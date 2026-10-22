@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#451A03" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <g filter="url(#shadow)">
+    <!-- Vapor quentinho -->
+    <path d="M45 34 Q40 22 48 14" fill="none" stroke="#FEF08A" stroke-width="4" stroke-linecap="round"/>
+    <path d="M62 30 Q57 18 65 10" fill="none" stroke="#FEF08A" stroke-width="4" stroke-linecap="round"/>
+    <path d="M78 34 Q73 22 81 14" fill="none" stroke="#FEF08A" stroke-width="4" stroke-linecap="round"/>
+    <!-- Caldo Dourado -->
+    <ellipse cx="60" cy="54" rx="36" ry="12" fill="#F59E0B" stroke="#78350F" stroke-width="3"/>
+    <!-- Tigela Rústica -->
+    <path d="M22 54 C22 96, 98 96, 98 54 Z" fill="#B45309" stroke="#451A03" stroke-width="3.5"/>
+    <path d="M26 64 L94 64" stroke="#FCD34D" stroke-width="4"/>
+  </g>
+</svg>

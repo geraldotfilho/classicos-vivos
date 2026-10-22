@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="windGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#E0F2FE"/>
+    </linearGradient>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0C4A6E" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <g filter="url(#shadow)">
+    <!-- Nuvem Sopradora Simpática -->
+    <path d="M26 74 C12 74, 10 52, 24 48 C22 30, 46 24, 56 38 C68 28, 86 38, 82 54 C92 58, 90 74, 76 74 Z" fill="#F0F9FF" stroke="#0284C7" stroke-width="3.5"/>
+    <!-- Olhinhos e Bochecha soprando -->
+    <circle cx="44" cy="52" r="3.5" fill="#0F172A"/>
+    <circle cx="62" cy="52" r="3.5" fill="#0F172A"/>
+    <circle cx="68" cy="60" r="6" fill="#FDA4AF" opacity="0.7"/>
+    <!-- Rajadas de Vento -->
+    <path d="M74 60 Q98 56 108 46 Q114 38 104 34" fill="none" stroke="url(#windGrad)" stroke-width="6" stroke-linecap="round"/>
+    <path d="M76 66 Q102 68 112 78 Q116 86 104 88" fill="none" stroke="url(#windGrad)" stroke-width="6" stroke-linecap="round"/>
+    <path d="M78 63 L114 63" fill="none" stroke="url(#windGrad)" stroke-width="5" stroke-linecap="round"/>
+  </g>
+</svg>

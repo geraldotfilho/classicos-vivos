@@ -42,7 +42,7 @@
             touch-action: manipulation;
         }
 
-        h1, h2, h3, .font-display {
+        h1, h2, h3, h4, .font-display {
             font-family: 'Fredoka', sans-serif;
         }
 
@@ -50,9 +50,9 @@
         .storybook-frame {
             background: var(--parchment);
             border: 6px solid #D97706;
-            height: calc(100vh - 12px);
-            height: calc(100dvh - 12px);
-            max-height: 880px;
+            height: calc(100vh - 10px);
+            height: calc(100dvh - 10px);
+            max-height: 900px;
             box-shadow:
                 0 25px 60px -15px rgba(0, 0, 0, 0.75),
                 inset 0 0 35px rgba(217, 119, 6, 0.12),
@@ -62,8 +62,8 @@
         @media (min-width: 640px) {
             .storybook-frame {
                 border-width: 8px;
-                height: calc(100vh - 28px);
-                height: calc(100dvh - 28px);
+                height: calc(100vh - 24px);
+                height: calc(100dvh - 24px);
             }
         }
 
@@ -71,16 +71,16 @@
         .literacy-word {
             display: inline-flex;
             align-items: center;
-            gap: 4px;
+            gap: 3px;
             font-family: 'Fredoka', sans-serif;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.04em;
             color: #9A3412;
             background: linear-gradient(180deg, #FEF08A 0%, #FDE047 100%);
-            padding: 2px 10px;
-            margin: 2px 2px;
-            border-radius: 12px;
+            padding: 1px 9px;
+            margin: 2px 1px;
+            border-radius: 11px;
             border: 2px solid #F59E0B;
             box-shadow: 0 3px 0 #D97706;
             cursor: pointer;
@@ -104,22 +104,78 @@
         /* Botões táteis 3D para crianças */
         .btn-chunky {
             transition: all 0.14s ease;
-            box-shadow: 0 5px 0 rgba(0, 0, 0, 0.28);
+            box-shadow: 0 4px 0 rgba(0, 0, 0, 0.28);
             cursor: pointer;
         }
         .btn-chunky:active:not(:disabled) {
-            transform: translateY(4px);
+            transform: translateY(3px);
             box-shadow: 0 1px 0 rgba(0, 0, 0, 0.28);
         }
 
         /* Botão Especial da Lente da Imaginação vs. Realidade */
         .lens-toggle-btn {
             transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
-            box-shadow: 0 6px 0 rgba(0, 0, 0, 0.3), 0 0 20px rgba(168, 85, 247, 0.45);
+            box-shadow: 0 5px 0 rgba(0, 0, 0, 0.35), 0 0 18px rgba(168, 85, 247, 0.5);
         }
         .lens-toggle-btn:active {
             transform: translateY(4px) scale(0.98);
-            box-shadow: 0 2px 0 rgba(0, 0, 0, 0.3);
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
+        }
+
+        /* Peças Arrastáveis (Drag & Drop Pedagógico) */
+        .draggable-card {
+            touch-action: none;
+            cursor: grab;
+            transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s ease, background-color 0.2s;
+            box-shadow: 0 5px 0 #D97706;
+        }
+        .draggable-card:hover {
+            transform: translateY(-3px) scale(1.03);
+        }
+        .draggable-card:active {
+            cursor: grabbing;
+        }
+        .draggable-card.card-completed {
+            background: linear-gradient(180deg, #D1FAE5 0%, #A7F3D0 100%);
+            border-color: #059669;
+            box-shadow: 0 4px 0 #047857;
+        }
+
+        /* Zona Alvo onde soltar o objeto arrastado */
+        .drop-zone-target {
+            transition: all 0.25s ease;
+        }
+        .drop-zone-target.drop-hover {
+            transform: scale(1.06);
+            filter: drop-shadow(0 0 18px rgba(250, 204, 21, 0.95));
+        }
+
+        /* Indicador visual sutil de zona interativa sobre a pintura Nano Banana */
+        .scene-hotspot {
+            position: absolute;
+            cursor: pointer;
+            border-radius: 20px;
+            transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.22s ease;
+        }
+        .scene-hotspot::after {
+            content: '✨';
+            position: absolute;
+            top: 6px;
+            right: 6px;
+            font-size: 16px;
+            background: rgba(255, 255, 255, 0.88);
+            border: 2px solid #F59E0B;
+            border-radius: 9999px;
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.25);
+            animation: floatSlow 2.2s ease-in-out infinite;
+        }
+        .scene-hotspot:active {
+            transform: scale(0.96);
         }
 
         /* Efeito de Onda Mágica ao trocar a Lente */
@@ -137,14 +193,10 @@
             z-index: 40;
         }
 
-        /* Animações SVG */
+        /* Animações */
         @keyframes floatSlow {
             0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-8px); }
-        }
-        @keyframes pulseTarget {
-            0%, 100% { filter: drop-shadow(0 0 4px rgba(245, 158, 11, 0.7)); transform: scale(1); }
-            50% { filter: drop-shadow(0 0 12px rgba(251, 191, 36, 1)); transform: scale(1.05); }
+            50% { transform: translateY(-6px); }
         }
         @keyframes spinBlades {
             from { transform: rotate(0deg); }
@@ -156,24 +208,20 @@
             100% { transform: scale(1); opacity: 1; }
         }
         @keyframes horseJump {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            30% { transform: translateY(-16px) rotate(-5deg); }
-            60% { transform: translateY(0) rotate(4deg); }
+            0%, 100% { transform: translateY(0) rotate(0deg) scale(1); }
+            25% { transform: translateY(-14px) rotate(-4deg) scale(1.05); }
+            55% { transform: translateY(0) rotate(3deg) scale(1.03); }
+        }
+        @keyframes shakeJoy {
+            0%, 100% { transform: rotate(0deg) scale(1); }
+            25% { transform: rotate(-5deg) scale(1.06); }
+            75% { transform: rotate(5deg) scale(1.06); }
         }
 
-        .animate-float { animation: floatSlow 3.4s ease-in-out infinite; }
-        .interactive-hitbox {
-            cursor: pointer;
-            transform-box: fill-box;
-            transform-origin: center;
-            animation: pulseTarget 2.4s ease-in-out infinite;
-            transition: transform 0.2s ease;
-        }
-        .interactive-hitbox:hover {
-            transform: scale(1.08);
-        }
-        .animate-pop { animation: popIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
-        .horse-happy { animation: horseJump 0.75s ease-in-out 2; }
+        .animate-float { animation: floatSlow 3.2s ease-in-out infinite; }
+        .animate-pop { animation: popIn 0.38s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
+        .horse-happy { animation: horseJump 0.7s ease-in-out 2; }
+        .character-joy { animation: shakeJoy 0.55s ease-in-out 2; }
 
         /* Partículas flutuantes no toque */
         .tap-sparkle {
@@ -199,7 +247,6 @@
             transform: scale(0.97);
         }
 
-        /* Rolagem interna limpa em tablets na vertical */
         #pages-viewport {
             -webkit-overflow-scrolling: touch;
             scrollbar-width: thin;
@@ -207,36 +254,33 @@
         }
     </style>
 </head>
-<body class="p-1.5 sm:p-3 select-none">
+<body class="p-1 sm:p-2.5 select-none">
 
     <!-- Balão Flutuante de Alfabetização (Sílabas + Voz) -->
-    <div id="phonics-toast" class="fixed top-16 left-1/2 -translate-x-1/2 z-50 hidden pointer-events-none w-[92vw] max-w-md">
-        <div class="bg-white border-4 border-amber-500 rounded-3xl px-5 py-3 shadow-2xl flex items-center justify-between gap-3 animate-pop">
+    <div id="phonics-toast" class="fixed top-14 left-1/2 -translate-x-1/2 z-50 hidden pointer-events-none w-[92vw] max-w-md">
+        <div class="bg-white border-4 border-amber-500 rounded-3xl px-5 py-2.5 shadow-2xl flex items-center justify-between gap-3 animate-pop">
             <div class="flex items-center gap-3 min-w-0">
-                <span id="phonics-emoji" class="text-4xl shrink-0">🏰</span>
+                <span id="phonics-emoji" class="text-3xl sm:text-4xl shrink-0">🏰</span>
                 <div class="text-left min-w-0">
-                    <p id="phonics-word" class="font-display font-bold text-lg sm:text-2xl text-amber-950 tracking-wider uppercase leading-tight break-words">CASTELOS</p>
-                    <p id="phonics-syllables" class="font-display font-semibold text-sm sm:text-base text-rose-600 tracking-widest mt-0.5 truncate">CAS • TE • LOS</p>
+                    <p id="phonics-word" class="font-display font-bold text-base sm:text-xl text-amber-950 tracking-wider uppercase leading-tight break-words">CASTELOS</p>
+                    <p id="phonics-syllables" class="font-display font-semibold text-xs sm:text-sm text-rose-600 tracking-widest mt-0.5 truncate">CAS • TE • LOS</p>
                 </div>
             </div>
-            <span class="w-10 h-10 shrink-0 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xl">
+            <span class="w-9 h-9 shrink-0 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-lg">
                 <i class="ph-fill ph-speaker-high"></i>
             </span>
         </div>
     </div>
 
     <!-- Moldura Principal do Livro Interativo -->
-    <main id="book-container" class="storybook-frame relative w-full max-w-6xl rounded-[26px] sm:rounded-[30px] flex flex-col justify-between overflow-hidden">
+    <main id="book-container" class="storybook-frame relative w-full max-w-6xl rounded-[24px] sm:rounded-[30px] flex flex-col justify-between overflow-hidden">
 
         <!-- BARRA SUPERIOR -->
-        <header class="w-full bg-amber-100/95 border-b-4 border-amber-300 px-2.5 py-2 sm:px-5 sm:py-2.5 flex items-center justify-between gap-2 z-30 shrink-0">
-            <div class="flex items-center gap-2 sm:gap-2.5 min-w-0">
-                <a href="../index.html" class="btn-chunky w-10 h-10 shrink-0 rounded-2xl bg-white hover:bg-amber-50 text-amber-900 flex items-center justify-center border-2 border-amber-500 text-lg" title="Voltar à Biblioteca Clássicos Vivos">
+        <header class="w-full bg-amber-100/95 border-b-4 border-amber-300 px-2.5 py-1.5 sm:px-5 sm:py-2 flex items-center justify-between gap-2 z-30 shrink-0">
+            <div class="flex items-center gap-2 min-w-0">
+                <a href="../index.html" class="btn-chunky w-9 h-9 sm:w-10 sm:h-10 shrink-0 rounded-2xl bg-white hover:bg-amber-50 text-amber-900 flex items-center justify-center border-2 border-amber-500 text-lg" title="Voltar à Biblioteca Clássicos Vivos">
                     <i class="ph-bold ph-books"></i>
                 </a>
-                <div class="w-10 h-10 shrink-0 rounded-2xl bg-amber-500 text-white hidden xs:flex sm:flex items-center justify-center shadow text-xl border-2 border-amber-700">
-                    🛡️
-                </div>
                 <div class="min-w-0">
                     <div class="flex items-center gap-1.5">
                         <span class="text-[10px] sm:text-[11px] font-extrabold uppercase tracking-wider bg-amber-300 text-amber-950 px-2 py-0.5 rounded-full shrink-0">Parte 1 de 4</span>
@@ -248,137 +292,79 @@
 
             <!-- Indicador de Páginas -->
             <div id="page-dots" class="hidden lg:flex items-center gap-1.5 bg-white/90 px-3.5 py-1.5 rounded-full border-2 border-amber-300">
-                <!-- Bolinhas geradas via JS -->
             </div>
 
             <!-- Controles de Voz, Tela Cheia e Som -->
             <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
-                <button id="btn-tts" onclick="toggleReadPageAloud()" class="btn-chunky flex items-center gap-1.5 bg-emerald-500 hover:bg-emerald-600 text-white font-display font-semibold px-3 py-2 rounded-2xl text-xs sm:text-sm border-2 border-emerald-700" title="Ouvir a página inteira">
-                    <i id="tts-icon" class="ph-fill ph-speaker-high text-lg"></i>
+                <button id="btn-tts" onclick="toggleReadPageAloud()" class="btn-chunky flex items-center gap-1.5 bg-emerald-500 hover:bg-emerald-600 text-white font-display font-semibold px-3 py-1.5 sm:py-2 rounded-2xl text-xs sm:text-sm border-2 border-emerald-700" title="Ouvir a página inteira">
+                    <i id="tts-icon" class="ph-fill ph-speaker-high text-base sm:text-lg"></i>
                     <span id="tts-label" class="hidden sm:inline">Ouvir Página</span>
                 </button>
 
-                <button id="btn-sfx" onclick="toggleSoundEffects()" class="btn-chunky w-10 h-10 rounded-2xl bg-amber-400 hover:bg-amber-500 text-amber-950 flex items-center justify-center border-2 border-amber-600 text-lg" title="Ativar/Desativar Efeitos Sonoros">
+                <button id="btn-sfx" onclick="toggleSoundEffects()" class="btn-chunky w-9 h-9 sm:w-10 sm:h-10 rounded-2xl bg-amber-400 hover:bg-amber-500 text-amber-950 flex items-center justify-center border-2 border-amber-600 text-base sm:text-lg" title="Ativar/Desativar Efeitos Sonoros">
                     <i id="sfx-icon" class="ph-fill ph-music-notes"></i>
                 </button>
 
-                <button id="btn-fullscreen" onclick="toggleFullscreen()" class="btn-chunky w-10 h-10 rounded-2xl bg-indigo-500 hover:bg-indigo-600 text-white flex items-center justify-center border-2 border-indigo-700 text-lg" title="Modo Tela Cheia para Tablet">
+                <button id="btn-fullscreen" onclick="toggleFullscreen()" class="btn-chunky w-9 h-9 sm:w-10 sm:h-10 rounded-2xl bg-indigo-500 hover:bg-indigo-600 text-white flex items-center justify-center border-2 border-indigo-700 text-base sm:text-lg" title="Modo Tela Cheia para Tablet">
                     <i id="fullscreen-icon" class="ph-bold ph-corners-out"></i>
                 </button>
             </div>
         </header>
 
-        <!-- ÁREA CENTRAL DO LIVRO (7 PÁGINAS RICAS) -->
-        <div id="pages-viewport" class="relative flex-1 w-full overflow-y-auto overflow-x-hidden flex items-start lg:items-center justify-center p-2.5 sm:p-5">
+        <!-- ÁREA CENTRAL DO LIVRO (7 PÁGINAS COM COLAGEM INTERATIVA NANO BANANA + DRAG & DROP) -->
+        <div id="pages-viewport" class="relative flex-1 w-full overflow-y-auto overflow-x-hidden flex items-start lg:items-center justify-center p-2 sm:p-4">
 
             <!-- =========================================================================
                  PÁGINA 1 (CAPA): O FIDALGO SONHADOR DE LA MANCHA
                  ========================================================================= -->
-            <section id="page-0" class="page-slide w-full min-h-full lg:h-full flex flex-col lg:flex-row items-center justify-between gap-4 sm:gap-6">
-                <!-- Moldura da Ilustração (com Lente da Realidade vs Imaginação) -->
-                <div id="frame-0" class="relative w-full lg:w-7/12 h-64 sm:h-80 lg:h-full shrink-0 bg-gradient-to-b from-sky-200 via-amber-100 to-amber-200 rounded-3xl border-4 border-amber-500 shadow-inner overflow-hidden flex flex-col justify-between p-2.5 sm:p-3 transition-colors duration-500">
+            <section id="page-0" class="page-slide w-full min-h-full lg:h-full flex flex-col lg:flex-row items-center justify-between gap-3 sm:gap-5">
+                <!-- Palco Interativo Nano Banana -->
+                <div id="frame-0" class="relative w-full lg:w-7/12 h-64 sm:h-80 lg:h-full shrink-0 bg-amber-100 rounded-3xl border-4 border-amber-500 shadow-inner overflow-hidden flex flex-col justify-between p-2.5">
                     
-                    <!-- Barra de Topo da Gravura: Status da Lente -->
-                    <div class="flex items-center justify-between gap-2 z-20">
-                        <span id="lens-badge-0" class="bg-slate-800/90 text-white font-display font-bold text-xs sm:text-sm px-3 py-1.5 rounded-full shadow flex items-center gap-1.5">
-                            <span>👓</span>
-                            <span id="lens-badge-text-0">Lente da Realidade: O Vovô Alonso e seus Amigos</span>
+                    <div class="flex flex-wrap items-center justify-between gap-1.5 z-20">
+                        <span id="lens-badge-0" class="bg-slate-900/85 backdrop-blur-sm text-white font-display font-bold text-[11px] sm:text-xs px-3 py-1 rounded-full shadow">
+                            👓 Lente da Realidade: O Vovô Alonso e seus Amigos
+                        </span>
+                        <span class="bg-amber-400/95 text-amber-950 font-display font-bold text-[10px] sm:text-xs px-2.5 py-1 rounded-full border border-amber-700 shadow">
+                            👆 Toque nos personagens da pintura!
                         </span>
                     </div>
 
-                    <!-- CENA SVG 0: CAPA (REALIDADE VS IMAGINAÇÃO) -->
-                    <div class="relative flex-1 w-full min-h-0 flex items-center justify-center overflow-hidden">
-                        <!-- Visão Real da Capa -->
-                        <svg id="svg-real-0" viewBox="0 0 520 320" class="w-full h-full object-contain">
-                            <!-- Sol suave e colinas de La Mancha -->
-                            <circle cx="90" cy="70" r="42" fill="#FDE047" />
-                            <path d="M0 240 Q150 190 310 230 T520 215 L520 320 L0 320 Z" fill="#D97706" opacity="0.45"/>
-                            <path d="M0 265 Q240 225 520 260 L520 320 L0 320 Z" fill="#92400E" opacity="0.6"/>
+                    <!-- Cena Viva sobre a Pintura Aquarela Nano Banana -->
+                    <div class="relative flex-1 w-full min-h-0 my-1.5 rounded-2xl overflow-hidden border-2 border-amber-400/80 shadow-md bg-slate-900">
+                        <img id="scene-bg-0" src="./imagens/p0-real.jpg" alt="Cena Capa Dom Quixote" class="w-full h-full object-cover transition-all duration-500" />
 
-                            <!-- Moinho branco tradicional à distância -->
-                            <g transform="translate(410, 130)">
-                                <polygon points="18,30 42,30 48,95 12,95" fill="#FFFBEB" stroke="#78350F" stroke-width="3"/>
-                                <polygon points="10,30 30,8 50,30" fill="#B45309"/>
-                                <g style="transform-origin: 30px 30px; animation: spinBlades 10s linear infinite;">
-                                    <line x1="30" y1="-22" x2="30" y2="82" stroke="#78350F" stroke-width="4"/>
-                                    <line x1="-22" y1="30" x2="82" y2="30" stroke="#78350F" stroke-width="4"/>
-                                    <rect x="30" y="-20" width="10" height="20" fill="#FEF3C7" stroke="#92400E" stroke-width="1.5"/>
-                                    <rect x="20" y="60" width="10" height="20" fill="#FEF3C7" stroke="#92400E" stroke-width="1.5"/>
-                                    <rect x="60" y="30" width="20" height="10" fill="#FEF3C7" stroke="#92400E" stroke-width="1.5"/>
-                                    <rect x="-20" y="20" width="20" height="10" fill="#FEF3C7" stroke="#92400E" stroke-width="1.5"/>
-                                </g>
-                            </g>
+                        <!-- Hotspots da Lente da Realidade (Capa) -->
+                        <div id="hotspots-real-0" class="absolute inset-0">
+                            <!-- Dom Quixote + Rocinante -->
+                            <div onclick="tapSceneHotspot(this, event, 'ROCINANTE', 'RO • CI • NAN • TE', '🐴', '🐴 Iiirrrááá! Vamos viajar por La Mancha!')"
+                                 class="scene-hotspot" style="left: 24%; top: 10%; width: 39%; height: 84%;" title="Tocar em Dom Quixote e Rocinante"></div>
+                            <!-- Sancho Pança -->
+                            <div onclick="tapSceneHotspot(this, event, 'SANCHO PANÇA', 'SAN • CHO • PAN • ÇA', '🥖', '🥖 Olá, amiguinho! Eu sou o Sancho Pança!')"
+                                 class="scene-hotspot" style="left: 61%; top: 44%; width: 22%; height: 50%;" title="Tocar em Sancho Pança"></div>
+                            <!-- Moinho ao fundo -->
+                            <div onclick="tapSceneHotspot(this, event, 'MOINHO', 'MO • I • NHO', '🌬️', '🌬️ O vento faz as pás do moinho girarem!')"
+                                 class="scene-hotspot" style="left: 72%; top: 6%; width: 20%; height: 38%;" title="Tocar no Moinho"></div>
+                        </div>
 
-                            <!-- Alonso Quixano com bacia na cabeça e seu cavalinho magricela -->
-                            <g class="interactive-hitbox" onclick="sceneTapFeedback(event, '🐴 Rocinante: Iiirrrááá!')" transform="translate(115, 75)">
-                                <!-- Cavalo magrinho simpático -->
-                                <line x1="65" y1="145" x2="60" y2="205" stroke="#B45309" stroke-width="8" stroke-linecap="round"/>
-                                <line x1="88" y1="145" x2="88" y2="205" stroke="#92400E" stroke-width="8" stroke-linecap="round"/>
-                                <line x1="145" y1="145" x2="145" y2="205" stroke="#B45309" stroke-width="8" stroke-linecap="round"/>
-                                <line x1="168" y1="145" x2="174" y2="205" stroke="#92400E" stroke-width="8" stroke-linecap="round"/>
-                                <rect x="50" y="110" width="130" height="44" rx="20" fill="#D97706" stroke="#78350F" stroke-width="3"/>
-                                <!-- Pescoço e cabeça do cavalo -->
-                                <path d="M160 120 L185 68 L208 75 L178 135 Z" fill="#D97706"/>
-                                <ellipse cx="208" cy="82" rx="22" ry="14" fill="#F59E0B" stroke="#78350F" stroke-width="2.5"/>
-                                <circle cx="196" cy="75" r="4.5" fill="#1E293B"/>
-                                <!-- Vovô Alonso sentado -->
-                                <rect x="92" y="48" width="38" height="68" rx="14" fill="#94A3B8" stroke="#475569" stroke-width="3"/>
-                                <circle cx="111" cy="28" r="20" fill="#FDBA74"/>
-                                <circle cx="118" cy="25" r="3" fill="#1E293B"/>
-                                <path d="M100 35 Q115 30 132 36" stroke="#F8FAFC" stroke-width="5" stroke-linecap="round" fill="none"/>
-                                <!-- Bacia de barbeiro na cabeça -->
-                                <path d="M85 16 Q111 -8 137 16 Z" fill="#FACC15" stroke="#CA8A04" stroke-width="3"/>
-                                <ellipse cx="111" cy="16" rx="30" ry="5" fill="#EAB308"/>
-                            </g>
-
-                            <!-- Sancho Pança ao lado acenando -->
-                            <g class="interactive-hitbox" onclick="sceneTapFeedback(event, '🥖 Sancho Pança: Olá, amiguinho!')" transform="translate(30, 145)">
-                                <ellipse cx="45" cy="95" rx="34" ry="30" fill="#B45309" stroke="#78350F" stroke-width="3"/>
-                                <circle cx="45" cy="52" r="20" fill="#FDBA74"/>
-                                <circle cx="40" cy="49" r="3" fill="#1E293B"/>
-                                <circle cx="52" cy="49" r="3" fill="#1E293B"/>
-                                <path d="M38 59 Q45 66 53 59" stroke="#78350F" stroke-width="3" fill="none" stroke-linecap="round"/>
-                                <path d="M22 42 Q45 20 68 42 Z" fill="#D97706" stroke="#78350F" stroke-width="2.5"/>
-                            </g>
-                        </svg>
-
-                        <!-- Visão da Imaginação da Capa -->
-                        <svg id="svg-imag-0" viewBox="0 0 520 320" class="hidden w-full h-full object-contain">
-                            <!-- Céu mágico estrelado e Lua Dourada -->
-                            <circle cx="260" cy="155" r="115" fill="#FEF08A" opacity="0.9"/>
-                            <circle cx="260" cy="155" r="135" fill="#FACC15" opacity="0.25"/>
-                            <text x="65" y="65" font-size="28">✨</text>
-                            <text x="430" y="60" font-size="30">🐉</text>
-                            <text x="415" y="135" font-size="42">🏰</text>
-
-                            <path d="M0 250 Q180 200 350 240 T520 225 L520 320 L0 320 Z" fill="#4C1D95"/>
-
-                            <!-- Super Herói Dom Quixote em Corcel Branco Reluzente -->
-                            <g class="animate-float interactive-hitbox" onclick="sceneTapFeedback(event, '⚔️ Pelos poderes da Imaginação!')" transform="translate(135, 55)">
-                                <!-- Capa Real Vermelha Esvoaçante -->
-                                <path d="M95 65 Q25 75 10 130 L85 130 Z" fill="#E11D48" stroke="#FACC15" stroke-width="3"/>
-                                <!-- Corcel Branco Forte -->
-                                <rect x="55" y="115" width="135" height="50" rx="24" fill="#FFFFFF" stroke="#93C5FD" stroke-width="4"/>
-                                <path d="M165 125 L195 62 L222 72 L188 145 Z" fill="#FFFFFF" stroke="#93C5FD" stroke-width="3"/>
-                                <ellipse cx="220" cy="78" rx="24" ry="15" fill="#FFFFFF" stroke="#F59E0B" stroke-width="3"/>
-                                <circle cx="208" cy="72" r="4.5" fill="#1E293B"/>
-                                <!-- Armadura Dourada Reluzente -->
-                                <rect x="92" y="45" width="44" height="75" rx="16" fill="#FACC15" stroke="#B45309" stroke-width="4"/>
-                                <circle cx="114" cy="24" r="20" fill="#FDBA74"/>
-                                <!-- Elmo Real com Pluma -->
-                                <path d="M86 14 Q114 -15 142 14 Z" fill="#FEF08A" stroke="#CA8A04" stroke-width="4"/>
-                                <path d="M105 -4 Q75 -28 60 -5" stroke="#E11D48" stroke-width="8" stroke-linecap="round" fill="none"/>
-                                <!-- Lança Dourada -->
-                                <line x1="135" y1="115" x2="175" y2="-15" stroke="#F59E0B" stroke-width="6" stroke-linecap="round"/>
-                                <polygon points="175,-25 165,-5 185,-5" fill="#FEF08A"/>
-                            </g>
-                        </svg>
+                        <!-- Hotspots da Lente da Imaginação (Capa) -->
+                        <div id="hotspots-imag-0" class="hidden absolute inset-0">
+                            <!-- Super Herói Dourado -->
+                            <div onclick="tapSceneHotspot(this, event, 'CAVALEIRO', 'CA • VA • LEI • RO', '⚔️', '⚔️ Pelos poderes da Super Imaginação!')"
+                                 class="scene-hotspot" style="left: 22%; top: 10%; width: 44%; height: 84%;"></div>
+                            <!-- Dragão Dourado -->
+                            <div onclick="tapSceneHotspot(this, event, 'DRAGÃO', 'DRA • GÃO', '🐉', '🐉 Roooaaar! Sou o Dragão Dourado dos Sonhos!')"
+                                 class="scene-hotspot" style="left: 60%; top: 5%; width: 16%; height: 28%;"></div>
+                            <!-- Castelo nas Nuvens -->
+                            <div onclick="tapSceneHotspot(this, event, 'CASTELO', 'CAS • TE • LO', '🏰', '🏰 Um Castelo Encantado flutuando nas nuvens!')"
+                                 class="scene-hotspot" style="left: 75%; top: 6%; width: 22%; height: 42%;"></div>
+                        </div>
                     </div>
 
-                    <!-- Botão Central da Lente da Imaginação -->
-                    <div class="flex items-center justify-center z-20 pt-1">
-                        <button onclick="toggleLens(0, event)" id="lens-btn-0" class="lens-toggle-btn bg-gradient-to-r from-purple-600 via-fuchsia-600 to-amber-500 text-white font-display font-bold text-xs sm:text-base px-5 py-2 rounded-2xl border-2 border-white flex items-center gap-2">
-                            <span class="text-xl">✨</span>
+                    <!-- Botão da Lente da Imaginação -->
+                    <div class="flex items-center justify-center z-20">
+                        <button onclick="toggleLens(0, event)" id="lens-btn-0" class="lens-toggle-btn bg-gradient-to-r from-purple-600 via-fuchsia-600 to-amber-500 text-white font-display font-bold text-xs sm:text-sm px-5 py-2 rounded-2xl border-2 border-white flex items-center gap-2">
+                            <span class="text-lg">✨</span>
                             <span id="lens-btn-label-0">Usar Lente da Imaginação!</span>
                         </button>
                     </div>
@@ -408,131 +394,94 @@
 
             <!-- =========================================================================
                  PÁGINA 2 (CAPÍTULO 1): ALONSO QUIXANO E OS LIVROS DE CAVALARIA
+                 JOGO: ARRASTAR OS 3 LIVROS (DRAGÕES, CASTELOS, CAVALEIROS) ATÉ O VOVÔ!
                  ========================================================================= -->
-            <section id="page-1" class="page-slide page-hidden w-full min-h-full lg:h-full flex flex-col lg:flex-row items-center justify-between gap-4 sm:gap-6">
-                <div id="frame-1" class="relative w-full lg:w-7/12 h-64 sm:h-80 lg:h-full shrink-0 bg-amber-50 rounded-3xl border-4 border-amber-400 shadow-inner overflow-hidden flex flex-col justify-between p-2.5 sm:p-3 transition-colors duration-500">
+            <section id="page-1" class="page-slide page-hidden w-full min-h-full lg:h-full flex flex-col lg:flex-row items-center justify-between gap-3 sm:gap-5">
+                <div id="frame-1" class="relative w-full lg:w-7/12 h-80 sm:h-96 lg:h-full shrink-0 bg-amber-50 rounded-3xl border-4 border-amber-400 shadow-inner overflow-hidden flex flex-col justify-between p-2.5">
                     
-                    <!-- Topo da Gravura -->
-                    <div class="flex items-center justify-between gap-2 z-20">
-                        <span id="lens-badge-1" class="bg-slate-800/90 text-white font-display font-bold text-xs sm:text-sm px-3 py-1.5 rounded-full shadow">
-                            👓 Lente da Realidade: A Sala de Leitura (<span id="books-count-ui">0</span>/3 livros lidos)
+                    <div class="flex flex-wrap items-center justify-between gap-1.5 z-20">
+                        <span id="lens-badge-1" class="bg-slate-900/85 text-white font-display font-bold text-[11px] sm:text-xs px-3 py-1 rounded-full shadow">
+                            👓 Lente da Realidade: Sala de Leitura (<span id="books-count-ui">0</span>/3 livros lidos)
+                        </span>
+                        <span id="page1-status-pill" class="bg-amber-300 text-amber-950 font-display font-bold text-[10px] sm:text-xs px-2.5 py-1 rounded-full border border-amber-600">
+                            ✋ Arraste os 3 livros até o Vovô Alonso!
                         </span>
                     </div>
 
-                    <!-- CENA SVG 1: 3 LIVROS BEM SEPARADOS + LENTE REALIDADE/IMAGINAÇÃO -->
-                    <div class="relative flex-1 w-full min-h-0 flex items-center justify-center">
-                        <!-- LENTE DA REALIDADE: Sala simples com 3 livros em lugares bem separados -->
-                        <svg id="svg-real-1" viewBox="0 0 540 310" class="w-full h-full object-contain">
-                            <!-- Estante Esquerda -->
-                            <rect x="20" y="30" width="115" height="175" rx="8" fill="#92400E" stroke="#78350F" stroke-width="4"/>
-                            <rect x="28" y="40" width="99" height="72" fill="#FEF3C7"/>
-                            <rect x="28" y="122" width="99" height="72" fill="#FEF3C7"/>
+                    <!-- Palco de Colagem Nano Banana (Página 2) -->
+                    <div id="drop-zone-1" class="drop-zone-target relative flex-1 w-full min-h-0 my-1 rounded-2xl overflow-hidden border-2 border-amber-400 shadow-md bg-slate-900">
+                        <img id="scene-bg-1" src="./imagens/p1-real.jpg" alt="Sala de Leitura de Alonso Quixano" class="w-full h-full object-cover transition-all duration-500" />
 
-                            <!-- Estante Direita -->
-                            <rect x="405" y="30" width="115" height="175" rx="8" fill="#92400E" stroke="#78350F" stroke-width="4"/>
-                            <rect x="413" y="40" width="99" height="72" fill="#FEF3C7"/>
-                            <rect x="413" y="122" width="99" height="72" fill="#FEF3C7"/>
+                        <!-- Personagens Mágicos que surgem na cena conforme cada livro é arrastado! -->
+                        <div id="magic-spawn-dragons" class="hidden absolute top-3 left-3 w-20 h-20 sm:w-24 sm:h-24 rounded-full border-4 border-amber-300 shadow-xl overflow-hidden bg-amber-100 animate-float">
+                            <img src="./biblioteca/personagens/dragao-dourado.png" alt="Dragão Dourado" class="w-full h-full object-cover" />
+                        </div>
+                        <div id="magic-spawn-castles" class="hidden absolute top-3 right-3 bg-indigo-950/90 border-4 border-amber-300 rounded-2xl px-3 py-1.5 text-center shadow-xl animate-float">
+                            <span class="text-2xl sm:text-3xl block">🏰✨</span>
+                            <span class="font-display font-bold text-[10px] text-amber-200 uppercase">Castelos!</span>
+                        </div>
+                        <div id="magic-spawn-knights" class="hidden absolute bottom-2 right-3 bg-rose-600/95 border-4 border-amber-300 rounded-2xl px-3 py-1.5 text-center shadow-xl animate-float">
+                            <span class="text-2xl sm:text-3xl block">⚔️🦁</span>
+                            <span class="font-display font-bold text-[10px] text-white uppercase">Cavaleiros!</span>
+                        </div>
 
-                            <!-- Tapete no chão -->
-                            <ellipse cx="270" cy="275" rx="220" ry="26" fill="#F43F5E" stroke="#FBBF24" stroke-width="4"/>
+                        <!-- Gatinho clicável no tapete -->
+                        <div onclick="tapSceneHotspot(this, event, 'GATINHO', 'GA • TI • NHO', '🐱', '🐱 Miau! Na imaginação do vovô eu viro um Leão Guardião!')"
+                             class="scene-hotspot" style="left: 26%; top: 73%; width: 18%; height: 22%;" title="Tocar no Gatinho"></div>
+                    </div>
 
-                            <!-- Gatinho dormindo no tapete (Esquerda) -->
-                            <g onclick="sceneTapFeedback(event, '🐱 Miau! Na realidade sou apenas um gatinho!')" class="cursor-pointer" transform="translate(80, 242)">
-                                <ellipse cx="32" cy="22" rx="24" ry="15" fill="#FB923C" stroke="#9A3412" stroke-width="2.5"/>
-                                <circle cx="14" cy="16" r="12" fill="#FB923C" stroke="#9A3412" stroke-width="2.5"/>
-                                <text x="22" y="5" font-size="14" font-weight="bold" fill="#78350F">Zzz</text>
-                            </g>
+                    <!-- Bandeja de Cartões de Alfabetização Arrastáveis (LIVROS) -->
+                    <div class="w-full grid grid-cols-3 gap-2 z-20 pb-1">
+                        <div id="drag-book-1"
+                             data-drop-target="drop-zone-1"
+                             data-action="book"
+                             data-id="1"
+                             data-word="DRAGÕES"
+                             data-syllables="DRA • GÕES"
+                             data-emoji="🐉"
+                             class="draggable-card bg-white border-2 border-amber-500 rounded-2xl p-1.5 flex items-center justify-center gap-2">
+                            <img src="./biblioteca/objetos/livro-dragoes.svg" alt="Livro Dragões" class="w-9 h-9 sm:w-11 sm:h-11 shrink-0 pointer-events-none" />
+                            <div class="text-left min-w-0">
+                                <span class="block font-display font-bold text-xs sm:text-sm text-amber-950 tracking-wide uppercase truncate">DRAGÕES</span>
+                                <span class="block font-display font-semibold text-[10px] text-rose-600">DRA • GÕES</span>
+                            </div>
+                        </div>
 
-                            <!-- Vovô Alonso sentado na poltrona central -->
-                            <g transform="translate(200, 60)">
-                                <rect x="10" y="25" width="120" height="145" rx="30" fill="#059669" stroke="#065F46" stroke-width="4"/>
-                                <circle cx="70" cy="65" r="28" fill="#FDBA74"/>
-                                <!-- Óculos de leitura -->
-                                <circle cx="60" cy="63" r="9" fill="none" stroke="#1E293B" stroke-width="2.5"/>
-                                <circle cx="82" cy="63" r="9" fill="none" stroke="#1E293B" stroke-width="2.5"/>
-                                <path d="M48 80 Q70 72 92 80" stroke="#F8FAFC" stroke-width="5" fill="none" stroke-linecap="round"/>
-                                <path d="M35 95 L105 95 L112 175 L28 175 Z" fill="#4F46E5"/>
-                            </g>
+                        <div id="drag-book-2"
+                             data-drop-target="drop-zone-1"
+                             data-action="book"
+                             data-id="2"
+                             data-word="CASTELOS"
+                             data-syllables="CAS • TE • LOS"
+                             data-emoji="🏰"
+                             class="draggable-card bg-white border-2 border-amber-500 rounded-2xl p-1.5 flex items-center justify-center gap-2">
+                            <img src="./biblioteca/objetos/livro-castelos.svg" alt="Livro Castelos" class="w-9 h-9 sm:w-11 sm:h-11 shrink-0 pointer-events-none" />
+                            <div class="text-left min-w-0">
+                                <span class="block font-display font-bold text-xs sm:text-sm text-amber-950 tracking-wide uppercase truncate">CASTELOS</span>
+                                <span class="block font-display font-semibold text-[10px] text-rose-600">CAS • TE • LOS</span>
+                            </div>
+                        </div>
 
-                            <!-- LIVRO 1: BEM SEPARADO NA ESTANTE ESQUERDA -->
-                            <g id="book-item-1" class="interactive-hitbox" onclick="tapStoryBook(1, event)" transform="translate(36, 48)">
-                                <rect x="0" y="0" width="82" height="58" rx="8" fill="#EF4444" stroke="#991B1B" stroke-width="3"/>
-                                <text x="41" y="32" font-size="24" text-anchor="middle">🐉</text>
-                                <text x="41" y="50" font-size="11" fill="white" font-weight="bold" text-anchor="middle">LIVRO 1</text>
-                            </g>
-
-                            <!-- LIVRO 2: BEM SEPARADO NA MESINHA CENTRAL EMBAIXO -->
-                            <g id="book-item-2" class="interactive-hitbox" onclick="tapStoryBook(2, event)" transform="translate(225, 228)">
-                                <rect x="0" y="0" width="90" height="56" rx="8" fill="#3B82F6" stroke="#1D4ED8" stroke-width="3"/>
-                                <text x="45" y="30" font-size="24" text-anchor="middle">🏰</text>
-                                <text x="45" y="48" font-size="11" fill="white" font-weight="bold" text-anchor="middle">LIVRO 2</text>
-                            </g>
-
-                            <!-- LIVRO 3: BEM SEPARADO NA ESTANTE DIREITA -->
-                            <g id="book-item-3" class="interactive-hitbox" onclick="tapStoryBook(3, event)" transform="translate(422, 48)">
-                                <rect x="0" y="0" width="82" height="58" rx="8" fill="#10B981" stroke="#065F46" stroke-width="3"/>
-                                <text x="41" y="32" font-size="24" text-anchor="middle">⚔️</text>
-                                <text x="41" y="50" font-size="11" fill="white" font-weight="bold" text-anchor="middle">LIVRO 3</text>
-                            </g>
-
-                            <!-- Balões que se abrem quando cada livro é clicado -->
-                            <g id="book-badge-1" class="hidden" transform="translate(36, 128)">
-                                <rect x="0" y="0" width="82" height="58" rx="10" fill="#DCFCE7" stroke="#16A34A" stroke-width="3"/>
-                                <text x="41" y="38" font-size="30" text-anchor="middle">🐲</text>
-                            </g>
-                            <g id="book-badge-2" class="hidden" transform="translate(225, 118)">
-                                <rect x="0" y="0" width="90" height="56" rx="10" fill="#FEF9C3" stroke="#CA8A04" stroke-width="3"/>
-                                <text x="45" y="38" font-size="30" text-anchor="middle">👑</text>
-                            </g>
-                            <g id="book-badge-3" class="hidden" transform="translate(422, 128)">
-                                <rect x="0" y="0" width="82" height="58" rx="10" fill="#FCE7F3" stroke="#DB2777" stroke-width="3"/>
-                                <text x="41" y="38" font-size="30" text-anchor="middle">🛡️</text>
-                            </g>
-                        </svg>
-
-                        <!-- LENTE DA IMAGINAÇÃO: A Sala vira um Reino de Dragões, Leão Guardião e Castelos! -->
-                        <svg id="svg-imag-1" viewBox="0 0 540 310" class="hidden w-full h-full object-contain">
-                            <!-- Fundo de céu encantado -->
-                            <rect x="0" y="0" width="540" height="310" rx="16" fill="#1E1B4B"/>
-                            <circle cx="460" cy="60" r="38" fill="#FEF08A" opacity="0.9"/>
-
-                            <!-- Castelo Flutuante nas Nuvens (Direita) -->
-                            <g class="animate-float interactive-hitbox" onclick="sceneTapFeedback(event, '🏰 Um Castelo Real nas nuvens!')" transform="translate(380, 45)">
-                                <ellipse cx="60" cy="115" rx="65" ry="22" fill="#E0E7FF"/>
-                                <rect x="25" y="45" width="70" height="65" fill="#C7D2FE" stroke="#4F46E5" stroke-width="3"/>
-                                <polygon points="18,45 60,5 102,45" fill="#EC4899"/>
-                                <text x="60" y="90" font-size="28" text-anchor="middle">🏰</text>
-                            </g>
-
-                            <!-- Dragão Dourado Amigável voando (Esquerda) -->
-                            <g class="animate-float interactive-hitbox" onclick="sceneTapFeedback(event, '🐉 Roooaaar! O Dragão dos Livros!')" transform="translate(30, 35)">
-                                <circle cx="65" cy="65" r="52" fill="#FEF08A" opacity="0.25"/>
-                                <text x="65" y="82" font-size="68" text-anchor="middle">🐉</text>
-                                <text x="125" y="55" font-size="26">✨</text>
-                            </g>
-
-                            <!-- O Gatinho virou um Leão Guardião Dourado! -->
-                            <g class="interactive-hitbox" onclick="sceneTapFeedback(event, '🦁 O gatinho virou um Leão Guardião na imaginação de Alonso!')" transform="translate(75, 200)">
-                                <circle cx="45" cy="45" r="38" fill="#F59E0B" stroke="#78350F" stroke-width="3"/>
-                                <text x="45" y="62" font-size="52" text-anchor="middle">🦁</text>
-                            </g>
-
-                            <!-- Vovô Alonso vestindo Manto Real lendo Pergaminho Dourado -->
-                            <g transform="translate(200, 65)">
-                                <rect x="10" y="25" width="120" height="145" rx="30" fill="#7C3AED" stroke="#FACC15" stroke-width="4"/>
-                                <circle cx="70" cy="65" r="28" fill="#FDBA74"/>
-                                <text x="70" y="34" font-size="30" text-anchor="middle">👑</text>
-                                <path d="M48 80 Q70 72 92 80" stroke="#F8FAFC" stroke-width="5" fill="none" stroke-linecap="round"/>
-                                <path d="M30 95 L110 95 L120 175 L20 175 Z" fill="#E11D48" stroke="#FACC15" stroke-width="3"/>
-                                <rect x="42" y="110" width="56" height="38" rx="6" fill="#FEF08A" stroke="#CA8A04" stroke-width="3"/>
-                            </g>
-                        </svg>
+                        <div id="drag-book-3"
+                             data-drop-target="drop-zone-1"
+                             data-action="book"
+                             data-id="3"
+                             data-word="CAVALEIROS"
+                             data-syllables="CA • VA • LEI • ROS"
+                             data-emoji="⚔️"
+                             class="draggable-card bg-white border-2 border-amber-500 rounded-2xl p-1.5 flex items-center justify-center gap-2">
+                            <img src="./biblioteca/objetos/livro-cavaleiros.svg" alt="Livro Cavaleiros" class="w-9 h-9 sm:w-11 sm:h-11 shrink-0 pointer-events-none" />
+                            <div class="text-left min-w-0">
+                                <span class="block font-display font-bold text-xs sm:text-sm text-amber-950 tracking-wide uppercase truncate">CAVALEIROS</span>
+                                <span class="block font-display font-semibold text-[10px] text-rose-600">CA • VA • LEI • ROS</span>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Botão da Lente da Imaginação -->
-                    <div class="flex items-center justify-center z-20 pt-1">
-                        <button onclick="toggleLens(1, event)" id="lens-btn-1" class="lens-toggle-btn bg-gradient-to-r from-purple-600 via-fuchsia-600 to-amber-500 text-white font-display font-bold text-xs sm:text-base px-5 py-2 rounded-2xl border-2 border-white flex items-center gap-2">
-                            <span class="text-xl">✨</span>
+                    <div class="flex items-center justify-center z-20">
+                        <button onclick="toggleLens(1, event)" id="lens-btn-1" class="lens-toggle-btn bg-gradient-to-r from-purple-600 via-fuchsia-600 to-amber-500 text-white font-display font-bold text-xs sm:text-sm px-5 py-1.5 rounded-2xl border-2 border-white flex items-center gap-2">
+                            <span class="text-lg">✨</span>
                             <span id="lens-btn-label-1">Usar Lente da Imaginação!</span>
                         </button>
                     </div>
@@ -551,106 +500,103 @@
                         <br><br>
                         Ele lia tanto sobre <span class="literacy-word" onclick="speakWord(this, 'CAVALEIROS', 'CA • VA • LEI • ROS', '🛡️')">CAVALEIROS</span>, <span class="literacy-word" onclick="speakWord(this, 'DRAGÕES', 'DRA • GÕES', '🐉')">DRAGÕES</span> e <span class="literacy-word" onclick="speakWord(this, 'CASTELOS', 'CAS • TE • LOS', '🏰')">CASTELOS</span> que sua <span class="literacy-word" onclick="speakWord(this, 'IMAGINAÇÃO', 'I • MA • GI • NA • ÇÃO', '✨')">IMAGINAÇÃO</span> ganhou vida própria: até o gatinho da sala parecia um leão guardião!
                     </p>
-                    <div class="bg-amber-100 border-2 border-amber-400 rounded-2xl p-2.5 text-xs sm:text-sm font-bold text-amber-950 flex items-center gap-2">
-                        <span class="text-xl">👆</span>
-                        <span>Toque nos <strong>3 livros separados</strong> nas estantes e depois ative a <strong>Lente da Imaginação</strong>!</span>
-                    </div>
                 </div>
             </section>
 
             <!-- =========================================================================
                  PÁGINA 3 (CAPÍTULO 2): A ARMADURA DO BISAVÔ E A BACIA DE BARBEIRO
+                 JOGO: ARRASTAR ARMADURA, BACIA, ESCUDO E LANÇA ATÉ DOM QUIXOTE!
                  ========================================================================= -->
-            <section id="page-2" class="page-slide page-hidden w-full min-h-full lg:h-full flex flex-col lg:flex-row items-center justify-between gap-4 sm:gap-6">
-                <div id="frame-2" class="relative w-full lg:w-7/12 h-72 sm:h-80 lg:h-full shrink-0 bg-gradient-to-b from-sky-100 to-amber-100 rounded-3xl border-4 border-amber-400 shadow-inner overflow-hidden flex flex-col justify-between p-2.5 sm:p-3 transition-colors duration-500">
+            <section id="page-2" class="page-slide page-hidden w-full min-h-full lg:h-full flex flex-col lg:flex-row items-center justify-between gap-3 sm:gap-5">
+                <div id="frame-2" class="relative w-full lg:w-7/12 h-80 sm:h-96 lg:h-full shrink-0 bg-gradient-to-b from-sky-100 to-amber-100 rounded-3xl border-4 border-amber-400 shadow-inner overflow-hidden flex flex-col justify-between p-2.5">
                     
-                    <div class="flex items-center justify-between gap-2 z-20">
-                        <span id="lens-badge-2" class="bg-slate-800/90 text-white font-display font-bold text-xs sm:text-sm px-3 py-1.5 rounded-full shadow">
-                            👓 Lente da Realidade: Peças Improvisadas (<span id="armor-count-ui">0</span>/4)
+                    <div class="flex flex-wrap items-center justify-between gap-1.5 z-20">
+                        <span id="lens-badge-2" class="bg-slate-900/85 text-white font-display font-bold text-[11px] sm:text-xs px-3 py-1 rounded-full shadow">
+                            👓 Lente da Realidade: Vestindo o Herói (<span id="armor-count-ui">0</span>/4 peças)
+                        </span>
+                        <span id="page2-status-pill" class="bg-amber-300 text-amber-950 font-display font-bold text-[10px] sm:text-xs px-2.5 py-1 rounded-full border border-amber-600">
+                            ✋ Arraste cada peça até Dom Quixote!
                         </span>
                     </div>
 
-                    <!-- CENA SVG 2: VESTIR DOM QUIXOTE + LENTE REALIDADE VS IMAGINAÇÃO -->
-                    <div class="relative flex-1 w-full min-h-0 flex flex-col justify-between items-center">
-                        <svg viewBox="0 0 500 220" class="w-full flex-1 min-h-0 object-contain">
-                            <!-- Aura dourada no modo imaginação -->
-                            <circle id="knight-glow-2" cx="250" cy="115" r="95" fill="#FEF08A" opacity="0" class="transition-opacity duration-500"/>
+                    <!-- Palco de Colagem Nano Banana (Página 3) -->
+                    <div id="drop-zone-2" class="drop-zone-target relative flex-1 w-full min-h-0 my-1 rounded-2xl overflow-hidden border-2 border-amber-400 shadow-md bg-slate-900">
+                        <img id="scene-bg-2" src="./imagens/p2-real.jpg" alt="Dom Quixote no Sótão" class="w-full h-full object-cover transition-all duration-500" />
 
-                            <!-- Capa (Simples remendada na realidade / Manto Real na imaginação) -->
-                            <path id="equip-cape-svg" d="M 215 85 Q 150 110 135 190 L 225 190 Z" fill="#E11D48" class="hidden"/>
+                        <!-- Selos Visuais que brilham sobre a pintura quando cada peça é equipada -->
+                        <div id="equipped-badge-1" class="hidden absolute left-[42%] top-[52%] -translate-x-1/2 -translate-y-1/2 bg-emerald-500/95 text-white font-display font-bold text-[11px] px-2.5 py-0.5 rounded-full border-2 border-white shadow-lg animate-pop">
+                            ✓ ARMADURA!
+                        </div>
+                        <div id="equipped-badge-2" class="hidden absolute left-[48%] top-[16%] -translate-x-1/2 -translate-y-1/2 bg-amber-400 text-amber-950 font-display font-bold text-[11px] px-2.5 py-0.5 rounded-full border-2 border-white shadow-lg animate-pop">
+                            ✓ BACIA / ELMO!
+                        </div>
+                        <div id="equipped-badge-3" class="hidden absolute left-[64%] top-[76%] -translate-x-1/2 -translate-y-1/2 bg-sky-500 text-white font-display font-bold text-[11px] px-2.5 py-0.5 rounded-full border-2 border-white shadow-lg animate-pop">
+                            ✓ ESCUDO!
+                        </div>
+                        <div id="equipped-badge-4" class="hidden absolute left-[28%] top-[34%] -translate-x-1/2 -translate-y-1/2 bg-rose-500 text-white font-display font-bold text-[11px] px-2.5 py-0.5 rounded-full border-2 border-white shadow-lg animate-pop">
+                            ✓ LANÇA!
+                        </div>
+                    </div>
 
-                            <!-- Pernas e Botas -->
-                            <rect x="228" y="155" width="14" height="45" rx="6" fill="#475569"/>
-                            <rect x="258" y="155" width="14" height="45" rx="6" fill="#475569"/>
+                    <!-- 4 Cartões Arrastáveis com PALAVRAS EM MAIÚSCULAS + Gravuras da Biblioteca -->
+                    <div class="w-full grid grid-cols-4 gap-1.5 sm:gap-2 z-20 pb-1">
+                        <div id="drag-gear-1"
+                             data-drop-target="drop-zone-2"
+                             data-action="gear"
+                             data-id="1"
+                             data-word="ARMADURA"
+                             data-syllables="AR • MA • DU • RA"
+                             data-emoji="🦺"
+                             class="draggable-card bg-white border-2 border-amber-500 rounded-xl p-1 sm:p-1.5 flex flex-col items-center text-center">
+                            <img src="./biblioteca/objetos/armadura-peitoral.svg" alt="Armadura" class="w-8 h-8 sm:w-10 sm:h-10 pointer-events-none" />
+                            <span class="font-display font-bold text-[10px] sm:text-xs text-amber-950 uppercase leading-tight mt-0.5">ARMADURA</span>
+                            <span class="font-display font-semibold text-[9px] text-rose-600 leading-none">AR•MA•DU•RA</span>
+                        </div>
 
-                            <!-- Tronco Base -->
-                            <rect id="equip-body-base" x="218" y="80" width="64" height="80" rx="20" fill="#E2E8F0" stroke="#64748B" stroke-width="3"/>
+                        <div id="drag-gear-2"
+                             data-drop-target="drop-zone-2"
+                             data-action="gear"
+                             data-id="2"
+                             data-word="BACIA"
+                             data-syllables="BA • CI • A"
+                             data-emoji="🥣"
+                             class="draggable-card bg-white border-2 border-amber-500 rounded-xl p-1 sm:p-1.5 flex flex-col items-center text-center">
+                            <img src="./biblioteca/objetos/bacia-elmo.svg" alt="Bacia" class="w-8 h-8 sm:w-10 sm:h-10 pointer-events-none" />
+                            <span class="font-display font-bold text-[10px] sm:text-xs text-amber-950 uppercase leading-tight mt-0.5">BACIA</span>
+                            <span class="font-display font-semibold text-[9px] text-rose-600 leading-none">BA • CI • A</span>
+                        </div>
 
-                            <!-- PEÇA 1: ARMADURA (Enferrujada na Realidade / Ouro Reluzente na Imaginação) -->
-                            <g id="equip-armor-svg" class="hidden">
-                                <rect id="armor-plate-rect" x="216" y="78" width="68" height="82" rx="20" fill="#94A3B8" stroke="#475569" stroke-width="4"/>
-                                <!-- Manchinhas de ferrugem (visíveis só na realidade) -->
-                                <g id="rust-patches">
-                                    <circle cx="235" cy="105" r="6" fill="#B45309" opacity="0.6"/>
-                                    <circle cx="265" cy="135" r="8" fill="#92400E" opacity="0.5"/>
-                                </g>
-                                <!-- Brasão Real (visível na imaginação) -->
-                                <text id="royal-crest" x="250" y="128" font-size="26" text-anchor="middle" class="hidden">🦁</text>
-                            </g>
+                        <div id="drag-gear-3"
+                             data-drop-target="drop-zone-2"
+                             data-action="gear"
+                             data-id="3"
+                             data-word="ESCUDO"
+                             data-syllables="ES • CU • DO"
+                             data-emoji="🛡️"
+                             class="draggable-card bg-white border-2 border-amber-500 rounded-xl p-1 sm:p-1.5 flex flex-col items-center text-center">
+                            <img src="./biblioteca/objetos/escudo-panelao.svg" alt="Escudo" class="w-8 h-8 sm:w-10 sm:h-10 pointer-events-none" />
+                            <span class="font-display font-bold text-[10px] sm:text-xs text-amber-950 uppercase leading-tight mt-0.5">ESCUDO</span>
+                            <span class="font-display font-semibold text-[9px] text-rose-600 leading-none">ES • CU • DO</span>
+                        </div>
 
-                            <!-- Cabeça de Dom Quixote -->
-                            <circle cx="250" cy="52" r="26" fill="#FDBA74"/>
-                            <circle cx="242" cy="48" r="3" fill="#1E293B"/>
-                            <circle cx="260" cy="48" r="3" fill="#1E293B"/>
-                            <path d="M230 60 Q250 53 272 60" stroke="#F8FAFC" stroke-width="5" fill="none" stroke-linecap="round"/>
-
-                            <!-- PEÇA 2: BACIA DE BARBEIRO / ELMO DE OURO -->
-                            <g id="equip-helmet-svg" class="hidden">
-                                <path d="M 216 36 Q 250 4 284 36 Z" fill="#FACC15" stroke="#CA8A04" stroke-width="3.5"/>
-                                <ellipse cx="250" cy="36" rx="38" ry="6" fill="#EAB308"/>
-                                <!-- Pluma Real (aparece na Lente da Imaginação) -->
-                                <path id="helmet-plume" d="M 250 12 Q 210 -12 195 10" stroke="#E11D48" stroke-width="8" stroke-linecap="round" fill="none" class="hidden"/>
-                            </g>
-
-                            <!-- PEÇA 3: ESCUDO -->
-                            <g id="equip-shield-svg" class="hidden">
-                                <circle id="shield-circle" cx="195" cy="130" r="26" fill="#CBD5E1" stroke="#475569" stroke-width="4"/>
-                                <text id="shield-star" x="195" y="138" font-size="22" text-anchor="middle">🍲</text>
-                            </g>
-
-                            <!-- PEÇA 4: LANÇA -->
-                            <g id="equip-lance-svg" class="hidden">
-                                <line x1="298" y1="195" x2="315" y2="12" stroke="#78350F" stroke-width="6" stroke-linecap="round"/>
-                                <polygon points="315,2 305,22 325,22" fill="#E2E8F0" stroke="#475569" stroke-width="2"/>
-                                <polygon points="313,22 278,34 312,46" fill="#E11D48"/>
-                            </g>
-                        </svg>
-
-                        <!-- 4 Botões Bem Separados para Vestir cada Peça -->
-                        <div class="w-full grid grid-cols-4 gap-1.5 sm:gap-2 z-20 pb-1">
-                            <button id="btn-gear-1" onclick="equipPiece(1, event)" class="btn-chunky bg-white hover:bg-amber-50 border-2 border-amber-500 rounded-xl p-1 sm:p-1.5 flex flex-col items-center">
-                                <span class="text-lg sm:text-xl">🦺</span>
-                                <span class="text-[10px] sm:text-[11px] font-display font-bold text-amber-950">1. Armadura</span>
-                            </button>
-                            <button id="btn-gear-2" onclick="equipPiece(2, event)" class="btn-chunky bg-white hover:bg-amber-50 border-2 border-amber-500 rounded-xl p-1 sm:p-1.5 flex flex-col items-center">
-                                <span class="text-lg sm:text-xl">🥣</span>
-                                <span class="text-[10px] sm:text-[11px] font-display font-bold text-amber-950">2. Bacia/Elmo</span>
-                            </button>
-                            <button id="btn-gear-3" onclick="equipPiece(3, event)" class="btn-chunky bg-white hover:bg-amber-50 border-2 border-amber-500 rounded-xl p-1 sm:p-1.5 flex flex-col items-center">
-                                <span class="text-lg sm:text-xl">🛡️</span>
-                                <span class="text-[10px] sm:text-[11px] font-display font-bold text-amber-950">3. Escudo</span>
-                            </button>
-                            <button id="btn-gear-4" onclick="equipPiece(4, event)" class="btn-chunky bg-white hover:bg-amber-50 border-2 border-amber-500 rounded-xl p-1 sm:p-1.5 flex flex-col items-center">
-                                <span class="text-lg sm:text-xl">🚩</span>
-                                <span class="text-[10px] sm:text-[11px] font-display font-bold text-amber-950">4. Lança</span>
-                            </button>
+                        <div id="drag-gear-4"
+                             data-drop-target="drop-zone-2"
+                             data-action="gear"
+                             data-id="4"
+                             data-word="LANÇA"
+                             data-syllables="LAN • ÇA"
+                             data-emoji="🚩"
+                             class="draggable-card bg-white border-2 border-amber-500 rounded-xl p-1 sm:p-1.5 flex flex-col items-center text-center">
+                            <img src="./biblioteca/objetos/lanca-bandeirola.svg" alt="Lança" class="w-8 h-8 sm:w-10 sm:h-10 pointer-events-none" />
+                            <span class="font-display font-bold text-[10px] sm:text-xs text-amber-950 uppercase leading-tight mt-0.5">LANÇA</span>
+                            <span class="font-display font-semibold text-[9px] text-rose-600 leading-none">LAN • ÇA</span>
                         </div>
                     </div>
 
                     <!-- Botão da Lente -->
-                    <div class="flex items-center justify-center z-20 pt-1">
-                        <button onclick="toggleLens(2, event)" id="lens-btn-2" class="lens-toggle-btn bg-gradient-to-r from-purple-600 via-fuchsia-600 to-amber-500 text-white font-display font-bold text-xs sm:text-base px-5 py-2 rounded-2xl border-2 border-white flex items-center gap-2">
-                            <span class="text-xl">✨</span>
+                    <div class="flex items-center justify-center z-20">
+                        <button onclick="toggleLens(2, event)" id="lens-btn-2" class="lens-toggle-btn bg-gradient-to-r from-purple-600 via-fuchsia-600 to-amber-500 text-white font-display font-bold text-xs sm:text-sm px-5 py-1.5 rounded-2xl border-2 border-white flex items-center gap-2">
+                            <span class="text-lg">✨</span>
                             <span id="lens-btn-label-2">Usar Lente da Imaginação!</span>
                         </button>
                     </div>
@@ -674,99 +620,92 @@
 
             <!-- =========================================================================
                  PÁGINA 4 (CAPÍTULO 3): ROCINANTE E A PRINCESA DULCINEIA
+                 JOGO PEDAGÓGICO: ARRASTAR MAÇÃ, CENOURA E ESCOVA ATÉ O CAVALO ROCINANTE!
                  ========================================================================= -->
-            <section id="page-3" class="page-slide page-hidden w-full min-h-full lg:h-full flex flex-col lg:flex-row items-center justify-between gap-4 sm:gap-6">
-                <div id="frame-3" class="relative w-full lg:w-7/12 h-72 sm:h-80 lg:h-full shrink-0 bg-gradient-to-b from-emerald-100 to-lime-200 rounded-3xl border-4 border-emerald-500 shadow-inner overflow-hidden flex flex-col justify-between p-2.5 sm:p-3 transition-colors duration-500">
+            <section id="page-3" class="page-slide page-hidden w-full min-h-full lg:h-full flex flex-col lg:flex-row items-center justify-between gap-3 sm:gap-5">
+                <div id="frame-3" class="relative w-full lg:w-7/12 h-80 sm:h-96 lg:h-full shrink-0 bg-gradient-to-b from-emerald-100 to-lime-200 rounded-3xl border-4 border-emerald-500 shadow-inner overflow-hidden flex flex-col justify-between p-2.5">
                     
-                    <div class="flex items-center justify-between gap-2 z-20">
-                        <span id="lens-badge-3" class="bg-slate-800/90 text-white font-display font-bold text-xs sm:text-sm px-3 py-1.5 rounded-full shadow">
-                            👓 Lente da Realidade: O Cavalinho Magricela e Aldonza
+                    <!-- Barra de Energia e Felicidade Progressiva do Rocinante -->
+                    <div class="flex flex-wrap items-center justify-between gap-1.5 z-20">
+                        <span id="lens-badge-3" class="bg-slate-900/85 text-white font-display font-bold text-[11px] sm:text-xs px-3 py-1 rounded-full shadow">
+                            👓 Lente da Realidade: O Estábulo e Aldonza
                         </span>
+                        <div class="flex items-center gap-1.5 bg-white/95 px-3 py-1 rounded-full border-2 border-emerald-600 shadow">
+                            <span class="font-display font-bold text-[11px] text-emerald-950">Felicidade do Rocinante:</span>
+                            <span id="horse-hearts-ui" class="text-xs sm:text-sm tracking-widest">🤍🤍🤍</span>
+                        </div>
                     </div>
 
-                    <!-- CENA SVG 3: ROCINANTE E DULCINEIA (REALIDADE VS IMAGINAÇÃO) -->
-                    <div class="relative flex-1 w-full min-h-0 flex flex-col justify-between items-center">
-                        <!-- Lente da Realidade -->
-                        <svg id="svg-real-3" viewBox="0 0 520 210" class="w-full flex-1 min-h-0 object-contain">
-                            <!-- Cercado do estábulo -->
-                            <rect x="20" y="135" width="320" height="10" rx="4" fill="#92400E"/>
-                            <rect x="20" y="165" width="320" height="10" rx="4" fill="#92400E"/>
+                    <!-- Palco de Colagem Nano Banana (Página 4) -->
+                    <div id="drop-zone-3" class="drop-zone-target relative flex-1 w-full min-h-0 my-1 rounded-2xl overflow-hidden border-2 border-emerald-500 shadow-md bg-slate-900">
+                        <img id="scene-bg-3" src="./imagens/p3-real.jpg" alt="Rocinante e Dulcineia" class="w-full h-full object-cover transition-all duration-500" />
 
-                            <!-- Janela ao fundo com a camponesa Aldonza peneirando trigo -->
-                            <g class="interactive-hitbox" onclick="sceneTapFeedback(event, '🌾 Aldonza Lorenzo trabalhando na fazenda!')" transform="translate(365, 25)">
-                                <rect x="0" y="0" width="125" height="135" rx="16" fill="#FEF3C7" stroke="#92400E" stroke-width="5"/>
-                                <circle cx="62" cy="52" r="22" fill="#FDBA74"/>
-                                <!-- Lenço simples de camponesa -->
-                                <path d="M38 42 Q62 22 86 42 Z" fill="#D97706"/>
-                                <rect x="38" y="74" width="48" height="45" rx="10" fill="#B45309"/>
-                                <text x="62" y="128" font-size="11" font-weight="bold" fill="#78350F" text-anchor="middle">Camponesa Aldonza</text>
-                            </g>
+                        <!-- Balão de Reação Progressiva sobre o Rocinante -->
+                        <div id="rocinante-reaction-bubble" class="absolute left-[26%] top-[12%] -translate-x-1/2 bg-white/95 border-3 border-amber-500 rounded-2xl px-3 py-1.5 shadow-xl flex items-center gap-1.5 pointer-events-none">
+                            <span id="rocinante-mood-emoji" class="text-xl">🐴</span>
+                            <span id="rocinante-mood-text" class="font-display font-bold text-xs sm:text-sm text-amber-950">Arraste MAÇÃ, CENOURA e ESCOVA para mim!</span>
+                        </div>
 
-                            <!-- Rocinante Magricela -->
-                            <g id="rocinante-group-real" transform="translate(65, 18)">
-                                <line x1="45" y1="120" x2="40" y2="178" stroke="#D97706" stroke-width="9" stroke-linecap="round"/>
-                                <line x1="70" y1="120" x2="70" y2="178" stroke="#B45309" stroke-width="9" stroke-linecap="round"/>
-                                <line x1="130" y1="120" x2="130" y2="178" stroke="#D97706" stroke-width="9" stroke-linecap="round"/>
-                                <line x1="155" y1="120" x2="160" y2="178" stroke="#B45309" stroke-width="9" stroke-linecap="round"/>
-                                <rect x="30" y="85" width="135" height="44" rx="22" fill="#F59E0B" stroke="#B45309" stroke-width="3"/>
-                                <!-- Costelinhas aparentes de magrinho -->
-                                <line x1="75" y1="92" x2="75" y2="118" stroke="#B45309" stroke-width="3" stroke-linecap="round"/>
-                                <line x1="92" y1="92" x2="92" y2="118" stroke="#B45309" stroke-width="3" stroke-linecap="round"/>
-                                <line x1="109" y1="92" x2="109" y2="118" stroke="#B45309" stroke-width="3" stroke-linecap="round"/>
-                                <path d="M145 98 L175 35 L200 45 L168 112 Z" fill="#F59E0B"/>
-                                <ellipse cx="202" cy="52" rx="26" ry="16" fill="#FBBF24" stroke="#B45309" stroke-width="3"/>
-                                <circle cx="188" cy="45" r="5" fill="#1E293B"/>
-                            </g>
-                        </svg>
+                        <!-- Hotspot na Aldonza / Princesa Dulcineia à direita -->
+                        <div onclick="tapDulcineiaHotspot(event)"
+                             class="scene-hotspot" style="left: 62%; top: 18%; width: 32%; height: 78%;" title="Tocar em Aldonza / Dulcineia"></div>
+                    </div>
 
-                        <!-- Lente da Imaginação: Super Corcel Real e Princesa Dulcineia del Toboso -->
-                        <svg id="svg-imag-3" viewBox="0 0 520 210" class="hidden w-full flex-1 min-h-0 object-contain">
-                            <!-- Medalhão Real da Princesa Dulcineia -->
-                            <g class="interactive-hitbox" onclick="sceneTapFeedback(event, '👸 Minha bela Princesa Dulcineia del Toboso!')" transform="translate(355, 15)">
-                                <rect x="0" y="0" width="140" height="150" rx="70" fill="#FCE7F3" stroke="#FACC15" stroke-width="6"/>
-                                <circle cx="70" cy="62" r="24" fill="#FDBA74"/>
-                                <text x="70" y="36" font-size="28" text-anchor="middle">👑</text>
-                                <path d="M40 86 L100 86 L112 135 L28 135 Z" fill="#EC4899" stroke="#FACC15" stroke-width="3"/>
-                                <text x="70" y="125" font-size="11" font-weight="bold" fill="#831843" text-anchor="middle">Princesa Dulcineia</text>
-                            </g>
+                    <!-- 3 Cartões de Alfabetização em MAIÚSCULAS para Arrastar até o Cavalo -->
+                    <div class="w-full grid grid-cols-3 gap-2 z-20 pb-1">
+                        <!-- MAÇÃ -->
+                        <div id="drag-care-maca"
+                             data-drop-target="drop-zone-3"
+                             data-action="horse-care"
+                             data-id="maca"
+                             data-word="MAÇÃ"
+                             data-syllables="MA • ÇÃ"
+                             data-emoji="🍎"
+                             class="draggable-card bg-white border-2 border-rose-400 rounded-2xl p-1.5 flex items-center justify-center gap-2">
+                            <img src="./biblioteca/objetos/maca.svg" alt="Gravura Maçã" class="w-10 h-10 sm:w-11 sm:h-11 shrink-0 pointer-events-none" />
+                            <div class="text-left min-w-0">
+                                <span class="block font-display font-bold text-sm sm:text-base text-rose-900 tracking-wider uppercase">MAÇÃ</span>
+                                <span class="block font-display font-semibold text-[10px] sm:text-xs text-rose-600">MA • ÇÃ</span>
+                            </div>
+                        </div>
 
-                            <!-- Rocinante como Corcel Branco Real Forte -->
-                            <g id="rocinante-group-imag" transform="translate(65, 15)">
-                                <line x1="45" y1="120" x2="40" y2="180" stroke="#E2E8F0" stroke-width="12" stroke-linecap="round"/>
-                                <line x1="75" y1="120" x2="75" y2="180" stroke="#CBD5E1" stroke-width="12" stroke-linecap="round"/>
-                                <line x1="135" y1="120" x2="135" y2="180" stroke="#E2E8F0" stroke-width="12" stroke-linecap="round"/>
-                                <line x1="165" y1="120" x2="170" y2="180" stroke="#CBD5E1" stroke-width="12" stroke-linecap="round"/>
-                                <rect x="25" y="78" width="150" height="54" rx="26" fill="#FFFFFF" stroke="#FACC15" stroke-width="4"/>
-                                <!-- Manta Real Vermelha e Dourada -->
-                                <path d="M65 78 L135 78 L125 118 L75 118 Z" fill="#E11D48" stroke="#FACC15" stroke-width="3"/>
-                                <path d="M150 95 L182 28 L212 38 L175 115 Z" fill="#FFFFFF" stroke="#FACC15" stroke-width="3"/>
-                                <ellipse cx="212" cy="46" rx="28" ry="18" fill="#FFFFFF" stroke="#FACC15" stroke-width="3"/>
-                                <circle cx="198" cy="40" r="5.5" fill="#1E293B"/>
-                                <text x="185" y="18" font-size="22">✨</text>
-                            </g>
-                        </svg>
+                        <!-- CENOURA -->
+                        <div id="drag-care-cenoura"
+                             data-drop-target="drop-zone-3"
+                             data-action="horse-care"
+                             data-id="cenoura"
+                             data-word="CENOURA"
+                             data-syllables="CE • NOU • RA"
+                             data-emoji="🥕"
+                             class="draggable-card bg-white border-2 border-orange-400 rounded-2xl p-1.5 flex items-center justify-center gap-2">
+                            <img src="./biblioteca/objetos/cenoura.svg" alt="Gravura Cenoura" class="w-10 h-10 sm:w-11 sm:h-11 shrink-0 pointer-events-none" />
+                            <div class="text-left min-w-0">
+                                <span class="block font-display font-bold text-sm sm:text-base text-orange-900 tracking-wider uppercase">CENOURA</span>
+                                <span class="block font-display font-semibold text-[10px] sm:text-xs text-orange-600">CE • NOU • RA</span>
+                            </div>
+                        </div>
 
-                        <!-- 3 Botões Bem Espaçados para Cuidar do Rocinante -->
-                        <div class="w-full grid grid-cols-3 gap-2 z-20 pb-1">
-                            <button onclick="careForRocinante('🍎', event)" class="btn-chunky bg-white hover:bg-rose-50 border-2 border-rose-400 rounded-xl py-1.5 px-2 flex items-center justify-center gap-1.5 font-display font-bold text-xs sm:text-sm text-rose-900">
-                                <span class="text-lg">🍎</span>
-                                <span>Maçã</span>
-                            </button>
-                            <button onclick="careForRocinante('🥕', event)" class="btn-chunky bg-white hover:bg-orange-50 border-2 border-orange-400 rounded-xl py-1.5 px-2 flex items-center justify-center gap-1.5 font-display font-bold text-xs sm:text-sm text-orange-900">
-                                <span class="text-lg">🥕</span>
-                                <span>Cenoura</span>
-                            </button>
-                            <button onclick="careForRocinante('✨', event)" class="btn-chunky bg-white hover:bg-amber-50 border-2 border-amber-400 rounded-xl py-1.5 px-2 flex items-center justify-center gap-1.5 font-display font-bold text-xs sm:text-sm text-amber-900">
-                                <span class="text-lg">🪮</span>
-                                <span>Escovar</span>
-                            </button>
+                        <!-- ESCOVA -->
+                        <div id="drag-care-escova"
+                             data-drop-target="drop-zone-3"
+                             data-action="horse-care"
+                             data-id="escova"
+                             data-word="ESCOVA"
+                             data-syllables="ES • CO • VA"
+                             data-emoji="🪮"
+                             class="draggable-card bg-white border-2 border-amber-500 rounded-2xl p-1.5 flex items-center justify-center gap-2">
+                            <img src="./biblioteca/objetos/escova.svg" alt="Gravura Escova" class="w-10 h-10 sm:w-11 sm:h-11 shrink-0 pointer-events-none" />
+                            <div class="text-left min-w-0">
+                                <span class="block font-display font-bold text-sm sm:text-base text-amber-950 tracking-wider uppercase">ESCOVA</span>
+                                <span class="block font-display font-semibold text-[10px] sm:text-xs text-amber-700">ES • CO • VA</span>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Botão da Lente -->
-                    <div class="flex items-center justify-center z-20 pt-1">
-                        <button onclick="toggleLens(3, event)" id="lens-btn-3" class="lens-toggle-btn bg-gradient-to-r from-purple-600 via-fuchsia-600 to-amber-500 text-white font-display font-bold text-xs sm:text-base px-5 py-2 rounded-2xl border-2 border-white flex items-center gap-2">
-                            <span class="text-xl">✨</span>
+                    <div class="flex items-center justify-center z-20">
+                        <button onclick="toggleLens(3, event)" id="lens-btn-3" class="lens-toggle-btn bg-gradient-to-r from-purple-600 via-fuchsia-600 to-amber-500 text-white font-display font-bold text-xs sm:text-sm px-5 py-1.5 rounded-2xl border-2 border-white flex items-center gap-2">
+                            <span class="text-lg">✨</span>
                             <span id="lens-btn-label-3">Usar Lente da Imaginação!</span>
                         </button>
                     </div>
@@ -781,91 +720,77 @@
                         Rocinante e a Bela Dulcineia!
                     </h2>
                     <p id="page-text-3" class="text-base sm:text-lg text-slate-800 font-bold leading-relaxed">
-                        Dom Quixote foi até o estábulo ver seu cavalo. Ele era bem magrinho e cansado, mas o herói lhe deu o nome de <span class="literacy-word" onclick="speakWord(this, 'ROCINANTE', 'RO • CI • NAN • TE', '🐴')">ROCINANTE</span>, enxergando nele um <span class="literacy-word" onclick="speakWord(this, 'CORCEL', 'COR • CEL', '⚡')">CORCEL</span> veloz como o vento!
+                        Dom Quixote foi cuidar do seu cavalo <span class="literacy-word" onclick="speakWord(this, 'ROCINANTE', 'RO • CI • NAN • TE', '🐴')">ROCINANTE</span>. Dê para ele uma <span class="literacy-word" onclick="speakWord(this, 'MAÇÃ', 'MA • ÇÃ', '🍎')">MAÇÃ</span>, uma <span class="literacy-word" onclick="speakWord(this, 'CENOURA', 'CE • NOU • RA', '🥕')">CENOURA</span> e passe a <span class="literacy-word" onclick="speakWord(this, 'ESCOVA', 'ES • CO • VA', '🪮')">ESCOVA</span> no pelo dele para vê-lo virar um reluzente <span class="literacy-word" onclick="speakWord(this, 'CORCEL', 'COR • CEL', '⚡')">CORCEL</span>!
                         <br><br>
-                        E como todo cavaleiro dedica suas vitórias a uma dama, ele escolheu a camponesa Aldonza e a chamou de princesa <span class="literacy-word" onclick="speakWord(this, 'DULCINEIA', 'DUL • CI • NEI • A', '👸')">DULCINEIA</span> del Toboso!
+                        E para dedicar suas vitórias, escolheu a camponesa Aldonza e a chamou de princesa <span class="literacy-word" onclick="speakWord(this, 'DULCINEIA', 'DUL • CI • NEI • A', '👸')">DULCINEIA</span> del Toboso!
                     </p>
                 </div>
             </section>
 
             <!-- =========================================================================
                  PÁGINA 5 (CAPÍTULO 4): A PRIMEIRA SAÍDA - POUSADA OU CASTELO?
+                 JOGO: ARRASTAR TROMBETA E SOPA ATÉ A CENA!
                  ========================================================================= -->
-            <section id="page-4" class="page-slide page-hidden w-full min-h-full lg:h-full flex flex-col lg:flex-row items-center justify-between gap-4 sm:gap-6">
-                <div id="frame-4" class="relative w-full lg:w-7/12 h-64 sm:h-80 lg:h-full shrink-0 bg-amber-100 rounded-3xl border-4 border-purple-500 shadow-inner overflow-hidden flex flex-col justify-between p-2.5 sm:p-3 transition-colors duration-500">
+            <section id="page-4" class="page-slide page-hidden w-full min-h-full lg:h-full flex flex-col lg:flex-row items-center justify-between gap-3 sm:gap-5">
+                <div id="frame-4" class="relative w-full lg:w-7/12 h-80 sm:h-96 lg:h-full shrink-0 bg-amber-100 rounded-3xl border-4 border-purple-500 shadow-inner overflow-hidden flex flex-col justify-between p-2.5">
                     
-                    <div class="flex items-center justify-between gap-2 z-20">
-                        <span id="lens-badge-4" class="bg-slate-800/90 text-white font-display font-bold text-xs sm:text-sm px-3 py-1.5 rounded-full shadow">
+                    <div class="flex flex-wrap items-center justify-between gap-1.5 z-20">
+                        <span id="lens-badge-4" class="bg-slate-900/85 text-white font-display font-bold text-[11px] sm:text-xs px-3 py-1 rounded-full shadow">
                             👓 Lente da Realidade: Uma Pousada na Estrada
+                        </span>
+                        <span id="page4-status-pill" class="bg-purple-200 text-purple-950 font-display font-bold text-[10px] sm:text-xs px-2.5 py-1 rounded-full border border-purple-500">
+                            ✋ Arraste TROMBETA e SOPA para a cena!
                         </span>
                     </div>
 
-                    <!-- CENA SVG 4: POUSADA VS CASTELO -->
-                    <div class="relative flex-1 w-full min-h-0 flex items-center justify-center">
-                        <!-- Lente da Realidade: Pousada rústica, porquinhos e estalajadeiro -->
-                        <svg id="svg-real-4" viewBox="0 0 520 240" class="w-full h-full object-contain">
-                            <ellipse cx="260" cy="215" rx="230" ry="20" fill="#D97706" opacity="0.35"/>
+                    <!-- Palco de Colagem Nano Banana (Página 5) -->
+                    <div id="drop-zone-4" class="drop-zone-target relative flex-1 w-full min-h-0 my-1 rounded-2xl overflow-hidden border-2 border-purple-400 shadow-md bg-slate-900">
+                        <img id="scene-bg-4" src="./imagens/p4-real.jpg" alt="Pousada ou Castelo Real" class="w-full h-full object-cover transition-all duration-500" />
 
-                            <!-- Prédio da Pousada -->
-                            <g class="interactive-hitbox" onclick="sceneTapFeedback(event, '🏠 Uma pousada simples de beira de estrada!')">
-                                <rect x="115" y="75" width="210" height="135" rx="8" fill="#FDE68A" stroke="#92400E" stroke-width="5"/>
-                                <polygon points="95,80 220,22 345,80" fill="#B45309" stroke="#78350F" stroke-width="4"/>
-                                <rect x="165" y="88" width="110" height="26" rx="6" fill="#78350F"/>
-                                <text x="220" y="106" font-size="13" fill="#FEF3C7" font-weight="bold" text-anchor="middle">POUSADA</text>
-                                <rect x="195" y="135" width="50" height="75" rx="8" fill="#92400E"/>
-                            </g>
+                        <!-- Hotspots na pintura -->
+                        <div onclick="tapSceneHotspot(this, event, 'POUSADA', 'POU • SA • DA', '🏠', '🏠 Para o vovô, esta pousada é um Castelo Real!')"
+                             class="scene-hotspot" style="left: 42%; top: 10%; width: 32%; height: 65%;"></div>
+                        <div onclick="tapSceneHotspot(this, event, 'PORQUINHOS', 'POR • QUI • NHOS', '🐷', '🐷 Oinc! Oinc! Que porquinhos fofinhos!')"
+                             class="scene-hotspot" style="left: 26%; top: 65%; width: 24%; height: 28%;"></div>
+                    </div>
 
-                            <!-- Pastor de porquinhos tocando apito de caniço (Esquerda) -->
-                            <g class="interactive-hitbox" onclick="sceneTapFeedback(event, '🐷 Oinc! Oinc! O pastor está chamando os porquinhos!')" transform="translate(20, 125)">
-                                <rect x="0" y="0" width="85" height="80" rx="14" fill="#FEF3C7" stroke="#D97706" stroke-width="2.5"/>
-                                <text x="42" y="42" font-size="34" text-anchor="middle">🐖</text>
-                                <text x="42" y="68" font-size="11" font-weight="bold" fill="#78350F" text-anchor="middle">Oinc! Flauta</text>
-                            </g>
+                    <!-- 2 Cartões Arrastáveis de Alfabetização (TROMBETA e SOPA) -->
+                    <div class="w-full grid grid-cols-2 gap-2.5 z-20 pb-1">
+                        <div id="drag-inn-1"
+                             data-drop-target="drop-zone-4"
+                             data-action="inn"
+                             data-id="trombeta"
+                             data-word="TROMBETA"
+                             data-syllables="TROM • BE • TA"
+                             data-emoji="🎺"
+                             class="draggable-card bg-white border-2 border-purple-500 rounded-2xl p-1.5 flex items-center justify-center gap-2.5">
+                            <img src="./biblioteca/objetos/trombeta-flauta.svg" alt="Trombeta" class="w-10 h-10 shrink-0 pointer-events-none" />
+                            <div class="text-left">
+                                <span class="block font-display font-bold text-sm sm:text-base text-purple-950 uppercase">TROMBETA</span>
+                                <span class="block font-display font-semibold text-[10px] sm:text-xs text-purple-600">TROM • BE • TA</span>
+                            </div>
+                        </div>
 
-                            <!-- Dono da pousada de avental (Direita) -->
-                            <g class="interactive-hitbox" onclick="sceneTapFeedback(event, '🍲 Estalajadeiro: Boa noite! Temos sopa quentinha!')" transform="translate(365, 95)">
-                                <circle cx="50" cy="35" r="22" fill="#FDBA74"/>
-                                <rect x="22" y="58" width="56" height="62" rx="18" fill="#FFFFFF" stroke="#64748B" stroke-width="3"/>
-                                <text x="50" y="100" font-size="24" text-anchor="middle">🥄</text>
-                                <text x="50" y="135" font-size="11" font-weight="bold" fill="#78350F" text-anchor="middle">Estalajadeiro</text>
-                            </g>
-                        </svg>
-
-                        <!-- Lente da Imaginação: Castelo de Quatro Torres de Prata, Trombetas Reais e Governador -->
-                        <svg id="svg-imag-4" viewBox="0 0 520 240" class="hidden w-full h-full object-contain">
-                            <path d="M 40 215 Q 260 15 480 215" fill="none" stroke="#F472B6" stroke-width="14" opacity="0.45"/>
-
-                            <!-- Castelo Reluzente com Torres e Ponte Levadiça -->
-                            <g class="interactive-hitbox" onclick="sceneTapFeedback(event, '🏰 Que Castelo Magnífico com Torres de Prata!')">
-                                <rect x="110" y="45" width="48" height="165" fill="#E0E7FF" stroke="#4F46E5" stroke-width="4"/>
-                                <polygon points="102,45 134,5 166,45" fill="#EC4899"/>
-                                <rect x="282" y="45" width="48" height="165" fill="#E0E7FF" stroke="#4F46E5" stroke-width="4"/>
-                                <polygon points="274,45 306,5 338,45" fill="#EC4899"/>
-                                <rect x="158" y="75" width="124" height="135" fill="#C7D2FE" stroke="#4F46E5" stroke-width="4"/>
-                                <path d="M 192 210 L 192 145 Q 220 120 248 145 L 248 210 Z" fill="#FACC15" stroke="#B45309" stroke-width="4"/>
-                            </g>
-
-                            <!-- Arauto Real tocando Trombeta Dourada (Esquerda) -->
-                            <g class="interactive-hitbox" onclick="sceneTapFeedback(event, '🎺 Tuuu-tuuu! As Trombetas Reais anunciam Dom Quixote!')" transform="translate(20, 115)">
-                                <rect x="0" y="0" width="85" height="85" rx="16" fill="#EDE9FE" stroke="#7C3AED" stroke-width="3"/>
-                                <text x="42" y="48" font-size="38" text-anchor="middle">🎺</text>
-                                <text x="42" y="74" font-size="11" font-weight="bold" fill="#5B21B6" text-anchor="middle">Trombetas!</text>
-                            </g>
-
-                            <!-- Governador do Castelo / Rei (Direita) -->
-                            <g class="interactive-hitbox" onclick="sceneTapFeedback(event, '👑 Governador do Castelo: Bem-vindo, nobre Cavaleiro!')" transform="translate(365, 85)">
-                                <text x="50" y="18" font-size="26" text-anchor="middle">👑</text>
-                                <circle cx="50" cy="42" r="22" fill="#FDBA74"/>
-                                <rect x="22" y="65" width="56" height="62" rx="16" fill="#7C3AED" stroke="#FACC15" stroke-width="4"/>
-                                <text x="50" y="142" font-size="11" font-weight="bold" fill="#FEF08A" text-anchor="middle">Senhor do Castelo</text>
-                            </g>
-                        </svg>
+                        <div id="drag-inn-2"
+                             data-drop-target="drop-zone-4"
+                             data-action="inn"
+                             data-id="sopa"
+                             data-word="SOPA"
+                             data-syllables="SO • PA"
+                             data-emoji="🍲"
+                             class="draggable-card bg-white border-2 border-amber-500 rounded-2xl p-1.5 flex items-center justify-center gap-2.5">
+                            <img src="./biblioteca/objetos/sopa-banquete.svg" alt="Sopa" class="w-10 h-10 shrink-0 pointer-events-none" />
+                            <div class="text-left">
+                                <span class="block font-display font-bold text-sm sm:text-base text-amber-950 uppercase">SOPA</span>
+                                <span class="block font-display font-semibold text-[10px] sm:text-xs text-rose-600">SO • PA</span>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Botão da Lente -->
-                    <div class="flex items-center justify-center z-20 pt-1">
-                        <button onclick="toggleLens(4, event)" id="lens-btn-4" class="lens-toggle-btn bg-gradient-to-r from-purple-600 via-fuchsia-600 to-amber-500 text-white font-display font-bold text-xs sm:text-base px-5 py-2 rounded-2xl border-2 border-white flex items-center gap-2">
-                            <span class="text-xl">✨</span>
+                    <div class="flex items-center justify-center z-20">
+                        <button onclick="toggleLens(4, event)" id="lens-btn-4" class="lens-toggle-btn bg-gradient-to-r from-purple-600 via-fuchsia-600 to-amber-500 text-white font-display font-bold text-xs sm:text-sm px-5 py-1.5 rounded-2xl border-2 border-white flex items-center gap-2">
+                            <span class="text-lg">✨</span>
                             <span id="lens-btn-label-4">Usar Lente da Imaginação!</span>
                         </button>
                     </div>
@@ -882,97 +807,78 @@
                     <p id="page-text-4" class="text-base sm:text-lg text-slate-800 font-bold leading-relaxed">
                         Ao entardecer, Dom Quixote chegou a uma simples <span class="literacy-word" onclick="speakWord(this, 'POUSADA', 'POU • SA • DA', '🏠')">POUSADA</span> de beira de estrada. Mas, com seus olhos sonhadores, ele enxergou um enorme <span class="literacy-word" onclick="speakWord(this, 'CASTELO', 'CAS • TE • LO', '🏰')">CASTELO</span> com torres de prata!
                         <br><br>
-                        Quando um pastor soprou um apito para chamar seus porquinhos, Dom Quixote achou que eram <span class="literacy-word" onclick="speakWord(this, 'TROMBETAS', 'TROM • BE • TAS', '🎺')">TROMBETAS</span> reais anunciando sua chegada!
+                        Quando um pastor soprou um apito para chamar seus porquinhos, Dom Quixote ouviu <span class="literacy-word" onclick="speakWord(this, 'TROMBETAS', 'TROM • BE • TAS', '🎺')">TROMBETAS</span> reais e saboreou uma simples <span class="literacy-word" onclick="speakWord(this, 'SOPA', 'SO • PA', '🍲')">SOPA</span> como se fosse um banquete de rei!
                     </p>
                 </div>
             </section>
 
             <!-- =========================================================================
                  PÁGINA 6 (CAPÍTULO 5): A CERIMÔNIA DE CAVALEIRO SOB A LUA CHEIA
+                 JOGO: ARRASTAR LUA CHEIA E ESPADA ATÉ DOM QUIXOTE!
                  ========================================================================= -->
-            <section id="page-5" class="page-slide page-hidden w-full min-h-full lg:h-full flex flex-col lg:flex-row items-center justify-between gap-4 sm:gap-6">
-                <div id="frame-5" class="relative w-full lg:w-7/12 h-72 sm:h-80 lg:h-full shrink-0 bg-gradient-to-b from-slate-900 via-indigo-950 to-slate-800 rounded-3xl border-4 border-amber-400 shadow-inner overflow-hidden flex flex-col justify-between p-2.5 sm:p-3 transition-colors duration-500">
+            <section id="page-5" class="page-slide page-hidden w-full min-h-full lg:h-full flex flex-col lg:flex-row items-center justify-between gap-3 sm:gap-5">
+                <div id="frame-5" class="relative w-full lg:w-7/12 h-80 sm:h-96 lg:h-full shrink-0 bg-gradient-to-b from-slate-900 via-indigo-950 to-slate-800 rounded-3xl border-4 border-amber-400 shadow-inner overflow-hidden flex flex-col justify-between p-2.5">
                     
-                    <div class="flex items-center justify-between gap-2 z-20">
-                        <span id="lens-badge-5" class="bg-slate-800/90 text-white font-display font-bold text-xs sm:text-sm px-3 py-1.5 rounded-full shadow">
+                    <div class="flex flex-wrap items-center justify-between gap-1.5 z-20">
+                        <span id="lens-badge-5" class="bg-slate-900/90 text-white font-display font-bold text-[11px] sm:text-xs px-3 py-1 rounded-full shadow">
                             👓 Lente da Realidade: Pátio da Pousada e Bebedouro
+                        </span>
+                        <span id="page5-status-pill" class="bg-amber-300 text-amber-950 font-display font-bold text-[10px] sm:text-xs px-2.5 py-1 rounded-full border border-amber-600">
+                            ✋ Arraste LUA CHEIA e ESPADA para a cerimônia!
                         </span>
                     </div>
 
-                    <!-- CENA SVG 5: CERIMÔNIA DE CAVALEIRO (REALIDADE VS IMAGINAÇÃO) -->
-                    <div class="relative flex-1 w-full min-h-0 flex flex-col justify-between items-center">
-                        <!-- Lente da Realidade -->
-                        <svg id="svg-real-5" viewBox="0 0 520 205" class="w-full flex-1 min-h-0 object-contain">
-                            <!-- Lua Cheia -->
-                            <circle cx="445" cy="48" r="34" fill="#FEF08A"/>
-                            <!-- Bebedouro de pedra dos cavalos -->
-                            <rect x="35" y="130" width="135" height="55" rx="8" fill="#64748B" stroke="#334155" stroke-width="4"/>
-                            <ellipse cx="102" cy="130" rx="60" ry="10" fill="#38BDF8"/>
-                            <text x="102" y="165" font-size="11" fill="white" font-weight="bold" text-anchor="middle">Bebedouro</text>
+                    <!-- Palco de Colagem Nano Banana (Página 6) -->
+                    <div id="drop-zone-5" class="drop-zone-target relative flex-1 w-full min-h-0 my-1 rounded-2xl overflow-hidden border-2 border-amber-400 shadow-md bg-slate-900">
+                        <img id="scene-bg-5" src="./imagens/p5-real.jpg" alt="Cerimônia de Cavaleiro sob a Lua Cheia" class="w-full h-full object-cover transition-all duration-500" />
 
-                            <!-- Dom Quixote ajoelhado -->
-                            <g transform="translate(195, 78)">
-                                <circle cx="45" cy="25" r="20" fill="#FDBA74"/>
-                                <path d="M22 15 Q45 -5 68 15 Z" fill="#FACC15"/>
-                                <rect x="28" y="45" width="34" height="58" rx="12" fill="#94A3B8" stroke="#475569" stroke-width="3"/>
-                                <text id="knight-star-real" x="45" y="0" font-size="26" text-anchor="middle" class="hidden">🌟</text>
-                            </g>
+                        <!-- Selo de Cavaleiro Sagrado quando concluído -->
+                        <div id="knight-crowned-badge" class="hidden absolute top-3 left-1/2 -translate-x-1/2 bg-amber-400 text-amber-950 font-display font-bold text-xs sm:text-sm px-4 py-1 rounded-full border-2 border-white shadow-xl animate-pop">
+                            👑✨ Dom Quixote foi Sagrado Cavaleiro!
+                        </div>
 
-                            <!-- Estalajadeiro com caderno de palha e cevada -->
-                            <g transform="translate(310, 52)">
-                                <circle cx="55" cy="32" r="22" fill="#FDBA74"/>
-                                <rect x="28" y="55" width="54" height="72" rx="16" fill="#D97706" stroke="#78350F" stroke-width="3"/>
-                                <!-- Livro de contas de cevada -->
-                                <rect x="2" y="65" width="32" height="26" rx="4" fill="#FEF3C7" stroke="#92400E" stroke-width="2"/>
-                                <!-- Espada tocando o ombro -->
-                                <line id="sword-line-real" x1="25" y1="62" x2="-45" y2="55" stroke="#CBD5E1" stroke-width="5" stroke-linecap="round"/>
-                            </g>
-                        </svg>
+                        <!-- Hotspot no Bebedouro / Altar -->
+                        <div onclick="tapSceneHotspot(this, event, 'BEBEDOURO', 'BE • BE • DOU • RO', '💧', '💧 Na imaginação de Dom Quixote, este bebedouro é um Altar de Cristal!')"
+                             class="scene-hotspot" style="left: 4%; top: 36%; width: 26%; height: 55%;"></div>
+                    </div>
 
-                        <!-- Lente da Imaginação: Altar de Cristal Sagrado e Rei Sábio -->
-                        <svg id="svg-imag-5" viewBox="0 0 520 205" class="hidden w-full flex-1 min-h-0 object-contain">
-                            <circle cx="445" cy="48" r="42" fill="#FEF08A" opacity="0.95"/>
-                            <!-- Altar Real de Cristal e Ouro -->
-                            <rect x="35" y="120" width="135" height="65" rx="12" fill="#FACC15" stroke="#FEF08A" stroke-width="4"/>
-                            <text x="102" y="158" font-size="26" text-anchor="middle">💎✨</text>
-                            <text x="102" y="178" font-size="11" fill="#78350F" font-weight="bold" text-anchor="middle">Altar Real</text>
+                    <!-- 2 Cartões Arrastáveis de Alfabetização (LUA CHEIA e ESPADA) -->
+                    <div class="w-full grid grid-cols-2 gap-2.5 z-20 pb-1">
+                        <div id="drag-ceremony-1"
+                             data-drop-target="drop-zone-5"
+                             data-action="ceremony"
+                             data-id="lua"
+                             data-word="LUA CHEIA"
+                             data-syllables="LU • A • CHEI • A"
+                             data-emoji="🌕"
+                             class="draggable-card bg-white border-2 border-amber-400 rounded-2xl p-1.5 flex items-center justify-center gap-2.5">
+                            <img src="./biblioteca/objetos/lua-cheia.svg" alt="Lua Cheia" class="w-10 h-10 shrink-0 pointer-events-none" />
+                            <div class="text-left">
+                                <span class="block font-display font-bold text-sm sm:text-base text-amber-950 uppercase">LUA CHEIA</span>
+                                <span class="block font-display font-semibold text-[10px] sm:text-xs text-amber-700">LU • A • CHEI • A</span>
+                            </div>
+                        </div>
 
-                            <!-- Dom Quixote em Armadura de Ouro Ajoelhado -->
-                            <g transform="translate(195, 72)">
-                                <circle cx="45" cy="25" r="20" fill="#FDBA74"/>
-                                <path d="M22 15 Q45 -8 68 15 Z" fill="#FEF08A" stroke="#CA8A04" stroke-width="3"/>
-                                <rect x="28" y="45" width="34" height="62" rx="12" fill="#FACC15" stroke="#B45309" stroke-width="3"/>
-                                <path d="M60 50 Q100 75 95 110 L55 110 Z" fill="#E11D48"/>
-                                <text id="knight-star-imag" x="45" y="-2" font-size="28" text-anchor="middle">👑✨</text>
-                            </g>
-
-                            <!-- Grande Rei Sábio com Pergaminho Iluminado e Espada Excalibur -->
-                            <g transform="translate(310, 45)">
-                                <text x="55" y="15" font-size="28" text-anchor="middle">👑</text>
-                                <circle cx="55" cy="38" r="22" fill="#FDBA74"/>
-                                <rect x="26" y="60" width="58" height="75" rx="16" fill="#7C3AED" stroke="#FACC15" stroke-width="4"/>
-                                <rect x="-2" y="65" width="36" height="30" rx="5" fill="#FEF08A" stroke="#CA8A04" stroke-width="3"/>
-                                <line x1="25" y1="65" x2="-45" y2="52" stroke="#FEF08A" stroke-width="7" stroke-linecap="round"/>
-                            </g>
-                        </svg>
-
-                        <!-- 2 Botões Interativos da Cerimônia de Cavaleiro -->
-                        <div class="w-full grid grid-cols-2 gap-2.5 z-20 pb-1">
-                            <button onclick="ceremonyStep(1, event)" class="btn-chunky bg-amber-100 hover:bg-amber-200 border-2 border-amber-500 rounded-xl py-2 px-2.5 flex items-center justify-center gap-1.5 font-display font-bold text-xs sm:text-sm text-amber-950">
-                                <span class="text-lg">📖</span>
-                                <span>1. Ler Juramento</span>
-                            </button>
-                            <button onclick="ceremonyStep(2, event)" class="btn-chunky bg-emerald-400 hover:bg-emerald-300 border-2 border-emerald-700 rounded-xl py-2 px-2.5 flex items-center justify-center gap-1.5 font-display font-bold text-xs sm:text-sm text-emerald-950">
-                                <span class="text-lg">⚔️</span>
-                                <span>2. Sagrar Cavaleiro!</span>
-                            </button>
+                        <div id="drag-ceremony-2"
+                             data-drop-target="drop-zone-5"
+                             data-action="ceremony"
+                             data-id="espada"
+                             data-word="ESPADA"
+                             data-syllables="ES • PA • DA"
+                             data-emoji="⚔️"
+                             class="draggable-card bg-white border-2 border-emerald-500 rounded-2xl p-1.5 flex items-center justify-center gap-2.5">
+                            <img src="./biblioteca/objetos/espada-real.svg" alt="Espada" class="w-10 h-10 shrink-0 pointer-events-none" />
+                            <div class="text-left">
+                                <span class="block font-display font-bold text-sm sm:text-base text-emerald-950 uppercase">ESPADA</span>
+                                <span class="block font-display font-semibold text-[10px] sm:text-xs text-emerald-700">ES • PA • DA</span>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Botão da Lente -->
-                    <div class="flex items-center justify-center z-20 pt-1">
-                        <button onclick="toggleLens(5, event)" id="lens-btn-5" class="lens-toggle-btn bg-gradient-to-r from-purple-600 via-fuchsia-600 to-amber-500 text-white font-display font-bold text-xs sm:text-base px-5 py-2 rounded-2xl border-2 border-white flex items-center gap-2">
-                            <span class="text-xl">✨</span>
+                    <div class="flex items-center justify-center z-20">
+                        <button onclick="toggleLens(5, event)" id="lens-btn-5" class="lens-toggle-btn bg-gradient-to-r from-purple-600 via-fuchsia-600 to-amber-500 text-white font-display font-bold text-xs sm:text-sm px-5 py-1.5 rounded-2xl border-2 border-white flex items-center gap-2">
+                            <span class="text-lg">✨</span>
                             <span id="lens-btn-label-5">Usar Lente da Imaginação!</span>
                         </button>
                     </div>
@@ -996,121 +902,58 @@
 
             <!-- =========================================================================
                  PÁGINA 7 (CAPÍTULO 6): SANCHO PANÇA E OS MOINHOS OU GIGANTES!
+                 JOGO: ARRASTAR VENTO E GIGANTES ATÉ OS MOINHOS!
                  ========================================================================= -->
-            <section id="page-6" class="page-slide page-hidden w-full min-h-full lg:h-full flex flex-col lg:flex-row items-center justify-between gap-4 sm:gap-6">
-                <div id="frame-6" class="relative w-full lg:w-7/12 h-72 sm:h-80 lg:h-full shrink-0 bg-gradient-to-b from-orange-300 via-amber-200 to-lime-200 rounded-3xl border-4 border-amber-500 shadow-inner overflow-hidden flex flex-col justify-between p-2.5 sm:p-3 transition-colors duration-500">
+            <section id="page-6" class="page-slide page-hidden w-full min-h-full lg:h-full flex flex-col lg:flex-row items-center justify-between gap-3 sm:gap-5">
+                <div id="frame-6" class="relative w-full lg:w-7/12 h-80 sm:h-96 lg:h-full shrink-0 bg-gradient-to-b from-orange-300 via-amber-200 to-lime-200 rounded-3xl border-4 border-amber-500 shadow-inner overflow-hidden flex flex-col justify-between p-2.5">
                     
-                    <div class="flex items-center justify-between gap-2 z-20">
-                        <span id="lens-badge-6" class="bg-slate-800/90 text-white font-display font-bold text-xs sm:text-sm px-3 py-1.5 rounded-full shadow">
-                            👓 Lente da Realidade: Sancho Pança e os Moinhos de Vento
+                    <div class="flex flex-wrap items-center justify-between gap-1.5 z-20">
+                        <span id="lens-badge-6" class="bg-slate-900/85 text-white font-display font-bold text-[11px] sm:text-xs px-3 py-1 rounded-full shadow">
+                            👓 Lente da Realidade: Sancho Pança e os Moinhos
+                        </span>
+                        <span id="page6-status-pill" class="bg-sky-200 text-sky-950 font-display font-bold text-[10px] sm:text-xs px-2.5 py-1 rounded-full border border-sky-500">
+                            ✋ Arraste VENTO até os Moinhos!
                         </span>
                     </div>
 
-                    <!-- CENA SVG 6: MOINHOS DE VENTO VS GIGANTES COLOSSAIS -->
-                    <div class="relative flex-1 w-full min-h-0 flex flex-col justify-between items-center">
-                        <!-- Lente da Realidade: Moinhos de Vento Brancos e Sancho em seu burrinho -->
-                        <svg id="svg-real-6" viewBox="0 0 520 205" class="w-full flex-1 min-h-0 object-contain">
-                            <path d="M 0 165 Q 260 120 520 160 L 520 205 L 0 205 Z" fill="#65A30D"/>
+                    <!-- Palco de Colagem Nano Banana (Página 7) -->
+                    <div id="drop-zone-6" class="drop-zone-target relative flex-1 w-full min-h-0 my-1 rounded-2xl overflow-hidden border-2 border-amber-500 shadow-md bg-slate-900">
+                        <img id="scene-bg-6" src="./imagens/p6-real.jpg" alt="Sancho Pança e os Moinhos de Vento" class="w-full h-full object-cover transition-all duration-500" />
 
-                            <!-- Sancho Pança no burrinho Ruço (Esquerda) -->
-                            <g class="interactive-hitbox" onclick="sceneTapFeedback(event, '🫏 Sancho Pança: Senhor Dom Quixote, são apenas moinhos de vento!')" transform="translate(30, 75)">
-                                <rect x="15" y="65" width="75" height="34" rx="16" fill="#94A3B8" stroke="#475569" stroke-width="3"/>
-                                <circle cx="88" cy="58" r="14" fill="#94A3B8"/>
-                                <circle cx="52" cy="36" r="18" fill="#FDBA74"/>
-                                <ellipse cx="52" cy="62" rx="24" ry="20" fill="#B45309"/>
-                                <text x="52" y="116" font-size="11" font-weight="bold" fill="#1E293B" text-anchor="middle">Sancho e seu Burrinho</text>
-                            </g>
+                        <!-- Hotspots na pintura -->
+                        <div onclick="tapSceneHotspot(this, event, 'SANCHO PANÇA', 'SAN • CHO • PAN • ÇA', '🏝️', '🏝️ Sancho sonha em governar uma Ilha cheia de frutas!')"
+                             class="scene-hotspot" style="left: 10%; top: 28%; width: 26%; height: 62%;"></div>
+                        <div onclick="tapSceneHotspot(this, event, 'GIGANTES', 'GI • GAN • TES', '👹', '👹 Dom Quixote acha que os moinhos são Gigantes Bravos!')"
+                             class="scene-hotspot" style="left: 60%; top: 8%; width: 36%; height: 65%;"></div>
+                    </div>
 
-                            <!-- Moinho 1 -->
-                            <g transform="translate(255, 38)">
-                                <polygon points="20,35 46,35 54,115 12,115" fill="#FFFFFF" stroke="#78350F" stroke-width="3"/>
-                                <polygon points="12,35 33,10 54,35" fill="#B45309"/>
-                                <g id="real-blades-1" style="transform-origin: 33px 35px; animation: spinBlades 6s linear infinite;">
-                                    <line x1="33" y1="-28" x2="33" y2="98" stroke="#451A03" stroke-width="4.5"/>
-                                    <line x1="-28" y1="35" x2="96" y2="35" stroke="#451A03" stroke-width="4.5"/>
-                                    <rect x="33" y="-26" width="13" height="24" fill="#FEF3C7" stroke="#78350F" stroke-width="2"/>
-                                    <rect x="20" y="70" width="13" height="24" fill="#FEF3C7" stroke="#78350F" stroke-width="2"/>
-                                    <rect x="68" y="35" width="24" height="13" fill="#FEF3C7" stroke="#78350F" stroke-width="2"/>
-                                    <rect x="-26" y="22" width="24" height="13" fill="#FEF3C7" stroke="#78350F" stroke-width="2"/>
-                                </g>
-                            </g>
-
-                            <!-- Moinho 2 -->
-                            <g transform="translate(385, 50) scale(0.85)">
-                                <polygon points="20,35 46,35 54,115 12,115" fill="#FFFFFF" stroke="#78350F" stroke-width="3"/>
-                                <polygon points="12,35 33,10 54,35" fill="#B45309"/>
-                                <g id="real-blades-2" style="transform-origin: 33px 35px; animation: spinBlades 7s linear infinite;">
-                                    <line x1="33" y1="-28" x2="33" y2="98" stroke="#451A03" stroke-width="4.5"/>
-                                    <line x1="-28" y1="35" x2="96" y2="35" stroke="#451A03" stroke-width="4.5"/>
-                                    <rect x="33" y="-26" width="13" height="24" fill="#FEF3C7" stroke="#78350F" stroke-width="2"/>
-                                    <rect x="20" y="70" width="13" height="24" fill="#FEF3C7" stroke="#78350F" stroke-width="2"/>
-                                    <rect x="68" y="35" width="24" height="13" fill="#FEF3C7" stroke="#78350F" stroke-width="2"/>
-                                    <rect x="-26" y="22" width="24" height="13" fill="#FEF3C7" stroke="#78350F" stroke-width="2"/>
-                                </g>
-                            </g>
-                        </svg>
-
-                        <!-- Lente da Imaginação: Sancho Governador de Ilha + Gigantes de Quatro Braços Giratórios! -->
-                        <svg id="svg-imag-6" viewBox="0 0 520 205" class="hidden w-full flex-1 min-h-0 object-contain">
-                            <path d="M 0 165 Q 260 120 520 160 L 520 205 L 0 205 Z" fill="#4C1D95"/>
-
-                            <!-- Sancho sonhando com sua Ilha Tropical de Governador (Esquerda) -->
-                            <g class="interactive-hitbox" onclick="sceneTapFeedback(event, '🏝️ Governador Sancho Pança em sua Ilha cheia de banquetes!')" transform="translate(25, 45)">
-                                <rect x="0" y="0" width="125" height="115" rx="22" fill="#FEF9C3" stroke="#FACC15" stroke-width="4"/>
-                                <text x="62" y="45" font-size="34" text-anchor="middle">🏝️👑</text>
-                                <text x="62" y="80" font-size="28" text-anchor="middle">🍇🥧</text>
-                                <text x="62" y="104" font-size="11" font-weight="bold" fill="#92400E" text-anchor="middle">Ilha do Governador Sancho</text>
-                            </g>
-
-                            <!-- GIGANTE COLOSSAL 1 (Moinho Transformado) -->
-                            <g class="interactive-hitbox" onclick="sceneTapFeedback(event, '👹 GIGANTE BRIAREU: Uaaaah! Tenho braços de vento!')" transform="translate(245, 25)">
-                                <polygon points="14,35 56,35 66,130 4,130" fill="#DC2626" stroke="#7F1D1D" stroke-width="4"/>
-                                <circle cx="35" cy="25" r="22" fill="#FDBA74" stroke="#7F1D1D" stroke-width="3"/>
-                                <!-- Olhos bravos e bocão de gigante -->
-                                <circle cx="28" cy="22" r="4" fill="#1E293B"/>
-                                <circle cx="42" cy="22" r="4" fill="#1E293B"/>
-                                <rect x="26" y="30" width="18" height="7" rx="3" fill="#1E293B"/>
-                                <!-- Braços giratórios de Gigante -->
-                                <g id="imag-blades-1" style="transform-origin: 35px 55px; animation: spinBlades 4s linear infinite;">
-                                    <line x1="35" y1="-15" x2="35" y2="125" stroke="#FACC15" stroke-width="8" stroke-linecap="round"/>
-                                    <line x1="-35" y1="55" x2="105" y2="55" stroke="#FACC15" stroke-width="8" stroke-linecap="round"/>
-                                    <circle cx="35" cy="-15" r="10" fill="#FDBA74" stroke="#7F1D1D" stroke-width="2"/>
-                                    <circle cx="35" cy="125" r="10" fill="#FDBA74" stroke="#7F1D1D" stroke-width="2"/>
-                                    <circle cx="-35" cy="55" r="10" fill="#FDBA74" stroke="#7F1D1D" stroke-width="2"/>
-                                    <circle cx="105" cy="55" r="10" fill="#FDBA74" stroke="#7F1D1D" stroke-width="2"/>
-                                </g>
-                            </g>
-
-                            <!-- GIGANTE COLOSSAL 2 -->
-                            <g transform="translate(390, 42) scale(0.85)">
-                                <polygon points="14,35 56,35 66,130 4,130" fill="#7C3AED" stroke="#4C1D95" stroke-width="4"/>
-                                <circle cx="35" cy="25" r="22" fill="#C4B5FD" stroke="#4C1D95" stroke-width="3"/>
-                                <circle cx="28" cy="22" r="4" fill="#1E293B"/>
-                                <circle cx="42" cy="22" r="4" fill="#1E293B"/>
-                                <g id="imag-blades-2" style="transform-origin: 35px 55px; animation: spinBlades 5s linear infinite;">
-                                    <line x1="35" y1="-15" x2="35" y2="125" stroke="#F472B6" stroke-width="8" stroke-linecap="round"/>
-                                    <line x1="-35" y1="55" x2="105" y2="55" stroke="#F472B6" stroke-width="8" stroke-linecap="round"/>
-                                </g>
-                            </g>
-                        </svg>
-
-                        <!-- Controles do Vento e Reinício -->
-                        <div class="w-full grid grid-cols-2 gap-2.5 z-20 pb-1">
-                            <button onclick="blowWindGust(event)" class="btn-chunky bg-sky-500 hover:bg-sky-600 text-white font-display font-bold py-2 px-3 rounded-xl border-2 border-sky-700 flex items-center justify-center gap-2 text-xs sm:text-sm">
-                                <span class="text-lg">💨</span>
-                                <span>Soprar Vento!</span>
-                            </button>
-                            <button onclick="goToPage(0)" class="btn-chunky bg-amber-300 hover:bg-amber-400 text-amber-950 font-display font-bold py-2 px-3 rounded-xl border-2 border-amber-600 flex items-center justify-center gap-2 text-xs sm:text-sm">
-                                <i class="ph-bold ph-arrow-counter-clockwise"></i>
-                                <span>Ler de Novo</span>
-                            </button>
+                    <!-- Cartão Arrastável de Alfabetização (VENTO) + Botão Ler de Novo -->
+                    <div class="w-full grid grid-cols-2 gap-2.5 z-20 pb-1">
+                        <div id="drag-wind-1"
+                             data-drop-target="drop-zone-6"
+                             data-action="wind"
+                             data-id="vento"
+                             data-word="VENTO"
+                             data-syllables="VEN • TO"
+                             data-emoji="💨"
+                             class="draggable-card bg-white border-2 border-sky-500 rounded-2xl p-1.5 flex items-center justify-center gap-2.5">
+                            <img src="./biblioteca/objetos/vento-sopro.svg" alt="Vento" class="w-10 h-10 shrink-0 pointer-events-none" />
+                            <div class="text-left">
+                                <span class="block font-display font-bold text-sm sm:text-base text-sky-950 uppercase">VENTO</span>
+                                <span class="block font-display font-semibold text-[10px] sm:text-xs text-sky-600">VEN • TO</span>
+                            </div>
                         </div>
+
+                        <button onclick="goToPage(0)" class="btn-chunky bg-amber-300 hover:bg-amber-400 text-amber-950 font-display font-bold py-2 px-3 rounded-2xl border-2 border-amber-600 flex items-center justify-center gap-2 text-xs sm:text-sm">
+                            <i class="ph-bold ph-arrow-counter-clockwise text-lg"></i>
+                            <span>Ler de Novo</span>
+                        </button>
                     </div>
 
                     <!-- Botão da Lente -->
-                    <div class="flex items-center justify-center z-20 pt-1">
-                        <button onclick="toggleLens(6, event)" id="lens-btn-6" class="lens-toggle-btn bg-gradient-to-r from-purple-600 via-fuchsia-600 to-amber-500 text-white font-display font-bold text-xs sm:text-base px-5 py-2 rounded-2xl border-2 border-white flex items-center gap-2">
-                            <span class="text-xl">✨</span>
+                    <div class="flex items-center justify-center z-20">
+                        <button onclick="toggleLens(6, event)" id="lens-btn-6" class="lens-toggle-btn bg-gradient-to-r from-purple-600 via-fuchsia-600 to-amber-500 text-white font-display font-bold text-xs sm:text-sm px-5 py-1.5 rounded-2xl border-2 border-white flex items-center gap-2">
+                            <span class="text-lg">✨</span>
                             <span id="lens-btn-label-6">Usar Lente da Imaginação!</span>
                         </button>
                     </div>
@@ -1127,10 +970,10 @@
                     <p id="page-text-6" class="text-base sm:text-lg text-slate-800 font-bold leading-relaxed">
                         Dom Quixote convenceu seu vizinho bondoso, <span class="literacy-word" onclick="speakWord(this, 'SANCHO PANÇA', 'SAN • CHO • PAN • ÇA', '🥖')">SANCHO PANÇA</span>, a ser seu fiel <span class="literacy-word" onclick="speakWord(this, 'ESCUDEIRO', 'ES • CU • DEI • RO', '🛡️')">ESCUDEIRO</span>, prometendo que ele seria governador de uma <span class="literacy-word" onclick="speakWord(this, 'ILHA', 'I • LHA', '🏝️')">ILHA</span>!
                         <br><br>
-                        De repente, no alto da colina, apareceram trinta <span class="literacy-word" onclick="speakWord(this, 'MOINHOS DE VENTO', 'MO • I • NHOS • DE • VEN • TO', '🌬️')">MOINHOS DE VENTO</span>. Mas Dom Quixote gritou:
+                        De repente, quando o <span class="literacy-word" onclick="speakWord(this, 'VENTO', 'VEN • TO', '💨')">VENTO</span> soprou no alto da colina, apareceram trinta <span class="literacy-word" onclick="speakWord(this, 'MOINHOS', 'MO • I • NHOS', '🌬️')">MOINHOS</span>. Mas Dom Quixote gritou:
                         — Prepare-se, amigo Sancho! Vou enfrentar aqueles imensos <span class="literacy-word" onclick="speakWord(this, 'GIGANTES', 'GI • GAN • TES', '👹')">GIGANTES</span>!
                     </p>
-                    <div class="bg-amber-200/90 border-2 border-amber-500 rounded-2xl p-2.5 text-center">
+                    <div class="bg-amber-200/90 border-2 border-amber-500 rounded-2xl p-2 text-center">
                         <p class="font-display font-bold text-amber-950 text-xs sm:text-sm">
                             🎉 Fim da Parte 1! Na Parte 2: O Grande Duelo contra os Moinhos de Vento!
                         </p>
@@ -1170,42 +1013,59 @@
         let toastTimeout = null;
         let ptVoice = null;
 
-        // Estado das Lentes (false = Lente da Realidade, true = Lente da Imaginação) para cada uma das 7 páginas
+        // Estado das Lentes (false = Lente da Realidade, true = Lente da Imaginação)
         const lensImaginationState = [false, false, false, false, false, false, false];
 
-        // Estado das interatividades específicas
+        // Progresso dos mini-jogos pedagógicos de cada capítulo
         const readBooksSet = new Set();
         const equippedPiecesSet = new Set();
+        const horseCareSet = new Set();
+        const innItemsSet = new Set();
+        const ceremonyItemsSet = new Set();
 
-        // Descrições das Lentes para atualizar os selos superiores de cada página
+        // Metadados e caminhos locais das gravuras geradas pelo Nano Banana
         const lensMetadata = [
             {
+                realImg: "./imagens/p0-real.jpg",
+                imagImg: "./imagens/p0-imag.jpg",
                 realBadge: "👓 Lente da Realidade: O Vovô Alonso e seus Amigos",
                 imagBadge: "✨ Lente da Imaginação: O Herói Dourado de La Mancha!"
             },
             {
+                realImg: "./imagens/p1-real.jpg",
+                imagImg: "./imagens/p1-imag.jpg",
                 realBadge: "👓 Lente da Realidade: A Sala de Leitura do Vovô Alonso",
-                imagBadge: "✨ Lente da Imaginação: Dragões, Castelos e Leão Guardião!"
+                imagBadge: "✨ Lente da Imaginação: Dragões, Castelos e Magia!"
             },
             {
-                realBadge: "👓 Lente da Realidade: Armadura Enferrujada e Bacia de Barbeiro",
-                imagBadge: "✨ Lente da Imaginação: Armadura Real e Elmo de Ouro Puro!"
+                realImg: "./imagens/p2-real.jpg",
+                imagImg: "./imagens/p2-imag.jpg",
+                realBadge: "👓 Lente da Realidade: Armadura Enferrujada e Bacia",
+                imagBadge: "✨ Lente da Imaginação: Armadura Real de Ouro Puro!"
             },
             {
-                realBadge: "👓 Lente da Realidade: Cavalinho Magricela e Camponesa Aldonza",
-                imagBadge: "✨ Lente da Imaginação: Corcel Real e Princesa Dulcineia!"
+                realImg: "./imagens/p3-real.jpg",
+                imagImg: "./imagens/p3-imag.jpg",
+                realBadge: "👓 Lente da Realidade: Cavalinho Magricela e Aldonza",
+                imagBadge: "✨ Lente da Imaginação: Corcel Branco e Princesa Dulcineia!"
             },
             {
+                realImg: "./imagens/p4-real.jpg",
+                imagImg: "./imagens/p4-imag.jpg",
                 realBadge: "👓 Lente da Realidade: Uma Pousada Simples na Estrada",
                 imagBadge: "✨ Lente da Imaginação: Um Castelo com Torres de Prata!"
             },
             {
-                realBadge: "👓 Lente da Realidade: Pátio da Pousada e Bebedouro de Pedra",
-                imagBadge: "✨ Lente da Imaginação: Altar Sagrado e Sagração Real!"
+                realImg: "./imagens/p5-real.jpg",
+                imagImg: "./imagens/p5-imag.jpg",
+                realBadge: "👓 Lente da Realidade: Pátio da Pousada e Bebedouro",
+                imagBadge: "✨ Lente da Imaginação: Altar de Cristal e Sagração Real!"
             },
             {
-                realBadge: "👓 Lente da Realidade: Sancho Pança e os Moinhos de Vento",
-                imagBadge: "✨ Lente da Imaginação: Ilha do Governador e Gigantes Bravos!"
+                realImg: "./imagens/p6-real.jpg",
+                imagImg: "./imagens/p6-imag.jpg",
+                realBadge: "👓 Lente da Realidade: Sancho Pança e os Moinhos",
+                imagBadge: "✨ Lente da Imaginação: Ilha de Sancho e Gigantes Bravos!"
             }
         ];
 
@@ -1235,17 +1095,12 @@
         function toggleFullscreen() {
             playSound('wordPop');
             const docEl = document.documentElement;
-            const icon = document.getElementById('fullscreen-icon');
             if (!document.fullscreenElement && !document.webkitFullscreenElement) {
                 const req = docEl.requestFullscreen || docEl.webkitRequestFullscreen;
-                if (req) {
-                    req.call(docEl).catch(() => {});
-                }
+                if (req) req.call(docEl).catch(() => {});
             } else {
                 const exit = document.exitFullscreen || document.webkitExitFullscreen;
-                if (exit) {
-                    exit.call(document).catch(() => {});
-                }
+                if (exit) exit.call(document).catch(() => {});
             }
         }
 
@@ -1291,6 +1146,21 @@
                         gain.connect(ctx.destination);
                         osc.start(now + i * 0.045);
                         osc.stop(now + i * 0.045 + 0.18);
+                    });
+                } else if (type === 'crunch') {
+                    // Som crocante divertido para quando o cavalo come maçã ou cenoura
+                    const notes = [260, 340, 290, 420];
+                    notes.forEach((freq, i) => {
+                        const osc = ctx.createOscillator();
+                        const gain = ctx.createGain();
+                        osc.type = 'sawtooth';
+                        osc.frequency.setValueAtTime(freq, now + i * 0.06);
+                        gain.gain.setValueAtTime(0.12, now + i * 0.06);
+                        gain.gain.exponentialRampToValueAtTime(0.001, now + i * 0.06 + 0.09);
+                        osc.connect(gain);
+                        gain.connect(ctx.destination);
+                        osc.start(now + i * 0.06);
+                        osc.stop(now + i * 0.06 + 0.09);
                     });
                 } else if (type === 'lensMagic') {
                     const notes = [440, 554.37, 659.25, 880, 1108.73];
@@ -1346,17 +1216,9 @@
         }
 
         /* =====================================================================
-           1. ALFABETIZAÇÃO: CLICAR NAS PALAVRAS EM MAIÚSCULAS PARA OUVIR EM VOZ ALTA
+           1. ALFABETIZAÇÃO: FALAR PALAVRA E MOSTRAR SÍLABAS
            ===================================================================== */
-        function speakWord(element, wordText, syllablesText, emoji) {
-            playSound('wordPop');
-
-            // Destaca visualmente a palavra clicada
-            document.querySelectorAll('.literacy-word').forEach(el => el.classList.remove('word-speaking'));
-            element.classList.add('word-speaking');
-            setTimeout(() => element.classList.remove('word-speaking'), 1100);
-
-            // Mostra o balão de alfabetização com a separação silábica
+        function showPhonicsToastAndSpeak(wordText, syllablesText, emoji) {
             const toast = document.getElementById('phonics-toast');
             document.getElementById('phonics-emoji').textContent = emoji || '📖';
             document.getElementById('phonics-word').textContent = wordText;
@@ -1366,13 +1228,8 @@
             if (toastTimeout) clearTimeout(toastTimeout);
             toastTimeout = setTimeout(() => {
                 toast.classList.add('hidden');
-            }, 2600);
+            }, 2800);
 
-            // Solta estrelinhas na palavra
-            const rect = element.getBoundingClientRect();
-            spawnSparkles(rect.left + rect.width / 2, rect.top, emoji || '✨');
-
-            // Lê a palavra em voz alta imediatamente em Português (pt-BR)
             if ('speechSynthesis' in window) {
                 window.speechSynthesis.cancel();
                 setReadingPageUI(false);
@@ -1380,10 +1237,24 @@
                 const utterance = new SpeechSynthesisUtterance(wordText.toLowerCase());
                 utterance.lang = 'pt-BR';
                 if (ptVoice) utterance.voice = ptVoice;
-                utterance.rate = 0.85; // Pronúncia clara e didática para criança de 6 anos
+                utterance.rate = 0.85;
                 utterance.pitch = 1.05;
                 window.speechSynthesis.speak(utterance);
             }
+        }
+
+        function speakWord(element, wordText, syllablesText, emoji) {
+            playSound('wordPop');
+
+            document.querySelectorAll('.literacy-word').forEach(el => el.classList.remove('word-speaking'));
+            if (element) {
+                element.classList.add('word-speaking');
+                setTimeout(() => element.classList.remove('word-speaking'), 1100);
+                const rect = element.getBoundingClientRect();
+                spawnSparkles(rect.left + rect.width / 2, rect.top, emoji || '✨');
+            }
+
+            showPhonicsToastAndSpeak(wordText, syllablesText, emoji);
         }
 
         /* Leitura da página inteira */
@@ -1422,20 +1293,20 @@
                 btn.classList.replace('bg-emerald-500', 'bg-rose-500');
                 btn.classList.replace('border-emerald-700', 'border-rose-700');
                 label.textContent = 'Parar Voz';
-                icon.className = 'ph-fill ph-stop-circle text-lg animate-pulse';
+                icon.className = 'ph-fill ph-stop-circle text-base sm:text-lg animate-pulse';
             } else {
                 btn.classList.replace('bg-rose-500', 'bg-emerald-500');
                 btn.classList.replace('border-rose-700', 'border-emerald-700');
                 label.textContent = 'Ouvir Página';
-                icon.className = 'ph-fill ph-speaker-high text-lg';
+                icon.className = 'ph-fill ph-speaker-high text-base sm:text-lg';
             }
         }
 
         /* =====================================================================
-           2. LENTE DA REALIDADE ↔ LENTE DA IMAGINAÇÃO EM TODAS AS CENAS
+           2. LENTE DA REALIDADE ↔ LENTE DA IMAGINAÇÃO (CARREGAMENTO INSTANTÂNEO NANO BANANA)
            ===================================================================== */
-        function toggleLens(pageIdx, event) {
-            lensImaginationState[pageIdx] = !lensImaginationState[pageIdx];
+        function toggleLens(pageIdx, event, forceState = null) {
+            lensImaginationState[pageIdx] = forceState !== null ? forceState : !lensImaginationState[pageIdx];
             const isImag = lensImaginationState[pageIdx];
             const meta = lensMetadata[pageIdx];
 
@@ -1445,6 +1316,7 @@
             const badge = document.getElementById(`lens-badge-${pageIdx}`);
             const btn = document.getElementById(`lens-btn-${pageIdx}`);
             const btnLabel = document.getElementById(`lens-btn-label-${pageIdx}`);
+            const sceneImg = document.getElementById(`scene-bg-${pageIdx}`);
 
             // Efeito de onda mágica na moldura
             const ripple = document.createElement('div');
@@ -1457,77 +1329,319 @@
                 spawnSparkles(coords.x, coords.y, isImag ? '✨' : '👓');
             }
 
+            // Troca a pintura aquarela pré-gerada pelo Nano Banana
+            if (sceneImg) {
+                sceneImg.src = isImag ? meta.imagImg : meta.realImg;
+                sceneImg.classList.remove('animate-pop');
+                void sceneImg.offsetWidth;
+                sceneImg.classList.add('animate-pop');
+            }
+
             // Atualiza rótulo e estilo do botão da lente
             if (isImag) {
                 badge.innerHTML = `${meta.imagBadge}`;
-                badge.className = "bg-purple-700 text-amber-200 font-display font-bold text-xs sm:text-sm px-3 py-1.5 rounded-full shadow border border-amber-300";
+                badge.className = "bg-purple-700 text-amber-200 font-display font-bold text-[11px] sm:text-xs px-3 py-1 rounded-full shadow border border-amber-300";
                 btnLabel.textContent = "Voltar para a Lente da Realidade";
-                btn.className = "lens-toggle-btn bg-gradient-to-r from-slate-800 to-slate-700 text-amber-300 font-display font-bold text-xs sm:text-base px-5 py-2 rounded-2xl border-2 border-amber-400 flex items-center gap-2";
+                btn.className = "lens-toggle-btn bg-gradient-to-r from-slate-800 to-slate-700 text-amber-300 font-display font-bold text-xs sm:text-sm px-5 py-1.5 rounded-2xl border-2 border-amber-400 flex items-center gap-2";
             } else {
                 badge.innerHTML = `${meta.realBadge}`;
-                badge.className = "bg-slate-800/90 text-white font-display font-bold text-xs sm:text-sm px-3 py-1.5 rounded-full shadow";
+                badge.className = "bg-slate-900/85 text-white font-display font-bold text-[11px] sm:text-xs px-3 py-1 rounded-full shadow";
                 btnLabel.textContent = "Usar Lente da Imaginação!";
-                btn.className = "lens-toggle-btn bg-gradient-to-r from-purple-600 via-fuchsia-600 to-amber-500 text-white font-display font-bold text-xs sm:text-base px-5 py-2 rounded-2xl border-2 border-white flex items-center gap-2";
+                btn.className = "lens-toggle-btn bg-gradient-to-r from-purple-600 via-fuchsia-600 to-amber-500 text-white font-display font-bold text-xs sm:text-sm px-5 py-1.5 rounded-2xl border-2 border-white flex items-center gap-2";
             }
 
-            // Página 2 (Vestir Dom Quixote) transforma a própria armadura equipada
-            if (pageIdx === 2) {
-                updatePage2ArmorLens(isImag);
-            } else {
-                const svgReal = document.getElementById(`svg-real-${pageIdx}`);
-                const svgImag = document.getElementById(`svg-imag-${pageIdx}`);
-                if (svgReal && svgImag) {
-                    if (isImag) {
-                        svgReal.classList.add('hidden');
-                        svgImag.classList.remove('hidden');
-                        svgImag.classList.add('animate-pop');
-                    } else {
-                        svgImag.classList.add('hidden');
-                        svgReal.classList.remove('hidden');
-                        svgReal.classList.add('animate-pop');
-                    }
-                }
-            }
-        }
-
-        function updatePage2ArmorLens(isImag) {
-            // Garante que as peças apareçam para a criança ver a transformação
-            if (equippedPiecesSet.size === 0) {
-                [1, 2, 3, 4].forEach(id => equipPiece(id, null, true));
-            }
-            const armorRect = document.getElementById('armor-plate-rect');
-            const rustPatches = document.getElementById('rust-patches');
-            const royalCrest = document.getElementById('royal-crest');
-            const plume = document.getElementById('helmet-plume');
-            const shieldCircle = document.getElementById('shield-circle');
-            const shieldStar = document.getElementById('shield-star');
-            const aura = document.getElementById('knight-glow-2');
-
-            if (isImag) {
-                armorRect.setAttribute('fill', '#FACC15');
-                armorRect.setAttribute('stroke', '#B45309');
-                rustPatches.classList.add('hidden');
-                royalCrest.classList.remove('hidden');
-                plume.classList.remove('hidden');
-                shieldCircle.setAttribute('fill', '#FEF08A');
-                shieldCircle.setAttribute('stroke', '#CA8A04');
-                shieldStar.textContent = '👑';
-                aura.style.opacity = '0.85';
-            } else {
-                armorRect.setAttribute('fill', '#94A3B8');
-                armorRect.setAttribute('stroke', '#475569');
-                rustPatches.classList.remove('hidden');
-                royalCrest.classList.add('hidden');
-                plume.classList.add('hidden');
-                shieldCircle.setAttribute('fill', '#CBD5E1');
-                shieldCircle.setAttribute('stroke', '#475569');
-                shieldStar.textContent = '🍲';
-                aura.style.opacity = '0';
+            // Hotspots específicos da Capa (Página 0)
+            if (pageIdx === 0) {
+                document.getElementById('hotspots-real-0').classList.toggle('hidden', isImag);
+                document.getElementById('hotspots-imag-0').classList.toggle('hidden', !isImag);
             }
         }
 
         /* =====================================================================
-           3. INTERATIVIDADES BEM ESPAÇADAS DE CADA CAPÍTULO
+           3. MOTOR UNIFICADO DE DRAG-AND-DROP PARA TABLET ANDROID (POINTER EVENTS)
+           Funciona tanto arrastando com o dedo até a cena quanto tocando no cartão!
+           ===================================================================== */
+        function initDraggableCards() {
+            const cards = document.querySelectorAll('.draggable-card');
+            cards.forEach(card => {
+                let startX = 0, startY = 0;
+                let isDragging = false;
+                let ghostEl = null;
+                const targetZoneId = card.dataset.dropTarget;
+
+                card.addEventListener('pointerdown', (e) => {
+                    e.preventDefault();
+                    startX = e.clientX;
+                    startY = e.clientY;
+                    isDragging = false;
+
+                    // Pronuncia a palavra imediatamente ao tocar na peça para reforçar a alfabetização!
+                    showPhonicsToastAndSpeak(card.dataset.word, card.dataset.syllables, card.dataset.emoji);
+                    playSound('wordPop');
+
+                    const onPointerMove = (moveEv) => {
+                        const dx = moveEv.clientX - startX;
+                        const dy = moveEv.clientY - startY;
+
+                        if (!isDragging && Math.hypot(dx, dy) > 8) {
+                            isDragging = true;
+                            ghostEl = card.cloneNode(true);
+                            ghostEl.style.position = 'fixed';
+                            ghostEl.style.left = `${moveEv.clientX - card.offsetWidth / 2}px`;
+                            ghostEl.style.top = `${moveEv.clientY - card.offsetHeight / 2}px`;
+                            ghostEl.style.width = `${card.offsetWidth}px`;
+                            ghostEl.style.zIndex = '9999';
+                            ghostEl.style.pointerEvents = 'none';
+                            ghostEl.style.transform = 'scale(1.12) rotate(-3deg)';
+                            ghostEl.style. opacity = '0.95';
+                            document.body.appendChild(ghostEl);
+                        }
+
+                        if (isDragging && ghostEl) {
+                            ghostEl.style.left = `${moveEv.clientX - card.offsetWidth / 2}px`;
+                            ghostEl.style.top = `${moveEv.clientY - card.offsetHeight / 2}px`;
+
+                            const dropZone = document.getElementById(targetZoneId);
+                            if (dropZone) {
+                                const r = dropZone.getBoundingClientRect();
+                                const inside = moveEv.clientX >= r.left && moveEv.clientX <= r.right &&
+                                               moveEv.clientY >= r.top && moveEv.clientY <= r.bottom;
+                                dropZone.classList.toggle('drop-hover', inside);
+                            }
+                        }
+                    };
+
+                    const onPointerUp = (upEv) => {
+                        window.removeEventListener('pointermove', onPointerMove);
+                        window.removeEventListener('pointerup', onPointerUp);
+                        window.removeEventListener('pointercancel', onPointerUp);
+
+                        const dropZone = document.getElementById(targetZoneId);
+                        if (dropZone) dropZone.classList.remove('drop-hover');
+
+                        if (ghostEl) {
+                            ghostEl.remove();
+                            ghostEl = null;
+                        }
+
+                        if (isDragging && dropZone) {
+                            const r = dropZone.getBoundingClientRect();
+                            const droppedInside = upEv.clientX >= r.left && upEv.clientX <= r.right &&
+                                                  upEv.clientY >= r.top && upEv.clientY <= r.bottom;
+                            if (droppedInside) {
+                                triggerCardInteraction(card, { x: upEv.clientX, y: upEv.clientY });
+                            }
+                        } else if (!isDragging) {
+                            // Se a criança apenas tocou rapidamente no cartão, também executa a interação de forma acolhedora
+                            const r = dropZone ? dropZone.getBoundingClientRect() : card.getBoundingClientRect();
+                            triggerCardInteraction(card, { x: r.left + r.width / 2, y: r.top + r.height / 2 });
+                        }
+                    };
+
+                    window.addEventListener('pointermove', onPointerMove);
+                    window.addEventListener('pointerup', onPointerUp);
+                    window.addEventListener('pointercancel', onPointerUp);
+                });
+            });
+        }
+
+        function triggerCardInteraction(card, coords) {
+            const action = card.dataset.action;
+            const itemId = card.dataset.id;
+            const emoji = card.dataset.emoji || '✨';
+
+            card.classList.add('card-completed');
+            if (coords) spawnSparkles(coords.x, coords.y, emoji);
+
+            if (action === 'book') {
+                handleBookDrop(itemId, coords);
+            } else if (action === 'gear') {
+                handleGearDrop(itemId, coords);
+            } else if (action === 'horse-care') {
+                handleRocinanteCareDrop(itemId, coords);
+            } else if (action === 'inn') {
+                handleInnDrop(itemId, coords);
+            } else if (action === 'ceremony') {
+                handleCeremonyDrop(itemId, coords);
+            } else if (action === 'wind') {
+                handleWindDrop(coords);
+            }
+        }
+
+        /* =====================================================================
+           4. LÓGICA PROGRESSIVA DOS JOGOS EM CADA PÁGINA
+           ===================================================================== */
+
+        // Hotspots de Toque Direto nas Pinturas
+        function tapSceneHotspot(el, event, word, syllables, emoji, speechBubbleText) {
+            playSound('wordPop');
+            const coords = getEventCoords(event);
+            if (coords) spawnSparkles(coords.x, coords.y, emoji);
+            showPhonicsToastAndSpeak(word, `${syllables} — ${speechBubbleText}`, emoji);
+        }
+
+        function tapDulcineiaHotspot(event) {
+            const isImag = lensImaginationState[3];
+            if (isImag) {
+                tapSceneHotspot(null, event, 'DULCINEIA', 'DUL • CI • NEI • A', '👸', '👸 Sou a Princesa Dulcineia del Toboso!');
+            } else {
+                tapSceneHotspot(null, event, 'ALDONZA', 'AL • DON • ZA', '🌾', '🌾 Sou a camponesa Aldonza peneirando trigo!');
+            }
+        }
+
+        // PÁGINA 2 (CAPÍTULO 1): Arrastar os 3 Livros até o Vovô Alonso
+        function handleBookDrop(bookId, coords) {
+            readBooksSet.add(bookId);
+            const countEl = document.getElementById('books-count-ui');
+            if (countEl) countEl.textContent = readBooksSet.size;
+
+            if (bookId === '1') document.getElementById('magic-spawn-dragons').classList.remove('hidden');
+            if (bookId === '2') document.getElementById('magic-spawn-castles').classList.remove('hidden');
+            if (bookId === '3') document.getElementById('magic-spawn-knights').classList.remove('hidden');
+
+            const sceneImg = document.getElementById('scene-bg-1');
+            sceneImg.classList.remove('character-joy');
+            void sceneImg.offsetWidth;
+            sceneImg.classList.add('character-joy');
+
+            if (readBooksSet.size === 3) {
+                playSound('fanfare');
+                document.getElementById('page1-status-pill').textContent = '🎉 Todos os 3 livros lidos! A Imaginação despertou!';
+                if (!lensImaginationState[1]) {
+                    setTimeout(() => toggleLens(1, null, true), 650);
+                }
+            }
+        }
+
+        // PÁGINA 3 (CAPÍTULO 2): Arrastar as 4 Peças da Armadura até Dom Quixote
+        function handleGearDrop(gearId, coords) {
+            equippedPiecesSet.add(gearId);
+            const countEl = document.getElementById('armor-count-ui');
+            if (countEl) countEl.textContent = equippedPiecesSet.size;
+
+            const badge = document.getElementById(`equipped-badge-${gearId}`);
+            if (badge) badge.classList.remove('hidden');
+
+            const sceneImg = document.getElementById('scene-bg-2');
+            sceneImg.classList.remove('character-joy');
+            void sceneImg.offsetWidth;
+            sceneImg.classList.add('character-joy');
+
+            if (equippedPiecesSet.size === 4) {
+                playSound('fanfare');
+                document.getElementById('page2-status-pill').textContent = '👑 Cavaleiro Completo! Veja na Lente da Imaginação!';
+                if (!lensImaginationState[2]) {
+                    setTimeout(() => toggleLens(2, null, true), 700);
+                }
+            }
+        }
+
+        // PÁGINA 4 (CAPÍTULO 3): Arrastar MAÇÃ, CENOURA e ESCOVA até o Cavalo Rocinante (Reação Progressiva!)
+        function handleRocinanteCareDrop(itemId, coords) {
+            horseCareSet.add(itemId);
+            const totalCared = horseCareSet.size;
+
+            const sceneImg = document.getElementById('scene-bg-3');
+            const moodEmoji = document.getElementById('rocinante-mood-emoji');
+            const moodText = document.getElementById('rocinante-mood-text');
+            const heartsUi = document.getElementById('horse-hearts-ui');
+
+            // Animação física do cavalo saltando de alegria
+            sceneImg.classList.remove('horse-happy');
+            void sceneImg.offsetWidth;
+            sceneImg.classList.add('horse-happy');
+
+            // Atualiza os corações de felicidade progressiva
+            heartsUi.textContent = '❤️'.repeat(totalCared) + '🤍'.repeat(3 - totalCared);
+
+            if (itemId === 'maca') {
+                playSound('crunch');
+                moodEmoji.textContent = '🍎😋';
+                moodText.textContent = 'Nhac, nhac! Que MAÇÃ docinha e crocante!';
+            } else if (itemId === 'cenoura') {
+                playSound('crunch');
+                moodEmoji.textContent = '🥕🐴';
+                moodText.textContent = 'Croc, croc! Adoro CENOURA fresquinha!';
+            } else if (itemId === 'escova') {
+                playSound('lensMagic');
+                moodEmoji.textContent = '🪮✨';
+                moodText.textContent = 'Que cócegas boas! Minha crina está brilhando!';
+            }
+
+            // Reação especial quando a criança completa os 3 cuidados (MAÇÃ + CENOURA + ESCOVA)!
+            if (totalCared === 3) {
+                setTimeout(() => {
+                    playSound('fanfare');
+                    moodEmoji.textContent = '🦄👑';
+                    moodText.textContent = 'IIIRRRÁÁÁ! Estou forte como um Super Corcel Real!';
+                    if (!lensImaginationState[3]) {
+                        toggleLens(3, null, true);
+                    }
+                }, 900);
+            }
+        }
+
+        // PÁGINA 5 (CAPÍTULO 4): Arrastar TROMBETA e SOPA na Pousada/Castelo
+        function handleInnDrop(itemId, coords) {
+            innItemsSet.add(itemId);
+            const sceneImg = document.getElementById('scene-bg-4');
+            sceneImg.classList.remove('character-joy');
+            void sceneImg.offsetWidth;
+            sceneImg.classList.add('character-joy');
+
+            if (itemId === 'trombeta') {
+                playSound('fanfare');
+            } else {
+                playSound('wordPop');
+            }
+
+            if (innItemsSet.size === 2) {
+                document.getElementById('page4-status-pill').textContent = '🏰 A Pousada virou um Castelo Real!';
+                if (!lensImaginationState[4]) {
+                    setTimeout(() => toggleLens(4, null, true), 650);
+                }
+            }
+        }
+
+        // PÁGINA 6 (CAPÍTULO 5): Arrastar LUA CHEIA e ESPADA na Cerimônia
+        function handleCeremonyDrop(itemId, coords) {
+            ceremonyItemsSet.add(itemId);
+            const sceneImg = document.getElementById('scene-bg-5');
+            sceneImg.classList.remove('character-joy');
+            void sceneImg.offsetWidth;
+            sceneImg.classList.add('character-joy');
+
+            if (itemId === 'espada') {
+                playSound('fanfare');
+                document.getElementById('knight-crowned-badge').classList.remove('hidden');
+            } else {
+                playSound('lensMagic');
+            }
+
+            if (ceremonyItemsSet.size === 2) {
+                document.getElementById('page5-status-pill').textContent = '⚔️ Dom Quixote foi Sagrado Cavaleiro!';
+                if (!lensImaginationState[5]) {
+                    setTimeout(() => toggleLens(5, null, true), 700);
+                }
+            }
+        }
+
+        // PÁGINA 7 (CAPÍTULO 6): Arrastar VENTO até os Moinhos/Gigantes
+        function handleWindDrop(coords) {
+            playSound('lensMagic');
+            const sceneImg = document.getElementById('scene-bg-6');
+            sceneImg.classList.remove('horse-happy');
+            void sceneImg.offsetWidth;
+            sceneImg.classList.add('horse-happy');
+
+            document.getElementById('page6-status-pill').textContent = '💨 Uuuuuh! O Vento transformou os Moinhos em Gigantes!';
+            if (!lensImaginationState[6]) {
+                setTimeout(() => toggleLens(6, null, true), 650);
+            }
+        }
+
+        /* =====================================================================
+           PARTÍCULAS VISUAIS, NAVEGAÇÃO DE PÁGINAS E SWIPE PARA TABLET
            ===================================================================== */
         function getEventCoords(event) {
             if (!event) return null;
@@ -1540,141 +1654,6 @@
             return null;
         }
 
-        function sceneTapFeedback(event, message) {
-            playSound('wordPop');
-            const coords = getEventCoords(event);
-            if (coords) {
-                spawnSparkles(coords.x, coords.y, '✨');
-            }
-            const toast = document.getElementById('phonics-toast');
-            document.getElementById('phonics-emoji').textContent = '✨';
-            document.getElementById('phonics-word').textContent = message;
-            document.getElementById('phonics-syllables').textContent = 'TOQUE INTERATIVO';
-            toast.classList.remove('hidden');
-            if (toastTimeout) clearTimeout(toastTimeout);
-            toastTimeout = setTimeout(() => toast.classList.add('hidden'), 2400);
-        }
-
-        // Capítulo 1: Tocar nos 3 livros bem separados
-        function tapStoryBook(bookNum, event) {
-            readBooksSet.add(bookNum);
-            const countEl = document.getElementById('books-count-ui');
-            if (countEl) countEl.textContent = readBooksSet.size;
-
-            const badge = document.getElementById(`book-badge-${bookNum}`);
-            if (badge) {
-                badge.classList.remove('hidden');
-                badge.classList.add('animate-pop');
-            }
-
-            const coords = getEventCoords(event);
-            if (coords) {
-                spawnSparkles(coords.x, coords.y, '📖');
-            }
-
-            if (readBooksSet.size === 3) {
-                playSound('fanfare');
-                // Quando lê os 3 livros, ativa automaticamente a Lente da Imaginação para surpreender a criança!
-                if (!lensImaginationState[1]) {
-                    setTimeout(() => toggleLens(1, event), 550);
-                }
-            } else {
-                playSound('wordPop');
-            }
-        }
-
-        // Capítulo 2: Vestir as 4 peças de Dom Quixote
-        function equipPiece(pieceId, event, silent = false) {
-            equippedPiecesSet.add(pieceId);
-            const countEl = document.getElementById('armor-count-ui');
-            if (countEl) countEl.textContent = equippedPiecesSet.size;
-
-            const idMap = {
-                1: 'equip-armor-svg',
-                2: 'equip-helmet-svg',
-                3: 'equip-shield-svg',
-                4: 'equip-lance-svg'
-            };
-
-            const svgEl = document.getElementById(idMap[pieceId]);
-            if (svgEl) {
-                svgEl.classList.remove('hidden');
-                svgEl.classList.add('animate-pop');
-            }
-            if (pieceId === 1 || pieceId === 3) {
-                document.getElementById('equip-cape-svg').classList.remove('hidden');
-            }
-
-            const btn = document.getElementById(`btn-gear-${pieceId}`);
-            if (btn) {
-                btn.classList.replace('bg-white', 'bg-emerald-100');
-                btn.classList.replace('border-amber-500', 'border-emerald-600');
-            }
-
-            if (!silent) {
-                const coords = getEventCoords(event);
-                if (coords) spawnSparkles(coords.x, coords.y, '⚔️');
-                if (equippedPiecesSet.size === 4) {
-                    playSound('fanfare');
-                } else {
-                    playSound('wordPop');
-                }
-            }
-        }
-
-        // Capítulo 3: Alimentar e Escovar o Rocinante
-        function careForRocinante(emoji, event) {
-            playSound('fanfare');
-            const targetId = lensImaginationState[3] ? 'rocinante-group-imag' : 'rocinante-group-real';
-            const horseEl = document.getElementById(targetId);
-            if (horseEl) {
-                horseEl.classList.remove('horse-happy');
-                void horseEl.offsetWidth;
-                horseEl.classList.add('horse-happy');
-            }
-            const coords = getEventCoords(event);
-            if (coords) {
-                spawnSparkles(coords.x, coords.y, emoji);
-            }
-        }
-
-        // Capítulo 5: Cerimônia de Cavaleiro
-        function ceremonyStep(step, event) {
-            if (step === 1) {
-                sceneTapFeedback(event, '📖 Lendo o Grande Juramento dos Cavaleiros!');
-            } else {
-                playSound('fanfare');
-                document.getElementById('knight-star-real').classList.remove('hidden');
-                const coords = getEventCoords(event);
-                if (coords) {
-                    spawnSparkles(coords.x, coords.y, '👑');
-                }
-                sceneTapFeedback(event, '⚔️ Levante-se, Nobre Cavaleiro Dom Quixote!');
-            }
-        }
-
-        // Capítulo 6: Soprar o vento nos moinhos/gigantes
-        function blowWindGust(event) {
-            playSound('lensMagic');
-            ['real-blades-1', 'real-blades-2', 'imag-blades-1', 'imag-blades-2'].forEach(id => {
-                const el = document.getElementById(id);
-                if (el) el.style.animationDuration = '0.9s';
-            });
-            const coords = getEventCoords(event);
-            if (coords) {
-                spawnSparkles(coords.x, coords.y, '💨');
-            }
-            setTimeout(() => {
-                ['real-blades-1', 'real-blades-2', 'imag-blades-1', 'imag-blades-2'].forEach(id => {
-                    const el = document.getElementById(id);
-                    if (el) el.style.animationDuration = '6s';
-                });
-            }, 2600);
-        }
-
-        /* =====================================================================
-           PARTÍCULAS VISUAIS, NAVEGAÇÃO DE PÁGINAS E SWIPE PARA TABLET
-           ===================================================================== */
         function spawnSparkles(x, y, emoji = '✨') {
             for (let i = 0; i < 6; i++) {
                 const el = document.createElement('div');
@@ -1716,10 +1695,8 @@
 
             document.getElementById(`page-${currentPage}`).classList.add('page-hidden');
             currentPage = index;
-            const nextSection = document.getElementById(`page-${currentPage}`);
-            nextSection.classList.remove('page-hidden');
+            document.getElementById(`page-${currentPage}`).classList.remove('page-hidden');
 
-            // Volta o scroll da área central para o topo ao trocar de página em modo retrato
             const viewport = document.getElementById('pages-viewport');
             if (viewport) viewport.scrollTop = 0;
 
@@ -1738,41 +1715,14 @@
             if (currentPage > 0) goToPage(currentPage - 1);
         }
 
-        // Navegação por teclado
         window.addEventListener('keydown', (e) => {
             if (e.key === 'ArrowRight') nextPage();
             if (e.key === 'ArrowLeft') prevPage();
         });
 
-        // Gestos de Swipe Horizontal para Tablet Android
-        let touchStartX = 0;
-        let touchStartY = 0;
-        const viewportEl = document.getElementById('pages-viewport');
-
-        viewportEl.addEventListener('touchstart', (e) => {
-            if (e.touches.length === 1) {
-                touchStartX = e.touches[0].clientX;
-                touchStartY = e.touches[0].clientY;
-            }
-        }, { passive: true });
-
-        viewportEl.addEventListener('touchend', (e) => {
-            if (e.changedTouches.length === 1) {
-                const dx = e.changedTouches[0].clientX - touchStartX;
-                const dy = e.changedTouches[0].clientY - touchStartY;
-                // Apenas se o movimento for claramente horizontal e longo o suficiente
-                if (Math.abs(dx) > 75 && Math.abs(dx) > Math.abs(dy) * 1.8) {
-                    if (dx < 0) {
-                        nextPage();
-                    } else {
-                        prevPage();
-                    }
-                }
-            }
-        }, { passive: true });
-
         window.onload = () => {
             renderPaginationDots();
+            initDraggableCards();
             document.getElementById('btn-prev').disabled = true;
         };
     </script>

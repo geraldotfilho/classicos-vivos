@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="carrotGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FB923C"/>
+      <stop offset="50%" stop-color="#EA580C"/>
+      <stop offset="100%" stop-color="#9A3412"/>
+    </linearGradient>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#431407" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <g filter="url(#shadow)">
+    <!-- Folhagem Verde -->
+    <path d="M78 40 C88 18, 105 14, 102 28 C98 36, 86 42, 78 40 Z" fill="#22C55E" stroke="#14532D" stroke-width="3"/>
+    <path d="M75 36 C74 12, 88 8, 88 22 C88 32, 80 36, 75 36 Z" fill="#4ADE80" stroke="#14532D" stroke-width="3"/>
+    <path d="M82 44 C102 36, 112 46, 98 54 C90 56, 84 48, 82 44 Z" fill="#16A34A" stroke="#14532D" stroke-width="3"/>
+    <!-- Corpo da Cenoura -->
+    <path d="M84 36 C92 44, 88 56, 72 70 L24 104 C18 108, 12 102, 16 96 L50 48 C64 32, 76 28, 84 36 Z" fill="url(#carrotGrad)" stroke="#7C2D12" stroke-width="3.5"/>
+    <!-- Risquinhos da Cenoura -->
+    <path d="M58 46 Q65 52 68 58" fill="none" stroke="#7C2D12" stroke-width="3" stroke-linecap="round"/>
+    <path d="M44 62 Q51 68 54 74" fill="none" stroke="#7C2D12" stroke-width="3" stroke-linecap="round"/>
+    <path d="M32 78 Q38 82 40 88" fill="none" stroke="#7C2D12" stroke-width="3" stroke-linecap="round"/>
+    <!-- Brilho -->
+    <path d="M68 40 L30 88" stroke="#FFEDD5" stroke-width="4" stroke-linecap="round" opacity="0.55"/>
+  </g>
+</svg>
