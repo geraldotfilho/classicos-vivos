@@ -16,7 +16,6 @@ const totalPages = LIVRO.paginas.length;
 let currentPage = 0;
 let soundEnabled = true;
 let isReadingPage = false;
-let ptVoice = null;
 
 // Lente por página (false = Realidade, true = Imaginação) e progresso das interações
 const lensImaginationState = LIVRO.paginas.map(() => false);
@@ -95,15 +94,8 @@ const LENS_BTN_REAL = "lens-toggle-btn bg-gradient-to-r from-purple-600 via-fuch
 const LENS_BTN_IMAG = "lens-toggle-btn bg-gradient-to-r from-slate-800 to-slate-700 text-amber-300 font-display font-bold text-xs sm:text-sm px-5 py-1.5 rounded-2xl border-2 border-amber-400 flex items-center gap-2";
 const GRID_COLS = { 1: 'grid-cols-1', 2: 'grid-cols-2', 3: 'grid-cols-3', 4: 'grid-cols-4', 5: 'grid-cols-5' };
 
-/* Texto do livro: parágrafos separados por linha em branco e palavras-chave
-   no formato {{PALAVRA|SÍ • LA • BAS|emoji}} */
-function textoParaHtml(texto) {
-    return texto.trim().split(/\n\s*\n/).map(par => par.trim().replace(/\s*\n\s*/g, ' ').replace(
-        /\{\{([^|}]+)\|([^|}]+)\|([^}]+)\}\}/g,
-        (m, palavra, silabas, emoji) =>
-            `<span class="literacy-word" data-palavra="${escapeHtml(palavra)}" data-silabas="${escapeHtml(silabas)}" data-emoji="${escapeHtml(emoji)}">${escapeHtml(palavra)}</span>`
-    )).join('\n<br><br>\n');
-}
+/* Texto falado de cada frase, por página (montado a partir do texto canônico de assets/js/texto.js) */
+const FALAS = {};
 
 function montarHotspots(i, cena) {
     return (cena.hotspots || []).map((h, k) => {
@@ -225,7 +217,7 @@ function montarPaginaTexto(i, pagina) {
             <div class="page-text-scroll">
                 <div class="page-text-inner flex flex-col ${alinhamento} space-y-3">
                     ${topo}
-                    <p id="page-text-${i}" class="text-base sm:text-lg text-slate-800 font-bold leading-relaxed">${textoParaHtml(pagina.texto)}</p>
+                    <p id="page-text-${i}" class="text-base sm:text-lg text-slate-800 font-bold leading-relaxed">${Texto.paginaParaHtml(pagina.texto, i)}</p>
                     ${abrir}
                     ${final}
                 </div>
@@ -234,6 +226,7 @@ function montarPaginaTexto(i, pagina) {
 }
 
 function montarLivro() {
+    LIVRO.paginas.forEach((pagina, i) => { FALAS[i] = Texto.falasDaPagina(pagina.texto, i); });
     const parteRotulo = LIVRO.parte ? `Parte ${LIVRO.parte} de ${LIVRO.totalPartes || LIVRO.parte}` : '';
     const secoes = LIVRO.paginas.map((pagina, i) => `
         <section id="page-${i}" class="page-slide${i ? ' page-hidden' : ''} spread" aria-label="Página ${i + 1}">
@@ -251,6 +244,16 @@ function montarLivro() {
                 <i class="ph-fill ph-speaker-high"></i>
             </span>
         </button>
+    </div>
+
+    <div id="painel-voz" class="phonics-backdrop" role="dialog" aria-modal="true" aria-labelledby="painel-voz-titulo" aria-hidden="true">
+        <div class="painel-voz-card">
+            <div class="flex items-center justify-between gap-2 mb-3">
+                <h2 id="painel-voz-titulo" class="font-display font-bold text-2xl text-amber-950">🗣️ Voz da leitura</h2>
+                <button type="button" data-fechar-voz class="btn-chunky w-12 h-12 shrink-0 rounded-2xl bg-amber-400 border-2 border-amber-600 text-amber-950 text-xl flex items-center justify-center" aria-label="Fechar"><i class="ph-bold ph-x"></i></button>
+            </div>
+            <div id="painel-voz-corpo" class="space-y-3"></div>
+        </div>
     </div>
 
     <main id="book-container" class="storybook-frame relative w-full max-w-6xl rounded-[24px] sm:rounded-[30px] flex flex-col justify-between overflow-hidden">
@@ -272,6 +275,9 @@ function montarLivro() {
                 <button type="button" id="btn-tts" class="btn-chunky flex items-center gap-1.5 bg-emerald-500 hover:bg-emerald-600 text-white font-display font-semibold px-3 py-1.5 sm:py-2 rounded-2xl text-xs sm:text-sm border-2 border-emerald-700" title="Ouvir a página inteira">
                     <i id="tts-icon" class="ph-fill ph-speaker-high text-base sm:text-lg"></i>
                     <span id="tts-label" class="hidden sm:inline">Ouvir Página</span>
+                </button>
+                <button type="button" id="btn-voz" class="btn-chunky w-9 h-9 sm:w-10 sm:h-10 rounded-2xl bg-white hover:bg-amber-50 text-emerald-700 flex items-center justify-center border-2 border-emerald-600 text-base sm:text-lg" title="Escolher a voz e a velocidade da leitura" aria-label="Escolher a voz">
+                    <i class="ph-bold ph-user-sound"></i>
                 </button>
                 <button type="button" id="btn-sfx" class="btn-chunky w-9 h-9 sm:w-10 sm:h-10 rounded-2xl bg-amber-400 hover:bg-amber-500 text-amber-950 flex items-center justify-center border-2 border-amber-600 text-base sm:text-lg" title="Ativar/Desativar Efeitos Sonoros" aria-label="Efeitos sonoros">
                     <i id="sfx-icon" class="ph-fill ph-music-notes"></i>
@@ -300,16 +306,60 @@ function montarLivro() {
 
 
 /* =====================================================================
-   INICIALIZAÇÃO DE VOZ PT-BR (ANDROID CHROME / WEB SPEECH API)
+   VOZES DA LEITURA
+   Duas fontes, escolhidas no painel "Voz":
+   - narração GRAVADA (vozes neurais geradas pelo Gemini, frase por frase,
+     em <livro>/audio/<voz>/parte-N/<id>.mp3; lista em <livro>/audio/vozes.js);
+   - VOZ DO APARELHO (Web Speech API), reserva automática para qualquer
+     frase que ainda não tenha gravação.
    ===================================================================== */
+const AUDIO_BASE = LIVRO.audio || './audio/';
+const PREF_VOZ = 'cv-voz';               // 'gravada:<id>' ou 'aparelho:<voiceURI>'
+const PREF_VELOCIDADE = 'cv-velocidade'; // 'normal' ou 'devagar'
+const VELOCIDADES = { normal: { aparelho: 0.92, gravada: 1 }, devagar: { aparelho: 0.72, gravada: 0.8 } };
+const FRASE_AMOSTRA = 'Olá! Eu vou ler esta história com você.';
+
+let ptVoice = null;
+let vozesAparelho = [];
+let vozEscolhida = lerPreferencia(PREF_VOZ) || '';
+let velocidade = lerPreferencia(PREF_VELOCIDADE) === 'devagar' ? 'devagar' : 'normal';
+const narrador = new Audio();
+narrador.preload = 'auto';
+
+function lerPreferencia(chave) {
+    try { return localStorage.getItem(chave); } catch (e) { return null; }
+}
+
+function salvarPreferencia(chave, valor) {
+    try { localStorage.setItem(chave, valor); } catch (e) { /* sem armazenamento: vale só nesta visita */ }
+}
+
+/* Vozes melhores primeiro: neurais/"naturais" > aprimoradas > Google > demais; pt-BR antes de pt-PT */
+function pontuarVoz(v) {
+    const nome = v.name.toLowerCase();
+    const lang = v.lang.replace('_', '-').toLowerCase();
+    let pontos = lang === 'pt-br' ? 100 : 40;
+    if (/natural|neural|online/.test(nome)) pontos += 30;
+    if (/enhanced|premium|aprimorad|melhorad/.test(nome)) pontos += 25;
+    if (/google/.test(nome)) pontos += 15;
+    if (/luciana|francisca|thalita|felipe|antonio|daniel/.test(nome)) pontos += 5;
+    if (v.localService) pontos += 3;   // funciona sem internet
+    return pontos;
+}
+
+function nomeAmigavel(v) {
+    return v.name.replace(/^(Microsoft|Google|Apple)\s+/i, '').replace(/\s*\(.*?\)\s*/g, ' ')
+        .replace(/\s*-\s*Portuguese.*$/i, '').replace(/português.*$/i, '').trim() || v.name;
+}
+
 function loadPortugueseVoice() {
     if (!('speechSynthesis' in window)) return;
-    const voices = window.speechSynthesis.getVoices();
-    if (!voices || voices.length === 0) return;
-
-    ptVoice = voices.find(v => v.lang.replace('_', '-').toLowerCase() === 'pt-br' && (v.name.includes('Google') || v.name.includes('Luciana') || v.name.includes('Francisca')))
-           || voices.find(v => v.lang.replace('_', '-').toLowerCase() === 'pt-br')
-           || voices.find(v => v.lang.toLowerCase().startsWith('pt'));
+    const todas = window.speechSynthesis.getVoices() || [];
+    vozesAparelho = todas.filter(v => v.lang.toLowerCase().replace('_', '-').startsWith('pt'))
+        .sort((a, b) => pontuarVoz(b) - pontuarVoz(a));
+    const salva = vozEscolhida.startsWith('aparelho:') ? vozEscolhida.slice(9) : null;
+    ptVoice = (salva && vozesAparelho.find(v => v.voiceURI === salva)) || vozesAparelho[0] || null;
+    if (document.getElementById('painel-voz')?.classList.contains('is-open')) renderPainelVoz();
 }
 
 if ('speechSynthesis' in window) {
@@ -317,6 +367,190 @@ if ('speechSynthesis' in window) {
     if (window.speechSynthesis.onvoiceschanged !== undefined) {
         window.speechSynthesis.onvoiceschanged = loadPortugueseVoice;
     }
+}
+
+/* Narrações gravadas declaradas em <livro>/audio/vozes.js (window.VOZES_GRAVADAS) */
+function vozesGravadas() {
+    return Array.isArray(window.VOZES_GRAVADAS) ? window.VOZES_GRAVADAS : [];
+}
+
+function gravadaDisponivel(voz) {
+    return !!voz && (voz.partes || []).includes(LIVRO.parte);
+}
+
+function vozGravadaAtiva() {
+    if (!vozEscolhida.startsWith('gravada:')) return null;
+    const voz = vozesGravadas().find(v => v.id === vozEscolhida.slice(8));
+    return gravadaDisponivel(voz) ? voz : null;
+}
+
+function carregarVozesGravadas() {
+    const script = document.createElement('script');
+    script.src = `${AUDIO_BASE}vozes.js`;
+    script.onload = () => {
+        // Primeira visita: se a narração gravada desta parte estiver pronta, ela vira a voz padrão
+        if (!vozEscolhida) {
+            const pronta = vozesGravadas().find(gravadaDisponivel);
+            if (pronta) vozEscolhida = `gravada:${pronta.id}`;
+        }
+    };
+    document.head.appendChild(script);
+}
+
+function urlFrase(voz, id) {
+    return `${AUDIO_BASE}${voz.id}/parte-${LIVRO.parte}/${id}.mp3`;
+}
+
+function urlPalavra(slugPalavra) {
+    return `${AUDIO_BASE}palavras/${slugPalavra}.mp3`;
+}
+
+/* Toca um áudio gravado; rejeita se o arquivo não existir (aí entra a voz do aparelho) */
+function tocarGravacao(src) {
+    return new Promise((resolve, reject) => {
+        narrador.onended = () => resolve();
+        narrador.onerror = () => reject(new Error('sem gravação'));
+        narrador.src = src;
+        narrador.playbackRate = VELOCIDADES[velocidade].gravada;
+        const tentativa = narrador.play();
+        if (tentativa && tentativa.catch) tentativa.catch(reject);
+    });
+}
+
+function pararGravacao() {
+    narrador.onended = null;
+    narrador.onerror = null;
+    narrador.pause();
+}
+
+/* Fala um texto com a voz do aparelho; resolve ao terminar.
+   Se uma voz "online" falhar (tablet sem internet), tenta de novo com a melhor voz offline. */
+function falarComAparelho(texto, { taxa, voz } = {}) {
+    return new Promise((resolve, reject) => {
+        if (!('speechSynthesis' in window)) {
+            reject(new Error('sem voz'));
+            return;
+        }
+        const usar = voz || ptVoice;
+        const utterance = new SpeechSynthesisUtterance(texto);
+        utterance.lang = usar ? usar.lang : 'pt-BR';
+        if (usar) utterance.voice = usar;
+        utterance.rate = taxa || VELOCIDADES[velocidade].aparelho;
+        utterance.pitch = 1.03;
+        utterance.onend = () => resolve();
+        utterance.onerror = (e) => {
+            const interrompida = e && (e.error === 'interrupted' || e.error === 'canceled');
+            const offline = vozesAparelho.find(v => v.localService);
+            if (!interrompida && usar && !usar.localService && offline) {
+                if (usar === ptVoice) ptVoice = offline;   // até recarregar: não insiste na voz sem internet
+                falarComAparelho(texto, { taxa, voz: offline }).then(resolve, reject);
+            } else {
+                reject(e);
+            }
+        };
+        window.speechSynthesis.speak(utterance);
+    });
+}
+
+function calarTudo() {
+    pararGravacao();
+    if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+}
+
+/* =====================================================================
+   PAINEL "VOZ": escolher a voz e a velocidade (fica lembrado no tablet)
+   ===================================================================== */
+function abrirPainelVoz() {
+    stopReadingPage();
+    renderPainelVoz();
+    const painel = document.getElementById('painel-voz');
+    painel.classList.add('is-open');
+    painel.setAttribute('aria-hidden', 'false');
+}
+
+function fecharPainelVoz() {
+    const painel = document.getElementById('painel-voz');
+    if (!painel.classList.contains('is-open')) return;
+    calarTudo();
+    painel.classList.remove('is-open');
+    painel.setAttribute('aria-hidden', 'true');
+}
+
+function opcaoVoz(valor, titulo, detalhe, { ativa, desativada, tags = [] }) {
+    return `
+        <div class="opcao-voz${ativa ? ' opcao-voz-ativa' : ''}${desativada ? ' opcao-voz-off' : ''}">
+            <button type="button" class="flex-1 min-w-0 text-left" data-escolher-voz="${escapeHtml(valor)}" ${desativada ? 'disabled' : ''}>
+                <span class="block font-display font-bold text-amber-950 text-base leading-tight">${ativa ? '✅ ' : ''}${escapeHtml(titulo)}</span>
+                <span class="block text-xs font-semibold text-slate-600">${escapeHtml(detalhe)}</span>
+                ${tags.length ? `<span class="flex flex-wrap gap-1 mt-1">${tags.map(t => `<span class="text-[10px] font-extrabold uppercase bg-amber-100 text-amber-900 px-1.5 py-0.5 rounded-full">${escapeHtml(t)}</span>`).join('')}</span>` : ''}
+            </button>
+            ${desativada ? '' : `<button type="button" class="btn-chunky shrink-0 w-12 h-12 rounded-full bg-emerald-500 border-2 border-emerald-700 text-white text-xl flex items-center justify-center" data-testar-voz="${escapeHtml(valor)}" aria-label="Ouvir amostra de ${escapeHtml(titulo)}"><i class="ph-fill ph-play"></i></button>`}
+        </div>`;
+}
+
+function renderPainelVoz() {
+    const corpo = document.getElementById('painel-voz-corpo');
+    const gravadaAtual = vozGravadaAtiva();
+    const gravadas = vozesGravadas().map(v => opcaoVoz(
+        `gravada:${v.id}`, v.nome, gravadaDisponivel(v) ? v.descricao : `${v.descricao} (em produção para esta parte)`,
+        { ativa: gravadaAtual && gravadaAtual.id === v.id, desativada: !gravadaDisponivel(v), tags: ['gravada', 'mais natural'] }
+    )).join('');
+
+    const aparelhoAtiva = !gravadaAtual;
+    const doAparelho = vozesAparelho.map((v, k) => opcaoVoz(
+        `aparelho:${v.voiceURI}`, nomeAmigavel(v), v.lang.replace('_', '-'),
+        {
+            ativa: aparelhoAtiva && ptVoice && ptVoice.voiceURI === v.voiceURI,
+            tags: [k === 0 ? '⭐ recomendada' : null, v.localService ? 'funciona offline' : 'precisa de internet'].filter(Boolean)
+        }
+    )).join('');
+
+    corpo.innerHTML = `
+        ${gravadas ? `<h3 class="font-display font-bold text-amber-800 text-sm uppercase tracking-wider">🎙️ Narração gravada</h3>
+        <div class="space-y-2">${gravadas}</div>` : ''}
+        <h3 class="font-display font-bold text-amber-800 text-sm uppercase tracking-wider">📱 Vozes deste aparelho</h3>
+        <div class="space-y-2">${doAparelho || `
+            <p class="text-sm font-semibold text-slate-700 bg-amber-50 border-2 border-amber-200 rounded-2xl p-3">
+                Nenhuma voz em português foi encontrada neste aparelho. Peça a um adulto para instalar a voz
+                <strong>Português (Brasil)</strong> nas configurações de "Texto para fala" do tablet.
+            </p>`}</div>
+        <h3 class="font-display font-bold text-amber-800 text-sm uppercase tracking-wider">⏱️ Velocidade</h3>
+        <div class="grid grid-cols-2 gap-2">
+            <button type="button" data-velocidade="normal" class="btn-chunky rounded-2xl border-2 px-3 py-2 font-display font-bold ${velocidade === 'normal' ? 'bg-amber-400 border-amber-600 text-amber-950' : 'bg-white border-amber-300 text-amber-900'}">🐇 Normal</button>
+            <button type="button" data-velocidade="devagar" class="btn-chunky rounded-2xl border-2 px-3 py-2 font-display font-bold ${velocidade === 'devagar' ? 'bg-amber-400 border-amber-600 text-amber-950' : 'bg-white border-amber-300 text-amber-900'}">🐢 Devagar</button>
+        </div>`;
+}
+
+function testarVoz(valor) {
+    calarTudo();
+    if (valor.startsWith('gravada:')) {
+        const voz = vozesGravadas().find(v => v.id === valor.slice(8));
+        if (voz) tocarGravacao(`${AUDIO_BASE}${voz.id}/amostra.mp3`).catch(() => {});
+        return;
+    }
+    const v = vozesAparelho.find(x => x.voiceURI === valor.slice(9));
+    const anterior = ptVoice;
+    ptVoice = v || ptVoice;
+    falarComAparelho(FRASE_AMOSTRA).catch(() => {});
+    ptVoice = anterior;
+}
+
+function escolherVoz(valor) {
+    vozEscolhida = valor;
+    salvarPreferencia(PREF_VOZ, valor);
+    if (valor.startsWith('aparelho:')) {
+        ptVoice = vozesAparelho.find(v => v.voiceURI === valor.slice(9)) || ptVoice;
+    }
+    playSound('wordPop');
+    renderPainelVoz();
+    testarVoz(valor);
+}
+
+function escolherVelocidade(valor) {
+    velocidade = valor === 'devagar' ? 'devagar' : 'normal';
+    salvarPreferencia(PREF_VELOCIDADE, velocidade);
+    playSound('wordPop');
+    renderPainelVoz();
 }
 
 /* =====================================================================
@@ -506,26 +740,30 @@ function speakWord(element, wordText, syllablesText, emoji) {
         spawnSparkles(rect.left + rect.width / 2, rect.top, emoji || '✨');
     }
 
-    openPhonicsCard(wordText, syllablesText, emoji);
+    openPhonicsCard(wordText, syllablesText, emoji, element && element.dataset.slug);
     stopReadingPage();
-    pronounceWord(wordText);
+    pronounceWord(wordText, element && element.dataset.slug);
 }
 
 let phonicsCurrentWord = '';
+let phonicsCurrentSlug = '';
 
-function pronounceWord(wordText) {
-    if (!('speechSynthesis' in window)) return;
-    window.speechSynthesis.cancel();
-    const utterance = new SpeechSynthesisUtterance(wordText.toLowerCase());
-    utterance.lang = 'pt-BR';
-    if (ptVoice) utterance.voice = ptVoice;
-    utterance.rate = 0.85;
-    utterance.pitch = 1.05;
-    window.speechSynthesis.speak(utterance);
+/* Palavra-chave: tenta a gravação pausada (sílabas + palavra) e, se não houver, usa a voz do aparelho */
+function pronounceWord(wordText, slugPalavra) {
+    calarTudo();
+    const aparelho = () => falarComAparelho(wordText.toLowerCase(), { taxa: VELOCIDADES[velocidade].aparelho * 0.92 }).catch(() => {});
+    tocarGravacao(urlPalavra(slugPalavra || Texto.slug(wordText))).catch(aparelho);
 }
 
-function openPhonicsCard(wordText, syllablesText, emoji) {
+/* Texto livre (contagens, palavras ordenadas): sempre com a voz do aparelho */
+function falar(texto) {
+    calarTudo();
+    falarComAparelho(texto).catch(() => {});
+}
+
+function openPhonicsCard(wordText, syllablesText, emoji, slugPalavra) {
     phonicsCurrentWord = wordText;
+    phonicsCurrentSlug = slugPalavra || '';
     document.getElementById('phonics-emoji').textContent = emoji || '📖';
     document.getElementById('phonics-word').textContent = wordText;
 
@@ -551,12 +789,12 @@ function closePhonicsCard() {
     if (!modal.classList.contains('is-open')) return;
     modal.classList.remove('is-open');
     modal.setAttribute('aria-hidden', 'true');
-    if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+    calarTudo();
 }
 
 function replayPhonicsWord() {
     playSound('wordPop');
-    pronounceWord(phonicsCurrentWord);
+    pronounceWord(phonicsCurrentWord, phonicsCurrentSlug);
 }
 
 
@@ -565,56 +803,10 @@ function replayPhonicsWord() {
    ===================================================================== */
 let readingSession = 0;
 
-// Envolve cada frase do texto em <span class="sentence"> preservando as palavras interativas.
-// Não quebra antes de minúscula: "bravura! — pensou o fidalgo" continua sendo uma frase só.
-function splitPageTextIntoSentences(textEl) {
-    const frag = document.createDocumentFragment();
-    let current = null;
-    const openSentence = () => {
-        if (!current) {
-            current = document.createElement('span');
-            current.className = 'sentence';
-            frag.appendChild(current);
-        }
-        return current;
-    };
-    const appendText = (text) => {
-        if (!text) return;
-        if (!current && !text.trim()) {
-            frag.appendChild(document.createTextNode(text));
-            return;
-        }
-        openSentence().appendChild(document.createTextNode(text));
-    };
-
-    Array.from(textEl.childNodes).forEach(node => {
-        if (node.nodeType === Node.TEXT_NODE) {
-            const text = node.textContent;
-            const boundary = /([.!?…]+[”"»]?)(\s+)(?!(?:[—–]\s*)?[a-zà-ÿ])/g;
-            let last = 0;
-            let m;
-            while ((m = boundary.exec(text)) !== null) {
-                appendText(text.slice(last, m.index + m[1].length));
-                current = null;
-                frag.appendChild(document.createTextNode(m[2]));
-                last = m.index + m[0].length;
-            }
-            appendText(text.slice(last));
-        } else if (node.nodeName === 'BR') {
-            current = null;
-            frag.appendChild(node);
-        } else {
-            openSentence().appendChild(node);
-        }
-    });
-    textEl.replaceChildren(frag);
-}
-
-// Texto falado: palavras-chave em minúsculas para a voz não soletrar "IMAGINAÇÃO" como sigla
+// Texto falado da frase (de assets/js/texto.js): sem travessões, palavras-chave em minúsculas, etc.
 function speechTextOf(el) {
-    const clone = el.cloneNode(true);
-    clone.querySelectorAll('.literacy-word').forEach(w => { w.textContent = w.textContent.toLowerCase(); });
-    return clone.textContent.replace(/\s+/g, ' ').trim();
+    const falas = FALAS[pageIndexOf(el)] || {};
+    return falas[el.dataset.frase] || el.textContent.replace(/\s+/g, ' ').trim();
 }
 
 function clearSentenceHighlight() {
@@ -623,14 +815,13 @@ function clearSentenceHighlight() {
 
 function stopReadingPage() {
     readingSession++;
-    if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+    calarTudo();
     clearSentenceHighlight();
     setReadingPageUI(false);
 }
 
+/* "Ouvir Página": frase por frase, com a narração gravada quando houver e a voz do aparelho como reserva */
 function toggleReadPageAloud() {
-    if (!('speechSynthesis' in window)) return;
-
     if (isReadingPage) {
         stopReadingPage();
         return;
@@ -640,9 +831,14 @@ function toggleReadPageAloud() {
     if (!textEl) return;
     const sentences = Array.from(textEl.querySelectorAll('.sentence'));
 
-    window.speechSynthesis.cancel();
+    calarTudo();
     const session = ++readingSession;
+    const voz = vozGravadaAtiva();
     setReadingPageUI(true);
+
+    const falhou = () => { if (session === readingSession) stopReadingPage(); };
+    // Pequena pausa entre as frases para respeitar o ritmo da leitura
+    const proxima = (i) => () => { if (session === readingSession) setTimeout(() => speakSentence(i + 1), voz ? 150 : 250); };
 
     const speakSentence = (i) => {
         if (session !== readingSession) return;
@@ -660,17 +856,14 @@ function toggleReadPageAloud() {
         sentence.classList.add('sentence-reading');
         scrollTextToSentence(sentence);
 
-        const utterance = new SpeechSynthesisUtterance(text);
-        utterance.lang = 'pt-BR';
-        if (ptVoice) utterance.voice = ptVoice;
-        utterance.rate = 0.92;
-        utterance.pitch = 1.05;
-        // Pequena pausa entre as frases para respeitar o ritmo da leitura
-        utterance.onend = () => setTimeout(() => speakSentence(i + 1), 250);
-        utterance.onerror = () => {
-            if (session === readingSession) stopReadingPage();
-        };
-        window.speechSynthesis.speak(utterance);
+        const comAparelho = () => falarComAparelho(text).then(proxima(i), falhou);
+        if (voz) {
+            tocarGravacao(urlFrase(voz, sentence.dataset.frase)).then(proxima(i), () => {
+                if (session === readingSession) comAparelho();
+            });
+        } else {
+            comAparelho();
+        }
     };
     speakSentence(0);
 }
@@ -872,7 +1065,7 @@ function apiDaPagina(i) {
         convidarImaginacao: () => inviteImagination(i),
         elemento: (seletor) => document.querySelector(`#page-${i} ${seletor}`),
         som: playSound,
-        falar: pronounceWord,
+        falar,
         faiscas: spawnSparkles
     };
 }
@@ -1144,7 +1337,7 @@ function handleOrdemPalavra(pageIdx, card, coords) {
 
     st.usados.add(id);
     completeCard(card, coords);
-    pronounceWord(card.dataset.word);
+    falar(card.dataset.word.toLowerCase());
 
     const faixa = document.getElementById(`faixa-${pageIdx}`);
     const vazia = faixa.querySelector('.faixa-vazia');
@@ -1178,7 +1371,7 @@ function handleContagem(pageIdx, card, coords) {
     if (lensImaginationState[pageIdx]) lensImaginationState[pageIdx] = false;
     renderScene(pageIdx);
     dispararEfeito(pageIdx, id, c.efeito || 'atravessar');
-    if (c.falas && c.falas[n]) pronounceWord(c.falas[n]);
+    if (c.falas && c.falas[n]) falar(c.falas[n]);
     if (st.usados.size === c.sequencia.length) {
         card.classList.add('card-completed');
         setTimeout(() => { playSound('fanfare'); inviteImagination(pageIdx); }, 900);
@@ -1485,6 +1678,25 @@ function initEventos() {
             tapHotspot(hotspot, e);
             return;
         }
+        const escolher = e.target.closest('[data-escolher-voz]');
+        if (escolher) {
+            escolherVoz(escolher.dataset.escolherVoz);
+            return;
+        }
+        const testar = e.target.closest('[data-testar-voz]');
+        if (testar) {
+            testarVoz(testar.dataset.testarVoz);
+            return;
+        }
+        const vel = e.target.closest('[data-velocidade]');
+        if (vel) {
+            escolherVelocidade(vel.dataset.velocidade);
+            return;
+        }
+        if (e.target.closest('[data-fechar-voz]') || e.target.id === 'painel-voz') {
+            fecharPainelVoz();
+            return;
+        }
         const nav = e.target.closest('[data-nav]');
         if (nav) {
             if (nav.dataset.nav === 'next') nextPage();
@@ -1495,6 +1707,7 @@ function initEventos() {
     document.getElementById('btn-prev').addEventListener('click', prevPage);
     document.getElementById('btn-next').addEventListener('click', nextPage);
     document.getElementById('btn-tts').addEventListener('click', toggleReadPageAloud);
+    document.getElementById('btn-voz').addEventListener('click', abrirPainelVoz);
     document.getElementById('btn-sfx').addEventListener('click', toggleSoundEffects);
     document.getElementById('btn-fullscreen').addEventListener('click', toggleFullscreen);
     document.getElementById('phonics-card').addEventListener('click', replayPhonicsWord);
@@ -1505,8 +1718,11 @@ function initEventos() {
     });
 
     window.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') closePhonicsCard();
-        if (document.getElementById('phonics-modal').classList.contains('is-open')) return;
+        if (e.key === 'Escape') {
+            closePhonicsCard();
+            fecharPainelVoz();
+        }
+        if (document.querySelector('.phonics-backdrop.is-open')) return;
         if (e.key === 'ArrowRight') nextPage();
         if (e.key === 'ArrowLeft') prevPage();
     });
@@ -1541,14 +1757,13 @@ function initEventos() {
 function iniciarLivro() {
     montarLivro();
     initEventos();
+    carregarVozesGravadas();
     initArtFallbacks();
     renderPaginationDots();
     initDraggableCards();
     document.getElementById('btn-prev').disabled = true;
 
     for (let i = 0; i < totalPages; i++) {
-        const textEl = document.getElementById(`page-text-${i}`);
-        if (textEl) splitPageTextIntoSentences(textEl);
         const c = cartoesDe(i);
         if (c && c.tipo === 'progressivo') updateProgressHints(i);
         renderCamadas(i);

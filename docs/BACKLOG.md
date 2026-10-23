@@ -48,6 +48,13 @@ Levantado na inspeção completa do sprint 1 (2026-10): código, ilustrações e
 - **A-1, moinhos**: cenário sem pás (`p7-real-sem-pas`) + pás em aquarela (`camadas/p7-pas-moinho`) sobre os cubos, paradas na Realidade e girando com o VENTO. Fim das pás vetoriais duplicadas.
 - **A-2, pousada em camadas**: fundo limpo + pastor (parado/tocando), porquinhos dançando, notas flutuando e estalajadeiro (acenando/servindo sopa). TROMBETA e SOPA funcionam em qualquer ordem, ou juntas, e a sopa agora aparece de verdade. Retoque das bordas das camadas pedido em P-003.
 
+## ✅ Entregue no sprint 6 (vozes)
+
+- **Painel "Voz"**: vozes pt do aparelho ordenadas da mais natural, com amostra, etiquetas offline/internet e velocidade normal/devagar (antigo M-3), lembradas no tablet. Aviso para instalar a voz pt-BR quando não houver nenhuma (antigo M-2).
+- **Fala mais natural**: sem travessões lidos, pausas nos diálogos, onomatopeias ("tac, tac") e palavras-chave em minúsculas.
+- **Narração gravada pronta para receber áudio**: tocador frase a frase com a voz do aparelho como reserva, voz offline quando a online falha, MP3 guardado sob demanda pelo service worker.
+- **Segmentação canônica** (`assets/js/texto.js`) e exportação das 214 frases e 105 palavras-chave (`docs/narracao/`) para o Gemini gravar (P-006, `docs/TODO-NARRACAO.md`). Conversor WAV/PCM → MP3 sem dependências nativas (`npm run build:audio`).
+
 ## 🔴 Prioridade alta
 
 | ID | Item | Detalhes |
@@ -60,9 +67,7 @@ Levantado na inspeção completa do sprint 1 (2026-10): código, ilustrações e
 
 | ID | Item | Detalhes |
 | :--- | :--- | :--- |
-| M-1 | **Pronúncia silábica de fato** | O §3.2 promete pronúncia **pausada por sílabas**, mas `speakWord` fala a palavra inteira (só o balão mostra `I • MA • GI • NA • ÇÃO`). Proposta: falar as sílabas com pausas (destacando cada uma no balão) e depois a palavra inteira. Testar a qualidade das sílabas isoladas nas vozes pt-BR do Android, porque algumas soam estranhas sozinhas ("ÇÃO"). |
-| M-2 | **Sem voz pt-BR instalada** | Se o tablet não tiver voz em português, o leitor fala com sotaque estrangeiro ou fica mudo. Mostrar um aviso discreto para o adulto, com instruções para instalar a voz. |
-| M-3 | **Velocidade da narração** | Botão com 2 velocidades (normal / devagar ≈ 0,75) para leitores iniciantes. |
+| M-1 | **Pronúncia silábica de fato** (encaminhado: gravações em `audio/palavras/`, P-006) | O §3.2 promete pronúncia **pausada por sílabas**, mas `speakWord` fala a palavra inteira (só o balão mostra `I • MA • GI • NA • ÇÃO`). Proposta: falar as sílabas com pausas (destacando cada uma no balão) e depois a palavra inteira. Testar a qualidade das sílabas isoladas nas vozes pt-BR do Android, porque algumas soam estranhas sozinhas ("ÇÃO"). |
 | M-4 | **Tocar numa frase para ouvi-la** | Hoje só a página inteira ou as palavras-chave. Útil para reler um trecho. Cuidar para não conflitar com o toque nas palavras-chave. |
 | M-5 | **"Ler de Novo" não reinicia** | Volta à capa, mas mantém lentes ativadas, armadura vestida e cartões verdes. Decidir: reiniciar tudo (recomendado: nova leitura, nova descoberta). |
 | M-6 | **Continuar de onde parou** | Lembrar a última página lida (`localStorage`, com `try/catch`) e oferecer "Continuar" na capa e na biblioteca. |

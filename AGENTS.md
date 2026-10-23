@@ -29,7 +29,7 @@ O projeto adota uma filosofia **Zero-Build para o leitor**: cada livro é um HTM
 - **Ilustrações em WebP** (1376 × 768, qualidade 80, ~150–230 KB cada).
 - **PWA**: `manifest.webmanifest` + `sw.js` na raiz. O service worker baixa todos os livros na primeira visita via HTTPS (GitHub Pages). HTML segue a estratégia rede-primeiro; o resto, cache-primeiro.
 - **Web Audio API Procedural**: Todos os efeitos sonoros (fanfarras de cavaleiro, arpeggios mágicos, cliques táteis de cartões de leitura, pops lúdicos) são sintetizados matematicamente via código (`AudioContext`), dispensando dependências de arquivos MP3/WAV externos pesados.
-- **Web Speech API (`pt-BR`)**: Síntese de voz nativa para leitura da página completa e para a pronúncia silábica pausada das palavras-chave em destaque.
+- **Narração**: gravada (vozes neurais geradas pelo Gemini, MP3 frase por frase) com a **Web Speech API (`pt-BR`)** do aparelho como reserva automática. Ver §2.6.
 - **Pointer Events**: Eventos unificados (`pointerdown`, `pointermove`, `pointerup`) para drag-and-drop fluido compatível tanto com touchscreen/caneta quanto com mouse. O swipe de troca de página ignora toques iniciados em `.draggable-card`.
 
 ### 2.1.1 Ferramentas de Desenvolvimento (`npm run build`)
@@ -37,6 +37,8 @@ O projeto adota uma filosofia **Zero-Build para o leitor**: cada livro é um HTM
 npm install          # uma vez (Tailwind, fontes e ícones como devDependencies)
 npm run build        # fontes + ícones + Tailwind + service worker
 npm run build:images # converte novos JPG/PNG de <livro>/imagens/ para WebP
+npm run build:audio  # converte a narração WAV/PCM de <livro>/audio/ para MP3 (corta silêncios)
+npm run exportar:frases # lista de frases e palavras-chave para gravar (docs/narracao/, já incluso no build)
 ```
 **Rode `npm run build` sempre que** usar uma classe Tailwind nova, um ícone Phosphor novo, ou adicionar/alterar qualquer HTML ou imagem. O `sw.js` precisa da lista atualizada e de uma nova versão de cache, senão os tablets não recebem a mudança. Os scripts ficam em `tools/`, e `sw.js` é gerado a partir de `tools/sw.template.js` (nunca edite `sw.js` à mão).
 
@@ -67,9 +69,9 @@ npm run build:images # converte novos JPG/PNG de <livro>/imagens/ para WebP
 - `goToPage` pré-carrega todas as ilustrações da página atual e da seguinte (`allSceneSrcs`).
 
 ### 2.2.2 Leitura Guiada Frase a Frase
-- Na inicialização, `splitPageTextIntoSentences` envolve cada frase de `#page-text-N` em `<span class="sentence">`, sem tocar nas `.literacy-word`. Não há quebra antes de minúscula, então falas com travessão ("bravura! — pensou o fidalgo") ficam numa frase só.
+- A divisão em frases é **canônica** e fica em `assets/js/texto.js`, usado pelo motor e pela exportação (`tools/exportar-frases.mjs`). Cada frase vira `<span class="sentence" data-frase="pN-sK">` (página N, frase K), e esse ID é o nome do arquivo da narração gravada. Não há quebra antes de minúscula, então falas com travessão ("bravura! — pensou o fidalgo") ficam numa frase só. **Mudou a regra de corte ou o texto?** Rode `npm run exportar:frases`: o `hash` de cada frase mostra o que precisa ser regravado.
 - "Ouvir Página" narra frase por frase (`.sentence-reading` destaca e rola até a frase). Frases curtas também evitam o corte de falas longas do Chrome Android.
-- O texto falado converte as palavras-chave para minúsculas (`speechTextOf`), para a voz não soletrar "IMAGINAÇÃO" como sigla. Para interromper a leitura, use sempre `stopReadingPage()`.
+- O texto falado (`prepararFala`) converte as palavras-chave para minúsculas (a voz não soletra "IMAGINAÇÃO" como sigla), tira o travessão que abre a fala, troca o travessão do meio por uma pausa curta e lê onomatopeias ("TAC-TAC" → "tac, tac"). Para interromper a leitura, use sempre `stopReadingPage()` (cala a gravação e a voz do aparelho).
 
 ### 2.3 Responsividade & Regras de Layout do Reader Frame
 Para garantir que o texto narrativo nunca seja cortado ou coberto pela barra de navegação inferior:
@@ -137,6 +139,13 @@ window.LIVRO = {
   | `livre` | só celebra. **Evite** (§3.3) | (provisório) |
 - **Arte ausente não quebra nada**: cena sem arquivo mostra "🎨 Ilustração a caminho"; camada sem arquivo mostra o `emoji` dela. Assim o texto e as interações podem ser escritos e testados **antes** da arte do Nano-Banana.
 - **Eventos delegados** (sem `onclick` no HTML): palavras-chave (`data-palavra`), lente (`data-lente`), hotspots (`data-hotspot`) e navegação (`data-nav`).
+
+### 2.6 Vozes e Narração Gravada
+- **Painel "Voz"** (botão 🗣️ no topo do livro): lista as **narrações gravadas** (`<livro>/audio/vozes.js`) e as **vozes em português do aparelho**, ordenadas da mais natural para a menos (neurais/"Natural" > aprimoradas > Google > demais; pt-BR antes de pt-PT). Cada uma tem um ▶ de amostra e as etiquetas "funciona offline"/"precisa de internet". Também tem **velocidade** 🐇 normal / 🐢 devagar. A escolha fica no `localStorage` (com `try/catch`).
+- **Narração gravada**: `<livro>/audio/<voz>/parte-N/<id-da-frase>.mp3`; palavras-chave em `<livro>/audio/palavras/<slug>.mp3` (sílabas pausadas + palavra inteira). A voz só aparece como disponível quando o número da parte está em `partes` no `vozes.js`.
+- **Reserva em cascata, nunca silêncio**: frase sem gravação → voz do aparelho; voz "online" sem internet → melhor voz offline do aparelho (até recarregar a página). Na primeira visita, se houver narração gravada pronta para a parte, ela vira a voz padrão.
+- **Offline**: o service worker **não** pré-baixa os áudios (são grandes); cada MP3 fica guardado na primeira vez que toca. O `vozes.js` é buscado sempre na rede primeiro, para refletir novas gravações.
+- Produção das gravações: `docs/TODO-NARRACAO.md` (Gemini). Lista do que gravar: `docs/narracao/frases-<livro>-parte-N.json`.
 
 ---
 
@@ -211,17 +220,21 @@ Para possibilitar ricas experiências interativas sem perder a fidelidade artís
 classicos-vivos/
 ├── assets/                              # Compartilhado por todos os livros
 │   ├── js/  livro.js                    # O MOTOR dos livros (editado à mão)
+│   ├── js/  texto.js                    # frases, HTML e texto falado (motor + exportação)
 │   ├── css/ livro.css                   # estilo dos livros (editado à mão)
 │   ├── css/  tailwind.css · fonts.css · icons.css
 │   ├── fonts/                           # woff2 locais
 │   └── icones/                          # ícones do app (PWA)
 ├── tools/                               # scripts de build (fontes, ícones, Tailwind, WebP, service worker)
-├── docs/  BACKLOG.md · TODO-NANO-BANANA.md · TODO-NANO-BANANA-PARTES-2-4.md · PLANO-PARTES-2-4.md
+├── docs/  BACKLOG.md · TODO-NANO-BANANA.md · TODO-NANO-BANANA-PARTES-2-4.md · PLANO-PARTES-2-4.md · TODO-NARRACAO.md
+│   ├── fila/                            # canal Claude ↔ Gemini (PEDIDOS.md, ENTREGAS.md)
+│   └── narracao/                        # frases e palavras-chave a gravar (gerado)
 ├── index.html                           # Biblioteca das crianças (estante de livros, quase sem texto)
 ├── sobre.html                           # Detalhes para adultos (proposta, acervo, uso no tablet, licença)
 ├── sw.js · manifest.webmanifest
 └── dom-quixote/
     ├── parte-1.html … parte-4.html      # só conteúdo (window.LIVRO), ver §2.5
+    ├── audio/                           # narração gravada: vozes.js, <voz>/parte-N/<id>.mp3, palavras/
     ├── imagens/                         # FONTE ÚNICA do que o livro carrega (cenas pN-*.webp)
     │   ├── parte-2/ parte-3/ parte-4/   # cenas de cada parte (a Parte 1 fica na raiz de imagens/)
     │   │   └── camadas/                 # sprites com alfa daquela parte (WebP)
