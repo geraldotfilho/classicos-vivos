@@ -29,7 +29,7 @@ O projeto adota uma filosofia **Zero-Build para o leitor**: cada livro é um HTM
 - **Ilustrações em WebP** (1376 × 768, qualidade 80, ~150–230 KB cada).
 - **PWA**: `manifest.webmanifest` + `sw.js` na raiz. O service worker baixa todos os livros na primeira visita via HTTPS (GitHub Pages). HTML segue a estratégia rede-primeiro; o resto, cache-primeiro.
 - **Web Audio API Procedural**: Todos os efeitos sonoros (fanfarras de cavaleiro, arpeggios mágicos, cliques táteis de cartões de leitura, pops lúdicos) são sintetizados matematicamente via código (`AudioContext`), dispensando dependências de arquivos MP3/WAV externos pesados.
-- **Narração**: gravada (vozes neurais geradas pelo Gemini, MP3 frase por frase) com a **Web Speech API (`pt-BR`)** do aparelho como reserva automática. Ver §2.6.
+- **Narração**: gravada (vozes neurais da API de voz do Gemini, chamada pelo Claude, MP3 frase por frase) com a **Web Speech API (`pt-BR`)** do aparelho como reserva automática. Ver §2.6.
 - **Pointer Events**: Eventos unificados (`pointerdown`, `pointermove`, `pointerup`) para drag-and-drop fluido compatível tanto com touchscreen/caneta quanto com mouse. O swipe de troca de página ignora toques iniciados em `.draggable-card`.
 
 ### 2.1.1 Ferramentas de Desenvolvimento (`npm run build`)
@@ -145,7 +145,7 @@ window.LIVRO = {
 - **Narração gravada**: `<livro>/audio/<voz>/parte-N/<id-da-frase>.mp3`; palavras-chave em `<livro>/audio/palavras/<slug>.mp3` (sílabas pausadas + palavra inteira). A voz só aparece como disponível quando o número da parte está em `partes` no `vozes.js`.
 - **Reserva em cascata, nunca silêncio**: frase sem gravação → voz do aparelho; voz "online" sem internet → melhor voz offline do aparelho (até recarregar a página). Na primeira visita, se houver narração gravada pronta para a parte, ela vira a voz padrão.
 - **Offline**: o service worker **não** pré-baixa os áudios (são grandes); cada MP3 fica guardado na primeira vez que toca. O `vozes.js` é buscado sempre na rede primeiro, para refletir novas gravações.
-- Produção das gravações: `docs/TODO-NARRACAO.md` (Gemini). Lista do que gravar: `docs/narracao/frases-<livro>-parte-N.json`.
+- Produção das gravações: `docs/TODO-NARRACAO.md` (Claude, via API do Gemini com a chave em `GEMINI_API_KEY`, que **nunca** é impressa nem versionada). Lista do que gravar: `docs/narracao/frases-<livro>-parte-N.json`.
 
 ---
 
@@ -226,7 +226,7 @@ classicos-vivos/
 │   ├── fonts/                           # woff2 locais
 │   └── icones/                          # ícones do app (PWA)
 ├── tools/                               # scripts de build (fontes, ícones, Tailwind, WebP, service worker)
-├── docs/  BACKLOG.md · TODO-NANO-BANANA.md · TODO-NANO-BANANA-PARTES-2-4.md · PLANO-PARTES-2-4.md · TODO-NARRACAO.md
+├── docs/  RETOMADA.md (comece por aqui numa sessão nova) · BACKLOG.md · TODO-NANO-BANANA.md · TODO-NANO-BANANA-PARTES-2-4.md · PLANO-PARTES-2-4.md · TODO-NARRACAO.md
 │   ├── fila/                            # canal Claude ↔ Gemini (PEDIDOS.md, ENTREGAS.md)
 │   └── narracao/                        # frases e palavras-chave a gravar (gerado)
 ├── index.html                           # Biblioteca das crianças (estante de livros, quase sem texto)
