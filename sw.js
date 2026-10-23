@@ -4,8 +4,9 @@
    - Na instalação, baixa todos os livros (HTML, estilos, fontes e ilustrações) para leitura offline.
    - Páginas HTML: rede primeiro (recebe correções), cache quando estiver sem internet.
    - Demais arquivos: cache primeiro (abre instantâneo no tablet). */
-const CACHE = 'classicos-vivos-a5be53989aa1';
+const CACHE = 'classicos-vivos-81d84ca194eb';
 const FILES = [
+    "./assets/icones/icone-192.png",
     "./assets/css/fonts.css",
     "./assets/css/icons.css",
     "./assets/css/livro.css",
@@ -19,8 +20,8 @@ const FILES = [
     "./assets/fonts/nunito-latin-700-normal.woff2",
     "./assets/fonts/nunito-latin-800-normal.woff2",
     "./assets/fonts/nunito-latin-900-normal.woff2",
-    "./assets/icones/icone-192.png",
     "./assets/js/livro.js",
+    "./dom-quixote/imagens/camadas/p7-pas-moinho.webp",
     "./dom-quixote/imagens/objetos/armadura-peitoral.svg",
     "./dom-quixote/imagens/objetos/bacia-elmo.svg",
     "./dom-quixote/imagens/objetos/cenoura.svg",
@@ -59,6 +60,7 @@ const FILES = [
     "./dom-quixote/imagens/p6-imag.webp",
     "./dom-quixote/imagens/p6-real.webp",
     "./dom-quixote/imagens/p7-imag.webp",
+    "./dom-quixote/imagens/p7-real-sem-pas.webp",
     "./dom-quixote/imagens/p7-real.webp",
     "./dom-quixote/parte-1.html",
     "./dom-quixote/parte-2.html",

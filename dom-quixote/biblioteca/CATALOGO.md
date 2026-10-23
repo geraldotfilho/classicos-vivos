@@ -25,7 +25,7 @@ Convenção: `pN` = índice da página (`?page=N`), sufixo `-real` (Lente da Rea
 | 4 · Pousada ou Castelo | `p4-real`, `p4-real-flauta`, `p4-real-sopa`, `p4-imag` | |
 | 5 · A Cerimônia | `p5-real`, `p5-imag` | |
 | 6 · Sancho Pança | `p6-real`, `p6-imag` | |
-| 7 · Os Moinhos | `p7-real`, `p7-imag` | Pás animadas: `objetos/moinho-pas.svg` |
+| 7 · Os Moinhos | `p7-real`, `p7-real-sem-pas`, `p7-imag` | Camada de pás em aquarela: `camadas/p7-pas-moinho.webp` (NB-1) |
 
 ---
 
