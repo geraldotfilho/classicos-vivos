@@ -269,6 +269,7 @@ Ao finalizar qualquer ciclo de desenvolvimento:
 1. **Regenerar os arquivos gerados**: `npm run build` (obrigatório se mudou HTML, classes, ícones ou imagens).
    > A antiga cópia avulsa `dom_quixote_parte_1_livro_interativo_infantil.html` foi descontinuada: o livro depende de `assets/` e `imagens/`, então distribua a pasta do repositório inteira (ou o link do GitHub Pages).
 2. **Atualizar `AGENTS.md`** caso novos padrões arquiteturais tenham sido introduzidos, e **`docs/BACKLOG.md`** (mover o que foi entregue, registrar o que foi descoberto). Pedidos de arte nova vão para **`docs/TODO-NANO-BANANA.md`**, com arquivo, referências, prompt e critério de aceite.
+   > **Trabalho entre agentes (Claude ↔ Gemini)**: a coordenação assíncrona passa por `docs/fila/`. Em `PEDIDOS.md` (só o Claude escreve) ficam os pedidos, as revisões e a linha `ESTADO: ATIVO|PARAR`; em `ENTREGAS.md` (só o Gemini escreve), as entregas e o status. Cada arquivo tem **um único dono** (tabela em `PEDIDOS.md`) para não haver conflito de merge. Conflito em `sw.js`: regenere com `npm run build:sw`, nunca resolva à mão.
 3. **Verificar Estado no Diretório Git**:
    ```powershell
    cd classicos-vivos
