@@ -21,15 +21,22 @@ Levantado na inspeção completa do sprint 1 (2026-10): código, ilustrações e
 
 ---
 
+## ✅ Entregue no sprint 2
+
+- **Biblioteca simplificada** (`index.html`): estante lúdica, só com a capa grande de Dom Quixote (▶ pulsando) e as Partes 2–4 com cadeado, quase sem texto. Os detalhes para adultos foram para a nova `sobre.html` (botão ⓘ "Para adultos").
+- **Cartão de alfabetização**: abre **centralizado** na tela, com as sílabas em blocos coloridos, e **só fecha com um toque fora** (ou Esc). Tocar no cartão repete a pronúncia. Fecha ao trocar de página, e as setas do teclado não viram a página com ele aberto.
+- **Camadas × colagem** esclarecido no `AGENTS.md` (§4.1 e §4.2: modelo híbrido, regras de integração, pasta `imagens/camadas/`). `TODO-NANO-BANANA.md` reescrito: NB-1, NB-2 e NB-6 agora usam camadas.
+
 ## 🔴 Prioridade alta
 
 | ID | Item | Detalhes |
 | :--- | :--- | :--- |
-| A-1 | **Pás do moinho duplicadas** (pág. 8) | O SVG das pás gira **por cima** das pás pintadas e o estilo vetorial destoa. Após NB-1: usar `p7-real-sem-pas.webp` como fundo durante o vento, trocar `moinho-pas.svg` por `moinho-pas-aquarela.png` e recalibrar `left/top/width` dos dois `windmill-blades-*` sobre os cubos dos moinhos. |
-| A-2 | **SOPA sem sopa / pousada incoerente** (pág. 5) | Após NB-2: em `realSceneFor(4)`, exibir `p4-real-completa.webp` quando `innItemsSet.size >= 2`. Os outros três arquivos são substituições diretas. |
+| A-1 | **Pás do moinho duplicadas** (pág. 8) | O SVG das pás gira **por cima** das pás pintadas e o estilo vetorial destoa. Após NB-1: durante o vento, trocar o fundo por `p7-real-sem-pas.webp` e girar a camada `camadas/p7-pas-moinho.webp` (uma por moinho), recalibrando `left/top/width` sobre os cubos. Pode ser feito antes do motor A-6 (já existe a sobreposição das pás). |
+| A-2 | **SOPA sem sopa / pousada incoerente** (pág. 5) | Após NB-2 e A-6: a página passa a ser `p4-real-fundo` + camadas. TROMBETA troca o pastor parado pelo que toca e faz surgir os porquinhos dançando e as notas animadas. SOPA troca o estalajadeiro que acena pelo que oferece a sopa. Funciona em qualquer ordem e com os dois juntos, sem imagem por combinação. A Lente da Imaginação continua sendo a ilustração inteira `p4-imag`. |
 | A-3 | **Livros sem transformação** (pág. 2) | Viola o §3.3 do AGENTS.md (cartão que só faz a imagem tremer). Após NB-3: cada livro troca a cena para `p1-real-livro-<tema>.webp` via `setSceneImage`, em qualquer ordem. Ao completar os três, o botão da lente convida à imaginação (já existe). |
 | A-4 | **Texto não cabe no tablet em paisagem** | Em 1280 × 800, 6 das 8 páginas exigem rolar a página inteira para ler o fim do texto, e o aviso "Fim da Parte 1" fica escondido. Proposta: em paisagem, rolagem **só na coluna de texto** (a cena fica fixa), com uma sombra/indicador "continua ↓". Avaliar `text-base` em paisagem < 900 px de altura. |
 | A-5 | **Extrair o motor do livro para `assets/js/livro.js`** | O `parte-1.html` tem cerca de 1.900 linhas, com áudio, voz, lentes, arrastar e navegação embutidos. Antes da Parte 2, separar o motor (sem build: um `<script src>` comum) e deixar no HTML só o conteúdo e a configuração das cenas (`lensMetadata`, `progressiveScenes`). Evita copiar e colar bugs entre livros. |
+| A-6 | **Motor de camadas (layered scene)** | Implementar o §4.2 do AGENTS.md, que hoje está só documentado. Dentro do quadro 16:9 de cada cena: `<div class="scene-layers">` com `<img>` posicionadas em `%` (ancoradas pela base) e declaradas na configuração da página (`layers: { pastor: { x, y, w, variants: { parado, tocando } } }`). A visibilidade e a variante saem do estado via `renderScene`, as animações são CSS (balanço, flutuar, girar), as camadas entram no pré-carregamento e no feedback de carregamento. Primeiras aplicações: NB-1 (moinho), NB-2 (pousada), nuvem da ilha (NB-6). Depois, avaliar a armadura em qualquer ordem: a bacia funciona como camada, mas escudo e lança dependem da pose do braço, então o teste precisa de arte dedicada. |
 
 ## 🟡 Prioridade média
 
@@ -41,7 +48,7 @@ Levantado na inspeção completa do sprint 1 (2026-10): código, ilustrações e
 | M-4 | **Tocar numa frase para ouvi-la** | Hoje só a página inteira ou as palavras-chave. Útil para reler um trecho. Cuidar para não conflitar com o toque nas palavras-chave. |
 | M-5 | **"Ler de Novo" não reinicia** | Volta à capa, mas mantém lentes ativadas, armadura vestida e cartões verdes. Decidir: reiniciar tudo (recomendado: nova leitura, nova descoberta). |
 | M-6 | **Continuar de onde parou** | Lembrar a última página lida (`localStorage`, com `try/catch`) e oferecer "Continuar" na capa e na biblioteca. |
-| M-7 | **Consistência das ilustrações** | NB-4 (escala do herói dourado e rosto na etapa 1), NB-5 (enquadramento do estábulo), NB-6 (imaginação de Sancho sem colagem). Substituições diretas, sem código. |
+| M-7 | **Consistência das ilustrações** | NB-4 (escala do herói dourado e rosto na etapa 1), NB-5 (enquadramento do estábulo), NB-6 (imaginação de Sancho gerada de verdade, em vez da capa com recorte achatado). Substituições diretas, sem código. |
 | M-8 | **Teste automatizado multiplataforma** | O protocolo do AGENTS.md §5 é só Windows/Chrome. Criar `npm test` com Playwright (retrato + paisagem, páginas 0–7, ambas as lentes, ordem da armadura, bloqueio de duplo toque, offline) gerando capturas em `test-results/`. |
 | M-9 | **Aviso de atualização do PWA** | Com o service worker, uma versão nova só aparece na visita seguinte. Mostrar "Livro atualizado ✨" ao ativar uma versão nova. |
 
@@ -54,5 +61,5 @@ Levantado na inspeção completa do sprint 1 (2026-10): código, ilustrações e
 | B-3 | **Ícone definitivo do app** | NB-7. |
 | B-4 | **Leão Guardião em aquarela** | NB-8 (referência ainda em SVG). |
 | B-5 | **GitHub Pages** | Confirmar que o Pages está ativo na `main`: o service worker exige HTTPS. Pelo `file://`, o livro funciona offline, mas sem instalação nem cache. |
-| B-7 | **Títulos das próximas partes na biblioteca** | `index.html` anuncia "Parte 2: O Duelo contra os Moinhos de Vento", mas o duelo já fecha a Parte 1, que por sua vez promete "Na Parte 2: A Batalha das Ovelhas" (anunciada na biblioteca como Parte 3). A biblioteca também diz "6+ anos", enquanto o AGENTS.md define 5 a 8 anos. Decisão editorial: alinhar o plano das Partes 2–4. |
+| B-7 | **Plano editorial das Partes 2–4** | A biblioteca não mostra mais títulos (só "Parte N" com cadeado). Falta alinhar o aviso no fim da Parte 1 ("Na Parte 2: A Batalha das Ovelhas") com o plano real das próximas partes. |
 | B-6 | **Indicador de páginas no retrato** | As bolinhas de página só aparecem em telas ≥ 1024 px. No retrato existe apenas o "Página N de 8". |

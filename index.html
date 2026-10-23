@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#78350F">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
-    <title>Clássicos Vivos — Biblioteca Infantil Interativa para Tablets</title>
+    <title>Clássicos Vivos — Biblioteca</title>
     <!-- Estilos locais (offline): Tailwind compilado, fontes e ícones. Regerar com `npm run build`. -->
     <link rel="stylesheet" href="./assets/css/tailwind.css">
     <link rel="stylesheet" href="./assets/css/fonts.css">
@@ -14,11 +14,6 @@
     <link rel="manifest" href="./manifest.webmanifest">
     <link rel="apple-touch-icon" href="./assets/icones/icone-180.png">
     <style>
-        :root {
-            --parchment: #FFFDF8;
-            --parchment-border: #D97706;
-        }
-
         * {
             box-sizing: border-box;
             user-select: none;
@@ -29,7 +24,7 @@
 
         body {
             font-family: 'Nunito', sans-serif;
-            background: radial-gradient(circle at top, #1e1b4b 0%, #0f172a 100%);
+            background: radial-gradient(circle at top, #312e81 0%, #1e1b4b 45%, #0f172a 100%);
             min-height: 100vh;
             min-height: 100dvh;
             margin: 0;
@@ -37,229 +32,134 @@
             touch-action: manipulation;
         }
 
-        h1, h2, h3, h4, .font-display {
+        h1, h2, .font-display {
             font-family: 'Fredoka', sans-serif;
         }
 
-        /* Moldura estilo estante de livros encantada */
-        .library-card {
-            background: var(--parchment);
-            border: 6px solid #D97706;
-            box-shadow:
-                0 20px 50px -12px rgba(0, 0, 0, 0.7),
-                inset 0 0 30px rgba(217, 119, 6, 0.1),
-                0 0 0 4px #78350F;
+        /* Céu estrelado discreto */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            background-image:
+                radial-gradient(2px 2px at 12% 18%, rgba(255,255,255,0.8), transparent),
+                radial-gradient(2px 2px at 78% 12%, rgba(255,255,255,0.7), transparent),
+                radial-gradient(1.5px 1.5px at 42% 8%, rgba(255,255,255,0.6), transparent),
+                radial-gradient(1.5px 1.5px at 90% 40%, rgba(255,255,255,0.5), transparent),
+                radial-gradient(2px 2px at 6% 55%, rgba(255,255,255,0.5), transparent);
         }
 
-        /* Botões táteis 3D */
-        .btn-chunky {
-            transition: all 0.15s ease;
-            box-shadow: 0 5px 0 rgba(0, 0, 0, 0.28);
-            cursor: pointer;
+        .btn-round {
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+            box-shadow: 0 4px 0 rgba(0, 0, 0, 0.35);
         }
-        .btn-chunky:active:not(:disabled) {
-            transform: translateY(4px);
-            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.28);
-        }
-
-        /* Cartão de capítulo disponível */
-        .chapter-card-active {
-            transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s ease;
-            box-shadow: 0 6px 0 #B45309;
-        }
-        .chapter-card-active:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 9px 0 #B45309;
-        }
-        .chapter-card-active:active {
+        .btn-round:active {
             transform: translateY(3px);
-            box-shadow: 0 2px 0 #B45309;
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
         }
 
-        @keyframes spinBlades {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
+        /* Prateleira de madeira */
+        .shelf {
+            position: relative;
+            padding: 0 16px;
         }
-        @keyframes floatSlow {
-            0%, 100% { transform: translateY(0px); }
+        .shelf::after {
+            content: '';
+            display: block;
+            height: 22px;
+            margin: 0 -16px;
+            border-radius: 6px;
+            background: linear-gradient(180deg, #B45309 0%, #92400E 55%, #78350F 100%);
+            box-shadow: 0 10px 18px -6px rgba(0, 0, 0, 0.7), inset 0 2px 0 rgba(255, 255, 255, 0.25);
+        }
+
+        /* Livro disponível: capa que convida ao toque */
+        .book {
+            display: block;
+            transform-origin: bottom center;
+            transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+            animation: bookBob 3.2s ease-in-out infinite;
+        }
+        .book:active { transform: scale(0.96); animation: none; }
+        @keyframes bookBob {
+            0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-6px); }
         }
-        .animate-float {
-            animation: floatSlow 3.5s ease-in-out infinite;
+        .book-cover {
+            box-shadow: 6px 8px 0 rgba(0, 0, 0, 0.35), inset 10px 0 12px -8px rgba(0, 0, 0, 0.45);
         }
+        @keyframes playPulse {
+            0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(251, 191, 36, 0.7); }
+            50% { transform: scale(1.08); box-shadow: 0 0 0 12px rgba(251, 191, 36, 0); }
+        }
+        .play-pulse { animation: playPulse 1.8s ease-in-out infinite; }
     </style>
 </head>
-<body class="p-3 sm:p-6 md:p-8 flex flex-col items-center justify-between">
+<body class="flex flex-col items-center px-4 py-5 sm:py-8">
 
-    <!-- Container Principal da Biblioteca -->
-    <div class="w-full max-w-6xl space-y-6">
+    <!-- Topo: nome da biblioteca + botões discretos para adultos -->
+    <header class="relative w-full max-w-5xl flex items-center justify-between gap-3">
+        <div class="flex items-center gap-3">
+            <span class="text-5xl sm:text-6xl" aria-hidden="true">📚</span>
+            <h1 class="font-display font-bold text-3xl sm:text-5xl text-amber-300 leading-none drop-shadow-lg">Clássicos Vivos</h1>
+        </div>
+        <div class="flex items-center gap-2 shrink-0">
+            <button onclick="toggleFullscreen()" class="btn-round w-14 h-14 rounded-2xl bg-indigo-500 border-2 border-indigo-300 text-white text-2xl flex items-center justify-center" aria-label="Tela cheia" title="Tela cheia">
+                <i id="fs-icon" class="ph-bold ph-corners-out"></i>
+            </button>
+            <a href="./sobre.html" class="btn-round h-14 px-3 rounded-2xl bg-white/10 border-2 border-white/30 text-amber-100 flex items-center justify-center gap-1.5 font-display font-semibold text-sm" aria-label="Sobre o projeto, para adultos" title="Sobre o projeto (para adultos)">
+                <i class="ph-bold ph-info text-2xl"></i>
+                <span class="hidden sm:inline">Para adultos</span>
+            </a>
+        </div>
+    </header>
 
-        <!-- CABEÇALHO DA BIBLIOTECA -->
-        <header class="library-card rounded-[28px] p-4 sm:p-6 bg-gradient-to-r from-amber-100 via-amber-50 to-amber-100 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div class="flex items-center gap-4 text-center sm:text-left flex-col sm:flex-row">
-                <div class="w-16 h-16 rounded-3xl bg-amber-500 border-4 border-amber-700 shadow-lg flex items-center justify-center text-4xl shrink-0 animate-float">
-                    📚
-                </div>
-                <div>
-                    <div class="inline-flex items-center gap-1.5 bg-amber-300 text-amber-950 font-display font-bold text-xs px-3 py-0.5 rounded-full uppercase tracking-wider mb-1">
-                        <span>✨ Biblioteca Infantil Interativa</span>
+    <main class="w-full max-w-5xl flex-1 flex flex-col justify-center gap-10 sm:gap-14 py-8 [@media(max-height:820px)]:gap-6 [@media(max-height:820px)]:py-4">
+
+        <!-- Prateleira 1: livros para ler agora -->
+        <section class="shelf" aria-label="Livros para ler">
+            <div class="flex flex-wrap items-end justify-center gap-8 pb-0">
+                <a href="./dom-quixote/parte-1.html" class="book w-60 sm:w-72" aria-label="Ler Dom Quixote, parte 1">
+                    <div class="book-cover relative aspect-[3/4] rounded-r-3xl rounded-l-lg overflow-hidden border-4 border-amber-500 bg-amber-100">
+                        <img src="./dom-quixote/imagens/p0-real.webp" alt="" class="absolute inset-0 w-full h-full object-cover object-[30%_50%]" />
+                        <span class="absolute top-3 right-3 bg-rose-500 text-white font-display font-bold text-base px-3 py-1 rounded-full border-2 border-white shadow">Parte 1</span>
+                        <span class="play-pulse absolute left-1/2 top-[42%] -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-amber-400 border-4 border-white text-amber-950 text-4xl flex items-center justify-center">
+                            <i class="ph-fill ph-play"></i>
+                        </span>
+                        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-amber-950/95 via-amber-950/80 to-transparent pt-10 pb-4 px-3 text-center">
+                            <h2 class="font-display font-bold text-3xl sm:text-4xl text-amber-200 leading-none">Dom Quixote</h2>
+                        </div>
                     </div>
-                    <h1 class="text-2xl sm:text-4xl font-display font-bold text-amber-950 leading-none">
-                        Clássicos Vivos
-                    </h1>
-                    <p class="text-sm sm:text-base text-amber-900 font-bold mt-1">
-                        Grandes histórias da humanidade reimaginadas para pequenos leitores em fase de alfabetização!
-                    </p>
-                </div>
+                </a>
             </div>
+        </section>
 
-            <!-- Botão de Tela Cheia para Tablet -->
-            <div class="flex items-center gap-2 shrink-0">
-                <button onclick="toggleFullscreen()" class="btn-chunky bg-indigo-500 hover:bg-indigo-600 text-white font-display font-bold text-xs sm:text-sm px-4 py-2.5 rounded-2xl border-2 border-indigo-700 flex items-center gap-2" title="Ativar Tela Cheia no Tablet">
-                    <i id="fs-icon" class="ph-bold ph-corners-out text-lg"></i>
-                    <span>Tela Cheia</span>
-                </button>
-            </div>
-        </header>
-
-        <!-- PILARES PEDAGÓGICOS (Pílulas Rápidas) -->
-        <section class="grid grid-cols-2 lg:grid-cols-4 gap-3">
-            <div class="bg-slate-900/90 border-2 border-amber-400/70 rounded-2xl p-3 text-white flex items-center gap-3">
-                <span class="text-3xl shrink-0">🗣️</span>
-                <div>
-                    <h2 class="font-display font-bold text-amber-300 text-xs sm:text-sm">Sílabas Faladas</h2>
-                    <p class="text-[11px] sm:text-xs text-slate-300 font-semibold">Toque nas PALAVRAS MAIÚSCULAS para ouvir.</p>
+        <!-- Prateleira 2: livros que ainda estão chegando -->
+        <section class="shelf" aria-label="Livros em breve">
+            <div class="flex flex-wrap items-end justify-center gap-5 sm:gap-8">
+                <div class="w-28 sm:w-36 opacity-70" aria-label="Dom Quixote, parte 2: em breve">
+                    <div class="book-cover aspect-[3/4] rounded-r-2xl rounded-l-md border-4 border-dashed border-indigo-300/60 bg-indigo-900/60 flex flex-col items-center justify-center gap-1 text-indigo-100">
+                        <span class="text-4xl" aria-hidden="true">🔒</span>
+                        <span class="font-display font-bold text-lg">Parte 2</span>
+                    </div>
                 </div>
-            </div>
-            <div class="bg-slate-900/90 border-2 border-purple-400/70 rounded-2xl p-3 text-white flex items-center gap-3">
-                <span class="text-3xl shrink-0">👓</span>
-                <div>
-                    <h2 class="font-display font-bold text-purple-300 text-xs sm:text-sm">Duas Lentes</h2>
-                    <p class="text-[11px] sm:text-xs text-slate-300 font-semibold">Alterne entre Realidade e Imaginação!</p>
+                <div class="w-28 sm:w-36 opacity-70" aria-label="Dom Quixote, parte 3: em breve">
+                    <div class="book-cover aspect-[3/4] rounded-r-2xl rounded-l-md border-4 border-dashed border-indigo-300/60 bg-indigo-900/60 flex flex-col items-center justify-center gap-1 text-indigo-100">
+                        <span class="text-4xl" aria-hidden="true">🔒</span>
+                        <span class="font-display font-bold text-lg">Parte 3</span>
+                    </div>
                 </div>
-            </div>
-            <div class="bg-slate-900/90 border-2 border-emerald-400/70 rounded-2xl p-3 text-white flex items-center gap-3">
-                <span class="text-3xl shrink-0">🔊</span>
-                <div>
-                    <h2 class="font-display font-bold text-emerald-300 text-xs sm:text-sm">Narração Guiada</h2>
-                    <p class="text-[11px] sm:text-xs text-slate-300 font-semibold">Ouça a página inteira em voz alta.</p>
-                </div>
-            </div>
-            <div class="bg-slate-900/90 border-2 border-rose-400/70 rounded-2xl p-3 text-white flex items-center gap-3">
-                <span class="text-3xl shrink-0">👆</span>
-                <div>
-                    <h2 class="font-display font-bold text-rose-300 text-xs sm:text-sm">Feito para Tablet</h2>
-                    <p class="text-[11px] sm:text-xs text-slate-300 font-semibold">Botões grandes e cenários que reagem ao toque.</p>
+                <div class="w-28 sm:w-36 opacity-70" aria-label="Dom Quixote, parte 4: em breve">
+                    <div class="book-cover aspect-[3/4] rounded-r-2xl rounded-l-md border-4 border-dashed border-indigo-300/60 bg-indigo-900/60 flex flex-col items-center justify-center gap-1 text-indigo-100">
+                        <span class="text-4xl" aria-hidden="true">🔒</span>
+                        <span class="font-display font-bold text-lg">Parte 4</span>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- LIVRO EM DESTAQUE: DOM QUIXOTE DE LA MANCHA -->
-        <main class="library-card rounded-[30px] overflow-hidden p-4 sm:p-7">
-            <div class="flex flex-col lg:flex-row items-center gap-6">
-                
-                <!-- Ilustração em Aquarela (Nano Banana) da Capa do Livro -->
-                <div class="w-full lg:w-5/12 h-64 sm:h-72 bg-amber-100 rounded-3xl border-4 border-amber-500 shadow-inner relative overflow-hidden flex items-center justify-center shrink-0">
-                    <div class="absolute top-3 left-3 z-10 bg-rose-600 text-white font-display font-bold text-xs px-3 py-1 rounded-full shadow border border-white flex items-center gap-1">
-                        <span>🛡️</span>
-                        <span>Obra #1 • Miguel de Cervantes</span>
-                    </div>
-                    <img src="./dom-quixote/imagens/p0-real.webp" alt="Dom Quixote de La Mancha e Sancho Pança" class="w-full h-full object-cover" />
-                </div>
-
-                <!-- Detalhes do Livro e Lista de Partes/Capítulos -->
-                <div class="w-full lg:w-7/12 flex flex-col justify-between space-y-4">
-                    <div>
-                        <div class="flex flex-wrap items-center gap-2 mb-1">
-                            <span class="bg-emerald-100 text-emerald-800 border border-emerald-400 font-display font-bold text-xs px-3 py-0.5 rounded-full">
-                                🎓 Recomendado: 6+ anos (Alfabetização)
-                            </span>
-                            <span class="bg-amber-100 text-amber-900 border border-amber-400 font-display font-bold text-xs px-3 py-0.5 rounded-full">
-                                🔊 Com Voz em Português
-                            </span>
-                        </div>
-                        <h2 class="text-2xl sm:text-4xl font-display font-bold text-amber-950">
-                            Dom Quixote de La Mancha
-                        </h2>
-                        <p class="text-sm sm:text-base text-slate-700 font-bold mt-1 leading-relaxed">
-                            Acompanhe o gentil vovô Alonso Quixano, que leu tantos livros de cavalaria que decidiu vestir uma armadura enferrujada, colocar uma bacia de barbeiro na cabeça e sair pelo mundo como o cavaleiro <strong>Dom Quixote</strong>!
-                        </p>
-                    </div>
-
-                    <!-- Grade de Partes da Obra -->
-                    <div class="space-y-3 pt-1">
-                        <h3 class="font-display font-bold text-amber-900 text-sm uppercase tracking-wider flex items-center gap-1.5">
-                            <i class="ph-fill ph-book-open-text text-lg text-amber-600"></i>
-                            <span>Escolha uma Parte da História para Ler:</span>
-                        </h3>
-
-                        <!-- PARTE 1: DISPONÍVEL AGORA -->
-                        <a href="./dom-quixote/parte-1.html" class="chapter-card-active block bg-gradient-to-r from-amber-300 via-yellow-200 to-amber-200 border-4 border-amber-600 rounded-3xl p-4 sm:p-5">
-                            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
-                                <div class="flex items-center gap-3.5">
-                                    <div class="w-14 h-14 rounded-2xl bg-rose-500 text-white border-2 border-rose-800 flex items-center justify-center text-3xl shrink-0 shadow">
-                                        ⚔️
-                                    </div>
-                                    <div>
-                                        <div class="flex items-center gap-2">
-                                            <span class="bg-emerald-600 text-white font-display font-bold text-[11px] px-2.5 py-0.5 rounded-full uppercase">
-                                                Disponível Agora!
-                                            </span>
-                                            <span class="text-xs font-extrabold text-amber-900">8 Páginas Interativas</span>
-                                        </div>
-                                        <h4 class="text-lg sm:text-xl font-display font-bold text-amber-950 mt-0.5">
-                                            Parte 1: O Cavaleiro da Super Imaginação
-                                        </h4>
-                                        <p class="text-xs sm:text-sm font-bold text-amber-900">
-                                            Os livros mágicos, a armadura do bisavô, Rocinante, Dulcineia, a pousada-castelo, Sancho Pança e os moinhos-gigantes!
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="w-full sm:w-auto bg-rose-500 hover:bg-rose-600 text-white font-display font-bold text-base px-5 py-3 rounded-2xl border-2 border-rose-800 flex items-center justify-center gap-2 shrink-0 shadow">
-                                    <span>Ler Agora</span>
-                                    <i class="ph-bold ph-play-circle text-xl"></i>
-                                </div>
-                            </div>
-                        </a>
-
-                        <!-- PRÓXIMAS PARTES (EM BREVE) -->
-                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-1">
-                            <div class="bg-slate-100 border-2 border-dashed border-slate-300 rounded-2xl p-3 flex items-center gap-3 opacity-75">
-                                <span class="text-2xl">🌬️</span>
-                                <div>
-                                    <span class="text-[10px] font-extrabold uppercase text-slate-500 bg-slate-200 px-2 py-0.5 rounded-full">Em breve • Parte 2</span>
-                                    <p class="font-display font-bold text-slate-700 text-xs sm:text-sm mt-0.5">O Duelo contra os Moinhos de Vento</p>
-                                </div>
-                            </div>
-                            <div class="bg-slate-100 border-2 border-dashed border-slate-300 rounded-2xl p-3 flex items-center gap-3 opacity-75">
-                                <span class="text-2xl">🐑</span>
-                                <div>
-                                    <span class="text-[10px] font-extrabold uppercase text-slate-500 bg-slate-200 px-2 py-0.5 rounded-full">Em breve • Parte 3</span>
-                                    <p class="font-display font-bold text-slate-700 text-xs sm:text-sm mt-0.5">O Exército de Ovelhas e Novas Aventuras</p>
-                                </div>
-                            </div>
-                            <div class="bg-slate-100 border-2 border-dashed border-slate-300 rounded-2xl p-3 flex items-center gap-3 opacity-75">
-                                <span class="text-2xl">🏝️</span>
-                                <div>
-                                    <span class="text-[10px] font-extrabold uppercase text-slate-500 bg-slate-200 px-2 py-0.5 rounded-full">Em breve • Parte 4</span>
-                                    <p class="font-display font-bold text-slate-700 text-xs sm:text-sm mt-0.5">A Ilha de Sancho e o Retorno para Casa</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </main>
-
-        <!-- RODAPÉ -->
-        <footer class="text-center text-slate-400 text-xs sm:text-sm font-semibold py-2 flex flex-col sm:flex-row items-center justify-between gap-2 px-2">
-            <p>📚 <strong>Clássicos Vivos</strong> • Projeto aberto de incentivo à leitura e alfabetização infantil.</p>
-            <p class="text-slate-400">Otimizado para Tablets Android &amp; iPad</p>
-        </footer>
-
-    </div>
+    </main>
 
     <script>
         function toggleFullscreen() {
@@ -276,7 +176,7 @@
         document.addEventListener('fullscreenchange', () => {
             const icon = document.getElementById('fs-icon');
             if (icon) {
-                icon.className = document.fullscreenElement ? 'ph-bold ph-corners-in text-lg' : 'ph-bold ph-corners-out text-lg';
+                icon.className = document.fullscreenElement ? 'ph-bold ph-corners-in' : 'ph-bold ph-corners-out';
             }
         });
     </script>

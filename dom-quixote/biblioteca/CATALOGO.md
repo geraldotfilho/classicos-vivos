@@ -5,6 +5,7 @@ Os ativos do livro ficam em **dois lugares, sem cópias duplicadas**:
 | Pasta | O que guarda | Carregada pelo livro? |
 | :--- | :--- | :--- |
 | `../imagens/` | Ilustrações finais das cenas (`pN-*.webp`) e ícones das bandejas (`objetos/*.svg`) | ✅ Sim (e baixada pelo service worker para uso offline) |
+| `../imagens/camadas/` | Camadas com alfa sobrepostas às cenas pelo livro (personagens e adereços animáveis, ver `AGENTS.md` §4.2). *Ainda vazia: chega com NB-1, NB-2 e NB-6.* | ✅ Sim |
 | `./referencias/` | Banco de referências para o Nano-Banana: sprites de personagens, cenários vazios e adereços | ❌ Não, serve só de contexto para gerar arte nova |
 
 > Toda ilustração **finalizada** em `../imagens/` também vale como referência de estilo e continuidade para novos prompts. Não copie esses arquivos para `referencias/`: aponte o caminho original.

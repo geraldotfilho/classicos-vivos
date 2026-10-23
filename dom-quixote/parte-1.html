@@ -108,6 +108,59 @@
             box-shadow: 0 4px 0 #047857;
         }
 
+        /* Cartão de alfabetização (palavras-chave do texto) */
+        .phonics-backdrop {
+            position: fixed;
+            inset: 0;
+            z-index: 60;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+            background: rgba(15, 23, 42, 0.55);
+            -webkit-backdrop-filter: blur(2px);
+            backdrop-filter: blur(2px);
+        }
+        .phonics-backdrop.is-open {
+            display: flex;
+            animation: backdropIn 0.18s ease-out;
+        }
+        @keyframes backdropIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .phonics-card {
+            width: 100%;
+            max-width: 30rem;
+            max-height: calc(100dvh - 32px);
+            overflow-y: auto;
+            background: #FFFDF8;
+            border: 6px solid #F59E0B;
+            border-radius: 32px;
+            padding: 28px 24px;
+            text-align: center;
+            cursor: pointer;
+            box-shadow: 0 8px 0 #D97706, 0 30px 60px -15px rgba(0, 0, 0, 0.6);
+            animation: popIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .phonics-card:active { transform: scale(0.98); }
+        .phonics-card:active .phonics-replay { transform: translateY(2px); }
+        .syllable-chip {
+            font-family: 'Fredoka', sans-serif;
+            font-weight: 700;
+            font-size: clamp(1.5rem, 5vw, 2.25rem);
+            letter-spacing: 0.06em;
+            line-height: 1;
+            padding: 10px 16px;
+            border-radius: 18px;
+            border: 3px solid;
+        }
+        /* Cores alternadas ajudam a enxergar onde cada sílaba começa e termina */
+        .syllable-chip:nth-child(4n+1) { background: #FFE4E6; border-color: #FB7185; color: #9F1239; }
+        .syllable-chip:nth-child(4n+2) { background: #E0F2FE; border-color: #38BDF8; color: #075985; }
+        .syllable-chip:nth-child(4n+3) { background: #FEF9C3; border-color: #FACC15; color: #854D0E; }
+        .syllable-chip:nth-child(4n+4) { background: #DCFCE7; border-color: #4ADE80; color: #166534; }
+
         /* Botões táteis 3D para crianças */
         .btn-chunky {
             transition: all 0.14s ease;
@@ -341,20 +394,17 @@
 </head>
 <body class="p-1 sm:p-2.5 select-none">
 
-    <!-- Balão Flutuante de Alfabetização (Apenas ao tocar nas palavras do texto) -->
-    <div id="phonics-toast" class="fixed top-14 left-1/2 -translate-x-1/2 z-50 hidden pointer-events-none w-[92vw] max-w-md">
-        <div class="bg-white border-4 border-amber-500 rounded-3xl px-5 py-2.5 shadow-2xl flex items-center justify-between gap-3 animate-pop">
-            <div class="flex items-center gap-3 min-w-0">
-                <span id="phonics-emoji" class="text-3xl sm:text-4xl shrink-0">🏰</span>
-                <div class="text-left min-w-0">
-                    <p id="phonics-word" class="font-display font-bold text-base sm:text-xl text-amber-950 tracking-wider uppercase leading-tight break-words">CASTELOS</p>
-                    <p id="phonics-syllables" class="font-display font-semibold text-xs sm:text-sm text-rose-600 tracking-widest mt-0.5 truncate">CAS • TE • LOS</p>
-                </div>
-            </div>
-            <span class="w-9 h-9 shrink-0 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-lg">
+    <!-- Cartão de Alfabetização: abre centralizado ao tocar numa palavra do texto e só fecha
+         com um toque fora dele (ou Esc). Tocar no cartão repete a pronúncia. -->
+    <div id="phonics-modal" class="phonics-backdrop" role="dialog" aria-modal="true" aria-labelledby="phonics-word" aria-hidden="true">
+        <button id="phonics-card" type="button" class="phonics-card" onclick="replayPhonicsWord()" aria-label="Ouvir a palavra de novo">
+            <span id="phonics-emoji" class="block text-6xl sm:text-7xl leading-none" aria-hidden="true">🏰</span>
+            <span id="phonics-word" class="block font-display font-bold text-3xl sm:text-5xl text-amber-950 tracking-wider uppercase leading-tight break-words mt-3">CASTELOS</span>
+            <span id="phonics-syllables" class="flex flex-wrap items-center justify-center gap-2 mt-4" aria-label="Sílabas"></span>
+            <span class="phonics-replay mt-5 mx-auto w-16 h-16 rounded-full bg-emerald-500 border-4 border-emerald-700 text-white text-3xl flex items-center justify-center" aria-hidden="true">
                 <i class="ph-fill ph-speaker-high"></i>
             </span>
-        </div>
+        </button>
     </div>
 
     <!-- Moldura Principal do Livro Interativo -->
@@ -1017,7 +1067,6 @@
         let currentPage = 0;
         let soundEnabled = true;
         let isReadingPage = false;
-        let toastTimeout = null;
         let ptVoice = null;
 
         // Estado das Lentes (false = Lente da Realidade, true = Lente da Imaginação)
@@ -1360,28 +1409,63 @@
                 spawnSparkles(rect.left + rect.width / 2, rect.top, emoji || '✨');
             }
 
-            const toast = document.getElementById('phonics-toast');
+            openPhonicsCard(wordText, syllablesText, emoji);
+            stopReadingPage();
+            pronounceWord(wordText);
+        }
+
+        let phonicsCurrentWord = '';
+
+        function pronounceWord(wordText) {
+            if (!('speechSynthesis' in window)) return;
+            window.speechSynthesis.cancel();
+            const utterance = new SpeechSynthesisUtterance(wordText.toLowerCase());
+            utterance.lang = 'pt-BR';
+            if (ptVoice) utterance.voice = ptVoice;
+            utterance.rate = 0.85;
+            utterance.pitch = 1.05;
+            window.speechSynthesis.speak(utterance);
+        }
+
+        function openPhonicsCard(wordText, syllablesText, emoji) {
+            phonicsCurrentWord = wordText;
             document.getElementById('phonics-emoji').textContent = emoji || '📖';
             document.getElementById('phonics-word').textContent = wordText;
-            document.getElementById('phonics-syllables').textContent = syllablesText;
-            toast.classList.remove('hidden');
 
-            if (toastTimeout) clearTimeout(toastTimeout);
-            toastTimeout = setTimeout(() => {
-                toast.classList.add('hidden');
-            }, 2600);
+            const syllablesEl = document.getElementById('phonics-syllables');
+            syllablesEl.replaceChildren(...syllablesText.split('•').map(part => {
+                const chip = document.createElement('span');
+                chip.className = 'syllable-chip';
+                chip.textContent = part.trim();
+                return chip;
+            }));
 
-            if ('speechSynthesis' in window) {
-                stopReadingPage();
-
-                const utterance = new SpeechSynthesisUtterance(wordText.toLowerCase());
-                utterance.lang = 'pt-BR';
-                if (ptVoice) utterance.voice = ptVoice;
-                utterance.rate = 0.85;
-                utterance.pitch = 1.05;
-                window.speechSynthesis.speak(utterance);
-            }
+            const modal = document.getElementById('phonics-modal');
+            const card = document.getElementById('phonics-card');
+            card.style.animation = 'none';
+            void card.offsetWidth;
+            card.style.animation = '';
+            modal.classList.add('is-open');
+            modal.setAttribute('aria-hidden', 'false');
         }
+
+        function closePhonicsCard() {
+            const modal = document.getElementById('phonics-modal');
+            if (!modal.classList.contains('is-open')) return;
+            modal.classList.remove('is-open');
+            modal.setAttribute('aria-hidden', 'true');
+            if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+        }
+
+        function replayPhonicsWord() {
+            playSound('wordPop');
+            pronounceWord(phonicsCurrentWord);
+        }
+
+        // Fecha só com toque FORA do cartão (no fundo escurecido) ou com Esc
+        document.getElementById('phonics-modal').addEventListener('click', (e) => {
+            if (e.target.id === 'phonics-modal') closePhonicsCard();
+        });
 
         /* =====================================================================
            LEITURA GUIADA: NARRAÇÃO FRASE A FRASE COM DESTAQUE SINCRONIZADO
@@ -1962,6 +2046,7 @@
 
         function goToPage(index) {
             if (index < 0 || index >= totalPages) return;
+            closePhonicsCard();
             stopReadingPage();
 
             playSound('pageFlip');
@@ -1993,6 +2078,8 @@
         }
 
         window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closePhonicsCard();
+            if (document.getElementById('phonics-modal').classList.contains('is-open')) return;
             if (e.key === 'ArrowRight') nextPage();
             if (e.key === 'ArrowLeft') prevPage();
         });

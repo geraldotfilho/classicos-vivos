@@ -104,6 +104,7 @@ Para garantir que o texto narrativo nunca seja cortado ou coberto pela barra de 
 ### 3.2 Fronteira Rígida da Pronúncia Silábica (`speakWord`)
 - **Regra de Ouro**: A pronúncia silábica pausada (ex: `I-MA-GI-NA-ÇÃO`, `CA-VA-LEI-ROS`, `DRAGÕES`) aplica-se **exclusivamente** às palavras destacadas em caixa alta dentro do bloco de texto narrativo.
 - **Proibição de Poluição Visual**: **NUNCA** adicionar cartões com leitura silábica ou balões de fala extensos dentro do quadro da cena interativa ou nas áreas de drop. O quadro da cena deve permanecer limpo, focado na arte e na atmosfera visual.
+- **Cartão de Alfabetização** (`#phonics-modal`): ao tocar numa palavra-chave, abre-se um cartão **centralizado na tela** (vertical e horizontal), sobre um fundo escurecido, com o emoji, a palavra e as **sílabas em blocos de cores alternadas** (rosa, azul, amarelo, verde), para a criança ver onde cada sílaba começa e termina. O cartão **permanece aberto até um toque fora dele** (ou Esc), sem temporizador: a criança lê no próprio ritmo. Tocar no cartão repete a pronúncia. Ele fecha sozinho ao trocar de página. É uma camada sobre o livro inteiro, nunca um elemento dentro do quadro da cena.
 
 ### 3.3 Postura Crítica contra o Excesso de Gamificação
 - **Aviso Mandatório**: Os agentes devem ser **sempre rigorosamente críticos** quanto a possíveis excessos de gamificação ao longo da narrativa.
@@ -114,11 +115,19 @@ Para garantir que o texto narrativo nunca seja cortado ou coberto pela barra de 
 
 ---
 
+### 3.4 Biblioteca para Crianças, Detalhes para Adultos
+- `index.html` é uma **estante lúdica**: livros como capas grandes e tocáveis numa prateleira de madeira, o livro disponível com botão ▶ pulsando e os próximos com 🔒 "Parte N". **Quanto menos texto, melhor**: nada de descrições, pilares, faixas etárias ou títulos de capítulos.
+- Tudo que é informação para adultos (proposta pedagógica, acervo detalhado, instruções de instalação e voz, licença) fica em `sobre.html`, acessível por um botão discreto "Para adultos" (ícone ⓘ).
+- Livro novo: uma capa nova na prateleira de cima e uma entrada no "Acervo" de `sobre.html`.
+
 ## 4. Pipeline de Ilustração: Nano-Banana, Desacoplamento e Banco de Referências
 
 ### 4.1 Uso Obrigatório do Nano-Banana
 - **Regra Indiscutível**: Todas as ilustrações, cenários, personagens e adereços visuais do projeto devem ser produzidos **exclusivamente através do Nano-Banana** (`image-generator`).
 - **Proibição de Gambiarras Gráficas**: É terminantemente proibido tentar montar ilustrações por colagem vetorial SVG externa ou composições manuais quando o usuário pedir arte. O Nano-Banana possui sensibilidade única para aquarela infantil, guache caloroso e contornos suaves de lápis de cor.
+- **Camada ≠ colagem achatada.** A distinção é importante:
+  - ✅ **Permitido e incentivado (§4.2)**: o Nano-Banana gera o cenário limpo e, separadamente, personagens e adereços com fundo transparente, que o **livro** sobrepõe no HTML. Cada camada continua independente, animável e reutilizável.
+  - ❌ **Proibido**: abrir uma ilustração pronta (com personagens) num editor, colar um recorte por cima e salvar o resultado como uma nova cena "achatada". Exemplo real: a antiga `p6-imag` era a capa (`p0-imag`) com Sancho na ilha colado dentro do arquivo. Perde-se a vantagem das camadas (nada se move), o fundo não é um cenário limpo e a cena não corresponde à da Lente da Realidade. Se a cena precisa de um elemento a mais, ele vira uma **camada no DOM** ou a cena é **gerada de novo inteira** pelo Nano-Banana.
 
 ### 4.2 Arquitetura Desacoplada: Cenário Separado de Personagens (Layered Scene)
 Para possibilitar ricas experiências interativas sem perder a fidelidade artística do livro ilustrado:
@@ -128,11 +137,25 @@ Para possibilitar ricas experiências interativas sem perder a fidelidade artís
 2. **Personagens e Adereços em Camadas (Transparent Sprites)**:
    - Produzidos com **fundo transparente (PNG com canal alfa)** ou fundo branco puro isolado para recorte de precisão.
    - Sobrepostos ao cenário através de posicionamento absoluto/relativo no DOM.
+   - Camadas que o livro carrega ficam em `<livro>/imagens/camadas/` (WebP com alfa, gerado por `npm run build:images`). Recortes usados só como referência de prompt ficam em `biblioteca/referencias/`.
+   - **Quando usar camada × ilustração inteira** (modelo híbrido):
+     | Use **camada** quando o elemento… | Use **ilustração inteira** quando… |
+     | :--- | :--- |
+     | se move ou é animado (pás girando, porquinhos dançando, burrico andando, notas musicais) | é a grande transformação da **Lente da Imaginação** (a pintura integrada pesa mais que a animação) |
+     | aparece/some com uma interação **independente** das outras (flauta, sopa): aceita **qualquer ordem** e combinações sem gerar uma imagem por combinação | personagens se **tocam ou interagem fisicamente** (escudo na mão, lança no punho, abraço): recortes separados não casam com a pose |
+     | se repete em várias cenas (o mesmo Sancho, o mesmo Rocinante) | a luz, sombra ou atmosfera da cena inteira muda |
+   - **Regras de integração das camadas** (para não parecer "colado"):
+     1. Mesma **direção de luz**, paleta e espessura de traço do cenário. Gere a camada usando o cenário como imagem de referência.
+     2. **Sombra de contato pintada no próprio sprite** (uma mancha suave sob os pés/cascos), para o personagem "pisar" no chão.
+     3. Mesma **escala e perspectiva**: posicione e dimensione em `%` do quadro 16:9, ancorando pela base (pés), e confira nas duas orientações.
+     4. Recorte limpo, **sem halo branco** nas bordas. Se o Nano-Banana entregar fundo branco, faça o recorte antes de versionar.
+     5. Cada variação de pose (pastor parado × tocando) é um sprite próprio com **o mesmo enquadramento e tamanho de tela**, para trocar sem "pular".
+   - **Estado atual**: o livro ainda não tem o motor de camadas. Todas as cenas são ilustrações inteiras, e a única sobreposição são as pás do moinho. O motor está no `docs/BACKLOG.md` (A-6), e as primeiras aplicações previstas são o moinho (NB-1) e a pousada (NB-2).
 3. **Mecânica Progressiva (Páginas 3, 4 e 5)**:
    - **Página 3 (`?page=2`, Capítulo 2 - A Armadura do Bisavô)**: Cada clique ou drop de um item da bandeja (`ARMADURA`, `BACIA`, `ESCUDO`, `LANÇA`) revela uma nova ilustração do personagem se vestindo progressivamente (`p2-real-stage-1.webp` a `p2-real-stage-4.webp`).
    - **Página 4 (`?page=3`, Capítulo 3 - O Cuidado com Rocinante)**: Cada clique ou drop de carinho (`MAÇÃ`, `CENOURA`, `ESCOVA`) revela uma nova ilustração do cavalo se alimentando alegremente, ganhando energia e com as crinas penteadas com esmero (`p3-real-stage-1.webp` a `p3-real-stage-3.webp`).
    - **Página 5 (`?page=4`, Capítulo 4 - O Acolhimento na Pousada)**: Os botões de `TROMBETA` e `SOPA` revelam o pastor tocando flauta rústica com porquinhos dançarinos (`p4-real-flauta.webp`) e o estalajadeiro servindo a sopa fumegante (`p4-real-sopa.webp`).
-   - **Regra das ilustrações cumulativas**: quando cada etapa **contém** as anteriores (a etapa 2 já mostra o peitoral da etapa 1), os itens **precisam seguir uma ordem fixa**, a mesma do texto, declarada em `progressiveScenes[pageIdx].order`. O próximo item brilha (`.card-next`), os seguintes ficam esmaecidos (`.card-waiting`) e um toque fora de ordem só dá uma dica gentil (som `hint` + balanço do cartão certo), **sem trocar a cena**. Nunca escolha a etapa pela *quantidade* de itens usados: esse foi o bug "toco na bacia e ele veste o peitoral". Se a interação precisar aceitar qualquer ordem, gere ilustrações **independentes** por item (não cumulativas).
+   - **Regra das ilustrações cumulativas**: quando cada etapa **contém** as anteriores (a etapa 2 já mostra o peitoral da etapa 1), os itens **precisam seguir uma ordem fixa**, a mesma do texto, declarada em `progressiveScenes[pageIdx].order`. O próximo item brilha (`.card-next`), os seguintes ficam esmaecidos (`.card-waiting`) e um toque fora de ordem só dá uma dica gentil (som `hint` + balanço do cartão certo), **sem trocar a cena**. Nunca escolha a etapa pela *quantidade* de itens usados: esse foi o bug "toco na bacia e ele veste o peitoral". Se a interação precisar aceitar qualquer ordem, use **camadas independentes** por item (ver acima) ou ilustrações independentes por item (não cumulativas).
    - Usar um item com a Lente da Imaginação ativa volta para a Lente da Realidade (vestir e cuidar acontecem no mundo real).
    - **Tempo de Contemplação do Leitor**: É terminantemente proibido forçar auto-toggle, transições automáticas precipitadas ou piscamentos relâmpagos para a imaginação. O leitor infantil deve contemplar a cena real concluída pelo tempo que desejar. O botão da Lente da Imaginação apenas pulsa suavemente para convidar a criança à transformação deliberada.
 
@@ -145,10 +168,13 @@ classicos-vivos/
 │   └── icones/                          # ícones do app (PWA)
 ├── tools/                               # scripts de build (fontes, ícones, Tailwind, WebP, service worker)
 ├── docs/  BACKLOG.md · TODO-NANO-BANANA.md
+├── index.html                           # Biblioteca das crianças (estante de livros, quase sem texto)
+├── sobre.html                           # Detalhes para adultos (proposta, acervo, uso no tablet, licença)
 ├── sw.js · manifest.webmanifest
 └── dom-quixote/
     ├── parte-1.html
     ├── imagens/                         # FONTE ÚNICA do que o livro carrega (cenas pN-*.webp)
+    │   ├── camadas/                     # sprites com alfa sobrepostos às cenas (WebP)
     │   └── objetos/                     # ícones SVG das bandejas
     └── biblioteca/
         ├── CATALOGO.md

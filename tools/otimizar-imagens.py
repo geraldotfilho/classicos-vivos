@@ -1,4 +1,4 @@
-"""Converte ilustrações JPG/PNG de <livro>/imagens/ para WebP otimizado para tablet.
+"""Converte ilustrações JPG/PNG de <livro>/imagens/ (inclusive camadas/) para WebP otimizado para tablet.
 
 Uso:  python3 tools/otimizar-imagens.py            (todos os livros)
       python3 tools/otimizar-imagens.py caminho.png (arquivos específicos)
@@ -30,7 +30,7 @@ def converter(src: Path) -> None:
 if __name__ == '__main__':
     root = Path(__file__).resolve().parent.parent
     alvos = [Path(a) for a in sys.argv[1:]] or [
-        p for p in root.glob('*/imagens/*') if p.suffix.lower() in ('.jpg', '.jpeg', '.png')
+        p for p in root.glob('*/imagens/**/*') if p.suffix.lower() in ('.jpg', '.jpeg', '.png')
     ]
     for p in alvos:
         converter(p)
