@@ -52,7 +52,7 @@
             border: 6px solid #D97706;
             height: calc(100vh - 10px);
             height: calc(100dvh - 10px);
-            max-height: 900px;
+            max-height: 100%;
             box-shadow:
                 0 25px 60px -15px rgba(0, 0, 0, 0.75),
                 inset 0 0 35px rgba(217, 119, 6, 0.12),
@@ -64,6 +64,13 @@
                 border-width: 8px;
                 height: calc(100vh - 20px);
                 height: calc(100dvh - 20px);
+                max-height: 100%;
+            }
+        }
+
+        @media (min-width: 1024px) and (orientation: landscape) {
+            .storybook-frame {
+                max-height: 900px;
             }
         }
 
@@ -214,16 +221,12 @@
             100% { transform: translate(var(--tx), var(--ty)) scale(1.35) rotate(25deg); opacity: 0; }
         }
 
-        /* Transição suave entre páginas */
+        /* Exibição e ocultação de páginas no leitor */
         .page-slide {
-            transition: opacity 0.3s ease, transform 0.3s ease;
+            opacity: 1;
         }
         .page-hidden {
-            opacity: 0;
-            pointer-events: none;
-            position: absolute;
-            inset: 0;
-            transform: scale(0.97);
+            display: none !important;
         }
 
         #pages-viewport {
@@ -377,9 +380,9 @@
                     <div id="drop-zone-1" class="drop-zone-target relative w-full aspect-[16/9] rounded-2xl overflow-hidden border-2 border-amber-400 shadow-md bg-slate-900 flex items-center justify-center">
                         <img id="scene-bg-1" src="./imagens/p1-real.jpg" alt="Sala de Leitura de Alonso Quixano" class="w-full h-full object-contain transition-all duration-300" />
 
-                        <!-- Gatinho tocável -->
-                        <div onclick="tapSceneHotspot(this, event, 'GATINHO', '🐱')"
-                             class="scene-hotspot" style="left: 26%; top: 73%; width: 18%; height: 22%;" title="Tocar no Gatinho"></div>
+                        <!-- Gatinho / Leão Guardião tocável -->
+                        <div onclick="tapCatLionHotspot(event)"
+                             class="scene-hotspot" style="left: 23%; top: 68%; width: 24%; height: 28%;" title="Tocar no Gatinho ou Leão Guardião"></div>
                     </div>
 
                     <!-- Bandeja de Cartões de Alfabetização Arrastáveis (LIVROS) -->
@@ -882,7 +885,7 @@
                 realImg: "./imagens/p1-real.jpg",
                 imagImg: "./imagens/p1-imag.jpg",
                 realBadge: "👓 Lente da Realidade: A Sala de Leitura do Vovô Alonso",
-                imagBadge: "✨ Lente da Imaginação: Dragões, Castelos e Magia!"
+                imagBadge: "✨ Lente da Imaginação: O Leão Guardião e Mundos Mágicos!"
             },
             {
                 realImg: "./imagens/p2-real.jpg",
@@ -1316,6 +1319,11 @@
             tapSceneHotspot(null, event, isImag ? 'DULCINEIA' : 'ALDONZA', isImag ? '👸' : '🌾');
         }
 
+        function tapCatLionHotspot(event) {
+            const isImag = lensImaginationState[1];
+            tapSceneHotspot(null, event, isImag ? 'LEÃO GUARDIÃO' : 'GATINHO', isImag ? '🦁' : '🐱');
+        }
+
         function handleBookDrop(bookId, coords) {
             readBooksSet.add(bookId);
             const sceneImg = document.getElementById('scene-bg-1');
@@ -1528,6 +1536,16 @@
             renderPaginationDots();
             initDraggableCards();
             document.getElementById('btn-prev').disabled = true;
+
+            // Suporte a URL params para navegação direta e testes automatizados (?page=1&imag=1)
+            const params = new URLSearchParams(window.location.search);
+            const p = parseInt(params.get('page'));
+            if (!isNaN(p) && p >= 0 && p < totalPages) {
+                goToPage(p);
+                if (params.get('imag') === '1' || params.get('imag') === 'true') {
+                    toggleLens(p, null, true);
+                }
+            }
         };
     </script>
 </body>
