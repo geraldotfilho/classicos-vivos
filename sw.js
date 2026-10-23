@@ -4,7 +4,7 @@
    - Na instalação, baixa todos os livros (HTML, estilos, fontes e ilustrações) para leitura offline.
    - Páginas HTML: rede primeiro (recebe correções), cache quando estiver sem internet.
    - Demais arquivos: cache primeiro (abre instantâneo no tablet). */
-const CACHE = 'classicos-vivos-bf5128a1ecbe';
+const CACHE = 'classicos-vivos-fcc6031a9e15';
 const FILES = [
     "./assets/icones/icone-192.png",
     "./assets/css/fonts.css",
@@ -38,7 +38,6 @@ const FILES = [
     "./dom-quixote/imagens/objetos/livro-cavaleiros.svg",
     "./dom-quixote/imagens/objetos/livro-dragoes.svg",
     "./dom-quixote/imagens/objetos/maca.svg",
-    "./dom-quixote/imagens/objetos/moinho-pas.svg",
     "./dom-quixote/imagens/objetos/sopa-banquete.svg",
     "./dom-quixote/imagens/objetos/trombeta-flauta.svg",
     "./dom-quixote/imagens/objetos/vento-sopro.svg",
@@ -59,17 +58,13 @@ const FILES = [
     "./dom-quixote/imagens/p3-real-stage-3.webp",
     "./dom-quixote/imagens/p3-real.webp",
     "./dom-quixote/imagens/p4-imag.webp",
-    "./dom-quixote/imagens/p4-real-flauta.webp",
     "./dom-quixote/imagens/p4-real-fundo.webp",
-    "./dom-quixote/imagens/p4-real-sopa.webp",
-    "./dom-quixote/imagens/p4-real.webp",
     "./dom-quixote/imagens/p5-imag.webp",
     "./dom-quixote/imagens/p5-real.webp",
     "./dom-quixote/imagens/p6-imag.webp",
     "./dom-quixote/imagens/p6-real.webp",
     "./dom-quixote/imagens/p7-imag.webp",
     "./dom-quixote/imagens/p7-real-sem-pas.webp",
-    "./dom-quixote/imagens/p7-real.webp",
     "./dom-quixote/parte-1.html",
     "./dom-quixote/parte-2.html",
     "./dom-quixote/parte-3.html",
