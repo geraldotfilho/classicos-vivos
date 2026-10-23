@@ -378,7 +378,7 @@
 
                     <!-- Quadro 16:9 Integral sem Recortes -->
                     <div id="drop-zone-1" class="drop-zone-target relative w-full aspect-[16/9] rounded-2xl overflow-hidden border-2 border-amber-400 shadow-md bg-slate-900 flex items-center justify-center">
-                        <img id="scene-bg-1" src="./imagens/p1-real.jpg" alt="Sala de Leitura de Alonso Quixano" class="w-full h-full object-contain transition-all duration-300" />
+                        <img id="scene-bg-1" src="./imagens/p1-real.jpg?v=3" alt="Sala de Leitura de Alonso Quixano" class="w-full h-full object-contain transition-all duration-300" />
 
                         <!-- Gatinho / Leão Guardião tocável -->
                         <div onclick="tapCatLionHotspot(event)"
@@ -460,7 +460,21 @@
 
                     <!-- Quadro 16:9 Integral sem Recortes -->
                     <div id="drop-zone-2" class="drop-zone-target relative w-full aspect-[16/9] rounded-2xl overflow-hidden border-2 border-amber-400 shadow-md bg-slate-900 flex items-center justify-center">
-                        <img id="scene-bg-2" src="./imagens/p2-real.jpg" alt="Dom Quixote no Sótão" class="w-full h-full object-contain transition-all duration-300" />
+                        <img id="scene-bg-2" src="./imagens/p2-real.jpg?v=3" alt="Dom Quixote no Sótão" class="w-full h-full object-contain transition-all duration-300" />
+
+                        <!-- Adereços de Armadura Improvisada Equipados Dinamicamente sobre Alonso Quixano -->
+                        <img id="gear-overlay-1" src="./biblioteca/objetos/armadura-peitoral.svg" alt="Peitoral Equipado"
+                             class="gear-equipped-overlay hidden absolute pointer-events-none drop-shadow-md transition-all duration-300 transform"
+                             style="left: 47%; top: 40%; width: 10%; z-index: 10;" />
+                        <img id="gear-overlay-2" src="./biblioteca/objetos/bacia-elmo.svg" alt="Bacia Equipada"
+                             class="gear-equipped-overlay hidden absolute pointer-events-none drop-shadow-md transition-all duration-300 transform"
+                             style="left: 47.5%; top: 22.5%; width: 8.5%; z-index: 12;" />
+                        <img id="gear-overlay-3" src="./biblioteca/objetos/escudo-panelao.svg" alt="Escudo Equipado"
+                             class="gear-equipped-overlay hidden absolute pointer-events-none drop-shadow-md transition-all duration-300 transform"
+                             style="left: 54%; top: 46%; width: 9%; z-index: 11;" />
+                        <img id="gear-overlay-4" src="./biblioteca/objetos/lanca-bandeirola.svg" alt="Lança Equipada"
+                             class="gear-equipped-overlay hidden absolute pointer-events-none drop-shadow-md transition-all duration-300 transform"
+                             style="left: 38%; top: 18%; width: 6%; height: 58%; z-index: 9;" />
                     </div>
 
                     <!-- 4 Cartões Arrastáveis -->
@@ -706,32 +720,7 @@
                         <img id="scene-bg-5" src="./imagens/p5-real.jpg" alt="Cerimônia de Cavaleiro sob a Lua Cheia" class="w-full h-full object-contain transition-all duration-300" />
 
                         <div onclick="tapSceneHotspot(this, event, 'BEBEDOURO', '💧')"
-                             class="scene-hotspot" style="left: 4%; top: 36%; width: 26%; height: 55%;"></div>
-                    </div>
-
-                    <!-- 2 Cartões Arrastáveis -->
-                    <div class="w-full grid grid-cols-2 gap-2.5 z-20 mt-2">
-                        <div id="drag-ceremony-1"
-                             data-drop-target="drop-zone-5"
-                             data-action="ceremony"
-                             data-id="lua"
-                             data-word="LUA CHEIA"
-                             data-emoji="🌕"
-                             class="draggable-card bg-white border-2 border-amber-400 rounded-2xl p-1.5 flex items-center justify-center gap-2">
-                            <img src="./biblioteca/objetos/lua-cheia.svg" alt="Lua Cheia" class="w-8 h-8 sm:w-10 sm:h-10 shrink-0 pointer-events-none" />
-                            <span class="font-display font-bold text-xs sm:text-sm text-amber-950 uppercase">LUA CHEIA</span>
-                        </div>
-
-                        <div id="drag-ceremony-2"
-                             data-drop-target="drop-zone-5"
-                             data-action="ceremony"
-                             data-id="espada"
-                             data-word="ESPADA"
-                             data-emoji="⚔️"
-                             class="draggable-card bg-white border-2 border-emerald-500 rounded-2xl p-1.5 flex items-center justify-center gap-2">
-                            <img src="./biblioteca/objetos/espada-real.svg" alt="Espada" class="w-8 h-8 sm:w-10 sm:h-10 shrink-0 pointer-events-none" />
-                            <span class="font-display font-bold text-xs sm:text-sm text-emerald-950 uppercase">ESPADA</span>
-                        </div>
+                             class="scene-hotspot" style="left: 4%; top: 36%; width: 26%; height: 55%;" title="Tocar no Bebedouro"></div>
                     </div>
 
                     <!-- Botão da Lente -->
@@ -1178,7 +1167,22 @@
             }
 
             if (sceneImg) {
-                sceneImg.src = isImag ? meta.imagImg : meta.realImg;
+                let targetSrc = isImag ? meta.imagImg : meta.realImg;
+                if (pageIdx === 2) {
+                    if (!isImag && equippedPiecesSet.size === 4) {
+                        targetSrc = "./imagens/p2-real-completa.jpg";
+                    }
+                    // Gerencia visibilidade dos adereços sobrepostos
+                    document.querySelectorAll('.gear-equipped-overlay').forEach(el => {
+                        const id = el.id.replace('gear-overlay-', '');
+                        if (isImag || equippedPiecesSet.size === 4 || !equippedPiecesSet.has(id)) {
+                            el.classList.add('hidden');
+                        } else {
+                            el.classList.remove('hidden');
+                        }
+                    });
+                }
+                sceneImg.src = targetSrc + '?v=3';
             }
 
             if (isImag) {
@@ -1346,11 +1350,24 @@
             void sceneImg.offsetWidth;
             sceneImg.classList.add('character-joy');
 
+            // Exibe o adereço equipado correspondente sobre Alonso Quixano
+            const overlay = document.getElementById('gear-overlay-' + gearId);
+            if (overlay) {
+                overlay.classList.remove('hidden');
+            }
+
             if (equippedPiecesSet.size === 4) {
-                playSound('fanfare');
-                if (!lensImaginationState[2]) {
-                    setTimeout(() => toggleLens(2, null, true), 500);
-                }
+                // Todas as 4 peças banais montadas: exibe Alonso com a armadura completa improvisada
+                setTimeout(() => {
+                    document.querySelectorAll('.gear-equipped-overlay').forEach(el => el.classList.add('hidden'));
+                    sceneImg.src = "./imagens/p2-real-completa.jpg?v=3";
+                    playSound('fanfare');
+                    if (!lensImaginationState[2]) {
+                        setTimeout(() => toggleLens(2, null, true), 900);
+                    }
+                }, 350);
+            } else {
+                playSound('wordPop');
             }
         }
 

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="brassGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FEF08A"/>
+      <stop offset="45%" stop-color="#FACC15"/>
+      <stop offset="100%" stop-color="#B45309"/>
+    </linearGradient>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#451A03" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <g filter="url(#shadow)">
+    <!-- Pluma charmosa -->
+    <path d="M35 38 Q18 15 10 24 Q18 38 35 42 Z" fill="#EF4444" stroke="#991B1B" stroke-width="2.5"/>
+    <!-- Cúpula da Bacia de Barbeiro -->
+    <path d="M22 72 C22 30, 98 30, 98 72 Z" fill="url(#brassGrad)" stroke="#78350F" stroke-width="3.5"/>
+    <!-- Aba com recorte de barbeiro -->
+    <path d="M10 72 L110 72 C112 82, 92 86, 75 84 C66 76, 54 76, 45 84 C28 86, 8 82, 10 72 Z" fill="#EAB308" stroke="#78350F" stroke-width="3.5"/>
+    <!-- Brilho Metálico -->
+    <path d="M38 56 Q52 42 70 46" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" opacity="0.75"/>
+  </g>
+</svg>

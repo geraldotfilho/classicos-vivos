@@ -66,69 +66,58 @@ Para garantir que o texto narrativo nunca seja cortado ou coberto pela barra de 
 
 ---
 
-## 3. Diretrizes Pedagógicas e Limites de UX
+## 3. Diretrizes Pedagógicas, UX e Crítica à Gamificação
 
 ### 3.1 A Dupla Lente da Imaginação
 - Cada página oferece dois pontos de vista alternáveis pelo botão de lente:
   1. **Lente da Realidade**: O mundo como ele é (Alonso Quixano idoso em sua poltrona; bacia de latão na cabeça; camponesa Aldonza; moinhos de vento na colina).
-  2. **Lente da Imaginação**: Como Dom Quixote enxerga com seus olhos poéticos (O rei em seu trono com dragões e um **leão guardião**; armadura dourada reluzente; Princesa Dulcineia do Toboso; gigantes descomunais agitando braços de vento).
+  2. **Lente da Imaginação**: Como Dom Quixote enxerga com seus olhos poéticos (O rei em seu trono com dragões e o **leão guardião**; armadura dourada reluzente; Princesa Dulcineia do Toboso; gigantes descomunais agitando braços de vento).
 - **Consistência Textual**: O texto literário principal **não** é alterado ao trocar de lente; a cena visual é que se metamorfoseia, ensinando à criança a magia de ler e imaginar.
 
 ### 3.2 Fronteira Rígida da Pronúncia Silábica (`speakWord`)
 - **Regra de Ouro**: A pronúncia silábica pausada (ex: `I-MA-GI-NA-ÇÃO`, `CA-VA-LEI-ROS`, `DRAGÕES`) aplica-se **exclusivamente** às palavras destacadas em caixa alta dentro do bloco de texto narrativo.
 - **Proibição de Poluição Visual**: **NUNCA** adicionar cartões com leitura silábica ou balões de fala extensos dentro do quadro da cena interativa ou nas áreas de drop. O quadro da cena deve permanecer limpo, focado na arte e na atmosfera visual.
 
-### 3.3 Interações na Cena (Hotspots)
-- Os toques em elementos da cena (personagens e animais) devem gerar feedback imediato:
-  - Som procedural sintetizado (Web Audio API).
-  - Erupção de partículas emoji flutuantes (`🐱`, `🦁`, `✨`, `⚔️`, `🌾`, `👸`).
-  - Badge dinâmico de identificação lúdica no topo da cena.
+### 3.3 Postura Crítica contra o Excesso de Gamificação
+- **Aviso Mandatório**: Os agentes devem ser **sempre rigorosamente críticos** quanto a possíveis excessos de gamificação ao longo da narrativa.
+- A interatividade **nunca deve competir com a leitura nem quebrar o ritmo poético do livro**.
+- **Regra Prática**: Botões ou cartões arrastáveis que não geram transformação tangível e divertida na cena são ruído pedagógico e devem ser banidos.
+  - *Exemplo real (Página 6)*: Na cena da sagração de cavaleiro, havia cartões para arrastar "LUA CHEIA" e "ESPADA" que apenas faziam a imagem tremer sem alterar a ilustração. Foram eliminados para manter o quadro limpo, preservando a interatividade das palavras apenas no texto da história.
 
 ---
 
-## 4. Padrões de Ilustração e Gestão de Ativos
+## 4. Pipeline de Ilustração: Nano-Banana, Desacoplamento e Banco de Referências
 
-### 4.1 Especificações Visuais das Imagens
-- **Proporção**: **16:9 estrita** (`aspect-[16/9]`, `object-contain`).
-- **Resolução Nativa**: 1376 × 768 px ou 1280 × 720 px.
-- **Formato de Entrega**: JPEG otimizado (~90-92% de qualidade) para carregamento instantâneo em tablets escolares.
-- **Estilo de Arte**: Aquarela e guache infantil caloroso, contornos suaves a lápis de cor, paleta inspirada na luz dourada da Espanha (Castela/La Mancha), atmosfera acolhedora e amigável.
-- **Texto nas Imagens**: **Zero texto impresso**. Nenhuma palavra em espanhol, inglês ou português deve vir embutida nas ilustrações. Todo texto deve ser renderizado em HTML para acessibilidade e síntese de voz.
+### 4.1 Uso Obrigatório do Nano-Banana
+- **Regra Indiscutível**: Todas as ilustrações, cenários, personagens e adereços visuais do projeto devem ser produzidos **exclusivamente através do Nano-Banana** (`image-generator`).
+- **Proibição de Gambiarras Gráficas**: É terminantemente proibido tentar montar ilustrações por colagem vetorial SVG externa ou composições manuais quando o usuário pedir arte. O Nano-Banana possui sensibilidade única para aquarela infantil, guache caloroso e contornos suaves de lápis de cor.
 
-### 4.2 Âncoras Visuais dos Personagens
-- **Alonso Quixano / Dom Quixote**: Vovô bondoso de 60 anos, esguio e alto, pele bronzeada acolhedora, bochechas rosadas, olhos alegres e expressivos, bigode branco comprido e curvado, pequeno cavanhaque branco.
-  - *Realidade*: Armadura cinza remendada com pequenos pontos de ferrugem, bacia de latão dourado virada na cabeça como elmo.
-  - *Imaginação*: Armadura completa de ouro puro com brasão de leão no peito, elmo dourado com pluma carmesim esvoaçante, capa real de veludo vermelho.
-- **Rocinante**:
-  - *Realidade*: Cavalo marrom claro muito magricela e ossudo, cara meiga e doce, crina levemente bagunçada.
-  - *Imaginação*: Majestoso corcel de guerra branco como a neve, musculoso, crina dourada reluzente e sela real de veludo.
-- **Sancho Pança**: Camponês baixinho, rechonchudo, bochechas rosadas, sorriso afetuoso de orelha a orelha, túnica marrom simples e chapéu de palha, montado em um burrico cinza simpático.
-- **O Gatinho / Leão Guardião (Página 2 / Cap. 1)**:
-  - *Realidade*: Gatinho laranja fofo dormindo enroladinho no tapete vermelho e amarelo.
-  - *Imaginação*: Nobre **filhote de leão guardião dourado**, com juba farta em camadas, pequena coroa real e patinhas descansadas, personificando a passagem de Cervantes: *"até o gatinho da sala parecia um leão guardião!"*.
+### 4.2 Arquitetura Desacoplada: Cenário Separado de Personagens (Layered Scene)
+Para possibilitar ricas experiências interativas sem perder a fidelidade artística do livro ilustrado:
+1. **Cenário de Fundo (Background)**:
+   - Produzido **limpo**, em proporção 16:9 (`aspect-[16/9]`, `object-contain`), sem personagens fixados diretamente no desenho.
+   - Serve como palco imersivo permanente.
+2. **Personagens e Adereços em Camadas (Transparent Sprites)**:
+   - Produzidos com **fundo transparente (PNG com canal alfa)** ou fundo branco puro isolado para recorte de precisão.
+   - Sobrepostos ao cenário através de posicionamento absoluto/relativo no DOM.
+3. **Mecânica Progressiva (Página 3 / Capítulo 2 - A Armadura Feita em Casa)**:
+   - O sótão começa com o fundo de madeira vazio e ensolarado.
+   - Alonso Quixano surge inicialmente em roupas cotidianas simples (sem armadura).
+   - À medida que o leitor arrasta cada item da bandeja (`ARMADURA`, `BACIA`, `ESCUDO`, `LANÇA`), o personagem veste progressivamente os adereços banais do cotidiano.
+   - Ao final, ou ao clicar na **Lente da Imaginação**, a composição se transfigura no deslumbrante Cavaleiro de Ouro reluzente.
 
-### 4.3 Estrutura de Arquivos
+### 4.3 Banco de Personagens e Itens de Referência
+Foi criada a estrutura padronizada para armazenamento e contexto de prompts:
 ```text
 classicos-vivos/
-├── dom-quixote/
-│   ├── parte-1.html                        # Código-fonte principal do livro interativo
-│   ├── imagens/                            # Imagens 16:9 em produção (p0-real.jpg a p6-imag.jpg)
-│   ├── biblioteca/
-│   │   ├── cenarios/                       # Cenas espelhadas para carregamento modular
-│   │   ├── personagens/                    # SVGs de personagens (ex: leao-guardiao.svg)
-│   │   └── objetos/                        # SVGs de adereços (armadura, bacia, livros)
-│   └── PROMPTS_ILUSTRACOES.md              # Registro completo dos prompts de geração de imagem
-├── index.html                              # Hub inicial da coleção Clássicos Vivos
-├── AGENTS.md                               # Este documento de referência
-└── README.md                               # Documentação pública do repositório
+└── dom-quixote/
+    └── biblioteca/
+        └── referencias/
+            ├── personagens/                 # Sprites com canal alfa (Alonso simples, armadurado, dourado, etc.)
+            ├── cenarios/                    # Cenários vazios 16:9 (sótão, sala de leitura, estábulo, etc.)
+            └── itens/                       # Adereços isolados transparentes (bacia, elmo, peitoral, lanças)
 ```
-- **Arquivo Espelho na Raiz**: O arquivo `dom_quixote_parte_1_livro_interativo_infantil.html` na raiz do workspace deve ser mantido sempre em sincronia idêntica com `classicos-vivos/dom-quixote/parte-1.html`.
-
-### 4.4 Resiliência contra Limites de Cotas de IA (429 Rate Limits)
-Quando modelos de geração de imagem por IA apresentarem `RESOURCE_EXHAUSTED (429)`, a estratégia comprovada é:
-1. Criar o elemento vetorial modular com SVG de alta fidelidade estilizado em aquarela/sombras na pasta `biblioteca/personagens/`.
-2. Fazer a composição na resolução exata de 1376 × 768 via headless Chrome e converter para JPEG 92%.
-3. Essa técnica garante independência de cotas externas e controle milimétrico da composição visual.
+- **Uso como Contexto**: Ao solicitar novas cenas ao Nano-Banana, os caminhos desses ativos de referência devem ser informados no prompt para que a IA mantenha total continuidade de design, proporção, tons de pele e vestimentas ao longo de toda a coleção.
 
 ---
 
@@ -145,13 +134,6 @@ cmd /c '"C:\Program Files\Google\Chrome\Application\chrome.exe" --headless=new -
 ```powershell
 cmd /c '"C:\Program Files\Google\Chrome\Application\chrome.exe" --headless=new --screenshot="C:\Users\geral\Projetos\classicos_infantis_para_tablet\test-landscape.png" --window-size=1280,800 --hide-scrollbars "file:///C:/Users/geral/Projetos/classicos_infantis_para_tablet/classicos-vivos/dom-quixote/parte-1.html?page=1&imag=1"'
 ```
-
-### 5.3 Checklist de Inspeção Visual Automatizada
-- [ ] O cabeçalho com título e botão de áudio/música está alinhado e legível.
-- [ ] A cena em proporção 16:9 está centralizada sem distorção ou corte (`object-contain`).
-- [ ] O texto narrativo possui margem confortável e não é sobreposto pela barra de navegação inferior.
-- [ ] A barra de rodapé (Anterior, Paginação, Próxima) está fixada e com botões clicáveis.
-- [ ] O leão guardião e os efeitos mágicos estão nítidos na Lente da Imaginação da Página 2.
 
 ---
 

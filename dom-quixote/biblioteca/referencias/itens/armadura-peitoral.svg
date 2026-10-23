@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="steelGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E2E8F0"/>
+      <stop offset="50%" stop-color="#94A3B8"/>
+      <stop offset="100%" stop-color="#475569"/>
+    </linearGradient>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#1E293B" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <g filter="url(#shadow)">
+    <!-- Capa vermelha remendada atrás -->
+    <path d="M26 32 L94 32 L104 102 L16 102 Z" fill="#E11D48" stroke="#881337" stroke-width="3"/>
+    <!-- Ombreiras -->
+    <ellipse cx="26" cy="42" rx="16" ry="12" fill="url(#steelGrad)" stroke="#334155" stroke-width="3"/>
+    <ellipse cx="94" cy="42" rx="16" ry="12" fill="url(#steelGrad)" stroke="#334155" stroke-width="3"/>
+    <!-- Peitoral Metálico -->
+    <path d="M32 30 L88 30 L82 92 Q60 104 38 92 Z" fill="url(#steelGrad)" stroke="#334155" stroke-width="3.5"/>
+    <!-- Manchinhas charmosas de ferrugem -->
+    <circle cx="46" cy="54" r="5" fill="#B45309" opacity="0.65"/>
+    <circle cx="72" cy="68" r="6.5" fill="#92400E" opacity="0.55"/>
+    <circle cx="52" cy="80" r="4" fill="#B45309" opacity="0.6"/>
+    <!-- Lenço vermelho no pescoço -->
+    <path d="M40 30 Q60 44 80 30" fill="none" stroke="#DC2626" stroke-width="8" stroke-linecap="round"/>
+  </g>
+</svg>

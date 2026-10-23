@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="woodGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="50%" stop-color="#B45309"/>
+      <stop offset="100%" stop-color="#78350F"/>
+    </linearGradient>
+    <linearGradient id="bristleGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FEF3C7"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#451A03" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <g filter="url(#shadow)" transform="rotate(-15 60 60)">
+    <!-- Cerdas Macias da Escova -->
+    <rect x="24" y="56" width="72" height="32" rx="10" fill="url(#bristleGrad)" stroke="#92400E" stroke-width="3"/>
+    <line x1="36" y1="58" x2="36" y2="86" stroke="#B45309" stroke-width="2.5"/>
+    <line x1="48" y1="58" x2="48" y2="86" stroke="#B45309" stroke-width="2.5"/>
+    <line x1="60" y1="58" x2="60" y2="86" stroke="#B45309" stroke-width="2.5"/>
+    <line x1="72" y1="58" x2="72" y2="86" stroke="#B45309" stroke-width="2.5"/>
+    <line x1="84" y1="58" x2="84" y2="86" stroke="#B45309" stroke-width="2.5"/>
+    <!-- Base de Madeira -->
+    <rect x="18" y="34" width="84" height="26" rx="13" fill="url(#woodGrad)" stroke="#451A03" stroke-width="3.5"/>
+    <!-- Alça de Couro para a Mão -->
+    <path d="M38 34 Q60 16 82 34" fill="none" stroke="#DC2626" stroke-width="9" stroke-linecap="round"/>
+    <path d="M38 34 Q60 16 82 34" fill="none" stroke="#FBBF24" stroke-width="3" stroke-dasharray="4 4" stroke-linecap="round"/>
+    <!-- Brilho -->
+    <ellipse cx="45" cy="44" rx="18" ry="4" fill="#FEF3C7" opacity="0.5"/>
+  </g>
+</svg>
