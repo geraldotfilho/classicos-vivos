@@ -17,6 +17,8 @@ ESTADO: ATIVO
    | `docs/fila/ENTREGAS.md` | Gemini |
    | `docs/TODO-NANO-BANANA*.md`, `AGENTS.md`, `docs/BACKLOG.md`, `docs/PLANO-*.md`, todo HTML/JS/CSS | Claude |
    | `dom-quixote/imagens/**`, `assets/icones/**`, `dom-quixote/biblioteca/**` (inclui `CATALOGO.md`), `dom-quixote/PROMPTS_ILUSTRACOES.md` | Gemini |
+   | `dom-quixote/audio/**` (narração gravada, inclui `vozes.js`) | Gemini |
+   | `docs/narracao/**` (lista de frases, gerada por `npm run exportar:frases`) e `docs/TODO-NARRACAO.md` | Claude |
    | `sw.js` (gerado) | os dois. Em conflito, **nunca resolva à mão**: rode `npm run build:sw` e faça o commit do resultado |
 2. **Status de tarefa** fica **só** em `ENTREGAS.md`: o Gemini **não** marca nada nos arquivos `TODO-*`.
 3. Cada pedido tem um ID (`P-001`, `P-002`…). Cada ajuste pedido numa revisão vira um pedido novo com ID próprio e status `ABERTO`.
@@ -35,10 +37,14 @@ ESTADO: ATIVO
 | P-003 | ajuste | **NB-2 (pousada), camadas com cara de adesivo**. Regerar **mantendo o mesmo tamanho de tela (canvas), o mesmo enquadramento e o mesmo ponto de apoio** de cada arquivo, porque o código já posiciona essas camadas: (1) `p4-estalajadeiro-acenando` e `p4-estalajadeiro-sopa`: a sombra de contato é uma **mancha branca/cinza-clara**; troque por uma sombra **escura, marrom-acinzentada, suave e semitransparente**, e deixe o avental **100% opaco** (hoje ~4% dos pixels claros têm alfa parcial: a remoção do fundo branco comeu o avental); (2) `p4-porquinhos`: mesma troca da sombra branca por sombra escura suave; (3) `p4-pastor-parado` e `p4-pastor-tocando`: **sem o tapete de grama recortado** sob o menino; só o menino sentado com uma sombra escura suave; (4) `p4-notas-musicais`: **sem o contorno/halo branco**; um brilho dourado suave é bem-vindo. Teste: componha cada camada sobre um fundo magenta puro, e nada branco pode aparecer em volta. | PARCIAL → substituído por P-005 |
 | P-004 | tarefa | **Limpeza (baixa prioridade, depois de P-003)**: apagar os arquivos substituídos pelas camadas e que o livro não carrega mais: `dom-quixote/imagens/p4-real.webp`, `p4-real-flauta.webp`, `p4-real-sopa.webp`, `p7-real.webp` e `dom-quixote/imagens/objetos/moinho-pas.svg`. Atualizar o `CATALOGO.md`. Rodar `npm run build:sw`. | ✅ CONCLUÍDO |
 | P-005 | ajuste (adiado) | **⏸️ ADIADO: só depois que os quatro livros estiverem prontos (P-001 e P-002 concluídos), por decisão do responsável humano. NÃO faça agora.** Pousada: remover o "chão" pintado dentro das camadas** (continuação de P-003, que corrigiu o avental e as notas). O defeito que restou **não é a sombra**: o Nano-Banana pinta um **pedaço de chão claro (mancha branca/creme)** sob os pés, e o pastor vem sentado num **tapete de grama recortado**; a sombra escura nova ficou *por baixo* desse pedaço de chão. Arquivos: `p4-estalajadeiro-acenando`, `p4-estalajadeiro-sopa`, `p4-porquinhos`, `p4-pastor-parado`, `p4-pastor-tocando` (as notas estão aprovadas, não mexa). **Mesmo canvas, enquadramento e ponto de apoio.** Como fazer: (a) gere de novo pedindo explicitamente `isolated character, NO ground, NO floor patch, NO grass, NO base under the feet, feet resting on nothing except a soft dark translucent contact shadow`; ou (b) pós-processe o PNG atual: a partir das áreas já transparentes, apague (alfa 0) os pixels **claros** (R, G e B > 215) **e verdes de grama** conectados a elas, só nos **25% inferiores** do canvas, sem tocar no corpo; depois pinte uma sombra elíptica marrom-acinzentada com alfa ≤ 40% sob os pés. **Critério de aceite verificável**: sobre fundo magenta puro, nos 25% inferiores do canvas, fora da silhueta dos pés, sapatos e pernas, só aparecem magenta ou sombra escura translúcida: **nenhum pixel claro ou verde**. Inclua no `ENTREGAS.md` a contagem desses pixels (deve ser 0). | ⏸️ ADIADO |
+| P-006 | tarefa | **Narração gravada**: executar `docs/TODO-NARRACAO.md` (narradora → palavras-chave → teatro de vozes), **depois** de P-001 e P-002 (arte primeiro). Entradas em `docs/narracao/`; saídas em `dom-quixote/audio/`. | ABERTO (após P-002) |
 
 ---
 
 ## Revisões do Claude
+
+### 2026-10-23 22:40 UTC — novo pedido
+- **P-006, narração gravada**: o livro já toca áudio frase por frase, com a voz do aparelho como reserva, e tem o painel "Voz" (escolha da voz e da velocidade). O passo a passo está em `docs/TODO-NARRACAO.md`. **Só comece depois de P-002**: a arte continua sendo a prioridade.
 
 ### 2026-10-23 22:05 UTC — mudança de prioridade
 - **P-005 adiado** a pedido do responsável humano: o acabamento das sombras fica para depois que os quatro livros estiverem prontos. Siga direto com **NB-3 (dragões e cavaleiros) → NB-4…NB-8 → P-002**, assim que a cota liberar.

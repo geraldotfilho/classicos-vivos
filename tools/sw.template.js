@@ -3,7 +3,8 @@
    Estratégia:
    - Na instalação, baixa todos os livros (HTML, estilos, fontes e ilustrações) para leitura offline.
    - Páginas HTML: rede primeiro (recebe correções), cache quando estiver sem internet.
-   - Demais arquivos: cache primeiro (abre instantâneo no tablet). */
+   - Demais arquivos: cache primeiro (abre instantâneo no tablet); a narração gravada é
+     guardada sob demanda, na primeira vez que toca. */
 const CACHE = 'classicos-vivos-__VERSION__';
 const FILES = __FILES__;
 
@@ -25,7 +26,8 @@ self.addEventListener('fetch', (event) => {
     const req = event.request;
     if (req.method !== 'GET' || new URL(req.url).origin !== self.location.origin) return;
 
-    const isPage = req.mode === 'navigate' || req.destination === 'document';
+    // Páginas HTML e a lista de narrações gravadas (vozes.js): rede primeiro, para receber atualizações
+    const isPage = req.mode === 'navigate' || req.destination === 'document' || /\/audio\/vozes\.js$/.test(new URL(req.url).pathname);
     if (isPage) {
         event.respondWith(
             fetch(req)
@@ -39,7 +41,15 @@ self.addEventListener('fetch', (event) => {
         return;
     }
 
+    // Demais arquivos: cache primeiro. O que não foi pré-baixado (ex.: a narração gravada,
+    // que é grande) fica guardado na primeira vez que tocar e depois funciona offline.
     event.respondWith(
-        caches.match(req, { ignoreSearch: true }).then(hit => hit || fetch(req))
+        caches.match(req, { ignoreSearch: true }).then(hit => hit || fetch(req).then(res => {
+            if (res.ok && res.status === 200) {
+                const copy = res.clone();
+                caches.open(CACHE).then(c => c.put(req, copy));
+            }
+            return res;
+        }))
     );
 });
