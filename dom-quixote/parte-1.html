@@ -7,12 +7,12 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
     <title>Dom Quixote de La Mancha - Parte 1 | Clássicos Vivos</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Fredoka (Títulos lúdicos) e Nunito (Excelente legibilidade para alfabetização) -->
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
-    <!-- Phosphor Icons -->
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- Estilos locais (offline): Tailwind compilado, fontes e ícones. Regerar com `npm run build`. -->
+    <link rel="stylesheet" href="../assets/css/tailwind.css">
+    <link rel="stylesheet" href="../assets/css/fonts.css">
+    <link rel="stylesheet" href="../assets/css/icons.css">
+    <link rel="manifest" href="../manifest.webmanifest">
+    <link rel="apple-touch-icon" href="../assets/icones/icone-180.png">
     <style>
         :root {
             --parchment: #FFFDF8;
@@ -248,6 +248,82 @@
             pointer-events: none;
         }
 
+        /* Troca de ilustração: feedback instantâneo enquanto a nova cena carrega,
+           evitando que a criança toque duas vezes achando que a tela travou */
+        .scene-img {
+            transition: filter 0.2s ease;
+        }
+        .scene-busy-overlay {
+            position: absolute;
+            inset: 0;
+            z-index: 30;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.1s ease;
+            background: radial-gradient(circle, rgba(15, 23, 42, 0.05) 0%, rgba(15, 23, 42, 0.4) 100%);
+        }
+        .scene-spinner {
+            width: 64px;
+            height: 64px;
+            border-radius: 9999px;
+            border: 6px solid rgba(255, 255, 255, 0.4);
+            border-top-color: #FACC15;
+            border-right-color: #C084FC;
+            animation: sceneSpin 0.7s linear infinite;
+            filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.4));
+        }
+        @keyframes sceneSpin {
+            to { transform: rotate(360deg); }
+        }
+        .scene-loading .scene-busy-overlay { opacity: 1; }
+        .scene-loading .scene-img { filter: blur(2px) brightness(0.85) saturate(0.7); }
+        .scene-enter { animation: sceneEnter 0.35s ease-out; }
+        @keyframes sceneEnter {
+            from { opacity: 0.3; transform: scale(1.015); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        /* Enquanto a cena carrega, os controles da página ficam travados com aparência de espera */
+        .page-busy .draggable-card,
+        .page-busy .lens-toggle-btn {
+            pointer-events: none;
+            opacity: 0.7;
+            filter: saturate(0.6);
+        }
+
+        /* Próximo item sugerido nas cenas progressivas (vestir o cavaleiro, cuidar do Rocinante) */
+        @keyframes nextGlow {
+            0%, 100% { box-shadow: 0 4px 0 #D97706, 0 0 0 0 rgba(250, 204, 21, 0.0); }
+            50% { box-shadow: 0 4px 0 #D97706, 0 0 0 6px rgba(250, 204, 21, 0.75); }
+        }
+        .draggable-card.card-next:not(.card-completed) {
+            animation: nextGlow 1.4s ease-in-out infinite;
+        }
+        .draggable-card.card-waiting:not(.card-completed) {
+            opacity: 0.6;
+        }
+        @keyframes cardNudge {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            75% { transform: translateX(5px); }
+        }
+        .card-nudge { animation: cardNudge 0.3s ease-in-out 2; }
+
+        /* Leitura guiada: a frase sendo narrada fica destacada */
+        .sentence {
+            border-radius: 8px;
+            transition: background-color 0.25s ease, box-shadow 0.25s ease;
+            -webkit-box-decoration-break: clone;
+            box-decoration-break: clone;
+        }
+        .sentence.sentence-reading {
+            background-color: #FDE68A;
+            box-shadow: 0 0 0 4px #FDE68A;
+            color: #451A03;
+        }
+
         /* Exibição e ocultação de páginas no leitor */
         .page-slide {
             opacity: 1;
@@ -321,12 +397,12 @@
         </header>
 
         <!-- ÁREA CENTRAL DO LIVRO (7 PÁGINAS COM QUADRO INTERATIVO TOTALMENTE INTEGRAL EM 16:9) -->
-        <div id="pages-viewport" class="relative flex-1 w-full overflow-y-auto overflow-x-hidden flex items-start lg:items-center justify-center p-2 sm:p-4">
+        <div id="pages-viewport" class="relative flex-1 w-full overflow-y-auto overflow-x-hidden flex items-start justify-center p-2 sm:p-4">
 
             <!-- =========================================================================
                  PÁGINA 1 (CAPA): O FIDALGO SONHADOR DE LA MANCHA
                  ========================================================================= -->
-            <section id="page-0" class="page-slide w-full min-h-full flex flex-col lg:flex-row items-center justify-between gap-3 sm:gap-5">
+            <section id="page-0" class="page-slide w-full min-h-full flex flex-col lg:flex-row items-center lg:justify-between gap-3 sm:gap-5">
                 <div id="frame-0" class="relative w-full lg:w-7/12 shrink-0 bg-amber-100 rounded-3xl border-4 border-amber-500 shadow-inner flex flex-col justify-between p-2.5">
                     
                     <div class="flex items-center justify-between gap-2 z-20 mb-1">
@@ -337,7 +413,7 @@
 
                     <!-- Quadro 16:9 Integral sem Recortes -->
                     <div class="relative w-full aspect-[16/9] rounded-2xl overflow-hidden border-2 border-amber-400/80 shadow-md bg-slate-900 flex items-center justify-center">
-                        <img id="scene-bg-0" src="./imagens/p0-real.jpg" alt="Cena Capa Dom Quixote" class="w-full h-full object-contain transition-all duration-300" />
+                        <img id="scene-bg-0" src="./imagens/p0-real.webp" alt="Cena Capa Dom Quixote" class="w-full h-full object-contain scene-img" />
 
                         <!-- Hotspots da Lente da Realidade -->
                         <div id="hotspots-real-0" class="absolute inset-0">
@@ -396,7 +472,7 @@
             <!-- =========================================================================
                  PÁGINA 2 (CAPÍTULO 1): ALONSO QUIXANO E OS LIVROS DE CAVALARIA
                  ========================================================================= -->
-            <section id="page-1" class="page-slide page-hidden w-full min-h-full flex flex-col lg:flex-row items-center justify-between gap-3 sm:gap-5">
+            <section id="page-1" class="page-slide page-hidden w-full min-h-full flex flex-col lg:flex-row items-center lg:justify-between gap-3 sm:gap-5">
                 <div id="frame-1" class="relative w-full lg:w-7/12 shrink-0 bg-amber-50 rounded-3xl border-4 border-amber-400 shadow-inner flex flex-col justify-between p-2.5">
                     
                     <div class="flex items-center justify-between gap-2 z-20 mb-1">
@@ -407,7 +483,7 @@
 
                     <!-- Quadro 16:9 Integral sem Recortes -->
                     <div id="drop-zone-1" class="drop-zone-target relative w-full aspect-[16/9] rounded-2xl overflow-hidden border-2 border-amber-400 shadow-md bg-slate-900 flex items-center justify-center">
-                        <img id="scene-bg-1" src="./imagens/p1-real.jpg?v=3" alt="Sala de Leitura de Alonso Quixano" class="w-full h-full object-contain transition-all duration-300" />
+                        <img id="scene-bg-1" src="./imagens/p1-real.webp" alt="Sala de Leitura de Alonso Quixano" class="w-full h-full object-contain scene-img" />
 
                         <!-- Gatinho / Leão Guardião tocável -->
                         <div onclick="tapCatLionHotspot(event)"
@@ -423,7 +499,7 @@
                              data-word="DRAGÕES"
                              data-emoji="🐉"
                              class="draggable-card bg-white border-2 border-amber-500 rounded-2xl p-1.5 flex items-center justify-center gap-2">
-                            <img src="./biblioteca/objetos/livro-dragoes.svg" alt="Livro Dragões" class="w-8 h-8 sm:w-10 sm:h-10 shrink-0 pointer-events-none" />
+                            <img src="./imagens/objetos/livro-dragoes.svg" alt="Livro Dragões" class="w-8 h-8 sm:w-10 sm:h-10 shrink-0 pointer-events-none" />
                             <span class="font-display font-bold text-xs sm:text-sm text-amber-950 uppercase truncate">DRAGÕES</span>
                         </div>
 
@@ -434,7 +510,7 @@
                              data-word="CASTELOS"
                              data-emoji="🏰"
                              class="draggable-card bg-white border-2 border-amber-500 rounded-2xl p-1.5 flex items-center justify-center gap-2">
-                            <img src="./biblioteca/objetos/livro-castelos.svg" alt="Livro Castelos" class="w-8 h-8 sm:w-10 sm:h-10 shrink-0 pointer-events-none" />
+                            <img src="./imagens/objetos/livro-castelos.svg" alt="Livro Castelos" class="w-8 h-8 sm:w-10 sm:h-10 shrink-0 pointer-events-none" />
                             <span class="font-display font-bold text-xs sm:text-sm text-amber-950 uppercase truncate">CASTELOS</span>
                         </div>
 
@@ -445,7 +521,7 @@
                              data-word="CAVALEIROS"
                              data-emoji="⚔️"
                              class="draggable-card bg-white border-2 border-amber-500 rounded-2xl p-1.5 flex items-center justify-center gap-2">
-                            <img src="./biblioteca/objetos/livro-cavaleiros.svg" alt="Livro Cavaleiros" class="w-8 h-8 sm:w-10 sm:h-10 shrink-0 pointer-events-none" />
+                            <img src="./imagens/objetos/livro-cavaleiros.svg" alt="Livro Cavaleiros" class="w-8 h-8 sm:w-10 sm:h-10 shrink-0 pointer-events-none" />
                             <span class="font-display font-bold text-xs sm:text-sm text-amber-950 uppercase truncate">CAVALEIROS</span>
                         </div>
                     </div>
@@ -480,7 +556,7 @@
             <!-- =========================================================================
                  PÁGINA 3 (CAPÍTULO 2): A ARMADURA DO BISAVÔ
                  ========================================================================= -->
-            <section id="page-2" class="page-slide page-hidden w-full min-h-full flex flex-col lg:flex-row items-center justify-between gap-3 sm:gap-5">
+            <section id="page-2" class="page-slide page-hidden w-full min-h-full flex flex-col lg:flex-row items-center lg:justify-between gap-3 sm:gap-5">
                 <div id="frame-2" class="relative w-full lg:w-7/12 shrink-0 bg-gradient-to-b from-sky-100 to-amber-100 rounded-3xl border-4 border-amber-400 shadow-inner flex flex-col justify-between p-2.5">
                     
                     <div class="flex items-center justify-between gap-2 z-20 mb-1">
@@ -491,7 +567,7 @@
 
                     <!-- Quadro 16:9 Integral sem Recortes -->
                     <div id="drop-zone-2" class="drop-zone-target relative w-full aspect-[16/9] rounded-2xl overflow-hidden border-2 border-amber-400 shadow-md bg-slate-900 flex items-center justify-center">
-                        <img id="scene-bg-2" src="./imagens/p2-real.jpg?v=4" alt="Dom Quixote no Sótão" class="w-full h-full object-contain transition-all duration-300" />
+                        <img id="scene-bg-2" src="./imagens/p2-real-stage-0.webp" alt="Dom Quixote no Sótão" class="w-full h-full object-contain scene-img" />
                     </div>
 
                     <!-- 4 Cartões Arrastáveis -->
@@ -503,7 +579,7 @@
                              data-word="ARMADURA"
                              data-emoji="🦺"
                              class="draggable-card bg-white border-2 border-amber-500 rounded-xl p-1 sm:p-1.5 flex flex-col items-center text-center">
-                            <img src="./biblioteca/objetos/armadura-peitoral.svg" alt="Armadura" class="w-7 h-7 sm:w-9 sm:h-9 pointer-events-none" />
+                            <img src="./imagens/objetos/armadura-peitoral.svg" alt="Armadura" class="w-7 h-7 sm:w-9 sm:h-9 pointer-events-none" />
                             <span class="font-display font-bold text-[10px] sm:text-xs text-amber-950 uppercase mt-0.5">ARMADURA</span>
                         </div>
 
@@ -514,7 +590,7 @@
                              data-word="BACIA"
                              data-emoji="🥣"
                              class="draggable-card bg-white border-2 border-amber-500 rounded-xl p-1 sm:p-1.5 flex flex-col items-center text-center">
-                            <img src="./biblioteca/objetos/bacia-elmo.svg" alt="Bacia" class="w-7 h-7 sm:w-9 sm:h-9 pointer-events-none" />
+                            <img src="./imagens/objetos/bacia-elmo.svg" alt="Bacia" class="w-7 h-7 sm:w-9 sm:h-9 pointer-events-none" />
                             <span class="font-display font-bold text-[10px] sm:text-xs text-amber-950 uppercase mt-0.5">BACIA</span>
                         </div>
 
@@ -525,7 +601,7 @@
                              data-word="ESCUDO"
                              data-emoji="🛡️"
                              class="draggable-card bg-white border-2 border-amber-500 rounded-xl p-1 sm:p-1.5 flex flex-col items-center text-center">
-                            <img src="./biblioteca/objetos/escudo-panelao.svg" alt="Escudo" class="w-7 h-7 sm:w-9 sm:h-9 pointer-events-none" />
+                            <img src="./imagens/objetos/escudo-panelao.svg" alt="Escudo" class="w-7 h-7 sm:w-9 sm:h-9 pointer-events-none" />
                             <span class="font-display font-bold text-[10px] sm:text-xs text-amber-950 uppercase mt-0.5">ESCUDO</span>
                         </div>
 
@@ -536,7 +612,7 @@
                              data-word="LANÇA"
                              data-emoji="🚩"
                              class="draggable-card bg-white border-2 border-amber-500 rounded-xl p-1 sm:p-1.5 flex flex-col items-center text-center">
-                            <img src="./biblioteca/objetos/lanca-bandeirola.svg" alt="Lança" class="w-7 h-7 sm:w-9 sm:h-9 pointer-events-none" />
+                            <img src="./imagens/objetos/lanca-bandeirola.svg" alt="Lança" class="w-7 h-7 sm:w-9 sm:h-9 pointer-events-none" />
                             <span class="font-display font-bold text-[10px] sm:text-xs text-amber-950 uppercase mt-0.5">LANÇA</span>
                         </div>
                     </div>
@@ -571,7 +647,7 @@
             <!-- =========================================================================
                  PÁGINA 4 (CAPÍTULO 3): ROCINANTE E A PRINCESA DULCINEIA
                  ========================================================================= -->
-            <section id="page-3" class="page-slide page-hidden w-full min-h-full flex flex-col lg:flex-row items-center justify-between gap-3 sm:gap-5">
+            <section id="page-3" class="page-slide page-hidden w-full min-h-full flex flex-col lg:flex-row items-center lg:justify-between gap-3 sm:gap-5">
                 <div id="frame-3" class="relative w-full lg:w-7/12 shrink-0 bg-gradient-to-b from-emerald-100 to-lime-200 rounded-3xl border-4 border-emerald-500 shadow-inner flex flex-col justify-between p-2.5">
                     
                     <div class="flex items-center justify-between gap-2 z-20 mb-1">
@@ -582,7 +658,7 @@
 
                     <!-- Quadro 16:9 Integral sem Recortes -->
                     <div id="drop-zone-3" class="drop-zone-target relative w-full aspect-[16/9] rounded-2xl overflow-hidden border-2 border-emerald-500 shadow-md bg-slate-900 flex items-center justify-center">
-                        <img id="scene-bg-3" src="./imagens/p3-real.jpg" alt="Rocinante e Dulcineia" class="w-full h-full object-contain transition-all duration-300" />
+                        <img id="scene-bg-3" src="./imagens/p3-real.webp" alt="Rocinante e Dulcineia" class="w-full h-full object-contain scene-img" />
 
                         <!-- Hotspot na Aldonza / Princesa Dulcineia à direita -->
                         <div onclick="tapDulcineiaHotspot(event)"
@@ -598,7 +674,7 @@
                              data-word="MAÇÃ"
                              data-emoji="🍎"
                              class="draggable-card bg-white border-2 border-rose-400 rounded-2xl p-1.5 flex items-center justify-center gap-2">
-                            <img src="./biblioteca/objetos/maca.svg" alt="Gravura Maçã" class="w-8 h-8 sm:w-10 sm:h-10 shrink-0 pointer-events-none" />
+                            <img src="./imagens/objetos/maca.svg" alt="Gravura Maçã" class="w-8 h-8 sm:w-10 sm:h-10 shrink-0 pointer-events-none" />
                             <span class="font-display font-bold text-xs sm:text-sm text-rose-900 uppercase">MAÇÃ</span>
                         </div>
 
@@ -609,7 +685,7 @@
                              data-word="CENOURA"
                              data-emoji="🥕"
                              class="draggable-card bg-white border-2 border-orange-400 rounded-2xl p-1.5 flex items-center justify-center gap-2">
-                            <img src="./biblioteca/objetos/cenoura.svg" alt="Gravura Cenoura" class="w-8 h-8 sm:w-10 sm:h-10 shrink-0 pointer-events-none" />
+                            <img src="./imagens/objetos/cenoura.svg" alt="Gravura Cenoura" class="w-8 h-8 sm:w-10 sm:h-10 shrink-0 pointer-events-none" />
                             <span class="font-display font-bold text-xs sm:text-sm text-orange-900 uppercase">CENOURA</span>
                         </div>
 
@@ -620,7 +696,7 @@
                              data-word="ESCOVA"
                              data-emoji="🪮"
                              class="draggable-card bg-white border-2 border-amber-500 rounded-2xl p-1.5 flex items-center justify-center gap-2">
-                            <img src="./biblioteca/objetos/escova.svg" alt="Gravura Escova" class="w-8 h-8 sm:w-10 sm:h-10 shrink-0 pointer-events-none" />
+                            <img src="./imagens/objetos/escova.svg" alt="Gravura Escova" class="w-8 h-8 sm:w-10 sm:h-10 shrink-0 pointer-events-none" />
                             <span class="font-display font-bold text-xs sm:text-sm text-amber-950 uppercase">ESCOVA</span>
                         </div>
                     </div>
@@ -657,7 +733,7 @@
             <!-- =========================================================================
                  PÁGINA 5 (CAPÍTULO 4): A PRIMEIRA SAÍDA - POUSADA OU CASTELO?
                  ========================================================================= -->
-            <section id="page-4" class="page-slide page-hidden w-full min-h-full flex flex-col lg:flex-row items-center justify-between gap-3 sm:gap-5">
+            <section id="page-4" class="page-slide page-hidden w-full min-h-full flex flex-col lg:flex-row items-center lg:justify-between gap-3 sm:gap-5">
                 <div id="frame-4" class="relative w-full lg:w-7/12 shrink-0 bg-amber-100 rounded-3xl border-4 border-purple-500 shadow-inner flex flex-col justify-between p-2.5">
                     
                     <div class="flex items-center justify-between gap-2 z-20 mb-1">
@@ -668,7 +744,7 @@
 
                     <!-- Quadro 16:9 Integral sem Recortes -->
                     <div id="drop-zone-4" class="drop-zone-target relative w-full aspect-[16/9] rounded-2xl overflow-hidden border-2 border-purple-400 shadow-md bg-slate-900 flex items-center justify-center">
-                        <img id="scene-bg-4" src="./imagens/p4-real.jpg" alt="Pousada ou Castelo Real" class="w-full h-full object-contain transition-all duration-300" />
+                        <img id="scene-bg-4" src="./imagens/p4-real.webp" alt="Pousada ou Castelo Real" class="w-full h-full object-contain scene-img" />
 
                         <div onclick="tapSceneHotspot(this, event, 'POUSADA', '🏠')"
                              class="scene-hotspot" style="left: 42%; top: 10%; width: 32%; height: 65%;"></div>
@@ -685,7 +761,7 @@
                              data-word="TROMBETA"
                              data-emoji="🎺"
                              class="draggable-card bg-white border-2 border-purple-500 rounded-2xl p-1.5 flex items-center justify-center gap-2">
-                            <img src="./biblioteca/objetos/trombeta-flauta.svg" alt="Trombeta" class="w-8 h-8 sm:w-10 sm:h-10 shrink-0 pointer-events-none" />
+                            <img src="./imagens/objetos/trombeta-flauta.svg" alt="Trombeta" class="w-8 h-8 sm:w-10 sm:h-10 shrink-0 pointer-events-none" />
                             <span class="font-display font-bold text-xs sm:text-sm text-purple-950 uppercase">TROMBETA</span>
                         </div>
 
@@ -696,7 +772,7 @@
                              data-word="SOPA"
                              data-emoji="🍲"
                              class="draggable-card bg-white border-2 border-amber-500 rounded-2xl p-1.5 flex items-center justify-center gap-2">
-                            <img src="./biblioteca/objetos/sopa-banquete.svg" alt="Sopa" class="w-8 h-8 sm:w-10 sm:h-10 shrink-0 pointer-events-none" />
+                            <img src="./imagens/objetos/sopa-banquete.svg" alt="Sopa" class="w-8 h-8 sm:w-10 sm:h-10 shrink-0 pointer-events-none" />
                             <span class="font-display font-bold text-xs sm:text-sm text-amber-950 uppercase">SOPA</span>
                         </div>
                     </div>
@@ -731,7 +807,7 @@
             <!-- =========================================================================
                  PÁGINA 6 (CAPÍTULO 5): A CERIMÔNIA DE CAVALEIRO SOB A LUA CHEIA
                  ========================================================================= -->
-            <section id="page-5" class="page-slide page-hidden w-full min-h-full flex flex-col lg:flex-row items-center justify-between gap-3 sm:gap-5">
+            <section id="page-5" class="page-slide page-hidden w-full min-h-full flex flex-col lg:flex-row items-center lg:justify-between gap-3 sm:gap-5">
                 <div id="frame-5" class="relative w-full lg:w-7/12 shrink-0 bg-gradient-to-b from-slate-900 via-indigo-950 to-slate-800 rounded-3xl border-4 border-amber-400 shadow-inner flex flex-col justify-between p-2.5">
                     
                     <div class="flex items-center justify-between gap-2 z-20 mb-1">
@@ -742,7 +818,7 @@
 
                     <!-- Quadro 16:9 Integral sem Recortes -->
                     <div id="drop-zone-5" class="drop-zone-target relative w-full aspect-[16/9] rounded-2xl overflow-hidden border-2 border-amber-400 shadow-md bg-slate-900 flex items-center justify-center">
-                        <img id="scene-bg-5" src="./imagens/p5-real.jpg" alt="Cerimônia de Cavaleiro sob a Lua Cheia" class="w-full h-full object-contain transition-all duration-300" />
+                        <img id="scene-bg-5" src="./imagens/p5-real.webp" alt="Cerimônia de Cavaleiro sob a Lua Cheia" class="w-full h-full object-contain scene-img" />
 
                         <div onclick="tapSceneHotspot(this, event, 'BEBEDOURO', '💧')"
                              class="scene-hotspot" style="left: 4%; top: 36%; width: 26%; height: 55%;" title="Tocar no Bebedouro"></div>
@@ -778,7 +854,7 @@
             <!-- =========================================================================
                  PÁGINA 7 (CAPÍTULO 6): O FIEL ESCUDEIRO SANCHO PANÇA E A ILHA!
                  ========================================================================= -->
-            <section id="page-6" class="page-slide page-hidden w-full min-h-full flex flex-col lg:flex-row items-center justify-between gap-3 sm:gap-5">
+            <section id="page-6" class="page-slide page-hidden w-full min-h-full flex flex-col lg:flex-row items-center lg:justify-between gap-3 sm:gap-5">
                 <div id="frame-6" class="relative w-full lg:w-7/12 shrink-0 bg-gradient-to-b from-amber-100 via-amber-50 to-orange-100 rounded-3xl border-4 border-amber-500 shadow-inner flex flex-col justify-between p-2.5">
                     
                     <div class="flex items-center justify-between gap-2 z-20 mb-1">
@@ -789,7 +865,7 @@
 
                     <!-- Quadro 16:9 Integral sem Recortes -->
                     <div id="drop-zone-6" class="drop-zone-target relative w-full aspect-[16/9] rounded-2xl overflow-hidden border-2 border-amber-500 shadow-md bg-slate-900 flex items-center justify-center">
-                        <img id="scene-bg-6" src="./imagens/p6a-real.jpg?v=5" alt="Sancho Pança e Dom Quixote" class="w-full h-full object-contain transition-all duration-300" />
+                        <img id="scene-bg-6" src="./imagens/p6-real.webp" alt="Sancho Pança e Dom Quixote" class="w-full h-full object-contain scene-img" />
 
                         <div onclick="tapSceneHotspot(this, event, 'SANCHO PANÇA', '🥖')"
                              class="scene-hotspot" style="left: 12%; top: 22%; width: 34%; height: 72%;" title="Tocar em Sancho Pança"></div>
@@ -827,7 +903,7 @@
             <!-- =========================================================================
                  PÁGINA 8 (CAPÍTULO 7): OS MOINHOS DE VENTO OU GIGANTES DE CERVANTES!
                  ========================================================================= -->
-            <section id="page-7" class="page-slide page-hidden w-full min-h-full flex flex-col lg:flex-row items-center justify-between gap-3 sm:gap-5">
+            <section id="page-7" class="page-slide page-hidden w-full min-h-full flex flex-col lg:flex-row items-center lg:justify-between gap-3 sm:gap-5">
                 <div id="frame-7" class="relative w-full lg:w-7/12 shrink-0 bg-gradient-to-b from-orange-300 via-amber-200 to-lime-200 rounded-3xl border-4 border-amber-500 shadow-inner flex flex-col justify-between p-2.5">
                     
                     <div class="flex items-center justify-between gap-2 z-20 mb-1">
@@ -838,16 +914,16 @@
 
                     <!-- Quadro 16:9 Integral sem Recortes -->
                     <div id="drop-zone-7" class="drop-zone-target relative w-full aspect-[16/9] rounded-2xl overflow-hidden border-2 border-amber-500 shadow-md bg-slate-900 flex items-center justify-center">
-                        <img id="scene-bg-7" src="./imagens/p6-real.jpg?v=5" alt="Sancho Pança e os Moinhos de Vento" class="w-full h-full object-contain transition-all duration-300" />
+                        <img id="scene-bg-7" src="./imagens/p7-real.webp" alt="Sancho Pança e os Moinhos de Vento" class="w-full h-full object-contain scene-img" />
 
                         <!-- Pás Giratórias Interativas dos Moinhos de Vento -->
                         <div id="windmill-blades-1" class="windmill-blades-overlay hidden absolute pointer-events-none"
                              style="left: 74.2%; top: 29.2%; width: 33%; height: 58%; transform: translate(-50%, -50%); transform-origin: 50% 50%; z-index: 10;">
-                            <img src="./biblioteca/objetos/moinho-pas.svg" alt="Pás do Moinho 1" class="w-full h-full" />
+                            <img src="./imagens/objetos/moinho-pas.svg" alt="Pás do Moinho 1" class="w-full h-full" />
                         </div>
                         <div id="windmill-blades-2" class="windmill-blades-overlay hidden absolute pointer-events-none"
                              style="left: 90.6%; top: 34.0%; width: 22%; height: 39%; transform: translate(-50%, -50%); transform-origin: 50% 50%; z-index: 9;">
-                            <img src="./biblioteca/objetos/moinho-pas.svg" alt="Pás do Moinho 2" class="w-full h-full" />
+                            <img src="./imagens/objetos/moinho-pas.svg" alt="Pás do Moinho 2" class="w-full h-full" />
                         </div>
 
                         <!-- Recipiente para Rajadas de Vento em Partículas -->
@@ -868,7 +944,7 @@
                              data-word="VENTO"
                              data-emoji="💨"
                              class="draggable-card bg-white border-2 border-sky-500 rounded-2xl p-1.5 flex items-center justify-center gap-2">
-                            <img src="./biblioteca/objetos/vento-sopro.svg" alt="Vento" class="w-8 h-8 sm:w-10 sm:h-10 shrink-0 pointer-events-none" />
+                            <img src="./imagens/objetos/vento-sopro.svg" alt="Vento" class="w-8 h-8 sm:w-10 sm:h-10 shrink-0 pointer-events-none" />
                             <span class="font-display font-bold text-xs sm:text-sm text-sky-950 uppercase">VENTO</span>
                         </div>
 
@@ -947,64 +1023,137 @@
         // Estado das Lentes (false = Lente da Realidade, true = Lente da Imaginação)
         const lensImaginationState = [false, false, false, false, false, false, false, false];
 
-        // Progresso dos mini-jogos pedagógicos de cada capítulo
+        // Progresso das interações de cada capítulo
         const readBooksSet = new Set();
-        const equippedPiecesSet = new Set();
-        const horseCareSet = new Set();
         const innItemsSet = new Set();
-        const ceremonyItemsSet = new Set();
+        let innLastItem = null;
 
-        // Metadados e caminhos locais das gravuras geradas pelo Nano Banana
+        // Páginas com transformação progressiva: cada item revela a próxima ilustração.
+        // As ilustrações são cumulativas (a etapa 2 já contém o item da etapa 1), por isso
+        // os itens precisam ser usados NA ORDEM abaixo — a mesma ordem em que aparecem no texto.
+        const progressiveScenes = {
+            2: {
+                order: ['1', '2', '3', '4'],
+                done: new Set(),
+                stageImg: (n) => `./imagens/p2-real-stage-${n}.webp`,
+                badges: [
+                    "👓 Lente da Realidade: Armadura Enferrujada e Bacia",
+                    "👓 Lente da Realidade: Peitoral Enferrujado Equipado!",
+                    "👓 Lente da Realidade: Bacia de Barbeiro na Cabeça!",
+                    "👓 Lente da Realidade: Tampa de Panela como Escudo!",
+                    "👓 Lente da Realidade: Armadura Caseira Completa!"
+                ],
+                stepSound: 'wordPop'
+            },
+            3: {
+                order: ['maca', 'cenoura', 'escova'],
+                done: new Set(),
+                stageImg: (n) => n === 0 ? "./imagens/p3-real.webp" : `./imagens/p3-real-stage-${n}.webp`,
+                badges: [
+                    "👓 Lente da Realidade: Cavalinho Magricela e Aldonza",
+                    "👓 Lente da Realidade: Rocinante Saboreia a Maçã Docinha! 🍎",
+                    "👓 Lente da Realidade: Rocinante Come a Cenoura Crocante! 🥕",
+                    "👓 Lente da Realidade: Crinas Escovadas e Cavalo Pronto! 🪮"
+                ],
+                stepSound: 'crunch'
+            }
+        };
+
+        // Caminhos locais das ilustrações geradas pelo Nano-Banana (pN = índice da página)
         const lensMetadata = [
             {
-                realImg: "./imagens/p0-real.jpg",
-                imagImg: "./imagens/p0-imag.jpg",
+                realImg: "./imagens/p0-real.webp",
+                imagImg: "./imagens/p0-imag.webp",
                 realBadge: "👓 Lente da Realidade: O Vovô Alonso e seus Amigos",
                 imagBadge: "✨ Lente da Imaginação: O Herói Dourado de La Mancha!"
             },
             {
-                realImg: "./imagens/p1-real.jpg",
-                imagImg: "./imagens/p1-imag.jpg",
+                realImg: "./imagens/p1-real.webp",
+                imagImg: "./imagens/p1-imag.webp",
                 realBadge: "👓 Lente da Realidade: A Sala de Leitura do Vovô Alonso",
                 imagBadge: "✨ Lente da Imaginação: O Leão Guardião e Mundos Mágicos!"
             },
             {
-                realImg: "./imagens/p2-real.jpg",
-                imagImg: "./imagens/p2-imag.jpg",
+                realImg: "./imagens/p2-real-stage-0.webp",
+                imagImg: "./imagens/p2-imag.webp",
                 realBadge: "👓 Lente da Realidade: Armadura Enferrujada e Bacia",
                 imagBadge: "✨ Lente da Imaginação: Armadura Real de Ouro Puro!"
             },
             {
-                realImg: "./imagens/p3-real.jpg",
-                imagImg: "./imagens/p3-imag.jpg",
+                realImg: "./imagens/p3-real.webp",
+                imagImg: "./imagens/p3-imag.webp",
                 realBadge: "👓 Lente da Realidade: Cavalinho Magricela e Aldonza",
                 imagBadge: "✨ Lente da Imaginação: Corcel Branco e Princesa Dulcineia!"
             },
             {
-                realImg: "./imagens/p4-real.jpg",
-                imagImg: "./imagens/p4-imag.jpg",
+                realImg: "./imagens/p4-real.webp",
+                imagImg: "./imagens/p4-imag.webp",
                 realBadge: "👓 Lente da Realidade: Uma Pousada Simples na Estrada",
                 imagBadge: "✨ Lente da Imaginação: Um Castelo com Torres de Prata!"
             },
             {
-                realImg: "./imagens/p5-real.jpg",
-                imagImg: "./imagens/p5-imag.jpg",
+                realImg: "./imagens/p5-real.webp",
+                imagImg: "./imagens/p5-imag.webp",
                 realBadge: "👓 Lente da Realidade: Pátio da Pousada e Bebedouro",
                 imagBadge: "✨ Lente da Imaginação: Altar de Cristal e Sagração Real!"
             },
             {
-                realImg: "./imagens/p6a-real.jpg",
-                imagImg: "./imagens/p6a-imag.jpg",
+                realImg: "./imagens/p6-real.webp",
+                imagImg: "./imagens/p6-imag.webp",
                 realBadge: "👓 Lente da Realidade: Sancho Pança e Quixote na Estrada",
                 imagBadge: "✨ Lente da Imaginação: Sancho Governador da Ilha Encantada!"
             },
             {
-                realImg: "./imagens/p6-real.jpg",
-                imagImg: "./imagens/p6-imag.jpg",
+                realImg: "./imagens/p7-real.webp",
+                imagImg: "./imagens/p7-imag.webp",
                 realBadge: "👓 Lente da Realidade: Os Moinhos de Vento de La Mancha",
                 imagBadge: "✨ Lente da Imaginação: Dom Quixote contra os Gigantes de Cervantes!"
             }
         ];
+
+        /* Ilustração e legenda da Lente da Realidade conforme o progresso da página */
+        function realSceneFor(pageIdx) {
+            const meta = lensMetadata[pageIdx];
+            const prog = progressiveScenes[pageIdx];
+            if (prog) {
+                const n = prog.done.size;
+                return { src: prog.stageImg(n), badge: prog.badges[n] };
+            }
+            if (pageIdx === 4 && innLastItem) {
+                const both = innItemsSet.size >= 2;
+                if (innLastItem === 'trombeta') {
+                    return {
+                        src: "./imagens/p4-real-flauta.webp",
+                        badge: both ? "👓 Lente da Realidade: Música e Acolhimento na Pousada! ✨" : "👓 Lente da Realidade: Pastor Tocando Flauta para os Porquinhos! 🎶"
+                    };
+                }
+                return {
+                    src: "./imagens/p4-real-sopa.webp",
+                    badge: both ? "👓 Lente da Realidade: Música e Acolhimento na Pousada! ✨" : "👓 Lente da Realidade: O Estalajadeiro Servindo a Sopa Quentinha! 🍲"
+                };
+            }
+            return { src: meta.realImg, badge: meta.realBadge };
+        }
+
+        function sceneFor(pageIdx) {
+            if (lensImaginationState[pageIdx]) {
+                const meta = lensMetadata[pageIdx];
+                return { src: meta.imagImg, badge: meta.imagBadge };
+            }
+            return realSceneFor(pageIdx);
+        }
+
+        /* Todas as ilustrações que uma página pode exibir (para pré-carregar) */
+        function allSceneSrcs(pageIdx) {
+            const meta = lensMetadata[pageIdx];
+            const srcs = [meta.realImg, meta.imagImg];
+            const prog = progressiveScenes[pageIdx];
+            if (prog) {
+                for (let n = 0; n <= prog.order.length; n++) srcs.push(prog.stageImg(n));
+            }
+            if (pageIdx === 4) srcs.push("./imagens/p4-real-flauta.webp", "./imagens/p4-real-sopa.webp");
+            return srcs;
+        }
 
         /* =====================================================================
            INICIALIZAÇÃO DE VOZ PT-BR (ANDROID CHROME / WEB SPEECH API)
@@ -1132,6 +1281,20 @@
                         osc.start(start);
                         osc.stop(start + dur);
                     });
+                } else if (type === 'hint') {
+                    // Dica suave (não é "erro"): duas notas descendentes e baixinhas
+                    [659.25, 523.25].forEach((freq, i) => {
+                        const osc = ctx.createOscillator();
+                        const gain = ctx.createGain();
+                        osc.type = 'sine';
+                        osc.frequency.setValueAtTime(freq, now + i * 0.12);
+                        gain.gain.setValueAtTime(0.08, now + i * 0.12);
+                        gain.gain.exponentialRampToValueAtTime(0.001, now + i * 0.12 + 0.2);
+                        osc.connect(gain);
+                        gain.connect(ctx.destination);
+                        osc.start(now + i * 0.12);
+                        osc.stop(now + i * 0.12 + 0.2);
+                    });
                 } else if (type === 'pageFlip') {
                     const osc = ctx.createOscillator();
                     const gain = ctx.createGain();
@@ -1209,8 +1372,7 @@
             }, 2600);
 
             if ('speechSynthesis' in window) {
-                window.speechSynthesis.cancel();
-                setReadingPageUI(false);
+                stopReadingPage();
 
                 const utterance = new SpeechSynthesisUtterance(wordText.toLowerCase());
                 utterance.lang = 'pt-BR';
@@ -1221,31 +1383,119 @@
             }
         }
 
-        /* Leitura da página inteira */
+        /* =====================================================================
+           LEITURA GUIADA: NARRAÇÃO FRASE A FRASE COM DESTAQUE SINCRONIZADO
+           ===================================================================== */
+        let readingSession = 0;
+
+        // Envolve cada frase do texto em <span class="sentence"> preservando as palavras interativas.
+        // Não quebra antes de minúscula: "bravura! — pensou o fidalgo" continua sendo uma frase só.
+        function splitPageTextIntoSentences(textEl) {
+            const frag = document.createDocumentFragment();
+            let current = null;
+            const openSentence = () => {
+                if (!current) {
+                    current = document.createElement('span');
+                    current.className = 'sentence';
+                    frag.appendChild(current);
+                }
+                return current;
+            };
+            const appendText = (text) => {
+                if (!text) return;
+                if (!current && !text.trim()) {
+                    frag.appendChild(document.createTextNode(text));
+                    return;
+                }
+                openSentence().appendChild(document.createTextNode(text));
+            };
+
+            Array.from(textEl.childNodes).forEach(node => {
+                if (node.nodeType === Node.TEXT_NODE) {
+                    const text = node.textContent;
+                    const boundary = /([.!?…]+[”"»]?)(\s+)(?!(?:[—–]\s*)?[a-zà-ÿ])/g;
+                    let last = 0;
+                    let m;
+                    while ((m = boundary.exec(text)) !== null) {
+                        appendText(text.slice(last, m.index + m[1].length));
+                        current = null;
+                        frag.appendChild(document.createTextNode(m[2]));
+                        last = m.index + m[0].length;
+                    }
+                    appendText(text.slice(last));
+                } else if (node.nodeName === 'BR') {
+                    current = null;
+                    frag.appendChild(node);
+                } else {
+                    openSentence().appendChild(node);
+                }
+            });
+            textEl.replaceChildren(frag);
+        }
+
+        // Texto falado: palavras-chave em minúsculas para a voz não soletrar "IMAGINAÇÃO" como sigla
+        function speechTextOf(el) {
+            const clone = el.cloneNode(true);
+            clone.querySelectorAll('.literacy-word').forEach(w => { w.textContent = w.textContent.toLowerCase(); });
+            return clone.textContent.replace(/\s+/g, ' ').trim();
+        }
+
+        function clearSentenceHighlight() {
+            document.querySelectorAll('.sentence-reading').forEach(el => el.classList.remove('sentence-reading'));
+        }
+
+        function stopReadingPage() {
+            readingSession++;
+            if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+            clearSentenceHighlight();
+            setReadingPageUI(false);
+        }
+
         function toggleReadPageAloud() {
             if (!('speechSynthesis' in window)) return;
 
             if (isReadingPage) {
-                window.speechSynthesis.cancel();
-                setReadingPageUI(false);
+                stopReadingPage();
                 return;
             }
 
             const textEl = document.getElementById(`page-text-${currentPage}`);
             if (!textEl) return;
+            const sentences = Array.from(textEl.querySelectorAll('.sentence'));
 
             window.speechSynthesis.cancel();
-            const utterance = new SpeechSynthesisUtterance(textEl.innerText);
-            utterance.lang = 'pt-BR';
-            if (ptVoice) utterance.voice = ptVoice;
-            utterance.rate = 0.92;
-            utterance.pitch = 1.05;
+            const session = ++readingSession;
+            setReadingPageUI(true);
 
-            utterance.onstart = () => setReadingPageUI(true);
-            utterance.onend = () => setReadingPageUI(false);
-            utterance.onerror = () => setReadingPageUI(false);
+            const speakSentence = (i) => {
+                if (session !== readingSession) return;
+                clearSentenceHighlight();
+                if (i >= sentences.length) {
+                    setReadingPageUI(false);
+                    return;
+                }
+                const sentence = sentences[i];
+                const text = speechTextOf(sentence);
+                if (!text) {
+                    speakSentence(i + 1);
+                    return;
+                }
+                sentence.classList.add('sentence-reading');
+                sentence.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
 
-            window.speechSynthesis.speak(utterance);
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'pt-BR';
+                if (ptVoice) utterance.voice = ptVoice;
+                utterance.rate = 0.92;
+                utterance.pitch = 1.05;
+                // Pequena pausa entre as frases para respeitar o ritmo da leitura
+                utterance.onend = () => setTimeout(() => speakSentence(i + 1), 250);
+                utterance.onerror = () => {
+                    if (session === readingSession) stopReadingPage();
+                };
+                window.speechSynthesis.speak(utterance);
+            };
+            speakSentence(0);
         }
 
         function setReadingPageUI(reading) {
@@ -1267,68 +1517,61 @@
         }
 
         /* =====================================================================
-           2. LENTE DA REALIDADE ↔ LENTE DA IMAGINAÇÃO
+           2. TROCA DE ILUSTRAÇÃO COM FEEDBACK INSTANTÂNEO DE CARREGAMENTO
            ===================================================================== */
-        function toggleLens(pageIdx, event, forceState = null) {
-            lensImaginationState[pageIdx] = forceState !== null ? forceState : !lensImaginationState[pageIdx];
+        const sceneBusy = {};
+        const SCENE_MIN_BUSY_MS = 280;   // curto o bastante para não cansar, longo o bastante para ser percebido
+        const SCENE_MAX_WAIT_MS = 8000;  // rede lenta: troca mesmo assim em vez de travar a página
+
+        function decodeImage(src) {
+            const img = new Image();
+            img.src = src;
+            const ready = img.decode
+                ? img.decode().catch(() => {})
+                : new Promise(resolve => { img.onload = img.onerror = resolve; });
+            return Promise.race([ready, new Promise(resolve => setTimeout(resolve, SCENE_MAX_WAIT_MS))]);
+        }
+
+        function warmImages(srcs) {
+            srcs.forEach(src => { new Image().src = src; });
+        }
+
+        function setSceneImage(pageIdx, src) {
+            const img = document.getElementById(`scene-bg-${pageIdx}`);
+            if (!img || img.getAttribute('src') === src) return Promise.resolve();
+
+            const stage = img.parentElement;
+            const page = document.getElementById(`page-${pageIdx}`);
+            sceneBusy[pageIdx] = true;
+            stage.classList.add('scene-loading');
+            stage.setAttribute('aria-busy', 'true');
+            page.classList.add('page-busy');
+
+            const minDelay = new Promise(resolve => setTimeout(resolve, SCENE_MIN_BUSY_MS));
+            return Promise.all([decodeImage(src), minDelay]).then(() => {
+                img.src = src;
+                img.classList.remove('scene-enter', 'character-joy', 'horse-happy');
+                void img.offsetWidth;
+                img.classList.add('scene-enter');
+                stage.classList.remove('scene-loading');
+                stage.removeAttribute('aria-busy');
+                page.classList.remove('page-busy');
+                sceneBusy[pageIdx] = false;
+            });
+        }
+
+        function updateLensUI(pageIdx, badgeText) {
             const isImag = lensImaginationState[pageIdx];
-            const meta = lensMetadata[pageIdx];
-
-            playSound(isImag ? 'lensMagic' : 'wordPop');
-
-            const frame = document.getElementById(`frame-${pageIdx}`);
             const badge = document.getElementById(`lens-badge-${pageIdx}`);
             const btn = document.getElementById(`lens-btn-${pageIdx}`);
             const btnLabel = document.getElementById(`lens-btn-label-${pageIdx}`);
-            const sceneImg = document.getElementById(`scene-bg-${pageIdx}`);
 
-            const ripple = document.createElement('div');
-            ripple.className = 'lens-ripple';
-            frame.appendChild(ripple);
-            setTimeout(() => ripple.remove(), 650);
-
-            const coords = getEventCoords(event);
-            if (coords) {
-                spawnSparkles(coords.x, coords.y, isImag ? '✨' : '👓');
-            }
-
-            if (sceneImg) {
-                let targetSrc = isImag ? meta.imagImg : meta.realImg;
-                if (pageIdx === 2) {
-                    if (!isImag) {
-                        const count = equippedPiecesSet.size;
-                        if (count === 0) targetSrc = "./imagens/p2-real-stage-0.jpg";
-                        else if (count === 1) targetSrc = "./imagens/p2-real-stage-1.jpg";
-                        else if (count === 2) targetSrc = "./imagens/p2-real-stage-2.jpg";
-                        else if (count === 3) targetSrc = "./imagens/p2-real-stage-3.jpg";
-                        else targetSrc = "./imagens/p2-real-stage-4.jpg";
-                    }
-                } else if (pageIdx === 3) {
-                    if (!isImag) {
-                        const count = horseCareSet.size;
-                        if (count === 0) targetSrc = "./imagens/p3-real.jpg";
-                        else if (count === 1) targetSrc = "./imagens/p3-real-stage-1.jpg";
-                        else if (count === 2) targetSrc = "./imagens/p3-real-stage-2.jpg";
-                        else targetSrc = "./imagens/p3-real-stage-3.jpg";
-                    }
-                } else if (pageIdx === 4) {
-                    if (!isImag) {
-                        if (innItemsSet.has('trombeta') && !innItemsSet.has('sopa')) targetSrc = "./imagens/p4-real-flauta.jpg";
-                        else if (innItemsSet.has('sopa') && !innItemsSet.has('trombeta')) targetSrc = "./imagens/p4-real-sopa.jpg";
-                        else if (innItemsSet.size >= 2) targetSrc = "./imagens/p4-real-flauta.jpg";
-                        else targetSrc = "./imagens/p4-real.jpg";
-                    }
-                }
-                sceneImg.src = targetSrc + '?v=5';
-            }
-
+            badge.textContent = badgeText;
             if (isImag) {
-                badge.innerHTML = `${meta.imagBadge}`;
                 badge.className = "bg-purple-700 text-amber-200 font-display font-bold text-[11px] sm:text-xs px-3 py-1 rounded-full shadow border border-amber-300";
                 btnLabel.textContent = "Voltar para a Lente da Realidade";
                 btn.className = "lens-toggle-btn bg-gradient-to-r from-slate-800 to-slate-700 text-amber-300 font-display font-bold text-xs sm:text-sm px-5 py-1.5 rounded-2xl border-2 border-amber-400 flex items-center gap-2";
             } else {
-                badge.innerHTML = `${meta.realBadge}`;
                 badge.className = "bg-slate-900/85 text-white font-display font-bold text-[11px] sm:text-xs px-3 py-1 rounded-full shadow";
                 btnLabel.textContent = "Usar Lente da Imaginação!";
                 btn.className = "lens-toggle-btn bg-gradient-to-r from-purple-600 via-fuchsia-600 to-amber-500 text-white font-display font-bold text-xs sm:text-sm px-5 py-1.5 rounded-2xl border-2 border-white flex items-center gap-2";
@@ -1340,17 +1583,53 @@
             }
 
             if (pageIdx === 7) {
-                const b1 = document.getElementById('windmill-blades-1');
-                const b2 = document.getElementById('windmill-blades-2');
-                if (b1 && b2) {
-                    b1.classList.add('hidden');
-                    b2.classList.add('hidden');
-                }
+                document.getElementById('windmill-blades-1').classList.add('hidden');
+                document.getElementById('windmill-blades-2').classList.add('hidden');
+            }
+        }
+
+        /* Redesenha a cena da página a partir do estado (lente + progresso) */
+        function renderScene(pageIdx) {
+            const scene = sceneFor(pageIdx);
+            updateLensUI(pageIdx, scene.badge);
+            return setSceneImage(pageIdx, scene.src);
+        }
+
+        function inviteImagination(pageIdx) {
+            // O leitor contempla a cena pelo tempo que quiser; o botão apenas convida à imaginação
+            const btn = document.getElementById(`lens-btn-${pageIdx}`);
+            if (btn) {
+                btn.classList.add('animate-bounce');
+                setTimeout(() => btn.classList.remove('animate-bounce'), 1400);
             }
         }
 
         /* =====================================================================
-           3. MOTOR UNIFICADO DE DRAG-AND-DROP PARA TABLET ANDROID
+           3. LENTE DA REALIDADE ↔ LENTE DA IMAGINAÇÃO
+           ===================================================================== */
+        function toggleLens(pageIdx, event, forceState = null) {
+            if (sceneBusy[pageIdx]) return;
+            lensImaginationState[pageIdx] = forceState !== null ? forceState : !lensImaginationState[pageIdx];
+            const isImag = lensImaginationState[pageIdx];
+
+            playSound(isImag ? 'lensMagic' : 'wordPop');
+
+            const frame = document.getElementById(`frame-${pageIdx}`);
+            const ripple = document.createElement('div');
+            ripple.className = 'lens-ripple';
+            frame.appendChild(ripple);
+            setTimeout(() => ripple.remove(), 650);
+
+            const coords = getEventCoords(event);
+            if (coords) {
+                spawnSparkles(coords.x, coords.y, isImag ? '✨' : '👓');
+            }
+
+            renderScene(pageIdx);
+        }
+
+        /* =====================================================================
+           4. MOTOR UNIFICADO DE DRAG-AND-DROP PARA TABLET ANDROID
            ===================================================================== */
         function initDraggableCards() {
             const cards = document.querySelectorAll('.draggable-card');
@@ -1432,31 +1711,41 @@
             });
         }
 
+        function pageIndexOf(el) {
+            const page = el.closest('.page-slide');
+            return page ? parseInt(page.id.replace('page-', ''), 10) : currentPage;
+        }
+
+        function completeCard(card, coords) {
+            card.classList.add('card-completed');
+            if (coords) spawnSparkles(coords.x, coords.y, card.dataset.emoji || '✨');
+        }
+
         function triggerCardInteraction(card, coords) {
             const action = card.dataset.action;
             const itemId = card.dataset.id;
-            const emoji = card.dataset.emoji || '✨';
+            const pageIdx = pageIndexOf(card);
 
-            card.classList.add('card-completed');
-            if (coords) spawnSparkles(coords.x, coords.y, emoji);
+            // Uma troca de ilustração já está em andamento: ignora o toque repetido
+            if (sceneBusy[pageIdx]) return;
 
+            if (action === 'gear' || action === 'horse-care') {
+                handleProgressiveDrop(pageIdx, card, coords);
+                return;
+            }
+
+            completeCard(card, coords);
             if (action === 'book') {
-                handleBookDrop(itemId, coords);
-            } else if (action === 'gear') {
-                handleGearDrop(itemId, coords);
-            } else if (action === 'horse-care') {
-                handleRocinanteCareDrop(itemId, coords);
+                handleBookDrop(itemId);
             } else if (action === 'inn') {
-                handleInnDrop(itemId, coords);
-            } else if (action === 'ceremony') {
-                handleCeremonyDrop(itemId, coords);
+                handleInnDrop(itemId);
             } else if (action === 'wind') {
                 handleWindDrop(coords);
             }
         }
 
         /* =====================================================================
-           4. LÓGICA DAS INTERAÇÕES VISUAIS
+           5. LÓGICA DAS INTERAÇÕES VISUAIS
            ===================================================================== */
         function tapSceneHotspot(el, event, word, emoji) {
             playSound('wordPop');
@@ -1474,142 +1763,85 @@
             tapSceneHotspot(null, event, isImag ? 'LEÃO GUARDIÃO' : 'GATINHO', isImag ? '🦁' : '🐱');
         }
 
-        function handleBookDrop(bookId, coords) {
+        function handleBookDrop(bookId) {
             readBooksSet.add(bookId);
             const sceneImg = document.getElementById('scene-bg-1');
-            sceneImg.classList.remove('character-joy');
+            sceneImg.classList.remove('character-joy', 'scene-enter');
             void sceneImg.offsetWidth;
             sceneImg.classList.add('character-joy');
 
             if (readBooksSet.size === 3) {
                 playSound('fanfare');
-                const btn = document.getElementById('lens-btn-1');
-                if (btn) {
-                    btn.classList.add('animate-bounce');
-                    setTimeout(() => btn.classList.remove('animate-bounce'), 1400);
-                }
+                inviteImagination(1);
             }
         }
 
-        function handleGearDrop(gearId, coords) {
-            equippedPiecesSet.add(gearId);
-            const count = equippedPiecesSet.size;
-            const sceneImg = document.getElementById('scene-bg-2');
-            const badge = document.getElementById('lens-badge-2');
-            const btn = document.getElementById('lens-btn-2');
-
-            sceneImg.classList.remove('character-joy');
-            void sceneImg.offsetWidth;
-            sceneImg.classList.add('character-joy');
-
-            // Cada clique revela progressivamente uma nova pintura autêntica do Nano-Banana
-            if (count === 1) {
-                sceneImg.src = "./imagens/p2-real-stage-1.jpg?v=5";
-                if (badge) badge.innerHTML = "👓 Lente da Realidade: Peitoral Enferrujado Equipado!";
-                playSound('wordPop');
-            } else if (count === 2) {
-                sceneImg.src = "./imagens/p2-real-stage-2.jpg?v=5";
-                if (badge) badge.innerHTML = "👓 Lente da Realidade: Bacia de Barbeiro na Cabeça!";
-                playSound('wordPop');
-            } else if (count === 3) {
-                sceneImg.src = "./imagens/p2-real-stage-3.jpg?v=5";
-                if (badge) badge.innerHTML = "👓 Lente da Realidade: Tampa de Panela como Escudo!";
-                playSound('wordPop');
-            } else if (count >= 4) {
-                sceneImg.src = "./imagens/p2-real-stage-4.jpg?v=5";
-                if (badge) badge.innerHTML = "👓 Lente da Realidade: Armadura Caseira Completa!";
-                playSound('fanfare');
-                // O leitor pode apreciar a cena da armadura completa! O botão pulsa para convidar à imaginação
-                if (btn) {
-                    btn.classList.add('animate-bounce');
-                    setTimeout(() => btn.classList.remove('animate-bounce'), 1400);
-                }
-            }
+        function progressCard(pageIdx, itemId) {
+            return document.querySelector(`#page-${pageIdx} .draggable-card[data-id="${itemId}"]`);
         }
 
-        function handleRocinanteCareDrop(itemId, coords) {
-            horseCareSet.add(itemId);
-            const count = horseCareSet.size;
-
-            const sceneImg = document.getElementById('scene-bg-3');
-            const badge = document.getElementById('lens-badge-3');
-            const btn = document.getElementById('lens-btn-3');
-
-            sceneImg.classList.remove('horse-happy');
-            void sceneImg.offsetWidth;
-            sceneImg.classList.add('horse-happy');
-
-            // Cada clique revela progressivamente uma nova ilustração do Nano-Banana
-            if (count === 1) {
-                sceneImg.src = "./imagens/p3-real-stage-1.jpg?v=5";
-                if (badge) badge.innerHTML = "👓 Lente da Realidade: Rocinante Saboreia a Maçã Docinha! 🍎";
-                playSound('crunch');
-            } else if (count === 2) {
-                sceneImg.src = "./imagens/p3-real-stage-2.jpg?v=5";
-                if (badge) badge.innerHTML = "👓 Lente da Realidade: Rocinante Come a Cenoura Crocante! 🥕";
-                playSound('crunch');
-            } else if (count >= 3) {
-                sceneImg.src = "./imagens/p3-real-stage-3.jpg?v=5";
-                if (badge) badge.innerHTML = "👓 Lente da Realidade: Crinas Escovadas e Cavalo Pronto! 🪮";
-                playSound('fanfare');
-                // O leitor pode contemplar a cena do cavalo pelo tempo que quiser! O botão convida à imaginação
-                if (btn) {
-                    btn.classList.add('animate-bounce');
-                    setTimeout(() => btn.classList.remove('animate-bounce'), 1400);
-                }
-            }
+        function nudge(el) {
+            if (!el) return;
+            el.classList.remove('card-nudge');
+            void el.offsetWidth;
+            el.classList.add('card-nudge');
         }
 
-        function handleInnDrop(itemId, coords) {
+        /* Destaca o próximo item da sequência e esmaece os que ainda vão chegar */
+        function updateProgressHints(pageIdx) {
+            const prog = progressiveScenes[pageIdx];
+            const expected = prog.order[prog.done.size];
+            prog.order.forEach(id => {
+                const card = progressCard(pageIdx, id);
+                if (!card) return;
+                card.classList.toggle('card-next', id === expected);
+                card.classList.toggle('card-waiting', !prog.done.has(id) && id !== expected);
+            });
+        }
+
+        // Páginas 3 e 4: cada item revela a próxima ilustração cumulativa (vestir o cavaleiro, cuidar do Rocinante)
+        function handleProgressiveDrop(pageIdx, card, coords) {
+            const prog = progressiveScenes[pageIdx];
+            const itemId = card.dataset.id;
+
+            if (prog.done.has(itemId)) {
+                if (coords) spawnSparkles(coords.x, coords.y, card.dataset.emoji || '✨');
+                return;
+            }
+
+            const expected = prog.order[prog.done.size];
+            if (itemId !== expected) {
+                // Fora de ordem: dica gentil apontando o item certo, sem trocar a ilustração
+                playSound('hint');
+                nudge(card);
+                nudge(progressCard(pageIdx, expected));
+                return;
+            }
+
+            prog.done.add(itemId);
+            completeCard(card, coords);
+            updateProgressHints(pageIdx);
+
+            const finished = prog.done.size === prog.order.length;
+            playSound(finished ? 'fanfare' : prog.stepSound);
+
+            // Vestir e cuidar acontecem no mundo real: volta para a Lente da Realidade se preciso
+            lensImaginationState[pageIdx] = false;
+            renderScene(pageIdx).then(() => {
+                if (finished) inviteImagination(pageIdx);
+            });
+        }
+
+        // Página 5: a flauta do pastor e a sopa do estalajadeiro
+        function handleInnDrop(itemId) {
             innItemsSet.add(itemId);
-            const sceneImg = document.getElementById('scene-bg-4');
-            const badge = document.getElementById('lens-badge-4');
-            const btn = document.getElementById('lens-btn-4');
+            innLastItem = itemId;
+            playSound(itemId === 'trombeta' ? 'fanfare' : 'wordPop');
 
-            sceneImg.classList.remove('character-joy');
-            void sceneImg.offsetWidth;
-            sceneImg.classList.add('character-joy');
-
-            // Cada clique revela a cena enriquecida da pousada
-            if (itemId === 'trombeta') {
-                sceneImg.src = "./imagens/p4-real-flauta.jpg?v=5";
-                if (badge) badge.innerHTML = "👓 Lente da Realidade: Pastor Tocando Flauta para os Porquinhos! 🎶";
-                playSound('fanfare');
-            } else if (itemId === 'sopa') {
-                sceneImg.src = "./imagens/p4-real-sopa.jpg?v=5";
-                if (badge) badge.innerHTML = "👓 Lente da Realidade: O Estalajadeiro Servindo a Sopa Quentinha! 🍲";
-                playSound('wordPop');
-            }
-
-            if (innItemsSet.size >= 2) {
-                if (badge) badge.innerHTML = "👓 Lente da Realidade: Música e Acolhimento na Pousada! ✨";
-                playSound('fanfare');
-                // O leitor contempla a cena pelo tempo que quiser! O botão convida à imaginação
-                if (btn) {
-                    btn.classList.add('animate-bounce');
-                    setTimeout(() => btn.classList.remove('animate-bounce'), 1400);
-                }
-            }
-        }
-
-        function handleCeremonyDrop(itemId, coords) {
-            ceremonyItemsSet.add(itemId);
-            const sceneImg = document.getElementById('scene-bg-5');
-            sceneImg.classList.remove('character-joy');
-            void sceneImg.offsetWidth;
-            sceneImg.classList.add('character-joy');
-
-            if (itemId === 'espada') {
-                playSound('fanfare');
-            } else {
-                playSound('lensMagic');
-            }
-
-            const btn = document.getElementById('lens-btn-5');
-            if (btn) {
-                btn.classList.add('animate-bounce');
-                setTimeout(() => btn.classList.remove('animate-bounce'), 1400);
-            }
+            lensImaginationState[4] = false;
+            renderScene(4).then(() => {
+                if (innItemsSet.size >= 2) inviteImagination(4);
+            });
         }
 
         function tapWindmillOrGiant(event) {
@@ -1623,7 +1855,7 @@
 
         let isWindSpinning = false;
         function handleWindDrop(coords) {
-            if (isWindSpinning) return;
+            if (isWindSpinning || sceneBusy[7]) return;
             isWindSpinning = true;
 
             playSound('windGust');
@@ -1730,10 +1962,7 @@
 
         function goToPage(index) {
             if (index < 0 || index >= totalPages) return;
-            if ('speechSynthesis' in window) {
-                window.speechSynthesis.cancel();
-                setReadingPageUI(false);
-            }
+            stopReadingPage();
 
             playSound('pageFlip');
 
@@ -1749,6 +1978,10 @@
             document.getElementById('page-counter-text').textContent = `Página ${currentPage + 1} de ${totalPages}`;
 
             renderPaginationDots();
+
+            // Aquece o cache com todas as ilustrações desta página e da próxima
+            warmImages(allSceneSrcs(currentPage));
+            if (currentPage + 1 < totalPages) warmImages(allSceneSrcs(currentPage + 1));
         }
 
         function nextPage() {
@@ -1765,17 +1998,19 @@
         });
 
         // Suporte a Swipe para virar páginas no tablet
-        let touchStartX = 0, touchStartY = 0;
+        let touchStartX = 0, touchStartY = 0, swipeFromCard = false;
         const viewportEl = document.getElementById('pages-viewport');
         viewportEl.addEventListener('touchstart', (e) => {
             if (e.touches.length === 1) {
                 touchStartX = e.touches[0].clientX;
                 touchStartY = e.touches[0].clientY;
+                // Arrastar um cartão até a cena não pode virar a página
+                swipeFromCard = !!e.target.closest('.draggable-card');
             }
         }, { passive: true });
 
         viewportEl.addEventListener('touchend', (e) => {
-            if (e.changedTouches.length === 1) {
+            if (e.changedTouches.length === 1 && !swipeFromCard) {
                 const dx = e.changedTouches[0].clientX - touchStartX;
                 const dy = e.changedTouches[0].clientY - touchStartY;
                 if (Math.abs(dx) > 75 && Math.abs(dx) > Math.abs(dy) * 1.8) {
@@ -1790,6 +2025,22 @@
             initDraggableCards();
             document.getElementById('btn-prev').disabled = true;
 
+            for (let i = 0; i < totalPages; i++) {
+                const textEl = document.getElementById(`page-text-${i}`);
+                if (textEl) splitPageTextIntoSentences(textEl);
+
+                // Camada de carregamento sobre cada cena (spinner instantâneo durante a troca)
+                const img = document.getElementById(`scene-bg-${i}`);
+                if (img) {
+                    const overlay = document.createElement('div');
+                    overlay.className = 'scene-busy-overlay';
+                    overlay.innerHTML = '<div class="scene-spinner"></div>';
+                    img.parentElement.appendChild(overlay);
+                }
+            }
+            Object.keys(progressiveScenes).forEach(idx => updateProgressHints(Number(idx)));
+            warmImages(allSceneSrcs(0).concat(allSceneSrcs(1)));
+
             // Suporte a URL params para navegação direta e testes automatizados (?page=1&imag=1)
             const params = new URLSearchParams(window.location.search);
             const p = parseInt(params.get('page'));
@@ -1800,6 +2051,13 @@
                 }
             }
         };
+    </script>
+    <script>
+        // Leitura offline: registra o service worker quando servido por http(s) (ex.: GitHub Pages).
+        // Aberto direto do arquivo (file://) o livro já funciona sem internet, pois tudo é local.
+        if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
+            window.addEventListener('load', () => navigator.serviceWorker.register('../sw.js').catch(() => {}));
+        }
     </script>
 </body>
 </html>
