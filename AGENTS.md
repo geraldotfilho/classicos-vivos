@@ -30,7 +30,7 @@ O projeto adota uma filosofia **Zero-Build / Single-File Web App**, garantindo m
 - **Pointer Events**: Eventos unificados (`pointerdown`, `pointermove`, `pointerup`) para drag-and-drop fluido compatível tanto com touchscreen/caneta quanto com mouse.
 
 ### 2.2 Isolamento de Páginas e Navegação
-- **Eliminação de Ghosting/Bleed-Through**: Para alternar entre as 7 páginas do livro, as páginas inativas devem **obrigatoriamente** receber a regra:
+- **Eliminação de Ghosting/Bleed-Through**: Para alternar entre as 8 páginas do livro, as páginas inativas devem **obrigatoriamente** receber a regra:
   ```css
   .page-hidden {
       display: none !important;
@@ -42,7 +42,7 @@ O projeto adota uma filosofia **Zero-Build / Single-File Web App**, garantindo m
   ```text
   ?page=N&imag=1
   ```
-  - `page`: Índice da página de `0` a `6` (ex: `?page=1` para Capítulo 1).
+  - `page`: Índice da página de `0` a `7` (ex: `?page=3` para Capítulo 3, `?page=6` para Sancho Pança, `?page=7` para os Moinhos).
   - `imag=1` ou `imag=true`: Ativa imediatamente a **Lente da Imaginação** daquela página.
 
 ### 2.3 Responsividade & Regras de Layout do Reader Frame
@@ -101,10 +101,11 @@ Para possibilitar ricas experiências interativas sem perder a fidelidade artís
 2. **Personagens e Adereços em Camadas (Transparent Sprites)**:
    - Produzidos com **fundo transparente (PNG com canal alfa)** ou fundo branco puro isolado para recorte de precisão.
    - Sobrepostos ao cenário através de posicionamento absoluto/relativo no DOM.
-3. **Mecânica Progressiva (Página 3 / Capítulo 2 - A Armadura Feita em Casa)**:
-   - O sótão começa com Alonso Quixano em roupas cotidianas simples (sem armadura).
-   - **Regra Estrita**: Cada clique ou drop de um item da bandeja (`ARMADURA`, `BACIA`, `ESCUDO`, `LANÇA`) revela uma **nova imagem autêntica gerada pelo Nano-Banana** do personagem se vestindo progressivamente com os adereços banais do cotidiano (`p2-real-stage-1.jpg` a `p2-real-stage-4.jpg`). É expressamente proibido colar ícones por cima da imagem.
-   - **Tempo de Contemplação do Leitor**: Ao equipar todas as 4 peças banais, a ilustração completa da armadura caseira permanece firme na tela para apreciação da criança (sem transições automáticas precipitadas ou piscamentos relâmpagos). A transformação para o Cavaleiro de Ouro ocorre de forma deliberada quando o leitor clica no botão da **Lente da Imaginação**.
+3. **Mecânica Progressiva (Páginas 3, 4 e 5)**:
+   - **Página 3 (Capítulo 2 - A Armadura Feita em Casa)**: Cada clique ou drop de um item da bandeja (`ARMADURA`, `BACIA`, `ESCUDO`, `LANÇA`) revela uma nova ilustração do personagem se vestindo progressivamente (`p2-real-stage-1.jpg` a `p2-real-stage-4.jpg`).
+   - **Página 4 (Capítulo 3 - O Cuidado com Rocinante)**: Cada clique ou drop de carinho (`MAÇÃ`, `CENOURA`, `ESCOVA`) revela uma nova ilustração autêntica do cavalo se alimentando alegremente, ganhando energia e com as crinas penteadas com esmero (`p3-real-stage-1.jpg` a `p3-real-stage-3.jpg`).
+   - **Página 5 (Capítulo 4 - O Acolhimento na Pousada)**: Os botões de `TROMBETA` e `SOPA` revelam o pastor tocando flauta rústica com porquinhos dançarinos (`p4-real-flauta.jpg`) e o estalajadeiro servindo a sopa fumegante (`p4-real-sopa.jpg`).
+   - **Tempo de Contemplação do Leitor**: É terminantemente proibido forçar auto-toggle, transições automáticas precipitadas ou piscamentos relâmpagos para a imaginação. O leitor infantil deve contemplar a cena real concluída pelo tempo que desejar. O botão da Lente da Imaginação apenas pulsa suavemente para convidar a criança à transformação deliberada.
 
 ### 4.3 Banco de Personagens e Itens de Referência
 Foi criada a estrutura padronizada para armazenamento e contexto de prompts:
