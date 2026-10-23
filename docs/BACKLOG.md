@@ -27,6 +27,12 @@ Levantado na inspeção completa do sprint 1 (2026-10): código, ilustrações e
 - **Cartão de alfabetização**: abre **centralizado** na tela, com as sílabas em blocos coloridos, e **só fecha com um toque fora** (ou Esc). Tocar no cartão repete a pronúncia. Fecha ao trocar de página, e as setas do teclado não viram a página com ele aberto.
 - **Camadas × colagem** esclarecido no `AGENTS.md` (§4.1 e §4.2: modelo híbrido, regras de integração, pasta `imagens/camadas/`). `TODO-NANO-BANANA.md` reescrito: NB-1, NB-2 e NB-6 agora usam camadas.
 
+## ✅ Entregue no sprint 3
+
+- **Livro aberto**: ilustração numa folha e texto na outra, as duas sempre visíveis. Em paisagem ficam lado a lado; em retrato, empilhadas. Papel, lombada e bordas das folhas sobre capa de couro.
+- **Rolagem independente do texto**: a ilustração não sai da tela durante a leitura. Esmaecido + seta ⬇ quando há mais texto, e a leitura guiada rola só o texto. Resolve o antigo A-4 (texto que não cabia em paisagem).
+- **Virada de página animada** em 3D, em torno da lombada (paisagem) ou da borda (retrato), com sombreamento. Respeita `prefers-reduced-motion` e bloqueia cliques repetidos durante a virada.
+
 ## 🔴 Prioridade alta
 
 | ID | Item | Detalhes |
@@ -34,7 +40,6 @@ Levantado na inspeção completa do sprint 1 (2026-10): código, ilustrações e
 | A-1 | **Pás do moinho duplicadas** (pág. 8) | O SVG das pás gira **por cima** das pás pintadas e o estilo vetorial destoa. Após NB-1: durante o vento, trocar o fundo por `p7-real-sem-pas.webp` e girar a camada `camadas/p7-pas-moinho.webp` (uma por moinho), recalibrando `left/top/width` sobre os cubos. Pode ser feito antes do motor A-6 (já existe a sobreposição das pás). |
 | A-2 | **SOPA sem sopa / pousada incoerente** (pág. 5) | Após NB-2 e A-6: a página passa a ser `p4-real-fundo` + camadas. TROMBETA troca o pastor parado pelo que toca e faz surgir os porquinhos dançando e as notas animadas. SOPA troca o estalajadeiro que acena pelo que oferece a sopa. Funciona em qualquer ordem e com os dois juntos, sem imagem por combinação. A Lente da Imaginação continua sendo a ilustração inteira `p4-imag`. |
 | A-3 | **Livros sem transformação** (pág. 2) | Viola o §3.3 do AGENTS.md (cartão que só faz a imagem tremer). Após NB-3: cada livro troca a cena para `p1-real-livro-<tema>.webp` via `setSceneImage`, em qualquer ordem. Ao completar os três, o botão da lente convida à imaginação (já existe). |
-| A-4 | **Texto não cabe no tablet em paisagem** | Em 1280 × 800, 6 das 8 páginas exigem rolar a página inteira para ler o fim do texto, e o aviso "Fim da Parte 1" fica escondido. Proposta: em paisagem, rolagem **só na coluna de texto** (a cena fica fixa), com uma sombra/indicador "continua ↓". Avaliar `text-base` em paisagem < 900 px de altura. |
 | A-5 | **Extrair o motor do livro para `assets/js/livro.js`** | O `parte-1.html` tem cerca de 1.900 linhas, com áudio, voz, lentes, arrastar e navegação embutidos. Antes da Parte 2, separar o motor (sem build: um `<script src>` comum) e deixar no HTML só o conteúdo e a configuração das cenas (`lensMetadata`, `progressiveScenes`). Evita copiar e colar bugs entre livros. |
 | A-6 | **Motor de camadas (layered scene)** | Implementar o §4.2 do AGENTS.md, que hoje está só documentado. Dentro do quadro 16:9 de cada cena: `<div class="scene-layers">` com `<img>` posicionadas em `%` (ancoradas pela base) e declaradas na configuração da página (`layers: { pastor: { x, y, w, variants: { parado, tocando } } }`). A visibilidade e a variante saem do estado via `renderScene`, as animações são CSS (balanço, flutuar, girar), as camadas entram no pré-carregamento e no feedback de carregamento. Primeiras aplicações: NB-1 (moinho), NB-2 (pousada), nuvem da ilha (NB-6). Depois, avaliar a armadura em qualquer ordem: a bacia funciona como camada, mas escudo e lança dependem da pose do braço, então o teste precisa de arte dedicada. |
 

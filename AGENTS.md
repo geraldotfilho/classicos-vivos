@@ -89,7 +89,18 @@ Para garantir que o texto narrativo nunca seja cortado ou coberto pela barra de 
       }
   }
   ```
-- **Nunca centralize verticalmente um contêiner rolável** (`items-center` em `#pages-viewport`): quando o conteúdo é mais alto que a tela, o topo fica cortado e inalcançável. As seções usam `lg:justify-between` (só no layout em linha), para não abrir vãos no retrato.
+- **Nunca centralize verticalmente um contêiner rolável com `align-items: center`**: quando o conteúdo é mais alto que a área, o topo fica cortado e inalcançável. Para centralizar conteúdo que pode crescer, use um filho com `min-height: 100%` + `justify-content: center` (como `.page-text-inner`).
+
+### 2.4 Layout de Livro Aberto (spread)
+Cada `section.page-slide.spread` é um **livro aberto** com duas folhas de papel sobre a capa de couro (`.book-viewport`):
+- **`.page-art`**: ilustração (com lente, bandeja de cartões e badge). **`.page-text`**: capítulo, título e texto.
+- **Paisagem** (`orientation: landscape`): folhas **lado a lado**, lombada vertical no meio. **Retrato**: folhas **empilhadas** (ilustração em cima, texto embaixo), lombada horizontal. As sombras da lombada e as bordas das folhas empilhadas são só CSS.
+- **Só o texto rola** (`.page-text-scroll`, `overscroll-behavior: contain`): a ilustração fica sempre à vista durante a leitura. O `#pages-viewport` **não rola** (`overflow: clip`). Quando há mais texto abaixo, aparecem um esmaecido e a seta ⬇ "Continuar lendo" (`updateScrollHint`). A leitura guiada rola só a coluna de texto (`scrollTextToSentence`); não use `scrollIntoView`, que pode deslocar contêineres com `overflow: hidden`.
+- A ilustração ocupa a largura da folha, mas encolhe para caber na altura (`.art-plate` com `container-type: size` e unidades `cqh`).
+- **Virada de página** (`animateTurn`): a página real troca na hora (`.page-hidden` continua obrigatório) e, por cima, uma camada `.turn-layer` com **cópias inertes** (`inertClone`: sem `id`, `pointer-events: none`) monta uma folha 3D que gira em torno da lombada em 750 ms, com sombreamento:
+  - paisagem, avançar: a folha da direita (texto antigo → ilustração nova no verso) gira para a esquerda; voltar: o espelho;
+  - retrato: a folha inteira gira pela borda esquerda, como num leitor de uma página.
+  Durante a virada, `isTurning` ignora novos comandos de navegação. Com `prefers-reduced-motion`, a troca é instantânea. Abrir por `?page=N` não anima.
 
 ---
 
