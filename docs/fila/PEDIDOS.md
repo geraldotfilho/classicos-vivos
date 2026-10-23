@@ -31,9 +31,16 @@ ESTADO: ATIVO
 | :--- | :--- | :--- | :--- |
 | P-001 | tarefa | Executar **todas** as tarefas de `docs/TODO-NANO-BANANA.md` (NB-1 a NB-8), na ordem de prioridade do arquivo | ABERTO |
 | P-002 | tarefa | Executar **todas** as tarefas de `docs/TODO-NANO-BANANA-PARTES-2-4.md` (Parte 2 → Parte 3 → Parte 4), depois de P-001 | ABERTO |
+| P-003 | ajuste | **NB-2 (pousada), camadas com cara de adesivo**. Regerar **mantendo o mesmo tamanho de tela (canvas), o mesmo enquadramento e o mesmo ponto de apoio** de cada arquivo, porque o código já posiciona essas camadas: (1) `p4-estalajadeiro-acenando` e `p4-estalajadeiro-sopa`: a sombra de contato é uma **mancha branca/cinza-clara**; troque por uma sombra **escura, marrom-acinzentada, suave e semitransparente**, e deixe o avental **100% opaco** (hoje ~4% dos pixels claros têm alfa parcial: a remoção do fundo branco comeu o avental); (2) `p4-porquinhos`: mesma troca da sombra branca por sombra escura suave; (3) `p4-pastor-parado` e `p4-pastor-tocando`: **sem o tapete de grama recortado** sob o menino; só o menino sentado com uma sombra escura suave; (4) `p4-notas-musicais`: **sem o contorno/halo branco**; um brilho dourado suave é bem-vindo. Teste: componha cada camada sobre um fundo magenta puro, e nada branco pode aparecer em volta. | ABERTO |
+| P-004 | tarefa | **Limpeza (baixa prioridade, depois de P-003)**: apagar os arquivos substituídos pelas camadas e que o livro não carrega mais: `dom-quixote/imagens/p4-real.webp`, `p4-real-flauta.webp`, `p4-real-sopa.webp`, `p7-real.webp` e `dom-quixote/imagens/objetos/moinho-pas.svg`. Atualizar o `CATALOGO.md`. Rodar `npm run build:sw`. | ABERTO |
 
 ---
 
 ## Revisões do Claude
 
-_(nenhuma ainda: as revisões aparecem aqui, com data, depois de cada entrega registrada em `ENTREGAS.md`)_
+### 2026-10-23 21:30 UTC — revisão das entregas de 20:26–20:38
+| Entrega | Veredito | Comentário |
+| :--- | :--- | :--- |
+| NB-1 (`f2971a0`) | ✅ APROVADO | Cenário sem pás fiel à base e camada de pás com cubo centralizado. **Integrado** na Parte 1, pág. 8 (BACKLOG A-1): as pás em aquarela ficam paradas sobre os cubos (73,5%/26,7% e 90,4%/33,3%) e giram com o VENTO. As pás vetoriais duplicadas acabaram. |
+| NB-2 (`5965b15`) | 🔧 AJUSTE → P-003 | Composição e escala ótimas, e as poses alternam sem "pular". **Integrado** na Parte 1, pág. 5 (BACKLOG A-2): TROMBETA e SOPA em qualquer ordem, ou juntas. Mas, sobre o cenário, as sombras brancas, o tapete de grama do pastor e o halo das notas dão cara de adesivo (detalhes em P-003). Reenvie **com os mesmos nomes e o mesmo canvas**: o código não precisa mudar. |
+| NB-3 parcial (`c8f09c7`) | ✅ APROVADO | O livro dos castelos é sutil e encantador, como pedido. A integração no código (BACKLOG A-3) espera os livros dos dragões e dos cavaleiros, para a página não mostrar "Ilustração a caminho" no meio da leitura. Entendido o bloqueio por cota (429) até 01:22 UTC. |

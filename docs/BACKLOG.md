@@ -43,12 +43,15 @@ Levantado na inspeção completa do sprint 1 (2026-10): código, ilustrações e
 - **Biblioteca** com as 4 partes na prateleira; `sobre.html` com o acervo completo.
 - **Arte das Partes 2–4** detalhada para o Gemini em `docs/TODO-NANO-BANANA-PARTES-2-4.md`. O aviso de fim da Parte 1 foi alinhado com o conteúdo real da Parte 2 (antigo B-7).
 
+## ✅ Entregue no sprint 5 (ciclo Claude ↔ Gemini, `docs/fila/`)
+
+- **A-1, moinhos**: cenário sem pás (`p7-real-sem-pas`) + pás em aquarela (`camadas/p7-pas-moinho`) sobre os cubos, paradas na Realidade e girando com o VENTO. Fim das pás vetoriais duplicadas.
+- **A-2, pousada em camadas**: fundo limpo + pastor (parado/tocando), porquinhos dançando, notas flutuando e estalajadeiro (acenando/servindo sopa). TROMBETA e SOPA funcionam em qualquer ordem, ou juntas, e a sopa agora aparece de verdade. Retoque das bordas das camadas pedido em P-003.
+
 ## 🔴 Prioridade alta
 
 | ID | Item | Detalhes |
 | :--- | :--- | :--- |
-| A-1 | **Pás do moinho duplicadas** (pág. 8) | O SVG das pás gira **por cima** das pás pintadas e o estilo vetorial destoa. Após NB-1: durante o vento, trocar o fundo por `p7-real-sem-pas.webp` e girar a camada `camadas/p7-pas-moinho.webp` (uma por moinho), recalibrando `left/top/width` sobre os cubos. Pode ser feito antes do motor A-6 (já existe a sobreposição das pás). |
-| A-2 | **SOPA sem sopa / pousada incoerente** (pág. 5) | Após NB-2 (o motor de camadas já existe): a página passa a ser `p4-real-fundo` + camadas. TROMBETA troca o pastor parado pelo que toca e faz surgir os porquinhos dançando e as notas animadas. SOPA troca o estalajadeiro que acena pelo que oferece a sopa. Funciona em qualquer ordem e com os dois juntos, sem imagem por combinação. A Lente da Imaginação continua sendo a ilustração inteira `p4-imag`. |
 | A-7 | **Arte das Partes 2–4** | 49 cenas + 18 camadas em `TODO-NANO-BANANA-PARTES-2-4.md` (Gemini). Depois de cada entrega: conferir posições das camadas nas duas orientações e ajustar `x/y/w` no `parte-N.html`. |
 | A-8 | **Revisão humana do texto das Partes 2–4** | Ler em voz alta com a voz do tablet; decidir "vinho tinto" × "suco de uva" (Parte 3, cap. 20); validar a dificuldade da `ordem` (5 palavras) e da contagem com crianças. Ver `PLANO-PARTES-2-4.md` §5. |
 | A-3 | **Livros sem transformação** (pág. 2) | Viola o §3.3 do AGENTS.md (cartão que só faz a imagem tremer). Após NB-3: cada livro troca a cena para `p1-real-livro-<tema>.webp` via `setSceneImage`, em qualquer ordem. Ao completar os três, o botão da lente convida à imaginação (já existe). |
