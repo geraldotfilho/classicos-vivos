@@ -33,15 +33,25 @@ Levantado na inspeção completa do sprint 1 (2026-10): código, ilustrações e
 - **Rolagem independente do texto**: a ilustração não sai da tela durante a leitura. Esmaecido + seta ⬇ quando há mais texto, e a leitura guiada rola só o texto. Resolve o antigo A-4 (texto que não cabia em paisagem).
 - **Virada de página animada** em 3D, em torno da lombada (paisagem) ou da borda (retrato), com sombreamento. Respeita `prefers-reduced-motion` e bloqueia cliques repetidos durante a virada.
 
+## ✅ Entregue no sprint 4
+
+- **Partes 2, 3 e 4 escritas** (8 páginas cada, caps. 8–28), com palavras-chave silábicas e 10 interações planejadas pelo crivo do §3.3. Decisões em `docs/PLANO-PARTES-2-4.md`.
+- **Motor único** `assets/js/livro.js` + `assets/css/livro.css` (antigo A-5): cada parte virou só configuração (`window.LIVRO`). A Parte 1 foi convertida e passou em todos os testes.
+- **Motor de camadas** (antigo A-6), com novos tipos de cartão: `camadas`, `contagem` e `ordem`.
+- **Arte ausente não quebra o livro**: "Ilustração a caminho" nas cenas e emojis provisórios nas camadas.
+- **Eventos delegados**, sem `onclick` embutido (antigo B-2).
+- **Biblioteca** com as 4 partes na prateleira; `sobre.html` com o acervo completo.
+- **Arte das Partes 2–4** detalhada para o Gemini em `docs/TODO-NANO-BANANA-PARTES-2-4.md`. O aviso de fim da Parte 1 foi alinhado com o conteúdo real da Parte 2 (antigo B-7).
+
 ## 🔴 Prioridade alta
 
 | ID | Item | Detalhes |
 | :--- | :--- | :--- |
 | A-1 | **Pás do moinho duplicadas** (pág. 8) | O SVG das pás gira **por cima** das pás pintadas e o estilo vetorial destoa. Após NB-1: durante o vento, trocar o fundo por `p7-real-sem-pas.webp` e girar a camada `camadas/p7-pas-moinho.webp` (uma por moinho), recalibrando `left/top/width` sobre os cubos. Pode ser feito antes do motor A-6 (já existe a sobreposição das pás). |
-| A-2 | **SOPA sem sopa / pousada incoerente** (pág. 5) | Após NB-2 e A-6: a página passa a ser `p4-real-fundo` + camadas. TROMBETA troca o pastor parado pelo que toca e faz surgir os porquinhos dançando e as notas animadas. SOPA troca o estalajadeiro que acena pelo que oferece a sopa. Funciona em qualquer ordem e com os dois juntos, sem imagem por combinação. A Lente da Imaginação continua sendo a ilustração inteira `p4-imag`. |
+| A-2 | **SOPA sem sopa / pousada incoerente** (pág. 5) | Após NB-2 (o motor de camadas já existe): a página passa a ser `p4-real-fundo` + camadas. TROMBETA troca o pastor parado pelo que toca e faz surgir os porquinhos dançando e as notas animadas. SOPA troca o estalajadeiro que acena pelo que oferece a sopa. Funciona em qualquer ordem e com os dois juntos, sem imagem por combinação. A Lente da Imaginação continua sendo a ilustração inteira `p4-imag`. |
+| A-7 | **Arte das Partes 2–4** | 49 cenas + 18 camadas em `TODO-NANO-BANANA-PARTES-2-4.md` (Gemini). Depois de cada entrega: conferir posições das camadas nas duas orientações e ajustar `x/y/w` no `parte-N.html`. |
+| A-8 | **Revisão humana do texto das Partes 2–4** | Ler em voz alta com a voz do tablet; decidir "vinho tinto" × "suco de uva" (Parte 3, cap. 20); validar a dificuldade da `ordem` (5 palavras) e da contagem com crianças. Ver `PLANO-PARTES-2-4.md` §5. |
 | A-3 | **Livros sem transformação** (pág. 2) | Viola o §3.3 do AGENTS.md (cartão que só faz a imagem tremer). Após NB-3: cada livro troca a cena para `p1-real-livro-<tema>.webp` via `setSceneImage`, em qualquer ordem. Ao completar os três, o botão da lente convida à imaginação (já existe). |
-| A-5 | **Extrair o motor do livro para `assets/js/livro.js`** | O `parte-1.html` tem cerca de 1.900 linhas, com áudio, voz, lentes, arrastar e navegação embutidos. Antes da Parte 2, separar o motor (sem build: um `<script src>` comum) e deixar no HTML só o conteúdo e a configuração das cenas (`lensMetadata`, `progressiveScenes`). Evita copiar e colar bugs entre livros. |
-| A-6 | **Motor de camadas (layered scene)** | Implementar o §4.2 do AGENTS.md, que hoje está só documentado. Dentro do quadro 16:9 de cada cena: `<div class="scene-layers">` com `<img>` posicionadas em `%` (ancoradas pela base) e declaradas na configuração da página (`layers: { pastor: { x, y, w, variants: { parado, tocando } } }`). A visibilidade e a variante saem do estado via `renderScene`, as animações são CSS (balanço, flutuar, girar), as camadas entram no pré-carregamento e no feedback de carregamento. Primeiras aplicações: NB-1 (moinho), NB-2 (pousada), nuvem da ilha (NB-6). Depois, avaliar a armadura em qualquer ordem: a bacia funciona como camada, mas escudo e lança dependem da pose do braço, então o teste precisa de arte dedicada. |
 
 ## 🟡 Prioridade média
 
@@ -62,9 +72,7 @@ Levantado na inspeção completa do sprint 1 (2026-10): código, ilustrações e
 | ID | Item | Detalhes |
 | :--- | :--- | :--- |
 | B-1 | **Acessibilidade** | Cartões e hotspots são `<div onclick>`, sem `role="button"`, `tabindex` ou `aria-label`. Botões só de ícone têm `title`, mas não `aria-label`. `maximum-scale=1, user-scalable=no` impede o zoom de quem precisa. |
-| B-2 | **Handlers inline** | `onclick="..."` espalhados pelo HTML. Migrar para `data-*` + `addEventListener` junto com A-5. |
 | B-3 | **Ícone definitivo do app** | NB-7. |
 | B-4 | **Leão Guardião em aquarela** | NB-8 (referência ainda em SVG). |
 | B-5 | **GitHub Pages** | Confirmar que o Pages está ativo na `main`: o service worker exige HTTPS. Pelo `file://`, o livro funciona offline, mas sem instalação nem cache. |
-| B-7 | **Plano editorial das Partes 2–4** | A biblioteca não mostra mais títulos (só "Parte N" com cadeado). Falta alinhar o aviso no fim da Parte 1 ("Na Parte 2: A Batalha das Ovelhas") com o plano real das próximas partes. |
 | B-6 | **Indicador de páginas no retrato** | As bolinhas de página só aparecem em telas ≥ 1024 px. No retrato existe apenas o "Página N de 8". |

@@ -21,7 +21,7 @@ Cada livro é construído como uma aplicação web leve e autônoma (HTML5, CSS3
 
 | Obra | Autor Original | Status | Capítulos Disponíveis |
 | :--- | :--- | :--- | :--- |
-| 🛡️ **Dom Quixote de La Mancha** | Miguel de Cervantes | 🚧 Em produção | [Parte 1: O Grande Sonho do Cavaleiro](./dom-quixote/parte-1.html) |
+| 🛡️ **Dom Quixote de La Mancha** | Miguel de Cervantes | 📝 Texto completo · 🎨 ilustrações das Partes 2–4 em produção | [Parte 1](./dom-quixote/parte-1.html) · [Parte 2](./dom-quixote/parte-2.html) · [Parte 3](./dom-quixote/parte-3.html) · [Parte 4](./dom-quixote/parte-4.html) |
 
 ---
 
@@ -40,7 +40,7 @@ npm run build        # regenera CSS (Tailwind), fontes, ícones e o service work
 npm run build:images # converte novas ilustrações JPG/PNG para WebP
 ```
 
-Arquitetura, regras pedagógicas e fluxo de ilustração: [`AGENTS.md`](AGENTS.md). Próximos passos: [`docs/BACKLOG.md`](docs/BACKLOG.md) e [`docs/TODO-NANO-BANANA.md`](docs/TODO-NANO-BANANA.md).
+Arquitetura, regras pedagógicas e fluxo de ilustração: [`AGENTS.md`](AGENTS.md). Cada livro é só configuração sobre o motor comum [`assets/js/livro.js`](assets/js/livro.js). Próximos passos: [`docs/BACKLOG.md`](docs/BACKLOG.md) e [`docs/TODO-NANO-BANANA.md`](docs/TODO-NANO-BANANA.md).
 
 ---
 

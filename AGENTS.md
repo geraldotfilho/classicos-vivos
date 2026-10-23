@@ -9,7 +9,7 @@ Este documento consolida a memória arquitetural, os princípios pedagógicos, a
 
 - **Público-Alvo**: Crianças em fase de alfabetização e letramento (5 a 8 anos).
 - **Proposta Pedagógica**: Aproximar as crianças das maiores obras-primas da literatura universal através de uma experiência interativa, sensorial, visualmente rica e de toque acolhedor.
-- **Obra Piloto**: *Dom Quixote de La Mancha - Parte 1: O Cavaleiro da Super Imaginação*, adaptado diretamente da obra de Miguel de Cervantes.
+- **Obra Piloto**: *Dom Quixote de La Mancha*, adaptado diretamente da obra de Miguel de Cervantes, em **4 partes de 8 páginas** (capítulos numerados em sequência: 1–7, 8–14, 15–21, 22–28). Parte 1: *O Cavaleiro da Super Imaginação*; Parte 2: *Exércitos de Lã e o Elmo Encantado*; Parte 3: *Serra Morena e a Princesa Micomicona*; Parte 4: *A Jaula Encantada e a Ilha de Sancho*. Decisões de adaptação e o mapa de interações estão em `docs/PLANO-PARTES-2-4.md`.
 - **Diretriz de Dispositivo**: **Tablet-First** (iPad, Samsung Galaxy Tab). Dimensões alvo prioritárias:
   - **Tablet Retrato (Portrait)**: 800 × 1280 px
   - **Tablet Paisagem (Landscape)**: 1280 × 800 px
@@ -102,6 +102,42 @@ Cada `section.page-slide.spread` é um **livro aberto** com duas folhas de papel
   - retrato: a folha inteira gira pela borda esquerda, como num leitor de uma página.
   Durante a virada, `isTurning` ignora novos comandos de navegação. Com `prefers-reduced-motion`, a troca é instantânea. Abrir por `?page=N` não anima.
 
+### 2.5 Motor Único e Livros como Configuração (`assets/js/livro.js`)
+Todas as partes usam **o mesmo motor** (`assets/js/livro.js` + `assets/css/livro.css`). Cada `parte-N.html` só tem o `<head>` padrão, um `<script>` com `window.LIVRO = {...}` e `<script src="../assets/js/livro.js">`. O motor monta a moldura, o livro aberto, as lentes, os cartões, as camadas, a leitura guiada, o cartão de alfabetização e a virada de página. **Nunca copie o motor para dentro de um livro**: melhorias no motor valem para todas as partes de uma vez.
+```js
+window.LIVRO = {
+  obra, autor, parte, totalPartes,
+  imagens: './imagens/parte-2/',          // nomes simples de imagem são relativos a esta pasta
+  fim: { mensagem, proxima: './parte-3.html', proximaRotulo },   // bloco final da última página
+  paginas: [{
+    capa: true | capitulo: '🌳 Capítulo 8 • ...', corCapitulo: 'text-emerald-700',
+    titulo: '...',
+    texto: `Parágrafos separados por linha em branco. Palavras-chave: {{CARVALHO|CAR • VA • LHO|🌳}}`,
+    cena: {
+      real, imag, alt, emoji /* do aviso "ilustração a caminho" */, legendaReal, legendaImag,
+      hotspots: [{ x, y, w, h, palavra, emoji, emojiImag?, lente?: 'real'|'imag', acao? }],
+      camadas: [{ id, src | fundo /* véu CSS */, x, y, w, h?, z?, anim?, lente?, item?, ate?, emoji }],
+      cartoes: { tipo, itens: [{ id, palavra, emoji, icone?, borda?, som?, animar?, efeito?, acao?, domId? }], ... },
+      realCena?: (estado) => ({ src, legenda }) | null,   // variação da Realidade calculada pelo estado
+      extra?, precarregar?, aoTrocarLente?
+    }
+  }],
+  acoes: { nome: (livro, contexto) => {} }   // ações personalizadas (ex.: o VENTO da Parte 1)
+};
+```
+- **Tipos de cartão** (`cena.cartoes.tipo`):
+  | Tipo | Comportamento | Exemplo |
+  | :--- | :--- | :--- |
+  | `progressivo` | ilustrações **cumulativas** (`etapas`, `legendas`) numa **ordem fixa** (`ordem`) | vestir o cavaleiro |
+  | `variante` | itens independentes: a cena mostra a variante do último (`variantes`, `legendaTodas`) | pousada da Parte 1 |
+  | `camadas` | cada item mostra/esconde camadas (`item`/`ate`) e pode disparar um `efeito`; qualquer ordem | mesa dos pastores, bengala |
+  | `contagem` | um cartão; cada toque revela a próxima camada de `sequencia` e fala `falas[n]` | cabras no barco |
+  | `ordem` | palavras na ordem certa, escritas numa faixa e lidas em voz alta | assinatura da carta |
+  | `acao` | chama `LIVRO.acoes[item.acao]` com a API da página | vento nos moinhos |
+  | `livre` | só celebra. **Evite** (§3.3) | (provisório) |
+- **Arte ausente não quebra nada**: cena sem arquivo mostra "🎨 Ilustração a caminho"; camada sem arquivo mostra o `emoji` dela. Assim o texto e as interações podem ser escritos e testados **antes** da arte do Nano-Banana.
+- **Eventos delegados** (sem `onclick` no HTML): palavras-chave (`data-palavra`), lente (`data-lente`), hotspots (`data-hotspot`) e navegação (`data-nav`).
+
 ---
 
 ## 3. Diretrizes Pedagógicas, UX e Crítica à Gamificação
@@ -127,7 +163,7 @@ Cada `section.page-slide.spread` é um **livro aberto** com duas folhas de papel
 ---
 
 ### 3.4 Biblioteca para Crianças, Detalhes para Adultos
-- `index.html` é uma **estante lúdica**: livros como capas grandes e tocáveis numa prateleira de madeira, o livro disponível com botão ▶ pulsando e os próximos com 🔒 "Parte N". **Quanto menos texto, melhor**: nada de descrições, pilares, faixas etárias ou títulos de capítulos.
+- `index.html` é uma **estante lúdica**: livros como capas grandes e tocáveis numa prateleira de madeira, com botão ▶. Na prateleira de cima ficam as 4 partes de Dom Quixote (a capa de cada uma é o `p0-real` da parte, com cor e emoji provisórios enquanto a arte não chega); na de baixo, os próximos clássicos com 🔒 "Em breve". **Quanto menos texto, melhor**: nada de descrições, pilares, faixas etárias ou títulos de capítulos.
 - Tudo que é informação para adultos (proposta pedagógica, acervo detalhado, instruções de instalação e voz, licença) fica em `sobre.html`, acessível por um botão discreto "Para adultos" (ícone ⓘ).
 - Livro novo: uma capa nova na prateleira de cima e uma entrada no "Acervo" de `sobre.html`.
 
@@ -161,31 +197,35 @@ Para possibilitar ricas experiências interativas sem perder a fidelidade artís
      3. Mesma **escala e perspectiva**: posicione e dimensione em `%` do quadro 16:9, ancorando pela base (pés), e confira nas duas orientações.
      4. Recorte limpo, **sem halo branco** nas bordas. Se o Nano-Banana entregar fundo branco, faça o recorte antes de versionar.
      5. Cada variação de pose (pastor parado × tocando) é um sprite próprio com **o mesmo enquadramento e tamanho de tela**, para trocar sem "pular".
-   - **Estado atual**: o livro ainda não tem o motor de camadas. Todas as cenas são ilustrações inteiras, e a única sobreposição são as pás do moinho. O motor está no `docs/BACKLOG.md` (A-6), e as primeiras aplicações previstas são o moinho (NB-1) e a pousada (NB-2).
+   - **Motor de camadas implementado** (§2.5): `cena.camadas` com posição em % (`x`, `y` = base, `w`), visibilidade pelo estado (`item`: aparece depois que o item é usado; `ate`: some quando o item é usado), animação contínua (`anim`: `balanco`, `flutuar`, `girar`, `pulsar`) e efeitos de um toque (`efeito`: `cambalhota`, `pulo`, `estouro`, `atravessar`). Véus sem arte (ex.: a escuridão da noite) usam `fundo` com um gradiente CSS. As Partes 2–4 já usam camadas; na Parte 1, o moinho (NB-1) e a pousada (NB-2) vão migrar quando a arte chegar.
 3. **Mecânica Progressiva (Páginas 3, 4 e 5)**:
    - **Página 3 (`?page=2`, Capítulo 2 - A Armadura do Bisavô)**: Cada clique ou drop de um item da bandeja (`ARMADURA`, `BACIA`, `ESCUDO`, `LANÇA`) revela uma nova ilustração do personagem se vestindo progressivamente (`p2-real-stage-1.webp` a `p2-real-stage-4.webp`).
    - **Página 4 (`?page=3`, Capítulo 3 - O Cuidado com Rocinante)**: Cada clique ou drop de carinho (`MAÇÃ`, `CENOURA`, `ESCOVA`) revela uma nova ilustração do cavalo se alimentando alegremente, ganhando energia e com as crinas penteadas com esmero (`p3-real-stage-1.webp` a `p3-real-stage-3.webp`).
    - **Página 5 (`?page=4`, Capítulo 4 - O Acolhimento na Pousada)**: Os botões de `TROMBETA` e `SOPA` revelam o pastor tocando flauta rústica com porquinhos dançarinos (`p4-real-flauta.webp`) e o estalajadeiro servindo a sopa fumegante (`p4-real-sopa.webp`).
-   - **Regra das ilustrações cumulativas**: quando cada etapa **contém** as anteriores (a etapa 2 já mostra o peitoral da etapa 1), os itens **precisam seguir uma ordem fixa**, a mesma do texto, declarada em `progressiveScenes[pageIdx].order`. O próximo item brilha (`.card-next`), os seguintes ficam esmaecidos (`.card-waiting`) e um toque fora de ordem só dá uma dica gentil (som `hint` + balanço do cartão certo), **sem trocar a cena**. Nunca escolha a etapa pela *quantidade* de itens usados: esse foi o bug "toco na bacia e ele veste o peitoral". Se a interação precisar aceitar qualquer ordem, use **camadas independentes** por item (ver acima) ou ilustrações independentes por item (não cumulativas).
+   - **Regra das ilustrações cumulativas**: quando cada etapa **contém** as anteriores (a etapa 2 já mostra o peitoral da etapa 1), os itens **precisam seguir uma ordem fixa**, a mesma do texto, declarada em `cena.cartoes.ordem` (tipo `progressivo`). O próximo item brilha (`.card-next`), os seguintes ficam esmaecidos (`.card-waiting`) e um toque fora de ordem só dá uma dica gentil (som `hint` + balanço do cartão certo), **sem trocar a cena**. Nunca escolha a etapa pela *quantidade* de itens usados: esse foi o bug "toco na bacia e ele veste o peitoral". Se a interação precisar aceitar qualquer ordem, use **camadas independentes** por item (ver acima) ou ilustrações independentes por item (não cumulativas).
    - Usar um item com a Lente da Imaginação ativa volta para a Lente da Realidade (vestir e cuidar acontecem no mundo real).
    - **Tempo de Contemplação do Leitor**: É terminantemente proibido forçar auto-toggle, transições automáticas precipitadas ou piscamentos relâmpagos para a imaginação. O leitor infantil deve contemplar a cena real concluída pelo tempo que desejar. O botão da Lente da Imaginação apenas pulsa suavemente para convidar a criança à transformação deliberada.
 
 ### 4.3 Estrutura de Ativos (sem duplicatas) e Banco de Referências
 ```text
 classicos-vivos/
-├── assets/                              # Compartilhado por todos os livros (gerado por `npm run build`)
+├── assets/                              # Compartilhado por todos os livros
+│   ├── js/  livro.js                    # O MOTOR dos livros (editado à mão)
+│   ├── css/ livro.css                   # estilo dos livros (editado à mão)
 │   ├── css/  tailwind.css · fonts.css · icons.css
 │   ├── fonts/                           # woff2 locais
 │   └── icones/                          # ícones do app (PWA)
 ├── tools/                               # scripts de build (fontes, ícones, Tailwind, WebP, service worker)
-├── docs/  BACKLOG.md · TODO-NANO-BANANA.md
+├── docs/  BACKLOG.md · TODO-NANO-BANANA.md · TODO-NANO-BANANA-PARTES-2-4.md · PLANO-PARTES-2-4.md
 ├── index.html                           # Biblioteca das crianças (estante de livros, quase sem texto)
 ├── sobre.html                           # Detalhes para adultos (proposta, acervo, uso no tablet, licença)
 ├── sw.js · manifest.webmanifest
 └── dom-quixote/
-    ├── parte-1.html
+    ├── parte-1.html … parte-4.html      # só conteúdo (window.LIVRO), ver §2.5
     ├── imagens/                         # FONTE ÚNICA do que o livro carrega (cenas pN-*.webp)
-    │   ├── camadas/                     # sprites com alfa sobrepostos às cenas (WebP)
+    │   ├── parte-2/ parte-3/ parte-4/   # cenas de cada parte (a Parte 1 fica na raiz de imagens/)
+    │   │   └── camadas/                 # sprites com alfa daquela parte (WebP)
+    │   ├── camadas/                     # sprites com alfa da Parte 1
     │   └── objetos/                     # ícones SVG das bandejas
     └── biblioteca/
         ├── CATALOGO.md

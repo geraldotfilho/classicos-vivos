@@ -9,6 +9,7 @@ const files = [
     ...globSync('*.html'),
     'manifest.webmanifest',
     ...globSync('assets/css/*.css'),
+    ...globSync('assets/js/*.js'),
     ...globSync('assets/fonts/*.woff2'),
     'assets/icones/icone-192.png',
     ...globSync('*/parte-*.html'),
