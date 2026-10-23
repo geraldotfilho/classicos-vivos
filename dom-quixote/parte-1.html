@@ -487,21 +487,7 @@
 
                     <!-- Quadro 16:9 Integral sem Recortes -->
                     <div id="drop-zone-2" class="drop-zone-target relative w-full aspect-[16/9] rounded-2xl overflow-hidden border-2 border-amber-400 shadow-md bg-slate-900 flex items-center justify-center">
-                        <img id="scene-bg-2" src="./imagens/p2-real.jpg?v=3" alt="Dom Quixote no Sótão" class="w-full h-full object-contain transition-all duration-300" />
-
-                        <!-- Adereços de Armadura Improvisada Equipados Dinamicamente sobre Alonso Quixano -->
-                        <img id="gear-overlay-1" src="./biblioteca/objetos/armadura-peitoral.svg" alt="Peitoral Equipado"
-                             class="gear-equipped-overlay hidden absolute pointer-events-none drop-shadow-md transition-all duration-300 transform"
-                             style="left: 47%; top: 40%; width: 10%; z-index: 10;" />
-                        <img id="gear-overlay-2" src="./biblioteca/objetos/bacia-elmo.svg" alt="Bacia Equipada"
-                             class="gear-equipped-overlay hidden absolute pointer-events-none drop-shadow-md transition-all duration-300 transform"
-                             style="left: 47.5%; top: 22.5%; width: 8.5%; z-index: 12;" />
-                        <img id="gear-overlay-3" src="./biblioteca/objetos/escudo-panelao.svg" alt="Escudo Equipado"
-                             class="gear-equipped-overlay hidden absolute pointer-events-none drop-shadow-md transition-all duration-300 transform"
-                             style="left: 54%; top: 46%; width: 9%; z-index: 11;" />
-                        <img id="gear-overlay-4" src="./biblioteca/objetos/lanca-bandeirola.svg" alt="Lança Equipada"
-                             class="gear-equipped-overlay hidden absolute pointer-events-none drop-shadow-md transition-all duration-300 transform"
-                             style="left: 38%; top: 18%; width: 6%; height: 58%; z-index: 9;" />
+                        <img id="scene-bg-2" src="./imagens/p2-real.jpg?v=4" alt="Dom Quixote no Sótão" class="w-full h-full object-contain transition-all duration-300" />
                     </div>
 
                     <!-- 4 Cartões Arrastáveis -->
@@ -1237,20 +1223,16 @@
             if (sceneImg) {
                 let targetSrc = isImag ? meta.imagImg : meta.realImg;
                 if (pageIdx === 2) {
-                    if (!isImag && equippedPiecesSet.size === 4) {
-                        targetSrc = "./imagens/p2-real-completa.jpg";
+                    if (!isImag) {
+                        const count = equippedPiecesSet.size;
+                        if (count === 0) targetSrc = "./imagens/p2-real-stage-0.jpg";
+                        else if (count === 1) targetSrc = "./imagens/p2-real-stage-1.jpg";
+                        else if (count === 2) targetSrc = "./imagens/p2-real-stage-2.jpg";
+                        else if (count === 3) targetSrc = "./imagens/p2-real-stage-3.jpg";
+                        else targetSrc = "./imagens/p2-real-stage-4.jpg";
                     }
-                    // Gerencia visibilidade dos adereços sobrepostos
-                    document.querySelectorAll('.gear-equipped-overlay').forEach(el => {
-                        const id = el.id.replace('gear-overlay-', '');
-                        if (isImag || equippedPiecesSet.size === 4 || !equippedPiecesSet.has(id)) {
-                            el.classList.add('hidden');
-                        } else {
-                            el.classList.remove('hidden');
-                        }
-                    });
                 }
-                sceneImg.src = targetSrc + '?v=3';
+                sceneImg.src = targetSrc + '?v=4';
             }
 
             if (isImag) {
@@ -1422,29 +1404,37 @@
 
         function handleGearDrop(gearId, coords) {
             equippedPiecesSet.add(gearId);
+            const count = equippedPiecesSet.size;
             const sceneImg = document.getElementById('scene-bg-2');
+            const badge = document.getElementById('lens-badge-2');
+            const btn = document.getElementById('lens-btn-2');
+
             sceneImg.classList.remove('character-joy');
             void sceneImg.offsetWidth;
             sceneImg.classList.add('character-joy');
 
-            // Exibe o adereço equipado correspondente sobre Alonso Quixano
-            const overlay = document.getElementById('gear-overlay-' + gearId);
-            if (overlay) {
-                overlay.classList.remove('hidden');
-            }
-
-            if (equippedPiecesSet.size === 4) {
-                // Todas as 4 peças banais montadas: exibe Alonso com a armadura completa improvisada
-                setTimeout(() => {
-                    document.querySelectorAll('.gear-equipped-overlay').forEach(el => el.classList.add('hidden'));
-                    sceneImg.src = "./imagens/p2-real-completa.jpg?v=3";
-                    playSound('fanfare');
-                    if (!lensImaginationState[2]) {
-                        setTimeout(() => toggleLens(2, null, true), 900);
-                    }
-                }, 350);
-            } else {
+            // Cada clique revela progressivamente uma nova pintura autêntica do Nano-Banana
+            if (count === 1) {
+                sceneImg.src = "./imagens/p2-real-stage-1.jpg?v=4";
+                if (badge) badge.innerHTML = "👓 Lente da Realidade: Peitoral Enferrujado Equipado!";
                 playSound('wordPop');
+            } else if (count === 2) {
+                sceneImg.src = "./imagens/p2-real-stage-2.jpg?v=4";
+                if (badge) badge.innerHTML = "👓 Lente da Realidade: Bacia de Barbeiro na Cabeça!";
+                playSound('wordPop');
+            } else if (count === 3) {
+                sceneImg.src = "./imagens/p2-real-stage-3.jpg?v=4";
+                if (badge) badge.innerHTML = "👓 Lente da Realidade: Tampa de Panela como Escudo!";
+                playSound('wordPop');
+            } else if (count >= 4) {
+                sceneImg.src = "./imagens/p2-real-stage-4.jpg?v=4";
+                if (badge) badge.innerHTML = "👓 Lente da Realidade: Armadura Caseira Completa!";
+                playSound('fanfare');
+                // O leitor pode apreciar a cena da armadura completa! O botão pulsa para convidar à imaginação
+                if (btn) {
+                    btn.classList.add('animate-bounce');
+                    setTimeout(() => btn.classList.remove('animate-bounce'), 1400);
+                }
             }
         }
 

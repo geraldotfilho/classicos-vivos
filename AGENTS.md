@@ -102,10 +102,9 @@ Para possibilitar ricas experiências interativas sem perder a fidelidade artís
    - Produzidos com **fundo transparente (PNG com canal alfa)** ou fundo branco puro isolado para recorte de precisão.
    - Sobrepostos ao cenário através de posicionamento absoluto/relativo no DOM.
 3. **Mecânica Progressiva (Página 3 / Capítulo 2 - A Armadura Feita em Casa)**:
-   - O sótão começa com o fundo de madeira vazio e ensolarado.
-   - Alonso Quixano surge inicialmente em roupas cotidianas simples (sem armadura).
-   - À medida que o leitor arrasta cada item da bandeja (`ARMADURA`, `BACIA`, `ESCUDO`, `LANÇA`), o personagem veste progressivamente os adereços banais do cotidiano.
-   - Ao final, ou ao clicar na **Lente da Imaginação**, a composição se transfigura no deslumbrante Cavaleiro de Ouro reluzente.
+   - O sótão começa com Alonso Quixano em roupas cotidianas simples (sem armadura).
+   - **Regra Estrita**: Cada clique ou drop de um item da bandeja (`ARMADURA`, `BACIA`, `ESCUDO`, `LANÇA`) revela uma **nova imagem autêntica gerada pelo Nano-Banana** do personagem se vestindo progressivamente com os adereços banais do cotidiano (`p2-real-stage-1.jpg` a `p2-real-stage-4.jpg`). É expressamente proibido colar ícones por cima da imagem.
+   - **Tempo de Contemplação do Leitor**: Ao equipar todas as 4 peças banais, a ilustração completa da armadura caseira permanece firme na tela para apreciação da criança (sem transições automáticas precipitadas ou piscamentos relâmpagos). A transformação para o Cavaleiro de Ouro ocorre de forma deliberada quando o leitor clica no botão da **Lente da Imaginação**.
 
 ### 4.3 Banco de Personagens e Itens de Referência
 Foi criada a estrutura padronizada para armazenamento e contexto de prompts:
