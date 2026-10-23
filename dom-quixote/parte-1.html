@@ -7,2594 +7,297 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
     <title>Dom Quixote de La Mancha - Parte 1 | Clássicos Vivos</title>
-    <!-- Estilos locais (offline): Tailwind compilado, fontes e ícones. Regerar com `npm run build`. -->
+    <!-- Estilos locais (offline): Tailwind compilado, fontes, ícones e o estilo comum dos livros. Regerar com `npm run build`. -->
     <link rel="stylesheet" href="../assets/css/tailwind.css">
     <link rel="stylesheet" href="../assets/css/fonts.css">
     <link rel="stylesheet" href="../assets/css/icons.css">
+    <link rel="stylesheet" href="../assets/css/livro.css">
     <link rel="manifest" href="../manifest.webmanifest">
     <link rel="apple-touch-icon" href="../assets/icones/icone-180.png">
-    <style>
-        :root {
-            --parchment: #FFFDF8;
-            --parchment-border: #D97706;
-        }
-
-        * {
-            box-sizing: border-box;
-            user-select: none;
-            -webkit-user-select: none;
-            -webkit-touch-callout: none;
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        html, body {
-            font-family: 'Nunito', sans-serif;
-            background: radial-gradient(circle at center, #1e1b4b 0%, #0f172a 100%);
-            height: 100vh;
-            height: 100dvh;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            overscroll-behavior: none;
-            touch-action: manipulation;
-        }
-
-        h1, h2, h3, h4, .font-display {
-            font-family: 'Fredoka', sans-serif;
-        }
-
-        /* Moldura de Livro Ilustrado para Tablet */
-        .storybook-frame {
-            background: var(--parchment);
-            border: 6px solid #D97706;
-            height: calc(100vh - 10px);
-            height: calc(100dvh - 10px);
-            max-height: 100%;
-            box-shadow:
-                0 25px 60px -15px rgba(0, 0, 0, 0.75),
-                inset 0 0 35px rgba(217, 119, 6, 0.12),
-                0 0 0 4px #78350F;
-        }
-
-        @media (min-width: 640px) {
-            .storybook-frame {
-                border-width: 8px;
-                height: calc(100vh - 20px);
-                height: calc(100dvh - 20px);
-                max-height: 100%;
-            }
-        }
-
-        @media (min-width: 1024px) and (orientation: landscape) {
-            .storybook-frame {
-                max-height: 900px;
-            }
-        }
-
-        /* Palavras em MAIÚSCULAS para Alfabetização (apenas no texto) */
-        .literacy-word {
-            display: inline-flex;
-            align-items: center;
-            gap: 3px;
-            font-family: 'Fredoka', sans-serif;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.04em;
-            color: #9A3412;
-            background: linear-gradient(180deg, #FEF08A 0%, #FDE047 100%);
-            padding: 2px 10px;
-            margin: 2px 2px;
-            border-radius: 12px;
-            border: 2px solid #F59E0B;
-            box-shadow: 0 3px 0 #D97706;
-            cursor: pointer;
-            transition: transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.2s, box-shadow 0.15s;
-            position: relative;
-        }
-
-        .literacy-word:hover {
-            background: linear-gradient(180deg, #FDE047 0%, #FACC15 100%);
-        }
-
-        .literacy-word:active,
-        .literacy-word.word-speaking {
-            transform: scale(1.12) translateY(-2px);
-            background: linear-gradient(180deg, #A7F3D0 0%, #34D399 100%);
-            color: #065F46;
-            border-color: #059669;
-            box-shadow: 0 4px 0 #047857;
-        }
-
-        /* Cartão de alfabetização (palavras-chave do texto) */
-        .phonics-backdrop {
-            position: fixed;
-            inset: 0;
-            z-index: 60;
-            display: none;
-            align-items: center;
-            justify-content: center;
-            padding: 16px;
-            background: rgba(15, 23, 42, 0.55);
-            -webkit-backdrop-filter: blur(2px);
-            backdrop-filter: blur(2px);
-        }
-        .phonics-backdrop.is-open {
-            display: flex;
-            animation: backdropIn 0.18s ease-out;
-        }
-        @keyframes backdropIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        .phonics-card {
-            width: 100%;
-            max-width: 30rem;
-            max-height: calc(100dvh - 32px);
-            overflow-y: auto;
-            background: #FFFDF8;
-            border: 6px solid #F59E0B;
-            border-radius: 32px;
-            padding: 28px 24px;
-            text-align: center;
-            cursor: pointer;
-            box-shadow: 0 8px 0 #D97706, 0 30px 60px -15px rgba(0, 0, 0, 0.6);
-            animation: popIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
-        }
-        .phonics-card:active { transform: scale(0.98); }
-        .phonics-card:active .phonics-replay { transform: translateY(2px); }
-        .syllable-chip {
-            font-family: 'Fredoka', sans-serif;
-            font-weight: 700;
-            font-size: clamp(1.5rem, 5vw, 2.25rem);
-            letter-spacing: 0.06em;
-            line-height: 1;
-            padding: 10px 16px;
-            border-radius: 18px;
-            border: 3px solid;
-        }
-        /* Cores alternadas ajudam a enxergar onde cada sílaba começa e termina */
-        .syllable-chip:nth-child(4n+1) { background: #FFE4E6; border-color: #FB7185; color: #9F1239; }
-        .syllable-chip:nth-child(4n+2) { background: #E0F2FE; border-color: #38BDF8; color: #075985; }
-        .syllable-chip:nth-child(4n+3) { background: #FEF9C3; border-color: #FACC15; color: #854D0E; }
-        .syllable-chip:nth-child(4n+4) { background: #DCFCE7; border-color: #4ADE80; color: #166534; }
-
-        /* Botões táteis 3D para crianças */
-        .btn-chunky {
-            transition: all 0.14s ease;
-            box-shadow: 0 4px 0 rgba(0, 0, 0, 0.28);
-            cursor: pointer;
-        }
-        .btn-chunky:active:not(:disabled) {
-            transform: translateY(3px);
-            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.28);
-        }
-
-        /* Botão Especial da Lente da Imaginação vs. Realidade */
-        .lens-toggle-btn {
-            transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
-            box-shadow: 0 4px 0 rgba(0, 0, 0, 0.35), 0 0 16px rgba(168, 85, 247, 0.45);
-        }
-        .lens-toggle-btn:active {
-            transform: translateY(3px) scale(0.98);
-            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
-        }
-
-        /* Peças Arrastáveis (Drag & Drop Pedagógico) */
-        .draggable-card {
-            touch-action: none;
-            cursor: grab;
-            transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s ease, background-color 0.2s;
-            box-shadow: 0 4px 0 #D97706;
-        }
-        .draggable-card:hover {
-            transform: translateY(-2px) scale(1.02);
-        }
-        .draggable-card:active {
-            cursor: grabbing;
-        }
-        .draggable-card.card-completed {
-            background: linear-gradient(180deg, #D1FAE5 0%, #A7F3D0 100%) !important;
-            border-color: #059669 !important;
-            box-shadow: 0 3px 0 #047857 !important;
-        }
-
-        /* Zona Alvo onde soltar o objeto arrastado */
-        .drop-zone-target {
-            transition: all 0.22s ease;
-        }
-        .drop-zone-target.drop-hover {
-            transform: scale(1.02);
-            filter: drop-shadow(0 0 16px rgba(250, 204, 21, 0.95));
-        }
-
-        /* Hotspots limpos sem ícones poluentes na imagem */
-        .scene-hotspot {
-            position: absolute;
-            cursor: pointer;
-            border-radius: 16px;
-            transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
-        }
-        .scene-hotspot:active {
-            transform: scale(0.97);
-        }
-
-        /* Efeito de Onda Mágica ao trocar a Lente */
-        @keyframes lensFlash {
-            0% { opacity: 0.9; transform: scale(0.8); }
-            100% { opacity: 0; transform: scale(2.2); }
-        }
-        .lens-ripple {
-            position: absolute;
-            inset: 0;
-            border-radius: 9999px;
-            background: radial-gradient(circle, rgba(250,204,21,0.75) 0%, rgba(168,85,247,0.6) 50%, transparent 75%);
-            pointer-events: none;
-            animation: lensFlash 0.65s ease-out forwards;
-            z-index: 40;
-        }
-
-        /* Animações */
-        @keyframes floatSlow {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-5px); }
-        }
-        @keyframes popIn {
-            0% { transform: scale(0.4); opacity: 0; }
-            75% { transform: scale(1.06); opacity: 1; }
-            100% { transform: scale(1); opacity: 1; }
-        }
-        @keyframes horseJump {
-            0%, 100% { transform: translateY(0) rotate(0deg) scale(1); }
-            25% { transform: translateY(-10px) rotate(-3deg) scale(1.03); }
-            55% { transform: translateY(0) rotate(2deg) scale(1.02); }
-        }
-        @keyframes shakeJoy {
-            0%, 100% { transform: rotate(0deg) scale(1); }
-            25% { transform: rotate(-4deg) scale(1.03); }
-            75% { transform: rotate(4deg) scale(1.03); }
-        }
-
-        .animate-float { animation: floatSlow 3.2s ease-in-out infinite; }
-        .animate-pop { animation: popIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
-        .horse-happy { animation: horseJump 0.65s ease-in-out 2; }
-        .character-joy { animation: shakeJoy 0.5s ease-in-out 2; }
-
-        /* Partículas flutuantes no toque */
-        .tap-sparkle {
-            position: fixed;
-            pointer-events: none;
-            z-index: 9999;
-            animation: sparkleFly 0.85s ease-out forwards;
-        }
-        @keyframes sparkleFly {
-            0% { transform: translate(-50%, -50%) scale(0.5); opacity: 1; }
-            100% { transform: translate(var(--tx), var(--ty)) scale(1.35) rotate(25deg); opacity: 0; }
-        }
-
-        /* Animações das Pás dos Moinhos de Vento e Rajadas */
-        @keyframes windmillSpin {
-            0% { transform: translate(-50%, -50%) rotate(0deg); }
-            100% { transform: translate(-50%, -50%) rotate(360deg); }
-        }
-        .windmill-spinning-slow {
-            animation: windmillSpin 2.6s linear infinite;
-        }
-        .windmill-spinning-fast {
-            animation: windmillSpin 0.45s linear infinite;
-        }
-        .windmill-spinning-turbo {
-            animation: windmillSpin 0.12s linear infinite;
-        }
-        @keyframes windGustTravel {
-            0% { transform: translateX(-60px) scale(0.6); opacity: 0; }
-            35% { opacity: 0.95; }
-            100% { transform: translateX(550px) scale(1.35); opacity: 0; }
-        }
-        .wind-gust-particle {
-            position: absolute;
-            animation: windGustTravel 1.1s ease-out forwards;
-            font-size: 2.2rem;
-            filter: drop-shadow(0 2px 5px rgba(255,255,255,0.85));
-            pointer-events: none;
-        }
-
-        /* Troca de ilustração: feedback instantâneo enquanto a nova cena carrega,
-           evitando que a criança toque duas vezes achando que a tela travou */
-        .scene-img {
-            transition: filter 0.2s ease;
-        }
-        .scene-busy-overlay {
-            position: absolute;
-            inset: 0;
-            z-index: 30;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            pointer-events: none;
-            opacity: 0;
-            transition: opacity 0.1s ease;
-            background: radial-gradient(circle, rgba(15, 23, 42, 0.05) 0%, rgba(15, 23, 42, 0.4) 100%);
-        }
-        .scene-spinner {
-            width: 64px;
-            height: 64px;
-            border-radius: 9999px;
-            border: 6px solid rgba(255, 255, 255, 0.4);
-            border-top-color: #FACC15;
-            border-right-color: #C084FC;
-            animation: sceneSpin 0.7s linear infinite;
-            filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.4));
-        }
-        @keyframes sceneSpin {
-            to { transform: rotate(360deg); }
-        }
-        .scene-loading .scene-busy-overlay { opacity: 1; }
-        .scene-loading .scene-img { filter: blur(2px) brightness(0.85) saturate(0.7); }
-        .scene-enter { animation: sceneEnter 0.35s ease-out; }
-        @keyframes sceneEnter {
-            from { opacity: 0.3; transform: scale(1.015); }
-            to { opacity: 1; transform: scale(1); }
-        }
-        /* Enquanto a cena carrega, os controles da página ficam travados com aparência de espera */
-        .page-busy .draggable-card,
-        .page-busy .lens-toggle-btn {
-            pointer-events: none;
-            opacity: 0.7;
-            filter: saturate(0.6);
-        }
-
-        /* Próximo item sugerido nas cenas progressivas (vestir o cavaleiro, cuidar do Rocinante) */
-        @keyframes nextGlow {
-            0%, 100% { box-shadow: 0 4px 0 #D97706, 0 0 0 0 rgba(250, 204, 21, 0.0); }
-            50% { box-shadow: 0 4px 0 #D97706, 0 0 0 6px rgba(250, 204, 21, 0.75); }
-        }
-        .draggable-card.card-next:not(.card-completed) {
-            animation: nextGlow 1.4s ease-in-out infinite;
-        }
-        .draggable-card.card-waiting:not(.card-completed) {
-            opacity: 0.6;
-        }
-        @keyframes cardNudge {
-            0%, 100% { transform: translateX(0); }
-            25% { transform: translateX(-5px); }
-            75% { transform: translateX(5px); }
-        }
-        .card-nudge { animation: cardNudge 0.3s ease-in-out 2; }
-
-        /* Leitura guiada: a frase sendo narrada fica destacada */
-        .sentence {
-            border-radius: 8px;
-            transition: background-color 0.25s ease, box-shadow 0.25s ease;
-            -webkit-box-decoration-break: clone;
-            box-decoration-break: clone;
-        }
-        .sentence.sentence-reading {
-            background-color: #FDE68A;
-            box-shadow: 0 0 0 4px #FDE68A;
-            color: #451A03;
-        }
-
-        /* Exibição e ocultação de páginas no leitor */
-        .page-slide {
-            opacity: 1;
-        }
-        .page-hidden {
-            display: none !important;
-        }
-
-        /* =====================================================================
-           LIVRO ABERTO: ilustração numa página, texto na outra, as duas visíveis.
-           Paisagem: páginas lado a lado (lombada vertical no meio).
-           Retrato: páginas empilhadas (ilustração em cima, texto embaixo).
-           Só o texto rola; a ilustração fica sempre à vista durante a leitura.
-           ===================================================================== */
-        .book-viewport {
-            position: relative;
-            flex: 1 1 auto;
-            min-height: 0;
-            width: 100%;
-            overflow: hidden;
-            overflow: clip;
-            padding: 10px 14px 14px;
-            /* Capa de couro por trás das folhas */
-            background:
-                radial-gradient(ellipse at 50% 35%, rgba(255, 255, 255, 0.08) 0%, transparent 60%),
-                linear-gradient(160deg, #7C2D12 0%, #5B1D0C 55%, #431407 100%);
-            perspective: 2400px;
-        }
-        .spread {
-            position: relative;
-            height: 100%;
-            display: grid;
-            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-            grid-template-rows: minmax(0, 1fr);
-        }
-        .book-page {
-            position: relative;
-            min-width: 0;
-            min-height: 0;
-            overflow: hidden;
-            background-color: #FFFBF0;
-            background-image:
-                radial-gradient(circle at 20% 15%, rgba(255, 255, 255, 0.7) 0%, transparent 45%),
-                radial-gradient(circle at 80% 90%, rgba(217, 119, 6, 0.06) 0%, transparent 50%);
-        }
-        /* Sombra da lombada (dobra do papel junto ao centro do livro) */
-        .book-page::after {
-            content: '';
-            position: absolute;
-            pointer-events: none;
-            z-index: 5;
-        }
-        .page-art {
-            border-radius: 16px 3px 3px 16px;
-            padding: 14px 22px 14px 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            container-type: size;
-            /* Bordas das folhas empilhadas */
-            box-shadow: -2px 2px 0 #EADFC8, -4px 4px 0 #FFF8E8, -6px 6px 0 #E2D4B6, -8px 8px 12px rgba(0, 0, 0, 0.35);
-        }
-        .page-art::after {
-            top: 0; bottom: 0; right: 0;
-            width: 56px;
-            background: linear-gradient(to left, rgba(120, 53, 15, 0.30) 0%, rgba(120, 53, 15, 0.08) 45%, transparent 100%);
-        }
-        .page-text {
-            border-radius: 3px 16px 16px 3px;
-            box-shadow: 2px 2px 0 #EADFC8, 4px 4px 0 #FFF8E8, 6px 6px 0 #E2D4B6, 8px 8px 12px rgba(0, 0, 0, 0.35);
-        }
-        .page-text::after {
-            top: 0; bottom: 0; left: 0;
-            width: 56px;
-            background: linear-gradient(to right, rgba(120, 53, 15, 0.30) 0%, rgba(120, 53, 15, 0.08) 45%, transparent 100%);
-        }
-        /* A ilustração ocupa a largura da página, mas encolhe para caber na altura */
-        .art-plate {
-            width: min(100%, calc((100cqh - 150px) * 16 / 9));
-            max-height: 100%;
-        }
-        .page-text-scroll {
-            height: 100%;
-            overflow-y: auto;
-            overflow-x: hidden;
-            overscroll-behavior: contain;
-            -webkit-overflow-scrolling: touch;
-            padding: 22px 26px 30px 34px;
-            scrollbar-width: thin;
-            scrollbar-color: #F59E0B transparent;
-        }
-        .page-text-inner {
-            min-height: 100%;
-            justify-content: center;
-        }
-        /* "Tem mais texto": esmaecido no rodapé da página + seta tocável */
-        .page-text-fade {
-            position: absolute;
-            left: 0; right: 0; bottom: 0;
-            height: 64px;
-            pointer-events: none;
-            background: linear-gradient(to top, #FFFBF0 15%, rgba(255, 251, 240, 0));
-            opacity: 0;
-            transition: opacity 0.2s ease;
-            z-index: 6;
-        }
-        .scroll-more {
-            position: absolute;
-            right: 16px; bottom: 10px;
-            width: 48px; height: 48px;
-            border-radius: 9999px;
-            background: #F59E0B;
-            border: 3px solid #fff;
-            color: #451A03;
-            font-size: 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 3px 0 #B45309, 0 6px 14px rgba(0, 0, 0, 0.25);
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.2s ease;
-            z-index: 7;
-            animation: scrollNudge 1.6s ease-in-out infinite;
-        }
-        @keyframes scrollNudge {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(4px); }
-        }
-        .page-text.has-more .page-text-fade { opacity: 1; }
-        .page-text.has-more .scroll-more { opacity: 1; pointer-events: auto; }
-
-        @media (orientation: portrait) {
-            .book-viewport { padding: 10px 10px 14px; }
-            .spread {
-                grid-template-columns: minmax(0, 1fr);
-                grid-template-rows: auto minmax(0, 1fr);
-            }
-            .page-art {
-                border-radius: 16px 16px 3px 3px;
-                padding: 12px 14px 20px;
-                container-type: inline-size;
-                box-shadow: 2px -2px 0 #EADFC8, 4px -4px 0 #FFF8E8, 0 -6px 12px rgba(0, 0, 0, 0.25);
-            }
-            .page-art::after {
-                top: auto; left: 0; right: 0; bottom: 0;
-                width: auto; height: 40px;
-                background: linear-gradient(to top, rgba(120, 53, 15, 0.26) 0%, rgba(120, 53, 15, 0.06) 50%, transparent 100%);
-            }
-            .page-text {
-                border-radius: 3px 3px 16px 16px;
-                box-shadow: 2px 2px 0 #EADFC8, 4px 4px 0 #FFF8E8, 6px 6px 0 #E2D4B6, 8px 8px 12px rgba(0, 0, 0, 0.35);
-            }
-            .page-text::after {
-                top: 0; left: 0; right: 0; bottom: auto;
-                width: auto; height: 40px;
-                background: linear-gradient(to bottom, rgba(120, 53, 15, 0.26) 0%, rgba(120, 53, 15, 0.06) 50%, transparent 100%);
-            }
-            .art-plate { width: 100%; }
-            .page-text-scroll { padding: 26px 24px 30px; }
-        }
-
-        /* Virada de página: folha 3D que gira em torno da lombada */
-        .turn-layer {
-            position: absolute;
-            inset: 0;
-            pointer-events: none;
-            z-index: 40;
-            perspective: 2400px;
-        }
-        .turn-static,
-        .turn-leaf {
-            position: absolute;
-        }
-        .turn-leaf {
-            transform-style: preserve-3d;
-            will-change: transform;
-            z-index: 2;
-        }
-        .turn-face {
-            position: absolute;
-            inset: 0;
-            -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-        }
-        .turn-face.turn-back { transform: rotateY(180deg); }
-        .turn-face > .book-page,
-        .turn-static > .book-page,
-        .turn-face > .spread,
-        .turn-static > .spread {
-            width: 100%;
-            height: 100%;
-        }
-        .turn-blank {
-            width: 100%;
-            height: 100%;
-            border-radius: 16px;
-            background: #FFFBF0;
-        }
-        .turn-shade {
-            position: absolute;
-            inset: 0;
-            pointer-events: none;
-            opacity: 0;
-            z-index: 10;
-        }
-    </style>
 </head>
 <body class="p-1 sm:p-2.5 select-none">
+    <noscript>Este livro interativo precisa de JavaScript ativado no navegador.</noscript>
 
-    <!-- Cartão de Alfabetização: abre centralizado ao tocar numa palavra do texto e só fecha
-         com um toque fora dele (ou Esc). Tocar no cartão repete a pronúncia. -->
-    <div id="phonics-modal" class="phonics-backdrop" role="dialog" aria-modal="true" aria-labelledby="phonics-word" aria-hidden="true">
-        <button id="phonics-card" type="button" class="phonics-card" onclick="replayPhonicsWord()" aria-label="Ouvir a palavra de novo">
-            <span id="phonics-emoji" class="block text-6xl sm:text-7xl leading-none" aria-hidden="true">🏰</span>
-            <span id="phonics-word" class="block font-display font-bold text-3xl sm:text-5xl text-amber-950 tracking-wider uppercase leading-tight break-words mt-3">CASTELOS</span>
-            <span id="phonics-syllables" class="flex flex-wrap items-center justify-center gap-2 mt-4" aria-label="Sílabas"></span>
-            <span class="phonics-replay mt-5 mx-auto w-16 h-16 rounded-full bg-emerald-500 border-4 border-emerald-700 text-white text-3xl flex items-center justify-center" aria-hidden="true">
-                <i class="ph-fill ph-speaker-high"></i>
-            </span>
-        </button>
-    </div>
+    <script>
+    /* =========================================================================
+       DOM QUIXOTE DE LA MANCHA — PARTE 1: O CAVALEIRO DA SUPER IMAGINAÇÃO
+       Conteúdo do livro. O motor (assets/js/livro.js) monta tudo a partir daqui.
+       Formato: AGENTS.md §2.5. Palavras-chave: {{PALAVRA|SÍ • LA • BAS|emoji}}
+       ========================================================================= */
+    window.LIVRO = {
+        obra: 'Dom Quixote de La Mancha',
+        autor: 'Miguel de Cervantes',
+        parte: 1,
+        totalPartes: 4,
+        imagens: './imagens/',
+        fim: {
+            mensagem: '🎉 Fim da Parte 1! Na Parte 2: o elmo encantado, os exércitos de lã e os barulhos misteriosos da noite!',
+            proxima: './parte-2.html',
+            proximaRotulo: 'Ir para a Parte 2'
+        },
+        paginas: [
+            {
+                capa: true,
+                titulo: 'Parte 1: O Cavaleiro da Super Imaginação',
+                texto: `Há mais de quatrocentos anos, o genial escritor espanhol Miguel de Cervantes criou uma das mais belas e amadas histórias de todo o planeta!
 
-    <!-- Moldura Principal do Livro Interativo -->
-    <main id="book-container" class="storybook-frame relative w-full max-w-6xl rounded-[24px] sm:rounded-[30px] flex flex-col justify-between overflow-hidden">
+                    Conheça Alonso Quixano, um bondoso fidalgo de coração gigante, cheio de coragem e {{IMAGINAÇÃO|I • MA • GI • NA • ÇÃO|✨}}. Ao lado do seu querido cavalo {{ROCINANTE|RO • CI • NAN • TE|🐴}}, ele decidiu percorrer os caminhos do mundo para proteger os indefesos, espalhar a bondade e provar que todos nós podemos ser nobres {{CAVALEIROS|CA • VA • LEI • ROS|🛡️}} em nossas próprias vidas!`,
+                cena: {
+                    real: 'p0-real.webp', imag: 'p0-imag.webp', alt: 'Cena Capa Dom Quixote',
+                    legendaReal: '👓 Lente da Realidade: O Vovô Alonso e seus Amigos',
+                    legendaImag: '✨ Lente da Imaginação: O Herói Dourado de La Mancha!',
+                    hotspots: [
+                        { x: 24, y: 10, w: 39, h: 84, lente: 'real', palavra: 'ROCINANTE', emoji: '🐴', titulo: 'Tocar em Dom Quixote e Rocinante' },
+                        { x: 61, y: 44, w: 22, h: 50, lente: 'real', palavra: 'SANCHO PANÇA', emoji: '🥖', titulo: 'Tocar em Sancho Pança' },
+                        { x: 72, y: 6, w: 20, h: 38, lente: 'real', palavra: 'MOINHO', emoji: '🌬️', titulo: 'Tocar no Moinho' },
+                        { x: 22, y: 10, w: 44, h: 84, lente: 'imag', palavra: 'CAVALEIRO', emoji: '⚔️' },
+                        { x: 60, y: 5, w: 16, h: 28, lente: 'imag', palavra: 'DRAGÃO', emoji: '🐉' },
+                        { x: 75, y: 6, w: 22, h: 42, lente: 'imag', palavra: 'CASTELO', emoji: '🏰' }
+                    ]
+                }
+            },
+            {
+                capitulo: '📚 Capítulo 1 • O Fidalgo Leitor', corCapitulo: 'text-amber-700',
+                titulo: 'O Vovô que Lia Dia e Noite!',
+                texto: `Em um pequeno vilarejo da Espanha chamado La Mancha, vivia um fidalgo de olhar doce e alma generosa: o senhor Alonso Quixano. Seu maior tesouro eram os seus queridos {{LIVROS|LI • VROS|📖}} de cavalaria antiga!
 
-        <!-- BARRA SUPERIOR -->
-        <header class="w-full bg-amber-100/95 border-b-4 border-amber-300 px-2.5 py-1.5 sm:px-5 sm:py-2 flex items-center justify-between gap-2 z-30 shrink-0">
-            <div class="flex items-center gap-2 min-w-0">
-                <a href="../index.html" class="btn-chunky w-9 h-9 sm:w-10 sm:h-10 shrink-0 rounded-2xl bg-white hover:bg-amber-50 text-amber-900 flex items-center justify-center border-2 border-amber-500 text-lg" title="Voltar à Biblioteca Clássicos Vivos">
-                    <i class="ph-bold ph-books"></i>
-                </a>
-                <div class="min-w-0">
-                    <div class="flex items-center gap-1.5">
-                        <span class="text-[10px] sm:text-[11px] font-extrabold uppercase tracking-wider bg-amber-300 text-amber-950 px-2 py-0.5 rounded-full shrink-0">Parte 1 de 4</span>
-                        <span class="hidden md:inline text-xs font-bold text-amber-800 truncate">Miguel de Cervantes</span>
-                    </div>
-                    <h1 class="text-xs sm:text-lg font-display font-bold text-amber-950 leading-tight truncate">Dom Quixote de La Mancha</h1>
-                </div>
-            </div>
+                    Alonso lia com tanto encantamento que passava noites inteiras acordado, viajando por terras distantes onde nobres {{CAVALEIROS|CA • VA • LEI • ROS|🛡️}} defendiam a justiça, enfrentavam perigos e protegiam quem mais precisava.
 
-            <!-- Indicador de Páginas -->
-            <div id="page-dots" class="hidden lg:flex items-center gap-1.5 bg-white/90 px-3.5 py-1.5 rounded-full border-2 border-amber-300">
-            </div>
+                    De tanto mergulhar no poder das palavras, seu quarto se enchia de pura poesia: o velho mapa brilhava no ar, histórias ganhavam asas e até o manso gatinho da sala, aos seus olhos afetuosos, transformava-se em um magnífico {{LEÃO GUARDIÃO|LE • ÃO • GUAR • DI • ÃO|🦁}}!`,
+                cena: {
+                    real: 'p1-real.webp', imag: 'p1-imag.webp', alt: 'Sala de Leitura de Alonso Quixano',
+                    legendaReal: '👓 Lente da Realidade: A Sala de Leitura do Vovô Alonso',
+                    legendaImag: '✨ Lente da Imaginação: O Leão Guardião e Mundos Mágicos!',
+                    hotspots: [
+                        { x: 23, y: 68, w: 24, h: 28, palavra: 'GATINHO', emoji: '🐱', emojiImag: '🦁', titulo: 'Tocar no Gatinho ou Leão Guardião' }
+                    ],
+                    // Provisório: só celebra (BACKLOG A-3 / NB-3 vão dar uma transformação a cada livro)
+                    cartoes: {
+                        tipo: 'livre',
+                        itens: [
+                            { id: '1', domId: 'drag-book-1', palavra: 'DRAGÕES', emoji: '🐉', icone: './imagens/objetos/livro-dragoes.svg' },
+                            { id: '2', domId: 'drag-book-2', palavra: 'CASTELOS', emoji: '🏰', icone: './imagens/objetos/livro-castelos.svg' },
+                            { id: '3', domId: 'drag-book-3', palavra: 'CAVALEIROS', emoji: '⚔️', icone: './imagens/objetos/livro-cavaleiros.svg' }
+                        ]
+                    }
+                }
+            },
+            {
+                capitulo: '⚔️ Capítulo 2 • O Novo Nome', corCapitulo: 'text-rose-600',
+                titulo: 'A Armadura do Bisavô!',
+                texto: `— O mundo precisa de mais bondade, justiça e bravura! — pensou o fidalgo com os olhos brilhando. E para essa grandiosa missão, escolheu um nome sonoro e destemido: {{DOM QUIXOTE|DOM • QUI • XO • TE|🦸‍♂️}} de La Mancha!
 
-            <!-- Controles de Voz, Tela Cheia e Som -->
-            <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
-                <button id="btn-tts" onclick="toggleReadPageAloud()" class="btn-chunky flex items-center gap-1.5 bg-emerald-500 hover:bg-emerald-600 text-white font-display font-semibold px-3 py-1.5 sm:py-2 rounded-2xl text-xs sm:text-sm border-2 border-emerald-700" title="Ouvir a página inteira">
-                    <i id="tts-icon" class="ph-fill ph-speaker-high text-base sm:text-lg"></i>
-                    <span id="tts-label" class="hidden sm:inline">Ouvir Página</span>
-                </button>
+                    Subindo ao sótão poeirento de sua casa, abriu um velho baú esquecido há quase cem anos. Lá dentro repousava a antiga {{ARMADURA|AR • MA • DU • RA|🛡️}} de ferro que pertencera ao seu bisavô, coberta de ferrugem.
 
-                <button id="btn-sfx" onclick="toggleSoundEffects()" class="btn-chunky w-9 h-9 sm:w-10 sm:h-10 rounded-2xl bg-amber-400 hover:bg-amber-500 text-amber-950 flex items-center justify-center border-2 border-amber-600 text-base sm:text-lg" title="Ativar/Desativar Efeitos Sonoros">
-                    <i id="sfx-icon" class="ph-fill ph-music-notes"></i>
-                </button>
+                    Com muito bom humor, colocou uma {{BACIA|BA • CI • A|🥣}} de latão na cabeça como capacete, segurou uma tampa de panela como {{ESCUDO|ES • CU • DO|🛡️}} e amarrou uma flâmula vermelha num cabo de madeira para fazer sua {{LANÇA|LAN • ÇA|🚩}}. Para seus olhos sonhadores, nada brilhava mais do que aquele reluzente {{ELMO DE OURO|EL • MO • DE • OU • RO|👑}}!`,
+                cena: {
+                    real: 'p2-real-stage-0.webp', imag: 'p2-imag.webp', alt: 'Dom Quixote no Sótão',
+                    legendaReal: '👓 Lente da Realidade: Armadura Enferrujada e Bacia',
+                    legendaImag: '✨ Lente da Imaginação: Armadura Real de Ouro Puro!',
+                    // Ilustrações cumulativas: os itens seguem a ordem do texto (AGENTS §4.2)
+                    cartoes: {
+                        tipo: 'progressivo',
+                        ordem: ['1', '2', '3', '4'],
+                        som: 'wordPop',
+                        etapas: ['p2-real-stage-0.webp', 'p2-real-stage-1.webp', 'p2-real-stage-2.webp', 'p2-real-stage-3.webp', 'p2-real-stage-4.webp'],
+                        legendas: [
+                            '👓 Lente da Realidade: Armadura Enferrujada e Bacia',
+                            '👓 Lente da Realidade: Peitoral Enferrujado Equipado!',
+                            '👓 Lente da Realidade: Bacia de Barbeiro na Cabeça!',
+                            '👓 Lente da Realidade: Tampa de Panela como Escudo!',
+                            '👓 Lente da Realidade: Armadura Caseira Completa!'
+                        ],
+                        itens: [
+                            { id: '1', domId: 'drag-gear-1', palavra: 'ARMADURA', emoji: '🦺', icone: './imagens/objetos/armadura-peitoral.svg' },
+                            { id: '2', domId: 'drag-gear-2', palavra: 'BACIA', emoji: '🥣', icone: './imagens/objetos/bacia-elmo.svg' },
+                            { id: '3', domId: 'drag-gear-3', palavra: 'ESCUDO', emoji: '🛡️', icone: './imagens/objetos/escudo-panelao.svg' },
+                            { id: '4', domId: 'drag-gear-4', palavra: 'LANÇA', emoji: '🚩', icone: './imagens/objetos/lanca-bandeirola.svg' }
+                        ]
+                    }
+                }
+            },
+            {
+                capitulo: '🐴 Capítulo 3 • O Corcel e a Princesa', corCapitulo: 'text-emerald-700',
+                titulo: 'Rocinante e a Bela Dulcineia!',
+                texto: `Nenhum cavaleiro andante viaja sem uma valorosa montaria. No estábulo da fazenda descansava seu antigo cavalo de trabalho: magrinho, com costelas aparentes, mas com um olhar manso e leal.
 
-                <button id="btn-fullscreen" onclick="toggleFullscreen()" class="btn-chunky w-9 h-9 sm:w-10 sm:h-10 rounded-2xl bg-indigo-500 hover:bg-indigo-600 text-white flex items-center justify-center border-2 border-indigo-700 text-base sm:text-lg" title="Modo Tela Cheia para Tablet">
-                    <i id="fullscreen-icon" class="ph-bold ph-corners-out"></i>
-                </button>
-            </div>
-        </header>
+                    Dom Quixote pensou durante quatro dias inteiros até escolher um nome nobre para o amigo, batizando-o de {{ROCINANTE|RO • CI • NAN • TE|🐴}} — o primeiro e mais fiel de todos os cavalos!
 
-        <!-- ÁREA CENTRAL DO LIVRO (7 PÁGINAS COM QUADRO INTERATIVO TOTALMENTE INTEGRAL EM 16:9) -->
-        <div id="pages-viewport" class="book-viewport">
+                    Alimente-o com uma doce {{MAÇÃ|MA • ÇÃ|🍎}}, uma crocante {{CENOURA|CE • NOU • RA|🥕}} e passe a {{ESCOVA|ES • CO • VA|🪮}} para deixá-lo tão altivo quanto um veloz {{CORCEL|COR • CEL|⚡}} real!
 
-            <!-- =========================================================================
-                 PÁGINA 1 (CAPA): O FIDALGO SONHADOR DE LA MANCHA
-                 ========================================================================= -->
-            <section id="page-0" class="page-slide spread" aria-label="Página 1">
-                <!-- Página da esquerda (retrato: de cima): ilustração -->
-                <div class="book-page page-art">
-                <div id="frame-0" class="art-plate relative w-full flex flex-col justify-center">
-                    
-                    <div class="flex items-center justify-between gap-2 z-20 mb-1">
-                        <span id="lens-badge-0" class="bg-slate-900/85 backdrop-blur-sm text-white font-display font-bold text-[11px] sm:text-xs px-3 py-1 rounded-full shadow">
-                            👓 Lente da Realidade: O Vovô Alonso e seus Amigos
-                        </span>
-                    </div>
+                    E a quem dedicar todas as suas vitórias? Dom Quixote escolheu a doce camponesa da aldeia vizinha, Aldonza Lorenzo, consagrando-a em seus pensamentos como a formosa princesa {{DULCINEIA|DUL • CI • NEI • A|👸}} del Toboso!`,
+                cena: {
+                    real: 'p3-real.webp', imag: 'p3-imag.webp', alt: 'Rocinante e Dulcineia',
+                    legendaReal: '👓 Lente da Realidade: Cavalinho Magricela e Aldonza',
+                    legendaImag: '✨ Lente da Imaginação: Corcel Branco e Princesa Dulcineia!',
+                    hotspots: [
+                        { x: 62, y: 18, w: 32, h: 78, palavra: 'ALDONZA', emoji: '🌾', emojiImag: '👸', titulo: 'Tocar em Aldonza / Dulcineia' }
+                    ],
+                    cartoes: {
+                        tipo: 'progressivo',
+                        ordem: ['maca', 'cenoura', 'escova'],
+                        som: 'crunch',
+                        etapas: ['p3-real.webp', 'p3-real-stage-1.webp', 'p3-real-stage-2.webp', 'p3-real-stage-3.webp'],
+                        legendas: [
+                            '👓 Lente da Realidade: Cavalinho Magricela e Aldonza',
+                            '👓 Lente da Realidade: Rocinante Saboreia a Maçã Docinha! 🍎',
+                            '👓 Lente da Realidade: Rocinante Come a Cenoura Crocante! 🥕',
+                            '👓 Lente da Realidade: Crinas Escovadas e Cavalo Pronto! 🪮'
+                        ],
+                        itens: [
+                            { id: 'maca', domId: 'drag-care-maca', palavra: 'MAÇÃ', emoji: '🍎', icone: './imagens/objetos/maca.svg', borda: 'border-rose-400' },
+                            { id: 'cenoura', domId: 'drag-care-cenoura', palavra: 'CENOURA', emoji: '🥕', icone: './imagens/objetos/cenoura.svg', borda: 'border-orange-400' },
+                            { id: 'escova', domId: 'drag-care-escova', palavra: 'ESCOVA', emoji: '🪮', icone: './imagens/objetos/escova.svg' }
+                        ]
+                    }
+                }
+            },
+            {
+                capitulo: '🏰 Capítulo 4 • A Primeira Saída', corCapitulo: 'text-purple-700',
+                titulo: 'Pousada ou Castelo Real?',
+                texto: `Ao entardecer, após cavalgar pelas colinas douradas de Montiel, Dom Quixote avistou uma simples {{POUSADA|POU • SA • DA|🏠}} de beira de estrada com telhas de barro e paredes de adobe.
 
-                    <!-- Quadro 16:9 Integral sem Recortes -->
-                    <div class="relative w-full aspect-[16/9] rounded-2xl overflow-hidden border-2 border-amber-400/80 shadow-md bg-slate-900 flex items-center justify-center">
-                        <img id="scene-bg-0" src="./imagens/p0-real.webp" alt="Cena Capa Dom Quixote" class="w-full h-full object-contain scene-img" />
+                    Mas, aos olhos do sonhador cavaleiro, as paredes rústicas se transformaram num grandioso {{CASTELO|CAS • TE • LO|🏰}} com altas torres prateadas e pontes levadiças!
 
-                        <!-- Hotspots da Lente da Realidade -->
-                        <div id="hotspots-real-0" class="absolute inset-0">
-                            <div onclick="tapSceneHotspot(this, event, 'ROCINANTE', '🐴')"
-                                 class="scene-hotspot" style="left: 24%; top: 10%; width: 39%; height: 84%;" title="Tocar em Dom Quixote e Rocinante"></div>
-                            <div onclick="tapSceneHotspot(this, event, 'SANCHO PANÇA', '🥖')"
-                                 class="scene-hotspot" style="left: 61%; top: 44%; width: 22%; height: 50%;" title="Tocar em Sancho Pança"></div>
-                            <div onclick="tapSceneHotspot(this, event, 'MOINHO', '🌬️')"
-                                 class="scene-hotspot" style="left: 72%; top: 6%; width: 20%; height: 38%;" title="Tocar no Moinho"></div>
-                        </div>
+                    Quando um jovem pastor soprou uma flauta rústica para recolher seus porquinhos, Dom Quixote escutou triunfantes {{TROMBETAS|TROM • BE • TAS|🎺}} reais. E recebido com carinho pelo bondoso dono da pousada, saboreou uma quentinha tigela de {{SOPA|SO • PA|🍲}} de pão com alho como se estivesse no mais nobre banquete de reis!`,
+                cena: {
+                    real: 'p4-real.webp', imag: 'p4-imag.webp', alt: 'Pousada ou Castelo Real',
+                    legendaReal: '👓 Lente da Realidade: Uma Pousada Simples na Estrada',
+                    legendaImag: '✨ Lente da Imaginação: Um Castelo com Torres de Prata!',
+                    hotspots: [
+                        { x: 42, y: 10, w: 32, h: 65, palavra: 'POUSADA', emoji: '🏠' },
+                        { x: 26, y: 65, w: 24, h: 28, palavra: 'PORQUINHOS', emoji: '🐷' }
+                    ],
+                    // Itens independentes (qualquer ordem). Com NB-2 + camadas vira tipo 'camadas' (BACKLOG A-2)
+                    cartoes: {
+                        tipo: 'variante',
+                        variantes: {
+                            trombeta: { src: 'p4-real-flauta.webp', legenda: '👓 Lente da Realidade: Pastor Tocando Flauta para os Porquinhos! 🎶' },
+                            sopa: { src: 'p4-real-sopa.webp', legenda: '👓 Lente da Realidade: O Estalajadeiro Servindo a Sopa Quentinha! 🍲' }
+                        },
+                        legendaTodas: '👓 Lente da Realidade: Música e Acolhimento na Pousada! ✨',
+                        itens: [
+                            { id: 'trombeta', domId: 'drag-inn-1', palavra: 'TROMBETA', emoji: '🎺', icone: './imagens/objetos/trombeta-flauta.svg', borda: 'border-purple-500', som: 'fanfare' },
+                            { id: 'sopa', domId: 'drag-inn-2', palavra: 'SOPA', emoji: '🍲', icone: './imagens/objetos/sopa-banquete.svg', som: 'wordPop' }
+                        ]
+                    }
+                }
+            },
+            {
+                capitulo: '🌙 Capítulo 5 • A Cerimônia Mágica', corCapitulo: 'text-indigo-700',
+                titulo: 'Cavaleiro sob a Lua Cheia!',
+                texto: `Para que sua sagração fosse completa, a tradição exigia a solene Vigília das Armas. Durante toda a noite silenciosa de La Mancha, banhado pelo brilho prateado da {{LUA CHEIA|LU • A • CHEI • A|🌕}}, Dom Quixote caminhou em vigília com passos firmes e coração puro.
 
-                        <!-- Hotspots da Lente da Imaginação -->
-                        <div id="hotspots-imag-0" class="hidden absolute inset-0">
-                            <div onclick="tapSceneHotspot(this, event, 'CAVALEIRO', '⚔️')"
-                                 class="scene-hotspot" style="left: 22%; top: 10%; width: 44%; height: 84%;"></div>
-                            <div onclick="tapSceneHotspot(this, event, 'DRAGÃO', '🐉')"
-                                 class="scene-hotspot" style="left: 60%; top: 5%; width: 16%; height: 28%;"></div>
-                            <div onclick="tapSceneHotspot(this, event, 'CASTELO', '🏰')"
-                                 class="scene-hotspot" style="left: 75%; top: 6%; width: 22%; height: 42%;"></div>
-                        </div>
-                    </div>
+                    Depositou seu peitoral, sua bacia e sua lança sobre o grande {{BEBEDOURO|BE • BE • DOU • RO|💧}} de pedra dos animais, sentindo com devoção sincera que orava diante de um sagrado altar de mármore e cristais.
 
-                    <!-- Botão da Lente -->
-                    <div class="flex items-center justify-center z-20 mt-2">
-                        <button onclick="toggleLens(0, event)" id="lens-btn-0" class="lens-toggle-btn bg-gradient-to-r from-purple-600 via-fuchsia-600 to-amber-500 text-white font-display font-bold text-xs sm:text-sm px-5 py-1.5 rounded-2xl border-2 border-white flex items-center gap-2">
-                            <span class="text-base">✨</span>
-                            <span id="lens-btn-label-0">Usar Lente da Imaginação!</span>
-                        </button>
-                    </div>
-                </div>
-                </div>
+                    Ao amanhecer, o bom estalajadeiro, emocionado com a pureza e a doçura daquele homem, pegou seu livro de anotações, recitou palavras de honra e tocou suavemente o ombro do fidalgo com a lâmina de uma {{ESPADA|ES • PA • DA|⚔️}}. Agora sim: o mundo ganhava seu mais corajoso protetor!`,
+                cena: {
+                    real: 'p5-real.webp', imag: 'p5-imag.webp', alt: 'Cerimônia de Cavaleiro sob a Lua Cheia',
+                    legendaReal: '👓 Lente da Realidade: Pátio da Pousada e Bebedouro',
+                    legendaImag: '✨ Lente da Imaginação: Altar de Cristal e Sagração Real!',
+                    hotspots: [
+                        { x: 4, y: 36, w: 26, h: 55, palavra: 'BEBEDOURO', emoji: '💧', titulo: 'Tocar no Bebedouro' }
+                    ]
+                }
+            },
+            {
+                capitulo: '🫏 Capítulo 6 • A Nobre Amizade', corCapitulo: 'text-amber-700',
+                titulo: 'O Fiel Escudeiro Sancho Pança!',
+                texto: `De volta à sua aldeia para recolher provisões, Dom Quixote procurou seu vizinho mais querido: {{SANCHO PANÇA|SAN • CHO • PAN • ÇA|🥖}}, um lavrador gordinho, bondoso, amante da paz e pai amoroso.
 
-                <!-- Página da direita (retrato: de baixo): texto com rolagem própria. Texto da Capa -->
-                <div class="book-page page-text">
-                <div class="page-text-scroll">
-                <div class="page-text-inner flex flex-col items-center lg:items-start text-center lg:text-left space-y-3">
-                    <div class="inline-flex items-center gap-2 bg-amber-200 text-amber-950 font-display font-bold px-3.5 py-1 rounded-full text-xs sm:text-sm border-2 border-amber-400">
-                        <span>✨ Toque nas PALAVRAS MAIÚSCULAS para ouvir!</span>
-                    </div>
+                    — Meu leal amigo — disse o cavaleiro —, junte-se a mim como meu {{ESCUDEIRO|ES • CU • DEI • RO|🛡️}}! Prometo que, quando vencermos as primeiras batalhas, você será nomeado governador de uma formosa {{ILHA|I • LHA|🏝️}} cheia de pão e justiça!
 
-                    <h2 class="text-2xl sm:text-4xl font-display font-bold text-amber-950 leading-tight">
-                        Dom Quixote de La Mancha
-                        <span class="block text-base sm:text-2xl text-amber-700 mt-1">Parte 1: O Cavaleiro da Super Imaginação</span>
-                    </h2>
+                    Sancho sorriu maravilhado, preparou alforjes com queijo fresco e pão em seu simpático {{BURRICO|BUR • RI • CO|🫏}} e aceitou o convite. Sob o sol da manhã, os dois amigos partiram juntos pela estrada, conversando alegremente sobre o futuro!`,
+                cena: {
+                    real: 'p6-real.webp', imag: 'p6-imag.webp', alt: 'Sancho Pança e Dom Quixote',
+                    legendaReal: '👓 Lente da Realidade: Sancho Pança e Quixote na Estrada',
+                    legendaImag: '✨ Lente da Imaginação: Sancho Governador da Ilha Encantada!',
+                    hotspots: [
+                        { x: 12, y: 22, w: 34, h: 72, palavra: 'SANCHO PANÇA', emoji: '🥖', titulo: 'Tocar em Sancho Pança' },
+                        { x: 48, y: 12, w: 44, h: 82, palavra: 'DOM QUIXOTE', emoji: '⚔️', titulo: 'Tocar em Dom Quixote' }
+                    ]
+                }
+            },
+            {
+                capitulo: '🌬️ Capítulo 7 • O Duelo dos Moinhos!', corCapitulo: 'text-orange-700',
+                titulo: 'O Duelo contra os Gigantes!',
+                texto: `Cavalgando pelas vastas planícies do Campo de Criptana, de repente surgiram no horizonte trinta ou quarenta enormes {{MOINHOS|MO • I • NHOS|🌬️}} de vento, com grandes pás de madeira recortando o céu.
 
-                    <p id="page-text-0" class="text-base sm:text-lg text-slate-800 font-bold leading-relaxed">
-                        Há mais de quatrocentos anos, o genial escritor espanhol Miguel de Cervantes criou uma das mais belas e amadas histórias de todo o planeta!
-                        <br><br>
-                        Conheça Alonso Quixano, um bondoso fidalgo de coração gigante, cheio de coragem e <span class="literacy-word" onclick="speakWord(this, 'IMAGINAÇÃO', 'I • MA • GI • NA • ÇÃO', '✨')">IMAGINAÇÃO</span>. Ao lado do seu querido cavalo <span class="literacy-word" onclick="speakWord(this, 'ROCINANTE', 'RO • CI • NAN • TE', '🐴')">ROCINANTE</span>, ele decidiu percorrer os caminhos do mundo para proteger os indefesos, espalhar a bondade e provar que todos nós podemos ser nobres <span class="literacy-word" onclick="speakWord(this, 'CAVALEIROS', 'CA • VA • LEI • ROS', '🛡️')">CAVALEIROS</span> em nossas próprias vidas!
-                    </p>
+                    Nesse instante, soprou uma forte rajada de {{VENTO|VEN • TO|💨}}, fazendo as pás girarem com um estrondo veloz! Dom Quixote puxou as rédeas de Rocinante e exclamou:
 
-                    <button onclick="nextPage()" class="btn-chunky w-full sm:w-auto bg-rose-500 hover:bg-rose-600 text-white font-display font-bold text-lg sm:text-xl px-7 py-3 rounded-3xl border-4 border-rose-700 flex items-center justify-center gap-3">
-                        <span>Abrir o Livro!</span>
-                        <i class="ph-bold ph-arrow-right text-2xl"></i>
-                    </button>
-                </div>
-                </div>
-                </div>
-            </section>
+                    — Veja, amigo Sancho! A sorte guia nossos passos! Ali despontam descomunais {{GIGANTES|GI • GAN • TES|👹}} com os quais travarei feroz combate!
 
-            <!-- =========================================================================
-                 PÁGINA 2 (CAPÍTULO 1): ALONSO QUIXANO E OS LIVROS DE CAVALARIA
-                 ========================================================================= -->
-            <section id="page-1" class="page-slide page-hidden spread" aria-label="Página 2">
-                <!-- Página da esquerda (retrato: de cima): ilustração -->
-                <div class="book-page page-art">
-                <div id="frame-1" class="art-plate relative w-full flex flex-col justify-center">
-                    
-                    <div class="flex items-center justify-between gap-2 z-20 mb-1">
-                        <span id="lens-badge-1" class="bg-slate-900/85 text-white font-display font-bold text-[11px] sm:text-xs px-3 py-1 rounded-full shadow">
-                            👓 Lente da Realidade: Sala de Leitura
-                        </span>
-                    </div>
-
-                    <!-- Quadro 16:9 Integral sem Recortes -->
-                    <div id="drop-zone-1" class="drop-zone-target relative w-full aspect-[16/9] rounded-2xl overflow-hidden border-2 border-amber-400 shadow-md bg-slate-900 flex items-center justify-center">
-                        <img id="scene-bg-1" src="./imagens/p1-real.webp" alt="Sala de Leitura de Alonso Quixano" class="w-full h-full object-contain scene-img" />
-
-                        <!-- Gatinho / Leão Guardião tocável -->
-                        <div onclick="tapCatLionHotspot(event)"
-                             class="scene-hotspot" style="left: 23%; top: 68%; width: 24%; height: 28%;" title="Tocar no Gatinho ou Leão Guardião"></div>
-                    </div>
-
-                    <!-- Bandeja de Cartões de Alfabetização Arrastáveis (LIVROS) -->
-                    <div class="w-full grid grid-cols-3 gap-2 z-20 mt-2">
-                        <div id="drag-book-1"
-                             data-drop-target="drop-zone-1"
-                             data-action="book"
-                             data-id="1"
-                             data-word="DRAGÕES"
-                             data-emoji="🐉"
-                             class="draggable-card bg-white border-2 border-amber-500 rounded-2xl p-1.5 flex items-center justify-center gap-2">
-                            <img src="./imagens/objetos/livro-dragoes.svg" alt="Livro Dragões" class="w-8 h-8 sm:w-10 sm:h-10 shrink-0 pointer-events-none" />
-                            <span class="font-display font-bold text-xs sm:text-sm text-amber-950 uppercase truncate">DRAGÕES</span>
-                        </div>
-
-                        <div id="drag-book-2"
-                             data-drop-target="drop-zone-1"
-                             data-action="book"
-                             data-id="2"
-                             data-word="CASTELOS"
-                             data-emoji="🏰"
-                             class="draggable-card bg-white border-2 border-amber-500 rounded-2xl p-1.5 flex items-center justify-center gap-2">
-                            <img src="./imagens/objetos/livro-castelos.svg" alt="Livro Castelos" class="w-8 h-8 sm:w-10 sm:h-10 shrink-0 pointer-events-none" />
-                            <span class="font-display font-bold text-xs sm:text-sm text-amber-950 uppercase truncate">CASTELOS</span>
-                        </div>
-
-                        <div id="drag-book-3"
-                             data-drop-target="drop-zone-1"
-                             data-action="book"
-                             data-id="3"
-                             data-word="CAVALEIROS"
-                             data-emoji="⚔️"
-                             class="draggable-card bg-white border-2 border-amber-500 rounded-2xl p-1.5 flex items-center justify-center gap-2">
-                            <img src="./imagens/objetos/livro-cavaleiros.svg" alt="Livro Cavaleiros" class="w-8 h-8 sm:w-10 sm:h-10 shrink-0 pointer-events-none" />
-                            <span class="font-display font-bold text-xs sm:text-sm text-amber-950 uppercase truncate">CAVALEIROS</span>
-                        </div>
-                    </div>
-
-                    <!-- Botão da Lente -->
-                    <div class="flex items-center justify-center z-20 mt-2">
-                        <button onclick="toggleLens(1, event)" id="lens-btn-1" class="lens-toggle-btn bg-gradient-to-r from-purple-600 via-fuchsia-600 to-amber-500 text-white font-display font-bold text-xs sm:text-sm px-5 py-1.5 rounded-2xl border-2 border-white flex items-center gap-2">
-                            <span class="text-base">✨</span>
-                            <span id="lens-btn-label-1">Usar Lente da Imaginação!</span>
-                        </button>
-                    </div>
-                </div>
-                </div>
-
-                <!-- Página da direita (retrato: de baixo): texto com rolagem própria. Texto da Página 2 -->
-                <div class="book-page page-text">
-                <div class="page-text-scroll">
-                <div class="page-text-inner flex flex-col space-y-3">
-                    <div class="inline-flex items-center gap-2 text-amber-700 font-display font-bold text-xs sm:text-sm uppercase">
-                        <span>📚 Capítulo 1 • O Fidalgo Leitor</span>
-                    </div>
-                    <h2 class="text-2xl sm:text-3xl font-display font-bold text-amber-950">
-                        O Vovô que Lia Dia e Noite!
-                    </h2>
-                    <p id="page-text-1" class="text-base sm:text-lg text-slate-800 font-bold leading-relaxed">
-                        Em um pequeno vilarejo da Espanha chamado La Mancha, vivia um fidalgo de olhar doce e alma generosa: o senhor Alonso Quixano. Seu maior tesouro eram os seus queridos <span class="literacy-word" onclick="speakWord(this, 'LIVROS', 'LI • VROS', '📖')">LIVROS</span> de cavalaria antiga!
-                        <br><br>
-                        Alonso lia com tanto encantamento que passava noites inteiras acordado, viajando por terras distantes onde nobres <span class="literacy-word" onclick="speakWord(this, 'CAVALEIROS', 'CA • VA • LEI • ROS', '🛡️')">CAVALEIROS</span> defendiam a justiça, enfrentavam perigos e protegiam quem mais precisava.
-                        <br><br>
-                        De tanto mergulhar no poder das palavras, seu quarto se enchia de pura poesia: o velho mapa brilhava no ar, histórias ganhavam asas e até o manso gatinho da sala, aos seus olhos afetuosos, transformava-se em um magnífico <span class="literacy-word" onclick="speakWord(this, 'LEÃO GUARDIÃO', 'LE • ÃO • GUAR • DI • ÃO', '🦁')">LEÃO GUARDIÃO</span>!
-                    </p>
-                </div>
-                </div>
-                </div>
-            </section>
-
-            <!-- =========================================================================
-                 PÁGINA 3 (CAPÍTULO 2): A ARMADURA DO BISAVÔ
-                 ========================================================================= -->
-            <section id="page-2" class="page-slide page-hidden spread" aria-label="Página 3">
-                <!-- Página da esquerda (retrato: de cima): ilustração -->
-                <div class="book-page page-art">
-                <div id="frame-2" class="art-plate relative w-full flex flex-col justify-center">
-                    
-                    <div class="flex items-center justify-between gap-2 z-20 mb-1">
-                        <span id="lens-badge-2" class="bg-slate-900/85 text-white font-display font-bold text-[11px] sm:text-xs px-3 py-1 rounded-full shadow">
-                            👓 Lente da Realidade: Armadura Improvisada
-                        </span>
-                    </div>
-
-                    <!-- Quadro 16:9 Integral sem Recortes -->
-                    <div id="drop-zone-2" class="drop-zone-target relative w-full aspect-[16/9] rounded-2xl overflow-hidden border-2 border-amber-400 shadow-md bg-slate-900 flex items-center justify-center">
-                        <img id="scene-bg-2" src="./imagens/p2-real-stage-0.webp" alt="Dom Quixote no Sótão" class="w-full h-full object-contain scene-img" />
-                    </div>
-
-                    <!-- 4 Cartões Arrastáveis -->
-                    <div class="w-full grid grid-cols-4 gap-1.5 sm:gap-2 z-20 mt-2">
-                        <div id="drag-gear-1"
-                             data-drop-target="drop-zone-2"
-                             data-action="gear"
-                             data-id="1"
-                             data-word="ARMADURA"
-                             data-emoji="🦺"
-                             class="draggable-card bg-white border-2 border-amber-500 rounded-xl p-1 sm:p-1.5 flex flex-col items-center text-center">
-                            <img src="./imagens/objetos/armadura-peitoral.svg" alt="Armadura" class="w-7 h-7 sm:w-9 sm:h-9 pointer-events-none" />
-                            <span class="font-display font-bold text-[10px] sm:text-xs text-amber-950 uppercase mt-0.5">ARMADURA</span>
-                        </div>
-
-                        <div id="drag-gear-2"
-                             data-drop-target="drop-zone-2"
-                             data-action="gear"
-                             data-id="2"
-                             data-word="BACIA"
-                             data-emoji="🥣"
-                             class="draggable-card bg-white border-2 border-amber-500 rounded-xl p-1 sm:p-1.5 flex flex-col items-center text-center">
-                            <img src="./imagens/objetos/bacia-elmo.svg" alt="Bacia" class="w-7 h-7 sm:w-9 sm:h-9 pointer-events-none" />
-                            <span class="font-display font-bold text-[10px] sm:text-xs text-amber-950 uppercase mt-0.5">BACIA</span>
-                        </div>
-
-                        <div id="drag-gear-3"
-                             data-drop-target="drop-zone-2"
-                             data-action="gear"
-                             data-id="3"
-                             data-word="ESCUDO"
-                             data-emoji="🛡️"
-                             class="draggable-card bg-white border-2 border-amber-500 rounded-xl p-1 sm:p-1.5 flex flex-col items-center text-center">
-                            <img src="./imagens/objetos/escudo-panelao.svg" alt="Escudo" class="w-7 h-7 sm:w-9 sm:h-9 pointer-events-none" />
-                            <span class="font-display font-bold text-[10px] sm:text-xs text-amber-950 uppercase mt-0.5">ESCUDO</span>
-                        </div>
-
-                        <div id="drag-gear-4"
-                             data-drop-target="drop-zone-2"
-                             data-action="gear"
-                             data-id="4"
-                             data-word="LANÇA"
-                             data-emoji="🚩"
-                             class="draggable-card bg-white border-2 border-amber-500 rounded-xl p-1 sm:p-1.5 flex flex-col items-center text-center">
-                            <img src="./imagens/objetos/lanca-bandeirola.svg" alt="Lança" class="w-7 h-7 sm:w-9 sm:h-9 pointer-events-none" />
-                            <span class="font-display font-bold text-[10px] sm:text-xs text-amber-950 uppercase mt-0.5">LANÇA</span>
-                        </div>
-                    </div>
-
-                    <!-- Botão da Lente -->
-                    <div class="flex items-center justify-center z-20 mt-2">
-                        <button onclick="toggleLens(2, event)" id="lens-btn-2" class="lens-toggle-btn bg-gradient-to-r from-purple-600 via-fuchsia-600 to-amber-500 text-white font-display font-bold text-xs sm:text-sm px-5 py-1.5 rounded-2xl border-2 border-white flex items-center gap-2">
-                            <span class="text-base">✨</span>
-                            <span id="lens-btn-label-2">Usar Lente da Imaginação!</span>
-                        </button>
-                    </div>
-                </div>
-                </div>
-
-                <!-- Página da direita (retrato: de baixo): texto com rolagem própria. Texto da Página 3 -->
-                <div class="book-page page-text">
-                <div class="page-text-scroll">
-                <div class="page-text-inner flex flex-col space-y-3">
-                    <div class="inline-flex items-center gap-2 text-rose-600 font-display font-bold text-xs sm:text-sm uppercase">
-                        <span>⚔️ Capítulo 2 • O Novo Nome</span>
-                    </div>
-                    <h2 class="text-2xl sm:text-3xl font-display font-bold text-amber-950">
-                        A Armadura do Bisavô!
-                    </h2>
-                    <p id="page-text-2" class="text-base sm:text-lg text-slate-800 font-bold leading-relaxed">
-                        — O mundo precisa de mais bondade, justiça e bravura! — pensou o fidalgo com os olhos brilhando. E para essa grandiosa missão, escolheu um nome sonoro e destemido: <span class="literacy-word" onclick="speakWord(this, 'DOM QUIXOTE', 'DOM • QUI • XO • TE', '🦸‍♂️')">DOM QUIXOTE</span> de La Mancha!
-                        <br><br>
-                        Subindo ao sótão poeirento de sua casa, abriu um velho baú esquecido há quase cem anos. Lá dentro repousava a antiga <span class="literacy-word" onclick="speakWord(this, 'ARMADURA', 'AR • MA • DU • RA', '🛡️')">ARMADURA</span> de ferro que pertencera ao seu bisavô, coberta de ferrugem.
-                        <br><br>
-                        Com muito bom humor, colocou uma <span class="literacy-word" onclick="speakWord(this, 'BACIA', 'BA • CI • A', '🥣')">BACIA</span> de latão na cabeça como capacete, segurou uma tampa de panela como <span class="literacy-word" onclick="speakWord(this, 'ESCUDO', 'ES • CU • DO', '🛡️')">ESCUDO</span> e amarrou uma flâmula vermelha num cabo de madeira para fazer sua <span class="literacy-word" onclick="speakWord(this, 'LANÇA', 'LAN • ÇA', '🚩')">LANÇA</span>. Para seus olhos sonhadores, nada brilhava mais do que aquele reluzente <span class="literacy-word" onclick="speakWord(this, 'ELMO DE OURO', 'EL • MO • DE • OU • RO', '👑')">ELMO DE OURO</span>!
-                    </p>
-                </div>
-                </div>
-                </div>
-            </section>
-
-            <!-- =========================================================================
-                 PÁGINA 4 (CAPÍTULO 3): ROCINANTE E A PRINCESA DULCINEIA
-                 ========================================================================= -->
-            <section id="page-3" class="page-slide page-hidden spread" aria-label="Página 4">
-                <!-- Página da esquerda (retrato: de cima): ilustração -->
-                <div class="book-page page-art">
-                <div id="frame-3" class="art-plate relative w-full flex flex-col justify-center">
-                    
-                    <div class="flex items-center justify-between gap-2 z-20 mb-1">
-                        <span id="lens-badge-3" class="bg-slate-900/85 text-white font-display font-bold text-[11px] sm:text-xs px-3 py-1 rounded-full shadow">
-                            👓 Lente da Realidade: O Estábulo e Aldonza
-                        </span>
-                    </div>
-
-                    <!-- Quadro 16:9 Integral sem Recortes -->
-                    <div id="drop-zone-3" class="drop-zone-target relative w-full aspect-[16/9] rounded-2xl overflow-hidden border-2 border-emerald-500 shadow-md bg-slate-900 flex items-center justify-center">
-                        <img id="scene-bg-3" src="./imagens/p3-real.webp" alt="Rocinante e Dulcineia" class="w-full h-full object-contain scene-img" />
-
-                        <!-- Hotspot na Aldonza / Princesa Dulcineia à direita -->
-                        <div onclick="tapDulcineiaHotspot(event)"
-                             class="scene-hotspot" style="left: 62%; top: 18%; width: 32%; height: 78%;" title="Tocar em Aldonza / Dulcineia"></div>
-                    </div>
-
-                    <!-- 3 Cartões Arrastáveis -->
-                    <div class="w-full grid grid-cols-3 gap-2 z-20 mt-2">
-                        <div id="drag-care-maca"
-                             data-drop-target="drop-zone-3"
-                             data-action="horse-care"
-                             data-id="maca"
-                             data-word="MAÇÃ"
-                             data-emoji="🍎"
-                             class="draggable-card bg-white border-2 border-rose-400 rounded-2xl p-1.5 flex items-center justify-center gap-2">
-                            <img src="./imagens/objetos/maca.svg" alt="Gravura Maçã" class="w-8 h-8 sm:w-10 sm:h-10 shrink-0 pointer-events-none" />
-                            <span class="font-display font-bold text-xs sm:text-sm text-rose-900 uppercase">MAÇÃ</span>
-                        </div>
-
-                        <div id="drag-care-cenoura"
-                             data-drop-target="drop-zone-3"
-                             data-action="horse-care"
-                             data-id="cenoura"
-                             data-word="CENOURA"
-                             data-emoji="🥕"
-                             class="draggable-card bg-white border-2 border-orange-400 rounded-2xl p-1.5 flex items-center justify-center gap-2">
-                            <img src="./imagens/objetos/cenoura.svg" alt="Gravura Cenoura" class="w-8 h-8 sm:w-10 sm:h-10 shrink-0 pointer-events-none" />
-                            <span class="font-display font-bold text-xs sm:text-sm text-orange-900 uppercase">CENOURA</span>
-                        </div>
-
-                        <div id="drag-care-escova"
-                             data-drop-target="drop-zone-3"
-                             data-action="horse-care"
-                             data-id="escova"
-                             data-word="ESCOVA"
-                             data-emoji="🪮"
-                             class="draggable-card bg-white border-2 border-amber-500 rounded-2xl p-1.5 flex items-center justify-center gap-2">
-                            <img src="./imagens/objetos/escova.svg" alt="Gravura Escova" class="w-8 h-8 sm:w-10 sm:h-10 shrink-0 pointer-events-none" />
-                            <span class="font-display font-bold text-xs sm:text-sm text-amber-950 uppercase">ESCOVA</span>
-                        </div>
-                    </div>
-
-                    <!-- Botão da Lente -->
-                    <div class="flex items-center justify-center z-20 mt-2">
-                        <button onclick="toggleLens(3, event)" id="lens-btn-3" class="lens-toggle-btn bg-gradient-to-r from-purple-600 via-fuchsia-600 to-amber-500 text-white font-display font-bold text-xs sm:text-sm px-5 py-1.5 rounded-2xl border-2 border-white flex items-center gap-2">
-                            <span class="text-base">✨</span>
-                            <span id="lens-btn-label-3">Usar Lente da Imaginação!</span>
-                        </button>
-                    </div>
-                </div>
-                </div>
-
-                <!-- Página da direita (retrato: de baixo): texto com rolagem própria. Texto da Página 4 -->
-                <div class="book-page page-text">
-                <div class="page-text-scroll">
-                <div class="page-text-inner flex flex-col space-y-3">
-                    <div class="inline-flex items-center gap-2 text-emerald-700 font-display font-bold text-xs sm:text-sm uppercase">
-                        <span>🐴 Capítulo 3 • O Corcel e a Princesa</span>
-                    </div>
-                    <h2 class="text-2xl sm:text-3xl font-display font-bold text-amber-950">
-                        Rocinante e a Bela Dulcineia!
-                    </h2>
-                    <p id="page-text-3" class="text-base sm:text-lg text-slate-800 font-bold leading-relaxed">
-                        Nenhum cavaleiro andante viaja sem uma valorosa montaria. No estábulo da fazenda descansava seu antigo cavalo de trabalho: magrinho, com costelas aparentes, mas com um olhar manso e leal.
-                        <br><br>
-                        Dom Quixote pensou durante quatro dias inteiros até escolher um nome nobre para o amigo, batizando-o de <span class="literacy-word" onclick="speakWord(this, 'ROCINANTE', 'RO • CI • NAN • TE', '🐴')">ROCINANTE</span> — o primeiro e mais fiel de todos os cavalos!
-                        <br><br>
-                        Alimente-o com uma doce <span class="literacy-word" onclick="speakWord(this, 'MAÇÃ', 'MA • ÇÃ', '🍎')">MAÇÃ</span>, uma crocante <span class="literacy-word" onclick="speakWord(this, 'CENOURA', 'CE • NOU • RA', '🥕')">CENOURA</span> e passe a <span class="literacy-word" onclick="speakWord(this, 'ESCOVA', 'ES • CO • VA', '🪮')">ESCOVA</span> para deixá-lo tão altivo quanto um veloz <span class="literacy-word" onclick="speakWord(this, 'CORCEL', 'COR • CEL', '⚡')">CORCEL</span> real!
-                        <br><br>
-                        E a quem dedicar todas as suas vitórias? Dom Quixote escolheu a doce camponesa da aldeia vizinha, Aldonza Lorenzo, consagrando-a em seus pensamentos como a formosa princesa <span class="literacy-word" onclick="speakWord(this, 'DULCINEIA', 'DUL • CI • NEI • A', '👸')">DULCINEIA</span> del Toboso!
-                    </p>
-                </div>
-                </div>
-                </div>
-            </section>
-
-            <!-- =========================================================================
-                 PÁGINA 5 (CAPÍTULO 4): A PRIMEIRA SAÍDA - POUSADA OU CASTELO?
-                 ========================================================================= -->
-            <section id="page-4" class="page-slide page-hidden spread" aria-label="Página 5">
-                <!-- Página da esquerda (retrato: de cima): ilustração -->
-                <div class="book-page page-art">
-                <div id="frame-4" class="art-plate relative w-full flex flex-col justify-center">
-                    
-                    <div class="flex items-center justify-between gap-2 z-20 mb-1">
-                        <span id="lens-badge-4" class="bg-slate-900/85 text-white font-display font-bold text-[11px] sm:text-xs px-3 py-1 rounded-full shadow">
-                            👓 Lente da Realidade: Uma Pousada na Estrada
-                        </span>
-                    </div>
-
-                    <!-- Quadro 16:9 Integral sem Recortes -->
-                    <div id="drop-zone-4" class="drop-zone-target relative w-full aspect-[16/9] rounded-2xl overflow-hidden border-2 border-purple-400 shadow-md bg-slate-900 flex items-center justify-center">
-                        <img id="scene-bg-4" src="./imagens/p4-real.webp" alt="Pousada ou Castelo Real" class="w-full h-full object-contain scene-img" />
-
-                        <div onclick="tapSceneHotspot(this, event, 'POUSADA', '🏠')"
-                             class="scene-hotspot" style="left: 42%; top: 10%; width: 32%; height: 65%;"></div>
-                        <div onclick="tapSceneHotspot(this, event, 'PORQUINHOS', '🐷')"
-                             class="scene-hotspot" style="left: 26%; top: 65%; width: 24%; height: 28%;"></div>
-                    </div>
-
-                    <!-- 2 Cartões Arrastáveis -->
-                    <div class="w-full grid grid-cols-2 gap-2.5 z-20 mt-2">
-                        <div id="drag-inn-1"
-                             data-drop-target="drop-zone-4"
-                             data-action="inn"
-                             data-id="trombeta"
-                             data-word="TROMBETA"
-                             data-emoji="🎺"
-                             class="draggable-card bg-white border-2 border-purple-500 rounded-2xl p-1.5 flex items-center justify-center gap-2">
-                            <img src="./imagens/objetos/trombeta-flauta.svg" alt="Trombeta" class="w-8 h-8 sm:w-10 sm:h-10 shrink-0 pointer-events-none" />
-                            <span class="font-display font-bold text-xs sm:text-sm text-purple-950 uppercase">TROMBETA</span>
-                        </div>
-
-                        <div id="drag-inn-2"
-                             data-drop-target="drop-zone-4"
-                             data-action="inn"
-                             data-id="sopa"
-                             data-word="SOPA"
-                             data-emoji="🍲"
-                             class="draggable-card bg-white border-2 border-amber-500 rounded-2xl p-1.5 flex items-center justify-center gap-2">
-                            <img src="./imagens/objetos/sopa-banquete.svg" alt="Sopa" class="w-8 h-8 sm:w-10 sm:h-10 shrink-0 pointer-events-none" />
-                            <span class="font-display font-bold text-xs sm:text-sm text-amber-950 uppercase">SOPA</span>
-                        </div>
-                    </div>
-
-                    <!-- Botão da Lente -->
-                    <div class="flex items-center justify-center z-20 mt-2">
-                        <button onclick="toggleLens(4, event)" id="lens-btn-4" class="lens-toggle-btn bg-gradient-to-r from-purple-600 via-fuchsia-600 to-amber-500 text-white font-display font-bold text-xs sm:text-sm px-5 py-1.5 rounded-2xl border-2 border-white flex items-center gap-2">
-                            <span class="text-base">✨</span>
-                            <span id="lens-btn-label-4">Usar Lente da Imaginação!</span>
-                        </button>
-                    </div>
-                </div>
-                </div>
-
-                <!-- Página da direita (retrato: de baixo): texto com rolagem própria. Texto da Página 5 -->
-                <div class="book-page page-text">
-                <div class="page-text-scroll">
-                <div class="page-text-inner flex flex-col space-y-3">
-                    <div class="inline-flex items-center gap-2 text-purple-700 font-display font-bold text-xs sm:text-sm uppercase">
-                        <span>🏰 Capítulo 4 • A Primeira Saída</span>
-                    </div>
-                    <h2 class="text-2xl sm:text-3xl font-display font-bold text-amber-950">
-                        Pousada ou Castelo Real?
-                    </h2>
-                    <p id="page-text-4" class="text-base sm:text-lg text-slate-800 font-bold leading-relaxed">
-                        Ao entardecer, após cavalgar pelas colinas douradas de Montiel, Dom Quixote avistou uma simples <span class="literacy-word" onclick="speakWord(this, 'POUSADA', 'POU • SA • DA', '🏠')">POUSADA</span> de beira de estrada com telhas de barro e paredes de adobe.
-                        <br><br>
-                        Mas, aos olhos do sonhador cavaleiro, as paredes rústicas se transformaram num grandioso <span class="literacy-word" onclick="speakWord(this, 'CASTELO', 'CAS • TE • LO', '🏰')">CASTELO</span> com altas torres prateadas e pontes levadiças!
-                        <br><br>
-                        Quando um jovem pastor soprou uma flauta rústica para recolher seus porquinhos, Dom Quixote escutou triunfantes <span class="literacy-word" onclick="speakWord(this, 'TROMBETAS', 'TROM • BE • TAS', '🎺')">TROMBETAS</span> reais. E recebido com carinho pelo bondoso dono da pousada, saboreou uma quentinha tigela de <span class="literacy-word" onclick="speakWord(this, 'SOPA', 'SO • PA', '🍲')">SOPA</span> de pão com alho como se estivesse no mais nobre banquete de reis!
-                    </p>
-                </div>
-                </div>
-                </div>
-            </section>
-
-            <!-- =========================================================================
-                 PÁGINA 6 (CAPÍTULO 5): A CERIMÔNIA DE CAVALEIRO SOB A LUA CHEIA
-                 ========================================================================= -->
-            <section id="page-5" class="page-slide page-hidden spread" aria-label="Página 6">
-                <!-- Página da esquerda (retrato: de cima): ilustração -->
-                <div class="book-page page-art">
-                <div id="frame-5" class="art-plate relative w-full flex flex-col justify-center">
-                    
-                    <div class="flex items-center justify-between gap-2 z-20 mb-1">
-                        <span id="lens-badge-5" class="bg-slate-900/90 text-white font-display font-bold text-[11px] sm:text-xs px-3 py-1 rounded-full shadow">
-                            👓 Lente da Realidade: Pátio da Pousada e Bebedouro
-                        </span>
-                    </div>
-
-                    <!-- Quadro 16:9 Integral sem Recortes -->
-                    <div id="drop-zone-5" class="drop-zone-target relative w-full aspect-[16/9] rounded-2xl overflow-hidden border-2 border-amber-400 shadow-md bg-slate-900 flex items-center justify-center">
-                        <img id="scene-bg-5" src="./imagens/p5-real.webp" alt="Cerimônia de Cavaleiro sob a Lua Cheia" class="w-full h-full object-contain scene-img" />
-
-                        <div onclick="tapSceneHotspot(this, event, 'BEBEDOURO', '💧')"
-                             class="scene-hotspot" style="left: 4%; top: 36%; width: 26%; height: 55%;" title="Tocar no Bebedouro"></div>
-                    </div>
-
-                    <!-- Botão da Lente -->
-                    <div class="flex items-center justify-center z-20 mt-2">
-                        <button onclick="toggleLens(5, event)" id="lens-btn-5" class="lens-toggle-btn bg-gradient-to-r from-purple-600 via-fuchsia-600 to-amber-500 text-white font-display font-bold text-xs sm:text-sm px-5 py-1.5 rounded-2xl border-2 border-white flex items-center gap-2">
-                            <span class="text-base">✨</span>
-                            <span id="lens-btn-label-5">Usar Lente da Imaginação!</span>
-                        </button>
-                    </div>
-                </div>
-                </div>
-
-                <!-- Página da direita (retrato: de baixo): texto com rolagem própria. Texto da Página 6 -->
-                <div class="book-page page-text">
-                <div class="page-text-scroll">
-                <div class="page-text-inner flex flex-col space-y-3">
-                    <div class="inline-flex items-center gap-2 text-indigo-700 font-display font-bold text-xs sm:text-sm uppercase">
-                        <span>🌙 Capítulo 5 • A Cerimônia Mágica</span>
-                    </div>
-                    <h2 class="text-2xl sm:text-3xl font-display font-bold text-amber-950">
-                        Cavaleiro sob a Lua Cheia!
-                    </h2>
-                    <p id="page-text-5" class="text-base sm:text-lg text-slate-800 font-bold leading-relaxed">
-                        Para que sua sagração fosse completa, a tradição exigia a solene Vigília das Armas. Durante toda a noite silenciosa de La Mancha, banhado pelo brilho prateado da <span class="literacy-word" onclick="speakWord(this, 'LUA CHEIA', 'LU • A • CHEI • A', '🌕')">LUA CHEIA</span>, Dom Quixote caminhou em vigília com passos firmes e coração puro.
-                        <br><br>
-                        Depositou seu peitoral, sua bacia e sua lança sobre o grande <span class="literacy-word" onclick="speakWord(this, 'BEBEDOURO', 'BE • BE • DOU • RO', '💧')">BEBEDOURO</span> de pedra dos animais, sentindo com devoção sincera que orava diante de um sagrado altar de mármore e cristais.
-                        <br><br>
-                        Ao amanhecer, o bom estalajadeiro, emocionado com a pureza e a doçura daquele homem, pegou seu livro de anotações, recitou palavras de honra e tocou suavemente o ombro do fidalgo com a lâmina de uma <span class="literacy-word" onclick="speakWord(this, 'ESPADA', 'ES • PA • DA', '⚔️')">ESPADA</span>. Agora sim: o mundo ganhava seu mais corajoso protetor!
-                    </p>
-                </div>
-                </div>
-                </div>
-            </section>
-
-            <!-- =========================================================================
-                 PÁGINA 7 (CAPÍTULO 6): O FIEL ESCUDEIRO SANCHO PANÇA E A ILHA!
-                 ========================================================================= -->
-            <section id="page-6" class="page-slide page-hidden spread" aria-label="Página 7">
-                <!-- Página da esquerda (retrato: de cima): ilustração -->
-                <div class="book-page page-art">
-                <div id="frame-6" class="art-plate relative w-full flex flex-col justify-center">
-                    
-                    <div class="flex items-center justify-between gap-2 z-20 mb-1">
-                        <span id="lens-badge-6" class="bg-slate-900/85 text-white font-display font-bold text-[11px] sm:text-xs px-3 py-1 rounded-full shadow">
-                            👓 Lente da Realidade: Sancho Pança e Quixote na Estrada
-                        </span>
-                    </div>
-
-                    <!-- Quadro 16:9 Integral sem Recortes -->
-                    <div id="drop-zone-6" class="drop-zone-target relative w-full aspect-[16/9] rounded-2xl overflow-hidden border-2 border-amber-500 shadow-md bg-slate-900 flex items-center justify-center">
-                        <img id="scene-bg-6" src="./imagens/p6-real.webp" alt="Sancho Pança e Dom Quixote" class="w-full h-full object-contain scene-img" />
-
-                        <div onclick="tapSceneHotspot(this, event, 'SANCHO PANÇA', '🥖')"
-                             class="scene-hotspot" style="left: 12%; top: 22%; width: 34%; height: 72%;" title="Tocar em Sancho Pança"></div>
-                        <div onclick="tapSceneHotspot(this, event, 'DOM QUIXOTE', '⚔️')"
-                             class="scene-hotspot" style="left: 48%; top: 12%; width: 44%; height: 82%;" title="Tocar em Dom Quixote"></div>
-                    </div>
-
-                    <!-- Botão da Lente -->
-                    <div class="flex items-center justify-center z-20 mt-2">
-                        <button onclick="toggleLens(6, event)" id="lens-btn-6" class="lens-toggle-btn bg-gradient-to-r from-purple-600 via-fuchsia-600 to-amber-500 text-white font-display font-bold text-xs sm:text-sm px-5 py-1.5 rounded-2xl border-2 border-white flex items-center gap-2">
-                            <span class="text-base">✨</span>
-                            <span id="lens-btn-label-6">Usar Lente da Imaginação!</span>
-                        </button>
-                    </div>
-                </div>
-                </div>
-
-                <!-- Página da direita (retrato: de baixo): texto com rolagem própria. Texto da Página 7 -->
-                <div class="book-page page-text">
-                <div class="page-text-scroll">
-                <div class="page-text-inner flex flex-col space-y-3">
-                    <div class="inline-flex items-center gap-2 text-amber-700 font-display font-bold text-xs sm:text-sm uppercase">
-                        <span>🫏 Capítulo 6 • A Nobre Amizade</span>
-                    </div>
-                    <h2 class="text-2xl sm:text-3xl font-display font-bold text-amber-950">
-                        O Fiel Escudeiro Sancho Pança!
-                    </h2>
-                    <p id="page-text-6" class="text-base sm:text-lg text-slate-800 font-bold leading-relaxed">
-                        De volta à sua aldeia para recolher provisões, Dom Quixote procurou seu vizinho mais querido: <span class="literacy-word" onclick="speakWord(this, 'SANCHO PANÇA', 'SAN • CHO • PAN • ÇA', '🥖')">SANCHO PANÇA</span>, um lavrador gordinho, bondoso, amante da paz e pai amoroso.
-                        <br><br>
-                        — Meu leal amigo — disse o cavaleiro —, junte-se a mim como meu <span class="literacy-word" onclick="speakWord(this, 'ESCUDEIRO', 'ES • CU • DEI • RO', '🛡️')">ESCUDEIRO</span>! Prometo que, quando vencermos as primeiras batalhas, você será nomeado governador de uma formosa <span class="literacy-word" onclick="speakWord(this, 'ILHA', 'I • LHA', '🏝️')">ILHA</span> cheia de pão e justiça!
-                        <br><br>
-                        Sancho sorriu maravilhado, preparou alforjes com queijo fresco e pão em seu simpático <span class="literacy-word" onclick="speakWord(this, 'BURRICO', 'BUR • RI • CO', '🫏')">BURRICO</span> e aceitou o convite. Sob o sol da manhã, os dois amigos partiram juntos pela estrada, conversando alegremente sobre o futuro!
-                    </p>
-                </div>
-                </div>
-                </div>
-            </section>
-
-            <!-- =========================================================================
-                 PÁGINA 8 (CAPÍTULO 7): OS MOINHOS DE VENTO OU GIGANTES DE CERVANTES!
-                 ========================================================================= -->
-            <section id="page-7" class="page-slide page-hidden spread" aria-label="Página 8">
-                <!-- Página da esquerda (retrato: de cima): ilustração -->
-                <div class="book-page page-art">
-                <div id="frame-7" class="art-plate relative w-full flex flex-col justify-center">
-                    
-                    <div class="flex items-center justify-between gap-2 z-20 mb-1">
-                        <span id="lens-badge-7" class="bg-slate-900/85 text-white font-display font-bold text-[11px] sm:text-xs px-3 py-1 rounded-full shadow">
-                            👓 Lente da Realidade: Os Moinhos de Vento de La Mancha
-                        </span>
-                    </div>
-
-                    <!-- Quadro 16:9 Integral sem Recortes -->
-                    <div id="drop-zone-7" class="drop-zone-target relative w-full aspect-[16/9] rounded-2xl overflow-hidden border-2 border-amber-500 shadow-md bg-slate-900 flex items-center justify-center">
-                        <img id="scene-bg-7" src="./imagens/p7-real.webp" alt="Sancho Pança e os Moinhos de Vento" class="w-full h-full object-contain scene-img" />
-
-                        <!-- Pás Giratórias Interativas dos Moinhos de Vento -->
+                    — Que gigantes, meu senhor? — avisou Sancho. — São apenas moinhos que moem o trigo ao vento! Mas Dom Quixote já baixava a lança, pronto para o mais célebre e corajoso duelo de toda a literatura!`,
+                cena: {
+                    real: 'p7-real.webp', imag: 'p7-imag.webp', alt: 'Sancho Pança e os Moinhos de Vento',
+                    legendaReal: '👓 Lente da Realidade: Os Moinhos de Vento de La Mancha',
+                    legendaImag: '✨ Lente da Imaginação: Dom Quixote contra os Gigantes de Cervantes!',
+                    precarregar: ['./imagens/objetos/moinho-pas.svg'],
+                    // Pás giratórias e rajadas (BACKLOG A-1: trocar por camadas em aquarela, NB-1)
+                    extra: `
                         <div id="windmill-blades-1" class="windmill-blades-overlay hidden absolute pointer-events-none"
                              style="left: 74.2%; top: 29.2%; width: 33%; height: 58%; transform: translate(-50%, -50%); transform-origin: 50% 50%; z-index: 10;">
-                            <img src="./imagens/objetos/moinho-pas.svg" alt="Pás do Moinho 1" class="w-full h-full" />
+                            <img src="./imagens/objetos/moinho-pas.svg" alt="" class="w-full h-full" />
                         </div>
                         <div id="windmill-blades-2" class="windmill-blades-overlay hidden absolute pointer-events-none"
                              style="left: 90.6%; top: 34.0%; width: 22%; height: 39%; transform: translate(-50%, -50%); transform-origin: 50% 50%; z-index: 9;">
-                            <img src="./imagens/objetos/moinho-pas.svg" alt="Pás do Moinho 2" class="w-full h-full" />
+                            <img src="./imagens/objetos/moinho-pas.svg" alt="" class="w-full h-full" />
                         </div>
-
-                        <!-- Recipiente para Rajadas de Vento em Partículas -->
-                        <div id="wind-gusts-container" class="absolute inset-0 pointer-events-none z-15 overflow-hidden"></div>
-
-                        <div onclick="tapSceneHotspot(this, event, 'SANCHO PANÇA', '🏝️')"
-                             class="scene-hotspot" style="left: 10%; top: 28%; width: 26%; height: 62%;" title="Tocar no Sancho Pança"></div>
-                        <div onclick="tapWindmillOrGiant(event)"
-                             class="scene-hotspot" style="left: 60%; top: 8%; width: 36%; height: 65%;" title="Tocar nos Moinhos ou Gigantes"></div>
-                    </div>
-
-                    <!-- Cartão Arrastável (VENTO) + Botão Ler de Novo -->
-                    <div class="w-full grid grid-cols-2 gap-2.5 z-20 mt-2">
-                        <div id="drag-wind-1"
-                             data-drop-target="drop-zone-7"
-                             data-action="wind"
-                             data-id="vento"
-                             data-word="VENTO"
-                             data-emoji="💨"
-                             class="draggable-card bg-white border-2 border-sky-500 rounded-2xl p-1.5 flex items-center justify-center gap-2">
-                            <img src="./imagens/objetos/vento-sopro.svg" alt="Vento" class="w-8 h-8 sm:w-10 sm:h-10 shrink-0 pointer-events-none" />
-                            <span class="font-display font-bold text-xs sm:text-sm text-sky-950 uppercase">VENTO</span>
-                        </div>
-
-                        <button onclick="goToPage(0)" class="btn-chunky bg-amber-300 hover:bg-amber-400 text-amber-950 font-display font-bold py-2 px-3 rounded-2xl border-2 border-amber-600 flex items-center justify-center gap-2 text-xs sm:text-sm">
-                            <i class="ph-bold ph-arrow-counter-clockwise text-lg"></i>
-                            <span>Ler de Novo</span>
-                        </button>
-                    </div>
-
-                    <!-- Botão da Lente -->
-                    <div class="flex items-center justify-center z-20 mt-2">
-                        <button onclick="toggleLens(7, event)" id="lens-btn-7" class="lens-toggle-btn bg-gradient-to-r from-purple-600 via-fuchsia-600 to-amber-500 text-white font-display font-bold text-xs sm:text-sm px-5 py-1.5 rounded-2xl border-2 border-white flex items-center gap-2">
-                            <span class="text-base">✨</span>
-                            <span id="lens-btn-label-7">Usar Lente da Imaginação!</span>
-                        </button>
-                    </div>
-                </div>
-                </div>
-
-                <!-- Página da direita (retrato: de baixo): texto com rolagem própria. Texto da Página 8 -->
-                <div class="book-page page-text">
-                <div class="page-text-scroll">
-                <div class="page-text-inner flex flex-col space-y-3">
-                    <div class="inline-flex items-center gap-2 text-orange-700 font-display font-bold text-xs sm:text-sm uppercase">
-                        <span>🌬️ Capítulo 7 • O Duelo dos Moinhos!</span>
-                    </div>
-                    <h2 class="text-2xl sm:text-3xl font-display font-bold text-amber-950">
-                        O Duelo contra os Gigantes!
-                    </h2>
-                    <p id="page-text-7" class="text-base sm:text-lg text-slate-800 font-bold leading-relaxed">
-                        Cavalgando pelas vastas planícies do Campo de Criptana, de repente surgiram no horizonte trinta ou quarenta enormes <span class="literacy-word" onclick="speakWord(this, 'MOINHOS', 'MO • I • NHOS', '🌬️')">MOINHOS</span> de vento, com grandes pás de madeira recortando o céu.
-                        <br><br>
-                        Nesse instante, soprou uma forte rajada de <span class="literacy-word" onclick="speakWord(this, 'VENTO', 'VEN • TO', '💨')">VENTO</span>, fazendo as pás girarem com um estrondo veloz! Dom Quixote puxou as rédeas de Rocinante e exclamou:
-                        <br><br>
-                        — Veja, amigo Sancho! A sorte guia nossos passos! Ali despontam descomunais <span class="literacy-word" onclick="speakWord(this, 'GIGANTES', 'GI • GAN • TES', '👹')">GIGANTES</span> com os quais travarei feroz combate!
-                        <br><br>
-                        — Que gigantes, meu senhor? — avisou Sancho. — São apenas moinhos que moem o trigo ao vento! Mas Dom Quixote já baixava a lança, pronto para o mais célebre e corajoso duelo de toda a literatura!
-                    </p>
-                    <div class="bg-amber-200/90 border-2 border-amber-500 rounded-2xl p-2 text-center">
-                        <p class="font-display font-bold text-amber-950 text-xs sm:text-sm">
-                            🎉 Fim da Parte 1! Na Parte 2: A Batalha das Ovelhas e Novas Aventuras!
-                        </p>
-                    </div>
-                </div>
-                </div>
-                </div>
-            </section>
-
-        </div>
-
-        <!-- BARRA INFERIOR DE NAVEGAÇÃO -->
-        <footer class="w-full bg-amber-100/95 border-t-4 border-amber-300 px-3 py-2 sm:px-6 sm:py-2 flex items-center justify-between z-30 shrink-0">
-            <button id="btn-prev" onclick="prevPage()" class="btn-chunky flex items-center gap-2 bg-white hover:bg-amber-50 text-amber-950 font-display font-bold px-4 py-1.5 sm:px-6 sm:py-2 rounded-2xl border-2 border-amber-500 text-xs sm:text-base disabled:opacity-40 disabled:pointer-events-none">
-                <i class="ph-bold ph-arrow-left text-base sm:text-lg"></i>
-                <span>Anterior</span>
-            </button>
-
-            <span id="page-counter-text" class="font-display font-bold text-amber-950 text-xs sm:text-base bg-amber-200 px-3.5 py-1 rounded-full border-2 border-amber-400">
-                Página 1 de 8
-            </span>
-
-            <button id="btn-next" onclick="nextPage()" class="btn-chunky flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white font-display font-bold px-4 py-1.5 sm:px-6 sm:py-2 rounded-2xl border-2 border-amber-700 text-xs sm:text-base disabled:opacity-40 disabled:pointer-events-none">
-                <span>Próxima</span>
-                <i class="ph-bold ph-arrow-right text-base sm:text-lg"></i>
-            </button>
-        </footer>
-
-    </main>
-
-    <script>
-        /* =====================================================================
-           ESTADO GLOBAL DO LIVRO INTERATIVO
-           ===================================================================== */
-        const totalPages = 8;
-        let currentPage = 0;
-        let soundEnabled = true;
-        let isReadingPage = false;
-        let ptVoice = null;
-
-        // Estado das Lentes (false = Lente da Realidade, true = Lente da Imaginação)
-        const lensImaginationState = [false, false, false, false, false, false, false, false];
-
-        // Progresso das interações de cada capítulo
-        const readBooksSet = new Set();
-        const innItemsSet = new Set();
-        let innLastItem = null;
-
-        // Páginas com transformação progressiva: cada item revela a próxima ilustração.
-        // As ilustrações são cumulativas (a etapa 2 já contém o item da etapa 1), por isso
-        // os itens precisam ser usados NA ORDEM abaixo — a mesma ordem em que aparecem no texto.
-        const progressiveScenes = {
-            2: {
-                order: ['1', '2', '3', '4'],
-                done: new Set(),
-                stageImg: (n) => `./imagens/p2-real-stage-${n}.webp`,
-                badges: [
-                    "👓 Lente da Realidade: Armadura Enferrujada e Bacia",
-                    "👓 Lente da Realidade: Peitoral Enferrujado Equipado!",
-                    "👓 Lente da Realidade: Bacia de Barbeiro na Cabeça!",
-                    "👓 Lente da Realidade: Tampa de Panela como Escudo!",
-                    "👓 Lente da Realidade: Armadura Caseira Completa!"
-                ],
-                stepSound: 'wordPop'
-            },
-            3: {
-                order: ['maca', 'cenoura', 'escova'],
-                done: new Set(),
-                stageImg: (n) => n === 0 ? "./imagens/p3-real.webp" : `./imagens/p3-real-stage-${n}.webp`,
-                badges: [
-                    "👓 Lente da Realidade: Cavalinho Magricela e Aldonza",
-                    "👓 Lente da Realidade: Rocinante Saboreia a Maçã Docinha! 🍎",
-                    "👓 Lente da Realidade: Rocinante Come a Cenoura Crocante! 🥕",
-                    "👓 Lente da Realidade: Crinas Escovadas e Cavalo Pronto! 🪮"
-                ],
-                stepSound: 'crunch'
-            }
-        };
-
-        // Caminhos locais das ilustrações geradas pelo Nano-Banana (pN = índice da página)
-        const lensMetadata = [
-            {
-                realImg: "./imagens/p0-real.webp",
-                imagImg: "./imagens/p0-imag.webp",
-                realBadge: "👓 Lente da Realidade: O Vovô Alonso e seus Amigos",
-                imagBadge: "✨ Lente da Imaginação: O Herói Dourado de La Mancha!"
-            },
-            {
-                realImg: "./imagens/p1-real.webp",
-                imagImg: "./imagens/p1-imag.webp",
-                realBadge: "👓 Lente da Realidade: A Sala de Leitura do Vovô Alonso",
-                imagBadge: "✨ Lente da Imaginação: O Leão Guardião e Mundos Mágicos!"
-            },
-            {
-                realImg: "./imagens/p2-real-stage-0.webp",
-                imagImg: "./imagens/p2-imag.webp",
-                realBadge: "👓 Lente da Realidade: Armadura Enferrujada e Bacia",
-                imagBadge: "✨ Lente da Imaginação: Armadura Real de Ouro Puro!"
-            },
-            {
-                realImg: "./imagens/p3-real.webp",
-                imagImg: "./imagens/p3-imag.webp",
-                realBadge: "👓 Lente da Realidade: Cavalinho Magricela e Aldonza",
-                imagBadge: "✨ Lente da Imaginação: Corcel Branco e Princesa Dulcineia!"
-            },
-            {
-                realImg: "./imagens/p4-real.webp",
-                imagImg: "./imagens/p4-imag.webp",
-                realBadge: "👓 Lente da Realidade: Uma Pousada Simples na Estrada",
-                imagBadge: "✨ Lente da Imaginação: Um Castelo com Torres de Prata!"
-            },
-            {
-                realImg: "./imagens/p5-real.webp",
-                imagImg: "./imagens/p5-imag.webp",
-                realBadge: "👓 Lente da Realidade: Pátio da Pousada e Bebedouro",
-                imagBadge: "✨ Lente da Imaginação: Altar de Cristal e Sagração Real!"
-            },
-            {
-                realImg: "./imagens/p6-real.webp",
-                imagImg: "./imagens/p6-imag.webp",
-                realBadge: "👓 Lente da Realidade: Sancho Pança e Quixote na Estrada",
-                imagBadge: "✨ Lente da Imaginação: Sancho Governador da Ilha Encantada!"
-            },
-            {
-                realImg: "./imagens/p7-real.webp",
-                imagImg: "./imagens/p7-imag.webp",
-                realBadge: "👓 Lente da Realidade: Os Moinhos de Vento de La Mancha",
-                imagBadge: "✨ Lente da Imaginação: Dom Quixote contra os Gigantes de Cervantes!"
-            }
-        ];
-
-        /* Ilustração e legenda da Lente da Realidade conforme o progresso da página */
-        function realSceneFor(pageIdx) {
-            const meta = lensMetadata[pageIdx];
-            const prog = progressiveScenes[pageIdx];
-            if (prog) {
-                const n = prog.done.size;
-                return { src: prog.stageImg(n), badge: prog.badges[n] };
-            }
-            if (pageIdx === 4 && innLastItem) {
-                const both = innItemsSet.size >= 2;
-                if (innLastItem === 'trombeta') {
-                    return {
-                        src: "./imagens/p4-real-flauta.webp",
-                        badge: both ? "👓 Lente da Realidade: Música e Acolhimento na Pousada! ✨" : "👓 Lente da Realidade: Pastor Tocando Flauta para os Porquinhos! 🎶"
-                    };
-                }
-                return {
-                    src: "./imagens/p4-real-sopa.webp",
-                    badge: both ? "👓 Lente da Realidade: Música e Acolhimento na Pousada! ✨" : "👓 Lente da Realidade: O Estalajadeiro Servindo a Sopa Quentinha! 🍲"
-                };
-            }
-            return { src: meta.realImg, badge: meta.realBadge };
-        }
-
-        function sceneFor(pageIdx) {
-            if (lensImaginationState[pageIdx]) {
-                const meta = lensMetadata[pageIdx];
-                return { src: meta.imagImg, badge: meta.imagBadge };
-            }
-            return realSceneFor(pageIdx);
-        }
-
-        /* Todas as ilustrações que uma página pode exibir (para pré-carregar) */
-        function allSceneSrcs(pageIdx) {
-            const meta = lensMetadata[pageIdx];
-            const srcs = [meta.realImg, meta.imagImg];
-            const prog = progressiveScenes[pageIdx];
-            if (prog) {
-                for (let n = 0; n <= prog.order.length; n++) srcs.push(prog.stageImg(n));
-            }
-            if (pageIdx === 4) srcs.push("./imagens/p4-real-flauta.webp", "./imagens/p4-real-sopa.webp");
-            return srcs;
-        }
-
-        /* =====================================================================
-           INICIALIZAÇÃO DE VOZ PT-BR (ANDROID CHROME / WEB SPEECH API)
-           ===================================================================== */
-        function loadPortugueseVoice() {
-            if (!('speechSynthesis' in window)) return;
-            const voices = window.speechSynthesis.getVoices();
-            if (!voices || voices.length === 0) return;
-
-            ptVoice = voices.find(v => v.lang.replace('_', '-').toLowerCase() === 'pt-br' && (v.name.includes('Google') || v.name.includes('Luciana') || v.name.includes('Francisca')))
-                   || voices.find(v => v.lang.replace('_', '-').toLowerCase() === 'pt-br')
-                   || voices.find(v => v.lang.toLowerCase().startsWith('pt'));
-        }
-
-        if ('speechSynthesis' in window) {
-            loadPortugueseVoice();
-            if (window.speechSynthesis.onvoiceschanged !== undefined) {
-                window.speechSynthesis.onvoiceschanged = loadPortugueseVoice;
-            }
-        }
-
-        /* =====================================================================
-           MODO TELA CHEIA PARA TABLET ANDROID
-           ===================================================================== */
-        function toggleFullscreen() {
-            playSound('wordPop');
-            const docEl = document.documentElement;
-            if (!document.fullscreenElement && !document.webkitFullscreenElement) {
-                const req = docEl.requestFullscreen || docEl.webkitRequestFullscreen;
-                if (req) {
-                    req.call(docEl).catch(() => {});
-                }
-            } else {
-                const exit = document.exitFullscreen || document.webkitExitFullscreen;
-                if (exit) {
-                    exit.call(document).catch(() => {});
-                }
-            }
-        }
-
-        document.addEventListener('fullscreenchange', () => {
-            const icon = document.getElementById('fullscreen-icon');
-            if (icon) {
-                icon.className = document.fullscreenElement ? 'ph-bold ph-corners-in' : 'ph-bold ph-corners-out';
-            }
-        });
-
-        /* =====================================================================
-           SINTETIZADOR DE EFEITOS SONOROS (Web Audio API)
-           ===================================================================== */
-        let audioCtx = null;
-
-        function getAudioContext() {
-            if (!audioCtx) {
-                const AudioContextClass = window.AudioContext || window.webkitAudioContext;
-                audioCtx = new AudioContextClass();
-            }
-            if (audioCtx.state === 'suspended') {
-                audioCtx.resume();
-            }
-            return audioCtx;
-        }
-
-        function playSound(type) {
-            if (!soundEnabled) return;
-            try {
-                const ctx = getAudioContext();
-                const now = ctx.currentTime;
-
-                if (type === 'wordPop') {
-                    const notes = [523.25, 659.25, 783.99];
-                    notes.forEach((freq, i) => {
-                        const osc = ctx.createOscillator();
-                        const gain = ctx.createGain();
-                        osc.type = 'triangle';
-                        osc.frequency.setValueAtTime(freq, now + i * 0.045);
-                        gain.gain.setValueAtTime(0.14, now + i * 0.045);
-                        gain.gain.exponentialRampToValueAtTime(0.001, now + i * 0.045 + 0.18);
-                        osc.connect(gain);
-                        gain.connect(ctx.destination);
-                        osc.start(now + i * 0.045);
-                        osc.stop(now + i * 0.045 + 0.18);
-                    });
-                } else if (type === 'crunch') {
-                    const notes = [260, 340, 290, 420];
-                    notes.forEach((freq, i) => {
-                        const osc = ctx.createOscillator();
-                        const gain = ctx.createGain();
-                        osc.type = 'sawtooth';
-                        osc.frequency.setValueAtTime(freq, now + i * 0.06);
-                        gain.gain.setValueAtTime(0.12, now + i * 0.06);
-                        gain.gain.exponentialRampToValueAtTime(0.001, now + i * 0.06 + 0.09);
-                        osc.connect(gain);
-                        gain.connect(ctx.destination);
-                        osc.start(now + i * 0.06);
-                        osc.stop(now + i * 0.06 + 0.09);
-                    });
-                } else if (type === 'lensMagic') {
-                    const notes = [440, 554.37, 659.25, 880, 1108.73];
-                    notes.forEach((freq, idx) => {
-                        const osc = ctx.createOscillator();
-                        const gain = ctx.createGain();
-                        osc.type = 'sine';
-                        osc.frequency.setValueAtTime(freq, now + idx * 0.055);
-                        gain.gain.setValueAtTime(0.15, now + idx * 0.055);
-                        gain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.055 + 0.35);
-                        osc.connect(gain);
-                        gain.connect(ctx.destination);
-                        osc.start(now + idx * 0.055);
-                        osc.stop(now + idx * 0.055 + 0.35);
-                    });
-                } else if (type === 'fanfare') {
-                    const notes = [392.00, 523.25, 659.25, 783.99];
-                    notes.forEach((freq, i) => {
-                        const osc = ctx.createOscillator();
-                        const gain = ctx.createGain();
-                        osc.type = 'triangle';
-                        const start = now + (i === 3 ? 0.33 : i * 0.1);
-                        const dur = i === 3 ? 0.45 : 0.1;
-                        osc.frequency.setValueAtTime(freq, start);
-                        gain.gain.setValueAtTime(0.18, start);
-                        gain.gain.exponentialRampToValueAtTime(0.001, start + dur);
-                        osc.connect(gain);
-                        gain.connect(ctx.destination);
-                        osc.start(start);
-                        osc.stop(start + dur);
-                    });
-                } else if (type === 'hint') {
-                    // Dica suave (não é "erro"): duas notas descendentes e baixinhas
-                    [659.25, 523.25].forEach((freq, i) => {
-                        const osc = ctx.createOscillator();
-                        const gain = ctx.createGain();
-                        osc.type = 'sine';
-                        osc.frequency.setValueAtTime(freq, now + i * 0.12);
-                        gain.gain.setValueAtTime(0.08, now + i * 0.12);
-                        gain.gain.exponentialRampToValueAtTime(0.001, now + i * 0.12 + 0.2);
-                        osc.connect(gain);
-                        gain.connect(ctx.destination);
-                        osc.start(now + i * 0.12);
-                        osc.stop(now + i * 0.12 + 0.2);
-                    });
-                } else if (type === 'pageFlip') {
-                    const osc = ctx.createOscillator();
-                    const gain = ctx.createGain();
-                    osc.type = 'sine';
-                    osc.frequency.setValueAtTime(300, now);
-                    osc.frequency.exponentialRampToValueAtTime(560, now + 0.1);
-                    gain.gain.setValueAtTime(0.1, now);
-                    gain.gain.exponentialRampToValueAtTime(0.001, now + 0.1);
-                    osc.connect(gain);
-                    gain.connect(ctx.destination);
-                    osc.start(now);
-                    osc.stop(now + 0.1);
-                } else if (type === 'windGust') {
-                    // Síntese procedural de sopro e rajada de vento
-                    const bufferSize = Math.floor(ctx.sampleRate * 1.6);
-                    const buffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
-                    const data = buffer.getChannelData(0);
-                    let lastOut = 0.0;
-                    for (let i = 0; i < bufferSize; i++) {
-                        const white = Math.random() * 2 - 1;
-                        data[i] = (lastOut + (0.02 * white)) / 1.02;
-                        lastOut = data[i];
+                        <div id="wind-gusts-container" class="absolute inset-0 pointer-events-none overflow-hidden" style="z-index: 15;"></div>`,
+                    hotspots: [
+                        { x: 10, y: 28, w: 26, h: 62, palavra: 'SANCHO PANÇA', emoji: '🏝️', titulo: 'Tocar no Sancho Pança' },
+                        { x: 60, y: 8, w: 36, h: 65, lente: 'real', acao: 'vento', titulo: 'Tocar nos Moinhos' },
+                        { x: 60, y: 8, w: 36, h: 65, lente: 'imag', palavra: 'GIGANTES', emoji: '⚔️', titulo: 'Tocar nos Gigantes' }
+                    ],
+                    aoTrocarLente: () => {
+                        document.getElementById('windmill-blades-1').classList.add('hidden');
+                        document.getElementById('windmill-blades-2').classList.add('hidden');
+                    },
+                    cartoes: {
+                        tipo: 'acao',
+                        colunas: 1,
+                        itens: [
+                            { id: 'vento', domId: 'drag-wind-1', palavra: 'VENTO', emoji: '💨', icone: './imagens/objetos/vento-sopro.svg', borda: 'border-sky-500', acao: 'vento' }
+                        ]
                     }
-                    const noise = ctx.createBufferSource();
-                    noise.buffer = buffer;
-                    const filter = ctx.createBiquadFilter();
-                    filter.type = 'lowpass';
-                    filter.frequency.setValueAtTime(160, now);
-                    filter.frequency.exponentialRampToValueAtTime(1100, now + 0.7);
-                    filter.frequency.exponentialRampToValueAtTime(220, now + 1.6);
-
-                    const gain = ctx.createGain();
-                    gain.gain.setValueAtTime(0.01, now);
-                    gain.gain.linearRampToValueAtTime(0.24, now + 0.6);
-                    gain.gain.exponentialRampToValueAtTime(0.001, now + 1.6);
-
-                    noise.connect(filter);
-                    filter.connect(gain);
-                    gain.connect(ctx.destination);
-                    noise.start(now);
                 }
-            } catch (e) {}
-        }
-
-        function toggleSoundEffects() {
-            soundEnabled = !soundEnabled;
-            const icon = document.getElementById('sfx-icon');
-            icon.className = soundEnabled ? 'ph-fill ph-music-notes' : 'ph-fill ph-speaker-slash';
-            if (soundEnabled) playSound('wordPop');
-        }
-
-        /* =====================================================================
-           1. ALFABETIZAÇÃO: APENAS NAS PALAVRAS DESTACADAS DO TEXTO
-           ===================================================================== */
-        function speakWord(element, wordText, syllablesText, emoji) {
-            playSound('wordPop');
-
-            document.querySelectorAll('.literacy-word').forEach(el => el.classList.remove('word-speaking'));
-            if (element) {
-                element.classList.add('word-speaking');
-                setTimeout(() => element.classList.remove('word-speaking'), 1100);
-                const rect = element.getBoundingClientRect();
-                spawnSparkles(rect.left + rect.width / 2, rect.top, emoji || '✨');
             }
-
-            openPhonicsCard(wordText, syllablesText, emoji);
-            stopReadingPage();
-            pronounceWord(wordText);
-        }
-
-        let phonicsCurrentWord = '';
-
-        function pronounceWord(wordText) {
-            if (!('speechSynthesis' in window)) return;
-            window.speechSynthesis.cancel();
-            const utterance = new SpeechSynthesisUtterance(wordText.toLowerCase());
-            utterance.lang = 'pt-BR';
-            if (ptVoice) utterance.voice = ptVoice;
-            utterance.rate = 0.85;
-            utterance.pitch = 1.05;
-            window.speechSynthesis.speak(utterance);
-        }
-
-        function openPhonicsCard(wordText, syllablesText, emoji) {
-            phonicsCurrentWord = wordText;
-            document.getElementById('phonics-emoji').textContent = emoji || '📖';
-            document.getElementById('phonics-word').textContent = wordText;
-
-            const syllablesEl = document.getElementById('phonics-syllables');
-            syllablesEl.replaceChildren(...syllablesText.split('•').map(part => {
-                const chip = document.createElement('span');
-                chip.className = 'syllable-chip';
-                chip.textContent = part.trim();
-                return chip;
-            }));
-
-            const modal = document.getElementById('phonics-modal');
-            const card = document.getElementById('phonics-card');
-            card.style.animation = 'none';
-            void card.offsetWidth;
-            card.style.animation = '';
-            modal.classList.add('is-open');
-            modal.setAttribute('aria-hidden', 'false');
-        }
-
-        function closePhonicsCard() {
-            const modal = document.getElementById('phonics-modal');
-            if (!modal.classList.contains('is-open')) return;
-            modal.classList.remove('is-open');
-            modal.setAttribute('aria-hidden', 'true');
-            if ('speechSynthesis' in window) window.speechSynthesis.cancel();
-        }
-
-        function replayPhonicsWord() {
-            playSound('wordPop');
-            pronounceWord(phonicsCurrentWord);
-        }
-
-        // Fecha só com toque FORA do cartão (no fundo escurecido) ou com Esc
-        document.getElementById('phonics-modal').addEventListener('click', (e) => {
-            if (e.target.id === 'phonics-modal') closePhonicsCard();
-        });
-
-        /* =====================================================================
-           LEITURA GUIADA: NARRAÇÃO FRASE A FRASE COM DESTAQUE SINCRONIZADO
-           ===================================================================== */
-        let readingSession = 0;
-
-        // Envolve cada frase do texto em <span class="sentence"> preservando as palavras interativas.
-        // Não quebra antes de minúscula: "bravura! — pensou o fidalgo" continua sendo uma frase só.
-        function splitPageTextIntoSentences(textEl) {
-            const frag = document.createDocumentFragment();
-            let current = null;
-            const openSentence = () => {
-                if (!current) {
-                    current = document.createElement('span');
-                    current.className = 'sentence';
-                    frag.appendChild(current);
-                }
-                return current;
-            };
-            const appendText = (text) => {
-                if (!text) return;
-                if (!current && !text.trim()) {
-                    frag.appendChild(document.createTextNode(text));
-                    return;
-                }
-                openSentence().appendChild(document.createTextNode(text));
-            };
-
-            Array.from(textEl.childNodes).forEach(node => {
-                if (node.nodeType === Node.TEXT_NODE) {
-                    const text = node.textContent;
-                    const boundary = /([.!?…]+[”"»]?)(\s+)(?!(?:[—–]\s*)?[a-zà-ÿ])/g;
-                    let last = 0;
-                    let m;
-                    while ((m = boundary.exec(text)) !== null) {
-                        appendText(text.slice(last, m.index + m[1].length));
-                        current = null;
-                        frag.appendChild(document.createTextNode(m[2]));
-                        last = m.index + m[0].length;
-                    }
-                    appendText(text.slice(last));
-                } else if (node.nodeName === 'BR') {
-                    current = null;
-                    frag.appendChild(node);
-                } else {
-                    openSentence().appendChild(node);
-                }
-            });
-            textEl.replaceChildren(frag);
-        }
-
-        // Texto falado: palavras-chave em minúsculas para a voz não soletrar "IMAGINAÇÃO" como sigla
-        function speechTextOf(el) {
-            const clone = el.cloneNode(true);
-            clone.querySelectorAll('.literacy-word').forEach(w => { w.textContent = w.textContent.toLowerCase(); });
-            return clone.textContent.replace(/\s+/g, ' ').trim();
-        }
-
-        function clearSentenceHighlight() {
-            document.querySelectorAll('.sentence-reading').forEach(el => el.classList.remove('sentence-reading'));
-        }
-
-        function stopReadingPage() {
-            readingSession++;
-            if ('speechSynthesis' in window) window.speechSynthesis.cancel();
-            clearSentenceHighlight();
-            setReadingPageUI(false);
-        }
-
-        function toggleReadPageAloud() {
-            if (!('speechSynthesis' in window)) return;
-
-            if (isReadingPage) {
-                stopReadingPage();
-                return;
-            }
-
-            const textEl = document.getElementById(`page-text-${currentPage}`);
-            if (!textEl) return;
-            const sentences = Array.from(textEl.querySelectorAll('.sentence'));
-
-            window.speechSynthesis.cancel();
-            const session = ++readingSession;
-            setReadingPageUI(true);
-
-            const speakSentence = (i) => {
-                if (session !== readingSession) return;
-                clearSentenceHighlight();
-                if (i >= sentences.length) {
-                    setReadingPageUI(false);
-                    return;
-                }
-                const sentence = sentences[i];
-                const text = speechTextOf(sentence);
-                if (!text) {
-                    speakSentence(i + 1);
-                    return;
-                }
-                sentence.classList.add('sentence-reading');
-                scrollTextToSentence(sentence);
-
-                const utterance = new SpeechSynthesisUtterance(text);
-                utterance.lang = 'pt-BR';
-                if (ptVoice) utterance.voice = ptVoice;
-                utterance.rate = 0.92;
-                utterance.pitch = 1.05;
-                // Pequena pausa entre as frases para respeitar o ritmo da leitura
-                utterance.onend = () => setTimeout(() => speakSentence(i + 1), 250);
-                utterance.onerror = () => {
-                    if (session === readingSession) stopReadingPage();
-                };
-                window.speechSynthesis.speak(utterance);
-            };
-            speakSentence(0);
-        }
-
-        function setReadingPageUI(reading) {
-            isReadingPage = reading;
-            const btn = document.getElementById('btn-tts');
-            const label = document.getElementById('tts-label');
-            const icon = document.getElementById('tts-icon');
-            if (reading) {
-                btn.classList.replace('bg-emerald-500', 'bg-rose-500');
-                btn.classList.replace('border-emerald-700', 'border-rose-700');
-                label.textContent = 'Parar Voz';
-                icon.className = 'ph-fill ph-stop-circle text-base sm:text-lg animate-pulse';
-            } else {
-                btn.classList.replace('bg-rose-500', 'bg-emerald-500');
-                btn.classList.replace('border-rose-700', 'border-emerald-700');
-                label.textContent = 'Ouvir Página';
-                icon.className = 'ph-fill ph-speaker-high text-base sm:text-lg';
-            }
-        }
-
-        /* =====================================================================
-           2. TROCA DE ILUSTRAÇÃO COM FEEDBACK INSTANTÂNEO DE CARREGAMENTO
-           ===================================================================== */
-        const sceneBusy = {};
-        const SCENE_MIN_BUSY_MS = 280;   // curto o bastante para não cansar, longo o bastante para ser percebido
-        const SCENE_MAX_WAIT_MS = 8000;  // rede lenta: troca mesmo assim em vez de travar a página
-
-        function decodeImage(src) {
-            const img = new Image();
-            img.src = src;
-            const ready = img.decode
-                ? img.decode().catch(() => {})
-                : new Promise(resolve => { img.onload = img.onerror = resolve; });
-            return Promise.race([ready, new Promise(resolve => setTimeout(resolve, SCENE_MAX_WAIT_MS))]);
-        }
-
-        function warmImages(srcs) {
-            srcs.forEach(src => { new Image().src = src; });
-        }
-
-        function setSceneImage(pageIdx, src) {
-            const img = document.getElementById(`scene-bg-${pageIdx}`);
-            if (!img || img.getAttribute('src') === src) return Promise.resolve();
-
-            const stage = img.parentElement;
-            const page = document.getElementById(`page-${pageIdx}`);
-            sceneBusy[pageIdx] = true;
-            stage.classList.add('scene-loading');
-            stage.setAttribute('aria-busy', 'true');
-            page.classList.add('page-busy');
-
-            const minDelay = new Promise(resolve => setTimeout(resolve, SCENE_MIN_BUSY_MS));
-            return Promise.all([decodeImage(src), minDelay]).then(() => {
-                img.src = src;
-                img.classList.remove('scene-enter', 'character-joy', 'horse-happy');
-                void img.offsetWidth;
-                img.classList.add('scene-enter');
-                stage.classList.remove('scene-loading');
-                stage.removeAttribute('aria-busy');
-                page.classList.remove('page-busy');
-                sceneBusy[pageIdx] = false;
-            });
-        }
-
-        function updateLensUI(pageIdx, badgeText) {
-            const isImag = lensImaginationState[pageIdx];
-            const badge = document.getElementById(`lens-badge-${pageIdx}`);
-            const btn = document.getElementById(`lens-btn-${pageIdx}`);
-            const btnLabel = document.getElementById(`lens-btn-label-${pageIdx}`);
-
-            badge.textContent = badgeText;
-            if (isImag) {
-                badge.className = "bg-purple-700 text-amber-200 font-display font-bold text-[11px] sm:text-xs px-3 py-1 rounded-full shadow border border-amber-300";
-                btnLabel.textContent = "Voltar para a Lente da Realidade";
-                btn.className = "lens-toggle-btn bg-gradient-to-r from-slate-800 to-slate-700 text-amber-300 font-display font-bold text-xs sm:text-sm px-5 py-1.5 rounded-2xl border-2 border-amber-400 flex items-center gap-2";
-            } else {
-                badge.className = "bg-slate-900/85 text-white font-display font-bold text-[11px] sm:text-xs px-3 py-1 rounded-full shadow";
-                btnLabel.textContent = "Usar Lente da Imaginação!";
-                btn.className = "lens-toggle-btn bg-gradient-to-r from-purple-600 via-fuchsia-600 to-amber-500 text-white font-display font-bold text-xs sm:text-sm px-5 py-1.5 rounded-2xl border-2 border-white flex items-center gap-2";
-            }
-
-            if (pageIdx === 0) {
-                document.getElementById('hotspots-real-0').classList.toggle('hidden', isImag);
-                document.getElementById('hotspots-imag-0').classList.toggle('hidden', !isImag);
-            }
-
-            if (pageIdx === 7) {
-                document.getElementById('windmill-blades-1').classList.add('hidden');
-                document.getElementById('windmill-blades-2').classList.add('hidden');
-            }
-        }
-
-        /* Redesenha a cena da página a partir do estado (lente + progresso) */
-        function renderScene(pageIdx) {
-            const scene = sceneFor(pageIdx);
-            updateLensUI(pageIdx, scene.badge);
-            return setSceneImage(pageIdx, scene.src);
-        }
-
-        function inviteImagination(pageIdx) {
-            // O leitor contempla a cena pelo tempo que quiser; o botão apenas convida à imaginação
-            const btn = document.getElementById(`lens-btn-${pageIdx}`);
-            if (btn) {
-                btn.classList.add('animate-bounce');
-                setTimeout(() => btn.classList.remove('animate-bounce'), 1400);
-            }
-        }
-
-        /* =====================================================================
-           3. LENTE DA REALIDADE ↔ LENTE DA IMAGINAÇÃO
-           ===================================================================== */
-        function toggleLens(pageIdx, event, forceState = null) {
-            if (sceneBusy[pageIdx]) return;
-            lensImaginationState[pageIdx] = forceState !== null ? forceState : !lensImaginationState[pageIdx];
-            const isImag = lensImaginationState[pageIdx];
-
-            playSound(isImag ? 'lensMagic' : 'wordPop');
-
-            const frame = document.getElementById(`frame-${pageIdx}`);
-            const ripple = document.createElement('div');
-            ripple.className = 'lens-ripple';
-            frame.appendChild(ripple);
-            setTimeout(() => ripple.remove(), 650);
-
-            const coords = getEventCoords(event);
-            if (coords) {
-                spawnSparkles(coords.x, coords.y, isImag ? '✨' : '👓');
-            }
-
-            renderScene(pageIdx);
-        }
-
-        /* =====================================================================
-           4. MOTOR UNIFICADO DE DRAG-AND-DROP PARA TABLET ANDROID
-           ===================================================================== */
-        function initDraggableCards() {
-            const cards = document.querySelectorAll('.draggable-card');
-            cards.forEach(card => {
-                let startX = 0, startY = 0;
-                let isDragging = false;
-                let ghostEl = null;
-                const targetZoneId = card.dataset.dropTarget;
-
-                card.addEventListener('pointerdown', (e) => {
-                    e.preventDefault();
-                    startX = e.clientX;
-                    startY = e.clientY;
-                    isDragging = false;
-                    playSound('wordPop');
-
-                    const onPointerMove = (moveEv) => {
-                        const dx = moveEv.clientX - startX;
-                        const dy = moveEv.clientY - startY;
-
-                        if (!isDragging && Math.hypot(dx, dy) > 8) {
-                            isDragging = true;
-                            ghostEl = card.cloneNode(true);
-                            ghostEl.style.position = 'fixed';
-                            ghostEl.style.left = `${moveEv.clientX - card.offsetWidth / 2}px`;
-                            ghostEl.style.top = `${moveEv.clientY - card.offsetHeight / 2}px`;
-                            ghostEl.style.width = `${card.offsetWidth}px`;
-                            ghostEl.style.zIndex = '9999';
-                            ghostEl.style.pointerEvents = 'none';
-                            ghostEl.style.transform = 'scale(1.1) rotate(-3deg)';
-                            ghostEl.style.opacity = '0.92';
-                            document.body.appendChild(ghostEl);
-                        }
-
-                        if (isDragging && ghostEl) {
-                            ghostEl.style.left = `${moveEv.clientX - card.offsetWidth / 2}px`;
-                            ghostEl.style.top = `${moveEv.clientY - card.offsetHeight / 2}px`;
-
-                            const dropZone = document.getElementById(targetZoneId);
-                            if (dropZone) {
-                                const r = dropZone.getBoundingClientRect();
-                                const inside = moveEv.clientX >= r.left && moveEv.clientX <= r.right &&
-                                               moveEv.clientY >= r.top && moveEv.clientY <= r.bottom;
-                                dropZone.classList.toggle('drop-hover', inside);
-                            }
-                        }
-                    };
-
-                    const onPointerUp = (upEv) => {
-                        window.removeEventListener('pointermove', onPointerMove);
-                        window.removeEventListener('pointerup', onPointerUp);
-                        window.removeEventListener('pointercancel', onPointerUp);
-
-                        const dropZone = document.getElementById(targetZoneId);
-                        if (dropZone) dropZone.classList.remove('drop-hover');
-
-                        if (ghostEl) {
-                            ghostEl.remove();
-                            ghostEl = null;
-                        }
-
-                        if (isDragging && dropZone) {
-                            const r = dropZone.getBoundingClientRect();
-                            const droppedInside = upEv.clientX >= r.left && upEv.clientX <= r.right &&
-                                                  upEv.clientY >= r.top && upEv.clientY <= r.bottom;
-                            if (droppedInside) {
-                                triggerCardInteraction(card, { x: upEv.clientX, y: upEv.clientY });
-                            }
-                        } else if (!isDragging) {
-                            const r = dropZone ? dropZone.getBoundingClientRect() : card.getBoundingClientRect();
-                            triggerCardInteraction(card, { x: r.left + r.width / 2, y: r.top + r.height / 2 });
-                        }
-                    };
-
-                    window.addEventListener('pointermove', onPointerMove);
-                    window.addEventListener('pointerup', onPointerUp);
-                    window.addEventListener('pointercancel', onPointerUp);
+        ],
+        acoes: {
+            // O VENTO gira as pás cada vez mais rápido até os moinhos virarem os gigantes de Cervantes
+            vento: (livro) => {
+                if (livro.ocupada() || window.ventoSoprando) return;
+                window.ventoSoprando = true;
+                livro.som('windGust');
+                const pas = [document.getElementById('windmill-blades-1'), document.getElementById('windmill-blades-2')];
+                const rajadas = document.getElementById('wind-gusts-container');
+                const girar = (velocidade) => pas.forEach(p => {
+                    p.className = `windmill-blades-overlay absolute pointer-events-none windmill-spinning-${velocidade}`;
                 });
-            });
-        }
 
-        function pageIndexOf(el) {
-            const page = el.closest('.page-slide');
-            return page ? parseInt(page.id.replace('page-', ''), 10) : currentPage;
-        }
-
-        function completeCard(card, coords) {
-            card.classList.add('card-completed');
-            if (coords) spawnSparkles(coords.x, coords.y, card.dataset.emoji || '✨');
-        }
-
-        function triggerCardInteraction(card, coords) {
-            const action = card.dataset.action;
-            const itemId = card.dataset.id;
-            const pageIdx = pageIndexOf(card);
-
-            // Uma troca de ilustração já está em andamento: ignora o toque repetido
-            if (sceneBusy[pageIdx]) return;
-
-            if (action === 'gear' || action === 'horse-care') {
-                handleProgressiveDrop(pageIdx, card, coords);
-                return;
-            }
-
-            completeCard(card, coords);
-            if (action === 'book') {
-                handleBookDrop(itemId);
-            } else if (action === 'inn') {
-                handleInnDrop(itemId);
-            } else if (action === 'wind') {
-                handleWindDrop(coords);
-            }
-        }
-
-        /* =====================================================================
-           5. LÓGICA DAS INTERAÇÕES VISUAIS
-           ===================================================================== */
-        function tapSceneHotspot(el, event, word, emoji) {
-            playSound('wordPop');
-            const coords = getEventCoords(event);
-            if (coords) spawnSparkles(coords.x, coords.y, emoji);
-        }
-
-        function tapDulcineiaHotspot(event) {
-            const isImag = lensImaginationState[3];
-            tapSceneHotspot(null, event, isImag ? 'DULCINEIA' : 'ALDONZA', isImag ? '👸' : '🌾');
-        }
-
-        function tapCatLionHotspot(event) {
-            const isImag = lensImaginationState[1];
-            tapSceneHotspot(null, event, isImag ? 'LEÃO GUARDIÃO' : 'GATINHO', isImag ? '🦁' : '🐱');
-        }
-
-        function handleBookDrop(bookId) {
-            readBooksSet.add(bookId);
-            const sceneImg = document.getElementById('scene-bg-1');
-            sceneImg.classList.remove('character-joy', 'scene-enter');
-            void sceneImg.offsetWidth;
-            sceneImg.classList.add('character-joy');
-
-            if (readBooksSet.size === 3) {
-                playSound('fanfare');
-                inviteImagination(1);
-            }
-        }
-
-        function progressCard(pageIdx, itemId) {
-            return document.querySelector(`#page-${pageIdx} .draggable-card[data-id="${itemId}"]`);
-        }
-
-        function nudge(el) {
-            if (!el) return;
-            el.classList.remove('card-nudge');
-            void el.offsetWidth;
-            el.classList.add('card-nudge');
-        }
-
-        /* Destaca o próximo item da sequência e esmaece os que ainda vão chegar */
-        function updateProgressHints(pageIdx) {
-            const prog = progressiveScenes[pageIdx];
-            const expected = prog.order[prog.done.size];
-            prog.order.forEach(id => {
-                const card = progressCard(pageIdx, id);
-                if (!card) return;
-                card.classList.toggle('card-next', id === expected);
-                card.classList.toggle('card-waiting', !prog.done.has(id) && id !== expected);
-            });
-        }
-
-        // Páginas 3 e 4: cada item revela a próxima ilustração cumulativa (vestir o cavaleiro, cuidar do Rocinante)
-        function handleProgressiveDrop(pageIdx, card, coords) {
-            const prog = progressiveScenes[pageIdx];
-            const itemId = card.dataset.id;
-
-            if (prog.done.has(itemId)) {
-                if (coords) spawnSparkles(coords.x, coords.y, card.dataset.emoji || '✨');
-                return;
-            }
-
-            const expected = prog.order[prog.done.size];
-            if (itemId !== expected) {
-                // Fora de ordem: dica gentil apontando o item certo, sem trocar a ilustração
-                playSound('hint');
-                nudge(card);
-                nudge(progressCard(pageIdx, expected));
-                return;
-            }
-
-            prog.done.add(itemId);
-            completeCard(card, coords);
-            updateProgressHints(pageIdx);
-
-            const finished = prog.done.size === prog.order.length;
-            playSound(finished ? 'fanfare' : prog.stepSound);
-
-            // Vestir e cuidar acontecem no mundo real: volta para a Lente da Realidade se preciso
-            lensImaginationState[pageIdx] = false;
-            renderScene(pageIdx).then(() => {
-                if (finished) inviteImagination(pageIdx);
-            });
-        }
-
-        // Página 5: a flauta do pastor e a sopa do estalajadeiro
-        function handleInnDrop(itemId) {
-            innItemsSet.add(itemId);
-            innLastItem = itemId;
-            playSound(itemId === 'trombeta' ? 'fanfare' : 'wordPop');
-
-            lensImaginationState[4] = false;
-            renderScene(4).then(() => {
-                if (innItemsSet.size >= 2) inviteImagination(4);
-            });
-        }
-
-        function tapWindmillOrGiant(event) {
-            const isImag = lensImaginationState[7];
-            if (isImag) {
-                tapSceneHotspot(null, event, 'GIGANTES', '⚔️');
-            } else {
-                handleWindDrop(getEventCoords(event));
-            }
-        }
-
-        let isWindSpinning = false;
-        function handleWindDrop(coords) {
-            if (isWindSpinning || sceneBusy[7]) return;
-            isWindSpinning = true;
-
-            playSound('windGust');
-            const blades1 = document.getElementById('windmill-blades-1');
-            const blades2 = document.getElementById('windmill-blades-2');
-            const gustsContainer = document.getElementById('wind-gusts-container');
-
-            if (blades1 && blades2) {
-                blades1.classList.remove('hidden');
-                blades2.classList.remove('hidden');
-
-                // Fase 1: Começa a girar suavemente
-                blades1.className = 'windmill-blades-overlay absolute pointer-events-none windmill-spinning-slow';
-                blades2.className = 'windmill-blades-overlay absolute pointer-events-none windmill-spinning-slow';
-
-                // Dispara rajadas lúdicas de vento pela colina
-                if (gustsContainer) {
-                    for (let i = 0; i < 6; i++) {
-                        setTimeout(() => {
-                            const gust = document.createElement('div');
-                            gust.className = 'wind-gust-particle';
-                            gust.textContent = '💨';
-                            gust.style.top = (15 + Math.random() * 45) + '%';
-                            gust.style.left = (5 + Math.random() * 25) + '%';
-                            gustsContainer.appendChild(gust);
-                            setTimeout(() => gust.remove(), 1200);
-                        }, i * 180);
-                    }
+                girar('slow');
+                for (let k = 0; k < 6; k++) {
+                    setTimeout(() => {
+                        const rajada = document.createElement('div');
+                        rajada.className = 'wind-gust-particle';
+                        rajada.textContent = '💨';
+                        rajada.style.top = (15 + Math.random() * 45) + '%';
+                        rajada.style.left = (5 + Math.random() * 25) + '%';
+                        rajadas.appendChild(rajada);
+                        setTimeout(() => rajada.remove(), 1200);
+                    }, k * 180);
                 }
-
-                // Fase 2: Pás aceleram com a força do vento
+                setTimeout(() => girar('fast'), 450);
+                setTimeout(() => { girar('turbo'); livro.som('lensMagic'); }, 900);
                 setTimeout(() => {
-                    blades1.className = 'windmill-blades-overlay absolute pointer-events-none windmill-spinning-fast';
-                    blades2.className = 'windmill-blades-overlay absolute pointer-events-none windmill-spinning-fast';
-                }, 450);
-
-                // Fase 3: Giro turbo extremo e suspense
-                setTimeout(() => {
-                    blades1.className = 'windmill-blades-overlay absolute pointer-events-none windmill-spinning-turbo';
-                    blades2.className = 'windmill-blades-overlay absolute pointer-events-none windmill-spinning-turbo';
-                    playSound('lensMagic');
-                }, 900);
-
-                // Fase 4: Transmutação mágica para os Gigantes de Cervantes na Imaginação!
-                setTimeout(() => {
-                    blades1.classList.add('hidden');
-                    blades2.classList.add('hidden');
-                    isWindSpinning = false;
-                    if (!lensImaginationState[7]) {
-                        toggleLens(7, null, true);
-                    }
+                    pas.forEach(p => p.classList.add('hidden'));
+                    window.ventoSoprando = false;
+                    if (!livro.lenteImaginacao()) livro.definirLente(true);
                 }, 1500);
-            } else {
-                isWindSpinning = false;
-                if (!lensImaginationState[7]) {
-                    toggleLens(7, null, true);
-                }
             }
         }
-
-        /* =====================================================================
-           PARTÍCULAS VISUAIS, NAVEGAÇÃO DE PÁGINAS E SWIPE PARA TABLET
-           ===================================================================== */
-        function getEventCoords(event) {
-            if (!event) return null;
-            if (event.clientX && event.clientY) {
-                return { x: event.clientX, y: event.clientY };
-            }
-            if (event.touches && event.touches[0]) {
-                return { x: event.touches[0].clientX, y: event.touches[0].clientY };
-            }
-            return null;
-        }
-
-        function spawnSparkles(x, y, emoji = '✨') {
-            for (let i = 0; i < 6; i++) {
-                const el = document.createElement('div');
-                el.className = 'tap-sparkle text-2xl';
-                el.textContent = emoji;
-                el.style.left = `${x}px`;
-                el.style.top = `${y}px`;
-                const angle = (Math.PI * 2 * i) / 6;
-                const dist = 40 + Math.random() * 30;
-                el.style.setProperty('--tx', `${Math.cos(angle) * dist}px`);
-                el.style.setProperty('--ty', `${Math.sin(angle) * dist - 16}px`);
-                document.body.appendChild(el);
-                setTimeout(() => el.remove(), 850);
-            }
-        }
-
-        function renderPaginationDots() {
-            const container = document.getElementById('page-dots');
-            container.innerHTML = '';
-            for (let i = 0; i < totalPages; i++) {
-                const dot = document.createElement('button');
-                dot.onclick = () => goToPage(i);
-                dot.className = i === currentPage
-                    ? 'w-7 h-3 rounded-full bg-amber-500 transition-all'
-                    : 'w-3 h-3 rounded-full bg-amber-300 hover:bg-amber-400 transition-all';
-                dot.setAttribute('aria-label', `Ir para página ${i + 1}`);
-                container.appendChild(dot);
-            }
-        }
-
-        /* =====================================================================
-           ROLAGEM INDEPENDENTE DO TEXTO
-           ===================================================================== */
-        function textScrollerOf(pageIdx) {
-            return document.querySelector(`#page-${pageIdx} .page-text-scroll`);
-        }
-
-        // Mostra o esmaecido e a seta "continua" quando ainda há texto abaixo
-        function updateScrollHint(pageIdx) {
-            const scroller = textScrollerOf(pageIdx);
-            if (!scroller) return;
-            const more = scroller.scrollHeight - scroller.scrollTop - scroller.clientHeight > 12;
-            scroller.parentElement.classList.toggle('has-more', more);
-        }
-
-        function scrollTextToSentence(sentence) {
-            const scroller = sentence.closest('.page-text-scroll');
-            if (!scroller) return;
-            const s = sentence.getBoundingClientRect();
-            const c = scroller.getBoundingClientRect();
-            const margin = 32;
-            if (s.top < c.top + margin || s.bottom > c.bottom - margin) {
-                scroller.scrollBy({ top: s.top - c.top - c.height / 3, behavior: 'smooth' });
-            }
-        }
-
-        function initTextScrolling() {
-            document.querySelectorAll('.page-text').forEach(pageText => {
-                const scroller = pageText.querySelector('.page-text-scroll');
-                const fade = document.createElement('div');
-                fade.className = 'page-text-fade';
-                const more = document.createElement('button');
-                more.type = 'button';
-                more.className = 'scroll-more';
-                more.setAttribute('aria-label', 'Continuar lendo');
-                more.innerHTML = '<i class="ph-bold ph-arrow-down"></i>';
-                more.addEventListener('click', () => {
-                    playSound('wordPop');
-                    scroller.scrollBy({ top: scroller.clientHeight * 0.7, behavior: 'smooth' });
-                });
-                pageText.append(fade, more);
-                scroller.addEventListener('scroll', () => updateScrollHint(pageIndexOf(scroller)), { passive: true });
-            });
-            window.addEventListener('resize', () => updateScrollHint(currentPage));
-        }
-
-        /* =====================================================================
-           VIRADA DE PÁGINA ANIMADA
-           Cópias inertes (sem ids) das páginas antiga e nova formam uma folha 3D
-           que gira em torno da lombada; a página real já trocou por baixo.
-           ===================================================================== */
-        const TURN_MS = 750;
-        let isTurning = false;
-
-        function inertClone(el) {
-            const clone = el.cloneNode(true);
-            clone.removeAttribute('id');
-            clone.querySelectorAll('[id]').forEach(n => n.removeAttribute('id'));
-            clone.classList.remove('page-hidden');
-            return clone;
-        }
-
-        function rectIn(el, container) {
-            const r = el.getBoundingClientRect();
-            const c = container.getBoundingClientRect();
-            return { left: r.left - c.left, top: r.top - c.top, width: r.width, height: r.height };
-        }
-
-        function placeBox(box, rect) {
-            box.style.left = `${rect.left}px`;
-            box.style.top = `${rect.top}px`;
-            box.style.width = `${rect.width}px`;
-            box.style.height = `${rect.height}px`;
-        }
-
-        function copyTextScroll(fromPage, clone) {
-            const src = fromPage.querySelector('.page-text-scroll');
-            const dst = clone.querySelector('.page-text-scroll') || (clone.classList.contains('page-text-scroll') ? clone : null);
-            if (src && dst) dst.scrollTop = src.scrollTop;
-        }
-
-        function animateTurn(oldSection, newSection, forward, showNew) {
-            const viewport = document.getElementById('pages-viewport');
-            const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            if (reduceMotion || !viewport.animate) {
-                showNew();
-                return Promise.resolve();
-            }
-
-            const twoPages = window.matchMedia('(orientation: landscape)').matches;
-            const oldArt = oldSection.querySelector('.page-art');
-            const oldText = oldSection.querySelector('.page-text');
-            const rects = {
-                art: rectIn(oldArt, viewport),
-                text: rectIn(oldText, viewport),
-                spread: rectIn(oldSection, viewport)
-            };
-            const oldClones = { art: inertClone(oldArt), text: inertClone(oldText), spread: inertClone(oldSection) };
-
-            showNew();
-
-            const newClones = {
-                art: inertClone(newSection.querySelector('.page-art')),
-                text: inertClone(newSection.querySelector('.page-text')),
-                spread: inertClone(newSection)
-            };
-            const blank = () => { const b = document.createElement('div'); b.className = 'turn-blank'; return b; };
-
-            // Paisagem: só a folha da direita (avançar) ou da esquerda (voltar) gira.
-            // Retrato: a folha inteira gira pela borda esquerda, como num leitor de uma página.
-            let statics, leafRect, origin, front, back, from, to;
-            if (twoPages) {
-                if (forward) {
-                    statics = [[oldClones.art, rects.art]];
-                    leafRect = rects.text; origin = 'left center';
-                    front = oldClones.text; back = newClones.art; from = 0; to = -180;
-                } else {
-                    statics = [[oldClones.text, rects.text]];
-                    leafRect = rects.art; origin = 'right center';
-                    front = oldClones.art; back = newClones.text; from = 0; to = 180;
-                }
-            } else if (forward) {
-                statics = [];
-                leafRect = rects.spread; origin = 'left center';
-                front = oldClones.spread; back = blank(); from = 0; to = -180;
-            } else {
-                statics = [[oldClones.spread, rects.spread]];
-                leafRect = rects.spread; origin = 'left center';
-                front = newClones.spread; back = blank(); from = -180; to = 0;
-            }
-
-            const layer = document.createElement('div');
-            layer.className = 'turn-layer';
-            statics.forEach(([clone, rect]) => {
-                const box = document.createElement('div');
-                box.className = 'turn-static';
-                placeBox(box, rect);
-                box.appendChild(clone);
-                layer.appendChild(box);
-            });
-
-            const leaf = document.createElement('div');
-            leaf.className = 'turn-leaf';
-            placeBox(leaf, leafRect);
-            leaf.style.transformOrigin = origin;
-            leaf.style.transform = `rotateY(${from}deg)`;
-            const shades = [];
-            [[front, 'turn-front'], [back, 'turn-back']].forEach(([content, cls]) => {
-                const face = document.createElement('div');
-                face.className = `turn-face ${cls}`;
-                face.appendChild(content);
-                const shade = document.createElement('div');
-                shade.className = 'turn-shade';
-                shade.style.background = cls === 'turn-front'
-                    ? 'linear-gradient(to left, rgba(0,0,0,0.35), rgba(0,0,0,0.05))'
-                    : 'linear-gradient(to right, rgba(0,0,0,0.35), rgba(0,0,0,0.05))';
-                face.appendChild(shade);
-                shades.push(shade);
-                leaf.appendChild(face);
-            });
-            layer.appendChild(leaf);
-            viewport.appendChild(layer);
-
-            // Preserva a posição de rolagem do texto nas cópias
-            [oldClones.text, oldClones.spread].forEach(c => copyTextScroll(oldSection, c));
-
-            const easing = 'cubic-bezier(0.45, 0.05, 0.35, 1)';
-            const turn = leaf.animate(
-                [
-                    { transform: `rotateY(${from}deg)` },
-                    { transform: `rotateY(${(from + to) / 2}deg) translateZ(30px)`, offset: 0.5 },
-                    { transform: `rotateY(${to}deg)` }
-                ],
-                { duration: TURN_MS, easing, fill: 'forwards' }
-            );
-            shades.forEach(shade => shade.animate(
-                [{ opacity: 0 }, { opacity: 1, offset: 0.5 }, { opacity: 0 }],
-                { duration: TURN_MS, easing, fill: 'forwards' }
-            ));
-
-            return turn.finished.catch(() => {}).then(() => layer.remove());
-        }
-
-        function goToPage(index, options = {}) {
-            if (index < 0 || index >= totalPages || index === currentPage || isTurning) return;
-            closePhonicsCard();
-            stopReadingPage();
-
-            const animate = options.animate !== false;
-            if (animate) playSound('pageFlip');
-
-            const oldSection = document.getElementById(`page-${currentPage}`);
-            const newSection = document.getElementById(`page-${index}`);
-            const forward = index > currentPage;
-            const showNew = () => {
-                oldSection.classList.add('page-hidden');
-                newSection.classList.remove('page-hidden');
-                const scroller = newSection.querySelector('.page-text-scroll');
-                if (scroller) scroller.scrollTop = 0;
-            };
-
-            currentPage = index;
-            if (animate) {
-                isTurning = true;
-                animateTurn(oldSection, newSection, forward, showNew).then(() => {
-                    isTurning = false;
-                    updateScrollHint(currentPage);
-                });
-            } else {
-                showNew();
-            }
-            updateScrollHint(currentPage);
-
-            document.getElementById('btn-prev').disabled = currentPage === 0;
-            document.getElementById('btn-next').disabled = currentPage === totalPages - 1;
-            document.getElementById('page-counter-text').textContent = `Página ${currentPage + 1} de ${totalPages}`;
-
-            renderPaginationDots();
-
-            // Aquece o cache com todas as ilustrações desta página e da próxima
-            warmImages(allSceneSrcs(currentPage));
-            if (currentPage + 1 < totalPages) warmImages(allSceneSrcs(currentPage + 1));
-        }
-
-        function nextPage() {
-            if (currentPage < totalPages - 1) goToPage(currentPage + 1);
-        }
-
-        function prevPage() {
-            if (currentPage > 0) goToPage(currentPage - 1);
-        }
-
-        window.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') closePhonicsCard();
-            if (document.getElementById('phonics-modal').classList.contains('is-open')) return;
-            if (e.key === 'ArrowRight') nextPage();
-            if (e.key === 'ArrowLeft') prevPage();
-        });
-
-        // Suporte a Swipe para virar páginas no tablet
-        let touchStartX = 0, touchStartY = 0, swipeFromCard = false;
-        const viewportEl = document.getElementById('pages-viewport');
-        viewportEl.addEventListener('touchstart', (e) => {
-            if (e.touches.length === 1) {
-                touchStartX = e.touches[0].clientX;
-                touchStartY = e.touches[0].clientY;
-                // Arrastar um cartão até a cena não pode virar a página
-                swipeFromCard = !!e.target.closest('.draggable-card');
-            }
-        }, { passive: true });
-
-        viewportEl.addEventListener('touchend', (e) => {
-            if (e.changedTouches.length === 1 && !swipeFromCard) {
-                const dx = e.changedTouches[0].clientX - touchStartX;
-                const dy = e.changedTouches[0].clientY - touchStartY;
-                if (Math.abs(dx) > 75 && Math.abs(dx) > Math.abs(dy) * 1.8) {
-                    if (dx < 0) nextPage();
-                    else prevPage();
-                }
-            }
-        }, { passive: true });
-
-        window.onload = () => {
-            renderPaginationDots();
-            initDraggableCards();
-            document.getElementById('btn-prev').disabled = true;
-
-            for (let i = 0; i < totalPages; i++) {
-                const textEl = document.getElementById(`page-text-${i}`);
-                if (textEl) splitPageTextIntoSentences(textEl);
-
-                // Camada de carregamento sobre cada cena (spinner instantâneo durante a troca)
-                const img = document.getElementById(`scene-bg-${i}`);
-                if (img) {
-                    const overlay = document.createElement('div');
-                    overlay.className = 'scene-busy-overlay';
-                    overlay.innerHTML = '<div class="scene-spinner"></div>';
-                    img.parentElement.appendChild(overlay);
-                }
-            }
-            Object.keys(progressiveScenes).forEach(idx => updateProgressHints(Number(idx)));
-            initTextScrolling();
-            updateScrollHint(currentPage);
-            warmImages(allSceneSrcs(0).concat(allSceneSrcs(1)));
-
-            // Suporte a URL params para navegação direta e testes automatizados (?page=1&imag=1)
-            const params = new URLSearchParams(window.location.search);
-            const p = parseInt(params.get('page'));
-            if (!isNaN(p) && p >= 0 && p < totalPages) {
-                goToPage(p, { animate: false });
-                if (params.get('imag') === '1' || params.get('imag') === 'true') {
-                    toggleLens(p, null, true);
-                }
-            }
-        };
+    };
     </script>
-    <script>
-        // Leitura offline: registra o service worker quando servido por http(s) (ex.: GitHub Pages).
-        // Aberto direto do arquivo (file://) o livro já funciona sem internet, pois tudo é local.
-        if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
-            window.addEventListener('load', () => navigator.serviceWorker.register('../sw.js').catch(() => {}));
-        }
-    </script>
+    <script src="../assets/js/livro.js"></script>
 </body>
 </html>

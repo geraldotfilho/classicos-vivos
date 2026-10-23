@@ -1,0 +1,673 @@
+/* Estilos compartilhados de todos os livros Clássicos Vivos (motor: assets/js/livro.js). */
+:root {
+    --parchment: #FFFDF8;
+    --parchment-border: #D97706;
+}
+
+* {
+    box-sizing: border-box;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+    font-family: 'Nunito', sans-serif;
+    background: radial-gradient(circle at center, #1e1b4b 0%, #0f172a 100%);
+    height: 100vh;
+    height: 100dvh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    overscroll-behavior: none;
+    touch-action: manipulation;
+}
+
+h1, h2, h3, h4, .font-display {
+    font-family: 'Fredoka', sans-serif;
+}
+
+/* Moldura de Livro Ilustrado para Tablet */
+.storybook-frame {
+    background: var(--parchment);
+    border: 6px solid #D97706;
+    height: calc(100vh - 10px);
+    height: calc(100dvh - 10px);
+    max-height: 100%;
+    box-shadow:
+        0 25px 60px -15px rgba(0, 0, 0, 0.75),
+        inset 0 0 35px rgba(217, 119, 6, 0.12),
+        0 0 0 4px #78350F;
+}
+
+@media (min-width: 640px) {
+    .storybook-frame {
+        border-width: 8px;
+        height: calc(100vh - 20px);
+        height: calc(100dvh - 20px);
+        max-height: 100%;
+    }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+    .storybook-frame {
+        max-height: 900px;
+    }
+}
+
+/* Palavras em MAIÚSCULAS para Alfabetização (apenas no texto) */
+.literacy-word {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #9A3412;
+    background: linear-gradient(180deg, #FEF08A 0%, #FDE047 100%);
+    padding: 2px 10px;
+    margin: 2px 2px;
+    border-radius: 12px;
+    border: 2px solid #F59E0B;
+    box-shadow: 0 3px 0 #D97706;
+    cursor: pointer;
+    transition: transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.2s, box-shadow 0.15s;
+    position: relative;
+}
+
+.literacy-word:hover {
+    background: linear-gradient(180deg, #FDE047 0%, #FACC15 100%);
+}
+
+.literacy-word:active,
+.literacy-word.word-speaking {
+    transform: scale(1.12) translateY(-2px);
+    background: linear-gradient(180deg, #A7F3D0 0%, #34D399 100%);
+    color: #065F46;
+    border-color: #059669;
+    box-shadow: 0 4px 0 #047857;
+}
+
+/* Cartão de alfabetização (palavras-chave do texto) */
+.phonics-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 60;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    background: rgba(15, 23, 42, 0.55);
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+}
+.phonics-backdrop.is-open {
+    display: flex;
+    animation: backdropIn 0.18s ease-out;
+}
+@keyframes backdropIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.phonics-card {
+    width: 100%;
+    max-width: 30rem;
+    max-height: calc(100dvh - 32px);
+    overflow-y: auto;
+    background: #FFFDF8;
+    border: 6px solid #F59E0B;
+    border-radius: 32px;
+    padding: 28px 24px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 8px 0 #D97706, 0 30px 60px -15px rgba(0, 0, 0, 0.6);
+    animation: popIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.phonics-card:active { transform: scale(0.98); }
+.phonics-card:active .phonics-replay { transform: translateY(2px); }
+.syllable-chip {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 700;
+    font-size: clamp(1.5rem, 5vw, 2.25rem);
+    letter-spacing: 0.06em;
+    line-height: 1;
+    padding: 10px 16px;
+    border-radius: 18px;
+    border: 3px solid;
+}
+/* Cores alternadas ajudam a enxergar onde cada sílaba começa e termina */
+.syllable-chip:nth-child(4n+1) { background: #FFE4E6; border-color: #FB7185; color: #9F1239; }
+.syllable-chip:nth-child(4n+2) { background: #E0F2FE; border-color: #38BDF8; color: #075985; }
+.syllable-chip:nth-child(4n+3) { background: #FEF9C3; border-color: #FACC15; color: #854D0E; }
+.syllable-chip:nth-child(4n+4) { background: #DCFCE7; border-color: #4ADE80; color: #166534; }
+
+/* Botões táteis 3D para crianças */
+.btn-chunky {
+    transition: all 0.14s ease;
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.28);
+    cursor: pointer;
+}
+.btn-chunky:active:not(:disabled) {
+    transform: translateY(3px);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.28);
+}
+
+/* Botão Especial da Lente da Imaginação vs. Realidade */
+.lens-toggle-btn {
+    transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.35), 0 0 16px rgba(168, 85, 247, 0.45);
+}
+.lens-toggle-btn:active {
+    transform: translateY(3px) scale(0.98);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
+}
+
+/* Peças Arrastáveis (Drag & Drop Pedagógico) */
+.draggable-card {
+    touch-action: none;
+    cursor: grab;
+    transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s ease, background-color 0.2s;
+    box-shadow: 0 4px 0 #D97706;
+}
+.draggable-card:hover {
+    transform: translateY(-2px) scale(1.02);
+}
+.draggable-card:active {
+    cursor: grabbing;
+}
+.draggable-card.card-completed {
+    background: linear-gradient(180deg, #D1FAE5 0%, #A7F3D0 100%) !important;
+    border-color: #059669 !important;
+    box-shadow: 0 3px 0 #047857 !important;
+}
+
+/* Zona Alvo onde soltar o objeto arrastado */
+.drop-zone-target {
+    transition: all 0.22s ease;
+}
+.drop-zone-target.drop-hover {
+    transform: scale(1.02);
+    filter: drop-shadow(0 0 16px rgba(250, 204, 21, 0.95));
+}
+
+/* Hotspots limpos sem ícones poluentes na imagem */
+.scene-hotspot {
+    position: absolute;
+    cursor: pointer;
+    border-radius: 16px;
+    transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.scene-hotspot:active {
+    transform: scale(0.97);
+}
+
+/* Efeito de Onda Mágica ao trocar a Lente */
+@keyframes lensFlash {
+    0% { opacity: 0.9; transform: scale(0.8); }
+    100% { opacity: 0; transform: scale(2.2); }
+}
+.lens-ripple {
+    position: absolute;
+    inset: 0;
+    border-radius: 9999px;
+    background: radial-gradient(circle, rgba(250,204,21,0.75) 0%, rgba(168,85,247,0.6) 50%, transparent 75%);
+    pointer-events: none;
+    animation: lensFlash 0.65s ease-out forwards;
+    z-index: 40;
+}
+
+/* Animações */
+@keyframes floatSlow {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+}
+@keyframes popIn {
+    0% { transform: scale(0.4); opacity: 0; }
+    75% { transform: scale(1.06); opacity: 1; }
+    100% { transform: scale(1); opacity: 1; }
+}
+@keyframes horseJump {
+    0%, 100% { transform: translateY(0) rotate(0deg) scale(1); }
+    25% { transform: translateY(-10px) rotate(-3deg) scale(1.03); }
+    55% { transform: translateY(0) rotate(2deg) scale(1.02); }
+}
+@keyframes shakeJoy {
+    0%, 100% { transform: rotate(0deg) scale(1); }
+    25% { transform: rotate(-4deg) scale(1.03); }
+    75% { transform: rotate(4deg) scale(1.03); }
+}
+
+.animate-float { animation: floatSlow 3.2s ease-in-out infinite; }
+.animate-pop { animation: popIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
+.horse-happy { animation: horseJump 0.65s ease-in-out 2; }
+.character-joy { animation: shakeJoy 0.5s ease-in-out 2; }
+
+/* Partículas flutuantes no toque */
+.tap-sparkle {
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    animation: sparkleFly 0.85s ease-out forwards;
+}
+@keyframes sparkleFly {
+    0% { transform: translate(-50%, -50%) scale(0.5); opacity: 1; }
+    100% { transform: translate(var(--tx), var(--ty)) scale(1.35) rotate(25deg); opacity: 0; }
+}
+
+/* Animações das Pás dos Moinhos de Vento e Rajadas */
+@keyframes windmillSpin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+.windmill-spinning-slow {
+    animation: windmillSpin 2.6s linear infinite;
+}
+.windmill-spinning-fast {
+    animation: windmillSpin 0.45s linear infinite;
+}
+.windmill-spinning-turbo {
+    animation: windmillSpin 0.12s linear infinite;
+}
+@keyframes windGustTravel {
+    0% { transform: translateX(-60px) scale(0.6); opacity: 0; }
+    35% { opacity: 0.95; }
+    100% { transform: translateX(550px) scale(1.35); opacity: 0; }
+}
+.wind-gust-particle {
+    position: absolute;
+    animation: windGustTravel 1.1s ease-out forwards;
+    font-size: 2.2rem;
+    filter: drop-shadow(0 2px 5px rgba(255,255,255,0.85));
+    pointer-events: none;
+}
+
+/* Troca de ilustração: feedback instantâneo enquanto a nova cena carrega,
+   evitando que a criança toque duas vezes achando que a tela travou */
+.scene-img {
+    transition: filter 0.2s ease;
+}
+.scene-busy-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 30;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.1s ease;
+    background: radial-gradient(circle, rgba(15, 23, 42, 0.05) 0%, rgba(15, 23, 42, 0.4) 100%);
+}
+.scene-spinner {
+    width: 64px;
+    height: 64px;
+    border-radius: 9999px;
+    border: 6px solid rgba(255, 255, 255, 0.4);
+    border-top-color: #FACC15;
+    border-right-color: #C084FC;
+    animation: sceneSpin 0.7s linear infinite;
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.4));
+}
+@keyframes sceneSpin {
+    to { transform: rotate(360deg); }
+}
+.scene-loading .scene-busy-overlay { opacity: 1; }
+.scene-loading .scene-img { filter: blur(2px) brightness(0.85) saturate(0.7); }
+.scene-enter { animation: sceneEnter 0.35s ease-out; }
+@keyframes sceneEnter {
+    from { opacity: 0.3; transform: scale(1.015); }
+    to { opacity: 1; transform: scale(1); }
+}
+/* Enquanto a cena carrega, os controles da página ficam travados com aparência de espera */
+.page-busy .draggable-card,
+.page-busy .lens-toggle-btn {
+    pointer-events: none;
+    opacity: 0.7;
+    filter: saturate(0.6);
+}
+
+/* Próximo item sugerido nas cenas progressivas (vestir o cavaleiro, cuidar do Rocinante) */
+@keyframes nextGlow {
+    0%, 100% { box-shadow: 0 4px 0 #D97706, 0 0 0 0 rgba(250, 204, 21, 0.0); }
+    50% { box-shadow: 0 4px 0 #D97706, 0 0 0 6px rgba(250, 204, 21, 0.75); }
+}
+.draggable-card.card-next:not(.card-completed) {
+    animation: nextGlow 1.4s ease-in-out infinite;
+}
+.draggable-card.card-waiting:not(.card-completed) {
+    opacity: 0.6;
+}
+@keyframes cardNudge {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+.card-nudge { animation: cardNudge 0.3s ease-in-out 2; }
+
+/* Leitura guiada: a frase sendo narrada fica destacada */
+.sentence {
+    border-radius: 8px;
+    transition: background-color 0.25s ease, box-shadow 0.25s ease;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+}
+.sentence.sentence-reading {
+    background-color: #FDE68A;
+    box-shadow: 0 0 0 4px #FDE68A;
+    color: #451A03;
+}
+
+/* Exibição e ocultação de páginas no leitor */
+.page-slide {
+    opacity: 1;
+}
+.page-hidden {
+    display: none !important;
+}
+
+/* =====================================================================
+   LIVRO ABERTO: ilustração numa página, texto na outra, as duas visíveis.
+   Paisagem: páginas lado a lado (lombada vertical no meio).
+   Retrato: páginas empilhadas (ilustração em cima, texto embaixo).
+   Só o texto rola; a ilustração fica sempre à vista durante a leitura.
+   ===================================================================== */
+.book-viewport {
+    position: relative;
+    flex: 1 1 auto;
+    min-height: 0;
+    width: 100%;
+    overflow: hidden;
+    overflow: clip;
+    padding: 10px 14px 14px;
+    /* Capa de couro por trás das folhas */
+    background:
+        radial-gradient(ellipse at 50% 35%, rgba(255, 255, 255, 0.08) 0%, transparent 60%),
+        linear-gradient(160deg, #7C2D12 0%, #5B1D0C 55%, #431407 100%);
+    perspective: 2400px;
+}
+.spread {
+    position: relative;
+    height: 100%;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr);
+}
+.book-page {
+    position: relative;
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+    background-color: #FFFBF0;
+    background-image:
+        radial-gradient(circle at 20% 15%, rgba(255, 255, 255, 0.7) 0%, transparent 45%),
+        radial-gradient(circle at 80% 90%, rgba(217, 119, 6, 0.06) 0%, transparent 50%);
+}
+/* Sombra da lombada (dobra do papel junto ao centro do livro) */
+.book-page::after {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    z-index: 5;
+}
+.page-art {
+    border-radius: 16px 3px 3px 16px;
+    padding: 14px 22px 14px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    container-type: size;
+    /* Bordas das folhas empilhadas */
+    box-shadow: -2px 2px 0 #EADFC8, -4px 4px 0 #FFF8E8, -6px 6px 0 #E2D4B6, -8px 8px 12px rgba(0, 0, 0, 0.35);
+}
+.page-art::after {
+    top: 0; bottom: 0; right: 0;
+    width: 56px;
+    background: linear-gradient(to left, rgba(120, 53, 15, 0.30) 0%, rgba(120, 53, 15, 0.08) 45%, transparent 100%);
+}
+.page-text {
+    border-radius: 3px 16px 16px 3px;
+    box-shadow: 2px 2px 0 #EADFC8, 4px 4px 0 #FFF8E8, 6px 6px 0 #E2D4B6, 8px 8px 12px rgba(0, 0, 0, 0.35);
+}
+.page-text::after {
+    top: 0; bottom: 0; left: 0;
+    width: 56px;
+    background: linear-gradient(to right, rgba(120, 53, 15, 0.30) 0%, rgba(120, 53, 15, 0.08) 45%, transparent 100%);
+}
+/* A ilustração ocupa a largura da página, mas encolhe para caber na altura */
+.art-plate {
+    width: min(100%, calc((100cqh - 150px) * 16 / 9));
+    max-height: 100%;
+}
+.page-text-scroll {
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    padding: 22px 26px 30px 34px;
+    scrollbar-width: thin;
+    scrollbar-color: #F59E0B transparent;
+}
+.page-text-inner {
+    min-height: 100%;
+    justify-content: center;
+}
+/* "Tem mais texto": esmaecido no rodapé da página + seta tocável */
+.page-text-fade {
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 64px;
+    pointer-events: none;
+    background: linear-gradient(to top, #FFFBF0 15%, rgba(255, 251, 240, 0));
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    z-index: 6;
+}
+.scroll-more {
+    position: absolute;
+    right: 16px; bottom: 10px;
+    width: 48px; height: 48px;
+    border-radius: 9999px;
+    background: #F59E0B;
+    border: 3px solid #fff;
+    color: #451A03;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 0 #B45309, 0 6px 14px rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 7;
+    animation: scrollNudge 1.6s ease-in-out infinite;
+}
+@keyframes scrollNudge {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(4px); }
+}
+.page-text.has-more .page-text-fade { opacity: 1; }
+.page-text.has-more .scroll-more { opacity: 1; pointer-events: auto; }
+
+@media (orientation: portrait) {
+    .book-viewport { padding: 10px 10px 14px; }
+    .spread {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto minmax(0, 1fr);
+    }
+    .page-art {
+        border-radius: 16px 16px 3px 3px;
+        padding: 12px 14px 20px;
+        container-type: inline-size;
+        box-shadow: 2px -2px 0 #EADFC8, 4px -4px 0 #FFF8E8, 0 -6px 12px rgba(0, 0, 0, 0.25);
+    }
+    .page-art::after {
+        top: auto; left: 0; right: 0; bottom: 0;
+        width: auto; height: 40px;
+        background: linear-gradient(to top, rgba(120, 53, 15, 0.26) 0%, rgba(120, 53, 15, 0.06) 50%, transparent 100%);
+    }
+    .page-text {
+        border-radius: 3px 3px 16px 16px;
+        box-shadow: 2px 2px 0 #EADFC8, 4px 4px 0 #FFF8E8, 6px 6px 0 #E2D4B6, 8px 8px 12px rgba(0, 0, 0, 0.35);
+    }
+    .page-text::after {
+        top: 0; left: 0; right: 0; bottom: auto;
+        width: auto; height: 40px;
+        background: linear-gradient(to bottom, rgba(120, 53, 15, 0.26) 0%, rgba(120, 53, 15, 0.06) 50%, transparent 100%);
+    }
+    .art-plate { width: 100%; }
+    .page-text-scroll { padding: 26px 24px 30px; }
+}
+
+/* Virada de página: folha 3D que gira em torno da lombada */
+.turn-layer {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 40;
+    perspective: 2400px;
+}
+.turn-static,
+.turn-leaf {
+    position: absolute;
+}
+.turn-leaf {
+    transform-style: preserve-3d;
+    will-change: transform;
+    z-index: 2;
+}
+.turn-face {
+    position: absolute;
+    inset: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.turn-face.turn-back { transform: rotateY(180deg); }
+.turn-face > .book-page,
+.turn-static > .book-page,
+.turn-face > .spread,
+.turn-static > .spread {
+    width: 100%;
+    height: 100%;
+}
+.turn-blank {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    background: #FFFBF0;
+}
+.turn-shade {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 10;
+}
+
+/* =====================================================================
+   CAMADAS (personagens e adereços com alfa sobre o cenário, AGENTS §4.2)
+   Posição e tamanho em % do quadro 16:9, ancoradas pela base.
+   ===================================================================== */
+.camada {
+    position: absolute;
+    transform: translate(-50%, -100%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    z-index: 8;
+}
+.camada-arte > img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.camada.camada-visivel { opacity: 1; }
+.camada.camada-visivel.camada-entrou > .camada-arte { animation: camadaEntra 0.45s cubic-bezier(0.34, 1.56, 0.64, 1); }
+@keyframes camadaEntra {
+    from { transform: scale(0.6) translateY(10%); opacity: 0; }
+    to { transform: none; opacity: 1; }
+}
+/* Arte ainda não entregue pelo Nano-Banana: mostra o emoji provisório */
+.camada.sem-arte > .camada-arte { display: none; }
+.camada.sem-arte::after {
+    content: attr(data-emoji);
+    display: block;
+    text-align: center;
+    font-size: clamp(1.6rem, 4vw, 3.5rem);
+    line-height: 1;
+    filter: drop-shadow(0 3px 4px rgba(0, 0, 0, 0.35));
+}
+.camada-arte { width: 100%; height: 100%; }
+/* Animações contínuas das camadas visíveis */
+.anim-balanco > .camada-arte, .anim-balanco.sem-arte::after { animation: animBalanco 1.1s ease-in-out infinite; transform-origin: 50% 100%; }
+.anim-flutuar > .camada-arte, .anim-flutuar.sem-arte::after { animation: animFlutuar 3s ease-in-out infinite; }
+.anim-girar > .camada-arte, .anim-girar.sem-arte::after { animation: animGirar 3s linear infinite; }
+.anim-pulsar > .camada-arte, .anim-pulsar.sem-arte::after { animation: animPulsar 1.6s ease-in-out infinite; }
+@keyframes animBalanco { 0%, 100% { transform: rotate(-6deg); } 50% { transform: rotate(6deg) translateY(-4%); } }
+@keyframes animFlutuar { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6%); } }
+@keyframes animGirar { to { transform: rotate(360deg); } }
+@keyframes animPulsar { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.06); } }
+/* Animações disparadas por um cartão (uma vez por toque) */
+.efeito-cambalhota > .camada-arte, .efeito-cambalhota.sem-arte::after { animation: efCambalhota 0.9s cubic-bezier(0.45, 0.05, 0.35, 1); transform-origin: 50% 60%; }
+.efeito-pulo > .camada-arte, .efeito-pulo.sem-arte::after { animation: efPulo 0.6s ease-out; }
+.efeito-estouro > .camada-arte, .efeito-estouro.sem-arte::after { animation: efEstouro 0.5s ease-out forwards; }
+.efeito-atravessar > .camada-arte, .efeito-atravessar.sem-arte::after { animation: efAtravessar 1.4s ease-in-out; }
+@keyframes efCambalhota { 0% { transform: rotate(0); } 40% { transform: translateY(-25%) rotate(-200deg); } 100% { transform: rotate(-360deg); } }
+@keyframes efPulo { 0%, 100% { transform: translateY(0); } 40% { transform: translateY(-18%); } }
+@keyframes efEstouro { 0% { transform: scale(1); } 40% { transform: scale(1.25); } 100% { transform: scale(0.2); opacity: 0; } }
+@keyframes efAtravessar { from { transform: translateX(-140%); opacity: 0.2; } to { transform: translateX(0); opacity: 1; } }
+
+/* Ilustração de cena ainda não entregue */
+.scene-placeholder {
+    position: absolute;
+    inset: 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    background: repeating-linear-gradient(45deg, #FEF3C7 0 18px, #FDE68A 18px 36px);
+    color: #78350F;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    padding: 12px;
+    z-index: 1;
+}
+.scene-placeholder .ph-emoji { font-size: clamp(2.5rem, 6vw, 5rem); line-height: 1; }
+.scene-missing .scene-placeholder { display: flex; }
+.scene-missing .scene-img { visibility: hidden; }
+
+/* Faixa onde as palavras ordenadas pela criança vão sendo escritas (ex.: a carta de Sancho) */
+.faixa-palavras {
+    min-height: 52px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 8px 12px;
+    border-radius: 14px;
+    border: 2px dashed #D97706;
+    background: #FFF7E6;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: #78350F;
+}
+.faixa-palavras .palavra-escrita { animation: popIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1); }
+.faixa-palavras .faixa-vazia { opacity: 0.55; font-weight: 600; font-size: 0.95rem; }
+
+/* Fim da parte: convite para a próxima */
+.fim-parte {
+    background: rgba(253, 230, 138, 0.9);
+    border: 2px solid #F59E0B;
+    border-radius: 18px;
+    padding: 10px 12px;
+    text-align: center;
+}

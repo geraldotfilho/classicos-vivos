@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#78350F">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>Dom Quixote de La Mancha - Parte 3 | Clássicos Vivos</title>
+    <!-- Estilos locais (offline): Tailwind compilado, fontes, ícones e o estilo comum dos livros. Regerar com `npm run build`. -->
+    <link rel="stylesheet" href="../assets/css/tailwind.css">
+    <link rel="stylesheet" href="../assets/css/fonts.css">
+    <link rel="stylesheet" href="../assets/css/icons.css">
+    <link rel="stylesheet" href="../assets/css/livro.css">
+    <link rel="manifest" href="../manifest.webmanifest">
+    <link rel="apple-touch-icon" href="../assets/icones/icone-180.png">
+</head>
+<body class="p-1 sm:p-2.5 select-none">
+    <noscript>Este livro interativo precisa de JavaScript ativado no navegador.</noscript>
+
+    <script>
+    /* =========================================================================
+       DOM QUIXOTE DE LA MANCHA — PARTE 3: SERRA MORENA E A PRINCESA MICOMICONA
+       Adaptação de Cervantes, Primeira Parte, capítulos 23 a 38.
+       Ilustrações: docs/TODO-NANO-BANANA-PARTES-2-4.md (pasta imagens/parte-3/).
+       ========================================================================= */
+    window.LIVRO = {
+        obra: 'Dom Quixote de La Mancha',
+        autor: 'Miguel de Cervantes',
+        parte: 3,
+        totalPartes: 4,
+        imagens: './imagens/parte-3/',
+        fim: {
+            mensagem: '🎉 Fim da Parte 3! Na Parte 4: uma jaula encantada, um cavalo de madeira que voa e Sancho governador!',
+            proxima: './parte-4.html',
+            proximaRotulo: 'Ir para a Parte 4'
+        },
+        paginas: [
+            {
+                capa: true,
+                titulo: 'Parte 3: Serra Morena e a Princesa Micomicona',
+                texto: `Com o seu elmo brilhante na cabeça, o Cavaleiro da Triste Figura subiu com Sancho as montanhas selvagens da {{SERRA MORENA|SER • RA • MO • RE • NA|⛰️}}.
+
+                    Lá no alto, entre pedras e árvores retorcidas, eles vão encontrar uma mala misteriosa, escrever uma {{CARTA|CAR • TA|✉️}} de amor, rever velhos amigos disfarçados e conhecer uma {{PRINCESA|PRIN • CE • SA|👸}} que precisa de ajuda.
+
+                    Vire a página e suba a serra com eles!`,
+                cena: {
+                    real: 'p0-real.webp', imag: 'p0-imag.webp', emoji: '⛰️',
+                    alt: 'Dom Quixote e Sancho sobem uma trilha entre as montanhas rochosas da Serra Morena',
+                    legendaReal: '👓 Lente da Realidade: A Trilha da Serra Morena',
+                    legendaImag: '✨ Lente da Imaginação: As Montanhas de um Reino Encantado!'
+                }
+            },
+            {
+                capitulo: '🧳 Capítulo 15 • A Mala Perdida', corCapitulo: 'text-amber-700',
+                titulo: 'Um Tesouro no Meio da Serra',
+                texto: `Subindo a serra, Sancho tropeçou numa velha {{MALA|MA • LA|🧳}} de couro, abandonada entre as pedras. Estava toda molhada de chuva e meio rasgada. O que será que havia lá dentro?
+
+                    Abra a mala para descobrir! Havia {{MOEDAS|MO • E • DAS|🪙}} de ouro, que deixaram Sancho pulando de alegria, e um {{CADERNO|CA • DER • NO|📓}} cheio de {{POEMAS|PO • E • MAS|📜}} escritos à mão.
+
+                    Dom Quixote pegou o caderno e leu em voz alta os versos tristes de um jovem apaixonado que se perdera na serra. — Quem escreve assim tem o coração ferido — disse o cavaleiro. — Os livros guardam os segredos do coração!`,
+                cena: {
+                    real: 'p1-real.webp', imag: 'p1-imag.webp', emoji: '🧳',
+                    alt: 'Sancho e Dom Quixote diante de uma velha mala de couro entre as pedras da serra',
+                    legendaReal: '👓 Lente da Realidade: Uma Mala Velha entre as Pedras',
+                    legendaImag: '✨ Lente da Imaginação: O Baú de um Poeta Encantado!',
+                    camadas: [
+                        { id: 'moedas', src: 'camadas/p1-moedas.png', item: 'moedas', x: 44, y: 90, w: 14, emoji: '🪙' },
+                        { id: 'caderno', src: 'camadas/p1-caderno.png', item: 'caderno', x: 58, y: 90, w: 13, emoji: '📓' }
+                    ],
+                    cartoes: {
+                        tipo: 'camadas',
+                        itens: [
+                            { id: 'moedas', palavra: 'MOEDAS', emoji: '🪙', som: 'fanfare' },
+                            { id: 'caderno', palavra: 'CADERNO', emoji: '📓', som: 'wordPop' }
+                        ]
+                    }
+                }
+            },
+            {
+                capitulo: '🤸 Capítulo 16 • As Cambalhotas da Saudade', corCapitulo: 'text-rose-600',
+                titulo: 'Um Cavaleiro de Pernas para o Ar',
+                texto: `No meio da serra, Dom Quixote teve uma ideia: — Sancho, vou ficar aqui para mostrar a minha {{SAUDADE|SAU • DA • DE|💭}} de Dulcineia, como fez o grande cavaleiro {{AMADIS|A • MA • DIS|🗡️}}! E você vai levar uma carta minha até ela.
+
+                    — E como eu vou contar à senhora Dulcineia as loucuras que vossa mercê faz por ela? — perguntou Sancho.
+
+                    — Assim! — respondeu Dom Quixote. E, só de camisolão, deu uma {{CAMBALHOTA|CAM • BA • LHO • TA|🤸}}, depois outra, de pernas para o ar! Sancho tapou os olhos e caiu na risada. Faça o cavaleiro dar cambalhotas!`,
+                cena: {
+                    real: 'p2-real.webp', imag: 'p2-imag.webp', emoji: '🤸',
+                    alt: 'Numa clareira da serra, Sancho ri enquanto Dom Quixote, de camisolão, se prepara para dar cambalhotas',
+                    legendaReal: '👓 Lente da Realidade: Cambalhotas de Camisolão na Serra',
+                    legendaImag: '✨ Lente da Imaginação: Os Saltos Heroicos de um Cavaleiro Apaixonado!',
+                    camadas: [
+                        { id: 'quixote-camisolao', src: 'camadas/p2-quixote-camisolao.png', x: 40, y: 92, w: 18, emoji: '🤸' }
+                    ],
+                    cartoes: {
+                        tipo: 'camadas',
+                        colunas: 1,
+                        itens: [
+                            { id: 'cambalhota', palavra: 'CAMBALHOTA', emoji: '🤸', som: 'wordPop', animar: 'quixote-camisolao', efeito: 'cambalhota' }
+                        ]
+                    }
+                }
+            },
+            {
+                capitulo: '✉️ Capítulo 17 • A Carta para Dulcineia', corCapitulo: 'text-purple-700',
+                titulo: 'Sancho Esqueceu a Carta!',
+                texto: `Dom Quixote escreveu uma linda {{CARTA|CAR • TA|✉️}} para Dulcineia no caderno dos poemas e a assinou com o seu novo nome. Sancho montou no burrico e partiu, todo importante.
+
+                    Só que, no caminho, ele descobriu que tinha esquecido o caderno! Coçou a cabeça e tentou lembrar a carta de {{MEMÓRIA|ME • MÓ • RI • A|🧠}}: — Começava assim: "Sobajada e alta senhora"... ou era "soberana"? E terminava com... com...
+
+                    Ajude Sancho a lembrar a {{ASSINATURA|AS • SI • NA • TU • RA|✍️}} da carta, tocando nas palavras na ordem certa!`,
+                cena: {
+                    real: 'p3-real.webp', imag: 'p3-imag.webp', emoji: '✉️',
+                    alt: 'Sancho no burrico, coçando a cabeça, tentando lembrar a carta',
+                    legendaReal: '👓 Lente da Realidade: Sancho Tentando Lembrar',
+                    legendaImag: '✨ Lente da Imaginação: A Carta Voando até o Toboso!',
+                    // Literacia dentro da história: as palavras embaralhadas na memória de Sancho
+                    cartoes: {
+                        tipo: 'ordem',
+                        colunas: 5,
+                        faixaVazia: 'Assinatura: toque nas palavras na ordem certa',
+                        ordem: ['o', 'cavaleiro', 'da', 'triste', 'figura'],
+                        itens: [
+                            { id: 'triste', palavra: 'TRISTE', emoji: '🎭' },
+                            { id: 'o', palavra: 'O', emoji: '✍️' },
+                            { id: 'figura', palavra: 'FIGURA', emoji: '🎭' },
+                            { id: 'cavaleiro', palavra: 'CAVALEIRO', emoji: '🛡️' },
+                            { id: 'da', palavra: 'DA', emoji: '✍️' }
+                        ]
+                    },
+                    realCena: (estado) => estado.usados.size >= 5
+                        ? { src: 'p3-real-lembrou.webp', legenda: '👓 Lente da Realidade: Sancho Lembrou! "O Cavaleiro da Triste Figura"' }
+                        : null,
+                    precarregar: ['p3-real-lembrou.webp']
+                }
+            },
+            {
+                capitulo: '🎭 Capítulo 18 • Amigos Disfarçados', corCapitulo: 'text-teal-700',
+                titulo: 'O Padre, o Barbeiro e uma Barba de Boi',
+                texto: `Numa pousada da estrada, Sancho encontrou dois velhos conhecidos da aldeia: o {{PADRE|PA • DRE|⛪}} e mestre Nicolau, o barbeiro. Eles estavam preocupados com Dom Quixote e queriam levá-lo de volta para casa.
+
+                    — Ele só vai sair da serra se um cavaleiro andante precisar de socorro! — explicou Sancho.
+
+                    Então os dois inventaram um plano: um {{DISFARCE|DIS • FAR • CE|🎭}}! O barbeiro grudou no queixo uma enorme {{BARBA|BAR • BA|🧔}} ruiva, feita com o rabo de um boi, e o padre se vestiu de dama. Quando se olharam no espelho, os dois riram tanto que quase desistiram do plano!`,
+                cena: {
+                    real: 'p4-real.webp', imag: 'p4-imag.webp', emoji: '🎭',
+                    alt: 'O padre e o barbeiro se disfarçam numa pousada, o barbeiro com uma barba ruiva de rabo de boi',
+                    legendaReal: '👓 Lente da Realidade: Uma Barba Feita de Rabo de Boi',
+                    legendaImag: '✨ Lente da Imaginação: Uma Dama Nobre e seu Escudeiro Barbudo!',
+                    hotspots: [
+                        { x: 55, y: 20, w: 25, h: 60, palavra: 'BARBA', emoji: '🧔', emojiImag: '✨', titulo: 'Tocar no barbeiro' }
+                    ]
+                }
+            },
+            {
+                capitulo: '👸 Capítulo 19 • A Princesa Micomicona', corCapitulo: 'text-fuchsia-700',
+                titulo: 'Uma Princesa Pede Ajuda',
+                texto: `Na serra, os amigos conheceram Doroteia, uma moça esperta e corajosa que topou ajudar no plano. Ela vestiu suas roupas mais bonitas e se ajoelhou diante de Dom Quixote:
+
+                    — Nobre cavaleiro! Eu sou a {{PRINCESA|PRIN • CE • SA|👸}} {{MICOMICONA|MI • CO • MI • CO • NA|👑}}, e um gigante terrível, Pandafilando da Fosca Vista, tomou o meu reino. Só vós podeis me ajudar!
+
+                    Dom Quixote ajudou a princesa a se levantar e fez uma {{PROMESSA|PRO • MES • SA|🤝}} solene: não descansaria enquanto o reino de Micomicão não estivesse livre. E assim, sem perceber, começou a viagem de volta para casa.`,
+                cena: {
+                    real: 'p5-real.webp', imag: 'p5-imag.webp', emoji: '👸',
+                    alt: 'Doroteia, de vestido bonito, ajoelha-se diante de Dom Quixote na serra',
+                    legendaReal: '👓 Lente da Realidade: Doroteia e um Plano Muito Esperto',
+                    legendaImag: '✨ Lente da Imaginação: A Princesa do Reino de Micomicão!',
+                    hotspots: [
+                        { x: 52, y: 25, w: 26, h: 70, palavra: 'PRINCESA', emoji: '🌸', emojiImag: '👑', titulo: 'Tocar na princesa' }
+                    ]
+                }
+            },
+            {
+                capitulo: '💤 Capítulo 20 • A Batalha dos Odres', corCapitulo: 'text-red-700',
+                titulo: 'Um Gigante no Meio da Noite',
+                texto: `De volta à pousada, todos dormiam quando ouviram gritos: — Toma, gigante malvado! Dom Quixote, ainda dormindo e sonhando com a batalha, lutava de camisolão contra os enormes {{ODRES|O • DRES|🍷}} de couro cheios de vinho tinto pendurados no quarto.
+
+                    Em seu {{SONHO|SO • NHO|💤}}, cada odre era o {{GIGANTE|GI • GAN • TE|👹}} Pandafilando! Ele golpeava com a {{ESPADA|ES • PA • DA|⚔️}}, e o vinho escorria pelo chão como um rio vermelho. Toque na espada e veja o que aconteceu com os odres!
+
+                    O dono da pousada ficou furioso com o prejuízo, mas o padre prometeu pagar tudo. E Dom Quixote acordou feliz da vida, achando que tinha salvado o reino da princesa!`,
+                cena: {
+                    real: 'p6-real.webp', imag: 'p6-imag.webp', emoji: '🍷',
+                    alt: 'À luz de velas, Dom Quixote de camisolão golpeia odres de vinho pendurados no quarto da pousada',
+                    legendaReal: '👓 Lente da Realidade: Odres de Vinho Pendurados no Quarto',
+                    legendaImag: '✨ Lente da Imaginação: O Gigante Pandafilando da Fosca Vista!',
+                    camadas: [
+                        { id: 'odre-1', src: 'camadas/p6-odre.png', ate: 'golpe-1', x: 55, y: 55, w: 10, emoji: '🍷' },
+                        { id: 'odre-2', src: 'camadas/p6-odre.png', ate: 'golpe-2', x: 68, y: 52, w: 10, emoji: '🍷' },
+                        { id: 'odre-3', src: 'camadas/p6-odre.png', ate: 'golpe-3', x: 81, y: 55, w: 10, emoji: '🍷' },
+                        { id: 'golpe-1', src: 'camadas/p6-respingo.png', item: 'golpe-1', x: 55, y: 92, w: 16, emoji: '💦' },
+                        { id: 'golpe-2', src: 'camadas/p6-respingo.png', item: 'golpe-2', x: 68, y: 94, w: 16, emoji: '💦' },
+                        { id: 'golpe-3', src: 'camadas/p6-respingo.png', item: 'golpe-3', x: 81, y: 92, w: 16, emoji: '💦' }
+                    ],
+                    cartoes: {
+                        tipo: 'contagem',
+                        colunas: 1,
+                        efeito: 'pulo',
+                        sequencia: ['golpe-1', 'golpe-2', 'golpe-3'],
+                        itens: [
+                            { id: 'espada', palavra: 'ESPADA', emoji: '⚔️', borda: 'border-red-400' }
+                        ]
+                    }
+                }
+            },
+            {
+                capitulo: '📚 Capítulo 21 • Armas e Letras', corCapitulo: 'text-amber-700',
+                titulo: 'Histórias na Pousada',
+                texto: `Naquela noite, a pousada ficou cheia de viajantes, e cada um tinha uma aventura para contar. Todos se sentaram ao redor da mesa para ouvir {{HISTÓRIAS|HIS • TÓ • RI • AS|📚}} de amor, de viagens e de reencontros.
+
+                    Então Dom Quixote se levantou e fez um discurso bonito sobre as {{ARMAS|AR • MAS|🛡️}} e as {{LETRAS|LE • TRAS|🔤}}. Para ele, tanto os cavaleiros quanto os que estudam e escrevem livros ajudam a fazer um mundo mais justo.
+
+                    Os viajantes ficaram de boca aberta. — Como pode um homem tão sábio acreditar em gigantes? — cochichavam. Mas o padre e o barbeiro sabiam: estava na hora de levar o cavaleiro de volta para casa.`,
+                cena: {
+                    real: 'p7-real.webp', imag: 'p7-imag.webp', emoji: '📚',
+                    alt: 'Viajantes ao redor de uma mesa na pousada escutam Dom Quixote discursar',
+                    legendaReal: '👓 Lente da Realidade: Viajantes ao Redor da Mesa',
+                    legendaImag: '✨ Lente da Imaginação: A Grande Távola dos Contadores de Histórias!',
+                    hotspots: [
+                        { x: 35, y: 10, w: 26, h: 70, palavra: 'DOM QUIXOTE', emoji: '📚', emojiImag: '✨', titulo: 'Tocar em Dom Quixote' }
+                    ]
+                }
+            }
+        ]
+    };
+    </script>
+    <script src="../assets/js/livro.js"></script>
+</body>
+</html>

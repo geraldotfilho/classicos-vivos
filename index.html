@@ -117,43 +117,67 @@
 
     <main class="w-full max-w-5xl flex-1 flex flex-col justify-center gap-10 sm:gap-14 py-8 [@media(max-height:820px)]:gap-6 [@media(max-height:820px)]:py-4">
 
-        <!-- Prateleira 1: livros para ler agora -->
-        <section class="shelf" aria-label="Livros para ler">
-            <div class="flex flex-wrap items-end justify-center gap-8 pb-0">
-                <a href="./dom-quixote/parte-1.html" class="book w-60 sm:w-72" aria-label="Ler Dom Quixote, parte 1">
+        <!-- Prateleira 1: Dom Quixote, as quatro partes -->
+        <section class="shelf" aria-label="Dom Quixote">
+            <div class="flex flex-wrap items-end justify-center gap-3 sm:gap-6">
+                <a href="./dom-quixote/parte-1.html" class="book w-44 sm:w-56" aria-label="Ler Dom Quixote, parte 1">
                     <div class="book-cover relative aspect-[3/4] rounded-r-3xl rounded-l-lg overflow-hidden border-4 border-amber-500 bg-amber-100">
                         <img src="./dom-quixote/imagens/p0-real.webp" alt="" class="absolute inset-0 w-full h-full object-cover object-[30%_50%]" />
                         <span class="absolute top-3 right-3 bg-rose-500 text-white font-display font-bold text-base px-3 py-1 rounded-full border-2 border-white shadow">Parte 1</span>
-                        <span class="play-pulse absolute left-1/2 top-[42%] -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-amber-400 border-4 border-white text-amber-950 text-4xl flex items-center justify-center">
+                        <span class="play-pulse absolute left-1/2 top-[42%] -translate-x-1/2 -translate-y-1/2 w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-amber-400 border-4 border-white text-amber-950 text-3xl sm:text-4xl flex items-center justify-center">
                             <i class="ph-fill ph-play"></i>
                         </span>
                         <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-amber-950/95 via-amber-950/80 to-transparent pt-10 pb-4 px-3 text-center">
-                            <h2 class="font-display font-bold text-3xl sm:text-4xl text-amber-200 leading-none">Dom Quixote</h2>
+                            <h2 class="font-display font-bold text-2xl sm:text-3xl text-amber-200 leading-none">Dom Quixote</h2>
                         </div>
+                    </div>
+                </a>
+                <a href="./dom-quixote/parte-2.html" class="book w-24 sm:w-32" style="animation-delay: -1.2s" aria-label="Ler Dom Quixote, parte 2">
+                    <div class="book-cover relative aspect-[3/4] rounded-r-2xl rounded-l-md overflow-hidden border-4 border-amber-500 bg-gradient-to-b from-amber-200 to-orange-300">
+                        <span class="absolute inset-x-0 bottom-3 flex justify-center text-4xl" aria-hidden="true">🐑</span>
+                        <img src="./dom-quixote/imagens/parte-2/p0-real.webp" alt="" onerror="this.remove()" class="absolute inset-0 w-full h-full object-cover" />
+                        <span class="absolute top-2 right-2 bg-rose-500 text-white font-display font-bold text-sm px-2.5 py-0.5 rounded-full border-2 border-white shadow">Parte 2</span>
+                        <span class="absolute left-1/2 top-[45%] -translate-x-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-amber-400 border-4 border-white text-amber-950 text-2xl flex items-center justify-center shadow">
+                            <i class="ph-fill ph-play"></i>
+                        </span>
+                    </div>
+                </a>
+                <a href="./dom-quixote/parte-3.html" class="book w-24 sm:w-32" style="animation-delay: -1.8s" aria-label="Ler Dom Quixote, parte 3">
+                    <div class="book-cover relative aspect-[3/4] rounded-r-2xl rounded-l-md overflow-hidden border-4 border-amber-500 bg-gradient-to-b from-emerald-200 to-teal-300">
+                        <span class="absolute inset-x-0 bottom-3 flex justify-center text-4xl" aria-hidden="true">⛰️</span>
+                        <img src="./dom-quixote/imagens/parte-3/p0-real.webp" alt="" onerror="this.remove()" class="absolute inset-0 w-full h-full object-cover" />
+                        <span class="absolute top-2 right-2 bg-rose-500 text-white font-display font-bold text-sm px-2.5 py-0.5 rounded-full border-2 border-white shadow">Parte 3</span>
+                        <span class="absolute left-1/2 top-[45%] -translate-x-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-amber-400 border-4 border-white text-amber-950 text-2xl flex items-center justify-center shadow">
+                            <i class="ph-fill ph-play"></i>
+                        </span>
+                    </div>
+                </a>
+                <a href="./dom-quixote/parte-4.html" class="book w-24 sm:w-32" style="animation-delay: -2.4s" aria-label="Ler Dom Quixote, parte 4">
+                    <div class="book-cover relative aspect-[3/4] rounded-r-2xl rounded-l-md overflow-hidden border-4 border-amber-500 bg-gradient-to-b from-sky-200 to-indigo-300">
+                        <span class="absolute inset-x-0 bottom-3 flex justify-center text-4xl" aria-hidden="true">🏝️</span>
+                        <img src="./dom-quixote/imagens/parte-4/p0-real.webp" alt="" onerror="this.remove()" class="absolute inset-0 w-full h-full object-cover" />
+                        <span class="absolute top-2 right-2 bg-rose-500 text-white font-display font-bold text-sm px-2.5 py-0.5 rounded-full border-2 border-white shadow">Parte 4</span>
+                        <span class="absolute left-1/2 top-[45%] -translate-x-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-amber-400 border-4 border-white text-amber-950 text-2xl flex items-center justify-center shadow">
+                            <i class="ph-fill ph-play"></i>
+                        </span>
                     </div>
                 </a>
             </div>
         </section>
 
-        <!-- Prateleira 2: livros que ainda estão chegando -->
+        <!-- Prateleira 2: os próximos clássicos da coleção -->
         <section class="shelf" aria-label="Livros em breve">
             <div class="flex flex-wrap items-end justify-center gap-5 sm:gap-8">
-                <div class="w-28 sm:w-36 opacity-70" aria-label="Dom Quixote, parte 2: em breve">
+                <div class="w-28 sm:w-36 opacity-70" aria-label="Novo clássico: em breve">
                     <div class="book-cover aspect-[3/4] rounded-r-2xl rounded-l-md border-4 border-dashed border-indigo-300/60 bg-indigo-900/60 flex flex-col items-center justify-center gap-1 text-indigo-100">
                         <span class="text-4xl" aria-hidden="true">🔒</span>
-                        <span class="font-display font-bold text-lg">Parte 2</span>
+                        <span class="font-display font-bold text-lg">Em breve</span>
                     </div>
                 </div>
-                <div class="w-28 sm:w-36 opacity-70" aria-label="Dom Quixote, parte 3: em breve">
+                <div class="w-28 sm:w-36 opacity-70" aria-label="Novo clássico: em breve">
                     <div class="book-cover aspect-[3/4] rounded-r-2xl rounded-l-md border-4 border-dashed border-indigo-300/60 bg-indigo-900/60 flex flex-col items-center justify-center gap-1 text-indigo-100">
                         <span class="text-4xl" aria-hidden="true">🔒</span>
-                        <span class="font-display font-bold text-lg">Parte 3</span>
-                    </div>
-                </div>
-                <div class="w-28 sm:w-36 opacity-70" aria-label="Dom Quixote, parte 4: em breve">
-                    <div class="book-cover aspect-[3/4] rounded-r-2xl rounded-l-md border-4 border-dashed border-indigo-300/60 bg-indigo-900/60 flex flex-col items-center justify-center gap-1 text-indigo-100">
-                        <span class="text-4xl" aria-hidden="true">🔒</span>
-                        <span class="font-display font-bold text-lg">Parte 4</span>
+                        <span class="font-display font-bold text-lg">Em breve</span>
                     </div>
                 </div>
             </div>
