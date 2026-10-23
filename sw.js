@@ -4,7 +4,7 @@
    - Na instalação, baixa todos os livros (HTML, estilos, fontes e ilustrações) para leitura offline.
    - Páginas HTML: rede primeiro (recebe correções), cache quando estiver sem internet.
    - Demais arquivos: cache primeiro (abre instantâneo no tablet). */
-const CACHE = 'classicos-vivos-dd5d13c49fc2';
+const CACHE = 'classicos-vivos-bf70f216f13f';
 const FILES = [
     "./assets/css/fonts.css",
     "./assets/css/icons.css",
