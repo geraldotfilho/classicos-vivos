@@ -385,10 +385,203 @@
             display: none !important;
         }
 
-        #pages-viewport {
+        /* =====================================================================
+           LIVRO ABERTO: ilustração numa página, texto na outra, as duas visíveis.
+           Paisagem: páginas lado a lado (lombada vertical no meio).
+           Retrato: páginas empilhadas (ilustração em cima, texto embaixo).
+           Só o texto rola; a ilustração fica sempre à vista durante a leitura.
+           ===================================================================== */
+        .book-viewport {
+            position: relative;
+            flex: 1 1 auto;
+            min-height: 0;
+            width: 100%;
+            overflow: hidden;
+            overflow: clip;
+            padding: 10px 14px 14px;
+            /* Capa de couro por trás das folhas */
+            background:
+                radial-gradient(ellipse at 50% 35%, rgba(255, 255, 255, 0.08) 0%, transparent 60%),
+                linear-gradient(160deg, #7C2D12 0%, #5B1D0C 55%, #431407 100%);
+            perspective: 2400px;
+        }
+        .spread {
+            position: relative;
+            height: 100%;
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+            grid-template-rows: minmax(0, 1fr);
+        }
+        .book-page {
+            position: relative;
+            min-width: 0;
+            min-height: 0;
+            overflow: hidden;
+            background-color: #FFFBF0;
+            background-image:
+                radial-gradient(circle at 20% 15%, rgba(255, 255, 255, 0.7) 0%, transparent 45%),
+                radial-gradient(circle at 80% 90%, rgba(217, 119, 6, 0.06) 0%, transparent 50%);
+        }
+        /* Sombra da lombada (dobra do papel junto ao centro do livro) */
+        .book-page::after {
+            content: '';
+            position: absolute;
+            pointer-events: none;
+            z-index: 5;
+        }
+        .page-art {
+            border-radius: 16px 3px 3px 16px;
+            padding: 14px 22px 14px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            container-type: size;
+            /* Bordas das folhas empilhadas */
+            box-shadow: -2px 2px 0 #EADFC8, -4px 4px 0 #FFF8E8, -6px 6px 0 #E2D4B6, -8px 8px 12px rgba(0, 0, 0, 0.35);
+        }
+        .page-art::after {
+            top: 0; bottom: 0; right: 0;
+            width: 56px;
+            background: linear-gradient(to left, rgba(120, 53, 15, 0.30) 0%, rgba(120, 53, 15, 0.08) 45%, transparent 100%);
+        }
+        .page-text {
+            border-radius: 3px 16px 16px 3px;
+            box-shadow: 2px 2px 0 #EADFC8, 4px 4px 0 #FFF8E8, 6px 6px 0 #E2D4B6, 8px 8px 12px rgba(0, 0, 0, 0.35);
+        }
+        .page-text::after {
+            top: 0; bottom: 0; left: 0;
+            width: 56px;
+            background: linear-gradient(to right, rgba(120, 53, 15, 0.30) 0%, rgba(120, 53, 15, 0.08) 45%, transparent 100%);
+        }
+        /* A ilustração ocupa a largura da página, mas encolhe para caber na altura */
+        .art-plate {
+            width: min(100%, calc((100cqh - 150px) * 16 / 9));
+            max-height: 100%;
+        }
+        .page-text-scroll {
+            height: 100%;
+            overflow-y: auto;
+            overflow-x: hidden;
+            overscroll-behavior: contain;
             -webkit-overflow-scrolling: touch;
+            padding: 22px 26px 30px 34px;
             scrollbar-width: thin;
             scrollbar-color: #F59E0B transparent;
+        }
+        .page-text-inner {
+            min-height: 100%;
+            justify-content: center;
+        }
+        /* "Tem mais texto": esmaecido no rodapé da página + seta tocável */
+        .page-text-fade {
+            position: absolute;
+            left: 0; right: 0; bottom: 0;
+            height: 64px;
+            pointer-events: none;
+            background: linear-gradient(to top, #FFFBF0 15%, rgba(255, 251, 240, 0));
+            opacity: 0;
+            transition: opacity 0.2s ease;
+            z-index: 6;
+        }
+        .scroll-more {
+            position: absolute;
+            right: 16px; bottom: 10px;
+            width: 48px; height: 48px;
+            border-radius: 9999px;
+            background: #F59E0B;
+            border: 3px solid #fff;
+            color: #451A03;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 3px 0 #B45309, 0 6px 14px rgba(0, 0, 0, 0.25);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s ease;
+            z-index: 7;
+            animation: scrollNudge 1.6s ease-in-out infinite;
+        }
+        @keyframes scrollNudge {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(4px); }
+        }
+        .page-text.has-more .page-text-fade { opacity: 1; }
+        .page-text.has-more .scroll-more { opacity: 1; pointer-events: auto; }
+
+        @media (orientation: portrait) {
+            .book-viewport { padding: 10px 10px 14px; }
+            .spread {
+                grid-template-columns: minmax(0, 1fr);
+                grid-template-rows: auto minmax(0, 1fr);
+            }
+            .page-art {
+                border-radius: 16px 16px 3px 3px;
+                padding: 12px 14px 20px;
+                container-type: inline-size;
+                box-shadow: 2px -2px 0 #EADFC8, 4px -4px 0 #FFF8E8, 0 -6px 12px rgba(0, 0, 0, 0.25);
+            }
+            .page-art::after {
+                top: auto; left: 0; right: 0; bottom: 0;
+                width: auto; height: 40px;
+                background: linear-gradient(to top, rgba(120, 53, 15, 0.26) 0%, rgba(120, 53, 15, 0.06) 50%, transparent 100%);
+            }
+            .page-text {
+                border-radius: 3px 3px 16px 16px;
+                box-shadow: 2px 2px 0 #EADFC8, 4px 4px 0 #FFF8E8, 6px 6px 0 #E2D4B6, 8px 8px 12px rgba(0, 0, 0, 0.35);
+            }
+            .page-text::after {
+                top: 0; left: 0; right: 0; bottom: auto;
+                width: auto; height: 40px;
+                background: linear-gradient(to bottom, rgba(120, 53, 15, 0.26) 0%, rgba(120, 53, 15, 0.06) 50%, transparent 100%);
+            }
+            .art-plate { width: 100%; }
+            .page-text-scroll { padding: 26px 24px 30px; }
+        }
+
+        /* Virada de página: folha 3D que gira em torno da lombada */
+        .turn-layer {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            z-index: 40;
+            perspective: 2400px;
+        }
+        .turn-static,
+        .turn-leaf {
+            position: absolute;
+        }
+        .turn-leaf {
+            transform-style: preserve-3d;
+            will-change: transform;
+            z-index: 2;
+        }
+        .turn-face {
+            position: absolute;
+            inset: 0;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+        .turn-face.turn-back { transform: rotateY(180deg); }
+        .turn-face > .book-page,
+        .turn-static > .book-page,
+        .turn-face > .spread,
+        .turn-static > .spread {
+            width: 100%;
+            height: 100%;
+        }
+        .turn-blank {
+            width: 100%;
+            height: 100%;
+            border-radius: 16px;
+            background: #FFFBF0;
+        }
+        .turn-shade {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            opacity: 0;
+            z-index: 10;
         }
     </style>
 </head>
@@ -447,13 +640,15 @@
         </header>
 
         <!-- ÁREA CENTRAL DO LIVRO (7 PÁGINAS COM QUADRO INTERATIVO TOTALMENTE INTEGRAL EM 16:9) -->
-        <div id="pages-viewport" class="relative flex-1 w-full overflow-y-auto overflow-x-hidden flex items-start justify-center p-2 sm:p-4">
+        <div id="pages-viewport" class="book-viewport">
 
             <!-- =========================================================================
                  PÁGINA 1 (CAPA): O FIDALGO SONHADOR DE LA MANCHA
                  ========================================================================= -->
-            <section id="page-0" class="page-slide w-full min-h-full flex flex-col lg:flex-row items-center lg:justify-between gap-3 sm:gap-5">
-                <div id="frame-0" class="relative w-full lg:w-7/12 shrink-0 bg-amber-100 rounded-3xl border-4 border-amber-500 shadow-inner flex flex-col justify-between p-2.5">
+            <section id="page-0" class="page-slide spread" aria-label="Página 1">
+                <!-- Página da esquerda (retrato: de cima): ilustração -->
+                <div class="book-page page-art">
+                <div id="frame-0" class="art-plate relative w-full flex flex-col justify-center">
                     
                     <div class="flex items-center justify-between gap-2 z-20 mb-1">
                         <span id="lens-badge-0" class="bg-slate-900/85 backdrop-blur-sm text-white font-display font-bold text-[11px] sm:text-xs px-3 py-1 rounded-full shadow">
@@ -494,9 +689,12 @@
                         </button>
                     </div>
                 </div>
+                </div>
 
-                <!-- Texto da Capa -->
-                <div class="w-full lg:w-5/12 flex flex-col items-center lg:items-start text-center lg:text-left justify-center space-y-3 px-2 py-1">
+                <!-- Página da direita (retrato: de baixo): texto com rolagem própria. Texto da Capa -->
+                <div class="book-page page-text">
+                <div class="page-text-scroll">
+                <div class="page-text-inner flex flex-col items-center lg:items-start text-center lg:text-left space-y-3">
                     <div class="inline-flex items-center gap-2 bg-amber-200 text-amber-950 font-display font-bold px-3.5 py-1 rounded-full text-xs sm:text-sm border-2 border-amber-400">
                         <span>✨ Toque nas PALAVRAS MAIÚSCULAS para ouvir!</span>
                     </div>
@@ -517,13 +715,17 @@
                         <i class="ph-bold ph-arrow-right text-2xl"></i>
                     </button>
                 </div>
+                </div>
+                </div>
             </section>
 
             <!-- =========================================================================
                  PÁGINA 2 (CAPÍTULO 1): ALONSO QUIXANO E OS LIVROS DE CAVALARIA
                  ========================================================================= -->
-            <section id="page-1" class="page-slide page-hidden w-full min-h-full flex flex-col lg:flex-row items-center lg:justify-between gap-3 sm:gap-5">
-                <div id="frame-1" class="relative w-full lg:w-7/12 shrink-0 bg-amber-50 rounded-3xl border-4 border-amber-400 shadow-inner flex flex-col justify-between p-2.5">
+            <section id="page-1" class="page-slide page-hidden spread" aria-label="Página 2">
+                <!-- Página da esquerda (retrato: de cima): ilustração -->
+                <div class="book-page page-art">
+                <div id="frame-1" class="art-plate relative w-full flex flex-col justify-center">
                     
                     <div class="flex items-center justify-between gap-2 z-20 mb-1">
                         <span id="lens-badge-1" class="bg-slate-900/85 text-white font-display font-bold text-[11px] sm:text-xs px-3 py-1 rounded-full shadow">
@@ -584,9 +786,12 @@
                         </button>
                     </div>
                 </div>
+                </div>
 
-                <!-- Texto da Página 2 -->
-                <div class="w-full lg:w-5/12 flex flex-col justify-center space-y-3 px-2 py-1">
+                <!-- Página da direita (retrato: de baixo): texto com rolagem própria. Texto da Página 2 -->
+                <div class="book-page page-text">
+                <div class="page-text-scroll">
+                <div class="page-text-inner flex flex-col space-y-3">
                     <div class="inline-flex items-center gap-2 text-amber-700 font-display font-bold text-xs sm:text-sm uppercase">
                         <span>📚 Capítulo 1 • O Fidalgo Leitor</span>
                     </div>
@@ -601,13 +806,17 @@
                         De tanto mergulhar no poder das palavras, seu quarto se enchia de pura poesia: o velho mapa brilhava no ar, histórias ganhavam asas e até o manso gatinho da sala, aos seus olhos afetuosos, transformava-se em um magnífico <span class="literacy-word" onclick="speakWord(this, 'LEÃO GUARDIÃO', 'LE • ÃO • GUAR • DI • ÃO', '🦁')">LEÃO GUARDIÃO</span>!
                     </p>
                 </div>
+                </div>
+                </div>
             </section>
 
             <!-- =========================================================================
                  PÁGINA 3 (CAPÍTULO 2): A ARMADURA DO BISAVÔ
                  ========================================================================= -->
-            <section id="page-2" class="page-slide page-hidden w-full min-h-full flex flex-col lg:flex-row items-center lg:justify-between gap-3 sm:gap-5">
-                <div id="frame-2" class="relative w-full lg:w-7/12 shrink-0 bg-gradient-to-b from-sky-100 to-amber-100 rounded-3xl border-4 border-amber-400 shadow-inner flex flex-col justify-between p-2.5">
+            <section id="page-2" class="page-slide page-hidden spread" aria-label="Página 3">
+                <!-- Página da esquerda (retrato: de cima): ilustração -->
+                <div class="book-page page-art">
+                <div id="frame-2" class="art-plate relative w-full flex flex-col justify-center">
                     
                     <div class="flex items-center justify-between gap-2 z-20 mb-1">
                         <span id="lens-badge-2" class="bg-slate-900/85 text-white font-display font-bold text-[11px] sm:text-xs px-3 py-1 rounded-full shadow">
@@ -675,9 +884,12 @@
                         </button>
                     </div>
                 </div>
+                </div>
 
-                <!-- Texto da Página 3 -->
-                <div class="w-full lg:w-5/12 flex flex-col justify-center space-y-3 px-2 py-1">
+                <!-- Página da direita (retrato: de baixo): texto com rolagem própria. Texto da Página 3 -->
+                <div class="book-page page-text">
+                <div class="page-text-scroll">
+                <div class="page-text-inner flex flex-col space-y-3">
                     <div class="inline-flex items-center gap-2 text-rose-600 font-display font-bold text-xs sm:text-sm uppercase">
                         <span>⚔️ Capítulo 2 • O Novo Nome</span>
                     </div>
@@ -692,13 +904,17 @@
                         Com muito bom humor, colocou uma <span class="literacy-word" onclick="speakWord(this, 'BACIA', 'BA • CI • A', '🥣')">BACIA</span> de latão na cabeça como capacete, segurou uma tampa de panela como <span class="literacy-word" onclick="speakWord(this, 'ESCUDO', 'ES • CU • DO', '🛡️')">ESCUDO</span> e amarrou uma flâmula vermelha num cabo de madeira para fazer sua <span class="literacy-word" onclick="speakWord(this, 'LANÇA', 'LAN • ÇA', '🚩')">LANÇA</span>. Para seus olhos sonhadores, nada brilhava mais do que aquele reluzente <span class="literacy-word" onclick="speakWord(this, 'ELMO DE OURO', 'EL • MO • DE • OU • RO', '👑')">ELMO DE OURO</span>!
                     </p>
                 </div>
+                </div>
+                </div>
             </section>
 
             <!-- =========================================================================
                  PÁGINA 4 (CAPÍTULO 3): ROCINANTE E A PRINCESA DULCINEIA
                  ========================================================================= -->
-            <section id="page-3" class="page-slide page-hidden w-full min-h-full flex flex-col lg:flex-row items-center lg:justify-between gap-3 sm:gap-5">
-                <div id="frame-3" class="relative w-full lg:w-7/12 shrink-0 bg-gradient-to-b from-emerald-100 to-lime-200 rounded-3xl border-4 border-emerald-500 shadow-inner flex flex-col justify-between p-2.5">
+            <section id="page-3" class="page-slide page-hidden spread" aria-label="Página 4">
+                <!-- Página da esquerda (retrato: de cima): ilustração -->
+                <div class="book-page page-art">
+                <div id="frame-3" class="art-plate relative w-full flex flex-col justify-center">
                     
                     <div class="flex items-center justify-between gap-2 z-20 mb-1">
                         <span id="lens-badge-3" class="bg-slate-900/85 text-white font-display font-bold text-[11px] sm:text-xs px-3 py-1 rounded-full shadow">
@@ -759,9 +975,12 @@
                         </button>
                     </div>
                 </div>
+                </div>
 
-                <!-- Texto da Página 4 -->
-                <div class="w-full lg:w-5/12 flex flex-col justify-center space-y-3 px-2 py-1">
+                <!-- Página da direita (retrato: de baixo): texto com rolagem própria. Texto da Página 4 -->
+                <div class="book-page page-text">
+                <div class="page-text-scroll">
+                <div class="page-text-inner flex flex-col space-y-3">
                     <div class="inline-flex items-center gap-2 text-emerald-700 font-display font-bold text-xs sm:text-sm uppercase">
                         <span>🐴 Capítulo 3 • O Corcel e a Princesa</span>
                     </div>
@@ -778,13 +997,17 @@
                         E a quem dedicar todas as suas vitórias? Dom Quixote escolheu a doce camponesa da aldeia vizinha, Aldonza Lorenzo, consagrando-a em seus pensamentos como a formosa princesa <span class="literacy-word" onclick="speakWord(this, 'DULCINEIA', 'DUL • CI • NEI • A', '👸')">DULCINEIA</span> del Toboso!
                     </p>
                 </div>
+                </div>
+                </div>
             </section>
 
             <!-- =========================================================================
                  PÁGINA 5 (CAPÍTULO 4): A PRIMEIRA SAÍDA - POUSADA OU CASTELO?
                  ========================================================================= -->
-            <section id="page-4" class="page-slide page-hidden w-full min-h-full flex flex-col lg:flex-row items-center lg:justify-between gap-3 sm:gap-5">
-                <div id="frame-4" class="relative w-full lg:w-7/12 shrink-0 bg-amber-100 rounded-3xl border-4 border-purple-500 shadow-inner flex flex-col justify-between p-2.5">
+            <section id="page-4" class="page-slide page-hidden spread" aria-label="Página 5">
+                <!-- Página da esquerda (retrato: de cima): ilustração -->
+                <div class="book-page page-art">
+                <div id="frame-4" class="art-plate relative w-full flex flex-col justify-center">
                     
                     <div class="flex items-center justify-between gap-2 z-20 mb-1">
                         <span id="lens-badge-4" class="bg-slate-900/85 text-white font-display font-bold text-[11px] sm:text-xs px-3 py-1 rounded-full shadow">
@@ -835,9 +1058,12 @@
                         </button>
                     </div>
                 </div>
+                </div>
 
-                <!-- Texto da Página 5 -->
-                <div class="w-full lg:w-5/12 flex flex-col justify-center space-y-3 px-2 py-1">
+                <!-- Página da direita (retrato: de baixo): texto com rolagem própria. Texto da Página 5 -->
+                <div class="book-page page-text">
+                <div class="page-text-scroll">
+                <div class="page-text-inner flex flex-col space-y-3">
                     <div class="inline-flex items-center gap-2 text-purple-700 font-display font-bold text-xs sm:text-sm uppercase">
                         <span>🏰 Capítulo 4 • A Primeira Saída</span>
                     </div>
@@ -852,13 +1078,17 @@
                         Quando um jovem pastor soprou uma flauta rústica para recolher seus porquinhos, Dom Quixote escutou triunfantes <span class="literacy-word" onclick="speakWord(this, 'TROMBETAS', 'TROM • BE • TAS', '🎺')">TROMBETAS</span> reais. E recebido com carinho pelo bondoso dono da pousada, saboreou uma quentinha tigela de <span class="literacy-word" onclick="speakWord(this, 'SOPA', 'SO • PA', '🍲')">SOPA</span> de pão com alho como se estivesse no mais nobre banquete de reis!
                     </p>
                 </div>
+                </div>
+                </div>
             </section>
 
             <!-- =========================================================================
                  PÁGINA 6 (CAPÍTULO 5): A CERIMÔNIA DE CAVALEIRO SOB A LUA CHEIA
                  ========================================================================= -->
-            <section id="page-5" class="page-slide page-hidden w-full min-h-full flex flex-col lg:flex-row items-center lg:justify-between gap-3 sm:gap-5">
-                <div id="frame-5" class="relative w-full lg:w-7/12 shrink-0 bg-gradient-to-b from-slate-900 via-indigo-950 to-slate-800 rounded-3xl border-4 border-amber-400 shadow-inner flex flex-col justify-between p-2.5">
+            <section id="page-5" class="page-slide page-hidden spread" aria-label="Página 6">
+                <!-- Página da esquerda (retrato: de cima): ilustração -->
+                <div class="book-page page-art">
+                <div id="frame-5" class="art-plate relative w-full flex flex-col justify-center">
                     
                     <div class="flex items-center justify-between gap-2 z-20 mb-1">
                         <span id="lens-badge-5" class="bg-slate-900/90 text-white font-display font-bold text-[11px] sm:text-xs px-3 py-1 rounded-full shadow">
@@ -882,9 +1112,12 @@
                         </button>
                     </div>
                 </div>
+                </div>
 
-                <!-- Texto da Página 6 -->
-                <div class="w-full lg:w-5/12 flex flex-col justify-center space-y-3 px-2 py-1">
+                <!-- Página da direita (retrato: de baixo): texto com rolagem própria. Texto da Página 6 -->
+                <div class="book-page page-text">
+                <div class="page-text-scroll">
+                <div class="page-text-inner flex flex-col space-y-3">
                     <div class="inline-flex items-center gap-2 text-indigo-700 font-display font-bold text-xs sm:text-sm uppercase">
                         <span>🌙 Capítulo 5 • A Cerimônia Mágica</span>
                     </div>
@@ -899,13 +1132,17 @@
                         Ao amanhecer, o bom estalajadeiro, emocionado com a pureza e a doçura daquele homem, pegou seu livro de anotações, recitou palavras de honra e tocou suavemente o ombro do fidalgo com a lâmina de uma <span class="literacy-word" onclick="speakWord(this, 'ESPADA', 'ES • PA • DA', '⚔️')">ESPADA</span>. Agora sim: o mundo ganhava seu mais corajoso protetor!
                     </p>
                 </div>
+                </div>
+                </div>
             </section>
 
             <!-- =========================================================================
                  PÁGINA 7 (CAPÍTULO 6): O FIEL ESCUDEIRO SANCHO PANÇA E A ILHA!
                  ========================================================================= -->
-            <section id="page-6" class="page-slide page-hidden w-full min-h-full flex flex-col lg:flex-row items-center lg:justify-between gap-3 sm:gap-5">
-                <div id="frame-6" class="relative w-full lg:w-7/12 shrink-0 bg-gradient-to-b from-amber-100 via-amber-50 to-orange-100 rounded-3xl border-4 border-amber-500 shadow-inner flex flex-col justify-between p-2.5">
+            <section id="page-6" class="page-slide page-hidden spread" aria-label="Página 7">
+                <!-- Página da esquerda (retrato: de cima): ilustração -->
+                <div class="book-page page-art">
+                <div id="frame-6" class="art-plate relative w-full flex flex-col justify-center">
                     
                     <div class="flex items-center justify-between gap-2 z-20 mb-1">
                         <span id="lens-badge-6" class="bg-slate-900/85 text-white font-display font-bold text-[11px] sm:text-xs px-3 py-1 rounded-full shadow">
@@ -931,9 +1168,12 @@
                         </button>
                     </div>
                 </div>
+                </div>
 
-                <!-- Texto da Página 7 -->
-                <div class="w-full lg:w-5/12 flex flex-col justify-center space-y-3 px-2 py-1">
+                <!-- Página da direita (retrato: de baixo): texto com rolagem própria. Texto da Página 7 -->
+                <div class="book-page page-text">
+                <div class="page-text-scroll">
+                <div class="page-text-inner flex flex-col space-y-3">
                     <div class="inline-flex items-center gap-2 text-amber-700 font-display font-bold text-xs sm:text-sm uppercase">
                         <span>🫏 Capítulo 6 • A Nobre Amizade</span>
                     </div>
@@ -948,13 +1188,17 @@
                         Sancho sorriu maravilhado, preparou alforjes com queijo fresco e pão em seu simpático <span class="literacy-word" onclick="speakWord(this, 'BURRICO', 'BUR • RI • CO', '🫏')">BURRICO</span> e aceitou o convite. Sob o sol da manhã, os dois amigos partiram juntos pela estrada, conversando alegremente sobre o futuro!
                     </p>
                 </div>
+                </div>
+                </div>
             </section>
 
             <!-- =========================================================================
                  PÁGINA 8 (CAPÍTULO 7): OS MOINHOS DE VENTO OU GIGANTES DE CERVANTES!
                  ========================================================================= -->
-            <section id="page-7" class="page-slide page-hidden w-full min-h-full flex flex-col lg:flex-row items-center lg:justify-between gap-3 sm:gap-5">
-                <div id="frame-7" class="relative w-full lg:w-7/12 shrink-0 bg-gradient-to-b from-orange-300 via-amber-200 to-lime-200 rounded-3xl border-4 border-amber-500 shadow-inner flex flex-col justify-between p-2.5">
+            <section id="page-7" class="page-slide page-hidden spread" aria-label="Página 8">
+                <!-- Página da esquerda (retrato: de cima): ilustração -->
+                <div class="book-page page-art">
+                <div id="frame-7" class="art-plate relative w-full flex flex-col justify-center">
                     
                     <div class="flex items-center justify-between gap-2 z-20 mb-1">
                         <span id="lens-badge-7" class="bg-slate-900/85 text-white font-display font-bold text-[11px] sm:text-xs px-3 py-1 rounded-full shadow">
@@ -1012,9 +1256,12 @@
                         </button>
                     </div>
                 </div>
+                </div>
 
-                <!-- Texto da Página 8 -->
-                <div class="w-full lg:w-5/12 flex flex-col justify-center space-y-3 px-2 py-1">
+                <!-- Página da direita (retrato: de baixo): texto com rolagem própria. Texto da Página 8 -->
+                <div class="book-page page-text">
+                <div class="page-text-scroll">
+                <div class="page-text-inner flex flex-col space-y-3">
                     <div class="inline-flex items-center gap-2 text-orange-700 font-display font-bold text-xs sm:text-sm uppercase">
                         <span>🌬️ Capítulo 7 • O Duelo dos Moinhos!</span>
                     </div>
@@ -1035,6 +1282,8 @@
                             🎉 Fim da Parte 1! Na Parte 2: A Batalha das Ovelhas e Novas Aventuras!
                         </p>
                     </div>
+                </div>
+                </div>
                 </div>
             </section>
 
@@ -1565,7 +1814,7 @@
                     return;
                 }
                 sentence.classList.add('sentence-reading');
-                sentence.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+                scrollTextToSentence(sentence);
 
                 const utterance = new SpeechSynthesisUtterance(text);
                 utterance.lang = 'pt-BR';
@@ -2044,19 +2293,218 @@
             }
         }
 
-        function goToPage(index) {
-            if (index < 0 || index >= totalPages) return;
+        /* =====================================================================
+           ROLAGEM INDEPENDENTE DO TEXTO
+           ===================================================================== */
+        function textScrollerOf(pageIdx) {
+            return document.querySelector(`#page-${pageIdx} .page-text-scroll`);
+        }
+
+        // Mostra o esmaecido e a seta "continua" quando ainda há texto abaixo
+        function updateScrollHint(pageIdx) {
+            const scroller = textScrollerOf(pageIdx);
+            if (!scroller) return;
+            const more = scroller.scrollHeight - scroller.scrollTop - scroller.clientHeight > 12;
+            scroller.parentElement.classList.toggle('has-more', more);
+        }
+
+        function scrollTextToSentence(sentence) {
+            const scroller = sentence.closest('.page-text-scroll');
+            if (!scroller) return;
+            const s = sentence.getBoundingClientRect();
+            const c = scroller.getBoundingClientRect();
+            const margin = 32;
+            if (s.top < c.top + margin || s.bottom > c.bottom - margin) {
+                scroller.scrollBy({ top: s.top - c.top - c.height / 3, behavior: 'smooth' });
+            }
+        }
+
+        function initTextScrolling() {
+            document.querySelectorAll('.page-text').forEach(pageText => {
+                const scroller = pageText.querySelector('.page-text-scroll');
+                const fade = document.createElement('div');
+                fade.className = 'page-text-fade';
+                const more = document.createElement('button');
+                more.type = 'button';
+                more.className = 'scroll-more';
+                more.setAttribute('aria-label', 'Continuar lendo');
+                more.innerHTML = '<i class="ph-bold ph-arrow-down"></i>';
+                more.addEventListener('click', () => {
+                    playSound('wordPop');
+                    scroller.scrollBy({ top: scroller.clientHeight * 0.7, behavior: 'smooth' });
+                });
+                pageText.append(fade, more);
+                scroller.addEventListener('scroll', () => updateScrollHint(pageIndexOf(scroller)), { passive: true });
+            });
+            window.addEventListener('resize', () => updateScrollHint(currentPage));
+        }
+
+        /* =====================================================================
+           VIRADA DE PÁGINA ANIMADA
+           Cópias inertes (sem ids) das páginas antiga e nova formam uma folha 3D
+           que gira em torno da lombada; a página real já trocou por baixo.
+           ===================================================================== */
+        const TURN_MS = 750;
+        let isTurning = false;
+
+        function inertClone(el) {
+            const clone = el.cloneNode(true);
+            clone.removeAttribute('id');
+            clone.querySelectorAll('[id]').forEach(n => n.removeAttribute('id'));
+            clone.classList.remove('page-hidden');
+            return clone;
+        }
+
+        function rectIn(el, container) {
+            const r = el.getBoundingClientRect();
+            const c = container.getBoundingClientRect();
+            return { left: r.left - c.left, top: r.top - c.top, width: r.width, height: r.height };
+        }
+
+        function placeBox(box, rect) {
+            box.style.left = `${rect.left}px`;
+            box.style.top = `${rect.top}px`;
+            box.style.width = `${rect.width}px`;
+            box.style.height = `${rect.height}px`;
+        }
+
+        function copyTextScroll(fromPage, clone) {
+            const src = fromPage.querySelector('.page-text-scroll');
+            const dst = clone.querySelector('.page-text-scroll') || (clone.classList.contains('page-text-scroll') ? clone : null);
+            if (src && dst) dst.scrollTop = src.scrollTop;
+        }
+
+        function animateTurn(oldSection, newSection, forward, showNew) {
+            const viewport = document.getElementById('pages-viewport');
+            const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            if (reduceMotion || !viewport.animate) {
+                showNew();
+                return Promise.resolve();
+            }
+
+            const twoPages = window.matchMedia('(orientation: landscape)').matches;
+            const oldArt = oldSection.querySelector('.page-art');
+            const oldText = oldSection.querySelector('.page-text');
+            const rects = {
+                art: rectIn(oldArt, viewport),
+                text: rectIn(oldText, viewport),
+                spread: rectIn(oldSection, viewport)
+            };
+            const oldClones = { art: inertClone(oldArt), text: inertClone(oldText), spread: inertClone(oldSection) };
+
+            showNew();
+
+            const newClones = {
+                art: inertClone(newSection.querySelector('.page-art')),
+                text: inertClone(newSection.querySelector('.page-text')),
+                spread: inertClone(newSection)
+            };
+            const blank = () => { const b = document.createElement('div'); b.className = 'turn-blank'; return b; };
+
+            // Paisagem: só a folha da direita (avançar) ou da esquerda (voltar) gira.
+            // Retrato: a folha inteira gira pela borda esquerda, como num leitor de uma página.
+            let statics, leafRect, origin, front, back, from, to;
+            if (twoPages) {
+                if (forward) {
+                    statics = [[oldClones.art, rects.art]];
+                    leafRect = rects.text; origin = 'left center';
+                    front = oldClones.text; back = newClones.art; from = 0; to = -180;
+                } else {
+                    statics = [[oldClones.text, rects.text]];
+                    leafRect = rects.art; origin = 'right center';
+                    front = oldClones.art; back = newClones.text; from = 0; to = 180;
+                }
+            } else if (forward) {
+                statics = [];
+                leafRect = rects.spread; origin = 'left center';
+                front = oldClones.spread; back = blank(); from = 0; to = -180;
+            } else {
+                statics = [[oldClones.spread, rects.spread]];
+                leafRect = rects.spread; origin = 'left center';
+                front = newClones.spread; back = blank(); from = -180; to = 0;
+            }
+
+            const layer = document.createElement('div');
+            layer.className = 'turn-layer';
+            statics.forEach(([clone, rect]) => {
+                const box = document.createElement('div');
+                box.className = 'turn-static';
+                placeBox(box, rect);
+                box.appendChild(clone);
+                layer.appendChild(box);
+            });
+
+            const leaf = document.createElement('div');
+            leaf.className = 'turn-leaf';
+            placeBox(leaf, leafRect);
+            leaf.style.transformOrigin = origin;
+            leaf.style.transform = `rotateY(${from}deg)`;
+            const shades = [];
+            [[front, 'turn-front'], [back, 'turn-back']].forEach(([content, cls]) => {
+                const face = document.createElement('div');
+                face.className = `turn-face ${cls}`;
+                face.appendChild(content);
+                const shade = document.createElement('div');
+                shade.className = 'turn-shade';
+                shade.style.background = cls === 'turn-front'
+                    ? 'linear-gradient(to left, rgba(0,0,0,0.35), rgba(0,0,0,0.05))'
+                    : 'linear-gradient(to right, rgba(0,0,0,0.35), rgba(0,0,0,0.05))';
+                face.appendChild(shade);
+                shades.push(shade);
+                leaf.appendChild(face);
+            });
+            layer.appendChild(leaf);
+            viewport.appendChild(layer);
+
+            // Preserva a posição de rolagem do texto nas cópias
+            [oldClones.text, oldClones.spread].forEach(c => copyTextScroll(oldSection, c));
+
+            const easing = 'cubic-bezier(0.45, 0.05, 0.35, 1)';
+            const turn = leaf.animate(
+                [
+                    { transform: `rotateY(${from}deg)` },
+                    { transform: `rotateY(${(from + to) / 2}deg) translateZ(30px)`, offset: 0.5 },
+                    { transform: `rotateY(${to}deg)` }
+                ],
+                { duration: TURN_MS, easing, fill: 'forwards' }
+            );
+            shades.forEach(shade => shade.animate(
+                [{ opacity: 0 }, { opacity: 1, offset: 0.5 }, { opacity: 0 }],
+                { duration: TURN_MS, easing, fill: 'forwards' }
+            ));
+
+            return turn.finished.catch(() => {}).then(() => layer.remove());
+        }
+
+        function goToPage(index, options = {}) {
+            if (index < 0 || index >= totalPages || index === currentPage || isTurning) return;
             closePhonicsCard();
             stopReadingPage();
 
-            playSound('pageFlip');
+            const animate = options.animate !== false;
+            if (animate) playSound('pageFlip');
 
-            document.getElementById(`page-${currentPage}`).classList.add('page-hidden');
+            const oldSection = document.getElementById(`page-${currentPage}`);
+            const newSection = document.getElementById(`page-${index}`);
+            const forward = index > currentPage;
+            const showNew = () => {
+                oldSection.classList.add('page-hidden');
+                newSection.classList.remove('page-hidden');
+                const scroller = newSection.querySelector('.page-text-scroll');
+                if (scroller) scroller.scrollTop = 0;
+            };
+
             currentPage = index;
-            document.getElementById(`page-${currentPage}`).classList.remove('page-hidden');
-
-            const viewport = document.getElementById('pages-viewport');
-            if (viewport) viewport.scrollTop = 0;
+            if (animate) {
+                isTurning = true;
+                animateTurn(oldSection, newSection, forward, showNew).then(() => {
+                    isTurning = false;
+                    updateScrollHint(currentPage);
+                });
+            } else {
+                showNew();
+            }
+            updateScrollHint(currentPage);
 
             document.getElementById('btn-prev').disabled = currentPage === 0;
             document.getElementById('btn-next').disabled = currentPage === totalPages - 1;
@@ -2126,13 +2574,15 @@
                 }
             }
             Object.keys(progressiveScenes).forEach(idx => updateProgressHints(Number(idx)));
+            initTextScrolling();
+            updateScrollHint(currentPage);
             warmImages(allSceneSrcs(0).concat(allSceneSrcs(1)));
 
             // Suporte a URL params para navegação direta e testes automatizados (?page=1&imag=1)
             const params = new URLSearchParams(window.location.search);
             const p = parseInt(params.get('page'));
             if (!isNaN(p) && p >= 0 && p < totalPages) {
-                goToPage(p);
+                goToPage(p, { animate: false });
                 if (params.get('imag') === '1' || params.get('imag') === 'true') {
                     toggleLens(p, null, true);
                 }
