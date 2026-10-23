@@ -1,0 +1,19 @@
+{
+  "name": "classicos-vivos",
+  "private": true,
+  "description": "Ferramentas de desenvolvimento dos livros Clássicos Vivos (o leitor não precisa de build: os arquivos gerados ficam versionados em assets/).",
+  "scripts": {
+    "build:css": "tailwindcss -c tailwind.config.js -i tools/tailwind.src.css -o assets/css/tailwind.css --minify",
+    "build:fonts": "node tools/build-fonts.mjs",
+    "build:icons": "node tools/build-icons.mjs",
+    "build:images": "python3 tools/otimizar-imagens.py",
+    "build": "npm run build:fonts && npm run build:icons && npm run build:css && npm run build:sw",
+    "build:sw": "node tools/build-sw.mjs"
+  },
+  "devDependencies": {
+    "@fontsource/fredoka": "5.1.1",
+    "@fontsource/nunito": "5.1.1",
+    "@phosphor-icons/core": "2.1.1",
+    "tailwindcss": "3.4.17"
+  }
+}

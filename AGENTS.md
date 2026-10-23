@@ -19,15 +19,26 @@ Este documento consolida a memória arquitetural, os princípios pedagógicos, a
 
 ## 2. Arquitetura Técnica & Frontend
 
-O projeto adota uma filosofia **Zero-Build / Single-File Web App**, garantindo máxima portabilidade, carregamento ultrarrápido em dispositivos móveis e execução off-line instantânea.
+O projeto adota uma filosofia **Zero-Build para o leitor**: cada livro é um HTML autocontido que abre direto no navegador, sem servidor, e **funciona 100% offline**. Não existe nenhuma dependência de CDN. Os poucos arquivos gerados (CSS, fontes, ícones, service worker) ficam **versionados no repositório**. O `npm` é só ferramenta de desenvolvimento, nunca é exigido de quem lê.
 
 ### 2.1 Tecnologias Utilizadas
 - **HTML5 & CSS3 Moderno**: Estrutura semântica e layouts fluidos com CSS Grid e Flexbox.
-- **Tailwind CSS (via CDN)**: Utility-first para estilização ágil, responsiva e consistente.
-- **Phosphor Icons (via CDN)**: Iconografia amigável, legível e suave para botões infantis.
+- **Tailwind CSS compilado** (`assets/css/tailwind.css`): contém só as classes usadas nos HTMLs. **Proibido voltar ao `cdn.tailwindcss.com`**, que exige internet e é feito para protótipo, não para produção.
+- **Fontes locais** (`assets/fonts/`, `assets/css/fonts.css`): Fredoka (títulos) e Nunito (texto), subconjunto latin (cobre todo o português).
+- **Ícones Phosphor locais** (`assets/css/icons.css`): cada ícone usado vira uma máscara SVG embutida, com as mesmas classes (`ph-bold ph-arrow-left`, `ph-fill ...`). O JS pode trocar `className` normalmente.
+- **Ilustrações em WebP** (1376 × 768, qualidade 80, ~150–230 KB cada).
+- **PWA**: `manifest.webmanifest` + `sw.js` na raiz. O service worker baixa todos os livros na primeira visita via HTTPS (GitHub Pages). HTML segue a estratégia rede-primeiro; o resto, cache-primeiro.
 - **Web Audio API Procedural**: Todos os efeitos sonoros (fanfarras de cavaleiro, arpeggios mágicos, cliques táteis de cartões de leitura, pops lúdicos) são sintetizados matematicamente via código (`AudioContext`), dispensando dependências de arquivos MP3/WAV externos pesados.
 - **Web Speech API (`pt-BR`)**: Síntese de voz nativa para leitura da página completa e para a pronúncia silábica pausada das palavras-chave em destaque.
-- **Pointer Events**: Eventos unificados (`pointerdown`, `pointermove`, `pointerup`) para drag-and-drop fluido compatível tanto com touchscreen/caneta quanto com mouse.
+- **Pointer Events**: Eventos unificados (`pointerdown`, `pointermove`, `pointerup`) para drag-and-drop fluido compatível tanto com touchscreen/caneta quanto com mouse. O swipe de troca de página ignora toques iniciados em `.draggable-card`.
+
+### 2.1.1 Ferramentas de Desenvolvimento (`npm run build`)
+```bash
+npm install          # uma vez (Tailwind, fontes e ícones como devDependencies)
+npm run build        # fontes + ícones + Tailwind + service worker
+npm run build:images # converte novos JPG/PNG de <livro>/imagens/ para WebP
+```
+**Rode `npm run build` sempre que** usar uma classe Tailwind nova, um ícone Phosphor novo, ou adicionar/alterar qualquer HTML ou imagem. O `sw.js` precisa da lista atualizada e de uma nova versão de cache, senão os tablets não recebem a mudança. Os scripts ficam em `tools/`, e `sw.js` é gerado a partir de `tools/sw.template.js` (nunca edite `sw.js` à mão).
 
 ### 2.2 Isolamento de Páginas e Navegação
 - **Eliminação de Ghosting/Bleed-Through**: Para alternar entre as 8 páginas do livro, as páginas inativas devem **obrigatoriamente** receber a regra:
@@ -44,6 +55,21 @@ O projeto adota uma filosofia **Zero-Build / Single-File Web App**, garantindo m
   ```
   - `page`: Índice da página de `0` a `7` (ex: `?page=3` para Capítulo 3, `?page=6` para Sancho Pança, `?page=7` para os Moinhos).
   - `imag=1` ou `imag=true`: Ativa imediatamente a **Lente da Imaginação** daquela página.
+- **Convenção de nomes das ilustrações**: `pN` = **índice da página** (`?page=N`). Exemplos: `p2-real-stage-3.webp`, `p6-imag.webp` (Sancho), `p7-real.webp` (Moinhos).
+
+### 2.2.1 Motor de Cenas (estado → ilustração)
+- A ilustração de cada página é **derivada do estado** (lente + progresso) por `sceneFor(pageIdx)` / `realSceneFor(pageIdx)` e desenhada por `renderScene(pageIdx)`. Nunca atribua `img.src` direto num handler: altere o estado e chame `renderScene`.
+- **Toda troca de ilustração passa por `setSceneImage`**, que:
+  1. mostra **na hora** o spinner sobre a cena (`.scene-loading`) e trava os cartões e o botão da lente da página (`.page-busy`);
+  2. só troca a imagem depois de decodificada (`img.decode()`, limite de 8 s) e com no mínimo 280 ms, entrando com *fade* (`.scene-enter`);
+  3. ignora toques repetidos enquanto `sceneBusy[pageIdx]` estiver ativo.
+  Isso evita que a criança toque duas vezes achando que a tela travou.
+- `goToPage` pré-carrega todas as ilustrações da página atual e da seguinte (`allSceneSrcs`).
+
+### 2.2.2 Leitura Guiada Frase a Frase
+- Na inicialização, `splitPageTextIntoSentences` envolve cada frase de `#page-text-N` em `<span class="sentence">`, sem tocar nas `.literacy-word`. Não há quebra antes de minúscula, então falas com travessão ("bravura! — pensou o fidalgo") ficam numa frase só.
+- "Ouvir Página" narra frase por frase (`.sentence-reading` destaca e rola até a frase). Frases curtas também evitam o corte de falas longas do Chrome Android.
+- O texto falado converte as palavras-chave para minúsculas (`speechTextOf`), para a voz não soletrar "IMAGINAÇÃO" como sigla. Para interromper a leitura, use sempre `stopReadingPage()`.
 
 ### 2.3 Responsividade & Regras de Layout do Reader Frame
 Para garantir que o texto narrativo nunca seja cortado ou coberto pela barra de navegação inferior:
@@ -63,6 +89,7 @@ Para garantir que o texto narrativo nunca seja cortado ou coberto pela barra de 
       }
   }
   ```
+- **Nunca centralize verticalmente um contêiner rolável** (`items-center` em `#pages-viewport`): quando o conteúdo é mais alto que a tela, o topo fica cortado e inalcançável. As seções usam `lg:justify-between` (só no layout em linha), para não abrir vãos no retrato.
 
 ---
 
@@ -83,7 +110,7 @@ Para garantir que o texto narrativo nunca seja cortado ou coberto pela barra de 
 - A interatividade **nunca deve competir com a leitura nem quebrar o ritmo poético do livro**.
 - **Regra Prática**: Botões ou cartões arrastáveis que não geram transformação tangível e divertida na cena são ruído pedagógico e devem ser banidos.
   - *Exemplo real (Página 6)*: Na cena da sagração de cavaleiro, havia cartões para arrastar "LUA CHEIA" e "ESPADA" que apenas faziam a imagem tremer sem alterar a ilustração. Foram eliminados para manter o quadro limpo, preservando a interatividade das palavras apenas no texto da história.
-  - *Exemplo de boa interatividade (Página 7)*: O botão "VENTO" não é decorativo; ele dispara fisicamente a rotação acelerada das pás dos moinhos com som sintetizado de rajada e partículas `💨`, até culminar na transformação mágica dos moinhos nos gigantes de Cervantes.
+  - *Exemplo de boa interatividade (Página 8, `?page=7`)*: O botão "VENTO" não é decorativo; ele dispara fisicamente a rotação acelerada das pás dos moinhos com som sintetizado de rajada e partículas `💨`, até culminar na transformação mágica dos moinhos nos gigantes de Cervantes.
 
 ---
 
@@ -102,33 +129,47 @@ Para possibilitar ricas experiências interativas sem perder a fidelidade artís
    - Produzidos com **fundo transparente (PNG com canal alfa)** ou fundo branco puro isolado para recorte de precisão.
    - Sobrepostos ao cenário através de posicionamento absoluto/relativo no DOM.
 3. **Mecânica Progressiva (Páginas 3, 4 e 5)**:
-   - **Página 3 (Capítulo 2 - A Armadura Feita em Casa)**: Cada clique ou drop de um item da bandeja (`ARMADURA`, `BACIA`, `ESCUDO`, `LANÇA`) revela uma nova ilustração do personagem se vestindo progressivamente (`p2-real-stage-1.jpg` a `p2-real-stage-4.jpg`).
-   - **Página 4 (Capítulo 3 - O Cuidado com Rocinante)**: Cada clique ou drop de carinho (`MAÇÃ`, `CENOURA`, `ESCOVA`) revela uma nova ilustração autêntica do cavalo se alimentando alegremente, ganhando energia e com as crinas penteadas com esmero (`p3-real-stage-1.jpg` a `p3-real-stage-3.jpg`).
-   - **Página 5 (Capítulo 4 - O Acolhimento na Pousada)**: Os botões de `TROMBETA` e `SOPA` revelam o pastor tocando flauta rústica com porquinhos dançarinos (`p4-real-flauta.jpg`) e o estalajadeiro servindo a sopa fumegante (`p4-real-sopa.jpg`).
+   - **Página 3 (`?page=2`, Capítulo 2 - A Armadura do Bisavô)**: Cada clique ou drop de um item da bandeja (`ARMADURA`, `BACIA`, `ESCUDO`, `LANÇA`) revela uma nova ilustração do personagem se vestindo progressivamente (`p2-real-stage-1.webp` a `p2-real-stage-4.webp`).
+   - **Página 4 (`?page=3`, Capítulo 3 - O Cuidado com Rocinante)**: Cada clique ou drop de carinho (`MAÇÃ`, `CENOURA`, `ESCOVA`) revela uma nova ilustração do cavalo se alimentando alegremente, ganhando energia e com as crinas penteadas com esmero (`p3-real-stage-1.webp` a `p3-real-stage-3.webp`).
+   - **Página 5 (`?page=4`, Capítulo 4 - O Acolhimento na Pousada)**: Os botões de `TROMBETA` e `SOPA` revelam o pastor tocando flauta rústica com porquinhos dançarinos (`p4-real-flauta.webp`) e o estalajadeiro servindo a sopa fumegante (`p4-real-sopa.webp`).
+   - **Regra das ilustrações cumulativas**: quando cada etapa **contém** as anteriores (a etapa 2 já mostra o peitoral da etapa 1), os itens **precisam seguir uma ordem fixa**, a mesma do texto, declarada em `progressiveScenes[pageIdx].order`. O próximo item brilha (`.card-next`), os seguintes ficam esmaecidos (`.card-waiting`) e um toque fora de ordem só dá uma dica gentil (som `hint` + balanço do cartão certo), **sem trocar a cena**. Nunca escolha a etapa pela *quantidade* de itens usados: esse foi o bug "toco na bacia e ele veste o peitoral". Se a interação precisar aceitar qualquer ordem, gere ilustrações **independentes** por item (não cumulativas).
+   - Usar um item com a Lente da Imaginação ativa volta para a Lente da Realidade (vestir e cuidar acontecem no mundo real).
    - **Tempo de Contemplação do Leitor**: É terminantemente proibido forçar auto-toggle, transições automáticas precipitadas ou piscamentos relâmpagos para a imaginação. O leitor infantil deve contemplar a cena real concluída pelo tempo que desejar. O botão da Lente da Imaginação apenas pulsa suavemente para convidar a criança à transformação deliberada.
 
-### 4.3 Banco de Personagens e Itens de Referência
-Foi criada a estrutura padronizada para armazenamento e contexto de prompts:
+### 4.3 Estrutura de Ativos (sem duplicatas) e Banco de Referências
 ```text
 classicos-vivos/
+├── assets/                              # Compartilhado por todos os livros (gerado por `npm run build`)
+│   ├── css/  tailwind.css · fonts.css · icons.css
+│   ├── fonts/                           # woff2 locais
+│   └── icones/                          # ícones do app (PWA)
+├── tools/                               # scripts de build (fontes, ícones, Tailwind, WebP, service worker)
+├── docs/  BACKLOG.md · TODO-NANO-BANANA.md
+├── sw.js · manifest.webmanifest
 └── dom-quixote/
+    ├── parte-1.html
+    ├── imagens/                         # FONTE ÚNICA do que o livro carrega (cenas pN-*.webp)
+    │   └── objetos/                     # ícones SVG das bandejas
     └── biblioteca/
-        └── referencias/
-            ├── personagens/                 # Sprites com canal alfa (Alonso simples, armadurado, dourado, etc.)
-            ├── cenarios/                    # Cenários vazios 16:9 (sótão, sala de leitura, estábulo, etc.)
-            └── itens/                       # Adereços isolados transparentes (bacia, elmo, peitoral, lanças)
+        ├── CATALOGO.md
+        └── referencias/                 # NÃO carregado pelo livro: contexto para o Nano-Banana
+            ├── personagens/             # Sprites com canal alfa (Alonso simples, armadurado, dourado, etc.)
+            ├── cenarios/                # Cenários vazios 16:9 (sótão, etc.)
+            └── itens/                   # Adereços isolados (bacia, escudo, cocho...)
 ```
+- **Nunca copie** uma ilustração de `imagens/` para `biblioteca/`. Cenas finalizadas já servem de referência: aponte o caminho original.
+- Ilustração nova: salve o PNG/JPG em `imagens/`, rode `npm run build:images` (converte para WebP e apaga o original) e depois `npm run build:sw`.
 - **Uso como Contexto**: Ao solicitar novas cenas ao Nano-Banana, os caminhos desses ativos de referência devem ser informados no prompt para que a IA mantenha total continuidade de design, proporção, tons de pele e vestimentas ao longo de toda a coleção.
 
 ### 4.4 Coerência Mitológica e Literária dos Monstros e Transformações
 - **Proibição de Monstros Estilo Alien / Cartoon Genérico**: As transformações imaginárias devem respeitar a atmosfera clássica da literatura de Cervantes.
-- *Caso dos Moinhos (Página 7 / Capítulo 6)*: Os gigantes não podem ser aliens ou "blobs" coloridos sem nexo. Devem ser titãs mitológicos de pedra, terra e musgo cujos braços giratórios são as próprias vigas dos moinhos girando no vendaval, com Dom Quixote investindo heroicamente de lança em punho e Sancho Pança abismado sobre o burrico.
+- *Caso dos Moinhos (Página 8 / `?page=7` / Capítulo 7)*: Os gigantes não podem ser aliens ou "blobs" coloridos sem nexo. Devem ser titãs mitológicos de pedra, terra e musgo cujos braços giratórios são as próprias vigas dos moinhos girando no vendaval, com Dom Quixote investindo heroicamente de lança em punho e Sancho Pança abismado sobre o burrico.
 
 ---
 
 ## 5. Protocolo de Testes Automatizados no Tablet
 
-Para validar a integridade da interface em tablets sem intervenção manual, utilize o comando headless do Google Chrome com as resoluções padronizadas.
+Para validar a integridade da interface em tablets sem intervenção manual, utilize o comando headless do Google Chrome com as resoluções padronizadas. Para testar o service worker (PWA offline), sirva por HTTP (`python -m http.server` na raiz) em vez de `file://`. Em Linux/macOS, o mesmo vale com Chromium/Playwright (`--window-size=800,1280` e `1280,800`). Um `npm test` multiplataforma está no backlog (M-8).
 
 ### 5.1 Teste em Tablet Retrato (Portrait: 800 × 1280)
 ```powershell
@@ -148,11 +189,9 @@ O repositório oficial é hospedado em:
 `https://github.com/geraldotfilho/classicos-vivos.git` (Branch: `main`).
 
 Ao finalizar qualquer ciclo de desenvolvimento:
-1. **Sincronizar Arquivo Raiz**:
-   ```powershell
-   Copy-Item -Path classicos-vivos/dom-quixote/parte-1.html -Destination dom_quixote_parte_1_livro_interativo_infantil.html -Force
-   ```
-2. **Atualizar `AGENTS.md`** caso novos padrões arquiteturais tenham sido introduzidos.
+1. **Regenerar os arquivos gerados**: `npm run build` (obrigatório se mudou HTML, classes, ícones ou imagens).
+   > A antiga cópia avulsa `dom_quixote_parte_1_livro_interativo_infantil.html` foi descontinuada: o livro depende de `assets/` e `imagens/`, então distribua a pasta do repositório inteira (ou o link do GitHub Pages).
+2. **Atualizar `AGENTS.md`** caso novos padrões arquiteturais tenham sido introduzidos, e **`docs/BACKLOG.md`** (mover o que foi entregue, registrar o que foi descoberto). Pedidos de arte nova vão para **`docs/TODO-NANO-BANANA.md`**, com arquivo, referências, prompt e critério de aceite.
 3. **Verificar Estado no Diretório Git**:
    ```powershell
    cd classicos-vivos

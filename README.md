@@ -4,7 +4,7 @@
 
 O **Clássicos Vivos** é uma biblioteca aberta de livros digitais interativos que adapta grandes obras da literatura mundial para crianças em fase de alfabetização (a partir de 6 anos). 
 
-Cada livro é construído como uma aplicação web leve e autônoma (HTML5, CSS3, SVG e Web Speech API), pensada especialmente para leitura em **tablets**, sem depender de servidores externos ou instalações complexas.
+Cada livro é construído como uma aplicação web leve e autônoma (HTML5, CSS3, Web Audio e Web Speech API), pensada especialmente para leitura em **tablets**, sem depender de servidores externos ou instalações complexas.
 
 ---
 
@@ -27,8 +27,20 @@ Cada livro é construído como uma aplicação web leve e autônoma (HTML5, CSS3
 
 ## 🚀 Como Usar
 
-1. Acesse diretamente pelo navegador do tablet, celular ou computador (via **GitHub Pages**); ou
-2. Baixe o arquivo `.html` do capítulo desejado e abra-o diretamente no navegador do seu dispositivo (funciona 100% offline!).
+1. **Pelo navegador do tablet** (GitHub Pages): na primeira visita com internet, o livro é baixado por inteiro (~6 MB) e depois **abre mesmo sem conexão**. No Chrome Android, use *"Adicionar à tela inicial"* para instalar como aplicativo em tela cheia.
+2. **Sem internet desde o início**: baixe o repositório (*Code → Download ZIP*), descompacte e abra `index.html`. Tudo é local: estilos, fontes, ícones e ilustrações. Nenhum CDN é usado.
+
+## 🛠️ Para Desenvolvedores
+
+O leitor não exige build. Os arquivos gerados ficam versionados em `assets/` e `sw.js`. Depois de editar um livro:
+
+```bash
+npm install          # uma vez
+npm run build        # regenera CSS (Tailwind), fontes, ícones e o service worker
+npm run build:images # converte novas ilustrações JPG/PNG para WebP
+```
+
+Arquitetura, regras pedagógicas e fluxo de ilustração: [`AGENTS.md`](AGENTS.md). Próximos passos: [`docs/BACKLOG.md`](docs/BACKLOG.md) e [`docs/TODO-NANO-BANANA.md`](docs/TODO-NANO-BANANA.md).
 
 ---
 

@@ -7,12 +7,12 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
     <title>Clássicos Vivos — Biblioteca Infantil Interativa para Tablets</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Fredoka e Nunito -->
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
-    <!-- Phosphor Icons -->
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- Estilos locais (offline): Tailwind compilado, fontes e ícones. Regerar com `npm run build`. -->
+    <link rel="stylesheet" href="./assets/css/tailwind.css">
+    <link rel="stylesheet" href="./assets/css/fonts.css">
+    <link rel="stylesheet" href="./assets/css/icons.css">
+    <link rel="manifest" href="./manifest.webmanifest">
+    <link rel="apple-touch-icon" href="./assets/icones/icone-180.png">
     <style>
         :root {
             --parchment: #FFFDF8;
@@ -164,7 +164,7 @@
                         <span>🛡️</span>
                         <span>Obra #1 • Miguel de Cervantes</span>
                     </div>
-                    <img src="./dom-quixote/imagens/p0-real.jpg" alt="Dom Quixote de La Mancha e Sancho Pança" class="w-full h-full object-cover" />
+                    <img src="./dom-quixote/imagens/p0-real.webp" alt="Dom Quixote de La Mancha e Sancho Pança" class="w-full h-full object-cover" />
                 </div>
 
                 <!-- Detalhes do Livro e Lista de Partes/Capítulos -->
@@ -205,13 +205,13 @@
                                             <span class="bg-emerald-600 text-white font-display font-bold text-[11px] px-2.5 py-0.5 rounded-full uppercase">
                                                 Disponível Agora!
                                             </span>
-                                            <span class="text-xs font-extrabold text-amber-900">7 Páginas Interativas</span>
+                                            <span class="text-xs font-extrabold text-amber-900">8 Páginas Interativas</span>
                                         </div>
                                         <h4 class="text-lg sm:text-xl font-display font-bold text-amber-950 mt-0.5">
                                             Parte 1: O Cavaleiro da Super Imaginação
                                         </h4>
                                         <p class="text-xs sm:text-sm font-bold text-amber-900">
-                                            Os livros mágicos, a armadura do bisavô, Rocinante, Dulcineia e a pousada-castelo!
+                                            Os livros mágicos, a armadura do bisavô, Rocinante, Dulcineia, a pousada-castelo, Sancho Pança e os moinhos-gigantes!
                                         </p>
                                     </div>
                                 </div>
@@ -279,6 +279,13 @@
                 icon.className = document.fullscreenElement ? 'ph-bold ph-corners-in text-lg' : 'ph-bold ph-corners-out text-lg';
             }
         });
+    </script>
+    <script>
+        // Leitura offline: registra o service worker quando servido por http(s) (ex.: GitHub Pages).
+        // Aberto direto do arquivo (file://) o livro já funciona sem internet, pois tudo é local.
+        if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
+            window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(() => {}));
+        }
     </script>
 </body>
 </html>
