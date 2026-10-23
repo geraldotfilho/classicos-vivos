@@ -1,8 +1,8 @@
-# 🎙️ TODO — Narração Gravada dos Livros (agente Gemini + modelo de voz)
+# 🎙️ TODO — Narração Gravada dos Livros (Claude + API de voz do Gemini)
 
 O livro já sabe tocar narração gravada **frase por frase**, com o destaque da frase lida sincronizado e a **voz do aparelho como reserva** para qualquer frase ainda não gravada. Falta gravar. Este documento diz exatamente o quê, com qual voz e onde salvar.
 
-> ⏳ **Quando fazer**: só depois de terminar a arte (P-001 e P-002 em `docs/fila/PEDIDOS.md`). Este trabalho é o pedido **P-006**.
+> 👤 **Quem faz**: o **Claude**, chamando a API do Gemini (chave em `GEMINI_API_KEY`) numa sessão própria, **em paralelo** à arte, que segue com o agente Gemini. Decisão do responsável humano em 2026-10-23. Pedido **P-006**. A execução pela API está na seção 8; o ponto de partida, em [`RETOMADA.md`](RETOMADA.md).
 
 ---
 
@@ -14,7 +14,7 @@ O livro já sabe tocar narração gravada **frase por frase**, com o destaque da
 | **Teatro de vozes** | `teatro` | A mesma narradora para a narração + **uma voz para cada personagem** nas falas com travessão |
 | **Palavras-chave** | `palavras` | A pronúncia pausada de cada palavra em destaque (sílabas devagar e depois a palavra inteira), com a voz da narradora. Serve para as duas narrações |
 
-**Entradas** (geradas pelo Claude, não edite): `docs/narracao/frases-dom-quixote-parte-N.json`, uma por parte. Cada frase traz:
+**Entradas** (geradas por `npm run exportar:frases`, não edite à mão): `docs/narracao/frases-dom-quixote-parte-N.json`, uma por parte. Cada frase traz:
 ```json
 { "id": "p2-s5", "pagina": 2, "texto": "como aparece no livro", "fala": "texto já preparado para falar", "hash": "6b19fbdf98" }
 ```
@@ -23,10 +23,10 @@ e cada palavra-chave traz:
 { "slug": "estrelas", "palavra": "ESTRELAS", "silabas": "ES • TRE • LAS", "fala": "es... tre... las... estrelas!", "hash": "..." }
 ```
 
-**Saídas** (você é o dono de `dom-quixote/audio/**`):
+**Saídas** (`dom-quixote/audio/**`, dono: Claude):
 ```text
 dom-quixote/audio/
-├── vozes.js                          # você acrescenta a parte em `partes` quando ela estiver completa
+├── vozes.js                          # acrescente a parte em `partes` quando ela estiver completa
 ├── narradora/amostra.mp3             # amostra curta (FRASE DE AMOSTRA abaixo), usada no botão ▶ do painel
 ├── narradora/parte-N/<id>.mp3        # uma frase por arquivo: p0-s1.mp3, p0-s2.mp3, ...
 ├── narradora/parte-N/indice.json     # { "<id>": "<hash da frase gravada>" }
@@ -38,8 +38,8 @@ dom-quixote/audio/
 ---
 
 ## 1. Ferramenta e formato
-- Use o **modelo de voz (TTS) mais recente do Gemini** com suporte a português do Brasil, a instruções de estilo e a **vários falantes** (até 2 por pedido). Registre em `ENTREGAS.md` o nome exato do modelo e das vozes usadas.
-- **Antes de produzir em massa, confirme** que os termos de uso permitem distribuir os áudios num projeto aberto (CC BY 4.0) e anote a conclusão em `ENTREGAS.md`. Se não permitirem, pare e registre o bloqueio.
+- Use o **modelo de voz (TTS) mais recente do Gemini** com suporte a português do Brasil, a instruções de estilo e a **vários falantes** (até 2 por pedido). Registre o nome exato do modelo e das vozes usadas na seção Revisões de `docs/fila/PEDIDOS.md` e no `indice.json`.
+- **Antes de produzir em massa, confirme** que os termos de uso permitem distribuir os áudios num projeto aberto (CC BY 4.0) e anote a conclusão em `docs/fila/PEDIDOS.md`. Se não permitirem, pare e registre o bloqueio.
 - O modelo devolve PCM 16 bits, 24 kHz, mono. Salve como **`.wav`** (com cabeçalho) ou **`.pcm`** (bruto) **com o nome final** (`p2-s5.wav`). Depois rode:
   ```bash
   npm run build:audio   # converte para MP3 (48 kbps mono), corta o silêncio das pontas e apaga os originais
@@ -106,9 +106,49 @@ Se o modelo errar um nome, reescreva só aquele trecho foneticamente no pedido (
 5. Quando **todas** as frases de uma parte estiverem gravadas numa voz, acrescente o número da parte em `partes` daquela voz em `dom-quixote/audio/vozes.js`. A partir daí ela aparece como opção no painel "Voz" do livro.
 
 ## 7. Ordem de produção e entregas
-Uma entrega (um commit + uma linha em `ENTREGAS.md`) por item:
+Uma entrega (commit + merge na `main` + uma linha nas Revisões de `docs/fila/PEDIDOS.md`) por item. **Antes do item 1**, entregue as amostras de 2 ou 3 narradoras e espere o humano escolher a voz de ouvido:
 1. `narradora/amostra` + **Parte 1** completa na `narradora` + palavras-chave da Parte 1.
 2. Partes 2, 3 e 4 na `narradora`, cada uma com suas palavras-chave.
 3. `teatro`: roteiro + áudios, uma parte por vez (1 → 4), + `teatro/amostra`.
 
 Tamanho esperado: ~20–40 KB por frase, ~6–8 MB por voz para os 4 livros. O tablet só baixa a voz escolhida, na primeira vez que ela toca.
+
+---
+
+## 8. Execução pelo Claude via API (`tools/gravar-narracao.mjs`)
+
+### 8.1 Chave, rede e modelo
+- A chave fica **só** na variável de ambiente `GEMINI_API_KEY`, configurada pelo humano nas configurações do ambiente. Nunca a imprima, nunca a grave em arquivo e nunca a ponha na URL de comandos que vão para log: use o cabeçalho `x-goog-api-key`.
+- Confira a chave e liste os modelos com `generateContent`:
+  ```bash
+  test -n "$GEMINI_API_KEY" && echo ok
+  curl -s -H "x-goog-api-key: $GEMINI_API_KEY" https://generativelanguage.googleapis.com/v1beta/models?pageSize=200 | grep -o '"name": "models/[^"]*tts[^"]*"'
+  ```
+  Use o modelo de voz mais recente da lista (em 2025 eram `gemini-2.5-flash-preview-tts` e `gemini-2.5-pro-preview-tts`). Se o modelo "pro" estiver disponível na cota, ele costuma ter entoação melhor. As vozes pré-prontas são as da seção 2/3 (Sulafat, Vindemiatrix, Gacrux, Achird, Leda, Algieba, Charon, Puck...).
+
+### 8.2 Pedido de uma frase
+```http
+POST https://generativelanguage.googleapis.com/v1beta/models/<modelo>:generateContent
+x-goog-api-key: $GEMINI_API_KEY
+{
+  "contents": [{ "parts": [{ "text": "<instrução de estilo>\n\n<texto a falar>" }] }],
+  "generationConfig": {
+    "responseModalities": ["AUDIO"],
+    "speechConfig": { "voiceConfig": { "prebuiltVoiceConfig": { "voiceName": "Sulafat" } } }
+  }
+}
+```
+- A resposta traz o áudio em `candidates[0].content.parts[0].inlineData.data`: base64 de **PCM s16le, 24 kHz, mono**. Salve como `<id>.pcm`; o `npm run build:audio` já converte esse formato.
+- **Teatro** (narradora + 1 personagem): troque `voiceConfig` por `multiSpeakerVoiceConfig.speakerVoiceConfigs` (`[{ speaker: "NARRADORA", voiceConfig: ... }, { speaker: "SANCHO", voiceConfig: ... }]`). O texto vai como roteiro, uma linha por trecho: `NARRADORA: ...` / `SANCHO: ...`.
+- **Risco conhecido**: o modelo pode **ler em voz alta** a instrução ou o contexto. Separe bem as partes do prompt (ex.: "Instrução: ... Leia apenas o texto entre as marcas: «...»"). A transcrição da QA (seção 6) pega esse erro: o áudio que tiver palavras a mais é regravado.
+- O contexto das frases vizinhas (seção 1) também pode vazar. Se vazar, mande só a instrução + a frase, e descreva a emoção da cena em uma palavra na instrução ("com suspense", "com ternura").
+
+### 8.3 Robustez do script
+- **Retomável**: pule a frase cujo `.mp3` já existe com o mesmo `hash` no `indice.json`. Assim o script pode ser rodado de novo depois de uma queda ou do fim da cota.
+- **Cota e erros**: em `429`, respeite o `retryDelay` da resposta (ou espere com recuo exponencial). Se a cota **diária** acabar, salve o progresso e registre em `PEDIDOS.md` quando retomar. Em `5xx`, faça até 4 tentativas.
+- Opções úteis: `--parte N`, `--voz narradora|teatro|palavras`, `--ids p2-s5,p2-s6` (regravar só algumas), `--amostra <voz-pré-pronta>`, `--seco` (mostra o que faria sem chamar a API).
+- Depois de cada lote: `npm run build:audio` (MP3 + corte de silêncio) e QA. O `ffprobe` está disponível no ambiente para conferir a duração.
+
+### 8.4 Controle de qualidade pela API
+- **Transcrição**: envie o MP3 a um modelo de texto do Gemini (ex.: `gemini-2.5-flash`), com `inlineData` `audio/mp3` e o pedido "Transcreva exatamente o que é falado, em português.". Compare com o `fala` sem acento, pontuação nem caixa. Divergência de palavra → regravar (até 3 tentativas; depois, anote a frase para o humano ouvir).
+- O Claude **não escuta**: entonação e naturalidade são julgadas pelo humano nas amostras e por amostragem. Gere um `docs/narracao/qa-parte-N.md` com as frases que precisaram de regravação ou ficaram fora da faixa de duração.
