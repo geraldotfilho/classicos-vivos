@@ -6,7 +6,7 @@ Leia este arquivo primeiro numa sessão nova do Claude. Depois, `AGENTS.md` (arq
 
 ## 1. Frente atual do Claude: narração gravada (P-006)
 
-O responsável humano passou a narração para o **Claude**, chamando a **API do Gemini** a partir de uma sessão com a chave em `GEMINI_API_KEY`. O Gemini (agente de imagens) não faz mais narração.
+O responsável humano passou a narração para o **Claude**, chamando a **API do Gemini** a partir de uma sessão com a chave cadastrada como **segredo de rede** do ambiente. O proxy injeta o cabeçalho `x-goog-api-key` nas requisições a `generativelanguage.googleapis.com`, e o Claude não vê a chave. O Gemini (agente de imagens) não faz mais narração.
 
 - **Passo a passo**: [`TODO-NARRACAO.md`](TODO-NARRACAO.md). A seção 8 traz a execução pela API.
 - **O que já existe**:
@@ -17,11 +17,7 @@ O responsável humano passou a narração para o **Claude**, chamando a **API do
 - **Nada foi gravado ainda.** `dom-quixote/audio/vozes.js` tem `partes: []` nas duas vozes.
 
 **Primeiros passos na sessão nova:**
-1. Confirme que a chave existe **sem imprimi-la**:
-   ```bash
-   test -n "$GEMINI_API_KEY" && echo ok
-   ```
-   Depois liste os modelos de voz disponíveis (seção 8.1 do TODO).
+1. Teste o acesso listando os modelos de voz (comando na seção 8.1 do TODO). `$GEMINI_API_KEY` vazio é normal: a chave vem pelo proxy.
 2. Leia os termos de uso da API e anote a conclusão na seção Revisões de `docs/fila/PEDIDOS.md`. A pergunta é se os áudios podem ser distribuídos sob CC BY 4.0.
 3. Escreva `tools/gravar-narracao.mjs` e crie o script `npm run gravar:narracao`.
 4. Grave **amostras** de 2 ou 3 vozes de narradora, com a FRASE DE AMOSTRA e uma frase de diálogo da Parte 1. Entregue na main e **peça ao humano para escolher de ouvido**: o Claude não escuta áudio. Nada de produção em massa antes dessa escolha.

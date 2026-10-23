@@ -2,7 +2,7 @@
 
 O livro já sabe tocar narração gravada **frase por frase**, com o destaque da frase lida sincronizado e a **voz do aparelho como reserva** para qualquer frase ainda não gravada. Falta gravar. Este documento diz exatamente o quê, com qual voz e onde salvar.
 
-> 👤 **Quem faz**: o **Claude**, chamando a API do Gemini (chave em `GEMINI_API_KEY`) numa sessão própria, **em paralelo** à arte, que segue com o agente Gemini. Decisão do responsável humano em 2026-10-23. Pedido **P-006**. A execução pela API está na seção 8; o ponto de partida, em [`RETOMADA.md`](RETOMADA.md).
+> 👤 **Quem faz**: o **Claude**, chamando a API do Gemini (chave num segredo de rede do ambiente) numa sessão própria, **em paralelo** à arte, que segue com o agente Gemini. Decisão do responsável humano em 2026-10-23. Pedido **P-006**. A execução pela API está na seção 8; o ponto de partida, em [`RETOMADA.md`](RETOMADA.md).
 
 ---
 
@@ -118,18 +118,18 @@ Tamanho esperado: ~20–40 KB por frase, ~6–8 MB por voz para os 4 livros. O t
 ## 8. Execução pelo Claude via API (`tools/gravar-narracao.mjs`)
 
 ### 8.1 Chave, rede e modelo
-- A chave fica **só** na variável de ambiente `GEMINI_API_KEY`, configurada pelo humano nas configurações do ambiente. Nunca a imprima, nunca a grave em arquivo e nunca a ponha na URL de comandos que vão para log: use o cabeçalho `x-goog-api-key`.
-- Confira a chave e liste os modelos com `generateContent`:
+- **Como a chave chega (preferido): segredo de rede do ambiente.** O humano cadastrou a chave como segredo do ambiente para o host `generativelanguage.googleapis.com`, com o cabeçalho `x-goog-api-key` e sem prefixo. O proxy do ambiente **injeta o cabeçalho sozinho** em toda requisição a esse host: o Claude nunca vê a chave e o script **não manda cabeçalho de autenticação nenhum**. Por isso `$GEMINI_API_KEY` fica vazio, e isso é o esperado.
+- **Alternativa**: se existir a variável `GEMINI_API_KEY`, o script manda `x-goog-api-key: $GEMINI_API_KEY`. Nunca imprima a chave, nunca a grave em arquivo e nunca a ponha na URL.
+- **Teste de acesso**: liste os modelos de voz. Um `403 "unregistered callers"` quer dizer que nenhuma chave chegou; confira o segredo do ambiente ou abra uma sessão nova.
   ```bash
-  test -n "$GEMINI_API_KEY" && echo ok
-  curl -s -H "x-goog-api-key: $GEMINI_API_KEY" https://generativelanguage.googleapis.com/v1beta/models?pageSize=200 | grep -o '"name": "models/[^"]*tts[^"]*"'
+  curl -s ${GEMINI_API_KEY:+-H "x-goog-api-key: $GEMINI_API_KEY"} "https://generativelanguage.googleapis.com/v1beta/models?pageSize=200" | grep -o '"name": "models/[^"]*tts[^"]*"'
   ```
   Use o modelo de voz mais recente da lista (em 2025 eram `gemini-2.5-flash-preview-tts` e `gemini-2.5-pro-preview-tts`). Se o modelo "pro" estiver disponível na cota, ele costuma ter entoação melhor. As vozes pré-prontas são as da seção 2/3 (Sulafat, Vindemiatrix, Gacrux, Achird, Leda, Algieba, Charon, Puck...).
 
 ### 8.2 Pedido de uma frase
 ```http
 POST https://generativelanguage.googleapis.com/v1beta/models/<modelo>:generateContent
-x-goog-api-key: $GEMINI_API_KEY
+(cabeçalho injetado pelo proxy, ou x-goog-api-key da variável)
 {
   "contents": [{ "parts": [{ "text": "<instrução de estilo>\n\n<texto a falar>" }] }],
   "generationConfig": {

@@ -145,7 +145,7 @@ window.LIVRO = {
 - **Narração gravada**: `<livro>/audio/<voz>/parte-N/<id-da-frase>.mp3`; palavras-chave em `<livro>/audio/palavras/<slug>.mp3` (sílabas pausadas + palavra inteira). A voz só aparece como disponível quando o número da parte está em `partes` no `vozes.js`.
 - **Reserva em cascata, nunca silêncio**: frase sem gravação → voz do aparelho; voz "online" sem internet → melhor voz offline do aparelho (até recarregar a página). Na primeira visita, se houver narração gravada pronta para a parte, ela vira a voz padrão.
 - **Offline**: o service worker **não** pré-baixa os áudios (são grandes); cada MP3 fica guardado na primeira vez que toca. O `vozes.js` é buscado sempre na rede primeiro, para refletir novas gravações.
-- Produção das gravações: `docs/TODO-NARRACAO.md` (Claude, via API do Gemini com a chave em `GEMINI_API_KEY`, que **nunca** é impressa nem versionada). Lista do que gravar: `docs/narracao/frases-<livro>-parte-N.json`.
+- Produção das gravações: `docs/TODO-NARRACAO.md` (Claude, via API do Gemini com a chave como segredo de rede do ambiente, injetada pelo proxy; ela **nunca** é impressa nem versionada). Lista do que gravar: `docs/narracao/frases-<livro>-parte-N.json`.
 
 ---
 
