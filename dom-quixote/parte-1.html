@@ -161,24 +161,36 @@
 
                     Quando um jovem pastor soprou uma flauta rústica para recolher seus porquinhos, Dom Quixote escutou triunfantes {{TROMBETAS|TROM • BE • TAS|🎺}} reais. E recebido com carinho pelo bondoso dono da pousada, saboreou uma quentinha tigela de {{SOPA|SO • PA|🍲}} de pão com alho como se estivesse no mais nobre banquete de reis!`,
                 cena: {
-                    real: 'p4-real.webp', imag: 'p4-imag.webp', alt: 'Pousada ou Castelo Real',
+                    real: 'p4-real-fundo.webp', imag: 'p4-imag.webp', alt: 'Pousada ou Castelo Real',
                     legendaReal: '👓 Lente da Realidade: Uma Pousada Simples na Estrada',
                     legendaImag: '✨ Lente da Imaginação: Um Castelo com Torres de Prata!',
                     hotspots: [
-                        { x: 42, y: 10, w: 32, h: 65, palavra: 'POUSADA', emoji: '🏠' },
-                        { x: 26, y: 65, w: 24, h: 28, palavra: 'PORQUINHOS', emoji: '🐷' }
+                        { x: 52, y: 10, w: 26, h: 60, palavra: 'POUSADA', emoji: '🏠' }
                     ],
-                    // Itens independentes (qualquer ordem). Com NB-2 + camadas vira tipo 'camadas' (BACKLOG A-2)
+                    // Cenário limpo + camadas (AGENTS §4.2): flauta e sopa em qualquer ordem, ou as duas juntas
+                    camadas: [
+                        { id: 'pastor-parado', src: 'camadas/p4-pastor-parado.webp', ate: 'trombeta', x: 13, y: 97, w: 20, emoji: '🧒' },
+                        { id: 'pastor-tocando', src: 'camadas/p4-pastor-tocando.webp', item: 'trombeta', x: 13, y: 97, w: 20, emoji: '🎶' },
+                        { id: 'notas', src: 'camadas/p4-notas-musicais.webp', item: 'trombeta', x: 22, y: 60, w: 12, anim: 'flutuar', emoji: '🎵' },
+                        { id: 'porquinhos', src: 'camadas/p4-porquinhos.webp', item: 'trombeta', x: 27, y: 99, w: 15, anim: 'balanco', z: 9, emoji: '🐷' },
+                        { id: 'estalajadeiro-acenando', src: 'camadas/p4-estalajadeiro-acenando.webp', ate: 'sopa', x: 86, y: 90, w: 15, emoji: '👋' },
+                        { id: 'estalajadeiro-sopa', src: 'camadas/p4-estalajadeiro-sopa.webp', item: 'sopa', x: 86, y: 90, w: 15, emoji: '🍲' }
+                    ],
+                    realCena: (estado) => ({
+                        src: 'p4-real-fundo.webp',
+                        legenda: estado.usados.size >= 2
+                            ? '👓 Lente da Realidade: Música e Acolhimento na Pousada! ✨'
+                            : estado.ultimo === 'trombeta'
+                                ? '👓 Lente da Realidade: Pastor Tocando Flauta para os Porquinhos! 🎶'
+                                : estado.ultimo === 'sopa'
+                                    ? '👓 Lente da Realidade: O Estalajadeiro Servindo a Sopa Quentinha! 🍲'
+                                    : '👓 Lente da Realidade: Uma Pousada Simples na Estrada'
+                    }),
                     cartoes: {
-                        tipo: 'variante',
-                        variantes: {
-                            trombeta: { src: 'p4-real-flauta.webp', legenda: '👓 Lente da Realidade: Pastor Tocando Flauta para os Porquinhos! 🎶' },
-                            sopa: { src: 'p4-real-sopa.webp', legenda: '👓 Lente da Realidade: O Estalajadeiro Servindo a Sopa Quentinha! 🍲' }
-                        },
-                        legendaTodas: '👓 Lente da Realidade: Música e Acolhimento na Pousada! ✨',
+                        tipo: 'camadas',
                         itens: [
                             { id: 'trombeta', domId: 'drag-inn-1', palavra: 'TROMBETA', emoji: '🎺', icone: './imagens/objetos/trombeta-flauta.svg', borda: 'border-purple-500', som: 'fanfare' },
-                            { id: 'sopa', domId: 'drag-inn-2', palavra: 'SOPA', emoji: '🍲', icone: './imagens/objetos/sopa-banquete.svg', som: 'wordPop' }
+                            { id: 'sopa', domId: 'drag-inn-2', palavra: 'SOPA', emoji: '🍲', icone: './imagens/objetos/sopa-banquete.svg', som: 'wordPop', animar: 'estalajadeiro-sopa', efeito: 'pulo' }
                         ]
                     }
                 }
@@ -229,19 +241,19 @@
 
                     — Que gigantes, meu senhor? — avisou Sancho. — São apenas moinhos que moem o trigo ao vento! Mas Dom Quixote já baixava a lança, pronto para o mais célebre e corajoso duelo de toda a literatura!`,
                 cena: {
-                    real: 'p7-real.webp', imag: 'p7-imag.webp', alt: 'Sancho Pança e os Moinhos de Vento',
+                    real: 'p7-real-sem-pas.webp', imag: 'p7-imag.webp', alt: 'Sancho Pança e os Moinhos de Vento',
                     legendaReal: '👓 Lente da Realidade: Os Moinhos de Vento de La Mancha',
                     legendaImag: '✨ Lente da Imaginação: Dom Quixote contra os Gigantes de Cervantes!',
-                    precarregar: ['./imagens/objetos/moinho-pas.svg'],
-                    // Pás giratórias e rajadas (BACKLOG A-1: trocar por camadas em aquarela, NB-1)
+                    precarregar: ['camadas/p7-pas-moinho.webp'],
+                    // Pás em aquarela sobre os cubos do cenário sem pás (NB-1): paradas na Realidade, giram com o VENTO
                     extra: `
-                        <div id="windmill-blades-1" class="windmill-blades-overlay hidden absolute pointer-events-none"
-                             style="left: 74.2%; top: 29.2%; width: 33%; height: 58%; transform: translate(-50%, -50%); transform-origin: 50% 50%; z-index: 10;">
-                            <img src="./imagens/objetos/moinho-pas.svg" alt="" class="w-full h-full" />
+                        <div id="windmill-blades-1" class="windmill-blades-overlay absolute pointer-events-none"
+                             style="left: 73.5%; top: 26.7%; width: 26%; aspect-ratio: 1; transform: translate(-50%, -50%); transform-origin: 50% 50%; z-index: 10;">
+                            <img src="./imagens/camadas/p7-pas-moinho.webp" alt="" class="w-full h-full" />
                         </div>
-                        <div id="windmill-blades-2" class="windmill-blades-overlay hidden absolute pointer-events-none"
-                             style="left: 90.6%; top: 34.0%; width: 22%; height: 39%; transform: translate(-50%, -50%); transform-origin: 50% 50%; z-index: 9;">
-                            <img src="./imagens/objetos/moinho-pas.svg" alt="" class="w-full h-full" />
+                        <div id="windmill-blades-2" class="windmill-blades-overlay absolute pointer-events-none"
+                             style="left: 90.4%; top: 33.3%; width: 14%; aspect-ratio: 1; transform: translate(-50%, -50%) rotate(20deg); transform-origin: 50% 50%; z-index: 9;">
+                            <img src="./imagens/camadas/p7-pas-moinho.webp" alt="" class="w-full h-full" />
                         </div>
                         <div id="wind-gusts-container" class="absolute inset-0 pointer-events-none overflow-hidden" style="z-index: 15;"></div>`,
                     hotspots: [
@@ -249,9 +261,13 @@
                         { x: 60, y: 8, w: 36, h: 65, lente: 'real', acao: 'vento', titulo: 'Tocar nos Moinhos' },
                         { x: 60, y: 8, w: 36, h: 65, lente: 'imag', palavra: 'GIGANTES', emoji: '⚔️', titulo: 'Tocar nos Gigantes' }
                     ],
-                    aoTrocarLente: () => {
-                        document.getElementById('windmill-blades-1').classList.add('hidden');
-                        document.getElementById('windmill-blades-2').classList.add('hidden');
+                    // Na Imaginação os moinhos já são gigantes: as pás somem; na Realidade voltam paradas
+                    aoTrocarLente: (livro) => {
+                        ['windmill-blades-1', 'windmill-blades-2'].forEach(id => {
+                            const pas = document.getElementById(id);
+                            pas.classList.remove('windmill-spinning-slow', 'windmill-spinning-fast', 'windmill-spinning-turbo');
+                            pas.classList.toggle('hidden', livro.lenteImaginacao());
+                        });
                     },
                     cartoes: {
                         tipo: 'acao',
@@ -290,7 +306,6 @@
                 setTimeout(() => girar('fast'), 450);
                 setTimeout(() => { girar('turbo'); livro.som('lensMagic'); }, 900);
                 setTimeout(() => {
-                    pas.forEach(p => p.classList.add('hidden'));
                     window.ventoSoprando = false;
                     if (!livro.lenteImaginacao()) livro.definirLente(true);
                 }, 1500);
