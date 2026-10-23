@@ -83,6 +83,7 @@ Para garantir que o texto narrativo nunca seja cortado ou coberto pela barra de 
 - A interatividade **nunca deve competir com a leitura nem quebrar o ritmo poético do livro**.
 - **Regra Prática**: Botões ou cartões arrastáveis que não geram transformação tangível e divertida na cena são ruído pedagógico e devem ser banidos.
   - *Exemplo real (Página 6)*: Na cena da sagração de cavaleiro, havia cartões para arrastar "LUA CHEIA" e "ESPADA" que apenas faziam a imagem tremer sem alterar a ilustração. Foram eliminados para manter o quadro limpo, preservando a interatividade das palavras apenas no texto da história.
+  - *Exemplo de boa interatividade (Página 7)*: O botão "VENTO" não é decorativo; ele dispara fisicamente a rotação acelerada das pás dos moinhos com som sintetizado de rajada e partículas `💨`, até culminar na transformação mágica dos moinhos nos gigantes de Cervantes.
 
 ---
 
@@ -118,6 +119,10 @@ classicos-vivos/
             └── itens/                       # Adereços isolados transparentes (bacia, elmo, peitoral, lanças)
 ```
 - **Uso como Contexto**: Ao solicitar novas cenas ao Nano-Banana, os caminhos desses ativos de referência devem ser informados no prompt para que a IA mantenha total continuidade de design, proporção, tons de pele e vestimentas ao longo de toda a coleção.
+
+### 4.4 Coerência Mitológica e Literária dos Monstros e Transformações
+- **Proibição de Monstros Estilo Alien / Cartoon Genérico**: As transformações imaginárias devem respeitar a atmosfera clássica da literatura de Cervantes.
+- *Caso dos Moinhos (Página 7 / Capítulo 6)*: Os gigantes não podem ser aliens ou "blobs" coloridos sem nexo. Devem ser titãs mitológicos de pedra, terra e musgo cujos braços giratórios são as próprias vigas dos moinhos girando no vendaval, com Dom Quixote investindo heroicamente de lança em punho e Sancho Pança abismado sobre o burrico.
 
 ---
 
