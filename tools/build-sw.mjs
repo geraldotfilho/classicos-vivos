@@ -6,7 +6,7 @@ import { readFileSync, writeFileSync, globSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 
 const files = [
-    'index.html',
+    ...globSync('*.html'),
     'manifest.webmanifest',
     ...globSync('assets/css/*.css'),
     ...globSync('assets/fonts/*.woff2'),

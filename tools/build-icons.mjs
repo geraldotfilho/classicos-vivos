@@ -5,7 +5,7 @@
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { globSync } from 'node:fs';
 
-const htmlFiles = ['index.html', ...globSync('*/parte-*.html')];
+const htmlFiles = [...globSync('*.html'), ...globSync('*/parte-*.html')];
 const weights = ['bold', 'fill'];
 const names = new Set();
 for (const f of htmlFiles) {
