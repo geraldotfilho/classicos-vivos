@@ -4,7 +4,7 @@
    - Na instalação, baixa todos os livros (HTML, estilos, fontes e ilustrações) para leitura offline.
    - Páginas HTML: rede primeiro (recebe correções), cache quando estiver sem internet.
    - Demais arquivos: cache primeiro (abre instantâneo no tablet). */
-const CACHE = 'classicos-vivos-039899a47f3f';
+const CACHE = 'classicos-vivos-d005fa610f17';
 const FILES = [
     "./assets/icones/icone-192.png",
     "./assets/css/fonts.css",
@@ -45,6 +45,7 @@ const FILES = [
     "./dom-quixote/imagens/p0-imag.webp",
     "./dom-quixote/imagens/p0-real.webp",
     "./dom-quixote/imagens/p1-imag.webp",
+    "./dom-quixote/imagens/p1-real-livro-castelos.webp",
     "./dom-quixote/imagens/p1-real.webp",
     "./dom-quixote/imagens/p2-imag.webp",
     "./dom-quixote/imagens/p2-real-stage-0.webp",
