@@ -58,7 +58,7 @@ Convenção: `pN` = índice da página (`?page=N`), sufixo `-real` (Lente da Rea
 | `rocinante-estabulo-real.png` / `rocinante-corcel-branco.png` | Rocinante real / corcel branco imaginado |
 | `aldonza-camponesa.png` / `princesa-dulcineia.png` | Aldonza Lorenzo / Princesa Dulcineia |
 | `sancho-panca-acenando.png` / `sancho-ilha-sonho.png` | Sancho Pança / Sancho governador da ilha |
-| `gatinho-dormindo.png` / `leao-guardiao.svg` | Gatinho da sala / Leão Guardião (o SVG é provisório: regerar no Nano-Banana) |
+| `gatinho-dormindo.png` / `leao-guardiao.png` | Gatinho da sala / Leão Guardião (sprite em aquarela com canal alfa, NB-8) |
 | `dragao-dourado.png` | Dragão dourado amigável |
 | `gigantes-moinhos.png` | Gigantes com braços de pás de moinho |
 

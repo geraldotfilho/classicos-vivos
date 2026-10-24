@@ -103,3 +103,11 @@ Para manter a consistência entre cenas e capítulos, use sempre estas descriç�
   > Epic whimsical children's picture book watercolor and gouache illustration, 16:9 landscape, no text. The windmill hill transformed by imagination! On the left, inside a glowing golden thought-cloud, chubby Sancho Panza wears a golden crown as Governor of a sunny tropical island surrounded by grapes, pies, and palm trees. On the right, standing on the purple hill where the windmills were, are two colossal, funny fairytale giants (one red, one purple) with grumpy cartoon faces, swinging four spinning windmill-sail arms in the wind!
   >
   > ⚠️ *Prompt histórico, já substituído:* a versão atual (`p7-imag.webp`) traz titãs mitológicos de pedra, terra e musgo, conforme a regra 4.4 do `AGENTS.md`. A ilha de Sancho foi movida para a página 7 (`p6-imag.webp`).
+
+### Ícone do Aplicativo (`assets/icones/icone-1024.png`, NB-7)
+- **Ícone Principal (1:1):**
+  > Warm, whimsical children's picture book watercolor and soft gouache illustration with gentle colored-pencil outlines, rich storybook textures, square 1:1 aspect ratio, no text or words anywhere in the image. App icon for a children's classic-books library: the friendly face and shoulders of kindly grandfather Don Quixote in a shiny brass basin helmet, with his long white mustache, smiling, in front of an open storybook whose pages glow golden, against a warm parchment-orange circle. Simple, bold, readable at small sizes, all important content inside the central 80% (safe zone for rounded masks). No text.
+
+### Sprites de Referência — Leão Guardião (`dom-quixote/biblioteca/referencias/personagens/leao-guardiao.png`, NB-8)
+- **Sprite com Canal Alfa (NB-8):**
+  > Warm, whimsical children's picture book watercolor and soft gouache illustration with gentle colored-pencil outlines, rich storybook textures, isolated sprite on pure white background, no text or words anywhere in the image. The same noble, gentle golden guardian lion from the reference, lying down peacefully with a fluffy mane and a tiny golden crown, full body, no floor shadow.
