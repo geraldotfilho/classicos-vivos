@@ -466,6 +466,7 @@ async function tentarBloco(bloco, roteiro) {
     while (vozFim > vozIni && Math.abs(a[vozFim]) < 500) vozFim--;
     const margem = Math.round(TAXA * 0.08);
     const ini = Math.max(0, vozIni - margem), fim = Math.min(a.length, vozFim + margem);
+    if (bloco.palavras) return { erros: 0, pior: 0, avisos: [], marcas: [], amostras: a.subarray(ini, fim), motivo: '' };
 
     let cortes, ouvidos = null;
     if (!o['sem-qa']) {
@@ -634,9 +635,83 @@ async function criarVoz() {
 
 /* Palavras-chave em grupos (até 10 por pedido): o mesmo áudio custa o mesmo, mas gasta até 10 vezes menos pedidos
    do limite diário. Cada grupo é gravado como uma lista (uma palavra por parágrafo) e cortado pelos tempos do Whisper. */
+/* Corta um grupo de palavras-chave gravado de uma vez. Âncora: o fim da PALAVRA INTEIRA de cada item
+   ("…jaula!"), que o Whisper reconhece bem (as sílabas soltas ele escreve de jeitos imprevisíveis); o corte
+   fica no meio da primeira pausa depois dela. Conferência: cada trecho tem a sua palavra e nenhuma das outras.
+   Item sem âncora não é salvo (fica pendente para a próxima rodada), exceto o último, que vai até o fim. */
+async function cortarPalavras(grupo, amostras) {
+    const r = await transcrever(wavDe(amostras), true);
+    const tokens = r.palavras.flatMap(([w, ini, fim]) => normalizar(w).split(' ').filter(Boolean).map(t => ({ t, ini, fim })));
+    const casa = (j, alvo) => {
+        // a palavra inteira começa em tokens[j]? (aceita junta/separada e quase igual)
+        for (let n = 1; n <= alvo.length + 1 && j + n <= tokens.length; n++) {
+            const ouvido = tokens.slice(j, j + n).map(x => x.t).join('');
+            const esperado = alvo.join('');
+            if (ouvido === esperado || (esperado.length >= 4 && edicao(ouvido, esperado) <= (esperado.length >= 8 ? 2 : 1))) return n;
+        }
+        return 0;
+    };
+    const alvos = grupo.map(g => normalizar(g.palavra).split(' '));
+    const fimDe = [];   // índice do último token da palavra inteira de cada item
+    let pos = 0;
+    for (let k = 0; k < grupo.length; k++) {
+        let achou = -1, n = 0;
+        for (let j = pos; j < tokens.length; j++) {
+            const m = casa(j, alvos[k]);
+            if (!m) continue;
+            // a sílaba solta pode soar como a palavra: fica a ÚLTIMA ocorrência antes da próxima palavra do grupo
+            const proxima = k + 1 < grupo.length ? tokens.findIndex((_, i) => i > j && casa(i, alvos[k + 1])) : -1;
+            achou = j; n = m;
+            for (let i = j + m; i < tokens.length && (proxima < 0 || i < proxima); i++) {
+                const m2 = casa(i, alvos[k]);
+                if (m2) { achou = i; n = m2; }
+            }
+            break;
+        }
+        fimDe.push(achou < 0 ? null : achou + n - 1);
+        if (achou >= 0) pos = achou + n;
+    }
+    let vozFim = amostras.length - 1;
+    while (vozFim > 0 && Math.abs(amostras[vozFim]) < 500) vozFim--;
+    const gaps = pausas(amostras, 0, vozFim);
+    const corteDepois = (seg) => {
+        const g = gaps.find(x => x.fim > (seg - 0.15) * TAXA && x.s >= 0.2);
+        return Math.round(g ? g.meio : Math.min(amostras.length, (seg + 0.3) * TAXA));
+    };
+    const marcas = [], avisos = [];
+    let inicio = 0;
+    for (let k = 0; k < grupo.length; k++) {
+        const ultimo = k === grupo.length - 1;
+        if (fimDe[k] === null && !ultimo) {
+            avisos.push(`${grupo[k].id}: palavra inteira não encontrada no áudio do grupo; fica para a próxima rodada`);
+            continue;
+        }
+        const fim = ultimo ? amostras.length : corteDepois(tokens[fimDe[k]].fim);
+        marcas.push({ id: grupo[k].id, ini: inicio / TAXA, fim: fim / TAXA });
+        inicio = fim;
+    }
+    // Conferência de cada trecho: a própria palavra presente e nenhuma das outras do grupo
+    const boas = [];
+    for (const m of marcas) {
+        const ouvido = normalizar(await transcrever(wavDe(amostras.subarray(Math.round(m.ini * TAXA), Math.round(m.fim * TAXA)))));
+        const tem = (palavra) => { const a = normalizar(palavra).replace(/ /g, ''); const b = ouvido.replace(/ /g, ''); return b.includes(a) || [...Array(Math.max(0, b.length - a.length + 1)).keys()].some(i => edicao(b.slice(i, i + a.length), a) <= (a.length >= 8 ? 2 : 1)); };
+        const item = grupo.find(g => g.id === m.id);
+        const intrusas = grupo.filter(g => g !== item && normalizar(g.palavra).replace(/ /g, '').length >= 4 && tem(g.palavra)).map(g => g.id);
+        if (intrusas.length) { avisos.push(`${m.id}: o trecho tem outra palavra (${intrusas.join(', ')}): "${ouvido}"; não foi salvo`); continue; }
+        if (!tem(item.palavra)) {
+            // a última do grupo vai até o fim do áudio: não tem como invadir outra palavra (ex.: onomatopeias, que o Whisper escreve de mil jeitos)
+            if (m !== marcas[marcas.length - 1] || m.id !== grupo[grupo.length - 1].id) { avisos.push(`${m.id}: a palavra inteira não está no trecho ("${ouvido}"), corte errado; não foi salvo`); continue; }
+            avisos.push(`${m.id}: salva (última do grupo), mas o Whisper ouviu "${ouvido}"; revise de ouvido`);
+        }
+        boas.push(m);
+    }
+    return { marcas: boas, avisos };
+}
+
 async function gravarPalavrasAgrupadas(itens, pasta, indiceArq, ids) {
     const indice = lerJson(indiceArq, { frases: {} });
-    const pendentes = itens.filter(i => (!ids || ids.has(i.id)) && (o.forcar || indice.frases[i.id] !== i.hash || !existsSync(join(pasta, `${i.id}.mp3`))));
+    const pendentes = itens.filter(i => (!ids || ids.has(i.id)) && (o.forcar || indice.frases[i.id] !== i.hash || !existsSync(join(pasta, `${i.id}.mp3`))))
+        .sort((a, b) => a.palavra.includes('-') - b.palavra.includes('-'));   // onomatopeias por último (não servem de âncora)
     // Grupos equilibrados de no máximo `agrupar` palavras (17 → 9 + 8, e não 8 + 8 + 1)
     const G = Math.ceil(pendentes.length / Math.ceil(pendentes.length / Number(o.agrupar ?? 10)));
     const grupos = [];
@@ -647,9 +722,11 @@ async function gravarPalavrasAgrupadas(itens, pasta, indiceArq, ids) {
     await emParalelo(grupos, PARALELO, async (grupo) => {
         const rotulo = `grupo ${grupo[0].id}…${grupo[grupo.length - 1].id}`;
         try {
-            const r = await gravarBloco({ frases: grupo, personagem: null, estilo: ESTILO_PALAVRAS }, {}, rotulo);
+            const r = await gravarBloco({ frases: grupo, personagem: null, estilo: ESTILO_PALAVRAS, palavras: true }, {}, rotulo);
             if (r.erros >= 999) { falhas.push(`${rotulo}: ${r.motivo}`); return; }
-            for (const m of r.marcas) {
+            const { marcas, avisos } = await cortarPalavras(grupo, r.amostras);
+            r.avisos = avisos;
+            for (const m of marcas) {
                 const trecho = r.amostras.subarray(Math.round(m.ini * TAXA), Math.round(m.fim * TAXA));
                 salvarMp3(trecho, join(pasta, `${m.id}.mp3`));
                 const item = grupo.find(g => g.id === m.id);
