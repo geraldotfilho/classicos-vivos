@@ -13,7 +13,8 @@
     "exportar:frases": "node tools/exportar-frases.mjs",
     "exportar:traducoes": "node tools/traducoes.mjs exportar",
     "conferir:traducoes": "node tools/traducoes.mjs",
-    "gravar:narracao": "NODE_USE_ENV_PROXY=1 node --no-warnings tools/gravar-narracao.mjs"
+    "gravar:narracao": "NODE_USE_ENV_PROXY=1 node --no-warnings tools/gravar-narracao.mjs",
+    "gerar:imagens": "NODE_USE_ENV_PROXY=1 node --no-warnings tools/gerar-imagens.mjs"
   },
   "devDependencies": {
     "@breezystack/lamejs": "^1.2.7",

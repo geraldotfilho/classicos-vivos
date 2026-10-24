@@ -2,9 +2,14 @@
 
 Leia este arquivo primeiro numa sessão nova do Claude. Depois, `AGENTS.md` (arquitetura e regras) e o arquivo da frente de trabalho.
 
-> 💰 **API paga do Gemini (AGENTS.md §2.7)**: use **só para produzir as vozes da leitura**, **sempre de forma econômica** e **só se o humano autorizou no prompt inicial desta sessão**. Sem essa autorização, não chame a API para nada (nem teste). Limite: R$ 10/mês. Opções mais baratas em `TODO-NARRACAO.md` §8.4 (o Flex corta o preço pela metade, mas falta a aprovação do humano).
+> 💰 **API paga do Gemini (AGENTS.md §2.7)**: use **só para produzir as vozes da leitura**, **sempre de forma econômica** e **só se o humano autorizou no prompt inicial desta sessão**. Sem essa autorização, não chame a API para nada (nem teste). Limite: R$ 10/mês. Opções mais baratas em `TODO-NARRACAO.md` §8.4 (o Flex corta o preço pela metade, mas falta a aprovação do humano). **Imagens** pela API: só com autorização pontual do humano (`docs/ARTE-PELA-API.md`).
 
 ---
+
+## 0. Atualização de 2026-10-24, tarde: arte da Parte 2 pela API
+- Com a cota do Antigravity esgotada até 29/10, o humano autorizou o Claude a gerar **só as imagens que faltavam da Parte 2**. Feito com `npm run gerar:imagens` (Nano Banana 2, Batch): páginas 4 a 8 (10 cenas + 5 camadas), integradas e testadas. **Gasto: US$ 0,57** (`docs/arte/gastos.csv`). **A Parte 2 está completa.**
+- Gasto da API no mês até aqui: narração ~US$ 0,65 + imagens US$ 0,57 ≈ **US$ 1,22**.
+- Próximo passo, **se o humano autorizar**: Partes 3 (~US$ 0,85) e 4 (~US$ 0,80), com o mesmo método: escrever `tools/arte/dom-quixote-parte-N.mjs` a partir do TODO, rodar `--seco`, e seguir as rodadas de `docs/ARTE-PELA-API.md` §3. Sem autorização, o Gemini retoma a Parte 3 no Antigravity em 29/10.
 
 ## 1. Frente atual do Claude: narração gravada (P-006)
 

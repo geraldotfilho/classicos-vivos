@@ -1,0 +1,4 @@
+data,modelo,nivel,comando,pedidos,imagens_ok,tokens_entrada,tokens_imagem,tokens_texto,usd_estimado
+2026-10-24T12:34,gemini-3.1-flash-image,batch,"--lista tools/arte/dom-quixote-parte-2.mjs --ids p4-real,p5-real,p6-real,p7-real,p8-real,p6-balao-historia,p6-cabra",7,7,6020,7467,2793,0.2297
+2026-10-24T12:38,gemini-3.1-flash-image,batch,"--lista tools/arte/dom-quixote-parte-2.mjs --ids p4-imag,p4-poeira-esquerda,p4-poeira-direita,p5-imag,p6-imag,p7-martelos,p7-imag,p8-imag",8,8,4693,8960,3123,0.2747
+2026-10-24T12:42,gemini-3.1-flash-image,batch,"--lista tools/arte/dom-quixote-parte-2.mjs --ids p6-imag,p8-imag",2,2,1267,2240,859,0.0688

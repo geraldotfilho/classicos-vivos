@@ -42,6 +42,7 @@ npm run exportar:frases # lista de frases e palavras-chave para gravar (docs/nar
 npm run exportar:traducoes # o que traduzir, parte por parte (docs/traducao/, já incluso no build)
 npm run conferir:traducoes # confere as traduções (páginas, palavras-chave, sílabas, textos soltos, páginas desatualizadas)
 npm run gravar:narracao -- --voz narracao --parte 1 --pagina-inteira --autorizado # grava pela API de voz do Gemini (§2.7: só com autorização do humano)
+npm run gerar:imagens -- --lista tools/arte/dom-quixote-parte-2.mjs --seco   # ilustrações pela API (Batch), só com autorização pontual (§2.7, docs/ARTE-PELA-API.md)
 ```
 **Rode `npm run build` sempre que** usar uma classe Tailwind nova, um ícone Phosphor novo, ou adicionar/alterar qualquer HTML ou imagem. O `sw.js` precisa da lista atualizada e de uma nova versão de cache, senão os tablets não recebem a mudança. Os scripts ficam em `tools/`, e `sw.js` é gerado a partir de `tools/sw.template.js` (nunca edite `sw.js` à mão).
 
@@ -161,7 +162,7 @@ A API é paga pelo humano, num projeto de hobby com **limite de R$ 10/mês**, e 
 2. **Só com autorização explícita do humano no prompt inicial da sessão.** Sem ela, a API não é chamada (nem para "um teste rápido"). O `tools/gravar-narracao.mjs` recusa sem `--autorizado`; passe a opção só quando o humano tiver autorizado aquela produção.
 3. **Sempre do jeito mais econômico**: planeje com `--seco` (de graça), grave a página inteira num pedido só, não regrave o que já está bom (o `hash` evita), no máximo 2 tentativas, a conferência é **local e gratuita** (Whisper, `tools/transcrever.py`), e prefira o nível mais barato aprovado pelo humano (opções e preços em `docs/TODO-NARRACAO.md` §8.4).
 4. **Registre o gasto**: cada rodada vai para `docs/narracao/gastos.csv` (o script faz isso). Ao fim do trabalho, diga ao humano quanto foi gasto.
-5. **As imagens não usam a API paga** (decisão do humano, 2026-10-24): continuam com o agente Gemini no **Google Antigravity**, na cota do plano Pro do humano (com as pausas por cota). Referência, caso um dia mude: na API, ~100 imagens custariam de US$ 1,70 (Nano Banana 2.1, Batch) a US$ 13,40 (Pro); ver a conversa de 2026-10-24.
+5. **As imagens, por padrão, não usam a API paga** (decisão do humano, 2026-10-24): continuam com o agente Gemini no **Google Antigravity**, na cota do plano Pro do humano (com as pausas por cota). **Exceção pontual**: quando o humano autoriza no prompt inicial (ex.: 2026-10-24, as páginas 4–8 da Parte 2, com a cota do Antigravity esgotada), o Claude gera pela API com `npm run gerar:imagens` (Nano Banana 2, **Batch**, ~US$ 0,038 por imagem aceita), **só** o que foi autorizado. Método, preços e lições: `docs/ARTE-PELA-API.md`.
 
 ### 2.8 Idiomas (bandeirinhas no topo do livro)
 - O **português é o original** (`window.LIVRO` em `parte-N.html`). Cada tradução fica em `<livro>/traducoes/parte-N.<idioma>.js` (`en`, `fr`, `es`) e é carregada por `<script>` só quando o idioma é escolhido (funciona em `file://` e offline: o SW pré-baixa as traduções).
@@ -226,6 +227,7 @@ Para possibilitar ricas experiências interativas sem perder a fidelidade artís
 2. **Personagens e Adereços em Camadas (Transparent Sprites)**:
    - Produzidos com **fundo transparente (PNG com canal alfa)** ou fundo branco puro isolado para recorte de precisão.
    - Sobrepostos ao cenário através de posicionamento absoluto/relativo no DOM.
+   - **Fundo para recorte: magenta puro `#FF00FF`, nunca branco** (o branco come as partes claras e deixa "chão"; ver P-003/P-005). `tools/recortar-camada.py` tira o magenta, desmistura as bordas e corta justo.
    - Camadas que o livro carrega ficam em `<livro>/imagens/camadas/` (WebP com alfa, gerado por `npm run build:images`). No `parte-N.html`, o `src` da camada aponta para o **`.webp`** (o motor não troca a extensão; um `.png` no código não carrega e cai no emoji). Recortes usados só como referência de prompt ficam em `biblioteca/referencias/`.
    - **Quando usar camada × ilustração inteira** (modelo híbrido):
      | Use **camada** quando o elemento… | Use **ilustração inteira** quando… |
@@ -239,7 +241,7 @@ Para possibilitar ricas experiências interativas sem perder a fidelidade artís
      3. Mesma **escala e perspectiva**: posicione e dimensione em `%` do quadro 16:9, ancorando pela base (pés), e confira nas duas orientações.
      4. Recorte limpo, **sem halo branco** nas bordas. Se o Nano-Banana entregar fundo branco, faça o recorte antes de versionar.
      5. Cada variação de pose (pastor parado × tocando) é um sprite próprio com **o mesmo enquadramento e tamanho de tela**, para trocar sem "pular".
-   - **Motor de camadas implementado** (§2.5): `cena.camadas` com posição em % (`x`, `y` = base, `w`), visibilidade pelo estado (`item`: aparece depois que o item é usado; `ate`: some quando o item é usado), animação contínua (`anim`: `balanco`, `flutuar`, `girar`, `pulsar`) e efeitos de um toque (`efeito`: `cambalhota`, `pulo`, `estouro`, `atravessar`). Véus sem arte (ex.: a escuridão da noite) usam `fundo` com um gradiente CSS. As Partes 2–4 já usam camadas; na Parte 1, o moinho (NB-1) e a pousada (NB-2) vão migrar quando a arte chegar.
+   - **Motor de camadas implementado** (§2.5): `cena.camadas` com posição em % (`x`, `y` = base, `w`), visibilidade pelo estado (`item`: aparece depois que o item é usado; `ate`: some quando o item é usado), animação contínua (`anim`: `balanco`, `flutuar`, `girar`, `pulsar`, `martelar`) e efeitos de um toque (`efeito`: `cambalhota`, `pulo`, `estouro`, `atravessar`). Véus sem arte (ex.: a escuridão da noite) usam `fundo` com um gradiente CSS. As Partes 2–4 já usam camadas; na Parte 1, o moinho (NB-1) e a pousada (NB-2) vão migrar quando a arte chegar.
 3. **Mecânica Progressiva (Páginas 3, 4 e 5)**:
    - **Página 3 (`?page=2`, Capítulo 2 - A Armadura do Bisavô)**: Cada clique ou drop de um item da bandeja (`ARMADURA`, `BACIA`, `ESCUDO`, `LANÇA`) revela uma nova ilustração do personagem se vestindo progressivamente (`p2-real-stage-1.webp` a `p2-real-stage-4.webp`).
    - **Página 4 (`?page=3`, Capítulo 3 - O Cuidado com Rocinante)**: Cada clique ou drop de carinho (`MAÇÃ`, `CENOURA`, `ESCOVA`) revela uma nova ilustração do cavalo se alimentando alegremente, ganhando energia e com as crinas penteadas com esmero (`p3-real-stage-1.webp` a `p3-real-stage-3.webp`).
@@ -259,7 +261,7 @@ classicos-vivos/
 │   ├── fonts/                           # woff2 locais
 │   └── icones/                          # ícones do app (PWA)
 ├── tools/                               # scripts de build (fontes, ícones, Tailwind, WebP, service worker)
-├── docs/  RETOMADA.md (comece por aqui numa sessão nova) · BACKLOG.md · TODO-NANO-BANANA.md · TODO-NANO-BANANA-PARTES-2-4.md · PLANO-PARTES-2-4.md · TODO-NARRACAO.md
+├── docs/  RETOMADA.md (comece por aqui numa sessão nova) · BACKLOG.md · TODO-NANO-BANANA.md · TODO-NANO-BANANA-PARTES-2-4.md · PLANO-PARTES-2-4.md · TODO-NARRACAO.md · ARTE-PELA-API.md
 │   ├── fila/                            # canal Claude ↔ Gemini (PEDIDOS.md, ENTREGAS.md)
 │   ├── narracao/                        # frases e palavras-chave a gravar (gerado)
 │   └── traducao/                        # o que traduzir, parte por parte (gerado)

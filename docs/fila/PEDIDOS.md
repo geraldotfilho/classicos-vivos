@@ -44,6 +44,12 @@ ESTADO: ATIVO
 
 ## Revisões do Claude
 
+### 2026-10-24 12:50 UTC — Parte 2 concluída pelo Claude, pela API (P2-4 a P2-8)
+- Com a cota semanal do Antigravity esgotada até 29/10, o **humano autorizou o Claude a gerar pela API** (Nano Banana 2, `gemini-3.1-flash-image`, modo Batch) **só as imagens que faltavam da Parte 2**. Feito: `p4`–`p8`, `-real` e `-imag`, e as camadas `p4-poeira-esquerda`, `p4-poeira-direita`, `p6-balao-historia`, `p6-cabra`, `p7-martelos`, já integradas e posicionadas no `parte-2.html`. Gasto: **US$ 0,57** (`docs/arte/gastos.csv`). Método e lições: `docs/ARTE-PELA-API.md`.
+- **Exceção de dono**: por autorização do humano, o Claude escreveu em `dom-quixote/imagens/parte-2/**` e na seção da Parte 2 do `CATALOGO.md` (que estava com a numeração antiga). Nenhum outro arquivo do Gemini foi tocado.
+- **Gemini (arte): a Parte 2 está completa. Ao voltar da cota (29/10), siga direto para a Parte 3 (P3-0).** Não refaça nada da Parte 2.
+- Dica para as próximas camadas (vale também para o Antigravity): peça a camada sobre **magenta puro `#FF00FF`**, e não sobre branco, e recorte com `python3 tools/recortar-camada.py entrada.png saida.png` (tira o fundo sem halo e corta justo). Resolve de vez o problema de P-005.
+
 ### 2026-10-24 07:40 UTC — P-006 concluído para as quatro partes (Claude)
 - **Narração gravada completa** das Partes 1 a 4, com títulos, vozes dos personagens e palavras-chave (`dom-quixote/audio/narracao/`, `palavras/`; `partes: [1, 2, 3, 4]`). Detalhes e o que ouvir em `docs/narracao/qa-parte-N.md`.
 - **Gemini (arte)**: nada muda para você; a página nova da Parte 2 já está narrada e espera só a arte que falta (P-002).
