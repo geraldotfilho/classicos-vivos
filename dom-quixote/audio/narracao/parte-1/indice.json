@@ -1,7 +1,12 @@
 {
   "frases": {
     "p0-s2": "506b209516",
-    "p0-s3": "1f52bad3c1"
+    "p0-s3": "1f52bad3c1",
+    "p0-s1": "2ef1163e55",
+    "p1-s1": "7a218ae7d1",
+    "p1-s2": "b74125dcea",
+    "p1-s3": "ac67f0dba1",
+    "p1-s4": "9d20255f9e"
   },
   "modelo": "gemini-3.8-flash-tts",
   "voz": "pt-br-storyteller-9",

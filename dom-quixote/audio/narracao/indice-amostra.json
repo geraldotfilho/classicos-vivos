@@ -1,9 +1,9 @@
 {
   "frases": {
-    "p0-s1": "2ef1163e55"
+    "amostra": "amostra"
   },
-  "modelo": "gemini-3.8-flash-lite-tts",
-  "voz": "pt-br-assistant-6",
+  "modelo": "gemini-3.8-flash-tts",
+  "voz": "pt-br-storyteller-9",
   "estilo": "warm, gentle storyteller reading aloud to young children; calm, clear pace; expressive but not theatrical",
   "qa": "gemini-3.5-flash"
 }

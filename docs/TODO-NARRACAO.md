@@ -6,6 +6,13 @@ O livro já sabe tocar narração gravada **frase por frase**, com o destaque da
 
 ---
 
+## ⭐ Decisões do humano (2026-10-24), valem mais que o resto deste arquivo
+1. **Uma voz por vez no livro.** Não há mais duas narrações (`narradora` e `teatro`): há **uma** narração, a pasta `dom-quixote/audio/narracao/`, com a **narradora** (`pt-br-storyteller-9`, a "Teste A") para o texto narrado e **vozes próprias para as falas dos personagens**.
+2. **O elenco dos personagens é escolhido com o humano.** Ao chegar à primeira frase com fala de personagem (`p2-s1` da Parte 1, Dom Quixote), **pare** e converse com ele antes de gravar. A tabela da seção 3 é só sugestão. O catálogo traduzido das vozes está em `docs/narracao/VOZES-PT-BR.md`.
+3. **Liberar aos poucos**, como `previa` no `vozes.js`, e pedir escuta a cada novidade (voz, estilo, entonação).
+4. Ficaram para depois: outras vozes de narradora e uma voz com **sotaque pernambucano** (seria por voice design, já que a biblioteca não tem sotaque regional).
+5. O plano pago da API foi ativado (fim do limite de 10 pedidos por dia).
+
 ## 0. Visão geral
 
 | Narração | ID (pasta) | O que é |
@@ -78,7 +85,7 @@ dom-quixote/audio/
 - Texto: o campo `fala` da palavra (ex.: "es... tre... las... estrelas!").
 - Instrução de estilo:
   > Pronuncie em português do Brasil como uma professora alfabetizadora: sílaba por sílaba, devagar e bem separado, com uma pausa curta entre as sílabas; depois diga a palavra inteira, com alegria e naturalidade.
-- Voz: a da narradora. Um arquivo por `slug`. Palavras repetidas entre as partes (ex.: `imaginacao`) são gravadas **uma vez só**.
+- Voz: a da narradora. Um arquivo por `slug`. Duração aceita: 1 a 12 s de fala, medida sem o silêncio das pontas (as de 5 sílabas passam de 10 s). Palavras repetidas entre as partes (ex.: `imaginacao`) são gravadas **uma vez só**.
 
 ## 5. Pronúncia dos nomes (confira em toda gravação)
 | Escrita | Como soa |
@@ -100,7 +107,7 @@ Se o modelo errar um nome, reescreva só aquele trecho foneticamente no pedido (
 
 ## 6. Controle de qualidade (obrigatório antes de cada entrega)
 1. **Transcreva** cada áudio gerado (fala → texto, com o próprio Gemini) e compare com o campo `fala`: as palavras precisam bater (diferenças só de pontuação). Regrave o que divergir.
-2. **Duração**: entre 0,5 s e 25 s por frase; palavras-chave entre 1 s e 8 s.
+2. **Duração** (sem o silêncio das pontas): entre 0,5 s e 25 s por frase; palavras-chave entre 1 s e 12 s.
 3. **Ouça** (ou analise) as frases com nomes da tabela da seção 5 e as frases de diálogo.
 4. Grave `indice.json` em cada pasta (`{ "p2-s5": "<hash>" }`) com o `hash` da frase no momento da gravação. Quando o texto do livro mudar, o Claude regenera os JSON: compare os hashes e **regrave só o que mudou**.
 5. Quando **todas** as frases de uma parte estiverem gravadas numa voz, acrescente o número da parte em `partes` daquela voz em `dom-quixote/audio/vozes.js`. A partir daí ela aparece como opção no painel "Voz" do livro.

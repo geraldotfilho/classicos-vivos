@@ -1,0 +1,13 @@
+{
+  "frases": {
+    "livros": "6b11bf002e",
+    "imaginacao": "f7f2072e41",
+    "rocinante": "b2c1192dc0",
+    "cavaleiros": "0741995de1",
+    "leao-guardiao": "0a9b49e25e"
+  },
+  "modelo": "gemini-3.8-flash-tts",
+  "voz": "pt-br-storyteller-9",
+  "estilo": "literacy teacher: each syllable slowly and clearly separated with short pauses, then the whole word joyfully",
+  "qa": "gemini-3.5-flash"
+}

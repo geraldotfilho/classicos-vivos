@@ -6,10 +6,10 @@
 // nem impressa).
 //
 // Uso:
-//   npm run gravar:narracao -- --voz narradora --parte 1                 # todas as frases da Parte 1
-//   npm run gravar:narracao -- --voz narradora --parte 1 --paginas 0,1   # só algumas páginas
-//   npm run gravar:narracao -- --voz narradora --parte 1 --ids p2-s5     # regravar frases específicas
-//   npm run gravar:narracao -- --voz narradora --amostra                 # amostra.mp3 do painel "Voz"
+//   npm run gravar:narracao -- --voz narracao --parte 1                 # todas as frases da Parte 1
+//   npm run gravar:narracao -- --voz narracao --parte 1 --paginas 0,1   # só algumas páginas
+//   npm run gravar:narracao -- --voz narracao --parte 1 --ids p2-s5     # regravar frases específicas
+//   npm run gravar:narracao -- --voz narracao --amostra                 # amostra.mp3 do painel "Voz"
 //   npm run gravar:narracao -- --voz palavras --parte 1                  # palavras-chave (sílabas)
 //   ... --seco                                                            # mostra o que faria, sem chamar a API
 //   ... --forcar                                                          # regrava mesmo com o hash igual
@@ -34,13 +34,12 @@ const ESTILO_NARRADORA = 'warm, gentle storyteller reading aloud to young childr
 const ESTILO_PALAVRAS = 'literacy teacher: each syllable slowly and clearly separated with short pauses, then the whole word joyfully';
 
 // Pasta de saída (dom-quixote/audio/<id>) → voz da API (e o modelo, se não for o MODELO_TTS).
-// As "narradora-*" são candidatas em teste: a escolhida pelo humano vira `narradora` (renomear a pasta).
+// `narracao` é a narração do livro: a narradora, escolhida de ouvido pelo humano em 2026-10-24.
+// As falas dos personagens terão vozes próprias (elenco a escolher com o humano; ver TODO-NARRACAO §3).
+const NARRADORA = 'pt-br-storyteller-9';
 const VOZES = {
-    'narradora-a': { voz: 'pt-br-storyteller-9', estilo: ESTILO_NARRADORA },
-    'narradora-b': { voz: 'pt-br-tutor-5', estilo: ESTILO_NARRADORA, modelo: 'gemini-3.8-flash-lite-tts' },
-    'narradora-c': { voz: 'pt-br-assistant-6', estilo: ESTILO_NARRADORA, modelo: 'gemini-3.8-flash-lite-tts' },
-    'narradora-d': { voz: 'Sulafat', estilo: ESTILO_NARRADORA, modelo: 'gemini-3.8-flash-lite-tts' },
-    palavras: { voz: 'pt-br-storyteller-9', estilo: ESTILO_PALAVRAS }
+    narracao: { voz: NARRADORA, estilo: ESTILO_NARRADORA },
+    palavras: { voz: NARRADORA, estilo: ESTILO_PALAVRAS }
 };
 
 function opcoes(argv) {
@@ -126,8 +125,13 @@ async function transcrever(wav) {
 /* Compara palavra por palavra, sem acento, pontuação nem caixa ("es... tre... las" vira "es tre las") */
 const normalizar = (s) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
 
+/* Duração da fala sem o silêncio das pontas (o mesmo corte do tools/otimizar-audio.mjs, que gera o MP3) */
 function duracao(wav) {
-    return (wav.length - 44) / 48000;
+    const a = new Int16Array(wav.buffer.slice(wav.byteOffset + 44, wav.byteOffset + wav.length - ((wav.length - 44) % 2)));
+    let ini = 0, fim = a.length - 1;
+    while (ini < fim && Math.abs(a[ini]) < 500) ini++;
+    while (fim > ini && Math.abs(a[fim]) < 500) fim--;
+    return (fim - ini) / 24000;
 }
 
 /* Palavras do esperado que faltam no ouvido e vice-versa (distância de edição por palavra) */
@@ -194,7 +198,7 @@ async function main() {
             if (ids && !ids.has(item.id)) continue;
             const mp3 = join(pasta, `${item.id}.mp3`);
             if (!o.forcar && indice.frases[item.id] === item.hash && existsSync(mp3)) continue;
-            pendentes.push({ item, wav: join(pasta, `${item.id}.wav`), faixa: o.voz === 'palavras' ? [1, 8] : [0.5, 25] });
+            pendentes.push({ item, wav: join(pasta, `${item.id}.wav`), faixa: o.voz === 'palavras' ? [1, 12] : [0.5, 25] });
         }
     }
 
