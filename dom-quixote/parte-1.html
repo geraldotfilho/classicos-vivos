@@ -71,9 +71,15 @@
                     hotspots: [
                         { x: 23, y: 68, w: 24, h: 28, palavra: 'GATINHO', emoji: '🐱', emojiImag: '🦁', titulo: 'Tocar no Gatinho ou Leão Guardião' }
                     ],
-                    // Provisório: só celebra (BACKLOG A-3 / NB-3 vão dar uma transformação a cada livro)
+                    // Cada livro abre a sua aventura na cena, em qualquer ordem (BACKLOG A-3, arte NB-3)
                     cartoes: {
-                        tipo: 'livre',
+                        tipo: 'variante',
+                        variantes: {
+                            '1': { src: 'p1-real-livro-dragoes.webp', legenda: '🐉 O Livro dos Dragões: um dragãozinho dourado sai das páginas!' },
+                            '2': { src: 'p1-real-livro-castelos.webp', legenda: '🏰 O Livro dos Castelos: torres encantadas surgem no ar!' },
+                            '3': { src: 'p1-real-livro-cavaleiros.webp', legenda: '⚔️ O Livro dos Cavaleiros: nobres cavaleiros galopam no ar!' }
+                        },
+                        legendaTodas: '✨ Três livros lidos! Experimente a Lente da Imaginação',
                         itens: [
                             { id: '1', domId: 'drag-book-1', palavra: 'DRAGÕES', emoji: '🐉', icone: './imagens/objetos/livro-dragoes.svg' },
                             { id: '2', domId: 'drag-book-2', palavra: 'CASTELOS', emoji: '🏰', icone: './imagens/objetos/livro-castelos.svg' },
@@ -224,6 +230,10 @@
                     real: 'p6-real.webp', imag: 'p6-imag.webp', alt: 'Sancho Pança e Dom Quixote',
                     legendaReal: '👓 Lente da Realidade: Sancho Pança e Quixote na Estrada',
                     legendaImag: '✨ Lente da Imaginação: Sancho Governador da Ilha Encantada!',
+                    // O sonho de Sancho flutua sobre ele na Imaginação (arte NB-6)
+                    camadas: [
+                        { id: 'nuvem-ilha', src: 'camadas/p6-nuvem-ilha.webp', lente: 'imag', x: 27, y: 35, w: 23, anim: 'flutuar', emoji: '🏝️' }
+                    ],
                     hotspots: [
                         { x: 12, y: 22, w: 34, h: 72, palavra: 'SANCHO PANÇA', emoji: '🥖', titulo: 'Tocar em Sancho Pança' },
                         { x: 48, y: 12, w: 44, h: 82, palavra: 'DOM QUIXOTE', emoji: '⚔️', titulo: 'Tocar em Dom Quixote' }

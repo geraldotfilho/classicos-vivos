@@ -1,0 +1,131 @@
+{
+  "p0": {
+    "arquivo": "p0.mp3",
+    "hash": "e229667eac",
+    "frases": [
+      {
+        "id": "p0-s0",
+        "ini": 0,
+        "fim": 8.09
+      },
+      {
+        "id": "p0-s1",
+        "ini": 8.09,
+        "fim": 22.18
+      },
+      {
+        "id": "p0-s2",
+        "ini": 22.18,
+        "fim": 44.61
+      },
+      {
+        "id": "p0-s3",
+        "ini": 44.61,
+        "fim": 51.54
+      }
+    ]
+  },
+  "modelo": "gemini-3.8-flash-tts",
+  "elenco": {
+    "NARRADORA": {
+      "voz": "pt-br-storyteller-9",
+      "estilo": "warm, gentle storyteller reading aloud to young children; calm, clear pace; expressive but not theatrical"
+    },
+    "QUIXOTE": {
+      "voz": "pt-br-concierge-3",
+      "estilo": "noble, solemn and dreamy, speaking with heartfelt conviction; never mocking"
+    },
+    "SANCHO": {
+      "voz": "pt-br-storyteller-2",
+      "estilo": "simple, warm and good-humored, plain and practical"
+    },
+    "PASTOR": {
+      "voz": "pt-br-podcaster-5",
+      "estilo": "old goatherd, warm, welcoming and generous"
+    },
+    "BARBEIRO": {
+      "voz": "pt-br-techagent-4",
+      "estilo": "frightened, shouting for help while running away, comic"
+    },
+    "PADRE": {
+      "voz": "pt-br-podcaster-9",
+      "estilo": "kind village priest, gentle, cheerful and clever"
+    },
+    "DOROTEIA": {
+      "voz": "pt-br-concierge-4",
+      "estilo": "clever young woman playing a princess in distress, dramatic and graceful"
+    },
+    "ESTALAJADEIRO": {
+      "voz": "pt-br-csagent-10",
+      "estilo": "innkeeper in comic despair over his spilled wine"
+    },
+    "TERESA": {
+      "voz": "pt-br-advisor-1",
+      "estilo": "warm-hearted wife, eager and affectionate"
+    },
+    "SANCHICA": {
+      "voz": "pt-br-concierge-6",
+      "estilo": "excited little girl, bouncing with joy, playful"
+    },
+    "CREDOR": {
+      "voz": "pt-br-techagent-5",
+      "estilo": "old man complaining indignantly"
+    },
+    "DEVEDOR": {
+      "voz": "pt-br-concierge-10",
+      "estilo": "old man swearing solemnly, a little too calm"
+    }
+  },
+  "qa": "whisper-large-v3-turbo (local)",
+  "p3": {
+    "arquivo": "p3.mp3",
+    "hash": "ed071601af",
+    "frases": [
+      {
+        "id": "p3-s0",
+        "ini": 0,
+        "fim": 6.99
+      },
+      {
+        "id": "p3-s1",
+        "ini": 6.99,
+        "fim": 20.41
+      },
+      {
+        "id": "p3-s2",
+        "ini": 20.41,
+        "fim": 29.82
+      },
+      {
+        "id": "p3-s3",
+        "ini": 29.82,
+        "fim": 42.48
+      },
+      {
+        "id": "p3-s4",
+        "ini": 42.48,
+        "fim": 50.56
+      },
+      {
+        "id": "p3-s5",
+        "ini": 50.56,
+        "fim": 53.44
+      },
+      {
+        "id": "p3-s6",
+        "ini": 53.44,
+        "fim": 54.6
+      },
+      {
+        "id": "p3-s7",
+        "ini": 54.6,
+        "fim": 56.2
+      },
+      {
+        "id": "p3-s8",
+        "ini": 56.2,
+        "fim": 62.78
+      }
+    ]
+  }
+}

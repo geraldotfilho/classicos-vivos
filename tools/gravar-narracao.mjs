@@ -18,8 +18,11 @@
 //   ... --seco                                                            # mostra o que faria, sem chamar a API
 //   ... --forcar                                                          # regrava mesmo com o hash igual
 //   ... --sem-qa                                                          # pula a transcrição de conferência
+//   ... --paralelo N                                                      # pedidos ao mesmo tempo (padrão 4)
+//   ... --agrupar N                                                       # palavras-chave por pedido (até 10; 1 = uma por pedido)
 //   ... --autorizado                                                      # obrigatório para chamar a API (ver a regra acima)
-//   ... --flex                                                            # nível Flex: metade do preço, resposta em minutos (não testado ainda)
+//   ... --standard                                                        # nível Standard (o padrão é o Flex: metade do preço, resposta em minutos)
+//   npm run gravar:narracao -- --criar-voz SANCHICA --descricao "..." --autorizado   # cria uma voz por descrição (voice design)
 //   npm run gravar:narracao -- --voz narracao --parte 1 --paginas 2 --pagina-inteira
 //       # a página inteira num pedido só (entonação mais contínua) + marcação das frases depois,
 //       # em parte-N/paginas.json (o livro toca um MP3 por página e destaca a frase pelo tempo)
@@ -32,8 +35,12 @@ import { readFileSync, writeFileSync, existsSync, mkdirSync, unlinkSync } from '
 import { execFileSync, spawn } from 'node:child_process';
 import { tmpdir } from 'node:os';
 import { createHash } from 'node:crypto';
-import { dirname, join } from 'node:path';
+import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { setGlobalDispatcher, EnvHttpProxyAgent } from 'undici';
+
+// O Flex pode levar até ~15 min para responder: sem isto, o fetch do Node desiste do cabeçalho em 300 s
+setGlobalDispatcher(new EnvHttpProxyAgent({ headersTimeout: 20 * 60e3, bodyTimeout: 20 * 60e3 }));
 
 const RAIZ = join(dirname(fileURLToPath(import.meta.url)), '..');
 const API = 'https://generativelanguage.googleapis.com/v1beta';
@@ -48,10 +55,23 @@ const ESTILO_PALAVRAS = 'literacy teacher: each syllable slowly and clearly sepa
 // Elenco: quem fala nas frases com diálogo (roteiro em <livro>/audio/narracao/parte-N/roteiro.json).
 // Vozes da biblioteca pt-BR (docs/narracao/VOZES-PT-BR.md), escolhidas pelo Claude a pedido do humano (2026-10-24).
 // O estilo é só o jeito de falar; idade e timbre vêm da voz.
+// Vozes criadas por descrição (voice_...) não entram em diálogo de 2 vozes: o script grava as falas uma a uma.
 const ELENCO = {
     NARRADORA: { voz: 'pt-br-storyteller-9', estilo: ESTILO_NARRADORA },
     QUIXOTE: { voz: 'pt-br-concierge-3', estilo: 'noble, solemn and dreamy, speaking with heartfelt conviction; never mocking' },
-    SANCHO: { voz: 'pt-br-storyteller-2', estilo: 'simple, warm and good-humored, plain and practical' }
+    SANCHO: { voz: 'pt-br-storyteller-2', estilo: 'simple, warm and good-humored, plain and practical' },
+    // Parte 2
+    PASTOR: { voz: 'pt-br-podcaster-5', estilo: 'old goatherd, warm, welcoming and generous' },
+    BARBEIRO: { voz: 'pt-br-techagent-4', estilo: 'frightened, shouting for help while running away, comic' },
+    // Parte 3
+    PADRE: { voz: 'pt-br-podcaster-9', estilo: 'kind village priest, gentle, cheerful and clever' },
+    DOROTEIA: { voz: 'pt-br-concierge-4', estilo: 'clever young woman playing a princess in distress, dramatic and graceful' },
+    ESTALAJADEIRO: { voz: 'pt-br-csagent-10', estilo: 'innkeeper in comic despair over his spilled wine' },
+    // Parte 4
+    TERESA: { voz: 'pt-br-advisor-1', estilo: 'warm-hearted wife, eager and affectionate' },
+    SANCHICA: { voz: 'pt-br-concierge-6', estilo: 'excited little girl, bouncing with joy, playful' },
+    CREDOR: { voz: 'pt-br-techagent-5', estilo: 'old man complaining indignantly' },
+    DEVEDOR: { voz: 'pt-br-concierge-10', estilo: 'old man swearing solemnly, a little too calm' }
 };
 
 // Pasta de saída (dom-quixote/audio/<id>) → voz da API (e o modelo, se não for o MODELO_TTS).
@@ -67,23 +87,24 @@ function opcoes(argv) {
     const o = { livro: 'dom-quixote' };
     for (let i = 0; i < argv.length; i++) {
         const a = argv[i].replace(/^--/, '');
-        if (['seco', 'forcar', 'amostra', 'sem-qa', 'pagina-inteira', 'autorizado', 'flex'].includes(a)) o[a] = true;
+        if (['seco', 'forcar', 'amostra', 'sem-qa', 'pagina-inteira', 'autorizado', 'standard'].includes(a)) o[a] = true;
         else o[a] = argv[++i];
     }
     return o;
 }
 
 const o = opcoes(process.argv.slice(2));
+const flex = !o.standard;   // Flex é o padrão (decisão do humano, 2026-10-24)
 const cfg = VOZES[o.voz] && { modelo: MODELO_TTS, ...VOZES[o.voz] };
-if (!cfg) {
+if (!cfg && !o['criar-voz']) {
     console.error(`Use --voz com uma destas: ${Object.keys(VOZES).join(', ')}`);
     process.exit(1);
 }
 // Gasto estimado (preços de 2026 por milhão de tokens; ver TODO-NARRACAO §8.4). Fica em docs/narracao/gastos.csv.
-// gemini-3.8-flash-tts no nível Standard até 31/12/2026 (dobra em 2027); Flex e Batch custam a metade.
+// gemini-3.8-flash-tts no nível Standard até 31/12/2026 (dobra em 2027); o Flex (padrão) custa a metade.
 const PRECO = { ttsSaida: 9, ttsEntrada: 0.5 };
-const gasto = { tts: 0, ttsEntrada: 0, pedidos: 0 };
-const dolares = () => (gasto.tts * PRECO.ttsSaida + gasto.ttsEntrada * PRECO.ttsEntrada) / 1e6 * (o.flex ? 0.5 : 1);
+const gasto = { tts: 0, ttsEntrada: 0, pedidos: 0, ttsStandard: 0 };
+const dolares = () => ((gasto.tts - gasto.ttsStandard) * (flex ? 0.5 : 1) + gasto.ttsStandard) * PRECO.ttsSaida / 1e6 + gasto.ttsEntrada * PRECO.ttsEntrada / 1e6;
 
 const cabecalhos = { 'Content-Type': 'application/json', ...(process.env.GEMINI_API_KEY ? { 'x-goog-api-key': process.env.GEMINI_API_KEY } : {}) };
 const espera = (ms) => new Promise(r => setTimeout(r, ms));
@@ -139,10 +160,19 @@ async function sintetizarDialogo(falas) {
 
 async function pedirAudio(corpo) {
     if (!o.autorizado) throw new Error('sem --autorizado: a API paga só pode ser chamada com autorização do humano no prompt inicial da sessão');
-    if (o.flex) corpo.service_tier = 'flex';
-    const j = await postar(`${API}/interactions`, corpo);
+    let j, standard = !flex;
+    try {
+        j = await postar(`${API}/interactions`, flex ? { ...corpo, service_tier: 'flex' } : corpo);
+    } catch (e) {
+        if (!flex || /cota esgotada/.test(e.message) || (/^4\d\d/.test(e.message) && !/tier|flex/i.test(e.message))) throw e;
+        // Flex é "best-effort": se falhar de vez, este pedido vai no Standard (o dobro do preço) para não parar a produção
+        console.log(`  ⚠️ Flex falhou (${e.message.slice(0, 120)}); este pedido vai no Standard`);
+        j = await postar(`${API}/interactions`, corpo);
+        standard = true;
+    }
     gasto.pedidos++;
     gasto.tts += j.usage?.total_output_tokens || 0;
+    if (standard && flex) gasto.ttsStandard += j.usage?.total_output_tokens || 0;
     gasto.ttsEntrada += j.usage?.total_input_tokens || 0;
     const audio = (j.steps || []).filter(s => s.type === 'model_output').flatMap(s => s.content || []).filter(c => c.type === 'audio').pop();
     if (!audio) throw new Error('resposta sem áudio');
@@ -191,7 +221,7 @@ function transcritorLocal() {
 
 let tmpN = 0;
 async function transcrever(wav, comPalavras = false) {
-    const arq = join(tmpdir(), `cv-qa-${process.pid}-${tmpN++}.wav`);
+    const arq = join(resolve(tmpdir()), `cv-qa-${process.pid}-${tmpN++}.wav`);
     writeFileSync(arq, wav);
     const r = await transcritorLocal().transcrever(arq);
     unlinkSync(arq);
@@ -270,6 +300,19 @@ async function gravar(item, destinoWav, faixa) {
     return { tentativas: melhor.tentativas, segundos: melhor.s, aviso: melhor.erros ? melhor.motivo : '' };
 }
 
+/* Roda `tarefa` para cada item com até `n` ao mesmo tempo (o Flex demora minutos: os pedidos esperam juntos) */
+async function emParalelo(itens, n, tarefa) {
+    let prox = 0, parar = false;
+    const trabalhador = async () => {
+        while (!parar && prox < itens.length) {
+            const item = itens[prox++];
+            if ((await tarefa(item)) === 'parar') parar = true;
+        }
+    };
+    await Promise.all(Array.from({ length: Math.min(n, itens.length) }, trabalhador));
+}
+const PARALELO = Number(o.paralelo || 4);
+
 function lerJson(arq, padrao) {
     return existsSync(arq) ? JSON.parse(readFileSync(arq, 'utf8')) : padrao;
 }
@@ -337,7 +380,12 @@ function fronteiras(frases, gaps, vozIni, vozFim) {
 }
 
 /* Quem fala cada trecho da frase (roteiro.json); fora do roteiro, é tudo da narradora */
-const trechosDe = (frase, roteiro) => (roteiro[frase.id] || [['NARRADORA', frase.fala]]).map(([falante, texto]) => ({ falante, texto }));
+function trechosDe(frase, roteiro) {
+    const trechos = (roteiro[frase.id] || [['NARRADORA', frase.fala]]).map(([falante, texto]) => ({ falante, texto }));
+    if (normalizar(trechos.map(t => t.texto).join(' ')) !== normalizar(frase.fala)) throw new Error(`${frase.id}: o roteiro não bate com o texto da frase (rode o exportar:frases e refaça o roteiro)`);
+    for (const t of trechos) if (!ELENCO[t.falante]) throw new Error(`${frase.id}: falante "${t.falante}" fora do ELENCO`);
+    return trechos;
+}
 
 /* Blocos de uma página: a API aceita no máximo 2 vozes por pedido, então cada bloco tem a narradora
    e no máximo 1 personagem. Um bloco novo começa quando entra um segundo personagem. */
@@ -357,10 +405,10 @@ function blocosDe(frases, roteiro) {
 
 /* Gera um bloco: só a narradora → um texto (parágrafos separados por linha em branco);
    com personagem → um item por fala (falas seguidas da mesma voz ficam num item só) */
-async function sintetizarBloco(frases, roteiro, personagem) {
+async function sintetizarBloco(frases, roteiro, personagem, estilo = ELENCO.NARRADORA.estilo) {
     const juntar = (anterior, f) => (anterior && anterior.paragrafo !== f.paragrafo ? '\n\n' : ' ');
     if (!personagem) {
-        return sintetizar(frases.map((f, k) => (k ? juntar(frases[k - 1], f) : '') + f.fala).join(''), ELENCO.NARRADORA.estilo, ELENCO.NARRADORA.voz);
+        return sintetizar(frases.map((f, k) => (k ? juntar(frases[k - 1], f) : '') + f.fala).join(''), estilo, ELENCO.NARRADORA.voz);
     }
     const falas = [];
     frases.forEach((f, k) => trechosDe(f, roteiro).forEach((t, n) => {
@@ -369,7 +417,20 @@ async function sintetizarBloco(frases, roteiro, personagem) {
         if (ultima && ultima.falante === t.falante) ultima.texto += sep + t.texto;
         else falas.push({ falante: t.falante, texto: t.texto });
     }));
-    return sintetizarDialogo(falas);
+    if (!ELENCO[personagem].voz.startsWith('voice_')) return sintetizarDialogo(falas);
+    // Voz criada por descrição não entra em diálogo: cada fala é gravada sozinha e as falas são emendadas
+    const partes = [];
+    for (const f of falas) {
+        const a = amostrasDe(await sintetizar(f.texto, ELENCO[f.falante].estilo, ELENCO[f.falante].voz));
+        let ini = 0, fim = a.length - 1;
+        while (ini < fim && Math.abs(a[ini]) < 500) ini++;
+        while (fim > ini && Math.abs(a[fim]) < 500) fim--;
+        partes.push(a.subarray(Math.max(0, ini - 1920), Math.min(a.length, fim + 1920)), new Int16Array(Math.round(TAXA * 0.15)));
+    }
+    const tudo = new Int16Array(partes.reduce((t, a) => t + a.length, 0));
+    let pos = 0;
+    for (const a of partes) { tudo.set(a, pos); pos += a.length; }
+    return wavDe(tudo);
 }
 
 /* Alinha as palavras esperadas (texto das frases) com as reconhecidas pelo Whisper (distância de edição)
@@ -398,7 +459,7 @@ function alinharFrases(frases, reconhecidas) {
    Devolve as amostras sem o silêncio das pontas (80 ms de margem) e as marcas relativas a elas. */
 async function tentarBloco(bloco, roteiro) {
     const frases = bloco.frases;
-    const wav = await sintetizarBloco(frases, roteiro, bloco.personagem);
+    const wav = await sintetizarBloco(frases, roteiro, bloco.personagem, bloco.estilo);
     const a = amostrasDe(wav);
     let vozIni = 0, vozFim = a.length - 1;
     while (vozIni < vozFim && Math.abs(a[vozIni]) < 500) vozIni++;
@@ -441,8 +502,24 @@ async function tentarBloco(bloco, roteiro) {
     return { erros, pior, avisos, marcas, amostras: a.subarray(ini, fim), motivo: avisos.join('; ') };
 }
 
+/* Cache de blocos (fora do git): um bloco pago nunca é pedido de novo, mesmo que outro bloco da mesma
+   página falhe ou a cota diária acabe no meio (o plano pago tem limite de 100 pedidos por dia) */
+const CACHE = join(RAIZ, '.cache-narracao');
+function chaveBloco(bloco, roteiro) {
+    const vozes = [...new Set(bloco.frases.flatMap(f => (roteiro[f.id] || [['NARRADORA']]).map(t => t[0])))].map(f => ELENCO[f]);
+    return createHash('sha1').update(JSON.stringify([MODELO_TTS, bloco.estilo || null, vozes, bloco.frases.map(f => [f.id, f.fala, f.paragrafo ?? null, roteiro[f.id] || null])])).digest('hex').slice(0, 16);
+}
+
 /* Bloco com até 2 tentativas: regrava só se alguma frase tiver mais que TOLERANCIA palavras diferentes */
 async function gravarBloco(bloco, roteiro, rotulo) {
+    const chave = chaveBloco(bloco, roteiro);
+    const arqCache = join(CACHE, `${chave}.json`);
+    if (!o.forcar && existsSync(arqCache)) {
+        const c = JSON.parse(readFileSync(arqCache, 'utf8'));
+        const raw = readFileSync(join(CACHE, `${chave}.pcm`));
+        console.log(`  ♻️  ${rotulo}: do cache (sem pedido novo)`);
+        return { ...c, amostras: new Int16Array(raw.buffer.slice(raw.byteOffset, raw.byteOffset + raw.length)) };
+    }
     let melhor = null;
     for (let tentativa = 1; tentativa <= TENTATIVAS; tentativa++) {
         const r = await tentarBloco(bloco, roteiro);
@@ -450,6 +527,12 @@ async function gravarBloco(bloco, roteiro, rotulo) {
         if (!melhor || r.erros < melhor.erros) melhor = r;
         if (r.erros < 999 && r.pior <= TOLERANCIA) break;
         console.log(`  ↻ ${rotulo} tentativa ${tentativa}: ${r.motivo}`);
+    }
+    if (melhor.erros < 999) {
+        mkdirSync(CACHE, { recursive: true });
+        const { amostras, ...resto } = melhor;
+        writeFileSync(join(CACHE, `${chave}.pcm`), Buffer.from(amostras.buffer, amostras.byteOffset, amostras.byteLength));
+        writeFileSync(arqCache, JSON.stringify(resto));
     }
     return melhor;
 }
@@ -488,21 +571,21 @@ async function gravarPaginas(fonte, pasta, paginas, ids) {
     const elenco = (frases) => JSON.stringify([...new Set(frases.flatMap(f => trechosDe(f, roteiro).map(t => t.falante)))].map(f => [f, ELENCO[f]]));
     const numeros = [...new Set(fonte.frases.map(f => f.pagina))].filter(n => !paginas || paginas.has(n));
     const falhas = [];
-    for (const n of numeros) {
+    await emParalelo(numeros, PARALELO, async (n) => {
         let frases = fonte.frases.filter(f => f.pagina === n);
         const id = `p${n}`;
         // --ids: grava só essas frases, como trecho avulso (parte-N/avulsas/), para emendar numa página já gravada
         if (ids) frases = frases.filter(f => ids.has(f.id));
-        if (!frases.length) continue;
+        if (!frases.length) return;
         const hash = createHash('sha1').update(frases.map(f => f.hash).join() + JSON.stringify(frases.map(f => roteiro[f.id] || null)) + elenco(frases)).digest('hex').slice(0, 10);
-        if (!ids && !o.forcar && registro[id]?.hash === hash && existsSync(join(pasta, `${id}.mp3`))) continue;
+        if (!ids && !o.forcar && registro[id]?.hash === hash && existsSync(join(pasta, `${id}.mp3`))) return;
         const blocos = blocosDe(frases, roteiro);
         console.log(`${id}${ids ? ` (avulsa: ${frases.map(f => f.id).join(', ')})` : ''}: ${frases.length} frases em ${blocos.length} bloco(s) ${blocos.map(b => `[${['NARRADORA', b.personagem].filter(Boolean).join(' + ')}]`).join(' ')}${o.seco ? ' [seco]' : ''}`);
-        if (o.seco) continue;
+        if (o.seco) return;
         const resultados = [];
         for (const [k, b] of blocos.entries()) resultados.push(await gravarBloco(b, roteiro, `${id} bloco ${k + 1}`));
         const ruim = resultados.find(r => r.erros >= 999);
-        if (ruim) { falhas.push(`${id}: ${ruim.motivo}`); continue; }
+        if (ruim) { falhas.push(`${id}: ${ruim.motivo}`); return; }
         const { amostras, marcas } = juntarBlocos(resultados);
         const segundos = amostras.length / TAXA;
         if (ids) {
@@ -512,6 +595,7 @@ async function gravarPaginas(fonte, pasta, paginas, ids) {
             console.log(`  ✓ ${nome} (${segundos.toFixed(1)} s)`);
         } else {
             salvarMp3(amostras, join(pasta, `${id}.mp3`));
+            Object.assign(registro, lerJson(arqPaginas, {}));   // outras páginas gravadas em paralelo
             registro[id] = { arquivo: `${id}.mp3`, hash, frases: marcas };
             Object.assign(registro, { modelo: cfg.modelo, elenco: ELENCO, qa: o['sem-qa'] ? 'sem' : 'whisper-large-v3-turbo (local)' });
             delete registro.voz; delete registro.estilo;
@@ -520,7 +604,68 @@ async function gravarPaginas(fonte, pasta, paginas, ids) {
         }
         marcas.forEach(m => console.log(`      ${m.id}: ${m.ini.toFixed(2)}–${m.fim.toFixed(2)} s`));
         resultados.filter(r => r.erros).forEach(r => falhas.push(`${id}: gravada, mas revise de ouvido (${r.motivo})`));
+    });
+    if (falhas.length) {
+        console.log(`\n${falhas.length} aviso(s):\n  ${falhas.join('\n  ')}`);
+        process.exitCode = 1;
     }
+}
+
+/* Voice design: cria uma voz por descrição (quando nenhuma da biblioteca serve, ex.: uma criança).
+   Guarda a amostra em docs/narracao/vozes-criadas/<NOME>.mp3 para o humano ouvir, e imprime o id para o ELENCO. */
+async function criarVoz() {
+    if (!o.autorizado) throw new Error('sem --autorizado: a API paga só pode ser chamada com autorização do humano no prompt inicial da sessão');
+    const j = await postar(`${API}/voices`, {
+        store: true,
+        voice: { model: MODELO_TTS, type: 'prompted', display_name: `classicos-vivos-${o['criar-voz'].toLowerCase()}`, gender: o.genero || 'female', language_code: 'pt-BR', prompted: { input: o.descricao } }
+    });
+    gasto.pedidos++;
+    console.log(`voz criada: ${j.id || j.name || JSON.stringify(j).slice(0, 200)}`);
+    if (j.sample_audio?.data) {
+        const dir = join(RAIZ, 'docs', 'narracao', 'vozes-criadas');
+        mkdirSync(dir, { recursive: true });
+        const wav = Buffer.from(j.sample_audio.data, 'base64');
+        const destino = join(dir, `${o['criar-voz'].toLowerCase()}.wav`);
+        writeFileSync(destino, wav.toString('ascii', 0, 4) === 'RIFF' ? wav : comCabecalhoWav(wav));
+        execFileSync('node', [join(RAIZ, 'tools', 'otimizar-audio.mjs'), destino], { stdio: 'ignore' });
+        console.log(`amostra: ${destino.replace(/\.wav$/, '.mp3')}`);
+    }
+}
+
+/* Palavras-chave em grupos (até 10 por pedido): o mesmo áudio custa o mesmo, mas gasta até 10 vezes menos pedidos
+   do limite diário. Cada grupo é gravado como uma lista (uma palavra por parágrafo) e cortado pelos tempos do Whisper. */
+async function gravarPalavrasAgrupadas(itens, pasta, indiceArq, ids) {
+    const indice = lerJson(indiceArq, { frases: {} });
+    const pendentes = itens.filter(i => (!ids || ids.has(i.id)) && (o.forcar || indice.frases[i.id] !== i.hash || !existsSync(join(pasta, `${i.id}.mp3`))));
+    // Grupos equilibrados de no máximo `agrupar` palavras (17 → 9 + 8, e não 8 + 8 + 1)
+    const G = Math.ceil(pendentes.length / Math.ceil(pendentes.length / Number(o.agrupar ?? 10)));
+    const grupos = [];
+    for (let k = 0; k < pendentes.length; k += G) grupos.push(pendentes.slice(k, k + G).map((p, n) => ({ ...p, paragrafo: n })));
+    console.log(`palavras (${MODELO_TTS} / ${ELENCO.NARRADORA.voz}): ${pendentes.length} em ${grupos.length} pedido(s)${o.seco ? ' [seco]' : ''}`);
+    if (o.seco) { grupos.forEach((g, k) => console.log(`  grupo ${k + 1}: ${g.map(p => p.id).join(', ')}`)); return; }
+    const falhas = [];
+    await emParalelo(grupos, PARALELO, async (grupo) => {
+        const rotulo = `grupo ${grupo[0].id}…${grupo[grupo.length - 1].id}`;
+        try {
+            const r = await gravarBloco({ frases: grupo, personagem: null, estilo: ESTILO_PALAVRAS }, {}, rotulo);
+            if (r.erros >= 999) { falhas.push(`${rotulo}: ${r.motivo}`); return; }
+            for (const m of r.marcas) {
+                const trecho = r.amostras.subarray(Math.round(m.ini * TAXA), Math.round(m.fim * TAXA));
+                salvarMp3(trecho, join(pasta, `${m.id}.mp3`));
+                const item = grupo.find(g => g.id === m.id);
+                const atual = lerJson(indiceArq, { frases: {} });
+                atual.frases[m.id] = item.hash;
+                Object.assign(atual, { modelo: MODELO_TTS, voz: ELENCO.NARRADORA.voz, estilo: ESTILO_PALAVRAS, qa: o['sem-qa'] ? 'sem' : 'whisper-large-v3-turbo (local)' });
+                writeFileSync(indiceArq, JSON.stringify(atual, null, 2) + '\n');
+                console.log(`  ✓ ${m.id} (${(m.fim - m.ini).toFixed(1)} s)`);
+            }
+            r.avisos.forEach(a => falhas.push(`${a} → revise de ouvido`));
+        } catch (e) {
+            falhas.push(`${rotulo}: ${e.message}`);
+            console.log(`  ✗ ${rotulo}: ${e.message}`);
+            if (/cota esgotada/.test(e.message)) return 'parar';
+        }
+    });
     if (falhas.length) {
         console.log(`\n${falhas.length} aviso(s):\n  ${falhas.join('\n  ')}`);
         process.exitCode = 1;
@@ -528,6 +673,7 @@ async function gravarPaginas(fonte, pasta, paginas, ids) {
 }
 
 async function main() {
+    if (o['criar-voz']) return criarVoz();
     const base = join(RAIZ, o.livro, 'audio', o.voz);
     const pendentes = [];   // { item, wav, chave, faixa }
     let indiceArq, indice;
@@ -550,6 +696,7 @@ async function main() {
         const itens = o.voz === 'palavras'
             ? fonte.palavras.map(p => ({ ...p, id: p.slug }))
             : fonte.frases.filter(f => !paginas || paginas.has(f.pagina));
+        if (o.voz === 'palavras' && Number(o.agrupar ?? 10) > 1) return gravarPalavrasAgrupadas(itens, pasta, indiceArq, ids);
         for (const item of itens) {
             if (ids && !ids.has(item.id)) continue;
             const mp3 = join(pasta, `${item.id}.mp3`);
@@ -565,11 +712,11 @@ async function main() {
     }
 
     const falhas = [];
-    for (const p of pendentes) {
+    await emParalelo(pendentes, PARALELO, async (p) => {
         try {
             const r = await gravar(p.item, p.wav, p.faixa);
             execFileSync('node', [join(RAIZ, 'tools', 'otimizar-audio.mjs'), p.wav], { stdio: 'ignore' });
-            indice.frases[p.item.id] = p.item.hash;
+            indice.frases = { ...lerJson(indiceArq, { frases: {} }).frases, ...indice.frases, [p.item.id]: p.item.hash };
             Object.assign(indice, { modelo: cfg.modelo, voz: cfg.voz, estilo: cfg.estilo, qa: o['sem-qa'] ? 'sem' : 'whisper-large-v3-turbo (local)' });
             writeFileSync(indiceArq, JSON.stringify(indice, null, 2) + '\n');
             console.log(`  ✓ ${p.item.id} (${r.segundos.toFixed(1)} s${r.tentativas > 1 ? `, ${r.tentativas} tentativas` : ''})`);
@@ -577,9 +724,9 @@ async function main() {
         } catch (e) {
             falhas.push(`${p.item.id}: ${e.message}`);
             console.log(`  ✗ ${p.item.id}: ${e.message}`);
-            if (/cota esgotada/.test(e.message)) break;
+            if (/cota esgotada/.test(e.message)) return 'parar';
         }
-    }
+    });
     if (falhas.length) {
         console.log(`\n${falhas.length} frase(s) com problema (anote em docs/narracao/qa-parte-N.md):\n  ${falhas.join('\n  ')}`);
         process.exitCode = 1;
@@ -589,7 +736,7 @@ async function main() {
 function registrarGasto() {
     if (!gasto.pedidos) return;
     const usd = dolares();
-    console.log(`\n💰 ${gasto.pedidos} pedido(s) de voz, ${gasto.tts} tokens de áudio: ~US$ ${usd.toFixed(4)} (estimativa${o.flex ? ', Flex' : ''})`);
+    console.log(`\n💰 ${gasto.pedidos} pedido(s) de voz, ${gasto.tts} tokens de áudio: ~US$ ${usd.toFixed(4)} (estimativa${flex ? `, Flex${gasto.ttsStandard ? `; ${gasto.ttsStandard} tokens caíram no Standard` : ''}` : ', Standard'})`);
     const arq = join(RAIZ, 'docs', 'narracao', 'gastos.csv');
     if (!existsSync(arq)) writeFileSync(arq, 'data,comando,pedidos_voz,tokens_audio,tokens_qa,usd_estimado\n');
     const linha = [new Date().toISOString().slice(0, 16), `"${process.argv.slice(2).join(' ')}"`, gasto.pedidos, gasto.tts, 0, usd.toFixed(4)].join(',');

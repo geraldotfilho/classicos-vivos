@@ -23,9 +23,10 @@ NOMES = ("Dom Quixote de La Mancha, Alonso Quixano, Sancho Pança, Rocinante, Du
 
 
 def ler(arquivo):
-    # Decodifica com o ffmpeg (16 kHz, mono): evita a dependência do PyAV na versão certa
-    pcm = subprocess.run(["ffmpeg", "-loglevel", "error", "-i", arquivo, "-f", "s16le", "-ac", "1", "-ar", "16000", "-"],
-                         capture_output=True, check=True).stdout
+    # Decodifica com o ffmpeg (16 kHz, mono): evita a dependência do PyAV na versão certa.
+    # -nostdin e stdin fechado: senão o ffmpeg "come" o começo da próxima linha da fila (o caminho seguinte)
+    pcm = subprocess.run(["ffmpeg", "-nostdin", "-loglevel", "error", "-i", arquivo, "-f", "s16le", "-ac", "1", "-ar", "16000", "-"],
+                         stdin=subprocess.DEVNULL, capture_output=True, check=True).stdout
     return np.frombuffer(pcm, np.int16).astype(np.float32) / 32768
 
 
