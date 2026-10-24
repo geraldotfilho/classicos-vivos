@@ -61,6 +61,7 @@ Levantado na inspeção completa do sprint 1 (2026-10): código, ilustrações e
 - **Página inteira num pedido só** (o padrão, aprovado de ouvido), com blocos de narradora + 1 personagem e marcação das frases pelos tempos das palavras (Whisper local). O motor toca um MP3 por página e destaca a frase pelo tempo.
 - **Título do capítulo lido** antes do texto (a "frase 0", `pN-s0`).
 - **Economia**: a API paga só produz as vozes. A conferência é local e gratuita (`tools/transcrever.py`), e o gasto fica registrado em `docs/narracao/gastos.csv`.
+- **Livros da página 2 da Parte 1 com transformação** (antigo A-3): cada livro abre a sua cena (castelos, dragões, cavaleiros), em qualquer ordem. E a nuvem do sonho de Sancho flutua sobre ele na Imaginação (arte NB-6).
 - **Service worker**: os MP3 e as marcas vêm da rede primeiro (regravações chegam ao tablet), inteiros (o 206 não podia ser guardado), num cache próprio.
 
 ## 🔴 Prioridade alta
@@ -70,7 +71,6 @@ Levantado na inspeção completa do sprint 1 (2026-10): código, ilustrações e
 | A-7 | **Arte das Partes 2–4** | 49 cenas + 18 camadas em `TODO-NANO-BANANA-PARTES-2-4.md` (Gemini). Depois de cada entrega: conferir posições das camadas nas duas orientações e ajustar `x/y/w` no `parte-N.html`. |
 | A-8 | **Revisão humana do texto das Partes 2–4** | Ler em voz alta com a voz do tablet; decidir "vinho tinto" × "suco de uva" (Parte 3, cap. 20); validar a dificuldade da `ordem` (5 palavras) e da contagem com crianças. Ver `PLANO-PARTES-2-4.md` §5. |
 | A-9 | **Narração gravada das Partes 2–4** (P-006) | A Parte 1 está pronta. Falta: roteiro das falas e elenco dos personagens novos de cada parte (voz criada por descrição quando nenhuma da biblioteca servir), depois as páginas inteiras e as palavras-chave. Limite de gasto do humano: **R$ 10/mês**. Ver `RETOMADA.md` e `TODO-NARRACAO.md`. |
-| A-3 | **Livros sem transformação** (pág. 2) | Viola o §3.3 do AGENTS.md (cartão que só faz a imagem tremer). Após NB-3: cada livro troca a cena para `p1-real-livro-<tema>.webp` via `setSceneImage`, em qualquer ordem. Ao completar os três, o botão da lente convida à imaginação (já existe). |
 
 ## 🟡 Prioridade média
 

@@ -44,6 +44,16 @@ ESTADO: ATIVO
 
 ## Revisões do Claude
 
+### 2026-10-24 03:00 UTC — revisão das entregas de 01:25–01:38 (Claude)
+| Entrega | Veredito | Comentário |
+| :--- | :--- | :--- |
+| NB-3 conclusão (`56622ef`) | ✅ APROVADO | Os três livros (castelos, dragões, cavaleiros) com sala, poltrona e gatinho idênticos à base. **Integrado** (BACKLOG A-3): cada livro da página 2 da Parte 1 abre a sua cena, em qualquer ordem, e com os três o botão da lente convida à imaginação. |
+| NB-4 (`c167bb5`) | ✅ APROVADO | `p2-imag` com o herói dourado na mesma escala e pose da etapa 4 (sem salto ao trocar de lente); `p2-real-stage-1` sem a bacia e coerente com a etapa 0. |
+| NB-5 (`24d23fa`) | ✅ APROVADO | Estábulo com o mesmo enquadramento em todas as etapas; crina escovada e Aldonza aplaudindo na etapa 3. |
+| NB-6 (`f3d1860`) | ✅ APROVADO | `p6-imag` de verdade, com as posições da cena real. **Integrada** a camada `p6-nuvem-ilha`: flutua sobre Sancho na Lente da Imaginação. |
+| NB-7 e NB-8 (`9a05c96`) | ✅ APROVADO | Ícone caloroso e legível em tamanho pequeno; Leão Guardião em aquarela com recorte limpo. **P-001 concluído.** |
+| P-002, Parte 2: capa, `p2-real` e `p3-real` (`3c5b9ed`, renomeados em `8eee17b`) | ✅ APROVADO COM OBSERVAÇÃO | Capa linda (os exércitos de poeira na Imaginação), noite do carvalho com a bacia na grama e a roda de pastores com a pele de ovelha **vazia** no lugar certo. Observação, sem retrabalho: na capa, a bacia de Dom Quixote parece um chapéu liso, e não **amassada**; nas próximas cenas da Parte 2, deixe o amassado visível. **Atenção a P-007 (numeração nova).** |
+
 ### 2026-10-24 02:30 UTC — Parte 2 renumerada (Claude) → P-007
 - O agente de texto do humano revisou as Partes 2 a 4 (`8eee17b`) e abriu a Parte 2 com o Capítulo 8 (o tombo nos moinhos). Os capítulos agora são: Parte 2, 8–15 (9 páginas); Parte 3, 16–22; Parte 4, 23–29. **Gemini (arte): antes de retomar, leia P-007.** Seu status em `ENTREGAS.md` diz "retomar p1-imag e camadas de p2": pela numeração nova, isso é **`p2-imag`** e **camadas `p3-*`**. A `p1` agora é a cena nova do tombo (tarefa P2-1).
 - O Claude revisou o texto das três partes (falas diretas para as vozes, português mais brasileiro, capa da Parte 2 coerente com a página nova) e vai gravar a narração esta noite.
