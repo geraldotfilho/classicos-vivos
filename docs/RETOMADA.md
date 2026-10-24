@@ -9,17 +9,16 @@ Leia este arquivo primeiro numa sessão nova do Claude. Depois, `AGENTS.md` (arq
 O responsável humano passou a narração para o **Claude**, chamando a **API do Gemini** a partir de uma sessão com a chave cadastrada como **segredo de rede** do ambiente. O proxy injeta o cabeçalho `x-goog-api-key` nas requisições a `generativelanguage.googleapis.com`, e o Claude não vê a chave. O Gemini (agente de imagens) não faz mais narração.
 
 - **Passo a passo**: [`TODO-NARRACAO.md`](TODO-NARRACAO.md). A seção 8 traz a execução pela API.
-- **Estado em 2026-10-24**:
-  - acesso à API testado e funcionando; modelo `gemini-3.8-flash-tts`, vozes nativas pt-BR da biblioteca;
-  - `tools/gravar-narracao.mjs` pronto (`npm run gravar:narracao`), com QA por transcrição e retomada pelo `indice.json`;
-  - termos de uso lidos e anotados em `PEDIDOS.md` (distribuir sob CC BY 4.0 é compatível);
-  - três vozes candidatas ("Teste A/B/C") liberadas como **prévia** na capa da Parte 1 (`previa` no `vozes.js`);
-  - **bloqueio**: cota gratuita de 10 pedidos/dia por modelo de voz. Esperando o humano (1) ativar o plano pago e (2) escolher a voz de ouvido.
+- **Estado em 2026-10-24** (decisões do humano no topo de `TODO-NARRACAO.md`):
+  - narradora escolhida: `pt-br-storyteller-9` (modelo `gemini-3.8-flash-tts`), pasta `dom-quixote/audio/narracao/`, a **única** voz no `vozes.js` (regra: uma voz por vez);
+  - gravadas: Parte 1, capa e Capítulo 1 + 5 palavras-chave, liberadas como `previa` e aguardando a escuta do humano;
+  - plano pago ativo;
+  - `tools/gravar-narracao.mjs` com QA por transcrição; catálogo das vozes em `docs/narracao/VOZES-PT-BR.md`.
 
 **Próximos passos:**
-1. Com a voz escolhida: renomeie a pasta dela para `narradora` (e o id na tabela `VOZES` do script e no `vozes.js`), apague as outras candidatas e complete a capa no modelo `gemini-3.8-flash-tts`.
-2. Grave a Parte 1 **página por página**, liberando como `previa`, e peça ao humano para ouvir a cada novidade (voz, estilo, entonação). Regra do humano: **nada de produção em massa sem escuta**.
-3. Siga a ordem de produção da seção 7 do TODO, com uma entrega na main por item.
+1. Aplicar o retorno de ouvido do humano sobre a capa, o Capítulo 1 e as palavras-chave.
+2. **Escolher com o humano o elenco** (uma voz por personagem) antes de `p2-s1`, a primeira fala (Dom Quixote). Depois, adaptar o script para frases mistas: trecho da narradora + trecho do personagem, gravados em separado e juntados num só MP3 por frase (ver TODO §3).
+3. Seguir página por página, liberando como `previa` e pedindo escuta a cada novidade.
 
 ## 2. Ciclo com o Gemini (arte): revisão **pausada**
 

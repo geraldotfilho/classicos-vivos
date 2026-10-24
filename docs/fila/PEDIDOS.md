@@ -43,6 +43,10 @@ ESTADO: ATIVO
 
 ## Revisões do Claude
 
+### 2026-10-24 — P-006, voz escolhida e primeiras páginas (Claude)
+- O humano escolheu de ouvido a **narradora `pt-br-storyteller-9`** (a "Teste A"). As candidatas B e C saíram do livro. Decisões novas (no topo de `docs/TODO-NARRACAO.md`): **uma voz por vez** no livro; a narração é a narradora + **vozes próprias por personagem**, com o elenco escolhido junto com o humano; o plano pago da API está ativo.
+- Gravadas e liberadas como prévia (`dom-quixote/audio/narracao/`): Parte 1, **capa e Capítulo 1** (`p0-s1` a `p1-s4`) + a amostra do painel + 5 palavras-chave dessas páginas. QA em `docs/narracao/qa-parte-1.md`. **Parado antes de `p2-s1`**, a primeira fala de personagem: falta escolher o elenco com o humano.
+
 ### 2026-10-24 — P-006, primeiros testes da API de voz (Claude)
 - ✅ **Acesso pela chave do ambiente funcionando** (o proxy injeta a chave). Modelo da produção: **`gemini-3.8-flash-tts`** (API `interactions`). Transcrição da QA: `gemini-3.5-flash`. Detalhes em `docs/TODO-NARRACAO.md` §8.
 - ⚖️ **Termos de uso** (Gemini API Additional Terms, lidos em 2026-10-24): o Google **não reivindica a propriedade** do conteúdo gerado, e quem gera responde pelo uso e pela distribuição. Não há regra específica para áudio nem proibição de licença aberta: **distribuir os MP3 sob CC BY 4.0 é compatível**. Ressalvas: (1) a API só pode ser usada por maiores de 18 anos e **não pode ser chamada por um app voltado a menores**; aqui quem chama é a ferramenta de desenvolvimento, e o livro só toca arquivos estáticos, **nunca chama a API**, e isso deve continuar assim; (2) boa prática: creditar "narração gerada com Gemini TTS (Google)" em `sobre.html` quando a narração for publicada. Não é parecer jurídico.
