@@ -1,0 +1,741 @@
+{
+  "obra": "Don Quixote of La Mancha",
+  "parte": 4,
+  "idioma": "en",
+  "audio": "dom-quixote/audio/<voz>-en/parte-4/<id>.mp3",
+  "audioPalavras": "dom-quixote/audio/palavras-en/<slug>.mp3",
+  "frases": [
+    {
+      "id": "p0-s0",
+      "pagina": 0,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Don Quixote of La Mancha. Part 4: The Enchanted Cage and Sancho’s Island",
+      "fala": "Don Quixote of La Mancha. Part 4: The Enchanted Cage and Sancho’s Island",
+      "hash": "4c8e04348f"
+    },
+    {
+      "id": "p0-s1",
+      "pagina": 0,
+      "paragrafo": 0,
+      "texto": "We have reached the great and thrilling final chapter of our unforgettable journey!",
+      "fala": "We have reached the great and thrilling final chapter of our unforgettable journey!",
+      "hash": "4be7bc2ac2"
+    },
+    {
+      "id": "p0-s2",
+      "pagina": 0,
+      "paragrafo": 0,
+      "texto": "Don Quixote will travel back to his village inside a mysterious wooden CAGE, set off once more on new adventures, fly across the skies on the back of a flying horse, and see his loyal squire live his dream of governing an ISLAND!",
+      "fala": "Don Quixote will travel back to his village inside a mysterious wooden cage, set off once more on new adventures, fly across the skies on the back of a flying horse, and see his loyal squire live his dream of governing an island!",
+      "hash": "0aa09d27ce"
+    },
+    {
+      "id": "p0-s3",
+      "pagina": 0,
+      "paragrafo": 1,
+      "texto": "In this farewell, Sancho Panza will teach us all that true WISDOM does not depend on crowns or riches, but blossoms in the hearts of the simple and the generous.",
+      "fala": "In this farewell, Sancho Panza will teach us all that true wisdom does not depend on crowns or riches, but blossoms in the hearts of the simple and the generous.",
+      "hash": "feae1f94d4"
+    },
+    {
+      "id": "p0-s4",
+      "pagina": 0,
+      "paragrafo": 2,
+      "texto": "Turn the page, feel the breeze on your face and come and live the grand ending of this immortal masterpiece!",
+      "fala": "Turn the page, feel the breeze on your face and come and live the grand ending of this immortal masterpiece!",
+      "hash": "4314e7c03d"
+    },
+    {
+      "id": "p1-s0",
+      "pagina": 1,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapter 23. The Enchanted Cage. A Journey by Ox Cart",
+      "fala": "Chapter 23. The Enchanted Cage. A Journey by Ox Cart",
+      "hash": "e692cf094c"
+    },
+    {
+      "id": "p1-s1",
+      "pagina": 1,
+      "paragrafo": 0,
+      "texto": "To take Don Quixote safely back home without hurting his noble heart, his friends built a big CAGE out of oak slats on top of a cart pulled by two slow and gentle white OXEN.",
+      "fala": "To take Don Quixote safely back home without hurting his noble heart, his friends built a big cage out of oak slats on top of a cart pulled by two slow and gentle white oxen.",
+      "hash": "1afe8203ef"
+    },
+    {
+      "id": "p1-s2",
+      "pagina": 1,
+      "paragrafo": 0,
+      "texto": "While the gentleman slept, worn out from his battles, they settled him inside with the greatest care.",
+      "fala": "While the gentleman slept, worn out from his battles, they settled him inside with the greatest care.",
+      "hash": "425491f65c"
+    },
+    {
+      "id": "p1-s3",
+      "pagina": 1,
+      "paragrafo": 1,
+      "texto": "When he woke up behind the wooden bars, instead of flying into a rage, Don Quixote gave a calm smile: “I am ENCHANTED by a powerful wizard from the books!” he told his companions serenely.",
+      "fala": "When he woke up behind the wooden bars, instead of flying into a rage, Don Quixote gave a calm smile: I am enchanted by a powerful wizard from the books! he told his companions serenely.",
+      "hash": "544f1e3118"
+    },
+    {
+      "id": "p1-s4",
+      "pagina": 1,
+      "paragrafo": 1,
+      "texto": "“Only the most famous knights in history travel in enchanted carriages like this one!”",
+      "fala": "Only the most famous knights in history travel in enchanted carriages like this one!",
+      "hash": "e604d6703f"
+    },
+    {
+      "id": "p1-s5",
+      "pagina": 1,
+      "paragrafo": 2,
+      "texto": "And so the procession rolled slowly on across the golden meadows: the cart wheels creaking in steady rhythm, the oxen mooing sweetly in the breeze, Sancho trotting alongside on his faithful donkey, and Don Quixote waving happily from inside his enchanted cell, dreaming of the glorious adventures that lay ahead!",
+      "fala": "And so the procession rolled slowly on across the golden meadows: the cart wheels creaking in steady rhythm, the oxen mooing sweetly in the breeze, Sancho trotting alongside on his faithful donkey, and Don Quixote waving happily from inside his enchanted cell, dreaming of the glorious adventures that lay ahead!",
+      "hash": "7638dbb757"
+    },
+    {
+      "id": "p2-s0",
+      "pagina": 2,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapter 24. Back Home. Hugs in La Mancha",
+      "fala": "Chapter 24. Back Home. Hugs in La Mancha",
+      "hash": "d298567052"
+    },
+    {
+      "id": "p2-s1",
+      "pagina": 2,
+      "paragrafo": 0,
+      "texto": "At midday on a sunny Sunday, the ox cart rolled into the flowery square of the village in La Mancha, where all the neighbours came running, curious to greet the travellers.",
+      "fala": "At midday on a sunny Sunday, the ox cart rolled into the flowery square of the village in La Mancha, where all the neighbours came running, curious to greet the travellers.",
+      "hash": "61cebaf329"
+    },
+    {
+      "id": "p2-s2",
+      "pagina": 2,
+      "paragrafo": 0,
+      "texto": "His loving NIECE Antonia and the devoted housekeeper covered the gentleman with kisses and tears of relief, tucked him into a soft bed and brought him a delicious bowl of piping-hot chicken soup.",
+      "fala": "His loving niece Antonia and the devoted housekeeper covered the gentleman with kisses and tears of relief, tucked him into a soft bed and brought him a delicious bowl of piping-hot chicken soup.",
+      "hash": "5fd685fe9d"
+    },
+    {
+      "id": "p2-s3",
+      "pagina": 2,
+      "paragrafo": 1,
+      "texto": "Sancho hurried off to his humble little white-walled cottage.",
+      "fala": "Sancho hurried off to his humble little white-walled cottage.",
+      "hash": "8bd4e5e0f1"
+    },
+    {
+      "id": "p2-s4",
+      "pagina": 2,
+      "paragrafo": 1,
+      "texto": "His devoted wife, Teresa Panza, and his little daughter, Sanchica, ran out to hug him.",
+      "fala": "His devoted wife, Teresa Panza, and his little daughter, Sanchica, ran out to hug him.",
+      "hash": "be066b36a7"
+    },
+    {
+      "id": "p2-s5",
+      "pagina": 2,
+      "paragrafo": 1,
+      "texto": "“Did you bring gold coins?” asked Teresa.",
+      "fala": "Did you bring gold coins? asked Teresa.",
+      "hash": "eb632b10fa"
+    },
+    {
+      "id": "p2-s6",
+      "pagina": 2,
+      "paragrafo": 1,
+      "texto": "“Did you bring fine dresses?” asked Sanchica, jumping for joy.",
+      "fala": "Did you bring fine dresses? asked Sanchica, jumping for joy.",
+      "hash": "be2ec8e411"
+    },
+    {
+      "id": "p2-s7",
+      "pagina": 2,
+      "paragrafo": 1,
+      "texto": "“I brought something far more precious!” cheered Sancho, twirling his daughter round in his arms.",
+      "fala": "I brought something far more precious! cheered Sancho, twirling his daughter round in his arms.",
+      "hash": "af2044a8e7"
+    },
+    {
+      "id": "p2-s8",
+      "pagina": 2,
+      "paragrafo": 1,
+      "texto": "“I brought unforgettable memories, courage, and the certainty that one day I shall be made governor of a lovely island!”",
+      "fala": "I brought unforgettable memories, courage, and the certainty that one day I shall be made governor of a lovely island!",
+      "hash": "8eb6324df6"
+    },
+    {
+      "id": "p2-s9",
+      "pagina": 2,
+      "paragrafo": 2,
+      "texto": "Gathered around the table with homemade bread and olives, the FAMILY listened, deeply moved, to the stories of the windmills and the sheep until late into the night.",
+      "fala": "Gathered around the table with homemade bread and olives, the family listened, deeply moved, to the stories of the windmills and the sheep until late into the night.",
+      "hash": "ba35480986"
+    },
+    {
+      "id": "p2-s10",
+      "pagina": 2,
+      "paragrafo": 2,
+      "texto": "But, gazing at the moonlight through his bedroom window, Don Quixote already felt in his heart a deep LONGING for the magical dust of the open road...",
+      "fala": "But, gazing at the moonlight through his bedroom window, Don Quixote already felt in his heart a deep longing for the magical dust of the open road...",
+      "hash": "742cb73cf3"
+    },
+    {
+      "id": "p3-s0",
+      "pagina": 3,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapter 25. Clavileño, the Flying Horse. A Journey through the Sky without Leaving the Ground",
+      "fala": "Chapter 25. Clavileño, the Flying Horse. A Journey through the Sky without Leaving the Ground",
+      "hash": "10b51a6f7a"
+    },
+    {
+      "id": "p3-s1",
+      "pagina": 3,
+      "paragrafo": 0,
+      "texto": "Months later, hearing the call of adventure, which no knight can resist, the two companions set off once more along the roads of the world!",
+      "fala": "Months later, hearing the call of adventure, which no knight can resist, the two companions set off once more along the roads of the world!",
+      "hash": "3a6b314d1f"
+    },
+    {
+      "id": "p3-s2",
+      "pagina": 3,
+      "paragrafo": 0,
+      "texto": "And they had a delightful surprise: their old adventures had been written down and published in a great book, and now the Knight of the Sorrowful Face was famous all over Spain.",
+      "fala": "And they had a delightful surprise: their old adventures had been written down and published in a great book, and now the Knight of the Sorrowful Face was famous all over Spain.",
+      "hash": "3916ef7529"
+    },
+    {
+      "id": "p3-s3",
+      "pagina": 3,
+      "paragrafo": 0,
+      "texto": "A rich and noble duke and duchess, who had loved reading the story, welcomed the two friends into their grand palace.",
+      "fala": "A rich and noble duke and duchess, who had loved reading the story, welcomed the two friends into their grand palace.",
+      "hash": "05b84b4584"
+    },
+    {
+      "id": "p3-s4",
+      "pagina": 3,
+      "paragrafo": 1,
+      "texto": "There, they put on an unforgettable piece of play-acting: they brought out CLAVILEÑO, an enormous wooden horse with a magic peg in its neck which, they said, had the power to fly above the clouds.",
+      "fala": "There, they put on an unforgettable piece of play-acting: they brought out clavileño, an enormous wooden horse with a magic peg in its neck which, they said, had the power to fly above the clouds.",
+      "hash": "8c990f9305"
+    },
+    {
+      "id": "p3-s5",
+      "pagina": 3,
+      "paragrafo": 1,
+      "texto": "Don Quixote and Sancho climbed onto its wooden back and tied a thick black BLINDFOLD over their eyes.",
+      "fala": "Don Quixote and Sancho climbed onto its wooden back and tied a thick black blindfold over their eyes.",
+      "hash": "6f69d49298"
+    },
+    {
+      "id": "p3-s6",
+      "pagina": 3,
+      "paragrafo": 2,
+      "texto": "To make it feel like flying through the sky, the palace servants blew gusts of air with a big blacksmith’s BELLOWS and held a torch close by to give off a glowing heat.",
+      "fala": "To make it feel like flying through the sky, the palace servants blew gusts of air with a big blacksmith’s bellows and held a torch close by to give off a glowing heat.",
+      "hash": "d03705287c"
+    },
+    {
+      "id": "p3-s7",
+      "pagina": 3,
+      "paragrafo": 2,
+      "texto": "“We’re crossing the highest clouds!” shouted Sancho, terrified and amazed, hugging his master round the waist.",
+      "fala": "We’re crossing the highest clouds! shouted Sancho, terrified and amazed, hugging his master round the waist.",
+      "hash": "3073db7631"
+    },
+    {
+      "id": "p3-s8",
+      "pagina": 3,
+      "paragrafo": 2,
+      "texto": "“And now we’re passing close to the sun itself!”",
+      "fala": "And now we’re passing close to the sun itself!",
+      "hash": "c77b83db8c"
+    },
+    {
+      "id": "p3-s9",
+      "pagina": 3,
+      "paragrafo": 2,
+      "texto": "“Courage, Sancho!",
+      "fala": "Courage, Sancho!",
+      "hash": "dabf57866d"
+    },
+    {
+      "id": "p3-s10",
+      "pagina": 3,
+      "paragrafo": 2,
+      "texto": "Hold on tight!” replied Don Quixote.",
+      "fala": "Hold on tight! replied Don Quixote.",
+      "hash": "51786b8133"
+    },
+    {
+      "id": "p3-s11",
+      "pagina": 3,
+      "paragrafo": 2,
+      "texto": "Help the friends on their fantastic journey through the air!",
+      "fala": "Help the friends on their fantastic journey through the air!",
+      "hash": "84d5386475"
+    },
+    {
+      "id": "p4-s0",
+      "pagina": 4,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapter 26. Advice for a Governor. Sancho Will Govern an Island",
+      "fala": "Chapter 26. Advice for a Governor. Sancho Will Govern an Island",
+      "hash": "5a5efc6c4f"
+    },
+    {
+      "id": "p4-s1",
+      "pagina": 4,
+      "paragrafo": 0,
+      "texto": "Carrying on with the game, the noble duke gave Sancho the much-desired governorship of the “Isle of Barataria”, which was really a busy, pretty town out in the countryside.",
+      "fala": "Carrying on with the game, the noble duke gave Sancho the much-desired governorship of the Isle of Barataria, which was really a busy, pretty town out in the countryside.",
+      "hash": "7382d725f7"
+    },
+    {
+      "id": "p4-s2",
+      "pagina": 4,
+      "paragrafo": 0,
+      "texto": "On the evening before he left, Don Quixote invited his faithful squire to sit with him on a stone bench in the garden and shared the wisest ADVICE a master can give:",
+      "fala": "On the evening before he left, Don Quixote invited his faithful squire to sit with him on a stone bench in the garden and shared the wisest advice a master can give:",
+      "hash": "97f061629a"
+    },
+    {
+      "id": "p4-s3",
+      "pagina": 4,
+      "paragrafo": 1,
+      "texto": "“Sancho, my brother of the road, never be ashamed of your humble beginnings, and never hide that you are the son of honest farmers.",
+      "fala": "Sancho, my brother of the road, never be ashamed of your humble beginnings, and never hide that you are the son of honest farmers.",
+      "hash": "c7206944b0"
+    },
+    {
+      "id": "p4-s4",
+      "pagina": 4,
+      "paragrafo": 1,
+      "texto": "Treat the barefoot townsman and the wealthy lord with the same kindness and care.",
+      "fala": "Treat the barefoot townsman and the wealthy lord with the same kindness and care.",
+      "hash": "80dce9aac6"
+    },
+    {
+      "id": "p4-s5",
+      "pagina": 4,
+      "paragrafo": 1,
+      "texto": "Always grow your HUMILITY, seek the truth with endless patience, and remember that the noblest JUSTICE is the kind that walks hand in hand with mercy and forgiveness.”",
+      "fala": "Always grow your humility, seek the truth with endless patience, and remember that the noblest justice is the kind that walks hand in hand with mercy and forgiveness.",
+      "hash": "6ac6f9298b"
+    },
+    {
+      "id": "p4-s6",
+      "pagina": 4,
+      "paragrafo": 2,
+      "texto": "Sancho listened to every lesson with his eyes brimming with feeling and respect.",
+      "fala": "Sancho listened to every lesson with his eyes brimming with feeling and respect.",
+      "hash": "bc4262e9d7"
+    },
+    {
+      "id": "p4-s7",
+      "pagina": 4,
+      "paragrafo": 2,
+      "texto": "Deeply moved, he hugged his dear gentleman, promised to keep every word in his heart, and set off to begin governing, trotting proudly along on his beloved donkey.",
+      "fala": "Deeply moved, he hugged his dear gentleman, promised to keep every word in his heart, and set off to begin governing, trotting proudly along on his beloved donkey.",
+      "hash": "86d1b5f538"
+    },
+    {
+      "id": "p5-s0",
+      "pagina": 5,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapter 27. The Mystery of the Walking Stick. The Cleverest Judgement",
+      "fala": "Chapter 27. The Mystery of the Walking Stick. The Cleverest Judgement",
+      "hash": "df863bc680"
+    },
+    {
+      "id": "p5-s1",
+      "pagina": 5,
+      "paragrafo": 0,
+      "texto": "On his very first day sitting in the island’s court, Sancho came across a puzzling mystery between two old neighbours.",
+      "fala": "On his very first day sitting in the island’s court, Sancho came across a puzzling mystery between two old neighbours.",
+      "hash": "6368b384bf"
+    },
+    {
+      "id": "p5-s2",
+      "pagina": 5,
+      "paragrafo": 0,
+      "texto": "The first one complained: “I lent my friend ten gold COINS and he refuses to give them back!”",
+      "fala": "The first one complained: I lent my friend ten gold coins and he refuses to give them back!",
+      "hash": "0bf18408ad"
+    },
+    {
+      "id": "p5-s3",
+      "pagina": 5,
+      "paragrafo": 0,
+      "texto": "The second one insisted, with his hand on his heart: “I solemnly swear before this court that I have already put every single coin back into his own hands!”",
+      "fala": "The second one insisted, with his hand on his heart: I solemnly swear before this court that I have already put every single coin back into his own hands!",
+      "hash": "b5e189bcb5"
+    },
+    {
+      "id": "p5-s4",
+      "pagina": 5,
+      "paragrafo": 1,
+      "texto": "Before taking the sacred oath, the second old man politely asked his neighbour to hold his heavy wooden WALKING STICK.",
+      "fala": "Before taking the sacred oath, the second old man politely asked his neighbour to hold his heavy wooden walking stick.",
+      "hash": "c1a0dab2e8"
+    },
+    {
+      "id": "p5-s5",
+      "pagina": 5,
+      "paragrafo": 1,
+      "texto": "He swore the oath, took back his stick and was getting ready to leave without a care in the world.",
+      "fala": "He swore the oath, took back his stick and was getting ready to leave without a care in the world.",
+      "hash": "d6c24b60c3"
+    },
+    {
+      "id": "p5-s6",
+      "pagina": 5,
+      "paragrafo": 1,
+      "texto": "Sancho stroked his beard, suspicious: “Hmm...",
+      "fala": "Sancho stroked his beard, suspicious: Hmm...",
+      "hash": "1fa8d95ef7"
+    },
+    {
+      "id": "p5-s7",
+      "pagina": 5,
+      "paragrafo": 1,
+      "texto": "Why would anyone ask the other man to hold his walking stick right at the moment of swearing?”",
+      "fala": "Why would anyone ask the other man to hold his walking stick right at the moment of swearing?",
+      "hash": "52b9ab97d6"
+    },
+    {
+      "id": "p5-s8",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "“Bring that walking stick here!” ordered the governor with a clever look.",
+      "fala": "Bring that walking stick here! ordered the governor with a clever look.",
+      "hash": "8915c35b27"
+    },
+    {
+      "id": "p5-s9",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "Break the walking stick to solve the riddle!",
+      "fala": "Break the walking stick to solve the riddle!",
+      "hash": "34597edc34"
+    },
+    {
+      "id": "p5-s10",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "As it split open, the ten gold coins hidden inside the hollow wood went rolling across the floor!",
+      "fala": "As it split open, the ten gold coins hidden inside the hollow wood went rolling across the floor!",
+      "hash": "ed8f7ce83a"
+    },
+    {
+      "id": "p5-s11",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "The man who owed the money really had put it into his friend’s hands while he was swearing!",
+      "fala": "The man who owed the money really had put it into his friend’s hands while he was swearing!",
+      "hash": "25fa7a8553"
+    },
+    {
+      "id": "p5-s12",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "The whole court clapped with admiration and delight at the brilliant WISDOM of Governor Sancho Panza!",
+      "fala": "The whole court clapped with admiration and delight at the brilliant wisdom of Governor Sancho Panza!",
+      "hash": "36b6a8c66c"
+    },
+    {
+      "id": "p6-s0",
+      "pagina": 6,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapter 28. Sancho Chooses his Donkey. The Freedom of a Simple Man",
+      "fala": "Chapter 28. Sancho Chooses his Donkey. The Freedom of a Simple Man",
+      "hash": "8e91ec740c"
+    },
+    {
+      "id": "p6-s1",
+      "pagina": 6,
+      "paragrafo": 0,
+      "texto": "Sancho governed the town for ten days with wonderful honesty and fairness.",
+      "fala": "Sancho governed the town for ten days with wonderful honesty and fairness.",
+      "hash": "cfea8afe0c"
+    },
+    {
+      "id": "p6-s2",
+      "pagina": 6,
+      "paragrafo": 0,
+      "texto": "But palace life was tiring and stuffy: a strict doctor would not let him eat anything tasty, the endless meetings kept him awake at night, and all the pomp of power stole away his peace.",
+      "fala": "But palace life was tiring and stuffy: a strict doctor would not let him eat anything tasty, the endless meetings kept him awake at night, and all the pomp of power stole away his peace.",
+      "hash": "6d42264910"
+    },
+    {
+      "id": "p6-s3",
+      "pagina": 6,
+      "paragrafo": 1,
+      "texto": "One fine morning, dressed in his old, simple farmer’s clothes, Sancho walked to the stable, lovingly hugged the neck of his beloved DONKEY and poured out his heart tenderly: “My loyal FRIEND, when I travelled with you, my days were full of peace and joy.",
+      "fala": "One fine morning, dressed in his old, simple farmer’s clothes, Sancho walked to the stable, lovingly hugged the neck of his beloved donkey and poured out his heart tenderly: My loyal friend, when I travelled with you, my days were full of peace and joy.",
+      "hash": "53d1530e31"
+    },
+    {
+      "id": "p6-s4",
+      "pagina": 6,
+      "paragrafo": 1,
+      "texto": "I would a thousand times rather have my sweet FREEDOM and a hunk of bread with an onion than all the banquets and fine airs of those who rule a kingdom!”",
+      "fala": "I would a thousand times rather have my sweet freedom and a hunk of bread with an onion than all the banquets and fine airs of those who rule a kingdom!",
+      "hash": "0136fe7e5f"
+    },
+    {
+      "id": "p6-s5",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "And so, without taking a single coin from the town’s treasure chest, Sancho said goodbye to the island with his head held high: he left with no riches at all, but with his soul overflowing with goodness, dignity and wisdom.",
+      "fala": "And so, without taking a single coin from the town’s treasure chest, Sancho said goodbye to the island with his head held high: he left with no riches at all, but with his soul overflowing with goodness, dignity and wisdom.",
+      "hash": "2b888c3cc6"
+    },
+    {
+      "id": "p6-s6",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "All the townspeople wiped away grateful tears as they watched that kind-hearted governor ride away in search of his true peace.",
+      "fala": "All the townspeople wiped away grateful tears as they watched that kind-hearted governor ride away in search of his true peace.",
+      "hash": "990a9f949e"
+    },
+    {
+      "id": "p7-s0",
+      "pagina": 7,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapter 29. The Knight of the White Moon. Adventures Live in Books",
+      "fala": "Chapter 29. The Knight of the White Moon. Adventures Live in Books",
+      "hash": "c44e4af8fa"
+    },
+    {
+      "id": "p7-s1",
+      "pagina": 7,
+      "paragrafo": 0,
+      "texto": "On the golden sands of a beach in Barcelona, to the steady rhythm of the waves, a mysterious opponent came riding up with a silver crescent on his shield: the Knight of the WHITE MOON.",
+      "fala": "On the golden sands of a beach in Barcelona, to the steady rhythm of the waves, a mysterious opponent came riding up with a silver crescent on his shield: the Knight of the white moon.",
+      "hash": "0608d61c8f"
+    },
+    {
+      "id": "p7-s2",
+      "pagina": 7,
+      "paragrafo": 0,
+      "texto": "He was really young Sansón Carrasco, a dear neighbour from La Mancha who only wanted to bring him safely home.",
+      "fala": "He was really young Sansón Carrasco, a dear neighbour from La Mancha who only wanted to bring him safely home.",
+      "hash": "250cb1ff94"
+    },
+    {
+      "id": "p7-s3",
+      "pagina": 7,
+      "paragrafo": 0,
+      "texto": "In the duel on the beach, the gentleman was defeated and, as a man of unbreakable honour, he kept his promise: he would put away his lance and go back to his village.",
+      "fala": "In the duel on the beach, the gentleman was defeated and, as a man of unbreakable honour, he kept his promise: he would put away his lance and go back to his village.",
+      "hash": "f0e76569d8"
+    },
+    {
+      "id": "p7-s4",
+      "pagina": 7,
+      "paragrafo": 1,
+      "texto": "Back in his cosy reading room, Alonso Quixano sat by the crackling fire, surrounded by his beloved books.",
+      "fala": "Back in his cosy reading room, Alonso Quixano sat by the crackling fire, surrounded by his beloved books.",
+      "hash": "8ed961d50e"
+    },
+    {
+      "id": "p7-s5",
+      "pagina": 7,
+      "paragrafo": 1,
+      "texto": "Every afternoon, the village children sat on the rug at Grandad Alonso’s feet to listen, spellbound, to the stories of the windmill giants, the sheep armies, the flight of Clavileño and the squire who governed an island with justice in his heart.",
+      "fala": "Every afternoon, the village children sat on the rug at Grandad Alonso’s feet to listen, spellbound, to the stories of the windmill giants, the sheep armies, the flight of Clavileño and the squire who governed an island with justice in his heart.",
+      "hash": "1a5dd97041"
+    },
+    {
+      "id": "p7-s6",
+      "pagina": 7,
+      "paragrafo": 1,
+      "texto": "“Once upon a time there was a gentleman of La Mancha who dreamed with his eyes wide open...” the old storyteller would begin, with a twinkle in his eye.",
+      "fala": "Once upon a time there was a gentleman of La Mancha who dreamed with his eyes wide open... the old storyteller would begin, with a twinkle in his eye.",
+      "hash": "b096a90590"
+    },
+    {
+      "id": "p7-s7",
+      "pagina": 7,
+      "paragrafo": 2,
+      "texto": "And so the wonderful IMAGINATION of the noble Don Quixote never faded away: it went on to live for ever in the hearts of young READERS all over the planet.",
+      "fala": "And so the wonderful imagination of the noble Don Quixote never faded away: it went on to live for ever in the hearts of young readers all over the planet.",
+      "hash": "37a8f31a3f"
+    },
+    {
+      "id": "p7-s8",
+      "pagina": 7,
+      "paragrafo": 2,
+      "texto": "For whoever reads and dreams of goodness, just like you, never stops riding along the most beautiful roads in the world!",
+      "fala": "For whoever reads and dreams of goodness, just like you, never stops riding along the most beautiful roads in the world!",
+      "hash": "4595c69c64"
+    }
+  ],
+  "palavras": [
+    {
+      "slug": "cage",
+      "palavra": "CAGE",
+      "silabas": "CAGE",
+      "fala": "cage... cage!",
+      "hash": "c47780fa21"
+    },
+    {
+      "slug": "island",
+      "palavra": "ISLAND",
+      "silabas": "IS • LAND",
+      "fala": "is... land... island!",
+      "hash": "e512090c80"
+    },
+    {
+      "slug": "wisdom",
+      "palavra": "WISDOM",
+      "silabas": "WIS • DOM",
+      "fala": "wis... dom... wisdom!",
+      "hash": "c2935eac92"
+    },
+    {
+      "slug": "oxen",
+      "palavra": "OXEN",
+      "silabas": "OX • EN",
+      "fala": "ox... en... oxen!",
+      "hash": "cc13196832"
+    },
+    {
+      "slug": "enchanted",
+      "palavra": "ENCHANTED",
+      "silabas": "EN • CHANT • ED",
+      "fala": "en... chant... ed... enchanted!",
+      "hash": "207ec3ed98"
+    },
+    {
+      "slug": "niece",
+      "palavra": "NIECE",
+      "silabas": "NIECE",
+      "fala": "niece... niece!",
+      "hash": "f186246468"
+    },
+    {
+      "slug": "family",
+      "palavra": "FAMILY",
+      "silabas": "FAM • I • LY",
+      "fala": "fam... i... ly... family!",
+      "hash": "0ceb2ac0e6"
+    },
+    {
+      "slug": "longing",
+      "palavra": "LONGING",
+      "silabas": "LONG • ING",
+      "fala": "long... ing... longing!",
+      "hash": "55ba0d821d"
+    },
+    {
+      "slug": "clavileno",
+      "palavra": "CLAVILEÑO",
+      "silabas": "CLA • VI • LE • ÑO",
+      "fala": "cla... vi... le... ño... clavileño!",
+      "hash": "fe260f0223"
+    },
+    {
+      "slug": "blindfold",
+      "palavra": "BLINDFOLD",
+      "silabas": "BLIND • FOLD",
+      "fala": "blind... fold... blindfold!",
+      "hash": "9db526aedc"
+    },
+    {
+      "slug": "bellows",
+      "palavra": "BELLOWS",
+      "silabas": "BEL • LOWS",
+      "fala": "bel... lows... bellows!",
+      "hash": "fbc868159f"
+    },
+    {
+      "slug": "advice",
+      "palavra": "ADVICE",
+      "silabas": "AD • VICE",
+      "fala": "ad... vice... advice!",
+      "hash": "a7303730f0"
+    },
+    {
+      "slug": "humility",
+      "palavra": "HUMILITY",
+      "silabas": "HU • MIL • I • TY",
+      "fala": "hu... mil... i... ty... humility!",
+      "hash": "508f7f53ed"
+    },
+    {
+      "slug": "justice",
+      "palavra": "JUSTICE",
+      "silabas": "JUS • TICE",
+      "fala": "jus... tice... justice!",
+      "hash": "565d8fb744"
+    },
+    {
+      "slug": "coins",
+      "palavra": "COINS",
+      "silabas": "COINS",
+      "fala": "coins... coins!",
+      "hash": "1304d5c5c3"
+    },
+    {
+      "slug": "walking-stick",
+      "palavra": "WALKING STICK",
+      "silabas": "WALK • ING • STICK",
+      "fala": "walk... ing... stick... walking stick!",
+      "hash": "6b51447e28"
+    },
+    {
+      "slug": "donkey",
+      "palavra": "DONKEY",
+      "silabas": "DON • KEY",
+      "fala": "don... key... donkey!",
+      "hash": "866f74b088"
+    },
+    {
+      "slug": "friend",
+      "palavra": "FRIEND",
+      "silabas": "FRIEND",
+      "fala": "friend... friend!",
+      "hash": "5ce38c3393"
+    },
+    {
+      "slug": "freedom",
+      "palavra": "FREEDOM",
+      "silabas": "FREE • DOM",
+      "fala": "free... dom... freedom!",
+      "hash": "502cf829fe"
+    },
+    {
+      "slug": "white-moon",
+      "palavra": "WHITE MOON",
+      "silabas": "WHITE • MOON",
+      "fala": "white... moon... white moon!",
+      "hash": "ffdc342d93"
+    },
+    {
+      "slug": "imagination",
+      "palavra": "IMAGINATION",
+      "silabas": "I • MAG • I • NA • TION",
+      "fala": "i... mag... i... na... tion... imagination!",
+      "hash": "d6584e0888"
+    },
+    {
+      "slug": "readers",
+      "palavra": "READERS",
+      "silabas": "READ • ERS",
+      "fala": "read... ers... readers!",
+      "hash": "ddc98659ed"
+    }
+  ]
+}

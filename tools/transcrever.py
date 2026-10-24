@@ -9,6 +9,7 @@ Na primeira execução o modelo (~800 MB) é baixado do Hugging Face e fica em c
 Uso avulso: python3 tools/transcrever.py arquivo.mp3 ...
 """
 import json
+import os
 import subprocess
 import sys
 
@@ -16,8 +17,10 @@ import numpy as np
 from faster_whisper import WhisperModel
 
 MODELO = "large-v3-turbo"
+# Idioma da fala (pt, en, fr, es): o gravar-narracao.mjs passa CV_IDIOMA e, nas traduções, os nomes em CV_NOMES
+IDIOMA = os.environ.get("CV_IDIOMA", "pt")
 # Nomes próprios dos livros: ajudam o Whisper a não "corrigir" o que a voz disse certo
-NOMES = ("Dom Quixote de La Mancha, Alonso Quixano, Sancho Pança, Rocinante, Dulcineia del Toboso, Aldonza Lorenzo, "
+NOMES = os.environ.get("CV_NOMES") or ("Dom Quixote de La Mancha, Alonso Quixano, Sancho Pança, Rocinante, Dulcineia del Toboso, Aldonza Lorenzo, "
          "Montiel, Campo de Criptana, Miguel de Cervantes, Mambrino, Micomicona, Micomicão, Alifanfarrão, Pentapolim, "
          "Trapobana, Pandafilando da Fosca Vista, Clavilenho, Barataria, Sansão Carrasco, Amadis, Teresa Pança, Sanchica.")
 
@@ -31,7 +34,7 @@ def ler(arquivo):
 
 
 def transcrever(modelo, arquivo):
-    trechos, _ = modelo.transcribe(ler(arquivo), language="pt", beam_size=5, condition_on_previous_text=False,
+    trechos, _ = modelo.transcribe(ler(arquivo), language=IDIOMA, beam_size=5, condition_on_previous_text=False,
                                    word_timestamps=True, initial_prompt=NOMES)
     trechos = list(trechos)
     palavras = [[p.word.strip(), round(p.start, 3), round(p.end, 3)] for t in trechos for p in (t.words or [])]

@@ -1,0 +1,636 @@
+{
+  "obra": "Don Quixote of La Mancha",
+  "parte": 1,
+  "idioma": "en",
+  "audio": "dom-quixote/audio/<voz>-en/parte-1/<id>.mp3",
+  "audioPalavras": "dom-quixote/audio/palavras-en/<slug>.mp3",
+  "frases": [
+    {
+      "id": "p0-s0",
+      "pagina": 0,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Don Quixote of La Mancha. Part 1: The Knight of Super Imagination",
+      "fala": "Don Quixote of La Mancha. Part 1: The Knight of Super Imagination",
+      "hash": "263b189260"
+    },
+    {
+      "id": "p0-s1",
+      "pagina": 0,
+      "paragrafo": 0,
+      "texto": "More than four hundred years ago, the brilliant Spanish writer Miguel de Cervantes created one of the most beautiful and best-loved stories on the whole planet!",
+      "fala": "More than four hundred years ago, the brilliant Spanish writer Miguel de Cervantes created one of the most beautiful and best-loved stories on the whole planet!",
+      "hash": "7db736abad"
+    },
+    {
+      "id": "p0-s2",
+      "pagina": 0,
+      "paragrafo": 1,
+      "texto": "Meet Alonso Quixano, a kind gentleman with a giant heart, full of courage and IMAGINATION.",
+      "fala": "Meet Alonso Quixano, a kind gentleman with a giant heart, full of courage and imagination.",
+      "hash": "fd219622e5"
+    },
+    {
+      "id": "p0-s3",
+      "pagina": 0,
+      "paragrafo": 1,
+      "texto": "With his beloved horse ROCINANTE at his side, he set out along the roads of the world to protect the helpless, spread kindness far and wide, and prove that every one of us can be a noble KNIGHT in our own life!",
+      "fala": "With his beloved horse rocinante at his side, he set out along the roads of the world to protect the helpless, spread kindness far and wide, and prove that every one of us can be a noble knight in our own life!",
+      "hash": "fefc7a6fa9"
+    },
+    {
+      "id": "p1-s0",
+      "pagina": 1,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapter 1. The Reading Gentleman. The Grandad Who Read Day and Night!",
+      "fala": "Chapter 1. The Reading Gentleman. The Grandad Who Read Day and Night!",
+      "hash": "f9a3d2eea6"
+    },
+    {
+      "id": "p1-s1",
+      "pagina": 1,
+      "paragrafo": 0,
+      "texto": "In a little village in Spain called La Mancha, there lived a gentleman with gentle eyes and a generous soul: the good Alonso Quixano.",
+      "fala": "In a little village in Spain called La Mancha, there lived a gentleman with gentle eyes and a generous soul: the good Alonso Quixano.",
+      "hash": "630e5ee4be"
+    },
+    {
+      "id": "p1-s2",
+      "pagina": 1,
+      "paragrafo": 0,
+      "texto": "His greatest treasure was his pile of beloved BOOKS about the knights of long ago!",
+      "fala": "His greatest treasure was his pile of beloved books about the knights of long ago!",
+      "hash": "c9469f7f6e"
+    },
+    {
+      "id": "p1-s3",
+      "pagina": 1,
+      "paragrafo": 1,
+      "texto": "Alonso read with such delight that he stayed awake whole nights through, travelling to faraway lands where noble KNIGHTS stood up for justice, faced great dangers and protected those who needed help the most.",
+      "fala": "Alonso read with such delight that he stayed awake whole nights through, travelling to faraway lands where noble knights stood up for justice, faced great dangers and protected those who needed help the most.",
+      "hash": "1788de5fac"
+    },
+    {
+      "id": "p1-s4",
+      "pagina": 1,
+      "paragrafo": 2,
+      "texto": "He dived so deep into the power of words that his room filled up with pure poetry: the old map glowed in the air, stories sprouted wings, and even the sleepy little cat in the sitting room, in his loving eyes, became a magnificent GUARDIAN LION!",
+      "fala": "He dived so deep into the power of words that his room filled up with pure poetry: the old map glowed in the air, stories sprouted wings, and even the sleepy little cat in the sitting room, in his loving eyes, became a magnificent guardian lion!",
+      "hash": "176e36f683"
+    },
+    {
+      "id": "p2-s0",
+      "pagina": 2,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapter 2. The New Name. Great-Grandad’s Armour!",
+      "fala": "Chapter 2. The New Name. Great-Grandad’s Armour!",
+      "hash": "4364733889"
+    },
+    {
+      "id": "p2-s1",
+      "pagina": 2,
+      "paragrafo": 0,
+      "texto": "“The world needs more kindness, justice and bravery!” thought the gentleman, his eyes shining.",
+      "fala": "The world needs more kindness, justice and bravery! thought the gentleman, his eyes shining.",
+      "hash": "7afca36cd1"
+    },
+    {
+      "id": "p2-s2",
+      "pagina": 2,
+      "paragrafo": 0,
+      "texto": "And for this grand mission he chose a name that rang out loud and fearless: DON QUIXOTE of La Mancha!",
+      "fala": "And for this grand mission he chose a name that rang out loud and fearless: don quixote of La Mancha!",
+      "hash": "395a948580"
+    },
+    {
+      "id": "p2-s3",
+      "pagina": 2,
+      "paragrafo": 1,
+      "texto": "Climbing up to the dusty attic of his house, he opened an old chest that had lain forgotten for almost a hundred years.",
+      "fala": "Climbing up to the dusty attic of his house, he opened an old chest that had lain forgotten for almost a hundred years.",
+      "hash": "82a16acc71"
+    },
+    {
+      "id": "p2-s4",
+      "pagina": 2,
+      "paragrafo": 1,
+      "texto": "Inside rested the ancient iron ARMOUR that had once belonged to his great-grandfather, all covered in rust.",
+      "fala": "Inside rested the ancient iron armour that had once belonged to his great-grandfather, all covered in rust.",
+      "hash": "b04bf54ed8"
+    },
+    {
+      "id": "p2-s5",
+      "pagina": 2,
+      "paragrafo": 2,
+      "texto": "In the very best of spirits, he put a brass BASIN on his head for a helmet, held up a saucepan lid as a SHIELD and tied a red pennant to a wooden pole to make his LANCE.",
+      "fala": "In the very best of spirits, he put a brass basin on his head for a helmet, held up a saucepan lid as a shield and tied a red pennant to a wooden pole to make his lance.",
+      "hash": "48ddee6d50"
+    },
+    {
+      "id": "p2-s6",
+      "pagina": 2,
+      "paragrafo": 2,
+      "texto": "To his dreamy eyes, nothing in the world shone brighter than that gleaming GOLDEN HELMET!",
+      "fala": "To his dreamy eyes, nothing in the world shone brighter than that gleaming golden helmet!",
+      "hash": "5ad12a70fb"
+    },
+    {
+      "id": "p3-s0",
+      "pagina": 3,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapter 3. The Steed and the Princess. Rocinante and the Lovely Dulcinea!",
+      "fala": "Chapter 3. The Steed and the Princess. Rocinante and the Lovely Dulcinea!",
+      "hash": "8e4356575d"
+    },
+    {
+      "id": "p3-s1",
+      "pagina": 3,
+      "paragrafo": 0,
+      "texto": "No knight errant ever travels without a worthy steed.",
+      "fala": "No knight errant ever travels without a worthy steed.",
+      "hash": "1c5bf62b58"
+    },
+    {
+      "id": "p3-s2",
+      "pagina": 3,
+      "paragrafo": 0,
+      "texto": "In the farm stable rested his old workhorse: skinny, with every rib showing, but with a gentle and loyal gaze.",
+      "fala": "In the farm stable rested his old workhorse: skinny, with every rib showing, but with a gentle and loyal gaze.",
+      "hash": "ca0864ccd7"
+    },
+    {
+      "id": "p3-s3",
+      "pagina": 3,
+      "paragrafo": 1,
+      "texto": "Don Quixote thought for four whole days before choosing a noble name for his friend, and at last he called him ROCINANTE, the first and most faithful of all horses!",
+      "fala": "Don Quixote thought for four whole days before choosing a noble name for his friend, and at last he called him rocinante, the first and most faithful of all horses!",
+      "hash": "01402b0e03"
+    },
+    {
+      "id": "p3-s4",
+      "pagina": 3,
+      "paragrafo": 2,
+      "texto": "Feed him a sweet APPLE and a crunchy CARROT, then run the BRUSH through his mane to make him as proud as a swift royal CHARGER!",
+      "fala": "Feed him a sweet apple and a crunchy carrot, then run the brush through his mane to make him as proud as a swift royal charger!",
+      "hash": "00413d2747"
+    },
+    {
+      "id": "p3-s5",
+      "pagina": 3,
+      "paragrafo": 3,
+      "texto": "And to whom would he dedicate all his victories?",
+      "fala": "And to whom would he dedicate all his victories?",
+      "hash": "1c48250ab6"
+    },
+    {
+      "id": "p3-s6",
+      "pagina": 3,
+      "paragrafo": 3,
+      "texto": "Don Quixote chose the sweet country girl from the next village, Aldonza Lorenzo, and in his thoughts he crowned her the beautiful princess DULCINEA of El Toboso!",
+      "fala": "Don Quixote chose the sweet country girl from the next village, Aldonza Lorenzo, and in his thoughts he crowned her the beautiful princess dulcinea of El Toboso!",
+      "hash": "86a0970b62"
+    },
+    {
+      "id": "p4-s0",
+      "pagina": 4,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapter 4. The First Ride Out. Inn or Royal Castle?",
+      "fala": "Chapter 4. The First Ride Out. Inn or Royal Castle?",
+      "hash": "2deba69503"
+    },
+    {
+      "id": "p4-s1",
+      "pagina": 4,
+      "paragrafo": 0,
+      "texto": "At sunset, after riding over the golden hills of Montiel, Don Quixote spotted a simple roadside INN with clay roof tiles and walls of mud brick.",
+      "fala": "At sunset, after riding over the golden hills of Montiel, Don Quixote spotted a simple roadside inn with clay roof tiles and walls of mud brick.",
+      "hash": "5c7266c495"
+    },
+    {
+      "id": "p4-s2",
+      "pagina": 4,
+      "paragrafo": 1,
+      "texto": "But to the dreaming knight’s eyes, those plain walls turned into a magnificent CASTLE with tall silver towers and drawbridges!",
+      "fala": "But to the dreaming knight’s eyes, those plain walls turned into a magnificent castle with tall silver towers and drawbridges!",
+      "hash": "a13eeab4a9"
+    },
+    {
+      "id": "p4-s3",
+      "pagina": 4,
+      "paragrafo": 2,
+      "texto": "When a young herdsman blew on a rustic pipe to call his piglets home, Don Quixote heard triumphant royal TRUMPETS.",
+      "fala": "When a young herdsman blew on a rustic pipe to call his piglets home, Don Quixote heard triumphant royal trumpets.",
+      "hash": "3114b1cd00"
+    },
+    {
+      "id": "p4-s4",
+      "pagina": 4,
+      "paragrafo": 2,
+      "texto": "And, warmly welcomed by the kind innkeeper, he savoured a steaming bowl of bread and garlic SOUP as if he were sitting at the noblest banquet of kings!",
+      "fala": "And, warmly welcomed by the kind innkeeper, he savoured a steaming bowl of bread and garlic soup as if he were sitting at the noblest banquet of kings!",
+      "hash": "69040c5d03"
+    },
+    {
+      "id": "p5-s0",
+      "pagina": 5,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapter 5. The Magic Ceremony. A Knight under the Full Moon!",
+      "fala": "Chapter 5. The Magic Ceremony. A Knight under the Full Moon!",
+      "hash": "dde7638c26"
+    },
+    {
+      "id": "p5-s1",
+      "pagina": 5,
+      "paragrafo": 0,
+      "texto": "To make his knighting complete, tradition demanded the solemn Vigil of Arms.",
+      "fala": "To make his knighting complete, tradition demanded the solemn Vigil of Arms.",
+      "hash": "9e66e35e49"
+    },
+    {
+      "id": "p5-s2",
+      "pagina": 5,
+      "paragrafo": 0,
+      "texto": "All through the silent night of La Mancha, bathed in the silver glow of the FULL MOON, Don Quixote kept watch, pacing with firm steps and a pure heart.",
+      "fala": "All through the silent night of La Mancha, bathed in the silver glow of the full moon, Don Quixote kept watch, pacing with firm steps and a pure heart.",
+      "hash": "2c389e90f3"
+    },
+    {
+      "id": "p5-s3",
+      "pagina": 5,
+      "paragrafo": 1,
+      "texto": "He laid his breastplate, his basin and his lance on the animals’ great stone TROUGH, feeling with true devotion that he was praying before a sacred altar of marble and crystal.",
+      "fala": "He laid his breastplate, his basin and his lance on the animals’ great stone trough, feeling with true devotion that he was praying before a sacred altar of marble and crystal.",
+      "hash": "411534bad5"
+    },
+    {
+      "id": "p5-s4",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "At dawn, the good innkeeper, touched by the goodness and sweetness of that man, picked up his account book, recited words of honour and gently tapped the gentleman’s shoulder with the blade of a SWORD.",
+      "fala": "At dawn, the good innkeeper, touched by the goodness and sweetness of that man, picked up his account book, recited words of honour and gently tapped the gentleman’s shoulder with the blade of a sword.",
+      "hash": "967153c1c4"
+    },
+    {
+      "id": "p5-s5",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "And now, at last, the world had its bravest protector!",
+      "fala": "And now, at last, the world had its bravest protector!",
+      "hash": "8734ea0e7e"
+    },
+    {
+      "id": "p6-s0",
+      "pagina": 6,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapter 6. A Noble Friendship. Sancho Panza, the Faithful Squire!",
+      "fala": "Chapter 6. A Noble Friendship. Sancho Panza, the Faithful Squire!",
+      "hash": "245b5f917a"
+    },
+    {
+      "id": "p6-s1",
+      "pagina": 6,
+      "paragrafo": 0,
+      "texto": "Back in his village to gather supplies, Don Quixote went to see his dearest neighbour: SANCHO PANZA, a plump and kindly farmer, a lover of peace and a loving father.",
+      "fala": "Back in his village to gather supplies, Don Quixote went to see his dearest neighbour: sancho panza, a plump and kindly farmer, a lover of peace and a loving father.",
+      "hash": "50116a4500"
+    },
+    {
+      "id": "p6-s2",
+      "pagina": 6,
+      "paragrafo": 1,
+      "texto": "“My loyal friend,” said the knight, “come with me and be my SQUIRE!",
+      "fala": "My loyal friend, said the knight, come with me and be my squire!",
+      "hash": "303ee18ba5"
+    },
+    {
+      "id": "p6-s3",
+      "pagina": 6,
+      "paragrafo": 1,
+      "texto": "I promise that, once we have won our first battles, you shall be made governor of a lovely ISLAND full of bread and justice!”",
+      "fala": "I promise that, once we have won our first battles, you shall be made governor of a lovely island full of bread and justice!",
+      "hash": "a020239d33"
+    },
+    {
+      "id": "p6-s4",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "Sancho smiled in wonder, packed his saddlebags with fresh cheese and bread, loaded them onto his friendly DONKEY and said yes.",
+      "fala": "Sancho smiled in wonder, packed his saddlebags with fresh cheese and bread, loaded them onto his friendly donkey and said yes.",
+      "hash": "005e53b1a7"
+    },
+    {
+      "id": "p6-s5",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "Under the morning sun, the two friends set off together down the road, chatting happily about the future!",
+      "fala": "Under the morning sun, the two friends set off together down the road, chatting happily about the future!",
+      "hash": "290f632872"
+    },
+    {
+      "id": "p7-s0",
+      "pagina": 7,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapter 7. The Duel of the Windmills! The Duel against the Giants!",
+      "fala": "Chapter 7. The Duel of the Windmills! The Duel against the Giants!",
+      "hash": "f95f1b444a"
+    },
+    {
+      "id": "p7-s1",
+      "pagina": 7,
+      "paragrafo": 0,
+      "texto": "As they rode across the wide plains of Campo de Criptana, thirty or forty enormous WINDMILLS suddenly appeared on the horizon, their great wooden sails slicing through the sky.",
+      "fala": "As they rode across the wide plains of Campo de Criptana, thirty or forty enormous windmills suddenly appeared on the horizon, their great wooden sails slicing through the sky.",
+      "hash": "ad1d272521"
+    },
+    {
+      "id": "p7-s2",
+      "pagina": 7,
+      "paragrafo": 1,
+      "texto": "At that very moment, a strong gust of WIND blew, and the sails spun round with a roaring whoosh!",
+      "fala": "At that very moment, a strong gust of wind blew, and the sails spun round with a roaring whoosh!",
+      "hash": "9d736c9c04"
+    },
+    {
+      "id": "p7-s3",
+      "pagina": 7,
+      "paragrafo": 1,
+      "texto": "Don Quixote pulled on Rocinante’s reins and cried out:",
+      "fala": "Don Quixote pulled on Rocinante’s reins and cried out:",
+      "hash": "df57205a79"
+    },
+    {
+      "id": "p7-s4",
+      "pagina": 7,
+      "paragrafo": 2,
+      "texto": "“Look, friend Sancho!",
+      "fala": "Look, friend Sancho!",
+      "hash": "f81d768e35"
+    },
+    {
+      "id": "p7-s5",
+      "pagina": 7,
+      "paragrafo": 2,
+      "texto": "Fortune is guiding our steps!",
+      "fala": "Fortune is guiding our steps!",
+      "hash": "b7913d8ae1"
+    },
+    {
+      "id": "p7-s6",
+      "pagina": 7,
+      "paragrafo": 2,
+      "texto": "Over there rise monstrous GIANTS, and I shall fight them in fierce battle!”",
+      "fala": "Over there rise monstrous giants, and I shall fight them in fierce battle!",
+      "hash": "2abbd51c60"
+    },
+    {
+      "id": "p7-s7",
+      "pagina": 7,
+      "paragrafo": 3,
+      "texto": "“What giants, my lord?” warned Sancho.",
+      "fala": "What giants, my lord? warned Sancho.",
+      "hash": "8fa2cf919a"
+    },
+    {
+      "id": "p7-s8",
+      "pagina": 7,
+      "paragrafo": 3,
+      "texto": "“They’re only windmills, grinding wheat in the wind!”",
+      "fala": "They’re only windmills, grinding wheat in the wind!",
+      "hash": "4d4ea09df0"
+    },
+    {
+      "id": "p7-s9",
+      "pagina": 7,
+      "paragrafo": 3,
+      "texto": "But Don Quixote was already lowering his lance, ready for the most famous and bravest duel in all of literature!",
+      "fala": "But Don Quixote was already lowering his lance, ready for the most famous and bravest duel in all of literature!",
+      "hash": "abeba1554c"
+    }
+  ],
+  "palavras": [
+    {
+      "slug": "imagination",
+      "palavra": "IMAGINATION",
+      "silabas": "I • MAG • I • NA • TION",
+      "fala": "i... mag... i... na... tion... imagination!",
+      "hash": "d6584e0888"
+    },
+    {
+      "slug": "rocinante",
+      "palavra": "ROCINANTE",
+      "silabas": "RO • CI • NAN • TE",
+      "fala": "ro... ci... nan... te... rocinante!",
+      "hash": "b2c1192dc0"
+    },
+    {
+      "slug": "knight",
+      "palavra": "KNIGHT",
+      "silabas": "KNIGHT",
+      "fala": "knight... knight!",
+      "hash": "9d7c3d73a6"
+    },
+    {
+      "slug": "books",
+      "palavra": "BOOKS",
+      "silabas": "BOOKS",
+      "fala": "books... books!",
+      "hash": "9aad8e490e"
+    },
+    {
+      "slug": "knights",
+      "palavra": "KNIGHTS",
+      "silabas": "KNIGHTS",
+      "fala": "knights... knights!",
+      "hash": "12ba18b615"
+    },
+    {
+      "slug": "guardian-lion",
+      "palavra": "GUARDIAN LION",
+      "silabas": "GUAR • DI • AN • LI • ON",
+      "fala": "guar... di... an... li... on... guardian lion!",
+      "hash": "100a204070"
+    },
+    {
+      "slug": "don-quixote",
+      "palavra": "DON QUIXOTE",
+      "silabas": "DON • QUI • XO • TE",
+      "fala": "don... qui... xo... te... don quixote!",
+      "hash": "7d66669325"
+    },
+    {
+      "slug": "armour",
+      "palavra": "ARMOUR",
+      "silabas": "AR • MOUR",
+      "fala": "ar... mour... armour!",
+      "hash": "af39d83a76"
+    },
+    {
+      "slug": "basin",
+      "palavra": "BASIN",
+      "silabas": "BA • SIN",
+      "fala": "ba... sin... basin!",
+      "hash": "37d4d9609a"
+    },
+    {
+      "slug": "shield",
+      "palavra": "SHIELD",
+      "silabas": "SHIELD",
+      "fala": "shield... shield!",
+      "hash": "70b9ceb8bd"
+    },
+    {
+      "slug": "lance",
+      "palavra": "LANCE",
+      "silabas": "LANCE",
+      "fala": "lance... lance!",
+      "hash": "d82ab630d4"
+    },
+    {
+      "slug": "golden-helmet",
+      "palavra": "GOLDEN HELMET",
+      "silabas": "GOL • DEN • HEL • MET",
+      "fala": "gol... den... hel... met... golden helmet!",
+      "hash": "462192cb79"
+    },
+    {
+      "slug": "apple",
+      "palavra": "APPLE",
+      "silabas": "AP • PLE",
+      "fala": "ap... ple... apple!",
+      "hash": "68ab3fdf31"
+    },
+    {
+      "slug": "carrot",
+      "palavra": "CARROT",
+      "silabas": "CAR • ROT",
+      "fala": "car... rot... carrot!",
+      "hash": "ca32008f69"
+    },
+    {
+      "slug": "brush",
+      "palavra": "BRUSH",
+      "silabas": "BRUSH",
+      "fala": "brush... brush!",
+      "hash": "ffbacbab07"
+    },
+    {
+      "slug": "charger",
+      "palavra": "CHARGER",
+      "silabas": "CHAR • GER",
+      "fala": "char... ger... charger!",
+      "hash": "86bb73b6b5"
+    },
+    {
+      "slug": "dulcinea",
+      "palavra": "DULCINEA",
+      "silabas": "DUL • CI • NE • A",
+      "fala": "dul... ci... ne... a... dulcinea!",
+      "hash": "9354bb3171"
+    },
+    {
+      "slug": "inn",
+      "palavra": "INN",
+      "silabas": "INN",
+      "fala": "inn... inn!",
+      "hash": "2ee66fcc0a"
+    },
+    {
+      "slug": "castle",
+      "palavra": "CASTLE",
+      "silabas": "CAS • TLE",
+      "fala": "cas... tle... castle!",
+      "hash": "4f091072bb"
+    },
+    {
+      "slug": "trumpets",
+      "palavra": "TRUMPETS",
+      "silabas": "TRUM • PETS",
+      "fala": "trum... pets... trumpets!",
+      "hash": "cfeba03460"
+    },
+    {
+      "slug": "soup",
+      "palavra": "SOUP",
+      "silabas": "SOUP",
+      "fala": "soup... soup!",
+      "hash": "7067f0a00c"
+    },
+    {
+      "slug": "full-moon",
+      "palavra": "FULL MOON",
+      "silabas": "FULL • MOON",
+      "fala": "full... moon... full moon!",
+      "hash": "bf569690e5"
+    },
+    {
+      "slug": "trough",
+      "palavra": "TROUGH",
+      "silabas": "TROUGH",
+      "fala": "trough... trough!",
+      "hash": "5027eb9574"
+    },
+    {
+      "slug": "sword",
+      "palavra": "SWORD",
+      "silabas": "SWORD",
+      "fala": "sword... sword!",
+      "hash": "aa2a419b76"
+    },
+    {
+      "slug": "sancho-panza",
+      "palavra": "SANCHO PANZA",
+      "silabas": "SAN • CHO • PAN • ZA",
+      "fala": "san... cho... pan... za... sancho panza!",
+      "hash": "3462188f9f"
+    },
+    {
+      "slug": "squire",
+      "palavra": "SQUIRE",
+      "silabas": "SQUIRE",
+      "fala": "squire... squire!",
+      "hash": "c533b5b83a"
+    },
+    {
+      "slug": "island",
+      "palavra": "ISLAND",
+      "silabas": "IS • LAND",
+      "fala": "is... land... island!",
+      "hash": "e512090c80"
+    },
+    {
+      "slug": "donkey",
+      "palavra": "DONKEY",
+      "silabas": "DON • KEY",
+      "fala": "don... key... donkey!",
+      "hash": "866f74b088"
+    },
+    {
+      "slug": "windmills",
+      "palavra": "WINDMILLS",
+      "silabas": "WIND • MILLS",
+      "fala": "wind... mills... windmills!",
+      "hash": "6b620f35b5"
+    },
+    {
+      "slug": "wind",
+      "palavra": "WIND",
+      "silabas": "WIND",
+      "fala": "wind... wind!",
+      "hash": "b63764a195"
+    },
+    {
+      "slug": "giants",
+      "palavra": "GIANTS",
+      "silabas": "GI • ANTS",
+      "fala": "gi... ants... giants!",
+      "hash": "f59a6c463d"
+    }
+  ]
+}

@@ -1,0 +1,731 @@
+{
+  "obra": "Don Quichotte de la Manche",
+  "parte": 3,
+  "idioma": "fr",
+  "audio": "dom-quixote/audio/<voz>-fr/parte-3/<id>.mp3",
+  "audioPalavras": "dom-quixote/audio/palavras-fr/<slug>.mp3",
+  "frases": [
+    {
+      "id": "p0-s0",
+      "pagina": 0,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Don Quichotte de la Manche. Partie 3 : La Sierra Morena et la princesse Micomicona",
+      "fala": "Don Quichotte de la Manche. Partie 3 : La Sierra Morena et la princesse Micomicona",
+      "hash": "fce21449d1"
+    },
+    {
+      "id": "p0-s1",
+      "pagina": 0,
+      "paragrafo": 0,
+      "texto": "Avec son armet resplendissant conquis sous la pluie et le cœur débordant de rêves, le Chevalier à la Triste Figure gravit avec Sancho les montagnes sauvages et majestueuses de la SIERRA MORENA !",
+      "fala": "Avec son armet resplendissant conquis sous la pluie et le cœur débordant de rêves, le Chevalier à la Triste Figure gravit avec Sancho les montagnes sauvages et majestueuses de la sierra morena !",
+      "hash": "64ed9302a8"
+    },
+    {
+      "id": "p0-s2",
+      "pagina": 0,
+      "paragrafo": 1,
+      "texto": "Sur les hauteurs rocheuses, entre les précipices, les pins et les fleurs sauvages, nos héros vont ouvrir une valise pleine de secrets, écrire une émouvante LETTRE d’amour, faire des galipettes de chagrin et découvrir le plan ingénieux de vieux amis pour sauver une belle PRINCESSE d’un royaume lointain.",
+      "fala": "Sur les hauteurs rocheuses, entre les précipices, les pins et les fleurs sauvages, nos héros vont ouvrir une valise pleine de secrets, écrire une émouvante lettre d’amour, faire des galipettes de chagrin et découvrir le plan ingénieux de vieux amis pour sauver une belle princesse d’un royaume lointain.",
+      "hash": "a57e651c7c"
+    },
+    {
+      "id": "p0-s3",
+      "pagina": 0,
+      "paragrafo": 2,
+      "texto": "Respire à fond l’air pur des montagnes, tourne la page et grimpe la sierra avec eux !",
+      "fala": "Respire à fond l’air pur des montagnes, tourne la page et grimpe la sierra avec eux !",
+      "hash": "49ac267880"
+    },
+    {
+      "id": "p1-s0",
+      "pagina": 1,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapitre 16. La valise perdue. Un trésor au milieu de la montagne",
+      "fala": "Chapitre 16. La valise perdue. Un trésor au milieu de la montagne",
+      "hash": "eeb036215a"
+    },
+    {
+      "id": "p1-s1",
+      "pagina": 1,
+      "paragrafo": 0,
+      "texto": "En gravissant les sentiers caillouteux de la sierra, entre les chênes verts tordus et les falaises escarpées, Sancho trébucha sur une mystérieuse VALISE de cuir tanné, abandonnée sous un buisson épineux.",
+      "fala": "En gravissant les sentiers caillouteux de la sierra, entre les chênes verts tordus et les falaises escarpées, Sancho trébucha sur une mystérieuse valise de cuir tanné, abandonnée sous un buisson épineux.",
+      "hash": "9dbfac7856"
+    },
+    {
+      "id": "p1-s2",
+      "pagina": 1,
+      "paragrafo": 0,
+      "texto": "La valise était usée par le temps, trempée par les pluies et fermée par des fermoirs rouillés.",
+      "fala": "La valise était usée par le temps, trempée par les pluies et fermée par des fermoirs rouillés.",
+      "hash": "a33dab2c88"
+    },
+    {
+      "id": "p1-s3",
+      "pagina": 1,
+      "paragrafo": 1,
+      "texto": "Que pouvait bien cacher ce coffre oublié ?",
+      "fala": "Que pouvait bien cacher ce coffre oublié ?",
+      "hash": "0c96eaebea"
+    },
+    {
+      "id": "p1-s4",
+      "pagina": 1,
+      "paragrafo": 1,
+      "texto": "Touche la valise pour l’ouvrir et découvrir son secret !",
+      "fala": "Touche la valise pour l’ouvrir et découvrir son secret !",
+      "hash": "a5afc1cb05"
+    },
+    {
+      "id": "p1-s5",
+      "pagina": 1,
+      "paragrafo": 1,
+      "texto": "À l’intérieur luisaient des dizaines de précieuses PIÈCES d’or, qui firent briller de joie les yeux de Sancho, et un délicat CAHIER rempli de POÈMES écrits à la main d’une élégante écriture.",
+      "fala": "À l’intérieur luisaient des dizaines de précieuses pièces d’or, qui firent briller de joie les yeux de Sancho, et un délicat cahier rempli de poèmes écrits à la main d’une élégante écriture.",
+      "hash": "67d5fa90e6"
+    },
+    {
+      "id": "p1-s6",
+      "pagina": 1,
+      "paragrafo": 1,
+      "texto": "« De l’or, mon seigneur !",
+      "fala": "De l’or, mon seigneur !",
+      "hash": "b947b465cb"
+    },
+    {
+      "id": "p1-s7",
+      "pagina": 1,
+      "paragrafo": 1,
+      "texto": "Du vrai or ! » s’écria Sancho en sautillant.",
+      "fala": "Du vrai or ! s’écria Sancho en sautillant.",
+      "hash": "c8f19a295a"
+    },
+    {
+      "id": "p1-s8",
+      "pagina": 1,
+      "paragrafo": 2,
+      "texto": "Don Quichotte prit le cahier entre ses mains avec un immense respect et lut à voix haute les vers attendrissants d’un jeune amoureux qui errait sans but dans les montagnes.",
+      "fala": "Don Quichotte prit le cahier entre ses mains avec un immense respect et lut à voix haute les vers attendrissants d’un jeune amoureux qui errait sans but dans les montagnes.",
+      "hash": "72d32797be"
+    },
+    {
+      "id": "p1-s9",
+      "pagina": 1,
+      "paragrafo": 2,
+      "texto": "« Celui qui écrit avec tant de sensibilité a l’âme noble, conclut le gentilhomme avec un soupir affectueux.",
+      "fala": "Celui qui écrit avec tant de sensibilité a l’âme noble, conclut le gentilhomme avec un soupir affectueux.",
+      "hash": "1d07e990a1"
+    },
+    {
+      "id": "p1-s10",
+      "pagina": 1,
+      "paragrafo": 2,
+      "texto": "Les livres gardent les plus profonds mystères du cœur humain ! »",
+      "fala": "Les livres gardent les plus profonds mystères du cœur humain !",
+      "hash": "23f773a841"
+    },
+    {
+      "id": "p2-s0",
+      "pagina": 2,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapitre 17. Les galipettes du chagrin. Un chevalier les jambes en l’air",
+      "fala": "Chapitre 17. Les galipettes du chagrin. Un chevalier les jambes en l’air",
+      "hash": "4c4a264bb8"
+    },
+    {
+      "id": "p2-s1",
+      "pagina": 2,
+      "paragrafo": 0,
+      "texto": "En contemplant l’immense solitude des montagnes, Don Quichotte eut une idée lumineuse : « Ami Sancho, je vais rester dans cette clairière pour prouver au monde mon immense CHAGRIN loin de Dulcinée, en jeûnant et en méditant comme le faisait l’illustre héros AMADIS de Gaule !",
+      "fala": "En contemplant l’immense solitude des montagnes, Don Quichotte eut une idée lumineuse : Ami Sancho, je vais rester dans cette clairière pour prouver au monde mon immense chagrin loin de Dulcinée, en jeûnant et en méditant comme le faisait l’illustre héros amadis de Gaule !",
+      "hash": "5eacc6fefd"
+    },
+    {
+      "id": "p2-s2",
+      "pagina": 2,
+      "paragrafo": 0,
+      "texto": "Et toi, tu partiras sur ton âne porter une lettre passionnée jusque dans ses mains. »",
+      "fala": "Et toi, tu partiras sur ton âne porter une lettre passionnée jusque dans ses mains.",
+      "hash": "1f0bd0d8ea"
+    },
+    {
+      "id": "p2-s3",
+      "pagina": 2,
+      "paragrafo": 1,
+      "texto": "« Mais, mon maître, demanda Sancho en se grattant le menton, comment convaincrai-je madame Dulcinée que Votre Grâce a presque perdu la tête pour elle, si je ne suis témoin d’aucun exploit extraordinaire ? »",
+      "fala": "Mais, mon maître, demanda Sancho en se grattant le menton, comment convaincrai-je madame Dulcinée que Votre Grâce a presque perdu la tête pour elle, si je ne suis témoin d’aucun exploit extraordinaire ?",
+      "hash": "dce9fc27b0"
+    },
+    {
+      "id": "p2-s4",
+      "pagina": 2,
+      "paragrafo": 2,
+      "texto": "« Sois-en témoin tout de suite ! » s’exclama Don Quichotte avec détermination.",
+      "fala": "Sois-en témoin tout de suite ! s’exclama Don Quichotte avec détermination.",
+      "hash": "cddb1a0c17"
+    },
+    {
+      "id": "p2-s5",
+      "pagina": 2,
+      "paragrafo": 2,
+      "texto": "Il ôta son armure de fer et, resté seulement dans sa longue chemise de nuit blanche, fit une rapide GALIPETTE dans l’herbe et leva ses jambes maigres vers le ciel en plein saut !",
+      "fala": "Il ôta son armure de fer et, resté seulement dans sa longue chemise de nuit blanche, fit une rapide galipette dans l’herbe et leva ses jambes maigres vers le ciel en plein saut !",
+      "hash": "0e6ec73f10"
+    },
+    {
+      "id": "p2-s6",
+      "pagina": 2,
+      "paragrafo": 2,
+      "texto": "Sancho se cacha le visage dans les deux mains, riant si fort que les larmes coulaient sur ses joues.",
+      "fala": "Sancho se cacha le visage dans les deux mains, riant si fort que les larmes coulaient sur ses joues.",
+      "hash": "0c9e3641d1"
+    },
+    {
+      "id": "p2-s7",
+      "pagina": 2,
+      "paragrafo": 2,
+      "texto": "Aide le chevalier dans ses acrobaties d’amour !",
+      "fala": "Aide le chevalier dans ses acrobaties d’amour !",
+      "hash": "264a560626"
+    },
+    {
+      "id": "p3-s0",
+      "pagina": 3,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapitre 18. La lettre pour Dulcinée. Sancho a oublié la lettre !",
+      "fala": "Chapitre 18. La lettre pour Dulcinée. Sancho a oublié la lettre !",
+      "hash": "9dfa8f5686"
+    },
+    {
+      "id": "p3-s1",
+      "pagina": 3,
+      "paragrafo": 0,
+      "texto": "Tout ému, Don Quichotte écrivit une magnifique LETTRE à sa muse sur une feuille arrachée au cahier de poèmes, pleine de déclarations lyriques et de sa promesse solennelle de fidélité éternelle.",
+      "fala": "Tout ému, Don Quichotte écrivit une magnifique lettre à sa muse sur une feuille arrachée au cahier de poèmes, pleine de déclarations lyriques et de sa promesse solennelle de fidélité éternelle.",
+      "hash": "ca8614d634"
+    },
+    {
+      "id": "p3-s2",
+      "pagina": 3,
+      "paragrafo": 0,
+      "texto": "Il confia ses instructions au fidèle écuyer, qui monta sur son âne et prit la route, en se sentant la personne la plus importante d’Espagne !",
+      "fala": "Il confia ses instructions au fidèle écuyer, qui monta sur son âne et prit la route, en se sentant la personne la plus importante d’Espagne !",
+      "hash": "840a2eb513"
+    },
+    {
+      "id": "p3-s3",
+      "pagina": 3,
+      "paragrafo": 1,
+      "texto": "Pourtant, en descendant les premières pentes, Sancho mit les mains dans ses poches et écarquilla les yeux, paniqué : il avait oublié le papier sur une pierre, tout là-haut dans la sierra !",
+      "fala": "Pourtant, en descendant les premières pentes, Sancho mit les mains dans ses poches et écarquilla les yeux, paniqué : il avait oublié le papier sur une pierre, tout là-haut dans la sierra !",
+      "hash": "3ec829585f"
+    },
+    {
+      "id": "p3-s4",
+      "pagina": 3,
+      "paragrafo": 1,
+      "texto": "Désespéré, il se gratta le front et essaya de retrouver le texte gardé seulement dans sa MÉMOIRE : « Comment ça commençait, déjà ?",
+      "fala": "Désespéré, il se gratta le front et essaya de retrouver le texte gardé seulement dans sa mémoire : Comment ça commençait, déjà ?",
+      "hash": "b624526a2b"
+    },
+    {
+      "id": "p3-s5",
+      "pagina": 3,
+      "paragrafo": 1,
+      "texto": "“Souveraine et très haute dame”…",
+      "fala": "Souveraine et très haute dame…",
+      "hash": "a3facd77be"
+    },
+    {
+      "id": "p3-s6",
+      "pagina": 3,
+      "paragrafo": 1,
+      "texto": "Et à la fin ?",
+      "fala": "Et à la fin ?",
+      "hash": "5f0be4e759"
+    },
+    {
+      "id": "p3-s7",
+      "pagina": 3,
+      "paragrafo": 1,
+      "texto": "Comment est-ce qu’il signait, déjà ? »",
+      "fala": "Comment est-ce qu’il signait, déjà ?",
+      "hash": "aa930ce209"
+    },
+    {
+      "id": "p3-s8",
+      "pagina": 3,
+      "paragrafo": 2,
+      "texto": "Aide le brave écuyer à se souvenir de la SIGNATURE de la lettre, en touchant chaque mot dans le bon ordre !",
+      "fala": "Aide le brave écuyer à se souvenir de la signature de la lettre, en touchant chaque mot dans le bon ordre !",
+      "hash": "1460423f02"
+    },
+    {
+      "id": "p4-s0",
+      "pagina": 4,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapitre 19. Des amis déguisés. Le curé, le barbier et une barbe de bœuf",
+      "fala": "Chapitre 19. Des amis déguisés. Le curé, le barbier et une barbe de bœuf",
+      "hash": "e55b9a99d5"
+    },
+    {
+      "id": "p4-s1",
+      "pagina": 4,
+      "paragrafo": 0,
+      "texto": "En faisant halte dans une auberge au pied de la montagne, Sancho rencontra deux vieilles connaissances dévouées de son village : le bon CURÉ Pero Pérez et maître Nicolas, le barbier du bourg.",
+      "fala": "En faisant halte dans une auberge au pied de la montagne, Sancho rencontra deux vieilles connaissances dévouées de son village : le bon curé Pero Pérez et maître Nicolas, le barbier du bourg.",
+      "hash": "3a103e9f36"
+    },
+    {
+      "id": "p4-s2",
+      "pagina": 4,
+      "paragrafo": 0,
+      "texto": "Inquiets de la disparition de leur ami Alonso Quichano, ils venaient le ramener avec tendresse.",
+      "fala": "Inquiets de la disparition de leur ami Alonso Quichano, ils venaient le ramener avec tendresse.",
+      "hash": "d562fd6a9a"
+    },
+    {
+      "id": "p4-s3",
+      "pagina": 4,
+      "paragrafo": 1,
+      "texto": "« Il n’acceptera jamais de rentrer chez lui de son plein gré, prévint Sancho, à moins qu’une demoiselle en détresse n’implore la protection de son épée invincible ! »",
+      "fala": "Il n’acceptera jamais de rentrer chez lui de son plein gré, prévint Sancho, à moins qu’une demoiselle en détresse n’implore la protection de son épée invincible !",
+      "hash": "631cc4fab5"
+    },
+    {
+      "id": "p4-s4",
+      "pagina": 4,
+      "paragrafo": 2,
+      "texto": "« J’ai une idée ! s’exclama le curé, les yeux brillants.",
+      "fala": "J’ai une idée ! s’exclama le curé, les yeux brillants.",
+      "hash": "5c874fba78"
+    },
+    {
+      "id": "p4-s5",
+      "pagina": 4,
+      "paragrafo": 2,
+      "texto": "Inventons une princesse en détresse ! »",
+      "fala": "Inventons une princesse en détresse !",
+      "hash": "1f943ba49c"
+    },
+    {
+      "id": "p4-s6",
+      "pagina": 4,
+      "paragrafo": 2,
+      "texto": "Et ainsi, tous deux imaginèrent un plan génial et théâtral : un ingénieux DÉGUISEMENT !",
+      "fala": "Et ainsi, tous deux imaginèrent un plan génial et théâtral : un ingénieux déguisement !",
+      "hash": "3ef859c397"
+    },
+    {
+      "id": "p4-s7",
+      "pagina": 4,
+      "paragrafo": 2,
+      "texto": "Maître Nicolas se colla au menton une énorme BARBE rousse, faite avec la queue poilue d’un bœuf, tandis que le curé enfila une jupe à volants et une coiffe fleurie par-dessus sa soutane.",
+      "fala": "Maître Nicolas se colla au menton une énorme barbe rousse, faite avec la queue poilue d’un bœuf, tandis que le curé enfila une jupe à volants et une coiffe fleurie par-dessus sa soutane.",
+      "hash": "e4957ffc14"
+    },
+    {
+      "id": "p4-s8",
+      "pagina": 4,
+      "paragrafo": 2,
+      "texto": "Quand ils se regardèrent dans le miroir de l’auberge, tous les trois éclatèrent de rire, presque trop essoufflés pour continuer la farce !",
+      "fala": "Quand ils se regardèrent dans le miroir de l’auberge, tous les trois éclatèrent de rire, presque trop essoufflés pour continuer la farce !",
+      "hash": "917dc582d1"
+    },
+    {
+      "id": "p5-s0",
+      "pagina": 5,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapitre 20. La princesse Micomicona. Une princesse demande de l’aide",
+      "fala": "Chapitre 20. La princesse Micomicona. Une princesse demande de l’aide",
+      "hash": "50b4958c3e"
+    },
+    {
+      "id": "p5-s1",
+      "pagina": 5,
+      "paragrafo": 0,
+      "texto": "Pour que le plan soit parfait, ils furent rejoints par Dorothée, une jeune paysanne intelligente, intrépide et douée d’un formidable talent de comédienne.",
+      "fala": "Pour que le plan soit parfait, ils furent rejoints par Dorothée, une jeune paysanne intelligente, intrépide et douée d’un formidable talent de comédienne.",
+      "hash": "32aadcbbed"
+    },
+    {
+      "id": "p5-s2",
+      "pagina": 5,
+      "paragrafo": 0,
+      "texto": "Vêtue d’une resplendissante robe de soie et d’un manteau de velours, elle monta dans la sierra et s’agenouilla avec grâce devant le gentilhomme :",
+      "fala": "Vêtue d’une resplendissante robe de soie et d’un manteau de velours, elle monta dans la sierra et s’agenouilla avec grâce devant le gentilhomme :",
+      "hash": "da926c85a9"
+    },
+    {
+      "id": "p5-s3",
+      "pagina": 5,
+      "paragrafo": 1,
+      "texto": "« Ô miroir de l’honneur et fleur de la chevalerie ! implora-t-elle d’une voix suave.",
+      "fala": "Ô miroir de l’honneur et fleur de la chevalerie ! implora-t-elle d’une voix suave.",
+      "hash": "5e57e76148"
+    },
+    {
+      "id": "p5-s4",
+      "pagina": 5,
+      "paragrafo": 1,
+      "texto": "Je suis l’infortunée PRINCESSE MICOMICONA, héritière du lointain royaume de Micomicon !",
+      "fala": "Je suis l’infortunée princesse micomicona, héritière du lointain royaume de Micomicon !",
+      "hash": "c38b93201b"
+    },
+    {
+      "id": "p5-s5",
+      "pagina": 5,
+      "paragrafo": 1,
+      "texto": "Un géant féroce et sans cœur, Pandafilando de la Fosca Vista, a envahi mes terres, et seul votre bras courageux peut libérer mon peuple ! »",
+      "fala": "Un géant féroce et sans cœur, Pandafilando de la Fosca Vista, a envahi mes terres, et seul votre bras courageux peut libérer mon peuple !",
+      "hash": "ffff875b73"
+    },
+    {
+      "id": "p5-s6",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "Ému, Don Quichotte tendit la main à la demoiselle et fit une PROMESSE sacrée : « Relevez-vous, belle princesse !",
+      "fala": "Ému, Don Quichotte tendit la main à la demoiselle et fit une promesse sacrée : Relevez-vous, belle princesse !",
+      "hash": "557f1c294d"
+    },
+    {
+      "id": "p5-s7",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "Je jure sur mon épée que je vaincrai ce géant ! »",
+      "fala": "Je jure sur mon épée que je vaincrai ce géant !",
+      "hash": "f93feb05ff"
+    },
+    {
+      "id": "p5-s8",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "Et ainsi, l’esprit en fête et le cœur plein de noblesse, le gentilhomme monta sur Rossinante et prit, sans se douter de rien, le chemin du retour vers sa maison !",
+      "fala": "Et ainsi, l’esprit en fête et le cœur plein de noblesse, le gentilhomme monta sur Rossinante et prit, sans se douter de rien, le chemin du retour vers sa maison !",
+      "hash": "22b3fd47bb"
+    },
+    {
+      "id": "p6-s0",
+      "pagina": 6,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapitre 21. La bataille des outres. Un géant au milieu de la nuit",
+      "fala": "Chapitre 21. La bataille des outres. Un géant au milieu de la nuit",
+      "hash": "25ceebbf42"
+    },
+    {
+      "id": "p6-s1",
+      "pagina": 6,
+      "paragrafo": 0,
+      "texto": "Tout le monde logeait à l’auberge sur le chemin du retour, et la nuit s’écoulait paisiblement quand des cris de guerre réveillèrent toute la maison : « Rends-toi, monstre lâche !",
+      "fala": "Tout le monde logeait à l’auberge sur le chemin du retour, et la nuit s’écoulait paisiblement quand des cris de guerre réveillèrent toute la maison : Rends-toi, monstre lâche !",
+      "hash": "22989c4487"
+    },
+    {
+      "id": "p6-s2",
+      "pagina": 6,
+      "paragrafo": 0,
+      "texto": "Goûte à mon acier ! »",
+      "fala": "Goûte à mon acier !",
+      "hash": "0e9615385e"
+    },
+    {
+      "id": "p6-s3",
+      "pagina": 6,
+      "paragrafo": 0,
+      "texto": "Don Quichotte, marchant en somnambule dans sa longue chemise de nuit blanche, livrait une bataille féroce contre les grosses OUTRES en cuir de bœuf pleines de vin rouge, accrochées aux murs de la chambre !",
+      "fala": "Don Quichotte, marchant en somnambule dans sa longue chemise de nuit blanche, livrait une bataille féroce contre les grosses outres en cuir de bœuf pleines de vin rouge, accrochées aux murs de la chambre !",
+      "hash": "c5e1173242"
+    },
+    {
+      "id": "p6-s4",
+      "pagina": 6,
+      "paragrafo": 1,
+      "texto": "Plongé dans son RÊVE si vivant, il voyait dans chaque outre suspendue le redoutable GÉANT Pandafilando !",
+      "fala": "Plongé dans son rêve si vivant, il voyait dans chaque outre suspendue le redoutable géant Pandafilando !",
+      "hash": "04f4d9eb5b"
+    },
+    {
+      "id": "p6-s5",
+      "pagina": 6,
+      "paragrafo": 1,
+      "texto": "Brandissant son ÉPÉE tranchante dans le noir, il perça le cuir épais et fit couler sur les planches du plancher une rivière de vin parfumé, comme une cascade cramoisie.",
+      "fala": "Brandissant son épée tranchante dans le noir, il perça le cuir épais et fit couler sur les planches du plancher une rivière de vin parfumé, comme une cascade cramoisie.",
+      "hash": "e34e3496d1"
+    },
+    {
+      "id": "p6-s6",
+      "pagina": 6,
+      "paragrafo": 1,
+      "texto": "Touche l’épée pour aider le chevalier à vaincre les outres !",
+      "fala": "Touche l’épée pour aider le chevalier à vaincre les outres !",
+      "hash": "545a005b1e"
+    },
+    {
+      "id": "p6-s7",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "« Mon vin !",
+      "fala": "Mon vin !",
+      "hash": "37e1e3851d"
+    },
+    {
+      "id": "p6-s8",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "Mon vin ! » hurlait l’aubergiste, désespéré.",
+      "fala": "Mon vin ! hurlait l’aubergiste, désespéré.",
+      "hash": "3d9a2a9e30"
+    },
+    {
+      "id": "p6-s9",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "« Du calme, mon brave, je paierai jusqu’au dernier sou ! » promit le généreux curé.",
+      "fala": "Du calme, mon brave, je paierai jusqu’au dernier sou ! promit le généreux curé.",
+      "hash": "a11cc4018c"
+    },
+    {
+      "id": "p6-s10",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "Et Don Quichotte, essuyant la sueur de son front avec une fierté d’enfant, se recoucha en paix, convaincu d’avoir sauvé le trône de la princesse Micomicona !",
+      "fala": "Et Don Quichotte, essuyant la sueur de son front avec une fierté d’enfant, se recoucha en paix, convaincu d’avoir sauvé le trône de la princesse Micomicona !",
+      "hash": "c2bfe442bf"
+    },
+    {
+      "id": "p7-s0",
+      "pagina": 7,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapitre 22. Les armes et les lettres. Des histoires à l’auberge",
+      "fala": "Chapitre 22. Les armes et les lettres. Des histoires à l’auberge",
+      "hash": "13ddb43047"
+    },
+    {
+      "id": "p7-s1",
+      "pagina": 7,
+      "paragrafo": 0,
+      "texto": "Ce soir-là, la grande salle de l’auberge si accueillante se remplit de voyageurs, de marchands et de familles autour d’une grande table éclairée de torches et de bougies parfumées.",
+      "fala": "Ce soir-là, la grande salle de l’auberge si accueillante se remplit de voyageurs, de marchands et de familles autour d’une grande table éclairée de torches et de bougies parfumées.",
+      "hash": "cdd8d6f53c"
+    },
+    {
+      "id": "p7-s2",
+      "pagina": 7,
+      "paragrafo": 0,
+      "texto": "Le pain tout chaud passait de main en main, et chaque voyageur partageait de belles HISTOIRES d’aventures sur les mers, de retrouvailles inattendues et d’anciennes légendes du monde.",
+      "fala": "Le pain tout chaud passait de main en main, et chaque voyageur partageait de belles histoires d’aventures sur les mers, de retrouvailles inattendues et d’anciennes légendes du monde.",
+      "hash": "e8cc797e49"
+    },
+    {
+      "id": "p7-s3",
+      "pagina": 7,
+      "paragrafo": 1,
+      "texto": "À un moment, Don Quichotte se leva au bout de la table et fit un discours sage et émouvant sur la valeur des ARMES et des LETTRES : « Le courage des chevaliers protège la paix et défend les plus faibles.",
+      "fala": "À un moment, Don Quichotte se leva au bout de la table et fit un discours sage et émouvant sur la valeur des armes et des lettres : Le courage des chevaliers protège la paix et défend les plus faibles.",
+      "hash": "5aef4aaa2d"
+    },
+    {
+      "id": "p7-s4",
+      "pagina": 7,
+      "paragrafo": 1,
+      "texto": "Et les livres, mes amis, font grandir dans le cœur la justice, la vérité et la beauté ! »",
+      "fala": "Et les livres, mes amis, font grandir dans le cœur la justice, la vérité et la beauté !",
+      "hash": "3cdf068be1"
+    },
+    {
+      "id": "p7-s5",
+      "pagina": 7,
+      "paragrafo": 2,
+      "texto": "Tous les auditeurs se regardaient, émerveillés, surpris de découvrir la brillante sagesse qui habitait ce gentilhomme au regard affectueux.",
+      "fala": "Tous les auditeurs se regardaient, émerveillés, surpris de découvrir la brillante sagesse qui habitait ce gentilhomme au regard affectueux.",
+      "hash": "171cb3a097"
+    },
+    {
+      "id": "p7-s6",
+      "pagina": 7,
+      "paragrafo": 2,
+      "texto": "Le curé et le barbier souriaient, émus : il était temps de ramener ce cher rêveur dans la douceur de sa maison !",
+      "fala": "Le curé et le barbier souriaient, émus : il était temps de ramener ce cher rêveur dans la douceur de sa maison !",
+      "hash": "160ca07197"
+    }
+  ],
+  "palavras": [
+    {
+      "slug": "sierra-morena",
+      "palavra": "SIERRA MORENA",
+      "silabas": "SIER • RA • MO • RE • NA",
+      "fala": "sier... ra... mo... re... na... sierra morena!",
+      "hash": "88e318cb41"
+    },
+    {
+      "slug": "lettre",
+      "palavra": "LETTRE",
+      "silabas": "LETTRE",
+      "fala": "lettre... lettre!",
+      "hash": "fc703104ee"
+    },
+    {
+      "slug": "princesse",
+      "palavra": "PRINCESSE",
+      "silabas": "PRIN • CESSE",
+      "fala": "prin... cesse... princesse!",
+      "hash": "3f8a2f8a31"
+    },
+    {
+      "slug": "valise",
+      "palavra": "VALISE",
+      "silabas": "VA • LISE",
+      "fala": "va... lise... valise!",
+      "hash": "7383f46c2e"
+    },
+    {
+      "slug": "pieces",
+      "palavra": "PIÈCES",
+      "silabas": "PIÈCES",
+      "fala": "pièces... pièces!",
+      "hash": "858c3914e6"
+    },
+    {
+      "slug": "cahier",
+      "palavra": "CAHIER",
+      "silabas": "CA • HIER",
+      "fala": "ca... hier... cahier!",
+      "hash": "63f44098e4"
+    },
+    {
+      "slug": "poemes",
+      "palavra": "POÈMES",
+      "silabas": "PO • ÈMES",
+      "fala": "po... èmes... poèmes!",
+      "hash": "1f38c35a5a"
+    },
+    {
+      "slug": "chagrin",
+      "palavra": "CHAGRIN",
+      "silabas": "CHA • GRIN",
+      "fala": "cha... grin... chagrin!",
+      "hash": "9f432da484"
+    },
+    {
+      "slug": "amadis",
+      "palavra": "AMADIS",
+      "silabas": "A • MA • DIS",
+      "fala": "a... ma... dis... amadis!",
+      "hash": "606d829231"
+    },
+    {
+      "slug": "galipette",
+      "palavra": "GALIPETTE",
+      "silabas": "GA • LI • PETTE",
+      "fala": "ga... li... pette... galipette!",
+      "hash": "9544eeedb7"
+    },
+    {
+      "slug": "memoire",
+      "palavra": "MÉMOIRE",
+      "silabas": "MÉ • MOIRE",
+      "fala": "mé... moire... mémoire!",
+      "hash": "02b5203cfc"
+    },
+    {
+      "slug": "signature",
+      "palavra": "SIGNATURE",
+      "silabas": "SI • GNA • TURE",
+      "fala": "si... gna... ture... signature!",
+      "hash": "c1d9db95f9"
+    },
+    {
+      "slug": "cure",
+      "palavra": "CURÉ",
+      "silabas": "CU • RÉ",
+      "fala": "cu... ré... curé!",
+      "hash": "1600168686"
+    },
+    {
+      "slug": "deguisement",
+      "palavra": "DÉGUISEMENT",
+      "silabas": "DÉ • GUISE • MENT",
+      "fala": "dé... guise... ment... déguisement!",
+      "hash": "adadcf8642"
+    },
+    {
+      "slug": "barbe",
+      "palavra": "BARBE",
+      "silabas": "BARBE",
+      "fala": "barbe... barbe!",
+      "hash": "fd35ec0dc0"
+    },
+    {
+      "slug": "micomicona",
+      "palavra": "MICOMICONA",
+      "silabas": "MI • CO • MI • CO • NA",
+      "fala": "mi... co... mi... co... na... micomicona!",
+      "hash": "f1091c65b0"
+    },
+    {
+      "slug": "promesse",
+      "palavra": "PROMESSE",
+      "silabas": "PRO • MESSE",
+      "fala": "pro... messe... promesse!",
+      "hash": "2d97b9a1bb"
+    },
+    {
+      "slug": "outres",
+      "palavra": "OUTRES",
+      "silabas": "OUTRES",
+      "fala": "outres... outres!",
+      "hash": "a477d775e1"
+    },
+    {
+      "slug": "reve",
+      "palavra": "RÊVE",
+      "silabas": "RÊVE",
+      "fala": "rêve... rêve!",
+      "hash": "f741f5167c"
+    },
+    {
+      "slug": "geant",
+      "palavra": "GÉANT",
+      "silabas": "GÉ • ANT",
+      "fala": "gé... ant... géant!",
+      "hash": "f22d600eb6"
+    },
+    {
+      "slug": "epee",
+      "palavra": "ÉPÉE",
+      "silabas": "É • PÉE",
+      "fala": "é... pée... épée!",
+      "hash": "716c2c1b94"
+    },
+    {
+      "slug": "histoires",
+      "palavra": "HISTOIRES",
+      "silabas": "HIS • TOIRES",
+      "fala": "his... toires... histoires!",
+      "hash": "a752ed496a"
+    },
+    {
+      "slug": "armes",
+      "palavra": "ARMES",
+      "silabas": "ARMES",
+      "fala": "armes... armes!",
+      "hash": "d1d10e0045"
+    },
+    {
+      "slug": "lettres",
+      "palavra": "LETTRES",
+      "silabas": "LETTRES",
+      "fala": "lettres... lettres!",
+      "hash": "bb39cba1b5"
+    }
+  ]
+}
