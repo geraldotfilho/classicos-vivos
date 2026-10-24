@@ -20,7 +20,7 @@ Convenção: `pN` = índice da página (`?page=N`), sufixo `-real` (Lente da Rea
 | :--- | :--- | :--- |
 | 0 · Capa | `p0-real`, `p0-imag` | |
 | 1 · O Fidalgo Leitor | `p1-real`, `p1-real-livro-castelos`, `p1-real-livro-dragoes`, `p1-real-livro-cavaleiros`, `p1-imag` | Livros dos Castelos, Dragões e Cavaleiros entregues (NB-3 completo) |
-| 2 · A Armadura do Bisavô | `p2-real-stage-0` … `p2-real-stage-4`, `p2-imag` | Etapas **cumulativas**: 1 peitoral → 2 +bacia → 3 +escudo → 4 +lança |
+| 2 · A Armadura do Bisavô | `p2-real-stage-0` … `p2-real-stage-4`, `p2-imag` | Etapas **cumulativas**: 1 peitoral → 2 +bacia → 3 +escudo → 4 +lança. `p2-imag` alinhado em escala/posição com `stage-4` e `p2-real-stage-1` com cabelo/rosto consistente com `stage-0` (NB-4 completo) |
 | 3 · Rocinante e Dulcineia | `p3-real`, `p3-real-stage-1` … `p3-real-stage-3`, `p3-imag` | Etapas: 1 maçã → 2 cenoura → 3 escova |
 | 4 · Pousada ou Castelo | `p4-real`, `p4-real-fundo`, `p4-real-flauta`, `p4-real-sopa`, `p4-imag` | Camadas em aquarela: `p4-pastor-parado`, `p4-pastor-tocando`, `p4-porquinhos`, `p4-notas-musicais`, `p4-estalajadeiro-acenando`, `p4-estalajadeiro-sopa` (NB-2) |
 | 5 · A Cerimônia | `p5-real`, `p5-imag` | |
