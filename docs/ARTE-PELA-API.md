@@ -1,6 +1,6 @@
 # 🖼️ Arte pela API do Gemini (Nano Banana 2, modo Batch)
 
-Caminho de reserva para as ilustrações quando a cota do Antigravity acaba. **Só com autorização do humano no prompt inicial da sessão** (AGENTS.md §2.7) e só para o que ele autorizou. Primeiro uso: 2026-10-24, Parte 2, páginas 4 a 8 (10 cenas + 5 camadas), **US$ 0,57**. Na mesma tarde, a pedido do humano, as **9 Imaginações da Parte 2 foram refeitas** com a bíblia da Imaginação (§4.1): **US$ 0,42**. Total da Parte 2: **US$ 0,99**.
+Caminho de reserva para as ilustrações quando a cota do Antigravity acaba. **Só com autorização do humano no prompt inicial da sessão** (AGENTS.md §2.7) e só para o que ele autorizou. Primeiro uso: 2026-10-24, Parte 2, páginas 4 a 8 (10 cenas + 5 camadas), **US$ 0,57**. Na mesma tarde, a pedido do humano, as **9 Imaginações da Parte 2 foram refeitas** com a bíblia da Imaginação (§4.1): **US$ 0,42**. Total da Parte 2: **US$ 0,99**. À noite, com autorização do humano, as **Partes 3 e 4 inteiras** (33 cenas + 10 camadas): **US$ 1,60** (§5). **Dom Quixote está todo ilustrado.**
 
 ## 1. Modelo e preço (página de preços do Gemini, 2026-10-24)
 | Modelo | ID | Imagem 1K Standard | **Batch** | 512 px Batch |
@@ -55,9 +55,16 @@ npm run build:images && npm run build
 - **Referências**: uma cena da mesma parte com Dom Quixote e Sancho de perto (`parte-2/p3-real`) segura rosto, roupa e traço; uma segunda dá a luz ou o cenário.
 - **Sem texto legível**: "only golden swirls, absolutely no letters or words" funcionou no livro do sábio.
 
-## 5. Estimativa para as próximas partes
-Custo médio real: **~US$ 0,038 por imagem aceita** (já com as refeitas). Com a bíblia da Imaginação desde o início, a Imaginação sai certa na primeira ou na segunda tentativa.
-| Parte | Cenas | Camadas | Estimativa |
-| :--- | :--- | :--- | :--- |
-| 3 | 17 | 5 | ~US$ 0,85 |
-| 4 | 16 | 5 | ~US$ 0,80 |
+- **Contorno branco de "adesivo"**: às vezes o modelo pinta um contorno branco em volta da camada (o Clavilenho veio assim duas vezes, mesmo com "NO white outline" no pedido). Não pague outra geração: `recortar-camada.py --sem-contorno` descasca, a partir do fundo, os pixels claros (pela cor já desmisturada do magenta) até o traço de lápis do desenho.
+- **Objeto que pendura**: em vez de depender de ganchos pintados no cenário (o modelo os pôs num cabideiro fora do lugar), a camada traz **o próprio gancho** no alto (`p6-odre` da Parte 3) e pendura em qualquer ponto da parede.
+- **Teste das interações**: o motor usa *pointer events*; no Playwright, clique com `locator.click()` (um `element.click()` dentro de `evaluate` não aciona os cartões).
+
+## 5. Partes 3 e 4 (2026-10-24, noite): o que mudou no método
+- **Módulo comum** `tools/arte/dom-quixote-comum.mjs`: estilo, fichas de todos os personagens (Realidade) e a bíblia da Imaginação, importados por `dom-quixote-parte-3.mjs` e `-parte-4.mjs`. O cache fica separado por lista (`.cache-arte/<lista>/<id>/`), porque os ids (`p0-real`...) se repetem entre as partes.
+- **A bíblia ganhou uma regra**: "só aparecem os personagens e animais que estão na Realidade". Sem ela, o modelo punha o burrico de Sancho dentro do salão do castelo e o cavaleiro dourado em cenas em que ele não estava.
+- **Exceções por página** ("EXCEPTION for this page: ..."): nas páginas do governo, Sancho é o governador sábio (não o escudeiro); na liberdade, ele é ele mesmo e o cenário muda inteiro; no final, Alonso continua o velho contador de histórias, e a imaginação é a das crianças.
+- **Personagens novos em cadeia**: o padre e o barbeiro nascem na P3 p4 e servem de referência para a P3 p5 e p7 e para a P4 p1; Doroteia nasce na P3 p5. Isso define as rodadas: (1) Realidades sem dependência + camadas soltas; (2) Realidades com personagens já criados, Imaginações e camadas da cena; (3) refeitas; (4) o que depende da rodada 3.
+- **Resultado**: 47 imagens geradas, 43 aceitas (4 refeitas: 3 Imaginações que acrescentavam personagens ou não mudavam o cenário e o Clavilenho), **US$ 1,60** para as duas partes (~US$ 0,037 por imagem aceita). Cada lote voltou em 2 a 4 minutos.
+
+## 6. Custo de referência para um livro novo
+Custo médio real: **~US$ 0,037 por imagem aceita** (já com as refeitas). Um livro de 4 partes como Dom Quixote (~85 imagens entre cenas e camadas) sai por cerca de **US$ 3,20**.

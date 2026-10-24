@@ -2,6 +2,8 @@
 
 Uso:  python3 tools/recortar-camada.py entrada.png saida.png [--margem 6] [--sem-rosa]
 
+      --sem-contorno: tira o contorno branco de "adesivo" que o modelo às vezes pinta em volta do desenho
+                  (descasca, a partir do fundo, os pixels claros e pouco saturados, até 12 px, parando no traço de lápis)
       --sem-rosa: o desenho não tem rosa nenhum (poeira, madeira): todo pixel rosado é tratado como mistura
                   com o magenta, não só os da borda
 
@@ -23,7 +25,7 @@ OPACO = 40.0      # m até aqui: pixel do desenho (opaco)
 FUNDO = 215.0     # m a partir daqui: fundo (transparente); o magenta gerado varia de ~185 a 250 (textura do papel)
 
 
-def recortar(entrada: str, saida: str, margem: int = 6, sem_rosa: bool = False) -> None:
+def recortar(entrada: str, saida: str, margem: int = 6, sem_rosa: bool = False, sem_contorno: bool = False) -> None:
     c = np.asarray(Image.open(entrada).convert('RGB')).astype(np.float32)
     r, g, b = c[..., 0], c[..., 1], c[..., 2]
     m = np.minimum(r, b) - g
@@ -38,6 +40,17 @@ def recortar(entrada: str, saida: str, margem: int = 6, sem_rosa: bool = False) 
     fundo = Image.fromarray(((a < 0.05) * 255).astype(np.uint8)).filter(ImageFilter.MaxFilter(31))
     rosado = ((np.asarray(fundo) > 0) | sem_rosa) & (m > 15)
     a = np.where(rosado, np.minimum(a, np.clip((FUNDO - m) / (FUNDO + 20), 0, 1)), a)
+
+    if sem_contorno:
+        # decide pela cor já desmisturada do magenta (a franja é mistura de branco com magenta)
+        f0 = np.clip((c - (1 - a)[..., None] * np.array([255, 0, 255], np.float32)) / np.maximum(a, 1e-3)[..., None], 0, 255)
+        claro = (f0.min(axis=2) > 175) & ((f0.max(axis=2) - f0.min(axis=2)) < 55)
+        for _ in range(12):
+            vazio = Image.fromarray(((a < 0.5) * 255).astype(np.uint8)).filter(ImageFilter.MaxFilter(3))
+            casca = (np.asarray(vazio) > 0) & claro & (a > 0)
+            if not casca.any():
+                break
+            a[casca] = 0
 
     # Desmistura do magenta nas bordas
     k = np.array([255, 0, 255], np.float32)
@@ -76,10 +89,13 @@ if __name__ == '__main__':
     sem_rosa = '--sem-rosa' in args
     if sem_rosa:
         args.remove('--sem-rosa')
+    sem_contorno = '--sem-contorno' in args
+    if sem_contorno:
+        args.remove('--sem-contorno')
     if '--margem' in args:
         i = args.index('--margem')
         margem = int(args[i + 1])
         del args[i:i + 2]
     if len(args) != 2:
         raise SystemExit(__doc__)
-    recortar(args[0], args[1], margem, sem_rosa)
+    recortar(args[0], args[1], margem, sem_rosa, sem_contorno)

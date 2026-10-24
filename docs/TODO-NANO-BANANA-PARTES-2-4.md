@@ -150,6 +150,8 @@ Exemplo: `x 51, y 88, w 12` = um objeto com 12% da largura da cena, centrado um 
 
 ## 📘 PARTE 3 — Serra Morena e a Princesa Micomicona (`imagens/parte-3/`)
 
+> ✅ **Parte 3 completa (2026-10-24)**, pelo Claude, pela API (`tools/arte/dom-quixote-parte-3.mjs`). As posições finais das camadas estão no `parte-3.html`.
+
 | Pág. | Cena | Arquivos | Interação |
 | :--- | :--- | :--- | :--- |
 | 0 | Capa | `p0-real`, `p0-imag` | — |
@@ -213,6 +215,8 @@ Exemplo: `x 51, y 88, w 12` = um objeto com 12% da largura da cena, centrado um 
 ---
 
 ## 📙 PARTE 4 — A Jaula Encantada e a Ilha de Sancho (`imagens/parte-4/`)
+
+> ✅ **Parte 4 completa (2026-10-24)**, pelo Claude, pela API (`tools/arte/dom-quixote-parte-4.mjs`). As posições finais das camadas estão no `parte-4.html`.
 
 | Pág. | Cena | Arquivos | Interação |
 | :--- | :--- | :--- | :--- |

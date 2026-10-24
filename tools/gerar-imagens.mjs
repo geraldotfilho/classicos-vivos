@@ -14,11 +14,11 @@
 //   npm run gerar:imagens -- --lista ... --lote batches/abc123                                  # retoma um lote já enviado
 //   ... --standard     # pedidos diretos, na hora (o dobro do preço do Batch); só quando o Batch travar
 //
-// Cada imagem recebida vai para .cache-arte/<id>/<data>.png (fora do Git). O Claude olha, escolhe e copia a boa
+// Cada imagem recebida vai para .cache-arte/<lista>/<id>/<data>.png (fora do Git). O Claude olha, escolhe e copia a boa
 // para o destino (`destino` na lista); camadas passam antes por tools/recortar-camada.py (fundo magenta → alfa).
 // O gasto de cada rodada vai para docs/arte/gastos.csv.
 import { readFileSync, writeFileSync, existsSync, mkdirSync, appendFileSync } from 'node:fs';
-import { dirname, join, resolve, extname } from 'node:path';
+import { dirname, join, resolve, extname, basename } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { setGlobalDispatcher, EnvHttpProxyAgent } from 'undici';
 
@@ -53,6 +53,7 @@ if (!o.lista) {
     process.exit(1);
 }
 const lista = (await import(pathToFileURL(resolve(RAIZ, o.lista)).href)).default;
+const NOME_LISTA = basename(o.lista, '.mjs');   // cache separado por lista: os ids (p0-real...) se repetem entre as partes
 const modelo = o.modelo || lista.modelo;
 const preco = PRECO[modelo];
 const fator = o.standard ? 1 : 0.5;
@@ -127,7 +128,7 @@ async function chamar(metodo, url, corpo) {
 function guardar(id, resposta) {
     const partes = resposta?.candidates?.[0]?.content?.parts || [];
     const imagens = partes.filter(x => (x.inlineData || x.inline_data)?.data);
-    const pasta = join(CACHE, id);
+    const pasta = join(CACHE, NOME_LISTA, id);
     mkdirSync(pasta, { recursive: true });
     const carimbo = new Date().toISOString().replace(/[:.]/g, '-').slice(0, 19);
     imagens.forEach((x, n) => {
