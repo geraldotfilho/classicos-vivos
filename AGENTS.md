@@ -39,6 +39,8 @@ npm run build        # fontes + ícones + Tailwind + service worker
 npm run build:images # converte novos JPG/PNG de <livro>/imagens/ para WebP
 npm run build:audio  # converte a narração WAV/PCM de <livro>/audio/ para MP3 (corta silêncios)
 npm run exportar:frases # lista de frases e palavras-chave para gravar (docs/narracao/, já incluso no build)
+npm run exportar:traducoes # o que traduzir, parte por parte (docs/traducao/, já incluso no build)
+npm run conferir:traducoes # confere as traduções (páginas, palavras-chave, sílabas, textos soltos, páginas desatualizadas)
 npm run gravar:narracao -- --voz narracao --parte 1 --pagina-inteira --autorizado # grava pela API de voz do Gemini (§2.7: só com autorização do humano)
 npm run gerar:imagens -- --lista tools/arte/dom-quixote-parte-2.mjs --seco   # ilustrações pela API (Batch), só com autorização pontual (§2.7, docs/ARTE-PELA-API.md)
 ```
@@ -73,7 +75,8 @@ npm run gerar:imagens -- --lista tools/arte/dom-quixote-parte-2.mjs --seco   # i
 ### 2.2.2 Leitura Guiada Frase a Frase
 - A divisão em frases é **canônica** e fica em `assets/js/texto.js`, usado pelo motor e pela exportação (`tools/exportar-frases.mjs`). Cada frase vira `<span class="sentence" data-frase="pN-sK">` (página N, frase K), e esse ID é o nome do arquivo da narração gravada. Não há quebra antes de minúscula, então falas com travessão ("bravura! — pensou o fidalgo") ficam numa frase só. **Mudou a regra de corte ou o texto?** Rode `npm run exportar:frases`: o `hash` de cada frase mostra o que precisa ser regravado.
 - **O título também é lido**: capítulo + título (na capa, obra + título da parte) são a "frase 0" da página, `pN-s0` (`Texto.tituloDaPagina`), no cabeçalho com `class="sentence"`. A leitura guiada começa por ele.
-- "Ouvir Página" narra frase por frase (`.sentence-reading` destaca e rola até a frase). Frases curtas também evitam o corte de falas longas do Chrome Android.
+- "Ouvir Página" narra frase por frase (`.sentence-reading` destaca e rola até a frase). **Tocar numa frase** (`lerAPartirDaFrase`) começa a leitura por ela e segue até o fim da página; o toque numa palavra-chave continua abrindo o cartão de alfabetização. Com a página gravada inteira, o MP3 vira um blob na memória (`audioComSalto`) para poder pular no tempo da frase.
+- **Botão Aa / AA** (topo): o texto da folha todo em MAIÚSCULAS (`body.texto-maiusculo`, só CSS `text-transform`; a fala não muda). Lembrado em `localStorage` (`cv-maiusculas`). Frases curtas também evitam o corte de falas longas do Chrome Android.
 - O texto falado (`prepararFala`) converte as palavras-chave para minúsculas (a voz não soletra "IMAGINAÇÃO" como sigla), tira o travessão que abre a fala, troca o travessão do meio por uma pausa curta e lê onomatopeias ("TAC-TAC" → "tac, tac"). Para interromper a leitura, use sempre `stopReadingPage()` (cala a gravação e a voz do aparelho).
 
 ### 2.3 Responsividade & Regras de Layout do Reader Frame
@@ -161,6 +164,23 @@ A API é paga pelo humano, num projeto de hobby com **limite de R$ 10/mês**, e 
 4. **Registre o gasto**: cada rodada vai para `docs/narracao/gastos.csv` (o script faz isso). Ao fim do trabalho, diga ao humano quanto foi gasto.
 5. **As imagens, por padrão, não usam a API paga** (decisão do humano, 2026-10-24): continuam com o agente Gemini no **Google Antigravity**, na cota do plano Pro do humano (com as pausas por cota). **Exceção pontual**: quando o humano autoriza no prompt inicial (ex.: 2026-10-24, as páginas 4–8 da Parte 2, com a cota do Antigravity esgotada), o Claude gera pela API com `npm run gerar:imagens` (Nano Banana 2, **Batch**, ~US$ 0,038 por imagem aceita), **só** o que foi autorizado. Método, preços e lições: `docs/ARTE-PELA-API.md`.
 
+### 2.8 Idiomas (bandeirinhas no topo do livro)
+- O **português é o original** (`window.LIVRO` em `parte-N.html`). Cada tradução fica em `<livro>/traducoes/parte-N.<idioma>.js` (`en`, `fr`, `es`) e é carregada por `<script>` só quando o idioma é escolhido (funciona em `file://` e offline: o SW pré-baixa as traduções).
+  ```js
+  (window.TRADUCOES = window.TRADUCOES || {})['en'] = {
+    obra: 'Don Quixote of La Mancha',
+    paginas: [{ hash, capitulo?, titulo, texto, cartoes?: { ordem, itens } }],  // uma por página, na mesma ordem
+    textos: { '👓 Lente da Realidade: ...': '👓 Reality Lens: ...', 'ARMADURA': 'ARMOUR' }  // dicionário pt → idioma
+  };
+  ```
+  - `paginas[i]`: capítulo, título e texto (com as palavras-chave `{{WORD|SYL • LA • BLES|emoji}}` silabadas no idioma). `cartoes` só para os cartões do tipo `ordem` (a assinatura tem outra quantidade de palavras em cada idioma; palavras repetidas valem em qualquer um dos cartões iguais).
+  - `textos`: legendas da cena, palavras dos cartões, falas da contagem, dicas dos hotspots, mensagem do fim. O motor traduz qualquer texto solto por `t(texto)`; o que faltar fica em português.
+  - `hash`: copiado de `docs/traducao/fonte-<livro>-parte-N.json` (`npm run exportar:traducoes`). Mudou o português? `npm run conferir:traducoes` avisa quais páginas traduzir de novo.
+- A **interface** (botões, painel de voz, dicas) fica em `IDIOMAS` no motor, com a bandeira (`assets/icones/bandeiras/*.svg`) e a variante de voz preferida (`pt-BR`, `en-GB`, `fr-FR`, `es-ES`). Idioma novo: uma entrada em `IDIOMAS` + os arquivos de tradução.
+- Trocar de idioma refaz só os textos (`traduzirPagina`): a página, a lente e o progresso dos cartões continuam. A escolha fica em `cv-idioma` e vale para todas as partes; `?lang=en` abre direto num idioma (testes).
+- **Narração**: a gravada é só em português (BACKLOG M-11). Nos outros idiomas, a voz do aparelho naquele idioma (a escolha de voz é guardada por idioma: `cv-voz-en` etc.), inclusive nas palavras-chave.
+- A segmentação de frases (`texto.js`) aceita o « » francês com espaço antes do fecho. Nas traduções, evite abreviações com ponto (Mr., Sr.), que cortariam a frase.
+
 ---
 
 ## 3. Diretrizes Pedagógicas, UX e Crítica à Gamificação
@@ -243,13 +263,15 @@ classicos-vivos/
 ├── tools/                               # scripts de build (fontes, ícones, Tailwind, WebP, service worker)
 ├── docs/  RETOMADA.md (comece por aqui numa sessão nova) · BACKLOG.md · TODO-NANO-BANANA.md · TODO-NANO-BANANA-PARTES-2-4.md · PLANO-PARTES-2-4.md · TODO-NARRACAO.md · ARTE-PELA-API.md
 │   ├── fila/                            # canal Claude ↔ Gemini (PEDIDOS.md, ENTREGAS.md)
-│   └── narracao/                        # frases e palavras-chave a gravar (gerado)
+│   ├── narracao/                        # frases e palavras-chave a gravar (gerado)
+│   └── traducao/                        # o que traduzir, parte por parte (gerado)
 ├── index.html                           # Biblioteca das crianças (estante de livros, quase sem texto)
 ├── sobre.html                           # Detalhes para adultos (proposta, acervo, uso no tablet, licença)
 ├── sw.js · manifest.webmanifest
 └── dom-quixote/
     ├── parte-1.html … parte-4.html      # só conteúdo (window.LIVRO), ver §2.5
     ├── audio/                           # narração gravada: vozes.js, <voz>/parte-N/<id>.mp3, palavras/
+    ├── traducoes/                       # parte-N.<idioma>.js (en, fr, es), ver §2.8
     ├── imagens/                         # FONTE ÚNICA do que o livro carrega (cenas pN-*.webp)
     │   ├── parte-2/ parte-3/ parte-4/   # cenas de cada parte (a Parte 1 fica na raiz de imagens/)
     │   │   └── camadas/                 # sprites com alfa daquela parte (WebP)

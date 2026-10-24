@@ -13,8 +13,9 @@
     // Palavra-chave no texto: {{PALAVRA|SÍ • LA • BAS|emoji}}
     const PALAVRA = /\{\{([^|}]+)\|([^|}]+)\|([^}]+)\}\}/g;
     // Fim de frase: pontuação + espaço, exceto antes de minúscula
-    // ("bravura! — pensou o fidalgo" continua sendo uma frase só)
-    const FIM_DE_FRASE = /([.!?…]+[”"»]?)(\s+)(?!(?:[—–]\s*)?[a-zà-ÿ])/g;
+    // ("bravura! — pensou o fidalgo" continua sendo uma frase só).
+    // O "»" pode vir depois de um espaço, como no francês: « Bonjour ! »
+    const FIM_DE_FRASE = /([.!?…]+(?:[\s\u00A0\u202F]?»|[”"])?)(\s+)(?!(?:[—–]\s*)?[a-zà-ÿ]|»)/g;
 
     function escapeHtml(texto) {
         return String(texto ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));

@@ -12,7 +12,9 @@ const files = [
     ...globSync('assets/js/*.js'),
     ...globSync('assets/fonts/*.woff2'),
     'assets/icones/icone-192.png',
+    ...globSync('assets/icones/bandeiras/*.svg'),
     ...globSync('*/parte-*.html'),
+    ...globSync('*/traducoes/*.js'),
     ...globSync('*/imagens/**/*.{webp,svg,png}')
 ].sort();
 

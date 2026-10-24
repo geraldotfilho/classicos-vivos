@@ -129,7 +129,7 @@
                             { id: 'da', palavra: 'DA', emoji: '✍️' }
                         ]
                     },
-                    realCena: (estado) => estado.usados.size >= 5
+                    realCena: (estado) => estado.completo   // todas as palavras da assinatura (a quantidade muda com o idioma)
                         ? { src: 'p3-real-lembrou.webp', legenda: '👓 Lente da Realidade: Sancho Lembrou! "O Cavaleiro da Triste Figura"' }
                         : null,
                     precarregar: ['p3-real-lembrou.webp']

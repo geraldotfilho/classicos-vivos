@@ -6,7 +6,7 @@
    - Narração gravada (*.mp3 e as marcas *.json em audio/): rede primeiro, para frases regravadas chegarem ao tablet;
      cada arquivo fica num cache próprio (que sobrevive às novas versões) e toca offline depois.
    - Demais arquivos: cache primeiro (abre instantâneo no tablet). */
-const CACHE = 'classicos-vivos-44aaae941780';
+const CACHE = 'classicos-vivos-b66742d1ef3a';
 const CACHE_AUDIO = 'cv-narracao';
 const FILES = [
     "./assets/css/fonts.css",
@@ -22,6 +22,10 @@ const FILES = [
     "./assets/fonts/nunito-latin-700-normal.woff2",
     "./assets/fonts/nunito-latin-800-normal.woff2",
     "./assets/fonts/nunito-latin-900-normal.woff2",
+    "./assets/icones/bandeiras/br.svg",
+    "./assets/icones/bandeiras/es.svg",
+    "./assets/icones/bandeiras/fr.svg",
+    "./assets/icones/bandeiras/gb.svg",
     "./assets/icones/icone-192.png",
     "./assets/js/livro.js",
     "./assets/js/texto.js",
@@ -102,6 +106,10 @@ const FILES = [
     "./dom-quixote/parte-2.html",
     "./dom-quixote/parte-3.html",
     "./dom-quixote/parte-4.html",
+    "./dom-quixote/traducoes/parte-1.en.js",
+    "./dom-quixote/traducoes/parte-2.en.js",
+    "./dom-quixote/traducoes/parte-3.en.js",
+    "./dom-quixote/traducoes/parte-4.en.js",
     "./index.html",
     "./manifest.webmanifest",
     "./sobre.html"
