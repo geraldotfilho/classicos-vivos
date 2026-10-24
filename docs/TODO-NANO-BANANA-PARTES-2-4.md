@@ -37,9 +37,9 @@ dom-quixote/imagens/parte-4/ ...
 
 ### 0.3 Character Bible — personagens novos (acrescente ao `PROMPTS_ILUSTRACOES.md`)
 - **Continuidade de Dom Quixote nas Partes 2–4**:
-  - Parte 2, páginas 1 a 6: a bacia de latão na cabeça está **amassada** (depois do tombo nos moinhos) e a lança é um **galho seco de carvalho**.
-  - A partir da Parte 2, página 3 (batalha das ovelhas): sorriso com uma **"janelinha"** de dois dentes faltando, de jeito simpático, nunca grotesco.
-  - A partir da Parte 2, página 7: usa a **bacia nova do barbeiro**, maior, muito brilhante, um pouco torta.
+  - Parte 2, páginas 1 a 7: a bacia de latão na cabeça está **amassada** (depois do tombo nos moinhos) e a lança é um **galho seco de carvalho** (a partir da página 2).
+  - A partir da Parte 2, página 4 (batalha das ovelhas): sorriso com uma **"janelinha"** de dois dentes faltando, de jeito simpático, nunca grotesco.
+  - A partir da Parte 2, página 8: usa a **bacia nova do barbeiro**, maior, muito brilhante, um pouco torta.
   - "Camisolão": camisa de dormir branca e comprida até os joelhos, pernas finas à mostra (Parte 3, páginas 2 e 6).
 - **Pastores de cabras** (Parte 2): `six friendly weathered Spanish goatherds of different ages in rough brown wool and sheepskin vests, with crooks, around a small campfire`.
 - **Barbeiro de Mambrino** (Parte 2): `a startled thin village barber in a grey cloak riding a small grey donkey, wearing a shiny brass shaving basin upside down on his head to protect his new hat from the rain`.

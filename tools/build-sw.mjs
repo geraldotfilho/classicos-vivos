@@ -23,6 +23,6 @@ const version = hash.digest('hex').slice(0, 12);
 const template = readFileSync('tools/sw.template.js', 'utf8');
 const sw = template
     .replace('__VERSION__', version)
-    .replace('__FILES__', JSON.stringify(files.map(f => `./${f}`), null, 4).replace(/\n/g, '\n'));
+    .replace('__FILES__', JSON.stringify(files.map(f => `./${f.replace(/\\/g, '/')}`), null, 4).replace(/\n/g, '\n'));
 writeFileSync('sw.js', sw);
 console.log(`sw.js gerado: versão ${version}, ${files.length} arquivos`);

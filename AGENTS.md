@@ -9,7 +9,7 @@ Este documento consolida a memória arquitetural, os princípios pedagógicos, a
 
 - **Público-Alvo**: Crianças em fase de alfabetização e letramento (5 a 8 anos).
 - **Proposta Pedagógica**: Aproximar as crianças das maiores obras-primas da literatura universal através de uma experiência interativa, sensorial, visualmente rica e de toque acolhedor.
-- **Obra Piloto**: *Dom Quixote de La Mancha*, adaptado diretamente da obra de Miguel de Cervantes, em **4 partes de 8 páginas** (capítulos numerados em sequência: 1–7, 8–14, 15–21, 22–28). Parte 1: *O Cavaleiro da Super Imaginação*; Parte 2: *Exércitos de Lã e o Elmo Encantado*; Parte 3: *Serra Morena e a Princesa Micomicona*; Parte 4: *A Jaula Encantada e a Ilha de Sancho*. Decisões de adaptação e o mapa de interações estão em `docs/PLANO-PARTES-2-4.md`.
+- **Obra Piloto**: *Dom Quixote de La Mancha*, adaptado diretamente da obra de Miguel de Cervantes, em **4 partes** (capítulos numerados em sequência: 1–7, 8–15, 16–22, 23–29; Parte 2 com 9 páginas ao abrir com o tombo nos moinhos). Parte 1: *O Cavaleiro da Super Imaginação*; Parte 2: *Exércitos de Lã e o Elmo Encantado*; Parte 3: *Serra Morena e a Princesa Micomicona*; Parte 4: *A Jaula Encantada e a Ilha de Sancho*. Decisões de adaptação e o mapa de interações estão em `docs/PLANO-PARTES-2-4.md`.
 - **Diretriz de Dispositivo**: **Tablet-First** (iPad, Samsung Galaxy Tab). Dimensões alvo prioritárias:
   - **Tablet Retrato (Portrait)**: 800 × 1280 px
   - **Tablet Paisagem (Landscape)**: 1280 × 800 px

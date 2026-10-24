@@ -21,7 +21,7 @@ for (const arquivo of globSync('*/parte-*.html').sort()) {
     const contexto = { window: {} };
     vm.runInNewContext(bloco, contexto);
     const livro = contexto.window.LIVRO;
-    const pasta = arquivo.split('/')[0];
+    const pasta = arquivo.split(/[\\/]/)[0];
 
     const frases = [];
     const palavras = new Map();
