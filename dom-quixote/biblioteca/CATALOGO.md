@@ -27,6 +27,14 @@ Convenção: `pN` = índice da página (`?page=N`), sufixo `-real` (Lente da Rea
 | 6 · Sancho Pança | `p6-real`, `p6-imag` | `p6-imag` na mesma estrada/câmera com Dom Quixote de ouro e Sancho governador, céu livre; camada `camadas/p6-nuvem-ilha.webp` com canal alfa limpo (NB-6 completo) |
 | 7 · Os Moinhos | `p7-real`, `p7-real-sem-pas`, `p7-imag` | Camada de pás em aquarela: `camadas/p7-pas-moinho.webp` (NB-1) |
 
+### Parte 2 — Exércitos de Lã e o Elmo Encantado (`../imagens/parte-2/`)
+
+| Página | Arquivos | Observação |
+| :--- | :--- | :--- |
+| 0 · Capa | `p0-real`, `p0-imag` | Capa completa entregue |
+| 1 · A Lança de Carvalho | `p1-real` | Noite sob o carvalho; `p1-imag` aguarda reset de cota às 06:22 UTC |
+| 2 · Os Pastores | `p2-real` | Fogueira com pele de ovelha vazia; camadas aguardam reset de cota às 06:22 UTC |
+
 ---
 
 ## 🎒 2. Ícones das Bandejas (`../imagens/objetos/`)
