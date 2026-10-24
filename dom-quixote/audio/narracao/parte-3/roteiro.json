@@ -19,63 +19,63 @@
   "p1-s9": [
     [
       "QUIXOTE",
-      "Quem escreve com tanta sensibilidade tem a alma nobre,"
+      "Quem escreve com tanto sentimento tem um coração nobre,"
     ],
     [
       "NARRADORA",
-      "concluiu o fidalgo com um suspiro afetuoso."
+      "disse o cavaleiro, com um suspiro."
     ]
   ],
   "p1-s10": [
     [
       "QUIXOTE",
-      "Os livros guardam os mais profundos mistérios do coração humano!"
+      "Os livros guardam os segredos mais bonitos do coração!"
     ]
   ],
   "p2-s1": [
     [
       "NARRADORA",
-      "Ao contemplar a solidão imensa das montanhas, Dom Quixote teve uma inspiração luminosa:"
+      "Olhando aquelas montanhas tão grandes e tão quietas, Dom Quixote teve uma ideia:"
     ],
     [
       "QUIXOTE",
-      "Amigo Sancho, vou permanecer nesta clareira para provar ao mundo a minha imensa saudade por Dulcineia, jejuando e meditando como fazia o ilustre herói amadis de Gaula!"
+      "Amigo Sancho, vou ficar aqui nesta clareira para mostrar ao mundo a minha enorme saudade de Dulcineia, igualzinho ao que fazia amadis de Gaula, o herói dos meus livros!"
     ]
   ],
   "p2-s2": [
     [
       "QUIXOTE",
-      "E você partirá no burrico para levar uma carta apaixonada até as mãos dela."
+      "E você vai no burrico levar uma carta de amor até as mãos dela."
     ]
   ],
   "p2-s3": [
     [
       "SANCHO",
-      "Mas, meu fidalgo amo,"
+      "Mas, meu senhor,"
     ],
     [
       "NARRADORA",
-      "indagou Sancho, coçando o queixo,"
+      "perguntou Sancho, coçando o queixo,"
     ],
     [
       "SANCHO",
-      "como convencerei a senhora Dulcineia de que vossa mercê quase perdeu o juízo por ela, se eu não testemunhar nenhuma façanha espantosa?"
+      "como vou contar à senhora Dulcineia que o senhor ficou quase maluco de saudade, se eu não vir nenhuma maluquice com os meus próprios olhos?"
     ]
   ],
   "p2-s4": [
     [
       "QUIXOTE",
-      "Testemunhe agora mesmo!"
+      "Pois veja agora mesmo!"
     ],
     [
       "NARRADORA",
-      "exclamou Dom Quixote com determinação."
+      "respondeu Dom Quixote."
     ]
   ],
   "p3-s4": [
     [
       "NARRADORA",
-      "Desesperado, coçou a testa e tentou recuperar o texto gravado apenas na sua memória:"
+      "Coçou a testa e tentou lembrar as palavras que tinha guardado só na memória:"
     ],
     [
       "SANCHO",
@@ -91,10 +91,16 @@
   "p3-s6": [
     [
       "SANCHO",
-      "E no final?"
+      "Isso!"
     ]
   ],
   "p3-s7": [
+    [
+      "SANCHO",
+      "E no final?"
+    ]
+  ],
+  "p3-s8": [
     [
       "SANCHO",
       "Como ele assinava mesmo?"
@@ -103,7 +109,7 @@
   "p4-s3": [
     [
       "SANCHO",
-      "Ele nunca aceitará voltar para casa por vontade própria,"
+      "Ele nunca vai querer voltar para casa,"
     ],
     [
       "NARRADORA",
@@ -111,7 +117,7 @@
     ],
     [
       "SANCHO",
-      "a menos que uma donzela em apuros implore pela proteção da sua espada invencível!"
+      "a não ser que uma moça em perigo peça a ajuda da sua espada!"
     ]
   ],
   "p4-s4": [
@@ -121,67 +127,67 @@
     ],
     [
       "NARRADORA",
-      "exclamou o padre, de olhos brilhando."
+      "disse o padre, de olhos brilhando."
     ]
   ],
   "p4-s5": [
     [
       "PADRE",
-      "Vamos inventar uma princesa em apuros!"
-    ]
-  ],
-  "p5-s3": [
-    [
-      "DOROTEIA",
-      "Ó espelho da honra e flor da cavalaria!"
-    ],
-    [
-      "NARRADORA",
-      "suplicou ela com voz aveludada."
+      "Vamos inventar uma princesa em perigo!"
     ]
   ],
   "p5-s4": [
     [
       "DOROTEIA",
-      "Eu sou a desventurada princesa micomicona, herdeira do distante reino de Micomicão!"
+      "Ó cavaleiro valente, flor da cavalaria!"
+    ],
+    [
+      "NARRADORA",
+      "pediu ela, com voz doce."
     ]
   ],
   "p5-s5": [
     [
       "DOROTEIA",
-      "Um gigante feroz e desalmado, Pandafilando da Fosca Vista, invadiu minhas terras e somente o vosso braço corajoso pode libertar meu povo!"
+      "Eu sou a princesa micomicona, do distante reino de Micomicão!"
     ]
   ],
   "p5-s6": [
     [
-      "NARRADORA",
-      "Comovido, Dom Quixote estendeu a mão à donzela e fez uma sagrada promessa:"
-    ],
-    [
-      "QUIXOTE",
-      "Levante-se, formosa princesa!"
+      "DOROTEIA",
+      "Um gigante malvado, Pandafilando da Fosca Vista, invadiu as minhas terras, e só o senhor pode salvar o meu povo!"
     ]
   ],
   "p5-s7": [
     [
+      "NARRADORA",
+      "Emocionado, Dom Quixote estendeu a mão para a moça e fez uma promessa:"
+    ],
+    [
       "QUIXOTE",
-      "Juro pela minha espada que vencerei esse gigante!"
+      "Levante-se, bela princesa!"
+    ]
+  ],
+  "p5-s8": [
+    [
+      "QUIXOTE",
+      "Juro pela minha espada que vou vencer esse gigante!"
     ]
   ],
   "p6-s1": [
     [
       "NARRADORA",
-      "Hospedados todos na pousada no retorno da viagem, a noite transcorria serena quando gritos de guerra acordaram a casa inteira:"
+      "De volta à pousada, todos dormiam tranquilos quando gritos de guerra acordaram a casa inteira:"
     ],
     [
       "QUIXOTE",
-      "Renda-se, monstro covarde!"
+      "Renda-se, gigante malvado!"
     ]
   ],
   "p6-s2": [
     [
       "QUIXOTE",
-      "Prove do meu aço!"
+      "Agora você vai ver!"
     ]
   ],
   "p6-s7": [
@@ -197,23 +203,23 @@
     ],
     [
       "NARRADORA",
-      "berrava o estalajadeiro, desesperado."
+      "gritava o dono da pousada, desesperado."
     ]
   ],
   "p6-s9": [
     [
       "PADRE",
-      "Calma, meu bom homem, eu pago cada centavo!"
+      "Calma, meu bom homem, eu pago tudo!"
     ],
     [
       "NARRADORA",
-      "prometeu o generoso padre."
+      "prometeu o padre."
     ]
   ],
   "p7-s3": [
     [
       "NARRADORA",
-      "Num dado momento, Dom Quixote levantou-se à cabeceira da mesa e fez um sábio e comovente discurso sobre o valor das armas e das letras:"
+      "Então Dom Quixote se levantou na ponta da mesa e fez um discurso bonito e sábio sobre as armas dos cavaleiros e as letras dos livros:"
     ],
     [
       "QUIXOTE",
