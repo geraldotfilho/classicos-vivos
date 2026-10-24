@@ -7,6 +7,7 @@
     {
       "id": "p0-s1",
       "pagina": 0,
+      "paragrafo": 0,
       "texto": "Com o seu elmo brilhante na cabeça, o Cavaleiro da Triste Figura subiu com Sancho as montanhas selvagens da SERRA MORENA.",
       "fala": "Com o seu elmo brilhante na cabeça, o Cavaleiro da Triste Figura subiu com Sancho as montanhas selvagens da serra morena.",
       "hash": "d5ad474399"
@@ -14,6 +15,7 @@
     {
       "id": "p0-s2",
       "pagina": 0,
+      "paragrafo": 1,
       "texto": "Lá no alto, entre pedras e árvores retorcidas, eles vão encontrar uma mala misteriosa, escrever uma CARTA de amor, rever velhos amigos disfarçados e conhecer uma PRINCESA que precisa de ajuda.",
       "fala": "Lá no alto, entre pedras e árvores retorcidas, eles vão encontrar uma mala misteriosa, escrever uma carta de amor, rever velhos amigos disfarçados e conhecer uma princesa que precisa de ajuda.",
       "hash": "e64f74045b"
@@ -21,6 +23,7 @@
     {
       "id": "p0-s3",
       "pagina": 0,
+      "paragrafo": 2,
       "texto": "Vire a página e suba a serra com eles!",
       "fala": "Vire a página e suba a serra com eles!",
       "hash": "dd0898694a"
@@ -28,6 +31,7 @@
     {
       "id": "p1-s1",
       "pagina": 1,
+      "paragrafo": 0,
       "texto": "Subindo a serra, Sancho tropeçou numa velha MALA de couro, abandonada entre as pedras.",
       "fala": "Subindo a serra, Sancho tropeçou numa velha mala de couro, abandonada entre as pedras.",
       "hash": "15e5ceffe9"
@@ -35,6 +39,7 @@
     {
       "id": "p1-s2",
       "pagina": 1,
+      "paragrafo": 0,
       "texto": "Estava toda molhada de chuva e meio rasgada.",
       "fala": "Estava toda molhada de chuva e meio rasgada.",
       "hash": "32920122e9"
@@ -42,6 +47,7 @@
     {
       "id": "p1-s3",
       "pagina": 1,
+      "paragrafo": 0,
       "texto": "O que será que havia lá dentro?",
       "fala": "O que será que havia lá dentro?",
       "hash": "4970795d15"
@@ -49,6 +55,7 @@
     {
       "id": "p1-s4",
       "pagina": 1,
+      "paragrafo": 1,
       "texto": "Abra a mala para descobrir!",
       "fala": "Abra a mala para descobrir!",
       "hash": "b2619453ca"
@@ -56,6 +63,7 @@
     {
       "id": "p1-s5",
       "pagina": 1,
+      "paragrafo": 1,
       "texto": "Havia MOEDAS de ouro, que deixaram Sancho pulando de alegria, e um CADERNO cheio de POEMAS escritos à mão.",
       "fala": "Havia moedas de ouro, que deixaram Sancho pulando de alegria, e um caderno cheio de poemas escritos à mão.",
       "hash": "0fd230e224"
@@ -63,6 +71,7 @@
     {
       "id": "p1-s6",
       "pagina": 1,
+      "paragrafo": 2,
       "texto": "Dom Quixote pegou o caderno e leu em voz alta os versos tristes de um jovem apaixonado que se perdera na serra.",
       "fala": "Dom Quixote pegou o caderno e leu em voz alta os versos tristes de um jovem apaixonado que se perdera na serra.",
       "hash": "f050f5cb1e"
@@ -70,6 +79,7 @@
     {
       "id": "p1-s7",
       "pagina": 1,
+      "paragrafo": 2,
       "texto": "— Quem escreve assim tem o coração ferido — disse o cavaleiro.",
       "fala": "Quem escreve assim tem o coração ferido, disse o cavaleiro.",
       "hash": "e9adbd331f"
@@ -77,6 +87,7 @@
     {
       "id": "p1-s8",
       "pagina": 1,
+      "paragrafo": 2,
       "texto": "— Os livros guardam os segredos do coração!",
       "fala": "Os livros guardam os segredos do coração!",
       "hash": "a6d3d2d90d"
@@ -84,6 +95,7 @@
     {
       "id": "p2-s1",
       "pagina": 2,
+      "paragrafo": 0,
       "texto": "No meio da serra, Dom Quixote teve uma ideia: — Sancho, vou ficar aqui para mostrar a minha SAUDADE de Dulcineia, como fez o grande cavaleiro AMADIS!",
       "fala": "No meio da serra, Dom Quixote teve uma ideia:, Sancho, vou ficar aqui para mostrar a minha saudade de Dulcineia, como fez o grande cavaleiro amadis!",
       "hash": "0a5119a316"
@@ -91,6 +103,7 @@
     {
       "id": "p2-s2",
       "pagina": 2,
+      "paragrafo": 0,
       "texto": "E você vai levar uma carta minha até ela.",
       "fala": "E você vai levar uma carta minha até ela.",
       "hash": "e9f62a2beb"
@@ -98,6 +111,7 @@
     {
       "id": "p2-s3",
       "pagina": 2,
+      "paragrafo": 1,
       "texto": "— E como eu vou contar à senhora Dulcineia as loucuras que vossa mercê faz por ela? — perguntou Sancho.",
       "fala": "E como eu vou contar à senhora Dulcineia as loucuras que vossa mercê faz por ela? perguntou Sancho.",
       "hash": "8911a711b8"
@@ -105,6 +119,7 @@
     {
       "id": "p2-s4",
       "pagina": 2,
+      "paragrafo": 2,
       "texto": "— Assim! — respondeu Dom Quixote.",
       "fala": "Assim! respondeu Dom Quixote.",
       "hash": "3bdf90ef99"
@@ -112,6 +127,7 @@
     {
       "id": "p2-s5",
       "pagina": 2,
+      "paragrafo": 2,
       "texto": "E, só de camisolão, deu uma CAMBALHOTA, depois outra, de pernas para o ar!",
       "fala": "E, só de camisolão, deu uma cambalhota, depois outra, de pernas para o ar!",
       "hash": "024d8af197"
@@ -119,6 +135,7 @@
     {
       "id": "p2-s6",
       "pagina": 2,
+      "paragrafo": 2,
       "texto": "Sancho tapou os olhos e caiu na risada.",
       "fala": "Sancho tapou os olhos e caiu na risada.",
       "hash": "19ca3f3f66"
@@ -126,6 +143,7 @@
     {
       "id": "p2-s7",
       "pagina": 2,
+      "paragrafo": 2,
       "texto": "Faça o cavaleiro dar cambalhotas!",
       "fala": "Faça o cavaleiro dar cambalhotas!",
       "hash": "b83d3f0135"
@@ -133,6 +151,7 @@
     {
       "id": "p3-s1",
       "pagina": 3,
+      "paragrafo": 0,
       "texto": "Dom Quixote escreveu uma linda CARTA para Dulcineia no caderno dos poemas e a assinou com o seu novo nome.",
       "fala": "Dom Quixote escreveu uma linda carta para Dulcineia no caderno dos poemas e a assinou com o seu novo nome.",
       "hash": "4fd1dad490"
@@ -140,6 +159,7 @@
     {
       "id": "p3-s2",
       "pagina": 3,
+      "paragrafo": 0,
       "texto": "Sancho montou no burrico e partiu, todo importante.",
       "fala": "Sancho montou no burrico e partiu, todo importante.",
       "hash": "0d5b86d95e"
@@ -147,6 +167,7 @@
     {
       "id": "p3-s3",
       "pagina": 3,
+      "paragrafo": 1,
       "texto": "Só que, no caminho, ele descobriu que tinha esquecido o caderno!",
       "fala": "Só que, no caminho, ele descobriu que tinha esquecido o caderno!",
       "hash": "67b746a4ea"
@@ -154,6 +175,7 @@
     {
       "id": "p3-s4",
       "pagina": 3,
+      "paragrafo": 1,
       "texto": "Coçou a cabeça e tentou lembrar a carta de MEMÓRIA: — Começava assim: \"Sobajada e alta senhora\"... ou era \"soberana\"?",
       "fala": "Coçou a cabeça e tentou lembrar a carta de memória:, Começava assim: Sobajada e alta senhora... ou era soberana?",
       "hash": "ccea6fa036"
@@ -161,6 +183,7 @@
     {
       "id": "p3-s5",
       "pagina": 3,
+      "paragrafo": 1,
       "texto": "E terminava com... com...",
       "fala": "E terminava com... com...",
       "hash": "9d43d41a97"
@@ -168,6 +191,7 @@
     {
       "id": "p3-s6",
       "pagina": 3,
+      "paragrafo": 2,
       "texto": "Ajude Sancho a lembrar a ASSINATURA da carta, tocando nas palavras na ordem certa!",
       "fala": "Ajude Sancho a lembrar a assinatura da carta, tocando nas palavras na ordem certa!",
       "hash": "b45e82903b"
@@ -175,6 +199,7 @@
     {
       "id": "p4-s1",
       "pagina": 4,
+      "paragrafo": 0,
       "texto": "Numa pousada da estrada, Sancho encontrou dois velhos conhecidos da aldeia: o PADRE e mestre Nicolau, o barbeiro.",
       "fala": "Numa pousada da estrada, Sancho encontrou dois velhos conhecidos da aldeia: o padre e mestre Nicolau, o barbeiro.",
       "hash": "c16e4ff4b0"
@@ -182,6 +207,7 @@
     {
       "id": "p4-s2",
       "pagina": 4,
+      "paragrafo": 0,
       "texto": "Eles estavam preocupados com Dom Quixote e queriam levá-lo de volta para casa.",
       "fala": "Eles estavam preocupados com Dom Quixote e queriam levá-lo de volta para casa.",
       "hash": "e52574541d"
@@ -189,6 +215,7 @@
     {
       "id": "p4-s3",
       "pagina": 4,
+      "paragrafo": 1,
       "texto": "— Ele só vai sair da serra se um cavaleiro andante precisar de socorro! — explicou Sancho.",
       "fala": "Ele só vai sair da serra se um cavaleiro andante precisar de socorro! explicou Sancho.",
       "hash": "338676b9b7"
@@ -196,6 +223,7 @@
     {
       "id": "p4-s4",
       "pagina": 4,
+      "paragrafo": 2,
       "texto": "Então os dois inventaram um plano: um DISFARCE!",
       "fala": "Então os dois inventaram um plano: um disfarce!",
       "hash": "d5417251eb"
@@ -203,6 +231,7 @@
     {
       "id": "p4-s5",
       "pagina": 4,
+      "paragrafo": 2,
       "texto": "O barbeiro grudou no queixo uma enorme BARBA ruiva, feita com o rabo de um boi, e o padre se vestiu de dama.",
       "fala": "O barbeiro grudou no queixo uma enorme barba ruiva, feita com o rabo de um boi, e o padre se vestiu de dama.",
       "hash": "eb21c39623"
@@ -210,6 +239,7 @@
     {
       "id": "p4-s6",
       "pagina": 4,
+      "paragrafo": 2,
       "texto": "Quando se olharam no espelho, os dois riram tanto que quase desistiram do plano!",
       "fala": "Quando se olharam no espelho, os dois riram tanto que quase desistiram do plano!",
       "hash": "3a78c28fb9"
@@ -217,6 +247,7 @@
     {
       "id": "p5-s1",
       "pagina": 5,
+      "paragrafo": 0,
       "texto": "Na serra, os amigos conheceram Doroteia, uma moça esperta e corajosa que topou ajudar no plano.",
       "fala": "Na serra, os amigos conheceram Doroteia, uma moça esperta e corajosa que topou ajudar no plano.",
       "hash": "f79a8d5791"
@@ -224,6 +255,7 @@
     {
       "id": "p5-s2",
       "pagina": 5,
+      "paragrafo": 0,
       "texto": "Ela vestiu suas roupas mais bonitas e se ajoelhou diante de Dom Quixote:",
       "fala": "Ela vestiu suas roupas mais bonitas e se ajoelhou diante de Dom Quixote:",
       "hash": "cf0ad211de"
@@ -231,6 +263,7 @@
     {
       "id": "p5-s3",
       "pagina": 5,
+      "paragrafo": 1,
       "texto": "— Nobre cavaleiro!",
       "fala": "Nobre cavaleiro!",
       "hash": "5ed21cc102"
@@ -238,6 +271,7 @@
     {
       "id": "p5-s4",
       "pagina": 5,
+      "paragrafo": 1,
       "texto": "Eu sou a PRINCESA MICOMICONA, e um gigante terrível, Pandafilando da Fosca Vista, tomou o meu reino.",
       "fala": "Eu sou a princesa micomicona, e um gigante terrível, Pandafilando da Fosca Vista, tomou o meu reino.",
       "hash": "f53b2d79f6"
@@ -245,6 +279,7 @@
     {
       "id": "p5-s5",
       "pagina": 5,
+      "paragrafo": 1,
       "texto": "Só vós podeis me ajudar!",
       "fala": "Só vós podeis me ajudar!",
       "hash": "7d190aec1a"
@@ -252,6 +287,7 @@
     {
       "id": "p5-s6",
       "pagina": 5,
+      "paragrafo": 2,
       "texto": "Dom Quixote ajudou a princesa a se levantar e fez uma PROMESSA solene: não descansaria enquanto o reino de Micomicão não estivesse livre.",
       "fala": "Dom Quixote ajudou a princesa a se levantar e fez uma promessa solene: não descansaria enquanto o reino de Micomicão não estivesse livre.",
       "hash": "9b7dac15d7"
@@ -259,6 +295,7 @@
     {
       "id": "p5-s7",
       "pagina": 5,
+      "paragrafo": 2,
       "texto": "E assim, sem perceber, começou a viagem de volta para casa.",
       "fala": "E assim, sem perceber, começou a viagem de volta para casa.",
       "hash": "d6f788bd74"
@@ -266,6 +303,7 @@
     {
       "id": "p6-s1",
       "pagina": 6,
+      "paragrafo": 0,
       "texto": "De volta à pousada, todos dormiam quando ouviram gritos: — Toma, gigante malvado!",
       "fala": "De volta à pousada, todos dormiam quando ouviram gritos:, Toma, gigante malvado!",
       "hash": "05ac773bca"
@@ -273,6 +311,7 @@
     {
       "id": "p6-s2",
       "pagina": 6,
+      "paragrafo": 0,
       "texto": "Dom Quixote, ainda dormindo e sonhando com a batalha, lutava de camisolão contra os enormes ODRES de couro cheios de vinho tinto pendurados no quarto.",
       "fala": "Dom Quixote, ainda dormindo e sonhando com a batalha, lutava de camisolão contra os enormes odres de couro cheios de vinho tinto pendurados no quarto.",
       "hash": "45d3a3d7d0"
@@ -280,6 +319,7 @@
     {
       "id": "p6-s3",
       "pagina": 6,
+      "paragrafo": 1,
       "texto": "Em seu SONHO, cada odre era o GIGANTE Pandafilando!",
       "fala": "Em seu sonho, cada odre era o gigante Pandafilando!",
       "hash": "77ab0d31da"
@@ -287,6 +327,7 @@
     {
       "id": "p6-s4",
       "pagina": 6,
+      "paragrafo": 1,
       "texto": "Ele golpeava com a ESPADA, e o vinho escorria pelo chão como um rio vermelho.",
       "fala": "Ele golpeava com a espada, e o vinho escorria pelo chão como um rio vermelho.",
       "hash": "fd6e8c58ce"
@@ -294,6 +335,7 @@
     {
       "id": "p6-s5",
       "pagina": 6,
+      "paragrafo": 1,
       "texto": "Toque na espada e veja o que aconteceu com os odres!",
       "fala": "Toque na espada e veja o que aconteceu com os odres!",
       "hash": "b4976e22a3"
@@ -301,6 +343,7 @@
     {
       "id": "p6-s6",
       "pagina": 6,
+      "paragrafo": 2,
       "texto": "O dono da pousada ficou furioso com o prejuízo, mas o padre prometeu pagar tudo.",
       "fala": "O dono da pousada ficou furioso com o prejuízo, mas o padre prometeu pagar tudo.",
       "hash": "dadfc1be4b"
@@ -308,6 +351,7 @@
     {
       "id": "p6-s7",
       "pagina": 6,
+      "paragrafo": 2,
       "texto": "E Dom Quixote acordou feliz da vida, achando que tinha salvado o reino da princesa!",
       "fala": "E Dom Quixote acordou feliz da vida, achando que tinha salvado o reino da princesa!",
       "hash": "09baae54b0"
@@ -315,6 +359,7 @@
     {
       "id": "p7-s1",
       "pagina": 7,
+      "paragrafo": 0,
       "texto": "Naquela noite, a pousada ficou cheia de viajantes, e cada um tinha uma aventura para contar.",
       "fala": "Naquela noite, a pousada ficou cheia de viajantes, e cada um tinha uma aventura para contar.",
       "hash": "bb70ae4dda"
@@ -322,6 +367,7 @@
     {
       "id": "p7-s2",
       "pagina": 7,
+      "paragrafo": 0,
       "texto": "Todos se sentaram ao redor da mesa para ouvir HISTÓRIAS de amor, de viagens e de reencontros.",
       "fala": "Todos se sentaram ao redor da mesa para ouvir histórias de amor, de viagens e de reencontros.",
       "hash": "ca2c1625cc"
@@ -329,6 +375,7 @@
     {
       "id": "p7-s3",
       "pagina": 7,
+      "paragrafo": 1,
       "texto": "Então Dom Quixote se levantou e fez um discurso bonito sobre as ARMAS e as LETRAS.",
       "fala": "Então Dom Quixote se levantou e fez um discurso bonito sobre as armas e as letras.",
       "hash": "f7e687e08e"
@@ -336,6 +383,7 @@
     {
       "id": "p7-s4",
       "pagina": 7,
+      "paragrafo": 1,
       "texto": "Para ele, tanto os cavaleiros quanto os que estudam e escrevem livros ajudam a fazer um mundo mais justo.",
       "fala": "Para ele, tanto os cavaleiros quanto os que estudam e escrevem livros ajudam a fazer um mundo mais justo.",
       "hash": "1c8e3e20be"
@@ -343,6 +391,7 @@
     {
       "id": "p7-s5",
       "pagina": 7,
+      "paragrafo": 2,
       "texto": "Os viajantes ficaram de boca aberta.",
       "fala": "Os viajantes ficaram de boca aberta.",
       "hash": "9d1b24aab0"
@@ -350,6 +399,7 @@
     {
       "id": "p7-s6",
       "pagina": 7,
+      "paragrafo": 2,
       "texto": "— Como pode um homem tão sábio acreditar em gigantes? — cochichavam.",
       "fala": "Como pode um homem tão sábio acreditar em gigantes? cochichavam.",
       "hash": "b1daf4effa"
@@ -357,6 +407,7 @@
     {
       "id": "p7-s7",
       "pagina": 7,
+      "paragrafo": 2,
       "texto": "Mas o padre e o barbeiro sabiam: estava na hora de levar o cavaleiro de volta para casa.",
       "fala": "Mas o padre e o barbeiro sabiam: estava na hora de levar o cavaleiro de volta para casa.",
       "hash": "42be358a00"

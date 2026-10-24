@@ -14,6 +14,9 @@
 //   ... --seco                                                            # mostra o que faria, sem chamar a API
 //   ... --forcar                                                          # regrava mesmo com o hash igual
 //   ... --sem-qa                                                          # pula a transcrição de conferência
+//   npm run gravar:narracao -- --voz narracao --parte 1 --paginas 2 --pagina-inteira
+//       # a página inteira num pedido só (entonação mais contínua) + marcação das frases depois,
+//       # em parte-N/paginas.json (o livro toca um MP3 por página e destaca a frase pelo tempo)
 //
 // Para cada frase: gera o WAV, transcreve com um modelo de texto e compara com o campo `fala` (até 3
 // tentativas; se nenhuma bater, guarda a mais próxima e avisa), converte para MP3 (tools/otimizar-audio.mjs)
@@ -21,6 +24,7 @@
 // mesmo hash já gravado são puladas: pode rodar de novo depois de uma queda ou do fim da cota.
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
+import { createHash } from 'node:crypto';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -46,7 +50,7 @@ function opcoes(argv) {
     const o = { livro: 'dom-quixote' };
     for (let i = 0; i < argv.length; i++) {
         const a = argv[i].replace(/^--/, '');
-        if (['seco', 'forcar', 'amostra', 'sem-qa'].includes(a)) o[a] = true;
+        if (['seco', 'forcar', 'amostra', 'sem-qa', 'pagina-inteira'].includes(a)) o[a] = true;
         else o[a] = argv[++i];
     }
     return o;
@@ -172,6 +176,135 @@ function lerJson(arq, padrao) {
     return existsSync(arq) ? JSON.parse(readFileSync(arq, 'utf8')) : padrao;
 }
 
+/* =====================================================================
+   PÁGINA INTEIRA: um pedido com o texto todo da página; depois, as pausas
+   do áudio dizem onde cada frase começa (marcação a posteriori)
+   ===================================================================== */
+const TAXA = 24000;
+const QUADRO = 240;           // 10 ms
+const PAUSA_MINIMA = 12;      // quadros (120 ms)
+const LIMIAR_RMS = 250;
+
+const amostrasDe = (wav) => new Int16Array(wav.buffer.slice(wav.byteOffset + 44, wav.byteOffset + wav.length - ((wav.length - 44) % 2)));
+const wavDe = (a) => comCabecalhoWav(Buffer.from(a.buffer, a.byteOffset, a.byteLength));
+
+/* Trechos de pelo menos 120 ms com energia baixa, dentro da fala: [{ ini, fim, meio, s }] em amostras */
+function pausas(a, vozIni, vozFim) {
+    const lista = [];
+    const n = Math.floor(a.length / QUADRO);
+    let inicio = -1;
+    for (let q = 0; q <= n; q++) {
+        let silencio = false;
+        if (q < n) {
+            let soma = 0;
+            for (let i = q * QUADRO; i < (q + 1) * QUADRO; i++) soma += a[i] * a[i];
+            silencio = Math.sqrt(soma / QUADRO) < LIMIAR_RMS;
+        }
+        if (silencio && inicio < 0) inicio = q;
+        if (!silencio && inicio >= 0) {
+            const ini = inicio * QUADRO, fim = q * QUADRO;
+            if (q - inicio >= PAUSA_MINIMA && ini > vozIni && fim < vozFim) lista.push({ ini, fim, meio: (ini + fim) / 2, s: (fim - ini) / TAXA });
+            inicio = -1;
+        }
+    }
+    return lista;
+}
+
+/* Escolhe uma pausa para cada fronteira entre frases (programação dinâmica): perto de onde a proporção
+   de letras diz que a frase acaba, e preferindo pausas longas (fim de frase pausa mais que vírgula) */
+function fronteiras(frases, gaps, vozIni, vozFim) {
+    const total = frases.reduce((t, f) => t + f.fala.length, 0);
+    const media = (vozFim - vozIni) / frases.length;
+    let acc = 0;
+    const esperado = frases.slice(0, -1).map(f => vozIni + (vozFim - vozIni) * (acc += f.fala.length) / total);
+    const custo = (k, g) => ((gaps[g].meio - esperado[k]) / media) ** 2 * 4 - gaps[g].s / 0.3;
+    const K = esperado.length, G = gaps.length;
+    if (G < K) return null;
+    const melhor = Array.from({ length: K }, () => new Array(G).fill(Infinity));
+    const de = Array.from({ length: K }, () => new Array(G).fill(-1));
+    for (let g = 0; g < G; g++) melhor[0][g] = custo(0, g);
+    for (let k = 1; k < K; k++) {
+        for (let g = k; g < G; g++) {
+            for (let h = k - 1; h < g; h++) {
+                const c = melhor[k - 1][h] + custo(k, g);
+                if (c < melhor[k][g]) { melhor[k][g] = c; de[k][g] = h; }
+            }
+        }
+    }
+    let g = melhor[K - 1].indexOf(Math.min(...melhor[K - 1]));
+    const escolha = [];
+    for (let k = K - 1; k >= 0; k--) { escolha.unshift(gaps[g]); g = de[k][g]; }
+    return escolha;
+}
+
+/* Uma tentativa: gera, marca e confere cada trecho por transcrição */
+async function tentarPagina(frases) {
+    const texto = [...new Set(frases.map(f => f.paragrafo))]
+        .map(k => frases.filter(f => f.paragrafo === k).map(f => f.fala).join(' ')).join('\n\n');
+    const a = amostrasDe(await sintetizar(texto, cfg.estilo));
+    let vozIni = 0, vozFim = a.length - 1;
+    while (vozIni < vozFim && Math.abs(a[vozIni]) < 500) vozIni++;
+    while (vozFim > vozIni && Math.abs(a[vozFim]) < 500) vozFim--;
+    const escolha = fronteiras(frases, pausas(a, vozIni, vozFim), vozIni, vozFim);
+    if (!escolha) return { erros: 999, motivo: 'pausas de menos para separar as frases' };
+
+    // Corte das pontas (80 ms de margem, como o otimizar-audio.mjs, que assim não corta de novo)
+    const margem = Math.round(TAXA * 0.08);
+    const ini = Math.max(0, vozIni - margem), fim = Math.min(a.length, vozFim + margem);
+    const cortes = [ini, ...escolha.map(e => Math.round(e.meio)), fim];
+    const marcas = [], avisos = [];
+    let erros = 0;
+    for (let k = 0; k < frases.length; k++) {
+        const trecho = a.subarray(cortes[k], cortes[k + 1]);
+        let dif = 0;
+        if (!o['sem-qa']) {
+            const ouvido = await transcrever(wavDe(trecho));
+            dif = diferenca(frases[k].fala, ouvido);
+            if (dif) avisos.push(`${frases[k].id}: ${dif} palavra(s) diferente(s): "${ouvido}"`);
+        }
+        erros += dif;
+        marcas.push({ id: frases[k].id, ini: +((cortes[k] - ini) / TAXA).toFixed(2), fim: +((cortes[k + 1] - ini) / TAXA).toFixed(2) });
+    }
+    marcas[marcas.length - 1].fim = +((fim - ini) / TAXA).toFixed(2);
+    return { erros, avisos, marcas, wav: wavDe(a.subarray(ini, fim)), segundos: (fim - ini) / TAXA, motivo: avisos.join('; ') };
+}
+
+async function gravarPaginas(fonte, pasta, paginas) {
+    const arqPaginas = join(pasta, 'paginas.json');
+    const registro = lerJson(arqPaginas, {});
+    const numeros = [...new Set(fonte.frases.map(f => f.pagina))].filter(n => !paginas || paginas.has(n));
+    const falhas = [];
+    for (const n of numeros) {
+        const frases = fonte.frases.filter(f => f.pagina === n);
+        const hash = createHash('sha1').update(frases.map(f => f.hash).join()).digest('hex').slice(0, 10);
+        const id = `p${n}`;
+        if (!o.forcar && registro[id]?.hash === hash && existsSync(join(pasta, `${id}.mp3`))) continue;
+        console.log(`${id} (${frases.length} frases, página inteira)${o.seco ? ' [seco]' : ''}`);
+        if (o.seco) continue;
+        let melhor = null;
+        for (let tentativa = 1; tentativa <= 3; tentativa++) {
+            const r = await tentarPagina(frases);
+            r.tentativas = tentativa;
+            if (!melhor || r.erros < melhor.erros) melhor = r;
+            if (!r.erros) break;
+            console.log(`  ↻ ${id} tentativa ${tentativa}: ${r.motivo}`);
+        }
+        if (melhor.erros >= 999) { falhas.push(`${id}: ${melhor.motivo}`); continue; }
+        writeFileSync(join(pasta, `${id}.wav`), melhor.wav);
+        execFileSync('node', [join(RAIZ, 'tools', 'otimizar-audio.mjs'), join(pasta, `${id}.wav`)], { stdio: 'ignore' });
+        registro[id] = { arquivo: `${id}.mp3`, hash, frases: melhor.marcas };
+        Object.assign(registro, { modelo: cfg.modelo, voz: cfg.voz, estilo: cfg.estilo, qa: o['sem-qa'] ? 'sem' : MODELO_QA });
+        writeFileSync(arqPaginas, JSON.stringify(registro, null, 2) + '\n');
+        console.log(`  ✓ ${id} (${melhor.segundos.toFixed(1)} s${melhor.tentativas > 1 ? `, ${melhor.tentativas} tentativas` : ''})`);
+        melhor.marcas.forEach(m => console.log(`      ${m.id}: ${m.ini.toFixed(2)}–${m.fim.toFixed(2)} s`));
+        if (melhor.erros) falhas.push(`${id}: gravada, mas revise de ouvido (${melhor.motivo})`);
+    }
+    if (falhas.length) {
+        console.log(`\n${falhas.length} página(s) com problema:\n  ${falhas.join('\n  ')}`);
+        process.exitCode = 1;
+    }
+}
+
 async function main() {
     const base = join(RAIZ, o.livro, 'audio', o.voz);
     const pendentes = [];   // { item, wav, chave, faixa }
@@ -191,6 +324,7 @@ async function main() {
         indice = lerJson(indiceArq, { frases: {} });
         const ids = o.ids ? new Set(o.ids.split(',')) : null;
         const paginas = o.paginas ? new Set(o.paginas.split(',').map(Number)) : null;
+        if (o['pagina-inteira']) return gravarPaginas(fonte, pasta, paginas);
         const itens = o.voz === 'palavras'
             ? fonte.palavras.map(p => ({ ...p, id: p.slug }))
             : fonte.frases.filter(f => !paginas || paginas.has(f.pagina));

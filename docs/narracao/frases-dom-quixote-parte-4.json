@@ -7,6 +7,7 @@
     {
       "id": "p0-s1",
       "pagina": 0,
+      "paragrafo": 0,
       "texto": "Chegou a hora da última parte da nossa história!",
       "fala": "Chegou a hora da última parte da nossa história!",
       "hash": "6287bbbd11"
@@ -14,6 +15,7 @@
     {
       "id": "p0-s2",
       "pagina": 0,
+      "paragrafo": 0,
       "texto": "Dom Quixote vai viajar dentro de uma JAULA encantada, voltar para casa, partir de novo, voar num cavalo de madeira e ver o seu escudeiro virar governador de uma ILHA.",
       "fala": "Dom Quixote vai viajar dentro de uma jaula encantada, voltar para casa, partir de novo, voar num cavalo de madeira e ver o seu escudeiro virar governador de uma ilha.",
       "hash": "63702bc6d4"
@@ -21,6 +23,7 @@
     {
       "id": "p0-s3",
       "pagina": 0,
+      "paragrafo": 1,
       "texto": "E Sancho Pança, aquele lavrador simples e bondoso, vai mostrar que a SABEDORIA pode morar no coração de qualquer pessoa.",
       "fala": "E Sancho Pança, aquele lavrador simples e bondoso, vai mostrar que a sabedoria pode morar no coração de qualquer pessoa.",
       "hash": "5731cad683"
@@ -28,6 +31,7 @@
     {
       "id": "p0-s4",
       "pagina": 0,
+      "paragrafo": 2,
       "texto": "Vire a página para o grande final!",
       "fala": "Vire a página para o grande final!",
       "hash": "2bc6bf8413"
@@ -35,6 +39,7 @@
     {
       "id": "p1-s1",
       "pagina": 1,
+      "paragrafo": 0,
       "texto": "Para levar Dom Quixote de volta para casa, os amigos construíram uma JAULA de madeira em cima de um carro puxado por dois BOIS bem lentos.",
       "fala": "Para levar Dom Quixote de volta para casa, os amigos construíram uma jaula de madeira em cima de um carro puxado por dois bois bem lentos.",
       "hash": "1fd2b77cc6"
@@ -42,6 +47,7 @@
     {
       "id": "p1-s2",
       "pagina": 1,
+      "paragrafo": 0,
       "texto": "Enquanto o cavaleiro dormia, colocaram-no lá dentro com muito cuidado.",
       "fala": "Enquanto o cavaleiro dormia, colocaram-no lá dentro com muito cuidado.",
       "hash": "c15bd4992e"
@@ -49,6 +55,7 @@
     {
       "id": "p1-s3",
       "pagina": 1,
+      "paragrafo": 1,
       "texto": "Quando acordou, Dom Quixote não ficou bravo.",
       "fala": "Quando acordou, Dom Quixote não ficou bravo.",
       "hash": "213a42f741"
@@ -56,6 +63,7 @@
     {
       "id": "p1-s4",
       "pagina": 1,
+      "paragrafo": 1,
       "texto": "— Fui ENCANTADO por um mago! — disse, muito calmo.",
       "fala": "Fui encantado por um mago! disse, muito calmo.",
       "hash": "a75c45d06f"
@@ -63,6 +71,7 @@
     {
       "id": "p1-s5",
       "pagina": 1,
+      "paragrafo": 1,
       "texto": "— Isso só acontece com os cavaleiros mais famosos!",
       "fala": "Isso só acontece com os cavaleiros mais famosos!",
       "hash": "000c135e8c"
@@ -70,6 +79,7 @@
     {
       "id": "p1-s6",
       "pagina": 1,
+      "paragrafo": 2,
       "texto": "E assim seguiram devagarinho pelos campos: o carro rangendo, os bois mugindo, Sancho caminhando ao lado com o burrico, e o cavaleiro sorrindo dentro da sua jaula encantada, sonhando com novas aventuras.",
       "fala": "E assim seguiram devagarinho pelos campos: o carro rangendo, os bois mugindo, Sancho caminhando ao lado com o burrico, e o cavaleiro sorrindo dentro da sua jaula encantada, sonhando com novas aventuras.",
       "hash": "c47850cbc9"
@@ -77,6 +87,7 @@
     {
       "id": "p2-s1",
       "pagina": 2,
+      "paragrafo": 0,
       "texto": "Quando o carro de bois chegou à aldeia, era domingo e todos correram para ver.",
       "fala": "Quando o carro de bois chegou à aldeia, era domingo e todos correram para ver.",
       "hash": "33072c81ec"
@@ -84,6 +95,7 @@
     {
       "id": "p2-s2",
       "pagina": 2,
+      "paragrafo": 0,
       "texto": "A SOBRINHA de Dom Quixote e a governanta da casa o receberam com abraços apertados e uma boa sopa quentinha.",
       "fala": "A sobrinha de Dom Quixote e a governanta da casa o receberam com abraços apertados e uma boa sopa quentinha.",
       "hash": "2d58a87f65"
@@ -91,6 +103,7 @@
     {
       "id": "p2-s3",
       "pagina": 2,
+      "paragrafo": 1,
       "texto": "Sancho correu até a sua casa.",
       "fala": "Sancho correu até a sua casa.",
       "hash": "5c934cba06"
@@ -98,6 +111,7 @@
     {
       "id": "p2-s4",
       "pagina": 2,
+      "paragrafo": 1,
       "texto": "Sua esposa, Teresa Pança, e a filhinha Sanchica perguntaram: — Trouxe sapatos novos?",
       "fala": "Sua esposa, Teresa Pança, e a filhinha Sanchica perguntaram:, Trouxe sapatos novos?",
       "hash": "549ffcbf59"
@@ -105,6 +119,7 @@
     {
       "id": "p2-s5",
       "pagina": 2,
+      "paragrafo": 1,
       "texto": "Trouxe vestidos?",
       "fala": "Trouxe vestidos?",
       "hash": "644f148f40"
@@ -112,6 +127,7 @@
     {
       "id": "p2-s6",
       "pagina": 2,
+      "paragrafo": 1,
       "texto": "— Trouxe algo melhor — respondeu Sancho, rindo.",
       "fala": "Trouxe algo melhor, respondeu Sancho, rindo.",
       "hash": "9828091a09"
@@ -119,6 +135,7 @@
     {
       "id": "p2-s7",
       "pagina": 2,
+      "paragrafo": 1,
       "texto": "— Trouxe muitas aventuras!",
       "fala": "Trouxe muitas aventuras!",
       "hash": "2ebb163480"
@@ -126,6 +143,7 @@
     {
       "id": "p2-s8",
       "pagina": 2,
+      "paragrafo": 1,
       "texto": "E um dia ainda serei governador de uma ilha!",
       "fala": "E um dia ainda serei governador de uma ilha!",
       "hash": "5d8fbfc616"
@@ -133,6 +151,7 @@
     {
       "id": "p2-s9",
       "pagina": 2,
+      "paragrafo": 2,
       "texto": "Em volta da mesa, a FAMÍLIA ouviu as histórias até tarde.",
       "fala": "Em volta da mesa, a família ouviu as histórias até tarde.",
       "hash": "39115b9ffa"
@@ -140,6 +159,7 @@
     {
       "id": "p2-s10",
       "pagina": 2,
+      "paragrafo": 2,
       "texto": "Mas, olhando pela janela, Dom Quixote já sentia SAUDADE da estrada...",
       "fala": "Mas, olhando pela janela, Dom Quixote já sentia saudade da estrada...",
       "hash": "f797c3b9f8"
@@ -147,6 +167,7 @@
     {
       "id": "p3-s1",
       "pagina": 3,
+      "paragrafo": 0,
       "texto": "Meses depois, os dois amigos partiram de novo!",
       "fala": "Meses depois, os dois amigos partiram de novo!",
       "hash": "55c0db95be"
@@ -154,6 +175,7 @@
     {
       "id": "p3-s2",
       "pagina": 3,
+      "paragrafo": 0,
       "texto": "E descobriram uma surpresa: as suas aventuras tinham virado um livro, e muita gente já conhecia o Cavaleiro da Triste Figura.",
       "fala": "E descobriram uma surpresa: as suas aventuras tinham virado um livro, e muita gente já conhecia o Cavaleiro da Triste Figura.",
       "hash": "a2adc0fc04"
@@ -161,6 +183,7 @@
     {
       "id": "p3-s3",
       "pagina": 3,
+      "paragrafo": 0,
       "texto": "Um duque e uma duquesa, que adoravam o livro, os convidaram para o seu castelo.",
       "fala": "Um duque e uma duquesa, que adoravam o livro, os convidaram para o seu castelo.",
       "hash": "85d304033f"
@@ -168,6 +191,7 @@
     {
       "id": "p3-s4",
       "pagina": 3,
+      "paragrafo": 1,
       "texto": "Lá, os duques prepararam uma brincadeira: CLAVILENHO, um cavalo de madeira que, diziam, voava pelos céus.",
       "fala": "Lá, os duques prepararam uma brincadeira: clavilenho, um cavalo de madeira que, diziam, voava pelos céus.",
       "hash": "8514cd3300"
@@ -175,6 +199,7 @@
     {
       "id": "p3-s5",
       "pagina": 3,
+      "paragrafo": 1,
       "texto": "Dom Quixote e Sancho montaram nele com uma VENDA nos olhos.",
       "fala": "Dom Quixote e Sancho montaram nele com uma venda nos olhos.",
       "hash": "d119386761"
@@ -182,6 +207,7 @@
     {
       "id": "p3-s6",
       "pagina": 3,
+      "paragrafo": 2,
       "texto": "Os criados sopravam vento com um grande FOLE e aproximavam uma TOCHA quentinha.",
       "fala": "Os criados sopravam vento com um grande fole e aproximavam uma tocha quentinha.",
       "hash": "6d4eda0074"
@@ -189,6 +215,7 @@
     {
       "id": "p3-s7",
       "pagina": 3,
+      "paragrafo": 2,
       "texto": "— Estamos voando entre as nuvens! — gritava Sancho.",
       "fala": "Estamos voando entre as nuvens! gritava Sancho.",
       "hash": "e2ccdb5d88"
@@ -196,6 +223,7 @@
     {
       "id": "p3-s8",
       "pagina": 3,
+      "paragrafo": 2,
       "texto": "— Agora passamos perto do sol!",
       "fala": "Agora passamos perto do sol!",
       "hash": "f499682b35"
@@ -203,6 +231,7 @@
     {
       "id": "p3-s9",
       "pagina": 3,
+      "paragrafo": 2,
       "texto": "Ajude os criados a fazer a viagem!",
       "fala": "Ajude os criados a fazer a viagem!",
       "hash": "11381ccab0"
@@ -210,6 +239,7 @@
     {
       "id": "p4-s1",
       "pagina": 4,
+      "paragrafo": 0,
       "texto": "Para continuar a brincadeira, o duque nomeou Sancho governador da Ilha Barataria, que, na verdade, era uma vila no meio do campo.",
       "fala": "Para continuar a brincadeira, o duque nomeou Sancho governador da Ilha Barataria, que, na verdade, era uma vila no meio do campo.",
       "hash": "a8441d8747"
@@ -217,6 +247,7 @@
     {
       "id": "p4-s2",
       "pagina": 4,
+      "paragrafo": 0,
       "texto": "Antes da partida, Dom Quixote chamou o amigo e lhe deu CONSELHOS preciosos:",
       "fala": "Antes da partida, Dom Quixote chamou o amigo e lhe deu conselhos preciosos:",
       "hash": "f1a035909a"
@@ -224,6 +255,7 @@
     {
       "id": "p4-s3",
       "pagina": 4,
+      "paragrafo": 1,
       "texto": "— Sancho, nunca tenha vergonha de ser filho de lavradores.",
       "fala": "Sancho, nunca tenha vergonha de ser filho de lavradores.",
       "hash": "29d5d43c9b"
@@ -231,6 +263,7 @@
     {
       "id": "p4-s4",
       "pagina": 4,
+      "paragrafo": 1,
       "texto": "Seja sempre gentil, tenha HUMILDADE e escute com a mesma atenção o pobre e o rico.",
       "fala": "Seja sempre gentil, tenha humildade e escute com a mesma atenção o pobre e o rico.",
       "hash": "6aac79462b"
@@ -238,6 +271,7 @@
     {
       "id": "p4-s5",
       "pagina": 4,
+      "paragrafo": 1,
       "texto": "Procure a verdade com paciência e faça sempre JUSTIÇA com bondade no coração.",
       "fala": "Procure a verdade com paciência e faça sempre justiça com bondade no coração.",
       "hash": "da97c870df"
@@ -245,6 +279,7 @@
     {
       "id": "p4-s6",
       "pagina": 4,
+      "paragrafo": 2,
       "texto": "Sancho escutou tudo com os olhos marejados.",
       "fala": "Sancho escutou tudo com os olhos marejados.",
       "hash": "c96ba533e4"
@@ -252,6 +287,7 @@
     {
       "id": "p4-s7",
       "pagina": 4,
+      "paragrafo": 2,
       "texto": "Abraçou o seu senhor e partiu para governar, montado no seu querido burrico.",
       "fala": "Abraçou o seu senhor e partiu para governar, montado no seu querido burrico.",
       "hash": "e0116dc96a"
@@ -259,6 +295,7 @@
     {
       "id": "p5-s1",
       "pagina": 5,
+      "paragrafo": 0,
       "texto": "No primeiro dia como governador, chegaram dois velhinhos brigando.",
       "fala": "No primeiro dia como governador, chegaram dois velhinhos brigando.",
       "hash": "e72dd89735"
@@ -266,6 +303,7 @@
     {
       "id": "p5-s2",
       "pagina": 5,
+      "paragrafo": 0,
       "texto": "Um dizia: — Emprestei dez MOEDAS de ouro e ele não me devolveu!",
       "fala": "Um dizia:, Emprestei dez moedas de ouro e ele não me devolveu!",
       "hash": "02250e58b8"
@@ -273,6 +311,7 @@
     {
       "id": "p5-s3",
       "pagina": 5,
+      "paragrafo": 0,
       "texto": "O outro jurava: — Já devolvi tudinho!",
       "fala": "O outro jurava:, Já devolvi tudinho!",
       "hash": "f972833e7a"
@@ -280,6 +319,7 @@
     {
       "id": "p5-s4",
       "pagina": 5,
+      "paragrafo": 1,
       "texto": "Para jurar, o segundo velhinho pediu ao primeiro que segurasse a sua BENGALA.",
       "fala": "Para jurar, o segundo velhinho pediu ao primeiro que segurasse a sua bengala.",
       "hash": "eed8d735aa"
@@ -287,6 +327,7 @@
     {
       "id": "p5-s5",
       "pagina": 5,
+      "paragrafo": 1,
       "texto": "Depois, pegou a bengala de volta e foi embora, todo tranquilo.",
       "fala": "Depois, pegou a bengala de volta e foi embora, todo tranquilo.",
       "hash": "4ce29d60b1"
@@ -294,6 +335,7 @@
     {
       "id": "p5-s6",
       "pagina": 5,
+      "paragrafo": 1,
       "texto": "Sancho ficou pensativo...",
       "fala": "Sancho ficou pensativo...",
       "hash": "db730286b3"
@@ -301,6 +343,7 @@
     {
       "id": "p5-s7",
       "pagina": 5,
+      "paragrafo": 1,
       "texto": "Por que alguém pediria para o outro segurar a bengala bem na hora de jurar?",
       "fala": "Por que alguém pediria para o outro segurar a bengala bem na hora de jurar?",
       "hash": "8a97ce51ea"
@@ -308,6 +351,7 @@
     {
       "id": "p5-s8",
       "pagina": 5,
+      "paragrafo": 2,
       "texto": "— Tragam a bengala aqui! — ordenou Sancho.",
       "fala": "Tragam a bengala aqui! ordenou Sancho.",
       "hash": "0eed0c47de"
@@ -315,6 +359,7 @@
     {
       "id": "p5-s9",
       "pagina": 5,
+      "paragrafo": 2,
       "texto": "Quebre a bengala e descubra o segredo!",
       "fala": "Quebre a bengala e descubra o segredo!",
       "hash": "cffddf2fb9"
@@ -322,6 +367,7 @@
     {
       "id": "p5-s10",
       "pagina": 5,
+      "paragrafo": 2,
       "texto": "Lá dentro estavam as dez moedas escondidas!",
       "fala": "Lá dentro estavam as dez moedas escondidas!",
       "hash": "cd0f8e2b23"
@@ -329,6 +375,7 @@
     {
       "id": "p5-s11",
       "pagina": 5,
+      "paragrafo": 2,
       "texto": "Assim, o velhinho tinha \"devolvido\" o dinheiro sem devolver de verdade.",
       "fala": "Assim, o velhinho tinha devolvido o dinheiro sem devolver de verdade.",
       "hash": "bd4f892b90"
@@ -336,6 +383,7 @@
     {
       "id": "p5-s12",
       "pagina": 5,
+      "paragrafo": 2,
       "texto": "Todos aplaudiram a SABEDORIA do governador Sancho Pança!",
       "fala": "Todos aplaudiram a sabedoria do governador Sancho Pança!",
       "hash": "15cdb2a74b"
@@ -343,6 +391,7 @@
     {
       "id": "p6-s1",
       "pagina": 6,
+      "paragrafo": 0,
       "texto": "Sancho governou a ilha com justiça durante dez dias.",
       "fala": "Sancho governou a ilha com justiça durante dez dias.",
       "hash": "c1566bcd27"
@@ -350,6 +399,7 @@
     {
       "id": "p6-s2",
       "pagina": 6,
+      "paragrafo": 0,
       "texto": "Mas era difícil!",
       "fala": "Mas era difícil!",
       "hash": "4594a4c52a"
@@ -357,6 +407,7 @@
     {
       "id": "p6-s3",
       "pagina": 6,
+      "paragrafo": 0,
       "texto": "Um doutor muito severo não o deixava comer quase nada, e o trabalho não tinha fim.",
       "fala": "Um doutor muito severo não o deixava comer quase nada, e o trabalho não tinha fim.",
       "hash": "5c2d4159b8"
@@ -364,6 +415,7 @@
     {
       "id": "p6-s4",
       "pagina": 6,
+      "paragrafo": 1,
       "texto": "Numa manhã, Sancho foi até o estábulo, abraçou o seu BURRICO e disse: — Meu AMIGO, quando eu vivia contigo, meus dias eram felizes.",
       "fala": "Numa manhã, Sancho foi até o estábulo, abraçou o seu burrico e disse:, Meu amigo, quando eu vivia contigo, meus dias eram felizes.",
       "hash": "45d2f5b96e"
@@ -371,6 +423,7 @@
     {
       "id": "p6-s5",
       "pagina": 6,
+      "paragrafo": 1,
       "texto": "Prefiro a minha LIBERDADE e o meu pão com cebola a todos os banquetes de um governador!",
       "fala": "Prefiro a minha liberdade e o meu pão com cebola a todos os banquetes de um governador!",
       "hash": "8cce640c28"
@@ -378,6 +431,7 @@
     {
       "id": "p6-s6",
       "pagina": 6,
+      "paragrafo": 2,
       "texto": "E assim, sem levar nem uma moeda, Sancho deixou a ilha do mesmo jeito que chegou: pobre de dinheiro, mas rico de bondade.",
       "fala": "E assim, sem levar nem uma moeda, Sancho deixou a ilha do mesmo jeito que chegou: pobre de dinheiro, mas rico de bondade.",
       "hash": "23d03f6b98"
@@ -385,6 +439,7 @@
     {
       "id": "p6-s7",
       "pagina": 6,
+      "paragrafo": 2,
       "texto": "Todos da vila ficaram tristes com a sua partida.",
       "fala": "Todos da vila ficaram tristes com a sua partida.",
       "hash": "7c4d8824b2"
@@ -392,6 +447,7 @@
     {
       "id": "p7-s1",
       "pagina": 7,
+      "paragrafo": 0,
       "texto": "Numa praia de Barcelona, apareceu um cavaleiro misterioso com uma lua branca pintada no escudo: o Cavaleiro da BRANCA LUA.",
       "fala": "Numa praia de Barcelona, apareceu um cavaleiro misterioso com uma lua branca pintada no escudo: o Cavaleiro da branca lua.",
       "hash": "a88aec37ee"
@@ -399,6 +455,7 @@
     {
       "id": "p7-s2",
       "pagina": 7,
+      "paragrafo": 0,
       "texto": "Era, na verdade, Sansão Carrasco, um vizinho que queria levar Dom Quixote de volta para casa.",
       "fala": "Era, na verdade, Sansão Carrasco, um vizinho que queria levar Dom Quixote de volta para casa.",
       "hash": "d27e552682"
@@ -406,6 +463,7 @@
     {
       "id": "p7-s3",
       "pagina": 7,
+      "paragrafo": 0,
       "texto": "Eles duelaram, e Dom Quixote perdeu.",
       "fala": "Eles duelaram, e Dom Quixote perdeu.",
       "hash": "5e81fd9e17"
@@ -413,6 +471,7 @@
     {
       "id": "p7-s4",
       "pagina": 7,
+      "paragrafo": 0,
       "texto": "Como bom cavaleiro, cumpriu a promessa: voltaria para a aldeia.",
       "fala": "Como bom cavaleiro, cumpriu a promessa: voltaria para a aldeia.",
       "hash": "cbde3a450e"
@@ -420,6 +479,7 @@
     {
       "id": "p7-s5",
       "pagina": 7,
+      "paragrafo": 1,
       "texto": "Em casa, Dom Quixote voltou a ser o bondoso Alonso Quixano.",
       "fala": "Em casa, Dom Quixote voltou a ser o bondoso Alonso Quixano.",
       "hash": "e20c6a5990"
@@ -427,6 +487,7 @@
     {
       "id": "p7-s6",
       "pagina": 7,
+      "paragrafo": 1,
       "texto": "E, nas tardes de La Mancha, as crianças da aldeia se juntavam ao seu redor para ouvir histórias de moinhos-gigantes, princesas, cabras que atravessam rios e um escudeiro que governou uma ilha.",
       "fala": "E, nas tardes de La Mancha, as crianças da aldeia se juntavam ao seu redor para ouvir histórias de moinhos-gigantes, princesas, cabras que atravessam rios e um escudeiro que governou uma ilha.",
       "hash": "5e8866fbb1"
@@ -434,6 +495,7 @@
     {
       "id": "p7-s7",
       "pagina": 7,
+      "paragrafo": 2,
       "texto": "Assim, a IMAGINAÇÃO de Dom Quixote passou a morar no coração dos LEITORES.",
       "fala": "Assim, a imaginação de Dom Quixote passou a morar no coração dos leitores.",
       "hash": "a018891f08"
@@ -441,6 +503,7 @@
     {
       "id": "p7-s8",
       "pagina": 7,
+      "paragrafo": 2,
       "texto": "E quem lê, como você, nunca para de viajar!",
       "fala": "E quem lê, como você, nunca para de viajar!",
       "hash": "3833feda2f"

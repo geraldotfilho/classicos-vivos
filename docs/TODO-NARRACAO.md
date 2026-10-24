@@ -12,6 +12,7 @@ O livro já sabe tocar narração gravada **frase por frase**, com o destaque da
 3. **Liberar aos poucos**, como `previa` no `vozes.js`, e pedir escuta a cada novidade (voz, estilo, entonação).
 4. Ficaram para depois: outras vozes de narradora e uma voz com **sotaque pernambucano** (seria por voice design, já que a biblioteca não tem sotaque regional).
 5. O plano pago da API foi ativado (fim do limite de 10 pedidos por dia).
+6. **Em teste (2026-10-24): página inteira num pedido só** (`--pagina-inteira`), para a cadência e a entonação ficarem contínuas, com a **marcação das frases a posteriori**. Primeiro teste: Parte 1, página 3 (`p2`, Capítulo 2). Se o humano aprovar de ouvido, vira o padrão (ver 8.6).
 
 ## 0. Visão geral
 
@@ -161,7 +162,15 @@ POST https://generativelanguage.googleapis.com/v1beta/interactions
 - **Plano pago** (projeto do Google Cloud com faturamento ativo): `gemini-3.8-flash-tts` custa US$ 9 por milhão de tokens de áudio até 31/12/2026 (US$ 18 depois). A fala usa ~25 tokens/s e o livro inteiro tem ~30 min por voz: **~US$ 0,40 por voz**, ~US$ 2–3 com o teatro, as palavras-chave e as regravações. O Batch (`batchGenerateContent`) custa metade, mas não tem plano gratuito.
 - No plano gratuito, o Google pode usar os textos e áudios enviados para melhorar os produtos (os textos do livro são públicos, sem problema).
 
-### 8.5 Controle de qualidade pela API
+### 8.5 Página inteira (`--pagina-inteira`)
+- **Um pedido por página**: o `fala` de cada frase, os parágrafos separados por linha em branco. Sai `parte-N/pN.mp3`.
+- **Marcação a posteriori**: o script acha as pausas do áudio (≥ 120 ms de energia baixa) e escolhe, por programação dinâmica, uma pausa por fronteira entre frases: a mais perto de onde a proporção de letras diz que a frase acaba, preferindo as pausas longas (fim de frase pausa mais que vírgula). O corte fica no meio da pausa.
+- **QA**: cada trecho entre dois cortes é transcrito e comparado com a sua frase. Isso confere o texto **e** a marcação (um corte no lugar errado passa palavras de uma frase para a outra). Até 3 gerações; fica a melhor.
+- **Saída**: `parte-N/paginas.json` = `{ "p2": { "arquivo": "p2.mp3", "hash", "frases": [{ "id", "ini", "fim" }] } }`, com os tempos em segundos. O `hash` junta os hashes das frases: mudou uma frase, regrava a página.
+- **No livro**: se a página está em `paginas.json`, "Ouvir Página" toca o MP3 inteiro e destaca a frase pelo `currentTime` (funciona no 🐢, que só muda o `playbackRate`). Página sem gravação inteira: frase por frase, como antes.
+- **Falas de personagem**: a página inteira com a narradora + 1 personagem cabe num pedido só no modo `conversational` (2 falantes). Com 2 ou mais personagens na página, divide-se a página em blocos. Decidir com o humano quando o elenco estiver escolhido.
+
+### 8.6 Controle de qualidade pela API
 - **Transcrição** (feita pelo script): o WAV vai ao `gemini-3.5-flash` com o pedido "Transcreva exatamente o que é falado, em português, com os números escritos por extenso." (sem isso, "quatrocentos" vira "400" e reprova uma frase boa). Compara palavra por palavra, sem acento, pontuação nem caixa. Divergência → regravar (até 3 tentativas). Se nenhuma bater, **guarda a mais próxima** (cada tentativa gasta cota) e avisa no fim, para o humano ouvir.
 - **Falso alarme conhecido**: a transcrição escreve "Alonso **Quijano**" (a grafia espanhola) para "Quixano". Pode ser o modelo de transcrição "corrigindo" o nome famoso ou a voz dizendo "ki-RRA-no": só o ouvido do humano decide.
 - **Pedir ao modelo para avaliar sotaque ou naturalidade não funciona**: ele deu 10/10 para todas as vozes. A escolha de voz e entonação é sempre de ouvido, pelo humano.

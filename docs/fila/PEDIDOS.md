@@ -43,6 +43,9 @@ ESTADO: ATIVO
 
 ## Revisões do Claude
 
+### 2026-10-24 — P-006, teste da página inteira (Claude)
+- A pedido do humano, a página 3 da Parte 1 (`p2`) foi gravada **num pedido só**, com a marcação das frases feita depois pelas pausas do áudio e conferida por transcrição trecho a trecho (método em `docs/TODO-NARRACAO.md` §8.5). O livro passou a tocar um MP3 por página com o destaque sincronizado. A fala de Dom Quixote (`p2-s1`) está provisoriamente na voz da narradora. **Aguardando a escuta do humano**, comparando com as páginas 1 e 2 (frase a frase).
+
 ### 2026-10-24 — P-006, voz escolhida e primeiras páginas (Claude)
 - O humano escolheu de ouvido a **narradora `pt-br-storyteller-9`** (a "Teste A"). As candidatas B e C saíram do livro. Decisões novas (no topo de `docs/TODO-NARRACAO.md`): **uma voz por vez** no livro; a narração é a narradora + **vozes próprias por personagem**, com o elenco escolhido junto com o humano; o plano pago da API está ativo.
 - Gravadas e liberadas como prévia (`dom-quixote/audio/narracao/`): Parte 1, **capa e Capítulo 1** (`p0-s1` a `p1-s4`) + a amostra do painel + 5 palavras-chave dessas páginas. QA em `docs/narracao/qa-parte-1.md`. **Parado antes de `p2-s1`**, a primeira fala de personagem: falta escolher o elenco com o humano.
