@@ -29,7 +29,17 @@
     "burrico": "bdc4230049",
     "moinhos": "f3a80cffc5",
     "vento": "d0bece3a69",
-    "gigantes": "9e4e0a721d"
+    "gigantes": "9e4e0a721d",
+    "pastores": "58c9c3dff3",
+    "feitico": "b3cfd45960",
+    "moinho": "25c7ed7e3f",
+    "estrelas": "6b19fbdf98",
+    "carvalho": "dffb799d97",
+    "coragem": "8d15b1b1cb",
+    "queijo": "dfed1955c7",
+    "idade-de-ouro": "12b010a2c3",
+    "poeira": "9ded627e65",
+    "exercitos": "a3952e3a3f"
   },
   "modelo": "gemini-3.8-flash-tts",
   "voz": "pt-br-storyteller-9",

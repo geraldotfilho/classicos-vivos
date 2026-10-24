@@ -4,3 +4,8 @@ data,comando,pedidos_voz,tokens_audio,tokens_qa,usd_estimado
 2026-10-24T01:08,"--voz narracao --parte 1 --ids p0-s0,p1-s0",3,571,0,0.0052
 2026-10-24T01:13,"--voz narracao --parte 1 --paginas 4,5,6,7 --pagina-inteira",6,7133,0,0.0647
 2026-10-24T01:17,"--voz palavras --parte 1",28,4860,0,0.0439
+2026-10-24T02:13,"--voz narracao --parte 2 --paginas 0 --pagina-inteira --autorizado",1,1324,0,0.0061
+2026-10-24T02:16,"--voz palavras --parte 2 --autorizado",13,2221,0,0.0101
+2026-10-24T02:16,"--voz narracao --parte 2 --pagina-inteira --autorizado",6,8310,0,0.0380
+2026-10-24T02:16,"--voz narracao --parte 4 --pagina-inteira --autorizado",6,8882,0,0.0406
+2026-10-24T02:16,"--voz narracao --parte 3 --pagina-inteira --autorizado (interrompido; estimativa)",6,8000,0,0.0360
