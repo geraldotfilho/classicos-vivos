@@ -1,0 +1,10 @@
+{
+  "frases": {
+    "p0-s2": "506b209516",
+    "p0-s3": "1f52bad3c1"
+  },
+  "modelo": "gemini-3.8-flash-tts",
+  "voz": "pt-br-storyteller-9",
+  "estilo": "warm, gentle storyteller reading aloud to young children; calm, clear pace; expressive but not theatrical",
+  "qa": "gemini-3.5-flash"
+}

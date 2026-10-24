@@ -39,6 +39,7 @@ npm run build        # fontes + ícones + Tailwind + service worker
 npm run build:images # converte novos JPG/PNG de <livro>/imagens/ para WebP
 npm run build:audio  # converte a narração WAV/PCM de <livro>/audio/ para MP3 (corta silêncios)
 npm run exportar:frases # lista de frases e palavras-chave para gravar (docs/narracao/, já incluso no build)
+npm run gravar:narracao -- --voz narradora --parte 1 # grava pela API de voz do Gemini, com QA (docs/TODO-NARRACAO.md §8)
 ```
 **Rode `npm run build` sempre que** usar uma classe Tailwind nova, um ícone Phosphor novo, ou adicionar/alterar qualquer HTML ou imagem. O `sw.js` precisa da lista atualizada e de uma nova versão de cache, senão os tablets não recebem a mudança. Os scripts ficam em `tools/`, e `sw.js` é gerado a partir de `tools/sw.template.js` (nunca edite `sw.js` à mão).
 
@@ -144,8 +145,9 @@ window.LIVRO = {
 - **Painel "Voz"** (botão 🗣️ no topo do livro): lista as **narrações gravadas** (`<livro>/audio/vozes.js`) e as **vozes em português do aparelho**, ordenadas da mais natural para a menos (neurais/"Natural" > aprimoradas > Google > demais; pt-BR antes de pt-PT). Cada uma tem um ▶ de amostra e as etiquetas "funciona offline"/"precisa de internet". Também tem **velocidade** 🐇 normal / 🐢 devagar. A escolha fica no `localStorage` (com `try/catch`).
 - **Narração gravada**: `<livro>/audio/<voz>/parte-N/<id-da-frase>.mp3`; palavras-chave em `<livro>/audio/palavras/<slug>.mp3` (sílabas pausadas + palavra inteira). A voz só aparece como disponível quando o número da parte está em `partes` no `vozes.js`.
 - **Reserva em cascata, nunca silêncio**: frase sem gravação → voz do aparelho; voz "online" sem internet → melhor voz offline do aparelho (até recarregar a página). Na primeira visita, se houver narração gravada pronta para a parte, ela vira a voz padrão.
-- **Offline**: o service worker **não** pré-baixa os áudios (são grandes); cada MP3 fica guardado na primeira vez que toca. O `vozes.js` é buscado sempre na rede primeiro, para refletir novas gravações.
-- Produção das gravações: `docs/TODO-NARRACAO.md` (Claude, via API do Gemini com a chave como segredo de rede do ambiente, injetada pelo proxy; ela **nunca** é impressa nem versionada). Lista do que gravar: `docs/narracao/frases-<livro>-parte-N.json`.
+- **Offline**: o service worker **não** pré-baixa os áudios (são grandes). Os MP3 seguem **rede primeiro** (uma frase regravada com o mesmo nome chega ao tablet) e ficam num cache próprio (`cv-narracao`, que sobrevive às novas versões), para tocar offline depois da primeira vez. O SW pede o arquivo inteiro (200) em vez do trecho (Range/206) que o `<audio>` pede, senão nada seria guardado. O `vozes.js` também é buscado na rede primeiro.
+- **Prévia**: uma voz com a parte em `previa` (no `vozes.js`) aparece no painel com só algumas frases gravadas (as demais usam a voz do aparelho) e nunca vira a voz padrão. Serve para o humano ouvir no livro antes de a produção seguir.
+- Produção das gravações: `docs/TODO-NARRACAO.md` e `npm run gravar:narracao` (Claude, via API do Gemini `gemini-3.8-flash-tts` com a chave como segredo de rede do ambiente, injetada pelo proxy; ela **nunca** é impressa nem versionada). Lista do que gravar: `docs/narracao/frases-<livro>-parte-N.json`.
 
 ---
 

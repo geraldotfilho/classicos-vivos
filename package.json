@@ -10,7 +10,8 @@
     "build": "npm run build:fonts && npm run build:icons && npm run build:css && npm run exportar:frases && npm run build:sw",
     "build:sw": "node tools/build-sw.mjs",
     "build:audio": "node tools/otimizar-audio.mjs",
-    "exportar:frases": "node tools/exportar-frases.mjs"
+    "exportar:frases": "node tools/exportar-frases.mjs",
+    "gravar:narracao": "NODE_USE_ENV_PROXY=1 node --no-warnings tools/gravar-narracao.mjs"
   },
   "devDependencies": {
     "@breezystack/lamejs": "^1.2.7",

@@ -43,6 +43,12 @@ ESTADO: ATIVO
 
 ## Revisões do Claude
 
+### 2026-10-24 — P-006, primeiros testes da API de voz (Claude)
+- ✅ **Acesso pela chave do ambiente funcionando** (o proxy injeta a chave). Modelo da produção: **`gemini-3.8-flash-tts`** (API `interactions`). Transcrição da QA: `gemini-3.5-flash`. Detalhes em `docs/TODO-NARRACAO.md` §8.
+- ⚖️ **Termos de uso** (Gemini API Additional Terms, lidos em 2026-10-24): o Google **não reivindica a propriedade** do conteúdo gerado, e quem gera responde pelo uso e pela distribuição. Não há regra específica para áudio nem proibição de licença aberta: **distribuir os MP3 sob CC BY 4.0 é compatível**. Ressalvas: (1) a API só pode ser usada por maiores de 18 anos e **não pode ser chamada por um app voltado a menores**; aqui quem chama é a ferramenta de desenvolvimento, e o livro só toca arquivos estáticos, **nunca chama a API**, e isso deve continuar assim; (2) boa prática: creditar "narração gerada com Gemini TTS (Google)" em `sobre.html` quando a narração for publicada. Não é parecer jurídico.
+- 🚧 **Bloqueio: cota gratuita.** 10 pedidos/dia por modelo de voz e 20/dia na transcrição. A produção precisa do **plano pago** (custo estimado: ~US$ 0,40 por voz completa; ~US$ 2–3 no total). Pedido ao humano.
+- 🎧 **Amostras para ouvir no livro** (capa da Parte 1, painel "Voz", vozes "Teste A/B/C"): A `pt-br-storyteller-9` (Flash), B `pt-br-tutor-5` (Flash-Lite), C `pt-br-assistant-6` (Flash-Lite). Incompletas por causa da cota; as frases que faltam usam a voz do aparelho. **Aguardando a escolha de ouvido do humano.**
+
 ### 2026-10-23 23:45 UTC — narração passa para o Claude
 - Por decisão do responsável humano, **P-006 (narração gravada) sai da fila do Gemini**. O Claude grava pela API do Gemini, numa sessão própria e em paralelo à arte. A pasta `dom-quixote/audio/**` passou a ser do Claude (tabela acima). **Gemini: siga só com a arte** (NB-3 → NB-4…NB-8 → P-002).
 - A revisão automática de hora em hora das entregas está **pausada**. As entregas continuam valendo: o Claude revisa tudo o que estiver em `ENTREGAS.md` desde a revisão de 21:55 UTC na próxima sessão, pela ordem. Continue entregando normalmente na `main`.
