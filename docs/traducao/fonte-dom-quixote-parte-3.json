@@ -1,0 +1,329 @@
+{
+  "obra": "Dom Quixote de La Mancha",
+  "autor": "Miguel de Cervantes",
+  "parte": 3,
+  "traducao": "dom-quixote/traducoes/parte-3.<idioma>.js",
+  "paginas": [
+    {
+      "indice": 0,
+      "hash": "be58f23cdb",
+      "capa": true,
+      "titulo": "Parte 3: Serra Morena e a Princesa Micomicona",
+      "texto": "Com o seu reluzente elmo conquistado na chuva e o coração transbordando de sonhos, o Cavaleiro da Triste Figura sobe com Sancho as montanhas selvagens e imponentes da {{SERRA MORENA|SER • RA • MO • RE • NA|⛰️}}!\n\nNas alturas rochosas, entre despenhadeiros, pinheiros e flores silvestres, nossos heróis vão abrir uma mala cheia de segredos, compor uma emocionante {{CARTA|CAR • TA|✉️}} de amor, dar cambalhotas de saudade e descobrir o engenhoso plano de velhos amigos para resgatar uma formosa {{PRINCESA|PRIN • CE • SA|👸}} de um reino distante.\n\nRespire fundo o ar puro das montanhas, vire a página e suba a serra com eles!"
+    },
+    {
+      "indice": 1,
+      "hash": "6c5cf268b2",
+      "capitulo": "🧳 Capítulo 16 • A Mala Perdida",
+      "titulo": "Um Tesouro no Meio da Serra",
+      "texto": "Subindo as trilhas pedregosas da serra, entre azinheiras retorcidas e penhascos escarpados, Sancho tropeçou numa misteriosa {{MALA|MA • LA|🧳}} de couro curtido, abandonada sob um arbusto espinhoso. A mala estava surrada pelo tempo, molhada pelas chuvas e fechada com fechos enferrujados.\n\nO que será que guardava aquele baú esquecido? Abra a mala com um toque para desvendar o segredo! Dentro dela reluziam dezenas de preciosas {{MOEDAS|MO • E • DAS|🪙}} de ouro, que fizeram os olhos de Sancho brilharem de pura euforia, e um delicado {{CADERNO|CA • DER • NO|📓}} repleto de {{POEMAS|PO • E • MAS|📜}} escritos com elegante caligrafia à mão. — Ouro, meu senhor! Ouro de verdade! — comemorou Sancho, dando pulinhos.\n\nDom Quixote tomou o caderno em suas mãos com extremo respeito e leu em voz alta os versos enternecedores de um jovem apaixonado que vagava sem rumo pelas montanhas. — Quem escreve com tanta sensibilidade tem a alma nobre — concluiu o fidalgo com um suspiro afetuoso. — Os livros guardam os mais profundos mistérios do coração humano!"
+    },
+    {
+      "indice": 2,
+      "hash": "c5dbc6cd8d",
+      "capitulo": "🤸 Capítulo 17 • As Cambalhotas da Saudade",
+      "titulo": "Um Cavaleiro de Pernas para o Ar",
+      "texto": "Ao contemplar a solidão imensa das montanhas, Dom Quixote teve uma inspiração luminosa: — Amigo Sancho, vou permanecer nesta clareira para provar ao mundo a minha imensa {{SAUDADE|SAU • DA • DE|💭}} por Dulcineia, jejuando e meditando como fazia o ilustre herói {{AMADIS|A • MA • DIS|🗡️}} de Gaula! E você partirá no burrico para levar uma carta apaixonada até as mãos dela.\n\n— Mas, meu fidalgo amo — indagou Sancho, coçando o queixo —, como convencerei a senhora Dulcineia de que vossa mercê quase perdeu o juízo por ela, se eu não testemunhar nenhuma façanha espantosa?\n\n— Testemunhe agora mesmo! — exclamou Dom Quixote com determinação. Despiu sua armadura de ferro e, ficando apenas de camisolão branco de dormir, deu uma veloz {{CAMBALHOTA|CAM • BA • LHO • TA|🤸}} na grama e ergueu as pernas finas para o ar em pleno salto! Sancho tapou o rosto com as duas mãos, gargalhando tanto que as lágrimas correram pelo rosto. Ajude o cavaleiro em suas acrobacias de amor!"
+    },
+    {
+      "indice": 3,
+      "hash": "365caee442",
+      "capitulo": "✉️ Capítulo 18 • A Carta para Dulcineia",
+      "titulo": "Sancho Esqueceu a Carta!",
+      "texto": "Emocionado, Dom Quixote escreveu uma belíssima {{CARTA|CAR • TA|✉️}} para sua musa numa folha arrancada do caderno poético, com declarações líricas e a sua solene promessa de fidelidade eterna. Entregou as instruções ao fiel escudeiro, que montou no burrico e partiu pela estrada, sentindo-se a pessoa mais importante da Espanha!\n\nNo entanto, ao descer as primeiras encostas, Sancho colocou as mãos nos bolsos e arregalou os olhos em pânico: havia esquecido o papel sobre uma pedra lá no alto da serra! Desesperado, coçou a testa e tentou recuperar o texto gravado apenas na sua {{MEMÓRIA|ME • MÓ • RI • A|🧠}}: — Como começava mesmo? \"Soberana e altíssima senhora\"... E no final? Como ele assinava mesmo?\n\nAjude o bom escudeiro a lembrar a {{ASSINATURA|AS • SI • NA • TU • RA|✍️}} da carta, tocando em cada palavra na ordem exata!",
+      "cartoes": {
+        "tipo": "ordem",
+        "ordem": [
+          "o",
+          "cavaleiro",
+          "da",
+          "triste",
+          "figura"
+        ],
+        "itens": [
+          {
+            "id": "triste",
+            "palavra": "TRISTE",
+            "emoji": "🎭"
+          },
+          {
+            "id": "o",
+            "palavra": "O",
+            "emoji": "✍️"
+          },
+          {
+            "id": "figura",
+            "palavra": "FIGURA",
+            "emoji": "🎭"
+          },
+          {
+            "id": "cavaleiro",
+            "palavra": "CAVALEIRO",
+            "emoji": "🛡️"
+          },
+          {
+            "id": "da",
+            "palavra": "DA",
+            "emoji": "✍️"
+          }
+        ]
+      }
+    },
+    {
+      "indice": 4,
+      "hash": "d17d57a309",
+      "capitulo": "🎭 Capítulo 19 • Amigos Disfarçados",
+      "titulo": "O Padre, o Barbeiro e uma Barba de Boi",
+      "texto": "Ao fazer uma parada numa estalagem no sopé da montanha, Sancho encontrou dois velhos e dedicados conhecidos de sua aldeia: o bondoso {{PADRE|PA • DRE|⛪}} Pero Pérez e o mestre Nicolau, o barbeiro da vila. Preocupados com o sumiço do amigo Alonso Quixano, eles vinham dispostos a resgatá-lo com carinho.\n\n— Ele nunca aceitará voltar para casa por vontade própria — avisou Sancho —, a menos que uma donzela em apuros implore pela proteção da sua espada invencível!\n\n— Já sei! — exclamou o padre, de olhos brilhando. — Vamos inventar uma princesa em apuros! E assim os dois arquitetaram um plano genial e teatral: um engenhoso {{DISFARCE|DIS • FAR • CE|🎭}}! Mestre Nicolau colou no queixo uma colossal {{BARBA|BAR • BA|🧔}} avermelhada, feita com o rabo peludo de um boi, enquanto o padre vestiu uma saia rodada e uma touca florida por cima da batina. Quando se olharam no espelho da pousada, os três caíram na gargalhada, quase sem fôlego para levar a farsa adiante!"
+    },
+    {
+      "indice": 5,
+      "hash": "530c383943",
+      "capitulo": "👸 Capítulo 20 • A Princesa Micomicona",
+      "titulo": "Uma Princesa Pede Ajuda",
+      "texto": "Para que o plano fosse perfeito, juntou-se a eles Doroteia, uma jovem camponesa inteligente, destemida e dona de um talento dramático formidável. Trajada com um reluzente vestido de seda e manto aveludado, ela subiu à serra e ajoelhou-se com graça diante do fidalgo:\n\n— Ó espelho da honra e flor da cavalaria! — suplicou ela com voz aveludada. — Eu sou a desventurada {{PRINCESA|PRIN • CE • SA|👸}} {{MICOMICONA|MI • CO • MI • CO • NA|👑}}, herdeira do distante reino de Micomicão! Um gigante feroz e desalmado, Pandafilando da Fosca Vista, invadiu minhas terras e somente o vosso braço corajoso pode libertar meu povo!\n\nComovido, Dom Quixote estendeu a mão à donzela e fez uma sagrada {{PROMESSA|PRO • MES • SA|🤝}}: — Levante-se, formosa princesa! Juro pela minha espada que vencerei esse gigante! E assim, com a mente em festa e o coração cheio de nobreza, o fidalgo montou no Rocinante e iniciou, sem desconfiar de nada, o caminho de volta ao seu lar!"
+    },
+    {
+      "indice": 6,
+      "hash": "8e55475c37",
+      "capitulo": "💤 Capítulo 21 • A Batalha dos Odres",
+      "titulo": "Um Gigante no Meio da Noite",
+      "texto": "Hospedados todos na pousada no retorno da viagem, a noite transcorria serena quando gritos de guerra acordaram a casa inteira: — Renda-se, monstro covarde! Prove do meu aço! Dom Quixote, caminhando sonâmbulo em seu camisolão branco de dormir, travava uma batalha feroz contra os grandes {{ODRES|O • DRES|🍷}} de couro de boi cheios de vinho tinto pendurados nas paredes do aposento!\n\nMergulhado em seu vívido {{SONHO|SO • NHO|💤}}, cada odre pendurado representava o temível {{GIGANTE|GI • GAN • TE|👹}} Pandafilando! Brandindo a sua afiada {{ESPADA|ES • PA • DA|⚔️}} no escuro, perfurou o couro grosso e fez um rio de vinho aromático escorrer pelas tábuas do chão como uma cachoeira carmesim. Toque na espada para ajudar o cavaleiro a vencer os odres!\n\n— Meu vinho! Meu vinho! — berrava o estalajadeiro, desesperado. — Calma, meu bom homem, eu pago cada centavo! — prometeu o generoso padre. E Dom Quixote, enxugando o suor da testa com orgulho infantil, deitou-se novamente em paz, convicto de que salvara o trono da princesa Micomicona!"
+    },
+    {
+      "indice": 7,
+      "hash": "d5c9244b15",
+      "capitulo": "📚 Capítulo 22 • Armas e Letras",
+      "titulo": "Histórias na Pousada",
+      "texto": "Naquela noite acolhedora, o salão da estalagem encheu-se de viajantes, mercadores e famílias ao redor de uma grande mesa iluminada por tochas e velas aromáticas. O pão quentinho circulava de mão em mão, e cada viajante compartilhava ricas {{HISTÓRIAS|HIS • TÓ • RI • AS|📚}} de aventuras pelos mares, reencontros inesperados e antigas lendas do mundo.\n\nNum dado momento, Dom Quixote levantou-se à cabeceira da mesa e fez um sábio e comovente discurso sobre o valor das {{ARMAS|AR • MAS|🛡️}} e das {{LETRAS|LE • TRAS|🔤}}: — A coragem dos cavaleiros protege a paz e defende os mais fracos. E os livros, meus amigos, fazem crescer no coração a justiça, a verdade e a beleza!\n\nTodos os ouvintes se entreolhavam maravilhados, surpresos ao descobrir a sabedoria brilhante que habitava aquele fidalgo de olhar afetuoso. O padre e o barbeiro sorriam comovidos: estava na hora de conduzir aquele querido sonhador de volta ao aconchego do seu lar!"
+    }
+  ],
+  "textos": [
+    {
+      "texto": "Dom Quixote e Sancho sobem uma trilha entre as montanhas rochosas da Serra Morena",
+      "onde": [
+        "página 0: descrição da ilustração (leitor de tela)"
+      ]
+    },
+    {
+      "texto": "👓 Lente da Realidade: A Trilha da Serra Morena",
+      "onde": [
+        "página 0: selo da Lente da Realidade",
+        "selo da cena"
+      ]
+    },
+    {
+      "texto": "✨ Lente da Imaginação: As Montanhas de um Reino Encantado!",
+      "onde": [
+        "página 0: selo da Lente da Imaginação",
+        "selo da cena"
+      ]
+    },
+    {
+      "texto": "Sancho e Dom Quixote diante de uma velha mala de couro entre as pedras da serra",
+      "onde": [
+        "página 1: descrição da ilustração (leitor de tela)"
+      ]
+    },
+    {
+      "texto": "👓 Lente da Realidade: Uma Mala Velha entre as Pedras",
+      "onde": [
+        "página 1: selo da Lente da Realidade",
+        "selo da cena"
+      ]
+    },
+    {
+      "texto": "✨ Lente da Imaginação: O Baú de um Poeta Encantado!",
+      "onde": [
+        "página 1: selo da Lente da Imaginação",
+        "selo da cena"
+      ]
+    },
+    {
+      "texto": "MOEDAS",
+      "onde": [
+        "página 1: cartão (MAIÚSCULAS, curto)"
+      ]
+    },
+    {
+      "texto": "CADERNO",
+      "onde": [
+        "página 1: cartão (MAIÚSCULAS, curto)"
+      ]
+    },
+    {
+      "texto": "Numa clareira da serra, Sancho ri enquanto Dom Quixote, de camisolão, se prepara para dar cambalhotas",
+      "onde": [
+        "página 2: descrição da ilustração (leitor de tela)"
+      ]
+    },
+    {
+      "texto": "👓 Lente da Realidade: Cambalhotas de Camisolão na Serra",
+      "onde": [
+        "página 2: selo da Lente da Realidade",
+        "selo da cena"
+      ]
+    },
+    {
+      "texto": "✨ Lente da Imaginação: Os Saltos Heroicos de um Cavaleiro Apaixonado!",
+      "onde": [
+        "página 2: selo da Lente da Imaginação",
+        "selo da cena"
+      ]
+    },
+    {
+      "texto": "CAMBALHOTA",
+      "onde": [
+        "página 2: cartão (MAIÚSCULAS, curto)"
+      ]
+    },
+    {
+      "texto": "Sancho no burrico, coçando a cabeça, tentando lembrar a carta",
+      "onde": [
+        "página 3: descrição da ilustração (leitor de tela)"
+      ]
+    },
+    {
+      "texto": "👓 Lente da Realidade: Sancho Tentando Lembrar",
+      "onde": [
+        "página 3: selo da Lente da Realidade",
+        "selo da cena"
+      ]
+    },
+    {
+      "texto": "✨ Lente da Imaginação: A Carta Voando até o Toboso!",
+      "onde": [
+        "página 3: selo da Lente da Imaginação",
+        "selo da cena"
+      ]
+    },
+    {
+      "texto": "Assinatura: toque nas palavras na ordem certa",
+      "onde": [
+        "página 3: faixa onde as palavras são escritas"
+      ]
+    },
+    {
+      "texto": "O padre e o barbeiro se disfarçam numa pousada, o barbeiro com uma barba ruiva de rabo de boi",
+      "onde": [
+        "página 4: descrição da ilustração (leitor de tela)"
+      ]
+    },
+    {
+      "texto": "👓 Lente da Realidade: Uma Barba Feita de Rabo de Boi",
+      "onde": [
+        "página 4: selo da Lente da Realidade",
+        "selo da cena"
+      ]
+    },
+    {
+      "texto": "✨ Lente da Imaginação: Uma Dama Nobre e seu Escudeiro Barbudo!",
+      "onde": [
+        "página 4: selo da Lente da Imaginação",
+        "selo da cena"
+      ]
+    },
+    {
+      "texto": "Tocar no barbeiro",
+      "onde": [
+        "página 4: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "Doroteia, de vestido bonito, ajoelha-se diante de Dom Quixote na serra",
+      "onde": [
+        "página 5: descrição da ilustração (leitor de tela)"
+      ]
+    },
+    {
+      "texto": "👓 Lente da Realidade: Doroteia e um Plano Muito Esperto",
+      "onde": [
+        "página 5: selo da Lente da Realidade",
+        "selo da cena"
+      ]
+    },
+    {
+      "texto": "✨ Lente da Imaginação: A Princesa do Reino de Micomicão!",
+      "onde": [
+        "página 5: selo da Lente da Imaginação",
+        "selo da cena"
+      ]
+    },
+    {
+      "texto": "Tocar na princesa",
+      "onde": [
+        "página 5: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "À luz de velas, Dom Quixote de camisolão golpeia odres de vinho pendurados no quarto da pousada",
+      "onde": [
+        "página 6: descrição da ilustração (leitor de tela)"
+      ]
+    },
+    {
+      "texto": "👓 Lente da Realidade: Odres de Vinho Pendurados no Quarto",
+      "onde": [
+        "página 6: selo da Lente da Realidade",
+        "selo da cena"
+      ]
+    },
+    {
+      "texto": "✨ Lente da Imaginação: O Gigante Pandafilando da Fosca Vista!",
+      "onde": [
+        "página 6: selo da Lente da Imaginação",
+        "selo da cena"
+      ]
+    },
+    {
+      "texto": "ESPADA",
+      "onde": [
+        "página 6: cartão (MAIÚSCULAS, curto)"
+      ]
+    },
+    {
+      "texto": "Viajantes ao redor de uma mesa na pousada escutam Dom Quixote discursar",
+      "onde": [
+        "página 7: descrição da ilustração (leitor de tela)"
+      ]
+    },
+    {
+      "texto": "👓 Lente da Realidade: Viajantes ao Redor da Mesa",
+      "onde": [
+        "página 7: selo da Lente da Realidade",
+        "selo da cena"
+      ]
+    },
+    {
+      "texto": "✨ Lente da Imaginação: A Grande Távola dos Contadores de Histórias!",
+      "onde": [
+        "página 7: selo da Lente da Imaginação",
+        "selo da cena"
+      ]
+    },
+    {
+      "texto": "Tocar em Dom Quixote",
+      "onde": [
+        "página 7: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "👓 Lente da Realidade: Sancho Lembrou! \"O Cavaleiro da Triste Figura\"",
+      "onde": [
+        "selo da cena (calculado pelo estado)"
+      ]
+    },
+    {
+      "texto": "🎉 Fim da Parte 3! Na Parte 4: uma jaula encantada, o voo no cavalo de madeira e a grande sabedoria de Sancho governador!",
+      "onde": [
+        "mensagem do fim da parte"
+      ]
+    },
+    {
+      "texto": "Ir para a Parte 4",
+      "onde": [
+        "botão para a próxima parte"
+      ]
+    }
+  ]
+}

@@ -61,6 +61,12 @@ Levantado na inspeção completa do sprint 1 (2026-10): código, ilustrações e
 - **Textos das Partes 2–4 revisados** para a narração; Parte 2 com o capítulo novo do tombo nos moinhos (9 páginas).
 - **Camadas das Partes 2–4 em `.webp`** (antes apontavam para `.png` e não carregavam).
 
+## ✅ Entregue no sprint 9 (leitura autônoma e idiomas, 2026-10-24)
+
+- **Botão Aa / AA** no topo: o texto todo em LETRAS MAIÚSCULAS (letra de forma, para a criança ler sozinha), lembrado no tablet. A dica da capa passa a falar das "palavras amarelas".
+- **Tocar numa frase para ouvi-la** (antigo M-4): a narração começa pela frase tocada e segue até o fim da página. Com a página gravada inteira, o MP3 é guardado na memória (blob) e pula para o tempo da frase, o que funciona também com o service worker (que não responde trechos 206).
+- **Quatro idiomas** (bandeirinhas 🇧🇷 🇬🇧 🇫🇷 🇪🇸): traduções literárias das quatro partes em `dom-quixote/traducoes/` (o espanhol com os nomes e fórmulas de Cervantes), interface traduzida, vozes do aparelho no idioma escolhido. Narração gravada só em português por enquanto (M-11). Ferramentas `npm run exportar:traducoes` e `npm run conferir:traducoes` (AGENTS.md §2.8).
+
 ## ✅ Entregue no sprint 7 (narração gravada da Parte 1)
 
 - **Parte 1 completa com narração gravada** (`dom-quixote/audio/narracao/`): narradora `pt-br-storyteller-9`, **Dom Quixote** `pt-br-concierge-3` e **Sancho** `pt-br-storyteller-2`, mais as 30 palavras-chave. Na primeira visita, vira a voz padrão.
@@ -82,7 +88,8 @@ Levantado na inspeção completa do sprint 1 (2026-10): código, ilustrações e
 | ID | Item | Detalhes |
 | :--- | :--- | :--- |
 | M-1 | **Pronúncia silábica de fato** (encaminhado: gravações em `audio/palavras/`, P-006) | O §3.2 promete pronúncia **pausada por sílabas**, mas `speakWord` fala a palavra inteira (só o balão mostra `I • MA • GI • NA • ÇÃO`). Proposta: falar as sílabas com pausas (destacando cada uma no balão) e depois a palavra inteira. Testar a qualidade das sílabas isoladas nas vozes pt-BR do Android, porque algumas soam estranhas sozinhas ("ÇÃO"). |
-| M-4 | **Tocar numa frase para ouvi-la** | Hoje só a página inteira ou as palavras-chave. Útil para reler um trecho. Cuidar para não conflitar com o toque nas palavras-chave. Com a página gravada inteira, exige **pular no tempo** do MP3, e o áudio que vem do service worker não aceita salto (`seekable` vazio): o SW teria de responder pedidos com `Range` (206) a partir do arquivo guardado. |
+| M-11 | **Narração gravada em inglês, francês e espanhol** | Hoje esses idiomas usam a voz do aparelho. Gravar com o mesmo fluxo do português (roteiro → elenco → `--pagina-inteira` → palavras-chave), com vozes nativas, **só com autorização do humano** (AGENTS.md §2.7). O motor precisa aceitar a narração por idioma (`<voz>/<idioma>/parte-N/`, `vozes.js` com `idioma`) e o `exportar-frases` precisa exportar os textos traduzidos. |
+| M-12 | **Revisão nativa das traduções** | Traduções feitas por agentes especialistas (Claude). Pedir a leitores nativos (de preferência professores de alfabetização) que leiam em voz alta, conferindo ritmo, divisão silábica das palavras-chave e as palavras dos cartões. Avisos de "página desatualizada" em `npm run conferir:traducoes` indicam páginas cujo português mudou depois da tradução. |
 | M-10 | **Páginas 1 e 2 da Parte 1 gravadas inteiras** | Foram gravadas frase por frase, antes de a página inteira virar o padrão (os títulos entraram como gravações avulsas). Regravar inteiras para o livro ficar uniforme: ~2 min de áudio, ~US$ 0,03. Só se o humano quiser. |
 | M-5 | **"Ler de Novo" não reinicia** | Volta à capa, mas mantém lentes ativadas, armadura vestida e cartões verdes. Decidir: reiniciar tudo (recomendado: nova leitura, nova descoberta). |
 | M-6 | **Continuar de onde parou** | Lembrar a última página lida (`localStorage`, com `try/catch`) e oferecer "Continuar" na capa e na biblioteca. |
