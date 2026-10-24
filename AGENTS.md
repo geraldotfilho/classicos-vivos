@@ -158,6 +158,7 @@ A API é paga pelo humano, num projeto de hobby com **limite de R$ 10/mês**, e 
 2. **Só com autorização explícita do humano no prompt inicial da sessão.** Sem ela, a API não é chamada (nem para "um teste rápido"). O `tools/gravar-narracao.mjs` recusa sem `--autorizado`; passe a opção só quando o humano tiver autorizado aquela produção.
 3. **Sempre do jeito mais econômico**: planeje com `--seco` (de graça), grave a página inteira num pedido só, não regrave o que já está bom (o `hash` evita), no máximo 2 tentativas, a conferência é **local e gratuita** (Whisper, `tools/transcrever.py`), e prefira o nível mais barato aprovado pelo humano (opções e preços em `docs/TODO-NARRACAO.md` §8.4).
 4. **Registre o gasto**: cada rodada vai para `docs/narracao/gastos.csv` (o script faz isso). Ao fim do trabalho, diga ao humano quanto foi gasto.
+5. **As imagens não usam a API paga** (decisão do humano, 2026-10-24): continuam com o agente Gemini no **Google Antigravity**, na cota do plano Pro do humano (com as pausas por cota). Referência, caso um dia mude: na API, ~100 imagens custariam de US$ 1,70 (Nano Banana 2.1, Batch) a US$ 13,40 (Pro); ver a conversa de 2026-10-24.
 
 ---
 
