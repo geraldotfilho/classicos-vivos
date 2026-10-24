@@ -59,6 +59,7 @@ Levantado na inspeção completa do sprint 1 (2026-10): código, ilustrações e
 
 - **Parte 2 com toda a arte**: páginas 4 a 8 (`-real`, `-imag` e as camadas da poeira, do balão, da cabra e dos martelos) geradas pelo Claude com o Nano Banana 2 pela API, em modo Batch, por autorização pontual do humano. US$ 0,57. Ferramentas novas: `npm run gerar:imagens` e `tools/recortar-camada.py` (fundo magenta → alfa, sem halo). Método: `docs/ARTE-PELA-API.md`.
 - **Animação `martelar`** (camada que gira em torno do eixo do alto): os martelos do amanhecer batem no pano.
+- **As 9 Imaginações da Parte 2 refeitas** (pedido do humano): transformam de verdade a cena e os personagens (cavaleiro dourado, corcel branco, Sancho escudeiro), com a bíblia da Imaginação (`ARTE-PELA-API.md` §4.1). US$ 0,42. Total da Parte 2 pela API: US$ 0,99.
 
 ## ✅ Entregue no sprint 8 (Partes 2–4 narradas, madrugada de 2026-10-24)
 
@@ -100,7 +101,7 @@ Levantado na inspeção completa do sprint 1 (2026-10): código, ilustrações e
 | M-6 | **Continuar de onde parou** | Lembrar a última página lida (`localStorage`, com `try/catch`) e oferecer "Continuar" na capa e na biblioteca. |
 | M-7 | **Consistência das ilustrações** | NB-4 (escala do herói dourado e rosto na etapa 1), NB-5 (enquadramento do estábulo), NB-6 (imaginação de Sancho gerada de verdade, em vez da capa com recorte achatado). Substituições diretas, sem código. |
 | M-8 | **Teste automatizado multiplataforma** | O protocolo do AGENTS.md §5 é só Windows/Chrome. Criar `npm test` com Playwright (retrato + paisagem, páginas 0–7, ambas as lentes, ordem da armadura, bloqueio de duplo toque, offline) gerando capturas em `test-results/`. |
-| M-11 | **Retoques da arte da Parte 2 (API)** | Sem retrabalho urgente. (1) A poeira da pág. 4 ainda tem fiapos levemente rosados nas pontas (quase invisíveis sobre a planície). (2) Na pág. 5, Dom Quixote parece mais alegre que "abatido". (3) Na pág. 8 da Imaginação, o elmo flutua logo acima das mãos. Só refazer se o humano pedir. |
+| M-13 | **Retoques da arte da Parte 2 (API)** | Sem retrabalho urgente. (1) A poeira da pág. 4 ainda tem fiapos levemente rosados nas pontas (quase invisíveis sobre a planície). (2) Na pág. 5 (Realidade), Dom Quixote parece mais alegre que "abatido". (3) Na pág. 6 da Imaginação, o cavaleiro está em pé (na Realidade, sentado na pedra), coerente com "empunhou a lança". O elmo flutuante da pág. 8 e as Imaginações que não transformavam já foram corrigidos. |
 | M-9 | **Aviso de atualização do PWA** | Com o service worker, uma versão nova só aparece na visita seguinte. Mostrar "Livro atualizado ✨" ao ativar uma versão nova. |
 
 ## 🟢 Prioridade baixa

@@ -1,6 +1,6 @@
 # 🖼️ Arte pela API do Gemini (Nano Banana 2, modo Batch)
 
-Caminho de reserva para as ilustrações quando a cota do Antigravity acaba. **Só com autorização do humano no prompt inicial da sessão** (AGENTS.md §2.7) e só para o que ele autorizou. Primeiro uso: 2026-10-24, Parte 2, páginas 4 a 8 (10 cenas + 5 camadas), **US$ 0,57** no total.
+Caminho de reserva para as ilustrações quando a cota do Antigravity acaba. **Só com autorização do humano no prompt inicial da sessão** (AGENTS.md §2.7) e só para o que ele autorizou. Primeiro uso: 2026-10-24, Parte 2, páginas 4 a 8 (10 cenas + 5 camadas), **US$ 0,57**. Na mesma tarde, a pedido do humano, as **9 Imaginações da Parte 2 foram refeitas** com a bíblia da Imaginação (§4.1): **US$ 0,42**. Total da Parte 2: **US$ 0,99**.
 
 ## 1. Modelo e preço (página de preços do Gemini, 2026-10-24)
 | Modelo | ID | Imagem 1K Standard | **Batch** | 512 px Batch |
@@ -33,6 +33,20 @@ npm run build:images && npm run build
 5. Posicionar as camadas no `parte-N.html` **pela arte**, e não pelo plano: o modelo segue a composição pedida só aproximadamente (a poeira, o balão e as cabras mudaram de lugar em relação ao TODO).
 
 ## 4. Lições aprendidas
+
+### 4.1 A Lente da Imaginação precisa TRANSFORMAR (a lição mais importante)
+- ❌ **Errado** (primeira rodada): "Edit the reference image keeping everything exactly, only change X". O modelo obedece demais: Dom Quixote continua de armadura enferrujada e bacia de latão, Rocinante continua marrom, e só um detalhe muda. O humano reprovou: "mantiveram os elementos da realidade, sem verdadeiramente transformar a cena e os personagens".
+- ✅ **Certo**: a lista tem uma **bíblia da Imaginação** (`imaginacao` em `tools/arte/<livro>-parte-N.mjs`), que entra em todo pedido com `imaginacao: true`:
+  1. "Da Realidade, mantenha **só** a câmera, o layout e o lugar, o tamanho e a pose de cada personagem. **Transforme todo o resto.**"
+  2. As transformações obrigatórias dos personagens fixos: Dom Quixote → **cavaleiro dourado** (armadura de ouro com filigrana, elmo de viseira aberta e pluma vermelha, capa carmim, lança de ouro com flâmula, o mesmo rosto); Rocinante → **corcel branco** (crina prateada, manta carmim e ouro); Sancho → **escudeiro orgulhoso**, reconhecível (túnica azul-celeste com ouro, escudinho nas costas), e o burrico com manta de festa.
+  3. O que **não pode sobrar** ("NO rusty armour, NO brass basin, NO skinny brown horse").
+  4. O mundo vira conto de fadas (ouro, violeta, rosa, turquesa, brilhos), e cada página diz **as suas** transformações, tiradas do texto de Cervantes (o barbeiro → cavaleiro em fuga, e o burrinho dele → corcel malhado; as cordas de Rocinante → fitas encantadas; os cabreiros → pastores da Idade de Ouro).
+- **Referências da Imaginação**, nesta ordem: (1) a `-real` da página (layout); (2) uma Imaginação aprovada com o cavaleiro dourado e Sancho (`imagens/p7-imag.webp`, da Parte 1); (3) uma ficha do banco (`biblioteca/referencias/personagens/don-quixote-cavaleiro-dourado.png`, `dom-quixote-heroi-dourado.png`, `rocinante-corcel-branco.png`); (4) a Imaginação anterior da página, quando tinha elementos bons (gigante, mago, sábio, exércitos), citada no prompt como "like the last reference image". Não use `gigantes-moinhos.png` (estilo cartoon vetado, AGENTS §4.4).
+- **Escala e lugar**: o corcel branco com manta tende a sair **maior** e a ir para o centro. Quando o lugar importa (troca de lente sem "pulo"), diga o tamanho em relação à Realidade ("no taller than half the picture height, exactly the size of the brown horse in the reality version, standing still") e troque a ficha do cavaleiro grande por uma cena com cavaleiros pequenos.
+- **Objetos nas mãos**: "gripping its rim firmly with BOTH hands (his hands touch the helmet; it does not float)". Sem isso, o objeto mágico flutua.
+- **Animais a mais**: o modelo acrescenta o burrico de Sancho em toda cena. Quando ele não está na página, diga "it is the ONLY animal on the road".
+
+### 4.2 Camadas e demais lições
 - **Camadas sobre magenta puro (#FF00FF), nunca sobre branco.** O modelo não entrega transparência. Recortar fundo branco come as partes claras (o avental da pousada) e deixa "chão" claro (P-003/P-005). O magenta saiu uniforme e o `recortar-camada.py` tira o fundo, desmistura as bordas (sem halo rosa) e corta justo.
 - **Poeira, fumaça e fiapos**: o modelo pinta fiapos rosados misturados ao magenta. Para desenhos sem rosa nenhum (poeira, madeira), use `--sem-rosa`.
 - **Diga o que NÃO pintar quando há camada por cima**: "Do NOT paint the hammers… the space stays clear" funcionou (galpão vazio + camada de martelos). Áreas livres pedidas em % ("the upper right part… must be EMPTY") também.
@@ -42,7 +56,7 @@ npm run build:images && npm run build
 - **Sem texto legível**: "only golden swirls, absolutely no letters or words" funcionou no livro do sábio.
 
 ## 5. Estimativa para as próximas partes
-Custo médio real: **~US$ 0,038 por imagem aceita** (já com as refeitas).
+Custo médio real: **~US$ 0,038 por imagem aceita** (já com as refeitas). Com a bíblia da Imaginação desde o início, a Imaginação sai certa na primeira ou na segunda tentativa.
 | Parte | Cenas | Camadas | Estimativa |
 | :--- | :--- | :--- | :--- |
 | 3 | 17 | 5 | ~US$ 0,85 |

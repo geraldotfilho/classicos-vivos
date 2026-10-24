@@ -67,9 +67,10 @@ const cabecalhos = { 'Content-Type': 'application/json', ...(process.env.GEMINI_
 const espera = (ms) => new Promise(r => setTimeout(r, ms));
 const MIME = { '.webp': 'image/webp', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg' };
 
-/* O texto final do pedido: estilo-mestre + descrição dos personagens citados + o prompt da imagem */
+/* O texto final do pedido: estilo-mestre (+ bíblia da Imaginação nas cenas -imag) + descrição dos personagens
+   citados + o prompt da imagem */
 function textoDoPedido(p) {
-    const estilo = p.camada ? lista.estiloCamada : lista.estilo;
+    const estilo = p.camada ? lista.estiloCamada : p.imaginacao ? `${lista.estilo}\n\n${lista.imaginacao}` : lista.estilo;
     const fichas = Object.entries(lista.personagens)
         .filter(([nome]) => p.prompt.includes(`[${nome}]`))
         .map(([nome, desc]) => `[${nome}] = ${desc}`);
