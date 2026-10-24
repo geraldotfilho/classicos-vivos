@@ -81,5 +81,41 @@
       "estilo": "old man swearing solemnly, a little too calm"
     }
   },
-  "qa": "whisper-large-v3-turbo (local)"
+  "qa": "whisper-large-v3-turbo (local)",
+  "p1": {
+    "arquivo": "p1.mp3",
+    "hash": "96bdc15f7f",
+    "frases": [
+      {
+        "id": "p1-s0",
+        "ini": 0,
+        "fim": 6.96
+      },
+      {
+        "id": "p1-s1",
+        "ini": 6.96,
+        "fim": 23.53
+      },
+      {
+        "id": "p1-s2",
+        "ini": 23.53,
+        "fim": 30.93
+      },
+      {
+        "id": "p1-s3",
+        "ini": 30.93,
+        "fim": 46.63
+      },
+      {
+        "id": "p1-s4",
+        "ini": 46.63,
+        "fim": 53.57
+      },
+      {
+        "id": "p1-s5",
+        "ini": 53.57,
+        "fim": 77.23
+      }
+    ]
+  }
 }
