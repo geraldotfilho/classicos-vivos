@@ -83,6 +83,7 @@
             .replace(/\b([a-zà-ÿ]+)-\1\b/gi, (_, s) => `${s.toLowerCase()}, ${s.toLowerCase()}`)   // onomatopeia: "TAC-TAC" → "tac, tac"
             .replace(/([.!?…:;])\s*,/g, '$1')                 // "bravura!, pensou" → "bravura! pensou"; "cabeça:, Valha" → "cabeça: Valha"
             .replace(/,\s*,/g, ',')
+            .replace(/,\s*([.!?…])/g, '$1')              // "—dijo Sancho—. Luego" (espanhol) → "dijo Sancho. Luego"
             .replace(/\s+/g, ' ')
             .trim();
     }
