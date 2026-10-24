@@ -55,6 +55,12 @@ Levantado na inspeção completa do sprint 1 (2026-10): código, ilustrações e
 - **Narração gravada pronta para receber áudio**: tocador frase a frase com a voz do aparelho como reserva, voz offline quando a online falha, MP3 guardado sob demanda pelo service worker.
 - **Segmentação canônica** (`assets/js/texto.js`) e exportação das 214 frases e 105 palavras-chave (`docs/narracao/`) para o Gemini gravar (P-006, agora com o Claude: `docs/TODO-NARRACAO.md`). Conversor WAV/PCM → MP3 sem dependências nativas (`npm run build:audio`).
 
+## ✅ Entregue no sprint 8 (Partes 2–4 narradas, madrugada de 2026-10-24)
+
+- **Narração gravada das Partes 2, 3 e 4** (antigo A-9): páginas inteiras com títulos, elenco de personagens (pastor, barbeiro, padre, Doroteia, estalajadeiro, Teresa, Sanchica, os velhos do tribunal) e todas as palavras-chave. Flex (metade do preço), cache de blocos e palavras em grupo por causa do limite de 100 pedidos/dia.
+- **Textos das Partes 2–4 revisados** para a narração; Parte 2 com o capítulo novo do tombo nos moinhos (9 páginas).
+- **Camadas das Partes 2–4 em `.webp`** (antes apontavam para `.png` e não carregavam).
+
 ## ✅ Entregue no sprint 7 (narração gravada da Parte 1)
 
 - **Parte 1 completa com narração gravada** (`dom-quixote/audio/narracao/`): narradora `pt-br-storyteller-9`, **Dom Quixote** `pt-br-concierge-3` e **Sancho** `pt-br-storyteller-2`, mais as 30 palavras-chave. Na primeira visita, vira a voz padrão.
@@ -70,7 +76,6 @@ Levantado na inspeção completa do sprint 1 (2026-10): código, ilustrações e
 | :--- | :--- | :--- |
 | A-7 | **Arte das Partes 2–4** | 49 cenas + 18 camadas em `TODO-NANO-BANANA-PARTES-2-4.md` (Gemini). Depois de cada entrega: conferir posições das camadas nas duas orientações e ajustar `x/y/w` no `parte-N.html`. |
 | A-8 | **Revisão humana do texto das Partes 2–4** | Ler em voz alta com a voz do tablet; decidir "vinho tinto" × "suco de uva" (Parte 3, cap. 20); validar a dificuldade da `ordem` (5 palavras) e da contagem com crianças. Ver `PLANO-PARTES-2-4.md` §5. |
-| A-9 | **Narração gravada das Partes 2–4** (P-006) | A Parte 1 está pronta. Falta: roteiro das falas e elenco dos personagens novos de cada parte (voz criada por descrição quando nenhuma da biblioteca servir), depois as páginas inteiras e as palavras-chave. Limite de gasto do humano: **R$ 10/mês**. Ver `RETOMADA.md` e `TODO-NARRACAO.md`. |
 
 ## 🟡 Prioridade média
 

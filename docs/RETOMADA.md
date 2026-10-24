@@ -1,4 +1,4 @@
-# 🔁 Retomada — onde o trabalho parou (2026-10-24)
+# 🔁 Retomada — onde o trabalho parou (2026-10-24, manhã)
 
 Leia este arquivo primeiro numa sessão nova do Claude. Depois, `AGENTS.md` (arquitetura e regras) e o arquivo da frente de trabalho.
 
@@ -11,15 +11,17 @@ Leia este arquivo primeiro numa sessão nova do Claude. Depois, `AGENTS.md` (arq
 O responsável humano passou a narração para o **Claude**, chamando a **API do Gemini** a partir de uma sessão com a chave cadastrada como **segredo de rede** do ambiente. O proxy injeta o cabeçalho `x-goog-api-key` nas requisições a `generativelanguage.googleapis.com`, e o Claude não vê a chave. O Gemini (agente de imagens) não faz mais narração.
 
 - **Passo a passo**: [`TODO-NARRACAO.md`](TODO-NARRACAO.md). A seção 8 traz a execução pela API.
-- **Estado em 2026-10-24** (decisões do humano no topo de `TODO-NARRACAO.md`, leia antes de gravar):
-  - **Parte 1 completa** (`dom-quixote/audio/narracao/`, `partes: [1]`): páginas inteiras, títulos lidos, Dom Quixote e Sancho com voz própria e as 30 palavras-chave;
-  - a página inteira é o padrão; o Claude escolhe o elenco; a API paga **só produz vozes** (a conferência é local, com o Whisper); limite de **R$ 10/mês**, e o gasto fica em `docs/narracao/gastos.csv`.
+- **Estado em 2026-10-24, manhã** (decisões do humano no topo de `TODO-NARRACAO.md`, leia antes de gravar):
+  - **as quatro partes de Dom Quixote estão gravadas** (`partes: [1, 2, 3, 4]`): páginas inteiras com títulos, narradora + vozes dos personagens (elenco em `ELENCO`) e todas as palavras-chave. QA em `docs/narracao/qa-parte-N.md`, com o que vale ouvir;
+  - textos das Partes 2–4 revisados pelo agente de texto do humano e pelo Claude (falas diretas, português brasileiro); roteiros em `narracao/parte-N/roteiro.json`;
+  - Flex é o padrão; limite de **100 pedidos/dia** (Tier 1) e de **R$ 10/mês**; o gasto fica em `docs/narracao/gastos.csv`;
+  - a conferência é local (Whisper): num contêiner novo, `pip install faster-whisper`.
 
-**Próximos passos (Partes 2 → 4):**
-1. Num contêiner novo: `npm install` e `pip install faster-whisper` (a conferência local; o modelo baixa sozinho na 1ª vez).
-2. Para cada parte: escrever `narracao/parte-N/roteiro.json` (quem fala cada trecho; lembre que as falas continuam em frases sem travessão) e acrescentar os personagens novos ao `ELENCO` do script. Use o catálogo `docs/narracao/VOZES-PT-BR.md`; se nenhuma voz servir (ex.: crianças), crie uma por descrição (voice design, `POST /v1beta/voices` com `type: "prompted"`).
-3. Planeje de graça com `--seco`. Com a autorização do humano: `npm run gravar:narracao -- --voz narracao --parte N --pagina-inteira --autorizado` e `npm run gravar:narracao -- --voz palavras --parte N --autorizado`. Confira os avisos, atualize `qa-parte-N.md` e ponha a parte em `partes` no `vozes.js`.
-4. Opcional (BACKLOG M-10): regravar inteiras as páginas 1 e 2 da Parte 1.
+**Próximos passos:**
+1. Retorno de ouvido do humano: vozes novas (pastor, barbeiro, padre, Doroteia, estalajadeiro, Teresa, Sanchica, os velhos do tribunal) e os pontos de cada `qa-parte-N.md`.
+2. Se o texto de uma frase mudar: `npm run exportar:frases` e regrave só a página (o `hash` mostra qual); avulsas com `--ids` + emenda (TODO §8.5).
+3. Opcional (BACKLOG M-10): regravar inteiras as páginas 1 e 2 da Parte 1.
+4. Novos livros: mesmo fluxo (texto → roteiro → elenco → `--pagina-inteira` → palavras em grupo), sempre com autorização do humano (AGENTS.md §2.7).
 
 ## 2. Ciclo com o Gemini (arte): revisão **pausada**
 
