@@ -2,14 +2,15 @@
 
 Leia este arquivo primeiro numa sessão nova do Claude. Depois, `AGENTS.md` (arquitetura e regras) e o arquivo da frente de trabalho.
 
-> 💰 **API paga do Gemini (AGENTS.md §2.7)**: use **só para produzir as vozes da leitura**, **sempre de forma econômica** e **só se o humano autorizou no prompt inicial desta sessão**. Sem essa autorização, não chame a API para nada (nem teste). Limite: R$ 10/mês. Opções mais baratas em `TODO-NARRACAO.md` §8.4 (o Flex corta o preço pela metade, mas falta a aprovação do humano). **Imagens** pela API: só com autorização pontual do humano (`docs/ARTE-PELA-API.md`).
+> 💰 **API paga do Gemini (AGENTS.md §2.7)**: use **só para produzir as vozes da leitura**, **sempre de forma econômica** e **só se o humano autorizou no prompt inicial desta sessão**. Sem essa autorização, não chame a API para nada (nem teste). Limite: R$ 30/mês (desde 2026-10-24). Opções mais baratas em `TODO-NARRACAO.md` §8.4 (o Flex corta o preço pela metade, mas falta a aprovação do humano). **Imagens** pela API: só com autorização pontual do humano (`docs/ARTE-PELA-API.md`).
 
 ---
 
 ## 0. Atualização de 2026-10-24, tarde: arte da Parte 2 pela API
 - Com a cota do Antigravity esgotada até 29/10, o humano autorizou o Claude a gerar **só as imagens que faltavam da Parte 2**. Feito com `npm run gerar:imagens` (Nano Banana 2, Batch): páginas 4 a 8 (10 cenas + 5 camadas), integradas e testadas. **Gasto: US$ 0,57** (`docs/arte/gastos.csv`). **A Parte 2 está completa.**
-- Gasto da API no mês até aqui: narração ~US$ 0,65 + imagens US$ 0,57 ≈ **US$ 1,22**.
-- Próximo passo, **se o humano autorizar**: Partes 3 (~US$ 0,85) e 4 (~US$ 0,80), com o mesmo método: escrever `tools/arte/dom-quixote-parte-N.mjs` a partir do TODO, rodar `--seco`, e seguir as rodadas de `docs/ARTE-PELA-API.md` §3. Sem autorização, o Gemini retoma a Parte 3 no Antigravity em 29/10.
+- **Imaginações da Parte 2 refeitas** (as 9, pedido do humano): agora transformam de verdade (cavaleiro dourado, corcel branco, Sancho escudeiro). Mais US$ 0,42. Regra para as próximas partes: `ARTE-PELA-API.md` §4.1.
+- **Teto da API: R$ 30/mês** (o humano aumentou em 2026-10-24). Gasto no mês até aqui: narração ~US$ 0,65 + imagens US$ 0,99 ≈ **US$ 1,64**.
+- Próximo passo, **se o humano autorizar**: Partes 3 (~US$ 0,85) e 4 (~US$ 0,80), já com a bíblia da Imaginação, com o mesmo método: escrever `tools/arte/dom-quixote-parte-N.mjs` a partir do TODO, rodar `--seco`, e seguir as rodadas de `docs/ARTE-PELA-API.md` §3. Sem autorização, o Gemini retoma a Parte 3 no Antigravity em 29/10.
 
 ## 1. Frente atual do Claude: narração gravada (P-006)
 
@@ -19,7 +20,7 @@ O responsável humano passou a narração para o **Claude**, chamando a **API do
 - **Estado em 2026-10-24, manhã** (decisões do humano no topo de `TODO-NARRACAO.md`, leia antes de gravar):
   - **as quatro partes de Dom Quixote estão gravadas** (`partes: [1, 2, 3, 4]`): páginas inteiras com títulos, narradora + vozes dos personagens (elenco em `ELENCO`) e todas as palavras-chave. QA em `docs/narracao/qa-parte-N.md`, com o que vale ouvir;
   - textos das Partes 2–4 revisados pelo agente de texto do humano e pelo Claude (falas diretas, português brasileiro); roteiros em `narracao/parte-N/roteiro.json`;
-  - Flex é o padrão; limite de **100 pedidos/dia** (Tier 1) e de **R$ 10/mês**; o gasto fica em `docs/narracao/gastos.csv`;
+  - Flex é o padrão; limite de **100 pedidos/dia** (Tier 1) e de **R$ 30/mês**; o gasto fica em `docs/narracao/gastos.csv`;
   - a conferência é local (Whisper): num contêiner novo, `pip install faster-whisper`.
 
 **Próximos passos:**
