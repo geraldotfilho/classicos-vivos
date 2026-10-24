@@ -55,6 +55,11 @@ Levantado na inspeção completa do sprint 1 (2026-10): código, ilustrações e
 - **Narração gravada pronta para receber áudio**: tocador frase a frase com a voz do aparelho como reserva, voz offline quando a online falha, MP3 guardado sob demanda pelo service worker.
 - **Segmentação canônica** (`assets/js/texto.js`) e exportação das 214 frases e 105 palavras-chave (`docs/narracao/`) para o Gemini gravar (P-006, agora com o Claude: `docs/TODO-NARRACAO.md`). Conversor WAV/PCM → MP3 sem dependências nativas (`npm run build:audio`).
 
+## ✅ Entregue no sprint 9 (arte da Parte 2 pela API, tarde de 2026-10-24)
+
+- **Parte 2 com toda a arte**: páginas 4 a 8 (`-real`, `-imag` e as camadas da poeira, do balão, da cabra e dos martelos) geradas pelo Claude com o Nano Banana 2 pela API, em modo Batch, por autorização pontual do humano. US$ 0,57. Ferramentas novas: `npm run gerar:imagens` e `tools/recortar-camada.py` (fundo magenta → alfa, sem halo). Método: `docs/ARTE-PELA-API.md`.
+- **Animação `martelar`** (camada que gira em torno do eixo do alto): os martelos do amanhecer batem no pano.
+
 ## ✅ Entregue no sprint 8 (Partes 2–4 narradas, madrugada de 2026-10-24)
 
 - **Narração gravada das Partes 2, 3 e 4** (antigo A-9): páginas inteiras com títulos, elenco de personagens (pastor, barbeiro, padre, Doroteia, estalajadeiro, Teresa, Sanchica, os velhos do tribunal) e todas as palavras-chave. Flex (metade do preço), cache de blocos e palavras em grupo por causa do limite de 100 pedidos/dia.
@@ -74,7 +79,7 @@ Levantado na inspeção completa do sprint 1 (2026-10): código, ilustrações e
 
 | ID | Item | Detalhes |
 | :--- | :--- | :--- |
-| A-7 | **Arte das Partes 2–4** | 49 cenas + 18 camadas em `TODO-NANO-BANANA-PARTES-2-4.md` (Gemini). Depois de cada entrega: conferir posições das camadas nas duas orientações e ajustar `x/y/w` no `parte-N.html`. |
+| A-7 | **Arte das Partes 3–4** (a Parte 2 está completa) | 33 cenas + 10 camadas em `TODO-NANO-BANANA-PARTES-2-4.md` (Gemini no Antigravity, a partir de 29/10; ou o Claude pela API, se o humano autorizar: ~US$ 1,65, `ARTE-PELA-API.md` §5). Depois de cada entrega: conferir posições das camadas nas duas orientações e ajustar `x/y/w` no `parte-N.html`. |
 | A-8 | **Revisão humana do texto das Partes 2–4** | Ler em voz alta com a voz do tablet; decidir "vinho tinto" × "suco de uva" (Parte 3, cap. 20); validar a dificuldade da `ordem` (5 palavras) e da contagem com crianças. Ver `PLANO-PARTES-2-4.md` §5. |
 
 ## 🟡 Prioridade média
@@ -88,6 +93,7 @@ Levantado na inspeção completa do sprint 1 (2026-10): código, ilustrações e
 | M-6 | **Continuar de onde parou** | Lembrar a última página lida (`localStorage`, com `try/catch`) e oferecer "Continuar" na capa e na biblioteca. |
 | M-7 | **Consistência das ilustrações** | NB-4 (escala do herói dourado e rosto na etapa 1), NB-5 (enquadramento do estábulo), NB-6 (imaginação de Sancho gerada de verdade, em vez da capa com recorte achatado). Substituições diretas, sem código. |
 | M-8 | **Teste automatizado multiplataforma** | O protocolo do AGENTS.md §5 é só Windows/Chrome. Criar `npm test` com Playwright (retrato + paisagem, páginas 0–7, ambas as lentes, ordem da armadura, bloqueio de duplo toque, offline) gerando capturas em `test-results/`. |
+| M-11 | **Retoques da arte da Parte 2 (API)** | Sem retrabalho urgente. (1) A poeira da pág. 4 ainda tem fiapos levemente rosados nas pontas (quase invisíveis sobre a planície). (2) Na pág. 5, Dom Quixote parece mais alegre que "abatido". (3) Na pág. 8 da Imaginação, o elmo flutua logo acima das mãos. Só refazer se o humano pedir. |
 | M-9 | **Aviso de atualização do PWA** | Com o service worker, uma versão nova só aparece na visita seguinte. Mostrar "Livro atualizado ✨" ao ativar uma versão nova. |
 
 ## 🟢 Prioridade baixa

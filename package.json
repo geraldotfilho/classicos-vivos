@@ -11,7 +11,8 @@
     "build:sw": "node tools/build-sw.mjs",
     "build:audio": "node tools/otimizar-audio.mjs",
     "exportar:frases": "node tools/exportar-frases.mjs",
-    "gravar:narracao": "NODE_USE_ENV_PROXY=1 node --no-warnings tools/gravar-narracao.mjs"
+    "gravar:narracao": "NODE_USE_ENV_PROXY=1 node --no-warnings tools/gravar-narracao.mjs",
+    "gerar:imagens": "NODE_USE_ENV_PROXY=1 node --no-warnings tools/gerar-imagens.mjs"
   },
   "devDependencies": {
     "@breezystack/lamejs": "^1.2.7",

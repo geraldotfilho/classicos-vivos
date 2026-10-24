@@ -6,7 +6,7 @@
    - Narração gravada (*.mp3 e as marcas *.json em audio/): rede primeiro, para frases regravadas chegarem ao tablet;
      cada arquivo fica num cache próprio (que sobrevive às novas versões) e toca offline depois.
    - Demais arquivos: cache primeiro (abre instantâneo no tablet). */
-const CACHE = 'classicos-vivos-0e45f5850eaf';
+const CACHE = 'classicos-vivos-44aaae941780';
 const CACHE_AUDIO = 'cv-narracao';
 const FILES = [
     "./assets/css/fonts.css",
@@ -75,6 +75,11 @@ const FILES = [
     "./dom-quixote/imagens/parte-2/camadas/p3-bolotas.webp",
     "./dom-quixote/imagens/parte-2/camadas/p3-leite.webp",
     "./dom-quixote/imagens/parte-2/camadas/p3-queijo.webp",
+    "./dom-quixote/imagens/parte-2/camadas/p4-poeira-direita.webp",
+    "./dom-quixote/imagens/parte-2/camadas/p4-poeira-esquerda.webp",
+    "./dom-quixote/imagens/parte-2/camadas/p6-balao-historia.webp",
+    "./dom-quixote/imagens/parte-2/camadas/p6-cabra.webp",
+    "./dom-quixote/imagens/parte-2/camadas/p7-martelos.webp",
     "./dom-quixote/imagens/parte-2/p0-imag.webp",
     "./dom-quixote/imagens/parte-2/p0-real.webp",
     "./dom-quixote/imagens/parte-2/p1-imag.webp",
@@ -83,6 +88,16 @@ const FILES = [
     "./dom-quixote/imagens/parte-2/p2-real.webp",
     "./dom-quixote/imagens/parte-2/p3-imag.webp",
     "./dom-quixote/imagens/parte-2/p3-real.webp",
+    "./dom-quixote/imagens/parte-2/p4-imag.webp",
+    "./dom-quixote/imagens/parte-2/p4-real.webp",
+    "./dom-quixote/imagens/parte-2/p5-imag.webp",
+    "./dom-quixote/imagens/parte-2/p5-real.webp",
+    "./dom-quixote/imagens/parte-2/p6-imag.webp",
+    "./dom-quixote/imagens/parte-2/p6-real.webp",
+    "./dom-quixote/imagens/parte-2/p7-imag.webp",
+    "./dom-quixote/imagens/parte-2/p7-real.webp",
+    "./dom-quixote/imagens/parte-2/p8-imag.webp",
+    "./dom-quixote/imagens/parte-2/p8-real.webp",
     "./dom-quixote/parte-1.html",
     "./dom-quixote/parte-2.html",
     "./dom-quixote/parte-3.html",

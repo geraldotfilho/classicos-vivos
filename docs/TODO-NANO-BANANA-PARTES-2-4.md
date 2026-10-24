@@ -64,6 +64,8 @@ Exemplo: `x 51, y 88, w 12` = um objeto com 12% da largura da cena, centrado um 
 
 ## 📗 PARTE 2 — Exércitos de Lã e o Elmo Encantado (`imagens/parte-2/`)
 
+> ✅ **Parte 2 completa (2026-10-24).** Páginas 0–3 pelo Gemini (Antigravity); páginas 4–8 pelo Claude, pela API (`tools/arte/dom-quixote-parte-2.mjs`, `docs/ARTE-PELA-API.md`). As posições finais das camadas estão no `parte-2.html` (mudaram em relação às tabelas abaixo, porque seguem a arte entregue).
+
 > ⚠️ **Renumerada em 2026-10-24** (Claude): a revisão do texto abriu a Parte 2 com um capítulo novo (o tombo nos moinhos), e a parte passou a ter **9 páginas (0 a 8)**. As páginas antigas 1 a 7 viraram **2 a 8**, com os arquivos renomeados (cenas e camadas). Já entregues e renomeados: `p0-real`, `p0-imag`, `p2-real` (a lança de carvalho, antes `p1-real`) e `p3-real` (os pastores, antes `p2-real`). **Use os nomes desta seção.**
 
 | Pág. | Cena | Arquivos | Interação |
