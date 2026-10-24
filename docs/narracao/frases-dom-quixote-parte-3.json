@@ -17,25 +17,25 @@
       "id": "p0-s1",
       "pagina": 0,
       "paragrafo": 0,
-      "texto": "Com o seu reluzente elmo conquistado na chuva e o coração transbordando de sonhos, o Cavaleiro da Triste Figura sobe com Sancho as montanhas selvagens e imponentes da SERRA MORENA!",
-      "fala": "Com o seu reluzente elmo conquistado na chuva e o coração transbordando de sonhos, o Cavaleiro da Triste Figura sobe com Sancho as montanhas selvagens e imponentes da serra morena!",
-      "hash": "c33870c11e"
+      "texto": "Com o elmo brilhante que ganhou na chuva e o coração cheio de sonhos, o Cavaleiro da Triste Figura sobe com Sancho as montanhas altas e selvagens da SERRA MORENA!",
+      "fala": "Com o elmo brilhante que ganhou na chuva e o coração cheio de sonhos, o Cavaleiro da Triste Figura sobe com Sancho as montanhas altas e selvagens da serra morena!",
+      "hash": "b669e9539b"
     },
     {
       "id": "p0-s2",
       "pagina": 0,
       "paragrafo": 1,
-      "texto": "Nas alturas rochosas, entre despenhadeiros, pinheiros e flores silvestres, nossos heróis vão abrir uma mala cheia de segredos, compor uma emocionante CARTA de amor, dar cambalhotas de saudade e descobrir o engenhoso plano de velhos amigos para resgatar uma formosa PRINCESA de um reino distante.",
-      "fala": "Nas alturas rochosas, entre despenhadeiros, pinheiros e flores silvestres, nossos heróis vão abrir uma mala cheia de segredos, compor uma emocionante carta de amor, dar cambalhotas de saudade e descobrir o engenhoso plano de velhos amigos para resgatar uma formosa princesa de um reino distante.",
-      "hash": "bb303c6e4a"
+      "texto": "Lá no alto, entre pedras, pinheiros e flores do campo, os dois amigos vão abrir uma mala cheia de segredos, escrever uma CARTA de amor, dar cambalhotas de saudade e descobrir o plano esperto de dois velhos amigos, com a ajuda de uma PRINCESA de um reino muito, muito distante.",
+      "fala": "Lá no alto, entre pedras, pinheiros e flores do campo, os dois amigos vão abrir uma mala cheia de segredos, escrever uma carta de amor, dar cambalhotas de saudade e descobrir o plano esperto de dois velhos amigos, com a ajuda de uma princesa de um reino muito, muito distante.",
+      "hash": "4a05fd3d2b"
     },
     {
       "id": "p0-s3",
       "pagina": 0,
       "paragrafo": 2,
-      "texto": "Respire fundo o ar puro das montanhas, vire a página e suba a serra com eles!",
-      "fala": "Respire fundo o ar puro das montanhas, vire a página e suba a serra com eles!",
-      "hash": "67881569cf"
+      "texto": "Respire fundo o ar fresquinho da montanha, vire a página e suba a serra com eles!",
+      "fala": "Respire fundo o ar fresquinho da montanha, vire a página e suba a serra com eles!",
+      "hash": "32fcf7bdf1"
     },
     {
       "id": "p1-s0",
@@ -50,41 +50,41 @@
       "id": "p1-s1",
       "pagina": 1,
       "paragrafo": 0,
-      "texto": "Subindo as trilhas pedregosas da serra, entre azinheiras retorcidas e penhascos escarpados, Sancho tropeçou numa misteriosa MALA de couro curtido, abandonada sob um arbusto espinhoso.",
-      "fala": "Subindo as trilhas pedregosas da serra, entre azinheiras retorcidas e penhascos escarpados, Sancho tropeçou numa misteriosa mala de couro curtido, abandonada sob um arbusto espinhoso.",
-      "hash": "c851a7ab95"
+      "texto": "Subindo as trilhas cheias de pedras, entre árvores tortas e paredões de rocha, Sancho tropeçou numa MALA de couro esquecida debaixo de um arbusto cheio de espinhos.",
+      "fala": "Subindo as trilhas cheias de pedras, entre árvores tortas e paredões de rocha, Sancho tropeçou numa mala de couro esquecida debaixo de um arbusto cheio de espinhos.",
+      "hash": "b0aa3dc534"
     },
     {
       "id": "p1-s2",
       "pagina": 1,
       "paragrafo": 0,
-      "texto": "A mala estava surrada pelo tempo, molhada pelas chuvas e fechada com fechos enferrujados.",
-      "fala": "A mala estava surrada pelo tempo, molhada pelas chuvas e fechada com fechos enferrujados.",
-      "hash": "2d367fe769"
+      "texto": "A mala estava velha, molhada de chuva e com os fechos enferrujados.",
+      "fala": "A mala estava velha, molhada de chuva e com os fechos enferrujados.",
+      "hash": "a8912800df"
     },
     {
       "id": "p1-s3",
       "pagina": 1,
       "paragrafo": 1,
-      "texto": "O que será que guardava aquele baú esquecido?",
-      "fala": "O que será que guardava aquele baú esquecido?",
-      "hash": "9872f23a29"
+      "texto": "O que será que havia lá dentro?",
+      "fala": "O que será que havia lá dentro?",
+      "hash": "4970795d15"
     },
     {
       "id": "p1-s4",
       "pagina": 1,
       "paragrafo": 1,
-      "texto": "Abra a mala com um toque para desvendar o segredo!",
-      "fala": "Abra a mala com um toque para desvendar o segredo!",
-      "hash": "6c6f0b276d"
+      "texto": "Abra a mala com um toque e descubra o segredo!",
+      "fala": "Abra a mala com um toque e descubra o segredo!",
+      "hash": "d360e95661"
     },
     {
       "id": "p1-s5",
       "pagina": 1,
       "paragrafo": 1,
-      "texto": "Dentro dela reluziam dezenas de preciosas MOEDAS de ouro, que fizeram os olhos de Sancho brilharem de pura euforia, e um delicado CADERNO repleto de POEMAS escritos com elegante caligrafia à mão.",
-      "fala": "Dentro dela reluziam dezenas de preciosas moedas de ouro, que fizeram os olhos de Sancho brilharem de pura euforia, e um delicado caderno repleto de poemas escritos com elegante caligrafia à mão.",
-      "hash": "fea5b0f12c"
+      "texto": "Lá dentro brilhavam muitas MOEDAS de ouro, que deixaram Sancho de olhos arregalados de alegria, e um CADERNO cheio de POEMAS escritos à mão, com letra caprichada.",
+      "fala": "Lá dentro brilhavam muitas moedas de ouro, que deixaram Sancho de olhos arregalados de alegria, e um caderno cheio de poemas escritos à mão, com letra caprichada.",
+      "hash": "d0ec34766d"
     },
     {
       "id": "p1-s6",
@@ -106,25 +106,25 @@
       "id": "p1-s8",
       "pagina": 1,
       "paragrafo": 2,
-      "texto": "Dom Quixote tomou o caderno em suas mãos com extremo respeito e leu em voz alta os versos enternecedores de um jovem apaixonado que vagava sem rumo pelas montanhas.",
-      "fala": "Dom Quixote tomou o caderno em suas mãos com extremo respeito e leu em voz alta os versos enternecedores de um jovem apaixonado que vagava sem rumo pelas montanhas.",
-      "hash": "ce26462f64"
+      "texto": "Dom Quixote pegou o caderno com todo o cuidado e leu em voz alta os versos de um moço apaixonado, que andava perdido e triste pelas montanhas.",
+      "fala": "Dom Quixote pegou o caderno com todo o cuidado e leu em voz alta os versos de um moço apaixonado, que andava perdido e triste pelas montanhas.",
+      "hash": "4751fca0d8"
     },
     {
       "id": "p1-s9",
       "pagina": 1,
       "paragrafo": 2,
-      "texto": "— Quem escreve com tanta sensibilidade tem a alma nobre — concluiu o fidalgo com um suspiro afetuoso.",
-      "fala": "Quem escreve com tanta sensibilidade tem a alma nobre, concluiu o fidalgo com um suspiro afetuoso.",
-      "hash": "241a115ffc"
+      "texto": "— Quem escreve com tanto sentimento tem um coração nobre — disse o cavaleiro, com um suspiro.",
+      "fala": "Quem escreve com tanto sentimento tem um coração nobre, disse o cavaleiro, com um suspiro.",
+      "hash": "79c5389d5a"
     },
     {
       "id": "p1-s10",
       "pagina": 1,
       "paragrafo": 2,
-      "texto": "— Os livros guardam os mais profundos mistérios do coração humano!",
-      "fala": "Os livros guardam os mais profundos mistérios do coração humano!",
-      "hash": "a8a769ffe9"
+      "texto": "— Os livros guardam os segredos mais bonitos do coração!",
+      "fala": "Os livros guardam os segredos mais bonitos do coração!",
+      "hash": "1a6ca8d474"
     },
     {
       "id": "p2-s0",
@@ -139,57 +139,57 @@
       "id": "p2-s1",
       "pagina": 2,
       "paragrafo": 0,
-      "texto": "Ao contemplar a solidão imensa das montanhas, Dom Quixote teve uma inspiração luminosa: — Amigo Sancho, vou permanecer nesta clareira para provar ao mundo a minha imensa SAUDADE por Dulcineia, jejuando e meditando como fazia o ilustre herói AMADIS de Gaula!",
-      "fala": "Ao contemplar a solidão imensa das montanhas, Dom Quixote teve uma inspiração luminosa: Amigo Sancho, vou permanecer nesta clareira para provar ao mundo a minha imensa saudade por Dulcineia, jejuando e meditando como fazia o ilustre herói amadis de Gaula!",
-      "hash": "89291c3fc1"
+      "texto": "Olhando aquelas montanhas tão grandes e tão quietas, Dom Quixote teve uma ideia: — Amigo Sancho, vou ficar aqui nesta clareira para mostrar ao mundo a minha enorme SAUDADE de Dulcineia, igualzinho ao que fazia AMADIS de Gaula, o herói dos meus livros!",
+      "fala": "Olhando aquelas montanhas tão grandes e tão quietas, Dom Quixote teve uma ideia: Amigo Sancho, vou ficar aqui nesta clareira para mostrar ao mundo a minha enorme saudade de Dulcineia, igualzinho ao que fazia amadis de Gaula, o herói dos meus livros!",
+      "hash": "e7519ca0b8"
     },
     {
       "id": "p2-s2",
       "pagina": 2,
       "paragrafo": 0,
-      "texto": "E você partirá no burrico para levar uma carta apaixonada até as mãos dela.",
-      "fala": "E você partirá no burrico para levar uma carta apaixonada até as mãos dela.",
-      "hash": "e0bcc87334"
+      "texto": "E você vai no burrico levar uma carta de amor até as mãos dela.",
+      "fala": "E você vai no burrico levar uma carta de amor até as mãos dela.",
+      "hash": "0dc58501d8"
     },
     {
       "id": "p2-s3",
       "pagina": 2,
       "paragrafo": 1,
-      "texto": "— Mas, meu fidalgo amo — indagou Sancho, coçando o queixo —, como convencerei a senhora Dulcineia de que vossa mercê quase perdeu o juízo por ela, se eu não testemunhar nenhuma façanha espantosa?",
-      "fala": "Mas, meu fidalgo amo, indagou Sancho, coçando o queixo, como convencerei a senhora Dulcineia de que vossa mercê quase perdeu o juízo por ela, se eu não testemunhar nenhuma façanha espantosa?",
-      "hash": "61f39ef37f"
+      "texto": "— Mas, meu senhor — perguntou Sancho, coçando o queixo —, como vou contar à senhora Dulcineia que o senhor ficou quase maluco de saudade, se eu não vir nenhuma maluquice com os meus próprios olhos?",
+      "fala": "Mas, meu senhor, perguntou Sancho, coçando o queixo, como vou contar à senhora Dulcineia que o senhor ficou quase maluco de saudade, se eu não vir nenhuma maluquice com os meus próprios olhos?",
+      "hash": "f5d7ec4b05"
     },
     {
       "id": "p2-s4",
       "pagina": 2,
       "paragrafo": 2,
-      "texto": "— Testemunhe agora mesmo! — exclamou Dom Quixote com determinação.",
-      "fala": "Testemunhe agora mesmo! exclamou Dom Quixote com determinação.",
-      "hash": "306e136f0e"
+      "texto": "— Pois veja agora mesmo! — respondeu Dom Quixote.",
+      "fala": "Pois veja agora mesmo! respondeu Dom Quixote.",
+      "hash": "6d59afe287"
     },
     {
       "id": "p2-s5",
       "pagina": 2,
       "paragrafo": 2,
-      "texto": "Despiu sua armadura de ferro e, ficando apenas de camisolão branco de dormir, deu uma veloz CAMBALHOTA na grama e ergueu as pernas finas para o ar em pleno salto!",
-      "fala": "Despiu sua armadura de ferro e, ficando apenas de camisolão branco de dormir, deu uma veloz cambalhota na grama e ergueu as pernas finas para o ar em pleno salto!",
-      "hash": "1427ceb045"
+      "texto": "Tirou a armadura de ferro e, só de camisolão branco, deu uma CAMBALHOTA na grama, com as pernas finas lá no alto!",
+      "fala": "Tirou a armadura de ferro e, só de camisolão branco, deu uma cambalhota na grama, com as pernas finas lá no alto!",
+      "hash": "dd93d22b08"
     },
     {
       "id": "p2-s6",
       "pagina": 2,
       "paragrafo": 2,
-      "texto": "Sancho tapou o rosto com as duas mãos, gargalhando tanto que as lágrimas correram pelo rosto.",
-      "fala": "Sancho tapou o rosto com as duas mãos, gargalhando tanto que as lágrimas correram pelo rosto.",
-      "hash": "e74943f443"
+      "texto": "Sancho tapou o rosto com as mãos e riu tanto que as lágrimas escorreram.",
+      "fala": "Sancho tapou o rosto com as mãos e riu tanto que as lágrimas escorreram.",
+      "hash": "73f27e545a"
     },
     {
       "id": "p2-s7",
       "pagina": 2,
       "paragrafo": 2,
-      "texto": "Ajude o cavaleiro em suas acrobacias de amor!",
-      "fala": "Ajude o cavaleiro em suas acrobacias de amor!",
-      "hash": "9c28e14c7d"
+      "texto": "Ajude o cavaleiro com as suas cambalhotas de saudade!",
+      "fala": "Ajude o cavaleiro com as suas cambalhotas de saudade!",
+      "hash": "9890baec91"
     },
     {
       "id": "p3-s0",
@@ -204,33 +204,33 @@
       "id": "p3-s1",
       "pagina": 3,
       "paragrafo": 0,
-      "texto": "Emocionado, Dom Quixote escreveu uma belíssima CARTA para sua musa numa folha arrancada do caderno poético, com declarações líricas e a sua solene promessa de fidelidade eterna.",
-      "fala": "Emocionado, Dom Quixote escreveu uma belíssima carta para sua musa numa folha arrancada do caderno poético, com declarações líricas e a sua solene promessa de fidelidade eterna.",
-      "hash": "e95318a67d"
+      "texto": "Com o coração batendo forte, Dom Quixote escreveu uma linda CARTA para Dulcineia, numa folha arrancada do caderno de poemas, prometendo amá-la para sempre.",
+      "fala": "Com o coração batendo forte, Dom Quixote escreveu uma linda carta para Dulcineia, numa folha arrancada do caderno de poemas, prometendo amá-la para sempre.",
+      "hash": "05df3331ae"
     },
     {
       "id": "p3-s2",
       "pagina": 3,
       "paragrafo": 0,
-      "texto": "Entregou as instruções ao fiel escudeiro, que montou no burrico e partiu pela estrada, sentindo-se a pessoa mais importante da Espanha!",
-      "fala": "Entregou as instruções ao fiel escudeiro, que montou no burrico e partiu pela estrada, sentindo-se a pessoa mais importante da Espanha!",
-      "hash": "b4e1fe77d1"
+      "texto": "Sancho subiu no burrico e partiu pela estrada, sentindo-se a pessoa mais importante da Espanha!",
+      "fala": "Sancho subiu no burrico e partiu pela estrada, sentindo-se a pessoa mais importante da Espanha!",
+      "hash": "ee36affbd0"
     },
     {
       "id": "p3-s3",
       "pagina": 3,
       "paragrafo": 1,
-      "texto": "No entanto, ao descer as primeiras encostas, Sancho colocou as mãos nos bolsos e arregalou os olhos em pânico: havia esquecido o papel sobre uma pedra lá no alto da serra!",
-      "fala": "No entanto, ao descer as primeiras encostas, Sancho colocou as mãos nos bolsos e arregalou os olhos em pânico: havia esquecido o papel sobre uma pedra lá no alto da serra!",
-      "hash": "3a2d44921e"
+      "texto": "Mas, logo na primeira descida, Sancho enfiou as mãos nos bolsos e arregalou os olhos: tinha esquecido a carta em cima de uma pedra, lá no alto da serra!",
+      "fala": "Mas, logo na primeira descida, Sancho enfiou as mãos nos bolsos e arregalou os olhos: tinha esquecido a carta em cima de uma pedra, lá no alto da serra!",
+      "hash": "dfe0a1fb26"
     },
     {
       "id": "p3-s4",
       "pagina": 3,
       "paragrafo": 1,
-      "texto": "Desesperado, coçou a testa e tentou recuperar o texto gravado apenas na sua MEMÓRIA: — Como começava mesmo?",
-      "fala": "Desesperado, coçou a testa e tentou recuperar o texto gravado apenas na sua memória: Como começava mesmo?",
-      "hash": "e0abbd683f"
+      "texto": "Coçou a testa e tentou lembrar as palavras que tinha guardado só na MEMÓRIA: — Como começava mesmo?",
+      "fala": "Coçou a testa e tentou lembrar as palavras que tinha guardado só na memória: Como começava mesmo?",
+      "hash": "a7dfe3e8b8"
     },
     {
       "id": "p3-s5",
@@ -244,12 +244,20 @@
       "id": "p3-s6",
       "pagina": 3,
       "paragrafo": 1,
+      "texto": "Isso!",
+      "fala": "Isso!",
+      "hash": "aaa51a26ec"
+    },
+    {
+      "id": "p3-s7",
+      "pagina": 3,
+      "paragrafo": 1,
       "texto": "E no final?",
       "fala": "E no final?",
       "hash": "014ed4c7f4"
     },
     {
-      "id": "p3-s7",
+      "id": "p3-s8",
       "pagina": 3,
       "paragrafo": 1,
       "texto": "Como ele assinava mesmo?",
@@ -257,12 +265,12 @@
       "hash": "82e74a1eff"
     },
     {
-      "id": "p3-s8",
+      "id": "p3-s9",
       "pagina": 3,
       "paragrafo": 2,
-      "texto": "Ajude o bom escudeiro a lembrar a ASSINATURA da carta, tocando em cada palavra na ordem exata!",
-      "fala": "Ajude o bom escudeiro a lembrar a assinatura da carta, tocando em cada palavra na ordem exata!",
-      "hash": "525d3dac13"
+      "texto": "Ajude o bom Sancho a lembrar a ASSINATURA da carta, tocando nas palavras na ordem certa!",
+      "fala": "Ajude o bom Sancho a lembrar a assinatura da carta, tocando nas palavras na ordem certa!",
+      "hash": "e31538b02a"
     },
     {
       "id": "p4-s0",
@@ -277,65 +285,65 @@
       "id": "p4-s1",
       "pagina": 4,
       "paragrafo": 0,
-      "texto": "Ao fazer uma parada numa estalagem no sopé da montanha, Sancho encontrou dois velhos e dedicados conhecidos de sua aldeia: o bondoso PADRE Pero Pérez e o mestre Nicolau, o barbeiro da vila.",
-      "fala": "Ao fazer uma parada numa estalagem no sopé da montanha, Sancho encontrou dois velhos e dedicados conhecidos de sua aldeia: o bondoso padre Pero Pérez e o mestre Nicolau, o barbeiro da vila.",
-      "hash": "62bac9cd6b"
+      "texto": "Numa parada na pousada, lá no pé da montanha, Sancho encontrou dois velhos amigos da sua aldeia: o bondoso PADRE Pero Pérez e mestre Nicolau, o barbeiro.",
+      "fala": "Numa parada na pousada, lá no pé da montanha, Sancho encontrou dois velhos amigos da sua aldeia: o bondoso padre Pero Pérez e mestre Nicolau, o barbeiro.",
+      "hash": "b8a29cdbdb"
     },
     {
       "id": "p4-s2",
       "pagina": 4,
       "paragrafo": 0,
-      "texto": "Preocupados com o sumiço do amigo Alonso Quixano, eles vinham dispostos a resgatá-lo com carinho.",
-      "fala": "Preocupados com o sumiço do amigo Alonso Quixano, eles vinham dispostos a resgatá-lo com carinho.",
-      "hash": "74cc6a636b"
+      "texto": "Preocupados com o sumiço de Alonso Quixano, os dois tinham vindo buscá-lo com todo o carinho.",
+      "fala": "Preocupados com o sumiço de Alonso Quixano, os dois tinham vindo buscá-lo com todo o carinho.",
+      "hash": "da00185315"
     },
     {
       "id": "p4-s3",
       "pagina": 4,
       "paragrafo": 1,
-      "texto": "— Ele nunca aceitará voltar para casa por vontade própria — avisou Sancho —, a menos que uma donzela em apuros implore pela proteção da sua espada invencível!",
-      "fala": "Ele nunca aceitará voltar para casa por vontade própria, avisou Sancho, a menos que uma donzela em apuros implore pela proteção da sua espada invencível!",
-      "hash": "09d86d2f22"
+      "texto": "— Ele nunca vai querer voltar para casa — avisou Sancho —, a não ser que uma moça em perigo peça a ajuda da sua espada!",
+      "fala": "Ele nunca vai querer voltar para casa, avisou Sancho, a não ser que uma moça em perigo peça a ajuda da sua espada!",
+      "hash": "3ba1914148"
     },
     {
       "id": "p4-s4",
       "pagina": 4,
       "paragrafo": 2,
-      "texto": "— Já sei! — exclamou o padre, de olhos brilhando.",
-      "fala": "Já sei! exclamou o padre, de olhos brilhando.",
-      "hash": "cd906e9263"
+      "texto": "— Já sei! — disse o padre, de olhos brilhando.",
+      "fala": "Já sei! disse o padre, de olhos brilhando.",
+      "hash": "e45b580e10"
     },
     {
       "id": "p4-s5",
       "pagina": 4,
       "paragrafo": 2,
-      "texto": "— Vamos inventar uma princesa em apuros!",
-      "fala": "Vamos inventar uma princesa em apuros!",
-      "hash": "89ad4b38d3"
+      "texto": "— Vamos inventar uma princesa em perigo!",
+      "fala": "Vamos inventar uma princesa em perigo!",
+      "hash": "4cff812fb4"
     },
     {
       "id": "p4-s6",
       "pagina": 4,
       "paragrafo": 2,
-      "texto": "E assim os dois arquitetaram um plano genial e teatral: um engenhoso DISFARCE!",
-      "fala": "E assim os dois arquitetaram um plano genial e teatral: um engenhoso disfarce!",
-      "hash": "e49135b350"
+      "texto": "E assim os dois prepararam um plano muito esperto: um DISFARCE!",
+      "fala": "E assim os dois prepararam um plano muito esperto: um disfarce!",
+      "hash": "09cd57a1b0"
     },
     {
       "id": "p4-s7",
       "pagina": 4,
       "paragrafo": 2,
-      "texto": "Mestre Nicolau colou no queixo uma colossal BARBA avermelhada, feita com o rabo peludo de um boi, enquanto o padre vestiu uma saia rodada e uma touca florida por cima da batina.",
-      "fala": "Mestre Nicolau colou no queixo uma colossal barba avermelhada, feita com o rabo peludo de um boi, enquanto o padre vestiu uma saia rodada e uma touca florida por cima da batina.",
-      "hash": "1516117c79"
+      "texto": "Mestre Nicolau grudou no queixo uma enorme BARBA ruiva, feita com o rabo peludo de um boi, e o padre vestiu uma saia rodada e uma touca de flores por cima da sua roupa de padre.",
+      "fala": "Mestre Nicolau grudou no queixo uma enorme barba ruiva, feita com o rabo peludo de um boi, e o padre vestiu uma saia rodada e uma touca de flores por cima da sua roupa de padre.",
+      "hash": "fb5dbe7cb6"
     },
     {
       "id": "p4-s8",
       "pagina": 4,
       "paragrafo": 2,
-      "texto": "Quando se olharam no espelho da pousada, os três caíram na gargalhada, quase sem fôlego para levar a farsa adiante!",
-      "fala": "Quando se olharam no espelho da pousada, os três caíram na gargalhada, quase sem fôlego para levar a farsa adiante!",
-      "hash": "b68119c286"
+      "texto": "Quando se olharam no espelho, os três caíram na gargalhada e quase perderam o fôlego de tanto rir!",
+      "fala": "Quando se olharam no espelho, os três caíram na gargalhada e quase perderam o fôlego de tanto rir!",
+      "hash": "75c56daa90"
     },
     {
       "id": "p5-s0",
@@ -350,65 +358,73 @@
       "id": "p5-s1",
       "pagina": 5,
       "paragrafo": 0,
-      "texto": "Para que o plano fosse perfeito, juntou-se a eles Doroteia, uma jovem camponesa inteligente, destemida e dona de um talento dramático formidável.",
-      "fala": "Para que o plano fosse perfeito, juntou-se a eles Doroteia, uma jovem camponesa inteligente, destemida e dona de um talento dramático formidável.",
-      "hash": "0fa7777bb4"
+      "texto": "Para o plano dar certo, uma moça chamada Doroteia resolveu ajudar.",
+      "fala": "Para o plano dar certo, uma moça chamada Doroteia resolveu ajudar.",
+      "hash": "c90a77957b"
     },
     {
       "id": "p5-s2",
       "pagina": 5,
       "paragrafo": 0,
-      "texto": "Trajada com um reluzente vestido de seda e manto aveludado, ela subiu à serra e ajoelhou-se com graça diante do fidalgo:",
-      "fala": "Trajada com um reluzente vestido de seda e manto aveludado, ela subiu à serra e ajoelhou-se com graça diante do fidalgo:",
-      "hash": "49d34eb3f4"
+      "texto": "Ela era esperta, corajosa e ótima para fazer teatro!",
+      "fala": "Ela era esperta, corajosa e ótima para fazer teatro!",
+      "hash": "44ea3d303a"
     },
     {
       "id": "p5-s3",
       "pagina": 5,
-      "paragrafo": 1,
-      "texto": "— Ó espelho da honra e flor da cavalaria! — suplicou ela com voz aveludada.",
-      "fala": "Ó espelho da honra e flor da cavalaria! suplicou ela com voz aveludada.",
-      "hash": "c32475e3e9"
+      "paragrafo": 0,
+      "texto": "Com um vestido de seda brilhante e uma capa de veludo, ela subiu a serra e se ajoelhou diante de Dom Quixote:",
+      "fala": "Com um vestido de seda brilhante e uma capa de veludo, ela subiu a serra e se ajoelhou diante de Dom Quixote:",
+      "hash": "4cb9ab81cd"
     },
     {
       "id": "p5-s4",
       "pagina": 5,
       "paragrafo": 1,
-      "texto": "— Eu sou a desventurada PRINCESA MICOMICONA, herdeira do distante reino de Micomicão!",
-      "fala": "Eu sou a desventurada princesa micomicona, herdeira do distante reino de Micomicão!",
-      "hash": "4348cc8a57"
+      "texto": "— Ó cavaleiro valente, flor da cavalaria! — pediu ela, com voz doce.",
+      "fala": "Ó cavaleiro valente, flor da cavalaria! pediu ela, com voz doce.",
+      "hash": "be10a612a4"
     },
     {
       "id": "p5-s5",
       "pagina": 5,
       "paragrafo": 1,
-      "texto": "Um gigante feroz e desalmado, Pandafilando da Fosca Vista, invadiu minhas terras e somente o vosso braço corajoso pode libertar meu povo!",
-      "fala": "Um gigante feroz e desalmado, Pandafilando da Fosca Vista, invadiu minhas terras e somente o vosso braço corajoso pode libertar meu povo!",
-      "hash": "c22eb2c2db"
+      "texto": "— Eu sou a PRINCESA MICOMICONA, do distante reino de Micomicão!",
+      "fala": "Eu sou a princesa micomicona, do distante reino de Micomicão!",
+      "hash": "8182bfb621"
     },
     {
       "id": "p5-s6",
       "pagina": 5,
-      "paragrafo": 2,
-      "texto": "Comovido, Dom Quixote estendeu a mão à donzela e fez uma sagrada PROMESSA: — Levante-se, formosa princesa!",
-      "fala": "Comovido, Dom Quixote estendeu a mão à donzela e fez uma sagrada promessa: Levante-se, formosa princesa!",
-      "hash": "3a33fad044"
+      "paragrafo": 1,
+      "texto": "Um gigante malvado, Pandafilando da Fosca Vista, invadiu as minhas terras, e só o senhor pode salvar o meu povo!",
+      "fala": "Um gigante malvado, Pandafilando da Fosca Vista, invadiu as minhas terras, e só o senhor pode salvar o meu povo!",
+      "hash": "9190deafbe"
     },
     {
       "id": "p5-s7",
       "pagina": 5,
       "paragrafo": 2,
-      "texto": "Juro pela minha espada que vencerei esse gigante!",
-      "fala": "Juro pela minha espada que vencerei esse gigante!",
-      "hash": "b4fc069515"
+      "texto": "Emocionado, Dom Quixote estendeu a mão para a moça e fez uma PROMESSA: — Levante-se, bela princesa!",
+      "fala": "Emocionado, Dom Quixote estendeu a mão para a moça e fez uma promessa: Levante-se, bela princesa!",
+      "hash": "f9b7a3f418"
     },
     {
       "id": "p5-s8",
       "pagina": 5,
       "paragrafo": 2,
-      "texto": "E assim, com a mente em festa e o coração cheio de nobreza, o fidalgo montou no Rocinante e iniciou, sem desconfiar de nada, o caminho de volta ao seu lar!",
-      "fala": "E assim, com a mente em festa e o coração cheio de nobreza, o fidalgo montou no Rocinante e iniciou, sem desconfiar de nada, o caminho de volta ao seu lar!",
-      "hash": "210a24589b"
+      "texto": "Juro pela minha espada que vou vencer esse gigante!",
+      "fala": "Juro pela minha espada que vou vencer esse gigante!",
+      "hash": "5c1f8c8457"
+    },
+    {
+      "id": "p5-s9",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "E assim, feliz da vida e sem desconfiar de nada, o cavaleiro montou no Rocinante e pegou o caminho de volta para casa!",
+      "fala": "E assim, feliz da vida e sem desconfiar de nada, o cavaleiro montou no Rocinante e pegou o caminho de volta para casa!",
+      "hash": "91a2a56e2b"
     },
     {
       "id": "p6-s0",
@@ -423,49 +439,49 @@
       "id": "p6-s1",
       "pagina": 6,
       "paragrafo": 0,
-      "texto": "Hospedados todos na pousada no retorno da viagem, a noite transcorria serena quando gritos de guerra acordaram a casa inteira: — Renda-se, monstro covarde!",
-      "fala": "Hospedados todos na pousada no retorno da viagem, a noite transcorria serena quando gritos de guerra acordaram a casa inteira: Renda-se, monstro covarde!",
-      "hash": "bb69870fb4"
+      "texto": "De volta à pousada, todos dormiam tranquilos quando gritos de guerra acordaram a casa inteira: — Renda-se, gigante malvado!",
+      "fala": "De volta à pousada, todos dormiam tranquilos quando gritos de guerra acordaram a casa inteira: Renda-se, gigante malvado!",
+      "hash": "7d9c0713a4"
     },
     {
       "id": "p6-s2",
       "pagina": 6,
       "paragrafo": 0,
-      "texto": "Prove do meu aço!",
-      "fala": "Prove do meu aço!",
-      "hash": "804d93d99b"
+      "texto": "Agora você vai ver!",
+      "fala": "Agora você vai ver!",
+      "hash": "ffc406c1cc"
     },
     {
       "id": "p6-s3",
       "pagina": 6,
       "paragrafo": 0,
-      "texto": "Dom Quixote, caminhando sonâmbulo em seu camisolão branco de dormir, travava uma batalha feroz contra os grandes ODRES de couro de boi cheios de vinho tinto pendurados nas paredes do aposento!",
-      "fala": "Dom Quixote, caminhando sonâmbulo em seu camisolão branco de dormir, travava uma batalha feroz contra os grandes odres de couro de boi cheios de vinho tinto pendurados nas paredes do aposento!",
-      "hash": "aae862b793"
+      "texto": "Era Dom Quixote, de camisolão branco e ainda dormindo, lutando contra os ODRES pendurados na parede do quarto: grandes sacos de couro, cheios de vinho tinto!",
+      "fala": "Era Dom Quixote, de camisolão branco e ainda dormindo, lutando contra os odres pendurados na parede do quarto: grandes sacos de couro, cheios de vinho tinto!",
+      "hash": "22526fd753"
     },
     {
       "id": "p6-s4",
       "pagina": 6,
       "paragrafo": 1,
-      "texto": "Mergulhado em seu vívido SONHO, cada odre pendurado representava o temível GIGANTE Pandafilando!",
-      "fala": "Mergulhado em seu vívido sonho, cada odre pendurado representava o temível gigante Pandafilando!",
-      "hash": "30752dfd0c"
+      "texto": "No meio do SONHO, cada odre parecia o terrível GIGANTE Pandafilando!",
+      "fala": "No meio do sonho, cada odre parecia o terrível gigante Pandafilando!",
+      "hash": "9e7251d40c"
     },
     {
       "id": "p6-s5",
       "pagina": 6,
       "paragrafo": 1,
-      "texto": "Brandindo a sua afiada ESPADA no escuro, perfurou o couro grosso e fez um rio de vinho aromático escorrer pelas tábuas do chão como uma cachoeira carmesim.",
-      "fala": "Brandindo a sua afiada espada no escuro, perfurou o couro grosso e fez um rio de vinho aromático escorrer pelas tábuas do chão como uma cachoeira carmesim.",
-      "hash": "c1b9ddf521"
+      "texto": "Balançando a ESPADA no escuro, ele furou o couro grosso e fez o vinho escorrer pelo chão como um rio vermelho.",
+      "fala": "Balançando a espada no escuro, ele furou o couro grosso e fez o vinho escorrer pelo chão como um rio vermelho.",
+      "hash": "72c13ea640"
     },
     {
       "id": "p6-s6",
       "pagina": 6,
       "paragrafo": 1,
-      "texto": "Toque na espada para ajudar o cavaleiro a vencer os odres!",
-      "fala": "Toque na espada para ajudar o cavaleiro a vencer os odres!",
-      "hash": "2c6dc18c20"
+      "texto": "Toque na espada e ajude o cavaleiro a vencer os odres!",
+      "fala": "Toque na espada e ajude o cavaleiro a vencer os odres!",
+      "hash": "0ac178405e"
     },
     {
       "id": "p6-s7",
@@ -479,25 +495,25 @@
       "id": "p6-s8",
       "pagina": 6,
       "paragrafo": 2,
-      "texto": "Meu vinho! — berrava o estalajadeiro, desesperado.",
-      "fala": "Meu vinho! berrava o estalajadeiro, desesperado.",
-      "hash": "52521163fb"
+      "texto": "Meu vinho! — gritava o dono da pousada, desesperado.",
+      "fala": "Meu vinho! gritava o dono da pousada, desesperado.",
+      "hash": "6a56a7ca7f"
     },
     {
       "id": "p6-s9",
       "pagina": 6,
       "paragrafo": 2,
-      "texto": "— Calma, meu bom homem, eu pago cada centavo! — prometeu o generoso padre.",
-      "fala": "Calma, meu bom homem, eu pago cada centavo! prometeu o generoso padre.",
-      "hash": "d92bb93c6f"
+      "texto": "— Calma, meu bom homem, eu pago tudo! — prometeu o padre.",
+      "fala": "Calma, meu bom homem, eu pago tudo! prometeu o padre.",
+      "hash": "9c102bee81"
     },
     {
       "id": "p6-s10",
       "pagina": 6,
       "paragrafo": 2,
-      "texto": "E Dom Quixote, enxugando o suor da testa com orgulho infantil, deitou-se novamente em paz, convicto de que salvara o trono da princesa Micomicona!",
-      "fala": "E Dom Quixote, enxugando o suor da testa com orgulho infantil, deitou-se novamente em paz, convicto de que salvara o trono da princesa Micomicona!",
-      "hash": "13d8fef246"
+      "texto": "E Dom Quixote, todo orgulhoso, voltou para a cama e dormiu em paz, certo de que tinha salvado o reino da princesa Micomicona!",
+      "fala": "E Dom Quixote, todo orgulhoso, voltou para a cama e dormiu em paz, certo de que tinha salvado o reino da princesa Micomicona!",
+      "hash": "a59f41eb41"
     },
     {
       "id": "p7-s0",
@@ -512,25 +528,25 @@
       "id": "p7-s1",
       "pagina": 7,
       "paragrafo": 0,
-      "texto": "Naquela noite acolhedora, o salão da estalagem encheu-se de viajantes, mercadores e famílias ao redor de uma grande mesa iluminada por tochas e velas aromáticas.",
-      "fala": "Naquela noite acolhedora, o salão da estalagem encheu-se de viajantes, mercadores e famílias ao redor de uma grande mesa iluminada por tochas e velas aromáticas.",
-      "hash": "1b1ef93a7b"
+      "texto": "Naquela noite, o salão da pousada se encheu de viajantes, comerciantes e famílias em volta de uma mesa grande, iluminada por velas.",
+      "fala": "Naquela noite, o salão da pousada se encheu de viajantes, comerciantes e famílias em volta de uma mesa grande, iluminada por velas.",
+      "hash": "63d6a5f61a"
     },
     {
       "id": "p7-s2",
       "pagina": 7,
       "paragrafo": 0,
-      "texto": "O pão quentinho circulava de mão em mão, e cada viajante compartilhava ricas HISTÓRIAS de aventuras pelos mares, reencontros inesperados e antigas lendas do mundo.",
-      "fala": "O pão quentinho circulava de mão em mão, e cada viajante compartilhava ricas histórias de aventuras pelos mares, reencontros inesperados e antigas lendas do mundo.",
-      "hash": "75d6a21afe"
+      "texto": "O pão quentinho passava de mão em mão, e cada um contava as suas HISTÓRIAS: aventuras no mar, encontros inesperados e lendas antigas do mundo inteiro.",
+      "fala": "O pão quentinho passava de mão em mão, e cada um contava as suas histórias: aventuras no mar, encontros inesperados e lendas antigas do mundo inteiro.",
+      "hash": "d8d0d0392f"
     },
     {
       "id": "p7-s3",
       "pagina": 7,
       "paragrafo": 1,
-      "texto": "Num dado momento, Dom Quixote levantou-se à cabeceira da mesa e fez um sábio e comovente discurso sobre o valor das ARMAS e das LETRAS: — A coragem dos cavaleiros protege a paz e defende os mais fracos.",
-      "fala": "Num dado momento, Dom Quixote levantou-se à cabeceira da mesa e fez um sábio e comovente discurso sobre o valor das armas e das letras: A coragem dos cavaleiros protege a paz e defende os mais fracos.",
-      "hash": "efc4a14eb6"
+      "texto": "Então Dom Quixote se levantou na ponta da mesa e fez um discurso bonito e sábio sobre as ARMAS dos cavaleiros e as LETRAS dos livros: — A coragem dos cavaleiros protege a paz e defende os mais fracos.",
+      "fala": "Então Dom Quixote se levantou na ponta da mesa e fez um discurso bonito e sábio sobre as armas dos cavaleiros e as letras dos livros: A coragem dos cavaleiros protege a paz e defende os mais fracos.",
+      "hash": "a1e1c80e09"
     },
     {
       "id": "p7-s4",
@@ -544,17 +560,17 @@
       "id": "p7-s5",
       "pagina": 7,
       "paragrafo": 2,
-      "texto": "Todos os ouvintes se entreolhavam maravilhados, surpresos ao descobrir a sabedoria brilhante que habitava aquele fidalgo de olhar afetuoso.",
-      "fala": "Todos os ouvintes se entreolhavam maravilhados, surpresos ao descobrir a sabedoria brilhante que habitava aquele fidalgo de olhar afetuoso.",
-      "hash": "c97b604634"
+      "texto": "Todos se olharam, encantados com a sabedoria daquele cavaleiro tão sonhador.",
+      "fala": "Todos se olharam, encantados com a sabedoria daquele cavaleiro tão sonhador.",
+      "hash": "61a6024520"
     },
     {
       "id": "p7-s6",
       "pagina": 7,
       "paragrafo": 2,
-      "texto": "O padre e o barbeiro sorriam comovidos: estava na hora de conduzir aquele querido sonhador de volta ao aconchego do seu lar!",
-      "fala": "O padre e o barbeiro sorriam comovidos: estava na hora de conduzir aquele querido sonhador de volta ao aconchego do seu lar!",
-      "hash": "1e28c2fa4c"
+      "texto": "O padre e o barbeiro sorriram, emocionados: estava na hora de levar o querido amigo de volta para o aconchego da sua casa!",
+      "fala": "O padre e o barbeiro sorriram, emocionados: estava na hora de levar o querido amigo de volta para o aconchego da sua casa!",
+      "hash": "7fab90bb4c"
     }
   ],
   "palavras": [
