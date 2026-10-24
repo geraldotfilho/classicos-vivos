@@ -43,6 +43,34 @@ Convenção: `pN` = índice da página (`?page=N`), sufixo `-real` (Lente da Rea
 
 **Todas as Imaginações da Parte 2 foram refeitas em 2026-10-24** com a bíblia da Imaginação (Dom Quixote cavaleiro dourado, Rocinante corcel branco, Sancho escudeiro). Prompts das páginas 4 a 8 e de todas as Imaginações: `tools/arte/dom-quixote-parte-2.mjs` (método em `docs/ARTE-PELA-API.md`).
 
+### Parte 3 — Serra Morena e a Princesa Micomicona (`../imagens/parte-3/`)
+Toda a parte pelo Claude, pela API (2026-10-24). Prompts: `tools/arte/dom-quixote-parte-3.mjs` (+ `dom-quixote-comum.mjs`).
+
+| Página | Arquivos | Observação |
+| :--- | :--- | :--- |
+| 0 · Capa | `p0-real`, `p0-imag` | Serra Morena; na Imaginação, reino encantado com castelos nos picos |
+| 1 · A Mala Perdida | `p1-real`, `p1-imag` | Camadas `p1-moedas`, `p1-caderno` (dentro da mala aberta) |
+| 2 · As Cambalhotas | `p2-real`, `p2-imag` | Camada `p2-quixote-camisolao` (gira com CAMBALHOTA) |
+| 3 · A Carta | `p3-real`, `p3-real-lembrou`, `p3-imag` | `p3-real-lembrou` quando a assinatura fica completa |
+| 4 · Amigos Disfarçados | `p4-real`, `p4-imag` | Primeira cena do padre e do barbeiro (referência das seguintes) |
+| 5 · A Princesa Micomicona | `p5-real`, `p5-imag` | Primeira cena de Doroteia |
+| 6 · A Batalha dos Odres | `p6-real`, `p6-imag` | Camadas `p6-odre` (com o próprio gancho, usada 3 vezes) e `p6-respingo` |
+| 7 · Armas e Letras | `p7-real`, `p7-imag` | |
+
+### Parte 4 — A Jaula Encantada e a Ilha de Sancho (`../imagens/parte-4/`)
+Toda a parte pelo Claude, pela API (2026-10-24). Prompts: `tools/arte/dom-quixote-parte-4.mjs`.
+
+| Página | Arquivos | Observação |
+| :--- | :--- | :--- |
+| 0 · Capa | `p0-real`, `p0-imag` | Na Imaginação, Sancho governador e a ilha encantada |
+| 1 · A Jaula Encantada | `p1-real`, `p1-imag` | Carruagem de cristal na Imaginação |
+| 2 · De Volta para Casa | `p2-real`, `p2-imag` | Primeira cena da sobrinha, da governanta, de Teresa e Sanchica |
+| 3 · Clavilenho | `p3-real` (centro livre), `p3-imag` | Camadas `p3-clavilenho`, `p3-vento-fole`, `p3-calor-tocha` |
+| 4 · Conselhos | `p4-real`, `p4-imag` | Imaginação de Sancho: governador sob a palmeira |
+| 5 · A Bengala | `p5-real`, `p5-imag` | Camadas `p5-bengala-inteira`, `p5-bengala-quebrada` |
+| 6 · O Burrico | `p6-real`, `p6-imag` | Imaginação: liberdade no campo florido |
+| 7 · As Aventuras Moram nos Livros | `p7-real`, `p7-imag` | A sala da Parte 1; as aventuras saem da lareira |
+
 ---
 
 ## 🎒 2. Ícones das Bandejas (`../imagens/objetos/`)

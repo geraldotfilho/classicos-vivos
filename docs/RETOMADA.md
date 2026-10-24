@@ -6,11 +6,17 @@ Leia este arquivo primeiro numa sessão nova do Claude. Depois, `AGENTS.md` (arq
 
 ---
 
-## 0. Atualização de 2026-10-24, tarde: arte da Parte 2 pela API
+## 0. Atualização de 2026-10-24, noite: Dom Quixote todo ilustrado
+- Com autorização do humano, o Claude gerou pela API **as Partes 3 e 4 inteiras** (33 cenas + 10 camadas, US$ 1,60), com a bíblia da Imaginação desde o início. Método e lições: `ARTE-PELA-API.md` §5. **Não falta nenhuma ilustração em Dom Quixote.**
+- Gasto da API no mês (2026-10-24): imagens US$ 2,59 + narração ~US$ 0,79 ≈ **US$ 3,38** (teto R$ 30).
+- **Gemini (Antigravity)**: P-002 está concluído. Ao voltar da cota (29/10), o que resta para ele é P-005 (acabamento da pousada, Parte 1), que pode ser reaberto, e os próximos livros.
+- Pendências de arte (sem urgência): BACKLOG M-13.
+
+## Atualização anterior (2026-10-24, tarde): arte da Parte 2 pela API
 - Com a cota do Antigravity esgotada até 29/10, o humano autorizou o Claude a gerar **só as imagens que faltavam da Parte 2**. Feito com `npm run gerar:imagens` (Nano Banana 2, Batch): páginas 4 a 8 (10 cenas + 5 camadas), integradas e testadas. **Gasto: US$ 0,57** (`docs/arte/gastos.csv`). **A Parte 2 está completa.**
 - **Imaginações da Parte 2 refeitas** (as 9, pedido do humano): agora transformam de verdade (cavaleiro dourado, corcel branco, Sancho escudeiro). Mais US$ 0,42. Regra para as próximas partes: `ARTE-PELA-API.md` §4.1.
 - **Teto da API: R$ 30/mês** (o humano aumentou em 2026-10-24). Gasto no mês até aqui: narração ~US$ 0,65 + imagens US$ 0,99 ≈ **US$ 1,64**.
-- Próximo passo, **se o humano autorizar**: Partes 3 (~US$ 0,85) e 4 (~US$ 0,80), já com a bíblia da Imaginação, com o mesmo método: escrever `tools/arte/dom-quixote-parte-N.mjs` a partir do TODO, rodar `--seco`, e seguir as rodadas de `docs/ARTE-PELA-API.md` §3. Sem autorização, o Gemini retoma a Parte 3 no Antigravity em 29/10.
+- (Feito à noite: Partes 3 e 4, ver acima.) Partes 3 (~US$ 0,85) e 4 (~US$ 0,80), já com a bíblia da Imaginação, com o mesmo método: escrever `tools/arte/dom-quixote-parte-N.mjs` a partir do TODO, rodar `--seco`, e seguir as rodadas de `docs/ARTE-PELA-API.md` §3. Sem autorização, o Gemini retoma a Parte 3 no Antigravity em 29/10.
 
 ## 1. Frente atual do Claude: narração gravada (P-006)
 

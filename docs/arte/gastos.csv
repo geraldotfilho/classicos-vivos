@@ -5,3 +5,11 @@ data,modelo,nivel,comando,pedidos,imagens_ok,tokens_entrada,tokens_imagem,tokens
 2026-10-24T13:07,gemini-3.1-flash-image,batch,"--lista tools/arte/dom-quixote-parte-2.mjs --ids p0-imag,p1-imag,p2-imag,p3-imag,p4-imag,p5-imag,p6-imag,p7-imag,p8-imag",9,9,14858,10080,5256,0.3140
 2026-10-24T13:10,gemini-3.1-flash-image,batch,"--lista tools/arte/dom-quixote-parte-2.mjs --ids p4-imag,p8-imag",2,2,3426,2240,1409,0.0702
 2026-10-24T13:14,gemini-3.1-flash-image,batch,"--lista tools/arte/dom-quixote-parte-2.mjs --ids p4-imag",1,1,1760,1120,595,0.0349
+2026-10-24T15:55,gemini-3.1-flash-image,batch,"--lista tools/arte/dom-quixote-parte-3.mjs --ids p0-real,p1-real,p2-real,p3-real,p4-real,p6-real,p2-quixote-camisolao",7,7,6180,7840,2792,0.2409
+2026-10-24T15:58,gemini-3.1-flash-image,batch,"--lista tools/arte/dom-quixote-parte-4.mjs --ids p0-real,p2-real,p3-real,p6-real,p7-real,p3-clavilenho",6,6,5243,6720,2665,0.2069
+2026-10-24T16:03,gemini-3.1-flash-image,batch,"--lista tools/arte/dom-quixote-parte-3.mjs --ids p5-real,p3-real-lembrou,p1-moedas,p1-caderno,p6-odre,p6-respingo,p0-imag,p1-imag,p2-imag,p3-imag,p4-imag,p6-imag",12,12,11554,13440,5631,0.4145
+2026-10-24T16:07,gemini-3.1-flash-image,batch,"--lista tools/arte/dom-quixote-parte-4.mjs --ids p1-real,p4-real,p5-real,p3-clavilenho,p3-vento-fole,p3-calor-tocha,p0-imag,p2-imag,p6-imag,p7-imag",10,10,10347,10827,4690,0.3344
+2026-10-24T16:12,gemini-3.1-flash-image,batch,"--lista tools/arte/dom-quixote-parte-3.mjs --ids p7-real,p3-imag,p6-imag,p5-imag",4,4,5658,4480,1995,0.1388
+2026-10-24T16:14,gemini-3.1-flash-image,batch,"--lista tools/arte/dom-quixote-parte-4.mjs --ids p1-imag,p4-imag,p5-imag,p6-imag,p3-imag,p5-bengala-inteira",6,6,7648,6347,2780,0.1965
+2026-10-24T16:16,gemini-3.1-flash-image,batch,"--lista tools/arte/dom-quixote-parte-4.mjs --ids p5-bengala-quebrada",1,1,747,1120,353,0.0343
+2026-10-24T16:17,gemini-3.1-flash-image,batch,"--lista tools/arte/dom-quixote-parte-3.mjs --ids p7-imag",1,1,1425,1120,589,0.0348

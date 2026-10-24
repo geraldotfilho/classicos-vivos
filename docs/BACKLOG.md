@@ -55,6 +55,11 @@ Levantado na inspeção completa do sprint 1 (2026-10): código, ilustrações e
 - **Narração gravada pronta para receber áudio**: tocador frase a frase com a voz do aparelho como reserva, voz offline quando a online falha, MP3 guardado sob demanda pelo service worker.
 - **Segmentação canônica** (`assets/js/texto.js`) e exportação das 214 frases e 105 palavras-chave (`docs/narracao/`) para o Gemini gravar (P-006, agora com o Claude: `docs/TODO-NARRACAO.md`). Conversor WAV/PCM → MP3 sem dependências nativas (`npm run build:audio`).
 
+## ✅ Entregue no sprint 10 (arte das Partes 3 e 4 pela API, noite de 2026-10-24)
+
+- **Dom Quixote todo ilustrado** (antigo A-7): as Partes 3 e 4 inteiras (33 cenas + 10 camadas) pelo Claude, pela API (Nano Banana 2, Batch), com a bíblia da Imaginação desde o início. US$ 1,60. Camadas posicionadas pela arte; todas as interações testadas (moedas, caderno, cambalhota, assinatura, espada, fole, tocha, bengala). A estante já mostra as quatro capas.
+- `recortar-camada.py --sem-contorno` (tira o contorno branco de "adesivo"); cache das imagens separado por lista.
+
 ## ✅ Entregue no sprint 9 (arte da Parte 2 pela API, tarde de 2026-10-24)
 
 - **Parte 2 com toda a arte**: páginas 4 a 8 (`-real`, `-imag` e as camadas da poeira, do balão, da cabra e dos martelos) geradas pelo Claude com o Nano Banana 2 pela API, em modo Batch, por autorização pontual do humano. US$ 0,57. Ferramentas novas: `npm run gerar:imagens` e `tools/recortar-camada.py` (fundo magenta → alfa, sem halo). Método: `docs/ARTE-PELA-API.md`.
@@ -86,7 +91,6 @@ Levantado na inspeção completa do sprint 1 (2026-10): código, ilustrações e
 
 | ID | Item | Detalhes |
 | :--- | :--- | :--- |
-| A-7 | **Arte das Partes 3–4** (a Parte 2 está completa) | 33 cenas + 10 camadas em `TODO-NANO-BANANA-PARTES-2-4.md` (Gemini no Antigravity, a partir de 29/10; ou o Claude pela API, se o humano autorizar: ~US$ 1,65, `ARTE-PELA-API.md` §5). Depois de cada entrega: conferir posições das camadas nas duas orientações e ajustar `x/y/w` no `parte-N.html`. |
 | A-8 | **Revisão humana do texto das Partes 2–4** | Ler em voz alta com a voz do tablet; decidir "vinho tinto" × "suco de uva" (Parte 3, cap. 20); validar a dificuldade da `ordem` (5 palavras) e da contagem com crianças. Ver `PLANO-PARTES-2-4.md` §5. |
 
 ## 🟡 Prioridade média
