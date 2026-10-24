@@ -184,6 +184,7 @@ A API é paga pelo humano, num projeto de hobby com **limite de R$ 30/mês** (er
   - no `vozes.js`, a voz leva `idioma: 'en'` (sem ele, é português); o painel só mostra as gravações do idioma atual;
   - sem gravação, a voz do aparelho naquele idioma (a escolha de voz é guardada por idioma: `cv-voz-en` etc.), inclusive nas palavras-chave.
 - A segmentação de frases (`texto.js`) aceita o « » francês com espaço antes do fecho. Nas traduções, evite abreviações com ponto (Mr., Sr.), que cortariam a frase.
+- **Portal e Menus Multilíngues**: `assets/js/i18n-site.js` estende o funcionamento multilíngue para fora dos livros (estante da biblioteca `index.html` e página explicativa `sobre.html`), com seletor de bandeiras sincronizado via `cv-idioma`.
 
 ---
 
@@ -213,6 +214,11 @@ A API é paga pelo humano, num projeto de hobby com **limite de R$ 30/mês** (er
 - `index.html` é uma **estante lúdica**: livros como capas grandes e tocáveis numa prateleira de madeira, com botão ▶. Na prateleira de cima ficam as 4 partes de Dom Quixote (a capa de cada uma é o `p0-real` da parte; cor e emoji provisórios só aparecem num livro novo, enquanto a arte não chega); na de baixo, os próximos clássicos com 🔒 "Em breve". **Quanto menos texto, melhor**: nada de descrições, pilares, faixas etárias ou títulos de capítulos.
 - Tudo que é informação para adultos (proposta pedagógica, acervo detalhado, instruções de instalação e voz, licença) fica em `sobre.html`, acessível por um botão discreto "Para adultos" (ícone ⓘ).
 - Livro novo: uma capa nova na prateleira de cima e uma entrada no "Acervo" de `sobre.html`.
+- **Fluxos de Leitura ("Continuar", "Ler de Novo" e "Recomeçar Página")**:
+  - `Continuar de onde parou`: guarda o progresso da leitura em `localStorage` (`cv-progresso-<livro>` e `cv-ultimo-livro`), oferecendo atalho destacado "Continuar da Página X" tanto na capa do livro quanto na estante da biblioteca (`index.html`).
+  - `Ler de Novo`: na última página, limpa e reinicia o estado de todas as páginas (cartões, lentes, camadas) e retorna à capa.
+  - `Botão 🔄 Recomeçar`: presente nas páginas de leitura ao lado do botão de lente, permite à criança reiniciar apenas as interações daquela página atual de volta ao estado inicial para brincar de novo à vontade.
+- **Notificação de Atualização do PWA**: Quando o service worker detecta uma nova versão em cache, um aviso sutil (`✨ Nova versão disponível`) convida o usuário a atualizar com um toque.
 
 ## 4. Pipeline de Ilustração: Nano-Banana, Desacoplamento e Banco de Referências
 
