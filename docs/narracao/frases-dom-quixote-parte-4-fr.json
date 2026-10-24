@@ -1,0 +1,741 @@
+{
+  "obra": "Don Quichotte de la Manche",
+  "parte": 4,
+  "idioma": "fr",
+  "audio": "dom-quixote/audio/<voz>-fr/parte-4/<id>.mp3",
+  "audioPalavras": "dom-quixote/audio/palavras-fr/<slug>.mp3",
+  "frases": [
+    {
+      "id": "p0-s0",
+      "pagina": 0,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Don Quichotte de la Manche. Partie 4 : La cage enchantée et l’île de Sancho",
+      "fala": "Don Quichotte de la Manche. Partie 4 : La cage enchantée et l’île de Sancho",
+      "hash": "5b2eb5fc11"
+    },
+    {
+      "id": "p0-s1",
+      "pagina": 0,
+      "paragrafo": 0,
+      "texto": "Nous voici arrivés au grand et émouvant chapitre final de notre inoubliable voyage !",
+      "fala": "Nous voici arrivés au grand et émouvant chapitre final de notre inoubliable voyage !",
+      "hash": "7aad2410ee"
+    },
+    {
+      "id": "p0-s2",
+      "pagina": 0,
+      "paragrafo": 0,
+      "texto": "Don Quichotte va rentrer dans son village à l’intérieur d’une mystérieuse CAGE de bois, repartir vers de nouveaux exploits, traverser le ciel sur le dos d’un cheval volant et voir son fidèle écuyer réaliser son rêve : gouverner une ÎLE !",
+      "fala": "Don Quichotte va rentrer dans son village à l’intérieur d’une mystérieuse cage de bois, repartir vers de nouveaux exploits, traverser le ciel sur le dos d’un cheval volant et voir son fidèle écuyer réaliser son rêve : gouverner une île !",
+      "hash": "76d7fb8c2b"
+    },
+    {
+      "id": "p0-s3",
+      "pagina": 0,
+      "paragrafo": 1,
+      "texto": "Pour ces adieux, Sancho Pança va nous apprendre à tous que la vraie SAGESSE ne dépend ni des couronnes ni des richesses, mais qu’elle fleurit dans le cœur des gens simples et généreux.",
+      "fala": "Pour ces adieux, Sancho Pança va nous apprendre à tous que la vraie sagesse ne dépend ni des couronnes ni des richesses, mais qu’elle fleurit dans le cœur des gens simples et généreux.",
+      "hash": "cd752f811b"
+    },
+    {
+      "id": "p0-s4",
+      "pagina": 0,
+      "paragrafo": 2,
+      "texto": "Tourne la page, sens la brise caresser tes yeux et viens vivre le grand dénouement de ce chef-d’œuvre immortel !",
+      "fala": "Tourne la page, sens la brise caresser tes yeux et viens vivre le grand dénouement de ce chef-d’œuvre immortel !",
+      "hash": "e248171745"
+    },
+    {
+      "id": "p1-s0",
+      "pagina": 1,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapitre 23. La cage enchantée. Un voyage en char à bœufs",
+      "fala": "Chapitre 23. La cage enchantée. Un voyage en char à bœufs",
+      "hash": "dfa452d72f"
+    },
+    {
+      "id": "p1-s1",
+      "pagina": 1,
+      "paragrafo": 0,
+      "texto": "Pour ramener Don Quichotte chez lui en toute sécurité et sans blesser son noble cœur, ses amis construisirent une grande CAGE en lattes de chêne sur une charrette tirée par deux BŒUFS blancs, lents et paisibles.",
+      "fala": "Pour ramener Don Quichotte chez lui en toute sécurité et sans blesser son noble cœur, ses amis construisirent une grande cage en lattes de chêne sur une charrette tirée par deux bœufs blancs, lents et paisibles.",
+      "hash": "d1b1bb1d63"
+    },
+    {
+      "id": "p1-s2",
+      "pagina": 1,
+      "paragrafo": 0,
+      "texto": "Pendant que le gentilhomme dormait, épuisé par ses batailles, ils l’installèrent dedans avec le plus grand soin.",
+      "fala": "Pendant que le gentilhomme dormait, épuisé par ses batailles, ils l’installèrent dedans avec le plus grand soin.",
+      "hash": "22efa419da"
+    },
+    {
+      "id": "p1-s3",
+      "pagina": 1,
+      "paragrafo": 1,
+      "texto": "En se réveillant entre les barreaux de bois, au lieu de se mettre en colère, Don Quichotte fit un sourire tranquille : « Je suis ENCHANTÉ par un puissant magicien des livres ! annonça-t-il avec sérénité à ses compagnons.",
+      "fala": "En se réveillant entre les barreaux de bois, au lieu de se mettre en colère, Don Quichotte fit un sourire tranquille : Je suis enchanté par un puissant magicien des livres ! annonça-t-il avec sérénité à ses compagnons.",
+      "hash": "798ce3b919"
+    },
+    {
+      "id": "p1-s4",
+      "pagina": 1,
+      "paragrafo": 1,
+      "texto": "Seuls les chevaliers les plus célèbres de l’histoire voyagent dans des carrosses enchantés comme celui-ci ! »",
+      "fala": "Seuls les chevaliers les plus célèbres de l’histoire voyagent dans des carrosses enchantés comme celui-ci !",
+      "hash": "bdaa1fc179"
+    },
+    {
+      "id": "p1-s5",
+      "pagina": 1,
+      "paragrafo": 2,
+      "texto": "Et ainsi le cortège avança lentement à travers les prairies dorées : les roues de la charrette grinçaient en cadence, les bœufs meuglaient doucement dans la brise, Sancho trottait à côté sur son fidèle âne, et Don Quichotte saluait joyeusement de l’intérieur de sa cellule enchantée, en rêvant aux glorieuses aventures qui l’attendaient plus loin !",
+      "fala": "Et ainsi le cortège avança lentement à travers les prairies dorées : les roues de la charrette grinçaient en cadence, les bœufs meuglaient doucement dans la brise, Sancho trottait à côté sur son fidèle âne, et Don Quichotte saluait joyeusement de l’intérieur de sa cellule enchantée, en rêvant aux glorieuses aventures qui l’attendaient plus loin !",
+      "hash": "8901465e9d"
+    },
+    {
+      "id": "p2-s0",
+      "pagina": 2,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapitre 24. De retour à la maison. Des câlins dans la Manche",
+      "fala": "Chapitre 24. De retour à la maison. Des câlins dans la Manche",
+      "hash": "6d9b045003"
+    },
+    {
+      "id": "p2-s1",
+      "pagina": 2,
+      "paragrafo": 0,
+      "texto": "À midi, par un dimanche ensoleillé, la charrette à bœufs entra sur la place fleurie de leur village de la Manche, où tout le voisinage accourut, curieux, pour saluer les voyageurs.",
+      "fala": "À midi, par un dimanche ensoleillé, la charrette à bœufs entra sur la place fleurie de leur village de la Manche, où tout le voisinage accourut, curieux, pour saluer les voyageurs.",
+      "hash": "6a6e17d5eb"
+    },
+    {
+      "id": "p2-s2",
+      "pagina": 2,
+      "paragrafo": 0,
+      "texto": "Sa tendre NIÈCE Antonia et la dévouée gouvernante de la maison couvrirent le gentilhomme de baisers et de larmes de soulagement, l’installèrent dans un lit moelleux et lui servirent un bon bouillon de poule bien chaud.",
+      "fala": "Sa tendre nièce Antonia et la dévouée gouvernante de la maison couvrirent le gentilhomme de baisers et de larmes de soulagement, l’installèrent dans un lit moelleux et lui servirent un bon bouillon de poule bien chaud.",
+      "hash": "36f7f39621"
+    },
+    {
+      "id": "p2-s3",
+      "pagina": 2,
+      "paragrafo": 1,
+      "texto": "Sancho courut vite jusqu’à sa modeste maisonnette aux murs blancs.",
+      "fala": "Sancho courut vite jusqu’à sa modeste maisonnette aux murs blancs.",
+      "hash": "3b58953bf5"
+    },
+    {
+      "id": "p2-s4",
+      "pagina": 2,
+      "paragrafo": 1,
+      "texto": "Sa chère épouse Thérèse Pança et sa petite fille Sanchica se précipitèrent pour le serrer dans leurs bras.",
+      "fala": "Sa chère épouse Thérèse Pança et sa petite fille Sanchica se précipitèrent pour le serrer dans leurs bras.",
+      "hash": "7d63ae0d46"
+    },
+    {
+      "id": "p2-s5",
+      "pagina": 2,
+      "paragrafo": 1,
+      "texto": "« Tu as rapporté des pièces d’or ? » demanda Thérèse.",
+      "fala": "Tu as rapporté des pièces d’or ? demanda Thérèse.",
+      "hash": "15aa033abf"
+    },
+    {
+      "id": "p2-s6",
+      "pagina": 2,
+      "paragrafo": 1,
+      "texto": "« Tu m’as rapporté de belles robes ? » voulut savoir Sanchica, en sautant de joie.",
+      "fala": "Tu m’as rapporté de belles robes ? voulut savoir Sanchica, en sautant de joie.",
+      "hash": "64ace5212b"
+    },
+    {
+      "id": "p2-s7",
+      "pagina": 2,
+      "paragrafo": 1,
+      "texto": "« J’ai rapporté quelque chose de bien plus précieux ! s’écria Sancho, en faisant tournoyer sa fille dans ses bras.",
+      "fala": "J’ai rapporté quelque chose de bien plus précieux ! s’écria Sancho, en faisant tournoyer sa fille dans ses bras.",
+      "hash": "d080279ad2"
+    },
+    {
+      "id": "p2-s8",
+      "pagina": 2,
+      "paragrafo": 1,
+      "texto": "J’ai rapporté des souvenirs inoubliables, du courage et la certitude que je serai un jour nommé gouverneur d’une belle île ! »",
+      "fala": "J’ai rapporté des souvenirs inoubliables, du courage et la certitude que je serai un jour nommé gouverneur d’une belle île !",
+      "hash": "c79f158d55"
+    },
+    {
+      "id": "p2-s9",
+      "pagina": 2,
+      "paragrafo": 2,
+      "texto": "Réunie autour de la table avec du pain maison et des olives, la FAMILLE écouta, émue, les histoires des moulins et des moutons jusque tard dans la nuit.",
+      "fala": "Réunie autour de la table avec du pain maison et des olives, la famille écouta, émue, les histoires des moulins et des moutons jusque tard dans la nuit.",
+      "hash": "50bdedeae8"
+    },
+    {
+      "id": "p2-s10",
+      "pagina": 2,
+      "paragrafo": 2,
+      "texto": "Mais, en contemplant le clair de lune par la fenêtre de sa chambre, Don Quichotte sentait déjà dans son cœur une profonde NOSTALGIE de la poussière magique des routes…",
+      "fala": "Mais, en contemplant le clair de lune par la fenêtre de sa chambre, Don Quichotte sentait déjà dans son cœur une profonde nostalgie de la poussière magique des routes…",
+      "hash": "298edca73e"
+    },
+    {
+      "id": "p3-s0",
+      "pagina": 3,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapitre 25. Clavilègne, le cheval volant. Un voyage dans le ciel sans quitter le sol",
+      "fala": "Chapitre 25. Clavilègne, le cheval volant. Un voyage dans le ciel sans quitter le sol",
+      "hash": "d88bd2e9df"
+    },
+    {
+      "id": "p3-s1",
+      "pagina": 3,
+      "paragrafo": 0,
+      "texto": "Des mois plus tard, sentant l’appel irrésistible de l’aventure, les deux compagnons repartirent sur les chemins du monde !",
+      "fala": "Des mois plus tard, sentant l’appel irrésistible de l’aventure, les deux compagnons repartirent sur les chemins du monde !",
+      "hash": "932e3b6e16"
+    },
+    {
+      "id": "p3-s2",
+      "pagina": 3,
+      "paragrafo": 0,
+      "texto": "Et ils eurent une charmante surprise : leurs anciens exploits avaient été écrits et publiés dans un grand livre, et le Chevalier à la Triste Figure était devenu célèbre dans toute l’Espagne.",
+      "fala": "Et ils eurent une charmante surprise : leurs anciens exploits avaient été écrits et publiés dans un grand livre, et le Chevalier à la Triste Figure était devenu célèbre dans toute l’Espagne.",
+      "hash": "54bd5e33f8"
+    },
+    {
+      "id": "p3-s3",
+      "pagina": 3,
+      "paragrafo": 0,
+      "texto": "Un duc et une duchesse, riches et nobles, passionnés par cette lecture, accueillirent les deux amis dans leur magnifique palais.",
+      "fala": "Un duc et une duchesse, riches et nobles, passionnés par cette lecture, accueillirent les deux amis dans leur magnifique palais.",
+      "hash": "d48cbe0890"
+    },
+    {
+      "id": "p3-s4",
+      "pagina": 3,
+      "paragrafo": 1,
+      "texto": "Là, ils préparèrent une farce théâtrale inoubliable : ils présentèrent CLAVILÈGNE, un immense cheval de bois avec une cheville magique sur le cou qui, affirmaient-ils, avait le pouvoir de traverser les nuages.",
+      "fala": "Là, ils préparèrent une farce théâtrale inoubliable : ils présentèrent clavilègne, un immense cheval de bois avec une cheville magique sur le cou qui, affirmaient-ils, avait le pouvoir de traverser les nuages.",
+      "hash": "6bc17b38e0"
+    },
+    {
+      "id": "p3-s5",
+      "pagina": 3,
+      "paragrafo": 1,
+      "texto": "Don Quichotte et Sancho montèrent sur son dos de bois et se mirent un épais BANDEAU noir sur les yeux.",
+      "fala": "Don Quichotte et Sancho montèrent sur son dos de bois et se mirent un épais bandeau noir sur les yeux.",
+      "hash": "5fdd03139e"
+    },
+    {
+      "id": "p3-s6",
+      "pagina": 3,
+      "paragrafo": 2,
+      "texto": "Pour imiter le vol dans le ciel, les serviteurs du palais soufflaient de grands courants d’air avec un gros SOUFFLET de forgeron et approchaient une torche d’une chaleur rayonnante.",
+      "fala": "Pour imiter le vol dans le ciel, les serviteurs du palais soufflaient de grands courants d’air avec un gros soufflet de forgeron et approchaient une torche d’une chaleur rayonnante.",
+      "hash": "64215e7d42"
+    },
+    {
+      "id": "p3-s7",
+      "pagina": 3,
+      "paragrafo": 2,
+      "texto": "« Nous traversons les plus hauts nuages ! criait Sancho, terrifié et émerveillé, en serrant la taille de son maître.",
+      "fala": "Nous traversons les plus hauts nuages ! criait Sancho, terrifié et émerveillé, en serrant la taille de son maître.",
+      "hash": "f37d14f073"
+    },
+    {
+      "id": "p3-s8",
+      "pagina": 3,
+      "paragrafo": 2,
+      "texto": "Et maintenant, nous passons tout près du soleil ! »",
+      "fala": "Et maintenant, nous passons tout près du soleil !",
+      "hash": "8f1990b35f"
+    },
+    {
+      "id": "p3-s9",
+      "pagina": 3,
+      "paragrafo": 2,
+      "texto": "« Courage, Sancho !",
+      "fala": "Courage, Sancho !",
+      "hash": "aa96f323b6"
+    },
+    {
+      "id": "p3-s10",
+      "pagina": 3,
+      "paragrafo": 2,
+      "texto": "Tiens bon ! » répondit Don Quichotte.",
+      "fala": "Tiens bon ! répondit Don Quichotte.",
+      "hash": "742f27c3ce"
+    },
+    {
+      "id": "p3-s11",
+      "pagina": 3,
+      "paragrafo": 2,
+      "texto": "Aide les deux amis dans ce fantastique voyage dans les airs !",
+      "fala": "Aide les deux amis dans ce fantastique voyage dans les airs !",
+      "hash": "92c93a359d"
+    },
+    {
+      "id": "p4-s0",
+      "pagina": 4,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapitre 26. Des conseils pour un gouverneur. Sancho va gouverner une île",
+      "fala": "Chapitre 26. Des conseils pour un gouverneur. Sancho va gouverner une île",
+      "hash": "b619a41f59"
+    },
+    {
+      "id": "p4-s1",
+      "pagina": 4,
+      "paragrafo": 0,
+      "texto": "Pour continuer la farce, le noble duc confia à Sancho le gouvernement de la très convoitée « île Barataria », qui était en réalité un beau bourg prospère au milieu des champs.",
+      "fala": "Pour continuer la farce, le noble duc confia à Sancho le gouvernement de la très convoitée île Barataria , qui était en réalité un beau bourg prospère au milieu des champs.",
+      "hash": "905ffced67"
+    },
+    {
+      "id": "p4-s2",
+      "pagina": 4,
+      "paragrafo": 0,
+      "texto": "La veille du départ, Don Quichotte invita son fidèle écuyer sur un banc de pierre du jardin et lui donna les plus sages CONSEILS qu’un maître puisse offrir :",
+      "fala": "La veille du départ, Don Quichotte invita son fidèle écuyer sur un banc de pierre du jardin et lui donna les plus sages conseils qu’un maître puisse offrir :",
+      "hash": "22a1bcb092"
+    },
+    {
+      "id": "p4-s3",
+      "pagina": 4,
+      "paragrafo": 1,
+      "texto": "« Sancho, mon frère de route, n’aie jamais honte de tes humbles origines et ne cache jamais que tu es fils d’honnêtes laboureurs.",
+      "fala": "Sancho, mon frère de route, n’aie jamais honte de tes humbles origines et ne cache jamais que tu es fils d’honnêtes laboureurs.",
+      "hash": "024ea22a4a"
+    },
+    {
+      "id": "p4-s4",
+      "pagina": 4,
+      "paragrafo": 1,
+      "texto": "Traite avec la même tendresse et la même attention le citoyen aux pieds nus et le seigneur fortuné.",
+      "fala": "Traite avec la même tendresse et la même attention le citoyen aux pieds nus et le seigneur fortuné.",
+      "hash": "207a091c5f"
+    },
+    {
+      "id": "p4-s5",
+      "pagina": 4,
+      "paragrafo": 1,
+      "texto": "Cultive toujours l’HUMILITÉ, cherche la vérité avec une patience infinie et souviens-toi que la JUSTICE la plus noble est celle qui marche main dans la main avec la miséricorde et le pardon. »",
+      "fala": "Cultive toujours l’humilité, cherche la vérité avec une patience infinie et souviens-toi que la justice la plus noble est celle qui marche main dans la main avec la miséricorde et le pardon.",
+      "hash": "892aa2c7f0"
+    },
+    {
+      "id": "p4-s6",
+      "pagina": 4,
+      "paragrafo": 2,
+      "texto": "Sancho écouta chaque leçon, les yeux brillants d’émotion et de respect.",
+      "fala": "Sancho écouta chaque leçon, les yeux brillants d’émotion et de respect.",
+      "hash": "27d5030270"
+    },
+    {
+      "id": "p4-s7",
+      "pagina": 4,
+      "paragrafo": 2,
+      "texto": "Il serra tendrement dans ses bras son cher gentilhomme, promit de garder chaque parole dans son cœur et partit prendre son gouvernement, trottant fièrement sur son âne bien-aimé.",
+      "fala": "Il serra tendrement dans ses bras son cher gentilhomme, promit de garder chaque parole dans son cœur et partit prendre son gouvernement, trottant fièrement sur son âne bien-aimé.",
+      "hash": "90976c3ed8"
+    },
+    {
+      "id": "p5-s0",
+      "pagina": 5,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapitre 27. Le mystère de la canne. Le jugement le plus malin",
+      "fala": "Chapitre 27. Le mystère de la canne. Le jugement le plus malin",
+      "hash": "56b57379d2"
+    },
+    {
+      "id": "p5-s1",
+      "pagina": 5,
+      "paragrafo": 0,
+      "texto": "Dès son premier jour au tribunal de l’île, Sancho découvrit un mystère intrigant entre deux vieux voisins.",
+      "fala": "Dès son premier jour au tribunal de l’île, Sancho découvrit un mystère intrigant entre deux vieux voisins.",
+      "hash": "07dcc287e0"
+    },
+    {
+      "id": "p5-s2",
+      "pagina": 5,
+      "paragrafo": 0,
+      "texto": "Le premier se plaignit : « J’ai prêté dix PIÈCES d’or à mon ami et il refuse de me les rendre ! »",
+      "fala": "Le premier se plaignit : J’ai prêté dix pièces d’or à mon ami et il refuse de me les rendre !",
+      "hash": "3f800caf17"
+    },
+    {
+      "id": "p5-s3",
+      "pagina": 5,
+      "paragrafo": 0,
+      "texto": "Le second assura, la main sur le cœur : « Je jure solennellement devant la cour que j’ai rendu chaque pièce dans ses propres mains ! »",
+      "fala": "Le second assura, la main sur le cœur : Je jure solennellement devant la cour que j’ai rendu chaque pièce dans ses propres mains !",
+      "hash": "9c84526f35"
+    },
+    {
+      "id": "p5-s4",
+      "pagina": 5,
+      "paragrafo": 1,
+      "texto": "Avant de prononcer son serment sacré, le second vieillard demanda gentiment à son voisin de lui tenir sa lourde CANNE de bois.",
+      "fala": "Avant de prononcer son serment sacré, le second vieillard demanda gentiment à son voisin de lui tenir sa lourde canne de bois.",
+      "hash": "eaa829d8b3"
+    },
+    {
+      "id": "p5-s5",
+      "pagina": 5,
+      "paragrafo": 1,
+      "texto": "Il fit son serment, reprit sa canne et s’apprêtait à repartir tranquillement.",
+      "fala": "Il fit son serment, reprit sa canne et s’apprêtait à repartir tranquillement.",
+      "hash": "2f1c2e750c"
+    },
+    {
+      "id": "p5-s6",
+      "pagina": 5,
+      "paragrafo": 1,
+      "texto": "Sancho se gratta la barbe, méfiant : « Hum…",
+      "fala": "Sancho se gratta la barbe, méfiant : Hum…",
+      "hash": "95d5c272e1"
+    },
+    {
+      "id": "p5-s7",
+      "pagina": 5,
+      "paragrafo": 1,
+      "texto": "Pourquoi quelqu’un demande-t-il à l’autre de tenir sa canne juste au moment de jurer ? »",
+      "fala": "Pourquoi quelqu’un demande-t-il à l’autre de tenir sa canne juste au moment de jurer ?",
+      "hash": "29396b030a"
+    },
+    {
+      "id": "p5-s8",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "« Apportez-moi cette canne ! » ordonna le gouverneur, l’œil malin.",
+      "fala": "Apportez-moi cette canne ! ordonna le gouverneur, l’œil malin.",
+      "hash": "d2fe053e5d"
+    },
+    {
+      "id": "p5-s9",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "Casse la canne pour révéler l’énigme !",
+      "fala": "Casse la canne pour révéler l’énigme !",
+      "hash": "a3a8457e8c"
+    },
+    {
+      "id": "p5-s10",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "En se brisant, elle laissa rouler sur le plancher les dix pièces d’or cachées dans le bois creux !",
+      "fala": "En se brisant, elle laissa rouler sur le plancher les dix pièces d’or cachées dans le bois creux !",
+      "hash": "2906b20e9f"
+    },
+    {
+      "id": "p5-s11",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "Le vieillard avait vraiment mis l’argent dans les mains de son ami pendant qu’il jurait !",
+      "fala": "Le vieillard avait vraiment mis l’argent dans les mains de son ami pendant qu’il jurait !",
+      "hash": "3362f5b8c8"
+    },
+    {
+      "id": "p5-s12",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "Toute la cour applaudit avec admiration et enthousiasme la brillante SAGESSE du gouverneur Sancho Pança !",
+      "fala": "Toute la cour applaudit avec admiration et enthousiasme la brillante sagesse du gouverneur Sancho Pança !",
+      "hash": "164669122b"
+    },
+    {
+      "id": "p6-s0",
+      "pagina": 6,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapitre 28. Sancho choisit son âne. La liberté d’un homme simple",
+      "fala": "Chapitre 28. Sancho choisit son âne. La liberté d’un homme simple",
+      "hash": "2379c17dab"
+    },
+    {
+      "id": "p6-s1",
+      "pagina": 6,
+      "paragrafo": 0,
+      "texto": "Sancho gouverna le bourg pendant dix jours avec une honnêteté et une droiture admirables.",
+      "fala": "Sancho gouverna le bourg pendant dix jours avec une honnêteté et une droiture admirables.",
+      "hash": "812e1bf981"
+    },
+    {
+      "id": "p6-s2",
+      "pagina": 6,
+      "paragrafo": 0,
+      "texto": "Mais la vie de palais était fatigante et étouffante : un médecin sévère ne le laissait rien manger de bon, les réunions interminables lui volaient son sommeil et la pompe du pouvoir lui dérobait sa paix.",
+      "fala": "Mais la vie de palais était fatigante et étouffante : un médecin sévère ne le laissait rien manger de bon, les réunions interminables lui volaient son sommeil et la pompe du pouvoir lui dérobait sa paix.",
+      "hash": "3a77f1665a"
+    },
+    {
+      "id": "p6-s3",
+      "pagina": 6,
+      "paragrafo": 1,
+      "texto": "Un beau matin, vêtu de ses vieux habits simples de paysan, Sancho marcha jusqu’à l’écurie, serra tendrement le cou de son cher ÂNE et lui ouvrit son cœur : « Mon fidèle AMI, quand je voyageais avec toi, mes jours étaient pleins de paix et de joie.",
+      "fala": "Un beau matin, vêtu de ses vieux habits simples de paysan, Sancho marcha jusqu’à l’écurie, serra tendrement le cou de son cher âne et lui ouvrit son cœur : Mon fidèle ami, quand je voyageais avec toi, mes jours étaient pleins de paix et de joie.",
+      "hash": "551f76d356"
+    },
+    {
+      "id": "p6-s4",
+      "pagina": 6,
+      "paragrafo": 1,
+      "texto": "Je préfère mille fois ma douce LIBERTÉ et un quignon de pain avec un oignon à tous les banquets et à toutes les vanités de ceux qui commandent un royaume ! »",
+      "fala": "Je préfère mille fois ma douce liberté et un quignon de pain avec un oignon à tous les banquets et à toutes les vanités de ceux qui commandent un royaume !",
+      "hash": "8f63dfaa79"
+    },
+    {
+      "id": "p6-s5",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "Et ainsi, sans emporter une seule pièce du trésor public, Sancho quitta l’île la tête haute : il partait pauvre en richesses, mais l’âme débordante de pureté, de dignité et de sagesse.",
+      "fala": "Et ainsi, sans emporter une seule pièce du trésor public, Sancho quitta l’île la tête haute : il partait pauvre en richesses, mais l’âme débordante de pureté, de dignité et de sagesse.",
+      "hash": "fb142728fb"
+    },
+    {
+      "id": "p6-s6",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "Tous les habitants du bourg essuyèrent des larmes de gratitude en voyant ce bon gouverneur partir à la recherche de sa vraie paix.",
+      "fala": "Tous les habitants du bourg essuyèrent des larmes de gratitude en voyant ce bon gouverneur partir à la recherche de sa vraie paix.",
+      "hash": "5dca31bcff"
+    },
+    {
+      "id": "p7-s0",
+      "pagina": 7,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapitre 29. Le Chevalier de la Blanche Lune. Les aventures habitent dans les livres",
+      "fala": "Chapitre 29. Le Chevalier de la Blanche Lune. Les aventures habitent dans les livres",
+      "hash": "56c931a445"
+    },
+    {
+      "id": "p7-s1",
+      "pagina": 7,
+      "paragrafo": 0,
+      "texto": "Sur le sable doré d’une plage de Barcelone, au rythme des vagues de la mer, surgit au galop un mystérieux adversaire portant un croissant d’argent sur son bouclier : le Chevalier de la BLANCHE LUNE.",
+      "fala": "Sur le sable doré d’une plage de Barcelone, au rythme des vagues de la mer, surgit au galop un mystérieux adversaire portant un croissant d’argent sur son bouclier : le Chevalier de la blanche lune.",
+      "hash": "1f098771ec"
+    },
+    {
+      "id": "p7-s2",
+      "pagina": 7,
+      "paragrafo": 0,
+      "texto": "C’était en réalité le jeune Samson Carrasco, un cher voisin de la Manche qui voulait seulement le ramener chez lui en toute sécurité.",
+      "fala": "C’était en réalité le jeune Samson Carrasco, un cher voisin de la Manche qui voulait seulement le ramener chez lui en toute sécurité.",
+      "hash": "9957008733"
+    },
+    {
+      "id": "p7-s3",
+      "pagina": 7,
+      "paragrafo": 0,
+      "texto": "Dans le duel sur la plage, le gentilhomme fut vaincu et, en homme d’honneur incorruptible, il tint sa promesse : il rangerait sa lance et retournerait dans son village.",
+      "fala": "Dans le duel sur la plage, le gentilhomme fut vaincu et, en homme d’honneur incorruptible, il tint sa promesse : il rangerait sa lance et retournerait dans son village.",
+      "hash": "2d041a1d00"
+    },
+    {
+      "id": "p7-s4",
+      "pagina": 7,
+      "paragrafo": 1,
+      "texto": "De retour dans son accueillant salon de lecture, Alonso Quichano s’assit près de la cheminée allumée, entouré de ses livres bien-aimés.",
+      "fala": "De retour dans son accueillant salon de lecture, Alonso Quichano s’assit près de la cheminée allumée, entouré de ses livres bien-aimés.",
+      "hash": "aa1731aeb0"
+    },
+    {
+      "id": "p7-s5",
+      "pagina": 7,
+      "paragrafo": 1,
+      "texto": "Tous les après-midi, les enfants du village s’asseyaient sur le tapis aux pieds de Papi Alonso pour écouter, fascinés, les histoires des moulins-géants, des moutons-armées, du vol de Clavilègne et de l’écuyer qui gouverna une île avec la justice au cœur.",
+      "fala": "Tous les après-midi, les enfants du village s’asseyaient sur le tapis aux pieds de Papi Alonso pour écouter, fascinés, les histoires des moulins-géants, des moutons-armées, du vol de Clavilègne et de l’écuyer qui gouverna une île avec la justice au cœur.",
+      "hash": "4b69b69cf2"
+    },
+    {
+      "id": "p7-s6",
+      "pagina": 7,
+      "paragrafo": 1,
+      "texto": "« Il était une fois un gentilhomme de la Manche qui rêvait les yeux ouverts… » commençait Papi Alonso, une lueur espiègle dans le regard.",
+      "fala": "Il était une fois un gentilhomme de la Manche qui rêvait les yeux ouverts… commençait Papi Alonso, une lueur espiègle dans le regard.",
+      "hash": "de9086f8ad"
+    },
+    {
+      "id": "p7-s7",
+      "pagina": 7,
+      "paragrafo": 2,
+      "texto": "C’est ainsi que la merveilleuse IMAGINATION du noble Don Quichotte ne s’éteignit jamais : elle se mit à vivre pour toujours dans le cœur des petits LECTEURS de toute la planète.",
+      "fala": "C’est ainsi que la merveilleuse imagination du noble Don Quichotte ne s’éteignit jamais : elle se mit à vivre pour toujours dans le cœur des petits lecteurs de toute la planète.",
+      "hash": "cdbe63f10f"
+    },
+    {
+      "id": "p7-s8",
+      "pagina": 7,
+      "paragrafo": 2,
+      "texto": "Car celui qui lit et rêve du bien, comme toi, ne cesse jamais de chevaucher sur les plus belles routes du monde !",
+      "fala": "Car celui qui lit et rêve du bien, comme toi, ne cesse jamais de chevaucher sur les plus belles routes du monde !",
+      "hash": "a7195885a5"
+    }
+  ],
+  "palavras": [
+    {
+      "slug": "cage",
+      "palavra": "CAGE",
+      "silabas": "CAGE",
+      "fala": "cage... cage!",
+      "hash": "c47780fa21"
+    },
+    {
+      "slug": "ile",
+      "palavra": "ÎLE",
+      "silabas": "ÎLE",
+      "fala": "île... île!",
+      "hash": "bfb2387ec9"
+    },
+    {
+      "slug": "sagesse",
+      "palavra": "SAGESSE",
+      "silabas": "SA • GESSE",
+      "fala": "sa... gesse... sagesse!",
+      "hash": "e4910add9d"
+    },
+    {
+      "slug": "b-ufs",
+      "palavra": "BŒUFS",
+      "silabas": "BŒUFS",
+      "fala": "bœufs... bœufs!",
+      "hash": "41b32879d5"
+    },
+    {
+      "slug": "enchante",
+      "palavra": "ENCHANTÉ",
+      "silabas": "EN • CHAN • TÉ",
+      "fala": "en... chan... té... enchanté!",
+      "hash": "d28f1154b8"
+    },
+    {
+      "slug": "niece",
+      "palavra": "NIÈCE",
+      "silabas": "NIÈCE",
+      "fala": "nièce... nièce!",
+      "hash": "5b2b29ae12"
+    },
+    {
+      "slug": "famille",
+      "palavra": "FAMILLE",
+      "silabas": "FA • MILLE",
+      "fala": "fa... mille... famille!",
+      "hash": "7d5f991b32"
+    },
+    {
+      "slug": "nostalgie",
+      "palavra": "NOSTALGIE",
+      "silabas": "NOS • TAL • GIE",
+      "fala": "nos... tal... gie... nostalgie!",
+      "hash": "906d84763c"
+    },
+    {
+      "slug": "clavilegne",
+      "palavra": "CLAVILÈGNE",
+      "silabas": "CLA • VI • LÈGNE",
+      "fala": "cla... vi... lègne... clavilègne!",
+      "hash": "34e4750702"
+    },
+    {
+      "slug": "bandeau",
+      "palavra": "BANDEAU",
+      "silabas": "BAN • DEAU",
+      "fala": "ban... deau... bandeau!",
+      "hash": "16c07d382d"
+    },
+    {
+      "slug": "soufflet",
+      "palavra": "SOUFFLET",
+      "silabas": "SOUF • FLET",
+      "fala": "souf... flet... soufflet!",
+      "hash": "a0c84105f2"
+    },
+    {
+      "slug": "conseils",
+      "palavra": "CONSEILS",
+      "silabas": "CON • SEILS",
+      "fala": "con... seils... conseils!",
+      "hash": "f525693840"
+    },
+    {
+      "slug": "humilite",
+      "palavra": "HUMILITÉ",
+      "silabas": "HU • MI • LI • TÉ",
+      "fala": "hu... mi... li... té... humilité!",
+      "hash": "23dbd4b72b"
+    },
+    {
+      "slug": "justice",
+      "palavra": "JUSTICE",
+      "silabas": "JUS • TICE",
+      "fala": "jus... tice... justice!",
+      "hash": "565d8fb744"
+    },
+    {
+      "slug": "pieces",
+      "palavra": "PIÈCES",
+      "silabas": "PIÈCES",
+      "fala": "pièces... pièces!",
+      "hash": "858c3914e6"
+    },
+    {
+      "slug": "canne",
+      "palavra": "CANNE",
+      "silabas": "CANNE",
+      "fala": "canne... canne!",
+      "hash": "39157513ae"
+    },
+    {
+      "slug": "ane",
+      "palavra": "ÂNE",
+      "silabas": "ÂNE",
+      "fala": "âne... âne!",
+      "hash": "452a767a81"
+    },
+    {
+      "slug": "ami",
+      "palavra": "AMI",
+      "silabas": "A • MI",
+      "fala": "a... mi... ami!",
+      "hash": "4e0052adb4"
+    },
+    {
+      "slug": "liberte",
+      "palavra": "LIBERTÉ",
+      "silabas": "LI • BER • TÉ",
+      "fala": "li... ber... té... liberté!",
+      "hash": "3a30855592"
+    },
+    {
+      "slug": "blanche-lune",
+      "palavra": "BLANCHE LUNE",
+      "silabas": "BLANCHE • LUNE",
+      "fala": "blanche... lune... blanche lune!",
+      "hash": "f78a702f8b"
+    },
+    {
+      "slug": "imagination",
+      "palavra": "IMAGINATION",
+      "silabas": "I • MA • GI • NA • TION",
+      "fala": "i... ma... gi... na... tion... imagination!",
+      "hash": "974546d4dc"
+    },
+    {
+      "slug": "lecteurs",
+      "palavra": "LECTEURS",
+      "silabas": "LEC • TEURS",
+      "fala": "lec... teurs... lecteurs!",
+      "hash": "e93291af85"
+    }
+  ]
+}

@@ -23,6 +23,9 @@
 //   ... --autorizado                                                      # obrigatório para chamar a API (ver a regra acima)
 //   ... --standard                                                        # nível Standard (o padrão é o Flex: metade do preço, resposta em minutos)
 //   npm run gravar:narracao -- --criar-voz SANCHICA --descricao "..." --autorizado   # cria uma voz por descrição (voice design)
+//   npm run gravar:narracao -- --voz narracao --idioma en --parte 1 --pagina-inteira --autorizado
+//       # narração de uma TRADUÇÃO (AGENTS.md §2.8): pastas narracao-en/ e palavras-en/, frases de
+//       # docs/narracao/frases-<livro>-parte-N-en.json e o elenco em <livro>/audio/narracao-en/elenco.json
 //   npm run gravar:narracao -- --voz narracao --parte 1 --paginas 2 --pagina-inteira
 //       # a página inteira num pedido só (entonação mais contínua) + marcação das frases depois,
 //       # em parte-N/paginas.json (o livro toca um MP3 por página e destaca a frase pelo tempo)
@@ -56,7 +59,7 @@ const ESTILO_PALAVRAS = 'literacy teacher: each syllable slowly and clearly sepa
 // Vozes da biblioteca pt-BR (docs/narracao/VOZES-PT-BR.md), escolhidas pelo Claude a pedido do humano (2026-10-24).
 // O estilo é só o jeito de falar; idade e timbre vêm da voz.
 // Vozes criadas por descrição (voice_...) não entram em diálogo de 2 vozes: o script grava as falas uma a uma.
-const ELENCO = {
+let ELENCO = {
     NARRADORA: { voz: 'pt-br-storyteller-9', estilo: ESTILO_NARRADORA },
     QUIXOTE: { voz: 'pt-br-concierge-3', estilo: 'noble, solemn and dreamy, speaking with heartfelt conviction; never mocking' },
     SANCHO: { voz: 'pt-br-storyteller-2', estilo: 'simple, warm and good-humored, plain and practical' },
@@ -74,15 +77,6 @@ const ELENCO = {
     DEVEDOR: { voz: 'pt-br-concierge-10', estilo: 'old man swearing solemnly, a little too calm' }
 };
 
-// Pasta de saída (dom-quixote/audio/<id>) → voz da API (e o modelo, se não for o MODELO_TTS).
-// `narracao` é a narração do livro: a narradora, escolhida de ouvido pelo humano em 2026-10-24.
-// As falas dos personagens terão vozes próprias (elenco a escolher com o humano; ver TODO-NARRACAO §3).
-const NARRADORA = ELENCO.NARRADORA.voz;
-const VOZES = {
-    narracao: { voz: NARRADORA, estilo: ESTILO_NARRADORA },
-    palavras: { voz: NARRADORA, estilo: ESTILO_PALAVRAS }
-};
-
 function opcoes(argv) {
     const o = { livro: 'dom-quixote' };
     for (let i = 0; i < argv.length; i++) {
@@ -94,6 +88,35 @@ function opcoes(argv) {
 }
 
 const o = opcoes(process.argv.slice(2));
+
+// Idioma da narração. Português: o original, com o ELENCO acima. Traduções (en, fr, es): o elenco, a frase de
+// amostra e os nomes próprios (dica para o Whisper) ficam em <livro>/audio/narracao-<idioma>/elenco.json:
+//   { "codigoVoz": "en-GB", "amostra": "...", "nomes": "Don Quixote, Sancho Panza, ...",
+//     "elenco": { "NARRADORA": { "voz": "en-gb-...", "estilo": "..." }, "QUIXOTE": {...}, ... } }
+const IDIOMA = o.idioma && o.idioma !== 'pt-BR' ? o.idioma : null;
+const SUFIXO = IDIOMA ? `-${IDIOMA}` : '';
+let AMOSTRA_FALA = AMOSTRA, NOMES_WHISPER = '', CODIGO_VOZ = 'pt-BR';
+if (IDIOMA) {
+    const arq = join(RAIZ, o.livro, 'audio', `narracao${SUFIXO}`, 'elenco.json');
+    if (!existsSync(arq)) {
+        console.error(`Falta ${arq} (o elenco do idioma; ver o comentário acima no script)`);
+        process.exit(1);
+    }
+    const def = JSON.parse(readFileSync(arq, 'utf8'));
+    ELENCO = def.elenco;
+    AMOSTRA_FALA = def.amostra || AMOSTRA;
+    NOMES_WHISPER = def.nomes || '';
+    CODIGO_VOZ = def.codigoVoz || IDIOMA;
+}
+
+// Pasta de saída (dom-quixote/audio/<id>) → voz da API (e o modelo, se não for o MODELO_TTS).
+// `narracao` é a narração do livro: a narradora, escolhida de ouvido pelo humano em 2026-10-24.
+// Nos outros idiomas, as pastas ganham o sufixo do idioma (narracao-en, palavras-en).
+const NARRADORA = ELENCO.NARRADORA.voz;
+const VOZES = {
+    narracao: { voz: NARRADORA, estilo: ELENCO.NARRADORA.estilo || ESTILO_NARRADORA },
+    palavras: { voz: NARRADORA, estilo: ELENCO.PALAVRAS?.estilo || ESTILO_PALAVRAS }
+};
 const flex = !o.standard;   // Flex é o padrão (decisão do humano, 2026-10-24)
 const cfg = VOZES[o.voz] && { modelo: MODELO_TTS, ...VOZES[o.voz] };
 if (!cfg && !o['criar-voz']) {
@@ -193,7 +216,8 @@ function comCabecalhoWav(pcm) {
 let whisper = null;
 function transcritorLocal() {
     if (whisper) return whisper;
-    const proc = spawn('python3', ['-I', join(RAIZ, 'tools', 'transcrever.py')], { stdio: ['pipe', 'pipe', 'inherit'] });
+    const env = { ...process.env, CV_IDIOMA: (IDIOMA || 'pt').slice(0, 2), ...(NOMES_WHISPER ? { CV_NOMES: NOMES_WHISPER } : {}) };
+    const proc = spawn('python3', ['-I', join(RAIZ, 'tools', 'transcrever.py')], { stdio: ['pipe', 'pipe', 'inherit'], env });
     const fila = [];
     let resto = '', pronto;
     const carregou = new Promise((ok, falha) => { pronto = ok; proc.on('error', falha); proc.on('exit', c => falha(new Error(`transcrever.py saiu (${c}); instale com: pip install faster-whisper`))); });
@@ -240,7 +264,45 @@ function porExtenso(n) {
     if (n < 1e6) return (n < 2000 ? 'mil' : `${porExtenso(Math.floor(n / 1000))} mil`) + (n % 1000 ? ` e ${porExtenso(n % 1000)}` : '');
     return String(n);
 }
-const normalizar = (s) => s.replace(/\d+/g, m => porExtenso(Number(m))).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+/* O mesmo para as traduções (até 999 999), na forma que o texto do livro escreve */
+function numeroEn(n) {
+    const u = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'];
+    const d = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
+    if (n < 20) return u[n];
+    if (n < 100) return d[Math.floor(n / 10)] + (n % 10 ? ` ${u[n % 10]}` : '');
+    if (n < 1000) return `${u[Math.floor(n / 100)]} hundred` + (n % 100 ? ` and ${numeroEn(n % 100)}` : '');
+    if (n < 1e6) return `${numeroEn(Math.floor(n / 1000))} thousand` + (n % 1000 ? `${n % 1000 < 100 ? ' and' : ''} ${numeroEn(n % 1000)}` : '');
+    return String(n);
+}
+function numeroEs(n) {
+    const u = ['cero', 'uno', 'dos', 'tres', 'cuatro', 'cinco', 'seis', 'siete', 'ocho', 'nueve', 'diez', 'once', 'doce', 'trece', 'catorce', 'quince', 'dieciséis', 'diecisiete', 'dieciocho', 'diecinueve',
+        'veinte', 'veintiuno', 'veintidós', 'veintitrés', 'veinticuatro', 'veinticinco', 'veintiséis', 'veintisiete', 'veintiocho', 'veintinueve'];
+    const d = ['', '', '', 'treinta', 'cuarenta', 'cincuenta', 'sesenta', 'setenta', 'ochenta', 'noventa'];
+    const c = ['', 'ciento', 'doscientos', 'trescientos', 'cuatrocientos', 'quinientos', 'seiscientos', 'setecientos', 'ochocientos', 'novecientos'];
+    if (n < 30) return u[n];
+    if (n < 100) return d[Math.floor(n / 10)] + (n % 10 ? ` y ${u[n % 10]}` : '');
+    if (n === 100) return 'cien';
+    if (n < 1000) return c[Math.floor(n / 100)] + (n % 100 ? ` ${numeroEs(n % 100)}` : '');
+    if (n < 1e6) return (n < 2000 ? 'mil' : `${numeroEs(Math.floor(n / 1000))} mil`) + (n % 1000 ? ` ${numeroEs(n % 1000)}` : '');
+    return String(n);
+}
+function numeroFr(n) {
+    const u = ['zéro', 'un', 'deux', 'trois', 'quatre', 'cinq', 'six', 'sept', 'huit', 'neuf', 'dix', 'onze', 'douze', 'treize', 'quatorze', 'quinze', 'seize', 'dix-sept', 'dix-huit', 'dix-neuf'];
+    const d = ['', '', 'vingt', 'trente', 'quarante', 'cinquante', 'soixante'];
+    if (n < 20) return u[n];
+    if (n < 70) return d[Math.floor(n / 10)] + (n % 10 === 1 ? ' et un' : n % 10 ? `-${u[n % 10]}` : '');
+    if (n < 80) return n === 71 ? 'soixante et onze' : `soixante-${u[n - 60]}`;
+    if (n < 100) return n === 80 ? 'quatre-vingts' : `quatre-vingt-${u[n - 80]}`;
+    if (n < 1000) {
+        const cent = Math.floor(n / 100), resto = n % 100;
+        return (cent === 1 ? 'cent' : `${u[cent]} cent${resto ? '' : 's'}`) + (resto ? ` ${numeroFr(resto)}` : '');
+    }
+    if (n < 1e6) return (n < 2000 ? 'mille' : `${numeroFr(Math.floor(n / 1000))} mille`) + (n % 1000 ? ` ${numeroFr(n % 1000)}` : '');
+    return String(n);
+}
+const NUMERO = { en: numeroEn, es: numeroEs, fr: numeroFr }[(IDIOMA || '').slice(0, 2)] || porExtenso;
+
+const normalizar = (s) => s.replace(/\d+/g, m => NUMERO(Number(m))).replace(/[œŒ]/g, 'oe').replace(/[æÆ]/g, 'ae').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
 
 /* Duração da fala sem o silêncio das pontas (o mesmo corte do tools/otimizar-audio.mjs, que gera o MP3) */
 function duracao(wav) {
@@ -618,7 +680,7 @@ async function criarVoz() {
     if (!o.autorizado) throw new Error('sem --autorizado: a API paga só pode ser chamada com autorização do humano no prompt inicial da sessão');
     const j = await postar(`${API}/voices`, {
         store: true,
-        voice: { model: MODELO_TTS, type: 'prompted', display_name: `classicos-vivos-${o['criar-voz'].toLowerCase()}`, gender: o.genero || 'female', language_code: 'pt-BR', prompted: { input: o.descricao } }
+        voice: { model: MODELO_TTS, type: 'prompted', display_name: `classicos-vivos-${o['criar-voz'].toLowerCase()}${SUFIXO}`, gender: o.genero || 'female', language_code: CODIGO_VOZ, prompted: { input: o.descricao } }
     });
     gasto.pedidos++;
     console.log(`voz criada: ${j.id || j.name || JSON.stringify(j).slice(0, 200)}`);
@@ -751,7 +813,7 @@ async function gravarPalavrasAgrupadas(itens, pasta, indiceArq, ids) {
 
 async function main() {
     if (o['criar-voz']) return criarVoz();
-    const base = join(RAIZ, o.livro, 'audio', o.voz);
+    const base = join(RAIZ, o.livro, 'audio', `${o.voz}${SUFIXO}`);
     const pendentes = [];   // { item, wav, chave, faixa }
     let indiceArq, indice;
 
@@ -759,10 +821,10 @@ async function main() {
         mkdirSync(base, { recursive: true });
         indiceArq = join(base, 'indice-amostra.json');
         indice = lerJson(indiceArq, { frases: {} });
-        pendentes.push({ item: { id: 'amostra', fala: AMOSTRA, hash: 'amostra' }, wav: join(base, 'amostra.wav'), faixa: [1, 25] });
+        pendentes.push({ item: { id: 'amostra', fala: AMOSTRA_FALA, hash: 'amostra' }, wav: join(base, 'amostra.wav'), faixa: [1, 25] });
     } else {
         if (!o.parte) throw new Error('informe --parte N (ou --amostra)');
-        const fonte = lerJson(join(RAIZ, 'docs', 'narracao', `frases-${o.livro}-parte-${o.parte}.json`));
+        const fonte = lerJson(join(RAIZ, 'docs', 'narracao', `frases-${o.livro}-parte-${o.parte}${SUFIXO}.json`));
         const pasta = o.voz === 'palavras' ? base : join(base, `parte-${o.parte}`);
         mkdirSync(pasta, { recursive: true });
         indiceArq = join(pasta, 'indice.json');

@@ -1,0 +1,637 @@
+{
+  "obra": "Don Quijote de la Mancha",
+  "parte": 1,
+  "idioma": "es",
+  "audio": "dom-quixote/audio/<voz>-es/parte-1/<id>.mp3",
+  "audioPalavras": "dom-quixote/audio/palavras-es/<slug>.mp3",
+  "frases": [
+    {
+      "id": "p0-s0",
+      "pagina": 0,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Don Quijote de la Mancha. Parte 1: El Caballero de la Superimaginación",
+      "fala": "Don Quijote de la Mancha. Parte 1: El Caballero de la Superimaginación",
+      "hash": "9dd474d072"
+    },
+    {
+      "id": "p0-s1",
+      "pagina": 0,
+      "paragrafo": 0,
+      "texto": "¡Hace más de cuatrocientos años, el genial escritor español Miguel de Cervantes creó una de las historias más bellas y queridas de todo el planeta!",
+      "fala": "¡Hace más de cuatrocientos años, el genial escritor español Miguel de Cervantes creó una de las historias más bellas y queridas de todo el planeta!",
+      "hash": "b6670da722"
+    },
+    {
+      "id": "p0-s2",
+      "pagina": 0,
+      "paragrafo": 1,
+      "texto": "Te presento a Alonso Quijano, un bondadoso hidalgo de corazón gigante, lleno de valor y de IMAGINACIÓN.",
+      "fala": "Te presento a Alonso Quijano, un bondadoso hidalgo de corazón gigante, lleno de valor y de imaginación.",
+      "hash": "a0a3df6c40"
+    },
+    {
+      "id": "p0-s3",
+      "pagina": 0,
+      "paragrafo": 1,
+      "texto": "Junto a su querido caballo ROCINANTE, decidió recorrer los caminos del mundo para proteger a los indefensos, sembrar la bondad y, como decían sus libros, desfacer agravios y enderezar entuertos.",
+      "fala": "Junto a su querido caballo rocinante, decidió recorrer los caminos del mundo para proteger a los indefensos, sembrar la bondad y, como decían sus libros, desfacer agravios y enderezar entuertos.",
+      "hash": "292a1521b2"
+    },
+    {
+      "id": "p0-s4",
+      "pagina": 0,
+      "paragrafo": 1,
+      "texto": "¡Quería demostrar que todos podemos ser nobles CABALLEROS en nuestras propias vidas!",
+      "fala": "¡Quería demostrar que todos podemos ser nobles caballeros en nuestras propias vidas!",
+      "hash": "370c9ea25c"
+    },
+    {
+      "id": "p1-s0",
+      "pagina": 1,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Capítulo 1. El hidalgo lector. ¡El abuelo que leía día y noche!",
+      "fala": "Capítulo 1. El hidalgo lector. ¡El abuelo que leía día y noche!",
+      "hash": "2e53cbf03e"
+    },
+    {
+      "id": "p1-s1",
+      "pagina": 1,
+      "paragrafo": 0,
+      "texto": "En un lugar de la Mancha, de cuyo nombre no quiero acordarme, vivía un hidalgo de mirada dulce y alma generosa: el señor Alonso Quijano.",
+      "fala": "En un lugar de la Mancha, de cuyo nombre no quiero acordarme, vivía un hidalgo de mirada dulce y alma generosa: el señor Alonso Quijano.",
+      "hash": "5f36165918"
+    },
+    {
+      "id": "p1-s2",
+      "pagina": 1,
+      "paragrafo": 0,
+      "texto": "¡Su mayor tesoro eran sus queridos LIBROS de caballerías!",
+      "fala": "¡Su mayor tesoro eran sus queridos libros de caballerías!",
+      "hash": "1e436ba60f"
+    },
+    {
+      "id": "p1-s3",
+      "pagina": 1,
+      "paragrafo": 1,
+      "texto": "Alonso leía con tanto encanto que se le pasaban las noches de claro en claro, despierto hasta el amanecer, viajando por tierras lejanas donde nobles CABALLEROS defendían la justicia, se enfrentaban a mil peligros y protegían a quien más lo necesitaba.",
+      "fala": "Alonso leía con tanto encanto que se le pasaban las noches de claro en claro, despierto hasta el amanecer, viajando por tierras lejanas donde nobles caballeros defendían la justicia, se enfrentaban a mil peligros y protegían a quien más lo necesitaba.",
+      "hash": "31e27cdf49"
+    },
+    {
+      "id": "p1-s4",
+      "pagina": 1,
+      "paragrafo": 2,
+      "texto": "De tanto sumergirse en el poder de las palabras, se le llenó la fantasía de todo aquello que leía, y su cuarto rebosaba de pura poesía: el viejo mapa brillaba en el aire, las historias echaban a volar y hasta el manso gatito de la sala, ante sus ojos cariñosos, ¡se convertía en un magnífico LEÓN GUARDIÁN!",
+      "fala": "De tanto sumergirse en el poder de las palabras, se le llenó la fantasía de todo aquello que leía, y su cuarto rebosaba de pura poesía: el viejo mapa brillaba en el aire, las historias echaban a volar y hasta el manso gatito de la sala, ante sus ojos cariñosos, ¡se convertía en un magnífico león guardián!",
+      "hash": "3ea4fccb59"
+    },
+    {
+      "id": "p2-s0",
+      "pagina": 2,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Capítulo 2. El nuevo nombre. ¡La armadura del bisabuelo!",
+      "fala": "Capítulo 2. El nuevo nombre. ¡La armadura del bisabuelo!",
+      "hash": "13854ba7a4"
+    },
+    {
+      "id": "p2-s1",
+      "pagina": 2,
+      "paragrafo": 0,
+      "texto": "—¡El mundo necesita más bondad, justicia y valentía! —pensó el hidalgo con los ojos brillantes.",
+      "fala": "¡El mundo necesita más bondad, justicia y valentía! pensó el hidalgo con los ojos brillantes.",
+      "hash": "0fbe242081"
+    },
+    {
+      "id": "p2-s2",
+      "pagina": 2,
+      "paragrafo": 0,
+      "texto": "Y para tan gran misión escogió un nombre sonoro y valeroso: ¡DON QUIJOTE de la Mancha!",
+      "fala": "Y para tan gran misión escogió un nombre sonoro y valeroso: ¡don quijote de la Mancha!",
+      "hash": "56db58b3d4"
+    },
+    {
+      "id": "p2-s3",
+      "pagina": 2,
+      "paragrafo": 1,
+      "texto": "Subió al polvoriento desván de su casa y abrió un viejo baúl olvidado desde hacía casi cien años.",
+      "fala": "Subió al polvoriento desván de su casa y abrió un viejo baúl olvidado desde hacía casi cien años.",
+      "hash": "08cddf5eda"
+    },
+    {
+      "id": "p2-s4",
+      "pagina": 2,
+      "paragrafo": 1,
+      "texto": "Allí dentro reposaba la antigua ARMADURA de hierro que había sido de su bisabuelo, cubierta de herrumbre y llena de moho.",
+      "fala": "Allí dentro reposaba la antigua armadura de hierro que había sido de su bisabuelo, cubierta de herrumbre y llena de moho.",
+      "hash": "9a49c6d4a0"
+    },
+    {
+      "id": "p2-s5",
+      "pagina": 2,
+      "paragrafo": 2,
+      "texto": "Con muy buen humor, se puso en la cabeza una BACÍA de latón como casco, tomó una tapa de olla como ESCUDO y ató un banderín rojo a un palo de madera para hacerse su LANZA.",
+      "fala": "Con muy buen humor, se puso en la cabeza una bacía de latón como casco, tomó una tapa de olla como escudo y ató un banderín rojo a un palo de madera para hacerse su lanza.",
+      "hash": "767fc9288e"
+    },
+    {
+      "id": "p2-s6",
+      "pagina": 2,
+      "paragrafo": 2,
+      "texto": "¡Para sus ojos soñadores, nada brillaba tanto como aquel reluciente YELMO DE ORO!",
+      "fala": "¡Para sus ojos soñadores, nada brillaba tanto como aquel reluciente yelmo de oro!",
+      "hash": "174d07376a"
+    },
+    {
+      "id": "p3-s0",
+      "pagina": 3,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Capítulo 3. El corcel y la princesa. ¡Rocinante y la bella Dulcinea!",
+      "fala": "Capítulo 3. El corcel y la princesa. ¡Rocinante y la bella Dulcinea!",
+      "hash": "b38c57aaf0"
+    },
+    {
+      "id": "p3-s1",
+      "pagina": 3,
+      "paragrafo": 0,
+      "texto": "Ningún caballero andante viaja sin una valerosa montura.",
+      "fala": "Ningún caballero andante viaja sin una valerosa montura.",
+      "hash": "41ef593822"
+    },
+    {
+      "id": "p3-s2",
+      "pagina": 3,
+      "paragrafo": 0,
+      "texto": "En el establo de la hacienda descansaba su viejo caballo de labor: flaquito, con las costillas a la vista, pero de mirada mansa y leal.",
+      "fala": "En el establo de la hacienda descansaba su viejo caballo de labor: flaquito, con las costillas a la vista, pero de mirada mansa y leal.",
+      "hash": "cb4f74223e"
+    },
+    {
+      "id": "p3-s3",
+      "pagina": 3,
+      "paragrafo": 1,
+      "texto": "Cuatro días se le pasaron a don Quijote imaginando qué nombre le pondría a su amigo, hasta que lo llamó ROCINANTE: un nombre alto, sonoro y significativo, ¡para el primero y más fiel de todos los rocines del mundo!",
+      "fala": "Cuatro días se le pasaron a don Quijote imaginando qué nombre le pondría a su amigo, hasta que lo llamó rocinante: un nombre alto, sonoro y significativo, ¡para el primero y más fiel de todos los rocines del mundo!",
+      "hash": "121f347620"
+    },
+    {
+      "id": "p3-s4",
+      "pagina": 3,
+      "paragrafo": 2,
+      "texto": "¡Dale una dulce MANZANA, una crujiente ZANAHORIA y pásale el CEPILLO para dejarlo tan gallardo como un veloz CORCEL real!",
+      "fala": "¡Dale una dulce manzana, una crujiente zanahoria y pásale el cepillo para dejarlo tan gallardo como un veloz corcel real!",
+      "hash": "9da3358784"
+    },
+    {
+      "id": "p3-s5",
+      "pagina": 3,
+      "paragrafo": 3,
+      "texto": "¿Y a quién dedicaría todas sus victorias?",
+      "fala": "¿Y a quién dedicaría todas sus victorias?",
+      "hash": "29d44ccc7d"
+    },
+    {
+      "id": "p3-s6",
+      "pagina": 3,
+      "paragrafo": 3,
+      "texto": "Don Quijote escogió a la dulce labradora de la aldea vecina, Aldonza Lorenzo, y en sus pensamientos la nombró ¡la hermosa y sin par princesa DULCINEA del Toboso!",
+      "fala": "Don Quijote escogió a la dulce labradora de la aldea vecina, Aldonza Lorenzo, y en sus pensamientos la nombró ¡la hermosa y sin par princesa dulcinea del Toboso!",
+      "hash": "12d42936f3"
+    },
+    {
+      "id": "p4-s0",
+      "pagina": 4,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Capítulo 4. La primera salida. ¿Venta o castillo real?",
+      "fala": "Capítulo 4. La primera salida. ¿Venta o castillo real?",
+      "hash": "3daa9c2c19"
+    },
+    {
+      "id": "p4-s1",
+      "pagina": 4,
+      "paragrafo": 0,
+      "texto": "Al caer la tarde, después de cabalgar por las colinas doradas del antiguo y conocido campo de Montiel, don Quijote vio, no lejos del camino, una sencilla VENTA: una posada de camino con tejas de barro y paredes de adobe.",
+      "fala": "Al caer la tarde, después de cabalgar por las colinas doradas del antiguo y conocido campo de Montiel, don Quijote vio, no lejos del camino, una sencilla venta: una posada de camino con tejas de barro y paredes de adobe.",
+      "hash": "9db1ee635e"
+    },
+    {
+      "id": "p4-s2",
+      "pagina": 4,
+      "paragrafo": 1,
+      "texto": "Pero, a los ojos del soñador caballero, aquellas paredes rústicas se transformaron en un grandioso CASTILLO, ¡con altas torres de luciente plata y puentes levadizos!",
+      "fala": "Pero, a los ojos del soñador caballero, aquellas paredes rústicas se transformaron en un grandioso castillo, ¡con altas torres de luciente plata y puentes levadizos!",
+      "hash": "44f2222da4"
+    },
+    {
+      "id": "p4-s3",
+      "pagina": 4,
+      "paragrafo": 2,
+      "texto": "Cuando un joven porquero sopló una flauta rústica para recoger a sus cerditos, don Quijote oyó triunfales TROMPETAS reales.",
+      "fala": "Cuando un joven porquero sopló una flauta rústica para recoger a sus cerditos, don Quijote oyó triunfales trompetas reales.",
+      "hash": "a2e64bf5ed"
+    },
+    {
+      "id": "p4-s4",
+      "pagina": 4,
+      "paragrafo": 2,
+      "texto": "Y, recibido con cariño por el bondadoso ventero, saboreó un calentito cuenco de SOPA de pan con ajo ¡como si estuviera en el más noble banquete de reyes!",
+      "fala": "Y, recibido con cariño por el bondadoso ventero, saboreó un calentito cuenco de sopa de pan con ajo ¡como si estuviera en el más noble banquete de reyes!",
+      "hash": "d1c6830d75"
+    },
+    {
+      "id": "p5-s0",
+      "pagina": 5,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Capítulo 5. La ceremonia mágica. ¡Caballero bajo la luna llena!",
+      "fala": "Capítulo 5. La ceremonia mágica. ¡Caballero bajo la luna llena!",
+      "hash": "0b4fe00501"
+    },
+    {
+      "id": "p5-s1",
+      "pagina": 5,
+      "paragrafo": 0,
+      "texto": "Para que lo armaran caballero como manda la tradición, debía cumplir la solemne vela de las armas.",
+      "fala": "Para que lo armaran caballero como manda la tradición, debía cumplir la solemne vela de las armas.",
+      "hash": "68cce423bf"
+    },
+    {
+      "id": "p5-s2",
+      "pagina": 5,
+      "paragrafo": 0,
+      "texto": "Durante toda la silenciosa noche de la Mancha, bañado por el brillo plateado de la LUNA LLENA, don Quijote veló sus armas paseando con paso firme y corazón puro.",
+      "fala": "Durante toda la silenciosa noche de la Mancha, bañado por el brillo plateado de la luna llena, don Quijote veló sus armas paseando con paso firme y corazón puro.",
+      "hash": "a87240f330"
+    },
+    {
+      "id": "p5-s3",
+      "pagina": 5,
+      "paragrafo": 1,
+      "texto": "Dejó su peto, su bacía y su lanza sobre el gran ABREVADERO de piedra de los animales, sintiendo con sincera devoción que rezaba ante un sagrado altar de mármol y cristales.",
+      "fala": "Dejó su peto, su bacía y su lanza sobre el gran abrevadero de piedra de los animales, sintiendo con sincera devoción que rezaba ante un sagrado altar de mármol y cristales.",
+      "hash": "cfd49d2ac3"
+    },
+    {
+      "id": "p5-s4",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "La del alba sería cuando el buen ventero, emocionado por la pureza y la dulzura de aquel hombre, tomó su libro de cuentas, donde apuntaba la paja y la cebada, recitó palabras de honor y tocó suavemente el hombro del hidalgo con la hoja de una ESPADA.",
+      "fala": "La del alba sería cuando el buen ventero, emocionado por la pureza y la dulzura de aquel hombre, tomó su libro de cuentas, donde apuntaba la paja y la cebada, recitó palabras de honor y tocó suavemente el hombro del hidalgo con la hoja de una espada.",
+      "hash": "891089ad1f"
+    },
+    {
+      "id": "p5-s5",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "Y ahora sí: ¡el mundo ganaba a su más valiente protector!",
+      "fala": "Y ahora sí: ¡el mundo ganaba a su más valiente protector!",
+      "hash": "9dcc59c51e"
+    },
+    {
+      "id": "p6-s0",
+      "pagina": 6,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Capítulo 6. La noble amistad. ¡El fiel escudero Sancho Panza!",
+      "fala": "Capítulo 6. La noble amistad. ¡El fiel escudero Sancho Panza!",
+      "hash": "4db85e28a0"
+    },
+    {
+      "id": "p6-s1",
+      "pagina": 6,
+      "paragrafo": 0,
+      "texto": "De vuelta en su aldea para recoger provisiones, don Quijote buscó a su vecino más querido: SANCHO PANZA, un labrador regordete, hombre de bien, amante de la paz y padre cariñoso.",
+      "fala": "De vuelta en su aldea para recoger provisiones, don Quijote buscó a su vecino más querido: sancho panza, un labrador regordete, hombre de bien, amante de la paz y padre cariñoso.",
+      "hash": "be66b2e770"
+    },
+    {
+      "id": "p6-s2",
+      "pagina": 6,
+      "paragrafo": 1,
+      "texto": "—Mi leal amigo —dijo el caballero—, ¡vente conmigo como mi ESCUDERO!",
+      "fala": "Mi leal amigo, dijo el caballero, ¡vente conmigo como mi escudero!",
+      "hash": "26f4ea9bdf"
+    },
+    {
+      "id": "p6-s3",
+      "pagina": 6,
+      "paragrafo": 1,
+      "texto": "¡Te prometo que, cuando ganemos las primeras batallas, serás nombrado gobernador de una hermosa ÍNSULA, una isla llena de pan y de justicia!",
+      "fala": "¡Te prometo que, cuando ganemos las primeras batallas, serás nombrado gobernador de una hermosa ínsula, una isla llena de pan y de justicia!",
+      "hash": "7dc9c84409"
+    },
+    {
+      "id": "p6-s4",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "Sancho sonrió maravillado, cargó en su simpático BURRITO unas alforjas con queso fresco y pan, y aceptó la invitación.",
+      "fala": "Sancho sonrió maravillado, cargó en su simpático burrito unas alforjas con queso fresco y pan, y aceptó la invitación.",
+      "hash": "08ee3cc5ab"
+    },
+    {
+      "id": "p6-s5",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "¡Bajo el sol de la mañana, los dos amigos partieron juntos por el camino, charlando alegremente sobre el futuro!",
+      "fala": "¡Bajo el sol de la mañana, los dos amigos partieron juntos por el camino, charlando alegremente sobre el futuro!",
+      "hash": "7fb5d434e8"
+    },
+    {
+      "id": "p7-s0",
+      "pagina": 7,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Capítulo 7. ¡El duelo de los molinos! ¡El duelo contra los gigantes!",
+      "fala": "Capítulo 7. ¡El duelo de los molinos! ¡El duelo contra los gigantes!",
+      "hash": "611bf3b7e9"
+    },
+    {
+      "id": "p7-s1",
+      "pagina": 7,
+      "paragrafo": 0,
+      "texto": "Iban cabalgando por las vastas llanuras del Campo de Criptana cuando, en esto, descubrieron en el horizonte treinta o cuarenta enormes MOLINOS de viento, con grandes aspas de madera que recortaban el cielo.",
+      "fala": "Iban cabalgando por las vastas llanuras del Campo de Criptana cuando, en esto, descubrieron en el horizonte treinta o cuarenta enormes molinos de viento, con grandes aspas de madera que recortaban el cielo.",
+      "hash": "44a0e3a162"
+    },
+    {
+      "id": "p7-s2",
+      "pagina": 7,
+      "paragrafo": 1,
+      "texto": "En ese instante sopló una fuerte ráfaga de VIENTO, ¡y las aspas empezaron a girar con un estruendo veloz!",
+      "fala": "En ese instante sopló una fuerte ráfaga de viento, ¡y las aspas empezaron a girar con un estruendo veloz!",
+      "hash": "099a159228"
+    },
+    {
+      "id": "p7-s3",
+      "pagina": 7,
+      "paragrafo": 1,
+      "texto": "Don Quijote tiró de las riendas de Rocinante y exclamó:",
+      "fala": "Don Quijote tiró de las riendas de Rocinante y exclamó:",
+      "hash": "2e31c61d5d"
+    },
+    {
+      "id": "p7-s4",
+      "pagina": 7,
+      "paragrafo": 2,
+      "texto": "—¡Mira, amigo Sancho!",
+      "fala": "¡Mira, amigo Sancho!",
+      "hash": "b4364078b5"
+    },
+    {
+      "id": "p7-s5",
+      "pagina": 7,
+      "paragrafo": 2,
+      "texto": "¡La ventura va guiando nuestras cosas!",
+      "fala": "¡La ventura va guiando nuestras cosas!",
+      "hash": "bbcd4b1fe0"
+    },
+    {
+      "id": "p7-s6",
+      "pagina": 7,
+      "paragrafo": 2,
+      "texto": "¡Allí se descubren desaforados GIGANTES, de los brazos largos, con quienes pienso hacer fiera batalla!",
+      "fala": "¡Allí se descubren desaforados gigantes, de los brazos largos, con quienes pienso hacer fiera batalla!",
+      "hash": "741bc8243f"
+    },
+    {
+      "id": "p7-s7",
+      "pagina": 7,
+      "paragrafo": 3,
+      "texto": "—¿Qué gigantes, mi señor?",
+      "fala": "¿Qué gigantes, mi señor?",
+      "hash": "3d853782b2"
+    },
+    {
+      "id": "p7-s8",
+      "pagina": 7,
+      "paragrafo": 3,
+      "texto": "¡Mire vuestra merced que aquellos no son gigantes, sino molinos de viento que muelen el trigo! —le avisó Sancho.",
+      "fala": "¡Mire vuestra merced que aquellos no son gigantes, sino molinos de viento que muelen el trigo! le avisó Sancho.",
+      "hash": "bad891a1c5"
+    },
+    {
+      "id": "p7-s9",
+      "pagina": 7,
+      "paragrafo": 3,
+      "texto": "Pero don Quijote ya ponía la lanza en ristre, ¡listo para el duelo más célebre y valiente de toda la literatura!",
+      "fala": "Pero don Quijote ya ponía la lanza en ristre, ¡listo para el duelo más célebre y valiente de toda la literatura!",
+      "hash": "d513282759"
+    }
+  ],
+  "palavras": [
+    {
+      "slug": "imaginacion",
+      "palavra": "IMAGINACIÓN",
+      "silabas": "I • MA • GI • NA • CIÓN",
+      "fala": "i... ma... gi... na... ción... imaginación!",
+      "hash": "c50723be66"
+    },
+    {
+      "slug": "rocinante",
+      "palavra": "ROCINANTE",
+      "silabas": "RO • CI • NAN • TE",
+      "fala": "ro... ci... nan... te... rocinante!",
+      "hash": "b2c1192dc0"
+    },
+    {
+      "slug": "caballeros",
+      "palavra": "CABALLEROS",
+      "silabas": "CA • BA • LLE • ROS",
+      "fala": "ca... ba... lle... ros... caballeros!",
+      "hash": "4fedc65cff"
+    },
+    {
+      "slug": "libros",
+      "palavra": "LIBROS",
+      "silabas": "LI • BROS",
+      "fala": "li... bros... libros!",
+      "hash": "ef66dd5363"
+    },
+    {
+      "slug": "leon-guardian",
+      "palavra": "LEÓN GUARDIÁN",
+      "silabas": "LE • ÓN • GUAR • DIÁN",
+      "fala": "le... ón... guar... dián... león guardián!",
+      "hash": "8c6d5382b8"
+    },
+    {
+      "slug": "don-quijote",
+      "palavra": "DON QUIJOTE",
+      "silabas": "DON • QUI • JO • TE",
+      "fala": "don... qui... jo... te... don quijote!",
+      "hash": "e95b4d35bd"
+    },
+    {
+      "slug": "armadura",
+      "palavra": "ARMADURA",
+      "silabas": "AR • MA • DU • RA",
+      "fala": "ar... ma... du... ra... armadura!",
+      "hash": "dfc0acfbb3"
+    },
+    {
+      "slug": "bacia",
+      "palavra": "BACÍA",
+      "silabas": "BA • CÍ • A",
+      "fala": "ba... cí... a... bacía!",
+      "hash": "3620ac0f0b"
+    },
+    {
+      "slug": "escudo",
+      "palavra": "ESCUDO",
+      "silabas": "ES • CU • DO",
+      "fala": "es... cu... do... escudo!",
+      "hash": "8dbcc2770a"
+    },
+    {
+      "slug": "lanza",
+      "palavra": "LANZA",
+      "silabas": "LAN • ZA",
+      "fala": "lan... za... lanza!",
+      "hash": "4404e8e738"
+    },
+    {
+      "slug": "yelmo-de-oro",
+      "palavra": "YELMO DE ORO",
+      "silabas": "YEL • MO • DE • O • RO",
+      "fala": "yel... mo... de... o... ro... yelmo de oro!",
+      "hash": "b111e27376"
+    },
+    {
+      "slug": "manzana",
+      "palavra": "MANZANA",
+      "silabas": "MAN • ZA • NA",
+      "fala": "man... za... na... manzana!",
+      "hash": "61f6d665ab"
+    },
+    {
+      "slug": "zanahoria",
+      "palavra": "ZANAHORIA",
+      "silabas": "ZA • NA • HO • RIA",
+      "fala": "za... na... ho... ria... zanahoria!",
+      "hash": "4f9c97fe05"
+    },
+    {
+      "slug": "cepillo",
+      "palavra": "CEPILLO",
+      "silabas": "CE • PI • LLO",
+      "fala": "ce... pi... llo... cepillo!",
+      "hash": "f207554233"
+    },
+    {
+      "slug": "corcel",
+      "palavra": "CORCEL",
+      "silabas": "COR • CEL",
+      "fala": "cor... cel... corcel!",
+      "hash": "7025cb24ea"
+    },
+    {
+      "slug": "dulcinea",
+      "palavra": "DULCINEA",
+      "silabas": "DUL • CI • NE • A",
+      "fala": "dul... ci... ne... a... dulcinea!",
+      "hash": "9354bb3171"
+    },
+    {
+      "slug": "venta",
+      "palavra": "VENTA",
+      "silabas": "VEN • TA",
+      "fala": "ven... ta... venta!",
+      "hash": "a51fe484b4"
+    },
+    {
+      "slug": "castillo",
+      "palavra": "CASTILLO",
+      "silabas": "CAS • TI • LLO",
+      "fala": "cas... ti... llo... castillo!",
+      "hash": "3dc3a94d1f"
+    },
+    {
+      "slug": "trompetas",
+      "palavra": "TROMPETAS",
+      "silabas": "TROM • PE • TAS",
+      "fala": "trom... pe... tas... trompetas!",
+      "hash": "e0e21ba945"
+    },
+    {
+      "slug": "sopa",
+      "palavra": "SOPA",
+      "silabas": "SO • PA",
+      "fala": "so... pa... sopa!",
+      "hash": "90b26e061f"
+    },
+    {
+      "slug": "luna-llena",
+      "palavra": "LUNA LLENA",
+      "silabas": "LU • NA • LLE • NA",
+      "fala": "lu... na... lle... na... luna llena!",
+      "hash": "9eed401009"
+    },
+    {
+      "slug": "abrevadero",
+      "palavra": "ABREVADERO",
+      "silabas": "A • BRE • VA • DE • RO",
+      "fala": "a... bre... va... de... ro... abrevadero!",
+      "hash": "337d97af82"
+    },
+    {
+      "slug": "espada",
+      "palavra": "ESPADA",
+      "silabas": "ES • PA • DA",
+      "fala": "es... pa... da... espada!",
+      "hash": "ecdfff71ed"
+    },
+    {
+      "slug": "sancho-panza",
+      "palavra": "SANCHO PANZA",
+      "silabas": "SAN • CHO • PAN • ZA",
+      "fala": "san... cho... pan... za... sancho panza!",
+      "hash": "3462188f9f"
+    },
+    {
+      "slug": "escudero",
+      "palavra": "ESCUDERO",
+      "silabas": "ES • CU • DE • RO",
+      "fala": "es... cu... de... ro... escudero!",
+      "hash": "81c43f48f7"
+    },
+    {
+      "slug": "insula",
+      "palavra": "ÍNSULA",
+      "silabas": "ÍN • SU • LA",
+      "fala": "ín... su... la... ínsula!",
+      "hash": "6504472573"
+    },
+    {
+      "slug": "burrito",
+      "palavra": "BURRITO",
+      "silabas": "BU • RRI • TO",
+      "fala": "bu... rri... to... burrito!",
+      "hash": "14a8b2f362"
+    },
+    {
+      "slug": "molinos",
+      "palavra": "MOLINOS",
+      "silabas": "MO • LI • NOS",
+      "fala": "mo... li... nos... molinos!",
+      "hash": "1aa77dd5e3"
+    },
+    {
+      "slug": "viento",
+      "palavra": "VIENTO",
+      "silabas": "VIEN • TO",
+      "fala": "vien... to... viento!",
+      "hash": "d53cfba8c2"
+    },
+    {
+      "slug": "gigantes",
+      "palavra": "GIGANTES",
+      "silabas": "GI • GAN • TES",
+      "fala": "gi... gan... tes... gigantes!",
+      "hash": "9e4e0a721d"
+    }
+  ]
+}
