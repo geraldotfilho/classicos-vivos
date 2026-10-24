@@ -26,6 +26,8 @@ for (const arquivo of globSync('*/parte-*.html').sort()) {
     const frases = [];
     const palavras = new Map();
     livro.paginas.forEach((pagina, i) => {
+        const titulo = Texto.tituloDaPagina(pagina, i, livro.obra);   // "frase 0": lida antes do texto
+        if (titulo) frases.push({ id: titulo.id, pagina: i, paragrafo: -1, titulo: true, texto: titulo.texto, fala: titulo.fala, hash: hash(titulo.fala) });
         Texto.frasesDaPagina(pagina.texto, i).forEach((paragrafo, k) => paragrafo.forEach(({ id, frase }) => {
             const fala = Texto.falaDaFrase(frase);
             frases.push({ id, pagina: i, paragrafo: k, texto: Texto.textoDaFrase(frase), fala, hash: hash(fala) });

@@ -5,6 +5,15 @@
   "audioPalavras": "dom-quixote/audio/palavras/<slug>.mp3",
   "frases": [
     {
+      "id": "p0-s0",
+      "pagina": 0,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Dom Quixote de La Mancha. Parte 4: A Jaula Encantada e a Ilha de Sancho",
+      "fala": "Dom Quixote de La Mancha. Parte 4: A Jaula Encantada e a Ilha de Sancho",
+      "hash": "1154f10861"
+    },
+    {
       "id": "p0-s1",
       "pagina": 0,
       "paragrafo": 0,
@@ -35,6 +44,15 @@
       "texto": "Vire a página para o grande final!",
       "fala": "Vire a página para o grande final!",
       "hash": "2bc6bf8413"
+    },
+    {
+      "id": "p1-s0",
+      "pagina": 1,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Capítulo 22. A Jaula Encantada. Uma Viagem de Carro de Boi",
+      "fala": "Capítulo 22. A Jaula Encantada. Uma Viagem de Carro de Boi",
+      "hash": "b938cd912f"
     },
     {
       "id": "p1-s1",
@@ -83,6 +101,15 @@
       "texto": "E assim seguiram devagarinho pelos campos: o carro rangendo, os bois mugindo, Sancho caminhando ao lado com o burrico, e o cavaleiro sorrindo dentro da sua jaula encantada, sonhando com novas aventuras.",
       "fala": "E assim seguiram devagarinho pelos campos: o carro rangendo, os bois mugindo, Sancho caminhando ao lado com o burrico, e o cavaleiro sorrindo dentro da sua jaula encantada, sonhando com novas aventuras.",
       "hash": "c47850cbc9"
+    },
+    {
+      "id": "p2-s0",
+      "pagina": 2,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Capítulo 23. De Volta para Casa. Abraços em La Mancha",
+      "fala": "Capítulo 23. De Volta para Casa. Abraços em La Mancha",
+      "hash": "4a01b6566b"
     },
     {
       "id": "p2-s1",
@@ -165,6 +192,15 @@
       "hash": "f797c3b9f8"
     },
     {
+      "id": "p3-s0",
+      "pagina": 3,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Capítulo 24. Clavilenho, o Cavalo Voador. Uma Viagem pelo Céu sem Sair do Lugar",
+      "fala": "Capítulo 24. Clavilenho, o Cavalo Voador. Uma Viagem pelo Céu sem Sair do Lugar",
+      "hash": "71855a1e2b"
+    },
+    {
       "id": "p3-s1",
       "pagina": 3,
       "paragrafo": 0,
@@ -237,6 +273,15 @@
       "hash": "11381ccab0"
     },
     {
+      "id": "p4-s0",
+      "pagina": 4,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Capítulo 25. Conselhos para um Governador. Sancho Vai Governar uma Ilha",
+      "fala": "Capítulo 25. Conselhos para um Governador. Sancho Vai Governar uma Ilha",
+      "hash": "dd9e1754cf"
+    },
+    {
       "id": "p4-s1",
       "pagina": 4,
       "paragrafo": 0,
@@ -291,6 +336,15 @@
       "texto": "Abraçou o seu senhor e partiu para governar, montado no seu querido burrico.",
       "fala": "Abraçou o seu senhor e partiu para governar, montado no seu querido burrico.",
       "hash": "e0116dc96a"
+    },
+    {
+      "id": "p5-s0",
+      "pagina": 5,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Capítulo 26. O Mistério da Bengala. O Julgamento Mais Esperto",
+      "fala": "Capítulo 26. O Mistério da Bengala. O Julgamento Mais Esperto",
+      "hash": "b22d27f1bd"
     },
     {
       "id": "p5-s1",
@@ -389,6 +443,15 @@
       "hash": "15cdb2a74b"
     },
     {
+      "id": "p6-s0",
+      "pagina": 6,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Capítulo 27. Sancho Escolhe seu Burrico. A Liberdade de um Homem Simples",
+      "fala": "Capítulo 27. Sancho Escolhe seu Burrico. A Liberdade de um Homem Simples",
+      "hash": "843fb58f50"
+    },
+    {
       "id": "p6-s1",
       "pagina": 6,
       "paragrafo": 0,
@@ -443,6 +506,15 @@
       "texto": "Todos da vila ficaram tristes com a sua partida.",
       "fala": "Todos da vila ficaram tristes com a sua partida.",
       "hash": "7c4d8824b2"
+    },
+    {
+      "id": "p7-s0",
+      "pagina": 7,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Capítulo 28. O Cavaleiro da Branca Lua. As Aventuras Moram nos Livros",
+      "fala": "Capítulo 28. O Cavaleiro da Branca Lua. As Aventuras Moram nos Livros",
+      "hash": "8beb0c9124"
     },
     {
       "id": "p7-s1",

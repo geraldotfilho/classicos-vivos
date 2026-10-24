@@ -43,6 +43,11 @@ ESTADO: ATIVO
 
 ## Revisões do Claude
 
+### 2026-10-24 — P-006, Parte 1 completa (Claude)
+- **Parte 1 com narração gravada completa**: as 8 páginas com o título do capítulo lido, a narradora e as vozes de **Dom Quixote** (`pt-br-concierge-3`) e **Sancho** (`pt-br-storyteller-2`), escolhidas pelo Claude a pedido do humano, e as 30 palavras-chave. Liberada como `partes: [1]` no `vozes.js`.
+- Decisões do humano (topo de `docs/TODO-NARRACAO.md`): **página inteira é o padrão**; o Claude escolhe o elenco (e cria voz por descrição quando nenhuma servir); o título é lido; **limite de R$ 10/mês** no projeto, com a API paga **só para produzir as vozes** (conferência local, pelo Whisper).
+- Gasto desta fase: ~US$ 0,15 (`docs/narracao/gastos.csv`).
+
 ### 2026-10-24 — P-006, teste da página inteira (Claude)
 - A pedido do humano, a página 3 da Parte 1 (`p2`) foi gravada **num pedido só**, com a marcação das frases feita depois pelas pausas do áudio e conferida por transcrição trecho a trecho (método em `docs/TODO-NARRACAO.md` §8.5). O livro passou a tocar um MP3 por página com o destaque sincronizado. A fala de Dom Quixote (`p2-s1`) está provisoriamente na voz da narradora. **Aguardando a escuta do humano**, comparando com as páginas 1 e 2 (frase a frase).
 

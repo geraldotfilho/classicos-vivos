@@ -12,7 +12,11 @@ O livro já sabe tocar narração gravada **frase por frase**, com o destaque da
 3. **Liberar aos poucos**, como `previa` no `vozes.js`, e pedir escuta a cada novidade (voz, estilo, entonação).
 4. Ficaram para depois: outras vozes de narradora e uma voz com **sotaque pernambucano** (seria por voice design, já que a biblioteca não tem sotaque regional).
 5. O plano pago da API foi ativado (fim do limite de 10 pedidos por dia).
-6. **Em teste (2026-10-24): página inteira num pedido só** (`--pagina-inteira`), para a cadência e a entonação ficarem contínuas, com a **marcação das frases a posteriori**. Primeiro teste: Parte 1, página 3 (`p2`, Capítulo 2). Se o humano aprovar de ouvido, vira o padrão (ver 8.6).
+6. **Página inteira num pedido só é o padrão** (`--pagina-inteira`, §8.5): aprovada de ouvido ("ficou muito melhor"). Frase por frase, só em gravações avulsas.
+7. **O Claude escolhe o elenco** pelas descrições do catálogo e, se nenhuma voz servir, **cria uma por descrição** (voice design). Escolhidos na Parte 1: **Dom Quixote** `pt-br-concierge-3` (62 anos, grave, "ressonante e espirituosa") e **Sancho** `pt-br-storyteller-2` (49, grave, humorista, "envolvente e empática"). O elenco fica em `ELENCO`, no script; o roteiro de quem fala cada trecho, em `narracao/parte-N/roteiro.json` (escrito à mão a partir do texto: falas continuam em frases sem travessão).
+8. **O título é lido**: capítulo + título no começo de cada página, a "frase 0" (`pN-s0`). Na capa: obra + título da parte.
+9. **Economia (limite de R$ 10/mês no projeto)**: a API paga só faz **o que só ela faz, produzir as vozes**. A conferência é **local** (Whisper no ambiente, `tools/transcrever.py`), no máximo 2 tentativas, 1 palavra diferente não regrava (fica o aviso) e a comparação tolera nomes mal ouvidos, palavras juntas/separadas e números em algarismos. Cada rodada registra o gasto estimado em `docs/narracao/gastos.csv`. A Parte 1 inteira custou ~US$ 0,15 nesta fase (fora os testes).
+10. **Clonar a voz do humano**: adiado ("preciso refletir mais").
 
 ## 0. Visão geral
 
@@ -162,15 +166,17 @@ POST https://generativelanguage.googleapis.com/v1beta/interactions
 - **Plano pago** (projeto do Google Cloud com faturamento ativo): `gemini-3.8-flash-tts` custa US$ 9 por milhão de tokens de áudio até 31/12/2026 (US$ 18 depois). A fala usa ~25 tokens/s e o livro inteiro tem ~30 min por voz: **~US$ 0,40 por voz**, ~US$ 2–3 com o teatro, as palavras-chave e as regravações. O Batch (`batchGenerateContent`) custa metade, mas não tem plano gratuito.
 - No plano gratuito, o Google pode usar os textos e áudios enviados para melhorar os produtos (os textos do livro são públicos, sem problema).
 
-### 8.5 Página inteira (`--pagina-inteira`)
-- **Um pedido por página**: o `fala` de cada frase, os parágrafos separados por linha em branco. Sai `parte-N/pN.mp3`.
-- **Marcação a posteriori**: o script acha as pausas do áudio (≥ 120 ms de energia baixa) e escolhe, por programação dinâmica, uma pausa por fronteira entre frases: a mais perto de onde a proporção de letras diz que a frase acaba, preferindo as pausas longas (fim de frase pausa mais que vírgula). O corte fica no meio da pausa.
-- **QA**: cada trecho entre dois cortes é transcrito e comparado com a sua frase. Isso confere o texto **e** a marcação (um corte no lugar errado passa palavras de uma frase para a outra). Até 3 gerações; fica a melhor.
+### 8.5 Página inteira (`--pagina-inteira`, o padrão)
+- **Blocos**: a API aceita no máximo 2 vozes por pedido. Cada bloco tem a narradora + no máximo 1 personagem, e um bloco novo começa quando entra um segundo personagem (ex.: Parte 1, `p7`: [narradora + Quixote] [narradora + Sancho]). Só narradora: um texto com os parágrafos separados por linha em branco. Com personagem: um item de `content` por fala, cada um com `speaker` e o estilo daquela voz em `speech_metadata`, e `speech_config.speakers` com as duas vozes (**sem** `mode`: a API recusa esse campo). Os blocos são juntados com 0,3 s de pausa e viram um só `parte-N/pN.mp3`.
+- **Marcação a posteriori**: o Whisper local devolve o tempo de cada palavra; as palavras esperadas são alinhadas às ouvidas (distância de edição) e cada frase começa no meio da pausa entre a última palavra da anterior e a primeira dela. Isso evita o erro do método antigo, só por pausas (que ainda é a reserva com `--qa api`/`--sem-qa`): cortar na pausa de dentro do título ("Capítulo 2. O Novo Nome. ‖ A Armadura…").
+- **QA**: o texto ouvido em cada frase é comparado com o `fala`. Isso confere o texto **e** a marcação.
+- **Gravação avulsa numa página já gravada** (`--ids pN-s0,pN-s1 --pagina-inteira`): sai em `parte-N/avulsas/`; depois, emenda-se com `ffmpeg -ss <corte> -i pN.mp3 -c copy` + `ffmpeg -f concat -c copy` (sem recodificar), e as marcas e o `hash` do `paginas.json` são atualizados. Foi assim que a página `p2` ganhou o título e a fala de Dom Quixote.
+- **Conferência local**: `pip install faster-whisper` (uma vez por ambiente; o contêiner é efêmero) e o ffmpeg. O modelo `large-v3-turbo` (~800 MB) baixa do Hugging Face na primeira vez e leva ~20 s para carregar; depois cada página sai em segundos.
 - **Saída**: `parte-N/paginas.json` = `{ "p2": { "arquivo": "p2.mp3", "hash", "frases": [{ "id", "ini", "fim" }] } }`, com os tempos em segundos. O `hash` junta os hashes das frases: mudou uma frase, regrava a página.
 - **No livro**: se a página está em `paginas.json`, "Ouvir Página" toca o MP3 inteiro e destaca a frase pelo `currentTime` (funciona no 🐢, que só muda o `playbackRate`). Página sem gravação inteira: frase por frase, como antes.
 - **Falas de personagem**: a página inteira com a narradora + 1 personagem cabe num pedido só no modo `conversational` (2 falantes). Com 2 ou mais personagens na página, divide-se a página em blocos. Decidir com o humano quando o elenco estiver escolhido.
 
-### 8.6 Controle de qualidade pela API
+### 8.6 Controle de qualidade pela API (só com `--qa api`)
 - **Transcrição** (feita pelo script): o WAV vai ao `gemini-3.5-flash` com o pedido "Transcreva exatamente o que é falado, em português, com os números escritos por extenso." (sem isso, "quatrocentos" vira "400" e reprova uma frase boa). Compara palavra por palavra, sem acento, pontuação nem caixa. Divergência → regravar (até 3 tentativas). Se nenhuma bater, **guarda a mais próxima** (cada tentativa gasta cota) e avisa no fim, para o humano ouvir.
 - **Falso alarme conhecido**: a transcrição escreve "Alonso **Quijano**" (a grafia espanhola) para "Quixano". Pode ser o modelo de transcrição "corrigindo" o nome famoso ou a voz dizendo "ki-RRA-no": só o ouvido do humano decide.
 - **Pedir ao modelo para avaliar sotaque ou naturalidade não funciona**: ele deu 10/10 para todas as vozes. A escolha de voz e entonação é sempre de ouvido, pelo humano.

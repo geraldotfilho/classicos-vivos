@@ -5,6 +5,15 @@
   "audioPalavras": "dom-quixote/audio/palavras/<slug>.mp3",
   "frases": [
     {
+      "id": "p0-s0",
+      "pagina": 0,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Dom Quixote de La Mancha. Parte 2: Exércitos de Lã e o Elmo Encantado",
+      "fala": "Dom Quixote de La Mancha. Parte 2: Exércitos de Lã e o Elmo Encantado",
+      "hash": "838dc59621"
+    },
+    {
       "id": "p0-s1",
       "pagina": 0,
       "paragrafo": 0,
@@ -27,6 +36,15 @@
       "texto": "Prepare a sua IMAGINAÇÃO: as aventuras estão só começando!",
       "fala": "Prepare a sua imaginação: as aventuras estão só começando!",
       "hash": "b64740effb"
+    },
+    {
+      "id": "p1-s0",
+      "pagina": 1,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Capítulo 8. A Lança de Carvalho. Uma Lança Nova sob as Estrelas",
+      "fala": "Capítulo 8. A Lança de Carvalho. Uma Lança Nova sob as Estrelas",
+      "hash": "0b1c3402c4"
     },
     {
       "id": "p1-s1",
@@ -77,6 +95,15 @@
       "hash": "ec05b1dc59"
     },
     {
+      "id": "p2-s0",
+      "pagina": 2,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Capítulo 9. Os Pastores e a Idade de Ouro. Um Jantar para Dividir",
+      "fala": "Capítulo 9. Os Pastores e a Idade de Ouro. Um Jantar para Dividir",
+      "hash": "fac56241bc"
+    },
+    {
       "id": "p2-s1",
       "pagina": 2,
       "paragrafo": 0,
@@ -123,6 +150,15 @@
       "texto": "Os pastores não entenderam todas as palavras bonitas, mas entenderam o principal: o mundo fica melhor quando a gente divide.",
       "fala": "Os pastores não entenderam todas as palavras bonitas, mas entenderam o principal: o mundo fica melhor quando a gente divide.",
       "hash": "93ab1b08d1"
+    },
+    {
+      "id": "p3-s0",
+      "pagina": 3,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Capítulo 10. Os Exércitos de Poeira. A Grande Batalha das Ovelhas",
+      "fala": "Capítulo 10. Os Exércitos de Poeira. A Grande Batalha das Ovelhas",
+      "hash": "4bdfb91834"
     },
     {
       "id": "p3-s1",
@@ -197,6 +233,15 @@
       "hash": "a2c537bef3"
     },
     {
+      "id": "p4-s0",
+      "pagina": 4,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Capítulo 11. O Cavaleiro da Triste Figura. Um Apelido Inesquecível",
+      "fala": "Capítulo 11. O Cavaleiro da Triste Figura. Um Apelido Inesquecível",
+      "hash": "0e567a9623"
+    },
+    {
       "id": "p4-s1",
       "pagina": 4,
       "paragrafo": 0,
@@ -251,6 +296,15 @@
       "texto": "E decidiu que, um dia, mandaria pintar um rosto triste e nobre no seu ESCUDO.",
       "fala": "E decidiu que, um dia, mandaria pintar um rosto triste e nobre no seu escudo.",
       "hash": "02c7719ff8"
+    },
+    {
+      "id": "p5-s0",
+      "pagina": 5,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Capítulo 12. Os Barulhos da Escuridão. As Cabras que Atravessam o Rio",
+      "fala": "Capítulo 12. Os Barulhos da Escuridão. As Cabras que Atravessam o Rio",
+      "hash": "f0a51da1c4"
     },
     {
       "id": "p5-s1",
@@ -315,6 +369,15 @@
       "texto": "Ajude Dom Quixote a contar as cabras que atravessam o rio!",
       "fala": "Ajude Dom Quixote a contar as cabras que atravessam o rio!",
       "hash": "b1a300800f"
+    },
+    {
+      "id": "p6-s0",
+      "pagina": 6,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Capítulo 13. O Segredo do Amanhecer. Quem Fazia TAC-TAC?",
+      "fala": "Capítulo 13. O Segredo do Amanhecer. Quem Fazia TAC, TAC?",
+      "hash": "8d91953a34"
     },
     {
       "id": "p6-s1",
@@ -395,6 +458,15 @@
       "texto": "Afinal, até os cavaleiros mais valentes têm medo do escuro, e a luz sempre ajuda a enxergar a verdade.",
       "fala": "Afinal, até os cavaleiros mais valentes têm medo do escuro, e a luz sempre ajuda a enxergar a verdade.",
       "hash": "1b8a680023"
+    },
+    {
+      "id": "p7-s0",
+      "pagina": 7,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Capítulo 14. O Elmo de Mambrino. Um Elmo que Brilha na Chuva",
+      "fala": "Capítulo 14. O Elmo de Mambrino. Um Elmo que Brilha na Chuva",
+      "hash": "392246ffca"
     },
     {
       "id": "p7-s1",

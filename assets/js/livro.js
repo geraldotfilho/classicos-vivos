@@ -173,22 +173,26 @@ function montarPaginaArte(i, pagina) {
 function montarPaginaTexto(i, pagina) {
     const ultima = i === totalPages - 1;
     const fim = LIVRO.fim || {};
+    const titulo = Texto.tituloDaPagina(pagina, i, LIVRO.obra);
     let topo;
     if (pagina.capa) {
         topo = `
             <div class="inline-flex items-center gap-2 bg-amber-200 text-amber-950 font-display font-bold px-3.5 py-1 rounded-full text-xs sm:text-sm border-2 border-amber-400">
                 <span>${escapeHtml(pagina.etiqueta || '✨ Toque nas PALAVRAS MAIÚSCULAS para ouvir!')}</span>
             </div>
-            <h2 class="text-2xl sm:text-4xl font-display font-bold text-amber-950 leading-tight">
+            <h2 class="sentence text-2xl sm:text-4xl font-display font-bold text-amber-950 leading-tight" data-frase="${titulo.id}">
                 ${escapeHtml(LIVRO.obra)}
                 <span class="block text-base sm:text-2xl text-amber-700 mt-1">${escapeHtml(pagina.titulo)}</span>
             </h2>`;
     } else {
+        // O título é a "frase 0" da leitura guiada (p{i}-s0): capítulo + título
         topo = `
-            <div class="inline-flex items-center gap-2 ${pagina.corCapitulo || 'text-amber-700'} font-display font-bold text-xs sm:text-sm uppercase">
-                <span>${escapeHtml(pagina.capitulo)}</span>
-            </div>
-            <h2 class="text-2xl sm:text-3xl font-display font-bold text-amber-950">${escapeHtml(pagina.titulo)}</h2>`;
+            <div class="sentence space-y-3" data-frase="${titulo.id}">
+                <div class="inline-flex items-center gap-2 ${pagina.corCapitulo || 'text-amber-700'} font-display font-bold text-xs sm:text-sm uppercase">
+                    <span>${escapeHtml(pagina.capitulo)}</span>
+                </div>
+                <h2 class="text-2xl sm:text-3xl font-display font-bold text-amber-950">${escapeHtml(pagina.titulo)}</h2>
+            </div>`;
     }
     const abrir = pagina.capa ? `
         <button type="button" data-nav="next" class="btn-chunky w-full sm:w-auto bg-rose-500 hover:bg-rose-600 text-white font-display font-bold text-lg sm:text-xl px-7 py-3 rounded-3xl border-4 border-rose-700 flex items-center justify-center gap-3">
@@ -226,7 +230,7 @@ function montarPaginaTexto(i, pagina) {
 }
 
 function montarLivro() {
-    LIVRO.paginas.forEach((pagina, i) => { FALAS[i] = Texto.falasDaPagina(pagina.texto, i); });
+    LIVRO.paginas.forEach((pagina, i) => { FALAS[i] = Texto.falasDaPagina(pagina.texto, i, Texto.tituloDaPagina(pagina, i, LIVRO.obra)); });
     const parteRotulo = LIVRO.parte ? `Parte ${LIVRO.parte} de ${LIVRO.totalPartes || LIVRO.parte}` : '';
     const secoes = LIVRO.paginas.map((pagina, i) => `
         <section id="page-${i}" class="page-slide${i ? ' page-hidden' : ''} spread" aria-label="Página ${i + 1}">
@@ -847,7 +851,8 @@ function toggleReadPageAloud() {
 
     const textEl = document.getElementById(`page-text-${currentPage}`);
     if (!textEl) return;
-    const sentences = Array.from(textEl.querySelectorAll('.sentence'));
+    // Começa pelo título (frase 0, fora do parágrafo) e segue pelo texto
+    const sentences = Array.from(textEl.closest('.page-text-inner').querySelectorAll('.sentence'));
 
     calarTudo();
     const session = ++readingSession;
