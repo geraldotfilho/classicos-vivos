@@ -1,0 +1,11 @@
+{
+  "_sobre": "Quem fala cada trecho das frases com fala de personagem (texto no formato do campo `fala` de docs/narracao/frases-dom-quixote-parte-1-en.json, sem mudar palavras). Frases fora daqui são da NARRADORA. Elenco em ../elenco.json.",
+  "p2-s1": [["QUIXOTE", "The world needs more kindness, justice and bravery!"], ["NARRADORA", "thought the gentleman, his eyes shining."]],
+  "p6-s2": [["QUIXOTE", "My loyal friend,"], ["NARRADORA", "said the knight,"], ["QUIXOTE", "come with me and be my squire!"]],
+  "p6-s3": [["QUIXOTE", "I promise that, once we have won our first battles, you shall be made governor of a lovely island full of bread and justice!"]],
+  "p7-s4": [["QUIXOTE", "Look, friend Sancho!"]],
+  "p7-s5": [["QUIXOTE", "Fortune is guiding our steps!"]],
+  "p7-s6": [["QUIXOTE", "Over there rise monstrous giants, and I shall fight them in fierce battle!"]],
+  "p7-s7": [["SANCHO", "What giants, my lord?"], ["NARRADORA", "warned Sancho."]],
+  "p7-s8": [["SANCHO", "They’re only windmills, grinding wheat in the wind!"]]
+}

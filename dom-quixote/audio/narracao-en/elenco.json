@@ -1,0 +1,11 @@
+{
+  "codigoVoz": "en-GB",
+  "amostra": "Hello! I'm going to read this story with you. Turn the page whenever you like!",
+  "nomes": "Don Quixote, Sancho Panza, Alonso Quixano, Rocinante, Dulcinea, Aldonza Lorenzo, El Toboso, La Mancha, Miguel de Cervantes, Montiel, Campo de Criptana",
+  "elenco": {
+    "NARRADORA": { "voz": "en-gb-storyteller-2", "estilo": "warm, gentle storyteller reading aloud to young children in British English; calm, clear pace; expressive but not theatrical" },
+    "QUIXOTE": { "voz": "en-gb-storyteller-4", "estilo": "noble, solemn and dreamy elderly knight in British English, speaking with heartfelt conviction; never mocking" },
+    "SANCHO": { "voz": "en-gb-advisor-2", "estilo": "simple, warm and good-humoured country farmer in British English, plain and practical" },
+    "PALAVRAS": { "estilo": "British English literacy teacher: each syllable slowly and clearly separated with short pauses, then the whole word joyfully" }
+  }
+}

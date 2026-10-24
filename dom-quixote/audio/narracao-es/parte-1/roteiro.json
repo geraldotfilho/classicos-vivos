@@ -1,0 +1,11 @@
+{
+  "_sobre": "Quem fala cada trecho das frases com fala de personagem (texto no formato do campo `fala` de docs/narracao/frases-dom-quixote-parte-1-es.json, sem mudar palavras). Frases fora daqui são da NARRADORA. Elenco em dom-quixote/audio/narracao-es/elenco.json.",
+  "p2-s1": [["QUIXOTE", "¡El mundo necesita más bondad, justicia y valentía!"], ["NARRADORA", "pensó el hidalgo con los ojos brillantes."]],
+  "p6-s2": [["QUIXOTE", "Mi leal amigo,"], ["NARRADORA", "dijo el caballero,"], ["QUIXOTE", "¡vente conmigo como mi escudero!"]],
+  "p6-s3": [["QUIXOTE", "¡Te prometo que, cuando ganemos las primeras batallas, serás nombrado gobernador de una hermosa ínsula, una isla llena de pan y de justicia!"]],
+  "p7-s4": [["QUIXOTE", "¡Mira, amigo Sancho!"]],
+  "p7-s5": [["QUIXOTE", "¡La ventura va guiando nuestras cosas!"]],
+  "p7-s6": [["QUIXOTE", "¡Allí se descubren desaforados gigantes, de los brazos largos, con quienes pienso hacer fiera batalla!"]],
+  "p7-s7": [["SANCHO", "¿Qué gigantes, mi señor?"]],
+  "p7-s8": [["SANCHO", "¡Mire vuestra merced que aquellos no son gigantes, sino molinos de viento que muelen el trigo!"], ["NARRADORA", "le avisó Sancho."]]
+}

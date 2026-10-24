@@ -1,0 +1,33 @@
+{
+  "frases": {
+    "abreuvoir": "0700e279ae",
+    "epee": "716c2c1b94",
+    "sancho-panca": "69035a2e9d",
+    "ecuyer": "c773756f3d",
+    "casque-dore": "9ac4ce6986",
+    "carotte": "a3f8ef3134",
+    "brosse": "1907e999f2",
+    "destrier": "284105dd72",
+    "dulcinee": "8bf79e6deb",
+    "auberge": "4ccf826e3b",
+    "chateau": "97e4787da0",
+    "trompettes": "2775a1c962",
+    "soupe": "9a5ad8894f",
+    "imagination": "974546d4dc",
+    "rossinante": "41ca4dde95",
+    "chevaliers": "f9fdef677b",
+    "livres": "ab6766feb3",
+    "lion-gardien": "9a2a9a24c8",
+    "don-quichotte": "8f18d1f76b",
+    "armure": "9eb13c8111",
+    "plat-a-barbe": "a7a3480942",
+    "bouclier": "f0affaa47e",
+    "lance": "d82ab630d4",
+    "pleine-lune": "f81a3e6173",
+    "ane": "452a767a81"
+  },
+  "modelo": "gemini-3.8-flash-tts",
+  "voz": "fr-fr-tutor-4",
+  "estilo": "literacy teacher in French from France: each syllable slowly and clearly separated with short pauses, then the whole word joyfully",
+  "qa": "whisper-large-v3-turbo (local)"
+}

@@ -1,0 +1,18 @@
+{
+  "frases": {
+    "imaginacion": "c50723be66",
+    "rocinante": "b2c1192dc0",
+    "caballeros": "4fedc65cff",
+    "libros": "ef66dd5363",
+    "leon-guardian": "8c6d5382b8",
+    "don-quijote": "e95b4d35bd",
+    "armadura": "dfc0acfbb3",
+    "bacia": "3620ac0f0b",
+    "escudo": "8dbcc2770a",
+    "lanza": "4404e8e738"
+  },
+  "modelo": "gemini-3.8-flash-tts",
+  "voz": "es-es-tutor-12",
+  "estilo": "literacy teacher: each syllable slowly and clearly separated with short pauses, then the whole word joyfully",
+  "qa": "whisper-large-v3-turbo (local)"
+}

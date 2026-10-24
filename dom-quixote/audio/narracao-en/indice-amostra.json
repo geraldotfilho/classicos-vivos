@@ -1,0 +1,9 @@
+{
+  "frases": {
+    "amostra": "amostra"
+  },
+  "modelo": "gemini-3.8-flash-tts",
+  "voz": "en-gb-storyteller-2",
+  "estilo": "warm, gentle storyteller reading aloud to young children in British English; calm, clear pace; expressive but not theatrical",
+  "qa": "whisper-large-v3-turbo (local)"
+}

@@ -1,0 +1,11 @@
+{
+  "codigoVoz": "fr-FR",
+  "amostra": "Bonjour ! Je vais lire cette histoire avec toi. Tourne la page quand tu veux !",
+  "nomes": "Don Quichotte, Miguel de Cervantes, Alonso Quichano, Rossinante, la Manche, Aldonza Lorenzo, Dulcinée du Toboso, Montiel, Sancho Pança, Campo de Criptana",
+  "elenco": {
+    "NARRADORA": { "voz": "fr-fr-tutor-4", "estilo": "warm, gentle storyteller reading aloud to young children in French from France; calm, clear pace; expressive but not theatrical" },
+    "QUIXOTE": { "voz": "fr-fr-assistant-4", "estilo": "elderly knight in French from France; noble, solemn and dreamy, speaking with heartfelt conviction; never mocking" },
+    "SANCHO": { "voz": "fr-fr-training-2", "estilo": "simple country squire in French from France; warm, good-humored, plain and practical" },
+    "PALAVRAS": { "estilo": "literacy teacher in French from France: each syllable slowly and clearly separated with short pauses, then the whole word joyfully" }
+  }
+}

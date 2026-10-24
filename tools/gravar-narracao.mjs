@@ -758,7 +758,12 @@ async function cortarPalavras(grupo, amostras) {
         const ouvido = normalizar(await transcrever(wavDe(amostras.subarray(Math.round(m.ini * TAXA), Math.round(m.fim * TAXA)))));
         const tem = (palavra) => { const a = normalizar(palavra).replace(/ /g, ''); const b = ouvido.replace(/ /g, ''); return b.includes(a) || [...Array(Math.max(0, b.length - a.length + 1)).keys()].some(i => edicao(b.slice(i, i + a.length), a) <= (a.length >= 8 ? 2 : 1)); };
         const item = grupo.find(g => g.id === m.id);
-        const intrusas = grupo.filter(g => g !== item && normalizar(g.palavra).replace(/ /g, '').length >= 4 && tem(g.palavra)).map(g => g.id);
+        // Palavra contida na própria ("wind" em "windmills", "knight" em "knights") não conta como intrusa
+        const propria = normalizar(item.palavra).replace(/ /g, '');
+        const intrusas = grupo.filter(g => {
+            const outra = normalizar(g.palavra).replace(/ /g, '');
+            return g !== item && outra.length >= 4 && !propria.includes(outra) && tem(g.palavra);
+        }).map(g => g.id);
         if (intrusas.length) { avisos.push(`${m.id}: o trecho tem outra palavra (${intrusas.join(', ')}): "${ouvido}"; não foi salvo`); continue; }
         if (!tem(item.palavra)) {
             // a última do grupo vai até o fim do áudio: não tem como invadir outra palavra (ex.: onomatopeias, que o Whisper escreve de mil jeitos)
