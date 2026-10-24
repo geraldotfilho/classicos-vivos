@@ -6,7 +6,7 @@
    - Narração gravada (*.mp3 e as marcas *.json em audio/): rede primeiro, para frases regravadas chegarem ao tablet;
      cada arquivo fica num cache próprio (que sobrevive às novas versões) e toca offline depois.
    - Demais arquivos: cache primeiro (abre instantâneo no tablet). */
-const CACHE = 'classicos-vivos-b66742d1ef3a';
+const CACHE = 'classicos-vivos-0f4a6389ee8d';
 const CACHE_AUDIO = 'cv-narracao';
 const FILES = [
     "./assets/css/fonts.css",
@@ -107,9 +107,13 @@ const FILES = [
     "./dom-quixote/parte-3.html",
     "./dom-quixote/parte-4.html",
     "./dom-quixote/traducoes/parte-1.en.js",
+    "./dom-quixote/traducoes/parte-1.fr.js",
     "./dom-quixote/traducoes/parte-2.en.js",
+    "./dom-quixote/traducoes/parte-2.fr.js",
     "./dom-quixote/traducoes/parte-3.en.js",
+    "./dom-quixote/traducoes/parte-3.fr.js",
     "./dom-quixote/traducoes/parte-4.en.js",
+    "./dom-quixote/traducoes/parte-4.fr.js",
     "./index.html",
     "./manifest.webmanifest",
     "./sobre.html"
