@@ -1,0 +1,275 @@
+{
+  "_sobre": "Quem fala cada trecho das frases com fala de personagem (texto no formato do campo `fala`, sem mudar palavras). Frases fora daqui são da NARRADORA. Elenco em tools/gravar-narracao.mjs (ELENCO).",
+  "p1-s2": [
+    [
+      "QUIXOTE",
+      "Não fujam, criaturas covardes!"
+    ]
+  ],
+  "p1-s3": [
+    [
+      "QUIXOTE",
+      "Um só cavaleiro vem enfrentar todos vocês!"
+    ],
+    [
+      "NARRADORA",
+      "bradava o fidalgo, avançando veloz contra o primeiro moinho de vento da planície!"
+    ]
+  ],
+  "p1-s6": [
+    [
+      "NARRADORA",
+      "Sancho Pança correu aflito em seu burrico, com as mãos na cabeça:"
+    ],
+    [
+      "SANCHO",
+      "Valha-me Deus, meu senhor!"
+    ]
+  ],
+  "p1-s7": [
+    [
+      "SANCHO",
+      "Eu não avisei que eram apenas moinhos?"
+    ]
+  ],
+  "p1-s8": [
+    [
+      "NARRADORA",
+      "Mas o fidalgo, sacudindo a poeira e endireitando a bacia amassada com um sorriso nobre, ensinou com paciência:"
+    ],
+    [
+      "QUIXOTE",
+      "Silêncio, amigo Sancho!"
+    ]
+  ],
+  "p1-s9": [
+    [
+      "QUIXOTE",
+      "As coisas da cavalaria mudam num piscar de olhos!"
+    ]
+  ],
+  "p1-s10": [
+    [
+      "QUIXOTE",
+      "Foi o maldoso mago Frestón que lançou um feitiço para roubar a minha glória."
+    ]
+  ],
+  "p1-s11": [
+    [
+      "QUIXOTE",
+      "Mas contra a nossa coragem, magia nenhuma há de prevalecer!"
+    ]
+  ],
+  "p2-s2": [
+    [
+      "QUIXOTE",
+      "Um verdadeiro cavaleiro andante jamais se entrega à tristeza!"
+    ],
+    [
+      "NARRADORA",
+      "declarou ele com nobreza, olhando com carinho para o leal Rocinante."
+    ]
+  ],
+  "p2-s4": [
+    [
+      "QUIXOTE",
+      "Um antigo herói da Espanha, quando perdeu a espada na batalha, lutou com um tronco de árvore e venceu!"
+    ],
+    [
+      "NARRADORA",
+      "contou ele a Sancho."
+    ]
+  ],
+  "p2-s5": [
+    [
+      "QUIXOTE",
+      "Pois eu farei o mesmo!"
+    ]
+  ],
+  "p3-s3": [
+    [
+      "PASTOR",
+      "Sentem-se, amigos!"
+    ],
+    [
+      "NARRADORA",
+      "convidou o pastor mais velho."
+    ]
+  ],
+  "p3-s4": [
+    [
+      "PASTOR",
+      "Aqui, o que é de um é de todos!"
+    ]
+  ],
+  "p3-s7": [
+    [
+      "NARRADORA",
+      "Segurando as bolotas na palma da mão, Dom Quixote falou com emoção:"
+    ],
+    [
+      "QUIXOTE",
+      "Houve um tempo abençoado, a idade de ouro, em que ninguém erguia cercas e todos sabiam dividir com amor os frutos da terra!"
+    ]
+  ],
+  "p4-s3": [
+    [
+      "QUIXOTE",
+      "Prepare o ânimo, fiel Sancho!"
+    ],
+    [
+      "NARRADORA",
+      "exclamou o cavaleiro, radiante."
+    ]
+  ],
+  "p4-s4": [
+    [
+      "QUIXOTE",
+      "Eis que marcham ao nosso encontro dois descomunais exércitos!"
+    ]
+  ],
+  "p4-s5": [
+    [
+      "QUIXOTE",
+      "À esquerda avança o temível Alifanfarrão da Trapobana; à direita ergue estandartes o valoroso Pentapolim do Braço Arregaçado, herói que luta sempre com as mangas arregaçadas!"
+    ]
+  ],
+  "p4-s6": [
+    [
+      "SANCHO",
+      "Mas, meu bondoso amo..."
+    ],
+    [
+      "NARRADORA",
+      "ponderou Sancho, apurando os ouvidos e franzindo a testa,"
+    ],
+    [
+      "SANCHO",
+      "não escuto espadas nem cornetas de guerra, só um coro bem pacífico de méééé!"
+    ]
+  ],
+  "p5-s4": [
+    [
+      "SANCHO",
+      "Meu senhor,"
+    ],
+    [
+      "NARRADORA",
+      "disse Sancho com carinho e um sorriso travesso,"
+    ],
+    [
+      "SANCHO",
+      "vossa mercê tem o semblante mais dolorido e melancólico que já vi sob o céu!"
+    ]
+  ],
+  "p5-s5": [
+    [
+      "SANCHO",
+      "Acho que seu verdadeiro nome de glórias deveria ser o Cavaleiro da triste figura!"
+    ]
+  ],
+  "p5-s7": [
+    [
+      "QUIXOTE",
+      "Que nome bonito, Sancho!"
+    ],
+    [
+      "NARRADORA",
+      "exclamou."
+    ]
+  ],
+  "p5-s8": [
+    [
+      "QUIXOTE",
+      "Todos os grandes cavaleiros dos livros têm nomes poéticos."
+    ]
+  ],
+  "p5-s9": [
+    [
+      "QUIXOTE",
+      "Vou mandar pintar um rosto nobre e pensativo no meu escudo!"
+    ]
+  ],
+  "p6-s5": [
+    [
+      "NARRADORA",
+      "Dom Quixote empunhou a lança na hora:"
+    ],
+    [
+      "QUIXOTE",
+      "Quem vem lá?"
+    ]
+  ],
+  "p6-s6": [
+    [
+      "QUIXOTE",
+      "Apareça, gigante da escuridão!"
+    ]
+  ],
+  "p6-s9": [
+    [
+      "SANCHO",
+      "Era uma vez um pastor chamado Lope Ruiz, que precisava transportar trezentas cabras pelas águas de um rio caudaloso."
+    ]
+  ],
+  "p6-s10": [
+    [
+      "SANCHO",
+      "Mas ele só tinha um barco pequenininho, onde cabia uma única cabra por travessia!"
+    ]
+  ],
+  "p6-s11": [
+    [
+      "SANCHO",
+      "Agora, vossa mercê preste atenção para contar cada cabrinha que passar... porque, se perder a conta, a história simplesmente desaparece!"
+    ]
+  ],
+  "p7-s8": [
+    [
+      "NARRADORA",
+      "Ao perceber todo o seu pavor infundado, Sancho não aguentou: segurou a barriga e desatou numa gostosa risada que ecoou pelas colinas, quase caindo do burrico:"
+    ],
+    [
+      "SANCHO",
+      "Ai, meu senhor!"
+    ]
+  ],
+  "p7-s9": [
+    [
+      "SANCHO",
+      "O gigante da noite era um martelo de bater pano!"
+    ]
+  ],
+  "p8-s4": [
+    [
+      "NARRADORA",
+      "Dom Quixote arregalou os olhos maravilhado:"
+    ],
+    [
+      "QUIXOTE",
+      "Eis diante de nós, Sancho, a maior das relíquias!"
+    ]
+  ],
+  "p8-s5": [
+    [
+      "QUIXOTE",
+      "Aquele nobre guerreiro ostenta o cobiçado elmo de mambrino, o elmo mágico que torna invencível quem o carrega!"
+    ]
+  ],
+  "p8-s7": [
+    [
+      "BARBEIRO",
+      "Socorro!"
+    ]
+  ],
+  "p8-s8": [
+    [
+      "BARBEIRO",
+      "Socorro!"
+    ],
+    [
+      "NARRADORA",
+      "gritou o pobre barbeiro, apavorado com aquele homem de armadura."
+    ]
+  ]
+}

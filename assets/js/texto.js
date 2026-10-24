@@ -79,8 +79,8 @@
             .replace(/[“”"«»]/g, '')
             .replace(/^\s*[—–]\s*/, '')                       // travessão que abre a fala
             .replace(/\s*[—–]\s*/g, ', ')                     // travessão no meio vira pausa curta
-            .replace(/\b([a-zà-ÿ]+)-\1\b/gi, '$1, $1')        // onomatopeia: "tac-tac" → "tac, tac"
-            .replace(/([.!?…])\s*,/g, '$1')                   // "bravura!, pensou" → "bravura! pensou"
+            .replace(/\b([a-zà-ÿ]+)-\1\b/gi, (_, s) => `${s.toLowerCase()}, ${s.toLowerCase()}`)   // onomatopeia: "TAC-TAC" → "tac, tac"
+            .replace(/([.!?…:;])\s*,/g, '$1')                 // "bravura!, pensou" → "bravura! pensou"; "cabeça:, Valha" → "cabeça: Valha"
             .replace(/,\s*,/g, ',')
             .replace(/\s+/g, ' ')
             .trim();

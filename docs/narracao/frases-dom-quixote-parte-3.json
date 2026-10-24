@@ -89,13 +89,29 @@
     {
       "id": "p1-s6",
       "pagina": 1,
+      "paragrafo": 1,
+      "texto": "— Ouro, meu senhor!",
+      "fala": "Ouro, meu senhor!",
+      "hash": "1ccf41a183"
+    },
+    {
+      "id": "p1-s7",
+      "pagina": 1,
+      "paragrafo": 1,
+      "texto": "Ouro de verdade! — comemorou Sancho, dando pulinhos.",
+      "fala": "Ouro de verdade! comemorou Sancho, dando pulinhos.",
+      "hash": "3ce57f36c4"
+    },
+    {
+      "id": "p1-s8",
+      "pagina": 1,
       "paragrafo": 2,
       "texto": "Dom Quixote tomou o caderno em suas mãos com extremo respeito e leu em voz alta os versos enternecedores de um jovem apaixonado que vagava sem rumo pelas montanhas.",
       "fala": "Dom Quixote tomou o caderno em suas mãos com extremo respeito e leu em voz alta os versos enternecedores de um jovem apaixonado que vagava sem rumo pelas montanhas.",
       "hash": "ce26462f64"
     },
     {
-      "id": "p1-s7",
+      "id": "p1-s9",
       "pagina": 1,
       "paragrafo": 2,
       "texto": "— Quem escreve com tanta sensibilidade tem a alma nobre — concluiu o fidalgo com um suspiro afetuoso.",
@@ -103,7 +119,7 @@
       "hash": "241a115ffc"
     },
     {
-      "id": "p1-s8",
+      "id": "p1-s10",
       "pagina": 1,
       "paragrafo": 2,
       "texto": "— Os livros guardam os mais profundos mistérios do coração humano!",
@@ -124,8 +140,8 @@
       "pagina": 2,
       "paragrafo": 0,
       "texto": "Ao contemplar a solidão imensa das montanhas, Dom Quixote teve uma inspiração luminosa: — Amigo Sancho, vou permanecer nesta clareira para provar ao mundo a minha imensa SAUDADE por Dulcineia, jejuando e meditando como fazia o ilustre herói AMADIS de Gaula!",
-      "fala": "Ao contemplar a solidão imensa das montanhas, Dom Quixote teve uma inspiração luminosa:, Amigo Sancho, vou permanecer nesta clareira para provar ao mundo a minha imensa saudade por Dulcineia, jejuando e meditando como fazia o ilustre herói amadis de Gaula!",
-      "hash": "a5d8122689"
+      "fala": "Ao contemplar a solidão imensa das montanhas, Dom Quixote teve uma inspiração luminosa: Amigo Sancho, vou permanecer nesta clareira para provar ao mundo a minha imensa saudade por Dulcineia, jejuando e meditando como fazia o ilustre herói amadis de Gaula!",
+      "hash": "89291c3fc1"
     },
     {
       "id": "p2-s2",
@@ -213,8 +229,8 @@
       "pagina": 3,
       "paragrafo": 1,
       "texto": "Desesperado, coçou a testa e tentou recuperar o texto gravado apenas na sua MEMÓRIA: — Como começava mesmo?",
-      "fala": "Desesperado, coçou a testa e tentou recuperar o texto gravado apenas na sua memória:, Como começava mesmo?",
-      "hash": "0740aca9b4"
+      "fala": "Desesperado, coçou a testa e tentou recuperar o texto gravado apenas na sua memória: Como começava mesmo?",
+      "hash": "e0abbd683f"
     },
     {
       "id": "p3-s5",
@@ -228,17 +244,17 @@
       "id": "p3-s6",
       "pagina": 3,
       "paragrafo": 1,
-      "texto": "E o final?",
-      "fala": "E o final?",
-      "hash": "5106fd58b3"
+      "texto": "E no final?",
+      "fala": "E no final?",
+      "hash": "014ed4c7f4"
     },
     {
       "id": "p3-s7",
       "pagina": 3,
       "paragrafo": 1,
-      "texto": "Como era a firma?",
-      "fala": "Como era a firma?",
-      "hash": "52a602f665"
+      "texto": "Como ele assinava mesmo?",
+      "fala": "Como ele assinava mesmo?",
+      "hash": "82e74a1eff"
     },
     {
       "id": "p3-s8",
@@ -285,12 +301,28 @@
       "id": "p4-s4",
       "pagina": 4,
       "paragrafo": 2,
-      "texto": "Diante disso, os dois arquitetaram um plano genial e teatral: um engenhoso DISFARCE!",
-      "fala": "Diante disso, os dois arquitetaram um plano genial e teatral: um engenhoso disfarce!",
-      "hash": "a6a499da49"
+      "texto": "— Já sei! — exclamou o padre, de olhos brilhando.",
+      "fala": "Já sei! exclamou o padre, de olhos brilhando.",
+      "hash": "cd906e9263"
     },
     {
       "id": "p4-s5",
+      "pagina": 4,
+      "paragrafo": 2,
+      "texto": "— Vamos inventar uma princesa em apuros!",
+      "fala": "Vamos inventar uma princesa em apuros!",
+      "hash": "89ad4b38d3"
+    },
+    {
+      "id": "p4-s6",
+      "pagina": 4,
+      "paragrafo": 2,
+      "texto": "E assim os dois arquitetaram um plano genial e teatral: um engenhoso DISFARCE!",
+      "fala": "E assim os dois arquitetaram um plano genial e teatral: um engenhoso disfarce!",
+      "hash": "e49135b350"
+    },
+    {
+      "id": "p4-s7",
       "pagina": 4,
       "paragrafo": 2,
       "texto": "Mestre Nicolau colou no queixo uma colossal BARBA avermelhada, feita com o rabo peludo de um boi, enquanto o padre vestiu uma saia rodada e uma touca florida por cima da batina.",
@@ -298,12 +330,12 @@
       "hash": "1516117c79"
     },
     {
-      "id": "p4-s6",
+      "id": "p4-s8",
       "pagina": 4,
       "paragrafo": 2,
-      "texto": "Ao olharem-se no espelho da pousada, os três caíram na gargalhada, quase sem fôlego para levar a farsa adiante!",
-      "fala": "Ao olharem-se no espelho da pousada, os três caíram na gargalhada, quase sem fôlego para levar a farsa adiante!",
-      "hash": "68e87f8780"
+      "texto": "Quando se olharam no espelho da pousada, os três caíram na gargalhada, quase sem fôlego para levar a farsa adiante!",
+      "fala": "Quando se olharam no espelho da pousada, os três caíram na gargalhada, quase sem fôlego para levar a farsa adiante!",
+      "hash": "b68119c286"
     },
     {
       "id": "p5-s0",
@@ -318,9 +350,9 @@
       "id": "p5-s1",
       "pagina": 5,
       "paragrafo": 0,
-      "texto": "Para que o plano fosse perfeito, uniu-se a eles Doroteia, uma jovem camponesa inteligente, destemida e dona de um talento dramático formidável.",
-      "fala": "Para que o plano fosse perfeito, uniu-se a eles Doroteia, uma jovem camponesa inteligente, destemida e dona de um talento dramático formidável.",
-      "hash": "238cea6438"
+      "texto": "Para que o plano fosse perfeito, juntou-se a eles Doroteia, uma jovem camponesa inteligente, destemida e dona de um talento dramático formidável.",
+      "fala": "Para que o plano fosse perfeito, juntou-se a eles Doroteia, uma jovem camponesa inteligente, destemida e dona de um talento dramático formidável.",
+      "hash": "0fa7777bb4"
     },
     {
       "id": "p5-s2",
@@ -358,12 +390,20 @@
       "id": "p5-s6",
       "pagina": 5,
       "paragrafo": 2,
-      "texto": "Comovido pela aflição da donzela, Dom Quixote ajudou-a a erguer-se e firmou uma sagrada PROMESSA: marchar imediatamente para derrotar o usurpador!",
-      "fala": "Comovido pela aflição da donzela, Dom Quixote ajudou-a a erguer-se e firmou uma sagrada promessa: marchar imediatamente para derrotar o usurpador!",
-      "hash": "88affa622a"
+      "texto": "Comovido, Dom Quixote estendeu a mão à donzela e fez uma sagrada PROMESSA: — Levante-se, formosa princesa!",
+      "fala": "Comovido, Dom Quixote estendeu a mão à donzela e fez uma sagrada promessa: Levante-se, formosa princesa!",
+      "hash": "3a33fad044"
     },
     {
       "id": "p5-s7",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "Juro pela minha espada que vencerei esse gigante!",
+      "fala": "Juro pela minha espada que vencerei esse gigante!",
+      "hash": "b4fc069515"
+    },
+    {
+      "id": "p5-s8",
       "pagina": 5,
       "paragrafo": 2,
       "texto": "E assim, com a mente em festa e o coração cheio de nobreza, o fidalgo montou no Rocinante e iniciou, sem desconfiar de nada, o caminho de volta ao seu lar!",
@@ -384,8 +424,8 @@
       "pagina": 6,
       "paragrafo": 0,
       "texto": "Hospedados todos na pousada no retorno da viagem, a noite transcorria serena quando gritos de guerra acordaram a casa inteira: — Renda-se, monstro covarde!",
-      "fala": "Hospedados todos na pousada no retorno da viagem, a noite transcorria serena quando gritos de guerra acordaram a casa inteira:, Renda-se, monstro covarde!",
-      "hash": "26f09134ac"
+      "fala": "Hospedados todos na pousada no retorno da viagem, a noite transcorria serena quando gritos de guerra acordaram a casa inteira: Renda-se, monstro covarde!",
+      "hash": "bb69870fb4"
     },
     {
       "id": "p6-s2",
@@ -431,12 +471,28 @@
       "id": "p6-s7",
       "pagina": 6,
       "paragrafo": 2,
-      "texto": "O estalajadeiro berrava desesperado vendo seu vinho escorrer pelo chão, mas o generoso padre prometeu pagar cada centavo do prejuízo.",
-      "fala": "O estalajadeiro berrava desesperado vendo seu vinho escorrer pelo chão, mas o generoso padre prometeu pagar cada centavo do prejuízo.",
-      "hash": "fceff3a8ef"
+      "texto": "— Meu vinho!",
+      "fala": "Meu vinho!",
+      "hash": "f2b10bd7b9"
     },
     {
       "id": "p6-s8",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "Meu vinho! — berrava o estalajadeiro, desesperado.",
+      "fala": "Meu vinho! berrava o estalajadeiro, desesperado.",
+      "hash": "52521163fb"
+    },
+    {
+      "id": "p6-s9",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "— Calma, meu bom homem, eu pago cada centavo! — prometeu o generoso padre.",
+      "fala": "Calma, meu bom homem, eu pago cada centavo! prometeu o generoso padre.",
+      "hash": "d92bb93c6f"
+    },
+    {
+      "id": "p6-s10",
       "pagina": 6,
       "paragrafo": 2,
       "texto": "E Dom Quixote, enxugando o suor da testa com orgulho infantil, deitou-se novamente em paz, convicto de que salvara o trono da princesa Micomicona!",
@@ -472,25 +528,25 @@
       "id": "p7-s3",
       "pagina": 7,
       "paragrafo": 1,
-      "texto": "Num dado momento, Dom Quixote ergueu-se majestosamente à cabeceira da mesa e proferiu um sábio e comovente discurso sobre o valor das ARMAS e das LETRAS.",
-      "fala": "Num dado momento, Dom Quixote ergueu-se majestosamente à cabeceira da mesa e proferiu um sábio e comovente discurso sobre o valor das armas e das letras.",
-      "hash": "59573a2867"
+      "texto": "Num dado momento, Dom Quixote levantou-se à cabeceira da mesa e fez um sábio e comovente discurso sobre o valor das ARMAS e das LETRAS: — A coragem dos cavaleiros protege a paz e defende os mais fracos.",
+      "fala": "Num dado momento, Dom Quixote levantou-se à cabeceira da mesa e fez um sábio e comovente discurso sobre o valor das armas e das letras: A coragem dos cavaleiros protege a paz e defende os mais fracos.",
+      "hash": "efc4a14eb6"
     },
     {
       "id": "p7-s4",
       "pagina": 7,
       "paragrafo": 1,
-      "texto": "Ensinou com doçura que, enquanto a bravura dos cavaleiros existe para assegurar a paz e amparar os indefesos, o estudo e os livros servem para cultivar a justiça, a verdade e a beleza no espírito dos homens.",
-      "fala": "Ensinou com doçura que, enquanto a bravura dos cavaleiros existe para assegurar a paz e amparar os indefesos, o estudo e os livros servem para cultivar a justiça, a verdade e a beleza no espírito dos homens.",
-      "hash": "7b65cc6afa"
+      "texto": "E os livros, meus amigos, fazem crescer no coração a justiça, a verdade e a beleza!",
+      "fala": "E os livros, meus amigos, fazem crescer no coração a justiça, a verdade e a beleza!",
+      "hash": "2b56e5c7a8"
     },
     {
       "id": "p7-s5",
       "pagina": 7,
       "paragrafo": 2,
-      "texto": "Todos os ouvintes entreolhavam-se maravilhados, surpresos ao descobrir a sabedoria brilhante que habitava aquele fidalgo de olhar afetuoso.",
-      "fala": "Todos os ouvintes entreolhavam-se maravilhados, surpresos ao descobrir a sabedoria brilhante que habitava aquele fidalgo de olhar afetuoso.",
-      "hash": "39327f78d2"
+      "texto": "Todos os ouvintes se entreolhavam maravilhados, surpresos ao descobrir a sabedoria brilhante que habitava aquele fidalgo de olhar afetuoso.",
+      "fala": "Todos os ouvintes se entreolhavam maravilhados, surpresos ao descobrir a sabedoria brilhante que habitava aquele fidalgo de olhar afetuoso.",
+      "hash": "c97b604634"
     },
     {
       "id": "p7-s6",
