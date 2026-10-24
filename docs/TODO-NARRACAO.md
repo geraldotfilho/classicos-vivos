@@ -17,6 +17,7 @@ O livro já sabe tocar narração gravada **frase por frase**, com o destaque da
 8. **O título é lido**: capítulo + título no começo de cada página, a "frase 0" (`pN-s0`). Na capa: obra + título da parte.
 9. **Economia (limite de R$ 10/mês no projeto)**: a API paga só faz **o que só ela faz, produzir as vozes**. A conferência é **local** (Whisper no ambiente, `tools/transcrever.py`), no máximo 2 tentativas, 1 palavra diferente não regrava (fica o aviso) e a comparação tolera nomes mal ouvidos, palavras juntas/separadas e números em algarismos. Cada rodada registra o gasto estimado em `docs/narracao/gastos.csv`. A Parte 1 inteira custou ~US$ 0,15 nesta fase (fora os testes).
 10. **Clonar a voz do humano**: adiado ("preciso refletir mais").
+11. **Regra da API paga (AGENTS.md §2.7)**: usar **sempre de forma econômica**, para sobrar verba para muitos livros e novas vozes; **só para produzir as vozes da leitura**, nada mais (nem teste, transcrição, avaliação, listagem ou criação de voz "para ver"); e **só com autorização do humano no prompt inicial da sessão**. O script exige `--autorizado`.
 
 ## 0. Visão geral
 
@@ -132,10 +133,7 @@ Tamanho esperado: ~20–40 KB por frase, ~6–8 MB por voz para os 4 livros. O t
 ### 8.1 Chave, rede e modelo
 - **Como a chave chega: segredo de rede do ambiente.** O proxy injeta `x-goog-api-key` em toda requisição a `generativelanguage.googleapis.com`: o Claude nunca vê a chave e o script **não manda cabeçalho de autenticação**. `$GEMINI_API_KEY` vazio é o esperado (se existir, o script a usa no cabeçalho; nunca na URL, nunca impressa).
 - **Node atrás do proxy**: o `fetch` do Node só usa o proxy com `NODE_USE_ENV_PROXY=1` (o `npm run gravar:narracao` já põe).
-- **Teste de acesso** (testado em 2026-10-24, funcionou):
-  ```bash
-  curl -s "https://generativelanguage.googleapis.com/v1beta/models?pageSize=200" | grep -o '"name": "models/[^"]*tts[^"]*"'
-  ```
+- **Acesso**: testado em 2026-10-24 e funcionando. **Não repita o teste** (regra 11): com autorização, rode direto a produção; um `403 "unregistered callers"` nela quer dizer que a chave não chegou.
 - **Modelos de voz disponíveis** (2026-10-24): `gemini-3.8-flash-tts` (GA desde 2026-09, o mais expressivo: **é o da produção**), `gemini-3.8-flash-lite-tts` (mais barato, mesma API), `gemini-3.1-flash-tts-preview`, `gemini-2.5-pro-preview-tts` (sem plano gratuito), `gemini-2.5-flash-preview-tts`. Só os 3.8 têm voz desenhada (voice design) e a biblioteca estendida.
 - **Vozes nativas pt-BR**: a biblioteca estendida tem **107 vozes brasileiras** (`pt-br-storyteller-9`, `pt-br-tutor-5`...), com idade, persona e timbre descritos. Elas soam mais brasileiras que as 30 vozes multilíngues (Sulafat, Kore...). Lista: `curl -sG ".../v1beta/voices" --data-urlencode language_code=pt-BR --data-urlencode page_size=100` (paginado por `page_token`).
 
@@ -161,10 +159,22 @@ POST https://generativelanguage.googleapis.com/v1beta/interactions
 - **Implementado** em `tools/gravar-narracao.mjs` (`npm run gravar:narracao -- ...`): `--voz <pasta>` (as vozes ficam na tabela `VOZES` do script, com modelo e estilo), `--parte N`, `--paginas 0,1`, `--ids p2-s5,p2-s6`, `--amostra`, `--forcar`, `--sem-qa`, `--seco`. Ele já transcreve, converte para MP3 e atualiza o `indice.json` (com modelo, voz e estilo usados).
 - **Liberar aos poucos no livro**: ponha a parte em `previa` da voz no `vozes.js`. A voz aparece no painel como "prévia" e as frases sem gravação usam a voz do aparelho. O humano ouve no próprio livro (GitHub Pages) e dá o retorno. **Toda voz ou entonação nova passa por essa escuta antes de seguir** (pedido do humano, 2026-10-24).
 
-### 8.4 Cota e custo (descoberto em 2026-10-24)
-- **Plano gratuito: 10 pedidos por dia por modelo de voz** (o 3.8 e o 3.8-Lite contam separado) e **20 por dia** no modelo de transcrição. Uma voz completa são ~215 frases + ~105 palavras-chave (fora as regravações): **sem o plano pago, a produção é inviável** (~1 mês por voz).
-- **Plano pago** (projeto do Google Cloud com faturamento ativo): `gemini-3.8-flash-tts` custa US$ 9 por milhão de tokens de áudio até 31/12/2026 (US$ 18 depois). A fala usa ~25 tokens/s e o livro inteiro tem ~30 min por voz: **~US$ 0,40 por voz**, ~US$ 2–3 com o teatro, as palavras-chave e as regravações. O Batch (`batchGenerateContent`) custa metade, mas não tem plano gratuito.
-- No plano gratuito, o Google pode usar os textos e áudios enviados para melhorar os produtos (os textos do livro são públicos, sem problema).
+### 8.4 Custo e opções de modelo (pesquisado em 2026-10-24, página de preços do Gemini)
+O áudio gerado custa por token: **25 tokens por segundo de fala**. O texto enviado é quase de graça. A Parte 1 inteira (8 páginas + 30 palavras-chave) teve ~17 mil tokens de áudio.
+
+| Modelo / nível | US$ por milhão de tokens de áudio (até 31/12/2026) | A partir de 1/1/2027 | Parte 1 (~17 mil tokens) | Características |
+| :--- | :--- | :--- | :--- | :--- |
+| `gemini-3.8-flash-tts` Standard (**o atual**) | 9,00 | 18,00 | ~US$ 0,15 | GA em set/2026; o mais expressivo; biblioteca de 107 vozes pt-BR, voz por descrição e clonagem; resposta em segundos |
+| `gemini-3.8-flash-tts` **Flex** | 4,50 | 9,00 | ~US$ 0,08 | **a mesma qualidade e as mesmas vozes**, metade do preço; resposta em minutos (meta de 1 a 15 min), "best-effort" (pode falhar sob carga e é preciso tentar de novo). Basta `service_tier: "flex"` no pedido (`--flex` no script; **ainda não testado**) |
+| `gemini-3.8-flash-tts` Batch | 4,50 | 9,00 | ~US$ 0,08 | o mesmo desconto do Flex, mas assíncrono (até 24 h) e com outra API (`batchGenerateContent`): mais trabalho, sem vantagem sobre o Flex |
+| `gemini-3.8-flash-lite-tts` Standard | 6,00 | 12,00 | ~US$ 0,10 | mesma API, vozes e recursos, feito para volume e agentes de voz; o Google recomenda o Flash para narração longa e máxima expressividade. As vozes B e C do primeiro teste saíram dele |
+| `gemini-3.8-flash-lite-tts` Flex/Batch | 3,00 | 6,00 | ~US$ 0,05 | o mais barato de todos; qualidade a ouvir antes |
+| `gemini-2.5-flash-preview-tts` | 10,00 (Batch 5,00) | — | ~US$ 0,17 | modelo antigo (prévia), só as 30 vozes multilíngues, sem biblioteca pt-BR |
+| `gemini-3.1-flash-tts-preview`, `gemini-2.5-pro-preview-tts` | 20,00 (Batch 10,00) | — | ~US$ 0,34 | mais caros e antigos; sem biblioteca pt-BR |
+
+- **Recomendação**: o **Flex do 3.8 Flash** corta o gasto pela metade sem mudar a voz nem o método. Só a espera aumenta, o que não importa para gravação. Antes de virar o padrão, precisa da aprovação do humano e de um primeiro uso numa produção autorizada (atenção: o `fetch` do Node desiste de esperar o cabeçalho em 300 s; se o Flex demorar mais, aumentar esse limite). Trocar de modelo (Lite) mudaria a voz: só com escuta do humano.
+- **Os preços dobram em 1/1/2027**: produzir as Partes 2 a 4 ainda em 2026 sai mais barato.
+- Com o plano gratuito eram só 10 pedidos por dia por modelo de voz, o que inviabiliza a produção. O plano pago está ativo desde 2026-10-24 (os textos enviados no pago não são usados pelo Google para treinar).
 
 ### 8.5 Página inteira (`--pagina-inteira`, o padrão)
 - **Blocos**: a API aceita no máximo 2 vozes por pedido. Cada bloco tem a narradora + no máximo 1 personagem, e um bloco novo começa quando entra um segundo personagem (ex.: Parte 1, `p7`: [narradora + Quixote] [narradora + Sancho]). Só narradora: um texto com os parágrafos separados por linha em branco. Com personagem: um item de `content` por fala, cada um com `speaker` e o estilo daquela voz em `speech_metadata`, e `speech_config.speakers` com as duas vozes (**sem** `mode`: a API recusa esse campo). Os blocos são juntados com 0,3 s de pausa e viram um só `parte-N/pN.mp3`.
@@ -176,8 +186,8 @@ POST https://generativelanguage.googleapis.com/v1beta/interactions
 - **No livro**: se a página está em `paginas.json`, "Ouvir Página" toca o MP3 inteiro e destaca a frase pelo `currentTime` (funciona no 🐢, que só muda o `playbackRate`). Página sem gravação inteira: frase por frase, como antes.
 - **Falas de personagem**: a página inteira com a narradora + 1 personagem cabe num pedido só no modo `conversational` (2 falantes). Com 2 ou mais personagens na página, divide-se a página em blocos. Decidir com o humano quando o elenco estiver escolhido.
 
-### 8.6 Controle de qualidade pela API (só com `--qa api`)
-- **Transcrição** (feita pelo script): o WAV vai ao `gemini-3.5-flash` com o pedido "Transcreva exatamente o que é falado, em português, com os números escritos por extenso." (sem isso, "quatrocentos" vira "400" e reprova uma frase boa). Compara palavra por palavra, sem acento, pontuação nem caixa. Divergência → regravar (até 3 tentativas). Se nenhuma bater, **guarda a mais próxima** (cada tentativa gasta cota) e avisa no fim, para o humano ouvir.
-- **Falso alarme conhecido**: a transcrição escreve "Alonso **Quijano**" (a grafia espanhola) para "Quixano". Pode ser o modelo de transcrição "corrigindo" o nome famoso ou a voz dizendo "ki-RRA-no": só o ouvido do humano decide.
-- **Pedir ao modelo para avaliar sotaque ou naturalidade não funciona**: ele deu 10/10 para todas as vozes. A escolha de voz e entonação é sempre de ouvido, pelo humano.
-- O Claude **não escuta**: entonação e naturalidade são julgadas pelo humano nas amostras e por amostragem. Gere um `docs/narracao/qa-parte-N.md` com as frases que precisaram de regravação ou ficaram fora da faixa de duração.
+### 8.6 Controle de qualidade
+- **Sempre local** (regra 11): o Whisper transcreve e o script compara palavra por palavra (sem acento, pontuação nem caixa; nomes quase iguais, palavras juntas ou separadas e números em algarismos contam como certos).
+- **Falso alarme conhecido**: o modelo de transcrição tende a "corrigir" nomes famosos (ex.: "Quijano" para "Quixano"). Na dúvida, só o ouvido do humano decide.
+- **Pedir a um modelo para avaliar sotaque ou naturalidade não funciona** (no primeiro teste, deu 10/10 para todas as vozes) e é proibido pela regra 11. A escolha de voz e entonação é sempre de ouvido, pelo humano.
+- O Claude **não escuta**: entonação e naturalidade são julgadas pelo humano. Registre em `docs/narracao/qa-parte-N.md` o que precisou de regravação ou merece ser ouvido.

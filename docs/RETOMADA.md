@@ -2,6 +2,8 @@
 
 Leia este arquivo primeiro numa sessão nova do Claude. Depois, `AGENTS.md` (arquitetura e regras) e o arquivo da frente de trabalho.
 
+> 💰 **API paga do Gemini (AGENTS.md §2.7)**: use **só para produzir as vozes da leitura**, **sempre de forma econômica** e **só se o humano autorizou no prompt inicial desta sessão**. Sem essa autorização, não chame a API para nada (nem teste). Limite: R$ 10/mês. Opções mais baratas em `TODO-NARRACAO.md` §8.4 (o Flex corta o preço pela metade, mas falta a aprovação do humano).
+
 ---
 
 ## 1. Frente atual do Claude: narração gravada (P-006)
@@ -16,7 +18,7 @@ O responsável humano passou a narração para o **Claude**, chamando a **API do
 **Próximos passos (Partes 2 → 4):**
 1. Num contêiner novo: `npm install` e `pip install faster-whisper` (a conferência local; o modelo baixa sozinho na 1ª vez).
 2. Para cada parte: escrever `narracao/parte-N/roteiro.json` (quem fala cada trecho; lembre que as falas continuam em frases sem travessão) e acrescentar os personagens novos ao `ELENCO` do script. Use o catálogo `docs/narracao/VOZES-PT-BR.md`; se nenhuma voz servir (ex.: crianças), crie uma por descrição (voice design, `POST /v1beta/voices` com `type: "prompted"`).
-3. `npm run gravar:narracao -- --voz narracao --parte N --pagina-inteira` e `npm run gravar:narracao -- --voz palavras --parte N`. Confira os avisos, atualize `qa-parte-N.md` e ponha a parte em `partes` no `vozes.js`.
+3. Planeje de graça com `--seco`. Com a autorização do humano: `npm run gravar:narracao -- --voz narracao --parte N --pagina-inteira --autorizado` e `npm run gravar:narracao -- --voz palavras --parte N --autorizado`. Confira os avisos, atualize `qa-parte-N.md` e ponha a parte em `partes` no `vozes.js`.
 4. Opcional (BACKLOG M-10): regravar inteiras as páginas 1 e 2 da Parte 1.
 
 ## 2. Ciclo com o Gemini (arte): revisão **pausada**

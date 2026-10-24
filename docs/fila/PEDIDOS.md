@@ -43,6 +43,10 @@ ESTADO: ATIVO
 
 ## Revisões do Claude
 
+### 2026-10-24 — P-006, regra de uso da API paga (Claude)
+- Decisão do humano, registrada em `AGENTS.md` §2.7: a API paga do Gemini é usada **só para produzir as vozes da leitura**, **sempre de forma econômica** (para render muitos livros e novas vozes) e **só com autorização dele no prompt inicial da sessão**. O `tools/gravar-narracao.mjs` agora exige `--autorizado`, e a conferência pela API foi removida (fica só a local, pelo Whisper).
+- Pesquisa de modelos mais baratos em `docs/TODO-NARRACAO.md` §8.4: o nível **Flex** do mesmo modelo custa a metade (US$ 4,50/M), com a mesma voz e a resposta em minutos. Aguardando a decisão do humano.
+
 ### 2026-10-24 — P-006, Parte 1 completa (Claude)
 - **Parte 1 com narração gravada completa**: as 8 páginas com o título do capítulo lido, a narradora e as vozes de **Dom Quixote** (`pt-br-concierge-3`) e **Sancho** (`pt-br-storyteller-2`), escolhidas pelo Claude a pedido do humano, e as 30 palavras-chave. Liberada como `partes: [1]` no `vozes.js`.
 - Decisões do humano (topo de `docs/TODO-NARRACAO.md`): **página inteira é o padrão**; o Claude escolhe o elenco (e cria voz por descrição quando nenhuma servir); o título é lido; **limite de R$ 10/mês** no projeto, com a API paga **só para produzir as vozes** (conferência local, pelo Whisper).
