@@ -1,0 +1,11 @@
+{
+  "_sobre": "Quem fala cada trecho das frases com fala de personagem (texto no formato do campo `fala` de docs/narracao/frases-dom-quixote-parte-1-fr.json, sem mudar palavras). Frases fora daqui são da NARRADORA. A fala intercalada dentro dos guillemets (« ..., dit le chevalier, ... ») é da NARRADORA. Elenco em ../elenco.json.",
+  "p2-s1": [["QUIXOTE", "Le monde a besoin de plus de bonté, de justice et de bravoure !"], ["NARRADORA", "pensa le gentilhomme, les yeux brillants."]],
+  "p6-s2": [["QUIXOTE", "Mon fidèle ami,"], ["NARRADORA", "dit le chevalier,"], ["QUIXOTE", "viens avec moi et deviens mon écuyer !"]],
+  "p6-s3": [["QUIXOTE", "Je te promets que, lorsque nous aurons gagné nos premières batailles, tu seras nommé gouverneur d’une belle île pleine de pain et de justice !"]],
+  "p7-s4": [["QUIXOTE", "Regarde, ami Sancho !"]],
+  "p7-s5": [["QUIXOTE", "La chance guide nos pas !"]],
+  "p7-s6": [["QUIXOTE", "Voici que se dressent là-bas de démesurés géants, contre lesquels je vais livrer un combat féroce !"]],
+  "p7-s7": [["SANCHO", "Quels géants, mon seigneur ?"], ["NARRADORA", "avertit Sancho."]],
+  "p7-s8": [["SANCHO", "Ce ne sont que des moulins qui moulent le blé au vent !"]]
+}

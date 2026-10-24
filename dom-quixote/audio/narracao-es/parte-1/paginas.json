@@ -1,0 +1,324 @@
+{
+  "p1": {
+    "arquivo": "p1.mp3",
+    "hash": "c99f59e1ef",
+    "frases": [
+      {
+        "id": "p1-s0",
+        "ini": 0,
+        "fim": 5.9
+      },
+      {
+        "id": "p1-s1",
+        "ini": 5.9,
+        "fim": 17.29
+      },
+      {
+        "id": "p1-s2",
+        "ini": 17.29,
+        "fim": 22.19
+      },
+      {
+        "id": "p1-s3",
+        "ini": 22.19,
+        "fim": 40.56
+      },
+      {
+        "id": "p1-s4",
+        "ini": 40.56,
+        "fim": 63.2
+      }
+    ]
+  },
+  "modelo": "gemini-3.8-flash-tts",
+  "elenco": {
+    "NARRADORA": {
+      "voz": "es-es-tutor-12",
+      "estilo": "warm, gentle storyteller reading aloud to young children in Castilian Spanish from Spain; calm, clear pace; savouring Cervantes' classic phrases with a smile; expressive but not theatrical"
+    },
+    "QUIXOTE": {
+      "voz": "es-es-assistant-3",
+      "estilo": "elderly noble knight in Castilian Spanish from Spain; solemn, dreamy and grand, speaking with heartfelt conviction and old-fashioned dignity; never mocking"
+    },
+    "SANCHO": {
+      "voz": "es-es-techagent-4",
+      "estilo": "plain, warm-hearted country farmer in Castilian Spanish from Spain; simple, good-humoured and practical, gently astonished"
+    },
+    "PALAVRAS": {
+      "estilo": "kind literacy teacher in Castilian Spanish from Spain: each syllable slowly and clearly separated with short pauses, then the whole word joyfully"
+    }
+  },
+  "qa": "whisper-large-v3-turbo (local)",
+  "p2": {
+    "arquivo": "p2.mp3",
+    "hash": "46e64dd766",
+    "frases": [
+      {
+        "id": "p2-s0",
+        "ini": 0,
+        "fim": 8.03
+      },
+      {
+        "id": "p2-s1",
+        "ini": 8.03,
+        "fim": 17.78
+      },
+      {
+        "id": "p2-s2",
+        "ini": 17.78,
+        "fim": 26.78
+      },
+      {
+        "id": "p2-s3",
+        "ini": 26.78,
+        "fim": 34.56
+      },
+      {
+        "id": "p2-s4",
+        "ini": 34.56,
+        "fim": 43.73
+      },
+      {
+        "id": "p2-s5",
+        "ini": 43.73,
+        "fim": 56.94
+      },
+      {
+        "id": "p2-s6",
+        "ini": 56.94,
+        "fim": 63.71
+      }
+    ]
+  },
+  "p0": {
+    "arquivo": "p0.mp3",
+    "hash": "a2cdd2b880",
+    "frases": [
+      {
+        "id": "p0-s0",
+        "ini": 0,
+        "fim": 7.52
+      },
+      {
+        "id": "p0-s1",
+        "ini": 7.52,
+        "fim": 20.19
+      },
+      {
+        "id": "p0-s2",
+        "ini": 20.19,
+        "fim": 30.26
+      },
+      {
+        "id": "p0-s3",
+        "ini": 30.26,
+        "fim": 44.87
+      },
+      {
+        "id": "p0-s4",
+        "ini": 44.87,
+        "fim": 51.79
+      }
+    ]
+  },
+  "p3": {
+    "arquivo": "p3.mp3",
+    "hash": "c73b85ecfd",
+    "frases": [
+      {
+        "id": "p3-s0",
+        "ini": 0,
+        "fim": 8.67
+      },
+      {
+        "id": "p3-s1",
+        "ini": 8.67,
+        "fim": 14.39
+      },
+      {
+        "id": "p3-s2",
+        "ini": 14.39,
+        "fim": 25.81
+      },
+      {
+        "id": "p3-s3",
+        "ini": 25.81,
+        "fim": 44.99
+      },
+      {
+        "id": "p3-s4",
+        "ini": 44.99,
+        "fim": 55.53
+      },
+      {
+        "id": "p3-s5",
+        "ini": 55.53,
+        "fim": 59.91
+      },
+      {
+        "id": "p3-s6",
+        "ini": 59.91,
+        "fim": 74.06
+      }
+    ]
+  },
+  "p4": {
+    "arquivo": "p4.mp3",
+    "hash": "eaefd211a1",
+    "frases": [
+      {
+        "id": "p4-s0",
+        "ini": 0,
+        "fim": 6.94
+      },
+      {
+        "id": "p4-s1",
+        "ini": 6.94,
+        "fim": 23.6
+      },
+      {
+        "id": "p4-s2",
+        "ini": 23.6,
+        "fim": 36.67
+      },
+      {
+        "id": "p4-s3",
+        "ini": 36.67,
+        "fim": 46.81
+      },
+      {
+        "id": "p4-s4",
+        "ini": 46.81,
+        "fim": 58.86
+      }
+    ]
+  },
+  "p5": {
+    "arquivo": "p5.mp3",
+    "hash": "b0ac94f8da",
+    "frases": [
+      {
+        "id": "p5-s0",
+        "ini": 0,
+        "fim": 8.9
+      },
+      {
+        "id": "p5-s1",
+        "ini": 8.9,
+        "fim": 17.24
+      },
+      {
+        "id": "p5-s2",
+        "ini": 17.24,
+        "fim": 31.73
+      },
+      {
+        "id": "p5-s3",
+        "ini": 31.73,
+        "fim": 47.17
+      },
+      {
+        "id": "p5-s4",
+        "ini": 47.17,
+        "fim": 66.02
+      },
+      {
+        "id": "p5-s5",
+        "ini": 66.02,
+        "fim": 71.4
+      }
+    ]
+  },
+  "p6": {
+    "arquivo": "p6.mp3",
+    "hash": "f888ec8973",
+    "frases": [
+      {
+        "id": "p6-s0",
+        "ini": 0,
+        "fim": 7.05
+      },
+      {
+        "id": "p6-s1",
+        "ini": 7.05,
+        "fim": 23.44
+      },
+      {
+        "id": "p6-s2",
+        "ini": 23.44,
+        "fim": 29.95
+      },
+      {
+        "id": "p6-s3",
+        "ini": 29.95,
+        "fim": 40.67
+      },
+      {
+        "id": "p6-s4",
+        "ini": 40.67,
+        "fim": 51.22
+      },
+      {
+        "id": "p6-s5",
+        "ini": 51.22,
+        "fim": 60.11
+      }
+    ]
+  },
+  "p7": {
+    "arquivo": "p7.mp3",
+    "hash": "809a924147",
+    "frases": [
+      {
+        "id": "p7-s0",
+        "ini": 0,
+        "fim": 6.83
+      },
+      {
+        "id": "p7-s1",
+        "ini": 6.83,
+        "fim": 24
+      },
+      {
+        "id": "p7-s2",
+        "ini": 24,
+        "fim": 33.31
+      },
+      {
+        "id": "p7-s3",
+        "ini": 33.31,
+        "fim": 38.16
+      },
+      {
+        "id": "p7-s4",
+        "ini": 38.16,
+        "fim": 40.27
+      },
+      {
+        "id": "p7-s5",
+        "ini": 40.27,
+        "fim": 42.88
+      },
+      {
+        "id": "p7-s6",
+        "ini": 42.88,
+        "fim": 49.71
+      },
+      {
+        "id": "p7-s7",
+        "ini": 49.71,
+        "fim": 51.61
+      },
+      {
+        "id": "p7-s8",
+        "ini": 51.61,
+        "fim": 59.6
+      },
+      {
+        "id": "p7-s9",
+        "ini": 59.6,
+        "fim": 68.92
+      }
+    ]
+  }
+}

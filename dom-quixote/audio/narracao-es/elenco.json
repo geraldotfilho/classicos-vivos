@@ -1,0 +1,11 @@
+{
+  "codigoVoz": "es-ES",
+  "amostra": "¡Hola! Voy a leer esta historia contigo. ¡Pasa la página cuando quieras!",
+  "nomes": "Don Quijote de la Mancha, Alonso Quijano, Sancho Panza, Rocinante, Dulcinea del Toboso, Aldonza Lorenzo, Miguel de Cervantes, Montiel, Campo de Criptana, vuestra merced, ínsula, bacía, yelmo",
+  "elenco": {
+    "NARRADORA": { "voz": "es-es-tutor-12", "estilo": "warm, gentle storyteller reading aloud to young children in Castilian Spanish from Spain; calm, clear pace; savouring Cervantes' classic phrases with a smile; expressive but not theatrical" },
+    "QUIXOTE": { "voz": "es-es-assistant-3", "estilo": "elderly noble knight in Castilian Spanish from Spain; solemn, dreamy and grand, speaking with heartfelt conviction and old-fashioned dignity; never mocking" },
+    "SANCHO": { "voz": "es-es-techagent-4", "estilo": "plain, warm-hearted country farmer in Castilian Spanish from Spain; simple, good-humoured and practical, gently astonished" },
+    "PALAVRAS": { "estilo": "kind literacy teacher in Castilian Spanish from Spain: each syllable slowly and clearly separated with short pauses, then the whole word joyfully" }
+  }
+}

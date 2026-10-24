@@ -1,0 +1,319 @@
+{
+  "p1": {
+    "arquivo": "p1.mp3",
+    "hash": "43456bd115",
+    "frases": [
+      {
+        "id": "p1-s0",
+        "ini": 0,
+        "fim": 7.37
+      },
+      {
+        "id": "p1-s1",
+        "ini": 7.37,
+        "fim": 19.75
+      },
+      {
+        "id": "p1-s2",
+        "ini": 19.75,
+        "fim": 27.26
+      },
+      {
+        "id": "p1-s3",
+        "ini": 27.26,
+        "fim": 44.34
+      },
+      {
+        "id": "p1-s4",
+        "ini": 44.34,
+        "fim": 64.71
+      }
+    ]
+  },
+  "modelo": "gemini-3.8-flash-tts",
+  "elenco": {
+    "NARRADORA": {
+      "voz": "en-gb-storyteller-2",
+      "estilo": "warm, gentle storyteller reading aloud to young children in British English; calm, clear pace; expressive but not theatrical"
+    },
+    "QUIXOTE": {
+      "voz": "en-gb-storyteller-4",
+      "estilo": "noble, solemn and dreamy elderly knight in British English, speaking with heartfelt conviction; never mocking"
+    },
+    "SANCHO": {
+      "voz": "en-gb-advisor-2",
+      "estilo": "simple, warm and good-humoured country farmer in British English, plain and practical"
+    },
+    "PALAVRAS": {
+      "estilo": "British English literacy teacher: each syllable slowly and clearly separated with short pauses, then the whole word joyfully"
+    }
+  },
+  "qa": "whisper-large-v3-turbo (local)",
+  "p0": {
+    "arquivo": "p0.mp3",
+    "hash": "053b0598a4",
+    "frases": [
+      {
+        "id": "p0-s0",
+        "ini": 0,
+        "fim": 8.02
+      },
+      {
+        "id": "p0-s1",
+        "ini": 8.02,
+        "fim": 22.22
+      },
+      {
+        "id": "p0-s2",
+        "ini": 22.22,
+        "fim": 31.55
+      },
+      {
+        "id": "p0-s3",
+        "ini": 31.55,
+        "fim": 49.65
+      }
+    ]
+  },
+  "p3": {
+    "arquivo": "p3.mp3",
+    "hash": "d21b6ec2e3",
+    "frases": [
+      {
+        "id": "p3-s0",
+        "ini": 0,
+        "fim": 7.81
+      },
+      {
+        "id": "p3-s1",
+        "ini": 7.81,
+        "fim": 13.27
+      },
+      {
+        "id": "p3-s2",
+        "ini": 13.27,
+        "fim": 23.57
+      },
+      {
+        "id": "p3-s3",
+        "ini": 23.57,
+        "fim": 38.65
+      },
+      {
+        "id": "p3-s4",
+        "ini": 38.65,
+        "fim": 48.75
+      },
+      {
+        "id": "p3-s5",
+        "ini": 48.75,
+        "fim": 52.9
+      },
+      {
+        "id": "p3-s6",
+        "ini": 52.9,
+        "fim": 65.93
+      }
+    ]
+  },
+  "p2": {
+    "arquivo": "p2.mp3",
+    "hash": "4f8d77b377",
+    "frases": [
+      {
+        "id": "p2-s0",
+        "ini": 0,
+        "fim": 7.06
+      },
+      {
+        "id": "p2-s1",
+        "ini": 7.06,
+        "fim": 16.39
+      },
+      {
+        "id": "p2-s2",
+        "ini": 16.39,
+        "fim": 26.62
+      },
+      {
+        "id": "p2-s3",
+        "ini": 26.62,
+        "fim": 35.23
+      },
+      {
+        "id": "p2-s4",
+        "ini": 35.23,
+        "fim": 44.5
+      },
+      {
+        "id": "p2-s5",
+        "ini": 44.5,
+        "fim": 56.02
+      },
+      {
+        "id": "p2-s6",
+        "ini": 56.02,
+        "fim": 63.96
+      }
+    ]
+  },
+  "p4": {
+    "arquivo": "p4.mp3",
+    "hash": "283fafd74a",
+    "frases": [
+      {
+        "id": "p4-s0",
+        "ini": 0,
+        "fim": 7.58
+      },
+      {
+        "id": "p4-s1",
+        "ini": 7.58,
+        "fim": 21.47
+      },
+      {
+        "id": "p4-s2",
+        "ini": 21.47,
+        "fim": 32.75
+      },
+      {
+        "id": "p4-s3",
+        "ini": 32.75,
+        "fim": 42.71
+      },
+      {
+        "id": "p4-s4",
+        "ini": 42.71,
+        "fim": 55.47
+      }
+    ]
+  },
+  "p5": {
+    "arquivo": "p5.mp3",
+    "hash": "9ebabb0177",
+    "frases": [
+      {
+        "id": "p5-s0",
+        "ini": 0,
+        "fim": 8
+      },
+      {
+        "id": "p5-s1",
+        "ini": 8,
+        "fim": 14.76
+      },
+      {
+        "id": "p5-s2",
+        "ini": 14.76,
+        "fim": 28.77
+      },
+      {
+        "id": "p5-s3",
+        "ini": 28.77,
+        "fim": 43.81
+      },
+      {
+        "id": "p5-s4",
+        "ini": 43.81,
+        "fim": 58.81
+      },
+      {
+        "id": "p5-s5",
+        "ini": 58.81,
+        "fim": 64.44
+      }
+    ]
+  },
+  "p6": {
+    "arquivo": "p6.mp3",
+    "hash": "eb558e5afd",
+    "frases": [
+      {
+        "id": "p6-s0",
+        "ini": 0,
+        "fim": 7.96
+      },
+      {
+        "id": "p6-s1",
+        "ini": 7.96,
+        "fim": 23.53
+      },
+      {
+        "id": "p6-s2",
+        "ini": 23.53,
+        "fim": 29.84
+      },
+      {
+        "id": "p6-s3",
+        "ini": 29.84,
+        "fim": 39.77
+      },
+      {
+        "id": "p6-s4",
+        "ini": 39.77,
+        "fim": 50.31
+      },
+      {
+        "id": "p6-s5",
+        "ini": 50.31,
+        "fim": 58.68
+      }
+    ]
+  },
+  "p7": {
+    "arquivo": "p7.mp3",
+    "hash": "fdd5a74fb0",
+    "frases": [
+      {
+        "id": "p7-s0",
+        "ini": 0,
+        "fim": 8.23
+      },
+      {
+        "id": "p7-s1",
+        "ini": 8.23,
+        "fim": 24.2
+      },
+      {
+        "id": "p7-s2",
+        "ini": 24.2,
+        "fim": 33.88
+      },
+      {
+        "id": "p7-s3",
+        "ini": 33.88,
+        "fim": 39.16
+      },
+      {
+        "id": "p7-s4",
+        "ini": 39.16,
+        "fim": 41.22
+      },
+      {
+        "id": "p7-s5",
+        "ini": 41.22,
+        "fim": 43.96
+      },
+      {
+        "id": "p7-s6",
+        "ini": 43.96,
+        "fim": 50.96
+      },
+      {
+        "id": "p7-s7",
+        "ini": 50.96,
+        "fim": 54.58
+      },
+      {
+        "id": "p7-s8",
+        "ini": 54.58,
+        "fim": 58.19
+      },
+      {
+        "id": "p7-s9",
+        "ini": 58.19,
+        "fim": 67.73
+      }
+    ]
+  }
+}

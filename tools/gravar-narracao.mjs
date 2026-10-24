@@ -758,7 +758,12 @@ async function cortarPalavras(grupo, amostras) {
         const ouvido = normalizar(await transcrever(wavDe(amostras.subarray(Math.round(m.ini * TAXA), Math.round(m.fim * TAXA)))));
         const tem = (palavra) => { const a = normalizar(palavra).replace(/ /g, ''); const b = ouvido.replace(/ /g, ''); return b.includes(a) || [...Array(Math.max(0, b.length - a.length + 1)).keys()].some(i => edicao(b.slice(i, i + a.length), a) <= (a.length >= 8 ? 2 : 1)); };
         const item = grupo.find(g => g.id === m.id);
-        const intrusas = grupo.filter(g => g !== item && normalizar(g.palavra).replace(/ /g, '').length >= 4 && tem(g.palavra)).map(g => g.id);
+        // Palavra contida na própria ("wind" em "windmills", "knight" em "knights") não conta como intrusa
+        const propria = normalizar(item.palavra).replace(/ /g, '');
+        const intrusas = grupo.filter(g => {
+            const outra = normalizar(g.palavra).replace(/ /g, '');
+            return g !== item && outra.length >= 4 && !propria.includes(outra) && tem(g.palavra);
+        }).map(g => g.id);
         if (intrusas.length) { avisos.push(`${m.id}: o trecho tem outra palavra (${intrusas.join(', ')}): "${ouvido}"; não foi salvo`); continue; }
         if (!tem(item.palavra)) {
             // a última do grupo vai até o fim do áudio: não tem como invadir outra palavra (ex.: onomatopeias, que o Whisper escreve de mil jeitos)
@@ -784,7 +789,7 @@ async function gravarPalavrasAgrupadas(itens, pasta, indiceArq, ids) {
     await emParalelo(grupos, PARALELO, async (grupo) => {
         const rotulo = `grupo ${grupo[0].id}…${grupo[grupo.length - 1].id}`;
         try {
-            const r = await gravarBloco({ frases: grupo, personagem: null, estilo: ESTILO_PALAVRAS, palavras: true }, {}, rotulo);
+            const r = await gravarBloco({ frases: grupo, personagem: null, estilo: VOZES.palavras.estilo, palavras: true }, {}, rotulo);
             if (r.erros >= 999) { falhas.push(`${rotulo}: ${r.motivo}`); return; }
             const { marcas, avisos } = await cortarPalavras(grupo, r.amostras);
             r.avisos = avisos;
@@ -794,7 +799,7 @@ async function gravarPalavrasAgrupadas(itens, pasta, indiceArq, ids) {
                 const item = grupo.find(g => g.id === m.id);
                 const atual = lerJson(indiceArq, { frases: {} });
                 atual.frases[m.id] = item.hash;
-                Object.assign(atual, { modelo: MODELO_TTS, voz: ELENCO.NARRADORA.voz, estilo: ESTILO_PALAVRAS, qa: o['sem-qa'] ? 'sem' : 'whisper-large-v3-turbo (local)' });
+                Object.assign(atual, { modelo: MODELO_TTS, voz: ELENCO.NARRADORA.voz, estilo: VOZES.palavras.estilo, qa: o['sem-qa'] ? 'sem' : 'whisper-large-v3-turbo (local)' });
                 writeFileSync(indiceArq, JSON.stringify(atual, null, 2) + '\n');
                 console.log(`  ✓ ${m.id} (${(m.fim - m.ini).toFixed(1)} s)`);
             }
