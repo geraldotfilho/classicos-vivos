@@ -1,5 +1,6 @@
 // Exporta todas as frases e palavras-chave dos livros para a narração gravada (Gemini).
-// Gera docs/narracao/frases-<livro>-parte-N.json com, para cada frase:
+// Gera docs/narracao/frases-<livro>-parte-N.json (e frases-<livro>-parte-N-<idioma>.json para cada tradução,
+// AGENTS.md §2.8) com, para cada frase:
 //   id    — "p3-s4" (página 3, frase 4): o nome do arquivo de áudio (<id>.mp3); paragrafo — índice na página
 //   texto — como aparece no livro;  fala — o texto já preparado para ser falado
 //   hash  — muda quando o texto da frase muda: indica que a gravação precisa ser refeita
@@ -14,15 +15,28 @@ const require = createRequire(import.meta.url);
 const Texto = require('../assets/js/texto.js');
 const hash = (t) => createHash('sha1').update(t).digest('hex').slice(0, 10);
 
-mkdirSync('docs/narracao', { recursive: true });
-for (const arquivo of globSync('*/parte-*.html').sort()) {
-    const html = readFileSync(arquivo, 'utf8');
-    const bloco = [...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].map(m => m[1]).find(c => c.includes('window.LIVRO'));
-    const contexto = { window: {} };
-    vm.runInNewContext(bloco, contexto);
-    const livro = contexto.window.LIVRO;
-    const pasta = arquivo.split(/[\\/]/)[0];
+/* Traduções da parte (<livro>/traducoes/parte-N.<idioma>.js): o livro no idioma, como o motor monta */
+function traducoesDe(pasta, livro) {
+    return globSync(`${pasta}/traducoes/parte-${livro.parte}.*.js`).sort().map(arq => {
+        const idioma = arq.match(/\.([a-z]{2}(?:-[A-Z]{2})?)\.js$/)[1];
+        const contexto = { window: {} };
+        vm.runInNewContext(readFileSync(arq, 'utf8'), contexto);
+        const t = contexto.window.TRADUCOES[idioma];
+        return {
+            idioma,
+            livro: {
+                ...livro,
+                obra: t.obra || livro.obra,
+                paginas: livro.paginas.map((pagina, i) => {
+                    const p = (t.paginas || [])[i] || {};
+                    return { ...pagina, capitulo: p.capitulo || pagina.capitulo, titulo: p.titulo || pagina.titulo, texto: p.texto || pagina.texto };
+                })
+            }
+        };
+    });
+}
 
+function exportar(livro, pasta, idioma) {
     const frases = [];
     const palavras = new Map();
     livro.paginas.forEach((pagina, i) => {
@@ -40,14 +54,29 @@ for (const arquivo of globSync('*/parte-*.html').sort()) {
         }));
     });
 
-    const destino = `docs/narracao/frases-${pasta}-parte-${livro.parte}.json`;
+    // Português: frases-<livro>-parte-N.json, na pasta `narracao`. Outros idiomas: ...-parte-N-<idioma>.json, `narracao-<idioma>`
+    const sufixo = idioma ? `-${idioma}` : '';
+    const destino = `docs/narracao/frases-${pasta}-parte-${livro.parte}${sufixo}.json`;
     writeFileSync(destino, JSON.stringify({
         obra: livro.obra,
         parte: livro.parte,
-        audio: `${pasta}/audio/<voz>/parte-${livro.parte}/<id>.mp3`,
-        audioPalavras: `${pasta}/audio/palavras/<slug>.mp3`,
+        ...(idioma ? { idioma } : {}),
+        audio: `${pasta}/audio/<voz>${sufixo}/parte-${livro.parte}/<id>.mp3`,
+        audioPalavras: `${pasta}/audio/palavras${sufixo}/<slug>.mp3`,
         frases,
         palavras: [...palavras.values()]
     }, null, 2) + '\n');
     console.log(`${destino}: ${frases.length} frases, ${palavras.size} palavras-chave`);
+}
+
+mkdirSync('docs/narracao', { recursive: true });
+for (const arquivo of globSync('*/parte-*.html').sort()) {
+    const html = readFileSync(arquivo, 'utf8');
+    const bloco = [...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].map(m => m[1]).find(c => c.includes('window.LIVRO'));
+    const contexto = { window: {} };
+    vm.runInNewContext(bloco, contexto);
+    const livro = contexto.window.LIVRO;
+    const pasta = arquivo.split(/[\\/]/)[0];
+    exportar(livro, pasta, null);
+    traducoesDe(pasta, livro).forEach(t => exportar(t.livro, pasta, t.idioma));
 }

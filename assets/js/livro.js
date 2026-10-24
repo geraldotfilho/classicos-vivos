@@ -595,9 +595,10 @@ if ('speechSynthesis' in window && window.speechSynthesis.onvoiceschanged !== un
     window.speechSynthesis.onvoiceschanged = carregarVozesDoAparelho;
 }
 
-/* Narrações gravadas declaradas em <livro>/audio/vozes.js (window.VOZES_GRAVADAS) */
+/* Narrações gravadas declaradas em <livro>/audio/vozes.js (window.VOZES_GRAVADAS), só as do idioma atual
+   (`idioma` no vozes.js; sem ele, português) */
 function vozesGravadas() {
-    return Array.isArray(window.VOZES_GRAVADAS) ? window.VOZES_GRAVADAS : [];
+    return (Array.isArray(window.VOZES_GRAVADAS) ? window.VOZES_GRAVADAS : []).filter(v => (v.idioma || PT) === idioma);
 }
 
 /* Completa: todas as frases da parte gravadas. Prévia (`previa` no vozes.js): só algumas, para o
@@ -610,9 +611,8 @@ function gravadaDisponivel(voz) {
     return gravadaCompleta(voz) || (!!voz && (voz.previa || []).includes(LIVRO.parte));
 }
 
-/* A narração gravada é em português; nos outros idiomas, a voz do aparelho */
+/* Narração gravada do idioma atual; sem ela, a voz do aparelho */
 function vozGravadaAtiva() {
-    if (idioma !== PT) return null;
     // Primeira visita (nada escolhido): se a narração gravada desta parte estiver pronta, ela é a voz padrão
     if (!vozEscolhida) return vozesGravadas().find(gravadaCompleta) || null;
     if (!vozEscolhida.startsWith('gravada:')) return null;
@@ -641,8 +641,9 @@ function paginasDaVoz(voz) {
     return paginasGravadas[voz.id];
 }
 
+/* Palavras-chave gravadas: palavras/ (português) ou palavras-<idioma>/ */
 function urlPalavra(slugPalavra) {
-    return `${AUDIO_BASE}palavras/${slugPalavra}.mp3`;
+    return `${AUDIO_BASE}palavras${idioma === PT ? '' : `-${idioma}`}/${slugPalavra}.mp3`;
 }
 
 /* Toca um áudio gravado (a partir de `inicio` segundos); rejeita se o arquivo não existir (aí entra a voz do aparelho) */
@@ -733,8 +734,8 @@ function opcaoVoz(valor, titulo, detalhe, { ativa, desativada, tags = [] }) {
 function renderPainelVoz() {
     const corpo = document.getElementById('painel-voz-corpo');
     const gravadaAtual = vozGravadaAtiva();
-    // A narração gravada (e a descrição dela no vozes.js) é em português
-    const gravadas = idioma !== PT ? '' : vozesGravadas().map(v => opcaoVoz(
+    // Narrações gravadas do idioma atual (nome e descrição vêm do vozes.js, já no idioma)
+    const gravadas = vozesGravadas().map(v => opcaoVoz(
         `gravada:${v.id}`, v.nome,
         gravadaCompleta(v) ? v.descricao : gravadaDisponivel(v) ? `${v.descricao} ${ui('previa')}` : `${v.descricao} ${ui('emProducao')}`,
         { ativa: gravadaAtual && gravadaAtual.id === v.id, desativada: !gravadaDisponivel(v), tags: [ui('gravada'), ui('maisNatural')] }
@@ -753,7 +754,7 @@ function renderPainelVoz() {
     corpo.innerHTML = `
         ${gravadas ? `<h3 class="font-display font-bold text-amber-800 text-sm uppercase tracking-wider">${escapeHtml(ui('narracaoGravada'))}</h3>
         <div class="space-y-2">${gravadas}</div>` : ''}
-        ${idioma !== PT && ui('gravadaEmBreve') ? aviso(escapeHtml(ui('gravadaEmBreve'))) : ''}
+        ${!gravadas && ui('gravadaEmBreve') ? aviso(escapeHtml(ui('gravadaEmBreve'))) : ''}
         <h3 class="font-display font-bold text-amber-800 text-sm uppercase tracking-wider">${escapeHtml(ui('vozesDoAparelho'))}</h3>
         <div class="space-y-2">${doAparelho || aviso(ui('semVoz'))}</div>
         <h3 class="font-display font-bold text-amber-800 text-sm uppercase tracking-wider">${escapeHtml(ui('velocidade'))}</h3>
@@ -987,11 +988,12 @@ function speakWord(element, wordText, syllablesText, emoji) {
 let phonicsCurrentWord = '';
 let phonicsCurrentSlug = '';
 
-/* Palavra-chave: tenta a gravação pausada (sílabas + palavra, só em português) e, se não houver, usa a voz do aparelho */
+/* Palavra-chave: tenta a gravação pausada (sílabas + palavra, nos idiomas com narração gravada) e, se não houver,
+   usa a voz do aparelho */
 function pronounceWord(wordText, slugPalavra) {
     calarTudo();
     const aparelho = () => falarComAparelho(wordText.toLocaleLowerCase(IDIOMAS[idioma].lang), { taxa: VELOCIDADES[velocidade].aparelho * 0.92 }).catch(() => {});
-    if (idioma !== PT) {
+    if (!vozesGravadas().some(gravadaDisponivel)) {
         aparelho();
         return;
     }

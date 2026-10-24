@@ -1,0 +1,973 @@
+{
+  "obra": "Don Quixote of La Mancha",
+  "parte": 2,
+  "idioma": "en",
+  "audio": "dom-quixote/audio/<voz>-en/parte-2/<id>.mp3",
+  "audioPalavras": "dom-quixote/audio/palavras-en/<slug>.mp3",
+  "frases": [
+    {
+      "id": "p0-s0",
+      "pagina": 0,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Don Quixote of La Mancha. Part 2: Woolly Armies and the Enchanted Helmet",
+      "fala": "Don Quixote of La Mancha. Part 2: Woolly Armies and the Enchanted Helmet",
+      "hash": "d25dddaab1"
+    },
+    {
+      "id": "p0-s1",
+      "pagina": 0,
+      "paragrafo": 0,
+      "texto": "Lance in hand and brave of heart, Don Quixote gallops against the windmill giants, and his loyal squire Sancho Panza follows close behind, along the sunny roads of La Mancha!",
+      "fala": "Lance in hand and brave of heart, Don Quixote gallops against the windmill giants, and his loyal squire Sancho Panza follows close behind, along the sunny roads of La Mancha!",
+      "hash": "188c2313b1"
+    },
+    {
+      "id": "p0-s2",
+      "pagina": 0,
+      "paragrafo": 1,
+      "texto": "In this part of the story, our noble knight will take a spectacular tumble, win a new lance beneath the stars, share a friendly supper with some GOATHERDS, challenge mysterious armies in the middle of clouds of dust, earn an unforgettable nickname and win a HELMET as bright as the sun.",
+      "fala": "In this part of the story, our noble knight will take a spectacular tumble, win a new lance beneath the stars, share a friendly supper with some goatherds, challenge mysterious armies in the middle of clouds of dust, earn an unforgettable nickname and win a helmet as bright as the sun.",
+      "hash": "2e41ee34bf"
+    },
+    {
+      "id": "p0-s3",
+      "pagina": 0,
+      "paragrafo": 2,
+      "texto": "Open your eyes and your heart wide, and get your IMAGINATION ready: the greatest adventures are only just beginning!",
+      "fala": "Open your eyes and your heart wide, and get your imagination ready: the greatest adventures are only just beginning!",
+      "hash": "b7cd8bf59c"
+    },
+    {
+      "id": "p1-s0",
+      "pagina": 1,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapter 8. The Charge against the Giants. The Flight and the Fall at the Windmills!",
+      "fala": "Chapter 8. The Charge against the Giants. The Flight and the Fall at the Windmills!",
+      "hash": "f84f4593ca"
+    },
+    {
+      "id": "p1-s1",
+      "pagina": 1,
+      "paragrafo": 0,
+      "texto": "Settling the brass basin on his head and gripping his lance with unstoppable bravery, Don Quixote spurred gentle Rocinante into a fearless gallop.",
+      "fala": "Settling the brass basin on his head and gripping his lance with unstoppable bravery, Don Quixote spurred gentle Rocinante into a fearless gallop.",
+      "hash": "e1c3bda9be"
+    },
+    {
+      "id": "p1-s2",
+      "pagina": 1,
+      "paragrafo": 0,
+      "texto": "“Do not run away, you cowardly creatures!",
+      "fala": "Do not run away, you cowardly creatures!",
+      "hash": "2d35873c25"
+    },
+    {
+      "id": "p1-s3",
+      "pagina": 1,
+      "paragrafo": 0,
+      "texto": "It is one single knight who comes to fight you all!” cried the gentleman, charging at full speed towards the first WINDMILL on the plain!",
+      "fala": "It is one single knight who comes to fight you all! cried the gentleman, charging at full speed towards the first windmill on the plain!",
+      "hash": "6b83efc9ed"
+    },
+    {
+      "id": "p1-s4",
+      "pagina": 1,
+      "paragrafo": 1,
+      "texto": "At that very moment, a strong gust of wind blew, and the gigantic wooden sail swung round, snapping the tip of his LANCE into a thousand splinters!",
+      "fala": "At that very moment, a strong gust of wind blew, and the gigantic wooden sail swung round, snapping the tip of his lance into a thousand splinters!",
+      "hash": "d8c542b671"
+    },
+    {
+      "id": "p1-s5",
+      "pagina": 1,
+      "paragrafo": 1,
+      "texto": "With one spectacular tug, the huge sail lifted horse and rider high up into the sky and whirled them round and round in a comical spin that ended with a mighty bump on the soft grass of the field!",
+      "fala": "With one spectacular tug, the huge sail lifted horse and rider high up into the sky and whirled them round and round in a comical spin that ended with a mighty bump on the soft grass of the field!",
+      "hash": "04818e5761"
+    },
+    {
+      "id": "p1-s6",
+      "pagina": 1,
+      "paragrafo": 2,
+      "texto": "Sancho Panza came hurrying up on his donkey, clutching his head in a fright: “Heaven help us, my lord!",
+      "fala": "Sancho Panza came hurrying up on his donkey, clutching his head in a fright: Heaven help us, my lord!",
+      "hash": "f3b83e32de"
+    },
+    {
+      "id": "p1-s7",
+      "pagina": 1,
+      "paragrafo": 2,
+      "texto": "Didn’t I warn you they were only windmills?”",
+      "fala": "Didn’t I warn you they were only windmills?",
+      "hash": "517c59e87f"
+    },
+    {
+      "id": "p1-s8",
+      "pagina": 1,
+      "paragrafo": 2,
+      "texto": "But the gentleman, shaking off the dust and straightening his dented basin with a noble smile, explained patiently: “Hush, friend Sancho!",
+      "fala": "But the gentleman, shaking off the dust and straightening his dented basin with a noble smile, explained patiently: Hush, friend Sancho!",
+      "hash": "0b2002e432"
+    },
+    {
+      "id": "p1-s9",
+      "pagina": 1,
+      "paragrafo": 2,
+      "texto": "The things of knighthood change in the blink of an eye!",
+      "fala": "The things of knighthood change in the blink of an eye!",
+      "hash": "edddec27c7"
+    },
+    {
+      "id": "p1-s10",
+      "pagina": 1,
+      "paragrafo": 2,
+      "texto": "It was the wicked wizard Frestón who cast a SPELL to steal my glory.",
+      "fala": "It was the wicked wizard Frestón who cast a spell to steal my glory.",
+      "hash": "e83ffe0ca2"
+    },
+    {
+      "id": "p1-s11",
+      "pagina": 1,
+      "paragrafo": 2,
+      "texto": "But against our COURAGE, no magic in the world shall win!”",
+      "fala": "But against our courage, no magic in the world shall win!",
+      "hash": "4fe13d817d"
+    },
+    {
+      "id": "p2-s0",
+      "pagina": 2,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapter 9. The Oak Lance. A New Lance under the Stars",
+      "fala": "Chapter 9. The Oak Lance. A New Lance under the Stars",
+      "hash": "d3fb682169"
+    },
+    {
+      "id": "p2-s1",
+      "pagina": 2,
+      "paragrafo": 0,
+      "texto": "Even with his body aching from the fall and his brass basin all dented, Don Quixote would not lose heart.",
+      "fala": "Even with his body aching from the fall and his brass basin all dented, Don Quixote would not lose heart.",
+      "hash": "da1757f327"
+    },
+    {
+      "id": "p2-s2",
+      "pagina": 2,
+      "paragrafo": 0,
+      "texto": "“A true knight errant never gives in to sadness!” he declared nobly, looking fondly at his loyal Rocinante.",
+      "fala": "A true knight errant never gives in to sadness! he declared nobly, looking fondly at his loyal Rocinante.",
+      "hash": "0d9a153fa9"
+    },
+    {
+      "id": "p2-s3",
+      "pagina": 2,
+      "paragrafo": 1,
+      "texto": "Walking over to an old, leafy OAK TREE by the side of the road, he chose a dry branch, straight and strong, and proudly turned it into his brand-new LANCE.",
+      "fala": "Walking over to an old, leafy oak tree by the side of the road, he chose a dry branch, straight and strong, and proudly turned it into his brand-new lance.",
+      "hash": "a8ede1495e"
+    },
+    {
+      "id": "p2-s4",
+      "pagina": 2,
+      "paragrafo": 1,
+      "texto": "“An ancient hero of Spain once lost his sword in battle, so he fought with a tree trunk and won!” he told Sancho.",
+      "fala": "An ancient hero of Spain once lost his sword in battle, so he fought with a tree trunk and won! he told Sancho.",
+      "hash": "82c30582ad"
+    },
+    {
+      "id": "p2-s5",
+      "pagina": 2,
+      "paragrafo": 1,
+      "texto": "“And I shall do the same!”",
+      "fala": "And I shall do the same!",
+      "hash": "6d07058ff6"
+    },
+    {
+      "id": "p2-s6",
+      "pagina": 2,
+      "paragrafo": 2,
+      "texto": "When night came down, soft and cool, over the plain, Sancho spread straw on the ground, ate his little bit of cheese and fell into a sleep so deep that his snores rang out like bells on the hillside.",
+      "fala": "When night came down, soft and cool, over the plain, Sancho spread straw on the ground, ate his little bit of cheese and fell into a sleep so deep that his snores rang out like bells on the hillside.",
+      "hash": "0d2c3b89f4"
+    },
+    {
+      "id": "p2-s7",
+      "pagina": 2,
+      "paragrafo": 2,
+      "texto": "But Don Quixote stayed awake in the breeze, gazing at the twinkling STARS and thinking of his sweet lady DULCINEA, just as the noblest knights in his books used to do.",
+      "fala": "But Don Quixote stayed awake in the breeze, gazing at the twinkling stars and thinking of his sweet lady dulcinea, just as the noblest knights in his books used to do.",
+      "hash": "31be5bb933"
+    },
+    {
+      "id": "p3-s0",
+      "pagina": 3,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapter 10. The Goatherds and the Golden Age. A Supper to Share",
+      "fala": "Chapter 10. The Goatherds and the Golden Age. A Supper to Share",
+      "hash": "a8e17a5c14"
+    },
+    {
+      "id": "p3-s1",
+      "pagina": 3,
+      "paragrafo": 0,
+      "texto": "Towards evening on the next day, catching the cosy smell of a campfire, the two friends came upon six friendly GOATHERDS gathered in the field.",
+      "fala": "Towards evening on the next day, catching the cosy smell of a campfire, the two friends came upon six friendly goatherds gathered in the field.",
+      "hash": "3f9306a8aa"
+    },
+    {
+      "id": "p3-s2",
+      "pagina": 3,
+      "paragrafo": 0,
+      "texto": "Without asking a single question or staring at the rusty armour, their hosts gave them open smiles and spread a soft sheepskin on the ground.",
+      "fala": "Without asking a single question or staring at the rusty armour, their hosts gave them open smiles and spread a soft sheepskin on the ground.",
+      "hash": "f00f363ffe"
+    },
+    {
+      "id": "p3-s3",
+      "pagina": 3,
+      "paragrafo": 0,
+      "texto": "“Sit down, friends!” said the eldest goatherd warmly.",
+      "fala": "Sit down, friends! said the eldest goatherd warmly.",
+      "hash": "238b704f61"
+    },
+    {
+      "id": "p3-s4",
+      "pagina": 3,
+      "paragrafo": 0,
+      "texto": "“Here, what belongs to one belongs to all!”",
+      "fala": "Here, what belongs to one belongs to all!",
+      "hash": "2685ea0086"
+    },
+    {
+      "id": "p3-s5",
+      "pagina": 3,
+      "paragrafo": 1,
+      "texto": "They gladly offered the best of what they had: a bowl of sweet ACORNS toasted on the embers, a generous slice of goat’s CHEESE and a jug of lovely fresh MILK.",
+      "fala": "They gladly offered the best of what they had: a bowl of sweet acorns toasted on the embers, a generous slice of goat’s cheese and a jug of lovely fresh milk.",
+      "hash": "55388ef2ff"
+    },
+    {
+      "id": "p3-s6",
+      "pagina": 3,
+      "paragrafo": 1,
+      "texto": "Help lay the goatherds’ table!",
+      "fala": "Help lay the goatherds’ table!",
+      "hash": "2c59dc523b"
+    },
+    {
+      "id": "p3-s7",
+      "pagina": 3,
+      "paragrafo": 2,
+      "texto": "Holding the acorns in the palm of his hand, Don Quixote spoke with great feeling: “Once there was a blessed time, the GOLDEN AGE, when nobody built fences and everyone knew how to SHARE the fruits of the earth with love!”",
+      "fala": "Holding the acorns in the palm of his hand, Don Quixote spoke with great feeling: Once there was a blessed time, the golden age, when nobody built fences and everyone knew how to share the fruits of the earth with love!",
+      "hash": "7bc19de186"
+    },
+    {
+      "id": "p3-s8",
+      "pagina": 3,
+      "paragrafo": 2,
+      "texto": "The goatherds did not understand all of the gentleman’s long, difficult words, but they felt the warmth of his generous soul: after all, the world becomes an enchanted place whenever we know how to share!",
+      "fala": "The goatherds did not understand all of the gentleman’s long, difficult words, but they felt the warmth of his generous soul: after all, the world becomes an enchanted place whenever we know how to share!",
+      "hash": "5a06d9468d"
+    },
+    {
+      "id": "p4-s0",
+      "pagina": 4,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapter 11. The Armies of Dust. The Great Battle of the Sheep",
+      "fala": "Chapter 11. The Armies of Dust. The Great Battle of the Sheep",
+      "hash": "b5da2c1621"
+    },
+    {
+      "id": "p4-s1",
+      "pagina": 4,
+      "paragrafo": 0,
+      "texto": "One sunny morning, riding across the wide lands of La Mancha, Don Quixote stopped short and pointed his lance at the horizon.",
+      "fala": "One sunny morning, riding across the wide lands of La Mancha, Don Quixote stopped short and pointed his lance at the horizon.",
+      "hash": "13fa629bc3"
+    },
+    {
+      "id": "p4-s2",
+      "pagina": 4,
+      "paragrafo": 0,
+      "texto": "Two enormous clouds of DUST were rushing towards each other, covering the sky with an earth-coloured cloak!",
+      "fala": "Two enormous clouds of dust were rushing towards each other, covering the sky with an earth-coloured cloak!",
+      "hash": "560b6b0cb5"
+    },
+    {
+      "id": "p4-s3",
+      "pagina": 4,
+      "paragrafo": 1,
+      "texto": "“Take heart, faithful Sancho!” cried the knight, beaming.",
+      "fala": "Take heart, faithful Sancho! cried the knight, beaming.",
+      "hash": "b15920c9f5"
+    },
+    {
+      "id": "p4-s4",
+      "pagina": 4,
+      "paragrafo": 1,
+      "texto": "“Behold, two mighty ARMIES are marching to meet us!",
+      "fala": "Behold, two mighty armies are marching to meet us!",
+      "hash": "340e864c59"
+    },
+    {
+      "id": "p4-s5",
+      "pagina": 4,
+      "paragrafo": 1,
+      "texto": "On the left advances the fearsome Alifanfarón of Trapobana; on the right, raising his banners, comes the valiant Pentapolín of the Rolled-Up Sleeve, a hero who always fights with his sleeves rolled up!”",
+      "fala": "On the left advances the fearsome Alifanfarón of Trapobana; on the right, raising his banners, comes the valiant Pentapolín of the Rolled-Up Sleeve, a hero who always fights with his sleeves rolled up!",
+      "hash": "04e250d4ae"
+    },
+    {
+      "id": "p4-s6",
+      "pagina": 4,
+      "paragrafo": 2,
+      "texto": "“But, my kind master...” said Sancho slowly, pricking up his ears and frowning, “I can’t hear any swords or war trumpets, only a very peaceful chorus of baaaa!”",
+      "fala": "But, my kind master... said Sancho slowly, pricking up his ears and frowning, I can’t hear any swords or war trumpets, only a very peaceful chorus of baaaa!",
+      "hash": "102a96e556"
+    },
+    {
+      "id": "p4-s7",
+      "pagina": 4,
+      "paragrafo": 3,
+      "texto": "Blow away the dust and see the truth with your own eyes!",
+      "fala": "Blow away the dust and see the truth with your own eyes!",
+      "hash": "dafe441952"
+    },
+    {
+      "id": "p4-s8",
+      "pagina": 4,
+      "paragrafo": 3,
+      "texto": "They were only two innocent flocks of SHEEP grazing on the grass!",
+      "fala": "They were only two innocent flocks of sheep grazing on the grass!",
+      "hash": "1c2836fe3f"
+    },
+    {
+      "id": "p4-s9",
+      "pagina": 4,
+      "paragrafo": 3,
+      "texto": "But Don Quixote was already galloping down the hill on his heroic mission.",
+      "fala": "But Don Quixote was already galloping down the hill on his heroic mission.",
+      "hash": "4b55c01ddf"
+    },
+    {
+      "id": "p4-s10",
+      "pagina": 4,
+      "paragrafo": 3,
+      "texto": "Frightened by that strange knight, the shepherds slung little stones to protect their animals.",
+      "fala": "Frightened by that strange knight, the shepherds slung little stones to protect their animals.",
+      "hash": "63751a0e34"
+    },
+    {
+      "id": "p4-s11",
+      "pagina": 4,
+      "paragrafo": 3,
+      "texto": "The poor gentleman tumbled off his horse in the middle of the pasture, with a sore chin and two teeth missing from his smile!",
+      "fala": "The poor gentleman tumbled off his horse in the middle of the pasture, with a sore chin and two teeth missing from his smile!",
+      "hash": "bb4db3c4b0"
+    },
+    {
+      "id": "p5-s0",
+      "pagina": 5,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapter 12. The Knight of the Sorrowful Face. An Unforgettable Nickname",
+      "fala": "Chapter 12. The Knight of the Sorrowful Face. An Unforgettable Nickname",
+      "hash": "08aa722d08"
+    },
+    {
+      "id": "p5-s1",
+      "pagina": 5,
+      "paragrafo": 0,
+      "texto": "When night covered the fields in shadow, the two friends settled down by the side of a quiet road.",
+      "fala": "When night covered the fields in shadow, the two friends settled down by the side of a quiet road.",
+      "hash": "4940197a8f"
+    },
+    {
+      "id": "p5-s2",
+      "pagina": 5,
+      "paragrafo": 0,
+      "texto": "Noticing his master’s sad silence, Sancho held up a little tin LANTERN to take a look at the knight’s bumps and bruises.",
+      "fala": "Noticing his master’s sad silence, Sancho held up a little tin lantern to take a look at the knight’s bumps and bruises.",
+      "hash": "5742cc5bb0"
+    },
+    {
+      "id": "p5-s3",
+      "pagina": 5,
+      "paragrafo": 1,
+      "texto": "In the yellow candlelight there appeared a touching, expressive face: the gentleman was thin and worn out from the battle, with his dented basin sitting crooked on his brow and a funny little window open in the middle of his lips, where two strong teeth used to shine.",
+      "fala": "In the yellow candlelight there appeared a touching, expressive face: the gentleman was thin and worn out from the battle, with his dented basin sitting crooked on his brow and a funny little window open in the middle of his lips, where two strong teeth used to shine.",
+      "hash": "bf6b8b260e"
+    },
+    {
+      "id": "p5-s4",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "“My lord,” said Sancho fondly, with a cheeky smile, “your grace has the saddest, most woebegone face I have ever seen under the sky!",
+      "fala": "My lord, said Sancho fondly, with a cheeky smile, your grace has the saddest, most woebegone face I have ever seen under the sky!",
+      "hash": "f45da7a334"
+    },
+    {
+      "id": "p5-s5",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "I think your true name of glory should be the Knight of the SORROWFUL FACE!”",
+      "fala": "I think your true name of glory should be the Knight of the sorrowful face!",
+      "hash": "333d0efe42"
+    },
+    {
+      "id": "p5-s6",
+      "pagina": 5,
+      "paragrafo": 3,
+      "texto": "Far from getting cross, Don Quixote loved the tribute!",
+      "fala": "Far from getting cross, Don Quixote loved the tribute!",
+      "hash": "3c6e938913"
+    },
+    {
+      "id": "p5-s7",
+      "pagina": 5,
+      "paragrafo": 3,
+      "texto": "“What a beautiful name, Sancho!” he exclaimed.",
+      "fala": "What a beautiful name, Sancho! he exclaimed.",
+      "hash": "2fb60c51b7"
+    },
+    {
+      "id": "p5-s8",
+      "pagina": 5,
+      "paragrafo": 3,
+      "texto": "“All the great knights in books have poetic names.",
+      "fala": "All the great knights in books have poetic names.",
+      "hash": "234856d11a"
+    },
+    {
+      "id": "p5-s9",
+      "pagina": 5,
+      "paragrafo": 3,
+      "texto": "I shall have a noble, thoughtful face painted on my SHIELD!”",
+      "fala": "I shall have a noble, thoughtful face painted on my shield!",
+      "hash": "3ba59bb0d9"
+    },
+    {
+      "id": "p6-s0",
+      "pagina": 6,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapter 13. Noises in the Dark. The Goats that Cross the River",
+      "fala": "Chapter 13. Noises in the Dark. The Goats that Cross the River",
+      "hash": "598d2b4725"
+    },
+    {
+      "id": "p6-s1",
+      "pagina": 6,
+      "paragrafo": 0,
+      "texto": "On a night as black as pitch, the two riders stopped beside a wood of tall trees.",
+      "fala": "On a night as black as pitch, the two riders stopped beside a wood of tall trees.",
+      "hash": "f992ac6a5d"
+    },
+    {
+      "id": "p6-s2",
+      "pagina": 6,
+      "paragrafo": 0,
+      "texto": "Suddenly, a steady, fearsome noise began to echo through the leaves: THUMP-THUMP!",
+      "fala": "Suddenly, a steady, fearsome noise began to echo through the leaves: thump, thump!",
+      "hash": "9ad4e3ed5c"
+    },
+    {
+      "id": "p6-s3",
+      "pagina": 6,
+      "paragrafo": 0,
+      "texto": "THUMP-THUMP!",
+      "fala": "thump, thump!",
+      "hash": "fd465b50ca"
+    },
+    {
+      "id": "p6-s4",
+      "pagina": 6,
+      "paragrafo": 0,
+      "texto": "It sounded like a giant hammering iron in the heart of the forest.",
+      "fala": "It sounded like a giant hammering iron in the heart of the forest.",
+      "hash": "9a54dedb17"
+    },
+    {
+      "id": "p6-s5",
+      "pagina": 6,
+      "paragrafo": 0,
+      "texto": "Don Quixote raised his lance at once: “Who goes there?",
+      "fala": "Don Quixote raised his lance at once: Who goes there?",
+      "hash": "72a4d99f24"
+    },
+    {
+      "id": "p6-s6",
+      "pagina": 6,
+      "paragrafo": 0,
+      "texto": "Show yourself, giant of the dark!”",
+      "fala": "Show yourself, giant of the dark!",
+      "hash": "fc9fa57720"
+    },
+    {
+      "id": "p6-s7",
+      "pagina": 6,
+      "paragrafo": 1,
+      "texto": "Sancho, trembling like a leaf in the wind, did something very crafty: he quietly tied Rocinante’s legs with the donkey’s halter rope, so that the horse could not take a single step.",
+      "fala": "Sancho, trembling like a leaf in the wind, did something very crafty: he quietly tied Rocinante’s legs with the donkey’s halter rope, so that the horse could not take a single step.",
+      "hash": "63940a8aeb"
+    },
+    {
+      "id": "p6-s8",
+      "pagina": 6,
+      "paragrafo": 1,
+      "texto": "And, to calm the gentleman and keep him there until sunrise, he began to tell a story that never ended:",
+      "fala": "And, to calm the gentleman and keep him there until sunrise, he began to tell a story that never ended:",
+      "hash": "e0437b0f98"
+    },
+    {
+      "id": "p6-s9",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "“Once upon a time there was a shepherd called Lope Ruiz, who had to take three hundred GOATS across a rushing river.",
+      "fala": "Once upon a time there was a shepherd called Lope Ruiz, who had to take three hundred goats across a rushing river.",
+      "hash": "3558196588"
+    },
+    {
+      "id": "p6-s10",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "But he only had a teeny-tiny BOAT, with room for just one goat on each crossing!",
+      "fala": "But he only had a teeny-tiny boat, with room for just one goat on each crossing!",
+      "hash": "01833210a8"
+    },
+    {
+      "id": "p6-s11",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "Now, your grace must pay close attention and COUNT every little goat that crosses... because if you lose count, the story will simply vanish!”",
+      "fala": "Now, your grace must pay close attention and count every little goat that crosses... because if you lose count, the story will simply vanish!",
+      "hash": "f6168a6fbf"
+    },
+    {
+      "id": "p6-s12",
+      "pagina": 6,
+      "paragrafo": 3,
+      "texto": "Help Don Quixote count the goats sailing across the river!",
+      "fala": "Help Don Quixote count the goats sailing across the river!",
+      "hash": "79a9678519"
+    },
+    {
+      "id": "p7-s0",
+      "pagina": 7,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapter 14. The Secret of the Dawn. Who Went THUMP-THUMP?",
+      "fala": "Chapter 14. The Secret of the Dawn. Who Went thump, thump?",
+      "hash": "5976cd2a5e"
+    },
+    {
+      "id": "p7-s1",
+      "pagina": 7,
+      "paragrafo": 0,
+      "texto": "The long night watch seemed to go on for ever.",
+      "fala": "The long night watch seemed to go on for ever.",
+      "hash": "624a620657"
+    },
+    {
+      "id": "p7-s2",
+      "pagina": 7,
+      "paragrafo": 0,
+      "texto": "But, little by little, the horizon turned gold and pink as the SUNRISE arrived in triumph.",
+      "fala": "But, little by little, the horizon turned gold and pink as the sunrise arrived in triumph.",
+      "hash": "4613fbbeb5"
+    },
+    {
+      "id": "p7-s3",
+      "pagina": 7,
+      "paragrafo": 0,
+      "texto": "Tap the sun to wake up the day and chase the shadows away!",
+      "fala": "Tap the sun to wake up the day and chase the shadows away!",
+      "hash": "dc827c3983"
+    },
+    {
+      "id": "p7-s4",
+      "pagina": 7,
+      "paragrafo": 1,
+      "texto": "Bathed in the morning rays, the friends could at last see the mystery of the night: no furious ogres, no beasts with sharp claws!",
+      "fala": "Bathed in the morning rays, the friends could at last see the mystery of the night: no furious ogres, no beasts with sharp claws!",
+      "hash": "cbe5e12f06"
+    },
+    {
+      "id": "p7-s5",
+      "pagina": 7,
+      "paragrafo": 1,
+      "texto": "They were only six huge wooden HAMMERS, driven by the rushing water of the river, beating pieces of cloth over and over to make them soft and fluffy.",
+      "fala": "They were only six huge wooden hammers, driven by the rushing water of the river, beating pieces of cloth over and over to make them soft and fluffy.",
+      "hash": "82067f6f4c"
+    },
+    {
+      "id": "p7-s6",
+      "pagina": 7,
+      "paragrafo": 1,
+      "texto": "THUMP-THUMP!",
+      "fala": "thump, thump!",
+      "hash": "fd465b50ca"
+    },
+    {
+      "id": "p7-s7",
+      "pagina": 7,
+      "paragrafo": 1,
+      "texto": "THUMP-THUMP!",
+      "fala": "thump, thump!",
+      "hash": "fd465b50ca"
+    },
+    {
+      "id": "p7-s8",
+      "pagina": 7,
+      "paragrafo": 2,
+      "texto": "When he saw that all his fright had been for nothing, Sancho could not help himself: he clutched his tummy and burst into such a hearty LAUGH that it echoed across the hills, and he nearly fell off his donkey: “Oh, my lord!",
+      "fala": "When he saw that all his fright had been for nothing, Sancho could not help himself: he clutched his tummy and burst into such a hearty laugh that it echoed across the hills, and he nearly fell off his donkey: Oh, my lord!",
+      "hash": "271650cf13"
+    },
+    {
+      "id": "p7-s9",
+      "pagina": 7,
+      "paragrafo": 2,
+      "texto": "The giant of the night was a hammer for beating cloth!”",
+      "fala": "The giant of the night was a hammer for beating cloth!",
+      "hash": "8e23b7bf60"
+    },
+    {
+      "id": "p7-s10",
+      "pagina": 7,
+      "paragrafo": 2,
+      "texto": "Don Quixote looked stern at first, but soon Sancho’s giggles caught him too.",
+      "fala": "Don Quixote looked stern at first, but soon Sancho’s giggles caught him too.",
+      "hash": "6649df93f1"
+    },
+    {
+      "id": "p7-s11",
+      "pagina": 7,
+      "paragrafo": 2,
+      "texto": "After all, even the greatest heroes are afraid of the unknown, and the morning light always brings the truth and a sigh of relief!",
+      "fala": "After all, even the greatest heroes are afraid of the unknown, and the morning light always brings the truth and a sigh of relief!",
+      "hash": "9e0356ca49"
+    },
+    {
+      "id": "p8-s0",
+      "pagina": 8,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapter 15. The Helmet of Mambrino. A Helmet that Shines in the Rain",
+      "fala": "Chapter 15. The Helmet of Mambrino. A Helmet that Shines in the Rain",
+      "hash": "64b2cbec8c"
+    },
+    {
+      "id": "p8-s1",
+      "pagina": 8,
+      "paragrafo": 0,
+      "texto": "As they went on down the road, soft clouds covered the sky and a gentle RAIN began to fall.",
+      "fala": "As they went on down the road, soft clouds covered the sky and a gentle rain began to fall.",
+      "hash": "0458acafc2"
+    },
+    {
+      "id": "p8-s2",
+      "pagina": 8,
+      "paragrafo": 0,
+      "texto": "In the distance, a peaceful village BARBER came trotting along on his little donkey.",
+      "fala": "In the distance, a peaceful village barber came trotting along on his little donkey.",
+      "hash": "75f70ba8c3"
+    },
+    {
+      "id": "p8-s3",
+      "pagina": 8,
+      "paragrafo": 0,
+      "texto": "To keep his new hat safe from the raindrops, he had put a brass basin on his head, and it gleamed in the wet like an enchanted mirror!",
+      "fala": "To keep his new hat safe from the raindrops, he had put a brass basin on his head, and it gleamed in the wet like an enchanted mirror!",
+      "hash": "4c14960bbb"
+    },
+    {
+      "id": "p8-s4",
+      "pagina": 8,
+      "paragrafo": 1,
+      "texto": "Don Quixote’s eyes grew wide with wonder: “Behold, Sancho, the greatest of all treasures!",
+      "fala": "Don Quixote’s eyes grew wide with wonder: Behold, Sancho, the greatest of all treasures!",
+      "hash": "38a3ac6c82"
+    },
+    {
+      "id": "p8-s5",
+      "pagina": 8,
+      "paragrafo": 1,
+      "texto": "That noble warrior is wearing the famous HELMET OF MAMBRINO, the magic helmet that makes whoever wears it unbeatable!”",
+      "fala": "That noble warrior is wearing the famous helmet of mambrino, the magic helmet that makes whoever wears it unbeatable!",
+      "hash": "76d54347dd"
+    },
+    {
+      "id": "p8-s6",
+      "pagina": 8,
+      "paragrafo": 2,
+      "texto": "Lowering his oak lance, the gentleman charged at a gallop.",
+      "fala": "Lowering his oak lance, the gentleman charged at a gallop.",
+      "hash": "2dfe083488"
+    },
+    {
+      "id": "p8-s7",
+      "pagina": 8,
+      "paragrafo": 2,
+      "texto": "“Help!",
+      "fala": "Help!",
+      "hash": "3e8adeced1"
+    },
+    {
+      "id": "p8-s8",
+      "pagina": 8,
+      "paragrafo": 2,
+      "texto": "Help!” cried the poor barber, terrified of that man in armour.",
+      "fala": "Help! cried the poor barber, terrified of that man in armour.",
+      "hash": "2f0ef27976"
+    },
+    {
+      "id": "p8-s9",
+      "pagina": 8,
+      "paragrafo": 2,
+      "texto": "He leapt off his donkey and ran helter-skelter through the wheat fields, leaving the basin lying on the grass!",
+      "fala": "He leapt off his donkey and ran helter-skelter through the wheat fields, leaving the basin lying on the grass!",
+      "hash": "460549ec89"
+    },
+    {
+      "id": "p8-s10",
+      "pagina": 8,
+      "paragrafo": 2,
+      "texto": "Don Quixote placed it solemnly on his head: it was rather loose, it had no visor and it almost covered his eyes, but to him it shone with the splendour of the purest royal gold.",
+      "fala": "Don Quixote placed it solemnly on his head: it was rather loose, it had no visor and it almost covered his eyes, but to him it shone with the splendour of the purest royal gold.",
+      "hash": "216a536f17"
+    },
+    {
+      "id": "p8-s11",
+      "pagina": 8,
+      "paragrafo": 2,
+      "texto": "Sancho laughed with such fondness and glee that he had to sit down on the grass to catch his breath!",
+      "fala": "Sancho laughed with such fondness and glee that he had to sit down on the grass to catch his breath!",
+      "hash": "32edd4e71e"
+    }
+  ],
+  "palavras": [
+    {
+      "slug": "goatherds",
+      "palavra": "GOATHERDS",
+      "silabas": "GOAT • HERDS",
+      "fala": "goat... herds... goatherds!",
+      "hash": "d7d296afda"
+    },
+    {
+      "slug": "helmet",
+      "palavra": "HELMET",
+      "silabas": "HEL • MET",
+      "fala": "hel... met... helmet!",
+      "hash": "20162f9c0e"
+    },
+    {
+      "slug": "imagination",
+      "palavra": "IMAGINATION",
+      "silabas": "I • MAG • I • NA • TION",
+      "fala": "i... mag... i... na... tion... imagination!",
+      "hash": "d6584e0888"
+    },
+    {
+      "slug": "windmill",
+      "palavra": "WINDMILL",
+      "silabas": "WIND • MILL",
+      "fala": "wind... mill... windmill!",
+      "hash": "25a1b50b00"
+    },
+    {
+      "slug": "lance",
+      "palavra": "LANCE",
+      "silabas": "LANCE",
+      "fala": "lance... lance!",
+      "hash": "d82ab630d4"
+    },
+    {
+      "slug": "spell",
+      "palavra": "SPELL",
+      "silabas": "SPELL",
+      "fala": "spell... spell!",
+      "hash": "7bc400e42d"
+    },
+    {
+      "slug": "courage",
+      "palavra": "COURAGE",
+      "silabas": "COUR • AGE",
+      "fala": "cour... age... courage!",
+      "hash": "23e1860de7"
+    },
+    {
+      "slug": "oak-tree",
+      "palavra": "OAK TREE",
+      "silabas": "OAK • TREE",
+      "fala": "oak... tree... oak tree!",
+      "hash": "aaf91c6506"
+    },
+    {
+      "slug": "stars",
+      "palavra": "STARS",
+      "silabas": "STARS",
+      "fala": "stars... stars!",
+      "hash": "7e9562a876"
+    },
+    {
+      "slug": "dulcinea",
+      "palavra": "DULCINEA",
+      "silabas": "DUL • CI • NE • A",
+      "fala": "dul... ci... ne... a... dulcinea!",
+      "hash": "9354bb3171"
+    },
+    {
+      "slug": "acorns",
+      "palavra": "ACORNS",
+      "silabas": "A • CORNS",
+      "fala": "a... corns... acorns!",
+      "hash": "eed9d1f3a1"
+    },
+    {
+      "slug": "cheese",
+      "palavra": "CHEESE",
+      "silabas": "CHEESE",
+      "fala": "cheese... cheese!",
+      "hash": "eccd6c034a"
+    },
+    {
+      "slug": "milk",
+      "palavra": "MILK",
+      "silabas": "MILK",
+      "fala": "milk... milk!",
+      "hash": "af0f333a4a"
+    },
+    {
+      "slug": "golden-age",
+      "palavra": "GOLDEN AGE",
+      "silabas": "GOL • DEN • AGE",
+      "fala": "gol... den... age... golden age!",
+      "hash": "fdbe3d0884"
+    },
+    {
+      "slug": "share",
+      "palavra": "SHARE",
+      "silabas": "SHARE",
+      "fala": "share... share!",
+      "hash": "7b8fb4129b"
+    },
+    {
+      "slug": "dust",
+      "palavra": "DUST",
+      "silabas": "DUST",
+      "fala": "dust... dust!",
+      "hash": "b19b39a805"
+    },
+    {
+      "slug": "armies",
+      "palavra": "ARMIES",
+      "silabas": "AR • MIES",
+      "fala": "ar... mies... armies!",
+      "hash": "0b1fe5ab2f"
+    },
+    {
+      "slug": "sheep",
+      "palavra": "SHEEP",
+      "silabas": "SHEEP",
+      "fala": "sheep... sheep!",
+      "hash": "166bd9315d"
+    },
+    {
+      "slug": "lantern",
+      "palavra": "LANTERN",
+      "silabas": "LAN • TERN",
+      "fala": "lan... tern... lantern!",
+      "hash": "30c2cbc822"
+    },
+    {
+      "slug": "sorrowful-face",
+      "palavra": "SORROWFUL FACE",
+      "silabas": "SOR • ROW • FUL • FACE",
+      "fala": "sor... row... ful... face... sorrowful face!",
+      "hash": "1650cd05ca"
+    },
+    {
+      "slug": "shield",
+      "palavra": "SHIELD",
+      "silabas": "SHIELD",
+      "fala": "shield... shield!",
+      "hash": "70b9ceb8bd"
+    },
+    {
+      "slug": "thump-thump",
+      "palavra": "THUMP-THUMP",
+      "silabas": "THUMP • THUMP",
+      "fala": "thump... thump... thump-thump!",
+      "hash": "79bf7042de"
+    },
+    {
+      "slug": "goats",
+      "palavra": "GOATS",
+      "silabas": "GOATS",
+      "fala": "goats... goats!",
+      "hash": "9dd0be5871"
+    },
+    {
+      "slug": "boat",
+      "palavra": "BOAT",
+      "silabas": "BOAT",
+      "fala": "boat... boat!",
+      "hash": "f68724f517"
+    },
+    {
+      "slug": "count",
+      "palavra": "COUNT",
+      "silabas": "COUNT",
+      "fala": "count... count!",
+      "hash": "10a15acac1"
+    },
+    {
+      "slug": "sunrise",
+      "palavra": "SUNRISE",
+      "silabas": "SUN • RISE",
+      "fala": "sun... rise... sunrise!",
+      "hash": "f964fa3e4c"
+    },
+    {
+      "slug": "hammers",
+      "palavra": "HAMMERS",
+      "silabas": "HAM • MERS",
+      "fala": "ham... mers... hammers!",
+      "hash": "b31dfe2b89"
+    },
+    {
+      "slug": "laugh",
+      "palavra": "LAUGH",
+      "silabas": "LAUGH",
+      "fala": "laugh... laugh!",
+      "hash": "9b372cdd91"
+    },
+    {
+      "slug": "rain",
+      "palavra": "RAIN",
+      "silabas": "RAIN",
+      "fala": "rain... rain!",
+      "hash": "27736479a0"
+    },
+    {
+      "slug": "barber",
+      "palavra": "BARBER",
+      "silabas": "BAR • BER",
+      "fala": "bar... ber... barber!",
+      "hash": "e37d2756b4"
+    },
+    {
+      "slug": "helmet-of-mambrino",
+      "palavra": "HELMET OF MAMBRINO",
+      "silabas": "HEL • MET • OF • MAM • BRI • NO",
+      "fala": "hel... met... of... mam... bri... no... helmet of mambrino!",
+      "hash": "fee85395d5"
+    }
+  ]
+}

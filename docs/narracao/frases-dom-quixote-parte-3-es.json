@@ -1,0 +1,723 @@
+{
+  "obra": "Don Quijote de la Mancha",
+  "parte": 3,
+  "idioma": "es",
+  "audio": "dom-quixote/audio/<voz>-es/parte-3/<id>.mp3",
+  "audioPalavras": "dom-quixote/audio/palavras-es/<slug>.mp3",
+  "frases": [
+    {
+      "id": "p0-s0",
+      "pagina": 0,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Don Quijote de la Mancha. Parte 3: Sierra Morena y la princesa Micomicona",
+      "fala": "Don Quijote de la Mancha. Parte 3: Sierra Morena y la princesa Micomicona",
+      "hash": "5ba1b08900"
+    },
+    {
+      "id": "p0-s1",
+      "pagina": 0,
+      "paragrafo": 0,
+      "texto": "Con su reluciente yelmo conquistado bajo la lluvia y el corazón rebosante de sueños, ¡el Caballero de la Triste Figura sube con Sancho por las montañas salvajes e imponentes de SIERRA MORENA!",
+      "fala": "Con su reluciente yelmo conquistado bajo la lluvia y el corazón rebosante de sueños, ¡el Caballero de la Triste Figura sube con Sancho por las montañas salvajes e imponentes de sierra morena!",
+      "hash": "729e457fd7"
+    },
+    {
+      "id": "p0-s2",
+      "pagina": 0,
+      "paragrafo": 1,
+      "texto": "En las alturas rocosas, entre despeñaderos, pinos y flores silvestres, nuestros héroes abrirán una maleta llena de secretos, escribirán una emocionante CARTA de amor, darán volteretas de añoranza y descubrirán el ingenioso plan de unos viejos amigos para rescatar a una hermosa PRINCESA de un reino lejano.",
+      "fala": "En las alturas rocosas, entre despeñaderos, pinos y flores silvestres, nuestros héroes abrirán una maleta llena de secretos, escribirán una emocionante carta de amor, darán volteretas de añoranza y descubrirán el ingenioso plan de unos viejos amigos para rescatar a una hermosa princesa de un reino lejano.",
+      "hash": "b84eaed9cc"
+    },
+    {
+      "id": "p0-s3",
+      "pagina": 0,
+      "paragrafo": 2,
+      "texto": "¡Respira hondo el aire puro de las montañas, pasa la página y sube la sierra con ellos!",
+      "fala": "¡Respira hondo el aire puro de las montañas, pasa la página y sube la sierra con ellos!",
+      "hash": "74602205bb"
+    },
+    {
+      "id": "p1-s0",
+      "pagina": 1,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Capítulo 16. La maleta perdida. Un tesoro en medio de la sierra",
+      "fala": "Capítulo 16. La maleta perdida. Un tesoro en medio de la sierra",
+      "hash": "dccfe18784"
+    },
+    {
+      "id": "p1-s1",
+      "pagina": 1,
+      "paragrafo": 0,
+      "texto": "Subiendo por las sendas pedregosas de la sierra, entre encinas retorcidas y riscos escarpados, Sancho tropezó con una misteriosa MALETA de cuero curtido, abandonada bajo un arbusto espinoso.",
+      "fala": "Subiendo por las sendas pedregosas de la sierra, entre encinas retorcidas y riscos escarpados, Sancho tropezó con una misteriosa maleta de cuero curtido, abandonada bajo un arbusto espinoso.",
+      "hash": "2def587e92"
+    },
+    {
+      "id": "p1-s2",
+      "pagina": 1,
+      "paragrafo": 0,
+      "texto": "La maleta estaba gastada por el tiempo, mojada por las lluvias y cerrada con broches oxidados.",
+      "fala": "La maleta estaba gastada por el tiempo, mojada por las lluvias y cerrada con broches oxidados.",
+      "hash": "6af223050c"
+    },
+    {
+      "id": "p1-s3",
+      "pagina": 1,
+      "paragrafo": 1,
+      "texto": "¿Qué guardaría aquel baúl olvidado?",
+      "fala": "¿Qué guardaría aquel baúl olvidado?",
+      "hash": "852bbe77d3"
+    },
+    {
+      "id": "p1-s4",
+      "pagina": 1,
+      "paragrafo": 1,
+      "texto": "¡Abre la maleta con un toque para descubrir el secreto!",
+      "fala": "¡Abre la maleta con un toque para descubrir el secreto!",
+      "hash": "6184191149"
+    },
+    {
+      "id": "p1-s5",
+      "pagina": 1,
+      "paragrafo": 1,
+      "texto": "Dentro relucían decenas de preciosas MONEDAS de oro, que hicieron brillar de pura euforia los ojos de Sancho, y un delicado CUADERNO lleno de POEMAS escritos a mano con elegante caligrafía.",
+      "fala": "Dentro relucían decenas de preciosas monedas de oro, que hicieron brillar de pura euforia los ojos de Sancho, y un delicado cuaderno lleno de poemas escritos a mano con elegante caligrafía.",
+      "hash": "4000bf339a"
+    },
+    {
+      "id": "p1-s6",
+      "pagina": 1,
+      "paragrafo": 1,
+      "texto": "—¡Oro, mi señor!",
+      "fala": "¡Oro, mi señor!",
+      "hash": "5edc2b743c"
+    },
+    {
+      "id": "p1-s7",
+      "pagina": 1,
+      "paragrafo": 1,
+      "texto": "¡Oro de verdad! —celebraba Sancho, dando saltitos.",
+      "fala": "¡Oro de verdad! celebraba Sancho, dando saltitos.",
+      "hash": "aafff62b56"
+    },
+    {
+      "id": "p1-s8",
+      "pagina": 1,
+      "paragrafo": 2,
+      "texto": "Don Quijote tomó el cuaderno en sus manos con enorme respeto y leyó en voz alta los tiernos versos de un joven enamorado que vagaba sin rumbo por las montañas.",
+      "fala": "Don Quijote tomó el cuaderno en sus manos con enorme respeto y leyó en voz alta los tiernos versos de un joven enamorado que vagaba sin rumbo por las montañas.",
+      "hash": "ed607812df"
+    },
+    {
+      "id": "p1-s9",
+      "pagina": 1,
+      "paragrafo": 2,
+      "texto": "—Quien escribe con tanta sensibilidad tiene el alma noble.",
+      "fala": "Quien escribe con tanta sensibilidad tiene el alma noble.",
+      "hash": "1c220470d3"
+    },
+    {
+      "id": "p1-s10",
+      "pagina": 1,
+      "paragrafo": 2,
+      "texto": "¡Los libros guardan los misterios más profundos del corazón humano! —concluyó el hidalgo con un suspiro cariñoso.",
+      "fala": "¡Los libros guardan los misterios más profundos del corazón humano! concluyó el hidalgo con un suspiro cariñoso.",
+      "hash": "bc90a9bb84"
+    },
+    {
+      "id": "p2-s0",
+      "pagina": 2,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Capítulo 17. Las volteretas de la añoranza. Un caballero patas arriba",
+      "fala": "Capítulo 17. Las volteretas de la añoranza. Un caballero patas arriba",
+      "hash": "688c614013"
+    },
+    {
+      "id": "p2-s1",
+      "pagina": 2,
+      "paragrafo": 0,
+      "texto": "Al contemplar la inmensa soledad de las montañas, don Quijote tuvo una idea luminosa: —Amigo Sancho, me quedaré en este claro del monte para demostrar al mundo mi inmensa AÑORANZA por Dulcinea, ayunando y meditando como hacía el ilustre héroe AMADÍS de Gaula.",
+      "fala": "Al contemplar la inmensa soledad de las montañas, don Quijote tuvo una idea luminosa: Amigo Sancho, me quedaré en este claro del monte para demostrar al mundo mi inmensa añoranza por Dulcinea, ayunando y meditando como hacía el ilustre héroe amadís de Gaula.",
+      "hash": "eafd15c3fd"
+    },
+    {
+      "id": "p2-s2",
+      "pagina": 2,
+      "paragrafo": 0,
+      "texto": "¡Y tú partirás en tu burrito para llevar una carta apasionada hasta sus manos!",
+      "fala": "¡Y tú partirás en tu burrito para llevar una carta apasionada hasta sus manos!",
+      "hash": "36989823fa"
+    },
+    {
+      "id": "p2-s3",
+      "pagina": 2,
+      "paragrafo": 1,
+      "texto": "—Pero, mi señor amo —preguntó Sancho, rascándose la barbilla—, ¿cómo convenceré a la señora Dulcinea de que vuestra merced casi perdió el juicio por ella, si no he visto ninguna hazaña asombrosa?",
+      "fala": "Pero, mi señor amo, preguntó Sancho, rascándose la barbilla, ¿cómo convenceré a la señora Dulcinea de que vuestra merced casi perdió el juicio por ella, si no he visto ninguna hazaña asombrosa?",
+      "hash": "643a509c2c"
+    },
+    {
+      "id": "p2-s4",
+      "pagina": 2,
+      "paragrafo": 2,
+      "texto": "—¡Pues mírala ahora mismo! —exclamó don Quijote con determinación.",
+      "fala": "¡Pues mírala ahora mismo! exclamó don Quijote con determinación.",
+      "hash": "19de24864b"
+    },
+    {
+      "id": "p2-s5",
+      "pagina": 2,
+      "paragrafo": 2,
+      "texto": "Se quitó la armadura de hierro y, quedándose solo con su blanco camisón de dormir, dio una veloz VOLTERETA en la hierba, la cabeza abajo y los pies en alto, ¡con sus flacas piernas al aire en pleno salto!",
+      "fala": "Se quitó la armadura de hierro y, quedándose solo con su blanco camisón de dormir, dio una veloz voltereta en la hierba, la cabeza abajo y los pies en alto, ¡con sus flacas piernas al aire en pleno salto!",
+      "hash": "a6c1778068"
+    },
+    {
+      "id": "p2-s6",
+      "pagina": 2,
+      "paragrafo": 2,
+      "texto": "Sancho se tapó la cara con las dos manos, riéndose tanto que las lágrimas le corrían por las mejillas.",
+      "fala": "Sancho se tapó la cara con las dos manos, riéndose tanto que las lágrimas le corrían por las mejillas.",
+      "hash": "e0b1ad9cec"
+    },
+    {
+      "id": "p2-s7",
+      "pagina": 2,
+      "paragrafo": 2,
+      "texto": "¡Ayuda al caballero en sus acrobacias de amor!",
+      "fala": "¡Ayuda al caballero en sus acrobacias de amor!",
+      "hash": "1d1b9c7f4b"
+    },
+    {
+      "id": "p3-s0",
+      "pagina": 3,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Capítulo 18. La carta para Dulcinea. ¡Sancho olvidó la carta!",
+      "fala": "Capítulo 18. La carta para Dulcinea. ¡Sancho olvidó la carta!",
+      "hash": "e1fff82e9f"
+    },
+    {
+      "id": "p3-s1",
+      "pagina": 3,
+      "paragrafo": 0,
+      "texto": "Emocionado, don Quijote escribió una bellísima CARTA para su amada en una hoja arrancada del cuaderno de poemas, con palabras llenas de poesía y su solemne promesa de fidelidad eterna.",
+      "fala": "Emocionado, don Quijote escribió una bellísima carta para su amada en una hoja arrancada del cuaderno de poemas, con palabras llenas de poesía y su solemne promesa de fidelidad eterna.",
+      "hash": "1151ff484b"
+    },
+    {
+      "id": "p3-s2",
+      "pagina": 3,
+      "paragrafo": 0,
+      "texto": "Le dio las instrucciones a su fiel escudero, que montó en su burrito y partió por el camino, ¡sintiéndose la persona más importante de España!",
+      "fala": "Le dio las instrucciones a su fiel escudero, que montó en su burrito y partió por el camino, ¡sintiéndose la persona más importante de España!",
+      "hash": "f33b60f8b5"
+    },
+    {
+      "id": "p3-s3",
+      "pagina": 3,
+      "paragrafo": 1,
+      "texto": "Sin embargo, al bajar las primeras laderas, Sancho se metió las manos en los bolsillos y abrió los ojos de par en par, lleno de pánico: ¡se había dejado el papel sobre una piedra, allá en lo alto de la sierra!",
+      "fala": "Sin embargo, al bajar las primeras laderas, Sancho se metió las manos en los bolsillos y abrió los ojos de par en par, lleno de pánico: ¡se había dejado el papel sobre una piedra, allá en lo alto de la sierra!",
+      "hash": "5c5a1bad7f"
+    },
+    {
+      "id": "p3-s4",
+      "pagina": 3,
+      "paragrafo": 1,
+      "texto": "Desesperado, se rascó la frente e intentó recuperar el texto, que solo guardaba en su MEMORIA: —¿Cómo empezaba?",
+      "fala": "Desesperado, se rascó la frente e intentó recuperar el texto, que solo guardaba en su memoria: ¿Cómo empezaba?",
+      "hash": "5feb61b9c7"
+    },
+    {
+      "id": "p3-s5",
+      "pagina": 3,
+      "paragrafo": 1,
+      "texto": "«Soberana y alta señora»...",
+      "fala": "Soberana y alta señora...",
+      "hash": "c862363870"
+    },
+    {
+      "id": "p3-s6",
+      "pagina": 3,
+      "paragrafo": 1,
+      "texto": "¿Y al final?",
+      "fala": "¿Y al final?",
+      "hash": "c181e17f56"
+    },
+    {
+      "id": "p3-s7",
+      "pagina": 3,
+      "paragrafo": 1,
+      "texto": "¿Cómo firmaba mi amo?",
+      "fala": "¿Cómo firmaba mi amo?",
+      "hash": "e3ce6b6070"
+    },
+    {
+      "id": "p3-s8",
+      "pagina": 3,
+      "paragrafo": 2,
+      "texto": "¡Ayuda al buen escudero a recordar la FIRMA de la carta, tocando cada palabra en el orden exacto!",
+      "fala": "¡Ayuda al buen escudero a recordar la firma de la carta, tocando cada palabra en el orden exacto!",
+      "hash": "7a02508425"
+    },
+    {
+      "id": "p4-s0",
+      "pagina": 4,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Capítulo 19. Amigos disfrazados. El cura, el barbero y una barba de buey",
+      "fala": "Capítulo 19. Amigos disfrazados. El cura, el barbero y una barba de buey",
+      "hash": "c153dd818b"
+    },
+    {
+      "id": "p4-s1",
+      "pagina": 4,
+      "paragrafo": 0,
+      "texto": "Al hacer una parada en una venta al pie de la montaña, Sancho se encontró con dos viejos y fieles conocidos de su aldea: el bondadoso CURA Pero Pérez y maese Nicolás, el barbero del pueblo.",
+      "fala": "Al hacer una parada en una venta al pie de la montaña, Sancho se encontró con dos viejos y fieles conocidos de su aldea: el bondadoso cura Pero Pérez y maese Nicolás, el barbero del pueblo.",
+      "hash": "a7e3237c56"
+    },
+    {
+      "id": "p4-s2",
+      "pagina": 4,
+      "paragrafo": 0,
+      "texto": "Preocupados por la desaparición de su amigo Alonso Quijano, venían dispuestos a rescatarlo con cariño.",
+      "fala": "Preocupados por la desaparición de su amigo Alonso Quijano, venían dispuestos a rescatarlo con cariño.",
+      "hash": "115989b592"
+    },
+    {
+      "id": "p4-s3",
+      "pagina": 4,
+      "paragrafo": 1,
+      "texto": "—Nunca aceptará volver a casa por su propia voluntad —avisó Sancho—, ¡a menos que una doncella en apuros le suplique la protección de su espada invencible!",
+      "fala": "Nunca aceptará volver a casa por su propia voluntad, avisó Sancho, ¡a menos que una doncella en apuros le suplique la protección de su espada invencible!",
+      "hash": "8104d635fd"
+    },
+    {
+      "id": "p4-s4",
+      "pagina": 4,
+      "paragrafo": 2,
+      "texto": "—¡Ya lo tengo!",
+      "fala": "¡Ya lo tengo!",
+      "hash": "74ca10aaa5"
+    },
+    {
+      "id": "p4-s5",
+      "pagina": 4,
+      "paragrafo": 2,
+      "texto": "¡Inventaremos una princesa en apuros! —exclamó el cura, con los ojos brillantes.",
+      "fala": "¡Inventaremos una princesa en apuros! exclamó el cura, con los ojos brillantes.",
+      "hash": "ed81f3aa4e"
+    },
+    {
+      "id": "p4-s6",
+      "pagina": 4,
+      "paragrafo": 2,
+      "texto": "Y así los dos tramaron un plan genial y teatral: ¡un ingenioso DISFRAZ!",
+      "fala": "Y así los dos tramaron un plan genial y teatral: ¡un ingenioso disfraz!",
+      "hash": "c5874e3e36"
+    },
+    {
+      "id": "p4-s7",
+      "pagina": 4,
+      "paragrafo": 2,
+      "texto": "Maese Nicolás se pegó en la barbilla una colosal BARBA rojiza, hecha con la peluda cola de un buey, mientras el cura se ponía una falda de vuelo y una toca floreada encima de la sotana.",
+      "fala": "Maese Nicolás se pegó en la barbilla una colosal barba rojiza, hecha con la peluda cola de un buey, mientras el cura se ponía una falda de vuelo y una toca floreada encima de la sotana.",
+      "hash": "74ba41d153"
+    },
+    {
+      "id": "p4-s8",
+      "pagina": 4,
+      "paragrafo": 2,
+      "texto": "Cuando se miraron en el espejo de la venta, los tres se echaron a reír a carcajadas, ¡casi sin aliento para seguir adelante con la farsa!",
+      "fala": "Cuando se miraron en el espejo de la venta, los tres se echaron a reír a carcajadas, ¡casi sin aliento para seguir adelante con la farsa!",
+      "hash": "12d0e9637b"
+    },
+    {
+      "id": "p5-s0",
+      "pagina": 5,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Capítulo 20. La princesa Micomicona. Una princesa pide ayuda",
+      "fala": "Capítulo 20. La princesa Micomicona. Una princesa pide ayuda",
+      "hash": "b9400c6818"
+    },
+    {
+      "id": "p5-s1",
+      "pagina": 5,
+      "paragrafo": 0,
+      "texto": "Para que el plan fuera perfecto, se les unió Dorotea, una joven labradora lista, valiente y dueña de un talento formidable para el teatro.",
+      "fala": "Para que el plan fuera perfecto, se les unió Dorotea, una joven labradora lista, valiente y dueña de un talento formidable para el teatro.",
+      "hash": "19fc82a0bd"
+    },
+    {
+      "id": "p5-s2",
+      "pagina": 5,
+      "paragrafo": 0,
+      "texto": "Vestida con un reluciente traje de seda y un manto de terciopelo, subió a la sierra y se arrodilló con gracia ante el hidalgo:",
+      "fala": "Vestida con un reluciente traje de seda y un manto de terciopelo, subió a la sierra y se arrodilló con gracia ante el hidalgo:",
+      "hash": "bfd613f9bc"
+    },
+    {
+      "id": "p5-s3",
+      "pagina": 5,
+      "paragrafo": 1,
+      "texto": "—¡Oh espejo de la honra y flor de la caballería —suplicó con voz dulce como el terciopelo—, yo soy la desdichada PRINCESA MICOMICONA, heredera del lejano reino de Micomicón!",
+      "fala": "¡Oh espejo de la honra y flor de la caballería, suplicó con voz dulce como el terciopelo, yo soy la desdichada princesa micomicona, heredera del lejano reino de Micomicón!",
+      "hash": "f6692856cc"
+    },
+    {
+      "id": "p5-s4",
+      "pagina": 5,
+      "paragrafo": 1,
+      "texto": "Un gigante feroz y sin corazón, Pandafilando de la Fosca Vista, ha invadido mis tierras, ¡y solo vuestro valeroso brazo puede liberar a mi pueblo!",
+      "fala": "Un gigante feroz y sin corazón, Pandafilando de la Fosca Vista, ha invadido mis tierras, ¡y solo vuestro valeroso brazo puede liberar a mi pueblo!",
+      "hash": "b72bc61ad3"
+    },
+    {
+      "id": "p5-s5",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "Conmovido, don Quijote hizo una sagrada PROMESA: —¡Levantaos, fermosa princesa!",
+      "fala": "Conmovido, don Quijote hizo una sagrada promesa: ¡Levantaos, fermosa princesa!",
+      "hash": "2268dfebf1"
+    },
+    {
+      "id": "p5-s6",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "¡Juro por mi espada que venceré a ese gigante! —dijo, tendiendo la mano a la doncella.",
+      "fala": "¡Juro por mi espada que venceré a ese gigante! dijo, tendiendo la mano a la doncella.",
+      "hash": "ab0db2ae73"
+    },
+    {
+      "id": "p5-s7",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "Y así, con la cabeza en fiesta y el corazón lleno de nobleza, el hidalgo montó en Rocinante y emprendió, sin sospechar nada, ¡el camino de vuelta a su hogar!",
+      "fala": "Y así, con la cabeza en fiesta y el corazón lleno de nobleza, el hidalgo montó en Rocinante y emprendió, sin sospechar nada, ¡el camino de vuelta a su hogar!",
+      "hash": "8a926a7ce1"
+    },
+    {
+      "id": "p6-s0",
+      "pagina": 6,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Capítulo 21. La descomunal batalla de los odres. Un gigante en mitad de la noche",
+      "fala": "Capítulo 21. La descomunal batalla de los odres. Un gigante en mitad de la noche",
+      "hash": "92033ca81a"
+    },
+    {
+      "id": "p6-s1",
+      "pagina": 6,
+      "paragrafo": 0,
+      "texto": "Estaban todos alojados en la venta, a la vuelta del viaje, y la noche transcurría serena cuando unos gritos de guerra despertaron a la casa entera: —¡Ríndete, monstruo cobarde, follón y malandrín!",
+      "fala": "Estaban todos alojados en la venta, a la vuelta del viaje, y la noche transcurría serena cuando unos gritos de guerra despertaron a la casa entera: ¡Ríndete, monstruo cobarde, follón y malandrín!",
+      "hash": "f1ba5d7d2f"
+    },
+    {
+      "id": "p6-s2",
+      "pagina": 6,
+      "paragrafo": 0,
+      "texto": "¡Prueba el filo de mi acero! —tronaba una voz.",
+      "fala": "¡Prueba el filo de mi acero! tronaba una voz.",
+      "hash": "2ac1558e07"
+    },
+    {
+      "id": "p6-s3",
+      "pagina": 6,
+      "paragrafo": 0,
+      "texto": "Don Quijote, que caminaba sonámbulo en su blanco camisón de dormir, ¡libraba una feroz batalla contra los grandes ODRES de cuero de buey, llenos de vino tinto, que colgaban de las paredes del aposento!",
+      "fala": "Don Quijote, que caminaba sonámbulo en su blanco camisón de dormir, ¡libraba una feroz batalla contra los grandes odres de cuero de buey, llenos de vino tinto, que colgaban de las paredes del aposento!",
+      "hash": "8a0b7ecea3"
+    },
+    {
+      "id": "p6-s4",
+      "pagina": 6,
+      "paragrafo": 1,
+      "texto": "Sumido en su vivo SUEÑO, ¡cada odre colgado era para él el temible GIGANTE Pandafilando!",
+      "fala": "Sumido en su vivo sueño, ¡cada odre colgado era para él el temible gigante Pandafilando!",
+      "hash": "08f61ac5fd"
+    },
+    {
+      "id": "p6-s5",
+      "pagina": 6,
+      "paragrafo": 1,
+      "texto": "Blandiendo su afilada ESPADA en la oscuridad, atravesó el grueso cuero e hizo correr por las tablas del suelo un río de vino aromático, como una cascada carmesí.",
+      "fala": "Blandiendo su afilada espada en la oscuridad, atravesó el grueso cuero e hizo correr por las tablas del suelo un río de vino aromático, como una cascada carmesí.",
+      "hash": "c6729a54b7"
+    },
+    {
+      "id": "p6-s6",
+      "pagina": 6,
+      "paragrafo": 1,
+      "texto": "¡Toca la espada para ayudar al caballero a vencer a los odres!",
+      "fala": "¡Toca la espada para ayudar al caballero a vencer a los odres!",
+      "hash": "4baa996008"
+    },
+    {
+      "id": "p6-s7",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "—¡Mi vino!",
+      "fala": "¡Mi vino!",
+      "hash": "eb3fee06e0"
+    },
+    {
+      "id": "p6-s8",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "¡Mi vino! —gritaba el ventero, desesperado.",
+      "fala": "¡Mi vino! gritaba el ventero, desesperado.",
+      "hash": "67296d58b5"
+    },
+    {
+      "id": "p6-s9",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "—Calma, buen hombre, ¡yo pagaré hasta el último maravedí! —prometió el generoso cura.",
+      "fala": "Calma, buen hombre, ¡yo pagaré hasta el último maravedí! prometió el generoso cura.",
+      "hash": "f0d5ef60e0"
+    },
+    {
+      "id": "p6-s10",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "Y don Quijote, secándose el sudor de la frente con orgullo infantil, volvió a acostarse en paz, ¡convencido de que había salvado el trono de la princesa Micomicona!",
+      "fala": "Y don Quijote, secándose el sudor de la frente con orgullo infantil, volvió a acostarse en paz, ¡convencido de que había salvado el trono de la princesa Micomicona!",
+      "hash": "9971b1589d"
+    },
+    {
+      "id": "p7-s0",
+      "pagina": 7,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Capítulo 22. Las armas y las letras. Historias en la venta",
+      "fala": "Capítulo 22. Las armas y las letras. Historias en la venta",
+      "hash": "f61af5011d"
+    },
+    {
+      "id": "p7-s1",
+      "pagina": 7,
+      "paragrafo": 0,
+      "texto": "Aquella noche acogedora, el salón de la venta se llenó de viajeros, mercaderes y familias alrededor de una gran mesa iluminada por antorchas y velas perfumadas.",
+      "fala": "Aquella noche acogedora, el salón de la venta se llenó de viajeros, mercaderes y familias alrededor de una gran mesa iluminada por antorchas y velas perfumadas.",
+      "hash": "e5b5ddc136"
+    },
+    {
+      "id": "p7-s2",
+      "pagina": 7,
+      "paragrafo": 0,
+      "texto": "El pan calentito pasaba de mano en mano, y cada viajero compartía ricas HISTORIAS de aventuras por los mares, reencuentros inesperados y antiguas leyendas del mundo.",
+      "fala": "El pan calentito pasaba de mano en mano, y cada viajero compartía ricas historias de aventuras por los mares, reencuentros inesperados y antiguas leyendas del mundo.",
+      "hash": "feda6497f7"
+    },
+    {
+      "id": "p7-s3",
+      "pagina": 7,
+      "paragrafo": 1,
+      "texto": "En un momento dado, don Quijote se levantó a la cabecera de la mesa y pronunció un sabio y conmovedor discurso sobre el valor de las ARMAS y de las LETRAS: —La valentía de los caballeros protege la paz, que es el mayor bien que podemos desear en esta vida, y defiende a los más débiles.",
+      "fala": "En un momento dado, don Quijote se levantó a la cabecera de la mesa y pronunció un sabio y conmovedor discurso sobre el valor de las armas y de las letras: La valentía de los caballeros protege la paz, que es el mayor bien que podemos desear en esta vida, y defiende a los más débiles.",
+      "hash": "36ddca9270"
+    },
+    {
+      "id": "p7-s4",
+      "pagina": 7,
+      "paragrafo": 1,
+      "texto": "¡Y los libros, amigos míos, hacen crecer en el corazón la justicia, la verdad y la belleza!",
+      "fala": "¡Y los libros, amigos míos, hacen crecer en el corazón la justicia, la verdad y la belleza!",
+      "hash": "e60df3df23"
+    },
+    {
+      "id": "p7-s5",
+      "pagina": 7,
+      "paragrafo": 2,
+      "texto": "Todos los oyentes se miraban maravillados, sorprendidos al descubrir la brillante sabiduría que habitaba en aquel hidalgo de mirada cariñosa.",
+      "fala": "Todos los oyentes se miraban maravillados, sorprendidos al descubrir la brillante sabiduría que habitaba en aquel hidalgo de mirada cariñosa.",
+      "hash": "95b862bc66"
+    },
+    {
+      "id": "p7-s6",
+      "pagina": 7,
+      "paragrafo": 2,
+      "texto": "El cura y el barbero sonreían conmovidos: ¡era hora de llevar a aquel querido soñador de vuelta al calor de su hogar!",
+      "fala": "El cura y el barbero sonreían conmovidos: ¡era hora de llevar a aquel querido soñador de vuelta al calor de su hogar!",
+      "hash": "13d853b67a"
+    }
+  ],
+  "palavras": [
+    {
+      "slug": "sierra-morena",
+      "palavra": "SIERRA MORENA",
+      "silabas": "SIE • RRA • MO • RE • NA",
+      "fala": "sie... rra... mo... re... na... sierra morena!",
+      "hash": "8361e5a6b5"
+    },
+    {
+      "slug": "carta",
+      "palavra": "CARTA",
+      "silabas": "CAR • TA",
+      "fala": "car... ta... carta!",
+      "hash": "291c021b82"
+    },
+    {
+      "slug": "princesa",
+      "palavra": "PRINCESA",
+      "silabas": "PRIN • CE • SA",
+      "fala": "prin... ce... sa... princesa!",
+      "hash": "8f06fc66f2"
+    },
+    {
+      "slug": "maleta",
+      "palavra": "MALETA",
+      "silabas": "MA • LE • TA",
+      "fala": "ma... le... ta... maleta!",
+      "hash": "3f3847c499"
+    },
+    {
+      "slug": "monedas",
+      "palavra": "MONEDAS",
+      "silabas": "MO • NE • DAS",
+      "fala": "mo... ne... das... monedas!",
+      "hash": "2351d1e1b6"
+    },
+    {
+      "slug": "cuaderno",
+      "palavra": "CUADERNO",
+      "silabas": "CUA • DER • NO",
+      "fala": "cua... der... no... cuaderno!",
+      "hash": "b04aeb17d1"
+    },
+    {
+      "slug": "poemas",
+      "palavra": "POEMAS",
+      "silabas": "PO • E • MAS",
+      "fala": "po... e... mas... poemas!",
+      "hash": "1edeccd263"
+    },
+    {
+      "slug": "anoranza",
+      "palavra": "AÑORANZA",
+      "silabas": "A • ÑO • RAN • ZA",
+      "fala": "a... ño... ran... za... añoranza!",
+      "hash": "c8741c0b80"
+    },
+    {
+      "slug": "amadis",
+      "palavra": "AMADÍS",
+      "silabas": "A • MA • DÍS",
+      "fala": "a... ma... dís... amadís!",
+      "hash": "e2c27b29b0"
+    },
+    {
+      "slug": "voltereta",
+      "palavra": "VOLTERETA",
+      "silabas": "VOL • TE • RE • TA",
+      "fala": "vol... te... re... ta... voltereta!",
+      "hash": "1584297dd1"
+    },
+    {
+      "slug": "memoria",
+      "palavra": "MEMORIA",
+      "silabas": "ME • MO • RIA",
+      "fala": "me... mo... ria... memoria!",
+      "hash": "e855621825"
+    },
+    {
+      "slug": "firma",
+      "palavra": "FIRMA",
+      "silabas": "FIR • MA",
+      "fala": "fir... ma... firma!",
+      "hash": "5b658eb6cd"
+    },
+    {
+      "slug": "cura",
+      "palavra": "CURA",
+      "silabas": "CU • RA",
+      "fala": "cu... ra... cura!",
+      "hash": "1e9078a54d"
+    },
+    {
+      "slug": "disfraz",
+      "palavra": "DISFRAZ",
+      "silabas": "DIS • FRAZ",
+      "fala": "dis... fraz... disfraz!",
+      "hash": "3782021d3a"
+    },
+    {
+      "slug": "barba",
+      "palavra": "BARBA",
+      "silabas": "BAR • BA",
+      "fala": "bar... ba... barba!",
+      "hash": "1224b2708b"
+    },
+    {
+      "slug": "micomicona",
+      "palavra": "MICOMICONA",
+      "silabas": "MI • CO • MI • CO • NA",
+      "fala": "mi... co... mi... co... na... micomicona!",
+      "hash": "f1091c65b0"
+    },
+    {
+      "slug": "promesa",
+      "palavra": "PROMESA",
+      "silabas": "PRO • ME • SA",
+      "fala": "pro... me... sa... promesa!",
+      "hash": "b5fa841bdc"
+    },
+    {
+      "slug": "odres",
+      "palavra": "ODRES",
+      "silabas": "O • DRES",
+      "fala": "o... dres... odres!",
+      "hash": "1bab13b1e8"
+    },
+    {
+      "slug": "sueno",
+      "palavra": "SUEÑO",
+      "silabas": "SUE • ÑO",
+      "fala": "sue... ño... sueño!",
+      "hash": "9955282d19"
+    },
+    {
+      "slug": "gigante",
+      "palavra": "GIGANTE",
+      "silabas": "GI • GAN • TE",
+      "fala": "gi... gan... te... gigante!",
+      "hash": "c6fb15b05c"
+    },
+    {
+      "slug": "espada",
+      "palavra": "ESPADA",
+      "silabas": "ES • PA • DA",
+      "fala": "es... pa... da... espada!",
+      "hash": "ecdfff71ed"
+    },
+    {
+      "slug": "historias",
+      "palavra": "HISTORIAS",
+      "silabas": "HIS • TO • RIAS",
+      "fala": "his... to... rias... historias!",
+      "hash": "c3d66cbe23"
+    },
+    {
+      "slug": "armas",
+      "palavra": "ARMAS",
+      "silabas": "AR • MAS",
+      "fala": "ar... mas... armas!",
+      "hash": "353a8087fc"
+    },
+    {
+      "slug": "letras",
+      "palavra": "LETRAS",
+      "silabas": "LE • TRAS",
+      "fala": "le... tras... letras!",
+      "hash": "d2788ac3bb"
+    }
+  ]
+}

@@ -1,0 +1,731 @@
+{
+  "obra": "Don Quixote of La Mancha",
+  "parte": 3,
+  "idioma": "en",
+  "audio": "dom-quixote/audio/<voz>-en/parte-3/<id>.mp3",
+  "audioPalavras": "dom-quixote/audio/palavras-en/<slug>.mp3",
+  "frases": [
+    {
+      "id": "p0-s0",
+      "pagina": 0,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Don Quixote of La Mancha. Part 3: The Sierra Morena and Princess Micomicona",
+      "fala": "Don Quixote of La Mancha. Part 3: The Sierra Morena and Princess Micomicona",
+      "hash": "e1381e21dc"
+    },
+    {
+      "id": "p0-s1",
+      "pagina": 0,
+      "paragrafo": 0,
+      "texto": "With the gleaming helmet he won in the rain and a heart brimming over with dreams, the Knight of the Sorrowful Face climbs with Sancho into the wild and mighty mountains of the SIERRA MORENA!",
+      "fala": "With the gleaming helmet he won in the rain and a heart brimming over with dreams, the Knight of the Sorrowful Face climbs with Sancho into the wild and mighty mountains of the sierra morena!",
+      "hash": "a135d5d890"
+    },
+    {
+      "id": "p0-s2",
+      "pagina": 0,
+      "paragrafo": 1,
+      "texto": "High among the rocks, between cliffs, pine trees and wild flowers, our heroes will open a suitcase full of secrets, write a moving love LETTER, turn somersaults of longing and discover a clever plan by old friends to rescue a beautiful PRINCESS from a faraway kingdom.",
+      "fala": "High among the rocks, between cliffs, pine trees and wild flowers, our heroes will open a suitcase full of secrets, write a moving love letter, turn somersaults of longing and discover a clever plan by old friends to rescue a beautiful princess from a faraway kingdom.",
+      "hash": "7b74cf6dd5"
+    },
+    {
+      "id": "p0-s3",
+      "pagina": 0,
+      "paragrafo": 2,
+      "texto": "Take a deep breath of the fresh mountain air, turn the page and climb the sierra with them!",
+      "fala": "Take a deep breath of the fresh mountain air, turn the page and climb the sierra with them!",
+      "hash": "4d0b747e45"
+    },
+    {
+      "id": "p1-s0",
+      "pagina": 1,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapter 16. The Lost Suitcase. A Treasure in the Middle of the Mountains",
+      "fala": "Chapter 16. The Lost Suitcase. A Treasure in the Middle of the Mountains",
+      "hash": "5813ce2b87"
+    },
+    {
+      "id": "p1-s1",
+      "pagina": 1,
+      "paragrafo": 0,
+      "texto": "Climbing the stony mountain paths, between twisted holm oaks and steep crags, Sancho tripped over a mysterious SUITCASE of tanned leather, abandoned under a prickly bush.",
+      "fala": "Climbing the stony mountain paths, between twisted holm oaks and steep crags, Sancho tripped over a mysterious suitcase of tanned leather, abandoned under a prickly bush.",
+      "hash": "2970b2c9ef"
+    },
+    {
+      "id": "p1-s2",
+      "pagina": 1,
+      "paragrafo": 0,
+      "texto": "The suitcase was worn out by time, soaked by the rains and shut tight with rusty clasps.",
+      "fala": "The suitcase was worn out by time, soaked by the rains and shut tight with rusty clasps.",
+      "hash": "73d13fe83c"
+    },
+    {
+      "id": "p1-s3",
+      "pagina": 1,
+      "paragrafo": 1,
+      "texto": "What could that forgotten case be hiding?",
+      "fala": "What could that forgotten case be hiding?",
+      "hash": "feeef18fc6"
+    },
+    {
+      "id": "p1-s4",
+      "pagina": 1,
+      "paragrafo": 1,
+      "texto": "Open the suitcase with a tap to uncover its secret!",
+      "fala": "Open the suitcase with a tap to uncover its secret!",
+      "hash": "36ebdeba12"
+    },
+    {
+      "id": "p1-s5",
+      "pagina": 1,
+      "paragrafo": 1,
+      "texto": "Inside it gleamed dozens of precious gold COINS, which made Sancho’s eyes sparkle with pure delight, and a dainty NOTEBOOK full of POEMS written in elegant handwriting.",
+      "fala": "Inside it gleamed dozens of precious gold coins, which made Sancho’s eyes sparkle with pure delight, and a dainty notebook full of poems written in elegant handwriting.",
+      "hash": "8d1a0e6a87"
+    },
+    {
+      "id": "p1-s6",
+      "pagina": 1,
+      "paragrafo": 1,
+      "texto": "“Gold, my lord!",
+      "fala": "Gold, my lord!",
+      "hash": "6c68d1bfb8"
+    },
+    {
+      "id": "p1-s7",
+      "pagina": 1,
+      "paragrafo": 1,
+      "texto": "Real gold!” cheered Sancho, hopping up and down.",
+      "fala": "Real gold! cheered Sancho, hopping up and down.",
+      "hash": "bbd88605dc"
+    },
+    {
+      "id": "p1-s8",
+      "pagina": 1,
+      "paragrafo": 2,
+      "texto": "Don Quixote took the notebook in his hands with the greatest respect and read aloud the tender verses of a young man in love who wandered lost through the mountains.",
+      "fala": "Don Quixote took the notebook in his hands with the greatest respect and read aloud the tender verses of a young man in love who wandered lost through the mountains.",
+      "hash": "62d54b3086"
+    },
+    {
+      "id": "p1-s9",
+      "pagina": 1,
+      "paragrafo": 2,
+      "texto": "“Whoever writes with such feeling has a noble soul,” said the gentleman with a fond sigh.",
+      "fala": "Whoever writes with such feeling has a noble soul, said the gentleman with a fond sigh.",
+      "hash": "54853e93ca"
+    },
+    {
+      "id": "p1-s10",
+      "pagina": 1,
+      "paragrafo": 2,
+      "texto": "“Books hold the deepest mysteries of the human heart!”",
+      "fala": "Books hold the deepest mysteries of the human heart!",
+      "hash": "3467748a3f"
+    },
+    {
+      "id": "p2-s0",
+      "pagina": 2,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapter 17. The Somersaults of Longing. A Knight Head over Heels",
+      "fala": "Chapter 17. The Somersaults of Longing. A Knight Head over Heels",
+      "hash": "7ca579717e"
+    },
+    {
+      "id": "p2-s1",
+      "pagina": 2,
+      "paragrafo": 0,
+      "texto": "Gazing at the vast loneliness of the mountains, Don Quixote had a shining idea: “Friend Sancho, I shall stay in this clearing to show the whole world my great LONGING for Dulcinea, fasting and pondering just as the famous hero AMADIS of Gaul once did!",
+      "fala": "Gazing at the vast loneliness of the mountains, Don Quixote had a shining idea: Friend Sancho, I shall stay in this clearing to show the whole world my great longing for Dulcinea, fasting and pondering just as the famous hero amadis of Gaul once did!",
+      "hash": "a3218a7628"
+    },
+    {
+      "id": "p2-s2",
+      "pagina": 2,
+      "paragrafo": 0,
+      "texto": "And you shall ride off on your donkey to carry a loving letter into her very hands.”",
+      "fala": "And you shall ride off on your donkey to carry a loving letter into her very hands.",
+      "hash": "f94a2ef943"
+    },
+    {
+      "id": "p2-s3",
+      "pagina": 2,
+      "paragrafo": 1,
+      "texto": "“But, my noble master,” asked Sancho, scratching his chin, “how shall I convince the lady Dulcinea that your grace nearly lost your wits for her, if I don’t see some astonishing deed with my own eyes?”",
+      "fala": "But, my noble master, asked Sancho, scratching his chin, how shall I convince the lady Dulcinea that your grace nearly lost your wits for her, if I don’t see some astonishing deed with my own eyes?",
+      "hash": "7217cfca50"
+    },
+    {
+      "id": "p2-s4",
+      "pagina": 2,
+      "paragrafo": 2,
+      "texto": "“Then see one right now!” cried Don Quixote firmly.",
+      "fala": "Then see one right now! cried Don Quixote firmly.",
+      "hash": "bcd1db4f28"
+    },
+    {
+      "id": "p2-s5",
+      "pagina": 2,
+      "paragrafo": 2,
+      "texto": "He took off his iron armour and, wearing nothing but his long white nightshirt, turned a quick SOMERSAULT on the grass and kicked his skinny legs up into the air in mid-leap!",
+      "fala": "He took off his iron armour and, wearing nothing but his long white nightshirt, turned a quick somersault on the grass and kicked his skinny legs up into the air in mid-leap!",
+      "hash": "9c5f135360"
+    },
+    {
+      "id": "p2-s6",
+      "pagina": 2,
+      "paragrafo": 2,
+      "texto": "Sancho covered his face with both hands, laughing so hard that tears ran down his cheeks.",
+      "fala": "Sancho covered his face with both hands, laughing so hard that tears ran down his cheeks.",
+      "hash": "1a9ca4a8a6"
+    },
+    {
+      "id": "p2-s7",
+      "pagina": 2,
+      "paragrafo": 2,
+      "texto": "Help the knight with his acrobatics of love!",
+      "fala": "Help the knight with his acrobatics of love!",
+      "hash": "f6aeb84929"
+    },
+    {
+      "id": "p3-s0",
+      "pagina": 3,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapter 18. The Letter for Dulcinea. Sancho Forgot the Letter!",
+      "fala": "Chapter 18. The Letter for Dulcinea. Sancho Forgot the Letter!",
+      "hash": "ea6c64f432"
+    },
+    {
+      "id": "p3-s1",
+      "pagina": 3,
+      "paragrafo": 0,
+      "texto": "Deeply moved, Don Quixote wrote a beautiful LETTER to his beloved on a page torn from the poetry notebook, full of poetic words and his solemn promise to be faithful for ever.",
+      "fala": "Deeply moved, Don Quixote wrote a beautiful letter to his beloved on a page torn from the poetry notebook, full of poetic words and his solemn promise to be faithful for ever.",
+      "hash": "92f53bf315"
+    },
+    {
+      "id": "p3-s2",
+      "pagina": 3,
+      "paragrafo": 0,
+      "texto": "He gave his instructions to his trusty squire, who climbed onto his donkey and set off down the road, feeling like the most important person in all of Spain!",
+      "fala": "He gave his instructions to his trusty squire, who climbed onto his donkey and set off down the road, feeling like the most important person in all of Spain!",
+      "hash": "f9f0896843"
+    },
+    {
+      "id": "p3-s3",
+      "pagina": 3,
+      "paragrafo": 1,
+      "texto": "But as he rode down the first slopes, Sancho put his hands in his pockets and his eyes grew wide with panic: he had left the paper on a rock high up in the mountains!",
+      "fala": "But as he rode down the first slopes, Sancho put his hands in his pockets and his eyes grew wide with panic: he had left the paper on a rock high up in the mountains!",
+      "hash": "0eb88e4e6e"
+    },
+    {
+      "id": "p3-s4",
+      "pagina": 3,
+      "paragrafo": 1,
+      "texto": "In despair, he scratched his forehead and tried to bring back the words kept only in his MEMORY: “How did it begin again?",
+      "fala": "In despair, he scratched his forehead and tried to bring back the words kept only in his memory: How did it begin again?",
+      "hash": "88818ee2fc"
+    },
+    {
+      "id": "p3-s5",
+      "pagina": 3,
+      "paragrafo": 1,
+      "texto": "‘Sovereign and exalted lady’...",
+      "fala": "‘Sovereign and exalted lady’...",
+      "hash": "cd9cee2ebf"
+    },
+    {
+      "id": "p3-s6",
+      "pagina": 3,
+      "paragrafo": 1,
+      "texto": "And at the end?",
+      "fala": "And at the end?",
+      "hash": "6abb05a75c"
+    },
+    {
+      "id": "p3-s7",
+      "pagina": 3,
+      "paragrafo": 1,
+      "texto": "How did he sign it again?”",
+      "fala": "How did he sign it again?",
+      "hash": "11bf472205"
+    },
+    {
+      "id": "p3-s8",
+      "pagina": 3,
+      "paragrafo": 2,
+      "texto": "Help the good squire remember the SIGNATURE on the letter by tapping each word in the right order!",
+      "fala": "Help the good squire remember the signature on the letter by tapping each word in the right order!",
+      "hash": "c1a57e58e8"
+    },
+    {
+      "id": "p4-s0",
+      "pagina": 4,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapter 19. Friends in Disguise. The Priest, the Barber and an Ox-Tail Beard",
+      "fala": "Chapter 19. Friends in Disguise. The Priest, the Barber and an Ox-Tail Beard",
+      "hash": "f77d2d4e02"
+    },
+    {
+      "id": "p4-s1",
+      "pagina": 4,
+      "paragrafo": 0,
+      "texto": "Stopping at an inn at the foot of the mountain, Sancho met two dear old friends from his village: the kind PRIEST Pero Pérez and Master Nicolás, the village barber.",
+      "fala": "Stopping at an inn at the foot of the mountain, Sancho met two dear old friends from his village: the kind priest Pero Pérez and Master Nicolás, the village barber.",
+      "hash": "ac01c47265"
+    },
+    {
+      "id": "p4-s2",
+      "pagina": 4,
+      "paragrafo": 0,
+      "texto": "Worried because their friend Alonso Quixano had vanished, they had come ready to rescue him with loving care.",
+      "fala": "Worried because their friend Alonso Quixano had vanished, they had come ready to rescue him with loving care.",
+      "hash": "83572283d3"
+    },
+    {
+      "id": "p4-s3",
+      "pagina": 4,
+      "paragrafo": 1,
+      "texto": "“He will never agree to come home of his own free will,” warned Sancho, “unless a damsel in distress begs for the protection of his unbeatable sword!”",
+      "fala": "He will never agree to come home of his own free will, warned Sancho, unless a damsel in distress begs for the protection of his unbeatable sword!",
+      "hash": "ca3edc192c"
+    },
+    {
+      "id": "p4-s4",
+      "pagina": 4,
+      "paragrafo": 2,
+      "texto": "“I know!” cried the priest, his eyes shining.",
+      "fala": "I know! cried the priest, his eyes shining.",
+      "hash": "8c7c352981"
+    },
+    {
+      "id": "p4-s5",
+      "pagina": 4,
+      "paragrafo": 2,
+      "texto": "“Let’s invent a princess in distress!”",
+      "fala": "Let’s invent a princess in distress!",
+      "hash": "0be1677a6d"
+    },
+    {
+      "id": "p4-s6",
+      "pagina": 4,
+      "paragrafo": 2,
+      "texto": "And so the two of them hatched a brilliant, theatrical plan: a cunning DISGUISE!",
+      "fala": "And so the two of them hatched a brilliant, theatrical plan: a cunning disguise!",
+      "hash": "92b371dc78"
+    },
+    {
+      "id": "p4-s7",
+      "pagina": 4,
+      "paragrafo": 2,
+      "texto": "Master Nicolás stuck an enormous reddish BEARD on his chin, made from the hairy tail of an ox, while the priest put on a swirly skirt and a flowery bonnet over his cassock.",
+      "fala": "Master Nicolás stuck an enormous reddish beard on his chin, made from the hairy tail of an ox, while the priest put on a swirly skirt and a flowery bonnet over his cassock.",
+      "hash": "66c1b3b243"
+    },
+    {
+      "id": "p4-s8",
+      "pagina": 4,
+      "paragrafo": 2,
+      "texto": "When they looked at themselves in the inn’s mirror, all three burst out laughing, so breathless they could hardly carry on with the play-acting!",
+      "fala": "When they looked at themselves in the inn’s mirror, all three burst out laughing, so breathless they could hardly carry on with the play-acting!",
+      "hash": "b3c2201e23"
+    },
+    {
+      "id": "p5-s0",
+      "pagina": 5,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapter 20. Princess Micomicona. A Princess Asks for Help",
+      "fala": "Chapter 20. Princess Micomicona. A Princess Asks for Help",
+      "hash": "b139362e5d"
+    },
+    {
+      "id": "p5-s1",
+      "pagina": 5,
+      "paragrafo": 0,
+      "texto": "To make the plan perfect, they were joined by Dorotea, a clever, fearless young country girl with a wonderful talent for acting.",
+      "fala": "To make the plan perfect, they were joined by Dorotea, a clever, fearless young country girl with a wonderful talent for acting.",
+      "hash": "ad8e8634e9"
+    },
+    {
+      "id": "p5-s2",
+      "pagina": 5,
+      "paragrafo": 0,
+      "texto": "Dressed in a shimmering silk gown and a velvet cloak, she climbed up into the mountains and knelt gracefully before the gentleman:",
+      "fala": "Dressed in a shimmering silk gown and a velvet cloak, she climbed up into the mountains and knelt gracefully before the gentleman:",
+      "hash": "ec32a40496"
+    },
+    {
+      "id": "p5-s3",
+      "pagina": 5,
+      "paragrafo": 1,
+      "texto": "“O mirror of honour and flower of chivalry!” she pleaded in a velvety voice.",
+      "fala": "O mirror of honour and flower of chivalry! she pleaded in a velvety voice.",
+      "hash": "e515584682"
+    },
+    {
+      "id": "p5-s4",
+      "pagina": 5,
+      "paragrafo": 1,
+      "texto": "“I am the unhappy PRINCESS MICOMICONA, heiress to the faraway kingdom of Micomicón!",
+      "fala": "I am the unhappy princess micomicona, heiress to the faraway kingdom of Micomicón!",
+      "hash": "27b2b6615f"
+    },
+    {
+      "id": "p5-s5",
+      "pagina": 5,
+      "paragrafo": 1,
+      "texto": "A fierce and heartless giant, Pandafilando of the Gloomy Glare, has invaded my lands, and only your brave arm can set my people free!”",
+      "fala": "A fierce and heartless giant, Pandafilando of the Gloomy Glare, has invaded my lands, and only your brave arm can set my people free!",
+      "hash": "032ae4affe"
+    },
+    {
+      "id": "p5-s6",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "Deeply moved, Don Quixote held out his hand to the damsel and made a sacred PROMISE: “Rise, fair princess!",
+      "fala": "Deeply moved, Don Quixote held out his hand to the damsel and made a sacred promise: Rise, fair princess!",
+      "hash": "870091f58d"
+    },
+    {
+      "id": "p5-s7",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "I swear by my sword that I shall defeat that giant!”",
+      "fala": "I swear by my sword that I shall defeat that giant!",
+      "hash": "68f53e22ee"
+    },
+    {
+      "id": "p5-s8",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "And so, with his mind full of celebration and his heart full of nobility, the gentleman climbed onto Rocinante and, without suspecting a thing, set off on the road back to his own home!",
+      "fala": "And so, with his mind full of celebration and his heart full of nobility, the gentleman climbed onto Rocinante and, without suspecting a thing, set off on the road back to his own home!",
+      "hash": "13e1da55ba"
+    },
+    {
+      "id": "p6-s0",
+      "pagina": 6,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapter 21. The Battle of the Wineskins. A Giant in the Middle of the Night",
+      "fala": "Chapter 21. The Battle of the Wineskins. A Giant in the Middle of the Night",
+      "hash": "167309ce41"
+    },
+    {
+      "id": "p6-s1",
+      "pagina": 6,
+      "paragrafo": 0,
+      "texto": "On the way home, they all stayed at the inn, and the night was passing peacefully when battle cries woke the whole house: “Surrender, you cowardly monster!",
+      "fala": "On the way home, they all stayed at the inn, and the night was passing peacefully when battle cries woke the whole house: Surrender, you cowardly monster!",
+      "hash": "64ed22d4fe"
+    },
+    {
+      "id": "p6-s2",
+      "pagina": 6,
+      "paragrafo": 0,
+      "texto": "Taste my steel!”",
+      "fala": "Taste my steel!",
+      "hash": "25713196c5"
+    },
+    {
+      "id": "p6-s3",
+      "pagina": 6,
+      "paragrafo": 0,
+      "texto": "Don Quixote, sleepwalking in his long white nightshirt, was fighting a fierce battle against the big WINESKINS of ox hide, full of red wine, that hung on the walls of the room!",
+      "fala": "Don Quixote, sleepwalking in his long white nightshirt, was fighting a fierce battle against the big wineskins of ox hide, full of red wine, that hung on the walls of the room!",
+      "hash": "cb86ef0fb9"
+    },
+    {
+      "id": "p6-s4",
+      "pagina": 6,
+      "paragrafo": 1,
+      "texto": "Lost in his vivid DREAM, he saw every hanging wineskin as the dreadful GIANT Pandafilando!",
+      "fala": "Lost in his vivid dream, he saw every hanging wineskin as the dreadful giant Pandafilando!",
+      "hash": "135c9443c1"
+    },
+    {
+      "id": "p6-s5",
+      "pagina": 6,
+      "paragrafo": 1,
+      "texto": "Swinging his sharp SWORD in the dark, he pierced the thick leather and sent a river of sweet-smelling wine pouring across the floorboards like a crimson waterfall.",
+      "fala": "Swinging his sharp sword in the dark, he pierced the thick leather and sent a river of sweet-smelling wine pouring across the floorboards like a crimson waterfall.",
+      "hash": "c87e2175ef"
+    },
+    {
+      "id": "p6-s6",
+      "pagina": 6,
+      "paragrafo": 1,
+      "texto": "Tap the sword to help the knight defeat the wineskins!",
+      "fala": "Tap the sword to help the knight defeat the wineskins!",
+      "hash": "e218878b03"
+    },
+    {
+      "id": "p6-s7",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "“My wine!",
+      "fala": "My wine!",
+      "hash": "c945852087"
+    },
+    {
+      "id": "p6-s8",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "My wine!” wailed the innkeeper in despair.",
+      "fala": "My wine! wailed the innkeeper in despair.",
+      "hash": "e84ac02fad"
+    },
+    {
+      "id": "p6-s9",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "“Calm down, my good man, I shall pay for every drop!” promised the generous priest.",
+      "fala": "Calm down, my good man, I shall pay for every drop! promised the generous priest.",
+      "hash": "c3b56c8499"
+    },
+    {
+      "id": "p6-s10",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "And Don Quixote, wiping the sweat from his brow with childlike pride, lay down again in peace, quite sure that he had saved Princess Micomicona’s throne!",
+      "fala": "And Don Quixote, wiping the sweat from his brow with childlike pride, lay down again in peace, quite sure that he had saved Princess Micomicona’s throne!",
+      "hash": "4060a781c1"
+    },
+    {
+      "id": "p7-s0",
+      "pagina": 7,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapter 22. Arms and Letters. Stories at the Inn",
+      "fala": "Chapter 22. Arms and Letters. Stories at the Inn",
+      "hash": "92a01e4488"
+    },
+    {
+      "id": "p7-s1",
+      "pagina": 7,
+      "paragrafo": 0,
+      "texto": "That cosy night, the great hall of the inn filled up with travellers, merchants and families around a big table lit by torches and sweet-scented candles.",
+      "fala": "That cosy night, the great hall of the inn filled up with travellers, merchants and families around a big table lit by torches and sweet-scented candles.",
+      "hash": "4c2cbf28b8"
+    },
+    {
+      "id": "p7-s2",
+      "pagina": 7,
+      "paragrafo": 0,
+      "texto": "Warm bread was passed from hand to hand, and each traveller shared wonderful STORIES of adventures at sea, surprise reunions and ancient legends from all over the world.",
+      "fala": "Warm bread was passed from hand to hand, and each traveller shared wonderful stories of adventures at sea, surprise reunions and ancient legends from all over the world.",
+      "hash": "2d2f2444f5"
+    },
+    {
+      "id": "p7-s3",
+      "pagina": 7,
+      "paragrafo": 1,
+      "texto": "At one point, Don Quixote stood up at the head of the table and gave a wise and moving speech about the worth of ARMS and LETTERS: “The courage of knights protects the peace and defends the weak.",
+      "fala": "At one point, Don Quixote stood up at the head of the table and gave a wise and moving speech about the worth of arms and letters: The courage of knights protects the peace and defends the weak.",
+      "hash": "c07de348d1"
+    },
+    {
+      "id": "p7-s4",
+      "pagina": 7,
+      "paragrafo": 1,
+      "texto": "And books, my friends, make justice, truth and beauty grow in our hearts!”",
+      "fala": "And books, my friends, make justice, truth and beauty grow in our hearts!",
+      "hash": "b0e4058ba9"
+    },
+    {
+      "id": "p7-s5",
+      "pagina": 7,
+      "paragrafo": 2,
+      "texto": "All the listeners looked at one another in amazement, surprised to discover the shining wisdom that lived inside that kind-eyed gentleman.",
+      "fala": "All the listeners looked at one another in amazement, surprised to discover the shining wisdom that lived inside that kind-eyed gentleman.",
+      "hash": "b5e678438a"
+    },
+    {
+      "id": "p7-s6",
+      "pagina": 7,
+      "paragrafo": 2,
+      "texto": "The priest and the barber smiled, deeply touched: it was time to take that dear dreamer back to the comfort of his home!",
+      "fala": "The priest and the barber smiled, deeply touched: it was time to take that dear dreamer back to the comfort of his home!",
+      "hash": "d143ad790b"
+    }
+  ],
+  "palavras": [
+    {
+      "slug": "sierra-morena",
+      "palavra": "SIERRA MORENA",
+      "silabas": "SI • ER • RA • MO • RE • NA",
+      "fala": "si... er... ra... mo... re... na... sierra morena!",
+      "hash": "b137638f63"
+    },
+    {
+      "slug": "letter",
+      "palavra": "LETTER",
+      "silabas": "LET • TER",
+      "fala": "let... ter... letter!",
+      "hash": "1fdac547e3"
+    },
+    {
+      "slug": "princess",
+      "palavra": "PRINCESS",
+      "silabas": "PRIN • CESS",
+      "fala": "prin... cess... princess!",
+      "hash": "2c9fe3fb56"
+    },
+    {
+      "slug": "suitcase",
+      "palavra": "SUITCASE",
+      "silabas": "SUIT • CASE",
+      "fala": "suit... case... suitcase!",
+      "hash": "4e73f8829f"
+    },
+    {
+      "slug": "coins",
+      "palavra": "COINS",
+      "silabas": "COINS",
+      "fala": "coins... coins!",
+      "hash": "1304d5c5c3"
+    },
+    {
+      "slug": "notebook",
+      "palavra": "NOTEBOOK",
+      "silabas": "NOTE • BOOK",
+      "fala": "note... book... notebook!",
+      "hash": "5ae7f9cc4f"
+    },
+    {
+      "slug": "poems",
+      "palavra": "POEMS",
+      "silabas": "PO • EMS",
+      "fala": "po... ems... poems!",
+      "hash": "a3fe1bb65f"
+    },
+    {
+      "slug": "longing",
+      "palavra": "LONGING",
+      "silabas": "LONG • ING",
+      "fala": "long... ing... longing!",
+      "hash": "55ba0d821d"
+    },
+    {
+      "slug": "amadis",
+      "palavra": "AMADIS",
+      "silabas": "A • MA • DIS",
+      "fala": "a... ma... dis... amadis!",
+      "hash": "606d829231"
+    },
+    {
+      "slug": "somersault",
+      "palavra": "SOMERSAULT",
+      "silabas": "SOM • ER • SAULT",
+      "fala": "som... er... sault... somersault!",
+      "hash": "332cc965d0"
+    },
+    {
+      "slug": "memory",
+      "palavra": "MEMORY",
+      "silabas": "MEM • O • RY",
+      "fala": "mem... o... ry... memory!",
+      "hash": "f6887770d2"
+    },
+    {
+      "slug": "signature",
+      "palavra": "SIGNATURE",
+      "silabas": "SIG • NA • TURE",
+      "fala": "sig... na... ture... signature!",
+      "hash": "db8dea5822"
+    },
+    {
+      "slug": "priest",
+      "palavra": "PRIEST",
+      "silabas": "PRIEST",
+      "fala": "priest... priest!",
+      "hash": "1113bb09e8"
+    },
+    {
+      "slug": "disguise",
+      "palavra": "DISGUISE",
+      "silabas": "DIS • GUISE",
+      "fala": "dis... guise... disguise!",
+      "hash": "190972d365"
+    },
+    {
+      "slug": "beard",
+      "palavra": "BEARD",
+      "silabas": "BEARD",
+      "fala": "beard... beard!",
+      "hash": "5ec98308e9"
+    },
+    {
+      "slug": "micomicona",
+      "palavra": "MICOMICONA",
+      "silabas": "MI • CO • MI • CO • NA",
+      "fala": "mi... co... mi... co... na... micomicona!",
+      "hash": "f1091c65b0"
+    },
+    {
+      "slug": "promise",
+      "palavra": "PROMISE",
+      "silabas": "PROM • ISE",
+      "fala": "prom... ise... promise!",
+      "hash": "4a99c2c72a"
+    },
+    {
+      "slug": "wineskins",
+      "palavra": "WINESKINS",
+      "silabas": "WINE • SKINS",
+      "fala": "wine... skins... wineskins!",
+      "hash": "9c1bb2956d"
+    },
+    {
+      "slug": "dream",
+      "palavra": "DREAM",
+      "silabas": "DREAM",
+      "fala": "dream... dream!",
+      "hash": "8d7828c0e8"
+    },
+    {
+      "slug": "giant",
+      "palavra": "GIANT",
+      "silabas": "GI • ANT",
+      "fala": "gi... ant... giant!",
+      "hash": "f153aa51e6"
+    },
+    {
+      "slug": "sword",
+      "palavra": "SWORD",
+      "silabas": "SWORD",
+      "fala": "sword... sword!",
+      "hash": "aa2a419b76"
+    },
+    {
+      "slug": "stories",
+      "palavra": "STORIES",
+      "silabas": "STO • RIES",
+      "fala": "sto... ries... stories!",
+      "hash": "8e72d0a62f"
+    },
+    {
+      "slug": "arms",
+      "palavra": "ARMS",
+      "silabas": "ARMS",
+      "fala": "arms... arms!",
+      "hash": "2a2c855d00"
+    },
+    {
+      "slug": "letters",
+      "palavra": "LETTERS",
+      "silabas": "LET • TERS",
+      "fala": "let... ters... letters!",
+      "hash": "1b9af42c80"
+    }
+  ]
+}

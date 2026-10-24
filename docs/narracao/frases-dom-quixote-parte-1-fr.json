@@ -1,0 +1,629 @@
+{
+  "obra": "Don Quichotte de la Manche",
+  "parte": 1,
+  "idioma": "fr",
+  "audio": "dom-quixote/audio/<voz>-fr/parte-1/<id>.mp3",
+  "audioPalavras": "dom-quixote/audio/palavras-fr/<slug>.mp3",
+  "frases": [
+    {
+      "id": "p0-s0",
+      "pagina": 0,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Don Quichotte de la Manche. Partie 1 : Le Chevalier à la Super Imagination",
+      "fala": "Don Quichotte de la Manche. Partie 1 : Le Chevalier à la Super Imagination",
+      "hash": "5aba451a74"
+    },
+    {
+      "id": "p0-s1",
+      "pagina": 0,
+      "paragrafo": 0,
+      "texto": "Il y a plus de quatre cents ans, le génial écrivain espagnol Miguel de Cervantes inventa l’une des histoires les plus belles et les plus aimées de toute la planète !",
+      "fala": "Il y a plus de quatre cents ans, le génial écrivain espagnol Miguel de Cervantes inventa l’une des histoires les plus belles et les plus aimées de toute la planète !",
+      "hash": "908505c035"
+    },
+    {
+      "id": "p0-s2",
+      "pagina": 0,
+      "paragrafo": 1,
+      "texto": "Voici Alonso Quichano, un bon gentilhomme au cœur gigantesque, plein de courage et d’IMAGINATION.",
+      "fala": "Voici Alonso Quichano, un bon gentilhomme au cœur gigantesque, plein de courage et d’imagination.",
+      "hash": "db5b1e1e18"
+    },
+    {
+      "id": "p0-s3",
+      "pagina": 0,
+      "paragrafo": 1,
+      "texto": "Avec son cher cheval ROSSINANTE, il décida de parcourir les chemins du monde pour protéger les plus faibles, semer la bonté et prouver que nous pouvons tous être de nobles CHEVALIERS dans notre propre vie !",
+      "fala": "Avec son cher cheval rossinante, il décida de parcourir les chemins du monde pour protéger les plus faibles, semer la bonté et prouver que nous pouvons tous être de nobles chevaliers dans notre propre vie !",
+      "hash": "07ef7c630d"
+    },
+    {
+      "id": "p1-s0",
+      "pagina": 1,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapitre 1. Le gentilhomme liseur. Le papi qui lisait jour et nuit !",
+      "fala": "Chapitre 1. Le gentilhomme liseur. Le papi qui lisait jour et nuit !",
+      "hash": "95efe41664"
+    },
+    {
+      "id": "p1-s1",
+      "pagina": 1,
+      "paragrafo": 0,
+      "texto": "Dans un petit village d’Espagne, au pays de la Manche, vivait un gentilhomme au regard doux et à l’âme généreuse : le seigneur Alonso Quichano.",
+      "fala": "Dans un petit village d’Espagne, au pays de la Manche, vivait un gentilhomme au regard doux et à l’âme généreuse : le seigneur Alonso Quichano.",
+      "hash": "ef375d63c5"
+    },
+    {
+      "id": "p1-s2",
+      "pagina": 1,
+      "paragrafo": 0,
+      "texto": "Son plus grand trésor, c’étaient ses chers LIVRES de chevalerie d’autrefois !",
+      "fala": "Son plus grand trésor, c’étaient ses chers livres de chevalerie d’autrefois !",
+      "hash": "ecb0987c8e"
+    },
+    {
+      "id": "p1-s3",
+      "pagina": 1,
+      "paragrafo": 1,
+      "texto": "Alonso lisait avec tant d’émerveillement qu’il passait des nuits entières sans dormir, à voyager vers des terres lointaines où de nobles CHEVALIERS défendaient la justice, affrontaient mille dangers et protégeaient ceux qui en avaient le plus besoin.",
+      "fala": "Alonso lisait avec tant d’émerveillement qu’il passait des nuits entières sans dormir, à voyager vers des terres lointaines où de nobles chevaliers défendaient la justice, affrontaient mille dangers et protégeaient ceux qui en avaient le plus besoin.",
+      "hash": "63b2654d68"
+    },
+    {
+      "id": "p1-s4",
+      "pagina": 1,
+      "paragrafo": 2,
+      "texto": "À force de plonger dans le pouvoir des mots, il voyait sa chambre se remplir de pure poésie : la vieille carte brillait dans les airs, les histoires prenaient des ailes, et même le gentil petit chat du salon, sous ses yeux affectueux, se changeait en un magnifique LION GARDIEN !",
+      "fala": "À force de plonger dans le pouvoir des mots, il voyait sa chambre se remplir de pure poésie : la vieille carte brillait dans les airs, les histoires prenaient des ailes, et même le gentil petit chat du salon, sous ses yeux affectueux, se changeait en un magnifique lion gardien !",
+      "hash": "f87ce6a68d"
+    },
+    {
+      "id": "p2-s0",
+      "pagina": 2,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapitre 2. Le nouveau nom. L’armure de l’arrière-grand-père !",
+      "fala": "Chapitre 2. Le nouveau nom. L’armure de l’arrière-grand-père !",
+      "hash": "4e1fd549b6"
+    },
+    {
+      "id": "p2-s1",
+      "pagina": 2,
+      "paragrafo": 0,
+      "texto": "« Le monde a besoin de plus de bonté, de justice et de bravoure ! » pensa le gentilhomme, les yeux brillants.",
+      "fala": "Le monde a besoin de plus de bonté, de justice et de bravoure ! pensa le gentilhomme, les yeux brillants.",
+      "hash": "b2f406462a"
+    },
+    {
+      "id": "p2-s2",
+      "pagina": 2,
+      "paragrafo": 0,
+      "texto": "Et pour cette grandiose mission, il se choisit un nom sonore et intrépide : DON QUICHOTTE de la Manche !",
+      "fala": "Et pour cette grandiose mission, il se choisit un nom sonore et intrépide : don quichotte de la Manche !",
+      "hash": "2c057040fb"
+    },
+    {
+      "id": "p2-s3",
+      "pagina": 2,
+      "paragrafo": 1,
+      "texto": "Montant au grenier poussiéreux de sa maison, il ouvrit un vieux coffre oublié depuis presque cent ans.",
+      "fala": "Montant au grenier poussiéreux de sa maison, il ouvrit un vieux coffre oublié depuis presque cent ans.",
+      "hash": "b9d94ed378"
+    },
+    {
+      "id": "p2-s4",
+      "pagina": 2,
+      "paragrafo": 1,
+      "texto": "Là reposait l’ancienne ARMURE de fer de son arrière-grand-père, toute couverte de rouille.",
+      "fala": "Là reposait l’ancienne armure de fer de son arrière-grand-père, toute couverte de rouille.",
+      "hash": "3d0be41548"
+    },
+    {
+      "id": "p2-s5",
+      "pagina": 2,
+      "paragrafo": 2,
+      "texto": "Avec beaucoup de bonne humeur, il se posa sur la tête un PLAT À BARBE en laiton en guise de casque, prit un couvercle de marmite comme BOUCLIER et attacha une banderole rouge à un manche de bois pour en faire sa LANCE.",
+      "fala": "Avec beaucoup de bonne humeur, il se posa sur la tête un plat à barbe en laiton en guise de casque, prit un couvercle de marmite comme bouclier et attacha une banderole rouge à un manche de bois pour en faire sa lance.",
+      "hash": "f306b03ebf"
+    },
+    {
+      "id": "p2-s6",
+      "pagina": 2,
+      "paragrafo": 2,
+      "texto": "Pour ses yeux de rêveur, rien ne brillait plus que ce resplendissant CASQUE DORÉ !",
+      "fala": "Pour ses yeux de rêveur, rien ne brillait plus que ce resplendissant casque doré !",
+      "hash": "d55f0dec31"
+    },
+    {
+      "id": "p3-s0",
+      "pagina": 3,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapitre 3. Le destrier et la princesse. Rossinante et la belle Dulcinée !",
+      "fala": "Chapitre 3. Le destrier et la princesse. Rossinante et la belle Dulcinée !",
+      "hash": "7bca80a9f0"
+    },
+    {
+      "id": "p3-s1",
+      "pagina": 3,
+      "paragrafo": 0,
+      "texto": "Aucun chevalier errant ne voyage sans une vaillante monture.",
+      "fala": "Aucun chevalier errant ne voyage sans une vaillante monture.",
+      "hash": "386e533ceb"
+    },
+    {
+      "id": "p3-s2",
+      "pagina": 3,
+      "paragrafo": 0,
+      "texto": "À l’écurie de la ferme se reposait son vieux cheval de labour : tout maigrichon, les côtes bien visibles, mais avec un regard doux et loyal.",
+      "fala": "À l’écurie de la ferme se reposait son vieux cheval de labour : tout maigrichon, les côtes bien visibles, mais avec un regard doux et loyal.",
+      "hash": "716afd2508"
+    },
+    {
+      "id": "p3-s3",
+      "pagina": 3,
+      "paragrafo": 1,
+      "texto": "Don Quichotte réfléchit pendant quatre jours entiers avant de choisir un nom noble pour son ami, et il le baptisa ROSSINANTE — le premier et le plus fidèle de tous les chevaux !",
+      "fala": "Don Quichotte réfléchit pendant quatre jours entiers avant de choisir un nom noble pour son ami, et il le baptisa rossinante, le premier et le plus fidèle de tous les chevaux !",
+      "hash": "c8adf43142"
+    },
+    {
+      "id": "p3-s4",
+      "pagina": 3,
+      "paragrafo": 2,
+      "texto": "Donne-lui une douce POMME, une CAROTTE bien croquante, et passe-lui la BROSSE pour le rendre aussi fier qu’un rapide DESTRIER royal !",
+      "fala": "Donne-lui une douce pomme, une carotte bien croquante, et passe-lui la brosse pour le rendre aussi fier qu’un rapide destrier royal !",
+      "hash": "a40cb259ce"
+    },
+    {
+      "id": "p3-s5",
+      "pagina": 3,
+      "paragrafo": 3,
+      "texto": "Et à qui dédier toutes ses victoires ?",
+      "fala": "Et à qui dédier toutes ses victoires ?",
+      "hash": "6e861e9c06"
+    },
+    {
+      "id": "p3-s6",
+      "pagina": 3,
+      "paragrafo": 3,
+      "texto": "Don Quichotte choisit la douce paysanne du village voisin, Aldonza Lorenzo, et dans ses pensées il en fit la belle princesse DULCINÉE du Toboso !",
+      "fala": "Don Quichotte choisit la douce paysanne du village voisin, Aldonza Lorenzo, et dans ses pensées il en fit la belle princesse dulcinée du Toboso !",
+      "hash": "3615470b07"
+    },
+    {
+      "id": "p4-s0",
+      "pagina": 4,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapitre 4. La première sortie. Auberge ou château royal ?",
+      "fala": "Chapitre 4. La première sortie. Auberge ou château royal ?",
+      "hash": "a180b4d6a0"
+    },
+    {
+      "id": "p4-s1",
+      "pagina": 4,
+      "paragrafo": 0,
+      "texto": "À la tombée du jour, après avoir chevauché sur les collines dorées de Montiel, Don Quichotte aperçut une simple AUBERGE au bord de la route, avec des tuiles d’argile et des murs de terre crue.",
+      "fala": "À la tombée du jour, après avoir chevauché sur les collines dorées de Montiel, Don Quichotte aperçut une simple auberge au bord de la route, avec des tuiles d’argile et des murs de terre crue.",
+      "hash": "593e005637"
+    },
+    {
+      "id": "p4-s2",
+      "pagina": 4,
+      "paragrafo": 1,
+      "texto": "Mais, aux yeux du chevalier rêveur, les murs rustiques se changèrent en un grandiose CHÂTEAU aux hautes tours d’argent et aux ponts-levis !",
+      "fala": "Mais, aux yeux du chevalier rêveur, les murs rustiques se changèrent en un grandiose château aux hautes tours d’argent et aux ponts-levis !",
+      "hash": "6f9a1dfe53"
+    },
+    {
+      "id": "p4-s3",
+      "pagina": 4,
+      "paragrafo": 2,
+      "texto": "Quand un jeune berger souffla dans une flûte rustique pour rassembler ses petits cochons, Don Quichotte entendit de triomphantes TROMPETTES royales.",
+      "fala": "Quand un jeune berger souffla dans une flûte rustique pour rassembler ses petits cochons, Don Quichotte entendit de triomphantes trompettes royales.",
+      "hash": "0ac86cd7c7"
+    },
+    {
+      "id": "p4-s4",
+      "pagina": 4,
+      "paragrafo": 2,
+      "texto": "Et, accueilli avec tendresse par le bon patron de l’auberge, il savoura un bol bien chaud de SOUPE au pain et à l’ail, comme s’il était au plus noble des banquets de rois !",
+      "fala": "Et, accueilli avec tendresse par le bon patron de l’auberge, il savoura un bol bien chaud de soupe au pain et à l’ail, comme s’il était au plus noble des banquets de rois !",
+      "hash": "099f6a054f"
+    },
+    {
+      "id": "p5-s0",
+      "pagina": 5,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapitre 5. La cérémonie magique. Chevalier sous la pleine lune !",
+      "fala": "Chapitre 5. La cérémonie magique. Chevalier sous la pleine lune !",
+      "hash": "0358c0cf0e"
+    },
+    {
+      "id": "p5-s1",
+      "pagina": 5,
+      "paragrafo": 0,
+      "texto": "Pour que son adoubement soit complet, la tradition exigeait la solennelle veillée d’armes.",
+      "fala": "Pour que son adoubement soit complet, la tradition exigeait la solennelle veillée d’armes.",
+      "hash": "403165b042"
+    },
+    {
+      "id": "p5-s2",
+      "pagina": 5,
+      "paragrafo": 0,
+      "texto": "Pendant toute la nuit silencieuse de la Manche, baigné par l’éclat argenté de la PLEINE LUNE, Don Quichotte veilla en marchant d’un pas ferme, le cœur pur.",
+      "fala": "Pendant toute la nuit silencieuse de la Manche, baigné par l’éclat argenté de la pleine lune, Don Quichotte veilla en marchant d’un pas ferme, le cœur pur.",
+      "hash": "4fa814d07a"
+    },
+    {
+      "id": "p5-s3",
+      "pagina": 5,
+      "paragrafo": 1,
+      "texto": "Il déposa son plastron, son plat à barbe et sa lance sur le grand ABREUVOIR de pierre des animaux, avec la sincère impression de prier devant un autel sacré de marbre et de cristal.",
+      "fala": "Il déposa son plastron, son plat à barbe et sa lance sur le grand abreuvoir de pierre des animaux, avec la sincère impression de prier devant un autel sacré de marbre et de cristal.",
+      "hash": "62f76a36e4"
+    },
+    {
+      "id": "p5-s4",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "À l’aube, le bon aubergiste, ému par la pureté et la douceur de cet homme, prit son livre de comptes, récita des paroles d’honneur et toucha doucement l’épaule du gentilhomme avec la lame d’une ÉPÉE.",
+      "fala": "À l’aube, le bon aubergiste, ému par la pureté et la douceur de cet homme, prit son livre de comptes, récita des paroles d’honneur et toucha doucement l’épaule du gentilhomme avec la lame d’une épée.",
+      "hash": "50eed59882"
+    },
+    {
+      "id": "p5-s5",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "Cette fois, ça y était : le monde avait gagné son plus courageux protecteur !",
+      "fala": "Cette fois, ça y était : le monde avait gagné son plus courageux protecteur !",
+      "hash": "087cbdd529"
+    },
+    {
+      "id": "p6-s0",
+      "pagina": 6,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapitre 6. La noble amitié. Le fidèle écuyer Sancho Pança !",
+      "fala": "Chapitre 6. La noble amitié. Le fidèle écuyer Sancho Pança !",
+      "hash": "3c8d27a09f"
+    },
+    {
+      "id": "p6-s1",
+      "pagina": 6,
+      "paragrafo": 0,
+      "texto": "De retour dans son village pour faire des provisions, Don Quichotte alla trouver son voisin préféré : SANCHO PANÇA, un laboureur tout rond, plein de bonté, ami de la paix et papa très aimant.",
+      "fala": "De retour dans son village pour faire des provisions, Don Quichotte alla trouver son voisin préféré : sancho pança, un laboureur tout rond, plein de bonté, ami de la paix et papa très aimant.",
+      "hash": "7b7171f11f"
+    },
+    {
+      "id": "p6-s2",
+      "pagina": 6,
+      "paragrafo": 1,
+      "texto": "« Mon fidèle ami, dit le chevalier, viens avec moi et deviens mon ÉCUYER !",
+      "fala": "Mon fidèle ami, dit le chevalier, viens avec moi et deviens mon écuyer !",
+      "hash": "fa9e3b4ce4"
+    },
+    {
+      "id": "p6-s3",
+      "pagina": 6,
+      "paragrafo": 1,
+      "texto": "Je te promets que, lorsque nous aurons gagné nos premières batailles, tu seras nommé gouverneur d’une belle ÎLE pleine de pain et de justice ! »",
+      "fala": "Je te promets que, lorsque nous aurons gagné nos premières batailles, tu seras nommé gouverneur d’une belle île pleine de pain et de justice !",
+      "hash": "76cd26d981"
+    },
+    {
+      "id": "p6-s4",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "Sancho sourit, émerveillé, remplit ses sacoches de fromage frais et de pain, les chargea sur son sympathique petit ÂNE et accepta l’invitation.",
+      "fala": "Sancho sourit, émerveillé, remplit ses sacoches de fromage frais et de pain, les chargea sur son sympathique petit âne et accepta l’invitation.",
+      "hash": "bffce300dd"
+    },
+    {
+      "id": "p6-s5",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "Sous le soleil du matin, les deux amis prirent la route ensemble, en bavardant gaiement de l’avenir !",
+      "fala": "Sous le soleil du matin, les deux amis prirent la route ensemble, en bavardant gaiement de l’avenir !",
+      "hash": "b83aa8edee"
+    },
+    {
+      "id": "p7-s0",
+      "pagina": 7,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapitre 7. Le duel des moulins ! Le duel contre les géants !",
+      "fala": "Chapitre 7. Le duel des moulins ! Le duel contre les géants !",
+      "hash": "6a4210ddfb"
+    },
+    {
+      "id": "p7-s1",
+      "pagina": 7,
+      "paragrafo": 0,
+      "texto": "Alors qu’ils chevauchaient à travers les vastes plaines de Campo de Criptana, surgirent tout à coup à l’horizon trente ou quarante énormes MOULINS à vent, dont les grandes ailes de bois découpaient le ciel.",
+      "fala": "Alors qu’ils chevauchaient à travers les vastes plaines de Campo de Criptana, surgirent tout à coup à l’horizon trente ou quarante énormes moulins à vent, dont les grandes ailes de bois découpaient le ciel.",
+      "hash": "b3083dbd52"
+    },
+    {
+      "id": "p7-s2",
+      "pagina": 7,
+      "paragrafo": 1,
+      "texto": "À cet instant, une forte rafale de VENT se mit à souffler et fit tourner les ailes dans un grondement rapide !",
+      "fala": "À cet instant, une forte rafale de vent se mit à souffler et fit tourner les ailes dans un grondement rapide !",
+      "hash": "636f3921b0"
+    },
+    {
+      "id": "p7-s3",
+      "pagina": 7,
+      "paragrafo": 1,
+      "texto": "Don Quichotte tira sur les rênes de Rossinante et s’écria :",
+      "fala": "Don Quichotte tira sur les rênes de Rossinante et s’écria :",
+      "hash": "9a42deb133"
+    },
+    {
+      "id": "p7-s4",
+      "pagina": 7,
+      "paragrafo": 2,
+      "texto": "« Regarde, ami Sancho !",
+      "fala": "Regarde, ami Sancho !",
+      "hash": "6ba3d699cf"
+    },
+    {
+      "id": "p7-s5",
+      "pagina": 7,
+      "paragrafo": 2,
+      "texto": "La chance guide nos pas !",
+      "fala": "La chance guide nos pas !",
+      "hash": "f5f480a171"
+    },
+    {
+      "id": "p7-s6",
+      "pagina": 7,
+      "paragrafo": 2,
+      "texto": "Voici que se dressent là-bas de démesurés GÉANTS, contre lesquels je vais livrer un combat féroce ! »",
+      "fala": "Voici que se dressent là-bas de démesurés géants, contre lesquels je vais livrer un combat féroce !",
+      "hash": "2f41577f8c"
+    },
+    {
+      "id": "p7-s7",
+      "pagina": 7,
+      "paragrafo": 3,
+      "texto": "« Quels géants, mon seigneur ? avertit Sancho.",
+      "fala": "Quels géants, mon seigneur ? avertit Sancho.",
+      "hash": "95c21292a0"
+    },
+    {
+      "id": "p7-s8",
+      "pagina": 7,
+      "paragrafo": 3,
+      "texto": "Ce ne sont que des moulins qui moulent le blé au vent ! »",
+      "fala": "Ce ne sont que des moulins qui moulent le blé au vent !",
+      "hash": "163de03594"
+    },
+    {
+      "id": "p7-s9",
+      "pagina": 7,
+      "paragrafo": 3,
+      "texto": "Mais Don Quichotte baissait déjà sa lance, prêt pour le duel le plus célèbre et le plus courageux de toute la littérature !",
+      "fala": "Mais Don Quichotte baissait déjà sa lance, prêt pour le duel le plus célèbre et le plus courageux de toute la littérature !",
+      "hash": "e4f9ba706b"
+    }
+  ],
+  "palavras": [
+    {
+      "slug": "imagination",
+      "palavra": "IMAGINATION",
+      "silabas": "I • MA • GI • NA • TION",
+      "fala": "i... ma... gi... na... tion... imagination!",
+      "hash": "974546d4dc"
+    },
+    {
+      "slug": "rossinante",
+      "palavra": "ROSSINANTE",
+      "silabas": "ROS • SI • NANTE",
+      "fala": "ros... si... nante... rossinante!",
+      "hash": "41ca4dde95"
+    },
+    {
+      "slug": "chevaliers",
+      "palavra": "CHEVALIERS",
+      "silabas": "CHE • VA • LIERS",
+      "fala": "che... va... liers... chevaliers!",
+      "hash": "f9fdef677b"
+    },
+    {
+      "slug": "livres",
+      "palavra": "LIVRES",
+      "silabas": "LIVRES",
+      "fala": "livres... livres!",
+      "hash": "ab6766feb3"
+    },
+    {
+      "slug": "lion-gardien",
+      "palavra": "LION GARDIEN",
+      "silabas": "LI • ON • GAR • DIEN",
+      "fala": "li... on... gar... dien... lion gardien!",
+      "hash": "9a2a9a24c8"
+    },
+    {
+      "slug": "don-quichotte",
+      "palavra": "DON QUICHOTTE",
+      "silabas": "DON • QUI • CHOTTE",
+      "fala": "don... qui... chotte... don quichotte!",
+      "hash": "8f18d1f76b"
+    },
+    {
+      "slug": "armure",
+      "palavra": "ARMURE",
+      "silabas": "AR • MURE",
+      "fala": "ar... mure... armure!",
+      "hash": "9eb13c8111"
+    },
+    {
+      "slug": "plat-a-barbe",
+      "palavra": "PLAT À BARBE",
+      "silabas": "PLAT • À • BARBE",
+      "fala": "plat... à... barbe... plat à barbe!",
+      "hash": "a7a3480942"
+    },
+    {
+      "slug": "bouclier",
+      "palavra": "BOUCLIER",
+      "silabas": "BOU • CLIER",
+      "fala": "bou... clier... bouclier!",
+      "hash": "f0affaa47e"
+    },
+    {
+      "slug": "lance",
+      "palavra": "LANCE",
+      "silabas": "LANCE",
+      "fala": "lance... lance!",
+      "hash": "d82ab630d4"
+    },
+    {
+      "slug": "casque-dore",
+      "palavra": "CASQUE DORÉ",
+      "silabas": "CASQUE • DO • RÉ",
+      "fala": "casque... do... ré... casque doré!",
+      "hash": "9ac4ce6986"
+    },
+    {
+      "slug": "pomme",
+      "palavra": "POMME",
+      "silabas": "POMME",
+      "fala": "pomme... pomme!",
+      "hash": "c9cbb9617b"
+    },
+    {
+      "slug": "carotte",
+      "palavra": "CAROTTE",
+      "silabas": "CA • ROTTE",
+      "fala": "ca... rotte... carotte!",
+      "hash": "a3f8ef3134"
+    },
+    {
+      "slug": "brosse",
+      "palavra": "BROSSE",
+      "silabas": "BROSSE",
+      "fala": "brosse... brosse!",
+      "hash": "1907e999f2"
+    },
+    {
+      "slug": "destrier",
+      "palavra": "DESTRIER",
+      "silabas": "DES • TRI • ER",
+      "fala": "des... tri... er... destrier!",
+      "hash": "284105dd72"
+    },
+    {
+      "slug": "dulcinee",
+      "palavra": "DULCINÉE",
+      "silabas": "DUL • CI • NÉE",
+      "fala": "dul... ci... née... dulcinée!",
+      "hash": "8bf79e6deb"
+    },
+    {
+      "slug": "auberge",
+      "palavra": "AUBERGE",
+      "silabas": "AU • BERGE",
+      "fala": "au... berge... auberge!",
+      "hash": "4ccf826e3b"
+    },
+    {
+      "slug": "chateau",
+      "palavra": "CHÂTEAU",
+      "silabas": "CHÂ • TEAU",
+      "fala": "châ... teau... château!",
+      "hash": "97e4787da0"
+    },
+    {
+      "slug": "trompettes",
+      "palavra": "TROMPETTES",
+      "silabas": "TROM • PETTES",
+      "fala": "trom... pettes... trompettes!",
+      "hash": "2775a1c962"
+    },
+    {
+      "slug": "soupe",
+      "palavra": "SOUPE",
+      "silabas": "SOUPE",
+      "fala": "soupe... soupe!",
+      "hash": "9a5ad8894f"
+    },
+    {
+      "slug": "pleine-lune",
+      "palavra": "PLEINE LUNE",
+      "silabas": "PLEINE • LUNE",
+      "fala": "pleine... lune... pleine lune!",
+      "hash": "f81a3e6173"
+    },
+    {
+      "slug": "abreuvoir",
+      "palavra": "ABREUVOIR",
+      "silabas": "A • BREU • VOIR",
+      "fala": "a... breu... voir... abreuvoir!",
+      "hash": "0700e279ae"
+    },
+    {
+      "slug": "epee",
+      "palavra": "ÉPÉE",
+      "silabas": "É • PÉE",
+      "fala": "é... pée... épée!",
+      "hash": "716c2c1b94"
+    },
+    {
+      "slug": "sancho-panca",
+      "palavra": "SANCHO PANÇA",
+      "silabas": "SAN • CHO • PAN • ÇA",
+      "fala": "san... cho... pan... ça... sancho pança!",
+      "hash": "69035a2e9d"
+    },
+    {
+      "slug": "ecuyer",
+      "palavra": "ÉCUYER",
+      "silabas": "É • CU • YER",
+      "fala": "é... cu... yer... écuyer!",
+      "hash": "c773756f3d"
+    },
+    {
+      "slug": "ile",
+      "palavra": "ÎLE",
+      "silabas": "ÎLE",
+      "fala": "île... île!",
+      "hash": "bfb2387ec9"
+    },
+    {
+      "slug": "ane",
+      "palavra": "ÂNE",
+      "silabas": "ÂNE",
+      "fala": "âne... âne!",
+      "hash": "452a767a81"
+    },
+    {
+      "slug": "moulins",
+      "palavra": "MOULINS",
+      "silabas": "MOU • LINS",
+      "fala": "mou... lins... moulins!",
+      "hash": "3252deface"
+    },
+    {
+      "slug": "vent",
+      "palavra": "VENT",
+      "silabas": "VENT",
+      "fala": "vent... vent!",
+      "hash": "632a5cdbbe"
+    },
+    {
+      "slug": "geants",
+      "palavra": "GÉANTS",
+      "silabas": "GÉ • ANTS",
+      "fala": "gé... ants... géants!",
+      "hash": "9a4752acf2"
+    }
+  ]
+}

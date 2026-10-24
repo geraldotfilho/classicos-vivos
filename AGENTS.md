@@ -178,7 +178,11 @@ A API é paga pelo humano, num projeto de hobby com **limite de R$ 10/mês**, e 
   - `hash`: copiado de `docs/traducao/fonte-<livro>-parte-N.json` (`npm run exportar:traducoes`). Mudou o português? `npm run conferir:traducoes` avisa quais páginas traduzir de novo.
 - A **interface** (botões, painel de voz, dicas) fica em `IDIOMAS` no motor, com a bandeira (`assets/icones/bandeiras/*.svg`) e a variante de voz preferida (`pt-BR`, `en-GB`, `fr-FR`, `es-ES`). Idioma novo: uma entrada em `IDIOMAS` + os arquivos de tradução.
 - Trocar de idioma refaz só os textos (`traduzirPagina`): a página, a lente e o progresso dos cartões continuam. A escolha fica em `cv-idioma` e vale para todas as partes; `?lang=en` abre direto num idioma (testes).
-- **Narração**: a gravada é só em português (BACKLOG M-11). Nos outros idiomas, a voz do aparelho naquele idioma (a escolha de voz é guardada por idioma: `cv-voz-en` etc.), inclusive nas palavras-chave.
+- **Narração**: cada idioma pode ter a sua narração gravada, com o mesmo fluxo do português (`npm run gravar:narracao -- --idioma en ...`, só com autorização do humano, §2.7):
+  - pastas `<livro>/audio/narracao-<idioma>/` (com `elenco.json`: vozes, estilo, frase de amostra e nomes para o Whisper; e `parte-N/roteiro.json`) e `palavras-<idioma>/`;
+  - frases em `docs/narracao/frases-<livro>-parte-N-<idioma>.json` (`npm run exportar:frases` exporta também as traduções);
+  - no `vozes.js`, a voz leva `idioma: 'en'` (sem ele, é português); o painel só mostra as gravações do idioma atual;
+  - sem gravação, a voz do aparelho naquele idioma (a escolha de voz é guardada por idioma: `cv-voz-en` etc.), inclusive nas palavras-chave.
 - A segmentação de frases (`texto.js`) aceita o « » francês com espaço antes do fecho. Nas traduções, evite abreviações com ponto (Mr., Sr.), que cortariam a frase.
 
 ---

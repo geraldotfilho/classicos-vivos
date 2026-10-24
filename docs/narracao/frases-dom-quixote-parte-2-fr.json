@@ -1,0 +1,973 @@
+{
+  "obra": "Don Quichotte de la Manche",
+  "parte": 2,
+  "idioma": "fr",
+  "audio": "dom-quixote/audio/<voz>-fr/parte-2/<id>.mp3",
+  "audioPalavras": "dom-quixote/audio/palavras-fr/<slug>.mp3",
+  "frases": [
+    {
+      "id": "p0-s0",
+      "pagina": 0,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Don Quichotte de la Manche. Partie 2 : Les armées de laine et le casque enchanté",
+      "fala": "Don Quichotte de la Manche. Partie 2 : Les armées de laine et le casque enchanté",
+      "hash": "0f8beb0465"
+    },
+    {
+      "id": "p0-s1",
+      "pagina": 0,
+      "paragrafo": 0,
+      "texto": "Lance au poing et cœur vaillant, Don Quichotte galope contre les géants des moulins à vent, et le fidèle écuyer Sancho Pança le suit de près, sur les routes ensoleillées de la Manche !",
+      "fala": "Lance au poing et cœur vaillant, Don Quichotte galope contre les géants des moulins à vent, et le fidèle écuyer Sancho Pança le suit de près, sur les routes ensoleillées de la Manche !",
+      "hash": "16f726a888"
+    },
+    {
+      "id": "p0-s2",
+      "pagina": 0,
+      "paragrafo": 1,
+      "texto": "Dans cette partie de l’histoire, notre noble chevalier va faire une chute spectaculaire, trouver une lance neuve sous les étoiles, partager un repas fraternel avec des CHEVRIERS, défier de mystérieuses armées au milieu de nuages de poussière, recevoir un surnom inoubliable et conquérir un CASQUE brillant comme le soleil.",
+      "fala": "Dans cette partie de l’histoire, notre noble chevalier va faire une chute spectaculaire, trouver une lance neuve sous les étoiles, partager un repas fraternel avec des chevriers, défier de mystérieuses armées au milieu de nuages de poussière, recevoir un surnom inoubliable et conquérir un casque brillant comme le soleil.",
+      "hash": "feb5319f8c"
+    },
+    {
+      "id": "p0-s3",
+      "pagina": 0,
+      "paragrafo": 2,
+      "texto": "Ouvre grand les yeux et le cœur, et prépare ton IMAGINATION : les plus grandes aventures ne font que commencer !",
+      "fala": "Ouvre grand les yeux et le cœur, et prépare ton imagination : les plus grandes aventures ne font que commencer !",
+      "hash": "2ab63112da"
+    },
+    {
+      "id": "p1-s0",
+      "pagina": 1,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapitre 8. La charge contre les géants. Le grand vol et la culbute des moulins !",
+      "fala": "Chapitre 8. La charge contre les géants. Le grand vol et la culbute des moulins !",
+      "hash": "5bef213423"
+    },
+    {
+      "id": "p1-s1",
+      "pagina": 1,
+      "paragrafo": 0,
+      "texto": "Ajustant le plat à barbe en laiton sur sa tête et brandissant sa lance avec une bravoure indomptable, Don Quichotte éperonna le paisible Rossinante dans un galop intrépide.",
+      "fala": "Ajustant le plat à barbe en laiton sur sa tête et brandissant sa lance avec une bravoure indomptable, Don Quichotte éperonna le paisible Rossinante dans un galop intrépide.",
+      "hash": "0955783457"
+    },
+    {
+      "id": "p1-s2",
+      "pagina": 1,
+      "paragrafo": 0,
+      "texto": "« Ne fuyez pas, lâches créatures !",
+      "fala": "Ne fuyez pas, lâches créatures !",
+      "hash": "5230ad1b7a"
+    },
+    {
+      "id": "p1-s3",
+      "pagina": 1,
+      "paragrafo": 0,
+      "texto": "Un seul chevalier vient vous affronter tous ! » criait le gentilhomme en fonçant à toute allure contre le premier MOULIN à vent de la plaine !",
+      "fala": "Un seul chevalier vient vous affronter tous ! criait le gentilhomme en fonçant à toute allure contre le premier moulin à vent de la plaine !",
+      "hash": "566479a3ed"
+    },
+    {
+      "id": "p1-s4",
+      "pagina": 1,
+      "paragrafo": 1,
+      "texto": "Au même instant, une forte bourrasque se leva et l’immense aile de bois tourna à toute vitesse, brisant la pointe de la LANCE en mille éclats !",
+      "fala": "Au même instant, une forte bourrasque se leva et l’immense aile de bois tourna à toute vitesse, brisant la pointe de la lance en mille éclats !",
+      "hash": "d4e50854ab"
+    },
+    {
+      "id": "p1-s5",
+      "pagina": 1,
+      "paragrafo": 1,
+      "texto": "D’une secousse spectaculaire, l’énorme aile souleva cheval et cavalier très haut dans le ciel, et les envoya dans une pirouette comique qui se termina par une chute retentissante sur l’herbe tendre du pré !",
+      "fala": "D’une secousse spectaculaire, l’énorme aile souleva cheval et cavalier très haut dans le ciel, et les envoya dans une pirouette comique qui se termina par une chute retentissante sur l’herbe tendre du pré !",
+      "hash": "cacc91f397"
+    },
+    {
+      "id": "p1-s6",
+      "pagina": 1,
+      "paragrafo": 2,
+      "texto": "Sancho Pança accourut tout affolé sur son âne, les mains sur la tête : « Dieu me protège, mon seigneur !",
+      "fala": "Sancho Pança accourut tout affolé sur son âne, les mains sur la tête : Dieu me protège, mon seigneur !",
+      "hash": "6eeaa421ea"
+    },
+    {
+      "id": "p1-s7",
+      "pagina": 1,
+      "paragrafo": 2,
+      "texto": "Ne vous avais-je pas dit que ce n’étaient que des moulins ? »",
+      "fala": "Ne vous avais-je pas dit que ce n’étaient que des moulins ?",
+      "hash": "1b82e2a671"
+    },
+    {
+      "id": "p1-s8",
+      "pagina": 1,
+      "paragrafo": 2,
+      "texto": "Mais le gentilhomme, secouant la poussière et redressant son plat à barbe cabossé avec un noble sourire, lui expliqua patiemment : « Silence, ami Sancho !",
+      "fala": "Mais le gentilhomme, secouant la poussière et redressant son plat à barbe cabossé avec un noble sourire, lui expliqua patiemment : Silence, ami Sancho !",
+      "hash": "d8c97ca3fb"
+    },
+    {
+      "id": "p1-s9",
+      "pagina": 1,
+      "paragrafo": 2,
+      "texto": "Les choses de la chevalerie changent en un clin d’œil !",
+      "fala": "Les choses de la chevalerie changent en un clin d’œil !",
+      "hash": "c8a98b971c"
+    },
+    {
+      "id": "p1-s10",
+      "pagina": 1,
+      "paragrafo": 2,
+      "texto": "C’est le méchant enchanteur Freston qui a jeté un SORTILÈGE pour me voler ma gloire.",
+      "fala": "C’est le méchant enchanteur Freston qui a jeté un sortilège pour me voler ma gloire.",
+      "hash": "5aa9c09381"
+    },
+    {
+      "id": "p1-s11",
+      "pagina": 1,
+      "paragrafo": 2,
+      "texto": "Mais contre notre COURAGE, aucune magie ne l’emportera ! »",
+      "fala": "Mais contre notre courage, aucune magie ne l’emportera !",
+      "hash": "a85e6fd167"
+    },
+    {
+      "id": "p2-s0",
+      "pagina": 2,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapitre 9. La lance de chêne. Une lance neuve sous les étoiles",
+      "fala": "Chapitre 9. La lance de chêne. Une lance neuve sous les étoiles",
+      "hash": "555b7cfbe2"
+    },
+    {
+      "id": "p2-s1",
+      "pagina": 2,
+      "paragrafo": 0,
+      "texto": "Le corps tout endolori par la chute et le plat à barbe tout cabossé, Don Quichotte ne se laissait pas abattre.",
+      "fala": "Le corps tout endolori par la chute et le plat à barbe tout cabossé, Don Quichotte ne se laissait pas abattre.",
+      "hash": "205b9e6fbe"
+    },
+    {
+      "id": "p2-s2",
+      "pagina": 2,
+      "paragrafo": 0,
+      "texto": "« Un vrai chevalier errant ne s’abandonne jamais à la tristesse ! » déclara-t-il noblement, en regardant avec tendresse son fidèle Rossinante.",
+      "fala": "Un vrai chevalier errant ne s’abandonne jamais à la tristesse ! déclara-t-il noblement, en regardant avec tendresse son fidèle Rossinante.",
+      "hash": "2a29c713c1"
+    },
+    {
+      "id": "p2-s3",
+      "pagina": 2,
+      "paragrafo": 1,
+      "texto": "Marchant jusqu’à un vieux CHÊNE touffu au bord du chemin, il choisit une branche sèche, droite et solide, et en fit fièrement sa toute nouvelle LANCE.",
+      "fala": "Marchant jusqu’à un vieux chêne touffu au bord du chemin, il choisit une branche sèche, droite et solide, et en fit fièrement sa toute nouvelle lance.",
+      "hash": "db62420118"
+    },
+    {
+      "id": "p2-s4",
+      "pagina": 2,
+      "paragrafo": 1,
+      "texto": "« Un ancien héros d’Espagne, ayant perdu son épée au combat, se battit avec un tronc d’arbre et remporta la victoire ! raconta-t-il à Sancho.",
+      "fala": "Un ancien héros d’Espagne, ayant perdu son épée au combat, se battit avec un tronc d’arbre et remporta la victoire ! raconta-t-il à Sancho.",
+      "hash": "54cb816a6f"
+    },
+    {
+      "id": "p2-s5",
+      "pagina": 2,
+      "paragrafo": 1,
+      "texto": "Eh bien, je ferai de même ! »",
+      "fala": "Eh bien, je ferai de même !",
+      "hash": "6ad87d961c"
+    },
+    {
+      "id": "p2-s6",
+      "pagina": 2,
+      "paragrafo": 2,
+      "texto": "Quand la nuit descendit, douce et fraîche, sur la plaine, Sancho étendit de la paille sur la terre, mangea son petit morceau de fromage et s’endormit d’un sommeil si lourd que ses ronflements résonnaient comme des cloches sur la colline.",
+      "fala": "Quand la nuit descendit, douce et fraîche, sur la plaine, Sancho étendit de la paille sur la terre, mangea son petit morceau de fromage et s’endormit d’un sommeil si lourd que ses ronflements résonnaient comme des cloches sur la colline.",
+      "hash": "6b7cbce3b3"
+    },
+    {
+      "id": "p2-s7",
+      "pagina": 2,
+      "paragrafo": 2,
+      "texto": "Mais Don Quichotte resta éveillé dans la brise, à admirer l’éclat des ÉTOILES et à penser à sa douce dame DULCINÉE, exactement comme le faisaient les plus nobles chevaliers de ses livres.",
+      "fala": "Mais Don Quichotte resta éveillé dans la brise, à admirer l’éclat des étoiles et à penser à sa douce dame dulcinée, exactement comme le faisaient les plus nobles chevaliers de ses livres.",
+      "hash": "7fd12e57b6"
+    },
+    {
+      "id": "p3-s0",
+      "pagina": 3,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapitre 10. Les chevriers et l’âge d’or. Un dîner à partager",
+      "fala": "Chapitre 10. Les chevriers et l’âge d’or. Un dîner à partager",
+      "hash": "f09ba3f6cf"
+    },
+    {
+      "id": "p3-s1",
+      "pagina": 3,
+      "paragrafo": 0,
+      "texto": "À la tombée du jour suivant, sentant une bonne odeur de feu de bois, les deux amis rencontrèrent six sympathiques CHEVRIERS réunis dans les champs.",
+      "fala": "À la tombée du jour suivant, sentant une bonne odeur de feu de bois, les deux amis rencontrèrent six sympathiques chevriers réunis dans les champs.",
+      "hash": "519dd74918"
+    },
+    {
+      "id": "p3-s2",
+      "pagina": 3,
+      "paragrafo": 0,
+      "texto": "Sans poser de questions ni s’étonner de l’armure rouillée, leurs hôtes leur firent de grands sourires et étendirent par terre une douce peau de mouton.",
+      "fala": "Sans poser de questions ni s’étonner de l’armure rouillée, leurs hôtes leur firent de grands sourires et étendirent par terre une douce peau de mouton.",
+      "hash": "dc75fd5e71"
+    },
+    {
+      "id": "p3-s3",
+      "pagina": 3,
+      "paragrafo": 0,
+      "texto": "« Asseyez-vous, mes amis ! invita le plus vieux des chevriers.",
+      "fala": "Asseyez-vous, mes amis ! invita le plus vieux des chevriers.",
+      "hash": "6fc5ba970d"
+    },
+    {
+      "id": "p3-s4",
+      "pagina": 3,
+      "paragrafo": 0,
+      "texto": "Ici, ce qui est à l’un est à tous ! »",
+      "fala": "Ici, ce qui est à l’un est à tous !",
+      "hash": "df5b1bdf12"
+    },
+    {
+      "id": "p3-s5",
+      "pagina": 3,
+      "paragrafo": 1,
+      "texto": "Ils offrirent avec joie le meilleur de ce qu’ils avaient : un bol de GLANDS doux grillés sur la braise, une belle tranche de FROMAGE de chèvre et une cruche de LAIT bien frais.",
+      "fala": "Ils offrirent avec joie le meilleur de ce qu’ils avaient : un bol de glands doux grillés sur la braise, une belle tranche de fromage de chèvre et une cruche de lait bien frais.",
+      "hash": "f6456cef27"
+    },
+    {
+      "id": "p3-s6",
+      "pagina": 3,
+      "paragrafo": 1,
+      "texto": "Aide à mettre la table des chevriers !",
+      "fala": "Aide à mettre la table des chevriers !",
+      "hash": "8fe1b49fd4"
+    },
+    {
+      "id": "p3-s7",
+      "pagina": 3,
+      "paragrafo": 2,
+      "texto": "Tenant les glands dans le creux de sa main, Don Quichotte parla avec émotion : « Il fut un temps béni, l’ÂGE D’OR, où personne ne dressait de clôtures et où tous savaient PARTAGER avec amour les fruits de la terre ! »",
+      "fala": "Tenant les glands dans le creux de sa main, Don Quichotte parla avec émotion : Il fut un temps béni, l’âge d’or, où personne ne dressait de clôtures et où tous savaient partager avec amour les fruits de la terre !",
+      "hash": "fb798508a9"
+    },
+    {
+      "id": "p3-s8",
+      "pagina": 3,
+      "paragrafo": 2,
+      "texto": "Les chevriers ne comprenaient pas tous les mots savants du gentilhomme, mais ils sentaient la chaleur de son âme généreuse : après tout, le monde devient un lieu enchanté chaque fois que nous savons partager !",
+      "fala": "Les chevriers ne comprenaient pas tous les mots savants du gentilhomme, mais ils sentaient la chaleur de son âme généreuse : après tout, le monde devient un lieu enchanté chaque fois que nous savons partager !",
+      "hash": "de1043e54f"
+    },
+    {
+      "id": "p4-s0",
+      "pagina": 4,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapitre 11. Les armées de poussière. La grande bataille des moutons",
+      "fala": "Chapitre 11. Les armées de poussière. La grande bataille des moutons",
+      "hash": "44ebd4185f"
+    },
+    {
+      "id": "p4-s1",
+      "pagina": 4,
+      "paragrafo": 0,
+      "texto": "Un matin ensoleillé, alors qu’il chevauchait dans les vastes étendues de la Manche, Don Quichotte s’arrêta net et pointa sa lance vers l’horizon.",
+      "fala": "Un matin ensoleillé, alors qu’il chevauchait dans les vastes étendues de la Manche, Don Quichotte s’arrêta net et pointa sa lance vers l’horizon.",
+      "hash": "68548c3ebe"
+    },
+    {
+      "id": "p4-s2",
+      "pagina": 4,
+      "paragrafo": 0,
+      "texto": "Deux énormes nuages de POUSSIÈRE avançaient à toute vitesse l’un contre l’autre, couvrant le ciel d’un manteau couleur de terre !",
+      "fala": "Deux énormes nuages de poussière avançaient à toute vitesse l’un contre l’autre, couvrant le ciel d’un manteau couleur de terre !",
+      "hash": "d8cc2176ea"
+    },
+    {
+      "id": "p4-s3",
+      "pagina": 4,
+      "paragrafo": 1,
+      "texto": "« Prépare ton courage, fidèle Sancho ! s’écria le chevalier, radieux.",
+      "fala": "Prépare ton courage, fidèle Sancho ! s’écria le chevalier, radieux.",
+      "hash": "1a1d9a311b"
+    },
+    {
+      "id": "p4-s4",
+      "pagina": 4,
+      "paragrafo": 1,
+      "texto": "Voici que marchent à notre rencontre deux gigantesques ARMÉES !",
+      "fala": "Voici que marchent à notre rencontre deux gigantesques armées !",
+      "hash": "943a8c8643"
+    },
+    {
+      "id": "p4-s5",
+      "pagina": 4,
+      "paragrafo": 1,
+      "texto": "À gauche avance le redoutable Alifanfaron de la Trapobane ; à droite lève ses étendards le vaillant Pentapolin au Bras Retroussé, un héros qui se bat toujours les manches retroussées ! »",
+      "fala": "À gauche avance le redoutable Alifanfaron de la Trapobane ; à droite lève ses étendards le vaillant Pentapolin au Bras Retroussé, un héros qui se bat toujours les manches retroussées !",
+      "hash": "5124f39dc5"
+    },
+    {
+      "id": "p4-s6",
+      "pagina": 4,
+      "paragrafo": 2,
+      "texto": "« Mais, mon bon maître… hésita Sancho en tendant l’oreille et en fronçant les sourcils, je n’entends ni épées ni trompettes de guerre, seulement un chœur bien paisible de bêêêê ! »",
+      "fala": "Mais, mon bon maître… hésita Sancho en tendant l’oreille et en fronçant les sourcils, je n’entends ni épées ni trompettes de guerre, seulement un chœur bien paisible de bêêêê !",
+      "hash": "064c17f2ee"
+    },
+    {
+      "id": "p4-s7",
+      "pagina": 4,
+      "paragrafo": 3,
+      "texto": "Souffle sur la poussière et vois la vérité de tes propres yeux !",
+      "fala": "Souffle sur la poussière et vois la vérité de tes propres yeux !",
+      "hash": "e05f7fb431"
+    },
+    {
+      "id": "p4-s8",
+      "pagina": 4,
+      "paragrafo": 3,
+      "texto": "Ce n’étaient que deux innocents troupeaux de MOUTONS qui broutaient dans l’herbe !",
+      "fala": "Ce n’étaient que deux innocents troupeaux de moutons qui broutaient dans l’herbe !",
+      "hash": "68e43cd336"
+    },
+    {
+      "id": "p4-s9",
+      "pagina": 4,
+      "paragrafo": 3,
+      "texto": "Mais Don Quichotte dévalait déjà la colline au galop pour sa mission héroïque.",
+      "fala": "Mais Don Quichotte dévalait déjà la colline au galop pour sa mission héroïque.",
+      "hash": "c3464b3a2d"
+    },
+    {
+      "id": "p4-s10",
+      "pagina": 4,
+      "paragrafo": 3,
+      "texto": "Effrayés par cet étrange chevalier, les bergers lancèrent de petits cailloux avec leurs frondes pour protéger leurs bêtes.",
+      "fala": "Effrayés par cet étrange chevalier, les bergers lancèrent de petits cailloux avec leurs frondes pour protéger leurs bêtes.",
+      "hash": "8989b3a3a8"
+    },
+    {
+      "id": "p4-s11",
+      "pagina": 4,
+      "paragrafo": 3,
+      "texto": "Le pauvre gentilhomme tomba de cheval au milieu du pré, le menton endolori et deux dents en moins dans son sourire !",
+      "fala": "Le pauvre gentilhomme tomba de cheval au milieu du pré, le menton endolori et deux dents en moins dans son sourire !",
+      "hash": "1f0ee63aef"
+    },
+    {
+      "id": "p5-s0",
+      "pagina": 5,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapitre 12. Le Chevalier à la Triste Figure. Un surnom inoubliable",
+      "fala": "Chapitre 12. Le Chevalier à la Triste Figure. Un surnom inoubliable",
+      "hash": "611507bf70"
+    },
+    {
+      "id": "p5-s1",
+      "pagina": 5,
+      "paragrafo": 0,
+      "texto": "Quand la nuit couvrit la campagne de son ombre, les deux amis s’installèrent au bord d’un chemin tranquille.",
+      "fala": "Quand la nuit couvrit la campagne de son ombre, les deux amis s’installèrent au bord d’un chemin tranquille.",
+      "hash": "6ff0f0f2cb"
+    },
+    {
+      "id": "p5-s2",
+      "pagina": 5,
+      "paragrafo": 0,
+      "texto": "Remarquant le silence mélancolique de son maître, Sancho leva une petite LANTERNE de fer-blanc pour examiner les bosses et les bleus du chevalier.",
+      "fala": "Remarquant le silence mélancolique de son maître, Sancho leva une petite lanterne de fer-blanc pour examiner les bosses et les bleus du chevalier.",
+      "hash": "8a4d6e8159"
+    },
+    {
+      "id": "p5-s3",
+      "pagina": 5,
+      "paragrafo": 1,
+      "texto": "À la lumière jaune de la chandelle apparut un visage touchant et expressif : le gentilhomme était tout maigre, épuisé par la bataille, avec son plat à barbe cabossé de travers sur le front et une drôle de petite fenêtre ouverte au milieu des lèvres, là où brillaient autrefois deux dents solides.",
+      "fala": "À la lumière jaune de la chandelle apparut un visage touchant et expressif : le gentilhomme était tout maigre, épuisé par la bataille, avec son plat à barbe cabossé de travers sur le front et une drôle de petite fenêtre ouverte au milieu des lèvres, là où brillaient autrefois deux dents solides.",
+      "hash": "ea9407da62"
+    },
+    {
+      "id": "p5-s4",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "« Mon seigneur, dit Sancho avec tendresse et un sourire espiègle, Votre Grâce a la mine la plus endolorie et la plus mélancolique que j’aie jamais vue sous le ciel !",
+      "fala": "Mon seigneur, dit Sancho avec tendresse et un sourire espiègle, Votre Grâce a la mine la plus endolorie et la plus mélancolique que j’aie jamais vue sous le ciel !",
+      "hash": "0cbb86b302"
+    },
+    {
+      "id": "p5-s5",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "Je crois que votre vrai nom de gloire devrait être le Chevalier à la TRISTE FIGURE ! »",
+      "fala": "Je crois que votre vrai nom de gloire devrait être le Chevalier à la triste figure !",
+      "hash": "4bfa91a5cd"
+    },
+    {
+      "id": "p5-s6",
+      "pagina": 5,
+      "paragrafo": 3,
+      "texto": "Loin de se fâcher, Don Quichotte adora cet hommage !",
+      "fala": "Loin de se fâcher, Don Quichotte adora cet hommage !",
+      "hash": "245a0f3424"
+    },
+    {
+      "id": "p5-s7",
+      "pagina": 5,
+      "paragrafo": 3,
+      "texto": "« Quel joli nom, Sancho ! s’exclama-t-il.",
+      "fala": "Quel joli nom, Sancho ! s’exclama-t-il.",
+      "hash": "39a4bcb586"
+    },
+    {
+      "id": "p5-s8",
+      "pagina": 5,
+      "paragrafo": 3,
+      "texto": "Tous les grands chevaliers des livres ont des noms poétiques.",
+      "fala": "Tous les grands chevaliers des livres ont des noms poétiques.",
+      "hash": "2720605621"
+    },
+    {
+      "id": "p5-s9",
+      "pagina": 5,
+      "paragrafo": 3,
+      "texto": "Je vais faire peindre un visage noble et pensif sur mon BOUCLIER ! »",
+      "fala": "Je vais faire peindre un visage noble et pensif sur mon bouclier !",
+      "hash": "b4e0357e94"
+    },
+    {
+      "id": "p6-s0",
+      "pagina": 6,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapitre 13. Les bruits de l’obscurité. Les chèvres qui traversent la rivière",
+      "fala": "Chapitre 13. Les bruits de l’obscurité. Les chèvres qui traversent la rivière",
+      "hash": "6e879c732c"
+    },
+    {
+      "id": "p6-s1",
+      "pagina": 6,
+      "paragrafo": 0,
+      "texto": "Par une nuit noire comme de l’encre, les deux chevaliers s’arrêtèrent près d’un bois aux grands arbres.",
+      "fala": "Par une nuit noire comme de l’encre, les deux chevaliers s’arrêtèrent près d’un bois aux grands arbres.",
+      "hash": "f6f51f8375"
+    },
+    {
+      "id": "p6-s2",
+      "pagina": 6,
+      "paragrafo": 0,
+      "texto": "Tout à coup, un bruit rythmé et effrayant se mit à résonner entre les feuillages : TAC-TAC !",
+      "fala": "Tout à coup, un bruit rythmé et effrayant se mit à résonner entre les feuillages : tac, tac !",
+      "hash": "3464040669"
+    },
+    {
+      "id": "p6-s3",
+      "pagina": 6,
+      "paragrafo": 0,
+      "texto": "TAC-TAC !",
+      "fala": "tac, tac !",
+      "hash": "73efbcbe8e"
+    },
+    {
+      "id": "p6-s4",
+      "pagina": 6,
+      "paragrafo": 0,
+      "texto": "On aurait dit un géant martelant du fer au cœur de la forêt.",
+      "fala": "On aurait dit un géant martelant du fer au cœur de la forêt.",
+      "hash": "58f3d6e2d8"
+    },
+    {
+      "id": "p6-s5",
+      "pagina": 6,
+      "paragrafo": 0,
+      "texto": "Don Quichotte empoigna aussitôt sa lance : « Qui va là ?",
+      "fala": "Don Quichotte empoigna aussitôt sa lance : Qui va là ?",
+      "hash": "12144ddc94"
+    },
+    {
+      "id": "p6-s6",
+      "pagina": 6,
+      "paragrafo": 0,
+      "texto": "Montre-toi, géant de l’obscurité ! »",
+      "fala": "Montre-toi, géant de l’obscurité !",
+      "hash": "c702bef90e"
+    },
+    {
+      "id": "p6-s7",
+      "pagina": 6,
+      "paragrafo": 1,
+      "texto": "Sancho, tremblant comme une feuille au vent, agit avec une grande malice : il attacha en cachette les pattes de Rossinante au licou de son âne, pour que le cheval ne puisse pas faire un seul pas.",
+      "fala": "Sancho, tremblant comme une feuille au vent, agit avec une grande malice : il attacha en cachette les pattes de Rossinante au licou de son âne, pour que le cheval ne puisse pas faire un seul pas.",
+      "hash": "b986c34e6e"
+    },
+    {
+      "id": "p6-s8",
+      "pagina": 6,
+      "paragrafo": 1,
+      "texto": "Et, pour calmer le gentilhomme et le garder là jusqu’au lever du soleil, il se mit à raconter une histoire interminable :",
+      "fala": "Et, pour calmer le gentilhomme et le garder là jusqu’au lever du soleil, il se mit à raconter une histoire interminable :",
+      "hash": "1da4cbedb7"
+    },
+    {
+      "id": "p6-s9",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "« Il était une fois un berger nommé Lope Ruiz, qui devait faire passer trois cents CHÈVRES de l’autre côté d’une rivière large et profonde.",
+      "fala": "Il était une fois un berger nommé Lope Ruiz, qui devait faire passer trois cents chèvres de l’autre côté d’une rivière large et profonde.",
+      "hash": "5b033d19e3"
+    },
+    {
+      "id": "p6-s10",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "Mais il n’avait qu’une toute petite BARQUE, où ne tenait qu’une seule chèvre à chaque traversée !",
+      "fala": "Mais il n’avait qu’une toute petite barque, où ne tenait qu’une seule chèvre à chaque traversée !",
+      "hash": "8b2190b9d8"
+    },
+    {
+      "id": "p6-s11",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "Maintenant, que Votre Grâce fasse bien attention à COMPTER chaque chevrette qui passe… parce que, si l’on perd le compte, l’histoire disparaît tout simplement ! »",
+      "fala": "Maintenant, que Votre Grâce fasse bien attention à compter chaque chevrette qui passe… parce que, si l’on perd le compte, l’histoire disparaît tout simplement !",
+      "hash": "76afc70513"
+    },
+    {
+      "id": "p6-s12",
+      "pagina": 6,
+      "paragrafo": 3,
+      "texto": "Aide Don Quichotte à compter les chèvres qui naviguent sur la rivière !",
+      "fala": "Aide Don Quichotte à compter les chèvres qui naviguent sur la rivière !",
+      "hash": "6feb868f7a"
+    },
+    {
+      "id": "p7-s0",
+      "pagina": 7,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapitre 14. Le secret de l’aube. Qui faisait TAC-TAC ?",
+      "fala": "Chapitre 14. Le secret de l’aube. Qui faisait tac, tac ?",
+      "hash": "1c7415144c"
+    },
+    {
+      "id": "p7-s1",
+      "pagina": 7,
+      "paragrafo": 0,
+      "texto": "La longue veillée semblait sans fin.",
+      "fala": "La longue veillée semblait sans fin.",
+      "hash": "5e0c1bac6f"
+    },
+    {
+      "id": "p7-s2",
+      "pagina": 7,
+      "paragrafo": 0,
+      "texto": "Mais, peu à peu, l’horizon se teinta d’or et de rose avec l’arrivée triomphale de l’AURORE.",
+      "fala": "Mais, peu à peu, l’horizon se teinta d’or et de rose avec l’arrivée triomphale de l’aurore.",
+      "hash": "23e9e6aaf9"
+    },
+    {
+      "id": "p7-s3",
+      "pagina": 7,
+      "paragrafo": 0,
+      "texto": "Touche le soleil pour réveiller le jour et chasser les ombres !",
+      "fala": "Touche le soleil pour réveiller le jour et chasser les ombres !",
+      "hash": "d66c000f1b"
+    },
+    {
+      "id": "p7-s4",
+      "pagina": 7,
+      "paragrafo": 1,
+      "texto": "Baignés par les rayons du matin, les amis découvrirent enfin le mystère de la nuit : ni ogres furieux ni bêtes aux griffes acérées !",
+      "fala": "Baignés par les rayons du matin, les amis découvrirent enfin le mystère de la nuit : ni ogres furieux ni bêtes aux griffes acérées !",
+      "hash": "3c30efee25"
+    },
+    {
+      "id": "p7-s5",
+      "pagina": 7,
+      "paragrafo": 1,
+      "texto": "Ce n’étaient que six énormes MARTEAUX de bois, actionnés par les eaux rapides de la rivière, qui frappaient en cadence des pièces d’étoffe pour les rendre douces et moelleuses.",
+      "fala": "Ce n’étaient que six énormes marteaux de bois, actionnés par les eaux rapides de la rivière, qui frappaient en cadence des pièces d’étoffe pour les rendre douces et moelleuses.",
+      "hash": "08487505d1"
+    },
+    {
+      "id": "p7-s6",
+      "pagina": 7,
+      "paragrafo": 1,
+      "texto": "TAC-TAC !",
+      "fala": "tac, tac !",
+      "hash": "73efbcbe8e"
+    },
+    {
+      "id": "p7-s7",
+      "pagina": 7,
+      "paragrafo": 1,
+      "texto": "TAC-TAC !",
+      "fala": "tac, tac !",
+      "hash": "73efbcbe8e"
+    },
+    {
+      "id": "p7-s8",
+      "pagina": 7,
+      "paragrafo": 2,
+      "texto": "En comprenant que toute sa peur était sans fondement, Sancho ne put se retenir : il se tint le ventre et éclata d’un joyeux FOU RIRE qui résonna sur les collines, manquant presque de tomber de son âne : « Oh là là, mon seigneur !",
+      "fala": "En comprenant que toute sa peur était sans fondement, Sancho ne put se retenir : il se tint le ventre et éclata d’un joyeux fou rire qui résonna sur les collines, manquant presque de tomber de son âne : Oh là là, mon seigneur !",
+      "hash": "3c383cfbe7"
+    },
+    {
+      "id": "p7-s9",
+      "pagina": 7,
+      "paragrafo": 2,
+      "texto": "Le géant de la nuit, c’était un marteau à battre le drap ! »",
+      "fala": "Le géant de la nuit, c’était un marteau à battre le drap !",
+      "hash": "4fbebd4e54"
+    },
+    {
+      "id": "p7-s10",
+      "pagina": 7,
+      "paragrafo": 2,
+      "texto": "Don Quichotte resta sérieux au début, mais bientôt le rire de Sancho le gagna.",
+      "fala": "Don Quichotte resta sérieux au début, mais bientôt le rire de Sancho le gagna.",
+      "hash": "0c16b4fe9d"
+    },
+    {
+      "id": "p7-s11",
+      "pagina": 7,
+      "paragrafo": 2,
+      "texto": "Après tout, même les plus grands héros ont peur de l’inconnu, et la lumière du matin apporte toujours la vérité et le soulagement !",
+      "fala": "Après tout, même les plus grands héros ont peur de l’inconnu, et la lumière du matin apporte toujours la vérité et le soulagement !",
+      "hash": "421bc8fe52"
+    },
+    {
+      "id": "p8-s0",
+      "pagina": 8,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapitre 15. L’armet de Mambrin. Un casque qui brille sous la pluie",
+      "fala": "Chapitre 15. L’armet de Mambrin. Un casque qui brille sous la pluie",
+      "hash": "928f86bb50"
+    },
+    {
+      "id": "p8-s1",
+      "pagina": 8,
+      "paragrafo": 0,
+      "texto": "Comme ils poursuivaient leur route, de doux nuages couvrirent le ciel et une fine PLUIE se mit à tomber.",
+      "fala": "Comme ils poursuivaient leur route, de doux nuages couvrirent le ciel et une fine pluie se mit à tomber.",
+      "hash": "62720400e7"
+    },
+    {
+      "id": "p8-s2",
+      "pagina": 8,
+      "paragrafo": 0,
+      "texto": "Au loin trottait un paisible BARBIER de village sur son petit âne.",
+      "fala": "Au loin trottait un paisible barbier de village sur son petit âne.",
+      "hash": "0620e42d00"
+    },
+    {
+      "id": "p8-s3",
+      "pagina": 8,
+      "paragrafo": 0,
+      "texto": "Pour protéger son chapeau neuf des gouttes, il s’était mis sur la tête un plat à barbe en laiton, qui brillait sous l’eau comme un miroir enchanté !",
+      "fala": "Pour protéger son chapeau neuf des gouttes, il s’était mis sur la tête un plat à barbe en laiton, qui brillait sous l’eau comme un miroir enchanté !",
+      "hash": "e4e5341646"
+    },
+    {
+      "id": "p8-s4",
+      "pagina": 8,
+      "paragrafo": 1,
+      "texto": "Don Quichotte écarquilla les yeux, émerveillé : « Voici devant nous, Sancho, la plus grande des reliques !",
+      "fala": "Don Quichotte écarquilla les yeux, émerveillé : Voici devant nous, Sancho, la plus grande des reliques !",
+      "hash": "87a6781b08"
+    },
+    {
+      "id": "p8-s5",
+      "pagina": 8,
+      "paragrafo": 1,
+      "texto": "Ce noble guerrier arbore le précieux ARMET DE MAMBRIN, le casque magique qui rend invincible celui qui le porte ! »",
+      "fala": "Ce noble guerrier arbore le précieux armet de mambrin, le casque magique qui rend invincible celui qui le porte !",
+      "hash": "9e3b7db7dc"
+    },
+    {
+      "id": "p8-s6",
+      "pagina": 8,
+      "paragrafo": 2,
+      "texto": "Abaissant sa lance de chêne, le gentilhomme s’élança au galop.",
+      "fala": "Abaissant sa lance de chêne, le gentilhomme s’élança au galop.",
+      "hash": "0e7cfb92d1"
+    },
+    {
+      "id": "p8-s7",
+      "pagina": 8,
+      "paragrafo": 2,
+      "texto": "« Au secours !",
+      "fala": "Au secours !",
+      "hash": "70a69e4e0f"
+    },
+    {
+      "id": "p8-s8",
+      "pagina": 8,
+      "paragrafo": 2,
+      "texto": "Au secours ! » cria le pauvre barbier, terrifié par cet homme en armure.",
+      "fala": "Au secours ! cria le pauvre barbier, terrifié par cet homme en armure.",
+      "hash": "a629cee3ec"
+    },
+    {
+      "id": "p8-s9",
+      "pagina": 8,
+      "paragrafo": 2,
+      "texto": "Il sauta de son âne et s’enfuit à toutes jambes à travers les champs de blé, laissant le plat à barbe tombé dans l’herbe !",
+      "fala": "Il sauta de son âne et s’enfuit à toutes jambes à travers les champs de blé, laissant le plat à barbe tombé dans l’herbe !",
+      "hash": "929469ae35"
+    },
+    {
+      "id": "p8-s10",
+      "pagina": 8,
+      "paragrafo": 2,
+      "texto": "Don Quichotte le posa solennellement sur sa tête : il était un peu trop grand, sans visière, et lui couvrait presque les yeux, mais pour lui il brillait de la splendeur de l’or royal le plus pur.",
+      "fala": "Don Quichotte le posa solennellement sur sa tête : il était un peu trop grand, sans visière, et lui couvrait presque les yeux, mais pour lui il brillait de la splendeur de l’or royal le plus pur.",
+      "hash": "426dc6619d"
+    },
+    {
+      "id": "p8-s11",
+      "pagina": 8,
+      "paragrafo": 2,
+      "texto": "Sancho riait avec tant de tendresse et d’amusement qu’il dut s’asseoir dans l’herbe pour reprendre son souffle !",
+      "fala": "Sancho riait avec tant de tendresse et d’amusement qu’il dut s’asseoir dans l’herbe pour reprendre son souffle !",
+      "hash": "c42f371276"
+    }
+  ],
+  "palavras": [
+    {
+      "slug": "chevriers",
+      "palavra": "CHEVRIERS",
+      "silabas": "CHE • VRI • ERS",
+      "fala": "che... vri... ers... chevriers!",
+      "hash": "e052fd4361"
+    },
+    {
+      "slug": "casque",
+      "palavra": "CASQUE",
+      "silabas": "CASQUE",
+      "fala": "casque... casque!",
+      "hash": "62b258313b"
+    },
+    {
+      "slug": "imagination",
+      "palavra": "IMAGINATION",
+      "silabas": "I • MA • GI • NA • TION",
+      "fala": "i... ma... gi... na... tion... imagination!",
+      "hash": "974546d4dc"
+    },
+    {
+      "slug": "moulin",
+      "palavra": "MOULIN",
+      "silabas": "MOU • LIN",
+      "fala": "mou... lin... moulin!",
+      "hash": "9f6af726dc"
+    },
+    {
+      "slug": "lance",
+      "palavra": "LANCE",
+      "silabas": "LANCE",
+      "fala": "lance... lance!",
+      "hash": "d82ab630d4"
+    },
+    {
+      "slug": "sortilege",
+      "palavra": "SORTILÈGE",
+      "silabas": "SOR • TI • LÈGE",
+      "fala": "sor... ti... lège... sortilège!",
+      "hash": "83f027b2bb"
+    },
+    {
+      "slug": "courage",
+      "palavra": "COURAGE",
+      "silabas": "COU • RAGE",
+      "fala": "cou... rage... courage!",
+      "hash": "fd88bb393a"
+    },
+    {
+      "slug": "chene",
+      "palavra": "CHÊNE",
+      "silabas": "CHÊNE",
+      "fala": "chêne... chêne!",
+      "hash": "3391bcc469"
+    },
+    {
+      "slug": "etoiles",
+      "palavra": "ÉTOILES",
+      "silabas": "É • TOILES",
+      "fala": "é... toiles... étoiles!",
+      "hash": "13719f8bcf"
+    },
+    {
+      "slug": "dulcinee",
+      "palavra": "DULCINÉE",
+      "silabas": "DUL • CI • NÉE",
+      "fala": "dul... ci... née... dulcinée!",
+      "hash": "8bf79e6deb"
+    },
+    {
+      "slug": "glands",
+      "palavra": "GLANDS",
+      "silabas": "GLANDS",
+      "fala": "glands... glands!",
+      "hash": "471a199ace"
+    },
+    {
+      "slug": "fromage",
+      "palavra": "FROMAGE",
+      "silabas": "FRO • MAGE",
+      "fala": "fro... mage... fromage!",
+      "hash": "86df657ad9"
+    },
+    {
+      "slug": "lait",
+      "palavra": "LAIT",
+      "silabas": "LAIT",
+      "fala": "lait... lait!",
+      "hash": "dc6801edc7"
+    },
+    {
+      "slug": "age-d-or",
+      "palavra": "ÂGE D’OR",
+      "silabas": "ÂGE • D’OR",
+      "fala": "âge... d’or... âge d’or!",
+      "hash": "1f08c100fc"
+    },
+    {
+      "slug": "partager",
+      "palavra": "PARTAGER",
+      "silabas": "PAR • TA • GER",
+      "fala": "par... ta... ger... partager!",
+      "hash": "a1a8eb9a9d"
+    },
+    {
+      "slug": "poussiere",
+      "palavra": "POUSSIÈRE",
+      "silabas": "POUS • SIÈRE",
+      "fala": "pous... sière... poussière!",
+      "hash": "dc666c3972"
+    },
+    {
+      "slug": "armees",
+      "palavra": "ARMÉES",
+      "silabas": "AR • MÉES",
+      "fala": "ar... mées... armées!",
+      "hash": "e10f72822f"
+    },
+    {
+      "slug": "moutons",
+      "palavra": "MOUTONS",
+      "silabas": "MOU • TONS",
+      "fala": "mou... tons... moutons!",
+      "hash": "340edf8eca"
+    },
+    {
+      "slug": "lanterne",
+      "palavra": "LANTERNE",
+      "silabas": "LAN • TERNE",
+      "fala": "lan... terne... lanterne!",
+      "hash": "db99245cf6"
+    },
+    {
+      "slug": "triste-figure",
+      "palavra": "TRISTE FIGURE",
+      "silabas": "TRISTE • FI • GURE",
+      "fala": "triste... fi... gure... triste figure!",
+      "hash": "2ffbd65348"
+    },
+    {
+      "slug": "bouclier",
+      "palavra": "BOUCLIER",
+      "silabas": "BOU • CLIER",
+      "fala": "bou... clier... bouclier!",
+      "hash": "f0affaa47e"
+    },
+    {
+      "slug": "tac-tac",
+      "palavra": "TAC-TAC",
+      "silabas": "TAC • TAC",
+      "fala": "tac... tac... tac-tac!",
+      "hash": "e6f3d611c2"
+    },
+    {
+      "slug": "chevres",
+      "palavra": "CHÈVRES",
+      "silabas": "CHÈVRES",
+      "fala": "chèvres... chèvres!",
+      "hash": "fb20e5a0da"
+    },
+    {
+      "slug": "barque",
+      "palavra": "BARQUE",
+      "silabas": "BARQUE",
+      "fala": "barque... barque!",
+      "hash": "05d1edaeda"
+    },
+    {
+      "slug": "compter",
+      "palavra": "COMPTER",
+      "silabas": "COMP • TER",
+      "fala": "comp... ter... compter!",
+      "hash": "019096f359"
+    },
+    {
+      "slug": "aurore",
+      "palavra": "AURORE",
+      "silabas": "AU • RORE",
+      "fala": "au... rore... aurore!",
+      "hash": "c5329e1f03"
+    },
+    {
+      "slug": "marteaux",
+      "palavra": "MARTEAUX",
+      "silabas": "MAR • TEAUX",
+      "fala": "mar... teaux... marteaux!",
+      "hash": "a358eaf882"
+    },
+    {
+      "slug": "fou-rire",
+      "palavra": "FOU RIRE",
+      "silabas": "FOU • RIRE",
+      "fala": "fou... rire... fou rire!",
+      "hash": "f85f5fcf5a"
+    },
+    {
+      "slug": "pluie",
+      "palavra": "PLUIE",
+      "silabas": "PLUIE",
+      "fala": "pluie... pluie!",
+      "hash": "1be25bee13"
+    },
+    {
+      "slug": "barbier",
+      "palavra": "BARBIER",
+      "silabas": "BAR • BIER",
+      "fala": "bar... bier... barbier!",
+      "hash": "ddccebb5d8"
+    },
+    {
+      "slug": "armet-de-mambrin",
+      "palavra": "ARMET DE MAMBRIN",
+      "silabas": "AR • MET • DE • MAM • BRIN",
+      "fala": "ar... met... de... mam... brin... armet de mambrin!",
+      "hash": "5cb7b70101"
+    }
+  ]
+}
