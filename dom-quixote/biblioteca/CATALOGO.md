@@ -31,17 +31,17 @@ Convenção: `pN` = índice da página (`?page=N`), sufixo `-real` (Lente da Rea
 
 | Página | Arquivos | Observação |
 | :--- | :--- | :--- |
-| 0 · Capa | `p0-real`, `p0-imag` | Capa completa (Gemini, Antigravity) |
-| 1 · O Tombo nos Moinhos | `p1-real`, `p1-imag` | Gemini, Antigravity |
-| 2 · A Lança de Carvalho | `p2-real`, `p2-imag` | Gemini, Antigravity |
-| 3 · Os Pastores | `p3-real`, `p3-imag` | Camadas `p3-bolotas`, `p3-queijo`, `p3-leite` (Gemini, Antigravity) |
+| 0 · Capa | `p0-real`, `p0-imag` | Realidade: Gemini (Antigravity); Imaginação refeita pelo Claude (API) |
+| 1 · O Tombo nos Moinhos | `p1-real`, `p1-imag` | idem |
+| 2 · A Lança de Carvalho | `p2-real`, `p2-imag` | idem |
+| 3 · Os Pastores | `p3-real`, `p3-imag` | idem. Camadas `p3-bolotas`, `p3-queijo`, `p3-leite` (Gemini) |
 | 4 · Os Exércitos de Poeira | `p4-real`, `p4-imag` | Camadas `p4-poeira-esquerda`, `p4-poeira-direita` (somem com SOPRO). Claude pela API, 2026-10-24 |
 | 5 · O Cavaleiro da Triste Figura | `p5-real`, `p5-imag` | Claude pela API, 2026-10-24 |
 | 6 · As Cabras do Rio | `p6-real`, `p6-imag` | Camadas `p6-balao-historia` e `p6-cabra` (usada 5 vezes). Claude pela API, 2026-10-24 |
 | 7 · O Segredo do Amanhecer | `p7-real` (galpão sem os martelos), `p7-imag` | Camada `p7-martelos` (anim `martelar`). Claude pela API, 2026-10-24 |
 | 8 · O Elmo de Mambrino | `p8-real`, `p8-imag` | Claude pela API, 2026-10-24 |
 
-Prompts das páginas 4 a 8: `tools/arte/dom-quixote-parte-2.mjs` (método em `docs/ARTE-PELA-API.md`).
+**Todas as Imaginações da Parte 2 foram refeitas em 2026-10-24** com a bíblia da Imaginação (Dom Quixote cavaleiro dourado, Rocinante corcel branco, Sancho escudeiro). Prompts das páginas 4 a 8 e de todas as Imaginações: `tools/arte/dom-quixote-parte-2.mjs` (método em `docs/ARTE-PELA-API.md`).
 
 ---
 

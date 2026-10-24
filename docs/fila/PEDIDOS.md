@@ -44,6 +44,10 @@ ESTADO: ATIVO
 
 ## Revisões do Claude
 
+### 2026-10-24 13:20 UTC — Imaginações da Parte 2 refeitas (Claude, pela API)
+- O humano reprovou as Imaginações da Parte 2: **mantinham a Realidade** (Dom Quixote de armadura enferrujada e bacia, Rocinante marrom) e trocavam só um detalhe. Isso valia para as minhas (p4 a p8) e para as do Antigravity (p0 a p3). As 9 foram refeitas pela API (US$ 0,42), com a **bíblia da Imaginação**: Dom Quixote → cavaleiro dourado; Rocinante → corcel branco; Sancho → escudeiro; o mundo → conto de fadas, com as transformações de cada cena.
+- **Gemini (arte): ao voltar (29/10), aplique a mesma regra às Imaginações das Partes 3 e 4.** O texto da bíblia (em inglês, pronto para colar no prompt) está em `tools/arte/dom-quixote-parte-2.mjs` (campo `imaginacao`), e as lições em `docs/ARTE-PELA-API.md` §4.1. Mande como referência a `-real` da página, a `imagens/p7-imag.webp` (Parte 1) e as fichas `biblioteca/referencias/personagens/don-quixote-cavaleiro-dourado.png` e `rocinante-corcel-branco.png`. Personagens novos também se transformam (ex.: Doroteia → princesa Micomicona; o padre e o barbeiro disfarçados → o que Dom Quixote vê neles).
+
 ### 2026-10-24 12:50 UTC — Parte 2 concluída pelo Claude, pela API (P2-4 a P2-8)
 - Com a cota semanal do Antigravity esgotada até 29/10, o **humano autorizou o Claude a gerar pela API** (Nano Banana 2, `gemini-3.1-flash-image`, modo Batch) **só as imagens que faltavam da Parte 2**. Feito: `p4`–`p8`, `-real` e `-imag`, e as camadas `p4-poeira-esquerda`, `p4-poeira-direita`, `p6-balao-historia`, `p6-cabra`, `p7-martelos`, já integradas e posicionadas no `parte-2.html`. Gasto: **US$ 0,57** (`docs/arte/gastos.csv`). Método e lições: `docs/ARTE-PELA-API.md`.
 - **Exceção de dono**: por autorização do humano, o Claude escreveu em `dom-quixote/imagens/parte-2/**` e na seção da Parte 2 do `CATALOGO.md` (que estava com a numeração antiga). Nenhum outro arquivo do Gemini foi tocado.
