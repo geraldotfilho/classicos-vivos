@@ -1,2 +1,4 @@
 node_modules/
 .cache-narracao/
+# WAV temporário da narração (o livro só usa o MP3; tools/otimizar-audio.mjs apaga o WAV)
+*/audio/**/*.wav
