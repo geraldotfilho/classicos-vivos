@@ -1,0 +1,229 @@
+{
+  "_sobre": "Quem fala cada trecho das frases com fala de personagem (texto no formato do campo `fala`, sem mudar palavras). Frases fora daqui são da NARRADORA. Elenco em tools/gravar-narracao.mjs (ELENCO).",
+  "p1-s6": [
+    [
+      "SANCHO",
+      "Ouro, meu senhor!"
+    ]
+  ],
+  "p1-s7": [
+    [
+      "SANCHO",
+      "Ouro de verdade!"
+    ],
+    [
+      "NARRADORA",
+      "comemorou Sancho, dando pulinhos."
+    ]
+  ],
+  "p1-s9": [
+    [
+      "QUIXOTE",
+      "Quem escreve com tanta sensibilidade tem a alma nobre,"
+    ],
+    [
+      "NARRADORA",
+      "concluiu o fidalgo com um suspiro afetuoso."
+    ]
+  ],
+  "p1-s10": [
+    [
+      "QUIXOTE",
+      "Os livros guardam os mais profundos mistérios do coração humano!"
+    ]
+  ],
+  "p2-s1": [
+    [
+      "NARRADORA",
+      "Ao contemplar a solidão imensa das montanhas, Dom Quixote teve uma inspiração luminosa:"
+    ],
+    [
+      "QUIXOTE",
+      "Amigo Sancho, vou permanecer nesta clareira para provar ao mundo a minha imensa saudade por Dulcineia, jejuando e meditando como fazia o ilustre herói amadis de Gaula!"
+    ]
+  ],
+  "p2-s2": [
+    [
+      "QUIXOTE",
+      "E você partirá no burrico para levar uma carta apaixonada até as mãos dela."
+    ]
+  ],
+  "p2-s3": [
+    [
+      "SANCHO",
+      "Mas, meu fidalgo amo,"
+    ],
+    [
+      "NARRADORA",
+      "indagou Sancho, coçando o queixo,"
+    ],
+    [
+      "SANCHO",
+      "como convencerei a senhora Dulcineia de que vossa mercê quase perdeu o juízo por ela, se eu não testemunhar nenhuma façanha espantosa?"
+    ]
+  ],
+  "p2-s4": [
+    [
+      "QUIXOTE",
+      "Testemunhe agora mesmo!"
+    ],
+    [
+      "NARRADORA",
+      "exclamou Dom Quixote com determinação."
+    ]
+  ],
+  "p3-s4": [
+    [
+      "NARRADORA",
+      "Desesperado, coçou a testa e tentou recuperar o texto gravado apenas na sua memória:"
+    ],
+    [
+      "SANCHO",
+      "Como começava mesmo?"
+    ]
+  ],
+  "p3-s5": [
+    [
+      "SANCHO",
+      "Soberana e altíssima senhora..."
+    ]
+  ],
+  "p3-s6": [
+    [
+      "SANCHO",
+      "E no final?"
+    ]
+  ],
+  "p3-s7": [
+    [
+      "SANCHO",
+      "Como ele assinava mesmo?"
+    ]
+  ],
+  "p4-s3": [
+    [
+      "SANCHO",
+      "Ele nunca aceitará voltar para casa por vontade própria,"
+    ],
+    [
+      "NARRADORA",
+      "avisou Sancho,"
+    ],
+    [
+      "SANCHO",
+      "a menos que uma donzela em apuros implore pela proteção da sua espada invencível!"
+    ]
+  ],
+  "p4-s4": [
+    [
+      "PADRE",
+      "Já sei!"
+    ],
+    [
+      "NARRADORA",
+      "exclamou o padre, de olhos brilhando."
+    ]
+  ],
+  "p4-s5": [
+    [
+      "PADRE",
+      "Vamos inventar uma princesa em apuros!"
+    ]
+  ],
+  "p5-s3": [
+    [
+      "DOROTEIA",
+      "Ó espelho da honra e flor da cavalaria!"
+    ],
+    [
+      "NARRADORA",
+      "suplicou ela com voz aveludada."
+    ]
+  ],
+  "p5-s4": [
+    [
+      "DOROTEIA",
+      "Eu sou a desventurada princesa micomicona, herdeira do distante reino de Micomicão!"
+    ]
+  ],
+  "p5-s5": [
+    [
+      "DOROTEIA",
+      "Um gigante feroz e desalmado, Pandafilando da Fosca Vista, invadiu minhas terras e somente o vosso braço corajoso pode libertar meu povo!"
+    ]
+  ],
+  "p5-s6": [
+    [
+      "NARRADORA",
+      "Comovido, Dom Quixote estendeu a mão à donzela e fez uma sagrada promessa:"
+    ],
+    [
+      "QUIXOTE",
+      "Levante-se, formosa princesa!"
+    ]
+  ],
+  "p5-s7": [
+    [
+      "QUIXOTE",
+      "Juro pela minha espada que vencerei esse gigante!"
+    ]
+  ],
+  "p6-s1": [
+    [
+      "NARRADORA",
+      "Hospedados todos na pousada no retorno da viagem, a noite transcorria serena quando gritos de guerra acordaram a casa inteira:"
+    ],
+    [
+      "QUIXOTE",
+      "Renda-se, monstro covarde!"
+    ]
+  ],
+  "p6-s2": [
+    [
+      "QUIXOTE",
+      "Prove do meu aço!"
+    ]
+  ],
+  "p6-s7": [
+    [
+      "ESTALAJADEIRO",
+      "Meu vinho!"
+    ]
+  ],
+  "p6-s8": [
+    [
+      "ESTALAJADEIRO",
+      "Meu vinho!"
+    ],
+    [
+      "NARRADORA",
+      "berrava o estalajadeiro, desesperado."
+    ]
+  ],
+  "p6-s9": [
+    [
+      "PADRE",
+      "Calma, meu bom homem, eu pago cada centavo!"
+    ],
+    [
+      "NARRADORA",
+      "prometeu o generoso padre."
+    ]
+  ],
+  "p7-s3": [
+    [
+      "NARRADORA",
+      "Num dado momento, Dom Quixote levantou-se à cabeceira da mesa e fez um sábio e comovente discurso sobre o valor das armas e das letras:"
+    ],
+    [
+      "QUIXOTE",
+      "A coragem dos cavaleiros protege a paz e defende os mais fracos."
+    ]
+  ],
+  "p7-s4": [
+    [
+      "QUIXOTE",
+      "E os livros, meus amigos, fazem crescer no coração a justiça, a verdade e a beleza!"
+    ]
+  ]
+}

@@ -64,76 +64,85 @@ Exemplo: `x 51, y 88, w 12` = um objeto com 12% da largura da cena, centrado um 
 
 ## 📗 PARTE 2 — Exércitos de Lã e o Elmo Encantado (`imagens/parte-2/`)
 
+> ⚠️ **Renumerada em 2026-10-24** (Claude): a revisão do texto abriu a Parte 2 com um capítulo novo (o tombo nos moinhos), e a parte passou a ter **9 páginas (0 a 8)**. As páginas antigas 1 a 7 viraram **2 a 8**, com os arquivos renomeados (cenas e camadas). Já entregues e renomeados: `p0-real`, `p0-imag`, `p2-real` (a lança de carvalho, antes `p1-real`) e `p3-real` (os pastores, antes `p2-real`). **Use os nomes desta seção.**
+
 | Pág. | Cena | Arquivos | Interação |
 | :--- | :--- | :--- | :--- |
 | 0 | Capa | `p0-real`, `p0-imag` | — |
-| 1 | A lança de carvalho | `p1-real`, `p1-imag` | toque em Sancho dormindo |
-| 2 | Pastores e a Idade de Ouro | `p2-real`, `p2-imag` + 3 camadas | BOLOTAS, QUEIJO, LEITE aparecem na pele de ovelha |
-| 3 | Os exércitos de poeira | `p3-real`, `p3-imag` + 2 camadas | SOPRO dissipa a poeira e revela as ovelhas |
-| 4 | O Cavaleiro da Triste Figura | `p4-real`, `p4-imag` | toque na lanterna |
-| 5 | As cabras que atravessam o rio | `p5-real`, `p5-imag` + 2 camadas | BARCO traz cada cabra (contagem até 5) |
-| 6 | O segredo do amanhecer | `p6-real`, `p6-imag` + 1 camada | SOL tira o véu da noite; martelos balançam |
-| 7 | O elmo de Mambrino | `p7-real`, `p7-imag` | toque no elmo |
+| 1 | A carga contra os gigantes e o tombo | `p1-real`, `p1-imag` | toque em Dom Quixote e em Sancho |
+| 2 | A lança de carvalho | `p2-real`, `p2-imag` | toque em Sancho dormindo |
+| 3 | Pastores e a Idade de Ouro | `p3-real`, `p3-imag` + 3 camadas | BOLOTAS, QUEIJO, LEITE aparecem na pele de ovelha |
+| 4 | Os exércitos de poeira | `p4-real`, `p4-imag` + 2 camadas | SOPRO dissipa a poeira e revela as ovelhas |
+| 5 | O Cavaleiro da Triste Figura | `p5-real`, `p5-imag` | toque na lanterna |
+| 6 | As cabras que atravessam o rio | `p6-real`, `p6-imag` + 2 camadas | BARCO traz cada cabra (contagem até 5) |
+| 7 | O segredo do amanhecer | `p7-real`, `p7-imag` + 1 camada | SOL tira o véu da noite; martelos balançam |
+| 8 | O elmo de Mambrino | `p8-real`, `p8-imag` | toque no elmo |
 
 ### P2-0 · Capa
 - **`p0-real.png`**: estrada de terra dourada de La Mancha ao fim da tarde. Dom Quixote no Rocinante magrinho (bacia **amassada**, galho de carvalho como lança) e Sancho no burrico cinza, de costas para o leitor, em três quartos, olhando o horizonte, onde se vê uma **nuvem de poeira** e, bem pequenino, um rebanho de ovelhas. Moinhos minúsculos ao fundo, à esquerda (lembrança da Parte 1).
 - **`p0-imag.png`**: mesma composição. A nuvem de poeira vira **dois exércitos de cavaleiros com estandartes coloridos**, e a bacia de Dom Quixote brilha como um **elmo de ouro**, com raios de luz.
 - **Referências**: `dom-quixote/imagens/p6-real.webp`, `p0-real.webp` e `p0-imag.webp` (Parte 1), `biblioteca/referencias/personagens/dom-quixote-rocinante-real.png`, `sancho-panca-acenando.png`.
 
-### P2-1 · A lança de carvalho (noite estrelada)
-- **`p1-real.png`**: noite azul-escura e estrelada no campo. À esquerda, um **velho carvalho** retorcido. Embaixo dele, Dom Quixote sentado, encostado no tronco, acordado, olhando as estrelas, com o galho seco de carvalho como lança apoiado no ombro. A bacia **amassada** está ao lado, na grama. À direita (zona x 66, y 55–95), **Sancho dormindo** de boca aberta sobre um saco, com um pedaço de pão na mão. Rocinante e o burrico cochilam ao fundo. Pequena fogueira quase apagada.
-- **`p1-imag.png`**: mesma cena. O carvalho brilha com folhas douradas, o galho na mão de Dom Quixote vira uma **lança encantada de madeira dourada** com uma flâmula, e entre as estrelas aparece, em constelação, o **rosto sereno de Dulcineia**. Sancho continua dormindo (com estrelinhas em volta).
+### P2-1 · A carga contra os gigantes e o tombo *(página nova, 2026-10-24)*
+- **`p1-real.png`**: a mesma planície de Campo de Criptana da Parte 1 (moinhos brancos de pás de madeira, céu claro com nuvens de vento), um instante **depois** do tombo. Em primeiro plano, à esquerda e no centro (zona x 15–50, y 40–95), **Dom Quixote e Rocinante caídos de lado na relva macia**, de pernas para o ar, de jeito engraçado e sem machucado à vista: a bacia **amassada** torta na cabeça, a **lança partida** em lascas espalhadas na grama e a ponta presa numa das pás do moinho mais próximo, ao fundo. À direita (zona x 60–90, y 30–90), **Sancho chegando aflito no burrico cinza**, com as duas mãos na cabeça. Poeira e folhas rodopiando no ar. Humor físico, **nunca dor**.
+- **`p1-imag.png`**: a mesma cena como Dom Quixote a vê: o moinho mais próximo é um **gigante de pedra, terra e musgo** cujos braços são as próprias vigas girando (AGENTS.md §4.4), e, no céu, a silhueta de um **mago de manto escuro e chapéu pontudo (Frestón)** soprando o vento com as bochechas cheias, entre faíscas douradas. Dom Quixote, caído na grama, já ergue o braço com um sorriso nobre. Sancho continua no burrico, com as mãos na cabeça.
+- **Referências**: `dom-quixote/imagens/p7-real-sem-pas.webp`, `camadas/p7-pas-moinho.webp` e `p7-imag.webp` (moinhos e gigantes da Parte 1), `biblioteca/referencias/personagens/dom-quixote-rocinante-real.png`, `sancho-panca-acenando.png`.
+- **Aceite**: é o mesmo lugar e a mesma luz da página 8 da Parte 1; o tombo é cômico e acolhedor; a criança reconhece a lança partida.
+
+### P2-2 · A lança de carvalho (noite estrelada)
+- **`p2-real.png`**: noite azul-escura e estrelada no campo. À esquerda, um **velho carvalho** retorcido. Embaixo dele, Dom Quixote sentado, encostado no tronco, acordado, olhando as estrelas, com o galho seco de carvalho como lança apoiado no ombro. A bacia **amassada** está ao lado, na grama. À direita (zona x 66, y 55–95), **Sancho dormindo** de boca aberta sobre um saco, com um pedaço de pão na mão. Rocinante e o burrico cochilam ao fundo. Pequena fogueira quase apagada.
+- **`p2-imag.png`**: mesma cena. O carvalho brilha com folhas douradas, o galho na mão de Dom Quixote vira uma **lança encantada de madeira dourada** com uma flâmula, e entre as estrelas aparece, em constelação, o **rosto sereno de Dulcineia**. Sancho continua dormindo (com estrelinhas em volta).
 - **Referências**: `dom-quixote/imagens/p5-real.webp` (noite da Parte 1) e `p3-imag.webp` (Dulcineia).
 
-### P2-2 · Os pastores e a Idade de Ouro *(com camadas)*
-- **`p2-real.png`** (cenário com personagens): fim de tarde num campo com pedras e azinheiras. **Seis pastores de cabras** (Character Bible), Dom Quixote e Sancho sentados em semicírculo ao redor de uma fogueira, à esquerda e no fundo. Em primeiro plano, no centro, **uma pele de ovelha estendida no chão, VAZIA**, ocupando a zona horizontal **x 33–68**, com a borda inferior em **y ≈ 90**. Algumas cabras pastando ao fundo. Dom Quixote com o braço erguido, como quem discursa.
+### P2-3 · Os pastores e a Idade de Ouro *(com camadas)*
+- **`p3-real.png`** (cenário com personagens): fim de tarde num campo com pedras e azinheiras. **Seis pastores de cabras** (Character Bible), Dom Quixote e Sancho sentados em semicírculo ao redor de uma fogueira, à esquerda e no fundo. Em primeiro plano, no centro, **uma pele de ovelha estendida no chão, VAZIA**, ocupando a zona horizontal **x 33–68**, com a borda inferior em **y ≈ 90**. Algumas cabras pastando ao fundo. Dom Quixote com o braço erguido, como quem discursa.
 - **Camadas** (`camadas/`, fundo transparente, apoiadas sobre a pele de ovelha):
   | Arquivo | Conteúdo | Posição |
   | :--- | :--- | :--- |
-  | `p2-bolotas.png` | tigela de madeira cheia de bolotas (frutos do carvalho), algumas soltas | x 40, y 86, w 11 |
-  | `p2-queijo.png` | meio queijo de cabra redondo, amarelado, com uma fatia cortada | x 51, y 88, w 12 |
-  | `p2-leite.png` | jarra de barro com leite, com uma gotinha escorrendo | x 62, y 86, w 8 |
-- **`p2-imag.png`**: a **Idade de Ouro** que Dom Quixote descreve. A mesma roda, agora num prado dourado e florido onde as pessoas e os animais vivem em harmonia: árvores carregadas de frutas que todos colhem, abelhas oferecendo mel em favos, um riacho cristalino, crianças e pastores dividindo comida. A pele de ovelha vira uma **toalha dourada farta**. Luz quente de entardecer mágico.
+  | `p3-bolotas.png` | tigela de madeira cheia de bolotas (frutos do carvalho), algumas soltas | x 40, y 86, w 11 |
+  | `p3-queijo.png` | meio queijo de cabra redondo, amarelado, com uma fatia cortada | x 51, y 88, w 12 |
+  | `p3-leite.png` | jarra de barro com leite, com uma gotinha escorrendo | x 62, y 86, w 8 |
+- **`p3-imag.png`**: a **Idade de Ouro** que Dom Quixote descreve. A mesma roda, agora num prado dourado e florido onde as pessoas e os animais vivem em harmonia: árvores carregadas de frutas que todos colhem, abelhas oferecendo mel em favos, um riacho cristalino, crianças e pastores dividindo comida. A pele de ovelha vira uma **toalha dourada farta**. Luz quente de entardecer mágico.
 - **Referências**: personagens de `dom-quixote/imagens/p6-real.webp` (Parte 1).
 - **Aceite**: com as três camadas sobre a pele de ovelha, parece uma única pintura, e cada comida se lê bem sozinha.
 
-### P2-3 · Os exércitos de poeira *(com camadas)*
-- **`p3-real.png`**: planície seca e larga sob céu claro. **Dois rebanhos de ovelhas** vêm de lados opostos: um à esquerda (zona x 10–50, base y ≈ 90) e outro à direita (x 55–95), com pastores ao fundo. Dom Quixote no Rocinante, num pequeno morro à esquerda, apontando com o galho-lança. Sancho no burrico, ao lado, com a mão em concha na orelha.
+### P2-4 · Os exércitos de poeira *(com camadas)*
+- **`p4-real.png`**: planície seca e larga sob céu claro. **Dois rebanhos de ovelhas** vêm de lados opostos: um à esquerda (zona x 10–50, base y ≈ 90) e outro à direita (x 55–95), com pastores ao fundo. Dom Quixote no Rocinante, num pequeno morro à esquerda, apontando com o galho-lança. Sancho no burrico, ao lado, com a mão em concha na orelha.
 - **Camadas** (nuvens de poeira que **escondem** cada rebanho até a criança soprar):
   | Arquivo | Conteúdo | Posição |
   | :--- | :--- | :--- |
-  | `p3-poeira-esquerda.png` | nuvem densa de poeira dourada-acinzentada, ondulante, que cobre totalmente o rebanho da esquerda | x 30, y 92, w 46 |
-  | `p3-poeira-direita.png` | nuvem semelhante, para o rebanho da direita (não espelhe exatamente) | x 74, y 92, w 46 |
-- **`p3-imag.png`**: mesma planície, mas cada rebanho vira um **exército medieval de conto de fadas**: à esquerda, o exército de **Alifanfarrão da Trapobana** (estandartes vermelhos, elefantes ao longe); à direita, o de **Pentapolim do Braço Arregaçado** (estandartes azuis, o próprio Pentapolim com a manga direita dobrada). Poeira dourada e lanças erguidas, sem violência explícita.
+  | `p4-poeira-esquerda.png` | nuvem densa de poeira dourada-acinzentada, ondulante, que cobre totalmente o rebanho da esquerda | x 30, y 92, w 46 |
+  | `p4-poeira-direita.png` | nuvem semelhante, para o rebanho da direita (não espelhe exatamente) | x 74, y 92, w 46 |
+- **`p4-imag.png`**: mesma planície, mas cada rebanho vira um **exército medieval de conto de fadas**: à esquerda, o exército de **Alifanfarrão da Trapobana** (estandartes vermelhos, elefantes ao longe); à direita, o de **Pentapolim do Braço Arregaçado** (estandartes azuis, o próprio Pentapolim com a manga direita dobrada). Poeira dourada e lanças erguidas, sem violência explícita.
 - **Aceite**: com as camadas visíveis, **nenhuma ovelha aparece**. Sem elas, os dois rebanhos são o centro da cena.
 
-### P2-4 · O Cavaleiro da Triste Figura
-- **`p4-real.png`**: noite, close médio. À esquerda (zona x 20–45), **Sancho levanta uma lanterna** de lata com luz amarela. À direita, o **rosto comprido, magro e cansado de Dom Quixote**, barba por fazer, bacia amassada, com um sorriso triste que mostra a janelinha dos dois dentes. A luz da lanterna desenha sombras suaves.
-- **`p4-imag.png`**: a mesma cena. Atrás de Dom Quixote aparece um **escudo nobre** pintado com um rosto triste e digno, e um velho sábio-mago escreve num livro dourado as palavras do novo nome (o livro **sem letras legíveis**).
+### P2-5 · O Cavaleiro da Triste Figura
+- **`p5-real.png`**: noite, close médio. À esquerda (zona x 20–45), **Sancho levanta uma lanterna** de lata com luz amarela. À direita, o **rosto comprido, magro e cansado de Dom Quixote**, barba por fazer, bacia amassada, com um sorriso triste que mostra a janelinha dos dois dentes. A luz da lanterna desenha sombras suaves.
+- **`p5-imag.png`**: a mesma cena. Atrás de Dom Quixote aparece um **escudo nobre** pintado com um rosto triste e digno, e um velho sábio-mago escreve num livro dourado as palavras do novo nome (o livro **sem letras legíveis**).
 - **Aceite**: o rosto é melancólico, mas **terno**, nunca assustador.
 
-### P2-5 · As cabras que atravessam o rio *(com camadas)*
-- **`p5-real.png`**: noite muito escura junto a um rio, com árvores altas. À esquerda, **Sancho** gesticula contando uma história, ao lado de **Rocinante com as patas dianteiras amarradas** por uma cordinha (de jeito engraçado). Dom Quixote está sentado e atento. Ao fundo, à direita, um vulto indistinto e silhuetas de onde vem o barulho (sem mostrar os martelos). **Deixe o terço direito superior (x 45–95, y 10–60) com céu escuro e liso**, porque ali aparece o balão da história.
+### P2-6 · As cabras que atravessam o rio *(com camadas)*
+- **`p6-real.png`**: noite muito escura junto a um rio, com árvores altas. À esquerda, **Sancho** gesticula contando uma história, ao lado de **Rocinante com as patas dianteiras amarradas** por uma cordinha (de jeito engraçado). Dom Quixote está sentado e atento. Ao fundo, à direita, um vulto indistinto e silhuetas de onde vem o barulho (sem mostrar os martelos). **Deixe o terço direito superior (x 45–95, y 10–60) com céu escuro e liso**, porque ali aparece o balão da história.
 - **Camadas**:
   | Arquivo | Conteúdo | Posição |
   | :--- | :--- | :--- |
-  | `p5-balao-historia.png` | grande **balão de pensamento** em aquarela clara saindo de Sancho, mostrando o rio Guadiana à luz do dia com um **barquinho** e a margem do outro lado (vazia, sem cabras) | x 70, y 62, w 52 |
-  | `p5-cabra.png` | **uma cabrinha** simpática de perfil, olhando para a direita, pequena (cabe no balão); a mesma imagem é usada 5 vezes | x 56–84, y 44, w 6 |
-- **`p5-imag.png`**: mesma noite, mas, na escuridão à direita, Dom Quixote imagina um **gigante ferreiro** de pedra e brasa martelando uma bigorna enorme, com faíscas. Mitológico, não monstruoso. O balão de Sancho fica de fora (é camada).
+  | `p6-balao-historia.png` | grande **balão de pensamento** em aquarela clara saindo de Sancho, mostrando o rio Guadiana à luz do dia com um **barquinho** e a margem do outro lado (vazia, sem cabras) | x 70, y 62, w 52 |
+  | `p6-cabra.png` | **uma cabrinha** simpática de perfil, olhando para a direita, pequena (cabe no balão); a mesma imagem é usada 5 vezes | x 56–84, y 44, w 6 |
+- **`p6-imag.png`**: mesma noite, mas, na escuridão à direita, Dom Quixote imagina um **gigante ferreiro** de pedra e brasa martelando uma bigorna enorme, com faíscas. Mitológico, não monstruoso. O balão de Sancho fica de fora (é camada).
 - **Aceite**: com as cinco cabrinhas lado a lado dentro do balão, todas cabem na margem de chegada.
 
-### P2-6 · O segredo do amanhecer *(com camada)*
-- **`p6-real.png`**: **amanhecer** rosado e dourado junto ao rio. À direita (zona x 58–86, y 35–65), um galpão de madeira aberto com **seis grandes martelos de madeira (pisões)** movidos por uma roda d'água, batendo em panos de lã. **Pinte os martelos em repouso** (a camada animada fica por cima). À esquerda, **Sancho segurando a barriga de tanto rir**, quase caindo do burrico, e Dom Quixote com expressão entre bravo e começando a rir.
+### P2-7 · O segredo do amanhecer *(com camada)*
+- **`p7-real.png`**: **amanhecer** rosado e dourado junto ao rio. À direita (zona x 58–86, y 35–65), um galpão de madeira aberto com **seis grandes martelos de madeira (pisões)** movidos por uma roda d'água, batendo em panos de lã. **Pinte os martelos em repouso** (a camada animada fica por cima). À esquerda, **Sancho segurando a barriga de tanto rir**, quase caindo do burrico, e Dom Quixote com expressão entre bravo e começando a rir.
 - **Camada**:
   | Arquivo | Conteúdo | Posição |
   | :--- | :--- | :--- |
-  | `p6-martelos.png` | o conjunto dos martelos de madeira **levantados**, sem o galpão; o livro balança a camada para simular as batidas | x 72, y 62, w 26 |
+  | `p7-martelos.png` | o conjunto dos martelos de madeira **levantados**, sem o galpão; o livro balança a camada para simular as batidas | x 72, y 62, w 26 |
 - A **escuridão da noite** é um véu feito em código (CSS) que some quando a criança toca em SOL. **Não precisa de arte**.
-- **`p6-imag.png`**: como Dom Quixote tinha imaginado à noite: a **forja encantada dos gigantes**, com martelos colossais de pedra, fagulhas douradas e o rio brilhando. Sancho continua rindo.
+- **`p7-imag.png`**: como Dom Quixote tinha imaginado à noite: a **forja encantada dos gigantes**, com martelos colossais de pedra, fagulhas douradas e o rio brilhando. Sancho continua rindo.
 
-### P2-7 · O elmo de Mambrino
-- **`p7-real.png`**: chuva fina e prateada numa estrada. No centro-esquerda, Dom Quixote no Rocinante **ergue com as duas mãos** a bacia de latão nova, molhada e brilhante (zona do elmo: x 38–60, y 8–38). À direita, o **barbeiro** corre para longe, segurando o chapéu, deixando o burrinho para trás. Em primeiro plano, Sancho sentado no chão, rindo.
-- **`p7-imag.png`**: a bacia vira o **lendário Elmo de Mambrino**: um elmo de ouro com plumas e pedras preciosas, iluminando a chuva como um arco-íris. Dom Quixote parece um rei-cavaleiro.
+### P2-8 · O elmo de Mambrino
+- **`p8-real.png`**: chuva fina e prateada numa estrada. No centro-esquerda, Dom Quixote no Rocinante **ergue com as duas mãos** a bacia de latão nova, molhada e brilhante (zona do elmo: x 38–60, y 8–38). À direita, o **barbeiro** corre para longe, segurando o chapéu, deixando o burrinho para trás. Em primeiro plano, Sancho sentado no chão, rindo.
+- **`p8-imag.png`**: a bacia vira o **lendário Elmo de Mambrino**: um elmo de ouro com plumas e pedras preciosas, iluminando a chuva como um arco-íris. Dom Quixote parece um rei-cavaleiro.
 
 ---
 

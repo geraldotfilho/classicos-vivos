@@ -17,17 +17,17 @@
       "id": "p0-s1",
       "pagina": 0,
       "paragrafo": 0,
-      "texto": "Depois de voar pelos ares no lendário duelo contra os moinhos de vento, Dom Quixote e seu leal escudeiro Sancho Pança continuam sua fantástica jornada pelas estradas ensolaradas de La Mancha!",
-      "fala": "Depois de voar pelos ares no lendário duelo contra os moinhos de vento, Dom Quixote e seu leal escudeiro Sancho Pança continuam sua fantástica jornada pelas estradas ensolaradas de La Mancha!",
-      "hash": "53cc5a16c8"
+      "texto": "De lança em punho e coração valente, Dom Quixote galopa contra os gigantes dos moinhos de vento, e o leal escudeiro Sancho Pança vai logo atrás, pelas estradas ensolaradas de La Mancha!",
+      "fala": "De lança em punho e coração valente, Dom Quixote galopa contra os gigantes dos moinhos de vento, e o leal escudeiro Sancho Pança vai logo atrás, pelas estradas ensolaradas de La Mancha!",
+      "hash": "5cc55d5296"
     },
     {
       "id": "p0-s2",
       "pagina": 0,
       "paragrafo": 1,
-      "texto": "Nesta parte da história, nosso nobre cavaleiro vai aprender a curar as dores sob o teto acolhedor das estrelas, partilhar uma ceia fraterna com PASTORES de cabras, desafiar exércitos misteriosos no meio de nuvens de poeira, ganhar um apelido inesquecível e conquistar um ELMO reluzente como o sol.",
-      "fala": "Nesta parte da história, nosso nobre cavaleiro vai aprender a curar as dores sob o teto acolhedor das estrelas, partilhar uma ceia fraterna com pastores de cabras, desafiar exércitos misteriosos no meio de nuvens de poeira, ganhar um apelido inesquecível e conquistar um elmo reluzente como o sol.",
-      "hash": "8a2310cc01"
+      "texto": "Nesta parte da história, nosso nobre cavaleiro vai levar um tombo espetacular, ganhar uma lança nova sob as estrelas, partilhar uma ceia fraterna com PASTORES de cabras, desafiar exércitos misteriosos no meio de nuvens de poeira, ganhar um apelido inesquecível e conquistar um ELMO reluzente como o sol.",
+      "fala": "Nesta parte da história, nosso nobre cavaleiro vai levar um tombo espetacular, ganhar uma lança nova sob as estrelas, partilhar uma ceia fraterna com pastores de cabras, desafiar exércitos misteriosos no meio de nuvens de poeira, ganhar um apelido inesquecível e conquistar um elmo reluzente como o sol.",
+      "hash": "de8e0f40a1"
     },
     {
       "id": "p0-s3",
@@ -58,12 +58,20 @@
       "id": "p1-s2",
       "pagina": 1,
       "paragrafo": 0,
-      "texto": "— Não fujam, criaturas covardes! — bradava o fidalgo, avançando veloz contra o primeiro MOINHO de vento da planície!",
-      "fala": "Não fujam, criaturas covardes! bradava o fidalgo, avançando veloz contra o primeiro moinho de vento da planície!",
-      "hash": "f81eda63d6"
+      "texto": "— Não fujam, criaturas covardes!",
+      "fala": "Não fujam, criaturas covardes!",
+      "hash": "fa9e05cf91"
     },
     {
       "id": "p1-s3",
+      "pagina": 1,
+      "paragrafo": 0,
+      "texto": "Um só cavaleiro vem enfrentar todos vocês! — bradava o fidalgo, avançando veloz contra o primeiro MOINHO de vento da planície!",
+      "fala": "Um só cavaleiro vem enfrentar todos vocês! bradava o fidalgo, avançando veloz contra o primeiro moinho de vento da planície!",
+      "hash": "5c640d8466"
+    },
+    {
+      "id": "p1-s4",
       "pagina": 1,
       "paragrafo": 1,
       "texto": "Nesse exato instante, soprou uma forte lufada de vento e a gigantesca pá de madeira girou veloz, partindo a ponta da LANÇA em mil lascas!",
@@ -71,7 +79,7 @@
       "hash": "3bd6dd470e"
     },
     {
-      "id": "p1-s4",
+      "id": "p1-s5",
       "pagina": 1,
       "paragrafo": 1,
       "texto": "Num puxão espetacular, a enorme pá ergueu cavalo e cavaleiro bem alto pelo céu, atirando os dois num rodopio cômico que terminou com um sonoro tombo sobre a relva macia do campo!",
@@ -79,15 +87,15 @@
       "hash": "89a511de31"
     },
     {
-      "id": "p1-s5",
+      "id": "p1-s6",
       "pagina": 1,
       "paragrafo": 2,
       "texto": "Sancho Pança correu aflito em seu burrico, com as mãos na cabeça: — Valha-me Deus, meu senhor!",
-      "fala": "Sancho Pança correu aflito em seu burrico, com as mãos na cabeça:, Valha-me Deus, meu senhor!",
-      "hash": "7d6432e595"
+      "fala": "Sancho Pança correu aflito em seu burrico, com as mãos na cabeça: Valha-me Deus, meu senhor!",
+      "hash": "1b3abf1a54"
     },
     {
-      "id": "p1-s6",
+      "id": "p1-s7",
       "pagina": 1,
       "paragrafo": 2,
       "texto": "Eu não avisei que eram apenas moinhos?",
@@ -95,15 +103,15 @@
       "hash": "667bfe9727"
     },
     {
-      "id": "p1-s7",
+      "id": "p1-s8",
       "pagina": 1,
       "paragrafo": 2,
       "texto": "Mas o fidalgo, sacudindo a poeira e endireitando a bacia amassada com um sorriso nobre, ensinou com paciência: — Silêncio, amigo Sancho!",
-      "fala": "Mas o fidalgo, sacudindo a poeira e endireitando a bacia amassada com um sorriso nobre, ensinou com paciência:, Silêncio, amigo Sancho!",
-      "hash": "a42b6274a6"
+      "fala": "Mas o fidalgo, sacudindo a poeira e endireitando a bacia amassada com um sorriso nobre, ensinou com paciência: Silêncio, amigo Sancho!",
+      "hash": "cbe7f8ea89"
     },
     {
-      "id": "p1-s8",
+      "id": "p1-s9",
       "pagina": 1,
       "paragrafo": 2,
       "texto": "As coisas da cavalaria mudam num piscar de olhos!",
@@ -111,7 +119,7 @@
       "hash": "0c51f09353"
     },
     {
-      "id": "p1-s9",
+      "id": "p1-s10",
       "pagina": 1,
       "paragrafo": 2,
       "texto": "Foi o maldoso mago Frestón que lançou um FEITIÇO para roubar a minha glória.",
@@ -119,7 +127,7 @@
       "hash": "2e27427e78"
     },
     {
-      "id": "p1-s10",
+      "id": "p1-s11",
       "pagina": 1,
       "paragrafo": 2,
       "texto": "Mas contra a nossa CORAGEM, magia nenhuma há de prevalecer!",
@@ -139,9 +147,9 @@
       "id": "p2-s1",
       "pagina": 2,
       "paragrafo": 0,
-      "texto": "Mesmo com o corpo dolorido pelo tombo e a bacia de latão toda amassada, Dom Quixote recusava-se a desanimar.",
-      "fala": "Mesmo com o corpo dolorido pelo tombo e a bacia de latão toda amassada, Dom Quixote recusava-se a desanimar.",
-      "hash": "6fe8f9c6f9"
+      "texto": "Mesmo com o corpo dolorido pelo tombo e a bacia de latão toda amassada, Dom Quixote não se deixava desanimar.",
+      "fala": "Mesmo com o corpo dolorido pelo tombo e a bacia de latão toda amassada, Dom Quixote não se deixava desanimar.",
+      "hash": "51045df1be"
     },
     {
       "id": "p2-s2",
@@ -163,12 +171,20 @@
       "id": "p2-s4",
       "pagina": 2,
       "paragrafo": 1,
-      "texto": "Relembrou a façanha de um antigo herói de Espanha, que, ao perder a espada em combate, lutara com a mesma bravura usando apenas o tronco de uma árvore.",
-      "fala": "Relembrou a façanha de um antigo herói de Espanha, que, ao perder a espada em combate, lutara com a mesma bravura usando apenas o tronco de uma árvore.",
-      "hash": "b61dbb8f08"
+      "texto": "— Um antigo herói da Espanha, quando perdeu a espada na batalha, lutou com um tronco de árvore e venceu! — contou ele a Sancho.",
+      "fala": "Um antigo herói da Espanha, quando perdeu a espada na batalha, lutou com um tronco de árvore e venceu! contou ele a Sancho.",
+      "hash": "393c67ab20"
     },
     {
       "id": "p2-s5",
+      "pagina": 2,
+      "paragrafo": 1,
+      "texto": "— Pois eu farei o mesmo!",
+      "fala": "Pois eu farei o mesmo!",
+      "hash": "7eb9b66e85"
+    },
+    {
+      "id": "p2-s6",
       "pagina": 2,
       "paragrafo": 2,
       "texto": "Quando a noite desceu mansa e fresca sobre a planície, Sancho forrou a terra com palha, jantou seu queijinho e adormeceu num sono tão pesado que seus roncos pareciam sinos na colina.",
@@ -176,7 +192,7 @@
       "hash": "65af19744d"
     },
     {
-      "id": "p2-s6",
+      "id": "p2-s7",
       "pagina": 2,
       "paragrafo": 2,
       "texto": "Mas Dom Quixote permaneceu desperto sob a brisa, admirando o brilho das ESTRELAS e pensando na sua doce dama DULCINEIA, exatamente como faziam os mais nobres cavaleiros dos seus livros.",
@@ -204,12 +220,28 @@
       "id": "p3-s2",
       "pagina": 3,
       "paragrafo": 0,
-      "texto": "Sem fazer perguntas nem estranhar a armadura enferrujada, os anfitriões abriram sorrisos francos, estenderam uma macia pele de ovelha no chão e convidaram os forasteiros para a ceia.",
-      "fala": "Sem fazer perguntas nem estranhar a armadura enferrujada, os anfitriões abriram sorrisos francos, estenderam uma macia pele de ovelha no chão e convidaram os forasteiros para a ceia.",
-      "hash": "1f2eba7a48"
+      "texto": "Sem fazer perguntas nem estranhar a armadura enferrujada, os anfitriões abriram sorrisos francos e estenderam uma macia pele de ovelha no chão.",
+      "fala": "Sem fazer perguntas nem estranhar a armadura enferrujada, os anfitriões abriram sorrisos francos e estenderam uma macia pele de ovelha no chão.",
+      "hash": "0f227d8ba9"
     },
     {
       "id": "p3-s3",
+      "pagina": 3,
+      "paragrafo": 0,
+      "texto": "— Sentem-se, amigos! — convidou o pastor mais velho.",
+      "fala": "Sentem-se, amigos! convidou o pastor mais velho.",
+      "hash": "28222020f0"
+    },
+    {
+      "id": "p3-s4",
+      "pagina": 3,
+      "paragrafo": 0,
+      "texto": "— Aqui, o que é de um é de todos!",
+      "fala": "Aqui, o que é de um é de todos!",
+      "hash": "4257e0dfe3"
+    },
+    {
+      "id": "p3-s5",
       "pagina": 3,
       "paragrafo": 1,
       "texto": "Ofereceram com alegria o melhor do que tinham: uma tigela de BOLOTAS doces tostadas na brasa, uma fatia generosa de QUEIJO de cabra e uma jarra de LEITE bem fresquinho.",
@@ -217,7 +249,7 @@
       "hash": "021fed270d"
     },
     {
-      "id": "p3-s4",
+      "id": "p3-s6",
       "pagina": 3,
       "paragrafo": 1,
       "texto": "Ajude a pôr a mesa dos pastores!",
@@ -225,15 +257,15 @@
       "hash": "d00075bb4b"
     },
     {
-      "id": "p3-s5",
+      "id": "p3-s7",
       "pagina": 3,
       "paragrafo": 2,
-      "texto": "Segurando as bolotas na palma da mão, Dom Quixote comoveu a todos ao falar sobre a lendária IDADE DE OURO — um tempo abençoado em que as pessoas não erguiam cercas, não existia a palavra \"egoísmo\" e todos sabiam DIVIDIR com amor os frutos da terra.",
-      "fala": "Segurando as bolotas na palma da mão, Dom Quixote comoveu a todos ao falar sobre a lendária idade de ouro, um tempo abençoado em que as pessoas não erguiam cercas, não existia a palavra egoísmo e todos sabiam dividir com amor os frutos da terra.",
-      "hash": "e78428b8c9"
+      "texto": "Segurando as bolotas na palma da mão, Dom Quixote falou com emoção: — Houve um tempo abençoado, a IDADE DE OURO, em que ninguém erguia cercas e todos sabiam DIVIDIR com amor os frutos da terra!",
+      "fala": "Segurando as bolotas na palma da mão, Dom Quixote falou com emoção: Houve um tempo abençoado, a idade de ouro, em que ninguém erguia cercas e todos sabiam dividir com amor os frutos da terra!",
+      "hash": "d21c0921e7"
     },
     {
-      "id": "p3-s6",
+      "id": "p3-s8",
       "pagina": 3,
       "paragrafo": 2,
       "texto": "Os pastores não compreendiam todas as palavras difíceis do fidalgo, mas sentiam o calor da sua alma generosa: afinal, o mundo torna-se um lugar encantado sempre que sabemos compartilhar!",
@@ -269,9 +301,9 @@
       "id": "p4-s3",
       "pagina": 4,
       "paragrafo": 1,
-      "texto": "— Prepare o ânimo, fiel Sancho! — exclamou o cavaleiro em júbilo.",
-      "fala": "Prepare o ânimo, fiel Sancho! exclamou o cavaleiro em júbilo.",
-      "hash": "3797a958dd"
+      "texto": "— Prepare o ânimo, fiel Sancho! — exclamou o cavaleiro, radiante.",
+      "fala": "Prepare o ânimo, fiel Sancho! exclamou o cavaleiro, radiante.",
+      "hash": "da94dbd06f"
     },
     {
       "id": "p4-s4",
@@ -293,14 +325,14 @@
       "id": "p4-s6",
       "pagina": 4,
       "paragrafo": 2,
-      "texto": "— Mas, meu bondoso amo... — ponderou Sancho, apurando os ouvidos e franzindo a testa —, não escuto espadas nem cornetas de guerra, mas apenas um pacífico coro de \"méééé\"!",
-      "fala": "Mas, meu bondoso amo... ponderou Sancho, apurando os ouvidos e franzindo a testa, não escuto espadas nem cornetas de guerra, mas apenas um pacífico coro de méééé!",
-      "hash": "0addebac28"
+      "texto": "— Mas, meu bondoso amo... — ponderou Sancho, apurando os ouvidos e franzindo a testa —, não escuto espadas nem cornetas de guerra, só um coro bem pacífico de méééé!",
+      "fala": "Mas, meu bondoso amo... ponderou Sancho, apurando os ouvidos e franzindo a testa, não escuto espadas nem cornetas de guerra, só um coro bem pacífico de méééé!",
+      "hash": "c5585edc6c"
     },
     {
       "id": "p4-s7",
       "pagina": 4,
-      "paragrafo": 2,
+      "paragrafo": 3,
       "texto": "Sopre a poeira e veja a verdade com seus próprios olhos!",
       "fala": "Sopre a poeira e veja a verdade com seus próprios olhos!",
       "hash": "2989a173f1"
@@ -390,17 +422,33 @@
       "id": "p5-s6",
       "pagina": 5,
       "paragrafo": 3,
-      "texto": "Longe de zangar-se, Dom Quixote encantou-se com a homenagem!",
-      "fala": "Longe de zangar-se, Dom Quixote encantou-se com a homenagem!",
-      "hash": "2862b7e91a"
+      "texto": "Longe de se zangar, Dom Quixote adorou a homenagem!",
+      "fala": "Longe de se zangar, Dom Quixote adorou a homenagem!",
+      "hash": "0c20653421"
     },
     {
       "id": "p5-s7",
       "pagina": 5,
       "paragrafo": 3,
-      "texto": "Lembrou-se de que todos os grandes paladinos dos livros recebiam nomes poéticos e declarou que, assim que passassem por uma oficina, mandaria pintar um rosto nobre e pensativo em seu ESCUDO de montaria!",
-      "fala": "Lembrou-se de que todos os grandes paladinos dos livros recebiam nomes poéticos e declarou que, assim que passassem por uma oficina, mandaria pintar um rosto nobre e pensativo em seu escudo de montaria!",
-      "hash": "1eefa945f0"
+      "texto": "— Que nome bonito, Sancho! — exclamou.",
+      "fala": "Que nome bonito, Sancho! exclamou.",
+      "hash": "d420b2f81d"
+    },
+    {
+      "id": "p5-s8",
+      "pagina": 5,
+      "paragrafo": 3,
+      "texto": "— Todos os grandes cavaleiros dos livros têm nomes poéticos.",
+      "fala": "Todos os grandes cavaleiros dos livros têm nomes poéticos.",
+      "hash": "72ff4b4086"
+    },
+    {
+      "id": "p5-s9",
+      "pagina": 5,
+      "paragrafo": 3,
+      "texto": "Vou mandar pintar um rosto nobre e pensativo no meu ESCUDO!",
+      "fala": "Vou mandar pintar um rosto nobre e pensativo no meu escudo!",
+      "hash": "eff98d51f1"
     },
     {
       "id": "p6-s0",
@@ -432,8 +480,8 @@
       "pagina": 6,
       "paragrafo": 0,
       "texto": "TAC-TAC!",
-      "fala": "TAC, TAC!",
-      "hash": "5cf1230f3f"
+      "fala": "tac, tac!",
+      "hash": "a1d14fe6d3"
     },
     {
       "id": "p6-s4",
@@ -447,12 +495,20 @@
       "id": "p6-s5",
       "pagina": 6,
       "paragrafo": 0,
-      "texto": "Dom Quixote empunhou a lança na hora, pronto para desvendar o enigma daquele monstro!",
-      "fala": "Dom Quixote empunhou a lança na hora, pronto para desvendar o enigma daquele monstro!",
-      "hash": "9c0e23d9c8"
+      "texto": "Dom Quixote empunhou a lança na hora: — Quem vem lá?",
+      "fala": "Dom Quixote empunhou a lança na hora: Quem vem lá?",
+      "hash": "b52a52ff97"
     },
     {
       "id": "p6-s6",
+      "pagina": 6,
+      "paragrafo": 0,
+      "texto": "Apareça, gigante da escuridão!",
+      "fala": "Apareça, gigante da escuridão!",
+      "hash": "1d80dedb67"
+    },
+    {
+      "id": "p6-s7",
       "pagina": 6,
       "paragrafo": 1,
       "texto": "Sancho, tremendo feito folha ao vento, agiu com extrema esperteza: amarrou disfarçadamente as patas de Rocinante ao cabresto do burrico, garantindo que o cavalo não andasse um passo sequer.",
@@ -460,7 +516,7 @@
       "hash": "5ec462cdd2"
     },
     {
-      "id": "p6-s7",
+      "id": "p6-s8",
       "pagina": 6,
       "paragrafo": 1,
       "texto": "E, para acalmar o fidalgo e mantê-lo ali até o sol raiar, começou a puxar uma história interminável:",
@@ -468,7 +524,7 @@
       "hash": "d89b22129c"
     },
     {
-      "id": "p6-s8",
+      "id": "p6-s9",
       "pagina": 6,
       "paragrafo": 2,
       "texto": "— Era uma vez um pastor chamado Lope Ruiz, que precisava transportar trezentas CABRAS pelas águas de um rio caudaloso.",
@@ -476,7 +532,7 @@
       "hash": "0b7b702de9"
     },
     {
-      "id": "p6-s9",
+      "id": "p6-s10",
       "pagina": 6,
       "paragrafo": 2,
       "texto": "Mas ele só tinha um BARCO pequenininho, onde cabia uma única cabra por travessia!",
@@ -484,7 +540,7 @@
       "hash": "26f3732410"
     },
     {
-      "id": "p6-s10",
+      "id": "p6-s11",
       "pagina": 6,
       "paragrafo": 2,
       "texto": "Agora, vossa mercê preste atenção para CONTAR cada cabrinha que passar... porque, se perder a conta, a história simplesmente desaparece!",
@@ -492,7 +548,7 @@
       "hash": "9260444909"
     },
     {
-      "id": "p6-s11",
+      "id": "p6-s12",
       "pagina": 6,
       "paragrafo": 3,
       "texto": "Ajude Dom Quixote a contar as cabras que navegam pelo rio!",
@@ -505,8 +561,8 @@
       "paragrafo": -1,
       "titulo": true,
       "texto": "Capítulo 14. O Segredo do Amanhecer. Quem Fazia TAC-TAC?",
-      "fala": "Capítulo 14. O Segredo do Amanhecer. Quem Fazia TAC, TAC?",
-      "hash": "1ac1ffb0ee"
+      "fala": "Capítulo 14. O Segredo do Amanhecer. Quem Fazia tac, tac?",
+      "hash": "eb03898dbf"
     },
     {
       "id": "p7-s1",
@@ -553,35 +609,43 @@
       "pagina": 7,
       "paragrafo": 1,
       "texto": "TAC-TAC!",
-      "fala": "TAC, TAC!",
-      "hash": "5cf1230f3f"
+      "fala": "tac, tac!",
+      "hash": "a1d14fe6d3"
     },
     {
       "id": "p7-s7",
       "pagina": 7,
       "paragrafo": 1,
       "texto": "TAC-TAC!",
-      "fala": "TAC, TAC!",
-      "hash": "5cf1230f3f"
+      "fala": "tac, tac!",
+      "hash": "a1d14fe6d3"
     },
     {
       "id": "p7-s8",
       "pagina": 7,
       "paragrafo": 2,
-      "texto": "Ao perceber todo o seu pavor infundado, Sancho não aguentou: segurou a barriga e desatou numa gostosa RISADA que ecoou pelas colinas, fazendo o burrico quase sacudi-lo no chão.",
-      "fala": "Ao perceber todo o seu pavor infundado, Sancho não aguentou: segurou a barriga e desatou numa gostosa risada que ecoou pelas colinas, fazendo o burrico quase sacudi-lo no chão.",
-      "hash": "944527ec15"
+      "texto": "Ao perceber todo o seu pavor infundado, Sancho não aguentou: segurou a barriga e desatou numa gostosa RISADA que ecoou pelas colinas, quase caindo do burrico: — Ai, meu senhor!",
+      "fala": "Ao perceber todo o seu pavor infundado, Sancho não aguentou: segurou a barriga e desatou numa gostosa risada que ecoou pelas colinas, quase caindo do burrico: Ai, meu senhor!",
+      "hash": "dff3efca80"
     },
     {
       "id": "p7-s9",
       "pagina": 7,
       "paragrafo": 2,
-      "texto": "Dom Quixote mordeu os lábios a princípio, mas logo o riso de Sancho o contagiou.",
-      "fala": "Dom Quixote mordeu os lábios a princípio, mas logo o riso de Sancho o contagiou.",
-      "hash": "2dcf96f34b"
+      "texto": "O gigante da noite era um martelo de bater pano!",
+      "fala": "O gigante da noite era um martelo de bater pano!",
+      "hash": "4b6cef4be2"
     },
     {
       "id": "p7-s10",
+      "pagina": 7,
+      "paragrafo": 2,
+      "texto": "Dom Quixote ficou sério no começo, mas logo o riso de Sancho o contagiou.",
+      "fala": "Dom Quixote ficou sério no começo, mas logo o riso de Sancho o contagiou.",
+      "hash": "1e482b2e7d"
+    },
+    {
+      "id": "p7-s11",
       "pagina": 7,
       "paragrafo": 2,
       "texto": "Afinal, até os maiores heróis têm medo do desconhecido, e a luz da manhã sempre traz a verdade e o alívio!",
@@ -626,8 +690,8 @@
       "pagina": 8,
       "paragrafo": 1,
       "texto": "Dom Quixote arregalou os olhos maravilhado: — Eis diante de nós, Sancho, a maior das relíquias!",
-      "fala": "Dom Quixote arregalou os olhos maravilhado:, Eis diante de nós, Sancho, a maior das relíquias!",
-      "hash": "7d8d482553"
+      "fala": "Dom Quixote arregalou os olhos maravilhado: Eis diante de nós, Sancho, a maior das relíquias!",
+      "hash": "b0451b49e4"
     },
     {
       "id": "p8-s5",
@@ -649,12 +713,28 @@
       "id": "p8-s7",
       "pagina": 8,
       "paragrafo": 2,
-      "texto": "O pobre barbeiro, apavorado com aquele homem de armadura gritando frases de cavalaria, saltou do burrinho e correu desabalado pelos trigais, deixando a bacia caída na relva!",
-      "fala": "O pobre barbeiro, apavorado com aquele homem de armadura gritando frases de cavalaria, saltou do burrinho e correu desabalado pelos trigais, deixando a bacia caída na relva!",
-      "hash": "e93eb0cb72"
+      "texto": "— Socorro!",
+      "fala": "Socorro!",
+      "hash": "15dab50b41"
     },
     {
       "id": "p8-s8",
+      "pagina": 8,
+      "paragrafo": 2,
+      "texto": "Socorro! — gritou o pobre barbeiro, apavorado com aquele homem de armadura.",
+      "fala": "Socorro! gritou o pobre barbeiro, apavorado com aquele homem de armadura.",
+      "hash": "90d8ff3346"
+    },
+    {
+      "id": "p8-s9",
+      "pagina": 8,
+      "paragrafo": 2,
+      "texto": "Saltou do burrinho e correu desabalado pelos trigais, deixando a bacia caída na relva!",
+      "fala": "Saltou do burrinho e correu desabalado pelos trigais, deixando a bacia caída na relva!",
+      "hash": "b13ee6f73d"
+    },
+    {
+      "id": "p8-s10",
       "pagina": 8,
       "paragrafo": 2,
       "texto": "Dom Quixote colocou-a solenemente na cabeça: ficou meio frouxa e sem viseira, cobrindo-lhe quase os olhos, mas para ele brilhava com o esplendor do mais puro ouro real.",
@@ -662,7 +742,7 @@
       "hash": "20d7b79949"
     },
     {
-      "id": "p8-s9",
+      "id": "p8-s11",
       "pagina": 8,
       "paragrafo": 2,
       "texto": "Sancho ria com tanta ternura e diversão que precisou sentar-se na relva para recuperar o fôlego!",
