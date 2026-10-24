@@ -7,10 +7,12 @@
     "build:fonts": "node tools/build-fonts.mjs",
     "build:icons": "node tools/build-icons.mjs",
     "build:images": "python3 tools/otimizar-imagens.py",
-    "build": "npm run build:fonts && npm run build:icons && npm run build:css && npm run exportar:frases && npm run build:sw",
+    "build": "npm run build:fonts && npm run build:icons && npm run build:css && npm run exportar:frases && npm run exportar:traducoes && npm run build:sw",
     "build:sw": "node tools/build-sw.mjs",
     "build:audio": "node tools/otimizar-audio.mjs",
     "exportar:frases": "node tools/exportar-frases.mjs",
+    "exportar:traducoes": "node tools/traducoes.mjs exportar",
+    "conferir:traducoes": "node tools/traducoes.mjs",
     "gravar:narracao": "NODE_USE_ENV_PROXY=1 node --no-warnings tools/gravar-narracao.mjs"
   },
   "devDependencies": {

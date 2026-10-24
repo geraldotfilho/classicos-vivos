@@ -33,12 +33,193 @@ function cenaDe(i) {
     return LIVRO.paginas[i].cena || {};
 }
 
+/* Cartões da página; uma tradução pode trocar as palavras de um cartão do tipo 'ordem' (a assinatura
+   tem outra quantidade de palavras em cada idioma) */
 function cartoesDe(i) {
-    return cenaDe(i).cartoes || null;
+    const c = cenaDe(i).cartoes || null;
+    const p = c && traducaoDaPagina(i);
+    return p && p.cartoes ? { ...c, ...p.cartoes } : c;
 }
 
 function escapeHtml(text) {
     return String(text ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+}
+
+/* =====================================================================
+   IDIOMAS: o português é o original (window.LIVRO); as traduções ficam em
+   <livro>/traducoes/parte-N.<idioma>.js (window.TRADUCOES, ver AGENTS.md §2.8).
+   A narração gravada é só em português; nos demais idiomas lê a voz do aparelho.
+   ===================================================================== */
+const PT = 'pt-BR';
+const PREF_IDIOMA = 'cv-idioma';
+const PREF_MAIUSCULAS = 'cv-maiusculas';
+const ICONES = LIVRO.icones || '../assets/icones/';
+
+const IDIOMAS = {
+    'pt-BR': {
+        nome: 'Português', bandeira: 'br', lang: 'pt-BR', voz: 'pt-BR', vozesBoas: /luciana|francisca|thalita|felipe|antonio|daniel/,
+        ui: {
+            lerNesteIdioma: 'Ler em português',
+            biblioteca: 'Voltar à biblioteca', bibliotecaTitulo: 'Voltar à Biblioteca Clássicos Vivos',
+            parte: (n, total) => `Parte ${n} de ${total}`,
+            ouvirPagina: 'Ouvir Página', pararVoz: 'Parar Voz', ouvirTitulo: 'Ouvir a página inteira (ou toque numa frase)',
+            maiusculas: 'Mostrar o texto todo em LETRAS MAIÚSCULAS', minusculas: 'Mostrar o texto com letras normais',
+            vozTitulo: 'Escolher a voz e a velocidade da leitura', vozAria: 'Escolher a voz',
+            sfxTitulo: 'Ativar/Desativar Efeitos Sonoros', sfxAria: 'Efeitos sonoros',
+            telaCheiaTitulo: 'Modo Tela Cheia para Tablet', telaCheiaAria: 'Tela cheia',
+            anterior: 'Anterior', proxima: 'Próxima',
+            pagina: (n, total) => `Página ${n} de ${total}`, secaoPagina: (n) => `Página ${n}`, irParaPagina: (n) => `Ir para página ${n}`,
+            abrirLivro: 'Abrir o Livro!', lerDeNovo: 'Ler de Novo', bibliotecaBotao: 'Biblioteca', continuarHistoria: 'Continuar a história', fim: '🎉 Fim!',
+            etiqueta: '✨ Toque nas PALAVRAS MAIÚSCULAS para ouvir!', etiquetaMaiusculas: '✨ Toque nas PALAVRAS AMARELAS para ouvir!',
+            lenteImag: 'Usar Lente da Imaginação!', lenteReal: 'Voltar para a Lente da Realidade',
+            ilustracaoACaminho: 'Ilustração a caminho', faixaVazia: 'Toque nas palavras na ordem certa',
+            continuarLendo: 'Continuar lendo', ouvirPalavra: 'Ouvir a palavra de novo', silabas: 'Sílabas',
+            vozDaLeitura: '🗣️ Voz da leitura', fechar: 'Fechar',
+            narracaoGravada: '🎙️ Narração gravada', vozesDoAparelho: '📱 Vozes deste aparelho', velocidade: '⏱️ Velocidade',
+            normal: '🐇 Normal', devagar: '🐢 Devagar',
+            semVoz: 'Nenhuma voz em português foi encontrada neste aparelho. Peça a um adulto para instalar a voz <strong>Português (Brasil)</strong> nas configurações de "Texto para fala" do tablet.',
+            gravadaEmBreve: '',
+            recomendada: '⭐ recomendada', offline: 'funciona offline', online: 'precisa de internet', gravada: 'gravada', maisNatural: 'mais natural',
+            previa: '(prévia: só algumas páginas)', emProducao: '(em produção para esta parte)',
+            amostraDe: (nome) => `Ouvir amostra de ${nome}`, amostra: 'Olá! Eu vou ler esta história com você.'
+        }
+    },
+    en: {
+        nome: 'English', bandeira: 'gb', lang: 'en-GB', voz: 'en-GB', vozesBoas: /libby|sonia|ryan|maisie|serena|daniel|kate|arthur/,
+        ui: {
+            lerNesteIdioma: 'Read in English',
+            biblioteca: 'Back to the library', bibliotecaTitulo: 'Back to the Clássicos Vivos Library',
+            parte: (n, total) => `Part ${n} of ${total}`,
+            ouvirPagina: 'Listen', pararVoz: 'Stop', ouvirTitulo: 'Listen to the whole page (or tap a sentence)',
+            maiusculas: 'Show all the text in CAPITAL LETTERS', minusculas: 'Show the text in normal letters',
+            vozTitulo: 'Choose the reading voice and speed', vozAria: 'Choose the voice',
+            sfxTitulo: 'Sound effects on/off', sfxAria: 'Sound effects',
+            telaCheiaTitulo: 'Full screen for tablets', telaCheiaAria: 'Full screen',
+            anterior: 'Back', proxima: 'Next',
+            pagina: (n, total) => `Page ${n} of ${total}`, secaoPagina: (n) => `Page ${n}`, irParaPagina: (n) => `Go to page ${n}`,
+            abrirLivro: 'Open the Book!', lerDeNovo: 'Read Again', bibliotecaBotao: 'Library', continuarHistoria: 'Continue the story', fim: '🎉 The End!',
+            etiqueta: '✨ Tap the CAPITAL WORDS to hear them!', etiquetaMaiusculas: '✨ Tap the YELLOW WORDS to hear them!',
+            lenteImag: 'Use the Imagination Lens!', lenteReal: 'Back to the Reality Lens',
+            ilustracaoACaminho: 'Picture on its way', faixaVazia: 'Tap the words in the right order',
+            continuarLendo: 'Keep reading', ouvirPalavra: 'Hear the word again', silabas: 'Syllables',
+            vozDaLeitura: '🗣️ Reading voice', fechar: 'Close',
+            narracaoGravada: '🎙️ Recorded narration', vozesDoAparelho: '📱 Voices on this device', velocidade: '⏱️ Speed',
+            normal: '🐇 Normal', devagar: '🐢 Slow',
+            semVoz: 'No English voice was found on this device. Ask a grown-up to install an <strong>English</strong> voice in the tablet\'s "Text-to-speech" settings.',
+            gravadaEmBreve: '🎙️ A recorded narration in English is coming soon. For now, the device\'s voice reads the story.',
+            recomendada: '⭐ recommended', offline: 'works offline', online: 'needs internet', gravada: 'recorded', maisNatural: 'most natural',
+            previa: '(preview: only some pages)', emProducao: '(in production for this part)',
+            amostraDe: (nome) => `Hear a sample of ${nome}`, amostra: 'Hello! I am going to read this story with you.'
+        }
+    },
+    fr: {
+        nome: 'Français', bandeira: 'fr', lang: 'fr-FR', voz: 'fr-FR', vozesBoas: /denise|henri|eloise|vivienne|remy|thomas|amelie|audrey/,
+        ui: {
+            lerNesteIdioma: 'Lire en français',
+            biblioteca: 'Retour à la bibliothèque', bibliotecaTitulo: 'Retour à la bibliothèque Clássicos Vivos',
+            parte: (n, total) => `Partie ${n} sur ${total}`,
+            ouvirPagina: 'Écouter', pararVoz: 'Arrêter', ouvirTitulo: 'Écouter toute la page (ou touche une phrase)',
+            maiusculas: 'Afficher tout le texte en LETTRES MAJUSCULES', minusculas: 'Afficher le texte en lettres normales',
+            vozTitulo: 'Choisir la voix et la vitesse de lecture', vozAria: 'Choisir la voix',
+            sfxTitulo: 'Activer/désactiver les effets sonores', sfxAria: 'Effets sonores',
+            telaCheiaTitulo: 'Plein écran pour tablette', telaCheiaAria: 'Plein écran',
+            anterior: 'Précédente', proxima: 'Suivante',
+            pagina: (n, total) => `Page ${n} sur ${total}`, secaoPagina: (n) => `Page ${n}`, irParaPagina: (n) => `Aller à la page ${n}`,
+            abrirLivro: 'Ouvrir le livre !', lerDeNovo: 'Relire', bibliotecaBotao: 'Bibliothèque', continuarHistoria: 'Continuer l’histoire', fim: '🎉 Fin !',
+            etiqueta: '✨ Touche les MOTS EN MAJUSCULES pour les écouter !', etiquetaMaiusculas: '✨ Touche les MOTS JAUNES pour les écouter !',
+            lenteImag: 'Utiliser la Lentille de l’Imagination !', lenteReal: 'Revenir à la Lentille de la Réalité',
+            ilustracaoACaminho: 'Illustration en route', faixaVazia: 'Touche les mots dans le bon ordre',
+            continuarLendo: 'Continuer la lecture', ouvirPalavra: 'Réécouter le mot', silabas: 'Syllabes',
+            vozDaLeitura: '🗣️ Voix de lecture', fechar: 'Fermer',
+            narracaoGravada: '🎙️ Narration enregistrée', vozesDoAparelho: '📱 Voix de cet appareil', velocidade: '⏱️ Vitesse',
+            normal: '🐇 Normale', devagar: '🐢 Lente',
+            semVoz: 'Aucune voix française n’a été trouvée sur cet appareil. Demande à un adulte d’installer une voix <strong>Français</strong> dans les réglages « Synthèse vocale » de la tablette.',
+            gravadaEmBreve: '🎙️ Une narration enregistrée en français arrive bientôt. Pour l’instant, c’est la voix de l’appareil qui lit l’histoire.',
+            recomendada: '⭐ recommandée', offline: 'fonctionne hors ligne', online: 'besoin d’internet', gravada: 'enregistrée', maisNatural: 'plus naturelle',
+            previa: '(aperçu : quelques pages)', emProducao: '(en préparation pour cette partie)',
+            amostraDe: (nome) => `Écouter un extrait de ${nome}`, amostra: 'Bonjour ! Je vais lire cette histoire avec toi.'
+        }
+    },
+    es: {
+        nome: 'Español', bandeira: 'es', lang: 'es-ES', voz: 'es-ES', vozesBoas: /elvira|alvaro|ximena|monica|jorge|lucia|pablo|helena/,
+        ui: {
+            lerNesteIdioma: 'Leer en español',
+            biblioteca: 'Volver a la biblioteca', bibliotecaTitulo: 'Volver a la Biblioteca Clássicos Vivos',
+            parte: (n, total) => `Parte ${n} de ${total}`,
+            ouvirPagina: 'Escuchar', pararVoz: 'Parar', ouvirTitulo: 'Escuchar toda la página (o toca una frase)',
+            maiusculas: 'Mostrar todo el texto en LETRAS MAYÚSCULAS', minusculas: 'Mostrar el texto con letras normales',
+            vozTitulo: 'Elegir la voz y la velocidad de lectura', vozAria: 'Elegir la voz',
+            sfxTitulo: 'Activar/desactivar los efectos de sonido', sfxAria: 'Efectos de sonido',
+            telaCheiaTitulo: 'Pantalla completa para tableta', telaCheiaAria: 'Pantalla completa',
+            anterior: 'Anterior', proxima: 'Siguiente',
+            pagina: (n, total) => `Página ${n} de ${total}`, secaoPagina: (n) => `Página ${n}`, irParaPagina: (n) => `Ir a la página ${n}`,
+            abrirLivro: '¡Abrir el libro!', lerDeNovo: 'Leer otra vez', bibliotecaBotao: 'Biblioteca', continuarHistoria: 'Seguir la historia', fim: '🎉 ¡Fin!',
+            etiqueta: '✨ ¡Toca las PALABRAS EN MAYÚSCULAS para oírlas!', etiquetaMaiusculas: '✨ ¡Toca las PALABRAS AMARILLAS para oírlas!',
+            lenteImag: '¡Usar la Lente de la Imaginación!', lenteReal: 'Volver a la Lente de la Realidad',
+            ilustracaoACaminho: 'Ilustración en camino', faixaVazia: 'Toca las palabras en el orden correcto',
+            continuarLendo: 'Seguir leyendo', ouvirPalavra: 'Oír la palabra otra vez', silabas: 'Sílabas',
+            vozDaLeitura: '🗣️ Voz de lectura', fechar: 'Cerrar',
+            narracaoGravada: '🎙️ Narración grabada', vozesDoAparelho: '📱 Voces de este aparato', velocidade: '⏱️ Velocidad',
+            normal: '🐇 Normal', devagar: '🐢 Despacio',
+            semVoz: 'No se encontró ninguna voz en español en este aparato. Pide a un adulto que instale una voz <strong>Español</strong> en los ajustes de «Texto a voz» de la tableta.',
+            gravadaEmBreve: '🎙️ Pronto habrá una narración grabada en español. Por ahora, la voz del aparato lee la historia.',
+            recomendada: '⭐ recomendada', offline: 'funciona sin internet', online: 'necesita internet', gravada: 'grabada', maisNatural: 'más natural',
+            previa: '(avance: solo algunas páginas)', emProducao: '(en producción para esta parte)',
+            amostraDe: (nome) => `Oír una muestra de ${nome}`, amostra: '¡Hola! Voy a leer esta historia contigo.'
+        }
+    }
+};
+
+let idioma = PT;
+let textoMaiusculo = lerPreferencia(PREF_MAIUSCULAS) === '1';
+
+/* Texto da interface no idioma atual (chave de IDIOMAS[...].ui; funções recebem os argumentos) */
+function ui(chave, ...args) {
+    const v = IDIOMAS[idioma].ui[chave] ?? IDIOMAS[PT].ui[chave];
+    return typeof v === 'function' ? v(...args) : v;
+}
+
+function traducao() {
+    return idioma === PT ? null : ((window.TRADUCOES || {})[idioma] || null);
+}
+
+function traducaoDaPagina(i) {
+    const tr = traducao();
+    return tr && tr.paginas ? tr.paginas[i] || null : null;
+}
+
+/* Textos soltos (legendas, cartões, falas): dicionário português → idioma; sem tradução, fica o original */
+function t(texto) {
+    const tr = traducao();
+    return (tr && tr.textos && typeof texto === 'string' && tr.textos[texto]) || texto;
+}
+
+function obraNoIdioma() {
+    return (traducao() || {}).obra || LIVRO.obra;
+}
+
+/* Página no idioma atual: capítulo, título e texto traduzidos; a cena é a mesma */
+function paginaNoIdioma(i) {
+    const pagina = LIVRO.paginas[i];
+    const p = traducaoDaPagina(i);
+    if (!p) return pagina;
+    return { ...pagina, capitulo: p.capitulo || pagina.capitulo, titulo: p.titulo || pagina.titulo, texto: p.texto || pagina.texto, etiqueta: p.etiqueta || pagina.etiqueta };
+}
+
+/* Carrega <livro>/traducoes/parte-N.<idioma>.js (uma tag <script>: funciona até em file://) */
+const traducoesCarregando = {};
+function carregarTraducao(codigo) {
+    if (codigo === PT || (window.TRADUCOES || {})[codigo]) return Promise.resolve();
+    if (!traducoesCarregando[codigo]) {
+        traducoesCarregando[codigo] = new Promise((resolve, reject) => {
+            const script = document.createElement('script');
+            script.src = `${LIVRO.traducoes || './traducoes/'}parte-${LIVRO.parte}.${codigo}.js`;
+            script.onload = () => ((window.TRADUCOES || {})[codigo] ? resolve() : reject(new Error('tradução vazia')));
+            script.onerror = () => { script.remove(); reject(new Error('sem tradução')); };
+            document.head.appendChild(script);
+        }).catch((e) => { delete traducoesCarregando[codigo]; throw e; });
+    }
+    return traducoesCarregando[codigo];
 }
 
 /* =====================================================================
@@ -100,7 +281,7 @@ const FALAS = {};
 function montarHotspots(i, cena) {
     return (cena.hotspots || []).map((h, k) => {
         const lente = h.lente ? ` hotspot-${h.lente}${h.lente === 'imag' ? ' hidden' : ''}` : '';
-        return `<div class="scene-hotspot${lente}" data-hotspot="${k}" style="left:${h.x}%;top:${h.y}%;width:${h.w}%;height:${h.h}%;" title="${escapeHtml(h.titulo || h.palavra || '')}"></div>`;
+        return `<div class="scene-hotspot${lente}" data-hotspot="${k}" style="left:${h.x}%;top:${h.y}%;width:${h.w}%;height:${h.h}%;" title="${escapeHtml(t(h.titulo || h.palavra || ''))}"></div>`;
     }).join('');
 }
 
@@ -119,12 +300,12 @@ function montarCamadas(i, cena) {
     }).join('');
 }
 
-function montarCartoes(i, cena) {
-    const c = cena.cartoes;
+function montarCartoes(i) {
+    const c = cartoesDe(i);
     if (!c || !c.itens || !c.itens.length) return '';
     const cols = GRID_COLS[c.colunas || Math.min(c.itens.length, 4)];
     const faixa = c.tipo === 'ordem'
-        ? `<div id="faixa-${i}" class="faixa-palavras mt-2" aria-live="polite"><span class="faixa-vazia">${escapeHtml(c.faixaVazia || 'Toque nas palavras na ordem certa')}</span></div>`
+        ? `<div id="faixa-${i}" class="faixa-palavras mt-2" aria-live="polite"><span class="faixa-vazia">${escapeHtml(t(c.faixaVazia) || ui('faixaVazia'))}</span></div>`
         : '';
     const cards = c.itens.map(item => {
         const domId = item.domId || `card-${i}-${item.id}`;
@@ -133,10 +314,10 @@ function montarCartoes(i, cena) {
             : (item.emoji && c.tipo !== 'ordem' ? `<span class="text-2xl sm:text-3xl leading-none pointer-events-none" aria-hidden="true">${item.emoji}</span>` : '');
         return `
             <div id="${escapeHtml(domId)}" data-drop-target="drop-zone-${i}" data-id="${escapeHtml(item.id)}"
-                 data-word="${escapeHtml(item.palavra)}" data-emoji="${escapeHtml(item.emoji || '✨')}"
+                 data-word="${escapeHtml(t(item.palavra))}" data-emoji="${escapeHtml(item.emoji || '✨')}"
                  class="draggable-card bg-white border-2 ${item.borda || 'border-amber-500'} rounded-2xl p-1.5 flex items-center justify-center gap-2 min-h-[48px]">
                 ${icone}
-                <span class="font-display font-bold text-xs sm:text-sm text-amber-950 uppercase truncate">${escapeHtml(item.palavra)}</span>
+                <span class="font-display font-bold text-xs sm:text-sm text-amber-950 uppercase truncate">${escapeHtml(t(item.palavra))}</span>
             </div>`;
     }).join('');
     return `${faixa}<div class="w-full grid ${cols} gap-2 z-20 mt-2">${cards}</div>`;
@@ -149,39 +330,41 @@ function montarPaginaArte(i, pagina) {
         <div class="book-page page-art">
             <div id="frame-${i}" class="art-plate relative w-full flex flex-col justify-center">
                 <div class="flex items-center justify-between gap-2 z-20 mb-1">
-                    <span id="lens-badge-${i}" class="${BADGE_REAL}">${escapeHtml(inicial.badge)}</span>
+                    <span id="lens-badge-${i}" class="${BADGE_REAL}">${escapeHtml(t(inicial.badge))}</span>
                 </div>
                 <div id="drop-zone-${i}" class="drop-zone-target relative w-full aspect-[16/9] rounded-2xl overflow-hidden border-2 border-amber-400 shadow-md bg-slate-900 flex items-center justify-center">
-                    <img id="scene-bg-${i}" src="${escapeHtml(inicial.src)}" alt="${escapeHtml(cena.alt || pagina.titulo || '')}" class="w-full h-full object-contain scene-img" />
-                    <div class="scene-placeholder" aria-hidden="true"><span class="ph-emoji">${cena.emoji || '🎨'}</span><span>Ilustração a caminho</span></div>
+                    <img id="scene-bg-${i}" src="${escapeHtml(inicial.src)}" alt="${escapeHtml(t(cena.alt) || paginaNoIdioma(i).titulo || '')}" class="w-full h-full object-contain scene-img" />
+                    <div class="scene-placeholder" aria-hidden="true"><span class="ph-emoji">${cena.emoji || '🎨'}</span><span data-ui="ilustracaoACaminho">${escapeHtml(ui('ilustracaoACaminho'))}</span></div>
                     ${montarCamadas(i, cena)}
                     ${cena.extra || ''}
                     ${montarHotspots(i, cena)}
                     <div class="scene-busy-overlay"><div class="scene-spinner"></div></div>
                 </div>
-                ${montarCartoes(i, cena)}
+                <div id="cartoes-${i}" class="cartoes-area">${montarCartoes(i)}</div>
                 <div class="flex items-center justify-center z-20 mt-2">
                     <button type="button" id="lens-btn-${i}" data-lente="${i}" class="${LENS_BTN_REAL}">
                         <span class="text-base">✨</span>
-                        <span id="lens-btn-label-${i}">Usar Lente da Imaginação!</span>
+                        <span id="lens-btn-label-${i}">${escapeHtml(ui('lenteImag'))}</span>
                     </button>
                 </div>
             </div>
         </div>`;
 }
 
-function montarPaginaTexto(i, pagina) {
+/* Conteúdo da folha de texto no idioma atual (refeito ao trocar de idioma) */
+function montarConteudoDoTexto(i) {
+    const pagina = paginaNoIdioma(i);
     const ultima = i === totalPages - 1;
     const fim = LIVRO.fim || {};
-    const titulo = Texto.tituloDaPagina(pagina, i, LIVRO.obra);
+    const titulo = Texto.tituloDaPagina(pagina, i, obraNoIdioma());
     let topo;
     if (pagina.capa) {
         topo = `
             <div class="inline-flex items-center gap-2 bg-amber-200 text-amber-950 font-display font-bold px-3.5 py-1 rounded-full text-xs sm:text-sm border-2 border-amber-400">
-                <span>${escapeHtml(pagina.etiqueta || '✨ Toque nas PALAVRAS MAIÚSCULAS para ouvir!')}</span>
+                <span data-etiqueta>${escapeHtml(etiquetaDaCapa(pagina))}</span>
             </div>
             <h2 class="sentence text-2xl sm:text-4xl font-display font-bold text-amber-950 leading-tight" data-frase="${titulo.id}">
-                ${escapeHtml(LIVRO.obra)}
+                ${escapeHtml(obraNoIdioma())}
                 <span class="block text-base sm:text-2xl text-amber-700 mt-1">${escapeHtml(pagina.titulo)}</span>
             </h2>`;
     } else {
@@ -196,54 +379,89 @@ function montarPaginaTexto(i, pagina) {
     }
     const abrir = pagina.capa ? `
         <button type="button" data-nav="next" class="btn-chunky w-full sm:w-auto bg-rose-500 hover:bg-rose-600 text-white font-display font-bold text-lg sm:text-xl px-7 py-3 rounded-3xl border-4 border-rose-700 flex items-center justify-center gap-3">
-            <span>Abrir o Livro!</span>
+            <span>${escapeHtml(ui('abrirLivro'))}</span>
             <i class="ph-bold ph-arrow-right text-2xl"></i>
         </button>` : '';
     const final = ultima ? `
         <div class="fim-parte space-y-2">
-            <p class="font-display font-bold text-amber-950 text-sm sm:text-base">${escapeHtml(fim.mensagem || '🎉 Fim!')}</p>
+            <p class="font-display font-bold text-amber-950 text-sm sm:text-base">${escapeHtml(t(fim.mensagem) || ui('fim'))}</p>
             <div class="flex flex-wrap items-center justify-center gap-2">
                 <button type="button" data-nav="0" class="btn-chunky bg-amber-300 hover:bg-amber-400 text-amber-950 font-display font-bold py-2 px-4 rounded-2xl border-2 border-amber-600 flex items-center justify-center gap-2 text-sm">
-                    <i class="ph-bold ph-arrow-counter-clockwise text-lg"></i><span>Ler de Novo</span>
+                    <i class="ph-bold ph-arrow-counter-clockwise text-lg"></i><span>${escapeHtml(ui('lerDeNovo'))}</span>
                 </button>
                 ${fim.proxima ? `
                 <a href="${escapeHtml(fim.proxima)}" class="btn-chunky bg-rose-500 hover:bg-rose-600 text-white font-display font-bold py-2 px-4 rounded-2xl border-2 border-rose-700 flex items-center justify-center gap-2 text-sm">
-                    <span>${escapeHtml(fim.proximaRotulo || 'Continuar a história')}</span><i class="ph-bold ph-arrow-right text-lg"></i>
+                    <span>${escapeHtml(t(fim.proximaRotulo) || ui('continuarHistoria'))}</span><i class="ph-bold ph-arrow-right text-lg"></i>
                 </a>` : `
                 <a href="../index.html" class="btn-chunky bg-white hover:bg-amber-50 text-amber-950 font-display font-bold py-2 px-4 rounded-2xl border-2 border-amber-500 flex items-center justify-center gap-2 text-sm">
-                    <i class="ph-bold ph-books text-lg"></i><span>Biblioteca</span>
+                    <i class="ph-bold ph-books text-lg"></i><span>${escapeHtml(ui('bibliotecaBotao'))}</span>
                 </a>`}
             </div>
         </div>` : '';
     const alinhamento = pagina.capa ? 'items-center lg:items-start text-center lg:text-left' : '';
     return `
-        <div class="book-page page-text">
-            <div class="page-text-scroll">
                 <div class="page-text-inner flex flex-col ${alinhamento} space-y-3">
                     ${topo}
                     <p id="page-text-${i}" class="text-base sm:text-lg text-slate-800 font-bold leading-relaxed">${Texto.paginaParaHtml(pagina.texto, i)}</p>
                     ${abrir}
                     ${final}
-                </div>
+                </div>`;
+}
+
+/* Dica da capa: no modo MAIÚSCULAS, as palavras-chave se destacam pela cor, não pelas letras */
+function etiquetaDaCapa(pagina) {
+    if (pagina.etiqueta) return pagina.etiqueta;
+    return ui(textoMaiusculo ? 'etiquetaMaiusculas' : 'etiqueta');
+}
+
+function montarPaginaTexto(i) {
+    return `
+        <div class="book-page page-text">
+            <div class="page-text-scroll">${montarConteudoDoTexto(i)}
             </div>
         </div>`;
 }
 
+/* Texto falado de cada frase da página, no idioma atual */
+function montarFalas(i) {
+    const pagina = paginaNoIdioma(i);
+    FALAS[i] = Texto.falasDaPagina(pagina.texto, i, Texto.tituloDaPagina(pagina, i, obraNoIdioma()));
+}
+
+function rotuloDaParte() {
+    return LIVRO.parte ? ui('parte', LIVRO.parte, LIVRO.totalPartes || LIVRO.parte) : '';
+}
+
+/* Bandeirinhas dos idiomas e o botão Aa / AA (texto todo em maiúsculas) */
+function montarIdiomas() {
+    const bandeiras = Object.entries(IDIOMAS).map(([codigo, def]) => `
+        <button type="button" class="btn-idioma" data-idioma="${codigo}" lang="${def.lang}" title="${escapeHtml(def.ui.lerNesteIdioma)}" aria-label="${escapeHtml(def.ui.lerNesteIdioma)}" aria-pressed="false">
+            <img src="${ICONES}bandeiras/${def.bandeira}.svg" alt="" draggable="false">
+        </button>`).join('');
+    return `
+            <div class="barra-leitura order-last sm:order-none w-full sm:w-auto flex items-center justify-center gap-1 sm:gap-1.5 shrink-0">
+                <button type="button" id="btn-maiusculas" class="btn-chunky btn-maiusculas w-9 h-9 sm:w-10 sm:h-10 rounded-2xl flex items-center justify-center border-2 font-display font-bold text-sm sm:text-base" aria-pressed="false">
+                    <span id="maiusculas-label">Aa</span>
+                </button>
+                <div class="grupo-idiomas flex items-center gap-0.5 bg-white/90 rounded-2xl border-2 border-amber-300 p-0.5" role="group">${bandeiras}
+                </div>
+            </div>`;
+}
+
 function montarLivro() {
-    LIVRO.paginas.forEach((pagina, i) => { FALAS[i] = Texto.falasDaPagina(pagina.texto, i, Texto.tituloDaPagina(pagina, i, LIVRO.obra)); });
-    const parteRotulo = LIVRO.parte ? `Parte ${LIVRO.parte} de ${LIVRO.totalPartes || LIVRO.parte}` : '';
+    LIVRO.paginas.forEach((pagina, i) => montarFalas(i));
     const secoes = LIVRO.paginas.map((pagina, i) => `
-        <section id="page-${i}" class="page-slide${i ? ' page-hidden' : ''} spread" aria-label="Página ${i + 1}">
+        <section id="page-${i}" class="page-slide${i ? ' page-hidden' : ''} spread" aria-label="${escapeHtml(ui('secaoPagina', i + 1))}">
             ${montarPaginaArte(i, pagina)}
-            ${montarPaginaTexto(i, pagina)}
+            ${montarPaginaTexto(i)}
         </section>`).join('');
 
     document.body.insertAdjacentHTML('afterbegin', `
     <div id="phonics-modal" class="phonics-backdrop" role="dialog" aria-modal="true" aria-labelledby="phonics-word" aria-hidden="true">
-        <button id="phonics-card" type="button" class="phonics-card" aria-label="Ouvir a palavra de novo">
+        <button id="phonics-card" type="button" class="phonics-card" data-ui-aria="ouvirPalavra" aria-label="${escapeHtml(ui('ouvirPalavra'))}">
             <span id="phonics-emoji" class="block text-6xl sm:text-7xl leading-none" aria-hidden="true">📖</span>
             <span id="phonics-word" class="block font-display font-bold text-3xl sm:text-5xl text-amber-950 tracking-wider uppercase leading-tight break-words mt-3"></span>
-            <span id="phonics-syllables" class="flex flex-wrap items-center justify-center gap-2 mt-4" aria-label="Sílabas"></span>
+            <span id="phonics-syllables" class="flex flex-wrap items-center justify-center gap-2 mt-4" data-ui-aria="silabas" aria-label="${escapeHtml(ui('silabas'))}"></span>
             <span class="phonics-replay mt-5 mx-auto w-16 h-16 rounded-full bg-emerald-500 border-4 border-emerald-700 text-white text-3xl flex items-center justify-center" aria-hidden="true">
                 <i class="ph-fill ph-speaker-high"></i>
             </span>
@@ -253,40 +471,41 @@ function montarLivro() {
     <div id="painel-voz" class="phonics-backdrop" role="dialog" aria-modal="true" aria-labelledby="painel-voz-titulo" aria-hidden="true">
         <div class="painel-voz-card">
             <div class="flex items-center justify-between gap-2 mb-3">
-                <h2 id="painel-voz-titulo" class="font-display font-bold text-2xl text-amber-950">🗣️ Voz da leitura</h2>
-                <button type="button" data-fechar-voz class="btn-chunky w-12 h-12 shrink-0 rounded-2xl bg-amber-400 border-2 border-amber-600 text-amber-950 text-xl flex items-center justify-center" aria-label="Fechar"><i class="ph-bold ph-x"></i></button>
+                <h2 id="painel-voz-titulo" class="font-display font-bold text-2xl text-amber-950" data-ui="vozDaLeitura">${escapeHtml(ui('vozDaLeitura'))}</h2>
+                <button type="button" data-fechar-voz class="btn-chunky w-12 h-12 shrink-0 rounded-2xl bg-amber-400 border-2 border-amber-600 text-amber-950 text-xl flex items-center justify-center" data-ui-aria="fechar" aria-label="${escapeHtml(ui('fechar'))}"><i class="ph-bold ph-x"></i></button>
             </div>
             <div id="painel-voz-corpo" class="space-y-3"></div>
         </div>
     </div>
 
     <main id="book-container" class="storybook-frame relative w-full max-w-6xl rounded-[24px] sm:rounded-[30px] flex flex-col justify-between overflow-hidden">
-        <header class="w-full bg-amber-100/95 border-b-4 border-amber-300 px-2.5 py-1.5 sm:px-5 sm:py-2 flex items-center justify-between gap-2 z-30 shrink-0">
-            <div class="flex items-center gap-2 min-w-0">
-                <a href="../index.html" class="btn-chunky w-9 h-9 sm:w-10 sm:h-10 shrink-0 rounded-2xl bg-white hover:bg-amber-50 text-amber-900 flex items-center justify-center border-2 border-amber-500 text-lg" title="Voltar à Biblioteca Clássicos Vivos" aria-label="Voltar à biblioteca">
+        <header class="w-full bg-amber-100/95 border-b-4 border-amber-300 px-2.5 py-1.5 sm:px-5 sm:py-2 flex flex-wrap sm:flex-nowrap items-center justify-between gap-x-2 gap-y-1.5 z-30 shrink-0">
+            <div class="flex-1 sm:flex-initial flex items-center gap-2 min-w-0">
+                <a href="../index.html" class="btn-chunky w-9 h-9 sm:w-10 sm:h-10 shrink-0 rounded-2xl bg-white hover:bg-amber-50 text-amber-900 flex items-center justify-center border-2 border-amber-500 text-lg" data-ui-title="bibliotecaTitulo" title="${escapeHtml(ui('bibliotecaTitulo'))}" data-ui-aria="biblioteca" aria-label="${escapeHtml(ui('biblioteca'))}">
                     <i class="ph-bold ph-books"></i>
                 </a>
                 <div class="min-w-0">
                     <div class="flex items-center gap-1.5">
-                        <span class="text-[10px] sm:text-[11px] font-extrabold uppercase tracking-wider bg-amber-300 text-amber-950 px-2 py-0.5 rounded-full shrink-0">${escapeHtml(parteRotulo)}</span>
-                        <span class="hidden md:inline text-xs font-bold text-amber-800 truncate">${escapeHtml(LIVRO.autor || '')}</span>
+                        <span id="parte-rotulo" class="text-[10px] sm:text-[11px] font-extrabold uppercase tracking-wider bg-amber-300 text-amber-950 px-2 py-0.5 rounded-full shrink-0">${escapeHtml(rotuloDaParte())}</span>
+                        <span class="hidden lg:inline text-xs font-bold text-amber-800 truncate">${escapeHtml(LIVRO.autor || '')}</span>
                     </div>
-                    <h1 class="text-xs sm:text-lg font-display font-bold text-amber-950 leading-tight truncate">${escapeHtml(LIVRO.obra)}</h1>
+                    <h1 id="titulo-obra" class="text-xs sm:text-lg font-display font-bold text-amber-950 leading-tight truncate">${escapeHtml(obraNoIdioma())}</h1>
                 </div>
             </div>
-            <div id="page-dots" class="hidden lg:flex items-center gap-1.5 bg-white/90 px-3.5 py-1.5 rounded-full border-2 border-amber-300"></div>
+            <div id="page-dots" class="hidden xl:flex items-center gap-1.5 bg-white/90 px-3.5 py-1.5 rounded-full border-2 border-amber-300"></div>
+            ${montarIdiomas()}
             <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
-                <button type="button" id="btn-tts" class="btn-chunky flex items-center gap-1.5 bg-emerald-500 hover:bg-emerald-600 text-white font-display font-semibold px-3 py-1.5 sm:py-2 rounded-2xl text-xs sm:text-sm border-2 border-emerald-700" title="Ouvir a página inteira">
+                <button type="button" id="btn-tts" class="btn-chunky flex items-center gap-1.5 bg-emerald-500 hover:bg-emerald-600 text-white font-display font-semibold px-3 py-1.5 sm:py-2 rounded-2xl text-xs sm:text-sm border-2 border-emerald-700" data-ui-title="ouvirTitulo" title="${escapeHtml(ui('ouvirTitulo'))}">
                     <i id="tts-icon" class="ph-fill ph-speaker-high text-base sm:text-lg"></i>
-                    <span id="tts-label" class="hidden sm:inline">Ouvir Página</span>
+                    <span id="tts-label" class="hidden sm:inline">${escapeHtml(ui('ouvirPagina'))}</span>
                 </button>
-                <button type="button" id="btn-voz" class="btn-chunky w-9 h-9 sm:w-10 sm:h-10 rounded-2xl bg-white hover:bg-amber-50 text-emerald-700 flex items-center justify-center border-2 border-emerald-600 text-base sm:text-lg" title="Escolher a voz e a velocidade da leitura" aria-label="Escolher a voz">
+                <button type="button" id="btn-voz" class="btn-chunky w-9 h-9 sm:w-10 sm:h-10 rounded-2xl bg-white hover:bg-amber-50 text-emerald-700 flex items-center justify-center border-2 border-emerald-600 text-base sm:text-lg" data-ui-title="vozTitulo" title="${escapeHtml(ui('vozTitulo'))}" data-ui-aria="vozAria" aria-label="${escapeHtml(ui('vozAria'))}">
                     <i class="ph-bold ph-user-sound"></i>
                 </button>
-                <button type="button" id="btn-sfx" class="btn-chunky w-9 h-9 sm:w-10 sm:h-10 rounded-2xl bg-amber-400 hover:bg-amber-500 text-amber-950 flex items-center justify-center border-2 border-amber-600 text-base sm:text-lg" title="Ativar/Desativar Efeitos Sonoros" aria-label="Efeitos sonoros">
+                <button type="button" id="btn-sfx" class="btn-chunky w-9 h-9 sm:w-10 sm:h-10 rounded-2xl bg-amber-400 hover:bg-amber-500 text-amber-950 flex items-center justify-center border-2 border-amber-600 text-base sm:text-lg" data-ui-title="sfxTitulo" title="${escapeHtml(ui('sfxTitulo'))}" data-ui-aria="sfxAria" aria-label="${escapeHtml(ui('sfxAria'))}">
                     <i id="sfx-icon" class="ph-fill ph-music-notes"></i>
                 </button>
-                <button type="button" id="btn-fullscreen" class="btn-chunky w-9 h-9 sm:w-10 sm:h-10 rounded-2xl bg-indigo-500 hover:bg-indigo-600 text-white flex items-center justify-center border-2 border-indigo-700 text-base sm:text-lg" title="Modo Tela Cheia para Tablet" aria-label="Tela cheia">
+                <button type="button" id="btn-fullscreen" class="btn-chunky w-9 h-9 sm:w-10 sm:h-10 rounded-2xl bg-indigo-500 hover:bg-indigo-600 text-white flex items-center justify-center border-2 border-indigo-700 text-base sm:text-lg" data-ui-title="telaCheiaTitulo" title="${escapeHtml(ui('telaCheiaTitulo'))}" data-ui-aria="telaCheiaAria" aria-label="${escapeHtml(ui('telaCheiaAria'))}">
                     <i id="fullscreen-icon" class="ph-bold ph-corners-out"></i>
                 </button>
             </div>
@@ -297,11 +516,11 @@ function montarLivro() {
         <footer class="w-full bg-amber-100/95 border-t-4 border-amber-300 px-3 py-2 sm:px-6 sm:py-2 flex items-center justify-between z-30 shrink-0">
             <button type="button" id="btn-prev" class="btn-chunky flex items-center gap-2 bg-white hover:bg-amber-50 text-amber-950 font-display font-bold px-4 py-1.5 sm:px-6 sm:py-2 rounded-2xl border-2 border-amber-500 text-xs sm:text-base disabled:opacity-40 disabled:pointer-events-none">
                 <i class="ph-bold ph-arrow-left text-base sm:text-lg"></i>
-                <span>Anterior</span>
+                <span data-ui="anterior">${escapeHtml(ui('anterior'))}</span>
             </button>
-            <span id="page-counter-text" class="font-display font-bold text-amber-950 text-xs sm:text-base bg-amber-200 px-3.5 py-1 rounded-full border-2 border-amber-400">Página 1 de ${totalPages}</span>
+            <span id="page-counter-text" class="font-display font-bold text-amber-950 text-xs sm:text-base bg-amber-200 px-3.5 py-1 rounded-full border-2 border-amber-400">${escapeHtml(ui('pagina', 1, totalPages))}</span>
             <button type="button" id="btn-next" class="btn-chunky flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white font-display font-bold px-4 py-1.5 sm:px-6 sm:py-2 rounded-2xl border-2 border-amber-700 text-xs sm:text-base disabled:opacity-40 disabled:pointer-events-none">
-                <span>Próxima</span>
+                <span data-ui="proxima">${escapeHtml(ui('proxima'))}</span>
                 <i class="ph-bold ph-arrow-right text-base sm:text-lg"></i>
             </button>
         </footer>
@@ -318,14 +537,13 @@ function montarLivro() {
      frase que ainda não tenha gravação.
    ===================================================================== */
 const AUDIO_BASE = LIVRO.audio || './audio/';
-const PREF_VOZ = 'cv-voz';               // 'gravada:<id>' ou 'aparelho:<voiceURI>'
+const PREF_VOZ = 'cv-voz';               // 'gravada:<id>' ou 'aparelho:<voiceURI>' (nos outros idiomas: cv-voz-<idioma>)
 const PREF_VELOCIDADE = 'cv-velocidade'; // 'normal' ou 'devagar'
 const VELOCIDADES = { normal: { aparelho: 0.92, gravada: 1 }, devagar: { aparelho: 0.72, gravada: 0.8 } };
-const FRASE_AMOSTRA = 'Olá! Eu vou ler esta história com você.';
 
-let ptVoice = null;
+let vozDoAparelho = null;
 let vozesAparelho = [];
-let vozEscolhida = lerPreferencia(PREF_VOZ) || '';
+let vozEscolhida = '';
 let velocidade = lerPreferencia(PREF_VELOCIDADE) === 'devagar' ? 'devagar' : 'normal';
 const narrador = new Audio();
 narrador.preload = 'auto';
@@ -338,39 +556,43 @@ function salvarPreferencia(chave, valor) {
     try { localStorage.setItem(chave, valor); } catch (e) { /* sem armazenamento: vale só nesta visita */ }
 }
 
-/* Vozes melhores primeiro: neurais/"naturais" > aprimoradas > Google > demais; pt-BR antes de pt-PT */
+function chavePrefVoz() {
+    return idioma === PT ? PREF_VOZ : `${PREF_VOZ}-${idioma}`;
+}
+
+/* Vozes melhores primeiro: neurais/"naturais" > aprimoradas > Google > demais; a variante da bandeira
+   (pt-BR, en-GB, fr-FR, es-ES) antes das outras do mesmo idioma */
 function pontuarVoz(v) {
     const nome = v.name.toLowerCase();
     const lang = v.lang.replace('_', '-').toLowerCase();
-    let pontos = lang === 'pt-br' ? 100 : 40;
+    let pontos = lang === IDIOMAS[idioma].voz.toLowerCase() ? 100 : 40;
     if (/natural|neural|online/.test(nome)) pontos += 30;
     if (/enhanced|premium|aprimorad|melhorad/.test(nome)) pontos += 25;
     if (/google/.test(nome)) pontos += 15;
-    if (/luciana|francisca|thalita|felipe|antonio|daniel/.test(nome)) pontos += 5;
+    if (IDIOMAS[idioma].vozesBoas.test(nome)) pontos += 5;
     if (v.localService) pontos += 3;   // funciona sem internet
     return pontos;
 }
 
 function nomeAmigavel(v) {
     return v.name.replace(/^(Microsoft|Google|Apple)\s+/i, '').replace(/\s*\(.*?\)\s*/g, ' ')
-        .replace(/\s*-\s*Portuguese.*$/i, '').replace(/português.*$/i, '').trim() || v.name;
+        .replace(/\s*-\s*(Portuguese|English|French|Spanish).*$/i, '').replace(/(português|english|français|español).*$/i, '').trim() || v.name;
 }
 
-function loadPortugueseVoice() {
+/* Vozes do aparelho no idioma atual (a lista chega aos poucos em alguns navegadores) */
+function carregarVozesDoAparelho() {
     if (!('speechSynthesis' in window)) return;
+    const prefixo = IDIOMAS[idioma].voz.slice(0, 2);
     const todas = window.speechSynthesis.getVoices() || [];
-    vozesAparelho = todas.filter(v => v.lang.toLowerCase().replace('_', '-').startsWith('pt'))
+    vozesAparelho = todas.filter(v => v.lang.toLowerCase().replace('_', '-').startsWith(prefixo))
         .sort((a, b) => pontuarVoz(b) - pontuarVoz(a));
     const salva = vozEscolhida.startsWith('aparelho:') ? vozEscolhida.slice(9) : null;
-    ptVoice = (salva && vozesAparelho.find(v => v.voiceURI === salva)) || vozesAparelho[0] || null;
+    vozDoAparelho = (salva && vozesAparelho.find(v => v.voiceURI === salva)) || vozesAparelho[0] || null;
     if (document.getElementById('painel-voz')?.classList.contains('is-open')) renderPainelVoz();
 }
 
-if ('speechSynthesis' in window) {
-    loadPortugueseVoice();
-    if (window.speechSynthesis.onvoiceschanged !== undefined) {
-        window.speechSynthesis.onvoiceschanged = loadPortugueseVoice;
-    }
+if ('speechSynthesis' in window && window.speechSynthesis.onvoiceschanged !== undefined) {
+    window.speechSynthesis.onvoiceschanged = carregarVozesDoAparelho;
 }
 
 /* Narrações gravadas declaradas em <livro>/audio/vozes.js (window.VOZES_GRAVADAS) */
@@ -388,7 +610,11 @@ function gravadaDisponivel(voz) {
     return gravadaCompleta(voz) || (!!voz && (voz.previa || []).includes(LIVRO.parte));
 }
 
+/* A narração gravada é em português; nos outros idiomas, a voz do aparelho */
 function vozGravadaAtiva() {
+    if (idioma !== PT) return null;
+    // Primeira visita (nada escolhido): se a narração gravada desta parte estiver pronta, ela é a voz padrão
+    if (!vozEscolhida) return vozesGravadas().find(gravadaCompleta) || null;
     if (!vozEscolhida.startsWith('gravada:')) return null;
     const voz = vozesGravadas().find(v => v.id === vozEscolhida.slice(8));
     return gravadaDisponivel(voz) ? voz : null;
@@ -397,13 +623,6 @@ function vozGravadaAtiva() {
 function carregarVozesGravadas() {
     const script = document.createElement('script');
     script.src = `${AUDIO_BASE}vozes.js`;
-    script.onload = () => {
-        // Primeira visita: se a narração gravada desta parte estiver pronta, ela vira a voz padrão
-        if (!vozEscolhida) {
-            const pronta = vozesGravadas().find(gravadaCompleta);
-            if (pronta) vozEscolhida = `gravada:${pronta.id}`;
-        }
-    };
     document.head.appendChild(script);
 }
 
@@ -426,11 +645,12 @@ function urlPalavra(slugPalavra) {
     return `${AUDIO_BASE}palavras/${slugPalavra}.mp3`;
 }
 
-/* Toca um áudio gravado; rejeita se o arquivo não existir (aí entra a voz do aparelho) */
-function tocarGravacao(src) {
+/* Toca um áudio gravado (a partir de `inicio` segundos); rejeita se o arquivo não existir (aí entra a voz do aparelho) */
+function tocarGravacao(src, inicio = 0) {
     return new Promise((resolve, reject) => {
         narrador.onended = () => resolve();
         narrador.onerror = () => reject(new Error('sem gravação'));
+        narrador.onloadedmetadata = inicio ? () => { narrador.currentTime = inicio; } : null;
         narrador.src = src;
         narrador.playbackRate = VELOCIDADES[velocidade].gravada;
         const tentativa = narrador.play();
@@ -441,6 +661,7 @@ function tocarGravacao(src) {
 function pararGravacao() {
     narrador.onended = null;
     narrador.onerror = null;
+    narrador.onloadedmetadata = null;
     narrador.pause();
 }
 
@@ -452,9 +673,9 @@ function falarComAparelho(texto, { taxa, voz } = {}) {
             reject(new Error('sem voz'));
             return;
         }
-        const usar = voz || ptVoice;
+        const usar = voz || vozDoAparelho;
         const utterance = new SpeechSynthesisUtterance(texto);
-        utterance.lang = usar ? usar.lang : 'pt-BR';
+        utterance.lang = usar ? usar.lang : IDIOMAS[idioma].voz;
         if (usar) utterance.voice = usar;
         utterance.rate = taxa || VELOCIDADES[velocidade].aparelho;
         utterance.pitch = 1.03;
@@ -463,7 +684,7 @@ function falarComAparelho(texto, { taxa, voz } = {}) {
             const interrompida = e && (e.error === 'interrupted' || e.error === 'canceled');
             const offline = vozesAparelho.find(v => v.localService);
             if (!interrompida && usar && !usar.localService && offline) {
-                if (usar === ptVoice) ptVoice = offline;   // até recarregar: não insiste na voz sem internet
+                if (usar === vozDoAparelho) vozDoAparelho = offline;   // até recarregar: não insiste na voz sem internet
                 falarComAparelho(texto, { taxa, voz: offline }).then(resolve, reject);
             } else {
                 reject(e);
@@ -505,41 +726,40 @@ function opcaoVoz(valor, titulo, detalhe, { ativa, desativada, tags = [] }) {
                 <span class="block text-xs font-semibold text-slate-600">${escapeHtml(detalhe)}</span>
                 ${tags.length ? `<span class="flex flex-wrap gap-1 mt-1">${tags.map(t => `<span class="text-[10px] font-extrabold uppercase bg-amber-100 text-amber-900 px-1.5 py-0.5 rounded-full">${escapeHtml(t)}</span>`).join('')}</span>` : ''}
             </button>
-            ${desativada ? '' : `<button type="button" class="btn-chunky shrink-0 w-12 h-12 rounded-full bg-emerald-500 border-2 border-emerald-700 text-white text-xl flex items-center justify-center" data-testar-voz="${escapeHtml(valor)}" aria-label="Ouvir amostra de ${escapeHtml(titulo)}"><i class="ph-fill ph-play"></i></button>`}
+            ${desativada ? '' : `<button type="button" class="btn-chunky shrink-0 w-12 h-12 rounded-full bg-emerald-500 border-2 border-emerald-700 text-white text-xl flex items-center justify-center" data-testar-voz="${escapeHtml(valor)}" aria-label="${escapeHtml(ui('amostraDe', titulo))}"><i class="ph-fill ph-play"></i></button>`}
         </div>`;
 }
 
 function renderPainelVoz() {
     const corpo = document.getElementById('painel-voz-corpo');
     const gravadaAtual = vozGravadaAtiva();
-    const gravadas = vozesGravadas().map(v => opcaoVoz(
+    // A narração gravada (e a descrição dela no vozes.js) é em português
+    const gravadas = idioma !== PT ? '' : vozesGravadas().map(v => opcaoVoz(
         `gravada:${v.id}`, v.nome,
-        gravadaCompleta(v) ? v.descricao : gravadaDisponivel(v) ? `${v.descricao} (prévia: só algumas páginas)` : `${v.descricao} (em produção para esta parte)`,
-        { ativa: gravadaAtual && gravadaAtual.id === v.id, desativada: !gravadaDisponivel(v), tags: ['gravada', 'mais natural'] }
+        gravadaCompleta(v) ? v.descricao : gravadaDisponivel(v) ? `${v.descricao} ${ui('previa')}` : `${v.descricao} ${ui('emProducao')}`,
+        { ativa: gravadaAtual && gravadaAtual.id === v.id, desativada: !gravadaDisponivel(v), tags: [ui('gravada'), ui('maisNatural')] }
     )).join('');
 
     const aparelhoAtiva = !gravadaAtual;
     const doAparelho = vozesAparelho.map((v, k) => opcaoVoz(
         `aparelho:${v.voiceURI}`, nomeAmigavel(v), v.lang.replace('_', '-'),
         {
-            ativa: aparelhoAtiva && ptVoice && ptVoice.voiceURI === v.voiceURI,
-            tags: [k === 0 ? '⭐ recomendada' : null, v.localService ? 'funciona offline' : 'precisa de internet'].filter(Boolean)
+            ativa: aparelhoAtiva && vozDoAparelho && vozDoAparelho.voiceURI === v.voiceURI,
+            tags: [k === 0 ? ui('recomendada') : null, v.localService ? ui('offline') : ui('online')].filter(Boolean)
         }
     )).join('');
 
+    const aviso = (html) => `<p class="text-sm font-semibold text-slate-700 bg-amber-50 border-2 border-amber-200 rounded-2xl p-3">${html}</p>`;
     corpo.innerHTML = `
-        ${gravadas ? `<h3 class="font-display font-bold text-amber-800 text-sm uppercase tracking-wider">🎙️ Narração gravada</h3>
+        ${gravadas ? `<h3 class="font-display font-bold text-amber-800 text-sm uppercase tracking-wider">${escapeHtml(ui('narracaoGravada'))}</h3>
         <div class="space-y-2">${gravadas}</div>` : ''}
-        <h3 class="font-display font-bold text-amber-800 text-sm uppercase tracking-wider">📱 Vozes deste aparelho</h3>
-        <div class="space-y-2">${doAparelho || `
-            <p class="text-sm font-semibold text-slate-700 bg-amber-50 border-2 border-amber-200 rounded-2xl p-3">
-                Nenhuma voz em português foi encontrada neste aparelho. Peça a um adulto para instalar a voz
-                <strong>Português (Brasil)</strong> nas configurações de "Texto para fala" do tablet.
-            </p>`}</div>
-        <h3 class="font-display font-bold text-amber-800 text-sm uppercase tracking-wider">⏱️ Velocidade</h3>
+        ${idioma !== PT && ui('gravadaEmBreve') ? aviso(escapeHtml(ui('gravadaEmBreve'))) : ''}
+        <h3 class="font-display font-bold text-amber-800 text-sm uppercase tracking-wider">${escapeHtml(ui('vozesDoAparelho'))}</h3>
+        <div class="space-y-2">${doAparelho || aviso(ui('semVoz'))}</div>
+        <h3 class="font-display font-bold text-amber-800 text-sm uppercase tracking-wider">${escapeHtml(ui('velocidade'))}</h3>
         <div class="grid grid-cols-2 gap-2">
-            <button type="button" data-velocidade="normal" class="btn-chunky rounded-2xl border-2 px-3 py-2 font-display font-bold ${velocidade === 'normal' ? 'bg-amber-400 border-amber-600 text-amber-950' : 'bg-white border-amber-300 text-amber-900'}">🐇 Normal</button>
-            <button type="button" data-velocidade="devagar" class="btn-chunky rounded-2xl border-2 px-3 py-2 font-display font-bold ${velocidade === 'devagar' ? 'bg-amber-400 border-amber-600 text-amber-950' : 'bg-white border-amber-300 text-amber-900'}">🐢 Devagar</button>
+            <button type="button" data-velocidade="normal" class="btn-chunky rounded-2xl border-2 px-3 py-2 font-display font-bold ${velocidade === 'normal' ? 'bg-amber-400 border-amber-600 text-amber-950' : 'bg-white border-amber-300 text-amber-900'}">${escapeHtml(ui('normal'))}</button>
+            <button type="button" data-velocidade="devagar" class="btn-chunky rounded-2xl border-2 px-3 py-2 font-display font-bold ${velocidade === 'devagar' ? 'bg-amber-400 border-amber-600 text-amber-950' : 'bg-white border-amber-300 text-amber-900'}">${escapeHtml(ui('devagar'))}</button>
         </div>`;
 }
 
@@ -551,17 +771,14 @@ function testarVoz(valor) {
         return;
     }
     const v = vozesAparelho.find(x => x.voiceURI === valor.slice(9));
-    const anterior = ptVoice;
-    ptVoice = v || ptVoice;
-    falarComAparelho(FRASE_AMOSTRA).catch(() => {});
-    ptVoice = anterior;
+    falarComAparelho(ui('amostra'), { voz: v || vozDoAparelho }).catch(() => {});
 }
 
 function escolherVoz(valor) {
     vozEscolhida = valor;
-    salvarPreferencia(PREF_VOZ, valor);
+    salvarPreferencia(chavePrefVoz(), valor);
     if (valor.startsWith('aparelho:')) {
-        ptVoice = vozesAparelho.find(v => v.voiceURI === valor.slice(9)) || ptVoice;
+        vozDoAparelho = vozesAparelho.find(v => v.voiceURI === valor.slice(9)) || vozDoAparelho;
     }
     playSound('wordPop');
     renderPainelVoz();
@@ -770,10 +987,14 @@ function speakWord(element, wordText, syllablesText, emoji) {
 let phonicsCurrentWord = '';
 let phonicsCurrentSlug = '';
 
-/* Palavra-chave: tenta a gravação pausada (sílabas + palavra) e, se não houver, usa a voz do aparelho */
+/* Palavra-chave: tenta a gravação pausada (sílabas + palavra, só em português) e, se não houver, usa a voz do aparelho */
 function pronounceWord(wordText, slugPalavra) {
     calarTudo();
-    const aparelho = () => falarComAparelho(wordText.toLowerCase(), { taxa: VELOCIDADES[velocidade].aparelho * 0.92 }).catch(() => {});
+    const aparelho = () => falarComAparelho(wordText.toLocaleLowerCase(IDIOMAS[idioma].lang), { taxa: VELOCIDADES[velocidade].aparelho * 0.92 }).catch(() => {});
+    if (idioma !== PT) {
+        aparelho();
+        return;
+    }
     tocarGravacao(urlPalavra(slugPalavra || Texto.slug(wordText))).catch(aparelho);
 }
 
@@ -842,17 +1063,35 @@ function stopReadingPage() {
     setReadingPageUI(false);
 }
 
-/* "Ouvir Página": frase por frase, com a narração gravada quando houver e a voz do aparelho como reserva */
+/* Botão "Ouvir Página": lê a página inteira (ou para a leitura em andamento) */
 function toggleReadPageAloud() {
     if (isReadingPage) {
         stopReadingPage();
         return;
     }
+    lerPagina(0);
+}
 
+/* Toque numa frase: a narração começa por ela e segue até o fim da página */
+function lerAPartirDaFrase(frase) {
+    const sentences = frasesDaPaginaAtual();
+    const inicio = sentences.indexOf(frase);
+    if (inicio < 0) return;
+    stopReadingPage();
+    lerPagina(inicio);
+}
+
+// Começa pelo título (frase 0, fora do parágrafo) e segue pelo texto
+function frasesDaPaginaAtual() {
     const textEl = document.getElementById(`page-text-${currentPage}`);
-    if (!textEl) return;
-    // Começa pelo título (frase 0, fora do parágrafo) e segue pelo texto
-    const sentences = Array.from(textEl.closest('.page-text-inner').querySelectorAll('.sentence'));
+    return textEl ? Array.from(textEl.closest('.page-text-inner').querySelectorAll('.sentence')) : [];
+}
+
+/* Leitura guiada a partir da frase `inicio`: frase por frase, com a narração gravada quando houver
+   e a voz do aparelho como reserva */
+function lerPagina(inicio = 0) {
+    const sentences = frasesDaPaginaAtual();
+    if (!sentences.length) return;
 
     calarTudo();
     const session = ++readingSession;
@@ -890,27 +1129,48 @@ function toggleReadPageAloud() {
     };
 
     if (!voz) {
-        speakSentence(0);
+        speakSentence(inicio);
         return;
     }
     const pagina = currentPage;
     paginasDaVoz(voz).then(paginas => {
         if (session !== readingSession) return;
         const gravada = paginas[`p${pagina}`];
-        if (gravada) lerPaginaInteira(voz, gravada, sentences, session, () => speakSentence(0));
-        else speakSentence(0);
+        if (gravada) lerPaginaInteira(voz, gravada, sentences, session, inicio, () => speakSentence(inicio));
+        else speakSentence(inicio);
     });
 }
 
-/* Página gravada inteira: um só áudio, e o destaque segue o tempo de cada frase (vale também no 🐢) */
-function lerPaginaInteira(voz, gravada, sentences, session, reserva) {
+/* Áudio da página inteira guardado na memória (blob): aceita salto no tempo mesmo quando vem do
+   service worker, que não responde trechos (Range). Usado só para começar no meio da página. */
+const audiosComSalto = {};
+function audioComSalto(src) {
+    if (!audiosComSalto[src]) {
+        audiosComSalto[src] = fetch(src)
+            .then(r => { if (!r.ok) throw new Error('sem gravação'); return r.blob(); })
+            .then(blob => URL.createObjectURL(blob))
+            .catch((e) => { delete audiosComSalto[src]; throw e; });
+    }
+    return audiosComSalto[src];
+}
+
+/* Página gravada inteira: um só áudio, e o destaque segue o tempo de cada frase (vale também no 🐢).
+   Começando na frase `inicio`, o áudio pula para o tempo dela. */
+function lerPaginaInteira(voz, gravada, sentences, session, inicio, reserva) {
     const porId = new Map(sentences.map(el => [el.dataset.frase, el]));
+    const marcaInicial = inicio > 0 ? gravada.frases.find(f => f.id === sentences[inicio].dataset.frase) : null;
+    if (inicio > 0 && !marcaInicial) {
+        reserva();   // a frase não está nas marcas da gravação: frase por frase
+        return;
+    }
+    const desde = marcaInicial ? marcaInicial.ini : 0;
     let atual = null;
     let quadro = 0;
     const acompanhar = () => {
         if (session !== readingSession) return;
         const t = narrador.currentTime;
-        const marca = gravada.frases.find(f => t >= f.ini && t < f.fim);
+        // Antes de o salto acontecer, o áudio ainda marca 0 s: não destaca o título por engano
+        const marca = t >= desde - 0.05 && gravada.frases.find(f => t >= f.ini && t < f.fim);
         const el = marca && porId.get(marca.id);
         if (el && el !== atual) {
             clearSentenceHighlight();
@@ -920,7 +1180,16 @@ function lerPaginaInteira(voz, gravada, sentences, session, reserva) {
         }
         quadro = requestAnimationFrame(acompanhar);
     };
-    tocarGravacao(`${AUDIO_BASE}${voz.id}/parte-${LIVRO.parte}/${gravada.arquivo}`).then(() => {
+    const src = `${AUDIO_BASE}${voz.id}/parte-${LIVRO.parte}/${gravada.arquivo}`;
+    const tocar = desde > 0
+        ? audioComSalto(src).then(url => (session === readingSession ? tocarGravacao(url, desde) : null))
+        : tocarGravacao(src);
+    if (desde > 0) {
+        sentences[inicio].classList.add('sentence-reading');
+        scrollTextToSentence(sentences[inicio]);
+        atual = sentences[inicio];
+    }
+    tocar.then(() => {
         cancelAnimationFrame(quadro);
         if (session !== readingSession) return;
         clearSentenceHighlight();
@@ -940,12 +1209,12 @@ function setReadingPageUI(reading) {
     if (reading) {
         btn.classList.replace('bg-emerald-500', 'bg-rose-500');
         btn.classList.replace('border-emerald-700', 'border-rose-700');
-        label.textContent = 'Parar Voz';
+        label.textContent = ui('pararVoz');
         icon.className = 'ph-fill ph-stop-circle text-base sm:text-lg animate-pulse';
     } else {
         btn.classList.replace('bg-rose-500', 'bg-emerald-500');
         btn.classList.replace('border-rose-700', 'border-emerald-700');
-        label.textContent = 'Ouvir Página';
+        label.textContent = ui('ouvirPagina');
         icon.className = 'ph-fill ph-speaker-high text-base sm:text-lg';
     }
 }
@@ -1057,15 +1326,19 @@ function dispararEfeito(i, id, efeito) {
     el.classList.add(`efeito-${efeito}`);
 }
 
-function updateLensUI(pageIdx, badgeText) {
+/* Selo da cena e rótulo do botão da lente, no idioma atual */
+function atualizarRotulosDaLente(pageIdx, badgeText) {
     const isImag = lensImaginationState[pageIdx];
     const badge = document.getElementById(`lens-badge-${pageIdx}`);
-    const btn = document.getElementById(`lens-btn-${pageIdx}`);
-    const btnLabel = document.getElementById(`lens-btn-label-${pageIdx}`);
-
-    badge.textContent = badgeText;
+    badge.textContent = t(badgeText);
     badge.className = isImag ? BADGE_IMAG : BADGE_REAL;
-    btnLabel.textContent = isImag ? "Voltar para a Lente da Realidade" : "Usar Lente da Imaginação!";
+    document.getElementById(`lens-btn-label-${pageIdx}`).textContent = ui(isImag ? 'lenteReal' : 'lenteImag');
+}
+
+function updateLensUI(pageIdx, badgeText) {
+    const isImag = lensImaginationState[pageIdx];
+    const btn = document.getElementById(`lens-btn-${pageIdx}`);
+    atualizarRotulosDaLente(pageIdx, badgeText);
     btn.className = isImag ? LENS_BTN_IMAG : LENS_BTN_REAL;
 
     document.querySelectorAll(`#page-${pageIdx} .hotspot-real`).forEach(h => h.classList.toggle('hidden', isImag));
@@ -1138,8 +1411,8 @@ function apiDaPagina(i) {
 /* =====================================================================
    4. MOTOR UNIFICADO DE DRAG-AND-DROP PARA TABLET ANDROID
    ===================================================================== */
-function initDraggableCards() {
-    const cards = document.querySelectorAll('.draggable-card');
+function initDraggableCards(raiz = document) {
+    const cards = raiz.querySelectorAll('.draggable-card');
     cards.forEach(card => {
         let startX = 0, startY = 0;
         let isDragging = false;
@@ -1390,34 +1663,48 @@ function handleOrdemPalavra(pageIdx, card, coords) {
     const c = cartoesDe(pageIdx);
     const st = pageState[pageIdx];
     const id = card.dataset.id;
-    if (st.usados.has(id)) return;
+    if (card.classList.contains('card-completed')) return;
 
+    // Palavras repetidas (THE … THE) valem em qualquer um dos cartões iguais
     const expected = c.ordem[st.usados.size];
-    if (id !== expected) {
+    const palavraDe = (itemId) => (c.itens.find(item => item.id === itemId) || {}).palavra;
+    if (id !== expected && palavraDe(id) !== palavraDe(expected)) {
         playSound('hint');
         nudge(card);
         return;
     }
 
-    st.usados.add(id);
+    st.usados.add(expected);
     completeCard(card, coords);
-    falar(card.dataset.word.toLowerCase());
-
-    const faixa = document.getElementById(`faixa-${pageIdx}`);
-    const vazia = faixa.querySelector('.faixa-vazia');
-    if (vazia) vazia.remove();
-    const escrita = document.createElement('span');
-    escrita.className = 'palavra-escrita';
-    escrita.textContent = card.dataset.word;
-    faixa.appendChild(escrita);
+    falar(card.dataset.word.toLocaleLowerCase(IDIOMAS[idioma].lang));
+    escreverNaFaixa(pageIdx);
 
     if (st.usados.size === c.ordem.length) {
+        st.completo = true;
         setTimeout(() => playSound('fanfare'), 600);
         lensImaginationState[pageIdx] = false;
         renderScene(pageIdx).then(() => inviteImagination(pageIdx));
     } else {
         playSound('wordPop');
     }
+}
+
+/* Faixa das palavras em ordem: as já acertadas, no idioma atual */
+function escreverNaFaixa(pageIdx) {
+    const c = cartoesDe(pageIdx);
+    const faixa = document.getElementById(`faixa-${pageIdx}`);
+    if (!faixa) return;
+    const usados = c.ordem.filter(id => pageState[pageIdx].usados.has(id));
+    if (!usados.length) {
+        faixa.innerHTML = `<span class="faixa-vazia">${escapeHtml(t(c.faixaVazia) || ui('faixaVazia'))}</span>`;
+        return;
+    }
+    faixa.replaceChildren(...usados.map(id => {
+        const escrita = document.createElement('span');
+        escrita.className = 'palavra-escrita';
+        escrita.textContent = t(itemDe(pageIdx, id).palavra);
+        return escrita;
+    }));
 }
 
 // Contagem (ex.: as cabras atravessando o rio): cada toque traz a próxima camada e fala o número
@@ -1435,7 +1722,7 @@ function handleContagem(pageIdx, card, coords) {
     if (lensImaginationState[pageIdx]) lensImaginationState[pageIdx] = false;
     renderScene(pageIdx);
     dispararEfeito(pageIdx, id, c.efeito || 'atravessar');
-    if (c.falas && c.falas[n]) falar(c.falas[n]);
+    if (c.falas && c.falas[n]) falar(t(c.falas[n]));
     if (st.usados.size === c.sequencia.length) {
         card.classList.add('card-completed');
         setTimeout(() => { playSound('fanfare'); inviteImagination(pageIdx); }, 900);
@@ -1484,7 +1771,7 @@ function renderPaginationDots() {
         dot.className = i === currentPage
             ? 'w-7 h-3 rounded-full bg-amber-500 transition-all'
             : 'w-3 h-3 rounded-full bg-amber-300 hover:bg-amber-400 transition-all';
-        dot.setAttribute('aria-label', `Ir para página ${i + 1}`);
+        dot.setAttribute('aria-label', ui('irParaPagina', i + 1));
         container.appendChild(dot);
     }
 }
@@ -1523,7 +1810,8 @@ function initTextScrolling() {
         const more = document.createElement('button');
         more.type = 'button';
         more.className = 'scroll-more';
-        more.setAttribute('aria-label', 'Continuar lendo');
+        more.setAttribute('aria-label', ui('continuarLendo'));
+        more.dataset.uiAria = 'continuarLendo';
         more.innerHTML = '<i class="ph-bold ph-arrow-down"></i>';
         more.addEventListener('click', () => {
             playSound('wordPop');
@@ -1705,7 +1993,7 @@ function goToPage(index, options = {}) {
 
     document.getElementById('btn-prev').disabled = currentPage === 0;
     document.getElementById('btn-next').disabled = currentPage === totalPages - 1;
-    document.getElementById('page-counter-text').textContent = `Página ${currentPage + 1} de ${totalPages}`;
+    document.getElementById('page-counter-text').textContent = ui('pagina', currentPage + 1, totalPages);
 
     renderPaginationDots();
 
@@ -1723,6 +2011,122 @@ function prevPage() {
 }
 
 /* =====================================================================
+   IDIOMA E LETRAS MAIÚSCULAS (barra do topo)
+   ===================================================================== */
+
+/* Textos fixos da moldura: data-ui (texto), data-ui-title e data-ui-aria */
+function traduzirInterface() {
+    document.querySelectorAll('[data-ui]').forEach(el => { el.textContent = ui(el.dataset.ui); });
+    document.querySelectorAll('[data-ui-title]').forEach(el => { el.title = ui(el.dataset.uiTitle); });
+    document.querySelectorAll('[data-ui-aria]').forEach(el => el.setAttribute('aria-label', ui(el.dataset.uiAria)));
+    document.getElementById('parte-rotulo').textContent = rotuloDaParte();
+    document.getElementById('titulo-obra').textContent = obraNoIdioma();
+    document.getElementById('page-counter-text').textContent = ui('pagina', currentPage + 1, totalPages);
+    document.querySelectorAll('[data-idioma]').forEach(btn => {
+        const ativo = btn.dataset.idioma === idioma;
+        btn.classList.toggle('idioma-ativo', ativo);
+        btn.setAttribute('aria-pressed', String(ativo));
+    });
+    setReadingPageUI(isReadingPage);
+    renderPaginationDots();
+    atualizarBotaoMaiusculas();
+}
+
+/* Cartões da página no idioma atual. Se a tradução troca as palavras (cartões em ordem), a bandeja
+   é refeita e a brincadeira daquela página recomeça. */
+function traduzirCartoes(i) {
+    const c = cartoesDe(i);
+    const area = document.getElementById(`cartoes-${i}`);
+    if (!c || !area) return;
+    const ids = Array.from(area.querySelectorAll('.draggable-card')).map(card => card.dataset.id).sort().join('|');
+    if (ids !== c.itens.map(item => item.id).sort().join('|')) {
+        pageState[i] = { usados: new Set(), ultimo: null };
+        area.innerHTML = montarCartoes(i);
+        initDraggableCards(area);
+        if (c.tipo === 'progressivo') updateProgressHints(i);
+        renderScene(i);
+        return;
+    }
+    area.querySelectorAll('.draggable-card').forEach(card => {
+        const item = itemDe(i, card.dataset.id);
+        if (!item) return;
+        card.dataset.word = t(item.palavra);
+        const rotulo = card.querySelector('span.font-display');
+        if (rotulo) rotulo.textContent = t(item.palavra);
+    });
+    if (c.tipo === 'ordem') escreverNaFaixa(i);
+}
+
+/* Refaz os textos de uma página no idioma atual (a cena e o progresso continuam como estão) */
+function traduzirPagina(i) {
+    const page = document.getElementById(`page-${i}`);
+    const cena = cenaDe(i);
+    montarFalas(i);
+    page.querySelector('.page-text-inner').outerHTML = montarConteudoDoTexto(i);
+    page.setAttribute('aria-label', ui('secaoPagina', i + 1));
+    document.getElementById(`scene-bg-${i}`).alt = t(cena.alt) || paginaNoIdioma(i).titulo || '';
+    page.querySelectorAll('.scene-hotspot').forEach(h => {
+        const def = (cena.hotspots || [])[Number(h.dataset.hotspot)];
+        if (def) h.title = t(def.titulo || def.palavra || '');
+    });
+    traduzirCartoes(i);
+    atualizarRotulosDaLente(i, sceneFor(i).badge);
+}
+
+function aplicarIdioma() {
+    const def = IDIOMAS[idioma];
+    document.documentElement.lang = def.lang;
+    vozEscolhida = lerPreferencia(chavePrefVoz()) || '';
+    carregarVozesDoAparelho();
+}
+
+/* Toque numa bandeirinha: carrega a tradução da parte e troca os textos sem sair da página */
+function trocarIdioma(codigo, botao) {
+    if (!IDIOMAS[codigo] || codigo === idioma) return;
+    carregarTraducao(codigo).then(() => {
+        closePhonicsCard();
+        stopReadingPage();
+        idioma = codigo;
+        salvarPreferencia(PREF_IDIOMA, codigo);
+        aplicarIdioma();
+        for (let i = 0; i < totalPages; i++) traduzirPagina(i);
+        traduzirInterface();
+        updateScrollHint(currentPage);
+        playSound('wordPop');
+    }, () => {
+        // Esta parte ainda não tem tradução neste idioma
+        playSound('hint');
+        nudge(botao);
+    });
+}
+
+function atualizarBotaoMaiusculas() {
+    const btn = document.getElementById('btn-maiusculas');
+    btn.setAttribute('aria-pressed', String(textoMaiusculo));
+    btn.classList.toggle('maiusculas-ativo', textoMaiusculo);
+    btn.title = ui(textoMaiusculo ? 'minusculas' : 'maiusculas');
+    btn.setAttribute('aria-label', btn.title);
+    document.getElementById('maiusculas-label').textContent = textoMaiusculo ? 'AA' : 'Aa';
+}
+
+/* Texto todo em MAIÚSCULAS: as letras de forma ajudam quem está começando a ler sozinho */
+function aplicarMaiusculas() {
+    document.body.classList.toggle('texto-maiusculo', textoMaiusculo);
+    document.querySelectorAll('[data-etiqueta]').forEach(el => {
+        el.textContent = etiquetaDaCapa(paginaNoIdioma(pageIndexOf(el)));
+    });
+    atualizarBotaoMaiusculas();
+}
+
+function alternarMaiusculas() {
+    textoMaiusculo = !textoMaiusculo;
+    salvarPreferencia(PREF_MAIUSCULAS, textoMaiusculo ? '1' : '0');
+    aplicarMaiusculas();
+    playSound('wordPop');
+    updateScrollHint(currentPage);
+}
+
+/* =====================================================================
    EVENTOS (delegados: o HTML montado não tem onclick embutido)
    ===================================================================== */
 function initEventos() {
@@ -1730,6 +2134,17 @@ function initEventos() {
         const palavra = e.target.closest('.literacy-word');
         if (palavra) {
             speakWord(palavra, palavra.dataset.palavra, palavra.dataset.silabas, palavra.dataset.emoji);
+            return;
+        }
+        // Toque numa frase do texto: a narração começa por ela
+        const frase = e.target.closest('.page-text .sentence');
+        if (frase && !e.target.closest('button, a')) {
+            lerAPartirDaFrase(frase);
+            return;
+        }
+        const bandeira = e.target.closest('[data-idioma]');
+        if (bandeira) {
+            trocarIdioma(bandeira.dataset.idioma, bandeira);
             return;
         }
         const lente = e.target.closest('[data-lente]');
@@ -1774,6 +2189,7 @@ function initEventos() {
     document.getElementById('btn-voz').addEventListener('click', abrirPainelVoz);
     document.getElementById('btn-sfx').addEventListener('click', toggleSoundEffects);
     document.getElementById('btn-fullscreen').addEventListener('click', toggleFullscreen);
+    document.getElementById('btn-maiusculas').addEventListener('click', alternarMaiusculas);
     document.getElementById('phonics-card').addEventListener('click', replayPhonicsWord);
 
     // Cartão de alfabetização: fecha só com toque FORA do cartão (no fundo escurecido) ou com Esc
@@ -1819,7 +2235,10 @@ function initEventos() {
    INICIALIZAÇÃO
    ===================================================================== */
 function iniciarLivro() {
+    aplicarIdioma();
     montarLivro();
+    traduzirInterface();
+    aplicarMaiusculas();
     initEventos();
     carregarVozesGravadas();
     initArtFallbacks();
@@ -1852,8 +2271,15 @@ function iniciarLivro() {
     }
 }
 
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', iniciarLivro);
-} else {
-    iniciarLivro();
+/* Idioma da leitura: ?lang=en (testes) ou o último escolhido no tablet; a tradução carrega antes de montar o livro */
+function prepararIdioma() {
+    const pedido = new URLSearchParams(window.location.search).get('lang') || lerPreferencia(PREF_IDIOMA) || PT;
+    const codigo = IDIOMAS[pedido] ? pedido : PT;
+    return carregarTraducao(codigo).then(() => { idioma = codigo; }, () => { idioma = PT; });
 }
+
+const domPronto = new Promise(resolve => {
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', resolve);
+    else resolve();
+});
+Promise.all([prepararIdioma(), domPronto]).then(iniciarLivro);
