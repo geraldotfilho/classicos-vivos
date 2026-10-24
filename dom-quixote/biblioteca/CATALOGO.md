@@ -24,7 +24,7 @@ Convenção: `pN` = índice da página (`?page=N`), sufixo `-real` (Lente da Rea
 | 3 · Rocinante e Dulcineia | `p3-real`, `p3-real-stage-1` … `p3-real-stage-3`, `p3-imag` | Etapas: cocho vazio (`p3-real`) → 1 maçã → 2 cenoura → 3 crina escovada e brilhante (`p3-real-stage-3`). Mesmo enquadramento estável entre todas as etapas (NB-5 completo) |
 | 4 · Pousada ou Castelo | `p4-real`, `p4-real-fundo`, `p4-real-flauta`, `p4-real-sopa`, `p4-imag` | Camadas em aquarela: `p4-pastor-parado`, `p4-pastor-tocando`, `p4-porquinhos`, `p4-notas-musicais`, `p4-estalajadeiro-acenando`, `p4-estalajadeiro-sopa` (NB-2) |
 | 5 · A Cerimônia | `p5-real`, `p5-imag` | |
-| 6 · Sancho Pança | `p6-real`, `p6-imag` | |
+| 6 · Sancho Pança | `p6-real`, `p6-imag` | `p6-imag` na mesma estrada/câmera com Dom Quixote de ouro e Sancho governador, céu livre; camada `camadas/p6-nuvem-ilha.webp` com canal alfa limpo (NB-6 completo) |
 | 7 · Os Moinhos | `p7-real`, `p7-real-sem-pas`, `p7-imag` | Camada de pás em aquarela: `camadas/p7-pas-moinho.webp` (NB-1) |
 
 ---

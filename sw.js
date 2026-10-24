@@ -6,7 +6,7 @@
    - Narração gravada (*.mp3 e as marcas *.json em audio/): rede primeiro, para frases regravadas chegarem ao tablet;
      cada arquivo fica num cache próprio (que sobrevive às novas versões) e toca offline depois.
    - Demais arquivos: cache primeiro (abre instantâneo no tablet). */
-const CACHE = 'classicos-vivos-dcc4242b46c2';
+const CACHE = 'classicos-vivos-d67992679bb5';
 const CACHE_AUDIO = 'cv-narracao';
 const FILES = [
     "./assets/icones/icone-192.png",
@@ -31,6 +31,7 @@ const FILES = [
     "./dom-quixote/imagens/camadas/p4-pastor-parado.webp",
     "./dom-quixote/imagens/camadas/p4-pastor-tocando.webp",
     "./dom-quixote/imagens/camadas/p4-porquinhos.webp",
+    "./dom-quixote/imagens/camadas/p6-nuvem-ilha.webp",
     "./dom-quixote/imagens/camadas/p7-pas-moinho.webp",
     "./dom-quixote/imagens/objetos/armadura-peitoral.svg",
     "./dom-quixote/imagens/objetos/bacia-elmo.svg",
