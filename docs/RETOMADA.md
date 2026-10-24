@@ -9,17 +9,15 @@ Leia este arquivo primeiro numa sessão nova do Claude. Depois, `AGENTS.md` (arq
 O responsável humano passou a narração para o **Claude**, chamando a **API do Gemini** a partir de uma sessão com a chave cadastrada como **segredo de rede** do ambiente. O proxy injeta o cabeçalho `x-goog-api-key` nas requisições a `generativelanguage.googleapis.com`, e o Claude não vê a chave. O Gemini (agente de imagens) não faz mais narração.
 
 - **Passo a passo**: [`TODO-NARRACAO.md`](TODO-NARRACAO.md). A seção 8 traz a execução pela API.
-- **Estado em 2026-10-24** (decisões do humano no topo de `TODO-NARRACAO.md`):
-  - narradora escolhida: `pt-br-storyteller-9` (modelo `gemini-3.8-flash-tts`), pasta `dom-quixote/audio/narracao/`, a **única** voz no `vozes.js` (regra: uma voz por vez);
-  - gravadas: Parte 1, capa e Capítulo 1 + 5 palavras-chave, liberadas como `previa` e aguardando a escuta do humano;
-  - **teste da página inteira** (TODO §8.5): a página 3 (`p2`) num pedido só, com marcação a posteriori (`paginas.json`); aguardando o humano comparar com as páginas 1 e 2. A fala de Dom Quixote está provisoriamente na voz da narradora;
-  - plano pago ativo;
-  - `tools/gravar-narracao.mjs` com QA por transcrição; catálogo das vozes em `docs/narracao/VOZES-PT-BR.md`.
+- **Estado em 2026-10-24** (decisões do humano no topo de `TODO-NARRACAO.md`, leia antes de gravar):
+  - **Parte 1 completa** (`dom-quixote/audio/narracao/`, `partes: [1]`): páginas inteiras, títulos lidos, Dom Quixote e Sancho com voz própria e as 30 palavras-chave;
+  - a página inteira é o padrão; o Claude escolhe o elenco; a API paga **só produz vozes** (a conferência é local, com o Whisper); limite de **R$ 10/mês**, e o gasto fica em `docs/narracao/gastos.csv`.
 
-**Próximos passos:**
-1. Aplicar o retorno de ouvido do humano sobre a capa, o Capítulo 1 e as palavras-chave.
-2. **Escolher com o humano o elenco** (uma voz por personagem) antes de `p2-s1`, a primeira fala (Dom Quixote). Depois, adaptar o script para frases mistas: trecho da narradora + trecho do personagem, gravados em separado e juntados num só MP3 por frase (ver TODO §3).
-3. Seguir página por página, liberando como `previa` e pedindo escuta a cada novidade.
+**Próximos passos (Partes 2 → 4):**
+1. Num contêiner novo: `npm install` e `pip install faster-whisper` (a conferência local; o modelo baixa sozinho na 1ª vez).
+2. Para cada parte: escrever `narracao/parte-N/roteiro.json` (quem fala cada trecho; lembre que as falas continuam em frases sem travessão) e acrescentar os personagens novos ao `ELENCO` do script. Use o catálogo `docs/narracao/VOZES-PT-BR.md`; se nenhuma voz servir (ex.: crianças), crie uma por descrição (voice design, `POST /v1beta/voices` com `type: "prompted"`).
+3. `npm run gravar:narracao -- --voz narracao --parte N --pagina-inteira` e `npm run gravar:narracao -- --voz palavras --parte N`. Confira os avisos, atualize `qa-parte-N.md` e ponha a parte em `partes` no `vozes.js`.
+4. Opcional (BACKLOG M-10): regravar inteiras as páginas 1 e 2 da Parte 1.
 
 ## 2. Ciclo com o Gemini (arte): revisão **pausada**
 

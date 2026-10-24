@@ -6,10 +6,12 @@
     "p1-s1": "7a218ae7d1",
     "p1-s2": "b74125dcea",
     "p1-s3": "ac67f0dba1",
-    "p1-s4": "9d20255f9e"
+    "p1-s4": "9d20255f9e",
+    "p0-s0": "a5c3eca096",
+    "p1-s0": "70e23d8c7e"
   },
   "modelo": "gemini-3.8-flash-tts",
   "voz": "pt-br-storyteller-9",
   "estilo": "warm, gentle storyteller reading aloud to young children; calm, clear pace; expressive but not theatrical",
-  "qa": "gemini-3.5-flash"
+  "qa": "whisper-large-v3-turbo (local)"
 }

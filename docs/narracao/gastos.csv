@@ -1,0 +1,6 @@
+data,comando,pedidos_voz,tokens_audio,tokens_qa,usd_estimado
+2026-10-24T01:05,"--voz narracao --parte 1 --paginas 2 --ids p2-s0,p2-s1 --pagina-inteira",2,806,0,0.0073
+2026-10-24T01:07,"--voz narracao --parte 1 --paginas 3 --pagina-inteira",2,3317,0,0.0301
+2026-10-24T01:08,"--voz narracao --parte 1 --ids p0-s0,p1-s0",3,571,0,0.0052
+2026-10-24T01:13,"--voz narracao --parte 1 --paginas 4,5,6,7 --pagina-inteira",6,7133,0,0.0647
+2026-10-24T01:17,"--voz palavras --parte 1",28,4860,0,0.0439

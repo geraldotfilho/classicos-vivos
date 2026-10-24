@@ -5,6 +5,15 @@
   "audioPalavras": "dom-quixote/audio/palavras/<slug>.mp3",
   "frases": [
     {
+      "id": "p0-s0",
+      "pagina": 0,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Dom Quixote de La Mancha. Parte 1: O Cavaleiro da Super Imaginação",
+      "fala": "Dom Quixote de La Mancha. Parte 1: O Cavaleiro da Super Imaginação",
+      "hash": "a5c3eca096"
+    },
+    {
       "id": "p0-s1",
       "pagina": 0,
       "paragrafo": 0,
@@ -27,6 +36,15 @@
       "texto": "Ao lado do seu querido cavalo ROCINANTE, ele decidiu percorrer os caminhos do mundo para proteger os indefesos, espalhar a bondade e provar que todos nós podemos ser nobres CAVALEIROS em nossas próprias vidas!",
       "fala": "Ao lado do seu querido cavalo rocinante, ele decidiu percorrer os caminhos do mundo para proteger os indefesos, espalhar a bondade e provar que todos nós podemos ser nobres cavaleiros em nossas próprias vidas!",
       "hash": "1f52bad3c1"
+    },
+    {
+      "id": "p1-s0",
+      "pagina": 1,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Capítulo 1. O Fidalgo Leitor. O Vovô que Lia Dia e Noite!",
+      "fala": "Capítulo 1. O Fidalgo Leitor. O Vovô que Lia Dia e Noite!",
+      "hash": "70e23d8c7e"
     },
     {
       "id": "p1-s1",
@@ -59,6 +77,15 @@
       "texto": "De tanto mergulhar no poder das palavras, seu quarto se enchia de pura poesia: o velho mapa brilhava no ar, histórias ganhavam asas e até o manso gatinho da sala, aos seus olhos afetuosos, transformava-se em um magnífico LEÃO GUARDIÃO!",
       "fala": "De tanto mergulhar no poder das palavras, seu quarto se enchia de pura poesia: o velho mapa brilhava no ar, histórias ganhavam asas e até o manso gatinho da sala, aos seus olhos afetuosos, transformava-se em um magnífico leão guardião!",
       "hash": "9d20255f9e"
+    },
+    {
+      "id": "p2-s0",
+      "pagina": 2,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Capítulo 2. O Novo Nome. A Armadura do Bisavô!",
+      "fala": "Capítulo 2. O Novo Nome. A Armadura do Bisavô!",
+      "hash": "f72a5e6768"
     },
     {
       "id": "p2-s1",
@@ -109,6 +136,15 @@
       "hash": "9160217344"
     },
     {
+      "id": "p3-s0",
+      "pagina": 3,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Capítulo 3. O Corcel e a Princesa. Rocinante e a Bela Dulcineia!",
+      "fala": "Capítulo 3. O Corcel e a Princesa. Rocinante e a Bela Dulcineia!",
+      "hash": "d05153d274"
+    },
+    {
       "id": "p3-s1",
       "pagina": 3,
       "paragrafo": 0,
@@ -157,6 +193,15 @@
       "hash": "c476a70184"
     },
     {
+      "id": "p4-s0",
+      "pagina": 4,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Capítulo 4. A Primeira Saída. Pousada ou Castelo Real?",
+      "fala": "Capítulo 4. A Primeira Saída. Pousada ou Castelo Real?",
+      "hash": "adf4be84bb"
+    },
+    {
       "id": "p4-s1",
       "pagina": 4,
       "paragrafo": 0,
@@ -187,6 +232,15 @@
       "texto": "E recebido com carinho pelo bondoso dono da pousada, saboreou uma quentinha tigela de SOPA de pão com alho como se estivesse no mais nobre banquete de reis!",
       "fala": "E recebido com carinho pelo bondoso dono da pousada, saboreou uma quentinha tigela de sopa de pão com alho como se estivesse no mais nobre banquete de reis!",
       "hash": "eee8919bac"
+    },
+    {
+      "id": "p5-s0",
+      "pagina": 5,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Capítulo 5. A Cerimônia Mágica. Cavaleiro sob a Lua Cheia!",
+      "fala": "Capítulo 5. A Cerimônia Mágica. Cavaleiro sob a Lua Cheia!",
+      "hash": "c01b50fb44"
     },
     {
       "id": "p5-s1",
@@ -229,6 +283,15 @@
       "hash": "e57d2550ba"
     },
     {
+      "id": "p6-s0",
+      "pagina": 6,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Capítulo 6. A Nobre Amizade. O Fiel Escudeiro Sancho Pança!",
+      "fala": "Capítulo 6. A Nobre Amizade. O Fiel Escudeiro Sancho Pança!",
+      "hash": "407fd45781"
+    },
+    {
       "id": "p6-s1",
       "pagina": 6,
       "paragrafo": 0,
@@ -267,6 +330,15 @@
       "texto": "Sob o sol da manhã, os dois amigos partiram juntos pela estrada, conversando alegremente sobre o futuro!",
       "fala": "Sob o sol da manhã, os dois amigos partiram juntos pela estrada, conversando alegremente sobre o futuro!",
       "hash": "5dc81dde11"
+    },
+    {
+      "id": "p7-s0",
+      "pagina": 7,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Capítulo 7. O Duelo dos Moinhos! O Duelo contra os Gigantes!",
+      "fala": "Capítulo 7. O Duelo dos Moinhos! O Duelo contra os Gigantes!",
+      "hash": "079dd316b4"
     },
     {
       "id": "p7-s1",

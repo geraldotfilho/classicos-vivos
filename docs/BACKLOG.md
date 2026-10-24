@@ -55,13 +55,21 @@ Levantado na inspeção completa do sprint 1 (2026-10): código, ilustrações e
 - **Narração gravada pronta para receber áudio**: tocador frase a frase com a voz do aparelho como reserva, voz offline quando a online falha, MP3 guardado sob demanda pelo service worker.
 - **Segmentação canônica** (`assets/js/texto.js`) e exportação das 214 frases e 105 palavras-chave (`docs/narracao/`) para o Gemini gravar (P-006, agora com o Claude: `docs/TODO-NARRACAO.md`). Conversor WAV/PCM → MP3 sem dependências nativas (`npm run build:audio`).
 
+## ✅ Entregue no sprint 7 (narração gravada da Parte 1)
+
+- **Parte 1 completa com narração gravada** (`dom-quixote/audio/narracao/`): narradora `pt-br-storyteller-9`, **Dom Quixote** `pt-br-concierge-3` e **Sancho** `pt-br-storyteller-2`, mais as 30 palavras-chave. Na primeira visita, vira a voz padrão.
+- **Página inteira num pedido só** (o padrão, aprovado de ouvido), com blocos de narradora + 1 personagem e marcação das frases pelos tempos das palavras (Whisper local). O motor toca um MP3 por página e destaca a frase pelo tempo.
+- **Título do capítulo lido** antes do texto (a "frase 0", `pN-s0`).
+- **Economia**: a API paga só produz as vozes. A conferência é local e gratuita (`tools/transcrever.py`), e o gasto fica registrado em `docs/narracao/gastos.csv`.
+- **Service worker**: os MP3 e as marcas vêm da rede primeiro (regravações chegam ao tablet), inteiros (o 206 não podia ser guardado), num cache próprio.
+
 ## 🔴 Prioridade alta
 
 | ID | Item | Detalhes |
 | :--- | :--- | :--- |
 | A-7 | **Arte das Partes 2–4** | 49 cenas + 18 camadas em `TODO-NANO-BANANA-PARTES-2-4.md` (Gemini). Depois de cada entrega: conferir posições das camadas nas duas orientações e ajustar `x/y/w` no `parte-N.html`. |
 | A-8 | **Revisão humana do texto das Partes 2–4** | Ler em voz alta com a voz do tablet; decidir "vinho tinto" × "suco de uva" (Parte 3, cap. 20); validar a dificuldade da `ordem` (5 palavras) e da contagem com crianças. Ver `PLANO-PARTES-2-4.md` §5. |
-| A-9 | **Narração gravada** (P-006) | Agora com o Claude, via API do Gemini (chave como segredo de rede do ambiente). Amostras de voz para o humano escolher → narradora (Partes 1–4) + palavras-chave → teatro de vozes. Ver `RETOMADA.md` e `TODO-NARRACAO.md` §8. |
+| A-9 | **Narração gravada das Partes 2–4** (P-006) | A Parte 1 está pronta. Falta: roteiro das falas e elenco dos personagens novos de cada parte (voz criada por descrição quando nenhuma da biblioteca servir), depois as páginas inteiras e as palavras-chave. Limite de gasto do humano: **R$ 10/mês**. Ver `RETOMADA.md` e `TODO-NARRACAO.md`. |
 | A-3 | **Livros sem transformação** (pág. 2) | Viola o §3.3 do AGENTS.md (cartão que só faz a imagem tremer). Após NB-3: cada livro troca a cena para `p1-real-livro-<tema>.webp` via `setSceneImage`, em qualquer ordem. Ao completar os três, o botão da lente convida à imaginação (já existe). |
 
 ## 🟡 Prioridade média
@@ -69,7 +77,8 @@ Levantado na inspeção completa do sprint 1 (2026-10): código, ilustrações e
 | ID | Item | Detalhes |
 | :--- | :--- | :--- |
 | M-1 | **Pronúncia silábica de fato** (encaminhado: gravações em `audio/palavras/`, P-006) | O §3.2 promete pronúncia **pausada por sílabas**, mas `speakWord` fala a palavra inteira (só o balão mostra `I • MA • GI • NA • ÇÃO`). Proposta: falar as sílabas com pausas (destacando cada uma no balão) e depois a palavra inteira. Testar a qualidade das sílabas isoladas nas vozes pt-BR do Android, porque algumas soam estranhas sozinhas ("ÇÃO"). |
-| M-4 | **Tocar numa frase para ouvi-la** | Hoje só a página inteira ou as palavras-chave. Útil para reler um trecho. Cuidar para não conflitar com o toque nas palavras-chave. |
+| M-4 | **Tocar numa frase para ouvi-la** | Hoje só a página inteira ou as palavras-chave. Útil para reler um trecho. Cuidar para não conflitar com o toque nas palavras-chave. Com a página gravada inteira, exige **pular no tempo** do MP3, e o áudio que vem do service worker não aceita salto (`seekable` vazio): o SW teria de responder pedidos com `Range` (206) a partir do arquivo guardado. |
+| M-10 | **Páginas 1 e 2 da Parte 1 gravadas inteiras** | Foram gravadas frase por frase, antes de a página inteira virar o padrão (os títulos entraram como gravações avulsas). Regravar inteiras para o livro ficar uniforme: ~2 min de áudio, ~US$ 0,03. Só se o humano quiser. |
 | M-5 | **"Ler de Novo" não reinicia** | Volta à capa, mas mantém lentes ativadas, armadura vestida e cartões verdes. Decidir: reiniciar tudo (recomendado: nova leitura, nova descoberta). |
 | M-6 | **Continuar de onde parou** | Lembrar a última página lida (`localStorage`, com `try/catch`) e oferecer "Continuar" na capa e na biblioteca. |
 | M-7 | **Consistência das ilustrações** | NB-4 (escala do herói dourado e rosto na etapa 1), NB-5 (enquadramento do estábulo), NB-6 (imaginação de Sancho gerada de verdade, em vez da capa com recorte achatado). Substituições diretas, sem código. |

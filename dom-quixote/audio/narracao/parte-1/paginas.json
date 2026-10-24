@@ -1,42 +1,260 @@
 {
   "p2": {
     "arquivo": "p2.mp3",
-    "hash": "3b50b9fee8",
+    "hash": "1073143840",
     "frases": [
       {
-        "id": "p2-s1",
+        "id": "p2-s0",
         "ini": 0,
-        "fim": 8.36
+        "fim": 5.86
+      },
+      {
+        "id": "p2-s1",
+        "ini": 5.86,
+        "fim": 15.37
       },
       {
         "id": "p2-s2",
-        "ini": 8.36,
-        "fim": 18.49
+        "ini": 15.37,
+        "fim": 25.5
       },
       {
         "id": "p2-s3",
-        "ini": 18.49,
-        "fim": 26.01
+        "ini": 25.5,
+        "fim": 33.02
       },
       {
         "id": "p2-s4",
-        "ini": 26.01,
-        "fim": 33.89
+        "ini": 33.02,
+        "fim": 40.9
       },
       {
         "id": "p2-s5",
-        "ini": 33.89,
-        "fim": 46.95
+        "ini": 40.9,
+        "fim": 53.96
       },
       {
         "id": "p2-s6",
-        "ini": 46.95,
-        "fim": 53.98
+        "ini": 53.96,
+        "fim": 61.03
+      }
+    ],
+    "emenda": "p2-s0 e p2-s1 gravadas avulsas (avulsas/p2-s0_p2-s1.mp3) e emendadas no áudio de 2026-10-24 sem recodificar"
+  },
+  "qa": "whisper-large-v3-turbo (local)",
+  "p3": {
+    "arquivo": "p3.mp3",
+    "hash": "e867ec7641",
+    "frases": [
+      {
+        "id": "p3-s0",
+        "ini": 0,
+        "fim": 8.23
+      },
+      {
+        "id": "p3-s1",
+        "ini": 8.23,
+        "fim": 14.01
+      },
+      {
+        "id": "p3-s2",
+        "ini": 14.01,
+        "fim": 25.02
+      },
+      {
+        "id": "p3-s3",
+        "ini": 25.02,
+        "fim": 38.73
+      },
+      {
+        "id": "p3-s4",
+        "ini": 38.73,
+        "fim": 49.25
+      },
+      {
+        "id": "p3-s5",
+        "ini": 49.25,
+        "fim": 53.67
+      },
+      {
+        "id": "p3-s6",
+        "ini": 53.67,
+        "fim": 66.5
       }
     ]
   },
+  "elenco": {
+    "NARRADORA": {
+      "voz": "pt-br-storyteller-9",
+      "estilo": "warm, gentle storyteller reading aloud to young children; calm, clear pace; expressive but not theatrical"
+    },
+    "QUIXOTE": {
+      "voz": "pt-br-concierge-3",
+      "estilo": "noble, solemn and dreamy, speaking with heartfelt conviction; never mocking"
+    },
+    "SANCHO": {
+      "voz": "pt-br-storyteller-2",
+      "estilo": "simple, warm and good-humored, plain and practical"
+    }
+  },
   "modelo": "gemini-3.8-flash-tts",
-  "voz": "pt-br-storyteller-9",
-  "estilo": "warm, gentle storyteller reading aloud to young children; calm, clear pace; expressive but not theatrical",
-  "qa": "gemini-3.5-flash"
+  "p4": {
+    "arquivo": "p4.mp3",
+    "hash": "0de0fca996",
+    "frases": [
+      {
+        "id": "p4-s0",
+        "ini": 0,
+        "fim": 8.03
+      },
+      {
+        "id": "p4-s1",
+        "ini": 8.03,
+        "fim": 22.06
+      },
+      {
+        "id": "p4-s2",
+        "ini": 22.06,
+        "fim": 35.93
+      },
+      {
+        "id": "p4-s3",
+        "ini": 35.93,
+        "fim": 44.87
+      },
+      {
+        "id": "p4-s4",
+        "ini": 44.87,
+        "fim": 58.62
+      }
+    ]
+  },
+  "p5": {
+    "arquivo": "p5.mp3",
+    "hash": "c79f71427b",
+    "frases": [
+      {
+        "id": "p5-s0",
+        "ini": 0,
+        "fim": 7.9
+      },
+      {
+        "id": "p5-s1",
+        "ini": 7.9,
+        "fim": 15.42
+      },
+      {
+        "id": "p5-s2",
+        "ini": 15.42,
+        "fim": 30.17
+      },
+      {
+        "id": "p5-s3",
+        "ini": 30.17,
+        "fim": 46.08
+      },
+      {
+        "id": "p5-s4",
+        "ini": 46.08,
+        "fim": 62.97
+      },
+      {
+        "id": "p5-s5",
+        "ini": 62.97,
+        "fim": 68.55
+      }
+    ]
+  },
+  "p6": {
+    "arquivo": "p6.mp3",
+    "hash": "534f1b9efb",
+    "frases": [
+      {
+        "id": "p6-s0",
+        "ini": 0,
+        "fim": 7.59
+      },
+      {
+        "id": "p6-s1",
+        "ini": 7.59,
+        "fim": 23.02
+      },
+      {
+        "id": "p6-s2",
+        "ini": 23.02,
+        "fim": 29.75
+      },
+      {
+        "id": "p6-s3",
+        "ini": 29.75,
+        "fim": 39.73
+      },
+      {
+        "id": "p6-s4",
+        "ini": 39.73,
+        "fim": 48.51
+      },
+      {
+        "id": "p6-s5",
+        "ini": 48.51,
+        "fim": 56.19
+      }
+    ]
+  },
+  "p7": {
+    "arquivo": "p7.mp3",
+    "hash": "449f2a6855",
+    "frases": [
+      {
+        "id": "p7-s0",
+        "ini": 0,
+        "fim": 6.67
+      },
+      {
+        "id": "p7-s1",
+        "ini": 6.67,
+        "fim": 20.95
+      },
+      {
+        "id": "p7-s2",
+        "ini": 20.95,
+        "fim": 28.76
+      },
+      {
+        "id": "p7-s3",
+        "ini": 28.76,
+        "fim": 32.93
+      },
+      {
+        "id": "p7-s4",
+        "ini": 32.93,
+        "fim": 34.84
+      },
+      {
+        "id": "p7-s5",
+        "ini": 34.84,
+        "fim": 37.27
+      },
+      {
+        "id": "p7-s6",
+        "ini": 37.27,
+        "fim": 42.94
+      },
+      {
+        "id": "p7-s7",
+        "ini": 42.94,
+        "fim": 46.58
+      },
+      {
+        "id": "p7-s8",
+        "ini": 46.58,
+        "fim": 50.22
+      },
+      {
+        "id": "p7-s9",
+        "ini": 50.22,
+        "fim": 59.27
+      }
+    ]
+  }
 }

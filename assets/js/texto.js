@@ -119,14 +119,25 @@
         }).join(' ')).join('\n<br><br>\n');
     }
 
+    /* Título lido no começo da página: a "frase 0" (p{página}-s0).
+       Capa: obra + título da parte. Demais: "Capítulo 1. O Fidalgo Leitor." + título. Sem emojis. */
+    function tituloDaPagina(pagina, indice, obra) {
+        const limpar = (t) => String(t || '').replace(/[\p{Extended_Pictographic}\uFE0F\u200D]/gu, '').replace(/\s*•\s*/g, '. ').replace(/\s+/g, ' ').trim();
+        const ponto = (t) => (t && !/[.!?…:]$/.test(t) ? `${t}.` : t);
+        const partes = pagina.capa ? [obra, pagina.titulo] : [pagina.capitulo, pagina.titulo];
+        const texto = partes.map(limpar).filter(Boolean).map((t, k, todas) => (k < todas.length - 1 ? ponto(t) : t)).join(' ');
+        return texto ? { id: `p${indice}-s0`, texto, fala: prepararFala(texto) } : null;
+    }
+
     /* Mapa id → texto falado (o motor usa para a voz do aparelho) */
-    function falasDaPagina(texto, pagina) {
+    function falasDaPagina(texto, pagina, titulo) {
         const falas = {};
+        if (titulo) falas[titulo.id] = titulo.fala;
         frasesDaPagina(texto, pagina).flat().forEach(({ id, frase }) => { falas[id] = falaDaFrase(frase); });
         return falas;
     }
 
-    const api = { segmentarTexto, frasesDaPagina, paginaParaHtml, falasDaPagina, falaDaFrase, textoDaFrase, falaSilabica, prepararFala, slug, escapeHtml };
+    const api = { segmentarTexto, frasesDaPagina, paginaParaHtml, falasDaPagina, tituloDaPagina, falaDaFrase, textoDaFrase, falaSilabica, prepararFala, slug, escapeHtml };
     if (typeof module === 'object' && module.exports) module.exports = api;
     else raiz.Texto = api;
 })(typeof window !== 'undefined' ? window : globalThis);

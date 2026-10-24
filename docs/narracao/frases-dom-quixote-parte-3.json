@@ -5,6 +5,15 @@
   "audioPalavras": "dom-quixote/audio/palavras/<slug>.mp3",
   "frases": [
     {
+      "id": "p0-s0",
+      "pagina": 0,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Dom Quixote de La Mancha. Parte 3: Serra Morena e a Princesa Micomicona",
+      "fala": "Dom Quixote de La Mancha. Parte 3: Serra Morena e a Princesa Micomicona",
+      "hash": "5ba5f1ef81"
+    },
+    {
       "id": "p0-s1",
       "pagina": 0,
       "paragrafo": 0,
@@ -27,6 +36,15 @@
       "texto": "Vire a página e suba a serra com eles!",
       "fala": "Vire a página e suba a serra com eles!",
       "hash": "dd0898694a"
+    },
+    {
+      "id": "p1-s0",
+      "pagina": 1,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Capítulo 15. A Mala Perdida. Um Tesouro no Meio da Serra",
+      "fala": "Capítulo 15. A Mala Perdida. Um Tesouro no Meio da Serra",
+      "hash": "d3c0afaef1"
     },
     {
       "id": "p1-s1",
@@ -93,6 +111,15 @@
       "hash": "a6d3d2d90d"
     },
     {
+      "id": "p2-s0",
+      "pagina": 2,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Capítulo 16. As Cambalhotas da Saudade. Um Cavaleiro de Pernas para o Ar",
+      "fala": "Capítulo 16. As Cambalhotas da Saudade. Um Cavaleiro de Pernas para o Ar",
+      "hash": "d46f9414ad"
+    },
+    {
       "id": "p2-s1",
       "pagina": 2,
       "paragrafo": 0,
@@ -149,6 +176,15 @@
       "hash": "b83d3f0135"
     },
     {
+      "id": "p3-s0",
+      "pagina": 3,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Capítulo 17. A Carta para Dulcineia. Sancho Esqueceu a Carta!",
+      "fala": "Capítulo 17. A Carta para Dulcineia. Sancho Esqueceu a Carta!",
+      "hash": "adc1a0b181"
+    },
+    {
       "id": "p3-s1",
       "pagina": 3,
       "paragrafo": 0,
@@ -197,6 +233,15 @@
       "hash": "b45e82903b"
     },
     {
+      "id": "p4-s0",
+      "pagina": 4,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Capítulo 18. Amigos Disfarçados. O Padre, o Barbeiro e uma Barba de Boi",
+      "fala": "Capítulo 18. Amigos Disfarçados. O Padre, o Barbeiro e uma Barba de Boi",
+      "hash": "893fb69ea8"
+    },
+    {
       "id": "p4-s1",
       "pagina": 4,
       "paragrafo": 0,
@@ -243,6 +288,15 @@
       "texto": "Quando se olharam no espelho, os dois riram tanto que quase desistiram do plano!",
       "fala": "Quando se olharam no espelho, os dois riram tanto que quase desistiram do plano!",
       "hash": "3a78c28fb9"
+    },
+    {
+      "id": "p5-s0",
+      "pagina": 5,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Capítulo 19. A Princesa Micomicona. Uma Princesa Pede Ajuda",
+      "fala": "Capítulo 19. A Princesa Micomicona. Uma Princesa Pede Ajuda",
+      "hash": "49e3e182c6"
     },
     {
       "id": "p5-s1",
@@ -301,6 +355,15 @@
       "hash": "d6f788bd74"
     },
     {
+      "id": "p6-s0",
+      "pagina": 6,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Capítulo 20. A Batalha dos Odres. Um Gigante no Meio da Noite",
+      "fala": "Capítulo 20. A Batalha dos Odres. Um Gigante no Meio da Noite",
+      "hash": "a609adeeec"
+    },
+    {
       "id": "p6-s1",
       "pagina": 6,
       "paragrafo": 0,
@@ -355,6 +418,15 @@
       "texto": "E Dom Quixote acordou feliz da vida, achando que tinha salvado o reino da princesa!",
       "fala": "E Dom Quixote acordou feliz da vida, achando que tinha salvado o reino da princesa!",
       "hash": "09baae54b0"
+    },
+    {
+      "id": "p7-s0",
+      "pagina": 7,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Capítulo 21. Armas e Letras. Histórias na Pousada",
+      "fala": "Capítulo 21. Armas e Letras. Histórias na Pousada",
+      "hash": "9d96a605ea"
     },
     {
       "id": "p7-s1",

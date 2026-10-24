@@ -1,0 +1,11 @@
+{
+  "_sobre": "Quem fala cada trecho das frases com fala de personagem (texto no formato do campo `fala`, sem mudar palavras). Frases fora daqui são da NARRADORA. Elenco em tools/gravar-narracao.mjs (ELENCO).",
+  "p2-s1": [["QUIXOTE", "O mundo precisa de mais bondade, justiça e bravura!"], ["NARRADORA", "pensou o fidalgo com os olhos brilhando."]],
+  "p6-s2": [["QUIXOTE", "Meu leal amigo,"], ["NARRADORA", "disse o cavaleiro,"], ["QUIXOTE", "junte-se a mim como meu escudeiro!"]],
+  "p6-s3": [["QUIXOTE", "Prometo que, quando vencermos as primeiras batalhas, você será nomeado governador de uma formosa ilha cheia de pão e justiça!"]],
+  "p7-s4": [["QUIXOTE", "Veja, amigo Sancho!"]],
+  "p7-s5": [["QUIXOTE", "A sorte guia nossos passos!"]],
+  "p7-s6": [["QUIXOTE", "Ali despontam descomunais gigantes com os quais travarei feroz combate!"]],
+  "p7-s7": [["SANCHO", "Que gigantes, meu senhor?"], ["NARRADORA", "avisou Sancho."]],
+  "p7-s8": [["SANCHO", "São apenas moinhos que moem o trigo ao vento!"]]
+}
