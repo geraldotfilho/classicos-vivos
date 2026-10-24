@@ -1,6 +1,10 @@
 // Grava a narração dos livros pela API de voz (TTS) do Gemini, frase por frase, com controle de qualidade.
 // Passo a passo e decisões: docs/TODO-NARRACAO.md (seção 8).
 //
+// ⚠️ REGRA DO HUMANO (2026-10-24): a API paga é usada SÓ para produzir as vozes da leitura, sempre do jeito
+// mais econômico, e SÓ quando ele autorizou no prompt inicial da sessão. Por isso o script não chama a API
+// sem `--autorizado` (e `--seco` nunca chama). Nada de testes, transcrições ou avaliações pela API.
+//
 // A chave NÃO passa por aqui: o proxy do ambiente injeta o cabeçalho x-goog-api-key nas requisições a
 // generativelanguage.googleapis.com. Se existir $GEMINI_API_KEY, ela é enviada no cabeçalho (nunca na URL
 // nem impressa).
@@ -14,11 +18,13 @@
 //   ... --seco                                                            # mostra o que faria, sem chamar a API
 //   ... --forcar                                                          # regrava mesmo com o hash igual
 //   ... --sem-qa                                                          # pula a transcrição de conferência
+//   ... --autorizado                                                      # obrigatório para chamar a API (ver a regra acima)
+//   ... --flex                                                            # nível Flex: metade do preço, resposta em minutos (não testado ainda)
 //   npm run gravar:narracao -- --voz narracao --parte 1 --paginas 2 --pagina-inteira
 //       # a página inteira num pedido só (entonação mais contínua) + marcação das frases depois,
 //       # em parte-N/paginas.json (o livro toca um MP3 por página e destaca a frase pelo tempo)
 //
-// Para cada frase: gera o WAV, transcreve LOCALMENTE (Whisper, tools/transcrever.py; `--qa api` usa a API) e compara com o campo `fala` (até 3
+// Para cada frase: gera o WAV, transcreve LOCALMENTE (Whisper, tools/transcrever.py, de graça) e compara com o campo `fala` (até 2
 // tentativas; se nenhuma bater, guarda a mais próxima e avisa), converte para MP3 (tools/otimizar-audio.mjs)
 // e registra o hash em indice.json. Frases com o
 // mesmo hash já gravado são puladas: pode rodar de novo depois de uma queda ou do fim da cota.
@@ -32,9 +38,8 @@ import { fileURLToPath } from 'node:url';
 const RAIZ = join(dirname(fileURLToPath(import.meta.url)), '..');
 const API = 'https://generativelanguage.googleapis.com/v1beta';
 const MODELO_TTS = 'gemini-3.8-flash-tts';
-// Conferência: por padrão LOCAL e gratuita (Whisper, tools/transcrever.py). A API paga fica só para as vozes
-// (decisão do humano, 2026-10-24). `--qa api` usa o modelo abaixo; `--sem-qa` desliga.
-const MODELO_QA_API = 'gemini-3.5-flash-lite';
+// Conferência: sempre LOCAL e gratuita (Whisper, tools/transcrever.py). A API paga só produz as vozes
+// (decisão do humano, 2026-10-24). `--sem-qa` desliga a conferência.
 const AMOSTRA = 'Olá! Eu vou ler esta história com você. Vire a página quando quiser!';
 
 const ESTILO_NARRADORA = 'warm, gentle storyteller reading aloud to young children; calm, clear pace; expressive but not theatrical';
@@ -62,7 +67,7 @@ function opcoes(argv) {
     const o = { livro: 'dom-quixote' };
     for (let i = 0; i < argv.length; i++) {
         const a = argv[i].replace(/^--/, '');
-        if (['seco', 'forcar', 'amostra', 'sem-qa', 'pagina-inteira'].includes(a)) o[a] = true;
+        if (['seco', 'forcar', 'amostra', 'sem-qa', 'pagina-inteira', 'autorizado', 'flex'].includes(a)) o[a] = true;
         else o[a] = argv[++i];
     }
     return o;
@@ -75,9 +80,10 @@ if (!cfg) {
     process.exit(1);
 }
 // Gasto estimado (preços de 2026 por milhão de tokens; ver TODO-NARRACAO §8.4). Fica em docs/narracao/gastos.csv.
-const PRECO = { ttsSaida: 9, ttsEntrada: 0.5, qaEntrada: 0.3, qaSaida: 2.5 };
-const gasto = { tts: 0, ttsEntrada: 0, qaEntrada: 0, qaSaida: 0, pedidos: 0 };
-const dolares = () => (gasto.tts * PRECO.ttsSaida + gasto.ttsEntrada * PRECO.ttsEntrada + gasto.qaEntrada * PRECO.qaEntrada + gasto.qaSaida * PRECO.qaSaida) / 1e6;
+// gemini-3.8-flash-tts no nível Standard até 31/12/2026 (dobra em 2027); Flex e Batch custam a metade.
+const PRECO = { ttsSaida: 9, ttsEntrada: 0.5 };
+const gasto = { tts: 0, ttsEntrada: 0, pedidos: 0 };
+const dolares = () => (gasto.tts * PRECO.ttsSaida + gasto.ttsEntrada * PRECO.ttsEntrada) / 1e6 * (o.flex ? 0.5 : 1);
 
 const cabecalhos = { 'Content-Type': 'application/json', ...(process.env.GEMINI_API_KEY ? { 'x-goog-api-key': process.env.GEMINI_API_KEY } : {}) };
 const espera = (ms) => new Promise(r => setTimeout(r, ms));
@@ -132,6 +138,8 @@ async function sintetizarDialogo(falas) {
 }
 
 async function pedirAudio(corpo) {
+    if (!o.autorizado) throw new Error('sem --autorizado: a API paga só pode ser chamada com autorização do humano no prompt inicial da sessão');
+    if (o.flex) corpo.service_tier = 'flex';
     const j = await postar(`${API}/interactions`, corpo);
     gasto.pedidos++;
     gasto.tts += j.usage?.total_output_tokens || 0;
@@ -183,27 +191,13 @@ function transcritorLocal() {
 
 let tmpN = 0;
 async function transcrever(wav, comPalavras = false) {
-    if (o.qa !== 'api') {
-        const arq = join(tmpdir(), `cv-qa-${process.pid}-${tmpN++}.wav`);
-        writeFileSync(arq, wav);
-        const r = await transcritorLocal().transcrever(arq);
-        unlinkSync(arq);
-        return comPalavras ? r : r.texto;
-    }
-    const j = await postar(`${API}/models/${MODELO_QA_API}:generateContent`, {
-        contents: [{ parts: [
-            { inlineData: { mimeType: 'audio/wav', data: wav.toString('base64') } },
-            { text: 'Transcreva exatamente o que é falado, em português, com os números escritos por extenso. Responda só com a transcrição.' }
-        ] }],
-        generationConfig: { thinkingConfig: { thinkingLevel: 'minimal' } }
-    });
-    const u = j.usageMetadata || {};
-    gasto.qaEntrada += u.promptTokenCount || 0;
-    gasto.qaSaida += (u.candidatesTokenCount || 0) + (u.thoughtsTokenCount || 0);
-    return (j.candidates?.[0]?.content?.parts || []).map(p => p.text || '').join('').trim();
+    const arq = join(tmpdir(), `cv-qa-${process.pid}-${tmpN++}.wav`);
+    writeFileSync(arq, wav);
+    const r = await transcritorLocal().transcrever(arq);
+    unlinkSync(arq);
+    return comPalavras ? r : r.texto;
 }
 
-/* Compara palavra por palavra, sem acento, pontuação nem caixa ("es... tre... las" vira "es tre las") */
 /* Algarismos por extenso (a transcrição escreve "30 ou 40"; o livro, "trinta ou quarenta") */
 function porExtenso(n) {
     const u = ['zero', 'um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez', 'onze', 'doze', 'treze', 'quatorze', 'quinze', 'dezesseis', 'dezessete', 'dezoito', 'dezenove'];
@@ -400,7 +394,7 @@ function alinharFrases(frases, reconhecidas) {
 
 /* Uma tentativa de um bloco: gera, transcreve localmente com o tempo de cada palavra, marca onde cada
    frase começa (no meio da pausa entre a última palavra de uma e a primeira da outra) e confere o texto.
-   Sem transcrição local (--qa api / --sem-qa), a marcação cai para o método das pausas.
+   Sem a conferência (--sem-qa), a marcação cai para o método das pausas.
    Devolve as amostras sem o silêncio das pontas (80 ms de margem) e as marcas relativas a elas. */
 async function tentarBloco(bloco, roteiro) {
     const frases = bloco.frases;
@@ -413,7 +407,7 @@ async function tentarBloco(bloco, roteiro) {
     const ini = Math.max(0, vozIni - margem), fim = Math.min(a.length, vozFim + margem);
 
     let cortes, ouvidos = null;
-    if (!o['sem-qa'] && o.qa !== 'api') {
+    if (!o['sem-qa']) {
         const r = await transcrever(wav, true);
         const al = alinharFrases(frases, r.palavras);
         if (al.some(x => !x)) return { erros: 999, motivo: `frase sem nenhuma palavra reconhecida: "${r.texto}"` };
@@ -519,7 +513,7 @@ async function gravarPaginas(fonte, pasta, paginas, ids) {
         } else {
             salvarMp3(amostras, join(pasta, `${id}.mp3`));
             registro[id] = { arquivo: `${id}.mp3`, hash, frases: marcas };
-            Object.assign(registro, { modelo: cfg.modelo, elenco: ELENCO, qa: o['sem-qa'] ? 'sem' : o.qa === 'api' ? MODELO_QA_API : 'whisper-large-v3-turbo (local)' });
+            Object.assign(registro, { modelo: cfg.modelo, elenco: ELENCO, qa: o['sem-qa'] ? 'sem' : 'whisper-large-v3-turbo (local)' });
             delete registro.voz; delete registro.estilo;
             writeFileSync(arqPaginas, JSON.stringify(registro, null, 2) + '\n');
             console.log(`  ✓ ${id}.mp3 (${segundos.toFixed(1)} s)`);
@@ -576,7 +570,7 @@ async function main() {
             const r = await gravar(p.item, p.wav, p.faixa);
             execFileSync('node', [join(RAIZ, 'tools', 'otimizar-audio.mjs'), p.wav], { stdio: 'ignore' });
             indice.frases[p.item.id] = p.item.hash;
-            Object.assign(indice, { modelo: cfg.modelo, voz: cfg.voz, estilo: cfg.estilo, qa: o['sem-qa'] ? 'sem' : o.qa === 'api' ? MODELO_QA_API : 'whisper-large-v3-turbo (local)' });
+            Object.assign(indice, { modelo: cfg.modelo, voz: cfg.voz, estilo: cfg.estilo, qa: o['sem-qa'] ? 'sem' : 'whisper-large-v3-turbo (local)' });
             writeFileSync(indiceArq, JSON.stringify(indice, null, 2) + '\n');
             console.log(`  ✓ ${p.item.id} (${r.segundos.toFixed(1)} s${r.tentativas > 1 ? `, ${r.tentativas} tentativas` : ''})`);
             if (r.aviso) falhas.push(`${p.item.id}: gravada, mas revise de ouvido (${r.aviso})`);
@@ -595,10 +589,10 @@ async function main() {
 function registrarGasto() {
     if (!gasto.pedidos) return;
     const usd = dolares();
-    console.log(`\n💰 ${gasto.pedidos} pedido(s) de voz, ${gasto.tts} tokens de áudio: ~US$ ${usd.toFixed(4)} (estimativa)`);
+    console.log(`\n💰 ${gasto.pedidos} pedido(s) de voz, ${gasto.tts} tokens de áudio: ~US$ ${usd.toFixed(4)} (estimativa${o.flex ? ', Flex' : ''})`);
     const arq = join(RAIZ, 'docs', 'narracao', 'gastos.csv');
     if (!existsSync(arq)) writeFileSync(arq, 'data,comando,pedidos_voz,tokens_audio,tokens_qa,usd_estimado\n');
-    const linha = [new Date().toISOString().slice(0, 16), `"${process.argv.slice(2).join(' ')}"`, gasto.pedidos, gasto.tts, gasto.qaEntrada + gasto.qaSaida, usd.toFixed(4)].join(',');
+    const linha = [new Date().toISOString().slice(0, 16), `"${process.argv.slice(2).join(' ')}"`, gasto.pedidos, gasto.tts, 0, usd.toFixed(4)].join(',');
     writeFileSync(arq, readFileSync(arq, 'utf8') + linha + '\n');
 }
 

@@ -39,7 +39,7 @@ npm run build        # fontes + ícones + Tailwind + service worker
 npm run build:images # converte novos JPG/PNG de <livro>/imagens/ para WebP
 npm run build:audio  # converte a narração WAV/PCM de <livro>/audio/ para MP3 (corta silêncios)
 npm run exportar:frases # lista de frases e palavras-chave para gravar (docs/narracao/, já incluso no build)
-npm run gravar:narracao -- --voz narradora --parte 1 # grava pela API de voz do Gemini, com QA (docs/TODO-NARRACAO.md §8)
+npm run gravar:narracao -- --voz narracao --parte 1 --pagina-inteira --autorizado # grava pela API de voz do Gemini (§2.7: só com autorização do humano)
 ```
 **Rode `npm run build` sempre que** usar uma classe Tailwind nova, um ícone Phosphor novo, ou adicionar/alterar qualquer HTML ou imagem. O `sw.js` precisa da lista atualizada e de uma nova versão de cache, senão os tablets não recebem a mudança. Os scripts ficam em `tools/`, e `sw.js` é gerado a partir de `tools/sw.template.js` (nunca edite `sw.js` à mão).
 
@@ -150,7 +150,14 @@ window.LIVRO = {
 - **Página inteira** (o padrão): `<voz>/parte-N/paginas.json` lista as páginas gravadas num áudio só (`pN.mp3`) e o tempo de cada frase (`ini`/`fim`). "Ouvir Página" toca esse MP3 e destaca a frase pelo `currentTime` (`lerPaginaInteira`). As páginas fora dele seguem frase a frase. O áudio que vem do service worker **não aceita salto no tempo** (`seekable` vazio); para tocar uma frase solta de uma página inteira, ver BACKLOG M-4.
 - **Vozes dos personagens**: o roteiro (`narracao/parte-N/roteiro.json`) diz quem fala cada trecho, e o elenco fica em `ELENCO` (`tools/gravar-narracao.mjs`). **Economia** (limite de R$ 10/mês do humano): a API paga só produz vozes; a conferência é local (`tools/transcrever.py`, Whisper).
 - **Prévia**: uma voz com a parte em `previa` (no `vozes.js`) aparece no painel com só algumas frases gravadas (as demais usam a voz do aparelho) e nunca vira a voz padrão. Serve para o humano ouvir no livro antes de a produção seguir.
-- Produção das gravações: `docs/TODO-NARRACAO.md` e `npm run gravar:narracao` (Claude, via API do Gemini `gemini-3.8-flash-tts` com a chave como segredo de rede do ambiente, injetada pelo proxy; ela **nunca** é impressa nem versionada). Lista do que gravar: `docs/narracao/frases-<livro>-parte-N.json`.
+- Produção das gravações: `docs/TODO-NARRACAO.md` e `npm run gravar:narracao` (Claude, via API do Gemini `gemini-3.8-flash-tts` com a chave como segredo de rede do ambiente, injetada pelo proxy; ela **nunca** é impressa nem versionada). **Regras de uso da API: §2.7.** Lista do que gravar: `docs/narracao/frases-<livro>-parte-N.json`.
+
+### 2.7 Uso da API paga do Gemini (regra do humano, 2026-10-24)
+A API é paga pelo humano, num projeto de hobby com **limite de R$ 10/mês**, e a verba precisa render para **muitos livros e, quem sabe, novas vozes**. Por isso:
+1. **Só para produzir as vozes da leitura** (narração e palavras-chave). **Nada mais**: nem testes de acesso, nem transcrição, nem avaliação de áudio, nem texto, nem imagens, nem listar ou criar vozes "para ver".
+2. **Só com autorização explícita do humano no prompt inicial da sessão.** Sem ela, a API não é chamada (nem para "um teste rápido"). O `tools/gravar-narracao.mjs` recusa sem `--autorizado`; passe a opção só quando o humano tiver autorizado aquela produção.
+3. **Sempre do jeito mais econômico**: planeje com `--seco` (de graça), grave a página inteira num pedido só, não regrave o que já está bom (o `hash` evita), no máximo 2 tentativas, a conferência é **local e gratuita** (Whisper, `tools/transcrever.py`), e prefira o nível mais barato aprovado pelo humano (opções e preços em `docs/TODO-NARRACAO.md` §8.4).
+4. **Registre o gasto**: cada rodada vai para `docs/narracao/gastos.csv` (o script faz isso). Ao fim do trabalho, diga ao humano quanto foi gasto.
 
 ---
 
