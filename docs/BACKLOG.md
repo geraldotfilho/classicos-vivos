@@ -55,6 +55,17 @@ Levantado na inspeção completa do sprint 1 (2026-10): código, ilustrações e
 - **Narração gravada pronta para receber áudio**: tocador frase a frase com a voz do aparelho como reserva, voz offline quando a online falha, MP3 guardado sob demanda pelo service worker.
 - **Segmentação canônica** (`assets/js/texto.js`) e exportação das 214 frases e 105 palavras-chave (`docs/narracao/`) para o Gemini gravar (P-006, agora com o Claude: `docs/TODO-NARRACAO.md`). Conversor WAV/PCM → MP3 sem dependências nativas (`npm run build:audio`).
 
+## ✅ Entregue no sprint 11 (fluxos de leitura, PWA e portal multilíngue)
+
+- **Fluxos de Leitura ("Ler de Novo" e "Continuar")**:
+  - **M-5**: "Ler de Novo" ao final do livro reinicia completamente todos os cartões, lentes, camadas e volta à capa inicial.
+  - **M-6**: "Continuar de onde parou" lembra a última página lida (guardada em `localStorage`) e oferece o botão destacado "Continuar da Página X" tanto na capa do livro quanto na estante da biblioteca (`index.html`).
+  - **Botão 🔄 Recomeçar (pedido do leitor)**: cada página de leitura inclui agora um botão direto ao lado da lente para reiniciar apenas a página atual de volta ao seu estado inicial (limpa cartões, zera progresso e restaura a Realidade).
+- **Aviso de atualização do PWA (M-9)**:
+  - Notificação sutil (`✨ Versão nova disponível`) ao detectar nova versão em cache pelo Service Worker nos livros e no portal, com botão "Atualizar" para recarregar instantaneamente.
+- **Portal e menus multilíngues fora dos livros**:
+  - `assets/js/i18n-site.js` adiciona seletor de bandeiras (🇧🇷 🇬🇧 🇫🇷 🇪🇸) no topo de `index.html` e `sobre.html`, sincronizado com a preferência dos livros (`cv-idioma`). Títulos, prateleiras, descrições do acervo e instruções traduzidos nos 4 idiomas.
+
 ## ✅ Entregue no sprint 10 (arte das Partes 3 e 4 pela API, noite de 2026-10-24)
 
 - **Dom Quixote todo ilustrado** (antigo A-7): as Partes 3 e 4 inteiras (33 cenas + 10 camadas) pelo Claude, pela API (Nano Banana 2, Batch), com a bíblia da Imaginação desde o início. US$ 1,60. Camadas posicionadas pela arte; todas as interações testadas (moedas, caderno, cambalhota, assinatura, espada, fole, tocha, bengala). A estante já mostra as quatro capas.
@@ -101,12 +112,9 @@ Levantado na inspeção completa do sprint 1 (2026-10): código, ilustrações e
 | M-11 | **Narração gravada em inglês, francês e espanhol** | **Parte 1 gravada** (2026-10-24, autorizada pelo humano só para a Parte 1): páginas inteiras nos três idiomas, com narradora, Dom Quixote e Sancho (elencos em `dom-quixote/audio/narracao-<idioma>/elenco.json`, QA em `docs/narracao/qa-parte-1-<idioma>.md`). **Pendentes por causa da cota diária (100 pedidos, renova às 07:00 UTC)**: espanhol, 20 palavras-chave e a amostra do painel; francês, 5 palavras-chave (`moulins`, `vent`, `geants`, `pomme`, `ile`) e a amostra. Comandos: `npm run gravar:narracao -- --voz palavras --idioma es --parte 1 --autorizado`, `... --voz narracao --idioma es --amostra --autorizado` (idem `fr`; para `pomme` e `ile`, de uma sílaba, use `--ids pomme,ile --agrupar 1`). Até lá, essas palavras usam a voz do aparelho. **Partes 2–4: só depois da aprovação do humano.** |
 | M-12 | **Revisão nativa das traduções** | Traduções feitas por agentes especialistas (Claude). Pedir a leitores nativos (de preferência professores de alfabetização) que leiam em voz alta, conferindo ritmo, divisão silábica das palavras-chave e as palavras dos cartões. Avisos de "página desatualizada" em `npm run conferir:traducoes` indicam páginas cujo português mudou depois da tradução. Dúvidas abertas pelos tradutores: Pandafilando "de la Fosca Vista" (en: *of the Gloomy Glare*; fr: mantido em espanhol); sílabas orais × escritas no francês (ROS • SI • NANTE); no espanhol, pequenos acréscimos literais de Cervantes (o livro de palha e cevada do vendeiro, "tuyo y mío", Diego Pérez de Vargas, "el doctor Pedro Recio", "desnudo nací", "el Alígero", "Alonso Quijano el Bueno") e a lança de **encina** (azinheira), como em Cervantes, em vez de carvalho. |
 | M-10 | **Páginas 1 e 2 da Parte 1 gravadas inteiras** | Foram gravadas frase por frase, antes de a página inteira virar o padrão (os títulos entraram como gravações avulsas). Regravar inteiras para o livro ficar uniforme: ~2 min de áudio, ~US$ 0,03. Só se o humano quiser. |
-| M-5 | **"Ler de Novo" não reinicia** | Volta à capa, mas mantém lentes ativadas, armadura vestida e cartões verdes. Decidir: reiniciar tudo (recomendado: nova leitura, nova descoberta). |
-| M-6 | **Continuar de onde parou** | Lembrar a última página lida (`localStorage`, com `try/catch`) e oferecer "Continuar" na capa e na biblioteca. |
 | M-7 | **Consistência das ilustrações** | NB-4 (escala do herói dourado e rosto na etapa 1), NB-5 (enquadramento do estábulo), NB-6 (imaginação de Sancho gerada de verdade, em vez da capa com recorte achatado). Substituições diretas, sem código. |
 | M-8 | **Teste automatizado multiplataforma** | O protocolo do AGENTS.md §5 é só Windows/Chrome. Criar `npm test` com Playwright (retrato + paisagem, páginas 0–7, ambas as lentes, ordem da armadura, bloqueio de duplo toque, offline) gerando capturas em `test-results/`. |
 | M-13 | **Retoques da arte da Parte 2 (API)** | Sem retrabalho urgente. (1) A poeira da pág. 4 ainda tem fiapos levemente rosados nas pontas (quase invisíveis sobre a planície). (2) Na pág. 5 (Realidade), Dom Quixote parece mais alegre que "abatido". (3) Na pág. 6 da Imaginação, o cavaleiro está em pé (na Realidade, sentado na pedra), coerente com "empunhou a lança". O elmo flutuante da pág. 8 e as Imaginações que não transformavam já foram corrigidos. |
-| M-9 | **Aviso de atualização do PWA** | Com o service worker, uma versão nova só aparece na visita seguinte. Mostrar "Livro atualizado ✨" ao ativar uma versão nova. |
 
 ## 🟢 Prioridade baixa
 

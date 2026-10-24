@@ -30,24 +30,61 @@
             border: 6px solid #D97706;
             box-shadow: 0 20px 50px -12px rgba(0, 0, 0, 0.7), 0 0 0 4px #78350F;
         }
+
+        /* Bandeirinhas dos idiomas */
+        .btn-idioma {
+            width: 34px;
+            height: 32px;
+            padding: 4px 3px;
+            border-radius: 12px;
+            border: 2px solid transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: transform 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
+        }
+        .btn-idioma img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 4px;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.18);
+            opacity: 0.55;
+            filter: saturate(0.7);
+            pointer-events: none;
+        }
+        .btn-idioma:active { transform: scale(0.92); }
+        .btn-idioma.idioma-ativo {
+            background: #FEF3C7;
+            border-color: #F59E0B;
+        }
+        .btn-idioma.idioma-ativo img { opacity: 1; filter: none; }
+        @media (min-width: 640px) {
+            .btn-idioma { width: 40px; height: 36px; }
+        }
     </style>
 </head>
-<body class="flex flex-col items-center px-4 py-5 sm:py-8">
+<body data-pagina="sobre" class="flex flex-col items-center px-4 py-5 sm:py-8">
 
     <main class="paper w-full max-w-3xl rounded-[28px] p-5 sm:p-8 space-y-7">
 
-        <header class="flex items-center justify-between gap-3">
+        <header class="flex flex-wrap items-center justify-between gap-3">
             <div>
-                <p class="font-display font-semibold text-amber-700 text-sm uppercase tracking-wider">Para pais, mães e educadores</p>
-                <h1 class="font-display font-bold text-3xl sm:text-4xl text-amber-950 leading-tight">Sobre o Clássicos Vivos</h1>
+                <p class="font-display font-semibold text-amber-700 text-sm uppercase tracking-wider" data-i18n="paraPais">Para pais, mães e educadores</p>
+                <h1 class="font-display font-bold text-3xl sm:text-4xl text-amber-950 leading-tight" data-i18n="sobreTituloPrincipal">Sobre o Clássicos Vivos</h1>
             </div>
-            <a href="./index.html" class="shrink-0 w-14 h-14 rounded-2xl bg-amber-400 border-2 border-amber-600 text-amber-950 text-2xl flex items-center justify-center shadow" aria-label="Voltar para a biblioteca" title="Voltar para a biblioteca">
-                <i class="ph-bold ph-books"></i>
-            </a>
+            <div class="flex items-center gap-2">
+                <!-- Seletor de Idiomas -->
+                <div id="seletor-idiomas" data-icon-path="./assets/icones/"></div>
+                <a href="./index.html" class="shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-amber-400 border-2 border-amber-600 text-amber-950 text-xl sm:text-2xl flex items-center justify-center shadow" aria-label="Voltar para a biblioteca" title="Voltar para a biblioteca" data-i18n-aria="voltarBiblioteca" data-i18n-title="voltarBiblioteca">
+                    <i class="ph-bold ph-books"></i>
+                </a>
+            </div>
         </header>
 
         <section class="space-y-2">
-            <p class="text-base sm:text-lg font-semibold leading-relaxed">
+            <p class="text-base sm:text-lg font-semibold leading-relaxed" data-i18n-html="introSobre">
                 Uma biblioteca aberta de livros digitais interativos que aproxima crianças em fase de
                 alfabetização e letramento (<strong>5 a 8 anos</strong>) das grandes obras da literatura
                 universal, com ilustrações em aquarela, narração em português e interações pensadas
@@ -56,8 +93,8 @@
         </section>
 
         <section class="space-y-3">
-            <h2 class="font-display font-bold text-2xl text-amber-900">Como os livros ajudam a ler</h2>
-            <ul class="grid sm:grid-cols-2 gap-3">
+            <h2 class="font-display font-bold text-2xl text-amber-900" data-i18n="comoAjudam">Como os livros ajudam a ler</h2>
+            <ul id="lista-beneficios" class="grid sm:grid-cols-2 gap-3">
                 <li class="bg-amber-50 border-2 border-amber-300 rounded-2xl p-3">
                     <h3 class="font-display font-bold text-amber-900">🗣️ Palavras em destaque</h3>
                     <p class="text-sm font-semibold">Tocar numa PALAVRA MAIÚSCULA abre um cartão com a palavra separada em sílabas e a pronúncia em voz alta.</p>
@@ -78,56 +115,52 @@
         </section>
 
         <section class="space-y-3">
-            <h2 class="font-display font-bold text-2xl text-amber-900">Acervo</h2>
+            <h2 class="font-display font-bold text-2xl text-amber-900" data-i18n="acervoTitulo">Acervo</h2>
             <div class="flex flex-col sm:flex-row gap-4 bg-amber-50 border-2 border-amber-300 rounded-2xl p-3">
                 <img src="./dom-quixote/imagens/p0-real.webp" alt="Dom Quixote e Sancho Pança" class="w-full sm:w-48 aspect-[16/9] sm:aspect-square object-cover rounded-xl border-2 border-amber-400" />
                 <div class="space-y-1">
-                    <h3 class="font-display font-bold text-xl text-amber-950">Dom Quixote de La Mancha <span class="text-amber-700 text-base">· Miguel de Cervantes</span></h3>
-                    <p class="text-sm font-semibold leading-relaxed">
+                    <h3 class="font-display font-bold text-xl text-amber-950"><span data-i18n="shelfQuixote">Dom Quixote de La Mancha</span> <span class="text-amber-700 text-base" data-i18n="autorQuixote">· Miguel de Cervantes</span></h3>
+                    <p class="text-sm font-semibold leading-relaxed" data-i18n-html="p1Desc">
                         <strong>Parte 1: O Cavaleiro da Super Imaginação</strong> (8 páginas): o fidalgo leitor,
                         a armadura do bisavô, Rocinante e Dulcineia, a pousada-castelo, a sagração sob a lua cheia,
                         o escudeiro Sancho Pança e o duelo contra os moinhos-gigantes.
                     </p>
-                    <p class="text-sm font-semibold leading-relaxed">
+                    <p class="text-sm font-semibold leading-relaxed" data-i18n-html="p2Desc">
                         <strong>Parte 2: Exércitos de Lã e o Elmo Encantado</strong>: a carga contra os gigantes e o tombo nos moinhos, a lança de carvalho, os pastores e a Idade de Ouro,
                         a batalha das ovelhas, o Cavaleiro da Triste Figura, as cabras que atravessam o rio e o elmo de Mambrino.
                     </p>
-                    <p class="text-sm font-semibold leading-relaxed">
+                    <p class="text-sm font-semibold leading-relaxed" data-i18n-html="p3Desc">
                         <strong>Parte 3: Serra Morena e a Princesa Micomicona</strong>: a mala perdida, as cambalhotas, a carta para Dulcineia,
                         os amigos disfarçados, a princesa Micomicona, a batalha dos odres e o discurso das armas e das letras.
                     </p>
-                    <p class="text-sm font-semibold leading-relaxed">
+                    <p class="text-sm font-semibold leading-relaxed" data-i18n-html="p4Desc">
                         <strong>Parte 4: A Jaula Encantada e a Ilha de Sancho</strong>: a volta para casa, o cavalo voador Clavilenho,
                         Sancho governador e o mistério da bengala, e o reencontro de Alonso Quixano com as histórias.
                     </p>
-                    <p class="text-sm font-semibold text-slate-600">Ilustrações das Partes 2 a 4 em produção: enquanto isso, as páginas mostram "Ilustração a caminho".</p>
+                    <p class="text-sm font-semibold text-emerald-800" data-i18n="todasIlustradas">As 4 partes de Dom Quixote estão totalmente ilustradas e interativas!</p>
                 </div>
             </div>
         </section>
 
         <section class="space-y-3">
-            <h2 class="font-display font-bold text-2xl text-amber-900">Como usar no tablet</h2>
-            <ul class="list-disc pl-6 space-y-1.5 text-sm sm:text-base font-semibold">
+            <h2 class="font-display font-bold text-2xl text-amber-900" data-i18n="comoUsarTitulo">Como usar no tablet</h2>
+            <ul id="lista-como-usar" class="list-disc pl-6 space-y-1.5 text-sm sm:text-base font-semibold">
                 <li>Funciona <strong>sem internet</strong>: depois da primeira visita, o navegador guarda os livros. No Chrome Android, use <em>"Adicionar à tela inicial"</em> para abrir como aplicativo, em tela cheia.</li>
                 <li>Toque em <strong>🗣️ Voz</strong>, no topo do livro, para escolher quem lê: a <strong>narração gravada</strong> (quando disponível) ou uma das vozes do aparelho, e a velocidade (normal ou devagar). A escolha fica guardada no tablet.</li>
                 <li><strong>Toque numa frase</strong> do texto para a narração começar por ela. O botão <strong>Aa</strong> mostra o texto todo em <strong>LETRAS MAIÚSCULAS</strong> (as letras de forma ajudam quem está começando a ler sozinho).</li>
-                <li>As <strong>bandeirinhas</strong> no topo trocam o idioma do texto: português (original), inglês, francês e espanhol (com os nomes e epítetos do próprio Cervantes). Nos outros idiomas, quem lê é a voz do aparelho; a narração gravada nesses idiomas virá depois.</li>
-                <li>As vozes do aparelho dependem do sistema. Se nenhuma soar natural, instale a voz <strong>Português (Brasil)</strong> nas configurações de "Texto para fala" do tablet; no iPad, baixe as vozes "Aprimoradas".</li>
+                <li>As <strong>bandeirinhas</strong> no topo trocam o idioma do texto: português (original), inglês, francês e espanhol. O idioma escolhido fica gravado e vale para toda a biblioteca.</li>
+                <li>Botão <strong>🔄 Recomeçar</strong>: cada página tem um botão para reiniciar as interações e brincadeiras daquela página específica.</li>
                 <li>Melhor experiência em tablets (retrato ou paisagem). Também funciona no celular e no computador.</li>
             </ul>
         </section>
 
         <section class="space-y-2 text-sm font-semibold text-slate-600 border-t-2 border-amber-200 pt-4">
-            <p>Projeto aberto e gratuito. Código sob licença MIT; textos adaptados e ilustrações sob CC BY 4.0, livres para uso em escolas mantendo o crédito ao <strong>Clássicos Vivos</strong>.</p>
-            <p>Sugestões e contribuições: <a class="text-indigo-700 underline" href="https://github.com/geraldotfilho/classicos-vivos">github.com/geraldotfilho/classicos-vivos</a></p>
+            <p data-i18n-html="licenca1">Projeto aberto e gratuito. Código sob licença MIT; textos adaptados e ilustrações sob CC BY 4.0, livres para uso em escolas mantendo o crédito ao <strong>Clássicos Vivos</strong>.</p>
+            <p data-i18n-html="licenca2">Sugestões e contribuições: <a class="text-indigo-700 underline" href="https://github.com/geraldotfilho/classicos-vivos">github.com/geraldotfilho/classicos-vivos</a></p>
         </section>
 
     </main>
 
-    <script>
-        if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
-            window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(() => {}));
-        }
-    </script>
+    <script src="./assets/js/i18n-site.js"></script>
 </body>
 </html>

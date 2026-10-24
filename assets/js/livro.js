@@ -53,6 +53,11 @@ function escapeHtml(text) {
 const PT = 'pt-BR';
 const PREF_IDIOMA = 'cv-idioma';
 const PREF_MAIUSCULAS = 'cv-maiusculas';
+
+function chaveProgressoLivro() {
+    const id = LIVRO.id || `${LIVRO.obra || 'livro'}-parte-${LIVRO.parte || 1}`;
+    return 'cv-progresso-' + id.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+}
 const ICONES = LIVRO.icones || '../assets/icones/';
 
 const IDIOMAS = {
@@ -70,6 +75,9 @@ const IDIOMAS = {
             anterior: 'Anterior', proxima: 'Próxima',
             pagina: (n, total) => `Página ${n} de ${total}`, secaoPagina: (n) => `Página ${n}`, irParaPagina: (n) => `Ir para página ${n}`,
             abrirLivro: 'Abrir o Livro!', lerDeNovo: 'Ler de Novo', bibliotecaBotao: 'Biblioteca', continuarHistoria: 'Continuar a história', fim: '🎉 Fim!',
+            comecarDoInicio: 'Começar do início', continuarPagina: (n) => `Continuar da Página ${n}`,
+            reiniciarPagina: 'Recomeçar', reiniciarPaginaTitulo: 'Recomeçar as brincadeiras desta página',
+            livroAtualizado: 'Livro atualizado! ✨', atualizarBtn: 'Atualizar',
             etiqueta: '✨ Toque nas PALAVRAS MAIÚSCULAS para ouvir!', etiquetaMaiusculas: '✨ Toque nas PALAVRAS AMARELAS para ouvir!',
             lenteImag: 'Usar Lente da Imaginação!', lenteReal: 'Voltar para a Lente da Realidade',
             ilustracaoACaminho: 'Ilustração a caminho', faixaVazia: 'Toque nas palavras na ordem certa',
@@ -98,6 +106,9 @@ const IDIOMAS = {
             anterior: 'Back', proxima: 'Next',
             pagina: (n, total) => `Page ${n} of ${total}`, secaoPagina: (n) => `Page ${n}`, irParaPagina: (n) => `Go to page ${n}`,
             abrirLivro: 'Open the Book!', lerDeNovo: 'Read Again', bibliotecaBotao: 'Library', continuarHistoria: 'Continue the story', fim: '🎉 The End!',
+            comecarDoInicio: 'Start from the beginning', continuarPagina: (n) => `Continue from Page ${n}`,
+            reiniciarPagina: 'Restart', reiniciarPaginaTitulo: 'Reset activities on this page',
+            livroAtualizado: 'Book updated! ✨', atualizarBtn: 'Update',
             etiqueta: '✨ Tap the CAPITAL WORDS to hear them!', etiquetaMaiusculas: '✨ Tap the YELLOW WORDS to hear them!',
             lenteImag: 'Use the Imagination Lens!', lenteReal: 'Back to the Reality Lens',
             ilustracaoACaminho: 'Picture on its way', faixaVazia: 'Tap the words in the right order',
@@ -126,6 +137,9 @@ const IDIOMAS = {
             anterior: 'Précédente', proxima: 'Suivante',
             pagina: (n, total) => `Page ${n} sur ${total}`, secaoPagina: (n) => `Page ${n}`, irParaPagina: (n) => `Aller à la page ${n}`,
             abrirLivro: 'Ouvrir le livre !', lerDeNovo: 'Relire', bibliotecaBotao: 'Bibliothèque', continuarHistoria: 'Continuer l’histoire', fim: '🎉 Fin !',
+            comecarDoInicio: 'Recommencer depuis le début', continuarPagina: (n) => `Continuer à la page ${n}`,
+            reiniciarPagina: 'Recommencer', reiniciarPaginaTitulo: 'Réinitialiser les activités de cette page',
+            livroAtualizado: 'Livre mis à jour ! ✨', atualizarBtn: 'Mettre à jour',
             etiqueta: '✨ Touche les MOTS EN MAJUSCULES pour les écouter !', etiquetaMaiusculas: '✨ Touche les MOTS JAUNES pour les écouter !',
             lenteImag: 'Utiliser la Lentille de l’Imagination !', lenteReal: 'Revenir à la Lentille de la Réalité',
             ilustracaoACaminho: 'Illustration en route', faixaVazia: 'Touche les mots dans le bon ordre',
@@ -154,6 +168,9 @@ const IDIOMAS = {
             anterior: 'Anterior', proxima: 'Siguiente',
             pagina: (n, total) => `Página ${n} de ${total}`, secaoPagina: (n) => `Página ${n}`, irParaPagina: (n) => `Ir a la página ${n}`,
             abrirLivro: '¡Abrir el libro!', lerDeNovo: 'Leer otra vez', bibliotecaBotao: 'Biblioteca', continuarHistoria: 'Seguir la historia', fim: '🎉 ¡Fin!',
+            comecarDoInicio: 'Empezar desde el inicio', continuarPagina: (n) => `Continuar desde la página ${n}`,
+            reiniciarPagina: 'Reiniciar', reiniciarPaginaTitulo: 'Reiniciar las actividades de esta página',
+            livroAtualizado: '¡Libro actualizado! ✨', atualizarBtn: 'Actualizar',
             etiqueta: '✨ ¡Toca las PALABRAS EN MAYÚSCULAS para oírlas!', etiquetaMaiusculas: '✨ ¡Toca las PALABRAS AMARILLAS para oírlas!',
             lenteImag: '¡Usar la Lente de la Imaginación!', lenteReal: 'Volver a la Lente de la Realidad',
             ilustracaoACaminho: 'Ilustración en camino', faixaVazia: 'Toca las palabras en el orden correcto',
@@ -341,11 +358,16 @@ function montarPaginaArte(i, pagina) {
                     <div class="scene-busy-overlay"><div class="scene-spinner"></div></div>
                 </div>
                 <div id="cartoes-${i}" class="cartoes-area">${montarCartoes(i)}</div>
-                <div class="flex items-center justify-center z-20 mt-2">
+                <div class="flex items-center justify-center gap-2 z-20 mt-2">
                     <button type="button" id="lens-btn-${i}" data-lente="${i}" class="${LENS_BTN_REAL}">
                         <span class="text-base">✨</span>
                         <span id="lens-btn-label-${i}">${escapeHtml(ui('lenteImag'))}</span>
                     </button>
+                    ${!pagina.capa ? `
+                    <button type="button" data-reiniciar-pagina="${i}" class="btn-chunky bg-amber-100 hover:bg-amber-200 text-amber-950 font-display font-bold text-xs sm:text-sm px-3.5 py-1.5 rounded-2xl border-2 border-amber-400 flex items-center gap-1.5 shadow" title="${escapeHtml(ui('reiniciarPaginaTitulo'))}" aria-label="${escapeHtml(ui('reiniciarPagina'))}">
+                        <i class="ph-bold ph-arrow-counter-clockwise text-base text-amber-700"></i>
+                        <span>${escapeHtml(ui('reiniciarPagina'))}</span>
+                    </button>` : ''}
                 </div>
             </div>
         </div>`;
@@ -377,16 +399,35 @@ function montarConteudoDoTexto(i) {
                 <h2 class="text-2xl sm:text-3xl font-display font-bold text-amber-950">${escapeHtml(pagina.titulo)}</h2>
             </div>`;
     }
-    const abrir = pagina.capa ? `
-        <button type="button" data-nav="next" class="btn-chunky w-full sm:w-auto bg-rose-500 hover:bg-rose-600 text-white font-display font-bold text-lg sm:text-xl px-7 py-3 rounded-3xl border-4 border-rose-700 flex items-center justify-center gap-3">
-            <span>${escapeHtml(ui('abrirLivro'))}</span>
-            <i class="ph-bold ph-arrow-right text-2xl"></i>
-        </button>` : '';
+    let abrir;
+    if (pagina.capa) {
+        const salvo = Number(lerPreferencia(chaveProgressoLivro()));
+        if (salvo > 0 && salvo < totalPages) {
+            abrir = `
+                <div class="flex flex-col sm:flex-row items-center gap-2.5 w-full sm:w-auto">
+                    <button type="button" data-continuar-progresso="${salvo}" class="btn-chunky w-full sm:w-auto bg-rose-500 hover:bg-rose-600 text-white font-display font-bold text-base sm:text-lg px-6 py-3 rounded-3xl border-4 border-rose-700 flex items-center justify-center gap-2.5 shadow-md">
+                        <i class="ph-fill ph-play text-xl sm:text-2xl text-amber-200"></i>
+                        <span>${escapeHtml(ui('continuarPagina', salvo + 1))}</span>
+                    </button>
+                    <button type="button" data-nav="1" class="btn-chunky w-full sm:w-auto bg-amber-200 hover:bg-amber-300 text-amber-950 font-display font-bold text-sm sm:text-base px-5 py-2.5 rounded-3xl border-2 border-amber-500 flex items-center justify-center gap-2">
+                        <span>${escapeHtml(ui('comecarDoInicio'))}</span>
+                    </button>
+                </div>`;
+        } else {
+            abrir = `
+                <button type="button" data-nav="next" class="btn-chunky w-full sm:w-auto bg-rose-500 hover:bg-rose-600 text-white font-display font-bold text-lg sm:text-xl px-7 py-3 rounded-3xl border-4 border-rose-700 flex items-center justify-center gap-3">
+                    <span>${escapeHtml(ui('abrirLivro'))}</span>
+                    <i class="ph-bold ph-arrow-right text-2xl"></i>
+                </button>`;
+        }
+    } else {
+        abrir = '';
+    }
     const final = ultima ? `
         <div class="fim-parte space-y-2">
             <p class="font-display font-bold text-amber-950 text-sm sm:text-base">${escapeHtml(t(fim.mensagem) || ui('fim'))}</p>
             <div class="flex flex-wrap items-center justify-center gap-2">
-                <button type="button" data-nav="0" class="btn-chunky bg-amber-300 hover:bg-amber-400 text-amber-950 font-display font-bold py-2 px-4 rounded-2xl border-2 border-amber-600 flex items-center justify-center gap-2 text-sm">
+                <button type="button" data-acao="ler-de-novo" class="btn-chunky bg-amber-300 hover:bg-amber-400 text-amber-950 font-display font-bold py-2 px-4 rounded-2xl border-2 border-amber-600 flex items-center justify-center gap-2 text-sm">
                     <i class="ph-bold ph-arrow-counter-clockwise text-lg"></i><span>${escapeHtml(ui('lerDeNovo'))}</span>
                 </button>
                 ${fim.proxima ? `
@@ -1963,6 +2004,56 @@ function animateTurn(oldSection, newSection, forward, showNew) {
 }
 
 
+
+/* =====================================================================
+   REINICIAR PÁGINA (pedido do leitor) E REINICIAR LIVRO (M-5)
+   ===================================================================== */
+function reiniciarPagina(i, opcoes = {}) {
+    if (sceneBusy[i]) return;
+    lensImaginationState[i] = false;
+    pageState[i] = { usados: new Set(), ultimo: null };
+    const area = document.getElementById(`cartoes-${i}`);
+    if (area) {
+        area.innerHTML = montarCartoes(i);
+        initDraggableCards(area);
+    }
+    const c = cartoesDe(i);
+    if (c && c.tipo === 'progressivo') updateProgressHints(i);
+    if (c && c.tipo === 'ordem') escreverNaFaixa(i);
+    renderScene(i);
+    if (!opcoes.silencioso) {
+        playSound('wordPop');
+        const frame = document.getElementById(`frame-${i}`);
+        if (frame) {
+            const ripple = document.createElement('div');
+            ripple.className = 'lens-ripple';
+            frame.appendChild(ripple);
+            setTimeout(() => ripple.remove(), 600);
+        }
+    }
+}
+
+function reiniciarLivro() {
+    stopReadingPage();
+    closePhonicsCard();
+    for (let i = 0; i < totalPages; i++) {
+        reiniciarPagina(i, { silencioso: true });
+    }
+    salvarPreferencia(chaveProgressoLivro(), '0');
+    try {
+        const ultRaw = localStorage.getItem('cv-ultimo-livro');
+        if (ultRaw) {
+            const ult = JSON.parse(ultRaw);
+            if (ult.parte === LIVRO.parte) {
+                ult.pagina = 0;
+                localStorage.setItem('cv-ultimo-livro', JSON.stringify(ult));
+            }
+        }
+    } catch (e) {}
+    goToPage(0);
+    playSound('fanfare');
+}
+
 function goToPage(index, options = {}) {
     if (index < 0 || index >= totalPages || index === currentPage || isTurning) return;
     closePhonicsCard();
@@ -1982,6 +2073,21 @@ function goToPage(index, options = {}) {
     };
 
     currentPage = index;
+    if (index > 0) {
+        salvarPreferencia(chaveProgressoLivro(), String(index));
+        try {
+            const ultimo = {
+                obra: LIVRO.obra,
+                parte: LIVRO.parte,
+                totalPartes: LIVRO.totalPartes,
+                pagina: index,
+                totalPaginas: totalPages,
+                url: window.location.pathname,
+                data: Date.now()
+            };
+            localStorage.setItem('cv-ultimo-livro', JSON.stringify(ultimo));
+        } catch (e) {}
+    }
     if (animate) {
         isTurning = true;
         animateTurn(oldSection, newSection, forward, showNew).then(() => {
@@ -2072,6 +2178,13 @@ function traduzirPagina(i) {
         if (def) h.title = t(def.titulo || def.palavra || '');
     });
     traduzirCartoes(i);
+    const btnRe = page.querySelector(`[data-reiniciar-pagina="${i}"]`);
+    if (btnRe) {
+        btnRe.title = ui('reiniciarPaginaTitulo');
+        btnRe.setAttribute('aria-label', ui('reiniciarPagina'));
+        const span = btnRe.querySelector('span');
+        if (span) span.textContent = ui('reiniciarPagina');
+    }
     atualizarRotulosDaLente(i, sceneFor(i).badge);
 }
 
@@ -2178,6 +2291,21 @@ function initEventos() {
             fecharPainelVoz();
             return;
         }
+        const reiniciarBtn = e.target.closest('[data-reiniciar-pagina]');
+        if (reiniciarBtn) {
+            reiniciarPagina(Number(reiniciarBtn.dataset.reiniciarPagina));
+            return;
+        }
+        const lerDeNovo = e.target.closest('[data-acao="ler-de-novo"]');
+        if (lerDeNovo) {
+            reiniciarLivro();
+            return;
+        }
+        const continuarProg = e.target.closest('[data-continuar-progresso]');
+        if (continuarProg) {
+            goToPage(Number(continuarProg.dataset.continuarProgresso));
+            return;
+        }
         const nav = e.target.closest('[data-nav]');
         if (nav) {
             if (nav.dataset.nav === 'next') nextPage();
@@ -2236,6 +2364,54 @@ function initEventos() {
 /* =====================================================================
    INICIALIZAÇÃO
    ===================================================================== */
+
+/* =====================================================================
+   AVISO DE ATUALIZAÇÃO DO PWA (M-9)
+   ===================================================================== */
+function monitorarAtualizacoesSW(reg) {
+    if (!reg) return;
+
+    function exibirAviso() {
+        if (document.getElementById('sw-update-toast')) return;
+        const toast = document.createElement('div');
+        toast.id = 'sw-update-toast';
+        toast.className = 'fixed bottom-4 right-4 z-50 bg-amber-950/95 text-amber-100 border-2 border-amber-400 rounded-2xl px-4 py-2.5 shadow-2xl flex items-center gap-3 backdrop-blur-sm';
+        toast.innerHTML = `
+            <span class="font-display font-semibold text-xs sm:text-sm flex items-center gap-1.5">
+                <span class="text-base">✨</span>
+                <span>${escapeHtml(ui('livroAtualizado'))}</span>
+            </span>
+            <button type="button" class="btn-chunky bg-amber-400 hover:bg-amber-300 text-amber-950 font-display font-bold text-xs sm:text-sm px-3 py-1 rounded-xl border border-amber-600 flex items-center gap-1">
+                <i class="ph-bold ph-arrow-counter-clockwise"></i>
+                <span>${escapeHtml(ui('atualizarBtn'))}</span>
+            </button>
+            <button type="button" class="text-amber-300 hover:text-white p-1 text-sm leading-none" aria-label="Fechar">✕</button>
+        `;
+        const btnAtualizar = toast.querySelector('button');
+        btnAtualizar.addEventListener('click', () => {
+            if (reg.waiting) reg.waiting.postMessage({ type: 'SKIP_WAITING' });
+            window.location.reload();
+        });
+        const btnFechar = toast.querySelectorAll('button')[1];
+        btnFechar.addEventListener('click', () => toast.remove());
+        document.body.appendChild(toast);
+    }
+
+    if (reg.waiting && navigator.serviceWorker.controller) {
+        exibirAviso();
+    }
+
+    reg.addEventListener('updatefound', () => {
+        const novo = reg.installing;
+        if (!novo) return;
+        novo.addEventListener('statechange', () => {
+            if (novo.state === 'installed' && navigator.serviceWorker.controller) {
+                exibirAviso();
+            }
+        });
+    });
+}
+
 function iniciarLivro() {
     aplicarIdioma();
     montarLivro();
@@ -2269,7 +2445,7 @@ function iniciarLivro() {
 
     // Leitura offline: registra o service worker quando servido por http(s) (ex.: GitHub Pages)
     if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
-        navigator.serviceWorker.register(LIVRO.serviceWorker || '../sw.js').catch(() => {});
+        navigator.serviceWorker.register(LIVRO.serviceWorker || '../sw.js').then(reg => monitorarAtualizacoesSW(reg)).catch(() => {});
     }
 }
 
