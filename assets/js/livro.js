@@ -374,8 +374,14 @@ function vozesGravadas() {
     return Array.isArray(window.VOZES_GRAVADAS) ? window.VOZES_GRAVADAS : [];
 }
 
-function gravadaDisponivel(voz) {
+/* Completa: todas as frases da parte gravadas. Prévia (`previa` no vozes.js): só algumas, para o
+   humano ouvir no livro enquanto a gravação avança; as demais frases usam a voz do aparelho. */
+function gravadaCompleta(voz) {
     return !!voz && (voz.partes || []).includes(LIVRO.parte);
+}
+
+function gravadaDisponivel(voz) {
+    return gravadaCompleta(voz) || (!!voz && (voz.previa || []).includes(LIVRO.parte));
 }
 
 function vozGravadaAtiva() {
@@ -390,7 +396,7 @@ function carregarVozesGravadas() {
     script.onload = () => {
         // Primeira visita: se a narração gravada desta parte estiver pronta, ela vira a voz padrão
         if (!vozEscolhida) {
-            const pronta = vozesGravadas().find(gravadaDisponivel);
+            const pronta = vozesGravadas().find(gravadaCompleta);
             if (pronta) vozEscolhida = `gravada:${pronta.id}`;
         }
     };
@@ -492,7 +498,8 @@ function renderPainelVoz() {
     const corpo = document.getElementById('painel-voz-corpo');
     const gravadaAtual = vozGravadaAtiva();
     const gravadas = vozesGravadas().map(v => opcaoVoz(
-        `gravada:${v.id}`, v.nome, gravadaDisponivel(v) ? v.descricao : `${v.descricao} (em produção para esta parte)`,
+        `gravada:${v.id}`, v.nome,
+        gravadaCompleta(v) ? v.descricao : gravadaDisponivel(v) ? `${v.descricao} (prévia: só algumas páginas)` : `${v.descricao} (em produção para esta parte)`,
         { ativa: gravadaAtual && gravadaAtual.id === v.id, desativada: !gravadaDisponivel(v), tags: ['gravada', 'mais natural'] }
     )).join('');
 
@@ -525,7 +532,7 @@ function testarVoz(valor) {
     calarTudo();
     if (valor.startsWith('gravada:')) {
         const voz = vozesGravadas().find(v => v.id === valor.slice(8));
-        if (voz) tocarGravacao(`${AUDIO_BASE}${voz.id}/amostra.mp3`).catch(() => {});
+        if (voz) tocarGravacao(`${AUDIO_BASE}${voz.id}/${voz.amostra || 'amostra.mp3'}`).catch(() => {});
         return;
     }
     const v = vozesAparelho.find(x => x.voiceURI === valor.slice(9));

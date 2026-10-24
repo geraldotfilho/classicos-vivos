@@ -40,7 +40,7 @@ dom-quixote/audio/
 ## 1. Ferramenta e formato
 - Use o **modelo de voz (TTS) mais recente do Gemini** com suporte a português do Brasil, a instruções de estilo e a **vários falantes** (até 2 por pedido). Registre o nome exato do modelo e das vozes usadas na seção Revisões de `docs/fila/PEDIDOS.md` e no `indice.json`.
 - **Antes de produzir em massa, confirme** que os termos de uso permitem distribuir os áudios num projeto aberto (CC BY 4.0) e anote a conclusão em `docs/fila/PEDIDOS.md`. Se não permitirem, pare e registre o bloqueio.
-- O modelo devolve PCM 16 bits, 24 kHz, mono. Salve como **`.wav`** (com cabeçalho) ou **`.pcm`** (bruto) **com o nome final** (`p2-s5.wav`). Depois rode:
+- O modelo 3.8 devolve **WAV** (PCM 16 bits, 24 kHz, mono); os anteriores, PCM bruto. Salve como **`.wav`** (com cabeçalho) ou **`.pcm`** (bruto) **com o nome final** (`p2-s5.wav`). Depois rode:
   ```bash
   npm run build:audio   # converte para MP3 (48 kbps mono), corta o silêncio das pontas e apaga os originais
   npm run build:sw
@@ -48,8 +48,8 @@ dom-quixote/audio/
 - **Uma frase por pedido ao modelo**, mas envie junto, como contexto (não para ler), as frases vizinhas da mesma página, para a entoação acompanhar a cena.
 
 ## 2. Voz da narradora (`narradora` e a parte narrada do `teatro`)
-- **Voz sugerida**: uma voz pré-pronta feminina e calorosa (ex.: `Sulafat`, "warm", ou `Vindemiatrix`, "gentle"). Teste 2 ou 3, escolha a mais natural em português e **use sempre a mesma** em tudo.
-- **Instrução de estilo** (envie em todo pedido):
+- **Voz**: de preferência uma **voz nativa brasileira** da biblioteca estendida (seção 8.1), feminina e calorosa. Em teste (2026-10-24, capa da Parte 1, painel "Voz" do livro): **A** `pt-br-storyteller-9`, **B** `pt-br-tutor-5`, **C** `pt-br-assistant-6`; `Sulafat` (multilíngue) entra se nenhuma agradar. O humano escolhe de ouvido; depois, **use sempre a mesma** em tudo (a pasta da escolhida vira `narradora`).
+- **Intenção de estilo** (a API recebe a versão curta, em inglês, que está em `tools/gravar-narracao.mjs`; ver 8.2):
   > Leia em português do Brasil, como uma contadora de histórias calorosa lendo em voz alta para crianças de 5 a 8 anos. Ritmo calmo e claro, com pausas naturais na pontuação. Entonação expressiva que acompanha a emoção da cena: alegria, suspense, humor e ternura, sem exagero teatral. Perguntas soam como perguntas; exclamações, com entusiasmo. Nas falas dos personagens, mude levemente o tom, sem imitar vozes.
 - **Texto a enviar**: o campo `fala` da frase. Ele já vem limpo (sem travessões e com as palavras-chave em minúsculas). Não acrescente nem tire palavras.
 - **FRASE DE AMOSTRA** (`amostra.mp3`): "Olá! Eu vou ler esta história com você. Vire a página quando quiser!"
@@ -118,37 +118,44 @@ Tamanho esperado: ~20–40 KB por frase, ~6–8 MB por voz para os 4 livros. O t
 ## 8. Execução pelo Claude via API (`tools/gravar-narracao.mjs`)
 
 ### 8.1 Chave, rede e modelo
-- **Como a chave chega (preferido): segredo de rede do ambiente.** O humano cadastrou a chave como segredo do ambiente para o host `generativelanguage.googleapis.com`, com o cabeçalho `x-goog-api-key` e sem prefixo. O proxy do ambiente **injeta o cabeçalho sozinho** em toda requisição a esse host: o Claude nunca vê a chave e o script **não manda cabeçalho de autenticação nenhum**. Por isso `$GEMINI_API_KEY` fica vazio, e isso é o esperado.
-- **Alternativa**: se existir a variável `GEMINI_API_KEY`, o script manda `x-goog-api-key: $GEMINI_API_KEY`. Nunca imprima a chave, nunca a grave em arquivo e nunca a ponha na URL.
-- **Teste de acesso**: liste os modelos de voz. Um `403 "unregistered callers"` quer dizer que nenhuma chave chegou; confira o segredo do ambiente ou abra uma sessão nova.
+- **Como a chave chega: segredo de rede do ambiente.** O proxy injeta `x-goog-api-key` em toda requisição a `generativelanguage.googleapis.com`: o Claude nunca vê a chave e o script **não manda cabeçalho de autenticação**. `$GEMINI_API_KEY` vazio é o esperado (se existir, o script a usa no cabeçalho; nunca na URL, nunca impressa).
+- **Node atrás do proxy**: o `fetch` do Node só usa o proxy com `NODE_USE_ENV_PROXY=1` (o `npm run gravar:narracao` já põe).
+- **Teste de acesso** (testado em 2026-10-24, funcionou):
   ```bash
-  curl -s ${GEMINI_API_KEY:+-H "x-goog-api-key: $GEMINI_API_KEY"} "https://generativelanguage.googleapis.com/v1beta/models?pageSize=200" | grep -o '"name": "models/[^"]*tts[^"]*"'
+  curl -s "https://generativelanguage.googleapis.com/v1beta/models?pageSize=200" | grep -o '"name": "models/[^"]*tts[^"]*"'
   ```
-  Use o modelo de voz mais recente da lista (em 2025 eram `gemini-2.5-flash-preview-tts` e `gemini-2.5-pro-preview-tts`). Se o modelo "pro" estiver disponível na cota, ele costuma ter entoação melhor. As vozes pré-prontas são as da seção 2/3 (Sulafat, Vindemiatrix, Gacrux, Achird, Leda, Algieba, Charon, Puck...).
+- **Modelos de voz disponíveis** (2026-10-24): `gemini-3.8-flash-tts` (GA desde 2026-09, o mais expressivo: **é o da produção**), `gemini-3.8-flash-lite-tts` (mais barato, mesma API), `gemini-3.1-flash-tts-preview`, `gemini-2.5-pro-preview-tts` (sem plano gratuito), `gemini-2.5-flash-preview-tts`. Só os 3.8 têm voz desenhada (voice design) e a biblioteca estendida.
+- **Vozes nativas pt-BR**: a biblioteca estendida tem **107 vozes brasileiras** (`pt-br-storyteller-9`, `pt-br-tutor-5`...), com idade, persona e timbre descritos. Elas soam mais brasileiras que as 30 vozes multilíngues (Sulafat, Kore...). Lista: `curl -sG ".../v1beta/voices" --data-urlencode language_code=pt-BR --data-urlencode page_size=100` (paginado por `page_token`).
 
-### 8.2 Pedido de uma frase
+### 8.2 Pedido de uma frase (API `interactions`, a dos modelos 3.8)
 ```http
-POST https://generativelanguage.googleapis.com/v1beta/models/<modelo>:generateContent
-(cabeçalho injetado pelo proxy, ou x-goog-api-key da variável)
+POST https://generativelanguage.googleapis.com/v1beta/interactions
 {
-  "contents": [{ "parts": [{ "text": "<instrução de estilo>\n\n<texto a falar>" }] }],
-  "generationConfig": {
-    "responseModalities": ["AUDIO"],
-    "speechConfig": { "voiceConfig": { "prebuiltVoiceConfig": { "voiceName": "Sulafat" } } }
-  }
+  "model": "gemini-3.8-flash-tts",
+  "input": [{ "type": "user_input", "content": [{ "type": "text", "text": "<campo fala, literal>",
+      "annotations": [{ "type": "speech_metadata", "style": "<estilo curto>" }] }] }],
+  "response_format": { "type": "audio" },
+  "generation_config": { "speech_config": [{ "voice": "pt-br-storyteller-9" }] }
 }
 ```
-- A resposta traz o áudio em `candidates[0].content.parts[0].inlineData.data`: base64 de **PCM s16le, 24 kHz, mono**. Salve como `<id>.pcm`; o `npm run build:audio` já converte esse formato.
-- **Teatro** (narradora + 1 personagem): troque `voiceConfig` por `multiSpeakerVoiceConfig.speakerVoiceConfigs` (`[{ speaker: "NARRADORA", voiceConfig: ... }, { speaker: "SANCHO", voiceConfig: ... }]`). O texto vai como roteiro, uma linha por trecho: `NARRADORA: ...` / `SANCHO: ...`.
-- **Risco conhecido**: o modelo pode **ler em voz alta** a instrução ou o contexto. Separe bem as partes do prompt (ex.: "Instrução: ... Leia apenas o texto entre as marcas: «...»"). A transcrição da QA (seção 6) pega esse erro: o áudio que tiver palavras a mais é regravado.
-- O contexto das frases vizinhas (seção 1) também pode vazar. Se vazar, mande só a instrução + a frase, e descreva a emoção da cena em uma palavra na instrução ("com suspense", "com ternura").
+- A resposta traz `steps[type=model_output].content[type=audio].data`: base64 de um **WAV** (PCM 16 bits, 24 kHz, mono, com cabeçalho). O `npm run build:audio` converte.
+- **O `text` é lido literalmente.** Instruções e contexto **não** vão no texto (seriam lidos em voz alta): o jeito de falar vai em `speech_metadata.style`, **curto** (a documentação avisa que instruções longas, tipo "notas do diretor", fazem a voz derivar). Por isso a instrução longa da seção 2 virou o estilo curto que está em `tools/gravar-narracao.mjs`, e o "contexto das frases vizinhas" (seção 1) não se aplica: no lugar dele, use um estilo por cena quando precisar ("com suspense", "com ternura").
+- Marcas no meio do texto, em inglês e entre `< >`: `<short pause>`, `<long pause>`, `<laugh>`, `<sigh>`. Palavra em CAIXA ALTA ganha ênfase (por isso o `fala` vem em minúsculas).
+- **Teatro**: até 2 falantes por pedido: `speech_config: { mode: "conversational", speakers: [{ speaker: "NARRADORA", voice: ... }, { speaker: "SANCHO", voice: ... }] }` e um item de `content` por trecho, com `speaker` no `speech_metadata`. Voz desenhada/clonada não entra em diálogo: gera-se cada trecho separado e junta-se.
 
 ### 8.3 Robustez do script
 - **Retomável**: pule a frase cujo `.mp3` já existe com o mesmo `hash` no `indice.json`. Assim o script pode ser rodado de novo depois de uma queda ou do fim da cota.
 - **Cota e erros**: em `429`, respeite o `retryDelay` da resposta (ou espere com recuo exponencial). Se a cota **diária** acabar, salve o progresso e registre em `PEDIDOS.md` quando retomar. Em `5xx`, faça até 4 tentativas.
-- Opções úteis: `--parte N`, `--voz narradora|teatro|palavras`, `--ids p2-s5,p2-s6` (regravar só algumas), `--amostra <voz-pré-pronta>`, `--seco` (mostra o que faria sem chamar a API).
-- Depois de cada lote: `npm run build:audio` (MP3 + corte de silêncio) e QA. O `ffprobe` está disponível no ambiente para conferir a duração.
+- **Implementado** em `tools/gravar-narracao.mjs` (`npm run gravar:narracao -- ...`): `--voz <pasta>` (as vozes ficam na tabela `VOZES` do script, com modelo e estilo), `--parte N`, `--paginas 0,1`, `--ids p2-s5,p2-s6`, `--amostra`, `--forcar`, `--sem-qa`, `--seco`. Ele já transcreve, converte para MP3 e atualiza o `indice.json` (com modelo, voz e estilo usados).
+- **Liberar aos poucos no livro**: ponha a parte em `previa` da voz no `vozes.js`. A voz aparece no painel como "prévia" e as frases sem gravação usam a voz do aparelho. O humano ouve no próprio livro (GitHub Pages) e dá o retorno. **Toda voz ou entonação nova passa por essa escuta antes de seguir** (pedido do humano, 2026-10-24).
 
-### 8.4 Controle de qualidade pela API
-- **Transcrição**: envie o MP3 a um modelo de texto do Gemini (ex.: `gemini-2.5-flash`), com `inlineData` `audio/mp3` e o pedido "Transcreva exatamente o que é falado, em português.". Compare com o `fala` sem acento, pontuação nem caixa. Divergência de palavra → regravar (até 3 tentativas; depois, anote a frase para o humano ouvir).
+### 8.4 Cota e custo (descoberto em 2026-10-24)
+- **Plano gratuito: 10 pedidos por dia por modelo de voz** (o 3.8 e o 3.8-Lite contam separado) e **20 por dia** no modelo de transcrição. Uma voz completa são ~215 frases + ~105 palavras-chave (fora as regravações): **sem o plano pago, a produção é inviável** (~1 mês por voz).
+- **Plano pago** (projeto do Google Cloud com faturamento ativo): `gemini-3.8-flash-tts` custa US$ 9 por milhão de tokens de áudio até 31/12/2026 (US$ 18 depois). A fala usa ~25 tokens/s e o livro inteiro tem ~30 min por voz: **~US$ 0,40 por voz**, ~US$ 2–3 com o teatro, as palavras-chave e as regravações. O Batch (`batchGenerateContent`) custa metade, mas não tem plano gratuito.
+- No plano gratuito, o Google pode usar os textos e áudios enviados para melhorar os produtos (os textos do livro são públicos, sem problema).
+
+### 8.5 Controle de qualidade pela API
+- **Transcrição** (feita pelo script): o WAV vai ao `gemini-3.5-flash` com o pedido "Transcreva exatamente o que é falado, em português, com os números escritos por extenso." (sem isso, "quatrocentos" vira "400" e reprova uma frase boa). Compara palavra por palavra, sem acento, pontuação nem caixa. Divergência → regravar (até 3 tentativas). Se nenhuma bater, **guarda a mais próxima** (cada tentativa gasta cota) e avisa no fim, para o humano ouvir.
+- **Falso alarme conhecido**: a transcrição escreve "Alonso **Quijano**" (a grafia espanhola) para "Quixano". Pode ser o modelo de transcrição "corrigindo" o nome famoso ou a voz dizendo "ki-RRA-no": só o ouvido do humano decide.
+- **Pedir ao modelo para avaliar sotaque ou naturalidade não funciona**: ele deu 10/10 para todas as vozes. A escolha de voz e entonação é sempre de ouvido, pelo humano.
 - O Claude **não escuta**: entonação e naturalidade são julgadas pelo humano nas amostras e por amostragem. Gere um `docs/narracao/qa-parte-N.md` com as frases que precisaram de regravação ou ficaram fora da faixa de duração.

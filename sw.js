@@ -3,9 +3,11 @@
    Estratégia:
    - Na instalação, baixa todos os livros (HTML, estilos, fontes e ilustrações) para leitura offline.
    - Páginas HTML: rede primeiro (recebe correções), cache quando estiver sem internet.
-   - Demais arquivos: cache primeiro (abre instantâneo no tablet); a narração gravada é
-     guardada sob demanda, na primeira vez que toca. */
-const CACHE = 'classicos-vivos-0fc7e0169141';
+   - Narração gravada (*.mp3 em audio/): rede primeiro, para frases regravadas chegarem ao tablet;
+     cada arquivo fica num cache próprio (que sobrevive às novas versões) e toca offline depois.
+   - Demais arquivos: cache primeiro (abre instantâneo no tablet). */
+const CACHE = 'classicos-vivos-bea52543c821';
+const CACHE_AUDIO = 'cv-narracao';
 const FILES = [
     "./assets/css/fonts.css",
     "./assets/css/icons.css",
@@ -109,8 +111,24 @@ self.addEventListener('fetch', (event) => {
         return;
     }
 
-    // Demais arquivos: cache primeiro. O que não foi pré-baixado (ex.: a narração gravada,
-    // que é grande) fica guardado na primeira vez que tocar e depois funciona offline.
+    // Narração: o <audio> pede trechos (Range → 206), que não dá para guardar. Pedimos o arquivo
+    // inteiro (200), que o navegador aceita como resposta e que fica guardado para tocar offline.
+    if (/\/audio\/.+\.mp3$/.test(new URL(req.url).pathname)) {
+        event.respondWith(
+            fetch(req.url)
+                .then(res => {
+                    if (res.ok && res.status === 200) {
+                        const copy = res.clone();
+                        caches.open(CACHE_AUDIO).then(c => c.put(req.url, copy));
+                    }
+                    return res;
+                })
+                .catch(() => caches.open(CACHE_AUDIO).then(c => c.match(req.url)).then(hit => hit || Response.error()))
+        );
+        return;
+    }
+
+    // Demais arquivos: cache primeiro; o que não foi pré-baixado fica guardado na primeira vez.
     event.respondWith(
         caches.match(req, { ignoreSearch: true }).then(hit => hit || fetch(req).then(res => {
             if (res.ok && res.status === 200) {

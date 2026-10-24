@@ -1,4 +1,4 @@
-# 🔁 Retomada — onde o trabalho parou (2026-10-23, 23:45 UTC)
+# 🔁 Retomada — onde o trabalho parou (2026-10-24)
 
 Leia este arquivo primeiro numa sessão nova do Claude. Depois, `AGENTS.md` (arquitetura e regras) e o arquivo da frente de trabalho.
 
@@ -9,19 +9,17 @@ Leia este arquivo primeiro numa sessão nova do Claude. Depois, `AGENTS.md` (arq
 O responsável humano passou a narração para o **Claude**, chamando a **API do Gemini** a partir de uma sessão com a chave cadastrada como **segredo de rede** do ambiente. O proxy injeta o cabeçalho `x-goog-api-key` nas requisições a `generativelanguage.googleapis.com`, e o Claude não vê a chave. O Gemini (agente de imagens) não faz mais narração.
 
 - **Passo a passo**: [`TODO-NARRACAO.md`](TODO-NARRACAO.md). A seção 8 traz a execução pela API.
-- **O que já existe**:
-  - o motor toca MP3 frase por frase, com reserva na voz do aparelho;
-  - o painel "Voz";
-  - as frases e palavras-chave exportadas em `docs/narracao/`;
-  - o conversor WAV/PCM → MP3 (`npm run build:audio`).
-- **Nada foi gravado ainda.** `dom-quixote/audio/vozes.js` tem `partes: []` nas duas vozes.
+- **Estado em 2026-10-24**:
+  - acesso à API testado e funcionando; modelo `gemini-3.8-flash-tts`, vozes nativas pt-BR da biblioteca;
+  - `tools/gravar-narracao.mjs` pronto (`npm run gravar:narracao`), com QA por transcrição e retomada pelo `indice.json`;
+  - termos de uso lidos e anotados em `PEDIDOS.md` (distribuir sob CC BY 4.0 é compatível);
+  - três vozes candidatas ("Teste A/B/C") liberadas como **prévia** na capa da Parte 1 (`previa` no `vozes.js`);
+  - **bloqueio**: cota gratuita de 10 pedidos/dia por modelo de voz. Esperando o humano (1) ativar o plano pago e (2) escolher a voz de ouvido.
 
-**Primeiros passos na sessão nova:**
-1. Teste o acesso listando os modelos de voz (comando na seção 8.1 do TODO). `$GEMINI_API_KEY` vazio é normal: a chave vem pelo proxy.
-2. Leia os termos de uso da API e anote a conclusão na seção Revisões de `docs/fila/PEDIDOS.md`. A pergunta é se os áudios podem ser distribuídos sob CC BY 4.0.
-3. Escreva `tools/gravar-narracao.mjs` e crie o script `npm run gravar:narracao`.
-4. Grave **amostras** de 2 ou 3 vozes de narradora, com a FRASE DE AMOSTRA e uma frase de diálogo da Parte 1. Entregue na main e **peça ao humano para escolher de ouvido**: o Claude não escuta áudio. Nada de produção em massa antes dessa escolha.
-5. Siga a ordem de produção da seção 7 do TODO, com uma entrega na main por item.
+**Próximos passos:**
+1. Com a voz escolhida: renomeie a pasta dela para `narradora` (e o id na tabela `VOZES` do script e no `vozes.js`), apague as outras candidatas e complete a capa no modelo `gemini-3.8-flash-tts`.
+2. Grave a Parte 1 **página por página**, liberando como `previa`, e peça ao humano para ouvir a cada novidade (voz, estilo, entonação). Regra do humano: **nada de produção em massa sem escuta**.
+3. Siga a ordem de produção da seção 7 do TODO, com uma entrega na main por item.
 
 ## 2. Ciclo com o Gemini (arte): revisão **pausada**
 
@@ -44,7 +42,7 @@ O responsável humano passou a narração para o **Claude**, chamando a **API do
 
 ## 3. Como entregar
 
-Use a branch designada pela sessão (até aqui, `claude/hopeful-thompson-i7aj9h`). Se ela já foi mesclada, recrie-a a partir de `origin/main`. Antes de entregar:
+Use a branch designada pela sessão (a última foi `claude/optimistic-hamilton-xyoicy`). Se ela já foi mesclada, recrie-a a partir de `origin/main`. Antes de entregar:
 - rode `npm run build`;
 - teste no Chromium headless (Playwright já instalado; sirva com `python3 -m http.server`).
 
