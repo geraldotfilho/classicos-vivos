@@ -1,0 +1,42 @@
+{
+  "p2": {
+    "arquivo": "p2.mp3",
+    "hash": "3b50b9fee8",
+    "frases": [
+      {
+        "id": "p2-s1",
+        "ini": 0,
+        "fim": 8.36
+      },
+      {
+        "id": "p2-s2",
+        "ini": 8.36,
+        "fim": 18.49
+      },
+      {
+        "id": "p2-s3",
+        "ini": 18.49,
+        "fim": 26.01
+      },
+      {
+        "id": "p2-s4",
+        "ini": 26.01,
+        "fim": 33.89
+      },
+      {
+        "id": "p2-s5",
+        "ini": 33.89,
+        "fim": 46.95
+      },
+      {
+        "id": "p2-s6",
+        "ini": 46.95,
+        "fim": 53.98
+      }
+    ]
+  },
+  "modelo": "gemini-3.8-flash-tts",
+  "voz": "pt-br-storyteller-9",
+  "estilo": "warm, gentle storyteller reading aloud to young children; calm, clear pace; expressive but not theatrical",
+  "qa": "gemini-3.5-flash"
+}

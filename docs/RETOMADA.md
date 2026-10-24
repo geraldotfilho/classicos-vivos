@@ -12,6 +12,7 @@ O responsável humano passou a narração para o **Claude**, chamando a **API do
 - **Estado em 2026-10-24** (decisões do humano no topo de `TODO-NARRACAO.md`):
   - narradora escolhida: `pt-br-storyteller-9` (modelo `gemini-3.8-flash-tts`), pasta `dom-quixote/audio/narracao/`, a **única** voz no `vozes.js` (regra: uma voz por vez);
   - gravadas: Parte 1, capa e Capítulo 1 + 5 palavras-chave, liberadas como `previa` e aguardando a escuta do humano;
+  - **teste da página inteira** (TODO §8.5): a página 3 (`p2`) num pedido só, com marcação a posteriori (`paginas.json`); aguardando o humano comparar com as páginas 1 e 2. A fala de Dom Quixote está provisoriamente na voz da narradora;
   - plano pago ativo;
   - `tools/gravar-narracao.mjs` com QA por transcrição; catálogo das vozes em `docs/narracao/VOZES-PT-BR.md`.
 

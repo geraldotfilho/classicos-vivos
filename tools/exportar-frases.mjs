@@ -1,6 +1,6 @@
 // Exporta todas as frases e palavras-chave dos livros para a narração gravada (Gemini).
 // Gera docs/narracao/frases-<livro>-parte-N.json com, para cada frase:
-//   id    — "p3-s4" (página 3, frase 4): o nome do arquivo de áudio (<id>.mp3)
+//   id    — "p3-s4" (página 3, frase 4): o nome do arquivo de áudio (<id>.mp3); paragrafo — índice na página
 //   texto — como aparece no livro;  fala — o texto já preparado para ser falado
 //   hash  — muda quando o texto da frase muda: indica que a gravação precisa ser refeita
 // A segmentação é a MESMA do livro (assets/js/texto.js). Rode `npm run exportar:frases`
@@ -26,16 +26,16 @@ for (const arquivo of globSync('*/parte-*.html').sort()) {
     const frases = [];
     const palavras = new Map();
     livro.paginas.forEach((pagina, i) => {
-        Texto.frasesDaPagina(pagina.texto, i).flat().forEach(({ id, frase }) => {
+        Texto.frasesDaPagina(pagina.texto, i).forEach((paragrafo, k) => paragrafo.forEach(({ id, frase }) => {
             const fala = Texto.falaDaFrase(frase);
-            frases.push({ id, pagina: i, texto: Texto.textoDaFrase(frase), fala, hash: hash(fala) });
+            frases.push({ id, pagina: i, paragrafo: k, texto: Texto.textoDaFrase(frase), fala, hash: hash(fala) });
             frase.partes.filter(p => p.tipo === 'palavra').forEach(p => {
                 if (!palavras.has(p.slug)) {
                     const fala = Texto.falaSilabica(p.palavra, p.silabas);
                     palavras.set(p.slug, { slug: p.slug, palavra: p.palavra, silabas: p.silabas, fala, hash: hash(fala) });
                 }
             });
-        });
+        }));
     });
 
     const destino = `docs/narracao/frases-${pasta}-parte-${livro.parte}.json`;

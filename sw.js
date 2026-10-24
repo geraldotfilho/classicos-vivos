@@ -3,10 +3,10 @@
    Estratégia:
    - Na instalação, baixa todos os livros (HTML, estilos, fontes e ilustrações) para leitura offline.
    - Páginas HTML: rede primeiro (recebe correções), cache quando estiver sem internet.
-   - Narração gravada (*.mp3 em audio/): rede primeiro, para frases regravadas chegarem ao tablet;
+   - Narração gravada (*.mp3 e as marcas *.json em audio/): rede primeiro, para frases regravadas chegarem ao tablet;
      cada arquivo fica num cache próprio (que sobrevive às novas versões) e toca offline depois.
    - Demais arquivos: cache primeiro (abre instantâneo no tablet). */
-const CACHE = 'classicos-vivos-bea52543c821';
+const CACHE = 'classicos-vivos-bd41aa465497';
 const CACHE_AUDIO = 'cv-narracao';
 const FILES = [
     "./assets/css/fonts.css",
@@ -113,7 +113,7 @@ self.addEventListener('fetch', (event) => {
 
     // Narração: o <audio> pede trechos (Range → 206), que não dá para guardar. Pedimos o arquivo
     // inteiro (200), que o navegador aceita como resposta e que fica guardado para tocar offline.
-    if (/\/audio\/.+\.mp3$/.test(new URL(req.url).pathname)) {
+    if (/\/audio\/.+\.(mp3|json)$/.test(new URL(req.url).pathname)) {
         event.respondWith(
             fetch(req.url)
                 .then(res => {

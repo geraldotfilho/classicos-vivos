@@ -7,6 +7,7 @@
     {
       "id": "p0-s1",
       "pagina": 0,
+      "paragrafo": 0,
       "texto": "Depois do grande duelo contra os moinhos de vento, Dom Quixote e seu fiel escudeiro Sancho Pança seguiram pelas estradas poeirentas de La Mancha, prontos para novas aventuras.",
       "fala": "Depois do grande duelo contra os moinhos de vento, Dom Quixote e seu fiel escudeiro Sancho Pança seguiram pelas estradas poeirentas de La Mancha, prontos para novas aventuras.",
       "hash": "f9817c4495"
@@ -14,6 +15,7 @@
     {
       "id": "p0-s2",
       "pagina": 0,
+      "paragrafo": 1,
       "texto": "Nesta parte da história, nosso cavaleiro vai partilhar o jantar com PASTORES de cabras, enfrentar exércitos feitos de nuvens de poeira, ganhar um apelido inesquecível e conquistar um ELMO que brilha como ouro.",
       "fala": "Nesta parte da história, nosso cavaleiro vai partilhar o jantar com pastores de cabras, enfrentar exércitos feitos de nuvens de poeira, ganhar um apelido inesquecível e conquistar um elmo que brilha como ouro.",
       "hash": "86ebd9c7f4"
@@ -21,6 +23,7 @@
     {
       "id": "p0-s3",
       "pagina": 0,
+      "paragrafo": 2,
       "texto": "Prepare a sua IMAGINAÇÃO: as aventuras estão só começando!",
       "fala": "Prepare a sua imaginação: as aventuras estão só começando!",
       "hash": "b64740effb"
@@ -28,6 +31,7 @@
     {
       "id": "p1-s1",
       "pagina": 1,
+      "paragrafo": 0,
       "texto": "Depois do tombo nos moinhos, a lança de Dom Quixote estava partida e sua bacia, toda amassada.",
       "fala": "Depois do tombo nos moinhos, a lança de Dom Quixote estava partida e sua bacia, toda amassada.",
       "hash": "145cb91b28"
@@ -35,6 +39,7 @@
     {
       "id": "p1-s2",
       "pagina": 1,
+      "paragrafo": 0,
       "texto": "Mas um verdadeiro cavaleiro não desiste nunca!",
       "fala": "Mas um verdadeiro cavaleiro não desiste nunca!",
       "hash": "eb50fe581e"
@@ -42,6 +47,7 @@
     {
       "id": "p1-s3",
       "pagina": 1,
+      "paragrafo": 1,
       "texto": "Ele escolheu um galho seco e forte de um velho CARVALHO e o transformou em sua nova LANÇA.",
       "fala": "Ele escolheu um galho seco e forte de um velho carvalho e o transformou em sua nova lança.",
       "hash": "676a1087e4"
@@ -49,6 +55,7 @@
     {
       "id": "p1-s4",
       "pagina": 1,
+      "paragrafo": 1,
       "texto": "— Assim fez um famoso cavaleiro de Espanha, e assim farei eu! — disse ele, orgulhoso.",
       "fala": "Assim fez um famoso cavaleiro de Espanha, e assim farei eu! disse ele, orgulhoso.",
       "hash": "93f0eae684"
@@ -56,6 +63,7 @@
     {
       "id": "p1-s5",
       "pagina": 1,
+      "paragrafo": 2,
       "texto": "Quando a noite chegou, Sancho jantou pão com queijo e dormiu sossegado, roncando feito um sino.",
       "fala": "Quando a noite chegou, Sancho jantou pão com queijo e dormiu sossegado, roncando feito um sino.",
       "hash": "751f8e03a4"
@@ -63,6 +71,7 @@
     {
       "id": "p1-s6",
       "pagina": 1,
+      "paragrafo": 2,
       "texto": "Mas Dom Quixote ficou acordado, olhando as ESTRELAS e pensando na sua amada DULCINEIA, como faziam os cavaleiros dos seus livros.",
       "fala": "Mas Dom Quixote ficou acordado, olhando as estrelas e pensando na sua amada dulcineia, como faziam os cavaleiros dos seus livros.",
       "hash": "ec05b1dc59"
@@ -70,6 +79,7 @@
     {
       "id": "p2-s1",
       "pagina": 2,
+      "paragrafo": 0,
       "texto": "Ao entardecer, os dois amigos encontraram seis PASTORES de cabras ao redor de uma fogueira.",
       "fala": "Ao entardecer, os dois amigos encontraram seis pastores de cabras ao redor de uma fogueira.",
       "hash": "7696d34984"
@@ -77,6 +87,7 @@
     {
       "id": "p2-s2",
       "pagina": 2,
+      "paragrafo": 0,
       "texto": "Mesmo sem conhecê-los, os pastores estenderam uma pele de ovelha no chão e os convidaram para jantar.",
       "fala": "Mesmo sem conhecê-los, os pastores estenderam uma pele de ovelha no chão e os convidaram para jantar.",
       "hash": "00d5d3b640"
@@ -84,6 +95,7 @@
     {
       "id": "p2-s3",
       "pagina": 2,
+      "paragrafo": 1,
       "texto": "Ofereceram o que tinham: um punhado de BOLOTAS doces, um grande QUEIJO e uma jarra de LEITE fresquinho.",
       "fala": "Ofereceram o que tinham: um punhado de bolotas doces, um grande queijo e uma jarra de leite fresquinho.",
       "hash": "c7f07fbcb3"
@@ -91,6 +103,7 @@
     {
       "id": "p2-s4",
       "pagina": 2,
+      "paragrafo": 1,
       "texto": "Ajude a pôr a mesa dos pastores!",
       "fala": "Ajude a pôr a mesa dos pastores!",
       "hash": "d00075bb4b"
@@ -98,6 +111,7 @@
     {
       "id": "p2-s5",
       "pagina": 2,
+      "paragrafo": 2,
       "texto": "Dom Quixote segurou as bolotas e falou de um tempo antigo e feliz, a IDADE DE OURO, quando ninguém dizia \"isto é meu\", e as pessoas sabiam DIVIDIR tudo o que a terra dava.",
       "fala": "Dom Quixote segurou as bolotas e falou de um tempo antigo e feliz, a idade de ouro, quando ninguém dizia isto é meu, e as pessoas sabiam dividir tudo o que a terra dava.",
       "hash": "3f2d10c79b"
@@ -105,6 +119,7 @@
     {
       "id": "p2-s6",
       "pagina": 2,
+      "paragrafo": 2,
       "texto": "Os pastores não entenderam todas as palavras bonitas, mas entenderam o principal: o mundo fica melhor quando a gente divide.",
       "fala": "Os pastores não entenderam todas as palavras bonitas, mas entenderam o principal: o mundo fica melhor quando a gente divide.",
       "hash": "93ab1b08d1"
@@ -112,6 +127,7 @@
     {
       "id": "p3-s1",
       "pagina": 3,
+      "paragrafo": 0,
       "texto": "Certa manhã, Dom Quixote viu duas enormes nuvens de POEIRA avançando uma contra a outra pela planície.",
       "fala": "Certa manhã, Dom Quixote viu duas enormes nuvens de poeira avançando uma contra a outra pela planície.",
       "hash": "ba509891a8"
@@ -119,6 +135,7 @@
     {
       "id": "p3-s2",
       "pagina": 3,
+      "paragrafo": 1,
       "texto": "— Sancho!",
       "fala": "Sancho!",
       "hash": "9fca0ce7ec"
@@ -126,6 +143,7 @@
     {
       "id": "p3-s3",
       "pagina": 3,
+      "paragrafo": 1,
       "texto": "São dois grandes EXÉRCITOS!",
       "fala": "São dois grandes exércitos!",
       "hash": "d848f89e01"
@@ -133,6 +151,7 @@
     {
       "id": "p3-s4",
       "pagina": 3,
+      "paragrafo": 1,
       "texto": "De um lado vem o terrível Alifanfarrão da Trapobana; do outro, o valente Pentapolim do Braço Arregaçado, que luta sempre com a manga dobrada!",
       "fala": "De um lado vem o terrível Alifanfarrão da Trapobana; do outro, o valente Pentapolim do Braço Arregaçado, que luta sempre com a manga dobrada!",
       "hash": "bad53df26c"
@@ -140,6 +159,7 @@
     {
       "id": "p3-s5",
       "pagina": 3,
+      "paragrafo": 2,
       "texto": "— Mas, meu senhor — respondeu Sancho, apertando os olhos —, eu só escuto balidos: \"méééé!\"",
       "fala": "Mas, meu senhor, respondeu Sancho, apertando os olhos, eu só escuto balidos: méééé!",
       "hash": "617f9b9c88"
@@ -147,6 +167,7 @@
     {
       "id": "p3-s6",
       "pagina": 3,
+      "paragrafo": 2,
       "texto": "Sopre a poeira e veja com os próprios olhos!",
       "fala": "Sopre a poeira e veja com os próprios olhos!",
       "hash": "d6a2d7a5dc"
@@ -154,6 +175,7 @@
     {
       "id": "p3-s7",
       "pagina": 3,
+      "paragrafo": 3,
       "texto": "Eram apenas dois rebanhos de OVELHAS!",
       "fala": "Eram apenas dois rebanhos de ovelhas!",
       "hash": "6fb624a56b"
@@ -161,6 +183,7 @@
     {
       "id": "p3-s8",
       "pagina": 3,
+      "paragrafo": 3,
       "texto": "Mas Dom Quixote já galopava para a batalha.",
       "fala": "Mas Dom Quixote já galopava para a batalha.",
       "hash": "44aa796dc2"
@@ -168,6 +191,7 @@
     {
       "id": "p3-s9",
       "pagina": 3,
+      "paragrafo": 3,
       "texto": "Os pastores, assustados, atiraram pedrinhas para proteger seus animais, e o pobre cavaleiro caiu do cavalo, com a boca dolorida e dois dentes a menos.",
       "fala": "Os pastores, assustados, atiraram pedrinhas para proteger seus animais, e o pobre cavaleiro caiu do cavalo, com a boca dolorida e dois dentes a menos.",
       "hash": "a2c537bef3"
@@ -175,6 +199,7 @@
     {
       "id": "p4-s1",
       "pagina": 4,
+      "paragrafo": 0,
       "texto": "Naquela noite, Sancho levantou a LANTERNA para ver o rosto do seu amo.",
       "fala": "Naquela noite, Sancho levantou a lanterna para ver o rosto do seu amo.",
       "hash": "182b5af0ab"
@@ -182,6 +207,7 @@
     {
       "id": "p4-s2",
       "pagina": 4,
+      "paragrafo": 0,
       "texto": "Era um rosto comprido, magrinho, cansado, com a barba por fazer e uma janelinha no sorriso, onde antes havia dois dentes.",
       "fala": "Era um rosto comprido, magrinho, cansado, com a barba por fazer e uma janelinha no sorriso, onde antes havia dois dentes.",
       "hash": "f72ca6e7ab"
@@ -189,6 +215,7 @@
     {
       "id": "p4-s3",
       "pagina": 4,
+      "paragrafo": 1,
       "texto": "— Meu senhor — disse Sancho, com carinho —, vossa mercê está com a cara mais triste que eu já vi!",
       "fala": "Meu senhor, disse Sancho, com carinho, vossa mercê está com a cara mais triste que eu já vi!",
       "hash": "db7fa3e792"
@@ -196,6 +223,7 @@
     {
       "id": "p4-s4",
       "pagina": 4,
+      "paragrafo": 1,
       "texto": "Bem que podia se chamar o Cavaleiro da TRISTE FIGURA!",
       "fala": "Bem que podia se chamar o Cavaleiro da triste figura!",
       "hash": "a2fd3045d0"
@@ -203,6 +231,7 @@
     {
       "id": "p4-s5",
       "pagina": 4,
+      "paragrafo": 2,
       "texto": "Em vez de ficar zangado, Dom Quixote adorou!",
       "fala": "Em vez de ficar zangado, Dom Quixote adorou!",
       "hash": "d9f0eac8f9"
@@ -210,6 +239,7 @@
     {
       "id": "p4-s6",
       "pagina": 4,
+      "paragrafo": 2,
       "texto": "Todo grande cavaleiro tinha um nome especial, como o Cavaleiro do Unicórnio ou o da Ardente Espada.",
       "fala": "Todo grande cavaleiro tinha um nome especial, como o Cavaleiro do Unicórnio ou o da Ardente Espada.",
       "hash": "ddba775b1e"
@@ -217,6 +247,7 @@
     {
       "id": "p4-s7",
       "pagina": 4,
+      "paragrafo": 2,
       "texto": "E decidiu que, um dia, mandaria pintar um rosto triste e nobre no seu ESCUDO.",
       "fala": "E decidiu que, um dia, mandaria pintar um rosto triste e nobre no seu escudo.",
       "hash": "02c7719ff8"
@@ -224,6 +255,7 @@
     {
       "id": "p5-s1",
       "pagina": 5,
+      "paragrafo": 0,
       "texto": "No meio de uma noite muito escura, ouviram um barulho assustador perto de um rio: TAC-TAC!",
       "fala": "No meio de uma noite muito escura, ouviram um barulho assustador perto de um rio: tac, tac!",
       "hash": "e1361d3fc1"
@@ -231,6 +263,7 @@
     {
       "id": "p5-s2",
       "pagina": 5,
+      "paragrafo": 0,
       "texto": "TAC-TAC!",
       "fala": "TAC, TAC!",
       "hash": "5cf1230f3f"
@@ -238,6 +271,7 @@
     {
       "id": "p5-s3",
       "pagina": 5,
+      "paragrafo": 0,
       "texto": "Dom Quixote quis partir na mesma hora para descobrir que monstro era aquele.",
       "fala": "Dom Quixote quis partir na mesma hora para descobrir que monstro era aquele.",
       "hash": "8bcb93f526"
@@ -245,6 +279,7 @@
     {
       "id": "p5-s4",
       "pagina": 5,
+      "paragrafo": 1,
       "texto": "Sancho, morrendo de medo, amarrou escondido as patas de Rocinante para que o cavalo não saísse do lugar.",
       "fala": "Sancho, morrendo de medo, amarrou escondido as patas de Rocinante para que o cavalo não saísse do lugar.",
       "hash": "dc64a6297d"
@@ -252,6 +287,7 @@
     {
       "id": "p5-s5",
       "pagina": 5,
+      "paragrafo": 1,
       "texto": "E, para passar o tempo, começou a contar uma história:",
       "fala": "E, para passar o tempo, começou a contar uma história:",
       "hash": "609040ebf9"
@@ -259,6 +295,7 @@
     {
       "id": "p5-s6",
       "pagina": 5,
+      "paragrafo": 2,
       "texto": "— Era uma vez um pastor que precisava atravessar um rio com trezentas CABRAS, mas só tinha um BARCO pequenino, onde cabia uma cabra de cada vez.",
       "fala": "Era uma vez um pastor que precisava atravessar um rio com trezentas cabras, mas só tinha um barco pequenino, onde cabia uma cabra de cada vez.",
       "hash": "733bc225f8"
@@ -266,6 +303,7 @@
     {
       "id": "p5-s7",
       "pagina": 5,
+      "paragrafo": 2,
       "texto": "Vossa mercê precisa CONTAR as cabras que passam, porque, se perder a conta, a história acaba!",
       "fala": "Vossa mercê precisa contar as cabras que passam, porque, se perder a conta, a história acaba!",
       "hash": "ee6ee5993a"
@@ -273,6 +311,7 @@
     {
       "id": "p5-s8",
       "pagina": 5,
+      "paragrafo": 3,
       "texto": "Ajude Dom Quixote a contar as cabras que atravessam o rio!",
       "fala": "Ajude Dom Quixote a contar as cabras que atravessam o rio!",
       "hash": "b1a300800f"
@@ -280,6 +319,7 @@
     {
       "id": "p6-s1",
       "pagina": 6,
+      "paragrafo": 0,
       "texto": "A noite parecia não ter fim.",
       "fala": "A noite parecia não ter fim.",
       "hash": "021738d338"
@@ -287,6 +327,7 @@
     {
       "id": "p6-s2",
       "pagina": 6,
+      "paragrafo": 0,
       "texto": "Mas, devagarinho, o céu começou a clarear: era o AMANHECER!",
       "fala": "Mas, devagarinho, o céu começou a clarear: era o amanhecer!",
       "hash": "16e9f3eb4a"
@@ -294,6 +335,7 @@
     {
       "id": "p6-s3",
       "pagina": 6,
+      "paragrafo": 0,
       "texto": "Toque no sol para a luz chegar.",
       "fala": "Toque no sol para a luz chegar.",
       "hash": "5ff5e58f61"
@@ -301,6 +343,7 @@
     {
       "id": "p6-s4",
       "pagina": 6,
+      "paragrafo": 1,
       "texto": "Com a luz do dia, os dois amigos descobriram o segredo do barulho: eram seis grandes MARTELOS de madeira, movidos pela força da água do rio, que batiam sem parar nos panos de lã para deixá-los macios.",
       "fala": "Com a luz do dia, os dois amigos descobriram o segredo do barulho: eram seis grandes martelos de madeira, movidos pela força da água do rio, que batiam sem parar nos panos de lã para deixá-los macios.",
       "hash": "94f0829fef"
@@ -308,6 +351,7 @@
     {
       "id": "p6-s5",
       "pagina": 6,
+      "paragrafo": 1,
       "texto": "TAC-TAC!",
       "fala": "TAC, TAC!",
       "hash": "5cf1230f3f"
@@ -315,6 +359,7 @@
     {
       "id": "p6-s6",
       "pagina": 6,
+      "paragrafo": 1,
       "texto": "TAC-TAC!",
       "fala": "TAC, TAC!",
       "hash": "5cf1230f3f"
@@ -322,6 +367,7 @@
     {
       "id": "p6-s7",
       "pagina": 6,
+      "paragrafo": 2,
       "texto": "Sancho segurou a barriga e soltou uma RISADA tão grande que quase caiu do burrico.",
       "fala": "Sancho segurou a barriga e soltou uma risada tão grande que quase caiu do burrico.",
       "hash": "340be78c5a"
@@ -329,6 +375,7 @@
     {
       "id": "p6-s8",
       "pagina": 6,
+      "paragrafo": 2,
       "texto": "Dom Quixote, primeiro, ficou bravo.",
       "fala": "Dom Quixote, primeiro, ficou bravo.",
       "hash": "25d983f782"
@@ -336,6 +383,7 @@
     {
       "id": "p6-s9",
       "pagina": 6,
+      "paragrafo": 2,
       "texto": "Depois, também começou a rir.",
       "fala": "Depois, também começou a rir.",
       "hash": "706c7c788a"
@@ -343,6 +391,7 @@
     {
       "id": "p6-s10",
       "pagina": 6,
+      "paragrafo": 2,
       "texto": "Afinal, até os cavaleiros mais valentes têm medo do escuro, e a luz sempre ajuda a enxergar a verdade.",
       "fala": "Afinal, até os cavaleiros mais valentes têm medo do escuro, e a luz sempre ajuda a enxergar a verdade.",
       "hash": "1b8a680023"
@@ -350,6 +399,7 @@
     {
       "id": "p7-s1",
       "pagina": 7,
+      "paragrafo": 0,
       "texto": "Começou a cair uma chuvinha fina.",
       "fala": "Começou a cair uma chuvinha fina.",
       "hash": "c5f70ee0ac"
@@ -357,6 +407,7 @@
     {
       "id": "p7-s2",
       "pagina": 7,
+      "paragrafo": 0,
       "texto": "Pela estrada vinha um BARBEIRO montado num burrinho, com uma bacia de latão na cabeça para proteger o chapéu novo da CHUVA.",
       "fala": "Pela estrada vinha um barbeiro montado num burrinho, com uma bacia de latão na cabeça para proteger o chapéu novo da chuva.",
       "hash": "d88d03751c"
@@ -364,6 +415,7 @@
     {
       "id": "p7-s3",
       "pagina": 7,
+      "paragrafo": 0,
       "texto": "A bacia molhada brilhava como ouro!",
       "fala": "A bacia molhada brilhava como ouro!",
       "hash": "f9e72020c3"
@@ -371,6 +423,7 @@
     {
       "id": "p7-s4",
       "pagina": 7,
+      "paragrafo": 1,
       "texto": "— Sancho! — exclamou Dom Quixote.",
       "fala": "Sancho! exclamou Dom Quixote.",
       "hash": "352aada8e0"
@@ -378,6 +431,7 @@
     {
       "id": "p7-s5",
       "pagina": 7,
+      "paragrafo": 1,
       "texto": "— É o lendário ELMO DE MAMBRINO, o capacete encantado dos livros de cavalaria!",
       "fala": "É o lendário elmo de mambrino, o capacete encantado dos livros de cavalaria!",
       "hash": "d6413d01b5"
@@ -385,6 +439,7 @@
     {
       "id": "p7-s6",
       "pagina": 7,
+      "paragrafo": 2,
       "texto": "O cavaleiro avançou de lança em punho, e o barbeiro, apavorado, pulou do burrinho e saiu correndo, deixando a bacia na estrada.",
       "fala": "O cavaleiro avançou de lança em punho, e o barbeiro, apavorado, pulou do burrinho e saiu correndo, deixando a bacia na estrada.",
       "hash": "3331020914"
@@ -392,6 +447,7 @@
     {
       "id": "p7-s7",
       "pagina": 7,
+      "paragrafo": 2,
       "texto": "Dom Quixote a colocou na cabeça, muito sério.",
       "fala": "Dom Quixote a colocou na cabeça, muito sério.",
       "hash": "9a34a83ff8"
@@ -399,6 +455,7 @@
     {
       "id": "p7-s8",
       "pagina": 7,
+      "paragrafo": 2,
       "texto": "Ficou grande, meio torta e sem viseira, mas, para ele, era o elmo mais nobre do mundo.",
       "fala": "Ficou grande, meio torta e sem viseira, mas, para ele, era o elmo mais nobre do mundo.",
       "hash": "40a40c344f"
@@ -406,6 +463,7 @@
     {
       "id": "p7-s9",
       "pagina": 7,
+      "paragrafo": 2,
       "texto": "Sancho riu tanto que precisou se sentar no chão!",
       "fala": "Sancho riu tanto que precisou se sentar no chão!",
       "hash": "15035ae7e1"

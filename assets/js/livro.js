@@ -407,6 +407,17 @@ function urlFrase(voz, id) {
     return `${AUDIO_BASE}${voz.id}/parte-${LIVRO.parte}/${id}.mp3`;
 }
 
+/* Páginas gravadas inteiras (um MP3 por página, entonação contínua), com o tempo de cada frase:
+   <voz>/parte-N/paginas.json = { "p2": { arquivo: "p2.mp3", frases: [{ id, ini, fim }] } } */
+const paginasGravadas = {};
+function paginasDaVoz(voz) {
+    if (!paginasGravadas[voz.id]) {
+        paginasGravadas[voz.id] = fetch(`${AUDIO_BASE}${voz.id}/parte-${LIVRO.parte}/paginas.json`)
+            .then(r => (r.ok ? r.json() : {})).catch(() => ({}));
+    }
+    return paginasGravadas[voz.id];
+}
+
 function urlPalavra(slugPalavra) {
     return `${AUDIO_BASE}palavras/${slugPalavra}.mp3`;
 }
@@ -872,7 +883,48 @@ function toggleReadPageAloud() {
             comAparelho();
         }
     };
-    speakSentence(0);
+
+    if (!voz) {
+        speakSentence(0);
+        return;
+    }
+    const pagina = currentPage;
+    paginasDaVoz(voz).then(paginas => {
+        if (session !== readingSession) return;
+        const gravada = paginas[`p${pagina}`];
+        if (gravada) lerPaginaInteira(voz, gravada, sentences, session, () => speakSentence(0));
+        else speakSentence(0);
+    });
+}
+
+/* Página gravada inteira: um só áudio, e o destaque segue o tempo de cada frase (vale também no 🐢) */
+function lerPaginaInteira(voz, gravada, sentences, session, reserva) {
+    const porId = new Map(sentences.map(el => [el.dataset.frase, el]));
+    let atual = null;
+    let quadro = 0;
+    const acompanhar = () => {
+        if (session !== readingSession) return;
+        const t = narrador.currentTime;
+        const marca = gravada.frases.find(f => t >= f.ini && t < f.fim);
+        const el = marca && porId.get(marca.id);
+        if (el && el !== atual) {
+            clearSentenceHighlight();
+            el.classList.add('sentence-reading');
+            scrollTextToSentence(el);
+            atual = el;
+        }
+        quadro = requestAnimationFrame(acompanhar);
+    };
+    tocarGravacao(`${AUDIO_BASE}${voz.id}/parte-${LIVRO.parte}/${gravada.arquivo}`).then(() => {
+        cancelAnimationFrame(quadro);
+        if (session !== readingSession) return;
+        clearSentenceHighlight();
+        setReadingPageUI(false);
+    }, () => {
+        cancelAnimationFrame(quadro);
+        if (session === readingSession) reserva();   // sem o arquivo: frase por frase (e a voz do aparelho)
+    });
+    quadro = requestAnimationFrame(acompanhar);
 }
 
 function setReadingPageUI(reading) {
