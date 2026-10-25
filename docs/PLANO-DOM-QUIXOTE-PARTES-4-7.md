@@ -32,7 +32,7 @@ O que o humano sentiu ("apressada, mal encadeada, eventos mal explicados") tem c
 | 1 · O Cavaleiro da Super Imaginação | 1605 · de cima | 1–8 | 8 | 1–7 | ✅ fica |
 | 2 · Exércitos de Lã e o Elmo Encantado | 1605 · de cima | 8–21 | 14 | 8–15 | ✅ fica |
 | 3 · Serra Morena e a Princesa Micomicona | 1605 · de cima | 23–38 | 16 | 16–22 | ✅ fica |
-| **4 · O Elmo, a Bacia e a Jaula Encantada** (título provisório) | 1605 · de cima | 39–52 | 14 | 23–29 | 🔁 refazer |
+| **4 · O Elmo, a Bacia e a Jaula Encantada** (título provisório) | 1605 · de cima | 39–52 | 14 | 23–32 | 🔁 refazer |
 | **5 · O Livro Famoso e o Cavaleiro dos Leões** | 1615 · de baixo | 1–29 | 29 | 30–37 | 🆕 |
 | **6 · O Palácio dos Duques e a Ilha de Sancho** | 1615 · de baixo | 30–57 | 28 | 38–45 | 🆕 |
 | **7 · O Cavaleiro da Branca Lua** | 1615 · de baixo | 58–74 | 17 | 46–53 | 🆕 |
@@ -168,7 +168,7 @@ Na mesma entrega (um só merge na `main`), para nunca haver um momento com texto
 
 | Parte | 0 Terreno | 1 Texto | 2 Interações e lentes | 3 Revisão 🛑 | 4 Arte e atividades | 5 Revisão final 🛑 | 6 Narração 🛑 | Publicada | 7 Idiomas | 8 Retrospectiva |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 4 | 🟡 (rascunho no motor e estante ✅; falta arquivar a arte e criar o rascunho) | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| 4 | ✅ | 🟡 (escaleta pronta) | 🟡 (planejadas) | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | 5 | — | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | 6 | — | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | 7 | — | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |

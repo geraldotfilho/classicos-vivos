@@ -23,7 +23,7 @@ window.ACERVO_PRODUCAO = [
         parte: 4,
         titulo: 'Parte 4 (nova): O Elmo, a Bacia e a Jaula Encantada',
         nota: 'Substitui a Parte 4 atual e fecha o primeiro volume (1605).',
-        situacao: 'fila',
+        situacao: 'rascunho',
         estante: null,
         href: './dom-quixote/parte-4-rascunho.html'
     },
