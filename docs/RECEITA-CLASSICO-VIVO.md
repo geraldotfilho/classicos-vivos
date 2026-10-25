@@ -79,6 +79,13 @@ Antes da primeira página, escreva o mapa da obra (na receita específica ou no 
 Cada parte tem um **caderno** (`docs/cadernos/<livro>-parte-N.md`, modelo no §7.1) com o quadro das fases, as decisões e as notas do humano. **Comece toda sessão lendo o caderno da parte** e termine atualizando-o.
 
 ### Fase 1: Adaptação e texto em português
+**1.0. Leitura obrigatória das partes já publicadas** (quando a obra já tem alguma parte publicada). Antes da escaleta, leia o **texto final** de todas as partes publicadas da obra (o português do `window.LIVRO` em `<livro>/parte-N.html`, ou o export limpo em `docs/traducao/fonte-<livro>-parte-N.json`), com **atenção especial ao final da parte imediatamente anterior**. O objetivo é que a parte nova continue a obra sem quebras, saltos, repetições ou incoerências:
+- **estilo**: o tom do narrador, o tamanho das frases, o jeito de abrir capítulos e de convidar a criança para as atividades, as falas e os bordões dos personagens;
+- **continuidade**: onde, quando e com quem a parte anterior termina; o que cada personagem sabe, quer e carrega; o que já foi explicado (não explique de novo) e o que ficou prometido (não esqueça);
+- **repetições a evitar**: episódios, piadas, imagens e atividades já usados (a mesma mecânica de atividade pode voltar, mas não a mesma brincadeira);
+- **palavras-chave já ensinadas**: quais repetir de propósito e quais seriam repetição sem motivo.
+Registre no caderno, em poucas linhas, onde a parte anterior termina e as notas de estilo e continuidade que a parte nova precisa seguir. Na fase 3, o humano confere essa ponte.
+
 **1a. Escaleta** (uma linha por página): página → episódio → trecho do original → o que acontece → que fio planta ou colhe. Mais a lista do que fica de fora (ou do que foi acrescentado) e por quê.
 ✋ **Mostre a escaleta ao humano na própria sessão antes de escrever o texto.** Mudar a escaleta custa um minuto; mudar um texto pronto custa uma reescrita e, se já houver, tradução e narração de novo.
 
@@ -233,6 +240,8 @@ Arquivo: <livro>/parte-N.html (rascunho: sim/não) · Trecho do original: … ·
 | 7 Idiomas (en, fr, es) | | | | US$ |
 | 8 Retrospectiva | | | | — |
 
+## 0. Onde a parte anterior termina (leitura obrigatória da fase 1.0)
+Partes lidas: … · Como a anterior termina: … · Notas de estilo e continuidade: … · O que não repetir: …
 ## 1. Escaleta
 | Pág. | Capítulo nosso | Episódio | Original | O que acontece | Fio (planta/colhe) |
 ## 2. O que ficou de fora (ou foi acrescentado) e por quê
@@ -262,7 +271,7 @@ Pare na próxima parada 🛑 e me diga o que ler.
 - Alguma **palavra** fez a leitura parar? Algo assustou ou incomodou a criança (ou você)?
 - Alguma página **longa demais** (a criança se dispersou)?
 - Na atividade: ela **quis** fazer? Entendeu **sem ajuda**? Ficou **frustrada**? Pediu para **repetir**?
-- A ligação com a parte anterior faz sentido? O fim dá vontade de ler a próxima?
+- A ligação com a parte anterior faz sentido? O estilo é o mesmo das partes já lidas? Algo se repetiu ou ficou incoerente? O fim dá vontade de ler a próxima?
 - Fase 5: as ilustrações **surpreendem**? Alguma imagem contradiz o texto?
 
 ---
@@ -273,6 +282,7 @@ As lições que só valem para *Dom Quixote* ou para a condensação de obras lo
 
 | Data | Lição | Origem | Virou regra em |
 | :--- | :--- | :--- | :--- |
+| 2026-10-25 | Quem escreve a parte seguinte precisa ler o texto final das partes publicadas, sobretudo o final da anterior, para não quebrar estilo nem continuidade (a Parte 4 antiga começava contradizendo o fim da Parte 3) | humano | §5 fase 1.0 |
 | 2026-10-25 | A receita precisa separar o que é geral do que é próprio de uma obra ou de um tipo de adaptação | humano | §2, `receitas/` |
 | 2026-10-25 | Obras em produção aparecem na estante só como teaser com cadeado; o adulto abre os rascunhos pela página "Para adultos". Nada de "próximos clássicos" vagos | humano | §4 |
 | 2026-10-25 | A atividade nota 10 ajuda um personagem com palavras do próprio texto e retoma algo já conhecido | humano | §6.2 |

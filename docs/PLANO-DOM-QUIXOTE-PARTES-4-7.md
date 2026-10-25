@@ -183,7 +183,7 @@ A API paga só pode ser usada com autorização **no prompt inicial da sessão**
 
 | Sessão | Fases | Termina em | Prompt de abertura (modelo) |
 | :--- | :--- | :--- | :--- |
-| **A** | 0 + 1 + 2 da Parte 4 | 🛑 o humano lê o rascunho | "Leia AGENTS.md e docs/RETOMADA.md e siga docs/PLANO-DOM-QUIXOTE-PARTES-4-7.md, docs/RECEITA-CLASSICO-VIVO.md e docs/receitas/DOM-QUIXOTE.md. Termine a fase 0 e faça as fases 1 e 2 da Parte 4. Mostre-me a escaleta antes de escrever o texto. Sem API paga nesta sessão." |
+| **A** | 0 + 1 + 2 da Parte 4 | 🛑 o humano lê o rascunho | "Leia AGENTS.md e docs/RETOMADA.md e siga docs/PLANO-DOM-QUIXOTE-PARTES-4-7.md, docs/RECEITA-CLASSICO-VIVO.md e docs/receitas/DOM-QUIXOTE.md. Termine a fase 0 e faça as fases 1 e 2 da Parte 4. Leia antes o texto final das Partes 1 a 3, com atenção ao fim da Parte 3. Mostre-me a escaleta antes de escrever o texto. Sem API paga nesta sessão." |
 | **B** | ajustes da 3 + fase 4 | 🛑 o humano lê o livro ilustrado | Claude (pela API): "Fase 4 da Parte 4 (caderno docs/cadernos/dom-quixote-parte-4.md). Minhas notas da revisão: … Autorizo a API paga do Gemini para gerar as ilustrações da Parte 4 (Nano Banana 2, Batch), até US$ 1,00." Gemini no Antigravity (na cota do plano Pro): o mesmo pedido, sem a autorização da API. |
 | **C** | ajustes da 5 + fase 6 + publicação | 🛑 o humano ouve a narração | "Fase 6 da Parte 4. Notas da revisão final: … Autorizo a API paga do Gemini para gravar a narração em português da Parte 4 (Flex), até US$ 0,20." |
 | **D** | fase 7 + 8 | Parte 4 completa | "Fase 7 da Parte 4. Autorizo traduzir para inglês, francês e espanhol e gravar a narração nesses idiomas, até US$ 0,40." |
