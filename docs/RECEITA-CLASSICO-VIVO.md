@@ -166,6 +166,8 @@ Só com autorização no prompt da sessão (`TODO-NARRACAO.md`):
 5. É **curta** (até 5 toques, cerca de 1 minuto) e o erro gera só uma **dica gentil**? (Exceção decidida pelo humano: as **pegadinhas** do tipo `pedido` recomeçam a brincadeira, sempre com uma fala engraçada que explica o porquê.)
 6. **A criança precisa ler (ou contar, ou observar) para acertar?** Se tocar em qualquer cartão já funciona, não há aprendizado (o 1º piquenique da nova Parte 4 de Dom Quixote foi reprovado por isso). Cartões de leitura vão **sem emoji**, que entregaria a resposta.
 
+**Contagem**: só quando contar é algo que um personagem **precisa** fazer na história (as cabras atravessando o rio uma a uma), nunca "conte os tesouros" decorativo. Confira na arte se a quantidade desenhada é **exatamente** a que a voz diz.
+
 **A recompensa**: nas páginas com atividade, a variação mágica da cena (em Dom Quixote, a Lente da Imaginação) fica **trancada até a criança acertar** (regra do humano, 2026-10-25; o motor faz sozinho, `AGENTS.md` §2.5).
 
 **Padrão ouro: a assinatura da carta** (*Dom Quixote*, Parte 3, cap. 18, nota 10 do humano). Sancho esqueceu a carta e não lembra como Dom Quixote assina; a criança toca nas palavras na ordem certa: O CAVALEIRO DA TRISTE FIGURA.
@@ -292,6 +294,7 @@ As lições que só valem para *Dom Quixote* ou para a condensação de obras lo
 
 | Data | Lição | Origem | Virou regra em |
 | :--- | :--- | :--- | :--- |
+| 2026-10-25 | Contagem que não nasce de uma necessidade da história ("conte os tesouros") é bestinha; e a arte precisa ter exatamente a quantidade que a voz conta (vieram 4 peixes para "três peixinhos"). Atividade que não acrescenta sai: página calma também é boa | humano (Dom Quixote, Parte 4 nova) | §6.2 |
 | 2026-10-25 | A qualidade do texto caiu na segunda metade da parte e uma página longa cansou: revisar o fim com o cuidado do começo e dividir páginas longas | humano (Dom Quixote, Parte 4 nova, fase 5) | §6.1 |
 | 2026-10-25 | Atividade em que qualquer toque funciona não ensina: a criança precisa ler para acertar; a variação mágica da cena vira recompensa, trancada até o acerto | humano | §6.2, `AGENTS.md` §2.5 |
 | 2026-10-25 | Continuidade de personagens entre páginas: recortar da arte aprovada e mandar copiar; consertar por edição | arte (Parte 4 nova, fase 5) | §6.3, `ARTE-PELA-API.md` §4.3 |

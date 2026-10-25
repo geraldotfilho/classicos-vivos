@@ -228,14 +228,13 @@
             {
                 capitulo: '🏰 Capítulo 28 • O Cavaleiro do Lago', corCapitulo: 'text-teal-700',
                 titulo: 'Os Castelos das Sete Fadas',
-                comandoAtividade: 'Toque no cartão e conte com Sancho os tesouros do riacho encantado!',
                 texto: `Depois do lanche, todos se deitaram na sombra do carvalho, de barriga cheia. Foi então que Dom Quixote se sentou numa raiz, levantou a mão para o céu e disse: — Escutem, meus amigos, uma das histórias mais bonitas dos meus velhos livros de cavalaria!
 
                     — Era uma vez um cavaleiro que chegou à beira de um {{LAGO|LA • GO|🌊}} muito estranho. A água era preta como piche e fervia: blub, blub, blub! Lá dentro nadavam cobras e lagartos de cara amarrada. De repente, uma voz saiu do fundo da água: "Ó cavaleiro! Se você tem coragem, pule no meio deste lago. Lá embaixo estão as maravilhas dos castelos das sete {{FADAS|FA • DAS|🧚}}!"
 
                     — E ele pulou? — perguntou Sancho, de olhos arregalados. — Pulou! — respondeu Dom Quixote. — Pensou na sua dama, fechou os olhos e... tchibum! Mas a água não queimou nem um pouquinho. Quando ele abriu os olhos, estava num campo cheio de flores, debaixo de um céu azulzinho, com passarinhos cantando por toda parte.
 
-                    — Ali corria um riacho de água transparente como {{CRISTAL|CRIS • TAL|💎}}, com areia de ouro no fundo, cheio de tesouros. E lá adiante brilhava um {{CASTELO|CAS • TE • LO|🏰}} de paredes de ouro e torres de diamante! As portas se abriram, e as fadas vieram receber o cavaleiro com música e flores. Lá dentro, esperava por ele um banquete com mais comida do que cabe numa história!
+                    — Ali corria um riacho de água transparente como {{CRISTAL|CRIS • TAL|💎}}, com areia de ouro no fundo e pedrinhas brancas que pareciam pérolas. E lá adiante brilhava um {{CASTELO|CAS • TE • LO|🏰}} de paredes de ouro e torres de diamante! As portas se abriram, e as fadas vieram receber o cavaleiro com música e flores. Lá dentro, esperava por ele um banquete com mais comida do que cabe numa história!
 
                     — Banquete? — Sancho lambeu os beiços. — Pois eu, se encontrasse esse lago, pulava de cabeça! Todos riram, e Dom Quixote também: — Pois é isso que os livros ensinam, Sancho. Quem tem coragem de pular no meio do medo encontra, do outro lado, um mundo cheio de maravilhas!`,
                 cena: {
@@ -243,24 +242,6 @@
                     real: 'p6-real.webp', emoji: '🏰',
                     alt: 'Debaixo do carvalho, Dom Quixote conta uma história aos amigos; no balão, o cavaleiro chega ao castelo de ouro das fadas, num campo de flores com um riacho de cristal',
                     legendaReal: '📖 A História do Cavaleiro do Lago',
-                    camadas: [
-                        // os tesouros aparecem na areia de ouro do riacho, dentro do balão da história
-                        { id: 'concha', src: 'camadas/p6-concha.webp', emoji: '🐚', item: 'concha', x: 73, y: 66, w: 4 },
-                        { id: 'perola', src: 'camadas/p6-perolas.webp', emoji: '⚪', item: 'perola', x: 79, y: 66, w: 4.5 },
-                        { id: 'peixinho', src: 'camadas/p6-peixinhos.webp', emoji: '🐠', item: 'peixinho', x: 87, y: 65, w: 7 }
-                    ],
-                    cartoes: {
-                        tipo: 'contagem',
-                        sequencia: ['concha', 'perola', 'peixinho'],
-                        falas: [
-                            'Uma concha de ouro!',
-                            'Duas pérolas que brilham!',
-                            'Três peixinhos de prata!'
-                        ],
-                        itens: [
-                            { id: 'contar', palavra: 'CONTAR OS TESOUROS', emoji: '💎', borda: 'border-teal-500' }
-                        ]
-                    },
                     hotspots: [
                         { x: 22, y: 28, w: 18, h: 62, palavra: 'DOM QUIXOTE', emoji: '🛡️' },
                         { x: 10, y: 48, w: 12, h: 42, palavra: 'SANCHO', emoji: '🫏' },

@@ -121,8 +121,7 @@ Peaceful, sunny, friendly.`
             prompt: `ONE terracotta clay water jug (a Spanish "botijo" with a handle and a little spout), with drops of fresh water on it, and a small clay cup next to it, seen slightly from above, with a small soft contact shadow. Paint only the jug and the cup.`
         },
 
-        // ---------------- Pág. 6 · Cap. 28: o Lago de Cristal (contagem: concha, pérolas, peixinhos) ----------------
-        // ---------------- Pág. 6 · Cap. 28: o Cavaleiro do Lago (contagem: concha, pérolas, peixinhos) ----------------
+        // ---------------- Pág. 6 · Cap. 28: o Cavaleiro do Lago (página calma: a contagem dos tesouros saiu na fase 5) ----------------
         // Refeito na revisão da fase 5: a história é a de Cervantes (I-50), e a imaginação fica só no balão.
         {
             id: 'p6-real', destino: `${P4}/p6-real.png`,
@@ -132,23 +131,8 @@ REPAINT ONLY THE INSIDE OF THE STORY BALLOON: the tale of the Knight of the Lake
 - a sunny field full of colourful flowers under a clear blue sky, with little birds flying;
 - on the right side of the balloon, a fairytale CASTLE with walls of gleaming gold and towers and battlements of sparkling diamonds, its gate wide open; three smiling FAIRIES (long pastel dresses, little translucent wings, crowns of flowers) come out of the gate to welcome the knight with flowers;
 - on the left side of the balloon, a young KNIGHT in shining silver armour with a blue plume walks toward the castle, amazed, a few water drops still glittering on him;
-- the LOWER THIRD of the balloon is a crystal-clear brook running across the whole balloon over a bed of GOLDEN SAND. This golden sand stays EMPTY: no shells, no pearls, no fish on it (the book adds them).
+- the LOWER THIRD of the balloon is a crystal-clear brook running across the whole balloon over a bed of GOLDEN SAND. (The shells, pearls and fish of the old counting activity are gone: the sand may have little white pebbles.)
 Dreamy, luminous and enchanting, never dark or scary.`
-        },
-        {
-            id: 'p6-concha', destino: `${P4}/camadas/p6-concha.png`, camada: true,
-            proporcao: '1:1', tamanho: '512', refs: [`${P2}/camadas/p6-balao-historia.webp`],
-            prompt: `ONE golden scallop seashell, gleaming like gold, with a few tiny sparkles around it. Paint only the shell and the sparkles.`
-        },
-        {
-            id: 'p6-perolas', destino: `${P4}/camadas/p6-perolas.png`, camada: true,
-            proporcao: '1:1', tamanho: '512', refs: [`${P2}/camadas/p6-balao-historia.webp`],
-            prompt: `TWO round shining pearls side by side, creamy ivory white with soft golden and light blue highlights, each with a tiny white sparkle. Exactly two pearls. Paint only the two pearls and their sparkles.`
-        },
-        {
-            id: 'p6-peixinhos', destino: `${P4}/camadas/p6-peixinhos.png`, camada: true,
-            proporcao: '4:3', tamanho: '512', refs: [`${P2}/camadas/p6-balao-historia.webp`],
-            prompt: `THREE cute little silver fish with shimmering silver-blue scales and friendly eyes, swimming together in a small happy group toward the RIGHT, with a few tiny air bubbles. Exactly three fish. Paint only the three fish and the bubbles.`
         },
 
         // ---------------- Pág. 7 · Cap. 29: a cabra fujona ----------------
