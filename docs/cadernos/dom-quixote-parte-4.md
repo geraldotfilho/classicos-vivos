@@ -127,3 +127,15 @@ Variedade rica de 5 mecânicas pedagógicas sem repetição:
   10. **Cap. 30 (A Romaria)**: Construído o drama da estiagem, a tensão de Dom Quixote com a lança, Sancho esclarecendo a cantiga de chuva e a celebração alegre com a chuva fresca e as crianças.
   11. **Cap. 31 (Teresa e Sancho)**: Resgate fiel de Cervantes (I, cap. 52): o alívio pelo burrico ("veio melhor que o dono!"), a cobrança bem-humorada dos vestidos e da ilha prometida na Parte 1, e Sancho reafirmando com orgulho sua honra de escudeiro.
   12. **Cap. 32 (O Fim do Volume 1)**: Fechamento clássico e emocionante de Cervantes: o repouso sereno do fidalgo em seu quarto arrumadinho, a palavra de honra cumprida, a lua cheia e as histórias que começam a nascer nos livros do mundo.
+
+- **2026-10-25 (Refinamentos Literários e Pedagógicos)**: Humano orientou:
+  1. **Cap. 25 (Exploração sem Spoilers)**: Não dar a resposta pronta da palavra mágica `AMIGO` na instrução nem na faixa vazia; deixar a criança explorar e descobrir sozinha o segredo de 5 letras.
+  2. **Cap. 25 & 26 (Ponto de Vista de Sancho)**: A explicação de que Sancho não participou da farsa dos lençóis foi antecipada para o Cap. 25, quando o plano é montado em segredo, tornando a abordagem no Cap. 26 fluida e natural.
+  3. **Cap. 28 (História do Lago de Cristal)**:
+     - Referência corrigida para "velhos livros de cavalaria que ele tanto amava ler" (pois ainda não existia livro sobre Dom Quixote publicado na história).
+     - Remoção de asteriscos na narração.
+     - Motivação do cavaleiro clarified: mergulhar para salvar uma luz dourada pedindo socorro no fundo das águas (a coragem de ajudar quem precisa).
+     - Adequação à infância: substituição das donzelas por criaturas marinhas encantadas, conchas e peixinhos prateados.
+  4. **Cap. 30 (Fidelidade a Cervantes e Realismo vs Imaginação)**:
+     - Eliminação da chuva mágica instantânea (que soava artificial e quebrava o contraste realista de Cervantes).
+     - Retomada do episódio canônico de Cervantes (I, cap. 52): procissão real de preces contra a seca; Sancho intervém com amor para evitar o ataque; Dom Quixote reconhece os lavradores vizinhos e se curva com profunda humildade diante da labuta do campo, sendo acolhido com água e flores.

@@ -16,8 +16,8 @@
     - Caderno: [docs/cadernos/dom-quixote-parte-4.md](cadernos/dom-quixote-parte-4.md).
     - 10 capítulos (Capítulos 23 a 32) + Capa = 11 páginas, cobrindo com calma e riqueza narrativa o retorno e o fim do volume de 1605.
     - **Quadro de atividades separado (`.quadro-atividade`)**: comandos de atividade desvinculados do texto narrativo, com botão 🔊 próprio (leitura opcional; a narração automática da página não os lê).
-    - 5 atividades ricas e variadas sem repetição: sílabas (`BACIELMO`), forca adaptada/palavra secreta (`AMIGO`), vocabulário do piquenique (`PÃO`, `QUEIJO`, `ÁGUA`), contagem poética dos tesouros do lago e ordem de frase (`SANCHO GOVERNADOR DA ILHA`).
-    - Narrativa aprofundada: a lógica de Sancho e a palavra de honra de Dom Quixote (Cap. 26); a lenda do Lago de Cristal (Cap. 28); o humor da cabrinha Manchadinha (Cap. 29); a romaria da seca e a chuva benfazeja (Cap. 30); o diálogo clássico de Teresa Pança e a cobrança da ilha (Cap. 31); e o fechamento nobre e emocionante de Cervantes com o fidalgo em seu leito sereno (Cap. 32).
+    - 5 atividades ricas e variadas sem repetição: sílabas (`BACIELMO`), descoberta da palavra secreta sem spoilers (Cap. 25), vocabulário do piquenique (`PÃO`, `QUEIJO`, `ÁGUA`), contagem poética dos tesouros do lago e ordem de frase (`SANCHO GOVERNADOR DA ILHA`).
+    - Narrativa aprofundada: a lógica de Sancho e a palavra de honra de Dom Quixote (Cap. 26); a lenda do Lago de Cristal (Cap. 28); o humor da cabrinha Manchadinha (Cap. 29); a romaria dos lavradores da terra sem chuva mágica e com respeito à labuta do campo (Cap. 30); o diálogo clássico de Teresa Pança e a cobrança da ilha (Cap. 31); e o fechamento nobre e emocionante de Cervantes com o fidalgo em seu leito sereno (Cap. 32).
     - Testado em Playwright (Chromium) nas duas orientações (800×1280 e 1280×800) com zero erros de script e de carregamento.
 - **Gasto da API nesta sessão**: **US$ 0,00** (sem uso de API paga). Gasto acumulado de outubro: **US$ 3,64** (≈ R$ 20).
 
