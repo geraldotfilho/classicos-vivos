@@ -8,7 +8,7 @@ Leia este arquivo primeiro numa sessão nova do Claude. Depois, `AGENTS.md` (arq
 
 ## 0. Atualização de 2026-10-25: texto mais simples nas Partes 2–4
 - A pedido do humano (leu a Parte 2 com o filho de 6 anos), o Claude reescreveu as Partes 2, 3 e 4 em linguagem mais simples (regra em AGENTS.md §3.5), e agentes refizeram as traduções en/fr/es no mesmo tom.
-- **A narração gravada em português das Partes 2–4 ficou desatualizada** e saiu do `paginas.json` (o livro usa a voz do aparelho nessas páginas). Regravar só com autorização do humano: BACKLOG A-12 (roteiros prontos, ~US$ 0,22).
+- Com autorização do humano, a narração em português das Partes 2–4 foi **regravada no texto novo** (US$ 0,24). As narrações en/fr/es das Partes 2–4 ainda não existem (só a Parte 1).
 
 ## Atualização de 2026-10-24, noite: Dom Quixote todo ilustrado
 - Com autorização do humano, o Claude gerou pela API **as Partes 3 e 4 inteiras** (33 cenas + 10 camadas, US$ 1,60), com a bíblia da Imaginação desde o início. Método e lições: `ARTE-PELA-API.md` §5. **Não falta nenhuma ilustração em Dom Quixote.**

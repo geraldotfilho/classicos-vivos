@@ -32,3 +32,6 @@ data,comando,pedidos_voz,tokens_audio,tokens_qa,usd_estimado
 2026-10-25T07:21,"--voz narracao --idioma fr --amostra --autorizado",1,148,0,0.0007
 2026-10-25T07:24,"--voz palavras --idioma es --parte 1 --autorizado",2,2641,0,0.0120
 2026-10-25T07:24,"--voz narracao --idioma es --amostra --autorizado",1,158,0,0.0007
+2026-10-25T10:04,"--voz narracao --parte 3 --pagina-inteira --autorizado --paralelo 3",16,15222,0,0.0695
+2026-10-25T10:05,"--voz narracao --parte 4 --pagina-inteira --autorizado --paralelo 3",14,17858,0,0.0816
+2026-10-25T10:06,"--voz narracao --parte 2 --pagina-inteira --autorizado --paralelo 3",17,19482,0,0.0890
