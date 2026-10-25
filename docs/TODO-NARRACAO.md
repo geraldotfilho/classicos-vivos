@@ -1,5 +1,7 @@
 # 🎙️ TODO — Narração Gravada dos Livros (Claude + API de voz do Gemini)
 
+> 🧭 **Como ler este arquivo (2026-10-25).** Para gravar hoje, leia: as **Decisões do humano** (logo abaixo), a **§5** (pronúncia dos nomes) e a **§8** (execução pela API, com `tools/gravar-narracao.mjs`). As §0 a §4, §6, §7 e §9 são o **plano original** (2026-10-23) e o estado de 24/10, guardados como registro. Onde conflitam com as decisões, **valem as decisões**: uma voz só no livro (a pasta `narracao`, com narradora + personagens; as pastas `narradora` e `teatro` não existem), **página inteira** num pedido só, conferência **local** pelo Whisper (nunca transcrição pela API, `AGENTS.md` §2.7) e o arquivo `paginas.json` com os tempos das frases. Vale para qualquer agente que faça a narração. O lugar da narração no processo é a fase 6 da receita geral (`docs/RECEITA-CLASSICO-VIVO.md` §5).
+
 O livro já sabe tocar narração gravada **frase por frase**, com o destaque da frase lida sincronizado e a **voz do aparelho como reserva** para qualquer frase ainda não gravada. Falta gravar. Este documento diz exatamente o quê, com qual voz e onde salvar.
 
 > 👤 **Quem faz**: o **Claude**, chamando a API do Gemini (chave num segredo de rede do ambiente) numa sessão própria, **em paralelo** à arte, que segue com o agente Gemini. Decisão do responsável humano em 2026-10-23. Pedido **P-006**. A execução pela API está na seção 8; o ponto de partida, em [`RETOMADA.md`](RETOMADA.md).
@@ -41,7 +43,7 @@ e cada palavra-chave traz:
 { "slug": "estrelas", "palavra": "ESTRELAS", "silabas": "ES • TRE • LAS", "fala": "es... tre... las... estrelas!", "hash": "..." }
 ```
 
-**Saídas** (`dom-quixote/audio/**`, dono: Claude):
+**Saídas** (`dom-quixote/audio/**`):
 ```text
 dom-quixote/audio/
 ├── vozes.js                          # acrescente a parte em `partes` quando ela estiver completa
@@ -117,7 +119,7 @@ dom-quixote/audio/
 Se o modelo errar um nome, reescreva só aquele trecho foneticamente no pedido (ex.: "Kixóte"), sem mudar o arquivo de frases.
 
 ## 6. Controle de qualidade (obrigatório antes de cada entrega)
-1. **Transcreva** cada áudio gerado (fala → texto, com o próprio Gemini) e compare com o campo `fala`: as palavras precisam bater (diferenças só de pontuação). Regrave o que divergir.
+1. **Transcreva** cada áudio gerado (fala → texto, **localmente, com o Whisper**: `tools/transcrever.py`; a transcrição pela API foi proibida pelo humano) e compare com o campo `fala`: as palavras precisam bater (diferenças só de pontuação). Regrave o que divergir.
 2. **Duração** (sem o silêncio das pontas): entre 0,5 s e 25 s por frase; palavras-chave entre 1 s e 12 s.
 3. **Ouça** (ou analise) as frases com nomes da tabela da seção 5 e as frases de diálogo.
 4. Grave `indice.json` em cada pasta (`{ "p2-s5": "<hash>" }`) com o `hash` da frase no momento da gravação. Quando o texto do livro mudar, o Claude regenera os JSON: compare os hashes e **regrave só o que mudou**.

@@ -137,9 +137,22 @@
                         <strong>Parte 4: A Jaula Encantada e a Ilha de Sancho</strong>: a volta para casa, o cavalo voador Clavilenho,
                         Sancho governador e o mistério da bengala, e o reencontro de Alonso Quixano com as histórias.
                     </p>
-                    <p class="text-sm font-semibold text-emerald-800" data-i18n="todasIlustradas">As 4 partes de Dom Quixote estão totalmente ilustradas e interativas!</p>
+                    <p class="text-sm font-semibold text-emerald-800" data-i18n="todasIlustradas">O primeiro volume de Dom Quixote (Partes 1 a 4) está todo ilustrado e interativo. O segundo volume está em produção.</p>
                 </div>
             </div>
+        </section>
+
+        <!-- Livros em produção: a chave (lembrada no aparelho, cv-rascunhos) mostra a lista de assets/js/acervo.js;
+             os rascunhos só se abrem por aqui. Na estante das crianças eles aparecem só como teaser com cadeado. -->
+        <section id="secao-rascunhos" class="space-y-3">
+            <h2 class="font-display font-bold text-2xl text-amber-900" data-i18n="rascunhosTitulo">Livros em produção</h2>
+            <p class="text-sm font-semibold leading-relaxed" data-i18n="rascunhosIntro">Na estante, os livros em produção aparecem com um cadeado. Para ler os rascunhos (por exemplo, para revisar o texto antes da publicação), ligue a chave abaixo. Rascunhos podem ter texto provisório e ilustrações a caminho.</p>
+            <label class="inline-flex items-center gap-3 cursor-pointer select-none bg-amber-50 border-2 border-amber-300 rounded-2xl px-4 py-2.5 min-h-[48px]">
+                <input id="chave-rascunhos" type="checkbox" class="peer sr-only">
+                <span class="relative w-12 h-7 rounded-full bg-slate-300 peer-checked:bg-emerald-500 transition-colors after:content-[''] after:absolute after:top-1 after:left-1 after:w-5 after:h-5 after:rounded-full after:bg-white after:shadow after:transition-transform peer-checked:after:translate-x-5" aria-hidden="true"></span>
+                <span class="font-display font-semibold text-amber-950" data-i18n="rascunhosToggle">Mostrar os rascunhos</span>
+            </label>
+            <ul id="lista-rascunhos" class="hidden space-y-2"></ul>
         </section>
 
         <section class="space-y-3">
@@ -161,6 +174,7 @@
 
     </main>
 
+    <script src="./assets/js/acervo.js"></script>
     <script src="./assets/js/i18n-site.js"></script>
 </body>
 </html>

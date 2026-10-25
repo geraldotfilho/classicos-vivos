@@ -2,7 +2,7 @@
 
 > **Grandes histórias da humanidade reimaginadas para pequenos leitores.**
 
-O **Clássicos Vivos** é uma biblioteca aberta de livros digitais interativos que adapta grandes obras da literatura mundial para crianças em fase de alfabetização (a partir de 6 anos). 
+O **Clássicos Vivos** é uma biblioteca aberta de livros digitais interativos que adapta grandes obras da literatura mundial para crianças em fase de alfabetização (5 a 8 anos), com fidelidade ao espírito da obra e cuidado com a proteção da infância.
 
 Cada livro é construído como uma aplicação web leve e autônoma (HTML5, CSS3, Web Audio e Web Speech API), pensada especialmente para leitura em **tablets**, sem depender de servidores externos ou instalações complexas.
 
@@ -21,7 +21,8 @@ Cada livro é construído como uma aplicação web leve e autônoma (HTML5, CSS3
 
 | Obra | Autor Original | Status | Capítulos Disponíveis |
 | :--- | :--- | :--- | :--- |
-| 🛡️ **Dom Quixote de La Mancha** | Miguel de Cervantes | 📝 Texto completo · 🎨 ilustrações das Partes 2–4 em produção | [Parte 1](./dom-quixote/parte-1.html) · [Parte 2](./dom-quixote/parte-2.html) · [Parte 3](./dom-quixote/parte-3.html) · [Parte 4](./dom-quixote/parte-4.html) |
+| 🛡️ **Dom Quixote de La Mancha** · primeiro volume (1605) | Miguel de Cervantes | ✅ Partes 1–3 ilustradas, narradas e traduzidas (en, fr, es) · 🔁 Parte 4 sendo refeita | [Parte 1](./dom-quixote/parte-1.html) · [Parte 2](./dom-quixote/parte-2.html) · [Parte 3](./dom-quixote/parte-3.html) · [Parte 4](./dom-quixote/parte-4.html) |
+| 🛡️ **Dom Quixote de La Mancha** · segundo volume (1615) | Miguel de Cervantes | 🚧 Partes 5–7 em produção | — |
 
 ---
 
@@ -40,7 +41,11 @@ npm run build        # regenera CSS (Tailwind), fontes, ícones e o service work
 npm run build:images # converte novas ilustrações JPG/PNG para WebP
 ```
 
-Arquitetura, regras pedagógicas e fluxo de ilustração: [`AGENTS.md`](AGENTS.md). Cada livro é só configuração sobre o motor comum [`assets/js/livro.js`](assets/js/livro.js). Próximos passos: [`docs/BACKLOG.md`](docs/BACKLOG.md) e [`docs/TODO-NANO-BANANA.md`](docs/TODO-NANO-BANANA.md).
+Cada livro é só configuração sobre o motor comum [`assets/js/livro.js`](assets/js/livro.js).
+
+- **Agentes de IA e pessoas que vão trabalhar no projeto**: comecem por [`docs/RETOMADA.md`](docs/RETOMADA.md) (onde o trabalho parou) e [`AGENTS.md`](AGENTS.md) (filosofia, arquitetura, regras e ordem de leitura, §0).
+- **Como se cria um livro**: a receita geral [`docs/RECEITA-CLASSICO-VIVO.md`](docs/RECEITA-CLASSICO-VIVO.md) e as receitas específicas de cada obra em [`docs/receitas/`](docs/receitas/).
+- **Pendências e histórico**: [`docs/BACKLOG.md`](docs/BACKLOG.md) e [`docs/HISTORICO.md`](docs/HISTORICO.md).
 
 ---
 

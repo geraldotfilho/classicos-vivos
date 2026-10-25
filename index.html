@@ -95,6 +95,19 @@
         }
         .play-pulse { animation: playPulse 1.8s ease-in-out infinite; }
 
+        /* Livro em produção: capa-teaser apagada, com cadeado (sem balanço, para não convidar como os prontos) */
+        .book-teaser {
+            display: block;
+            padding: 0;
+            border: 0;
+            background: none;
+            cursor: pointer;
+            transform-origin: bottom center;
+            transition: transform 0.2s ease;
+            filter: saturate(0.6);
+        }
+        .book-teaser:active { transform: scale(0.96); }
+
         /* Bandeirinhas dos idiomas */
         .btn-idioma {
             width: 34px;
@@ -203,22 +216,11 @@
             </div>
         </section>
 
-        <!-- Prateleira 2: os próximos clássicos da coleção -->
-        <section id="shelf-em-breve" class="shelf" aria-label="Livros em breve">
-            <div class="flex flex-wrap items-end justify-center gap-5 sm:gap-8">
-                <div class="w-28 sm:w-36 opacity-70 item-em-breve" aria-label="Novo clássico: em breve">
-                    <div class="book-cover aspect-[3/4] rounded-r-2xl rounded-l-md border-4 border-dashed border-indigo-300/60 bg-indigo-900/60 flex flex-col items-center justify-center gap-1 text-indigo-100">
-                        <span class="text-4xl" aria-hidden="true">🔒</span>
-                        <span class="font-display font-bold text-lg badge-em-breve">Em breve</span>
-                    </div>
-                </div>
-                <div class="w-28 sm:w-36 opacity-70 item-em-breve" aria-label="Novo clássico: em breve">
-                    <div class="book-cover aspect-[3/4] rounded-r-2xl rounded-l-md border-4 border-dashed border-indigo-300/60 bg-indigo-900/60 flex flex-col items-center justify-center gap-1 text-indigo-100">
-                        <span class="text-4xl" aria-hidden="true">🔒</span>
-                        <span class="font-display font-bold text-lg badge-em-breve">Em breve</span>
-                    </div>
-                </div>
-            </div>
+        <!-- Prateleira 2: Dom Quixote, segundo volume (1615). As capas-teaser com cadeado vêm de
+             assets/js/acervo.js (obras em produção); ao tocar, um aviso diz que o livro está sendo feito.
+             Só entra na estante o que já é rascunho ou está na fila para virar rascunho em breve. -->
+        <section id="shelf-quixote-2" class="shelf hidden" data-estante-producao aria-label="Dom Quixote, segundo volume">
+            <div class="fila-capas flex flex-wrap items-end justify-center gap-3 sm:gap-6"></div>
         </section>
 
     </main>
@@ -242,6 +244,7 @@
             }
         });
     </script>
+    <script src="./assets/js/acervo.js"></script>
     <script src="./assets/js/i18n-site.js"></script>
 </body>
 </html>

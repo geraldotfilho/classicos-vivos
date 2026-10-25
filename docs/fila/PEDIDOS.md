@@ -1,9 +1,11 @@
-# 📬 Fila de Trabalho — PEDIDOS e REVISÕES (escrito só pelo Claude)
+# 📬 Fila de Trabalho — PEDIDOS e REVISÕES (encerrada)
 
-Canal entre o **Claude** (código, texto, revisão e **narração gravada** via API) e o **Gemini** (ilustrações com o Nano-Banana), para trabalharem sem supervisão enquanto o responsável humano está longe.
+> 🛑 **Fila encerrada em 2026-10-25**, quando o humano confirmou que os papéis fixos tinham acabado. Ela existia quando o Claude escrevia e o Gemini desenhava. Todas as tarefas foram concluídas (a maior parte da arte pela API); o último pedido adiado (P-005, acabamento das camadas da pousada) virou o item **M-14** do `docs/BACKLOG.md`. Hoje **qualquer agente pode receber qualquer tarefa**, inclusive a arte (`AGENTS.md` §0.3), e a coordenação entre agentes em paralelo é feita pelo Git (mesclar a `main` antes de entregar, `AGENTS.md` §6) e pelos cadernos das partes. A tabela de donos de arquivos abaixo **não vale mais**. Este arquivo e o `ENTREGAS.md` ficam como registro.
+
+Canal entre o **Claude** (código, texto, revisão e **narração gravada** via API) e o **Gemini** (ilustrações com o Nano-Banana no Antigravity), para trabalharem sem supervisão enquanto o responsável humano está longe.
 
 ```text
-ESTADO: ATIVO
+ESTADO: PARAR
 ```
 > Para encerrar o ciclo, o humano (ou o Claude, a pedido dele) troca a linha acima para `ESTADO: PARAR`. Ao ver `PARAR` no próximo `git pull`, o Gemini termina a tarefa em andamento, entrega e **para de monitorar**.
 
@@ -15,7 +17,7 @@ ESTADO: ATIVO
    | :--- | :--- |
    | `docs/fila/PEDIDOS.md` (este) | Claude |
    | `docs/fila/ENTREGAS.md` | Gemini |
-   | `docs/TODO-NANO-BANANA*.md`, `AGENTS.md`, `docs/BACKLOG.md`, `docs/PLANO-*.md`, todo HTML/JS/CSS | Claude |
+   | `docs/TODO-NANO-BANANA*.md`, `AGENTS.md`, `docs/BACKLOG.md`, `docs/HISTORICO.md`, `docs/RETOMADA.md`, `docs/PLANO-*.md`, `docs/RECEITA-CLASSICO-VIVO.md`, `docs/receitas/**`, `docs/cadernos/**`, todo HTML/JS/CSS | Claude |
    | `dom-quixote/imagens/**`, `assets/icones/**`, `dom-quixote/biblioteca/**` (inclui `CATALOGO.md`), `dom-quixote/PROMPTS_ILUSTRACOES.md` | Gemini |
    | `dom-quixote/audio/**` (narração gravada, inclui `vozes.js`) | Claude (desde 2026-10-23) |
    | `docs/narracao/**` (lista de frases, gerada por `npm run exportar:frases`) e `docs/TODO-NARRACAO.md` | Claude |
@@ -32,17 +34,24 @@ ESTADO: ATIVO
 
 | ID | Tipo | Pedido | Status |
 | :--- | :--- | :--- | :--- |
-| P-001 | tarefa | Executar **todas** as tarefas de `docs/TODO-NANO-BANANA.md` (NB-1 a NB-8), na ordem de prioridade do arquivo | ABERTO |
+| P-001 | tarefa | Executar **todas** as tarefas de `docs/TODO-NANO-BANANA.md` (NB-1 a NB-8), na ordem de prioridade do arquivo | ✅ CONCLUÍDO (2026-10-24) |
 | P-002 | tarefa | Executar **todas** as tarefas de `docs/TODO-NANO-BANANA-PARTES-2-4.md` (Parte 2 → Parte 3 → Parte 4), depois de P-001 | ✅ CONCLUÍDO (Parte 2, páginas 0–3: Gemini; o resto: Claude pela API, 2026-10-24) |
 | P-003 | ajuste | **NB-2 (pousada), camadas com cara de adesivo**. Regerar **mantendo o mesmo tamanho de tela (canvas), o mesmo enquadramento e o mesmo ponto de apoio** de cada arquivo, porque o código já posiciona essas camadas: (1) `p4-estalajadeiro-acenando` e `p4-estalajadeiro-sopa`: a sombra de contato é uma **mancha branca/cinza-clara**; troque por uma sombra **escura, marrom-acinzentada, suave e semitransparente**, e deixe o avental **100% opaco** (hoje ~4% dos pixels claros têm alfa parcial: a remoção do fundo branco comeu o avental); (2) `p4-porquinhos`: mesma troca da sombra branca por sombra escura suave; (3) `p4-pastor-parado` e `p4-pastor-tocando`: **sem o tapete de grama recortado** sob o menino; só o menino sentado com uma sombra escura suave; (4) `p4-notas-musicais`: **sem o contorno/halo branco**; um brilho dourado suave é bem-vindo. Teste: componha cada camada sobre um fundo magenta puro, e nada branco pode aparecer em volta. | PARCIAL → substituído por P-005 |
 | P-004 | tarefa | **Limpeza (baixa prioridade, depois de P-003)**: apagar os arquivos substituídos pelas camadas e que o livro não carrega mais: `dom-quixote/imagens/p4-real.webp`, `p4-real-flauta.webp`, `p4-real-sopa.webp`, `p7-real.webp` e `dom-quixote/imagens/objetos/moinho-pas.svg`. Atualizar o `CATALOGO.md`. Rodar `npm run build:sw`. | ✅ CONCLUÍDO |
-| P-005 | ajuste (adiado) | **⏸️ ADIADO: só depois que os quatro livros estiverem prontos (P-001 e P-002 concluídos), por decisão do responsável humano. NÃO faça agora.** Pousada: remover o "chão" pintado dentro das camadas** (continuação de P-003, que corrigiu o avental e as notas). O defeito que restou **não é a sombra**: o Nano-Banana pinta um **pedaço de chão claro (mancha branca/creme)** sob os pés, e o pastor vem sentado num **tapete de grama recortado**; a sombra escura nova ficou *por baixo* desse pedaço de chão. Arquivos: `p4-estalajadeiro-acenando`, `p4-estalajadeiro-sopa`, `p4-porquinhos`, `p4-pastor-parado`, `p4-pastor-tocando` (as notas estão aprovadas, não mexa). **Mesmo canvas, enquadramento e ponto de apoio.** Como fazer: (a) gere de novo pedindo explicitamente `isolated character, NO ground, NO floor patch, NO grass, NO base under the feet, feet resting on nothing except a soft dark translucent contact shadow`; ou (b) pós-processe o PNG atual: a partir das áreas já transparentes, apague (alfa 0) os pixels **claros** (R, G e B > 215) **e verdes de grama** conectados a elas, só nos **25% inferiores** do canvas, sem tocar no corpo; depois pinte uma sombra elíptica marrom-acinzentada com alfa ≤ 40% sob os pés. **Critério de aceite verificável**: sobre fundo magenta puro, nos 25% inferiores do canvas, fora da silhueta dos pés, sapatos e pernas, só aparecem magenta ou sombra escura translúcida: **nenhum pixel claro ou verde**. Inclua no `ENTREGAS.md` a contagem desses pixels (deve ser 0). | ⏸️ ADIADO |
+| P-005 | ajuste (adiado) | **⏸️ ADIADO: só depois que os quatro livros estiverem prontos (P-001 e P-002 concluídos), por decisão do responsável humano. NÃO faça agora.** Pousada: remover o "chão" pintado dentro das camadas** (continuação de P-003, que corrigiu o avental e as notas). O defeito que restou **não é a sombra**: o Nano-Banana pinta um **pedaço de chão claro (mancha branca/creme)** sob os pés, e o pastor vem sentado num **tapete de grama recortado**; a sombra escura nova ficou *por baixo* desse pedaço de chão. Arquivos: `p4-estalajadeiro-acenando`, `p4-estalajadeiro-sopa`, `p4-porquinhos`, `p4-pastor-parado`, `p4-pastor-tocando` (as notas estão aprovadas, não mexa). **Mesmo canvas, enquadramento e ponto de apoio.** Como fazer: (a) gere de novo pedindo explicitamente `isolated character, NO ground, NO floor patch, NO grass, NO base under the feet, feet resting on nothing except a soft dark translucent contact shadow`; ou (b) pós-processe o PNG atual: a partir das áreas já transparentes, apague (alfa 0) os pixels **claros** (R, G e B > 215) **e verdes de grama** conectados a elas, só nos **25% inferiores** do canvas, sem tocar no corpo; depois pinte uma sombra elíptica marrom-acinzentada com alfa ≤ 40% sob os pés. **Critério de aceite verificável**: sobre fundo magenta puro, nos 25% inferiores do canvas, fora da silhueta dos pés, sapatos e pernas, só aparecem magenta ou sombra escura translúcida: **nenhum pixel claro ou verde**. Inclua no `ENTREGAS.md` a contagem desses pixels (deve ser 0). | 🔚 movido para o BACKLOG (M-14) em 2026-10-25 |
 | P-006 | tarefa | **Narração gravada**: executar `docs/TODO-NARRACAO.md` (narradora → palavras-chave → teatro de vozes). Entradas em `docs/narracao/`; saídas em `dom-quixote/audio/`. | ✅ CONCLUÍDO pelo Claude (as 4 partes, 2026-10-24) |
 | P-007 | ajuste (urgente) | **Parte 2 renumerada: use os nomes NOVOS.** A revisão do texto abriu a Parte 2 com um capítulo novo (o tombo nos moinhos) e ela passou a ter 9 páginas (0 a 8). As páginas antigas 1–7 viraram **2–8**. A tabela e as tarefas de `docs/TODO-NANO-BANANA-PARTES-2-4.md` (Parte 2) já estão renumeradas, inclusive as camadas (`p3-bolotas`, `p4-poeira-*`, `p6-balao-historia`, `p6-cabra`, `p7-martelos`). Equivalência: a noite do carvalho agora é **`p2-imag`** (não `p1-imag`); as camadas dos pastores agora são **`p3-*`** (não `p2-*`). **Página nova `p1-real`/`p1-imag`** (o tombo nos moinhos): tarefa P2-1. Os arquivos já entregues foram renomeados pelo agente de texto e estão certos (`p2-real` = noite do carvalho, `p3-real` = pastores). | ✅ CONCLUÍDO |
 
 ---
 
 ## Revisões do Claude
+
+### 2026-10-25 — fila encerrada (Claude, a pedido do humano)
+- `ESTADO: PARAR`. Nenhuma tarefa aberta. P-005 → BACKLOG M-14. Os papéis fixos (Claude escreve, Gemini desenha) foram superados: ver `AGENTS.md` §0.3.
+
+### 2026-10-25 — correção de rumo de Dom Quixote (Claude)
+- O humano aprovou as Partes 1–3 e reprovou a Parte 4 (apressada). A nova Parte 4 fecha o volume de 1605, e as Partes 5–7 contam o de 1615: `docs/PLANO-DOM-QUIXOTE-PARTES-4-7.md`. Processo: `docs/RECEITA-CLASSICO-VIVO.md` (geral) e `docs/receitas/DOM-QUIXOTE.md` (específica).
+- Exceção de dono, a pedido do humano (revisão de todos os documentos): o Claude atualizou uma linha de `dom-quixote/PROMPTS_ILUSTRACOES.md` (de onde vêm os pedidos de arte agora).
 
 ### 2026-10-24 16:30 UTC — Partes 3 e 4 concluídas pelo Claude, pela API → P-002 concluído
 - Com autorização do humano, o Claude gerou as **Partes 3 e 4 inteiras** (33 cenas + 10 camadas, US$ 1,60), já integradas e testadas. Prompts em `tools/arte/dom-quixote-parte-3.mjs` e `-parte-4.mjs`; lições em `docs/ARTE-PELA-API.md` §5. **Dom Quixote está todo ilustrado.**

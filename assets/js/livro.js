@@ -48,15 +48,22 @@ function escapeHtml(text) {
 /* =====================================================================
    IDIOMAS: o português é o original (window.LIVRO); as traduções ficam em
    <livro>/traducoes/parte-N.<idioma>.js (window.TRADUCOES, ver AGENTS.md §2.8).
-   A narração gravada é só em português; nos demais idiomas lê a voz do aparelho.
+   Cada idioma pode ter a sua narração gravada (vozes.js, `idioma`); sem ela, lê a voz do aparelho.
    ===================================================================== */
 const PT = 'pt-BR';
 const PREF_IDIOMA = 'cv-idioma';
 const PREF_MAIUSCULAS = 'cv-maiusculas';
 
+/* Rascunho (`rascunho: true` no LIVRO): livro em produção, aberto só pela lista de rascunhos de sobre.html.
+   Mostra o selo "Rascunho", lê só com a voz do aparelho em português (a narração gravada e as traduções
+   da parte publicada seriam de outro texto; `?narracao=1` libera a gravação para a escuta da fase 6) e
+   guarda o progresso à parte, sem mexer no "Continuar lendo" da estante. */
+const RASCUNHO = !!LIVRO.rascunho;
+const NARRACAO_NO_RASCUNHO = RASCUNHO && new URLSearchParams(window.location.search).get('narracao') === '1';
+
 function chaveProgressoLivro() {
     const id = LIVRO.id || `${LIVRO.obra || 'livro'}-parte-${LIVRO.parte || 1}`;
-    return 'cv-progresso-' + id.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+    return 'cv-progresso-' + id.toLowerCase().replace(/[^a-z0-9]+/g, '-') + (RASCUNHO ? '-rascunho' : '');
 }
 const ICONES = LIVRO.icones || '../assets/icones/';
 
@@ -65,7 +72,7 @@ const IDIOMAS = {
         nome: 'Português', bandeira: 'br', lang: 'pt-BR', voz: 'pt-BR', vozesBoas: /luciana|francisca|thalita|felipe|antonio|daniel/,
         ui: {
             lerNesteIdioma: 'Ler em português',
-            biblioteca: 'Voltar à biblioteca', bibliotecaTitulo: 'Voltar à Biblioteca Clássicos Vivos',
+            rascunho: '📝 Rascunho', biblioteca: 'Voltar à biblioteca', bibliotecaTitulo: 'Voltar à Biblioteca Clássicos Vivos',
             parte: (n, total) => `Parte ${n} de ${total}`,
             ouvirPagina: 'Ouvir Página', pararVoz: 'Parar Voz', ouvirTitulo: 'Ouvir a página inteira (ou toque numa frase)',
             maiusculas: 'Mostrar o texto todo em LETRAS MAIÚSCULAS', minusculas: 'Mostrar o texto com letras normais',
@@ -96,7 +103,7 @@ const IDIOMAS = {
         nome: 'English', bandeira: 'gb', lang: 'en-GB', voz: 'en-GB', vozesBoas: /libby|sonia|ryan|maisie|serena|daniel|kate|arthur/,
         ui: {
             lerNesteIdioma: 'Read in English',
-            biblioteca: 'Back to the library', bibliotecaTitulo: 'Back to the Clássicos Vivos Library',
+            rascunho: '📝 Draft', biblioteca: 'Back to the library', bibliotecaTitulo: 'Back to the Clássicos Vivos Library',
             parte: (n, total) => `Part ${n} of ${total}`,
             ouvirPagina: 'Listen', pararVoz: 'Stop', ouvirTitulo: 'Listen to the whole page (or tap a sentence)',
             maiusculas: 'Show all the text in CAPITAL LETTERS', minusculas: 'Show the text in normal letters',
@@ -127,7 +134,7 @@ const IDIOMAS = {
         nome: 'Français', bandeira: 'fr', lang: 'fr-FR', voz: 'fr-FR', vozesBoas: /denise|henri|eloise|vivienne|remy|thomas|amelie|audrey/,
         ui: {
             lerNesteIdioma: 'Lire en français',
-            biblioteca: 'Retour à la bibliothèque', bibliotecaTitulo: 'Retour à la bibliothèque Clássicos Vivos',
+            rascunho: '📝 Brouillon', biblioteca: 'Retour à la bibliothèque', bibliotecaTitulo: 'Retour à la bibliothèque Clássicos Vivos',
             parte: (n, total) => `Partie ${n} sur ${total}`,
             ouvirPagina: 'Écouter', pararVoz: 'Arrêter', ouvirTitulo: 'Écouter toute la page (ou touche une phrase)',
             maiusculas: 'Afficher tout le texte en LETTRES MAJUSCULES', minusculas: 'Afficher le texte en lettres normales',
@@ -158,7 +165,7 @@ const IDIOMAS = {
         nome: 'Español', bandeira: 'es', lang: 'es-ES', voz: 'es-ES', vozesBoas: /elvira|alvaro|ximena|monica|jorge|lucia|pablo|helena/,
         ui: {
             lerNesteIdioma: 'Leer en español',
-            biblioteca: 'Volver a la biblioteca', bibliotecaTitulo: 'Volver a la Biblioteca Clássicos Vivos',
+            rascunho: '📝 Borrador', biblioteca: 'Volver a la biblioteca', bibliotecaTitulo: 'Volver a la Biblioteca Clássicos Vivos',
             parte: (n, total) => `Parte ${n} de ${total}`,
             ouvirPagina: 'Escuchar', pararVoz: 'Parar', ouvirTitulo: 'Escuchar toda la página (o toca una frase)',
             maiusculas: 'Mostrar todo el texto en LETRAS MAYÚSCULAS', minusculas: 'Mostrar el texto con letras normales',
@@ -227,6 +234,7 @@ function paginaNoIdioma(i) {
 const traducoesCarregando = {};
 function carregarTraducao(codigo) {
     if (codigo === PT || (window.TRADUCOES || {})[codigo]) return Promise.resolve();
+    if (RASCUNHO) return Promise.reject(new Error('rascunho: só em português'));
     if (!traducoesCarregando[codigo]) {
         traducoesCarregando[codigo] = new Promise((resolve, reject) => {
             const script = document.createElement('script');
@@ -528,6 +536,7 @@ function montarLivro() {
                 <div class="min-w-0">
                     <div class="flex items-center gap-1.5">
                         <span id="parte-rotulo" class="text-[10px] sm:text-[11px] font-extrabold uppercase tracking-wider bg-amber-300 text-amber-950 px-2 py-0.5 rounded-full shrink-0">${escapeHtml(rotuloDaParte())}</span>
+                        ${RASCUNHO ? `<span class="text-[10px] sm:text-[11px] font-extrabold uppercase tracking-wider bg-rose-500 text-white px-2 py-0.5 rounded-full shrink-0" data-ui="rascunho">${escapeHtml(ui('rascunho'))}</span>` : ''}
                         <span class="hidden lg:inline text-xs font-bold text-amber-800 truncate">${escapeHtml(LIVRO.autor || '')}</span>
                     </div>
                     <h1 id="titulo-obra" class="text-xs sm:text-lg font-display font-bold text-amber-950 leading-tight truncate">${escapeHtml(obraNoIdioma())}</h1>
@@ -639,6 +648,7 @@ if ('speechSynthesis' in window && window.speechSynthesis.onvoiceschanged !== un
 /* Narrações gravadas declaradas em <livro>/audio/vozes.js (window.VOZES_GRAVADAS), só as do idioma atual
    (`idioma` no vozes.js; sem ele, português) */
 function vozesGravadas() {
+    if (RASCUNHO && !NARRACAO_NO_RASCUNHO) return [];
     return (Array.isArray(window.VOZES_GRAVADAS) ? window.VOZES_GRAVADAS : []).filter(v => (v.idioma || PT) === idioma);
 }
 
@@ -2040,7 +2050,7 @@ function reiniciarLivro() {
         reiniciarPagina(i, { silencioso: true });
     }
     salvarPreferencia(chaveProgressoLivro(), '0');
-    try {
+    if (!RASCUNHO) try {
         const ultRaw = localStorage.getItem('cv-ultimo-livro');
         if (ultRaw) {
             const ult = JSON.parse(ultRaw);
@@ -2075,7 +2085,7 @@ function goToPage(index, options = {}) {
     currentPage = index;
     if (index > 0) {
         salvarPreferencia(chaveProgressoLivro(), String(index));
-        try {
+        if (!RASCUNHO) try {
             const ultimo = {
                 obra: LIVRO.obra,
                 parte: LIVRO.parte,

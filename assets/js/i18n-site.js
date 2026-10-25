@@ -27,8 +27,18 @@
             parte: (n) => `Parte ${n}`,
             lerParte: (n) => `Ler Dom Quixote, parte ${n}`,
             emBreve: 'Em breve',
-            shelfEmBreve: 'Livros em breve',
-            novoEmBreve: 'Novo clássico: em breve',
+            shelfQuixote2: 'Dom Quixote, segundo volume',
+            emProducaoAria: (n) => `Dom Quixote, parte ${n}: em produção`,
+            emProducaoTitulo: 'Este livro ainda está sendo feito!',
+            emProducaoTexto: 'Estamos escrevendo, desenhando e gravando esta parte da história. Ela vai ser liberada em breve!',
+            emProducaoOk: 'Combinado!',
+            rascunhosTitulo: 'Livros em produção',
+            rascunhosIntro: 'Na estante, os livros em produção aparecem com um cadeado. Para ler os rascunhos (por exemplo, para revisar o texto antes da publicação), ligue a chave abaixo. Rascunhos podem ter texto provisório e ilustrações a caminho.',
+            rascunhosToggle: 'Mostrar os rascunhos',
+            rascunhosVazio: 'Nenhum livro em produção no momento.',
+            situacaoRascunho: '📝 Rascunho',
+            situacaoFila: '⏳ Na fila',
+            abrirRascunho: 'Abrir',
             continuarLendo: 'Continuar lendo',
             continuarSubtitulo: (parte, pag) => `Dom Quixote · Parte ${parte} (Página ${pag})`,
             voltarBiblioteca: 'Voltar para a biblioteca',
@@ -48,7 +58,7 @@
             p2Desc: '<strong>Parte 2: Exércitos de Lã e o Elmo Encantado</strong>: a carga contra os gigantes e o tombo nos moinhos, a lança de carvalho, os pastores e a Idade de Ouro, a batalha das ovelhas, o Cavaleiro da Triste Figura, as cabras que atravessam o rio e o elmo de Mambrino.',
             p3Desc: '<strong>Parte 3: Serra Morena e a Princesa Micomicona</strong>: a mala perdida, as cambalhotas, a carta para Dulcineia, os amigos disfarçados, a princesa Micomicona, a batalha dos odres e a volta à pousada.',
             p4Desc: '<strong>Parte 4: A Jaula Encantada e a Ilha de Sancho</strong>: a volta para casa, o cavalo voador Clavilenho, Sancho governador e o mistério da bengala, e o reencontro de Alonso Quixano com as histórias.',
-            todasIlustradas: 'As 4 partes de Dom Quixote estão totalmente ilustradas e interativas!',
+            todasIlustradas: 'O primeiro volume de Dom Quixote (Partes 1 a 4) está todo ilustrado e interativo. O segundo volume está em produção.',
             comoUsarTitulo: 'Como usar no tablet',
             comoUsarItens: [
                 'Funciona <strong>sem internet</strong>: depois da primeira visita, o navegador guarda os livros. No Chrome Android, use <em>"Adicionar à tela inicial"</em> para abrir como aplicativo, em tela cheia.',
@@ -79,8 +89,18 @@
             parte: (n) => `Part ${n}`,
             lerParte: (n) => `Read Don Quixote, part ${n}`,
             emBreve: 'Coming soon',
-            shelfEmBreve: 'Coming soon books',
-            novoEmBreve: 'New classic: coming soon',
+            shelfQuixote2: 'Don Quixote, second volume',
+            emProducaoAria: (n) => `Don Quixote, part ${n}: being made`,
+            emProducaoTitulo: 'This book is still being made!',
+            emProducaoTexto: 'We are writing, drawing and recording this part of the story. It will be ready soon!',
+            emProducaoOk: 'OK!',
+            rascunhosTitulo: 'Books in progress',
+            rascunhosIntro: 'On the shelf, books in progress show a padlock. To read the drafts (for example, to review the text before it is published), turn on the switch below. Drafts may have provisional text and illustrations still on their way.',
+            rascunhosToggle: 'Show the drafts',
+            rascunhosVazio: 'No books in progress right now.',
+            situacaoRascunho: '📝 Draft',
+            situacaoFila: '⏳ Queued',
+            abrirRascunho: 'Open',
             continuarLendo: 'Continue reading',
             continuarSubtitulo: (parte, pag) => `Don Quixote · Part ${parte} (Page ${pag})`,
             voltarBiblioteca: 'Back to the library',
@@ -100,7 +120,7 @@
             p2Desc: '<strong>Part 2: Armies of Wool and the Enchanted Helmet</strong>: the charge against giants, the oak branch lance, the goatherds and the Golden Age, the battle of the sheep, the Knight of the Rueful Countenance, and the helmet of Mambrino.',
             p3Desc: '<strong>Part 3: Sierra Morena and Princess Micomicona</strong>: the lost suitcase, the acrobatics, the letter to Dulcinea, disguised friends, Princess Micomicona, and the battle of the wine skins.',
             p4Desc: '<strong>Part 4: The Enchanted Cage and Sancho\'s Island</strong>: the journey home, the wooden flying horse Clavileño, Sancho as governor and the walking stick trial, and Alonso Quixano\'s rediscovery of stories.',
-            todasIlustradas: 'All 4 parts of Don Quixote are fully illustrated and interactive!',
+            todasIlustradas: 'The first volume of Don Quixote (Parts 1 to 4) is fully illustrated and interactive. The second volume is in progress.',
             comoUsarTitulo: 'How to use on a tablet',
             comoUsarItens: [
                 'Works <strong>offline</strong>: after the first visit, the browser saves the books. In Chrome Android, tap <em>"Add to Home Screen"</em> to open as a full-screen app.',
@@ -131,8 +151,18 @@
             parte: (n) => `Partie ${n}`,
             lerParte: (n) => `Lire Don Quichotte, partie ${n}`,
             emBreve: 'Bientôt',
-            shelfEmBreve: 'Livres à venir',
-            novoEmBreve: 'Nouveau classique : bientôt',
+            shelfQuixote2: 'Don Quichotte, second volume',
+            emProducaoAria: (n) => `Don Quichotte, partie ${n} : en préparation`,
+            emProducaoTitulo: 'Ce livre est encore en préparation !',
+            emProducaoTexto: 'Nous écrivons, dessinons et enregistrons cette partie de l\'histoire. Elle sera bientôt prête !',
+            emProducaoOk: 'D\'accord !',
+            rascunhosTitulo: 'Livres en préparation',
+            rascunhosIntro: 'Sur l\'étagère, les livres en préparation ont un cadenas. Pour lire les brouillons (par exemple, pour relire le texte avant la publication), activez l\'interrupteur ci-dessous. Les brouillons peuvent avoir un texte provisoire et des illustrations à venir.',
+            rascunhosToggle: 'Afficher les brouillons',
+            rascunhosVazio: 'Aucun livre en préparation pour le moment.',
+            situacaoRascunho: '📝 Brouillon',
+            situacaoFila: '⏳ En attente',
+            abrirRascunho: 'Ouvrir',
             continuarLendo: 'Continuer la lecture',
             continuarSubtitulo: (parte, pag) => `Don Quichotte · Partie ${parte} (Page ${pag})`,
             voltarBiblioteca: 'Retour à la bibliothèque',
@@ -152,7 +182,7 @@
             p2Desc: '<strong>Partie 2 : Armées de Laine et le Casque Enchanté</strong> : la charge contre les géants, la lance de chêne, les chevriers et l\'Âge d\'or, la bataille des moutons, le Chevalier à la Triste Figure et le casque de Mambrin.',
             p3Desc: '<strong>Partie 3 : Sierra Morena et la Princesse Micomicona</strong> : la valise perdue, les cabrioles, la lettre à Dulcinée, les amis déguisés, la princesse Micomicona et la bataille des outres.',
             p4Desc: '<strong>Partie 4 : La Cage Enchantée et l\'Île de Sancho</strong> : le retour au village, le cheval volant Clavileño, Sancho gouverneur et l\'énigme du bâton, et la redécouverte des histoires par Alonso Quijano.',
-            todasIlustradas: 'Les 4 parties de Don Quichotte sont entièrement illustrées et interactives !',
+            todasIlustradas: 'Le premier volume de Don Quichotte (parties 1 à 4) est entièrement illustré et interactif. Le second volume est en préparation.',
             comoUsarTitulo: 'Comment utiliser sur tablette',
             comoUsarItens: [
                 'Fonctionne <strong>hors ligne</strong> : après la première visite, le navigateur enregistre les livres. Sur Chrome Android, touchez <em>« Ajouter à l\'écran d\'accueil »</em> pour ouvrir en plein écran.',
@@ -183,8 +213,18 @@
             parte: (n) => `Parte ${n}`,
             lerParte: (n) => `Leer Don Quijote, parte ${n}`,
             emBreve: 'Pronto',
-            shelfEmBreve: 'Libros próximamente',
-            novoEmBreve: 'Nuevo clásico: pronto',
+            shelfQuixote2: 'Don Quijote, segundo volumen',
+            emProducaoAria: (n) => `Don Quijote, parte ${n}: en preparación`,
+            emProducaoTitulo: '¡Este libro todavía se está haciendo!',
+            emProducaoTexto: 'Estamos escribiendo, dibujando y grabando esta parte de la historia. ¡Muy pronto estará lista!',
+            emProducaoOk: '¡Vale!',
+            rascunhosTitulo: 'Libros en preparación',
+            rascunhosIntro: 'En la estantería, los libros en preparación tienen un candado. Para leer los borradores (por ejemplo, para revisar el texto antes de publicarlo), activa el interruptor de abajo. Los borradores pueden tener texto provisional e ilustraciones en camino.',
+            rascunhosToggle: 'Mostrar los borradores',
+            rascunhosVazio: 'Ningún libro en preparación por ahora.',
+            situacaoRascunho: '📝 Borrador',
+            situacaoFila: '⏳ En cola',
+            abrirRascunho: 'Abrir',
             continuarLendo: 'Continuar leyendo',
             continuarSubtitulo: (parte, pag) => `Don Quijote · Parte ${parte} (Pág. ${pag})`,
             voltarBiblioteca: 'Volver a la biblioteca',
@@ -204,7 +244,7 @@
             p2Desc: '<strong>Parte 2: Ejércitos de Lana y el Yelmo Encantado</strong>: la carga contra los gigantes, el ramo de encina, los cabreros y la Edad de Oro, la batalla de las ovejas, el Caballero de la Triste Figura y el yelmo de Mambrino.',
             p3Desc: '<strong>Parte 3: Sierra Morena y la Princesa Micomicona</strong>: la maleta perdida, las zapatetas, la carta a Dulcinea, los amigos disfrazados, la princesa Micomicona y la batalla de los cueros de vino.',
             p4Desc: '<strong>Parte 4: La Jaula Encantada y la Ínsula de Sancho</strong>: la vuelta a casa, el caballo volador Clavileño, Sancho gobernador y el juicio de la caña, y el reencuentro de Alonso Quijano con las historias.',
-            todasIlustradas: '¡Las 4 partes de Don Quijote están completamente ilustradas e interactivas!',
+            todasIlustradas: 'El primer volumen de Don Quijote (partes 1 a 4) está totalmente ilustrado e interactivo. El segundo volumen está en preparación.',
             comoUsarTitulo: 'Cómo usar en la tableta',
             comoUsarItens: [
                 'Funciona <strong>sin internet</strong>: tras la primera visita, el navegador guarda los libros. En Chrome Android, usa <em>«Añadir a pantalla de inicio»</em> para abrir como aplicación a pantalla completa.',
@@ -316,10 +356,7 @@
             });
             const shelfQ = document.getElementById('shelf-quixote');
             if (shelfQ) shelfQ.setAttribute('aria-label', d.shelfQuixote);
-            const shelfB = document.getElementById('shelf-em-breve');
-            if (shelfB) shelfB.setAttribute('aria-label', d.shelfEmBreve);
-            document.querySelectorAll('.badge-em-breve').forEach(b => b.textContent = d.emBreve);
-            document.querySelectorAll('.item-em-breve').forEach(el => el.setAttribute('aria-label', d.novoEmBreve));
+            renderEstanteEmProducao(d);
             renderBannerContinuar(d);
         }
 
@@ -338,7 +375,102 @@
             if (listaUso && d.comoUsarItens) {
                 listaUso.innerHTML = d.comoUsarItens.map(item => `<li>${item}</li>`).join('');
             }
+            renderRascunhos(d);
         }
+    }
+
+    /* Obras em produção (assets/js/acervo.js): na estante, só capas-teaser com cadeado */
+    function obrasEmProducao() {
+        return Array.isArray(window.ACERVO_PRODUCAO) ? window.ACERVO_PRODUCAO : [];
+    }
+
+    function escapar(texto) {
+        return String(texto ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+    }
+
+    function renderEstanteEmProducao(d) {
+        document.querySelectorAll('[data-estante-producao]').forEach(estante => {
+            const obras = obrasEmProducao().filter(o => o.estante === estante.id);
+            estante.classList.toggle('hidden', !obras.length);
+            if (estante.id === 'shelf-quixote-2') estante.setAttribute('aria-label', d.shelfQuixote2);
+            const fila = estante.querySelector('.fila-capas');
+            if (!fila) return;
+            fila.innerHTML = obras.map(o => `
+                <button type="button" class="book-teaser w-24 sm:w-32 text-left" data-em-producao="${escapar(o.id)}" aria-label="${escapar(d.emProducaoAria(o.parte))}">
+                    <span class="book-cover relative block aspect-[3/4] rounded-r-2xl rounded-l-md overflow-hidden border-4 border-amber-500/70 bg-gradient-to-b ${escapar(o.cor || 'from-amber-200 to-orange-300')}">
+                        <span class="absolute inset-x-0 bottom-3 flex justify-center text-4xl opacity-60" aria-hidden="true">${escapar(o.emoji || '📖')}</span>
+                        <span class="absolute top-2 right-2 bg-rose-500/80 text-white font-display font-bold text-sm px-2.5 py-0.5 rounded-full border-2 border-white shadow">${escapar(d.parte(o.parte))}</span>
+                        <span class="absolute inset-0 bg-indigo-950/45"></span>
+                        <span class="absolute left-1/2 top-[45%] -translate-x-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-indigo-900 border-4 border-indigo-300 text-2xl flex items-center justify-center shadow" aria-hidden="true">🔒</span>
+                    </span>
+                </button>`).join('');
+        });
+    }
+
+    /* Toque numa capa-teaser: aviso gentil de que o livro ainda está em produção */
+    function avisarEmProducao() {
+        const d = DICIONARIO[idiomaAtual] || DICIONARIO[PT];
+        let aviso = document.getElementById('aviso-em-producao');
+        if (!aviso) {
+            aviso = document.createElement('div');
+            aviso.id = 'aviso-em-producao';
+            aviso.className = 'fixed inset-0 z-50 bg-indigo-950/70 flex items-center justify-center p-4';
+            aviso.setAttribute('role', 'dialog');
+            aviso.setAttribute('aria-modal', 'true');
+            aviso.addEventListener('click', (e) => {
+                if (e.target === aviso || e.target.closest('[data-fechar-aviso]')) aviso.classList.add('hidden');
+            });
+            document.addEventListener('keydown', (e) => { if (e.key === 'Escape') aviso.classList.add('hidden'); });
+            document.body.appendChild(aviso);
+        }
+        aviso.innerHTML = `
+            <div class="w-full max-w-sm bg-amber-50 border-4 border-amber-400 rounded-3xl p-6 text-center shadow-2xl">
+                <p class="text-6xl" aria-hidden="true">🎨</p>
+                <h2 class="font-display font-bold text-2xl text-amber-950 mt-3">${escapar(d.emProducaoTitulo)}</h2>
+                <p class="font-semibold text-amber-900 mt-2">${escapar(d.emProducaoTexto)}</p>
+                <button type="button" data-fechar-aviso class="btn-round mt-5 bg-amber-400 border-2 border-amber-600 text-amber-950 font-display font-bold text-lg px-6 py-2.5 rounded-2xl">${escapar(d.emProducaoOk)}</button>
+            </div>`;
+        aviso.classList.remove('hidden');
+        const ok = aviso.querySelector('[data-fechar-aviso]');
+        if (ok) ok.focus();
+    }
+
+    /* sobre.html: a chave "Mostrar os rascunhos" (lembrada no aparelho) e a lista das obras em produção */
+    const PREF_RASCUNHOS = 'cv-rascunhos';
+    function rascunhosVisiveis() {
+        try { return localStorage.getItem(PREF_RASCUNHOS) === '1'; } catch (e) { return false; }
+    }
+
+    function renderRascunhos(d) {
+        const chave = document.getElementById('chave-rascunhos');
+        const lista = document.getElementById('lista-rascunhos');
+        if (!chave || !lista) return;
+        const visiveis = rascunhosVisiveis();
+        chave.checked = visiveis;
+        lista.classList.toggle('hidden', !visiveis);
+        const obras = obrasEmProducao();
+        lista.innerHTML = obras.length ? obras.map(o => `
+            <li class="bg-white border-2 border-amber-300 rounded-2xl p-3 flex flex-wrap items-center justify-between gap-2">
+                <div class="min-w-0">
+                    <p class="font-display font-bold text-amber-950">${escapar(o.titulo)}</p>
+                    <p class="text-xs font-semibold text-slate-600">${escapar(o.obra)}${o.nota ? ` · ${escapar(o.nota)}` : ''}</p>
+                </div>
+                ${o.situacao === 'rascunho'
+                    ? `<a href="${escapar(o.href)}" class="btn-round shrink-0 bg-rose-500 border-2 border-rose-700 text-white font-display font-bold text-sm px-4 py-2 rounded-2xl">${escapar(d.situacaoRascunho)} · ${escapar(d.abrirRascunho)}</a>`
+                    : `<span class="shrink-0 bg-slate-100 border-2 border-slate-300 text-slate-600 font-display font-semibold text-sm px-3 py-1.5 rounded-2xl">${escapar(d.situacaoFila)}</span>`}
+            </li>`).join('') : `<li class="text-sm font-semibold text-slate-600">${escapar(d.rascunhosVazio)}</li>`;
+    }
+
+    function ligarInteracoes() {
+        document.addEventListener('click', (e) => {
+            if (e.target.closest('[data-em-producao]')) avisarEmProducao();
+        });
+        const chave = document.getElementById('chave-rascunhos');
+        if (chave) chave.addEventListener('change', () => {
+            try { localStorage.setItem(PREF_RASCUNHOS, chave.checked ? '1' : '0'); } catch (e) {}
+            const lista = document.getElementById('lista-rascunhos');
+            if (lista) lista.classList.toggle('hidden', !chave.checked);
+        });
     }
 
     /* M-6: Oferecer "Continuar de onde parou" na biblioteca */
@@ -427,6 +559,7 @@
         const seletor = document.getElementById('seletor-idiomas');
         if (seletor) montarSeletorBandeiras(seletor);
         aplicarIdiomaNaPagina();
+        ligarInteracoes();
 
         if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
             window.addEventListener('load', () => {

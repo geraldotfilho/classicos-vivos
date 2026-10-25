@@ -1,5 +1,7 @@
 # 🖼️ Arte pela API do Gemini (Nano Banana 2, modo Batch)
 
+> Regras gerais de ilustração (valem para qualquer obra e qualquer agente): receita geral, `docs/RECEITA-CLASSICO-VIVO.md` §6.3. As regras da Imaginação de Dom Quixote (§4.1 abaixo) estão resumidas em `docs/receitas/DOM-QUIXOTE.md` §3.
+
 Caminho de reserva para as ilustrações quando a cota do Antigravity acaba. **Só com autorização do humano no prompt inicial da sessão** (AGENTS.md §2.7) e só para o que ele autorizou. Primeiro uso: 2026-10-24, Parte 2, páginas 4 a 8 (10 cenas + 5 camadas), **US$ 0,57**. Na mesma tarde, a pedido do humano, as **9 Imaginações da Parte 2 foram refeitas** com a bíblia da Imaginação (§4.1): **US$ 0,42**. Total da Parte 2: **US$ 0,99**. À noite, com autorização do humano, as **Partes 3 e 4 inteiras** (33 cenas + 10 camadas): **US$ 1,60** (§5). **Dom Quixote está todo ilustrado.**
 
 ## 1. Modelo e preço (página de preços do Gemini, 2026-10-24)

@@ -1,67 +1,46 @@
-# 🔁 Retomada — onde o trabalho parou (2026-10-24, manhã)
+# 🔁 Retomada — onde o trabalho parou (2026-10-25, noite)
 
-Leia este arquivo primeiro numa sessão nova do Claude. Depois, `AGENTS.md` (arquitetura e regras) e o arquivo da frente de trabalho.
+**Leia este arquivo primeiro numa sessão nova**, seja qual for o agente. Depois, siga a ordem de leitura do `AGENTS.md` §0.2 (AGENTS → receita geral → receita específica → plano → caderno da parte).
 
-> 💰 **API paga do Gemini (AGENTS.md §2.7)**: use **só para produzir as vozes da leitura**, **sempre de forma econômica** e **só se o humano autorizou no prompt inicial desta sessão**. Sem essa autorização, não chame a API para nada (nem teste). Limite: R$ 30/mês (desde 2026-10-24). Opções mais baratas em `TODO-NARRACAO.md` §8.4 (o Flex corta o preço pela metade, mas falta a aprovação do humano). **Imagens** pela API: só com autorização pontual do humano (`docs/ARTE-PELA-API.md`).
+> 💰 **API paga do Gemini (`AGENTS.md` §2.7)**: só com **autorização do humano no prompt inicial da sessão**, só para o que ele autorizou, sempre no modo mais barato (Flex na narração, Batch nas imagens) e com o gasto registrado em `docs/narracao/gastos.csv` e `docs/arte/gastos.csv`. Teto: **R$ 30/mês**. Sem autorização, não chame a API para nada (nem para um teste).
 
 ---
 
-## 0. Atualização de 2026-10-25: texto mais simples nas Partes 2–4
-- A pedido do humano (leu a Parte 2 com o filho de 6 anos), o Claude reescreveu as Partes 2, 3 e 4 em linguagem mais simples (regra em AGENTS.md §3.5), e agentes refizeram as traduções en/fr/es no mesmo tom.
-- Com autorização do humano, a narração em português das Partes 2–4 foi **regravada no texto novo** (US$ 0,24). As narrações en/fr/es das Partes 2–4 ainda não existem (só a Parte 1).
+## 1. Estado atual
 
-## Atualização de 2026-10-24, noite: Dom Quixote todo ilustrado
-- Com autorização do humano, o Claude gerou pela API **as Partes 3 e 4 inteiras** (33 cenas + 10 camadas, US$ 1,60), com a bíblia da Imaginação desde o início. Método e lições: `ARTE-PELA-API.md` §5. **Não falta nenhuma ilustração em Dom Quixote.**
-- Gasto da API no mês (2026-10-24): imagens US$ 2,59 + narração ~US$ 0,79 ≈ **US$ 3,38** (teto R$ 30).
-- **Gemini (Antigravity)**: P-002 está concluído. Ao voltar da cota (29/10), o que resta para ele é P-005 (acabamento da pousada, Parte 1), que pode ser reaberto, e os próximos livros.
-- Pendências de arte (sem urgência): BACKLOG M-13.
+- **Dom Quixote**:
+  - Partes 1, 2 e 3 **publicadas e aprovadas** pelo humano, que leu a série com o filho de 6 anos: ilustradas, narradas em português e traduzidas (en, fr, es). Narração nos outros idiomas só na Parte 1.
+  - **Parte 4 reprovada** (apressada, mal encadeada: resumia 81 capítulos de Cervantes em 7 páginas). Continua no ar até a nova ser publicada.
+  - **Correção de rumo** em andamento: a nova Parte 4 fecha o volume de 1605, e as Partes 5–7 contam o de 1615. Plano: [`PLANO-DOM-QUIXOTE-PARTES-4-7.md`](PLANO-DOM-QUIXOTE-PARTES-4-7.md) (quadro de andamento no §7).
+- **Processo**: [`RECEITA-CLASSICO-VIVO.md`](RECEITA-CLASSICO-VIVO.md) é a **receita geral** (qualquer obra, qualquer tipo de adaptação). O que vale só para Dom Quixote (a condensação de uma obra enorme e as lentes) está em [`receitas/DOM-QUIXOTE.md`](receitas/DOM-QUIXOTE.md).
+- **Estante** (feito em 2026-10-25): na prateleira de baixo, as Partes 5–7 aparecem como capas-teaser com cadeado e um aviso ao tocar. Os cadeados de "próximos clássicos" saíram. As obras em produção ficam em `assets/js/acervo.js`. O humano abre os rascunhos em `sobre.html` → Livros em produção → "Mostrar os rascunhos".
+- **Motor**: modo rascunho pronto (`rascunho: true`, `AGENTS.md` §2.5).
+- **Gasto da API em outubro** (até 2026-10-25): arte US$ 2,59 + narração US$ 1,04 ≈ **US$ 3,64** (≈ R$ 20). Antes de usar a API, some os dois `gastos.csv` do mês.
 
-## Atualização anterior (2026-10-24, tarde): arte da Parte 2 pela API
-- Com a cota do Antigravity esgotada até 29/10, o humano autorizou o Claude a gerar **só as imagens que faltavam da Parte 2**. Feito com `npm run gerar:imagens` (Nano Banana 2, Batch): páginas 4 a 8 (10 cenas + 5 camadas), integradas e testadas. **Gasto: US$ 0,57** (`docs/arte/gastos.csv`). **A Parte 2 está completa.**
-- **Imaginações da Parte 2 refeitas** (as 9, pedido do humano): agora transformam de verdade (cavaleiro dourado, corcel branco, Sancho escudeiro). Mais US$ 0,42. Regra para as próximas partes: `ARTE-PELA-API.md` §4.1.
-- **Teto da API: R$ 30/mês** (o humano aumentou em 2026-10-24). Gasto no mês até aqui: narração ~US$ 0,65 + imagens US$ 0,99 ≈ **US$ 1,64**.
-- (Feito à noite: Partes 3 e 4, ver acima.) Partes 3 (~US$ 0,85) e 4 (~US$ 0,80), já com a bíblia da Imaginação, com o mesmo método: escrever `tools/arte/dom-quixote-parte-N.mjs` a partir do TODO, rodar `--seco`, e seguir as rodadas de `docs/ARTE-PELA-API.md` §3. Sem autorização, o Gemini retoma a Parte 3 no Antigravity em 29/10.
+## 2. Próxima sessão (A): terminar a fase 0 e fazer as fases 1 e 2 da nova Parte 4, sem API paga
 
-## 1. Frente atual do Claude: narração gravada (P-006)
+1. **Fase 0 (o que falta)**: arquivar a arte da Parte 4 atual em `dom-quixote/imagens/acervo/parte-4-v1/` sem quebrar o livro publicado; criar `dom-quixote/parte-4-rascunho.html` (`rascunho: true`) e passar a entrada `dom-quixote-parte-4-nova` do `acervo.js` para `situacao: 'rascunho'` (plano §6).
+2. **Fase 1**: criar o caderno `docs/cadernos/dom-quixote-parte-4.md`; **mostrar a escaleta ao humano antes de escrever o texto**; escrever o texto no rascunho.
+3. **Fase 2**: plano de atividades e lentes no caderno.
+4. Parar na 🛑 da fase 3: o humano lê o rascunho no tablet com o filho.
 
-O responsável humano passou a narração para o **Claude**, chamando a **API do Gemini** a partir de uma sessão com a chave cadastrada como **segredo de rede** do ambiente. O proxy injeta o cabeçalho `x-goog-api-key` nas requisições a `generativelanguage.googleapis.com`, e o Claude não vê a chave. O Gemini (agente de imagens) não faz mais narração.
+Prompt de abertura sugerido (plano §8):
+> Leia AGENTS.md e docs/RETOMADA.md e siga docs/PLANO-DOM-QUIXOTE-PARTES-4-7.md, docs/RECEITA-CLASSICO-VIVO.md e docs/receitas/DOM-QUIXOTE.md. Termine a fase 0 e faça as fases 1 e 2 da Parte 4. Mostre-me a escaleta antes de escrever o texto. Sem API paga nesta sessão.
 
-- **Passo a passo**: [`TODO-NARRACAO.md`](TODO-NARRACAO.md). A seção 8 traz a execução pela API.
-- **Estado em 2026-10-24, manhã** (decisões do humano no topo de `TODO-NARRACAO.md`, leia antes de gravar):
-  - **as quatro partes de Dom Quixote estão gravadas** (`partes: [1, 2, 3, 4]`): páginas inteiras com títulos, narradora + vozes dos personagens (elenco em `ELENCO`) e todas as palavras-chave. QA em `docs/narracao/qa-parte-N.md`, com o que vale ouvir;
-  - textos das Partes 2–4 revisados pelo agente de texto do humano e pelo Claude (falas diretas, português brasileiro); roteiros em `narracao/parte-N/roteiro.json`;
-  - Flex é o padrão; limite de **100 pedidos/dia** (Tier 1) e de **R$ 30/mês**; o gasto fica em `docs/narracao/gastos.csv`;
-  - a conferência é local (Whisper): num contêiner novo, `pip install faster-whisper`.
+## 3. Frentes paradas (sem urgência)
 
-**Próximos passos:**
-1. Retorno de ouvido do humano: vozes novas (pastor, barbeiro, padre, Doroteia, estalajadeiro, Teresa, Sanchica, os velhos do tribunal) e os pontos de cada `qa-parte-N.md`.
-2. Se o texto de uma frase mudar: `npm run exportar:frases` e regrave só a página (o `hash` mostra qual); avulsas com `--ids` + emenda (TODO §8.5).
-3. Opcional (BACKLOG M-10): regravar inteiras as páginas 1 e 2 da Parte 1.
-4. Novos livros: mesmo fluxo (texto → roteiro → elenco → `--pagina-inteira` → palavras em grupo), sempre com autorização do humano (AGENTS.md §2.7).
+- **Fila de arte Claude ↔ Gemini (`docs/fila/`)**: **encerrada** em 2026-10-25. Todas as tarefas foram concluídas (a maior parte pela API); o único pedido que sobrava, o acabamento das camadas da pousada da Parte 1, virou o item M-14 do backlog. Hoje qualquer agente pode receber qualquer tarefa, inclusive a arte (`AGENTS.md` §0.3).
+- **Narração em en/fr/es das Partes 2 e 3**: espera o humano ouvir a Parte 1 nesses idiomas e autorizar (BACKLOG M-11).
+- **Escuta do humano** das vozes novas das Partes 2–3 (pontos em `docs/narracao/qa-parte-N.md`).
+- Demais pendências: [`BACKLOG.md`](BACKLOG.md). O que já foi feito: [`HISTORICO.md`](HISTORICO.md).
 
-## 2. Ciclo com o Gemini (arte): revisão **pausada**
+## 4. Notas do ambiente (contêineres de agentes)
 
-- O agendamento de revisão de hora em hora ("Revisar entregas do Gemini") foi **desativado** a pedido do humano. Ele disparava na sessão antiga.
-- O Gemini continua trabalhando sozinho. Ao abrir uma sessão nova, ou quando o humano pedir, revise as entregas:
-  1. `git fetch origin main`;
-  2. compare `docs/fila/ENTREGAS.md` com a última revisão registrada em `docs/fila/PEDIDOS.md`;
-  3. olhe as imagens;
-  4. abra as páginas no Chromium headless (800×1280 e 1280×800, nas duas lentes) e confira posição e **escala** das camadas;
-  5. registre o veredito em `PEDIDOS.md`.
-- **Regra de prioridade do humano**: primeiro **terminar a arte dos quatro livros** (P-001 e P-002). Acabamentos de sombra, borda e halo ficam adiados (P-005 `⏸️ ADIADO`). Só peça ajuste imediato quando a entrega impedir o uso: nome ou pasta errados, conteúdo que contradiz o texto, personagem irreconhecível, texto legível na imagem, colagem achatada ou camada inutilizável.
-- **Último estado conhecido do Gemini**:
-  - esperava o reset da cota do Nano-Banana (2026-10-24, 01:22 UTC);
-  - a próxima tarefa era NB-3, os livros dos dragões e dos cavaleiros;
-  - depois vêm NB-4 a NB-8 e P-002 (arte das Partes 2–4).
-- **Integrações de código que a arte destrava**:
-  - **A-3** (BACKLOG): quando existirem os três `p1-real-livro-*.webp`, cada livro da página 2 da Parte 1 troca a cena via `setSceneImage`, em qualquer ordem;
-  - **camadas das Partes 2–4**: ajustar `x/y/w` em `parte-N.html` conforme a arte chegar.
-- **Feedback do humano sobre escala**: ele achou pequenas as primeiras camadas da pousada. Ao integrar, prefira personagens com tamanho proporcional à perspectiva da cena.
+- **Chave da API do Gemini** (ambiente do Claude): segredo de rede do ambiente; o proxy injeta o cabeçalho `x-goog-api-key` nas requisições a `generativelanguage.googleapis.com`. O agente nunca vê, imprime ou versiona a chave.
+- **Whisper local** (conferência da narração): num contêiner novo, `pip install faster-whisper`.
+- **Testes**: o Chromium e o Playwright já vêm instalados no contêiner; sirva a raiz com `python3 -m http.server` e abra as páginas nos dois tamanhos de tablet (`AGENTS.md` §5).
+- No **Antigravity** (Gemini), a arte pode ser gerada direto, na cota do plano Pro; a API só com autorização expressa do humano e a chave fornecida por ele.
 
-## 3. Como entregar
+## 5. Como entregar
 
-Use a branch designada pela sessão (a última foi `claude/optimistic-hamilton-xyoicy`). Se ela já foi mesclada, recrie-a a partir de `origin/main`. Antes de entregar:
-- rode `npm run build`;
-- teste no Chromium headless (Playwright já instalado; sirva com `python3 -m http.server`).
-
-Depois abra o PR e faça o merge na `main` pelas ferramentas do GitHub (MCP). O humano autoriza o merge direto. Nunca edite arquivos cujo dono é o Gemini (tabela em `docs/fila/PEDIDOS.md`).
+Trabalhe na branch definida pela sessão (se ela já foi mesclada, recomece-a da `main`). Ao terminar, **outro agente pode ter entregado algo em paralelo**: mescle a `main` do remoto na sua branch (`git fetch origin main && git merge origin/main`), resolva os conflitos preservando o trabalho dos dois lados (arquivos gerados, como o `sw.js`, se regeneram com `npm run build`), rode o build e os testes e só então entregue na `main`. Se um conflito não tiver solução que não destrua o trabalho de alguém, pergunte ao humano. Atualize este arquivo dizendo qual é a próxima sessão. Detalhes: `AGENTS.md` §6.

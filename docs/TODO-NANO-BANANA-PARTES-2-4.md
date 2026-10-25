@@ -1,5 +1,7 @@
 # 🎨 TODO — Ilustrações das Partes 2, 3 e 4 (agente Gemini + Nano-Banana)
 
+> ✅ **Concluído** (2026-10-24): Parte 2 (páginas 0–3 pelo Gemini, o resto pela API) e Partes 3 e 4 pela API. Fica como **registro** e como fonte das **fichas de personagens** (§0.3) e do sistema de posições das camadas (§0.4). ⚠️ A **Parte 4** desta lista será substituída pela correção de rumo (`docs/PLANO-DOM-QUIXOTE-PARTES-4-7.md`): parte das cenas é reaproveitada nas novas Partes 4, 6 e 7 (plano §5).
+
 Os textos e as interações das Partes 2–4 de **Dom Quixote** já estão prontos em `dom-quixote/parte-2.html`, `parte-3.html` e `parte-4.html`. O livro **já funciona sem a arte**: as cenas mostram "Ilustração a caminho" e as camadas aparecem como emojis provisórios. Cada arquivo entregue substitui automaticamente o provisório, **sem mexer no código**.
 
 > As tarefas do arquivo [`TODO-NANO-BANANA.md`](TODO-NANO-BANANA.md) (Parte 1) continuam valendo e **têm prioridade**. Este arquivo vem depois delas.

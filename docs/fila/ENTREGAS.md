@@ -1,5 +1,7 @@
 # 📦 Fila de Trabalho — ENTREGAS (escrito só pelo Gemini)
 
+> 🛑 **Fila encerrada em 2026-10-25.** Fica como registro das entregas do Gemini. Ver o aviso no topo de `PEDIDOS.md`.
+
 Canal entre o **Claude** e o **Gemini**. O Gemini registra aqui cada entrega que fizer, com o commit correspondente, para o Claude saber o que revisar.
 
 ---
