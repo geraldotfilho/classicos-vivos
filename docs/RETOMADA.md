@@ -20,12 +20,12 @@
 ## 2. Próxima sessão (A): terminar a fase 0 e fazer as fases 1 e 2 da nova Parte 4, sem API paga
 
 1. **Fase 0 (o que falta)**: arquivar a arte da Parte 4 atual em `dom-quixote/imagens/acervo/parte-4-v1/` sem quebrar o livro publicado; criar `dom-quixote/parte-4-rascunho.html` (`rascunho: true`) e passar a entrada `dom-quixote-parte-4-nova` do `acervo.js` para `situacao: 'rascunho'` (plano §6).
-2. **Fase 1**: criar o caderno `docs/cadernos/dom-quixote-parte-4.md`; **mostrar a escaleta ao humano antes de escrever o texto**; escrever o texto no rascunho.
+2. **Fase 1**: criar o caderno `docs/cadernos/dom-quixote-parte-4.md`; **ler antes o texto final das Partes 1 a 3, com atenção ao fim da Parte 3** (receita geral, fase 1.0; `receitas/DOM-QUIXOTE.md` §1.4); **mostrar a escaleta ao humano antes de escrever o texto**; escrever o texto no rascunho.
 3. **Fase 2**: plano de atividades e lentes no caderno.
 4. Parar na 🛑 da fase 3: o humano lê o rascunho no tablet com o filho.
 
 Prompt de abertura sugerido (plano §8):
-> Leia AGENTS.md e docs/RETOMADA.md e siga docs/PLANO-DOM-QUIXOTE-PARTES-4-7.md, docs/RECEITA-CLASSICO-VIVO.md e docs/receitas/DOM-QUIXOTE.md. Termine a fase 0 e faça as fases 1 e 2 da Parte 4. Mostre-me a escaleta antes de escrever o texto. Sem API paga nesta sessão.
+> Leia AGENTS.md e docs/RETOMADA.md e siga docs/PLANO-DOM-QUIXOTE-PARTES-4-7.md, docs/RECEITA-CLASSICO-VIVO.md e docs/receitas/DOM-QUIXOTE.md. Termine a fase 0 e faça as fases 1 e 2 da Parte 4. Leia antes o texto final das Partes 1 a 3, com atenção ao fim da Parte 3. Mostre-me a escaleta antes de escrever o texto. Sem API paga nesta sessão.
 
 ## 3. Frentes paradas (sem urgência)
 

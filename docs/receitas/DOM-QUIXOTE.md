@@ -29,7 +29,12 @@ O erro mais caro de Dom Quixote não foi de texto nem de arte: foi de **divisão
 ### 1.3 Cortes por idade (proteção da infância em Dom Quixote)
 Registrados em [`PLANO-PARTES-2-4.md`](../PLANO-PARTES-2-4.md) §2. Em resumo: fora a violência como eixo (o biscainho, os arrieiros iangueses, os galeotes), a humilhação (Maritornes, o manteamento de Sancho), o humor de vômito (o bálsamo de Ferrabrás), a mentira de Sancho sobre a Dulcineia encantada e a morte de Alonso Quixano (substituída por um final sereno: ele volta a ser Alonso e conta as aventuras às crianças). As pedras dos pastores viraram "pedrinhas para proteger os animais"; os odres de vinho ficaram, como humor, sem sangue.
 
-### 1.4 Nomes e palavras do original
+### 1.4 Leitura das partes publicadas (receita geral, fase 1.0)
+- **Nova Parte 4**: ler as Partes 1, 2 e 3 (`dom-quixote/parte-1.html` a `parte-3.html`), com atenção ao **fim da Parte 3**: o cap. 20 manda Dom Quixote "de volta para casa" para salvar a Princesa Micomicona, o cap. 21 é a batalha dos odres na pousada, e o cap. 22 termina no salão da pousada, depois do discurso das armas e das letras, com o padre e o barbeiro decidindo que "estava na hora de levar o querido amigo de volta". A Parte 4 começa daí. A Parte 4 antiga **não** é referência de continuidade (foi reprovada); serve só como material reaproveitável (plano §5).
+- **Partes 5, 6 e 7**: ler as Partes 1 a 3 e a **nova** Parte 4 já publicada, com atenção ao fim da parte imediatamente anterior.
+- O estilo de referência é o das Partes 2 e 3 depois da simplificação de 2026-10-25 (`AGENTS.md` §3.5): narrador caloroso, frases curtas, convites diretos à criança ("Ajude o bom Sancho a…"), falas com travessão, humor gentil.
+
+### 1.5 Nomes e palavras do original
 - Os **nomes divertidos** de Cervantes ficam (Alifanfarrão da Trapobana, Pentapolim do Braço Arregaçado, Pandafilando da Fosca Vista, Clavilenho, Micomicona): são ótimos para ler em voz alta.
 - **Palavras da época que fazem parte da história** ficam, explicadas no texto: odre, elmo, bolota, fole, fidalgo, escudeiro.
 

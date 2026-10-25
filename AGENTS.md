@@ -20,6 +20,7 @@ Este documento consolida a memória arquitetural, os princípios pedagógicos, a
 3. `docs/RECEITA-CLASSICO-VIVO.md`: a **receita geral** (fases, paradas, crivos, modelos), que vale para qualquer obra.
 4. A **receita específica** da obra (`docs/receitas/<OBRA>.md`, ex.: `docs/receitas/DOM-QUIXOTE.md`): o que vale só para aquela obra ou tipo de adaptação.
 5. O **plano** do livro (`docs/PLANO-*.md`) e o **caderno** da parte em produção (`docs/cadernos/<livro>-parte-N.md`).
+   - **Vai escrever uma parte nova de uma obra que já tem partes publicadas?** Então é **obrigatório** ler antes o texto final de todas as partes publicadas, com atenção especial ao **final da parte imediatamente anterior**, para seguir o estilo literário já adotado e continuar a obra sem quebras, saltos, repetições ou incoerências (receita geral, fase 1.0).
 6. Só então, os documentos da frente de trabalho: `ARTE-PELA-API.md`, `TODO-NARRACAO.md`, `docs/fila/` etc.
 
 ### 0.3 Papéis e agentes
