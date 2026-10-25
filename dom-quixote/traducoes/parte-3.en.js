@@ -9,95 +9,95 @@
     },
     paginas: [
         {   // página 0 (capa)
-            hash: 'be58f23cdb',
+            hash: '70f1d080c0',
             titulo: 'Part 3: The Sierra Morena and Princess Micomicona',
-            texto: `With the gleaming helmet he won in the rain and a heart brimming over with dreams, the Knight of the Sorrowful Face climbs with Sancho into the wild and mighty mountains of the {{SIERRA MORENA|SI • ER • RA • MO • RE • NA|⛰️}}!
+            texto: `With the shiny helmet he won in the rain and a heart full of dreams, the Knight of the Sorrowful Face climbs with Sancho into the high, wild mountains of the {{SIERRA MORENA|SI • ER • RA • MO • RE • NA|⛰️}}!
 
-High among the rocks, between cliffs, pine trees and wild flowers, our heroes will open a suitcase full of secrets, write a moving love {{LETTER|LET • TER|✉️}}, turn somersaults of longing and discover a clever plan by old friends to rescue a beautiful {{PRINCESS|PRIN • CESS|👸}} from a faraway kingdom.
+Up there, among the rocks, the pine trees and the wild flowers, the two friends will open a suitcase full of secrets, write a love {{LETTER|LET • TER|✉️}}, turn somersaults of longing and discover the clever plan of two old friends, with the help of a {{PRINCESS|PRIN • CESS|👸}} from a kingdom far, far away.
 
-Take a deep breath of the fresh mountain air, turn the page and climb the sierra with them!`
+Take a deep breath of the fresh mountain air, turn the page and climb the mountains with them!`
         },
         {   // página 1
-            hash: '6c5cf268b2',
+            hash: 'aab727f185',
             capitulo: '🧳 Chapter 16 • The Lost Suitcase',
             titulo: 'A Treasure in the Middle of the Mountains',
-            texto: `Climbing the stony mountain paths, between twisted holm oaks and steep crags, Sancho tripped over a mysterious {{SUITCASE|SUIT • CASE|🧳}} of tanned leather, abandoned under a prickly bush. The suitcase was worn out by time, soaked by the rains and shut tight with rusty clasps.
+            texto: `Climbing the stony paths, between crooked trees and great walls of rock, Sancho tripped over a leather {{SUITCASE|SUIT • CASE|🧳}} left behind under a prickly bush. The suitcase was old and wet from the rain, and its clasps were all rusty.
 
-What could that forgotten case be hiding? Open the suitcase with a tap to uncover its secret! Inside it gleamed dozens of precious gold {{COINS|COINS|🪙}}, which made Sancho’s eyes sparkle with pure delight, and a dainty {{NOTEBOOK|NOTE • BOOK|📓}} full of {{POEMS|PO • EMS|📜}} written in elegant handwriting. “Gold, my lord! Real gold!” cheered Sancho, hopping up and down.
+What could be inside? Open the suitcase with a tap and find out the secret! Inside, lots of gold {{COINS|COINS|🪙}} were shining, and they made Sancho’s eyes go wide with joy. There was also a {{NOTEBOOK|NOTE • BOOK|📓}} full of {{POEMS|PO • EMS|📜}}, written by hand in very neat letters. “Gold, my lord! Real gold!” cheered Sancho, hopping up and down.
 
-Don Quixote took the notebook in his hands with the greatest respect and read aloud the tender verses of a young man in love who wandered lost through the mountains. “Whoever writes with such feeling has a noble soul,” said the gentleman with a fond sigh. “Books hold the deepest mysteries of the human heart!”`
+Don Quixote picked up the notebook very carefully and read aloud the poems of a young man in love, who was wandering lost and sad through the mountains. “Whoever writes with so much feeling has a noble heart,” said the knight with a sigh. “Books keep the most beautiful secrets of the heart!”`
         },
         {   // página 2
-            hash: 'c5dbc6cd8d',
+            hash: 'b9d4545218',
             capitulo: '🤸 Chapter 17 • The Somersaults of Longing',
             titulo: 'A Knight Head over Heels',
-            texto: `Gazing at the vast loneliness of the mountains, Don Quixote had a shining idea: “Friend Sancho, I shall stay in this clearing to show the whole world my great {{LONGING|LONG • ING|💭}} for Dulcinea, fasting and pondering just as the famous hero {{AMADIS|A • MA • DIS|🗡️}} of Gaul once did! And you shall ride off on your donkey to carry a loving letter into her very hands.”
+            texto: `Looking at those mountains, so big and so quiet, Don Quixote had an idea: “Friend Sancho, I shall stay here in this clearing to show the world how much I am {{LONGING|LONG • ING|💭}} for Dulcinea, just like {{AMADIS|A • MA • DIS|🗡️}} of Gaul, the hero of my books! And you will ride your donkey and carry a love letter right into her hands.”
 
-“But, my noble master,” asked Sancho, scratching his chin, “how shall I convince the lady Dulcinea that your grace nearly lost your wits for her, if I don’t see some astonishing deed with my own eyes?”
+“But, my lord,” asked Sancho, scratching his chin, “how can I tell the lady Dulcinea that you went almost crazy with longing, if I don’t see you do anything crazy with my own eyes?”
 
-“Then see one right now!” cried Don Quixote firmly. He took off his iron armour and, wearing nothing but his long white nightshirt, turned a quick {{SOMERSAULT|SOM • ER • SAULT|🤸}} on the grass and kicked his skinny legs up into the air in mid-leap! Sancho covered his face with both hands, laughing so hard that tears ran down his cheeks. Help the knight with his acrobatics of love!`
+“Then look right now!” answered Don Quixote. He took off his iron armour and, in nothing but his long white nightshirt, turned a {{SOMERSAULT|SOM • ER • SAULT|🤸}} on the grass, with his skinny legs high up in the air! Sancho covered his face with his hands and laughed so hard that tears ran down his cheeks. Help the knight with his somersaults of longing!`
         },
         {   // página 3
-            hash: '365caee442',
+            hash: 'bd74bae794',
             capitulo: '✉️ Chapter 18 • The Letter for Dulcinea',
             titulo: 'Sancho Forgot the Letter!',
-            texto: `Deeply moved, Don Quixote wrote a beautiful {{LETTER|LET • TER|✉️}} to his beloved on a page torn from the poetry notebook, full of poetic words and his solemn promise to be faithful for ever. He gave his instructions to his trusty squire, who climbed onto his donkey and set off down the road, feeling like the most important person in all of Spain!
+            texto: `With his heart beating fast, Don Quixote wrote a lovely {{LETTER|LET • TER|✉️}} to Dulcinea on a page torn out of the poem notebook, promising to love her for ever. Sancho climbed onto his donkey and set off down the road, feeling like the most important person in all of Spain!
 
-But as he rode down the first slopes, Sancho put his hands in his pockets and his eyes grew wide with panic: he had left the paper on a rock high up in the mountains! In despair, he scratched his forehead and tried to bring back the words kept only in his {{MEMORY|MEM • O • RY|🧠}}: “How did it begin again? ‘Sovereign and exalted lady’... And at the end? How did he sign it again?”
+But on the very first slope, Sancho put his hands in his pockets and his eyes went wide: he had left the letter on top of a rock, high up in the mountains! He scratched his forehead and tried to remember the words he had kept only in his {{MEMORY|MEM • O • RY|🧠}}: “How did it begin again? ‘Sovereign and exalted lady’... That’s it! And at the end? How did he sign it again?”
 
-Help the good squire remember the {{SIGNATURE|SIG • NA • TURE|✍️}} on the letter by tapping each word in the right order!`,
+Help good old Sancho remember the {{SIGNATURE|SIG • NA • TURE|✍️}} on the letter by tapping the words in the right order!`,
             cartoes: {
-                // "OF THE" fica num cartão só (como o "DA" do português): dois cartões "THE"
-                // iguais confundiriam a criança, porque o motor confere a ordem pelo id.
-                ordem: ['the', 'knight', 'of-the', 'sorrowful', 'face'],
+                // As duas palavras THE valem em qualquer um dos dois cartões (o motor compara a palavra).
+                ordem: ['the-1', 'knight', 'of', 'the-2', 'sorrowful', 'face'],
                 itens: [
                     { id: 'sorrowful', palavra: 'SORROWFUL', emoji: '🎭' },
-                    { id: 'the', palavra: 'THE', emoji: '✍️' },
+                    { id: 'the-1', palavra: 'THE', emoji: '✍️' },
                     { id: 'face', palavra: 'FACE', emoji: '🎭' },
+                    { id: 'of', palavra: 'OF', emoji: '✍️' },
                     { id: 'knight', palavra: 'KNIGHT', emoji: '🛡️' },
-                    { id: 'of-the', palavra: 'OF THE', emoji: '✍️' }
+                    { id: 'the-2', palavra: 'THE', emoji: '✍️' }
                 ]
             }
         },
         {   // página 4
-            hash: 'd17d57a309',
+            hash: 'ac862e8a8f',
             capitulo: '🎭 Chapter 19 • Friends in Disguise',
             titulo: 'The Priest, the Barber and an Ox-Tail Beard',
-            texto: `Stopping at an inn at the foot of the mountain, Sancho met two dear old friends from his village: the kind {{PRIEST|PRIEST|⛪}} Pero Pérez and Master Nicolás, the village barber. Worried because their friend Alonso Quixano had vanished, they had come ready to rescue him with loving care.
+            texto: `When they stopped at the inn at the foot of the mountain, Sancho met two old friends from his village: the kind {{PRIEST|PRIEST|⛪}} Pero Pérez and Master Nicolás, the barber. They were worried because Alonso Quixano had disappeared, so they had come to take him home, with lots of love.
 
-“He will never agree to come home of his own free will,” warned Sancho, “unless a damsel in distress begs for the protection of his unbeatable sword!”
+“He will never want to go home,” said Sancho, “unless a girl in danger asks for the help of his sword!”
 
-“I know!” cried the priest, his eyes shining. “Let’s invent a princess in distress!” And so the two of them hatched a brilliant, theatrical plan: a cunning {{DISGUISE|DIS • GUISE|🎭}}! Master Nicolás stuck an enormous reddish {{BEARD|BEARD|🧔}} on his chin, made from the hairy tail of an ox, while the priest put on a swirly skirt and a flowery bonnet over his cassock. When they looked at themselves in the inn’s mirror, all three burst out laughing, so breathless they could hardly carry on with the play-acting!`
+“I know!” said the priest, his eyes shining. “Let’s make up a princess in danger!” And so the two of them came up with a very clever plan: a {{DISGUISE|DIS • GUISE|🎭}}! Master Nicolás stuck a huge red {{BEARD|BEARD|🧔}} on his chin, made from the hairy tail of an ox, and the priest put on a swirly skirt and a flowery bonnet over his priest’s clothes. When they looked in the mirror, all three burst out laughing, until they were almost out of breath!`
         },
         {   // página 5
-            hash: '530c383943',
+            hash: '5dd5de36a1',
             capitulo: '👸 Chapter 20 • Princess Micomicona',
             titulo: 'A Princess Asks for Help',
-            texto: `To make the plan perfect, they were joined by Dorotea, a clever, fearless young country girl with a wonderful talent for acting. Dressed in a shimmering silk gown and a velvet cloak, she climbed up into the mountains and knelt gracefully before the gentleman:
+            texto: `To make the plan work, a young woman called Dorotea decided to help. She was clever, brave and very good at acting! In a shiny silk dress and a velvet cape, she climbed up the mountain and knelt down in front of Don Quixote:
 
-“O mirror of honour and flower of chivalry!” she pleaded in a velvety voice. “I am the unhappy {{PRINCESS|PRIN • CESS|👸}} {{MICOMICONA|MI • CO • MI • CO • NA|👑}}, heiress to the faraway kingdom of Micomicón! A fierce and heartless giant, Pandafilando of the Gloomy Glare, has invaded my lands, and only your brave arm can set my people free!”
+“O brave knight, flower of all knights!” she begged in a sweet voice. “I am {{PRINCESS|PRIN • CESS|👸}} {{MICOMICONA|MI • CO • MI • CO • NA|👑}}, from the faraway kingdom of Micomicón! A wicked giant, Pandafilando of the Gloomy Glare, has taken over my lands, and only you can save my people!”
 
-Deeply moved, Don Quixote held out his hand to the damsel and made a sacred {{PROMISE|PROM • ISE|🤝}}: “Rise, fair princess! I swear by my sword that I shall defeat that giant!” And so, with his mind full of celebration and his heart full of nobility, the gentleman climbed onto Rocinante and, without suspecting a thing, set off on the road back to his own home!`
+Deeply moved, Don Quixote held out his hand to her and made a {{PROMISE|PROM • ISE|🤝}}: “Rise, lovely princess! I swear by my sword that I shall beat that giant!” And so, as happy as could be and without guessing a thing, the knight climbed onto Rocinante and took the road back home!`
         },
         {   // página 6
-            hash: '8e55475c37',
+            hash: '3dbb65f845',
             capitulo: '💤 Chapter 21 • The Battle of the Wineskins',
             titulo: 'A Giant in the Middle of the Night',
-            texto: `On the way home, they all stayed at the inn, and the night was passing peacefully when battle cries woke the whole house: “Surrender, you cowardly monster! Taste my steel!” Don Quixote, sleepwalking in his long white nightshirt, was fighting a fierce battle against the big {{WINESKINS|WINE • SKINS|🍷}} of ox hide, full of red wine, that hung on the walls of the room!
+            texto: `Back at the inn, everyone was fast asleep when battle cries woke up the whole house: “Give up, you wicked giant! Now you’ll see!” It was Don Quixote, in his long white nightshirt and still asleep, fighting the {{WINESKINS|WINE • SKINS|🍷}} that hung on the bedroom wall: big leather bags full of red wine!
 
-Lost in his vivid {{DREAM|DREAM|💤}}, he saw every hanging wineskin as the dreadful {{GIANT|GI • ANT|👹}} Pandafilando! Swinging his sharp {{SWORD|SWORD|⚔️}} in the dark, he pierced the thick leather and sent a river of sweet-smelling wine pouring across the floorboards like a crimson waterfall. Tap the sword to help the knight defeat the wineskins!
+In his {{DREAM|DREAM|💤}}, every wineskin looked like the terrible {{GIANT|GI • ANT|👹}} Pandafilando! Swinging his {{SWORD|SWORD|⚔️}} in the dark, he poked holes in the thick leather, and the wine ran across the floor like a red river. Tap the sword and help the knight beat the wineskins!
 
-“My wine! My wine!” wailed the innkeeper in despair. “Calm down, my good man, I shall pay for every drop!” promised the generous priest. And Don Quixote, wiping the sweat from his brow with childlike pride, lay down again in peace, quite sure that he had saved Princess Micomicona’s throne!`
+“My wine! My wine!” cried the innkeeper, upset. “Calm down, my good man, I shall pay for everything!” promised the priest. And Don Quixote, very proud of himself, went back to bed and slept peacefully, quite sure that he had saved Princess Micomicona’s kingdom!`
         },
         {   // página 7
-            hash: 'd5c9244b15',
+            hash: 'f11e3d41d0',
             capitulo: '📚 Chapter 22 • Arms and Letters',
             titulo: 'Stories at the Inn',
-            texto: `That cosy night, the great hall of the inn filled up with travellers, merchants and families around a big table lit by torches and sweet-scented candles. Warm bread was passed from hand to hand, and each traveller shared wonderful {{STORIES|STO • RIES|📚}} of adventures at sea, surprise reunions and ancient legends from all over the world.
+            texto: `That night, the big room at the inn filled up with travellers, shopkeepers and families around a long table lit by candles. Warm bread was passed from hand to hand, and everyone told their {{STORIES|STO • RIES|📚}}: adventures at sea, surprise meetings and old legends from all over the world.
 
-At one point, Don Quixote stood up at the head of the table and gave a wise and moving speech about the worth of {{ARMS|ARMS|🛡️}} and {{LETTERS|LET • TERS|🔤}}: “The courage of knights protects the peace and defends the weak. And books, my friends, make justice, truth and beauty grow in our hearts!”
+Then Don Quixote stood up at the end of the table and made a beautiful, wise speech about the {{ARMS|ARMS|🛡️}} of knights and the {{LETTERS|LET • TERS|🔤}} of books: “The courage of knights keeps the peace and protects the weak. And books, my friends, make justice, truth and beauty grow in our hearts!”
 
-All the listeners looked at one another in amazement, surprised to discover the shining wisdom that lived inside that kind-eyed gentleman. The priest and the barber smiled, deeply touched: it was time to take that dear dreamer back to the comfort of his home!`
+Everyone looked at one another, amazed at how wise that dreamy knight was. The priest and the barber smiled, deeply touched: it was time to take their dear friend back to his cosy home!`
         }
     ],
     textos: {
@@ -131,7 +131,7 @@ All the listeners looked at one another in amazement, surprised to discover the 
         'ESPADA': 'SWORD',
         'Viajantes ao redor de uma mesa na pousada escutam Dom Quixote discursar': 'Travellers around a table at the inn listen to Don Quixote’s speech',
         '👓 Lente da Realidade: Viajantes ao Redor da Mesa': '👓 Reality Lens: Travellers around the Table',
-        '✨ Lente da Imaginação: A Grande Távola dos Contadores de Histórias!': '✨ Imagination Lens: The Great Round Table of Storytellers!',
+        '✨ Lente da Imaginação: A Grande Mesa dos Contadores de Histórias!': '✨ Imagination Lens: The Great Table of the Storytellers!',
         'Tocar em Dom Quixote': 'Tap Don Quixote',
         '👓 Lente da Realidade: Sancho Lembrou! "O Cavaleiro da Triste Figura"': '👓 Reality Lens: Sancho Remembered! “The Knight of the Sorrowful Face”',
         '🎉 Fim da Parte 3! Na Parte 4: uma jaula encantada, o voo no cavalo de madeira e a grande sabedoria de Sancho governador!': '🎉 The End of Part 3! In Part 4: an enchanted cage, a flight on a wooden horse and the great wisdom of Governor Sancho!',
