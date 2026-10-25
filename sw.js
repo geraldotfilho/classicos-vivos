@@ -6,7 +6,7 @@
    - Narração gravada (*.mp3 e as marcas *.json em audio/): rede primeiro, para frases regravadas chegarem ao tablet;
      cada arquivo fica num cache próprio (que sobrevive às novas versões) e toca offline depois.
    - Demais arquivos: cache primeiro (abre instantâneo no tablet). */
-const CACHE = 'classicos-vivos-a6cdfd0226e4';
+const CACHE = 'classicos-vivos-6108e82e130f';
 const CACHE_AUDIO = 'cv-narracao';
 const FILES = [
     "./assets/css/fonts.css",
@@ -27,6 +27,7 @@ const FILES = [
     "./assets/icones/bandeiras/fr.svg",
     "./assets/icones/bandeiras/gb.svg",
     "./assets/icones/icone-192.png",
+    "./assets/js/i18n-site.js",
     "./assets/js/livro.js",
     "./assets/js/texto.js",
     "./dom-quixote/imagens/camadas/p4-estalajadeiro-acenando.webp",
@@ -170,6 +171,12 @@ self.addEventListener('install', (event) => {
     event.waitUntil(
         caches.open(CACHE).then(cache => cache.addAll(FILES)).then(() => self.skipWaiting())
     );
+});
+
+self.addEventListener('message', (event) => {
+    if (event.data && event.data.type === 'SKIP_WAITING') {
+        self.skipWaiting();
+    }
 });
 
 self.addEventListener('activate', (event) => {

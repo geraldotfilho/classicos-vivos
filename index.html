@@ -94,69 +94,107 @@
             50% { transform: scale(1.08); box-shadow: 0 0 0 12px rgba(251, 191, 36, 0); }
         }
         .play-pulse { animation: playPulse 1.8s ease-in-out infinite; }
+
+        /* Bandeirinhas dos idiomas */
+        .btn-idioma {
+            width: 34px;
+            height: 32px;
+            padding: 4px 3px;
+            border-radius: 12px;
+            border: 2px solid transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: transform 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
+        }
+        .btn-idioma img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 4px;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.18);
+            opacity: 0.55;
+            filter: saturate(0.7);
+            pointer-events: none;
+        }
+        .btn-idioma:active { transform: scale(0.92); }
+        .btn-idioma.idioma-ativo {
+            background: #FEF3C7;
+            border-color: #F59E0B;
+        }
+        .btn-idioma.idioma-ativo img { opacity: 1; filter: none; }
+        @media (min-width: 640px) {
+            .btn-idioma { width: 40px; height: 36px; }
+        }
     </style>
 </head>
-<body class="flex flex-col items-center px-4 py-5 sm:py-8">
+<body data-pagina="index" class="flex flex-col items-center px-4 py-5 sm:py-8">
 
-    <!-- Topo: nome da biblioteca + botões discretos para adultos -->
+    <!-- Topo: nome da biblioteca + idiomas + botões de controle -->
     <header class="relative w-full max-w-5xl flex items-center justify-between gap-3">
         <div class="flex items-center gap-3">
-            <span class="text-5xl sm:text-6xl" aria-hidden="true">📚</span>
-            <h1 class="font-display font-bold text-3xl sm:text-5xl text-amber-300 leading-none drop-shadow-lg">Clássicos Vivos</h1>
+            <span class="text-4xl sm:text-6xl" aria-hidden="true">📚</span>
+            <h1 class="font-display font-bold text-2xl sm:text-5xl text-amber-300 leading-none drop-shadow-lg">Clássicos Vivos</h1>
         </div>
         <div class="flex items-center gap-2 shrink-0">
-            <button onclick="toggleFullscreen()" class="btn-round w-14 h-14 rounded-2xl bg-indigo-500 border-2 border-indigo-300 text-white text-2xl flex items-center justify-center" aria-label="Tela cheia" title="Tela cheia">
+            <!-- Seletor de Idiomas (sincronizado com os livros) -->
+            <div id="seletor-idiomas" data-icon-path="./assets/icones/"></div>
+            <button onclick="toggleFullscreen()" class="btn-round w-11 h-11 sm:w-14 sm:h-14 rounded-2xl bg-indigo-500 border-2 border-indigo-300 text-white text-xl sm:text-2xl flex items-center justify-center" aria-label="Tela cheia" title="Tela cheia" data-i18n-aria="telaCheia" data-i18n-title="telaCheia">
                 <i id="fs-icon" class="ph-bold ph-corners-out"></i>
             </button>
-            <a href="./sobre.html" class="btn-round h-14 px-3 rounded-2xl bg-white/10 border-2 border-white/30 text-amber-100 flex items-center justify-center gap-1.5 font-display font-semibold text-sm" aria-label="Sobre o projeto, para adultos" title="Sobre o projeto (para adultos)">
-                <i class="ph-bold ph-info text-2xl"></i>
-                <span class="hidden sm:inline">Para adultos</span>
+            <a href="./sobre.html" class="btn-round h-11 sm:h-14 px-3 rounded-2xl bg-white/10 border-2 border-white/30 text-amber-100 flex items-center justify-center gap-1.5 font-display font-semibold text-xs sm:text-sm" aria-label="Sobre o projeto, para adultos" title="Sobre o projeto (para adultos)" data-i18n-aria="sobreAria" data-i18n-title="sobreTitulo">
+                <i class="ph-bold ph-info text-xl sm:text-2xl"></i>
+                <span class="hidden sm:inline" data-i18n="paraAdultos">Para adultos</span>
             </a>
         </div>
     </header>
 
+    <!-- M-6: Oferecer "Continuar de onde parou" se houver leitura em andamento -->
+    <div id="container-continuar" class="w-full max-w-5xl mt-4 sm:mt-6 hidden"></div>
+
     <main class="w-full max-w-5xl flex-1 flex flex-col justify-center gap-10 sm:gap-14 py-8 [@media(max-height:820px)]:gap-6 [@media(max-height:820px)]:py-4">
 
         <!-- Prateleira 1: Dom Quixote, as quatro partes -->
-        <section class="shelf" aria-label="Dom Quixote">
+        <section id="shelf-quixote" class="shelf" aria-label="Dom Quixote">
             <div class="flex flex-wrap items-end justify-center gap-3 sm:gap-6">
-                <a href="./dom-quixote/parte-1.html" class="book w-44 sm:w-56" aria-label="Ler Dom Quixote, parte 1">
+                <a id="link-parte-1" href="./dom-quixote/parte-1.html" class="book w-44 sm:w-56" aria-label="Ler Dom Quixote, parte 1">
                     <div class="book-cover relative aspect-[3/4] rounded-r-3xl rounded-l-lg overflow-hidden border-4 border-amber-500 bg-amber-100">
                         <img src="./dom-quixote/imagens/p0-real.webp" alt="" class="absolute inset-0 w-full h-full object-cover object-[30%_50%]" />
-                        <span class="absolute top-3 right-3 bg-rose-500 text-white font-display font-bold text-base px-3 py-1 rounded-full border-2 border-white shadow">Parte 1</span>
+                        <span id="badge-parte-1" class="absolute top-3 right-3 bg-rose-500 text-white font-display font-bold text-base px-3 py-1 rounded-full border-2 border-white shadow">Parte 1</span>
                         <span class="play-pulse absolute left-1/2 top-[42%] -translate-x-1/2 -translate-y-1/2 w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-amber-400 border-4 border-white text-amber-950 text-3xl sm:text-4xl flex items-center justify-center">
                             <i class="ph-fill ph-play"></i>
                         </span>
                         <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-amber-950/95 via-amber-950/80 to-transparent pt-10 pb-4 px-3 text-center">
-                            <h2 class="font-display font-bold text-2xl sm:text-3xl text-amber-200 leading-none">Dom Quixote</h2>
+                            <h2 class="font-display font-bold text-2xl sm:text-3xl text-amber-200 leading-none" data-i18n="domQuixote">Dom Quixote</h2>
                         </div>
                     </div>
                 </a>
-                <a href="./dom-quixote/parte-2.html" class="book w-24 sm:w-32" style="animation-delay: -1.2s" aria-label="Ler Dom Quixote, parte 2">
+                <a id="link-parte-2" href="./dom-quixote/parte-2.html" class="book w-24 sm:w-32" style="animation-delay: -1.2s" aria-label="Ler Dom Quixote, parte 2">
                     <div class="book-cover relative aspect-[3/4] rounded-r-2xl rounded-l-md overflow-hidden border-4 border-amber-500 bg-gradient-to-b from-amber-200 to-orange-300">
                         <span class="absolute inset-x-0 bottom-3 flex justify-center text-4xl" aria-hidden="true">🐑</span>
                         <img src="./dom-quixote/imagens/parte-2/p0-real.webp" alt="" onerror="this.remove()" class="absolute inset-0 w-full h-full object-cover" />
-                        <span class="absolute top-2 right-2 bg-rose-500 text-white font-display font-bold text-sm px-2.5 py-0.5 rounded-full border-2 border-white shadow">Parte 2</span>
+                        <span id="badge-parte-2" class="absolute top-2 right-2 bg-rose-500 text-white font-display font-bold text-sm px-2.5 py-0.5 rounded-full border-2 border-white shadow">Parte 2</span>
                         <span class="absolute left-1/2 top-[45%] -translate-x-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-amber-400 border-4 border-white text-amber-950 text-2xl flex items-center justify-center shadow">
                             <i class="ph-fill ph-play"></i>
                         </span>
                     </div>
                 </a>
-                <a href="./dom-quixote/parte-3.html" class="book w-24 sm:w-32" style="animation-delay: -1.8s" aria-label="Ler Dom Quixote, parte 3">
+                <a id="link-parte-3" href="./dom-quixote/parte-3.html" class="book w-24 sm:w-32" style="animation-delay: -1.8s" aria-label="Ler Dom Quixote, parte 3">
                     <div class="book-cover relative aspect-[3/4] rounded-r-2xl rounded-l-md overflow-hidden border-4 border-amber-500 bg-gradient-to-b from-emerald-200 to-teal-300">
                         <span class="absolute inset-x-0 bottom-3 flex justify-center text-4xl" aria-hidden="true">⛰️</span>
                         <img src="./dom-quixote/imagens/parte-3/p0-real.webp" alt="" onerror="this.remove()" class="absolute inset-0 w-full h-full object-cover" />
-                        <span class="absolute top-2 right-2 bg-rose-500 text-white font-display font-bold text-sm px-2.5 py-0.5 rounded-full border-2 border-white shadow">Parte 3</span>
+                        <span id="badge-parte-3" class="absolute top-2 right-2 bg-rose-500 text-white font-display font-bold text-sm px-2.5 py-0.5 rounded-full border-2 border-white shadow">Parte 3</span>
                         <span class="absolute left-1/2 top-[45%] -translate-x-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-amber-400 border-4 border-white text-amber-950 text-2xl flex items-center justify-center shadow">
                             <i class="ph-fill ph-play"></i>
                         </span>
                     </div>
                 </a>
-                <a href="./dom-quixote/parte-4.html" class="book w-24 sm:w-32" style="animation-delay: -2.4s" aria-label="Ler Dom Quixote, parte 4">
+                <a id="link-parte-4" href="./dom-quixote/parte-4.html" class="book w-24 sm:w-32" style="animation-delay: -2.4s" aria-label="Ler Dom Quixote, parte 4">
                     <div class="book-cover relative aspect-[3/4] rounded-r-2xl rounded-l-md overflow-hidden border-4 border-amber-500 bg-gradient-to-b from-sky-200 to-indigo-300">
                         <span class="absolute inset-x-0 bottom-3 flex justify-center text-4xl" aria-hidden="true">🏝️</span>
                         <img src="./dom-quixote/imagens/parte-4/p0-real.webp" alt="" onerror="this.remove()" class="absolute inset-0 w-full h-full object-cover" />
-                        <span class="absolute top-2 right-2 bg-rose-500 text-white font-display font-bold text-sm px-2.5 py-0.5 rounded-full border-2 border-white shadow">Parte 4</span>
+                        <span id="badge-parte-4" class="absolute top-2 right-2 bg-rose-500 text-white font-display font-bold text-sm px-2.5 py-0.5 rounded-full border-2 border-white shadow">Parte 4</span>
                         <span class="absolute left-1/2 top-[45%] -translate-x-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-amber-400 border-4 border-white text-amber-950 text-2xl flex items-center justify-center shadow">
                             <i class="ph-fill ph-play"></i>
                         </span>
@@ -166,18 +204,18 @@
         </section>
 
         <!-- Prateleira 2: os próximos clássicos da coleção -->
-        <section class="shelf" aria-label="Livros em breve">
+        <section id="shelf-em-breve" class="shelf" aria-label="Livros em breve">
             <div class="flex flex-wrap items-end justify-center gap-5 sm:gap-8">
-                <div class="w-28 sm:w-36 opacity-70" aria-label="Novo clássico: em breve">
+                <div class="w-28 sm:w-36 opacity-70 item-em-breve" aria-label="Novo clássico: em breve">
                     <div class="book-cover aspect-[3/4] rounded-r-2xl rounded-l-md border-4 border-dashed border-indigo-300/60 bg-indigo-900/60 flex flex-col items-center justify-center gap-1 text-indigo-100">
                         <span class="text-4xl" aria-hidden="true">🔒</span>
-                        <span class="font-display font-bold text-lg">Em breve</span>
+                        <span class="font-display font-bold text-lg badge-em-breve">Em breve</span>
                     </div>
                 </div>
-                <div class="w-28 sm:w-36 opacity-70" aria-label="Novo clássico: em breve">
+                <div class="w-28 sm:w-36 opacity-70 item-em-breve" aria-label="Novo clássico: em breve">
                     <div class="book-cover aspect-[3/4] rounded-r-2xl rounded-l-md border-4 border-dashed border-indigo-300/60 bg-indigo-900/60 flex flex-col items-center justify-center gap-1 text-indigo-100">
                         <span class="text-4xl" aria-hidden="true">🔒</span>
-                        <span class="font-display font-bold text-lg">Em breve</span>
+                        <span class="font-display font-bold text-lg badge-em-breve">Em breve</span>
                     </div>
                 </div>
             </div>
@@ -204,12 +242,6 @@
             }
         });
     </script>
-    <script>
-        // Leitura offline: registra o service worker quando servido por http(s) (ex.: GitHub Pages).
-        // Aberto direto do arquivo (file://) o livro já funciona sem internet, pois tudo é local.
-        if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
-            window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(() => {}));
-        }
-    </script>
+    <script src="./assets/js/i18n-site.js"></script>
 </body>
 </html>

@@ -42,3 +42,7 @@ Só Dom Quixote e Sancho falam na Parte 1 francesa, como no português. As falas
 ## Pendências para a próxima rodada (cota renova às 07:00 UTC)
 1. `npm run gravar:narracao -- --voz narracao --idioma fr --amostra --autorizado` (1 pedido).
 2. `npm run gravar:narracao -- --voz palavras --idioma fr --parte 1 --autorizado` grava só as 5 que faltam (`pomme`, `ile`, `moulins`, `vent`, `geants`). A rodada extra permitida já foi usada: a decisão de gastar mais 1–2 pedidos é do coordenador/humano. Para `pomme` e `ile`, o problema é a conferência de palavras de uma sílaba, e não a voz: regravar sem mexer na conferência deve falhar de novo.
+
+## Rodada de 2026-10-25 (cota renovada)
+- Gravadas `moulins`, `vent`, `geants` (1 pedido) e `pomme`, `ile` com `--agrupar 1` (2 pedidos), mais a `amostra.mp3` (1 pedido). Parte 1 completa.
+- Ouvir: `geants` (o Whisper ouviu "j'ai un géant"; deve ser só a transcrição), `pomme` e `ile` (palavras de uma sílaba, a conferência não as reconhece bem).
