@@ -24,7 +24,12 @@
     "bouclier": "f0affaa47e",
     "lance": "d82ab630d4",
     "pleine-lune": "f81a3e6173",
-    "ane": "452a767a81"
+    "ane": "452a767a81",
+    "moulins": "3252deface",
+    "vent": "632a5cdbbe",
+    "geants": "9a4752acf2",
+    "pomme": "c9cbb9617b",
+    "ile": "bfb2387ec9"
   },
   "modelo": "gemini-3.8-flash-tts",
   "voz": "fr-fr-tutor-4",

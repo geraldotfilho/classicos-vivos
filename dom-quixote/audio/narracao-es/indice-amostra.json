@@ -1,0 +1,9 @@
+{
+  "frases": {
+    "amostra": "amostra"
+  },
+  "modelo": "gemini-3.8-flash-tts",
+  "voz": "es-es-tutor-12",
+  "estilo": "warm, gentle storyteller reading aloud to young children in Castilian Spanish from Spain; calm, clear pace; savouring Cervantes' classic phrases with a smile; expressive but not theatrical",
+  "qa": "whisper-large-v3-turbo (local)"
+}

@@ -39,3 +39,6 @@ npm run gravar:narracao -- --voz narracao --idioma es --amostra --autorizado
 
 ## Observação técnica
 - No modo agrupado das palavras-chave, o script usa a constante `ESTILO_PALAVRAS` (`tools/gravar-narracao.mjs`, linhas ~787 e ~797) e **não** o `elenco.PALAVRAS.estilo` do `elenco.json`. Assim, o estilo "kind literacy teacher in Castilian Spanish from Spain…" não foi enviado; foi o estilo padrão em inglês sem sotaque. A voz é `es-es` e as 10 palavras passaram na conferência, então não há prejuízo audível esperado, mas vale corrigir no script (dono: o coordenador).
+
+## Rodada de 2026-10-25 (cota renovada)
+- Gravadas as 20 palavras-chave pendentes (2 pedidos, todas conferidas) e a `amostra.mp3` (1 pedido). Parte 1 completa. As palavras novas já usaram o estilo do `elenco.json` (castelhano).
