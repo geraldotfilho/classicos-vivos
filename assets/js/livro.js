@@ -96,7 +96,8 @@ const IDIOMAS = {
             gravadaEmBreve: '',
             recomendada: '⭐ recomendada', offline: 'funciona offline', online: 'precisa de internet', gravada: 'gravada', maisNatural: 'mais natural',
             previa: '(prévia: só algumas páginas)', emProducao: '(em produção para esta parte)',
-            amostraDe: (nome) => `Ouvir amostra de ${nome}`, amostra: 'Olá! Eu vou ler esta história com você.'
+            amostraDe: (nome) => `Ouvir amostra de ${nome}`, amostra: 'Olá! Eu vou ler esta história com você.',
+            atividadeRotulo: 'Atividade', ouvirInstrucao: 'Ouvir instrução da atividade', atividadeOpcional: 'Atividade opcional'
         }
     },
     en: {
@@ -127,7 +128,8 @@ const IDIOMAS = {
             gravadaEmBreve: '🎙️ A recorded narration in English is coming soon. For now, the device\'s voice reads the story.',
             recomendada: '⭐ recommended', offline: 'works offline', online: 'needs internet', gravada: 'recorded', maisNatural: 'most natural',
             previa: '(preview: only some pages)', emProducao: '(in production for this part)',
-            amostraDe: (nome) => `Hear a sample of ${nome}`, amostra: 'Hello! I am going to read this story with you.'
+            amostraDe: (nome) => `Hear a sample of ${nome}`, amostra: 'Hello! I am going to read this story with you.',
+            atividadeRotulo: 'Activity', ouvirInstrucao: 'Listen to activity instructions', atividadeOpcional: 'Optional activity'
         }
     },
     fr: {
@@ -158,7 +160,8 @@ const IDIOMAS = {
             gravadaEmBreve: '🎙️ Une narration enregistrée en français arrive bientôt. Pour l’instant, c’est la voix de l’appareil qui lit l’histoire.',
             recomendada: '⭐ recommandée', offline: 'fonctionne hors ligne', online: 'besoin d’internet', gravada: 'enregistrée', maisNatural: 'plus naturelle',
             previa: '(aperçu : quelques pages)', emProducao: '(en préparation pour cette partie)',
-            amostraDe: (nome) => `Écouter un extrait de ${nome}`, amostra: 'Bonjour ! Je vais lire cette histoire avec toi.'
+            amostraDe: (nome) => `Écouter un extrait de ${nome}`, amostra: 'Bonjour ! Je vais lire cette histoire avec toi.',
+            atividadeRotulo: 'Activité', ouvirInstrucao: "Écouter l'instruction de l'activité", atividadeOpcional: 'Activité facultative'
         }
     },
     es: {
@@ -189,7 +192,8 @@ const IDIOMAS = {
             gravadaEmBreve: '🎙️ Pronto habrá una narración grabada en español. Por ahora, la voz del aparato lee la historia.',
             recomendada: '⭐ recomendada', offline: 'funciona sin internet', online: 'necesita internet', gravada: 'grabada', maisNatural: 'más natural',
             previa: '(avance: solo algunas páginas)', emProducao: '(en producción para esta parte)',
-            amostraDe: (nome) => `Oír una muestra de ${nome}`, amostra: '¡Hola! Voy a leer esta historia contigo.'
+            amostraDe: (nome) => `Oír una muestra de ${nome}`, amostra: '¡Hola! Voy a leer esta historia contigo.',
+            atividadeRotulo: 'Actividad', ouvirInstrucao: 'Escuchar la instrucción de la actividad', atividadeOpcional: 'Actividad opcional'
         }
     }
 };
@@ -447,11 +451,23 @@ function montarConteudoDoTexto(i) {
                 </a>`}
             </div>
         </div>` : '';
+    const comando = pagina.comandoAtividade || (pagina.cena && pagina.cena.cartoes && pagina.cena.cartoes.comando);
+    const quadroAtividade = comando ? `
+        <aside class="quadro-atividade mt-2 flex items-center gap-2.5" aria-label="${escapeHtml(ui('atividadeOpcional'))}">
+            <button type="button" class="btn-ouvir-comando shrink-0 w-8 h-8 rounded-full bg-amber-400 hover:bg-amber-300 active:scale-95 border-2 border-amber-600 text-amber-950 flex items-center justify-center transition shadow-sm" data-ouvir-comando="${escapeHtml(t(comando))}" aria-label="${escapeHtml(ui('ouvirInstrucao'))}" title="${escapeHtml(ui('ouvirInstrucao'))}">
+                <i class="ph-fill ph-speaker-high text-base pointer-events-none" aria-hidden="true"></i>
+            </button>
+            <div class="text-xs sm:text-sm font-display font-bold text-amber-950 leading-snug">
+                <span class="block text-[10px] uppercase tracking-wider text-amber-700 font-extrabold mb-0.5">🎮 ${escapeHtml(ui('atividadeRotulo'))}</span>
+                <span>${escapeHtml(t(comando))}</span>
+            </div>
+        </aside>` : '';
     const alinhamento = pagina.capa ? 'items-center lg:items-start text-center lg:text-left' : '';
     return `
                 <div class="page-text-inner flex flex-col ${alinhamento} space-y-3">
                     ${topo}
                     <p id="page-text-${i}" class="text-base sm:text-lg text-slate-800 font-bold leading-relaxed">${Texto.paginaParaHtml(pagina.texto, i)}</p>
+                    ${quadroAtividade}
                     ${abrir}
                     ${final}
                 </div>`;
@@ -2256,6 +2272,11 @@ function alternarMaiusculas() {
    ===================================================================== */
 function initEventos() {
     document.addEventListener('click', (e) => {
+        const btnComando = e.target.closest('[data-ouvir-comando]');
+        if (btnComando) {
+            falar(btnComando.dataset.ouvirComando);
+            return;
+        }
         const palavra = e.target.closest('.literacy-word');
         if (palavra) {
             speakWord(palavra, palavra.dataset.palavra, palavra.dataset.silabas, palavra.dataset.emoji);

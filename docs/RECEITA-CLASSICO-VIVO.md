@@ -153,6 +153,7 @@ Só com autorização no prompt da sessão (`TODO-NARRACAO.md`):
 - Evite arcaísmos e palavras de livro antigo (vossa mercê, donzela, estalagem, desventurada, carmesim), ênclises e mesóclises rebuscadas e adjetivos empilhados.
 - Todo evento responde a três perguntas da criança: **por que** aconteceu, **o que** aconteceu e **o que mudou** depois.
 - Histórias dentro da história quase sempre saem; quando ficam, saem resumidas numa fala curta.
+- **Comando da atividade em quadro separado (regra mandatória, 2026-10-25)**: o convite ou instrução da atividade (ex.: "Descubra as letras...") **nunca** deve entrar no meio dos parágrafos da narrativa. Ele fica num campo próprio da página (`comandoAtividade: '...'`), exibido num quadro destacado (`.quadro-atividade`), de leitura opcional, com um botão de alto-falante (🔊) exclusivo que só fala ao ser tocado. A narração automática da página ("Ouvir Página") **nunca** lê o comando da atividade.
 
 ### 6.2 Atividades: o crivo e o padrão ouro
 **O crivo** (todas as respostas precisam ser "sim"):
@@ -282,6 +283,7 @@ As lições que só valem para *Dom Quixote* ou para a condensação de obras lo
 
 | Data | Lição | Origem | Virou regra em |
 | :--- | :--- | :--- | :--- |
+| 2026-10-25 | O comando das atividades não deve poluir a narrativa nem ser lido automaticamente; fica num quadro destacado de leitura opcional com botão 🔊 próprio | humano | §6.1, §6.2, AGENTS §2.5 |
 | 2026-10-25 | Quem escreve a parte seguinte precisa ler o texto final das partes publicadas, sobretudo o final da anterior, para não quebrar estilo nem continuidade (a Parte 4 antiga começava contradizendo o fim da Parte 3) | humano | §5 fase 1.0 |
 | 2026-10-25 | A receita precisa separar o que é geral do que é próprio de uma obra ou de um tipo de adaptação | humano | §2, `receitas/` |
 | 2026-10-25 | Obras em produção aparecem na estante só como teaser com cadeado; o adulto abre os rascunhos pela página "Para adultos". Nada de "próximos clássicos" vagos | humano | §4 |

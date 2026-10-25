@@ -162,6 +162,7 @@ window.LIVRO = {
   paginas: [{
     capa: true | capitulo: '🌳 Capítulo 8 • ...', corCapitulo: 'text-emerald-700',
     titulo: '...',
+    comandoAtividade?: '...',             // instrução da atividade num quadro destacado (.quadro-atividade); lida só pelo 🔊 próprio
     texto: `Parágrafos separados por linha em branco. Palavras-chave: {{CARVALHO|CAR • VA • LHO|🌳}}`,
     cena: {
       real, imag, alt, emoji /* do aviso "ilustração a caminho" */, legendaReal, legendaImag,

@@ -761,3 +761,21 @@ h1, h2, h3, h4, .font-display {
 }
 .opcao-voz-off { opacity: 0.55; }
 .opcao-voz-off button { cursor: not-allowed; }
+
+/* Quadro destacado de instrução de atividade (leitura opcional) */
+.quadro-atividade {
+    background: #FEF3C7;
+    border: 2px dashed #D97706;
+    border-radius: 1rem;
+    padding: 0.65rem 0.85rem;
+    box-shadow: 0 2px 6px rgba(180, 83, 9, 0.08);
+}
+.btn-ouvir-comando {
+    transition: transform 0.15s ease, background-color 0.15s ease;
+}
+.btn-ouvir-comando:active {
+    transform: scale(0.92);
+}
+.btn-ouvir-comando:hover {
+    background: #FBBF24;
+}

@@ -109,7 +109,21 @@ Variedade rica de 5 mecânicas pedagógicas sem repetição:
 
 ## 5. Notas do humano e o que mudou
 
-- **2026-10-25**: Humano sugeriu:
-  1. Aportuguesar o termo para **bacielmo** (sem "y").
-  2. Adicionar mais 3 páginas na Parte 4 (passando para 10 capítulos: 23 a 32, totalizando 11 páginas com a capa).
-  3. Incluir mais atividades alfabetizadoras e evitar repetições da mecânica `ordem`: diversificado em 5 mecânicas distintas (sílabas, forca adaptada/letras, vocabulário em camadas, contagem de tesouros e frase completa).
+- **2026-10-25 (Revisão da Fase 1/2)**: Humano revisou o rascunho e definiu:
+  1. **Comando de Atividades em Quadro Separado (Regra Mandatória para todas as produções)**:
+     - O texto da narrativa não deve conter instruções de atividade.
+     - O comando fica num campo `comandoAtividade` e é renderizado em um `<aside class="quadro-atividade">` separado, com destaque visual e leitura opcional.
+     - Botão de alto-falante exclusivo (🔊) que só fala quando clicado (`falar(comando)`). A narração automática ("Ouvir Página") nunca lê esse quadro.
+  2. **Aportuguesamento**: **bacielmo** (com "i", sem "y").
+  3. **Ampliação para 10 Capítulos (11 páginas com a capa)**: Para dar respiro à viagem de volta e fechar com dignidade o volume de 1605.
+  4. **Diversificação de Atividades**: 5 atividades distintas sem repetição (sílabas, forca adaptada/chave de letras, vocabulário em camadas, contagem poética e frase estruturada).
+  5. **Cap. 25 (A Jaula)**: Palavra secreta `AMIGO` explicada na fala dos magos como o segredo da amizade que sela a carruagem.
+  6. **Cap. 26 (Lógica e Segurança)**:
+     - Sancho tem pena do amo e percebe a farsa dos magos (voz do barbeiro e cheiro do padre).
+     - Dom Quixote é solto porque dá a sua solene **palavra de honra de cavaleiro** de que não fugirá e seguirá em paz até a aldeia (fidelidade a Cervantes I, cap. 49).
+  7. **Cap. 27 (Piquenique)**: Associação e desafio de ligar a palavra escrita ao alimento correto.
+  8. **Cap. 28 (O Cavaleiro do Lago)**: Aprofundada a lenda poética de cavalaria contada por Dom Quixote (o mergulho no lago fervente, o palácio submarino de cristal e a coragem que vence o medo).
+  9. **Cap. 29 (A Cabra Fujona)**: Desenvolvido o humor slapstick (cabeçada no bacielmo, tombo de Sancho na grama) e a ternura da conversa do pastor Eugenio com a cabrinha livre.
+  10. **Cap. 30 (A Romaria)**: Construído o drama da estiagem, a tensão de Dom Quixote com a lança, Sancho esclarecendo a cantiga de chuva e a celebração alegre com a chuva fresca e as crianças.
+  11. **Cap. 31 (Teresa e Sancho)**: Resgate fiel de Cervantes (I, cap. 52): o alívio pelo burrico ("veio melhor que o dono!"), a cobrança bem-humorada dos vestidos e da ilha prometida na Parte 1, e Sancho reafirmando com orgulho sua honra de escudeiro.
+  12. **Cap. 32 (O Fim do Volume 1)**: Fechamento clássico e emocionante de Cervantes: o repouso sereno do fidalgo em seu quarto arrumadinho, a palavra de honra cumprida, a lua cheia e as histórias que começam a nascer nos livros do mundo.
