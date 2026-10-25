@@ -18,12 +18,13 @@
     - **Quadro de atividades separado (`.quadro-atividade`)**: comandos de atividade desvinculados do texto narrativo, com botão 🔊 próprio (leitura opcional; a narração automática da página não os lê).
     - 5 atividades ricas e variadas sem repetição: sílabas (`BACIELMO`), descoberta da palavra secreta sem spoilers (Cap. 25), vocabulário do piquenique (`PÃO`, `QUEIJO`, `ÁGUA`), contagem poética dos tesouros do lago e ordem de frase (`SANCHO GOVERNADOR DA ILHA`).
     - Narrativa aprofundada: a lógica de Sancho e a palavra de honra de Dom Quixote (Cap. 26); a lenda do Lago de Cristal (Cap. 28); o humor da cabrinha Manchadinha (Cap. 29); a romaria dos lavradores da terra sem chuva mágica e com respeito à labuta do campo (Cap. 30); o diálogo clássico de Teresa Pança e a cobrança da ilha (Cap. 31); e o fechamento nobre e emocionante de Cervantes com o fidalgo em seu leito sereno (Cap. 32).
+    - **Revisão de coautoria (Claude, 2026-10-25, noite)** aplicada a pedido do humano: mestre Nicolau sempre pelo nome (dois barbeiros), Rocinante de volta à viagem, linguagem simplificada sem encurtar as páginas, humor e poesia de Cervantes (votação do elmo, profecia em versos, "encantados modernos", "ilha se come?"), a palavra AMIGO colhida no cap. 26, as moedas da Parte 3 colhidas no cap. 31 e um fim sem spoiler da Parte 5, com o gatinho da Parte 1. Detalhes no caderno, §5.
     - Testado em Playwright (Chromium) nas duas orientações (800×1280 e 1280×800) com zero erros de script e de carregamento.
 - **Gasto da API nesta sessão**: **US$ 0,00** (sem uso de API paga). Gasto acumulado de outubro: **US$ 3,64** (≈ R$ 20).
 
 ## 2. Próxima sessão: 🛑 Parada 3 (Revisão Humana) ➔ Sessão B (Fase 4: Arte e Atividades)
 
-1. **Parada 🛑 Fase 3**: O humano lê o rascunho em [dom-quixote/parte-4-rascunho.html](dom-quixote/parte-4-rascunho.html) no tablet com o filho de 6 anos (aberto pela página `sobre.html` → "Mostrar os rascunhos", ou via `?page=N`), ouvindo na voz do aparelho em português, com o roteiro de observação da receita geral §7.3.
+1. **Parada 🛑 Fase 3**: falta só o "aprovado" final. O humano lê o rascunho em [dom-quixote/parte-4-rascunho.html](dom-quixote/parte-4-rascunho.html) no tablet com o filho de 6 anos (aberto pela página `sobre.html` → "Mostrar os rascunhos", ou via `?page=N`), ouvindo na voz do aparelho em português, com o roteiro de observação da receita geral §7.3.
 2. **Sessão B (Arte e Atividades)**:
    - Registrar no caderno as notas da revisão humana e fazer os ajustes finos de texto.
    - Fase 4: gerar as ilustrações (6 cenas novas: capa, despedida de Micomicona, bacielmo, piquenique, cabrinha fujona e quarto/janela; reaproveitando a jaula e a chegada à aldeia da v1).

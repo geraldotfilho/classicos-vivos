@@ -7,7 +7,7 @@ Arquivo: `dom-quixote/parte-4-rascunho.html` (rascunho: sim) · Trecho do origin
 | 0 Terreno | ✅ feito | 2026-10-25 | branch `gemini/dom-quixote-parte-4` | — |
 | 1 Adaptação e texto | 🟡 em andamento | 2026-10-25 | escaleta expandida (10 caps) pronta para aprovação humana | — |
 | 2 Interações e visual | 🟡 planejadas | 2026-10-25 | 4 atividades alfabetizadoras + plano visual completo | — |
-| 3 Revisão humana 🛑 | ⬜ a fazer | | | — |
+| 3 Revisão humana 🛑 | 🟡 revisão de coautoria feita; falta o "aprovado" final do humano | 2026-10-25 | branch `ccr-0c6dd8bf-k3upnk` → `main` | — |
 | 4 Ilustrações e atividades | ⬜ a fazer | | | US$ |
 | 5 Revisão final 🛑 | ⬜ a fazer | | | — |
 | 6 Narração (pt) + escuta 🛑 | ⬜ a fazer | | | US$ |
@@ -96,14 +96,14 @@ Variedade rica de 5 mecânicas pedagógicas sem repetição:
 | **0** | A pousada espanhola iluminada pelo sol da manhã | O castelo imperial em dia de festa e vitória | 👓 A Pousada sob a Luz da Manhã | ✨ A Despedida do Castelo Encantado! |
 | **1** | Doroteia despedindo-se com um sorriso no pátio da pousada | A Princesa Micomicona na sala do trono dourada entregando um ramo de louros ao cavaleiro | 👓 Doroteia Agradece na Pousada | ✨ A Princesa Coroa o Vencedor de Gigantes! |
 | **2** | O barbeiro da bacia, Dom Quixote segurando a bacia de latão e Sancho gesticulando no meio | Dom Quixote com o esplêndido Elmo Dourado de Mambrino emitindo raios mágicos de luz | 👓 Bacia de Latão ou Elmo? | ✨ O Brilho Lendário do Elmo de Mambrino! |
-| **3** | Carro de bois rústico com a jaula de madeira; padre e barbeiro de lençóis brancos e máscaras | Uma carruagem mágica de madrepérola e cristal conduzida por magos com mantos celestes | 👓 A Jaula de Madeira no Carro de Bois | ✨ A Carruagem Encantada dos Magos Protetores! |
+| **3** | Carro de bois rústico com a jaula de madeira; padre e mestre Nicolau de lençóis brancos e máscaras; Rocinante e o burrico amarrados atrás | Uma carruagem mágica de madrepérola e cristal conduzida por magos com mantos celestes | 👓 A Jaula de Madeira no Carro de Bois | ✨ A Carruagem Encantada dos Magos Protetores! |
 | **4** | Sancho apontando para o cavaleiro e rindo na estrada ensolarada | Sancho discursando como um sábio filósofo diante de uma corte de amigos | 👓 A Esperteza de Sancho na Estrada | ✨ O Raciocínio de um Grande Sábio! |
-| **5** | Toalha xadrez estendida na grama com pão e queijo sob a sombra do carvalho | Um banquete real servido em toalhas de seda sob árvores de frutos dourados | 👓 Piquenique de Amigos no Prado | ✨ O Banquete dos Nobres Cavaleiros! |
+| **5** | Toalha xadrez estendida na grama com pão e queijo sob a sombra do carvalho; Rocinante e o burrico pastando juntos na beira do riacho | Um banquete real servido em toalhas de seda sob árvores de frutos dourados | 👓 Piquenique de Amigos no Prado | ✨ O Banquete dos Nobres Cavaleiros! |
 | **6** | Dom Quixote sentado na relva gesticulando animado enquanto todos ouvem | O cavaleiro no fundo de um lago cristalino diante de um palácio submarino de corais e ouro | 👓 Histórias à Beira do Riacho | ✨ O Palácio Submarino de Cristal! |
 | **7** | Pastor rindo enquanto corre atrás de uma cabrinha malhada saltitante | Um fauno mitológico brincando com um cordeirinho encantado no bosque de fadas | 👓 O Pastor e a Cabrinha Manchadinha | ✨ O Guardião dos Bosques e a Criatura Mágica! |
-| **8** | Camponeses festivos com fitas coloridas e pandeiros acenando na estrada | Um cortejo de músicos celestiais jogando pétalas brilhantes no caminho | 👓 Romaria Alegre pelo Campo | ✨ O Cortejo Musical dos Campos de Ouro! |
+| **8** | Lavradores em romaria pelo campo seco, com pandeiro e um andor coberto por um manto; Dom Quixote, ao lado de Rocinante, curva a cabeça sem o bacielmo | Um cortejo de guardiões da terra, com o andor como um altar de flores luminosas | 👓 Romaria de Vizinhos Pedindo Chuva | ✨ A Procissão Solene dos Guardiões da Terra! |
 | **9** | Chegada à aldeia branca; sobrinha, governanta, Teresa e Sanchica correndo com abraços | Recepção triunfal com tapetes de flores e arcos de vitória na entrada da aldeia | 👓 Acolhida com Abraços na Aldeia | ✨ A Recepção Triunfal dos Grandes Heróis! |
-| **10** | Dom Quixote descansando na cama macia, olhando a lua cheia pela janela do quarto | O cavaleiro dourado cavalgando pelo céu noturno entre constelações e cometas | 👓 Descanso Sereno à Luz da Lua | ✨ Os Sonhos Eternos de Novas Aventuras! |
+| **10** | Dom Quixote descansando na cama macia, olhando a lua cheia pela janela do quarto, com o gatinho da casa (o da Parte 1, cap. 1) enrolado aos pés da cama | O cavaleiro dourado cavalgando pelo céu noturno entre constelações e cometas; aos pés da cama, o gatinho vira o **leão guardião** da Parte 1 (fecha o círculo do primeiro volume) | 👓 Descanso Sereno à Luz da Lua | ✨ Os Sonhos Eternos de Novas Aventuras! |
 
 ---
 
@@ -139,3 +139,19 @@ Variedade rica de 5 mecânicas pedagógicas sem repetição:
   4. **Cap. 30 (Fidelidade a Cervantes e Realismo vs Imaginação)**:
      - Eliminação da chuva mágica instantânea (que soava artificial e quebrava o contraste realista de Cervantes).
      - Retomada do episódio canônico de Cervantes (I, cap. 52): procissão real de preces contra a seca; Sancho intervém com amor para evitar o ataque; Dom Quixote reconhece os lavradores vizinhos e se curva com profunda humildade diante da labuta do campo, sendo acolhido com água e flores.
+
+- **2026-10-25 (Revisão de coautoria, Claude)**: o humano pediu um olhar de coautor sobre enredo, estilo, humor e poesia, e aprovou as sugestões, **menos a de encurtar as páginas** (o enredo está bom e o tamanho fica; o cap. 30 também não foi cortado). O que mudou:
+  1. **Dois barbeiros**: o amigo da aldeia passou a ser sempre **mestre Nicolau** (como na Parte 3); o outro é **o barbeiro da bacia**.
+  2. **Rocinante de volta à história**: amarrado atrás da carroça (cap. 25); depois da palavra de honra, Dom Quixote segue **montado nele** e a jaula viaja vazia, só com as malas (cap. 26); pastando com o burrico (27); na romaria (30); na chegada (31); no estábulo (32).
+  3. **Linguagem (§3.5) sem encurtar**: saíram empertigando, disparate, farsa, receio, valoroso, dádiva, ressequida, murmúrio, repique, entoando, comitiva, labuta, apeando, "hão de", "o fizera", farto, salpicado, caiadas, aos prantos; "andor" ficou, explicado no texto. Saíram as falas que quebravam a ficção ("lá na Parte 2", "na Parte 1") e as repetições ("solene" ×3, as pistas de Sancho dobradas nos caps. 25 e 26).
+  4. **Cap. 23**: Doroteia continua no papel de princesa (dito no texto); piscadela de Sancho: o gigante "deixou a pousada inteira cheirando a vinho".
+  5. **Cap. 24**: o barbeiro reclama a **bacia** (não o "cavalo"); a **votação da pousada** de Cervantes (I-45), puxada por mestre Nicolau: "Então eu passei a vida inteira fazendo barba com o elmo de um rei?"; o padre paga "umas moedinhas" (não oito de ouro) e o bacielmo fica com o cavaleiro.
+  6. **Cap. 25**: profecia **em versos** (valente/frente/contente, terra/guerra), que já planta a terceira saída do segundo volume; a palavra secreta **abre a porta** da carruagem (antes, ambíguo entre abrir e trancar).
+  7. **Cap. 26**: as pistas de Sancho ficam só aqui; o teste de Cervantes (I-48–49) inteiro, com o "xixi atrás da moita" (humor leve, fiel ao original; o humano pode vetar); a resposta de Dom Quixote: "Os encantamentos de hoje são modernos: agora os encantados comem!"; o padre abre a jaula sussurrando **AMIGO**, a palavra da atividade do cap. 25, "a mais verdadeira de todo aquele teatro" (fio plantado e colhido na mesma parte). A palavra-chave VENTO, que não cabia, virou HONRA.
+  8. **Cap. 27**: quadro da atividade corrigido ("toque", não "conecte") e com Sancho como quem a criança ajuda; Dom Quixote reparte o pão e lembra os pastores da Parte 2 (cap. 10).
+  9. **Cap. 28**: a luzinha dourada que pedia socorro ganhou explicação (uma **estrelinha-do-mar** presa nas algas, que depois ilumina o palácio); falas da contagem casadas com o texto (peixinhos **prateados**); fecho com Sancho: "E lá no palácio... serviam almoço?".
+  10. **Cap. 29**: o pastor **Eugênio** apresentado logo que entra; Dom Quixote liga a cabra à jaula: "Eu sei bem o que é querer sair de uma jaula".
+  11. **Cap. 30**: a "dama cativa" agora é o que Dom Quixote vê de verdade (a figura coberta no andor), e não "vilões de branco"; o lavrador o chama de **"Seu Alonso"** e avisa que a casa está perto (ponte para o cap. 31).
+  12. **Cap. 31**: sobrinha e governanta apresentadas; Teresa não sabe o que é ilha ("Ilha se come?"), e Sancho explica (Cervantes, I-52); **as moedas da mala da Parte 3 (cap. 16)** voltam como presente do amo para os sapatinhos da Sanchica (fio solto colhido).
+  13. **Cap. 32**: saiu "os primeiros livros começavam a ser impressos" (estragava a surpresa do "Viramos livro!" da Parte 5); no lugar, "alguém molhava a pena na tinta e começava a escrever...". Entraram o **gatinho** da Parte 1 aos pés da cama, o Rocinante no estábulo e o "Boa noite, Dulcineia" à lua; o fim troca o resumo moral por uma imagem e um gancho ("um cavaleiro andante descansa, sim. Mas nunca, nunca para de sonhar"). A mensagem do fim avisa que ele vai sair de novo no segundo livro.
+
