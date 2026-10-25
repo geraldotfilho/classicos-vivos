@@ -6,7 +6,7 @@
    - Narração gravada (*.mp3 e as marcas *.json em audio/): rede primeiro, para frases regravadas chegarem ao tablet;
      cada arquivo fica num cache próprio (que sobrevive às novas versões) e toca offline depois.
    - Demais arquivos: cache primeiro (abre instantâneo no tablet). */
-const CACHE = 'classicos-vivos-6108e82e130f';
+const CACHE = 'classicos-vivos-888177bb71af';
 const CACHE_AUDIO = 'cv-narracao';
 const FILES = [
     "./assets/css/fonts.css",
@@ -27,6 +27,7 @@ const FILES = [
     "./assets/icones/bandeiras/fr.svg",
     "./assets/icones/bandeiras/gb.svg",
     "./assets/icones/icone-192.png",
+    "./assets/js/acervo.js",
     "./assets/js/i18n-site.js",
     "./assets/js/livro.js",
     "./assets/js/texto.js",

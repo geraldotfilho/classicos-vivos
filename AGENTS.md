@@ -1,9 +1,42 @@
 # AGENTS.md — Memória de Arquitetura, UX e Protocolos Operacionais
 ## Coleção Clássicos Vivos: Livros Interativos Infantis para Tablet
 
-Este documento consolida a memória arquitetural, os princípios pedagógicos, as regras de design de interface, o fluxo de ativos visuais e os protocolos de automação do projeto **Clássicos Vivos**. Ele serve como guia definitivo para agentes de IA e desenvolvedores que assumirem o projeto em sessões futuras.
+Este documento consolida a memória arquitetural, os princípios pedagógicos, as regras de design de interface, o fluxo de ativos visuais e os protocolos de automação do projeto **Clássicos Vivos**. Ele serve como guia definitivo para agentes de IA (Claude, Gemini, Codex, Cursor ou qualquer outro) e desenvolvedores que assumirem o projeto em sessões futuras.
 
-> **Para criar uma parte ou um livro novo**, siga a **receita** em `docs/RECEITA-CLASSICO-VIVO.md` (fases, paradas para o humano, crivos e lições aprendidas). Este arquivo guarda a arquitetura e as regras; a receita guarda o processo.
+---
+
+## 0. Como trabalhar neste projeto (leia primeiro, vale para qualquer agente)
+
+### 0.1 Filosofia em cinco linhas
+1. **Para quem**: crianças de 5 a 8 anos, lendo no tablet com um adulto. O leitor de referência é uma criança de **6 anos** (§3.5).
+2. **O quê**: clássicos da literatura adaptados com fidelidade ao espírito e **proteção da infância**, com ilustração em aquarela, narração e interações que **nascem da história e alfabetizam** (§3.3).
+3. **Como**: livros como configuração de um **motor único**, offline, sem build para quem lê (§2).
+4. **Ritmo**: **uma parte por vez**, com **paradas para o humano** ler com o filho e aprovar. Nada é publicado sem esse "aprovado".
+5. **Economia**: a API paga só com autorização do humano no prompt da sessão, sempre no modo mais barato e com o gasto registrado (§2.7).
+
+### 0.2 Ordem de leitura numa sessão nova
+1. `docs/RETOMADA.md`: onde o trabalho parou e qual é a próxima sessão.
+2. Este `AGENTS.md`: arquitetura e regras.
+3. `docs/RECEITA-CLASSICO-VIVO.md`: a **receita geral** (fases, paradas, crivos, modelos), que vale para qualquer obra.
+4. A **receita específica** da obra (`docs/receitas/<OBRA>.md`, ex.: `docs/receitas/DOM-QUIXOTE.md`): o que vale só para aquela obra ou tipo de adaptação.
+5. O **plano** do livro (`docs/PLANO-*.md`) e o **caderno** da parte em produção (`docs/cadernos/<livro>-parte-N.md`).
+6. Só então, os documentos da frente de trabalho: `ARTE-PELA-API.md`, `TODO-NARRACAO.md`, `docs/fila/` etc.
+
+### 0.3 Papéis
+| Papel | Quem é hoje | O que faz |
+| :--- | :--- | :--- |
+| **Humano** (responsável) | o autor do projeto, que lê os livros com o filho | aprova as paradas 🛑, autoriza a API paga e define o teto de gasto |
+| **Agente principal** | Claude Code (nos documentos, "o Claude") | adaptação e texto, plano de interações, código, testes, narração e, com autorização, arte pela API; escreve os documentos de plano, cadernos, receitas e `docs/fila/PEDIDOS.md` |
+| **Agente de arte** | Gemini no Google Antigravity (nos documentos, "o Gemini") | ilustrações na cota do plano Pro do humano, pela fila `docs/fila/`; escreve só `ENTREGAS.md` e os arquivos de arte que são dele |
+
+Outro agente pode assumir um papel: nesse caso, ele segue as mesmas regras e é dono dos mesmos arquivos (tabela de donos em `docs/fila/PEDIDOS.md`). As regras da API paga (§2.7) valem para todos.
+
+### 0.4 Regras de convivência
+- **Português do Brasil** em tudo (código comentado, documentos, commits).
+- **Nunca quebre o que está publicado**: obra nova ou versão nova nasce como **rascunho** (§2.5, §3.4).
+- **Trabalhe numa branch** e entregue por PR (§6); o humano autoriza o merge direto na `main`. Se o ambiente da sessão define uma branch, use-a.
+- **Feche a sessão** com o `npm run build` (se mexeu em HTML, classes, ícones ou imagens), os testes, o PR, o caderno e a `docs/RETOMADA.md` atualizados e, se houve gasto, quanto foi.
+- **Documente o que aprendeu**: regra geral → receita geral; regra de uma obra → receita específica; arquitetura → este arquivo; pendência → `docs/BACKLOG.md`; entrega → `docs/HISTORICO.md`.
 
 ---
 
@@ -11,9 +44,10 @@ Este documento consolida a memória arquitetural, os princípios pedagógicos, a
 
 - **Público-Alvo**: Crianças em fase de alfabetização e letramento (5 a 8 anos).
 - **Proposta Pedagógica**: Aproximar as crianças das maiores obras-primas da literatura universal através de uma experiência interativa, sensorial, visualmente rica e de toque acolhedor.
+- **Tipos de adaptação** (receita geral §2): **condensação** de obras longas (resumir e escolher, como em Dom Quixote) e **adequação/ampliação** de obras curtas (atualizar para hoje e para a idade, às vezes ficando maior que o original; receita ainda a escrever). As decisões de cada obra ficam na receita específica dela, em `docs/receitas/`.
 - **Obra Piloto**: *Dom Quixote de La Mancha*, adaptado diretamente da obra de Miguel de Cervantes, em **dois volumes, como o original**:
   - **Primeiro volume (1605), Partes 1 a 4**, na prateleira de cima (capítulos numerados em sequência: 1–7, 8–15, 16–22, 23–29; Parte 2 com 9 páginas ao abrir com o tombo nos moinhos). Parte 1: *O Cavaleiro da Super Imaginação*; Parte 2: *Exércitos de Lã e o Elmo Encantado*; Parte 3: *Serra Morena e a Princesa Micomicona*. Decisões de adaptação e o mapa de interações das Partes 2–3 estão em `docs/PLANO-PARTES-2-4.md`.
-  - **Correção de rumo (2026-10-25)**: a Parte 4 atual (*A Jaula Encantada e a Ilha de Sancho*) resumia 81 capítulos em 7 páginas e ficou apressada. Ela será **refeita para fechar o primeiro volume**, e o **segundo volume (1615)** vira pelo menos **três partes novas (5 a 7)**, na prateleira de baixo. Plano, escaletas e andamento: `docs/PLANO-DOM-QUIXOTE-PARTES-4-7.md`.
+  - **Correção de rumo (2026-10-25)**: a Parte 4 atual (*A Jaula Encantada e a Ilha de Sancho*) resumia 81 capítulos em 7 páginas e ficou apressada. Ela será **refeita para fechar o primeiro volume**, e o **segundo volume (1615)** vira pelo menos **três partes novas (5 a 7)**, na prateleira de baixo. Plano, escaletas e andamento: `docs/PLANO-DOM-QUIXOTE-PARTES-4-7.md`. O que vale só para Dom Quixote (a condensação e as lentes): `docs/receitas/DOM-QUIXOTE.md`.
 - **Diretriz de Dispositivo**: **Tablet-First** (iPad, Samsung Galaxy Tab). Dimensões alvo prioritárias:
   - **Tablet Retrato (Portrait)**: 800 × 1280 px
   - **Tablet Paisagem (Landscape)**: 1280 × 800 px
@@ -33,7 +67,7 @@ O projeto adota uma filosofia **Zero-Build para o leitor**: cada livro é um HTM
 - **Ilustrações em WebP** (1376 × 768, qualidade 80, ~150–230 KB cada).
 - **PWA**: `manifest.webmanifest` + `sw.js` na raiz. O service worker baixa todos os livros na primeira visita via HTTPS (GitHub Pages). HTML segue a estratégia rede-primeiro; o resto, cache-primeiro.
 - **Web Audio API Procedural**: Todos os efeitos sonoros (fanfarras de cavaleiro, arpeggios mágicos, cliques táteis de cartões de leitura, pops lúdicos) são sintetizados matematicamente via código (`AudioContext`), dispensando dependências de arquivos MP3/WAV externos pesados.
-- **Narração**: gravada (vozes neurais da API de voz do Gemini, chamada pelo Claude, MP3 frase por frase) com a **Web Speech API (`pt-BR`)** do aparelho como reserva automática. Ver §2.6.
+- **Narração**: gravada (vozes neurais da API de voz do Gemini, produzidas pelo agente principal, um MP3 por página com o tempo de cada frase) com a **Web Speech API** do aparelho como reserva automática. Ver §2.6.
 - **Pointer Events**: Eventos unificados (`pointerdown`, `pointermove`, `pointerup`) para drag-and-drop fluido compatível tanto com touchscreen/caneta quanto com mouse. O swipe de troca de página ignora toques iniciados em `.draggable-card`.
 
 ### 2.1.1 Ferramentas de Desenvolvimento (`npm run build`)
@@ -51,7 +85,7 @@ npm run gerar:imagens -- --lista tools/arte/dom-quixote-parte-2.mjs --seco   # i
 **Rode `npm run build` sempre que** usar uma classe Tailwind nova, um ícone Phosphor novo, ou adicionar/alterar qualquer HTML ou imagem. O `sw.js` precisa da lista atualizada e de uma nova versão de cache, senão os tablets não recebem a mudança. Os scripts ficam em `tools/`, e `sw.js` é gerado a partir de `tools/sw.template.js` (nunca edite `sw.js` à mão).
 
 ### 2.2 Isolamento de Páginas e Navegação
-- **Eliminação de Ghosting/Bleed-Through**: Para alternar entre as 8 páginas do livro, as páginas inativas devem **obrigatoriamente** receber a regra:
+- **Eliminação de Ghosting/Bleed-Through**: Para alternar entre as páginas do livro, as páginas inativas devem **obrigatoriamente** receber a regra:
   ```css
   .page-hidden {
       display: none !important;
@@ -63,7 +97,7 @@ npm run gerar:imagens -- --lista tools/arte/dom-quixote-parte-2.mjs --seco   # i
   ```text
   ?page=N&imag=1
   ```
-  - `page`: Índice da página de `0` a `7` (ex: `?page=3` para Capítulo 3, `?page=6` para Sancho Pança, `?page=7` para os Moinhos).
+  - `page`: índice da página, de `0` (a capa) ao número de páginas menos 1 (ex.: na Parte 1, `?page=3` para o Capítulo 3, `?page=6` para Sancho Pança, `?page=7` para os Moinhos).
   - `imag=1` ou `imag=true`: Ativa imediatamente a **Lente da Imaginação** daquela página.
 - **Convenção de nomes das ilustrações**: `pN` = **índice da página** (`?page=N`). Exemplos: `p2-real-stage-3.webp`, `p6-imag.webp` (Sancho), `p7-real.webp` (Moinhos).
 
@@ -119,6 +153,7 @@ Todas as partes usam **o mesmo motor** (`assets/js/livro.js` + `assets/css/livro
 ```js
 window.LIVRO = {
   obra, autor, parte, totalPartes,
+  rascunho?: true,                        // obra em produção (ver abaixo); some ao publicar
   imagens: './imagens/parte-2/',          // nomes simples de imagem são relativos a esta pasta
   fim: { mensagem, proxima: './parte-3.html', proximaRotulo },   // bloco final da última página
   paginas: [{
@@ -148,6 +183,7 @@ window.LIVRO = {
   | `acao` | chama `LIVRO.acoes[item.acao]` com a API da página | vento nos moinhos |
   | `livre` | só celebra. **Evite** (§3.3) | (provisório) |
 - **Arte ausente não quebra nada**: cena sem arquivo mostra "🎨 Ilustração a caminho"; camada sem arquivo mostra o `emoji` dela. Assim o texto e as interações podem ser escritos e testados **antes** da arte do Nano-Banana.
+- **Rascunho** (`rascunho: true`): o livro mostra o selo "📝 Rascunho", lê só com a voz do aparelho em português (a narração gravada e as traduções seriam de outro texto; `?narracao=1` libera a gravação para a escuta da fase 6), não carrega traduções e guarda o progresso numa chave à parte (`cv-progresso-…-rascunho`), sem mexer no "Continuar lendo" da estante. A obra em produção também tem uma entrada em `assets/js/acervo.js` (§3.4). Uma versão nova de uma parte já publicada nasce num arquivo à parte (ex.: `parte-4-rascunho.html`).
 - **Eventos delegados** (sem `onclick` no HTML): palavras-chave (`data-palavra`), lente (`data-lente`), hotspots (`data-hotspot`) e navegação (`data-nav`).
 
 ### 2.6 Vozes e Narração Gravada
@@ -155,7 +191,7 @@ window.LIVRO = {
 - **Narração gravada**: **uma voz por vez** no livro (decisão do humano): a pasta `narracao`, com a narradora e vozes próprias para as falas dos personagens. Arquivos em `<livro>/audio/<voz>/parte-N/<id-da-frase>.mp3`; palavras-chave em `<livro>/audio/palavras/<slug>.mp3` (sílabas pausadas + palavra inteira). A voz só aparece como completa quando o número da parte está em `partes` no `vozes.js` (as Partes 1 a 4 de Dom Quixote já estão).
 - **Reserva em cascata, nunca silêncio**: frase sem gravação → voz do aparelho; voz "online" sem internet → melhor voz offline do aparelho (até recarregar a página). Na primeira visita, se houver narração gravada pronta para a parte, ela vira a voz padrão.
 - **Offline**: o service worker **não** pré-baixa os áudios (são grandes). Os MP3 seguem **rede primeiro** (uma frase regravada com o mesmo nome chega ao tablet) e ficam num cache próprio (`cv-narracao`, que sobrevive às novas versões), para tocar offline depois da primeira vez. O SW pede o arquivo inteiro (200) em vez do trecho (Range/206) que o `<audio>` pede, senão nada seria guardado. O `vozes.js` também é buscado na rede primeiro.
-- **Página inteira** (o padrão): `<voz>/parte-N/paginas.json` lista as páginas gravadas num áudio só (`pN.mp3`) e o tempo de cada frase (`ini`/`fim`). "Ouvir Página" toca esse MP3 e destaca a frase pelo `currentTime` (`lerPaginaInteira`). As páginas fora dele seguem frase a frase. O áudio que vem do service worker **não aceita salto no tempo** (`seekable` vazio); para tocar uma frase solta de uma página inteira, ver BACKLOG M-4.
+- **Página inteira** (o padrão): `<voz>/parte-N/paginas.json` lista as páginas gravadas num áudio só (`pN.mp3`) e o tempo de cada frase (`ini`/`fim`). "Ouvir Página" toca esse MP3 e destaca a frase pelo `currentTime` (`lerPaginaInteira`). As páginas fora dele seguem frase a frase. O áudio que vem do service worker **não aceita salto no tempo** (`seekable` vazio); por isso, para começar numa frase do meio, o MP3 da página vira um blob na memória (`audioComSalto`, §2.2.2).
 - **Vozes dos personagens**: o roteiro (`narracao/parte-N/roteiro.json`) diz quem fala cada trecho, e o elenco fica em `ELENCO` (`tools/gravar-narracao.mjs`). **Economia** (limite de R$ 30/mês do humano): a API paga só produz vozes; a conferência é local (`tools/transcrever.py`, Whisper).
 - **Prévia**: uma voz com a parte em `previa` (no `vozes.js`) aparece no painel com só algumas frases gravadas (as demais usam a voz do aparelho) e nunca vira a voz padrão. Serve para o humano ouvir no livro antes de a produção seguir.
 - Produção das gravações: `docs/TODO-NARRACAO.md` e `npm run gravar:narracao` (Claude, via API do Gemini `gemini-3.8-flash-tts` com a chave como segredo de rede do ambiente, injetada pelo proxy; ela **nunca** é impressa nem versionada). **Regras de uso da API: §2.7.** Lista do que gravar: `docs/narracao/frases-<livro>-parte-N.json`.
@@ -194,7 +230,9 @@ A API é paga pelo humano, num projeto de hobby com **limite de R$ 30/mês** (er
 
 ## 3. Diretrizes Pedagógicas, UX e Crítica à Gamificação
 
-### 3.1 A Dupla Lente da Imaginação
+### 3.1 A Dupla Lente da Imaginação (recurso próprio de Dom Quixote)
+> O motor oferece as duas lentes a qualquer livro, mas elas nasceram do tema de *Dom Quixote* (o choque entre o real e o imaginado). Um livro novo só usa esse recurso, ou cria o seu, se o mapa da obra pedir (receita geral §3). Regras da Imaginação em Dom Quixote: `docs/receitas/DOM-QUIXOTE.md` §3.
+
 - Cada página oferece dois pontos de vista alternáveis pelo botão de lente:
   1. **Lente da Realidade**: O mundo como ele é (Alonso Quixano idoso em sua poltrona; bacia de latão na cabeça; camponesa Aldonza; moinhos de vento na colina).
   2. **Lente da Imaginação**: Como Dom Quixote enxerga com seus olhos poéticos (O rei em seu trono com dragões e o **leão guardião**; armadura dourada reluzente; Princesa Dulcineia do Toboso; gigantes descomunais agitando braços de vento).
@@ -211,8 +249,20 @@ A API é paga pelo humano, num projeto de hobby com **limite de R$ 30/mês** (er
 - **Regra Prática**: Botões ou cartões arrastáveis que não geram transformação tangível e divertida na cena são ruído pedagógico e devem ser banidos.
   - *Exemplo real (Página 6)*: Na cena da sagração de cavaleiro, havia cartões para arrastar "LUA CHEIA" e "ESPADA" que apenas faziam a imagem tremer sem alterar a ilustração. Foram eliminados para manter o quadro limpo, preservando a interatividade das palavras apenas no texto da história.
   - *Exemplo de boa interatividade (Página 8, `?page=7`)*: O botão "VENTO" não é decorativo; ele dispara fisicamente a rotação acelerada das pás dos moinhos com som sintetizado de rajada e partículas `💨`, até culminar na transformação mágica dos moinhos nos gigantes de Cervantes.
+- **Padrão ouro** (nota 10 do humano): a assinatura da carta (Dom Quixote, Parte 3, cap. 18), em que a criança ajuda Sancho a lembrar as palavras na ordem certa. O crivo de cinco perguntas e o cardápio de atividades alfabetizadoras estão na receita geral (`docs/RECEITA-CLASSICO-VIVO.md` §6.2).
 
----
+### 3.4 Biblioteca para Crianças, Detalhes para Adultos
+- `index.html` é uma **estante lúdica**: livros como capas grandes e tocáveis numa prateleira de madeira, com botão ▶. **Quanto menos texto, melhor**: nada de descrições, pilares, faixas etárias ou títulos de capítulos.
+  - **Prateleira de cima**: as 4 partes do primeiro volume de Dom Quixote, publicadas (a capa de cada uma é o `p0-real` da parte, fixa no HTML).
+  - **Prateleira de baixo**: o segundo volume de Dom Quixote (Partes 5–7), por enquanto só como **capas-teaser com cadeado** 🔒. Ao tocar numa delas, um aviso gentil diz que o livro ainda está sendo feito e será liberado em breve.
+- **Obras em produção** (`assets/js/acervo.js`, lista única lida pela estante e pela página dos adultos): cada entrada tem `situacao` (`'fila'` ou `'rascunho'`), a `estante` onde aparece a capa-teaser (ou `null`, para uma versão nova de uma parte já publicada) e o `href` do rascunho. **Só entra ali o que já é rascunho ou está na fila para virar rascunho em breve** (decisão do humano, 2026-10-25): nada de cadeados de "próximos clássicos" sem obra definida.
+- Tudo que é informação para adultos (proposta pedagógica, acervo detalhado, instruções de instalação e voz, licença) fica em `sobre.html`, acessível por um botão discreto "Para adultos" (ícone ⓘ). Lá fica também a seção **Livros em produção**, com a chave **"Mostrar os rascunhos"** (lembrada no aparelho em `cv-rascunhos`): ligada, lista as obras do `acervo.js`, e os rascunhos se abrem por ali. Na estante, nunca.
+- **Publicar uma obra**: tirar `rascunho` do `window.LIVRO`, tirar a entrada do `acervo.js`, pôr a capa fixa na prateleira certa do `index.html` e a descrição no "Acervo" de `sobre.html` (textos traduzidos em `assets/js/i18n-site.js`). Livro novo: uma prateleira nova para ele.
+- **Fluxos de Leitura ("Continuar", "Ler de Novo" e "Recomeçar Página")**:
+  - `Continuar de onde parou`: guarda o progresso da leitura em `localStorage` (`cv-progresso-<livro>` e `cv-ultimo-livro`), oferecendo atalho destacado "Continuar da Página X" tanto na capa do livro quanto na estante da biblioteca (`index.html`).
+  - `Ler de Novo`: na última página, limpa e reinicia o estado de todas as páginas (cartões, lentes, camadas) e retorna à capa.
+  - `Botão 🔄 Recomeçar`: presente nas páginas de leitura ao lado do botão de lente, permite à criança reiniciar apenas as interações daquela página atual de volta ao estado inicial para brincar de novo à vontade.
+- **Notificação de Atualização do PWA**: Quando o service worker detecta uma nova versão em cache, um aviso sutil (`✨ Nova versão disponível`) convida o usuário a atualizar com um toque.
 
 ### 3.5 Linguagem: simples sem perder a beleza
 - **Leitor de referência: uma criança de 6 anos ouvindo (ou lendo junto com) um adulto.** Retorno do humano (2026-10-25): o texto das Partes 2–4 estava rebuscado demais, com construções complexas e palavras arcaicas, longe da realidade brasileira.
@@ -221,15 +271,9 @@ A API é paga pelo humano, num projeto de hobby com **limite de R$ 30/mês** (er
 - **Palavras difíceis que fazem parte da história** (odre, elmo, bolota, fole, fidalgo) podem ficar, com uma explicação curta no próprio texto: "os odres: grandes sacos de couro, cheios de vinho". Nomes de Cervantes (Pandafilando da Fosca Vista, Alifanfarrão) ficam: são divertidos.
 - Vale também para as traduções (§2.8), cada uma no dia a dia de uma criança daquele idioma.
 
-### 3.4 Biblioteca para Crianças, Detalhes para Adultos
-- `index.html` é uma **estante lúdica**: livros como capas grandes e tocáveis numa prateleira de madeira, com botão ▶. Na prateleira de cima ficam as 4 partes do primeiro volume de Dom Quixote (a capa de cada uma é o `p0-real` da parte; cor e emoji provisórios só aparecem num livro novo, enquanto a arte não chega); na de baixo, hoje com os próximos clássicos em 🔒 "Em breve", entra o **segundo volume** (Partes 5–7, com cadeado até cada uma ser publicada; ver `docs/PLANO-DOM-QUIXOTE-PARTES-4-7.md` §2). **Quanto menos texto, melhor**: nada de descrições, pilares, faixas etárias ou títulos de capítulos.
-- Tudo que é informação para adultos (proposta pedagógica, acervo detalhado, instruções de instalação e voz, licença) fica em `sobre.html`, acessível por um botão discreto "Para adultos" (ícone ⓘ).
-- Livro novo: uma capa nova na prateleira de cima e uma entrada no "Acervo" de `sobre.html`.
-- **Fluxos de Leitura ("Continuar", "Ler de Novo" e "Recomeçar Página")**:
-  - `Continuar de onde parou`: guarda o progresso da leitura em `localStorage` (`cv-progresso-<livro>` e `cv-ultimo-livro`), oferecendo atalho destacado "Continuar da Página X" tanto na capa do livro quanto na estante da biblioteca (`index.html`).
-  - `Ler de Novo`: na última página, limpa e reinicia o estado de todas as páginas (cartões, lentes, camadas) e retorna à capa.
-  - `Botão 🔄 Recomeçar`: presente nas páginas de leitura ao lado do botão de lente, permite à criança reiniciar apenas as interações daquela página atual de volta ao estado inicial para brincar de novo à vontade.
-- **Notificação de Atualização do PWA**: Quando o service worker detecta uma nova versão em cache, um aviso sutil (`✨ Nova versão disponível`) convida o usuário a atualizar com um toque.
+### 3.6 Proteção da infância
+- Muitos clássicos foram escritos quando a ideia de proteger a criança não existia como hoje. Adaptar é também trazer a obra para os valores de agora: sem violência como eixo, sem humilhação como piada, sem conteúdo adulto, sem medo gratuito, sem preconceito, sem castigo cruel apresentado como justo. O conflito, o perigo e a emoção que a história precisa ficam; muda a forma.
+- Cada decisão é registrada com o motivo (no mapa da obra, receita geral §3). Exemplo: os cortes de Dom Quixote em `docs/receitas/DOM-QUIXOTE.md` §1.3.
 
 ## 4. Pipeline de Ilustração: Nano-Banana, Desacoplamento e Banco de Referências
 
@@ -262,11 +306,11 @@ Para possibilitar ricas experiências interativas sem perder a fidelidade artís
      3. Mesma **escala e perspectiva**: posicione e dimensione em `%` do quadro 16:9, ancorando pela base (pés), e confira nas duas orientações.
      4. Recorte limpo, **sem halo branco** nas bordas. Se o Nano-Banana entregar fundo branco, faça o recorte antes de versionar.
      5. Cada variação de pose (pastor parado × tocando) é um sprite próprio com **o mesmo enquadramento e tamanho de tela**, para trocar sem "pular".
-   - **Motor de camadas implementado** (§2.5): `cena.camadas` com posição em % (`x`, `y` = base, `w`), visibilidade pelo estado (`item`: aparece depois que o item é usado; `ate`: some quando o item é usado), animação contínua (`anim`: `balanco`, `flutuar`, `girar`, `pulsar`, `martelar`) e efeitos de um toque (`efeito`: `cambalhota`, `pulo`, `estouro`, `atravessar`). Véus sem arte (ex.: a escuridão da noite) usam `fundo` com um gradiente CSS. As Partes 2–4 já usam camadas; na Parte 1, o moinho (NB-1) e a pousada (NB-2) vão migrar quando a arte chegar.
+   - **Motor de camadas implementado** (§2.5): `cena.camadas` com posição em % (`x`, `y` = base, `w`), visibilidade pelo estado (`item`: aparece depois que o item é usado; `ate`: some quando o item é usado), animação contínua (`anim`: `balanco`, `flutuar`, `girar`, `pulsar`, `martelar`) e efeitos de um toque (`efeito`: `cambalhota`, `pulo`, `estouro`, `atravessar`). Véus sem arte (ex.: a escuridão da noite) usam `fundo` com um gradiente CSS. Todas as partes de Dom Quixote já usam camadas (na Parte 1, as pás dos moinhos e a pousada).
 3. **Mecânica Progressiva (Páginas 3, 4 e 5)**:
    - **Página 3 (`?page=2`, Capítulo 2 - A Armadura do Bisavô)**: Cada clique ou drop de um item da bandeja (`ARMADURA`, `BACIA`, `ESCUDO`, `LANÇA`) revela uma nova ilustração do personagem se vestindo progressivamente (`p2-real-stage-1.webp` a `p2-real-stage-4.webp`).
    - **Página 4 (`?page=3`, Capítulo 3 - O Cuidado com Rocinante)**: Cada clique ou drop de carinho (`MAÇÃ`, `CENOURA`, `ESCOVA`) revela uma nova ilustração do cavalo se alimentando alegremente, ganhando energia e com as crinas penteadas com esmero (`p3-real-stage-1.webp` a `p3-real-stage-3.webp`).
-   - **Página 5 (`?page=4`, Capítulo 4 - O Acolhimento na Pousada)**: Os botões de `TROMBETA` e `SOPA` revelam o pastor tocando flauta rústica com porquinhos dançarinos (`p4-real-flauta.webp`) e o estalajadeiro servindo a sopa fumegante (`p4-real-sopa.webp`).
+   - **Página 5 (`?page=4`, Capítulo 4 - O Acolhimento na Pousada)**: Os botões de `TROMBETA` e `SOPA` mostram, em camadas independentes e em qualquer ordem, o pastor tocando flauta com os porquinhos dançando e o estalajadeiro servindo a sopa (`camadas/p4-*.webp`; as antigas ilustrações inteiras `p4-real-flauta`/`p4-real-sopa` foram aposentadas).
    - **Regra das ilustrações cumulativas**: quando cada etapa **contém** as anteriores (a etapa 2 já mostra o peitoral da etapa 1), os itens **precisam seguir uma ordem fixa**, a mesma do texto, declarada em `cena.cartoes.ordem` (tipo `progressivo`). O próximo item brilha (`.card-next`), os seguintes ficam esmaecidos (`.card-waiting`) e um toque fora de ordem só dá uma dica gentil (som `hint` + balanço do cartão certo), **sem trocar a cena**. Nunca escolha a etapa pela *quantidade* de itens usados: esse foi o bug "toco na bacia e ele veste o peitoral". Se a interação precisar aceitar qualquer ordem, use **camadas independentes** por item (ver acima) ou ilustrações independentes por item (não cumulativas).
    - Usar um item com a Lente da Imaginação ativa volta para a Lente da Realidade (vestir e cuidar acontecem no mundo real).
    - **Tempo de Contemplação do Leitor**: É terminantemente proibido forçar auto-toggle, transições automáticas precipitadas ou piscamentos relâmpagos para a imaginação. O leitor infantil deve contemplar a cena real concluída pelo tempo que desejar. O botão da Lente da Imaginação apenas pulsa suavemente para convidar a criança à transformação deliberada.
@@ -277,13 +321,17 @@ classicos-vivos/
 ├── assets/                              # Compartilhado por todos os livros
 │   ├── js/  livro.js                    # O MOTOR dos livros (editado à mão)
 │   ├── js/  texto.js                    # frases, HTML e texto falado (motor + exportação)
+│   ├── js/  acervo.js                   # obras em produção (fila/rascunho): teasers da estante e lista para adultos
+│   ├── js/  i18n-site.js                # idiomas e interações da estante (index) e de sobre.html
 │   ├── css/ livro.css                   # estilo dos livros (editado à mão)
 │   ├── css/  tailwind.css · fonts.css · icons.css
 │   ├── fonts/                           # woff2 locais
 │   └── icones/                          # ícones do app (PWA)
 ├── tools/                               # scripts de build (fontes, ícones, Tailwind, WebP, service worker)
-├── docs/  RETOMADA.md (comece por aqui numa sessão nova) · RECEITA-CLASSICO-VIVO.md (como criar uma parte) · PLANO-DOM-QUIXOTE-PARTES-4-7.md · BACKLOG.md · TODO-NANO-BANANA.md · TODO-NANO-BANANA-PARTES-2-4.md · PLANO-PARTES-2-4.md · TODO-NARRACAO.md · ARTE-PELA-API.md
+├── docs/  RETOMADA.md (comece por aqui numa sessão nova) · RECEITA-CLASSICO-VIVO.md (receita geral) · PLANO-DOM-QUIXOTE-PARTES-4-7.md · BACKLOG.md (pendências) · HISTORICO.md (entregas) · TODO-NANO-BANANA.md · TODO-NANO-BANANA-PARTES-2-4.md · PLANO-PARTES-2-4.md · TODO-NARRACAO.md · ARTE-PELA-API.md
+│   ├── receitas/                        # receitas específicas por obra ou tipo de adaptação (DOM-QUIXOTE.md)
 │   ├── cadernos/                        # um caderno por parte em produção (fases, decisões, notas do humano)
+│   ├── arquivo/                         # versões aposentadas guardadas para reaproveitar (ex.: traduções antigas)
 │   ├── fila/                            # canal Claude ↔ Gemini (PEDIDOS.md, ENTREGAS.md)
 │   ├── narracao/                        # frases e palavras-chave a gravar (gerado)
 │   └── traducao/                        # o que traduzir, parte por parte (gerado)
@@ -291,7 +339,7 @@ classicos-vivos/
 ├── sobre.html                           # Detalhes para adultos (proposta, acervo, uso no tablet, licença)
 ├── sw.js · manifest.webmanifest
 └── dom-quixote/
-    ├── parte-1.html … parte-4.html      # só conteúdo (window.LIVRO), ver §2.5
+    ├── parte-1.html … parte-N.html      # só conteúdo (window.LIVRO), ver §2.5; rascunhos com `rascunho: true`
     ├── audio/                           # narração gravada: vozes.js, <voz>/parte-N/<id>.mp3, palavras/
     ├── traducoes/                       # parte-N.<idioma>.js (en, fr, es), ver §2.8
     ├── imagens/                         # FONTE ÚNICA do que o livro carrega (cenas pN-*.webp)
@@ -318,7 +366,7 @@ classicos-vivos/
 
 ## 5. Protocolo de Testes Automatizados no Tablet
 
-Para validar a integridade da interface em tablets sem intervenção manual, utilize o comando headless do Google Chrome com as resoluções padronizadas. Para testar o service worker (PWA offline), sirva por HTTP (`python -m http.server` na raiz) em vez de `file://`. Em Linux/macOS, o mesmo vale com Chromium/Playwright (`--window-size=800,1280` e `1280,800`). Um `npm test` multiplataforma está no backlog (M-8).
+Para validar a integridade da interface em tablets sem intervenção manual, use um navegador headless nas resoluções padronizadas. **Linux/macOS (contêineres de agentes)**: Chromium + Playwright (`require('playwright')`, `chromium.launch()`), servindo a raiz com `python3 -m http.server`, viewports 800 × 1280 e 1280 × 800, nas duas lentes, clicando nas atividades com `locator.click()` (o motor usa *pointer events*). **Windows (máquina do humano)**: os comandos abaixo, com o Google Chrome. Para testar o service worker (PWA offline), sirva por HTTP (`python -m http.server` na raiz) em vez de `file://`. Em Linux/macOS, o mesmo vale com Chromium/Playwright (`--window-size=800,1280` e `1280,800`). Um `npm test` multiplataforma está no backlog (M-8).
 
 ### 5.1 Teste em Tablet Retrato (Portrait: 800 × 1280)
 ```powershell
@@ -335,21 +383,24 @@ cmd /c '"C:\Program Files\Google\Chrome\Application\chrome.exe" --headless=new -
 ## 6. Procedimento Operacional de Entrega (Git & Deploy)
 
 O repositório oficial é hospedado em:
-`https://github.com/geraldotfilho/classicos-vivos.git` (Branch: `main`).
+`https://github.com/geraldotfilho/classicos-vivos.git` (Branch: `main`, publicada no GitHub Pages).
+
+O trabalho é feito numa **branch** (a que o ambiente da sessão definir, ou uma nova a partir da `main`) e entregue por **PR**; o humano autoriza o merge direto na `main` pelas ferramentas do GitHub. Se a branch da sessão já foi mesclada, recomece-a a partir da `main` atual.
 
 Ao finalizar qualquer ciclo de desenvolvimento:
 1. **Regenerar os arquivos gerados**: `npm run build` (obrigatório se mudou HTML, classes, ícones ou imagens).
    > A antiga cópia avulsa `dom_quixote_parte_1_livro_interativo_infantil.html` foi descontinuada: o livro depende de `assets/` e `imagens/`, então distribua a pasta do repositório inteira (ou o link do GitHub Pages).
-2. **Atualizar `AGENTS.md`** caso novos padrões arquiteturais tenham sido introduzidos, e **`docs/BACKLOG.md`** (mover o que foi entregue, registrar o que foi descoberto). Ao fechar uma parte, a retrospectiva leva as lições novas para o **Diário de lições** de `docs/RECEITA-CLASSICO-VIVO.md` §7. Pedidos de arte nova vão para **`docs/TODO-NANO-BANANA.md`**, com arquivo, referências, prompt e critério de aceite.
-   > **Trabalho entre agentes (Claude ↔ Gemini)**: a coordenação assíncrona passa por `docs/fila/`. Em `PEDIDOS.md` (só o Claude escreve) ficam os pedidos, as revisões e a linha `ESTADO: ATIVO|PARAR`; em `ENTREGAS.md` (só o Gemini escreve), as entregas e o status. Cada arquivo tem **um único dono** (tabela em `PEDIDOS.md`) para não haver conflito de merge. Conflito em `sw.js`: regenere com `npm run build:sw`, nunca resolva à mão.
+2. **Atualizar `AGENTS.md`** caso novos padrões arquiteturais tenham sido introduzidos, e **`docs/BACKLOG.md`** (o que falta; o que foi entregue vai para **`docs/HISTORICO.md`**). Ao fechar uma parte, a retrospectiva leva as lições novas para o diário da receita geral (`docs/RECEITA-CLASSICO-VIVO.md` §8) ou da receita específica (`docs/receitas/`). Pedidos de arte para o agente de arte vão para `docs/fila/PEDIDOS.md`, com arquivo, referências, prompt e critério de aceite (os `TODO-NANO-BANANA*.md` antigos já foram concluídos).
+   > **Trabalho entre agentes (agente principal ↔ agente de arte, hoje Claude ↔ Gemini)**: a coordenação assíncrona passa por `docs/fila/`. Em `PEDIDOS.md` (só o agente principal escreve) ficam os pedidos, as revisões e a linha `ESTADO: ATIVO|PARAR`; em `ENTREGAS.md` (só o agente de arte escreve), as entregas e o status. Cada arquivo tem **um único dono** (tabela em `PEDIDOS.md`) para não haver conflito de merge. Conflito em `sw.js`: regenere com `npm run build:sw`, nunca resolva à mão.
 3. **Verificar Estado no Diretório Git**:
    ```powershell
    cd classicos-vivos
    git status
    ```
-4. **Adicionar, Commitar e Enviar**:
-   ```powershell
+4. **Adicionar, commitar, enviar e abrir o PR**:
+   ```bash
    git add .
-   git commit -m "feat/fix: descrição clara e concisa das melhorias realizadas"
-   git push origin main
+   git commit -m "feat/fix/docs/arte/narração: descrição clara e concisa"
+   git push -u origin <branch>
    ```
+   Depois, o PR para a `main` e o merge. Mensagens de commit em português, com o tipo na frente (`feat`, `fix`, `docs`, `texto`, `arte`, `narração`, `traducao`, `chore`).

@@ -1,6 +1,6 @@
 # 📬 Fila de Trabalho — PEDIDOS e REVISÕES (escrito só pelo Claude)
 
-Canal entre o **Claude** (código, texto, revisão e **narração gravada** via API) e o **Gemini** (ilustrações com o Nano-Banana), para trabalharem sem supervisão enquanto o responsável humano está longe.
+Canal entre o **Claude** (o agente principal: código, texto, revisão e **narração gravada** via API) e o **Gemini** (o agente de arte: ilustrações com o Nano-Banana no Antigravity), para trabalharem sem supervisão enquanto o responsável humano está longe. Os nomes são dos **papéis** (`AGENTS.md` §0.3): outro agente que assuma um papel herda os mesmos arquivos e regras.
 
 ```text
 ESTADO: ATIVO
@@ -15,7 +15,7 @@ ESTADO: ATIVO
    | :--- | :--- |
    | `docs/fila/PEDIDOS.md` (este) | Claude |
    | `docs/fila/ENTREGAS.md` | Gemini |
-   | `docs/TODO-NANO-BANANA*.md`, `AGENTS.md`, `docs/BACKLOG.md`, `docs/PLANO-*.md`, todo HTML/JS/CSS | Claude |
+   | `docs/TODO-NANO-BANANA*.md`, `AGENTS.md`, `docs/BACKLOG.md`, `docs/HISTORICO.md`, `docs/RETOMADA.md`, `docs/PLANO-*.md`, `docs/RECEITA-CLASSICO-VIVO.md`, `docs/receitas/**`, `docs/cadernos/**`, todo HTML/JS/CSS | Claude |
    | `dom-quixote/imagens/**`, `assets/icones/**`, `dom-quixote/biblioteca/**` (inclui `CATALOGO.md`), `dom-quixote/PROMPTS_ILUSTRACOES.md` | Gemini |
    | `dom-quixote/audio/**` (narração gravada, inclui `vozes.js`) | Claude (desde 2026-10-23) |
    | `docs/narracao/**` (lista de frases, gerada por `npm run exportar:frases`) e `docs/TODO-NARRACAO.md` | Claude |
@@ -32,7 +32,7 @@ ESTADO: ATIVO
 
 | ID | Tipo | Pedido | Status |
 | :--- | :--- | :--- | :--- |
-| P-001 | tarefa | Executar **todas** as tarefas de `docs/TODO-NANO-BANANA.md` (NB-1 a NB-8), na ordem de prioridade do arquivo | ABERTO |
+| P-001 | tarefa | Executar **todas** as tarefas de `docs/TODO-NANO-BANANA.md` (NB-1 a NB-8), na ordem de prioridade do arquivo | ✅ CONCLUÍDO (2026-10-24) |
 | P-002 | tarefa | Executar **todas** as tarefas de `docs/TODO-NANO-BANANA-PARTES-2-4.md` (Parte 2 → Parte 3 → Parte 4), depois de P-001 | ✅ CONCLUÍDO (Parte 2, páginas 0–3: Gemini; o resto: Claude pela API, 2026-10-24) |
 | P-003 | ajuste | **NB-2 (pousada), camadas com cara de adesivo**. Regerar **mantendo o mesmo tamanho de tela (canvas), o mesmo enquadramento e o mesmo ponto de apoio** de cada arquivo, porque o código já posiciona essas camadas: (1) `p4-estalajadeiro-acenando` e `p4-estalajadeiro-sopa`: a sombra de contato é uma **mancha branca/cinza-clara**; troque por uma sombra **escura, marrom-acinzentada, suave e semitransparente**, e deixe o avental **100% opaco** (hoje ~4% dos pixels claros têm alfa parcial: a remoção do fundo branco comeu o avental); (2) `p4-porquinhos`: mesma troca da sombra branca por sombra escura suave; (3) `p4-pastor-parado` e `p4-pastor-tocando`: **sem o tapete de grama recortado** sob o menino; só o menino sentado com uma sombra escura suave; (4) `p4-notas-musicais`: **sem o contorno/halo branco**; um brilho dourado suave é bem-vindo. Teste: componha cada camada sobre um fundo magenta puro, e nada branco pode aparecer em volta. | PARCIAL → substituído por P-005 |
 | P-004 | tarefa | **Limpeza (baixa prioridade, depois de P-003)**: apagar os arquivos substituídos pelas camadas e que o livro não carrega mais: `dom-quixote/imagens/p4-real.webp`, `p4-real-flauta.webp`, `p4-real-sopa.webp`, `p7-real.webp` e `dom-quixote/imagens/objetos/moinho-pas.svg`. Atualizar o `CATALOGO.md`. Rodar `npm run build:sw`. | ✅ CONCLUÍDO |
@@ -43,6 +43,11 @@ ESTADO: ATIVO
 ---
 
 ## Revisões do Claude
+
+### 2026-10-25 — correção de rumo de Dom Quixote (Claude)
+- O humano aprovou as Partes 1–3 e reprovou a Parte 4 (apressada). A nova Parte 4 fecha o volume de 1605, e as Partes 5–7 contam o de 1615: `docs/PLANO-DOM-QUIXOTE-PARTES-4-7.md`. Processo: `docs/RECEITA-CLASSICO-VIVO.md` (geral) e `docs/receitas/DOM-QUIXOTE.md` (específica).
+- Exceção de dono, a pedido do humano (revisão de todos os documentos): o Claude atualizou uma linha de `dom-quixote/PROMPTS_ILUSTRACOES.md` (de onde vêm os pedidos de arte agora).
+- **Gemini (arte)**: nada a fazer agora. Os pedidos de arte das partes novas chegam aqui, um por parte, na fase 4 da receita (depois de o humano aprovar o texto), quando não forem feitos pela API. Não gere nada das Partes 4–7 antes disso: o texto ainda vai mudar.
 
 ### 2026-10-24 16:30 UTC — Partes 3 e 4 concluídas pelo Claude, pela API → P-002 concluído
 - Com autorização do humano, o Claude gerou as **Partes 3 e 4 inteiras** (33 cenas + 10 camadas, US$ 1,60), já integradas e testadas. Prompts em `tools/arte/dom-quixote-parte-3.mjs` e `-parte-4.mjs`; lições em `docs/ARTE-PELA-API.md` §5. **Dom Quixote está todo ilustrado.**

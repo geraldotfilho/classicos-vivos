@@ -36,7 +36,7 @@ Para manter a consistência entre cenas e capítulos, use sempre estas descriç�
 
 ## 🖼️ 3. Prompts Utilizados na Parte 1 (`./imagens/p0` a `p7`)
 
-> Convenção de nomes: `pN` = índice da página no livro (`?page=N`). Os arquivos finais ficam em `./imagens/` no formato **WebP** (convertidos por `tools/otimizar-imagens.py`). Prompts de novas ilustrações pendentes estão em [`../docs/TODO-NANO-BANANA.md`](../docs/TODO-NANO-BANANA.md).
+> Convenção de nomes: `pN` = índice da página no livro (`?page=N`). Os arquivos finais ficam em `./imagens/` no formato **WebP** (convertidos por `tools/otimizar-imagens.py`). Os pedidos de ilustração chegam por [`../docs/fila/PEDIDOS.md`](../docs/fila/PEDIDOS.md) (os `TODO-NANO-BANANA*.md` já foram concluídos); as regras gerais de ilustração estão na receita geral, [`../docs/RECEITA-CLASSICO-VIVO.md`](../docs/RECEITA-CLASSICO-VIVO.md) §6.3.
 
 ### Página 1 (Capa) — O Fidalgo Sonhador de La Mancha
 - **Lente da Realidade (`./imagens/p0-real.webp`):**

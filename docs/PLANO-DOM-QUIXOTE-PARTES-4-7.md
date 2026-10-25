@@ -2,7 +2,7 @@
 
 Plano registrado em 2026-10-25, depois de o humano terminar a série com o filho. As **Partes 1, 2 e 3 ficam como estão** (aprovadas na leitura). A **Parte 4 será refeita para fechar o primeiro volume** de Cervantes (1605), e o **segundo volume (1615)** vira pelo menos **três partes novas (5, 6 e 7)**, na **prateleira de baixo** da estante.
 
-> **Como trabalhar**: uma parte por vez, do começo ao fim, com paradas para o humano ler e aprovar. O processo (fases, paradas, crivos, modelos) está em [`RECEITA-CLASSICO-VIVO.md`](RECEITA-CLASSICO-VIVO.md). Este arquivo diz **o que** fazer em Dom Quixote; a receita diz **como**. O trabalho em si é feito em sessões novas (§8).
+> **Como trabalhar**: uma parte por vez, do começo ao fim, com paradas para o humano ler e aprovar. O processo (fases, paradas, crivos, modelos) está na receita geral, [`RECEITA-CLASSICO-VIVO.md`](RECEITA-CLASSICO-VIVO.md); o que vale só para Dom Quixote (a condensação de uma obra enorme e as lentes), em [`receitas/DOM-QUIXOTE.md`](receitas/DOM-QUIXOTE.md). Este arquivo diz **o que** fazer nas Partes 4 a 7; as receitas dizem **como**. O trabalho em si é feito em sessões novas (§8), por qualquer agente que siga o `AGENTS.md`.
 
 ---
 
@@ -38,7 +38,8 @@ O que o humano sentiu ("apressada, mal encadeada, eventos mal explicados") tem c
 | **7 · O Cavaleiro da Branca Lua** | 1615 · de baixo | 58–74 | 17 | 46–53 | 🆕 |
 
 - Com isso, o volume de 1615 fica com 3 partes de 17 a 29 capítulos, perto da proporção das Partes 2 e 3. Se, na fase 1, a Parte 6 ficar densa demais (duques + ilha), ela pode virar duas (6 = palácio e Clavilenho; 7 = governo de Sancho; 8 = Branca Lua). O humano pediu "pelo menos 3".
-- **Estante** (`index.html`): prateleira de cima = primeiro volume (Partes 1–4); **prateleira de baixo = segundo volume** (Partes 5–7, com 🔒 "Em breve" até cada uma ser publicada), no lugar dos cadeados atuais. Os cadeados dos próximos clássicos vão para uma terceira prateleira, mais discreta, abaixo do segundo volume (ou saem por enquanto: decisão em aberto, §10).
+- **Estante** (`index.html`, ✅ feito em 2026-10-25): prateleira de cima = primeiro volume (Partes 1–4); **prateleira de baixo = segundo volume** (Partes 5–7 como capas-teaser com 🔒; ao tocar, um aviso diz que o livro está sendo feito). As capas-teaser vêm de `assets/js/acervo.js`, a lista das obras em produção. Os cadeados dos "próximos clássicos" (sem obra definida) **saíram**, por decisão do humano: na estante só aparece o que já é rascunho ou está na fila para virar rascunho em breve.
+- **Rascunhos** (✅ feito em 2026-10-25): o humano abre os rascunhos em `sobre.html` → Livros em produção → chave "Mostrar os rascunhos" (receita geral §4).
 - `totalPartes` passa a 7 em todas as partes quando a nova Parte 4 for publicada (o selo vira "Parte 1 de 7"). O fim da Parte 4 aponta para a Parte 5 quando ela existir; até lá, diz que o segundo livro de Dom Quixote está a caminho.
 
 ---
@@ -144,17 +145,18 @@ O texto antigo fica no histórico do Git (versão de `6a55f61`) e serve de base 
 
 ## 6. Fase 0: preparar o terreno (uma vez, na primeira sessão, antes da fase 1 da Parte 4)
 
-1. **Modo rascunho no motor** (`assets/js/livro.js`): `rascunho: true` no `window.LIVRO` mostra uma faixa discreta "Rascunho"; ignora a narração gravada e as traduções (voz do aparelho em português), exceto com `?narracao=1`, para a escuta da fase 6; e guarda o progresso numa chave separada. Documentar no `AGENTS.md` §2.5.
+1. ✅ **Modo rascunho no motor** (feito em 2026-10-25): `rascunho: true` no `window.LIVRO` mostra o selo "📝 Rascunho", ignora a narração gravada e as traduções (voz do aparelho em português; `?narracao=1` libera a gravação para a escuta da fase 6) e guarda o progresso numa chave separada, sem mexer no "Continuar lendo" da estante (`AGENTS.md` §2.5).
 2. **Arquivar a arte da Parte 4 atual sem quebrá-la**: `git mv dom-quixote/imagens/parte-4 dom-quixote/imagens/acervo/parte-4-v1` e trocar o `imagens:` do `parte-4.html` atual e a capa no `index.html`. A nova Parte 4 usa `imagens/parte-4/` e copia de lá as cenas reaproveitadas. A lista de arte antiga vira `tools/arte/dom-quixote-parte-4-v1.mjs`. (Exceção de dono do `CATALOGO.md`, como nas vezes anteriores.)
-3. **Rascunho da nova Parte 4** em `dom-quixote/parte-4-rascunho.html` (`parte: 4`, `rascunho: true`). As Partes 5–7 já nascem nos arquivos finais (`parte-5.html`…), em rascunho.
-4. **Estante**: a prateleira de baixo passa a ser o segundo volume, com três capas 🔒 "Em breve" (Partes 5–7); os próximos clássicos conforme a decisão do §10; textos no `i18n-site.js`; o "Acervo" do `sobre.html` com os dois volumes.
+3. **Rascunho da nova Parte 4** em `dom-quixote/parte-4-rascunho.html` (`parte: 4`, `rascunho: true`) e, no `assets/js/acervo.js`, a entrada `dom-quixote-parte-4-nova` passa a `situacao: 'rascunho'`. As Partes 5–7 já nascem nos arquivos finais (`parte-5.html`…), em rascunho, quando chegar a vez delas.
+4. ✅ **Estante e lista de rascunhos** (feito em 2026-10-25: `index.html`, `sobre.html`, `assets/js/acervo.js`, `assets/js/i18n-site.js`).
 5. `npm run build`, teste das duas orientações e merge.
 
 ### 6.1 Publicação da nova Parte 4 (fim da fase 6)
 No mesmo PR, para nunca haver um momento com texto novo e áudio velho (ou o contrário) no ar:
 - o conteúdo do rascunho substitui o `parte-4.html`; o rascunho é apagado;
 - a narração nova da Parte 4 substitui a antiga;
-- as traduções antigas da Parte 4 vão para `docs/arquivo/`. Até a fase 7, a Parte 4 aparece em português nos outros idiomas (conferir se o motor cai bem para o português quando falta o arquivo; se não cair, corrigir na fase 0);
+- as traduções antigas da Parte 4 vão para `docs/arquivo/`. Até a fase 7, a Parte 4 aparece em português nos outros idiomas (conferido: sem o arquivo da tradução, o motor fica no português e a bandeirinha só balança);
+- a entrada `dom-quixote-parte-4-nova` sai do `assets/js/acervo.js`, e a capa e a descrição da Parte 4 (em `index.html` e `sobre.html`, com as traduções em `i18n-site.js`) passam a ser as da nova;
 - `totalPartes: 7` nas Partes 1–4; o fim da Parte 4 anuncia o segundo livro;
 - `npm run build`, os testes, o merge e a `RETOMADA.md`.
 
@@ -166,7 +168,7 @@ No mesmo PR, para nunca haver um momento com texto novo e áudio velho (ou o con
 
 | Parte | 0 Terreno | 1 Texto | 2 Interações e lentes | 3 Revisão 🛑 | 4 Arte e atividades | 5 Revisão final 🛑 | 6 Narração 🛑 | Publicada | 7 Idiomas | 8 Retrospectiva |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 4 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| 4 | 🟡 (rascunho no motor e estante ✅; falta arquivar a arte e criar o rascunho) | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | 5 | — | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | 6 | — | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | 7 | — | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
@@ -181,7 +183,7 @@ A API paga só pode ser usada com autorização **no prompt inicial da sessão**
 
 | Sessão | Fases | Termina em | Prompt de abertura (modelo) |
 | :--- | :--- | :--- | :--- |
-| **A** | 0 + 1 + 2 da Parte 4 | 🛑 o humano lê o rascunho | "Leia docs/RETOMADA.md e siga docs/PLANO-DOM-QUIXOTE-PARTES-4-7.md e docs/RECEITA-CLASSICO-VIVO.md. Faça a fase 0 e as fases 1 e 2 da Parte 4. Mostre-me a escaleta antes de escrever o texto. Sem API paga nesta sessão." |
+| **A** | 0 + 1 + 2 da Parte 4 | 🛑 o humano lê o rascunho | "Leia AGENTS.md e docs/RETOMADA.md e siga docs/PLANO-DOM-QUIXOTE-PARTES-4-7.md, docs/RECEITA-CLASSICO-VIVO.md e docs/receitas/DOM-QUIXOTE.md. Termine a fase 0 e faça as fases 1 e 2 da Parte 4. Mostre-me a escaleta antes de escrever o texto. Sem API paga nesta sessão." |
 | **B** | ajustes da 3 + fase 4 | 🛑 o humano lê o livro ilustrado | "Fase 4 da Parte 4 (caderno docs/cadernos/dom-quixote-parte-4.md). Minhas notas da revisão: … Autorizo a API paga do Gemini para gerar as ilustrações da Parte 4 (Nano Banana 2, Batch), até US$ 1,00." |
 | **C** | ajustes da 5 + fase 6 + publicação | 🛑 o humano ouve a narração | "Fase 6 da Parte 4. Notas da revisão final: … Autorizo a API paga do Gemini para gravar a narração em português da Parte 4 (Flex), até US$ 0,20." |
 | **D** | fase 7 + 8 | Parte 4 completa | "Fase 7 da Parte 4. Autorizo traduzir para inglês, francês e espanhol e gravar a narração nesses idiomas, até US$ 0,40." |
@@ -215,5 +217,5 @@ A API paga só pode ser usada com autorização **no prompt inicial da sessão**
 4. Parte 5: **bodas de Camacho** ou **Gruta de Montesinos**?
 5. Parte 6: o **doutor** ou a **carta de Teresa** (ou os dois)? Dividir a Parte 6 em duas?
 6. Parte 7: as **redes verdes** ou o **livro "mentiroso"**?
-7. Os cadeados dos **próximos clássicos**: numa terceira prateleira abaixo do segundo volume ou fora da estante por enquanto?
+7. ~~Os cadeados dos próximos clássicos~~: **decidido** (2026-10-25), saíram da estante.
 8. Publicar cada parte ao fim da fase 6 (com narração, o padrão deste plano) ou já ao fim da fase 5 (voz do aparelho até a narração chegar).

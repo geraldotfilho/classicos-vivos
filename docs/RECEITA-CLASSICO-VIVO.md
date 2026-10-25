@@ -1,115 +1,130 @@
-# 📖 Receita de um Clássico Vivo
+# 📖 Receita de um Clássico Vivo (receita geral)
 
-Como transformar uma obra-prima da literatura num livro interativo para crianças de 5 a 8 anos, do jeito que funcionou (e do jeito que não funcionou) em *Dom Quixote*. Vale para cada **parte** de um livro e para cada **livro novo** da coleção.
+Como transformar uma obra-prima da literatura num livro interativo para crianças de 5 a 8 anos. Esta é a **receita geral**: vale para **qualquer** clássico, **qualquer** tipo de adaptação e **qualquer** agente (Claude, Gemini, Codex ou uma pessoa).
 
-> **Documento vivo.** Toda parte entregue termina com uma retrospectiva (fase 8). Cada lição nova entra no **Diário de lições** (§7) com data e origem e, se mudar o jeito de trabalhar, também na regra da seção certa. Arquitetura e regras técnicas continuam no `AGENTS.md`; aqui fica o **processo**.
-
----
-
-## 1. Princípios (não se negociam)
-
-1. **Leitor de referência: uma criança de 6 anos ouvindo, ou lendo junto com um adulto** (`AGENTS.md` §3.5). Frases curtas, ordem direta, palavras do dia a dia do Brasil, sem perder a beleza e o humor do original.
-2. **Fiel ao espírito, não à letra.** Cortar e fundir episódios é permitido. Deixar a história sem pé nem cabeça, não: cada evento precisa de **motivo** e de **consequência** que a criança entenda.
-3. **A interação nasce da história**, transforma a cena e, sempre que der, **alfabetiza**. Nada de placar, estrela, tempo-limite ou "errou" em vermelho (`AGENTS.md` §3.3).
-4. **Ler vem primeiro.** Páginas calmas (só texto, Lente e toques na cena) são parte do ritmo, não falta de ideia.
-5. **Uma parte por vez, do começo ao fim**, com paradas para o humano ler e aprovar. Só se passa para a próxima parte com a anterior entregue.
-6. **Economia**: a API paga só é usada com autorização do humano no prompt da sessão, sempre no modo mais barato, com o gasto registrado (`AGENTS.md` §2.7).
-7. **Nunca quebrar o que está publicado.** O livro novo nasce em rascunho e só substitui o antigo quando estiver aprovado.
+> **Receita geral × receitas específicas.** Cada obra exige decisões próprias. O que serve só para um tipo de adaptação ou para uma obra fica numa **receita específica** em `docs/receitas/`. Exemplo: *Dom Quixote* é uma obra enorme que precisou ser **muito resumida**, e tem um recurso visual próprio (as lentes da Realidade e da Imaginação). Essas regras estão em [`receitas/DOM-QUIXOTE.md`](receitas/DOM-QUIXOTE.md), **não** aqui. Na dúvida, a regra só entra nesta receita se valer para um conto de fadas de 10 páginas tanto quanto para um romance de 1.000.
+>
+> **Documento vivo.** Toda parte entregue termina com uma retrospectiva (fase 8). Cada lição nova entra no **Diário de lições** (§8) desta receita, se for geral, ou no da receita específica, se não for. Arquitetura e regras técnicas ficam no `AGENTS.md`; aqui fica o **processo**.
 
 ---
 
-## 2. Antes da primeira parte: o Mapa da Obra (uma vez por livro ou volume)
+## 1. Princípios (valem para toda obra)
 
-O erro mais caro de *Dom Quixote* não foi de texto nem de arte: foi de **divisão**. A Parte 4 recebeu 81 capítulos de Cervantes (o fim do volume de 1605 e todo o de 1615) em 7 páginas, e ficou apressada, com eventos sem motivo e personagens surgindo do nada. As Partes 1 a 3 (8, 14 e 16 capítulos) ficaram boas. Por isso, antes de escrever qualquer página:
-
-### 2.1 Mapa de capítulos
-Uma tabela com **todos** os capítulos do original: número, episódio em uma linha e decisão (**usar**, **fundir** ou **cortar**, com o motivo). Ela mostra o que cabe em cada parte e evita esquecer um fio importante.
-
-### 2.2 Regras de divisão em partes
-- **7 a 9 páginas por parte** (capa + 6 a 8 capítulos). Cada página conta **um episódio**.
-- **Proporção**: em média, **1 a 3 capítulos do original por página**. Uma parte nunca deve cobrir mais que **~25 capítulos** do original. Se passar disso, divida em mais partes.
-- **Respeite a estrutura do autor** (volumes, livros, atos). Em *Dom Quixote*: volume de 1605 = Partes 1 a 4; volume de 1615 = Partes 5 em diante, na prateleira de baixo.
-- **Uma parte = um arco**, com começo, meio e fim, de preferência num **lugar** (a estrada, a serra, a pousada, o palácio). Quatro arcos em sete páginas foi o defeito da Parte 4 antiga.
-- **Numeração contínua dos capítulos** entre as partes, para a criança sentir que lê um único grande livro.
-
-### 2.3 Fios da história (plantar e colher)
-Uma tabela com cada fio que atravessa as partes (personagem, promessa, objeto, apelido): **onde é plantado** e **onde é colhido**.
-- **Ninguém resolve a história sem ter sido apresentado antes.** Exemplo do defeito: Sansão Carrasco apareceu pela primeira vez já como o Cavaleiro da Branca Lua, na última página.
-- **Nenhum fio fica solto.** Exemplo do defeito: a Princesa Micomicona e o gigante sumiram entre a Parte 3 e a Parte 4.
-- **Pontes**: a última página de uma parte e a primeira da seguinte precisam conversar (onde estão, por que estão ali, o que querem agora).
-- Os fios bons dão as **melhores atividades e as melhores páginas**: o apelido da Triste Figura (Parte 2) voltou na assinatura da carta (Parte 3), e a criança se reconheceu.
-
-### 2.4 Bíblias, antes da primeira imagem
-- **Estilo** (aquarela, guache, lápis de cor) e **fichas dos personagens** na Realidade.
-- **Bíblia da Imaginação**: o que cada personagem fixo vira na Imaginação e o que **não pode sobrar** da Realidade (`ARTE-PELA-API.md` §4.1).
-- **Cortes por idade**: violência como eixo, humilhação, conteúdo adulto, humor de vômito. Registre cada decisão e o motivo (exemplo: `PLANO-PARTES-2-4.md` §2).
+1. **Leitor de referência: uma criança de 6 anos ouvindo, ou lendo junto com um adulto** (`AGENTS.md` §3.5). Frases curtas, ordem direta, palavras do dia a dia, sem perder a beleza e o humor do original.
+2. **Proteção da infância.** Muitos clássicos foram escritos quando a ideia de proteger a criança não existia como hoje. Adaptar é também trazer a obra para os valores de agora: sem violência como eixo, sem humilhação como piada, sem conteúdo adulto, sem medo gratuito, sem preconceito de raça, gênero, origem, religião ou deficiência, sem castigo cruel apresentado como justo. Mantenha o conflito, o perigo e a emoção que a história precisa; mude a forma. Registre cada decisão e o motivo.
+3. **Fiel ao espírito, não à letra.** Cortar, fundir, simplificar e (em obras curtas) **acrescentar** cenas é permitido. Deixar a história sem pé nem cabeça, não: cada evento precisa de **motivo** e de **consequência** que a criança entenda.
+4. **A interação nasce da história**, transforma a cena e, sempre que der, **alfabetiza**. Nada de placar, estrela, tempo-limite ou "errou" em vermelho (`AGENTS.md` §3.3).
+5. **Ler vem primeiro.** Páginas calmas (só texto e toques na cena) são parte do ritmo, não falta de ideia.
+6. **Uma parte por vez, do começo ao fim**, com paradas para o humano ler e aprovar.
+7. **Economia**: a API paga só é usada com autorização do humano no prompt da sessão, no modo mais barato, com o gasto registrado (`AGENTS.md` §2.7). Vale para qualquer agente.
+8. **Nunca quebrar o que está publicado.** O livro novo nasce como rascunho e só substitui o antigo depois de aprovado (§4).
 
 ---
 
-## 3. As fases de cada parte
+## 2. Tipos de adaptação
+
+Antes de tudo, diga **que tipo de adaptação** a obra pede. O tipo muda a fase 0 e boa parte da fase 1.
+
+| Tipo | Quando | O desafio principal | Receita específica |
+| :--- | :--- | :--- | :--- |
+| **Condensação** | A obra é muito maior que um livro infantil (romances, epopeias) | **Escolher e resumir** sem perder o fio: o que entra, o que sai, como dividir em partes | [`receitas/DOM-QUIXOTE.md`](receitas/DOM-QUIXOTE.md) (o primeiro caso; serve de ponto de partida para outras obras longas) |
+| **Adequação / ampliação** | A obra é curta (fábulas, contos de fadas, poemas) e a adaptação pode ficar **maior que o original** | **Atualizar** a obra para hoje e para a idade (§1.2) e, quando preciso, **desenvolver** cenas que o original só sugere, sem trair a moral, o tom e a estrutura | ainda não existe: escrever quando o primeiro livro desse tipo começar |
+
+Uma obra pode misturar os dois tipos (resumir uma parte, desenvolver outra). O que for decidido entra na receita específica dela.
+
+---
+
+## 3. Fase 0: o Mapa da Obra (uma vez por livro ou volume)
+
+Antes da primeira página, escreva o mapa da obra (na receita específica ou no plano do livro, `docs/PLANO-<livro>.md`). Ele tem sempre:
+
+1. **Fonte e tipo**: edição ou tradução de referência, domínio público, tipo de adaptação (§2).
+2. **Mapa do original**: os capítulos, cenas ou estrofes, cada um com o episódio em uma linha e a decisão (**usar**, **fundir**, **cortar**, **desenvolver**) e o motivo.
+3. **Divisão em partes**:
+   - **7 a 9 páginas por parte** (capa + 6 a 8 capítulos nossos); **cada página conta um episódio**;
+   - **uma parte = um arco**, com começo, meio e fim, de preferência num lugar ou numa situação;
+   - as regras de **proporção** (quanto do original cabe numa página) dependem do tipo e ficam na receita específica.
+4. **Fios da história (plantar e colher)**: cada personagem, promessa, objeto ou apelido que atravessa as partes, com **onde é plantado** e **onde é colhido**.
+   - Ninguém resolve a história sem ter sido apresentado antes.
+   - Nenhum fio fica solto.
+   - A última página de uma parte e a primeira da seguinte precisam conversar (onde estão, por que estão ali, o que querem agora).
+   - Fios bons rendem as melhores páginas e atividades: a criança se reconhece quando algo volta.
+5. **Proteção da infância**: lista do que a obra traz de problemático (§1.2) e como cada ponto será tratado.
+6. **Bíblias, antes da primeira imagem**: estilo da coleção (aquarela, guache, lápis de cor), fichas dos personagens e, se a obra tiver, o **recurso visual próprio** (em *Dom Quixote*, as lentes) com as regras dele.
+
+🛑 O humano aprova o mapa antes da fase 1 da primeira parte.
+
+---
+
+## 4. Rascunho e publicação
+
+- **Toda obra em produção** tem uma entrada em `assets/js/acervo.js` (`situacao: 'fila'` → `'rascunho'`). Na estante (`index.html`) ela aparece só como **capa-teaser com cadeado**; ao tocar, um aviso diz que o livro está sendo feito. Só entra no acervo o que já é rascunho ou vai virar rascunho em breve: nada de "próximos clássicos" vagos (regra do humano, 2026-10-25).
+- **O rascunho é o próprio arquivo do livro** com `rascunho: true` no `window.LIVRO`: mostra o selo "Rascunho", lê só com a voz do aparelho em português (`?narracao=1` libera a narração gravada para a escuta da fase 6), não carrega traduções e guarda o progresso à parte.
+- **O humano abre os rascunhos** em `sobre.html` (Para adultos → Livros em produção → chave "Mostrar os rascunhos", lembrada no aparelho).
+- **Uma versão nova de uma parte já publicada** nasce num arquivo à parte (ex.: `parte-4-rascunho.html`, com `estante: null` no acervo) e a publicada continua no ar até a troca.
+- **Publicar** = tirar o `rascunho`, tirar a entrada do `acervo.js`, pôr a capa fixa na estante do `index.html` e a descrição no "Acervo" de `sobre.html`, e (com a narração pronta) pôr a parte em `partes` no `vozes.js`.
+
+---
+
+## 5. As fases de cada parte
 
 ```text
- 1 Adaptação e texto ─► 2 Interações e lentes ─► 🛑 3 Revisão humana ─► 4 Ilustrações e atividades
-   (1a escaleta ✋)                                    (congela a estrutura)
+ 1 Adaptação e texto ─► 2 Interações e visual ─► 🛑 3 Revisão humana ─► 4 Ilustrações e atividades
+   (1a escaleta ✋)                                   (congela a estrutura)
  ─► 🛑 5 Revisão final ─► 6 Narração (API) 🛑 escuta ─► publicação ─► 7 Idiomas (API) ─► 8 Retrospectiva
     (congela o texto)
 ```
 🛑 = parada: o trabalho só continua com o "aprovado" do humano. ✋ = pergunta rápida na mesma sessão.
 
-Cada parte tem um **caderno** (`docs/cadernos/<livro>-parte-N.md`, modelo no §6.1) com o quadro das fases, as decisões e as notas do humano. **Comece toda sessão lendo o caderno da parte** e termine atualizando-o.
+Cada parte tem um **caderno** (`docs/cadernos/<livro>-parte-N.md`, modelo no §7.1) com o quadro das fases, as decisões e as notas do humano. **Comece toda sessão lendo o caderno da parte** e termine atualizando-o.
 
 ### Fase 1: Adaptação e texto em português
-**1a. Escaleta** (o roteiro em uma linha por página): página → episódio → capítulos do original → o que acontece → que fio planta ou colhe. Mais a lista do que fica de fora e por quê.
-✋ **Mostre a escaleta ao humano na própria sessão antes de escrever o texto.** Mudar a escaleta custa um minuto; mudar o texto pronto custa uma reescrita, a tradução e a narração de novo (aconteceu nas Partes 2 a 4).
+**1a. Escaleta** (uma linha por página): página → episódio → trecho do original → o que acontece → que fio planta ou colhe. Mais a lista do que fica de fora (ou do que foi acrescentado) e por quê.
+✋ **Mostre a escaleta ao humano na própria sessão antes de escrever o texto.** Mudar a escaleta custa um minuto; mudar um texto pronto custa uma reescrita e, se já houver, tradução e narração de novo.
 
-**1b. Texto**, direto no arquivo do livro, em **modo rascunho** (`rascunho: true` no `window.LIVRO`: não aparece na estante e não usa narração gravada nem traduções; o recurso entra no motor na fase 0 do `PLANO-DOM-QUIXOTE-PARTES-4-7.md`). O motor funciona sem arte ("Ilustração a caminho" e emojis nas camadas), então o humano já pode ler no tablet.
-- **Capa**: obra + título da parte e um "Nesta parte da história…" de 3 parágrafos curtos que conta o que vem pela frente, sem estragar surpresas.
-- **Primeira página**: ponte com a parte anterior (onde estamos e por quê).
+**1b. Texto**, direto no arquivo do livro, em rascunho (§4), e a entrada no `acervo.js` passa a `situacao: 'rascunho'`. O motor funciona sem arte ("Ilustração a caminho" e emojis nas camadas), então o humano já pode ler no tablet.
+- **Capa**: obra + título da parte e um "Nesta parte da história…" de 3 parágrafos curtos, sem estragar surpresas.
+- **Primeira página**: ponte com a parte anterior.
 - **Cada página**: 2 a 4 parágrafos curtos; o título do capítulo também é lido (a "frase 0").
-- **Palavras-chave**: 25 a 30 por parte, `{{PALAVRA|SÍ • LA • BAS|emoji}}`, sempre no texto (nunca na cena). Repita de propósito algumas das partes anteriores (IMAGINAÇÃO, ESCUDO, SAUDADE…).
-- **Palavras difíceis que fazem parte da história** ficam, explicadas no próprio texto ("os odres: grandes sacos de couro, cheios de vinho"). Os nomes divertidos do autor ficam.
+- **Palavras-chave**: 25 a 30 por parte, `{{PALAVRA|SÍ • LA • BAS|emoji}}`, sempre no texto (nunca na cena). Repita de propósito algumas das partes anteriores.
+- **Palavras difíceis que fazem parte da história** ficam, explicadas no próprio texto ("os odres: grandes sacos de couro, cheios de vinho"). Nomes divertidos do autor ficam.
 - **Falas** com travessão; evite abreviações com ponto (Sr., Mr.), que cortam a frase na leitura guiada.
 - Se a página tem atividade, o texto **convida** a criança no ponto certo ("Ajude o bom Sancho a lembrar…").
-- `npm run build` e conferência rápida no Chromium (retrato e paisagem): texto inteiro visível, frases e palavras-chave funcionando.
+- `npm run build` e conferência no Chromium (retrato e paisagem): texto inteiro visível, frases e palavras-chave funcionando.
 
-### Fase 2: Interações e lentes
-**Atividades** (o crivo está no §4.2):
-- **3 ou 4 por parte**, alternadas com páginas calmas. Evite três páginas de atividade seguidas.
-- Para cada uma: o que a criança faz, por que nasce da história, o que treina (leitura, sílabas, contagem…), o tipo no motor e como a cena muda.
-- Precisa de um tipo de cartão novo? Descreva-o aqui; ele é programado na fase 4.
+### Fase 2: Interações e visual
+**Atividades** (crivo no §6.2): 3 ou 4 por parte, alternadas com páginas calmas (evite três páginas de atividade seguidas). Para cada uma: o que a criança faz, por que nasce da história, o que treina, o tipo no motor e como a cena muda. Um tipo de cartão novo é descrito aqui e programado na fase 4.
 
-**Lentes** (específico de *Dom Quixote*, mas a ideia serve para qualquer obra com um "olhar" próprio): uma tabela por página com a **Realidade**, a **Imaginação**, as duas legendas e os hotspots. Decida também **camada × ilustração inteira** (`AGENTS.md` §4.2).
-- Quem imagina? Por padrão, Dom Quixote. Há **exceções** (a de Sancho governador; a das crianças no final). Escreva-as.
-- **Episódios encenados por outros** (o teatro dos duques, Clavilenho, as Cortes da Morte): a Realidade mostra os bastidores (criados com foles e tochas), e a Imaginação, o que os heróis acreditam ver.
+**Visual de cada página**: o que a ilustração mostra, os toques na cena (hotspots) e o que é **camada** × **ilustração inteira** (`AGENTS.md` §4.2). Se a obra tem um recurso visual próprio, planeje-o aqui seguindo a receita específica (em *Dom Quixote*, a tabela Realidade × Imaginação).
 
-**Lista de arte**: cenas `-real`/`-imag` e camadas, com referências e o que cada cena deve deixar livre para as camadas. Para a API, já escreva a lista `tools/arte/<livro>-parte-N.mjs` e rode `--seco` para saber o custo.
+**Lista de arte**: cenas e camadas, referências e o que cada cena deve deixar livre para as camadas. Para a API, já escreva a lista `tools/arte/<livro>-parte-N.mjs` e rode `--seco` para saber o custo.
 
 ### 🛑 Fase 3: Revisão humana do texto e do plano
-O humano lê o rascunho **no tablet, com a criança**, na voz do aparelho, com o plano de interações e lentes ao lado (no caderno). Roteiro de observação no §6.3. As notas vêm no prompt da sessão seguinte (ou no chat), e o Claude as registra no caderno.
-- Depois dos ajustes, **a estrutura fica congelada**: número de páginas, ordem, numeração dos capítulos e nomes de arquivo. Mudar isso depois da arte gera renomeações em cadeia (aconteceu com a Parte 2, P-007).
+O humano lê o rascunho **no tablet, com a criança**, na voz do aparelho, com o plano da fase 2 ao lado (no caderno). Roteiro de observação no §7.3. As notas vêm no prompt da sessão seguinte (ou no chat), e o agente as registra no caderno.
+- Depois dos ajustes, **a estrutura fica congelada**: número de páginas, ordem, numeração dos capítulos e nomes de arquivo. Mudar isso depois da arte gera renomeações em cadeia.
 
 ### Fase 4: Ilustrações e atividades
-1. **Autorização e verba**: arte pela API só com autorização no prompt da sessão; antes, some o gasto do mês (`docs/arte/gastos.csv` + `docs/narracao/gastos.csv`) e confira o teto. Sem autorização, a arte vai para o Gemini no Antigravity (`docs/fila/PEDIDOS.md`).
+1. **Autorização e verba**: arte pela API só com autorização no prompt da sessão. Antes, some o gasto do mês (`docs/arte/gastos.csv` + `docs/narracao/gastos.csv`) e confira o teto. Sem autorização, a arte vai para o agente de arte no Antigravity (`docs/fila/PEDIDOS.md`).
 2. **Rodadas** (`ARTE-PELA-API.md` §3 e §5):
-   - rodada 1: as Realidades sem dependência e as camadas soltas;
-   - rodada 2: as Imaginações como **edição** da Realidade aceita e as camadas que usam a cena como referência;
+   - rodada 1: as cenas sem dependência e as camadas soltas;
+   - rodada 2: as variações (no caso de *Dom Quixote*, as Imaginações) e as camadas que usam a cena como referência;
    - rodada 3: só o que falhou, com o prompt corrigido.
    Olhe **cada** imagem antes de aceitar.
-3. **Integração**: posicione as camadas **pela arte entregue**, não pelo plano; personagens em **escala proporcional à perspectiva** (o humano achou pequenas as primeiras camadas da pousada); camadas sempre em `.webp`.
+3. **Integração**: posicione as camadas **pela arte entregue**, não pelo plano; personagens em escala proporcional à perspectiva; camadas sempre em `.webp`.
 4. **Programe** as atividades e os tipos de cartão novos.
-5. **Teste** no Chromium/Playwright em 800 × 1280 e 1280 × 800, nas duas lentes, cada atividade até o fim (clique com `locator.click()`), o botão 🔄 Recomeçar e a virada de página. Mande ao humano capturas das páginas com atividade.
+5. **Teste** no Chromium/Playwright em 800 × 1280 e 1280 × 800, cada atividade até o fim (clique com `locator.click()`), o botão 🔄 Recomeçar e a virada de página. Mande ao humano capturas das páginas com atividade.
 
 ### 🛑 Fase 5: Revisão final
-O humano lê o livro ilustrado (ainda em rascunho) com a criança. Ajustes pequenos entram na mesma sessão.
-- Depois do "aprovado", **o texto fica congelado**. Qualquer mudança daqui em diante custa regravar a narração e refazer as traduções.
+O humano lê o livro ilustrado (ainda rascunho) com a criança. Ajustes pequenos entram na mesma sessão.
+- Depois do "aprovado", **o texto fica congelado**: qualquer mudança custa regravar a narração e refazer as traduções.
 
 ### Fase 6: Narração em português (API)
 Só com autorização no prompt da sessão (`TODO-NARRACAO.md`):
-1. `npm run exportar:frases`, o **roteiro** (quem fala cada trecho) e o **elenco** (mesmas vozes para os mesmos personagens em todo o livro).
+1. `npm run exportar:frases`, o **roteiro** (quem fala cada trecho) e o **elenco** (as mesmas vozes para os mesmos personagens em todo o livro).
 2. Planeje com `--seco`. Grave com `--pagina-inteira` no Flex, as palavras-chave em grupos, e confira tudo no Whisper local (no máximo 2 tentativas).
-3. Escreva `docs/narracao/qa-parte-N.md` com o que vale o humano ouvir.
+3. Escreva `docs/narracao/qa-parte-N.md` com o que vale o humano ouvir (no rascunho, com `?narracao=1`).
 
-🛑 **Escuta do humano.** Depois, a **publicação**: tirar o `rascunho`, abrir a parte na estante, pôr a parte em `partes` no `vozes.js` e ajustar o `fim.proxima` da parte anterior.
+🛑 **Escuta do humano.** Depois, a **publicação** (§4) e o `fim.proxima` da parte anterior apontando para esta.
 
 ### Fase 7: Outros idiomas (só com o português aprovado e autorização do humano)
 1. **Traduções** (`AGENTS.md` §2.8): um agente por idioma, cada um no dia a dia de uma criança daquele idioma, com as palavras-chave silabadas no idioma e os cartões do tipo `ordem` adaptados. `npm run conferir:traducoes` sem avisos.
@@ -118,21 +133,21 @@ Só com autorização no prompt da sessão (`TODO-NARRACAO.md`):
 
 ### Fase 8: Fechamento e retrospectiva
 - `npm run build`, o PR e o merge na `main`.
-- Atualize o `docs/BACKLOG.md`, o `docs/RETOMADA.md` e o caderno da parte.
+- Atualize o `docs/BACKLOG.md`, o `docs/HISTORICO.md`, o `docs/RETOMADA.md`, o caderno e o quadro do plano do livro.
 - Some o que foi gasto na parte e informe ao humano.
-- **Pergunte: o que aprendemos?** Toda lição nova entra no §7 (e na regra certa desta receita).
+- **Pergunte: o que aprendemos?** Toda lição nova entra no §8 (geral) ou no diário da receita específica.
 
 ---
 
-## 4. Regras de ouro por área
+## 6. Regras de ouro por área
 
-### 4.1 Texto
+### 6.1 Texto
 - Uma ideia por frase. Verbos concretos, imagens vivas ("como um rio vermelho"), diminutivos e humor cabem.
 - Evite arcaísmos e palavras de livro antigo (vossa mercê, donzela, estalagem, desventurada, carmesim), ênclises e mesóclises rebuscadas e adjetivos empilhados.
 - Todo evento responde a três perguntas da criança: **por que** aconteceu, **o que** aconteceu e **o que mudou** depois.
-- Episódios contados por outros personagens (histórias dentro da história) quase sempre saem; quando ficam, saem resumidos numa fala curta.
+- Histórias dentro da história quase sempre saem; quando ficam, saem resumidas numa fala curta.
 
-### 4.2 Atividades: o crivo e o padrão ouro
+### 6.2 Atividades: o crivo e o padrão ouro
 **O crivo** (todas as respostas precisam ser "sim"):
 1. Nasce de algo que **acontece na história** naquela página?
 2. A criança **ajuda um personagem** a fazer algo que a história precisa?
@@ -140,10 +155,10 @@ Só com autorização no prompt da sessão (`TODO-NARRACAO.md`):
 4. Treina alguma coisa: **leitura, sílabas, letras, contagem** ou, no mínimo, observação de causa e efeito?
 5. É **curta** (até 5 toques, cerca de 1 minuto) e o erro gera só uma **dica gentil**?
 
-**Padrão ouro: a assinatura da carta** (Parte 3, cap. 18, nota 10 do humano). Sancho esqueceu a carta e não lembra como Dom Quixote assina; a criança toca nas palavras na ordem certa: O CAVALEIRO DA TRISTE FIGURA.
-- O problema vem da história; a criança ajuda Sancho.
+**Padrão ouro: a assinatura da carta** (*Dom Quixote*, Parte 3, cap. 18, nota 10 do humano). Sancho esqueceu a carta e não lembra como Dom Quixote assina; a criança toca nas palavras na ordem certa: O CAVALEIRO DA TRISTE FIGURA.
+- O problema vem da história; a criança ajuda um personagem.
 - O que ela manipula são palavras de verdade, que ela lê.
-- Retoma algo que ela já conhece (o apelido da Parte 2): reconhecimento e orgulho.
+- Retoma algo que ela já conhece (o apelido de uma parte anterior): reconhecimento e orgulho.
 - Cada palavra é falada ao ser colocada (ouvir + ver = ler).
 - Ao completar, a cena muda ("Sancho lembrou!") e a história segue.
 - Funciona em todos os idiomas (a tradução pode ter outra quantidade de palavras).
@@ -152,49 +167,43 @@ Só com autorização no prompt da sessão (`TODO-NARRACAO.md`):
 | Mecânica | O que treina | Tipo no motor | Exemplo |
 | :--- | :--- | :--- | :--- |
 | Ordenar as palavras de uma frase curta (até 5) | leitura de palavras, ordem da frase | `ordem` | assinatura da carta ⭐ |
-| Juntar sílabas para formar uma palavra | consciência silábica | `ordem` com sílabas (testar) | (ideia) a palavra que Sancho inventa |
+| Juntar sílabas para formar uma palavra | consciência silábica | `ordem` com sílabas (testar) | (ideia) uma palavra que um personagem inventa |
 | Contar com a voz | números | `contagem` | as cabras no barco |
 | Revelar o que está escondido | observação, causa e efeito | `camadas` com `ate` | o sopro na poeira, o sol na noite, a bengala |
 | Montar a cena com as palavras do texto | vocabulário (palavra ↔ coisa) | `camadas` | a mesa dos pastores, a mala |
-| Montar uma palavra letra por letra | letra e som | **tipo novo** (a criar) | (ideia) a gráfica de Barcelona |
+| Montar uma palavra letra por letra | letra e som | **tipo novo** (a criar) | (ideia) uma gráfica, um bilhete |
 | Disparar um efeito físico da história | causa e efeito | `acao` / `camadas` + efeito | o VENTO nos moinhos, a cambalhota |
 
-Varie as mecânicas dentro da parte; uma mecânica muito repetida perde a graça.
-- **Banido**: cartões que só fazem a cena tremer (LUA CHEIA e ESPADA na sagração da Parte 1) e celebrações soltas (tipo `livre`).
-- **Ilustrações cumulativas** pedem ordem fixa (`progressivo`). Escolher a etapa pela **quantidade** de itens usados foi o bug "toco na bacia e ele veste o peitoral". Se a ordem for livre, use camadas independentes.
+Varie as mecânicas dentro da parte.
+- **Banido**: cartões que só fazem a cena tremer e celebrações soltas (tipo `livre`).
+- **Ilustrações cumulativas** pedem ordem fixa (`progressivo`). Escolher a etapa pela **quantidade** de itens usados troca a cena errada. Se a ordem for livre, use camadas independentes.
 
-### 4.3 Lentes e Imaginação
-- A Imaginação **transforma** os personagens e o mundo (o cavaleiro dourado, o corcel branco, Sancho escudeiro, o conto de fadas). Mantém da Realidade **só** a câmera, o layout e o lugar, o tamanho e a pose de cada um. Imaginações que trocavam só um detalhe foram reprovadas (as 9 da Parte 2 foram refeitas).
-- Só aparecem os personagens e animais que estão na Realidade.
-- O texto **não muda** com a lente; só a cena muda.
-- Nunca troque de lente sozinho: o botão só pulsa para convidar (`AGENTS.md` §4.2, tempo de contemplação).
-- Monstros com a atmosfera clássica do livro, nunca alienígenas nem desenho genérico; descreva o rosto ("gentle bearded face, kind ordinary eyes").
-
-### 4.4 Arte
-- Gere sempre a Realidade primeiro e a Imaginação como edição dela, com as fichas e as cenas aprovadas como referência.
-- **Camadas sobre magenta puro `#FF00FF`**, nunca sobre branco. Recorte com `tools/recortar-camada.py` (`--sem-rosa`, `--sem-contorno`).
-- No código, a camada aponta para o **`.webp`** (um `.png` não carrega e cai no emoji).
-- Diga o que **não** pintar onde vai uma camada; peça objetos **seguros nas duas mãos** (senão flutuam); diga "é o ÚNICO animal" quando o burrico não está na página.
-- Sem texto legível na imagem. Nunca achatar recortes numa cena pronta (`AGENTS.md` §4.1).
+### 6.3 Ilustração
+- O estilo da coleção é o mesmo em todos os livros: aquarela e guache infantil com contornos suaves de lápis de cor, pelo Nano Banana (`AGENTS.md` §4.1).
+- Gere primeiro a cena-base e depois as variações como edição dela, com as fichas e as cenas aprovadas como referência.
+- **Camadas sobre magenta puro `#FF00FF`**, nunca sobre branco; recorte com `tools/recortar-camada.py` (`--sem-rosa`, `--sem-contorno`). No código, a camada aponta para o **`.webp`**.
+- Diga o que **não** pintar onde vai uma camada; peça objetos **seguros nas mãos** (senão flutuam); diga quais animais e pessoas estão na cena (o modelo acrescenta personagens recorrentes).
+- Sem texto legível na imagem. Nunca achatar recortes numa cena pronta.
 - Personagens novos nascem numa página e servem de referência para as seguintes; isso define a ordem das rodadas.
+- Monstros e seres mágicos com a atmosfera da obra; descreva o rosto ("gentle face, kind ordinary eyes"), nunca assustador para a idade.
 
-### 4.5 Narração
-- **Página inteira** num pedido só, com a narradora e uma voz por personagem, a mesma em todas as partes.
+### 6.4 Narração
+- **Página inteira** num pedido só, com a narradora e uma voz por personagem, a mesma em todas as partes do livro.
 - **Voz de criança por descrição é bloqueada** pela API: use a voz mais jovem da biblioteca. Não tente contornar.
 - Limite de 100 pedidos por dia: cache de blocos e palavras-chave em grupos de até 10.
 - A conferência é **local** (Whisper). A API paga só produz vozes.
-- O título do capítulo é lido. Nomes estrangeiros com pronúncia anotada (`TODO-NARRACAO.md` §5).
+- Nomes estrangeiros com pronúncia anotada (`TODO-NARRACAO.md` §5).
 
-### 4.6 Traduções
-- Só depois do português aprovado. As traduções da Parte 3 foram refeitas duas vezes porque o português mudou depois.
+### 6.5 Traduções
+- Só depois do português aprovado.
 - O `hash` de cada página mostra o que ficou desatualizado (`npm run conferir:traducoes`).
 
-### 4.7 Engenharia
+### 6.6 Engenharia
 - Um motor só (`assets/js/livro.js`); cada parte é só configuração. Melhoria no motor vale para todos os livros.
 - `npm run build` depois de mudar HTML, classes, ícones ou imagens; nunca edite `sw.js` à mão.
-- Nada publicado quebra: rascunho (`rascunho: true`) até a publicação; conteúdo antigo arquivado, nunca apagado sem substituto.
+- Conteúdo antigo é arquivado (`docs/arquivo/`, `imagens/acervo/` ou o histórico do Git), nunca apagado sem substituto.
 
-### 4.8 Custos de referência (Dom Quixote, out/2026)
+### 6.7 Custos de referência (out/2026)
 | Item | Custo real | Observação |
 | :--- | :--- | :--- |
 | Arte de uma parte pela API (~22 imagens, Batch) | ~US$ 0,80 | ~US$ 0,037 por imagem aceita, já com as refeitas |
@@ -205,25 +214,17 @@ Varie as mecânicas dentro da parte; uma mecânica muito repetida perde a graça
 
 ---
 
-## 5. Papéis e canais
-- **Humano**: editor-chefe e primeiro leitor (com o filho). Aprova as paradas 🛑, autoriza a API e define o teto.
-- **Claude**: adaptação, texto, plano de interações e lentes, código, testes, narração e (com autorização) arte pela API. Escreve os documentos de plano, o caderno e a receita.
-- **Gemini (Antigravity)**: arte na cota do plano Pro do humano, pela fila `docs/fila/` (cada arquivo tem um único dono).
-- **Sessões**: o trabalho é feito em sessões do Claude, cada uma com uma ou duas fases, aberta com um prompt que diz a parte, a fase e as autorizações (modelos no plano do livro). Cada sessão termina com PR e merge na `main` e com o caderno e a `RETOMADA.md` atualizados.
+## 7. Modelos
 
----
-
-## 6. Modelos
-
-### 6.1 Caderno da parte (`docs/cadernos/<livro>-parte-N.md`)
+### 7.1 Caderno da parte (`docs/cadernos/<livro>-parte-N.md`)
 ```markdown
 # Caderno — <Livro>, Parte N: <título>
-Arquivo do livro: <livro>/parte-N.html (rascunho: sim/não) · Capítulos do original: … · Nossos capítulos: …
+Arquivo: <livro>/parte-N.html (rascunho: sim/não) · Trecho do original: … · Nossos capítulos: …
 
 | Fase | Situação | Data | PR | Gasto |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 Adaptação e texto | ⬜ / 🟡 / ✅ | | | — |
-| 2 Interações e lentes | | | | — |
+| 2 Interações e visual | | | | — |
 | 3 Revisão humana 🛑 | | | | — |
 | 4 Ilustrações e atividades | | | | US$ |
 | 5 Revisão final 🛑 | | | | — |
@@ -234,51 +235,54 @@ Arquivo do livro: <livro>/parte-N.html (rascunho: sim/não) · Capítulos do ori
 
 ## 1. Escaleta
 | Pág. | Capítulo nosso | Episódio | Original | O que acontece | Fio (planta/colhe) |
-## 2. O que ficou de fora e por quê
-## 3. Atividades (crivo do §4.2)
-## 4. Lentes (Realidade × Imaginação, legendas, hotspots, camadas)
+## 2. O que ficou de fora (ou foi acrescentado) e por quê
+## 3. Atividades (crivo do §6.2)
+## 4. Visual de cada página (e o recurso próprio da obra, se houver)
 ## 5. Notas do humano e o que mudou
 ## 6. Arte (lista, rodadas, refeitas, gasto)
 ## 7. Narração (elenco, QA, gasto)
 ## 8. Traduções
-## 9. Lições para a receita
+## 9. Lições (para a receita geral ou a específica)
 ```
 
-### 6.2 Prompt para abrir uma sessão
+### 7.2 Prompt para abrir uma sessão (qualquer agente)
 ```text
-Leia docs/RETOMADA.md e o caderno docs/cadernos/<livro>-parte-N.md.
-Faça a(s) fase(s) <X> da Parte N, seguindo docs/RECEITA-CLASSICO-VIVO.md e docs/PLANO-<…>.md.
+Leia AGENTS.md, docs/RETOMADA.md e o caderno docs/cadernos/<livro>-parte-N.md.
+Faça a(s) fase(s) <X> da Parte N, seguindo docs/RECEITA-CLASSICO-VIVO.md, a receita específica
+docs/receitas/<LIVRO>.md e o plano docs/PLANO-<…>.md.
 Minhas notas da revisão: <…>            (quando houver)
 Autorizo a API paga do Gemini para <produzir X da Parte N>, até US$ <teto>.   (só nas fases 4, 6 e 7)
 Pare na próxima parada 🛑 e me diga o que ler.
 ```
 
-### 6.3 Roteiro de observação para o humano (fases 3 e 5)
+### 7.3 Roteiro de observação para o humano (fases 3 e 5)
 - Ao fim de cada página, peça à criança para **recontar** com as palavras dela. Onde ela travou?
 - Alguma pergunta do tipo **"por que ele fez isso?"** ou **"quem é esse?"** Isso indica evento sem motivo ou personagem não apresentado.
-- Alguma **palavra** fez a leitura parar? Anote.
+- Alguma **palavra** fez a leitura parar? Algo assustou ou incomodou a criança (ou você)?
 - Alguma página **longa demais** (a criança se dispersou)?
 - Na atividade: ela **quis** fazer? Entendeu **sem ajuda**? Ficou **frustrada**? Pediu para **repetir**?
 - A ligação com a parte anterior faz sentido? O fim dá vontade de ler a próxima?
-- Fase 5: as Imaginações **surpreendem**? Alguma imagem contradiz o texto?
+- Fase 5: as ilustrações **surpreendem**? Alguma imagem contradiz o texto?
 
 ---
 
-## 7. Diário de lições (mais recente primeiro)
+## 8. Diário de lições gerais (mais recente primeiro)
+
+As lições que só valem para *Dom Quixote* ou para a condensação de obras longas estão no diário de [`receitas/DOM-QUIXOTE.md`](receitas/DOM-QUIXOTE.md).
 
 | Data | Lição | Origem | Virou regra em |
 | :--- | :--- | :--- | :--- |
-| 2026-10-25 | Divisão desproporcional estraga a história: 81 capítulos em 7 páginas deixaram a Parte 4 apressada e mal encadeada | leitura do humano com o filho | §2.2, §2.3 |
-| 2026-10-25 | A atividade nota 10 é a que ajuda um personagem com palavras do próprio texto e retoma algo já conhecido (assinatura da carta) | humano | §4.2 |
-| 2026-10-25 | Texto rebuscado demais para 6 anos: as Partes 2 a 4 foram reescritas, e as traduções e a narração refeitas (US$ 0,24 e muitas horas) | humano | §1, §3 fase 1, `AGENTS.md` §3.5 |
-| 2026-10-25 | Traduzir e narrar antes de o português estar aprovado gera retrabalho em cascata (traduções da Parte 3 refeitas duas vezes) | histórico | §3 fases 5 a 7 |
-| 2026-10-24 | Imaginação que muda só um detalhe não encanta; precisa transformar personagens e mundo | humano | §4.3, `ARTE-PELA-API.md` §4.1 |
-| 2026-10-24 | Sem a regra "só os personagens da Realidade", o modelo acrescenta o burrico e o cavaleiro dourado onde não estão | arte das Partes 3 e 4 | §4.3 |
-| 2026-10-24 | Acrescentar uma página depois da arte começada obrigou a renomear arquivos em cadeia (P-007) | Parte 2 | §3 fase 3 (congelar a estrutura) |
-| 2026-10-24 | Camadas apontando para `.png` não carregavam | Partes 2 a 4 | §4.4 |
-| 2026-10-24 | Página inteira num pedido só soa muito melhor que frase por frase | escuta do humano | §4.5 |
-| 2026-10-24 | Voz de criança por descrição é bloqueada pela API; limite de 100 pedidos por dia | narração | §4.5 |
-| 2026-10-23 | Camadas recortadas de fundo branco perdem as partes claras e ficam com "chão" e halo; magenta resolve | P-003/P-005 | §4.4 |
-| 2026-10-23 | Camadas pequenas demais parecem coladas: escala proporcional à perspectiva | humano | §3 fase 4 |
-| 2026-10 | Etapas cumulativas escolhidas pela quantidade de itens trocavam a roupa errada | sprint 1 | §4.2 |
-| 2026-10 | Cartões que só fazem a cena tremer são ruído (LUA CHEIA, ESPADA) | sprint 1 | §4.2 |
+| 2026-10-25 | A receita precisa separar o que é geral do que é próprio de uma obra ou de um tipo de adaptação | humano | §2, `receitas/` |
+| 2026-10-25 | Obras em produção aparecem na estante só como teaser com cadeado; o adulto abre os rascunhos pela página "Para adultos". Nada de "próximos clássicos" vagos | humano | §4 |
+| 2026-10-25 | A atividade nota 10 ajuda um personagem com palavras do próprio texto e retoma algo já conhecido | humano | §6.2 |
+| 2026-10-25 | Texto rebuscado demais para 6 anos obrigou a reescrever três partes e a refazer traduções e narração | humano | §1, §5 fase 1, `AGENTS.md` §3.5 |
+| 2026-10-25 | Traduzir e narrar antes de o português estar aprovado gera retrabalho em cascata | histórico | §5 fases 5 a 7 |
+| 2026-10-24 | Acrescentar uma página depois da arte começada obrigou a renomear arquivos em cadeia | Dom Quixote, Parte 2 (P-007) | §5 fase 3 |
+| 2026-10-24 | Camadas apontando para `.png` não carregavam | Dom Quixote, Partes 2 a 4 | §6.3 |
+| 2026-10-24 | Página inteira num pedido só soa muito melhor que frase por frase | escuta do humano | §6.4 |
+| 2026-10-24 | Voz de criança por descrição é bloqueada pela API; limite de 100 pedidos por dia | narração | §6.4 |
+| 2026-10-24 | O modelo de imagem acrescenta personagens recorrentes onde não estão | arte | §6.3 |
+| 2026-10-23 | Camadas recortadas de fundo branco perdem as partes claras e ficam com "chão" e halo; magenta resolve | P-003/P-005 | §6.3 |
+| 2026-10-23 | Camadas pequenas demais parecem coladas: escala proporcional à perspectiva | humano | §5 fase 4 |
+| 2026-10 | Etapas cumulativas escolhidas pela quantidade de itens trocavam a cena errada | sprint 1 | §6.2 |
+| 2026-10 | Cartões que só fazem a cena tremer são ruído | sprint 1 | §6.2 |

@@ -1,5 +1,7 @@
 # 🎨 TODO — Ilustrações para o Nano-Banana (agente Gemini)
 
+> ✅ **Concluído** (NB-1 a NB-8 entregues e aprovados até 2026-10-24; P-001 em `docs/fila/PEDIDOS.md`). Fica como **registro** e como **exemplo de pedido de arte bem especificado** (arquivo, referências, prompt, critério de aceite). Pedidos novos vão para `docs/fila/PEDIDOS.md`, com as regras da receita geral (`docs/RECEITA-CLASSICO-VIVO.md` §6.3).
+
 Lista de ilustrações novas ou refeitas para **Dom Quixote — Parte 1**, levantadas na inspeção do sprint 1 (2026-10). Cada tarefa traz o arquivo exato, as referências visuais, o prompt e os critérios de aceite. Execute **na ordem de prioridade**.
 
 ---
