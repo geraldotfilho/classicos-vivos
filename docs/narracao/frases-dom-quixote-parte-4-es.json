@@ -18,33 +18,33 @@
       "id": "p0-s1",
       "pagina": 0,
       "paragrafo": 0,
-      "texto": "¡Hemos llegado al grande y emocionante capítulo final de nuestro inolvidable viaje!",
-      "fala": "¡Hemos llegado al grande y emocionante capítulo final de nuestro inolvidable viaje!",
-      "hash": "b5f14c9db5"
+      "texto": "¡Ha llegado la hora de la última parte de nuestro gran viaje!",
+      "fala": "¡Ha llegado la hora de la última parte de nuestro gran viaje!",
+      "hash": "c5a2f03437"
     },
     {
       "id": "p0-s2",
       "pagina": 0,
       "paragrafo": 0,
-      "texto": "Don Quijote volverá a su aldea dentro de una misteriosa JAULA de madera, partirá otra vez en busca de nuevas hazañas, cruzará los cielos a lomos de un caballo volador ¡y verá a su leal escudero cumplir el sueño de gobernar una ÍNSULA!",
-      "fala": "Don Quijote volverá a su aldea dentro de una misteriosa jaula de madera, partirá otra vez en busca de nuevas hazañas, cruzará los cielos a lomos de un caballo volador ¡y verá a su leal escudero cumplir el sueño de gobernar una ínsula!",
-      "hash": "3adac1e0bb"
+      "texto": "Don Quijote va a volver a su aldea dentro de una JAULA de madera, saldrá otra vez en busca de aventuras, volará por el cielo en un caballo de madera ¡y verá a su fiel escudero cumplir el sueño de gobernar una ÍNSULA, una isla!",
+      "fala": "Don Quijote va a volver a su aldea dentro de una jaula de madera, saldrá otra vez en busca de aventuras, volará por el cielo en un caballo de madera ¡y verá a su fiel escudero cumplir el sueño de gobernar una ínsula, una isla!",
+      "hash": "48a837d297"
     },
     {
       "id": "p0-s3",
       "pagina": 0,
       "paragrafo": 1,
-      "texto": "En esta despedida, Sancho Panza nos enseñará a todos que la verdadera SABIDURÍA no depende de coronas ni de riquezas, sino que florece en el corazón de las personas sencillas y generosas.",
-      "fala": "En esta despedida, Sancho Panza nos enseñará a todos que la verdadera sabiduría no depende de coronas ni de riquezas, sino que florece en el corazón de las personas sencillas y generosas.",
-      "hash": "4a55e0c486"
+      "texto": "En esta despedida, Sancho Panza nos va a enseñar a todos que la verdadera SABIDURÍA no depende de coronas ni de riquezas: nace en el corazón de las personas sencillas y generosas.",
+      "fala": "En esta despedida, Sancho Panza nos va a enseñar a todos que la verdadera sabiduría no depende de coronas ni de riquezas: nace en el corazón de las personas sencillas y generosas.",
+      "hash": "9cc08490e4"
     },
     {
       "id": "p0-s4",
       "pagina": 0,
       "paragrafo": 2,
-      "texto": "¡Pasa la página, siente la brisa en los ojos y ven a vivir el gran desenlace de esta obra maestra inmortal!",
-      "fala": "¡Pasa la página, siente la brisa en los ojos y ven a vivir el gran desenlace de esta obra maestra inmortal!",
-      "hash": "e43a00d4c9"
+      "texto": "¡Pasa la página, siente el viento en la cara y ven a vivir el final de esta historia que quiere el mundo entero!",
+      "fala": "¡Pasa la página, siente el viento en la cara y ven a vivir el final de esta historia que quiere el mundo entero!",
+      "hash": "afed003809"
     },
     {
       "id": "p1-s0",
@@ -59,41 +59,49 @@
       "id": "p1-s1",
       "pagina": 1,
       "paragrafo": 0,
-      "texto": "Para llevar a don Quijote de vuelta a casa sin peligro y sin herir su noble corazón, sus amigos construyeron una gran JAULA de palos enrejados de roble sobre un carro tirado por dos BUEYES blancos, mansos y tardíos.",
-      "fala": "Para llevar a don Quijote de vuelta a casa sin peligro y sin herir su noble corazón, sus amigos construyeron una gran jaula de palos enrejados de roble sobre un carro tirado por dos bueyes blancos, mansos y tardíos.",
-      "hash": "43c2835a06"
+      "texto": "Para llevar a don Quijote de vuelta a casa sin hacerle daño en el corazón, sus amigos construyeron una gran JAULA de madera encima de un carro tirado por dos BUEYES blancos, mansos y muy lentos.",
+      "fala": "Para llevar a don Quijote de vuelta a casa sin hacerle daño en el corazón, sus amigos construyeron una gran jaula de madera encima de un carro tirado por dos bueyes blancos, mansos y muy lentos.",
+      "hash": "b3b74e6d7b"
     },
     {
       "id": "p1-s2",
       "pagina": 1,
       "paragrafo": 0,
-      "texto": "Mientras el hidalgo dormía, agotado de tantas batallas, lo acomodaron dentro con el mayor cuidado.",
-      "fala": "Mientras el hidalgo dormía, agotado de tantas batallas, lo acomodaron dentro con el mayor cuidado.",
-      "hash": "ec0f77bfa5"
+      "texto": "Mientras el caballero dormía, cansado de tantas batallas, lo metieron dentro con mucho cuidado.",
+      "fala": "Mientras el caballero dormía, cansado de tantas batallas, lo metieron dentro con mucho cuidado.",
+      "hash": "338195c6c2"
     },
     {
       "id": "p1-s3",
       "pagina": 1,
       "paragrafo": 1,
-      "texto": "Al despertar entre los barrotes de madera, en vez de enfadarse, don Quijote sonrió tranquilo: —¡Estoy ENCANTADO por un poderoso mago de los libros!",
-      "fala": "Al despertar entre los barrotes de madera, en vez de enfadarse, don Quijote sonrió tranquilo: ¡Estoy encantado por un poderoso mago de los libros!",
-      "hash": "02014f1fb8"
+      "texto": "Cuando se despertó detrás de los barrotes de madera, don Quijote no se enfadó.",
+      "fala": "Cuando se despertó detrás de los barrotes de madera, don Quijote no se enfadó.",
+      "hash": "eda8e06a20"
     },
     {
       "id": "p1-s4",
       "pagina": 1,
       "paragrafo": 1,
-      "texto": "¡Solo los caballeros más famosos de la historia viajan en carruajes encantados como este! —anunció con serenidad a sus compañeros.",
-      "fala": "¡Solo los caballeros más famosos de la historia viajan en carruajes encantados como este! anunció con serenidad a sus compañeros.",
-      "hash": "1fc4bcd6eb"
+      "texto": "Sonrió, muy tranquilo: —¡Estoy ENCANTADO por un mago poderoso! —les contó a sus amigos—.",
+      "fala": "Sonrió, muy tranquilo: ¡Estoy encantado por un mago poderoso! les contó a sus amigos.",
+      "hash": "8e8a946bf8"
     },
     {
       "id": "p1-s5",
       "pagina": 1,
+      "paragrafo": 1,
+      "texto": "¡Solo los caballeros más famosos de la historia viajan en carruajes encantados como este!",
+      "fala": "¡Solo los caballeros más famosos de la historia viajan en carruajes encantados como este!",
+      "hash": "05f14841a0"
+    },
+    {
+      "id": "p1-s6",
+      "pagina": 1,
       "paragrafo": 2,
-      "texto": "Y así la comitiva avanzó despacio por las praderas doradas: las ruedas del carro chirriando a compás, los bueyes mugiendo con dulzura en la brisa, Sancho a su lado, en su fiel burrito, y don Quijote saludando feliz desde su celda encantada, ¡soñando con las gloriosas aventuras que le esperaban más adelante!",
-      "fala": "Y así la comitiva avanzó despacio por las praderas doradas: las ruedas del carro chirriando a compás, los bueyes mugiendo con dulzura en la brisa, Sancho a su lado, en su fiel burrito, y don Quijote saludando feliz desde su celda encantada, ¡soñando con las gloriosas aventuras que le esperaban más adelante!",
-      "hash": "885a8e6357"
+      "texto": "Y así el carro siguió despacito por los campos dorados: las ruedas chirriando, los bueyes mugiendo bajito, Sancho al lado en su fiel burrito y don Quijote saludando feliz desde dentro, ¡soñando con las aventuras que todavía le esperaban!",
+      "fala": "Y así el carro siguió despacito por los campos dorados: las ruedas chirriando, los bueyes mugiendo bajito, Sancho al lado en su fiel burrito y don Quijote saludando feliz desde dentro, ¡soñando con las aventuras que todavía le esperaban!",
+      "hash": "de0b158066"
     },
     {
       "id": "p2-s0",
@@ -108,33 +116,33 @@
       "id": "p2-s1",
       "pagina": 2,
       "paragrafo": 0,
-      "texto": "Llegaron a la aldea a mitad del día, que acertó a ser un domingo de sol, y el carro de bueyes cruzó la plaza florida, donde todos los vecinos corrieron curiosos a saludar a los viajeros.",
-      "fala": "Llegaron a la aldea a mitad del día, que acertó a ser un domingo de sol, y el carro de bueyes cruzó la plaza florida, donde todos los vecinos corrieron curiosos a saludar a los viajeros.",
-      "hash": "579ee3cfe9"
+      "texto": "Un domingo de sol, a mediodía, el carro de bueyes llegó a la placita de la aldea, y todos los vecinos corrieron a ver a los viajeros.",
+      "fala": "Un domingo de sol, a mediodía, el carro de bueyes llegó a la placita de la aldea, y todos los vecinos corrieron a ver a los viajeros.",
+      "hash": "196c501ba9"
     },
     {
       "id": "p2-s2",
       "pagina": 2,
       "paragrafo": 0,
-      "texto": "Su cariñosa SOBRINA Antonia y la fiel ama de la casa cubrieron al hidalgo de besos y lágrimas de alivio, lo acostaron en una cama blandita y le sirvieron un apetitoso caldo de gallina bien calentito.",
-      "fala": "Su cariñosa sobrina Antonia y la fiel ama de la casa cubrieron al hidalgo de besos y lágrimas de alivio, lo acostaron en una cama blandita y le sirvieron un apetitoso caldo de gallina bien calentito.",
-      "hash": "644c0904b8"
+      "texto": "Su cariñosa SOBRINA Antonia y el ama, que cuidaba de la casa, llenaron a don Quijote de besos y lágrimas de alegría, acostaron al tío en una cama blandita y le dieron una sopa de pollo bien calentita.",
+      "fala": "Su cariñosa sobrina Antonia y el ama, que cuidaba de la casa, llenaron a don Quijote de besos y lágrimas de alegría, acostaron al tío en una cama blandita y le dieron una sopa de pollo bien calentita.",
+      "hash": "9a3958387d"
     },
     {
       "id": "p2-s3",
       "pagina": 2,
       "paragrafo": 1,
-      "texto": "Sancho corrió a toda prisa a su humilde casita de paredes blancas.",
-      "fala": "Sancho corrió a toda prisa a su humilde casita de paredes blancas.",
-      "hash": "5e136bf124"
+      "texto": "Sancho corrió a su casita de paredes blancas.",
+      "fala": "Sancho corrió a su casita de paredes blancas.",
+      "hash": "abfe68d0f0"
     },
     {
       "id": "p2-s4",
       "pagina": 2,
       "paragrafo": 1,
-      "texto": "Su querida esposa, Teresa Panza, y su pequeña hija Sanchica salieron corriendo a abrazarlo.",
-      "fala": "Su querida esposa, Teresa Panza, y su pequeña hija Sanchica salieron corriendo a abrazarlo.",
-      "hash": "e02951957d"
+      "texto": "Su mujer, Teresa Panza, y su hijita, Sanchica, salieron corriendo a abrazarlo.",
+      "fala": "Su mujer, Teresa Panza, y su hijita, Sanchica, salieron corriendo a abrazarlo.",
+      "hash": "e6e8711601"
     },
     {
       "id": "p2-s5",
@@ -148,33 +156,41 @@
       "id": "p2-s6",
       "pagina": 2,
       "paragrafo": 1,
-      "texto": "—¿Traes vestidos finos? —quiso saber Sanchica, dando saltos de alegría.",
-      "fala": "¿Traes vestidos finos? quiso saber Sanchica, dando saltos de alegría.",
-      "hash": "6f327fcc8c"
+      "texto": "—¿Traes vestidos bonitos? —quiso saber Sanchica, dando saltos de alegría.",
+      "fala": "¿Traes vestidos bonitos? quiso saber Sanchica, dando saltos de alegría.",
+      "hash": "b56c80f95a"
     },
     {
       "id": "p2-s7",
       "pagina": 2,
       "paragrafo": 1,
-      "texto": "—¡Traigo algo mucho más precioso: recuerdos inolvidables, valor y la certeza de que todavía seré nombrado gobernador de una hermosa ínsula! —celebró Sancho, dando vueltas a su hija en brazos.",
-      "fala": "¡Traigo algo mucho más precioso: recuerdos inolvidables, valor y la certeza de que todavía seré nombrado gobernador de una hermosa ínsula! celebró Sancho, dando vueltas a su hija en brazos.",
-      "hash": "dc4270f98f"
+      "texto": "—¡Traigo algo mucho más valioso! —respondió Sancho, dando vueltas a su hija en el aire—.",
+      "fala": "¡Traigo algo mucho más valioso! respondió Sancho, dando vueltas a su hija en el aire.",
+      "hash": "5869910d31"
     },
     {
       "id": "p2-s8",
       "pagina": 2,
-      "paragrafo": 2,
-      "texto": "Reunida alrededor de la mesa, con pan casero y aceitunas, la FAMILIA escuchó conmovida las historias de los molinos y de las ovejas hasta muy tarde.",
-      "fala": "Reunida alrededor de la mesa, con pan casero y aceitunas, la familia escuchó conmovida las historias de los molinos y de las ovejas hasta muy tarde.",
-      "hash": "64b14e76b3"
+      "paragrafo": 1,
+      "texto": "¡Traigo recuerdos que nunca voy a olvidar, mucho valor y la seguridad de que todavía voy a gobernar una ínsula preciosa!",
+      "fala": "¡Traigo recuerdos que nunca voy a olvidar, mucho valor y la seguridad de que todavía voy a gobernar una ínsula preciosa!",
+      "hash": "6fa26282c3"
     },
     {
       "id": "p2-s9",
       "pagina": 2,
       "paragrafo": 2,
-      "texto": "Pero, mientras contemplaba la luna desde la ventana de su cuarto, el corazón de don Quijote ya sentía una honda AÑORANZA del polvo mágico de los caminos...",
-      "fala": "Pero, mientras contemplaba la luna desde la ventana de su cuarto, el corazón de don Quijote ya sentía una honda añoranza del polvo mágico de los caminos...",
-      "hash": "9ac42ed735"
+      "texto": "Alrededor de la mesa, con pan casero y aceitunas, la FAMILIA escuchó las historias de los molinos y de las ovejas hasta muy tarde.",
+      "fala": "Alrededor de la mesa, con pan casero y aceitunas, la familia escuchó las historias de los molinos y de las ovejas hasta muy tarde.",
+      "hash": "4166087eba"
+    },
+    {
+      "id": "p2-s10",
+      "pagina": 2,
+      "paragrafo": 2,
+      "texto": "Pero, mirando la luna por la ventana de su cuarto, don Quijote ya sentía una gran AÑORANZA del polvo mágico de los caminos...",
+      "fala": "Pero, mirando la luna por la ventana de su cuarto, don Quijote ya sentía una gran añoranza del polvo mágico de los caminos...",
+      "hash": "7a23add4c6"
     },
     {
       "id": "p3-s0",
@@ -189,65 +205,65 @@
       "id": "p3-s1",
       "pagina": 3,
       "paragrafo": 0,
-      "texto": "Meses después, sintiendo la llamada irresistible de la aventura, ¡los dos compañeros partieron de nuevo por los caminos del mundo!",
-      "fala": "Meses después, sintiendo la llamada irresistible de la aventura, ¡los dos compañeros partieron de nuevo por los caminos del mundo!",
-      "hash": "f969c804e3"
+      "texto": "Meses después, echando de menos las aventuras, ¡los dos amigos se fueron otra vez por los caminos del mundo!",
+      "fala": "Meses después, echando de menos las aventuras, ¡los dos amigos se fueron otra vez por los caminos del mundo!",
+      "hash": "0fc71f7287"
     },
     {
       "id": "p3-s2",
       "pagina": 3,
       "paragrafo": 0,
-      "texto": "Y se llevaron una sorpresa encantadora: sus antiguas hazañas se habían escrito e impreso en un gran libro, que había hecho famoso al Caballero de la Triste Figura en toda España.",
-      "fala": "Y se llevaron una sorpresa encantadora: sus antiguas hazañas se habían escrito e impreso en un gran libro, que había hecho famoso al Caballero de la Triste Figura en toda España.",
-      "hash": "f1fe3fd00a"
+      "texto": "Y se llevaron una sorpresa: sus aventuras se habían escrito en un libro, ¡y el Caballero de la Triste Figura era famoso en toda España!",
+      "fala": "Y se llevaron una sorpresa: sus aventuras se habían escrito en un libro, ¡y el Caballero de la Triste Figura era famoso en toda España!",
+      "hash": "45526ee8f6"
     },
     {
       "id": "p3-s3",
       "pagina": 3,
       "paragrafo": 0,
-      "texto": "Unos duques ricos y nobles, fascinados con su lectura, acogieron a los dos amigos en su imponente palacio.",
-      "fala": "Unos duques ricos y nobles, fascinados con su lectura, acogieron a los dos amigos en su imponente palacio.",
-      "hash": "69cf306c44"
+      "texto": "Un duque y una duquesa muy ricos, a los que les encantaba ese libro, los recibieron en su palacio.",
+      "fala": "Un duque y una duquesa muy ricos, a los que les encantaba ese libro, los recibieron en su palacio.",
+      "hash": "8bd1afa1ea"
     },
     {
       "id": "p3-s4",
       "pagina": 3,
       "paragrafo": 1,
-      "texto": "Allí prepararon una inolvidable broma teatral: les presentaron a CLAVILEÑO el Alígero, un enorme caballo de madera con una clavija mágica en el cuello que, según decían, tenía el poder de cruzar las nubes.",
-      "fala": "Allí prepararon una inolvidable broma teatral: les presentaron a clavileño el Alígero, un enorme caballo de madera con una clavija mágica en el cuello que, según decían, tenía el poder de cruzar las nubes.",
-      "hash": "46df59bde7"
+      "texto": "Allí se inventaron una broma de teatro: les presentaron a CLAVILEÑO, un enorme caballo de madera con una clavija en el cuello que, según decían, lo hacía volar por encima de las nubes.",
+      "fala": "Allí se inventaron una broma de teatro: les presentaron a clavileño, un enorme caballo de madera con una clavija en el cuello que, según decían, lo hacía volar por encima de las nubes.",
+      "hash": "128dbb90eb"
     },
     {
       "id": "p3-s5",
       "pagina": 3,
       "paragrafo": 1,
-      "texto": "Don Quijote y Sancho montaron en su lomo de madera y se pusieron una espesa VENDA negra sobre los ojos.",
-      "fala": "Don Quijote y Sancho montaron en su lomo de madera y se pusieron una espesa venda negra sobre los ojos.",
-      "hash": "9d762197fe"
+      "texto": "Don Quijote y Sancho se subieron al caballo y se taparon los ojos con una VENDA negra.",
+      "fala": "Don Quijote y Sancho se subieron al caballo y se taparon los ojos con una venda negra.",
+      "hash": "d5fb42bb37"
     },
     {
       "id": "p3-s6",
       "pagina": 3,
       "paragrafo": 2,
-      "texto": "Para imitar el vuelo por el cielo, los criados del palacio soplaban corrientes de aire con un gran FUELLE de herrero y les acercaban una antorcha de calor radiante.",
-      "fala": "Para imitar el vuelo por el cielo, los criados del palacio soplaban corrientes de aire con un gran fuelle de herrero y les acercaban una antorcha de calor radiante.",
-      "hash": "e22465616b"
+      "texto": "Para hacer como que volaban, los criados del palacio les soplaban aire con un gran FUELLE, ese soplador de los herreros, y les acercaban mucho una antorcha bien caliente.",
+      "fala": "Para hacer como que volaban, los criados del palacio les soplaban aire con un gran fuelle, ese soplador de los herreros, y les acercaban mucho una antorcha bien caliente.",
+      "hash": "46428b33f6"
     },
     {
       "id": "p3-s7",
       "pagina": 3,
       "paragrafo": 2,
-      "texto": "—¡Estamos cruzando las nubes más altas!",
-      "fala": "¡Estamos cruzando las nubes más altas!",
-      "hash": "2c1e9b2c3a"
+      "texto": "—¡Estamos pasando por las nubes más altas! —gritaba Sancho, con miedo y encantado a la vez, agarrado a la cintura de su señor—.",
+      "fala": "¡Estamos pasando por las nubes más altas! gritaba Sancho, con miedo y encantado a la vez, agarrado a la cintura de su señor.",
+      "hash": "a65c14c90b"
     },
     {
       "id": "p3-s8",
       "pagina": 3,
       "paragrafo": 2,
-      "texto": "¡Y ahora pasamos cerca del mismísimo sol! —gritaba Sancho, asustado y maravillado, abrazado a la cintura de su amo.",
-      "fala": "¡Y ahora pasamos cerca del mismísimo sol! gritaba Sancho, asustado y maravillado, abrazado a la cintura de su amo.",
-      "hash": "e40bd1e9ea"
+      "texto": "¡Y ahora estamos cerquita del sol!",
+      "fala": "¡Y ahora estamos cerquita del sol!",
+      "hash": "327aa4bdff"
     },
     {
       "id": "p3-s9",
@@ -269,9 +285,9 @@
       "id": "p3-s11",
       "pagina": 3,
       "paragrafo": 2,
-      "texto": "¡Ayuda a los amigos en su fantástico viaje por los aires!",
-      "fala": "¡Ayuda a los amigos en su fantástico viaje por los aires!",
-      "hash": "2506150e78"
+      "texto": "¡Ayuda a los amigos en este viaje fantástico por el cielo!",
+      "fala": "¡Ayuda a los amigos en este viaje fantástico por el cielo!",
+      "hash": "3ac33919d8"
     },
     {
       "id": "p4-s0",
@@ -286,57 +302,57 @@
       "id": "p4-s1",
       "pagina": 4,
       "paragrafo": 0,
-      "texto": "Siguiendo con la broma, el noble duque le concedió a Sancho el gobierno de la codiciada «ínsula Barataria», que en verdad era un lugar próspero y hermoso, de hasta mil vecinos, en medio del campo.",
-      "fala": "Siguiendo con la broma, el noble duque le concedió a Sancho el gobierno de la codiciada ínsula Barataria, que en verdad era un lugar próspero y hermoso, de hasta mil vecinos, en medio del campo.",
-      "hash": "87a7d43e5e"
+      "texto": "Siguiendo con la broma, el duque le dio a Sancho el gobierno de la ínsula Barataria, que en realidad era un pueblo bonito en medio del campo, ¡sin nada de mar alrededor!",
+      "fala": "Siguiendo con la broma, el duque le dio a Sancho el gobierno de la ínsula Barataria, que en realidad era un pueblo bonito en medio del campo, ¡sin nada de mar alrededor!",
+      "hash": "49d36deeab"
     },
     {
       "id": "p4-s2",
       "pagina": 4,
       "paragrafo": 0,
-      "texto": "La víspera de la partida, don Quijote invitó a su fiel escudero a sentarse en un banco de piedra del jardín y compartió con él los CONSEJOS más sabios que un maestro puede ofrecer:",
-      "fala": "La víspera de la partida, don Quijote invitó a su fiel escudero a sentarse en un banco de piedra del jardín y compartió con él los consejos más sabios que un maestro puede ofrecer:",
-      "hash": "26e3fc9f5a"
+      "texto": "La noche antes del viaje, don Quijote se sentó con su fiel escudero en un banco de piedra del jardín y le dio los CONSEJOS más sabios que puede dar un amigo:",
+      "fala": "La noche antes del viaje, don Quijote se sentó con su fiel escudero en un banco de piedra del jardín y le dio los consejos más sabios que puede dar un amigo:",
+      "hash": "f51f19cc4e"
     },
     {
       "id": "p4-s3",
       "pagina": 4,
       "paragrafo": 1,
-      "texto": "—Sancho, hermano mío de camino: haz gala de la HUMILDAD de tu linaje y no te avergüences nunca de decir que vienes de labradores honrados.",
-      "fala": "Sancho, hermano mío de camino: haz gala de la humildad de tu linaje y no te avergüences nunca de decir que vienes de labradores honrados.",
-      "hash": "e1b72dd47c"
+      "texto": "—Sancho, compañero de camino, nunca te dé vergüenza ser hijo de labradores, gente sencilla y honrada.",
+      "fala": "Sancho, compañero de camino, nunca te dé vergüenza ser hijo de labradores, gente sencilla y honrada.",
+      "hash": "bae23d19f6"
     },
     {
       "id": "p4-s4",
       "pagina": 4,
       "paragrafo": 1,
-      "texto": "Trata con el mismo cariño y atención al pobre descalzo que al rico señor.",
-      "fala": "Trata con el mismo cariño y atención al pobre descalzo que al rico señor.",
-      "hash": "4d647e9cde"
+      "texto": "Trata con el mismo cariño a quien va descalzo y a quien es rico.",
+      "fala": "Trata con el mismo cariño a quien va descalzo y a quien es rico.",
+      "hash": "f87f17fc98"
     },
     {
       "id": "p4-s5",
       "pagina": 4,
       "paragrafo": 1,
-      "texto": "Procura descubrir la verdad con paciencia infinita y recuerda que la JUSTICIA más noble es la que camina de la mano de la misericordia y del perdón.",
-      "fala": "Procura descubrir la verdad con paciencia infinita y recuerda que la justicia más noble es la que camina de la mano de la misericordia y del perdón.",
-      "hash": "8af3eebe72"
+      "texto": "Ten siempre HUMILDAD, busca la verdad con paciencia y recuerda: la JUSTICIA más bonita es la que va de la mano del perdón.",
+      "fala": "Ten siempre humildad, busca la verdad con paciencia y recuerda: la justicia más bonita es la que va de la mano del perdón.",
+      "hash": "5347c20d4d"
     },
     {
       "id": "p4-s6",
       "pagina": 4,
       "paragrafo": 2,
-      "texto": "Sancho escuchó cada enseñanza con los ojos llenos de lágrimas de emoción y respeto.",
-      "fala": "Sancho escuchó cada enseñanza con los ojos llenos de lágrimas de emoción y respeto.",
-      "hash": "d8f6a65970"
+      "texto": "Sancho escuchó cada consejo con los ojos llenos de lágrimas.",
+      "fala": "Sancho escuchó cada consejo con los ojos llenos de lágrimas.",
+      "hash": "50729f3317"
     },
     {
       "id": "p4-s7",
       "pagina": 4,
       "paragrafo": 2,
-      "texto": "Abrazó conmovido a su querido hidalgo, prometió guardar cada palabra en su corazón y partió a tomar posesión de su gobierno, trotando orgulloso en su querido burrito.",
-      "fala": "Abrazó conmovido a su querido hidalgo, prometió guardar cada palabra en su corazón y partió a tomar posesión de su gobierno, trotando orgulloso en su querido burrito.",
-      "hash": "45f34fe214"
+      "texto": "Abrazó a su querido amigo, prometió guardar cada palabra en el corazón y se fue a gobernar la ínsula, muy orgulloso, montado en su burrito.",
+      "fala": "Abrazó a su querido amigo, prometió guardar cada palabra en el corazón y se fue a gobernar la ínsula, muy orgulloso, montado en su burrito.",
+      "hash": "f450790697"
     },
     {
       "id": "p5-s0",
@@ -351,41 +367,41 @@
       "id": "p5-s1",
       "pagina": 5,
       "paragrafo": 0,
-      "texto": "En su primer día sentado en el tribunal de la ínsula, Sancho se encontró con un misterio intrigante entre dos viejos vecinos.",
-      "fala": "En su primer día sentado en el tribunal de la ínsula, Sancho se encontró con un misterio intrigante entre dos viejos vecinos.",
-      "hash": "172e47290d"
+      "texto": "En su primer día como juez de la ínsula, Sancho tuvo que resolver un misterio: una pelea entre dos viejecitos vecinos.",
+      "fala": "En su primer día como juez de la ínsula, Sancho tuvo que resolver un misterio: una pelea entre dos viejecitos vecinos.",
+      "hash": "f786be4992"
     },
     {
       "id": "p5-s2",
       "pagina": 5,
       "paragrafo": 0,
-      "texto": "—¡Le presté diez MONEDAS de oro a mi amigo y se niega a devolvérmelas! —se quejó el primero.",
-      "fala": "¡Le presté diez monedas de oro a mi amigo y se niega a devolvérmelas! se quejó el primero.",
-      "hash": "f4a6fe05c2"
+      "texto": "El primero se quejó: —¡Le presté diez MONEDAS de oro y no me las quiere devolver!",
+      "fala": "El primero se quejó: ¡Le presté diez monedas de oro y no me las quiere devolver!",
+      "hash": "6cecafaa67"
     },
     {
       "id": "p5-s3",
       "pagina": 5,
       "paragrafo": 0,
-      "texto": "El segundo aseguró, con la mano en el pecho: —¡Juro solemnemente ante el tribunal que ya se las devolví, una por una, en sus propias manos!",
-      "fala": "El segundo aseguró, con la mano en el pecho: ¡Juro solemnemente ante el tribunal que ya se las devolví, una por una, en sus propias manos!",
-      "hash": "e8736f3453"
+      "texto": "El segundo juró, con la mano en el pecho: —¡Juro que ya le devolví cada moneda en sus propias manos!",
+      "fala": "El segundo juró, con la mano en el pecho: ¡Juro que ya le devolví cada moneda en sus propias manos!",
+      "hash": "8399c12e11"
     },
     {
       "id": "p5-s4",
       "pagina": 5,
       "paragrafo": 1,
-      "texto": "Antes de pronunciar el juramento sagrado, el segundo anciano le pidió amablemente a su vecino que le sostuviera su pesado BASTÓN de madera.",
-      "fala": "Antes de pronunciar el juramento sagrado, el segundo anciano le pidió amablemente a su vecino que le sostuviera su pesado bastón de madera.",
-      "hash": "0923206af3"
+      "texto": "Pero, antes de jurar, el segundo viejecito le pidió a su vecino que le sujetara su BASTÓN de madera.",
+      "fala": "Pero, antes de jurar, el segundo viejecito le pidió a su vecino que le sujetara su bastón de madera.",
+      "hash": "5343c8fab2"
     },
     {
       "id": "p5-s5",
       "pagina": 5,
       "paragrafo": 1,
-      "texto": "Hizo el juramento, recogió su bastón y se dispuso a marcharse tan tranquilo.",
-      "fala": "Hizo el juramento, recogió su bastón y se dispuso a marcharse tan tranquilo.",
-      "hash": "f11bd18456"
+      "texto": "Juró, recogió el bastón y ya se iba tan tranquilo.",
+      "fala": "Juró, recogió el bastón y ya se iba tan tranquilo.",
+      "hash": "fcdc873e2c"
     },
     {
       "id": "p5-s6",
@@ -399,49 +415,49 @@
       "id": "p5-s7",
       "pagina": 5,
       "paragrafo": 1,
-      "texto": "¿Por qué alguien le pide a otro que le sostenga el bastón justo en el momento de jurar?",
-      "fala": "¿Por qué alguien le pide a otro que le sostenga el bastón justo en el momento de jurar?",
-      "hash": "d746351a87"
+      "texto": "¿Por qué alguien le pide a otro que le sujete el bastón justo cuando va a jurar?",
+      "fala": "¿Por qué alguien le pide a otro que le sujete el bastón justo cuando va a jurar?",
+      "hash": "0ff02d2dce"
     },
     {
       "id": "p5-s8",
       "pagina": 5,
       "paragrafo": 2,
-      "texto": "—¡Traedme aquí ese bastón! —ordenó el gobernador, con mirada pícara.",
-      "fala": "¡Traedme aquí ese bastón! ordenó el gobernador, con mirada pícara.",
-      "hash": "32a257bac8"
+      "texto": "—¡Traedme ese bastón! —mandó el gobernador, con mirada lista.",
+      "fala": "¡Traedme ese bastón! mandó el gobernador, con mirada lista.",
+      "hash": "4df69edf25"
     },
     {
       "id": "p5-s9",
       "pagina": 5,
       "paragrafo": 2,
-      "texto": "¡Rompe el bastón para descubrir el enigma!",
-      "fala": "¡Rompe el bastón para descubrir el enigma!",
-      "hash": "f26f3c7697"
+      "texto": "¡Rompe el bastón y descubre el secreto!",
+      "fala": "¡Rompe el bastón y descubre el secreto!",
+      "hash": "ed93d0334d"
     },
     {
       "id": "p5-s10",
       "pagina": 5,
       "paragrafo": 2,
-      "texto": "Al partirlo, ¡rodaron por el suelo las diez monedas de oro, escondidas en el hueco de la madera!",
-      "fala": "Al partirlo, ¡rodaron por el suelo las diez monedas de oro, escondidas en el hueco de la madera!",
-      "hash": "f4c4fbe9bc"
+      "texto": "Cuando el bastón se partió, ¡rodaron por el suelo las diez monedas de oro, que estaban escondidas dentro de la madera hueca!",
+      "fala": "Cuando el bastón se partió, ¡rodaron por el suelo las diez monedas de oro, que estaban escondidas dentro de la madera hueca!",
+      "hash": "2afd12556f"
     },
     {
       "id": "p5-s11",
       "pagina": 5,
       "paragrafo": 2,
-      "texto": "Era verdad que el deudor había puesto el dinero en las manos de su amigo mientras juraba.",
-      "fala": "Era verdad que el deudor había puesto el dinero en las manos de su amigo mientras juraba.",
-      "hash": "aafc14a36f"
+      "texto": "Mientras juraba, el viejecito sí había dejado el dinero en las manos de su vecino, ¡escondido en el bastón!",
+      "fala": "Mientras juraba, el viejecito sí había dejado el dinero en las manos de su vecino, ¡escondido en el bastón!",
+      "hash": "dcaba8ba19"
     },
     {
       "id": "p5-s12",
       "pagina": 5,
       "paragrafo": 2,
-      "texto": "¡Todo el tribunal aplaudió con admiración y entusiasmo la brillante SABIDURÍA del gobernador Sancho Panza!",
-      "fala": "¡Todo el tribunal aplaudió con admiración y entusiasmo la brillante sabiduría del gobernador Sancho Panza!",
-      "hash": "a4ff9b6a76"
+      "texto": "Todo el mundo aplaudió, admirado con la gran SABIDURÍA del gobernador Sancho Panza.",
+      "fala": "Todo el mundo aplaudió, admirado con la gran sabiduría del gobernador Sancho Panza.",
+      "hash": "0cf170c64f"
     },
     {
       "id": "p6-s0",
@@ -456,57 +472,49 @@
       "id": "p6-s1",
       "pagina": 6,
       "paragrafo": 0,
-      "texto": "Sancho gobernó el lugar durante diez días con admirable honradez y rectitud.",
-      "fala": "Sancho gobernó el lugar durante diez días con admirable honradez y rectitud.",
-      "hash": "efbcaa5c09"
+      "texto": "Sancho gobernó el pueblo durante diez días, siempre con mucha honradez.",
+      "fala": "Sancho gobernó el pueblo durante diez días, siempre con mucha honradez.",
+      "hash": "d72bd3ffa0"
     },
     {
       "id": "p6-s2",
       "pagina": 6,
       "paragrafo": 0,
-      "texto": "Pero la vida de palacio era cansada y agobiante: un médico severísimo, el doctor Pedro Recio, no le dejaba comer nada rico, las reuniones interminables le quitaban el sueño y la pompa del poder le robaba la paz.",
-      "fala": "Pero la vida de palacio era cansada y agobiante: un médico severísimo, el doctor Pedro Recio, no le dejaba comer nada rico, las reuniones interminables le quitaban el sueño y la pompa del poder le robaba la paz.",
-      "hash": "bdaed73a0e"
+      "texto": "Pero la vida en el palacio era cansada: un médico muy gruñón no le dejaba comer nada rico, las reuniones no se acababan nunca, y tanto teatro de gobernador le robaba la paz.",
+      "fala": "Pero la vida en el palacio era cansada: un médico muy gruñón no le dejaba comer nada rico, las reuniones no se acababan nunca, y tanto teatro de gobernador le robaba la paz.",
+      "hash": "680e1b44c8"
     },
     {
       "id": "p6-s3",
       "pagina": 6,
       "paragrafo": 1,
-      "texto": "Una hermosa mañana, vestido con sus viejas y sencillas ropas de labrador, Sancho fue hasta el establo, abrazó con cariño el cuello de su querido BURRITO y le habló con ternura: —Ven acá, compañero mío y AMIGO mío: cuando yo viajaba contigo, ¡dichosas eran mis horas, mis días y mis años!",
-      "fala": "Una hermosa mañana, vestido con sus viejas y sencillas ropas de labrador, Sancho fue hasta el establo, abrazó con cariño el cuello de su querido burrito y le habló con ternura: Ven acá, compañero mío y amigo mío: cuando yo viajaba contigo, ¡dichosas eran mis horas, mis días y mis años!",
-      "hash": "024234c9c0"
+      "texto": "Una bonita mañana, con su ropa sencilla de labrador, Sancho fue al establo, abrazó con cariño el cuello de su BURRITO y le habló bajito: —Mi fiel AMIGO, cuando viajaba contigo, mis días estaban llenos de paz y de alegría.",
+      "fala": "Una bonita mañana, con su ropa sencilla de labrador, Sancho fue al establo, abrazó con cariño el cuello de su burrito y le habló bajito: Mi fiel amigo, cuando viajaba contigo, mis días estaban llenos de paz y de alegría.",
+      "hash": "b207d01e2d"
     },
     {
       "id": "p6-s4",
       "pagina": 6,
       "paragrafo": 1,
-      "texto": "¡Prefiero mil veces mi dulce LIBERTAD y un pedazo de pan con cebolla a todos los banquetes y vanidades de quien manda en un reino!",
-      "fala": "¡Prefiero mil veces mi dulce libertad y un pedazo de pan con cebolla a todos los banquetes y vanidades de quien manda en un reino!",
-      "hash": "0f2fab1969"
+      "texto": "¡Prefiero mil veces mi LIBERTAD y un trozo de pan con cebolla a todos los banquetes de quien manda en un reino!",
+      "fala": "¡Prefiero mil veces mi libertad y un trozo de pan con cebolla a todos los banquetes de quien manda en un reino!",
+      "hash": "cbefc8cab5"
     },
     {
       "id": "p6-s5",
       "pagina": 6,
       "paragrafo": 2,
-      "texto": "Y así, sin llevarse ni una sola moneda del arca pública, Sancho se despidió de la ínsula con la cabeza bien alta, diciendo: «Desnudo nací, desnudo me hallo: ni pierdo ni gano».",
-      "fala": "Y así, sin llevarse ni una sola moneda del arca pública, Sancho se despidió de la ínsula con la cabeza bien alta, diciendo: Desnudo nací, desnudo me hallo: ni pierdo ni gano.",
-      "hash": "26d6aceb70"
+      "texto": "Y así, sin llevarse ni una moneda de la caja del pueblo, Sancho se despidió de la ínsula con la cabeza bien alta: se iba sin riquezas, pero con el corazón lleno de bondad y de sabiduría.",
+      "fala": "Y así, sin llevarse ni una moneda de la caja del pueblo, Sancho se despidió de la ínsula con la cabeza bien alta: se iba sin riquezas, pero con el corazón lleno de bondad y de sabiduría.",
+      "hash": "a55f61d60b"
     },
     {
       "id": "p6-s6",
       "pagina": 6,
       "paragrafo": 2,
-      "texto": "Se marchaba pobre de riquezas, pero con el alma rebosante de pureza, dignidad y sabiduría.",
-      "fala": "Se marchaba pobre de riquezas, pero con el alma rebosante de pureza, dignidad y sabiduría.",
-      "hash": "4b6b071474"
-    },
-    {
-      "id": "p6-s7",
-      "pagina": 6,
-      "paragrafo": 2,
-      "texto": "Todos los vecinos del lugar se secaron lágrimas de gratitud al ver partir a aquel gobernante bondadoso en busca de su verdadera paz.",
-      "fala": "Todos los vecinos del lugar se secaron lágrimas de gratitud al ver partir a aquel gobernante bondadoso en busca de su verdadera paz.",
-      "hash": "2a88012307"
+      "texto": "Los vecinos se secaron las lágrimas, agradecidos, al ver marcharse a aquel gobernador tan bueno, que ahora se iba en busca de su paz.",
+      "fala": "Los vecinos se secaron las lágrimas, agradecidos, al ver marcharse a aquel gobernador tan bueno, que ahora se iba en busca de su paz.",
+      "hash": "c8063c2e38"
     },
     {
       "id": "p7-s0",
@@ -521,65 +529,65 @@
       "id": "p7-s1",
       "pagina": 7,
       "paragrafo": 0,
-      "texto": "En las arenas doradas de una playa de Barcelona, al son rítmico de las olas del mar, apareció cabalgando un misterioso adversario con una media luna plateada en el escudo: el Caballero de la BLANCA LUNA.",
-      "fala": "En las arenas doradas de una playa de Barcelona, al son rítmico de las olas del mar, apareció cabalgando un misterioso adversario con una media luna plateada en el escudo: el Caballero de la blanca luna.",
-      "hash": "102a7ccbfe"
+      "texto": "En una playa de arena dorada, en Barcelona, con el ruido de las olas del mar, apareció a caballo un caballero misterioso, con una luna plateada pintada en el escudo: el Caballero de la BLANCA LUNA.",
+      "fala": "En una playa de arena dorada, en Barcelona, con el ruido de las olas del mar, apareció a caballo un caballero misterioso, con una luna plateada pintada en el escudo: el Caballero de la blanca luna.",
+      "hash": "b17e68c44c"
     },
     {
       "id": "p7-s2",
       "pagina": 7,
       "paragrafo": 0,
-      "texto": "Era, en verdad, el joven bachiller Sansón Carrasco, un querido vecino de la Mancha que solo deseaba llevarlo a casa sano y salvo.",
-      "fala": "Era, en verdad, el joven bachiller Sansón Carrasco, un querido vecino de la Mancha que solo deseaba llevarlo a casa sano y salvo.",
-      "hash": "e67f31f06f"
+      "texto": "En realidad era el joven Sansón Carrasco, un vecino querido de la Mancha, que solo quería llevar a don Quijote a casa sano y salvo.",
+      "fala": "En realidad era el joven Sansón Carrasco, un vecino querido de la Mancha, que solo quería llevar a don Quijote a casa sano y salvo.",
+      "hash": "87026991e3"
     },
     {
       "id": "p7-s3",
       "pagina": 7,
       "paragrafo": 0,
-      "texto": "En el duelo de la playa, el hidalgo fue vencido y, como hombre de honor incorruptible, cumplió su promesa: guardaría la lanza y volvería a su aldea.",
-      "fala": "En el duelo de la playa, el hidalgo fue vencido y, como hombre de honor incorruptible, cumplió su promesa: guardaría la lanza y volvería a su aldea.",
-      "hash": "aee80829e6"
+      "texto": "En la pelea sobre la arena, don Quijote perdió y, como un caballero que siempre cumple su palabra, hizo lo que había prometido: guardó la lanza y volvió a su aldea.",
+      "fala": "En la pelea sobre la arena, don Quijote perdió y, como un caballero que siempre cumple su palabra, hizo lo que había prometido: guardó la lanza y volvió a su aldea.",
+      "hash": "d8fd4116a6"
     },
     {
       "id": "p7-s4",
       "pagina": 7,
       "paragrafo": 1,
-      "texto": "De vuelta en su acogedora sala de lectura, Alonso Quijano el Bueno se sentó junto a la chimenea encendida, rodeado de sus amados libros.",
-      "fala": "De vuelta en su acogedora sala de lectura, Alonso Quijano el Bueno se sentó junto a la chimenea encendida, rodeado de sus amados libros.",
-      "hash": "be5dbdf309"
+      "texto": "De vuelta en su sala de lectura, Alonso Quijano se sentó junto a la chimenea encendida, rodeado de los libros que tanto quería.",
+      "fala": "De vuelta en su sala de lectura, Alonso Quijano se sentó junto a la chimenea encendida, rodeado de los libros que tanto quería.",
+      "hash": "e3e1bb5571"
     },
     {
       "id": "p7-s5",
       "pagina": 7,
       "paragrafo": 1,
-      "texto": "Todas las tardes, los niños de la aldea se sentaban en la alfombra, a los pies del abuelo Alonso, para escuchar fascinados las historias de los gigantes-molinos, de las ovejas-ejércitos, del vuelo de Clavileño y del escudero que gobernó una ínsula con justicia en el corazón.",
-      "fala": "Todas las tardes, los niños de la aldea se sentaban en la alfombra, a los pies del abuelo Alonso, para escuchar fascinados las historias de los gigantes-molinos, de las ovejas-ejércitos, del vuelo de Clavileño y del escudero que gobernó una ínsula con justicia en el corazón.",
-      "hash": "dd7a955dd2"
+      "texto": "Todas las tardes, los niños de la aldea se sentaban en la alfombra, a los pies del abuelo Alonso, para escuchar las historias de los gigantes-molinos, de las ovejas-ejércitos, del vuelo de Clavileño y del escudero que gobernó una ínsula con justicia en el corazón.",
+      "fala": "Todas las tardes, los niños de la aldea se sentaban en la alfombra, a los pies del abuelo Alonso, para escuchar las historias de los gigantes-molinos, de las ovejas-ejércitos, del vuelo de Clavileño y del escudero que gobernó una ínsula con justicia en el corazón.",
+      "hash": "878448a5d2"
     },
     {
       "id": "p7-s6",
       "pagina": 7,
       "paragrafo": 1,
-      "texto": "—En un lugar de la Mancha, de cuyo nombre no quiero acordarme, vivía un hidalgo que soñaba con los ojos abiertos... —empezaba el abuelo, con un brillo travieso en la mirada.",
-      "fala": "En un lugar de la Mancha, de cuyo nombre no quiero acordarme, vivía un hidalgo que soñaba con los ojos abiertos... empezaba el abuelo, con un brillo travieso en la mirada.",
-      "hash": "5aa213ae46"
+      "texto": "—Érase una vez un hidalgo de la Mancha que soñaba con los ojos abiertos... —empezaba el abuelo, con un brillo travieso en la mirada.",
+      "fala": "Érase una vez un hidalgo de la Mancha que soñaba con los ojos abiertos... empezaba el abuelo, con un brillo travieso en la mirada.",
+      "hash": "7973087fe9"
     },
     {
       "id": "p7-s7",
       "pagina": 7,
       "paragrafo": 2,
-      "texto": "Así, la maravillosa IMAGINACIÓN del noble don Quijote nunca se apagó: pasó a vivir para siempre en el corazón de los pequeños LECTORES de todo el planeta.",
-      "fala": "Así, la maravillosa imaginación del noble don Quijote nunca se apagó: pasó a vivir para siempre en el corazón de los pequeños lectores de todo el planeta.",
-      "hash": "b3507fd9c3"
+      "texto": "Y así la IMAGINACIÓN de don Quijote nunca se apagó: se fue a vivir para siempre en el corazón de los pequeños LECTORES de todo el mundo.",
+      "fala": "Y así la imaginación de don Quijote nunca se apagó: se fue a vivir para siempre en el corazón de los pequeños lectores de todo el mundo.",
+      "hash": "9dc43ec0d6"
     },
     {
       "id": "p7-s8",
       "pagina": 7,
       "paragrafo": 2,
-      "texto": "¡Porque quien lee y sueña con el bien, como tú, nunca deja de cabalgar por los caminos más hermosos del mundo!",
-      "fala": "¡Porque quien lee y sueña con el bien, como tú, nunca deja de cabalgar por los caminos más hermosos del mundo!",
-      "hash": "2044ea7135"
+      "texto": "¡Porque quien lee y sueña con el bien, como tú, nunca deja de cabalgar por los caminos más bonitos que existen!",
+      "fala": "¡Porque quien lee y sueña con el bien, como tú, nunca deja de cabalgar por los caminos más bonitos que existen!",
+      "hash": "c30b142cb1"
     }
   ],
   "palavras": [
