@@ -616,6 +616,8 @@ function montarLivro() {
             </button>
         </footer>
 
+        <span id="contador-canto" class="contador-canto" aria-live="polite"></span>
+
         <!-- Com os botões escondidos, eles voltam por estes controles flutuantes nos cantinhos -->
         <button type="button" id="alca-topo" class="alca-barra alca-topo" data-ui-title="mostrarTopo" title="${escapeHtml(ui('mostrarTopo'))}" data-ui-aria="mostrarTopo" aria-label="${escapeHtml(ui('mostrarTopo'))}">
             <i class="ph-bold ph-caret-down"></i>
@@ -929,6 +931,16 @@ const BARRAS_PREF = 'cv-barras-auto';
 const BARRAS_ESPERA_MS = 4000;
 let barrasAuto = false;
 const barrasTimer = {};
+
+/* Contador da barra de baixo e o discreto do cantinho (visível com os botões escondidos):
+   número da página e quanto do livro já foi lido (capa = 0%, última página = 100%) */
+function atualizarContadores() {
+    document.getElementById('page-counter-text').textContent = ui('pagina', currentPage + 1, totalPages);
+    const pct = totalPages > 1 ? Math.round(currentPage / (totalPages - 1) * 100) : 100;
+    const canto = document.getElementById('contador-canto');
+    canto.textContent = `${currentPage + 1}/${totalPages} · ${pct}%`;
+    canto.setAttribute('aria-label', `${ui('pagina', currentPage + 1, totalPages)} (${pct}%)`);
+}
 
 function barraEl(qual) {
     return document.getElementById(qual === 'topo' ? 'barra-topo' : 'barra-base');
@@ -2240,7 +2252,7 @@ function goToPage(index, options = {}) {
 
     document.getElementById('btn-prev').disabled = currentPage === 0;
     document.getElementById('btn-next').disabled = currentPage === totalPages - 1;
-    document.getElementById('page-counter-text').textContent = ui('pagina', currentPage + 1, totalPages);
+    atualizarContadores();
 
     renderPaginationDots();
 
@@ -2268,7 +2280,7 @@ function traduzirInterface() {
     document.querySelectorAll('[data-ui-aria]').forEach(el => el.setAttribute('aria-label', ui(el.dataset.uiAria)));
     document.getElementById('parte-rotulo').textContent = rotuloDaParte();
     document.getElementById('titulo-obra').textContent = obraNoIdioma();
-    document.getElementById('page-counter-text').textContent = ui('pagina', currentPage + 1, totalPages);
+    atualizarContadores();
     document.querySelectorAll('[data-idioma]').forEach(btn => {
         const ativo = btn.dataset.idioma === idioma;
         btn.classList.toggle('idioma-ativo', ativo);

@@ -128,4 +128,5 @@ O que já foi entregue, sprint a sprint, em ordem cronológica (o mais antigo pr
 - **Paisagem**: a folha da arte cresce até 60% da largura quando sobra altura; a virada de página foi ajustada para folhas de larguras diferentes.
 - **Barras compactas**: botões de 40 px; o "Ouvir Página" só mostra o texto a partir de 1024 px.
 - **Modo "esconder os botões"** (👁 no topo, lembrado no aparelho): as barras somem sozinhas e voltam com um toque nos controles flutuantes dos cantinhos de cima e de baixo.
+- **Contador no cantinho**: com os botões escondidos, o número da página e o % do livro lido aparecem discretos no canto inferior direito (pedido do humano).
 - Testado no Playwright em 1280 × 800, 800 × 1280 e 1865 × 892 (Partes 1, 3 e rascunho da 4; português e inglês).

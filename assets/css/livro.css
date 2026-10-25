@@ -930,7 +930,28 @@ body.barras-auto #barra-base.barra-visivel {
     visibility: visible;
     transition: transform 0.28s ease, opacity 0.28s ease, visibility 0s;
 }
-body.barras-auto .book-viewport { padding-top: 12px; padding-bottom: 16px; }
+body.barras-auto .book-viewport { padding-top: 12px; padding-bottom: 18px; }
+
+/* Número da página e % do livro, discreto no cantinho de baixo (sobre a capa de couro),
+   só quando a barra de baixo está escondida */
+.contador-canto {
+    position: absolute;
+    z-index: 35;
+    right: 22px;
+    bottom: 1px;
+    display: none;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    color: #FDE68A;
+    opacity: 0.85;
+    pointer-events: none;
+    white-space: nowrap;
+}
+body.barras-auto .contador-canto { display: block; }
+body.barras-auto #barra-base.barra-visivel ~ .contador-canto { display: none; }
 
 .alca-barra {
     position: absolute;
