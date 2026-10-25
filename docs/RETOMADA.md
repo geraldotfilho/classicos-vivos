@@ -14,6 +14,7 @@
   - **Nova Parte 4 em rascunho, agora ILUSTRADA**: [dom-quixote/parte-4-rascunho.html](../dom-quixote/parte-4-rascunho.html) (`rascunho: true`), 10 capítulos (23 a 32) + capa. Caderno: [docs/cadernos/dom-quixote-parte-4.md](cadernos/dom-quixote-parte-4.md).
     - Fase 3 **aprovada** pelo humano (2026-10-25).
     - Fase 4 **feita** (Claude, API Batch autorizada): 23 cenas novas + 6 camadas (pão, queijo, moringa; concha, pérolas, peixinhos), a chegada à aldeia reaproveitada da v1; áreas de toque medidas na arte; testado no Playwright nas duas orientações. Detalhes, refeitas e ressalvas no caderno, §6.
+- **Interface (2026-10-25)**: ilustração maximizada, barra estreita da lente (chave deslizante) e botões que se escondem (👁 no topo). Vale para todas as partes (motor único). Detalhes em `HISTORICO.md`.
 - **Gasto da API nesta sessão**: **US$ 0,90** (imagens). Acumulado de outubro: **US$ 4,54** (≈ R$ 25 de R$ 30).
 
 ## 2. Próxima sessão: 🛑 Parada 5 (Revisão final) ➔ Fase 6 (Narração)

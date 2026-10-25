@@ -87,6 +87,9 @@ const IDIOMAS = {
             livroAtualizado: 'Livro atualizado! ✨', atualizarBtn: 'Atualizar',
             etiqueta: '✨ Toque nas PALAVRAS MAIÚSCULAS para ouvir!', etiquetaMaiusculas: '✨ Toque nas PALAVRAS AMARELAS para ouvir!',
             lenteImag: 'Usar Lente da Imaginação!', lenteReal: 'Voltar para a Lente da Realidade',
+            lenteCurtaReal: 'Realidade', lenteCurtaImag: 'Imaginação',
+            barrasAuto: 'Esconder os botões (voltam com um toque nos cantinhos)', barrasFixas: 'Deixar os botões sempre à vista',
+            mostrarTopo: 'Mostrar os botões de cima', mostrarBase: 'Mostrar os botões de baixo',
             ilustracaoACaminho: 'Ilustração a caminho', faixaVazia: 'Toque nas palavras na ordem certa',
             continuarLendo: 'Continuar lendo', ouvirPalavra: 'Ouvir a palavra de novo', silabas: 'Sílabas',
             vozDaLeitura: '🗣️ Voz da leitura', fechar: 'Fechar',
@@ -119,6 +122,9 @@ const IDIOMAS = {
             livroAtualizado: 'Book updated! ✨', atualizarBtn: 'Update',
             etiqueta: '✨ Tap the CAPITAL WORDS to hear them!', etiquetaMaiusculas: '✨ Tap the YELLOW WORDS to hear them!',
             lenteImag: 'Use the Imagination Lens!', lenteReal: 'Back to the Reality Lens',
+            lenteCurtaReal: 'Reality', lenteCurtaImag: 'Imagination',
+            barrasAuto: 'Hide the buttons (tap a corner to bring them back)', barrasFixas: 'Keep the buttons always visible',
+            mostrarTopo: 'Show the top buttons', mostrarBase: 'Show the bottom buttons',
             ilustracaoACaminho: 'Picture on its way', faixaVazia: 'Tap the words in the right order',
             continuarLendo: 'Keep reading', ouvirPalavra: 'Hear the word again', silabas: 'Syllables',
             vozDaLeitura: '🗣️ Reading voice', fechar: 'Close',
@@ -151,6 +157,9 @@ const IDIOMAS = {
             livroAtualizado: 'Livre mis à jour ! ✨', atualizarBtn: 'Mettre à jour',
             etiqueta: '✨ Touche les MOTS EN MAJUSCULES pour les écouter !', etiquetaMaiusculas: '✨ Touche les MOTS JAUNES pour les écouter !',
             lenteImag: 'Utiliser la Lentille de l’Imagination !', lenteReal: 'Revenir à la Lentille de la Réalité',
+            lenteCurtaReal: 'Réalité', lenteCurtaImag: 'Imagination',
+            barrasAuto: 'Cacher les boutons (touchez un coin pour les revoir)', barrasFixas: 'Garder les boutons toujours visibles',
+            mostrarTopo: 'Afficher les boutons du haut', mostrarBase: 'Afficher les boutons du bas',
             ilustracaoACaminho: 'Illustration en route', faixaVazia: 'Touche les mots dans le bon ordre',
             continuarLendo: 'Continuer la lecture', ouvirPalavra: 'Réécouter le mot', silabas: 'Syllabes',
             vozDaLeitura: '🗣️ Voix de lecture', fechar: 'Fermer',
@@ -183,6 +192,9 @@ const IDIOMAS = {
             livroAtualizado: '¡Libro actualizado! ✨', atualizarBtn: 'Actualizar',
             etiqueta: '✨ ¡Toca las PALABRAS EN MAYÚSCULAS para oírlas!', etiquetaMaiusculas: '✨ ¡Toca las PALABRAS AMARILLAS para oírlas!',
             lenteImag: '¡Usar la Lente de la Imaginación!', lenteReal: 'Volver a la Lente de la Realidad',
+            lenteCurtaReal: 'Realidad', lenteCurtaImag: 'Imaginación',
+            barrasAuto: 'Ocultar los botones (toca una esquina para volver a verlos)', barrasFixas: 'Dejar los botones siempre a la vista',
+            mostrarTopo: 'Mostrar los botones de arriba', mostrarBase: 'Mostrar los botones de abajo',
             ilustracaoACaminho: 'Ilustración en camino', faixaVazia: 'Toca las palabras en el orden correcto',
             continuarLendo: 'Seguir leyendo', ouvirPalavra: 'Oír la palabra otra vez', silabas: 'Sílabas',
             vozDaLeitura: '🗣️ Voz de lectura', fechar: 'Cerrar',
@@ -298,11 +310,10 @@ function allSceneSrcs(i) {
 /* =====================================================================
    MONTAGEM DO LIVRO A PARTIR DA CONFIGURAÇÃO
    ===================================================================== */
-const BADGE_REAL = "bg-slate-900/85 text-white font-display font-bold text-[11px] sm:text-xs px-3 py-1 rounded-full shadow";
-const BADGE_IMAG = "bg-purple-700 text-amber-200 font-display font-bold text-[11px] sm:text-xs px-3 py-1 rounded-full shadow border border-amber-300";
-const LENS_BTN_REAL = "lens-toggle-btn bg-gradient-to-r from-purple-600 via-fuchsia-600 to-amber-500 text-white font-display font-bold text-xs sm:text-sm px-5 py-1.5 rounded-2xl border-2 border-white flex items-center gap-2";
-const LENS_BTN_IMAG = "lens-toggle-btn bg-gradient-to-r from-slate-800 to-slate-700 text-amber-300 font-display font-bold text-xs sm:text-sm px-5 py-1.5 rounded-2xl border-2 border-amber-400 flex items-center gap-2";
-const GRID_COLS = { 1: 'grid-cols-1', 2: 'grid-cols-2', 3: 'grid-cols-3', 4: 'grid-cols-4', 5: 'grid-cols-5' };
+/* Barra da lente (logo abaixo da ilustração): chave deslizante Realidade ↔ Imaginação + legenda da cena */
+const LENS_BTN_REAL = "lens-toggle-btn chave-lente btn-chunky";
+const LENS_BTN_IMAG = "lens-toggle-btn chave-lente btn-chunky lente-imag";
+const GRID_COLS = { 1: 'grid-cols-1', 2: 'grid-cols-2', 3: 'grid-cols-3', 4: 'grid-cols-4', 5: 'grid-cols-5', 6: 'grid-cols-6' };
 
 /* Texto falado de cada frase, por página (montado a partir do texto canônico de assets/js/texto.js) */
 const FALAS = {};
@@ -332,55 +343,66 @@ function montarCamadas(i, cena) {
 function montarCartoes(i) {
     const c = cartoesDe(i);
     if (!c || !c.itens || !c.itens.length) return '';
-    const cols = GRID_COLS[c.colunas || Math.min(c.itens.length, 4)];
+    // Uma fileira só sempre que couber (até 5 cartões); mais que isso, duas fileiras
+    const n = c.itens.length;
+    const cols = GRID_COLS[c.colunas || (n <= 5 ? n : Math.min(Math.ceil(n / 2), 6))];
     const faixa = c.tipo === 'ordem'
-        ? `<div id="faixa-${i}" class="faixa-palavras mt-2" aria-live="polite"><span class="faixa-vazia">${escapeHtml(t(c.faixaVazia) || ui('faixaVazia'))}</span></div>`
+        ? `<div id="faixa-${i}" class="faixa-palavras" aria-live="polite"><span class="faixa-vazia">${escapeHtml(t(c.faixaVazia) || ui('faixaVazia'))}</span></div>`
         : '';
     const cards = c.itens.map(item => {
         const domId = item.domId || `card-${i}-${item.id}`;
         const icone = item.icone
-            ? `<img src="${escapeHtml(img(item.icone))}" alt="" class="w-8 h-8 sm:w-10 sm:h-10 shrink-0 pointer-events-none" />`
-            : (item.emoji && c.tipo !== 'ordem' ? `<span class="text-2xl sm:text-3xl leading-none pointer-events-none" aria-hidden="true">${item.emoji}</span>` : '');
+            ? `<img src="${escapeHtml(img(item.icone))}" alt="" class="w-7 h-7 sm:w-8 sm:h-8 shrink-0 pointer-events-none" />`
+            : (item.emoji && c.tipo !== 'ordem' ? `<span class="text-xl sm:text-2xl leading-none pointer-events-none" aria-hidden="true">${item.emoji}</span>` : '');
         return `
             <div id="${escapeHtml(domId)}" data-drop-target="drop-zone-${i}" data-id="${escapeHtml(item.id)}"
                  data-word="${escapeHtml(t(item.palavra))}" data-emoji="${escapeHtml(item.emoji || '✨')}"
-                 class="draggable-card bg-white border-2 ${item.borda || 'border-amber-500'} rounded-2xl p-1.5 flex items-center justify-center gap-2 min-h-[48px]">
+                 class="draggable-card bg-white border-2 ${item.borda || 'border-amber-500'} rounded-xl px-1.5 py-1 flex items-center justify-center gap-1.5 min-h-[48px] min-w-0">
                 ${icone}
-                <span class="font-display font-bold text-xs sm:text-sm text-amber-950 uppercase truncate">${escapeHtml(t(item.palavra))}</span>
+                <span class="font-display font-bold text-xs text-amber-950 uppercase truncate">${escapeHtml(t(item.palavra))}</span>
             </div>`;
     }).join('');
-    return `${faixa}<div class="w-full grid ${cols} gap-2 z-20 mt-2">${cards}</div>`;
+    return `${faixa}<div class="w-full grid ${cols} gap-1.5 z-20">${cards}</div>`;
 }
 
+/* Legenda da cena sem o nome da lente ("👓 Lente da Realidade: A Pousada" → "A Pousada"):
+   a chave da lente já mostra em qual mundo a criança está */
+function legendaCurta(texto) {
+    const k = texto.indexOf(':');
+    return k > 0 && k < texto.length - 1 ? texto.slice(k + 1).trim() : texto;
+}
+
+/* Folha da ilustração: a cena ocupa todo o espaço que sobrar; embaixo, a barra estreita da lente
+   (chave deslizante, legenda e 🔄) e, se houver, a bandeja de cartões, com altura máxima limitada */
 function montarPaginaArte(i, pagina) {
     const cena = pagina.cena;
     const inicial = sceneFor(i);
+    const legenda = t(inicial.badge || '');
     return `
         <div class="book-page page-art">
-            <div id="frame-${i}" class="art-plate relative w-full flex flex-col justify-center">
-                <div class="flex items-center justify-between gap-2 z-20 mb-1">
-                    <span id="lens-badge-${i}" class="${BADGE_REAL}">${escapeHtml(t(inicial.badge))}</span>
+            <div id="frame-${i}" class="art-plate relative w-full">
+                <div class="cena-caixa">
+                    <div id="drop-zone-${i}" class="drop-zone-target relative aspect-[16/9] rounded-2xl overflow-hidden border-2 border-amber-400 shadow-md bg-slate-900 flex items-center justify-center">
+                        <img id="scene-bg-${i}" src="${escapeHtml(inicial.src)}" alt="${escapeHtml(t(cena.alt) || paginaNoIdioma(i).titulo || '')}" class="w-full h-full object-contain scene-img" />
+                        <div class="scene-placeholder" aria-hidden="true"><span class="ph-emoji">${cena.emoji || '🎨'}</span><span data-ui="ilustracaoACaminho">${escapeHtml(ui('ilustracaoACaminho'))}</span></div>
+                        ${montarCamadas(i, cena)}
+                        ${cena.extra || ''}
+                        ${montarHotspots(i, cena)}
+                        <div class="scene-busy-overlay"><div class="scene-spinner"></div></div>
+                    </div>
                 </div>
-                <div id="drop-zone-${i}" class="drop-zone-target relative w-full aspect-[16/9] rounded-2xl overflow-hidden border-2 border-amber-400 shadow-md bg-slate-900 flex items-center justify-center">
-                    <img id="scene-bg-${i}" src="${escapeHtml(inicial.src)}" alt="${escapeHtml(t(cena.alt) || paginaNoIdioma(i).titulo || '')}" class="w-full h-full object-contain scene-img" />
-                    <div class="scene-placeholder" aria-hidden="true"><span class="ph-emoji">${cena.emoji || '🎨'}</span><span data-ui="ilustracaoACaminho">${escapeHtml(ui('ilustracaoACaminho'))}</span></div>
-                    ${montarCamadas(i, cena)}
-                    ${cena.extra || ''}
-                    ${montarHotspots(i, cena)}
-                    <div class="scene-busy-overlay"><div class="scene-spinner"></div></div>
-                </div>
-                <div id="cartoes-${i}" class="cartoes-area">${montarCartoes(i)}</div>
-                <div class="flex items-center justify-center gap-2 z-20 mt-2">
-                    <button type="button" id="lens-btn-${i}" data-lente="${i}" class="${LENS_BTN_REAL}">
-                        <span class="text-base">✨</span>
-                        <span id="lens-btn-label-${i}">${escapeHtml(ui('lenteImag'))}</span>
+                <div class="barra-lente z-20">
+                    <button type="button" id="lens-btn-${i}" data-lente="${i}" class="${LENS_BTN_REAL}" role="switch" aria-checked="false" aria-label="${escapeHtml(ui('lenteImag'))}" title="${escapeHtml(ui('lenteImag'))}">
+                        <span class="chave-lente-lado chave-lente-real" aria-hidden="true">👓 <span data-ui="lenteCurtaReal">${escapeHtml(ui('lenteCurtaReal'))}</span></span>
+                        <span class="chave-lente-lado chave-lente-imag" aria-hidden="true">✨ <span data-ui="lenteCurtaImag">${escapeHtml(ui('lenteCurtaImag'))}</span></span>
                     </button>
+                    <span id="lens-badge-${i}" class="legenda-lente" title="${escapeHtml(legenda)}">${escapeHtml(legendaCurta(legenda))}</span>
                     ${!pagina.capa ? `
-                    <button type="button" data-reiniciar-pagina="${i}" class="btn-chunky bg-amber-100 hover:bg-amber-200 text-amber-950 font-display font-bold text-xs sm:text-sm px-3.5 py-1.5 rounded-2xl border-2 border-amber-400 flex items-center gap-1.5 shadow" title="${escapeHtml(ui('reiniciarPaginaTitulo'))}" aria-label="${escapeHtml(ui('reiniciarPagina'))}">
-                        <i class="ph-bold ph-arrow-counter-clockwise text-base text-amber-700"></i>
-                        <span>${escapeHtml(ui('reiniciarPagina'))}</span>
+                    <button type="button" data-reiniciar-pagina="${i}" class="btn-chunky btn-reiniciar shrink-0 rounded-xl bg-amber-100 hover:bg-amber-200 text-amber-800 border-2 border-amber-400 flex items-center justify-center" title="${escapeHtml(ui('reiniciarPaginaTitulo'))}" aria-label="${escapeHtml(ui('reiniciarPagina'))}">
+                        <i class="ph-bold ph-arrow-counter-clockwise"></i>
                     </button>` : ''}
                 </div>
+                <div id="cartoes-${i}" class="cartoes-area">${montarCartoes(i)}</div>
             </div>
         </div>`;
 }
@@ -504,11 +526,11 @@ function montarIdiomas() {
             <img src="${ICONES}bandeiras/${def.bandeira}.svg" alt="" draggable="false">
         </button>`).join('');
     return `
-            <div class="barra-leitura order-last sm:order-none w-full sm:w-auto flex items-center justify-center gap-1 sm:gap-1.5 shrink-0">
-                <button type="button" id="btn-maiusculas" class="btn-chunky btn-maiusculas w-9 h-9 sm:w-10 sm:h-10 rounded-2xl flex items-center justify-center border-2 font-display font-bold text-sm sm:text-base" aria-pressed="false">
+            <div class="barra-leitura order-last sm:order-none w-full sm:w-auto flex items-center justify-center gap-1 shrink-0">
+                <button type="button" id="btn-maiusculas" class="btn-chunky btn-maiusculas btn-barra rounded-xl flex items-center justify-center border-2 font-display font-bold text-sm" aria-pressed="false">
                     <span id="maiusculas-label">Aa</span>
                 </button>
-                <div class="grupo-idiomas flex items-center gap-0.5 bg-white/90 rounded-2xl border-2 border-amber-300 p-0.5" role="group">${bandeiras}
+                <div class="grupo-idiomas flex items-center gap-0.5 bg-white/90 rounded-xl border-2 border-amber-300 p-0.5" role="group">${bandeiras}
                 </div>
             </div>`;
 }
@@ -544,34 +566,37 @@ function montarLivro() {
     </div>
 
     <main id="book-container" class="storybook-frame relative w-full max-w-6xl rounded-[24px] sm:rounded-[30px] flex flex-col justify-between overflow-hidden">
-        <header class="w-full bg-amber-100/95 border-b-4 border-amber-300 px-2.5 py-1.5 sm:px-5 sm:py-2 flex flex-wrap sm:flex-nowrap items-center justify-between gap-x-2 gap-y-1.5 z-30 shrink-0">
-            <div class="flex-1 sm:flex-initial flex items-center gap-2 min-w-0">
-                <a href="../index.html" class="btn-chunky w-9 h-9 sm:w-10 sm:h-10 shrink-0 rounded-2xl bg-white hover:bg-amber-50 text-amber-900 flex items-center justify-center border-2 border-amber-500 text-lg" data-ui-title="bibliotecaTitulo" title="${escapeHtml(ui('bibliotecaTitulo'))}" data-ui-aria="biblioteca" aria-label="${escapeHtml(ui('biblioteca'))}">
+        <header id="barra-topo" class="barra-moldura w-full bg-amber-100/95 border-b-4 border-amber-300 px-2 py-1 sm:px-4 flex flex-wrap sm:flex-nowrap items-center justify-between gap-x-1.5 gap-y-1 z-30 shrink-0">
+            <div class="flex-1 flex items-center gap-1.5 min-w-0">
+                <a href="../index.html" class="btn-chunky btn-barra shrink-0 rounded-xl bg-white hover:bg-amber-50 text-amber-900 flex items-center justify-center border-2 border-amber-500" data-ui-title="bibliotecaTitulo" title="${escapeHtml(ui('bibliotecaTitulo'))}" data-ui-aria="biblioteca" aria-label="${escapeHtml(ui('biblioteca'))}">
                     <i class="ph-bold ph-books"></i>
                 </a>
                 <div class="min-w-0">
-                    <div class="flex items-center gap-1.5">
-                        <span id="parte-rotulo" class="text-[10px] sm:text-[11px] font-extrabold uppercase tracking-wider bg-amber-300 text-amber-950 px-2 py-0.5 rounded-full shrink-0">${escapeHtml(rotuloDaParte())}</span>
-                        ${RASCUNHO ? `<span class="text-[10px] sm:text-[11px] font-extrabold uppercase tracking-wider bg-rose-500 text-white px-2 py-0.5 rounded-full shrink-0" data-ui="rascunho">${escapeHtml(ui('rascunho'))}</span>` : ''}
-                        <span class="hidden lg:inline text-xs font-bold text-amber-800 truncate">${escapeHtml(LIVRO.autor || '')}</span>
+                    <div class="flex items-center gap-1 min-w-0 overflow-hidden">
+                        <span id="parte-rotulo" class="text-[10px] font-extrabold uppercase tracking-wider bg-amber-300 text-amber-950 px-1.5 rounded-full shrink-0">${escapeHtml(rotuloDaParte())}</span>
+                        ${RASCUNHO ? `<span class="text-[10px] font-extrabold uppercase tracking-wider bg-rose-500 text-white px-1.5 rounded-full shrink-0" data-ui="rascunho">${escapeHtml(ui('rascunho'))}</span>` : ''}
+                        <span class="hidden xl:inline text-[11px] font-bold text-amber-800 truncate">${escapeHtml(LIVRO.autor || '')}</span>
                     </div>
-                    <h1 id="titulo-obra" class="text-xs sm:text-lg font-display font-bold text-amber-950 leading-tight truncate">${escapeHtml(obraNoIdioma())}</h1>
+                    <h1 id="titulo-obra" class="text-xs sm:text-base font-display font-bold text-amber-950 leading-tight truncate">${escapeHtml(obraNoIdioma())}</h1>
                 </div>
             </div>
-            <div id="page-dots" class="hidden xl:flex items-center gap-1.5 bg-white/90 px-3.5 py-1.5 rounded-full border-2 border-amber-300"></div>
+            <div id="page-dots" class="hidden xl:flex items-center gap-1.5 bg-white/90 px-3 py-1 rounded-full border-2 border-amber-300"></div>
             ${montarIdiomas()}
-            <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
-                <button type="button" id="btn-tts" class="btn-chunky flex items-center gap-1.5 bg-emerald-500 hover:bg-emerald-600 text-white font-display font-semibold px-3 py-1.5 sm:py-2 rounded-2xl text-xs sm:text-sm border-2 border-emerald-700" data-ui-title="ouvirTitulo" title="${escapeHtml(ui('ouvirTitulo'))}">
-                    <i id="tts-icon" class="ph-fill ph-speaker-high text-base sm:text-lg"></i>
-                    <span id="tts-label" class="hidden sm:inline">${escapeHtml(ui('ouvirPagina'))}</span>
+            <div class="flex items-center gap-1 sm:gap-1.5 shrink-0">
+                <button type="button" id="btn-tts" class="btn-chunky btn-barra flex items-center justify-center gap-1.5 bg-emerald-500 hover:bg-emerald-600 text-white font-display font-semibold px-2 lg:px-3 rounded-xl text-xs sm:text-sm border-2 border-emerald-700" data-ui-title="ouvirTitulo" title="${escapeHtml(ui('ouvirTitulo'))}">
+                    <i id="tts-icon" class="ph-fill ph-speaker-high"></i>
+                    <span id="tts-label" class="hidden lg:inline">${escapeHtml(ui('ouvirPagina'))}</span>
                 </button>
-                <button type="button" id="btn-voz" class="btn-chunky w-9 h-9 sm:w-10 sm:h-10 rounded-2xl bg-white hover:bg-amber-50 text-emerald-700 flex items-center justify-center border-2 border-emerald-600 text-base sm:text-lg" data-ui-title="vozTitulo" title="${escapeHtml(ui('vozTitulo'))}" data-ui-aria="vozAria" aria-label="${escapeHtml(ui('vozAria'))}">
+                <button type="button" id="btn-voz" class="btn-chunky btn-barra rounded-xl bg-white hover:bg-amber-50 text-emerald-700 flex items-center justify-center border-2 border-emerald-600" data-ui-title="vozTitulo" title="${escapeHtml(ui('vozTitulo'))}" data-ui-aria="vozAria" aria-label="${escapeHtml(ui('vozAria'))}">
                     <i class="ph-bold ph-user-sound"></i>
                 </button>
-                <button type="button" id="btn-sfx" class="btn-chunky w-9 h-9 sm:w-10 sm:h-10 rounded-2xl bg-amber-400 hover:bg-amber-500 text-amber-950 flex items-center justify-center border-2 border-amber-600 text-base sm:text-lg" data-ui-title="sfxTitulo" title="${escapeHtml(ui('sfxTitulo'))}" data-ui-aria="sfxAria" aria-label="${escapeHtml(ui('sfxAria'))}">
+                <button type="button" id="btn-sfx" class="btn-chunky btn-barra rounded-xl bg-amber-400 hover:bg-amber-500 text-amber-950 flex items-center justify-center border-2 border-amber-600" data-ui-title="sfxTitulo" title="${escapeHtml(ui('sfxTitulo'))}" data-ui-aria="sfxAria" aria-label="${escapeHtml(ui('sfxAria'))}">
                     <i id="sfx-icon" class="ph-fill ph-music-notes"></i>
                 </button>
-                <button type="button" id="btn-fullscreen" class="btn-chunky w-9 h-9 sm:w-10 sm:h-10 rounded-2xl bg-indigo-500 hover:bg-indigo-600 text-white flex items-center justify-center border-2 border-indigo-700 text-base sm:text-lg" data-ui-title="telaCheiaTitulo" title="${escapeHtml(ui('telaCheiaTitulo'))}" data-ui-aria="telaCheiaAria" aria-label="${escapeHtml(ui('telaCheiaAria'))}">
+                <button type="button" id="btn-barras" class="btn-chunky btn-barra rounded-xl bg-white hover:bg-amber-50 text-amber-800 flex items-center justify-center border-2 border-amber-500" aria-pressed="false">
+                    <i id="barras-icon" class="ph-bold ph-eye-slash"></i>
+                </button>
+                <button type="button" id="btn-fullscreen" class="btn-chunky btn-barra rounded-xl bg-indigo-500 hover:bg-indigo-600 text-white flex items-center justify-center border-2 border-indigo-700" data-ui-title="telaCheiaTitulo" title="${escapeHtml(ui('telaCheiaTitulo'))}" data-ui-aria="telaCheiaAria" aria-label="${escapeHtml(ui('telaCheiaAria'))}">
                     <i id="fullscreen-icon" class="ph-bold ph-corners-out"></i>
                 </button>
             </div>
@@ -579,17 +604,25 @@ function montarLivro() {
 
         <div id="pages-viewport" class="book-viewport">${secoes}</div>
 
-        <footer class="w-full bg-amber-100/95 border-t-4 border-amber-300 px-3 py-2 sm:px-6 sm:py-2 flex items-center justify-between z-30 shrink-0">
-            <button type="button" id="btn-prev" class="btn-chunky flex items-center gap-2 bg-white hover:bg-amber-50 text-amber-950 font-display font-bold px-4 py-1.5 sm:px-6 sm:py-2 rounded-2xl border-2 border-amber-500 text-xs sm:text-base disabled:opacity-40 disabled:pointer-events-none">
-                <i class="ph-bold ph-arrow-left text-base sm:text-lg"></i>
+        <footer id="barra-base" class="barra-moldura w-full bg-amber-100/95 border-t-4 border-amber-300 px-2 py-1 sm:px-4 flex items-center justify-between z-30 shrink-0">
+            <button type="button" id="btn-prev" class="btn-chunky btn-barra flex items-center gap-1.5 bg-white hover:bg-amber-50 text-amber-950 font-display font-bold px-3 sm:px-4 rounded-xl border-2 border-amber-500 text-xs sm:text-sm disabled:opacity-40 disabled:pointer-events-none">
+                <i class="ph-bold ph-arrow-left text-base"></i>
                 <span data-ui="anterior">${escapeHtml(ui('anterior'))}</span>
             </button>
-            <span id="page-counter-text" class="font-display font-bold text-amber-950 text-xs sm:text-base bg-amber-200 px-3.5 py-1 rounded-full border-2 border-amber-400">${escapeHtml(ui('pagina', 1, totalPages))}</span>
-            <button type="button" id="btn-next" class="btn-chunky flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white font-display font-bold px-4 py-1.5 sm:px-6 sm:py-2 rounded-2xl border-2 border-amber-700 text-xs sm:text-base disabled:opacity-40 disabled:pointer-events-none">
+            <span id="page-counter-text" class="font-display font-bold text-amber-950 text-xs sm:text-sm bg-amber-200 px-3 py-0.5 rounded-full border-2 border-amber-400">${escapeHtml(ui('pagina', 1, totalPages))}</span>
+            <button type="button" id="btn-next" class="btn-chunky btn-barra flex items-center gap-1.5 bg-amber-500 hover:bg-amber-600 text-white font-display font-bold px-3 sm:px-4 rounded-xl border-2 border-amber-700 text-xs sm:text-sm disabled:opacity-40 disabled:pointer-events-none">
                 <span data-ui="proxima">${escapeHtml(ui('proxima'))}</span>
-                <i class="ph-bold ph-arrow-right text-base sm:text-lg"></i>
+                <i class="ph-bold ph-arrow-right text-base"></i>
             </button>
         </footer>
+
+        <!-- Com os botões escondidos, eles voltam por estes controles flutuantes nos cantinhos -->
+        <button type="button" id="alca-topo" class="alca-barra alca-topo" data-ui-title="mostrarTopo" title="${escapeHtml(ui('mostrarTopo'))}" data-ui-aria="mostrarTopo" aria-label="${escapeHtml(ui('mostrarTopo'))}">
+            <i class="ph-bold ph-caret-down"></i>
+        </button>
+        <button type="button" id="alca-base" class="alca-barra alca-base" data-ui-title="mostrarBase" title="${escapeHtml(ui('mostrarBase'))}" data-ui-aria="mostrarBase" aria-label="${escapeHtml(ui('mostrarBase'))}">
+            <i class="ph-bold ph-caret-up"></i>
+        </button>
     </main>`);
 }
 
@@ -885,6 +918,72 @@ document.addEventListener('fullscreenchange', () => {
         icon.className = document.fullscreenElement ? 'ph-bold ph-corners-in' : 'ph-bold ph-corners-out';
     }
 });
+
+/* =====================================================================
+   BOTÕES QUE SE ESCONDEM (mais espaço para o livro)
+   Ligado pelo 👁 do topo e lembrado no aparelho (cv-barras-auto). As barras de cima e de baixo
+   passam a flutuar sobre o livro e somem sozinhas; voltam com um toque no controle do cantinho
+   (alca-topo / alca-base) e somem de novo depois de alguns segundos sem uso.
+   ===================================================================== */
+const BARRAS_PREF = 'cv-barras-auto';
+const BARRAS_ESPERA_MS = 4000;
+let barrasAuto = false;
+const barrasTimer = {};
+
+function barraEl(qual) {
+    return document.getElementById(qual === 'topo' ? 'barra-topo' : 'barra-base');
+}
+
+function esconderBarra(qual) {
+    clearTimeout(barrasTimer[qual]);
+    barraEl(qual).classList.remove('barra-visivel');
+}
+
+/* Mostra a barra e agenda o sumiço (só no modo "esconder") */
+function mostrarBarra(qual, espera = BARRAS_ESPERA_MS) {
+    if (!barrasAuto) return;
+    barraEl(qual).classList.add('barra-visivel');
+    clearTimeout(barrasTimer[qual]);
+    barrasTimer[qual] = setTimeout(() => esconderBarra(qual), espera);
+}
+
+function atualizarBotaoBarras() {
+    const btn = document.getElementById('btn-barras');
+    if (!btn) return;
+    const rotulo = ui(barrasAuto ? 'barrasFixas' : 'barrasAuto');
+    btn.title = rotulo;
+    btn.setAttribute('aria-label', rotulo);
+    btn.setAttribute('aria-pressed', String(barrasAuto));
+    document.getElementById('barras-icon').className = barrasAuto ? 'ph-bold ph-eye' : 'ph-bold ph-eye-slash';
+}
+
+function definirBarrasAuto(ligado, espera = 1200) {
+    barrasAuto = ligado;
+    document.body.classList.toggle('barras-auto', ligado);
+    ['topo', 'base'].forEach(qual => {
+        if (ligado) mostrarBarra(qual, espera);
+        else esconderBarra(qual);
+    });
+    atualizarBotaoBarras();
+}
+
+function initBarras() {
+    document.getElementById('btn-barras').addEventListener('click', () => {
+        playSound('wordPop');
+        definirBarrasAuto(!barrasAuto);
+        salvarPreferencia(BARRAS_PREF, barrasAuto ? '1' : '0');
+    });
+    document.getElementById('alca-topo').addEventListener('click', () => { playSound('wordPop'); mostrarBarra('topo'); });
+    document.getElementById('alca-base').addEventListener('click', () => { playSound('wordPop'); mostrarBarra('base'); });
+    // Enquanto a criança usa uma barra, ela não some
+    ['topo', 'base'].forEach(qual => {
+        barraEl(qual).addEventListener('pointerdown', () => {
+            if (barrasAuto && barraEl(qual).classList.contains('barra-visivel')) mostrarBarra(qual);
+        });
+    });
+    // Ao abrir o livro, os botões aparecem um pouco antes de sumir, para a criança saber que existem
+    definirBarrasAuto(lerPreferencia(BARRAS_PREF) === '1', 2500);
+}
 
 /* =====================================================================
    SINTETIZADOR DE EFEITOS SONOROS (Web Audio API)
@@ -1399,9 +1498,13 @@ function dispararEfeito(i, id, efeito) {
 function atualizarRotulosDaLente(pageIdx, badgeText) {
     const isImag = lensImaginationState[pageIdx];
     const badge = document.getElementById(`lens-badge-${pageIdx}`);
-    badge.textContent = t(badgeText);
-    badge.className = isImag ? BADGE_IMAG : BADGE_REAL;
-    document.getElementById(`lens-btn-label-${pageIdx}`).textContent = ui(isImag ? 'lenteReal' : 'lenteImag');
+    const legenda = t(badgeText || '');
+    badge.textContent = legendaCurta(legenda);
+    badge.title = legenda;
+    const btn = document.getElementById(`lens-btn-${pageIdx}`);
+    btn.title = ui(isImag ? 'lenteReal' : 'lenteImag');
+    btn.setAttribute('aria-label', btn.title);
+    btn.setAttribute('aria-checked', String(isImag));
 }
 
 function updateLensUI(pageIdx, badgeText) {
@@ -1429,8 +1532,10 @@ function inviteImagination(pageIdx) {
     // O leitor contempla a cena pelo tempo que quiser; o botão apenas convida à imaginação
     const btn = document.getElementById(`lens-btn-${pageIdx}`);
     if (btn) {
-        btn.classList.add('animate-bounce');
-        setTimeout(() => btn.classList.remove('animate-bounce'), 1400);
+        btn.classList.remove('convite-lente');
+        void btn.offsetWidth;
+        btn.classList.add('convite-lente');
+        setTimeout(() => btn.classList.remove('convite-lente'), 1600);
     }
 }
 
@@ -1993,9 +2098,17 @@ function animateTurn(oldSection, newSection, forward, showNew) {
     leaf.style.transformOrigin = origin;
     leaf.style.transform = `rotateY(${from}deg)`;
     const shades = [];
+    // Na paisagem as duas folhas podem ter larguras diferentes (a da ilustração cresce):
+    // o verso da folha que gira ganha a largura da folha onde ela vai pousar
+    const versoRect = twoPages ? (forward ? rects.art : rects.text) : null;
     [[front, 'turn-front'], [back, 'turn-back']].forEach(([content, cls]) => {
         const face = document.createElement('div');
         face.className = `turn-face ${cls}`;
+        if (versoRect && cls === 'turn-back') {
+            face.style.width = `${versoRect.width}px`;
+            face.style.right = 'auto';
+            face.style.left = forward ? '0px' : `${leafRect.width - versoRect.width}px`;
+        }
         face.appendChild(content);
         const shade = document.createElement('div');
         shade.className = 'turn-shade';
@@ -2164,6 +2277,7 @@ function traduzirInterface() {
     setReadingPageUI(isReadingPage);
     renderPaginationDots();
     atualizarBotaoMaiusculas();
+    atualizarBotaoBarras();
 }
 
 /* Cartões da página no idioma atual. Se a tradução troca as palavras (cartões em ordem), a bandeja
@@ -2208,8 +2322,6 @@ function traduzirPagina(i) {
     if (btnRe) {
         btnRe.title = ui('reiniciarPaginaTitulo');
         btnRe.setAttribute('aria-label', ui('reiniciarPagina'));
-        const span = btnRe.querySelector('span');
-        if (span) span.textContent = ui('reiniciarPagina');
     }
     atualizarRotulosDaLente(i, sceneFor(i).badge);
 }
@@ -2350,6 +2462,7 @@ function initEventos() {
     document.getElementById('btn-voz').addEventListener('click', abrirPainelVoz);
     document.getElementById('btn-sfx').addEventListener('click', toggleSoundEffects);
     document.getElementById('btn-fullscreen').addEventListener('click', toggleFullscreen);
+    initBarras();
     document.getElementById('btn-maiusculas').addEventListener('click', alternarMaiusculas);
     document.getElementById('phonics-card').addEventListener('click', replayPhonicsWord);
 

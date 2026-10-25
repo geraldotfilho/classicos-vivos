@@ -27,6 +27,10 @@ html, body {
     touch-action: manipulation;
 }
 
+/* Largura explícita: o html também é flex, e o livro não pode depender da largura do conteúdo
+   (a .book-viewport tem contenção de tamanho e as barras podem flutuar fora do fluxo) */
+body { width: 100%; }
+
 h1, h2, h3, h4, .font-display {
     font-family: 'Fredoka', sans-serif;
 }
@@ -198,7 +202,19 @@ h1, h2, h3, h4, .font-display {
 }
 .btn-idioma.idioma-ativo img { opacity: 1; filter: none; }
 @media (min-width: 640px) {
-    .btn-idioma { width: 40px; height: 36px; }
+    .btn-idioma { width: 38px; height: 34px; }
+}
+
+/* Botões das barras de cima e de baixo: compactos, mas com área de toque confortável */
+.btn-barra {
+    height: 40px;
+    min-width: 40px;
+    font-size: 1.1rem;
+    line-height: 1;
+}
+.btn-barra > span { font-size: 0.8125rem; }
+@media (min-width: 640px) {
+    .btn-barra > span { font-size: 0.875rem; }
 }
 
 /* Texto todo em MAIÚSCULAS (botão Aa): letras de forma, um pouco mais espaçadas */
@@ -211,14 +227,88 @@ h1, h2, h3, h4, .font-display {
 .page-text .sentence { cursor: pointer; }
 .page-text .sentence:active:not(.sentence-reading) { background-color: #FEF3C7; }
 
-/* Botão Especial da Lente da Imaginação vs. Realidade */
+/* Barra estreita da lente, logo abaixo da ilustração:
+   [👓 Realidade | ✨ Imaginação] (chave deslizante) · legenda da cena · 🔄 */
+.barra-lente {
+    flex: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+}
+.chave-lente {
+    position: relative;
+    flex: none;
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    height: 40px;
+    padding: 3px;
+    border-radius: 9999px;
+    background: #1E293B;
+    border: 2px solid #FBBF24;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 700;
+    font-size: 0.78rem;
+    line-height: 1;
+}
+/* O "botão" que desliza de um lado para o outro */
+.chave-lente::before {
+    content: '';
+    position: absolute;
+    top: 3px; bottom: 3px; left: 3px;
+    width: calc(50% - 3px);
+    border-radius: 9999px;
+    background: linear-gradient(180deg, #FFFFFF 0%, #E2E8F0 100%);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.3s ease;
+}
+.chave-lente.lente-imag::before {
+    transform: translateX(100%);
+    background: linear-gradient(90deg, #9333EA 0%, #C026D3 55%, #F59E0B 100%);
+}
+.chave-lente-lado {
+    position: relative;
+    z-index: 1;
+    padding: 0 10px;
+    white-space: nowrap;
+    text-align: center;
+    color: #FDE68A;
+    transition: color 0.3s ease;
+}
+.chave-lente:not(.lente-imag) .chave-lente-real { color: #0F172A; }
+.chave-lente.lente-imag .chave-lente-imag { color: #FFFFFF; }
+.chave-lente.lente-imag .chave-lente-real { color: #CBD5E1; }
 .lens-toggle-btn {
-    transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
-    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.35), 0 0 16px rgba(168, 85, 247, 0.45);
+    transition: transform 0.14s ease, box-shadow 0.14s ease;
+    box-shadow: 0 3px 0 rgba(0, 0, 0, 0.35), 0 0 12px rgba(168, 85, 247, 0.4);
 }
 .lens-toggle-btn:active {
-    transform: translateY(3px) scale(0.98);
+    transform: translateY(2px) scale(0.98);
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
+}
+/* Convite suave à Imaginação depois de uma atividade (nunca troca a lente sozinho) */
+.lens-toggle-btn.convite-lente { animation: conviteLente 0.8s ease-in-out 2; }
+@keyframes conviteLente {
+    0%, 100% { box-shadow: 0 3px 0 rgba(0, 0, 0, 0.35), 0 0 0 0 rgba(250, 204, 21, 0); }
+    50% { box-shadow: 0 3px 0 rgba(0, 0, 0, 0.35), 0 0 0 6px rgba(250, 204, 21, 0.85); }
+}
+.legenda-lente {
+    flex: 1 1 auto;
+    min-width: 0;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+    font-size: 0.8rem;
+    line-height: 1.2;
+    color: #78350F;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.btn-reiniciar {
+    width: 40px;
+    height: 40px;
+    font-size: 1.15rem;
 }
 
 /* Peças Arrastáveis (Drag & Drop Pedagógico) */
@@ -444,11 +534,14 @@ h1, h2, h3, h4, .font-display {
         linear-gradient(160deg, #7C2D12 0%, #5B1D0C 55%, #431407 100%);
     perspective: 2400px;
 }
+/* Paisagem: a folha da ilustração fica mais larga (até 60%) quando sobra altura, para a cena
+   crescer; ~146px = barra da lente + uma fileira de cartões + margens, 34px = margens laterais */
+.book-viewport { container-type: size; }
 .spread {
     position: relative;
     height: 100%;
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-columns: minmax(0, clamp(50%, calc((100cqh - 146px) * 16 / 9 + 34px), 60%)) minmax(0, 1fr);
     grid-template-rows: minmax(0, 1fr);
 }
 .book-page {
@@ -470,7 +563,7 @@ h1, h2, h3, h4, .font-display {
 }
 .page-art {
     border-radius: 16px 3px 3px 16px;
-    padding: 14px 22px 14px 16px;
+    padding: 10px 20px 10px 12px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -492,11 +585,41 @@ h1, h2, h3, h4, .font-display {
     width: 56px;
     background: linear-gradient(to right, rgba(120, 53, 15, 0.30) 0%, rgba(120, 53, 15, 0.08) 45%, transparent 100%);
 }
-/* A ilustração ocupa a largura da página, mas encolhe para caber na altura */
+/* A ilustração fica com todo o espaço que sobra na folha (largura e altura), sempre em 16:9.
+   Barra da lente e bandeja de cartões ficam embaixo, compactas; a bandeja tem altura máxima
+   e rola por dentro se uma atividade tiver cartões demais. */
 .art-plate {
-    width: min(100%, calc((100cqh - 150px) * 16 / 9));
-    max-height: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
 }
+/* Altura ideal = a cena na largura inteira da folha (100cqw da .page-art); encolhe se faltar altura */
+.cena-caixa {
+    flex: 0 1 calc(100cqw * 9 / 16);
+    min-height: 0;
+    container-type: size;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cena-caixa > .drop-zone-target {
+    width: min(100cqw, calc(100cqh * 16 / 9));
+    flex: none;
+}
+.cartoes-area {
+    flex: none;
+    max-height: 34%;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 2px 2px 5px;
+    scrollbar-width: thin;
+}
+.cartoes-area:empty { display: none; }
 .page-text-scroll {
     height: 100%;
     overflow-y: auto;
@@ -556,7 +679,7 @@ h1, h2, h3, h4, .font-display {
     }
     .page-art {
         border-radius: 16px 16px 3px 3px;
-        padding: 12px 14px 20px;
+        padding: 10px 12px 14px;
         container-type: inline-size;
         box-shadow: 2px -2px 0 #EADFC8, 4px -4px 0 #FFF8E8, 0 -6px 12px rgba(0, 0, 0, 0.25);
     }
@@ -574,7 +697,10 @@ h1, h2, h3, h4, .font-display {
         width: auto; height: 40px;
         background: linear-gradient(to bottom, rgba(120, 53, 15, 0.26) 0%, rgba(120, 53, 15, 0.06) 50%, transparent 100%);
     }
-    .art-plate { width: 100%; }
+    .art-plate { height: auto; }
+    .cena-caixa { flex: none; container-type: normal; }
+    .cena-caixa > .drop-zone-target { width: 100%; }
+    .cartoes-area { max-height: 24vh; max-height: 24dvh; }
     .page-text-scroll { padding: 26px 24px 30px; }
 }
 
@@ -702,23 +828,24 @@ h1, h2, h3, h4, .font-display {
 
 /* Faixa onde as palavras ordenadas pela criança vão sendo escritas (ex.: a carta de Sancho) */
 .faixa-palavras {
-    min-height: 52px;
+    flex: none;
+    min-height: 40px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 6px;
-    padding: 8px 12px;
-    border-radius: 14px;
+    padding: 4px 10px;
+    border-radius: 12px;
     border: 2px dashed #D97706;
     background: #FFF7E6;
     font-family: 'Fredoka', sans-serif;
     font-weight: 700;
-    font-size: 1.15rem;
+    font-size: 1rem;
     color: #78350F;
 }
 .faixa-palavras .palavra-escrita { animation: popIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1); }
-.faixa-palavras .faixa-vazia { opacity: 0.55; font-weight: 600; font-size: 0.95rem; }
+.faixa-palavras .faixa-vazia { opacity: 0.55; font-weight: 600; font-size: 0.85rem; }
 
 /* Fim da parte: convite para a próxima */
 .fim-parte {
@@ -762,7 +889,7 @@ h1, h2, h3, h4, .font-display {
 .opcao-voz-off { opacity: 0.55; }
 .opcao-voz-off button { cursor: not-allowed; }
 
-/* Quadro destacado de instru��o de atividade (leitura opcional) */
+/* Quadro destacado de instrução de atividade (leitura opcional) */
 .quadro-atividade {
     background: #FEF3C7;
     border: 2px dashed #D97706;
@@ -778,4 +905,62 @@ h1, h2, h3, h4, .font-display {
 }
 .btn-ouvir-comando:hover {
     background: #FBBF24;
+}
+
+/* =====================================================================
+   BOTÕES QUE SE ESCONDEM (body.barras-auto, ligado pelo 👁 do topo)
+   As barras flutuam sobre o livro (sem empurrar a ilustração e o texto) e saem de cena;
+   os controles dos cantinhos (de cima e de baixo) trazem cada uma de volta.
+   ===================================================================== */
+body.barras-auto .barra-moldura {
+    position: absolute;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+    transition: transform 0.28s ease, opacity 0.28s ease, visibility 0s linear 0.28s;
+}
+body.barras-auto #barra-topo { top: 0; transform: translateY(-110%); }
+body.barras-auto #barra-base { bottom: 0; transform: translateY(110%); }
+body.barras-auto #barra-topo.barra-visivel,
+body.barras-auto #barra-base.barra-visivel {
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    transition: transform 0.28s ease, opacity 0.28s ease, visibility 0s;
+}
+body.barras-auto .book-viewport { padding-top: 12px; padding-bottom: 16px; }
+
+.alca-barra {
+    position: absolute;
+    z-index: 35;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 26px;
+    background: rgba(254, 243, 199, 0.92);
+    border: 2px solid #F59E0B;
+    color: #92400E;
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    animation: alcaEntra 0.3s ease-out;
+}
+/* Área de toque maior que o desenho */
+.alca-barra::before {
+    content: '';
+    position: absolute;
+    inset: -10px -8px;
+}
+.alca-barra:active { background: #FDE68A; }
+.alca-topo { top: 0; right: 18px; border-top: 0; border-radius: 0 0 14px 14px; }
+.alca-base { bottom: 0; left: 18px; border-bottom: 0; border-radius: 14px 14px 0 0; }
+body.barras-auto .alca-barra { display: flex; }
+body.barras-auto #barra-topo.barra-visivel ~ .alca-topo,
+body.barras-auto #barra-base.barra-visivel ~ .alca-base { display: none; }
+@keyframes alcaEntra {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }

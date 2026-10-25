@@ -120,3 +120,12 @@ O que já foi entregue, sprint a sprint, em ordem cronológica (o mais antigo pr
 - Atividades com arte: o piquenique (pão, queijo e moringa sobre a toalha) e a contagem dos tesouros do lago (concha, pérolas e peixinhos no balão da história). Áreas de toque medidas na arte de cada página.
 - Lição de arte: lençol branco + capuz pontudo vira imagem de ódio (Ku Klux Klan); fantasia de "mago" pede chapéu de papelão e cabeça descoberta (`ARTE-PELA-API.md` §4.2, receita geral §6.3).
 
+---
+
+## ✅ Interface: ilustração maior e botões que se escondem (2026-10-25)
+
+- **Ilustração maximizada**: a cena fica com todo o espaço livre da folha (antes reservava 150 px fixos e era espremida quando a atividade tinha mais cartões). Selo da lente + botão grande + "Recomeçar" viraram **uma barra estreita** logo abaixo da cena: chave deslizante 👓 Realidade ↔ ✨ Imaginação, legenda curta e 🔄. Bandeja de cartões mais compacta, numa fileira só até 5 cartões e com altura máxima.
+- **Paisagem**: a folha da arte cresce até 60% da largura quando sobra altura; a virada de página foi ajustada para folhas de larguras diferentes.
+- **Barras compactas**: botões de 40 px; o "Ouvir Página" só mostra o texto a partir de 1024 px.
+- **Modo "esconder os botões"** (👁 no topo, lembrado no aparelho): as barras somem sozinhas e voltam com um toque nos controles flutuantes dos cantinhos de cima e de baixo.
+- Testado no Playwright em 1280 × 800, 800 × 1280 e 1865 × 892 (Partes 1, 3 e rascunho da 4; português e inglês).
