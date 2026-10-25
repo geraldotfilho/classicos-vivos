@@ -57,8 +57,8 @@ Toda a parte pelo Claude, pela API (2026-10-24). Prompts: `tools/arte/dom-quixot
 | 6 · A Batalha dos Odres | `p6-real`, `p6-imag` | Camadas `p6-odre` (com o próprio gancho, usada 3 vezes) e `p6-respingo` |
 | 7 · Armas e Letras | `p7-real`, `p7-imag` | |
 
-### Parte 4 — A Jaula Encantada e a Ilha de Sancho (`../imagens/parte-4/`)
-Toda a parte pelo Claude, pela API (2026-10-24). Prompts: `tools/arte/dom-quixote-parte-4.mjs`.
+### Parte 4 — A Jaula Encantada e a Ilha de Sancho (v1 arquivada: `../imagens/acervo/parte-4-v1/`)
+Toda a parte pelo Claude, pela API (2026-10-24). Prompts: `tools/arte/dom-quixote-parte-4-v1.mjs`.
 
 | Página | Arquivos | Observação |
 | :--- | :--- | :--- |

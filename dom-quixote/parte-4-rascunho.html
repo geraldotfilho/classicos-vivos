@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#78350F">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>Dom Quixote de La Mancha - Parte 4 (Rascunho) | Clássicos Vivos</title>
+    <!-- Estilos locais (offline): Tailwind compilado, fontes, ícones e o estilo comum dos livros. Regerar com `npm run build`. -->
+    <link rel="stylesheet" href="../assets/css/tailwind.css">
+    <link rel="stylesheet" href="../assets/css/fonts.css">
+    <link rel="stylesheet" href="../assets/css/icons.css">
+    <link rel="stylesheet" href="../assets/css/livro.css">
+    <link rel="manifest" href="../manifest.webmanifest">
+    <link rel="apple-touch-icon" href="../assets/icones/icone-180.png">
+</head>
+<body class="p-1 sm:p-2.5 select-none">
+    <noscript>Este livro interativo precisa de JavaScript ativado no navegador.</noscript>
+
+    <script>
+    /* =========================================================================
+       DOM QUIXOTE DE LA MANCHA — PARTE 4 (NOVA): O ELMO, A BACIA E A JAULA ENCANTADA
+       Adaptação de Cervantes, Primeira Parte (1605), capítulos 39 a 52.
+       Rascunho em produção para substituir a Parte 4 antiga e fechar o 1º volume.
+       ========================================================================= */
+    window.LIVRO = {
+        obra: 'Dom Quixote de La Mancha',
+        autor: 'Miguel de Cervantes',
+        parte: 4,
+        totalPartes: 4,
+        rascunho: true,
+        imagens: './imagens/parte-4/',
+        fim: {
+            mensagem: '🎉 Fim da Parte 4 e do primeiro livro de Dom Quixote! O segundo livro, com o cavaleiro dos leões e o palácio dos duques, está a caminho!',
+            proxima: '../index.html',
+            proximaRotulo: 'Voltar à estante'
+        },
+        paginas: [
+            {
+                capa: true,
+                titulo: 'Parte 4: O Elmo, a Bacia e a Jaula Encantada',
+                texto: `Depois de tantas aventuras na serra e na pousada, Dom Quixote acredita que o {{REINO|REI • NO|👑}} da princesa Micomicona está livre de todo o perigo. Mas os seus amigos prepararam um plano com muito carinho para levá-lo de volta para casa!
+
+                    Nesta viagem cheia de surpresas, uma bacia de latão vai virar motivo de uma divertida discussão, uma {{JAULA|JAU • LA|🔒}} de madeira vai virar carruagem mágica e o fiel Sancho Pança vai mostrar que a sua esperteza e a sua {{AMIZADE|A • MI • ZA • DE|🤝}} desfazem qualquer feitiço.
+
+                    Abra o livro, sinta a brisa suave do caminho e venha acompanhar a volta triunfal do nosso cavaleiro sonhador!`,
+                cena: {
+                    real: 'p0-real.webp', imag: 'p0-imag.webp', emoji: '🏰',
+                    alt: 'Dom Quixote e Sancho Pança na pousada, com amigos preparando a volta para casa',
+                    legendaReal: '👓 Lente da Realidade: A Pousada sob a Luz da Manhã',
+                    legendaImag: '✨ Lente da Imaginação: A Despedida do Castelo Encantado!'
+                }
+            },
+            {
+                capitulo: '🪞 Capítulo 23 • O Reino Está Salvo!', corCapitulo: 'text-amber-700',
+                titulo: 'A Despedida da Princesa',
+                texto: `O sol da manhã entrou pelas janelas da pousada, enchendo o pátio de luz dourada. Doroteia, que tinha fingido ser a princesa Micomicona, vestiu sua roupa de viagem e veio agradecer ao cavaleiro com uma {{REVERÊNCIA|RE • VE • RÊN • CI • A|🙇}} graciosa:
+
+                    — Ó cavaleiro valente! — disse ela, com voz doce. — O senhor derrotou o gigante do meu reino e devolveu a paz ao meu povo! Agora já posso voltar feliz para as minhas terras!
+
+                    Dom Quixote bateu a mão no peito, todo orgulhoso: — Cumprir o meu {{DEVER|DE • VER|🛡️}} é a maior alegria de um cavaleiro! Já estou pronto para a próxima {{BATALHA|BA • TA • LHA|⚔️}}! O padre e o barbeiro trocaram olhares de preocupação: era preciso levar o amigo para casa antes que ele encontrasse outro perigo pela {{ESTRADA|ES • TRA • DA|🛣️}}!`,
+                cena: {
+                    real: 'p1-real.webp', imag: 'p1-imag.webp', emoji: '👸',
+                    alt: 'Doroteia sorrindo e se despedindo de Dom Quixote no pátio da pousada',
+                    legendaReal: '👓 Lente da Realidade: Doroteia Agradece na Pousada',
+                    legendaImag: '✨ Lente da Imaginação: A Princesa Coroa o Vencedor de Gigantes!',
+                    hotspots: [
+                        { x: 30, y: 35, w: 20, h: 50, palavra: 'DOROTEIA', emoji: '👸' },
+                        { x: 60, y: 25, w: 25, h: 65, palavra: 'DOM QUIXOTE', emoji: '🛡️' }
+                    ]
+                }
+            },
+            {
+                capitulo: '👑 Capítulo 24 • Bacia ou Elmo?', corCapitulo: 'text-yellow-700',
+                titulo: 'A Grande Invenção de Sancho',
+                texto: `Quando todos arrumavam as malas para partir, um homem entrou apressado na pousada: era o barbeiro da chuva! Ele olhou para a cabeça de Dom Quixote, arregalou os olhos e gritou: — Ei, essa aí é a minha {{BACIA|BA • CI • A|🥣}} de {{LATÃO|LA • TÃO|🪙}}! Devolva a minha bacia!
+
+                    — Bacia coisa nenhuma! — respondeu Dom Quixote, ajeitando o metal na cabeça com pose de herói. — Este é o famoso {{ELMO|EL • MO|👑}} de Mambrino, conquistado com honra numa batalha!
+
+                    Os dois começaram a discutir e todos seguraram o riso. Foi aí que Sancho deu um passo à frente com uma ideia genial: — Calma, meus senhores! Não é só bacia nem só elmo... É um {{BACIELMO|BA • CI • EL • MO|✨}}! Ajude o bom Sancho a juntar as sílabas e inventar essa palavra!`,
+                cena: {
+                    real: 'p2-real.webp', imag: 'p2-imag.webp', emoji: '👑',
+                    alt: 'O barbeiro reclamando a bacia enquanto Dom Quixote a segura como um elmo e Sancho concilia no meio',
+                    legendaReal: '👓 Lente da Realidade: Bacia de Latão ou Elmo?',
+                    legendaImag: '✨ Lente da Imaginação: O Brilho Lendário do Elmo de Mambrino!',
+                    cartoes: {
+                        tipo: 'ordem',
+                        ordem: ['ba', 'ci', 'el', 'mo'],
+                        itens: [
+                            { id: 'el', palavra: 'EL', emoji: '👑' },
+                            { id: 'ba', palavra: 'BA', emoji: '🥣' },
+                            { id: 'mo', palavra: 'MO', emoji: '✨' },
+                            { id: 'ci', palavra: 'CI', emoji: '🪙' }
+                        ]
+                    },
+                    hotspots: [
+                        { x: 45, y: 20, w: 15, h: 25, palavra: 'BACIELMO', emoji: '✨' },
+                        { x: 20, y: 30, w: 20, h: 60, palavra: 'BARBEIRO', emoji: '✂️' },
+                        { x: 65, y: 25, w: 25, h: 65, palavra: 'DOM QUIXOTE', emoji: '🛡️' }
+                    ]
+                }
+            },
+            {
+                capitulo: '🪄 Capítulo 25 • A Jaula Encantada', corCapitulo: 'text-purple-700',
+                titulo: 'A Carruagem dos Magos',
+                texto: `Para levar o amigo de volta sem deixá-lo triste, os amigos tiveram uma ideia brilhante. Construíram uma grande {{JAULA|JAU • LA|🔒}} de madeira em cima de um carro de bois. Depois, vestiram lençóis brancos e colocaram máscaras engraçadas de papelão, fingindo ser sábios {{MAGOS|MA • GOS|🧙}} protetores!
+
+                    Com passos lentos, convidaram Dom Quixote a entrar na carruagem mágica. O barbeiro, engrossando a voz como um trovão, recitou uma {{PROFECIA|PRO • FE • CI • A|🔮}} solene escrita num velho {{PERGAMINHO|PER • GA • MI • NHO|📜}}: — Não temas, fidalgo valoroso! Esta viagem vai levar você com toda a glória de volta à sua terra!
+
+                    Dom Quixote sorriu maravilhado: — Os cavaleiros mais ilustres sempre viajam em carruagens mágicas! Descubra as letras da palavra secreta gravada no fecho da jaula!`,
+                cena: {
+                    real: 'p3-real.webp', imag: 'p3-imag.webp', emoji: '🪄',
+                    alt: 'Dom Quixote dentro da jaula de madeira num carro de bois, com amigos de lençóis brancos ao redor',
+                    legendaReal: '👓 Lente da Realidade: A Jaula de Madeira no Carro de Bois',
+                    legendaImag: '✨ Lente da Imaginação: A Carruagem Encantada dos Magos Protetores!',
+                    cartoes: {
+                        tipo: 'ordem',
+                        faixaVazia: 'Descubra as letras da palavra secreta',
+                        ordem: ['a', 'm', 'i', 'g', 'o'],
+                        itens: [
+                            { id: 'm', palavra: 'M', emoji: '🪄' },
+                            { id: 'a', palavra: 'A', emoji: '📜' },
+                            { id: 'o', palavra: 'O', emoji: '⭐' },
+                            { id: 'g', palavra: 'G', emoji: '🔒' },
+                            { id: 'i', palavra: 'I', emoji: '✨' }
+                        ]
+                    },
+                    hotspots: [
+                        { x: 35, y: 30, w: 35, h: 45, palavra: 'JAULA', emoji: '🔒' },
+                        { x: 10, y: 40, w: 25, h: 50, palavra: 'BOIS', emoji: '🐂' },
+                        { x: 75, y: 35, w: 20, h: 55, palavra: 'SANCHO', emoji: '🫏' }
+                    ]
+                }
+            },
+            {
+                capitulo: '🤔 Capítulo 26 • Encantado Sente Fome?', corCapitulo: 'text-indigo-700',
+                titulo: 'O Teste Esperto de Sancho',
+                texto: `A carroça de bois seguia devagar pelos campos dourados: as rodas rangiam bem baixinho e Sancho cavalgava ao lado no seu fiel burrico. Olhando o cavaleiro em silêncio atrás das grades de madeira, Sancho começou a desconfiar:
+
+                    — Meu senhor Dom Quixote... O senhor está sentindo a barriga roncar de {{FOME|FO • ME|🥖}}? Sente a garganta seca de {{SEDE|SE • DE|💧}}? E sono, o senhor sente sono?
+
+                    — Ora, amigo Sancho! — respondeu Dom Quixote, sentindo o frescor do {{VENTO|VEN • TO|🍃}}. — Sinto muita fome, muita sede e uma vontade enorme de comer pão quentinho! Sancho bateu palmas e riu com gosto: — Pois então não tem {{FEITIÇO|FEI • TI • ÇO|🪄}} nenhum! Gente encantada não sente fome! Vamos descer e fazer um banquete na relva!`,
+                cena: {
+                    real: 'p4-real.webp', imag: 'p4-imag.webp', emoji: '🤔',
+                    alt: 'Sancho conversando com Dom Quixote através das grades da jaula no meio da estrada de campo',
+                    legendaReal: '👓 Lente da Realidade: A Esperteza de Sancho na Estrada',
+                    legendaImag: '✨ Lente da Imaginação: O Raciocínio de um Grande Sábio!',
+                    hotspots: [
+                        { x: 25, y: 35, w: 25, h: 55, palavra: 'SANCHO', emoji: '🫏' },
+                        { x: 60, y: 30, w: 30, h: 55, palavra: 'DOM QUIXOTE', emoji: '🛡️' }
+                    ]
+                }
+            },
+            {
+                capitulo: '🧺 Capítulo 27 • O Piquenique no Prado', corCapitulo: 'text-emerald-700',
+                titulo: 'O Banquete sob o Carvalho',
+                texto: `Os amigos concordaram que era hora de descansar. Abriram a portinha da jaula com todo o carinho e Dom Quixote desceu, respirando o ar puro do campo com um suspiro de alívio.
+
+                    Na sombra fresca de um enorme {{CARVALHO|CAR • VA • LHO|🌳}}, perto de um riacho que cantava entre as pedras, estenderam uma toalha na grama macia. Dom Quixote tirou o bacielmo e se sentou com os amigos para dividir o saboroso {{LANCHE|LAN • CHE|🧺}}.
+
+                    — Comer ao ar livre, ouvindo o canto dos passarinhos, é o melhor banquete do mundo! — declarou o cavaleiro, sorrindo feliz. Ajude a arrumar o piquenique na toalha, tocando nos alimentos que eles trouxeram!`,
+                cena: {
+                    real: 'p5-real.webp', imag: 'p5-imag.webp', emoji: '🧺',
+                    alt: 'Dom Quixote, Sancho e amigos sentados na relva sob um carvalho fazendo um piquenique',
+                    legendaReal: '👓 Lente da Realidade: Piquenique de Amigos no Prado',
+                    legendaImag: '✨ Lente da Imaginação: O Banquete dos Nobres Cavaleiros!',
+                    camadas: [
+                        { id: 'pao', emoji: '🥖', item: 'pao', x: 42, y: 68, w: 12, h: 10 },
+                        { id: 'queijo', emoji: '🧀', item: 'queijo', x: 48, y: 65, w: 10, h: 10 },
+                        { id: 'agua', emoji: '🏺', item: 'agua', x: 55, y: 62, w: 10, h: 14 }
+                    ],
+                    cartoes: {
+                        tipo: 'camadas',
+                        itens: [
+                            { id: 'pao', palavra: 'PÃO', emoji: '🥖', borda: 'border-amber-400' },
+                            { id: 'queijo', palavra: 'QUEIJO', emoji: '🧀', borda: 'border-yellow-400' },
+                            { id: 'agua', palavra: 'ÁGUA', emoji: '🏺', borda: 'border-sky-400' }
+                        ]
+                    },
+                    hotspots: [
+                        { x: 40, y: 60, w: 25, h: 25, palavra: 'TOALHA', emoji: '🧺' },
+                        { x: 25, y: 40, w: 20, h: 45, palavra: 'SANCHO', emoji: '🫏' },
+                        { x: 65, y: 35, w: 25, h: 50, palavra: 'DOM QUIXOTE', emoji: '🛡️' }
+                    ]
+                }
+            },
+            {
+                capitulo: '🏰 Capítulo 28 • O Cavaleiro do Lago de Cristal', corCapitulo: 'text-teal-700',
+                titulo: 'Histórias à Beira do Riacho',
+                texto: `Depois de comerem com gosto, todos ficaram descansando na grama verde. Olhando as águas claras do riacho, Dom Quixote começou a contar uma de suas histórias de cavalaria favoritas:
+
+                    — Sabiam que um nobre cavaleiro uma vez mergulhou no fundo de um {{LAGO|LA • GO|🌊}} encantado? Lá no fundo das águas, ele não se afogou! Encontrou um maravilhoso {{PALÁCIO|PA • LÁ • CIO|🏰}} de {{CRISTAL|CRIS • TAL|💎}} e {{OURO|OU • RO|🪙}}, onde peixinhos coloridos dançavam e fadas gentis serviam frutas doces!
+
+                    Sancho ouvia com os olhos brilhando de encanto. Ajude a contar os tesouros mágicos que o cavaleiro encontrou no palácio submarino!`,
+                cena: {
+                    real: 'p6-real.webp', imag: 'p6-imag.webp', emoji: '🏰',
+                    alt: 'Dom Quixote gesticulando animado enquanto conta histórias aos amigos descansando na relva',
+                    legendaReal: '👓 Lente da Realidade: Histórias à Beira do Riacho',
+                    legendaImag: '✨ Lente da Imaginação: O Palácio Submarino de Cristal!',
+                    camadas: [
+                        { id: 'concha', emoji: '🐚', x: 38, y: 72, w: 10, h: 10 },
+                        { id: 'perola', emoji: '⚪', x: 48, y: 70, w: 10, h: 10 },
+                        { id: 'peixinho', emoji: '🐠', x: 58, y: 73, w: 12, h: 10 }
+                    ],
+                    cartoes: {
+                        tipo: 'contagem',
+                        sequencia: ['concha', 'perola', 'peixinho'],
+                        falas: [
+                            'Uma concha de ouro!',
+                            'Duas pérolas que brilham!',
+                            'Três peixinhos de cristal!'
+                        ],
+                        itens: [
+                            { id: 'contar', palavra: 'CONTAR OS TESOUROS', emoji: '💎', borda: 'border-teal-500' }
+                        ]
+                    },
+                    hotspots: [
+                        { x: 45, y: 30, w: 30, h: 55, palavra: 'DOM QUIXOTE', emoji: '🛡️' },
+                        { x: 20, y: 40, w: 20, h: 45, palavra: 'SANCHO', emoji: '🫏' },
+                        { x: 40, y: 70, w: 25, h: 20, palavra: 'RIACHO', emoji: '🌊' }
+                    ]
+                }
+            },
+            {
+                capitulo: '🐐 Capítulo 29 • A Cabra Fujona', corCapitulo: 'text-stone-700',
+                titulo: 'A Travessa Manchadinha',
+                texto: `De repente, um barulho de galhos quebrando chamou a atenção de todos: — Bééé! Uma cabrinha malhada, cheia de pintinhas pretas e brancas, saltou de uma pedra e quase caiu na toalha do piquenique!
+
+                    Atrás dela vinha correndo um jovem {{PASTOR|PAS • TOR|🧑‍🌾}}, com o seu {{CAJADO|CA • JA • DO|🦯}} na mão: — Pare aí, Manchadinha! Por que você vive fugindo do cercado? A {{CABRA|CA • BRA|🐐}} deu uma cabeçada carinhosa na mão do pastor e começou a mastigar folhinhas.
+
+                    O pastor sentou-se com os viajantes e riu da travessura da bichinha. Dom Quixote fez um carinho nas orelhas da cabra e sorriu: — A {{LIBERDADE|LI • BER • DA • DE|🕊️}} é o maior tesouro do mundo, para os homens e para os animais!`,
+                cena: {
+                    real: 'p7-real.webp', imag: 'p7-imag.webp', emoji: '🐐',
+                    alt: 'Um pastor rindo ao lado de sua cabrinha malhada que recebe carinho de Dom Quixote',
+                    legendaReal: '👓 Lente da Realidade: O Pastor e a Cabrinha Manchadinha',
+                    legendaImag: '✨ Lente da Imaginação: O Guardião dos Bosques e a Criatura Mágica!',
+                    hotspots: [
+                        { x: 35, y: 45, w: 20, h: 35, palavra: 'CABRINHA', emoji: '🐐' },
+                        { x: 15, y: 35, w: 25, h: 55, palavra: 'PASTOR', emoji: '🧑‍🌾' },
+                        { x: 60, y: 35, w: 25, h: 55, palavra: 'DOM QUIXOTE', emoji: '🛡️' }
+                    ]
+                }
+            },
+            {
+                capitulo: '🎶 Capítulo 30 • A Romaria na Estrada', corCapitulo: 'text-rose-700',
+                titulo: 'Música e Fitas Coloridas',
+                texto: `Depois de se despedirem da cabrinha, Dom Quixote subiu na carruagem de madeira e a viagem seguiu o seu rumo. Perto da entrada de uma aldeia vizinha, um som alegre ecoou pelo vale: era o toque ritmado de um {{PANDEIRO|PAN • DEI • RO|🪘}} e o som doce de uma flauta!
+
+                    Uma alegre {{ROMARIA|RO • MA • RI • A|🎉}} de camponeses vinha pela estrada, usando fitas coloridas e {{FLORES|FLO • RES|🌸}} nos cabelos, entoando uma linda {{CANTIGA|CAN • TI • GA|🎶}} de verão.
+
+                    Ao verem a carruagem de bois se aproximando, as crianças correram para saudar os viajantes com sorrisos. Dom Quixote se levantou na jaula, pôs a mão no coração e acenou com nobreza: — Viva a gente boa e generosa deste campo!`,
+                cena: {
+                    real: 'p8-real.webp', imag: 'p8-imag.webp', emoji: '🎶',
+                    alt: 'Camponeses com fitas coloridas e pandeiros cantando alegremente na estrada enquanto Dom Quixote acena',
+                    legendaReal: '👓 Lente da Realidade: Romaria Alegre pelo Campo',
+                    legendaImag: '✨ Lente da Imaginação: O Cortejo Musical dos Campos de Ouro!',
+                    hotspots: [
+                        { x: 20, y: 35, w: 30, h: 55, palavra: 'CAMPONESES', emoji: '🎉' },
+                        { x: 60, y: 30, w: 30, h: 55, palavra: 'DOM QUIXOTE', emoji: '🛡️' }
+                    ]
+                }
+            },
+            {
+                capitulo: '🏡 Capítulo 31 • De Volta para Casa', corCapitulo: 'text-orange-700',
+                titulo: 'O Abraço na Aldeia',
+                texto: `Era domingo ao meio-dia quando o carro de bois finalmente entrou na rua principal da {{ALDEIA|AL • DEI • A|🏡}}. A sobrinha Antônia e a governanta saíram correndo pelo portão e abraçaram Dom Quixote com lágrimas de alegria: — Nosso tio querido voltou! Venha descansar!
+
+                    Pelo outro lado da rua, Teresa vinha correndo com a filhinha Sanchica. A {{ESPOSA|ES • PO • SA|👩}} deu um abraço apertado no marido e perguntou logo: — E a nossa {{ILHA|I • LHA|🏝️}}, Sancho? O que você trouxe de riqueza?
+
+                    Sancho estufou o peito de orgulho: — Trouxe a maior honra do mundo: o dever cumprido! E prometo que logo, logo serei o {{GOVERNADOR|GO • VER • NA • DOR|👑}} da nossa ilha! Ajude Sancho a proclamar o seu título para a família!`,
+                cena: {
+                    real: 'p9-real.webp', imag: 'p9-imag.webp', emoji: '🏡',
+                    alt: 'Chegada festiva na aldeia com a sobrinha abraçando Dom Quixote e Teresa abraçando Sancho',
+                    legendaReal: '👓 Lente da Realidade: Acolhida com Abraços na Aldeia',
+                    legendaImag: '✨ Lente da Imaginação: A Recepção Triunfal dos Grandes Heróis!',
+                    cartoes: {
+                        tipo: 'ordem',
+                        ordem: ['sancho', 'governador', 'da', 'ilha'],
+                        itens: [
+                            { id: 'governador', palavra: 'GOVERNADOR', emoji: '👑' },
+                            { id: 'sancho', palavra: 'SANCHO', emoji: '🫏' },
+                            { id: 'ilha', palavra: 'ILHA', emoji: '🏝️' },
+                            { id: 'da', palavra: 'DA', emoji: '✍️' }
+                        ]
+                    },
+                    hotspots: [
+                        { x: 25, y: 35, w: 25, h: 55, palavra: 'SANCHO', emoji: '🫏' },
+                        { x: 10, y: 40, w: 20, h: 50, palavra: 'TERESA', emoji: '👩' },
+                        { x: 65, y: 30, w: 25, h: 60, palavra: 'DOM QUIXOTE', emoji: '🛡️' }
+                    ]
+                }
+            },
+            {
+                capitulo: '🌙 Capítulo 32 • Sonhos à Janela', corCapitulo: 'text-blue-900',
+                titulo: 'O Descanso do Guerreiro',
+                texto: `A noite caiu sobre La Mancha, cobrindo o vilarejo com um manto azul salpicado de {{ESTRELAS|ES • TRE • LAS|⭐}}. Dom Quixote tomou um caldo quentinho, vestiu seu camisolão macio de dormir e se deitou na cama fofa, perfumada com lavanda.
+
+                    Pela janela aberta do quarto, uma suave {{BRISA|BRI • SA|🌬️}} balançava as cortinas brancas. A {{LUA|LU • A|🌕}} cheia brilhava no céu, iluminando as colinas onde os velhos moinhos de vento pareciam dormir em silêncio.
+
+                    O cavaleiro fechou os olhos com um sorriso sereno. Ele estava em casa, cercado de amor. Mas, lá no fundo do coração, os seus {{SONHOS|SO • NHOS|💤}} continuavam vivos, chamando por novas aventuras... E assim termina o nosso primeiro livro! O segundo livro de Dom Quixote está a caminho!`,
+                cena: {
+                    real: 'p10-real.webp', imag: 'p10-imag.webp', emoji: '🌙',
+                    alt: 'Dom Quixote dormindo em paz em sua cama macia enquanto a lua cheia brilha na janela aberta',
+                    legendaReal: '👓 Lente da Realidade: Descanso Sereno à Luz da Lua',
+                    legendaImag: '✨ Lente da Imaginação: Os Sonhos Eternos de Novas Aventuras!',
+                    hotspots: [
+                        { x: 35, y: 45, w: 35, h: 45, palavra: 'DOM QUIXOTE', emoji: '💤' },
+                        { x: 75, y: 15, w: 20, h: 30, palavra: 'LUA', emoji: '🌕' },
+                        { x: 70, y: 10, w: 25, h: 50, palavra: 'JANELA', emoji: '🪟' }
+                    ]
+                }
+            }
+        ]
+    };
+    </script>
+    <script src="../assets/js/texto.js"></script>
+    <script src="../assets/js/livro.js"></script>
+</body>
+</html>

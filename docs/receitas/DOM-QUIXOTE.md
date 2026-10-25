@@ -47,7 +47,7 @@ Registrados em [`PLANO-PARTES-2-4.md`](../PLANO-PARTES-2-4.md) §2. Em resumo: f
 | 1 · O Cavaleiro da Super Imaginação | 1605 | 1–8 | 1–7 | publicada |
 | 2 · Exércitos de Lã e o Elmo Encantado | 1605 | 8–21 | 8–15 | publicada |
 | 3 · Serra Morena e a Princesa Micomicona | 1605 | 23–38 | 16–22 | publicada |
-| 4 · (nova) O Elmo, a Bacia e a Jaula Encantada | 1605 | 39–52 | 23–29 | a Parte 4 antiga continua no ar até a nova ser publicada |
+| 4 · (nova) O Elmo, a Bacia e a Jaula Encantada | 1605 | 39–52 | 23–32 | a Parte 4 antiga continua no ar até a nova ser publicada |
 | 5 · O Livro Famoso e o Cavaleiro dos Leões | 1615 | 1–29 | 30–37 | na fila |
 | 6 · O Palácio dos Duques e a Ilha de Sancho | 1615 | 30–57 | 38–45 | na fila |
 | 7 · O Cavaleiro da Branca Lua | 1615 | 58–74 | 46–53 | na fila |
