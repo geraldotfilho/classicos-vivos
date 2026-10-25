@@ -10,43 +10,43 @@
     },
     paginas: [
         {   // página 0 (capa)
-            hash: 'be58f23cdb',
+            hash: '70f1d080c0',
             titulo: 'Parte 3: Sierra Morena y la princesa Micomicona',
-            texto: `Con su reluciente yelmo conquistado bajo la lluvia y el corazón rebosante de sueños, ¡el Caballero de la Triste Figura sube con Sancho por las montañas salvajes e imponentes de {{SIERRA MORENA|SIE • RRA • MO • RE • NA|⛰️}}!
+            texto: `Con el yelmo brillante que ganó bajo la lluvia y el corazón lleno de sueños, ¡el Caballero de la Triste Figura sube con Sancho por las montañas altas y salvajes de {{SIERRA MORENA|SIE • RRA • MO • RE • NA|⛰️}}!
 
-                En las alturas rocosas, entre despeñaderos, pinos y flores silvestres, nuestros héroes abrirán una maleta llena de secretos, escribirán una emocionante {{CARTA|CAR • TA|✉️}} de amor, darán volteretas de añoranza y descubrirán el ingenioso plan de unos viejos amigos para rescatar a una hermosa {{PRINCESA|PRIN • CE • SA|👸}} de un reino lejano.
+                Allá arriba, entre piedras, pinos y flores del campo, los dos amigos van a abrir una maleta llena de secretos, escribir una {{CARTA|CAR • TA|✉️}} de amor, dar volteretas de añoranza y descubrir el plan astuto de dos viejos amigos, con la ayuda de una {{PRINCESA|PRIN • CE • SA|👸}} de un reino muy, muy lejano.
 
-                ¡Respira hondo el aire puro de las montañas, pasa la página y sube la sierra con ellos!`
+                ¡Respira hondo el aire fresquito de la montaña, pasa la página y sube la sierra con ellos!`
         },
         {   // página 1
-            hash: '6c5cf268b2',
+            hash: 'aab727f185',
             capitulo: '🧳 Capítulo 16 • La maleta perdida',
             titulo: 'Un tesoro en medio de la sierra',
-            texto: `Subiendo por las sendas pedregosas de la sierra, entre encinas retorcidas y riscos escarpados, Sancho tropezó con una misteriosa {{MALETA|MA • LE • TA|🧳}} de cuero curtido, abandonada bajo un arbusto espinoso. La maleta estaba gastada por el tiempo, mojada por las lluvias y cerrada con broches oxidados.
+            texto: `Subiendo por caminos llenos de piedras, entre árboles torcidos y paredes de roca, Sancho tropezó con una {{MALETA|MA • LE • TA|🧳}} de cuero olvidada debajo de un arbusto lleno de espinas. La maleta estaba vieja, mojada por la lluvia y con los cierres oxidados.
 
-                ¿Qué guardaría aquel baúl olvidado? ¡Abre la maleta con un toque para descubrir el secreto! Dentro relucían decenas de preciosas {{MONEDAS|MO • NE • DAS|🪙}} de oro, que hicieron brillar de pura euforia los ojos de Sancho, y un delicado {{CUADERNO|CUA • DER • NO|📓}} lleno de {{POEMAS|PO • E • MAS|📜}} escritos a mano con elegante caligrafía. —¡Oro, mi señor! ¡Oro de verdad! —celebraba Sancho, dando saltitos.
+                ¿Qué habría dentro? ¡Abre la maleta con un toque y descubre el secreto! Dentro brillaban muchas {{MONEDAS|MO • NE • DAS|🪙}} de oro, que dejaron a Sancho con los ojos como platos de alegría, y un {{CUADERNO|CUA • DER • NO|📓}} lleno de {{POEMAS|PO • E • MAS|📜}} escritos a mano, con una letra muy bonita. —¡Oro, mi señor! ¡Oro de verdad! —gritó Sancho, dando saltitos.
 
-                Don Quijote tomó el cuaderno en sus manos con enorme respeto y leyó en voz alta los tiernos versos de un joven enamorado que vagaba sin rumbo por las montañas. —Quien escribe con tanta sensibilidad tiene el alma noble. ¡Los libros guardan los misterios más profundos del corazón humano! —concluyó el hidalgo con un suspiro cariñoso.`
+                Don Quijote tomó el cuaderno con mucho cuidado y leyó en voz alta los versos de un joven enamorado, que andaba perdido y triste por las montañas. —Quien escribe con tanto sentimiento tiene un corazón noble. ¡Los libros guardan los secretos más bonitos del corazón! —dijo el caballero, con un suspiro.`
         },
         {   // página 2
-            hash: 'c5dbc6cd8d',
+            hash: 'b9d4545218',
             capitulo: '🤸 Capítulo 17 • Las volteretas de la añoranza',
             titulo: 'Un caballero patas arriba',
-            texto: `Al contemplar la inmensa soledad de las montañas, don Quijote tuvo una idea luminosa: —Amigo Sancho, me quedaré en este claro del monte para demostrar al mundo mi inmensa {{AÑORANZA|A • ÑO • RAN • ZA|💭}} por Dulcinea, ayunando y meditando como hacía el ilustre héroe {{AMADÍS|A • MA • DÍS|🗡️}} de Gaula. ¡Y tú partirás en tu burrito para llevar una carta apasionada hasta sus manos!
+            texto: `Mirando aquellas montañas tan grandes y tan calladas, don Quijote tuvo una idea: —Amigo Sancho, me voy a quedar en este claro para enseñar al mundo mi enorme {{AÑORANZA|A • ÑO • RAN • ZA|💭}} por Dulcinea, igual que hacía {{AMADÍS|A • MA • DÍS|🗡️}} de Gaula, el héroe de mis libros. ¡Y tú irás en tu burrito a llevarle una carta de amor!
 
-                —Pero, mi señor amo —preguntó Sancho, rascándose la barbilla—, ¿cómo convenceré a la señora Dulcinea de que vuestra merced casi perdió el juicio por ella, si no he visto ninguna hazaña asombrosa?
+                —Pero, mi señor —preguntó Sancho, rascándose la barbilla—, ¿cómo le voy a contar a la señora Dulcinea que mi amo está casi loco de añoranza, si no veo ninguna locura con mis propios ojos?
 
-                —¡Pues mírala ahora mismo! —exclamó don Quijote con determinación. Se quitó la armadura de hierro y, quedándose solo con su blanco camisón de dormir, dio una veloz {{VOLTERETA|VOL • TE • RE • TA|🤸}} en la hierba, la cabeza abajo y los pies en alto, ¡con sus flacas piernas al aire en pleno salto! Sancho se tapó la cara con las dos manos, riéndose tanto que las lágrimas le corrían por las mejillas. ¡Ayuda al caballero en sus acrobacias de amor!`
+                —¡Pues mira ahora mismo! —respondió don Quijote. Se quitó la armadura de hierro y, solo con su camisón blanco, dio una {{VOLTERETA|VOL • TE • RE • TA|🤸}} en la hierba, ¡la cabeza abajo y los pies en alto! Sancho se tapó la cara con las manos y se rio tanto que se le saltaron las lágrimas. ¡Ayuda al caballero con sus volteretas de añoranza!`
         },
         {   // página 3
-            hash: '365caee442',
+            hash: 'bd74bae794',
             capitulo: '✉️ Capítulo 18 • La carta para Dulcinea',
             titulo: '¡Sancho olvidó la carta!',
-            texto: `Emocionado, don Quijote escribió una bellísima {{CARTA|CAR • TA|✉️}} para su amada en una hoja arrancada del cuaderno de poemas, con palabras llenas de poesía y su solemne promesa de fidelidad eterna. Le dio las instrucciones a su fiel escudero, que montó en su burrito y partió por el camino, ¡sintiéndose la persona más importante de España!
+            texto: `Con el corazón latiendo fuerte, don Quijote escribió una preciosa {{CARTA|CAR • TA|✉️}} para Dulcinea en una hoja arrancada del cuaderno de poemas, y le prometió quererla para siempre. Sancho se subió a su burrito y se fue por el camino, ¡sintiéndose la persona más importante de España!
 
-                Sin embargo, al bajar las primeras laderas, Sancho se metió las manos en los bolsillos y abrió los ojos de par en par, lleno de pánico: ¡se había dejado el papel sobre una piedra, allá en lo alto de la sierra! Desesperado, se rascó la frente e intentó recuperar el texto, que solo guardaba en su {{MEMORIA|ME • MO • RIA|🧠}}: —¿Cómo empezaba? «Soberana y alta señora»... ¿Y al final? ¿Cómo firmaba mi amo?
+                Pero, en la primera bajada, Sancho se metió las manos en los bolsillos y abrió mucho los ojos: ¡se había dejado la carta encima de una piedra, allá arriba en la sierra! Se rascó la frente e intentó recordar las palabras que solo guardaba en la {{MEMORIA|ME • MO • RIA|🧠}}: —¿Cómo empezaba? «Soberana y alta señora»... ¡Eso es! ¿Y al final? ¿Cómo firmaba mi amo?
 
-                ¡Ayuda al buen escudero a recordar la {{FIRMA|FIR • MA|✍️}} de la carta, tocando cada palabra en el orden exacto!`,
+                ¡Ayuda al buen Sancho a recordar la {{FIRMA|FIR • MA|✍️}} de la carta, tocando las palabras en el orden correcto!`,
             cartoes: {
                 ordem: ['el', 'caballero', 'de', 'la', 'triste', 'figura'],
                 itens: [
@@ -60,44 +60,44 @@
             }
         },
         {   // página 4
-            hash: 'd17d57a309',
+            hash: 'ac862e8a8f',
             capitulo: '🎭 Capítulo 19 • Amigos disfrazados',
             titulo: 'El cura, el barbero y una barba de buey',
-            texto: `Al hacer una parada en una venta al pie de la montaña, Sancho se encontró con dos viejos y fieles conocidos de su aldea: el bondadoso {{CURA|CU • RA|⛪}} Pero Pérez y maese Nicolás, el barbero del pueblo. Preocupados por la desaparición de su amigo Alonso Quijano, venían dispuestos a rescatarlo con cariño.
+            texto: `Al parar en la posada, al pie de la montaña, Sancho se encontró con dos viejos amigos de su aldea: el bondadoso {{CURA|CU • RA|⛪}} Pero Pérez y maese Nicolás, el barbero. Preocupados porque Alonso Quijano había desaparecido, venían a buscarlo con mucho cariño.
 
-                —Nunca aceptará volver a casa por su propia voluntad —avisó Sancho—, ¡a menos que una doncella en apuros le suplique la protección de su espada invencible!
+                —Nunca va a querer volver a casa —avisó Sancho—, ¡a no ser que una muchacha en peligro le pida ayuda a su espada!
 
-                —¡Ya lo tengo! ¡Inventaremos una princesa en apuros! —exclamó el cura, con los ojos brillantes. Y así los dos tramaron un plan genial y teatral: ¡un ingenioso {{DISFRAZ|DIS • FRAZ|🎭}}! Maese Nicolás se pegó en la barbilla una colosal {{BARBA|BAR • BA|🧔}} rojiza, hecha con la peluda cola de un buey, mientras el cura se ponía una falda de vuelo y una toca floreada encima de la sotana. Cuando se miraron en el espejo de la venta, los tres se echaron a reír a carcajadas, ¡casi sin aliento para seguir adelante con la farsa!`
+                —¡Ya lo tengo! ¡Vamos a inventar una princesa en peligro! —dijo el cura, con los ojos brillantes. Y así los dos prepararon un plan muy astuto: ¡un {{DISFRAZ|DIS • FRAZ|🎭}}! Maese Nicolás se pegó en la barbilla una enorme {{BARBA|BAR • BA|🧔}} pelirroja, hecha con la cola peluda de un buey, y el cura se puso una falda de vuelo y una toca de flores encima de su ropa de cura. Cuando se miraron en el espejo, los tres se echaron a reír, ¡y casi se quedaron sin aire de tanta risa!`
         },
         {   // página 5
-            hash: '530c383943',
+            hash: '5dd5de36a1',
             capitulo: '👸 Capítulo 20 • La princesa Micomicona',
             titulo: 'Una princesa pide ayuda',
-            texto: `Para que el plan fuera perfecto, se les unió Dorotea, una joven labradora lista, valiente y dueña de un talento formidable para el teatro. Vestida con un reluciente traje de seda y un manto de terciopelo, subió a la sierra y se arrodilló con gracia ante el hidalgo:
+            texto: `Para que el plan saliera bien, una muchacha llamada Dorotea decidió ayudar. ¡Era lista, valiente y muy buena haciendo teatro! Con un vestido de seda brillante y una capa de terciopelo, subió a la sierra y se arrodilló delante de don Quijote:
 
-                —¡Oh espejo de la honra y flor de la caballería —suplicó con voz dulce como el terciopelo—, yo soy la desdichada {{PRINCESA|PRIN • CE • SA|👸}} {{MICOMICONA|MI • CO • MI • CO • NA|👑}}, heredera del lejano reino de Micomicón! Un gigante feroz y sin corazón, Pandafilando de la Fosca Vista, ha invadido mis tierras, ¡y solo vuestro valeroso brazo puede liberar a mi pueblo!
+                —¡Oh caballero valiente —pidió ella, con voz dulce—, flor de la caballería! ¡Yo soy la {{PRINCESA|PRIN • CE • SA|👸}} {{MICOMICONA|MI • CO • MI • CO • NA|👑}}, del lejano reino de Micomicón! Un gigante malvado, Pandafilando de la Fosca Vista, ha invadido mis tierras, ¡y solo vuestra espada puede salvar a mi pueblo!
 
-                Conmovido, don Quijote hizo una sagrada {{PROMESA|PRO • ME • SA|🤝}}: —¡Levantaos, fermosa princesa! ¡Juro por mi espada que venceré a ese gigante! —dijo, tendiendo la mano a la doncella. Y así, con la cabeza en fiesta y el corazón lleno de nobleza, el hidalgo montó en Rocinante y emprendió, sin sospechar nada, ¡el camino de vuelta a su hogar!`
+                Emocionado, don Quijote le tendió la mano a la muchacha e hizo una {{PROMESA|PRO • ME • SA|🤝}}: —¡Levántate, bella princesa! ¡Juro por mi espada que venceré a ese gigante! —exclamó. Y así, feliz y sin sospechar nada, el caballero montó en Rocinante ¡y tomó el camino de vuelta a casa!`
         },
         {   // página 6
-            hash: '8e55475c37',
-            capitulo: '💤 Capítulo 21 • La descomunal batalla de los odres',
+            hash: '3dbb65f845',
+            capitulo: '💤 Capítulo 21 • La batalla de los odres',
             titulo: 'Un gigante en mitad de la noche',
-            texto: `Estaban todos alojados en la venta, a la vuelta del viaje, y la noche transcurría serena cuando unos gritos de guerra despertaron a la casa entera: —¡Ríndete, monstruo cobarde, follón y malandrín! ¡Prueba el filo de mi acero! —tronaba una voz. Don Quijote, que caminaba sonámbulo en su blanco camisón de dormir, ¡libraba una feroz batalla contra los grandes {{ODRES|O • DRES|🍷}} de cuero de buey, llenos de vino tinto, que colgaban de las paredes del aposento!
+            texto: `De vuelta en la posada, todos dormían tranquilos cuando unos gritos de guerra despertaron a la casa entera: —¡Ríndete, gigante malandrín! ¡Ahora verás! —gritaba alguien. Era don Quijote, en camisón blanco y todavía dormido, ¡peleando contra los {{ODRES|O • DRES|🍷}} colgados en la pared del cuarto, unas grandes bolsas de cuero llenas de vino tinto!
 
-                Sumido en su vivo {{SUEÑO|SUE • ÑO|💤}}, ¡cada odre colgado era para él el temible {{GIGANTE|GI • GAN • TE|👹}} Pandafilando! Blandiendo su afilada {{ESPADA|ES • PA • DA|⚔️}} en la oscuridad, atravesó el grueso cuero e hizo correr por las tablas del suelo un río de vino aromático, como una cascada carmesí. ¡Toca la espada para ayudar al caballero a vencer a los odres!
+                En medio de su {{SUEÑO|SUE • ÑO|💤}}, ¡cada odre le parecía el terrible {{GIGANTE|GI • GAN • TE|👹}} Pandafilando! Moviendo la {{ESPADA|ES • PA • DA|⚔️}} en la oscuridad, agujereó el cuero grueso e hizo que el vino corriera por el suelo como un río rojo. ¡Toca la espada y ayuda al caballero a vencer a los odres!
 
-                —¡Mi vino! ¡Mi vino! —gritaba el ventero, desesperado. —Calma, buen hombre, ¡yo pagaré hasta el último maravedí! —prometió el generoso cura. Y don Quijote, secándose el sudor de la frente con orgullo infantil, volvió a acostarse en paz, ¡convencido de que había salvado el trono de la princesa Micomicona!`
+                —¡Mi vino! ¡Mi vino! —gritaba el dueño de la posada, desesperado. —¡Tranquilo, buen hombre, yo lo pago todo! —prometió el cura. Y don Quijote, muy orgulloso, volvió a la cama y durmió en paz, ¡seguro de que había salvado el reino de la princesa Micomicona!`
         },
         {   // página 7
-            hash: 'd5c9244b15',
+            hash: 'f11e3d41d0',
             capitulo: '📚 Capítulo 22 • Las armas y las letras',
-            titulo: 'Historias en la venta',
-            texto: `Aquella noche acogedora, el salón de la venta se llenó de viajeros, mercaderes y familias alrededor de una gran mesa iluminada por antorchas y velas perfumadas. El pan calentito pasaba de mano en mano, y cada viajero compartía ricas {{HISTORIAS|HIS • TO • RIAS|📚}} de aventuras por los mares, reencuentros inesperados y antiguas leyendas del mundo.
+            titulo: 'Historias en la posada',
+            texto: `Aquella noche, el salón de la posada se llenó de viajeros, comerciantes y familias alrededor de una mesa grande, iluminada con velas. El pan calentito pasaba de mano en mano, y cada uno contaba sus {{HISTORIAS|HIS • TO • RIAS|📚}}: aventuras en el mar, encuentros inesperados y leyendas antiguas de todo el mundo.
 
-                En un momento dado, don Quijote se levantó a la cabecera de la mesa y pronunció un sabio y conmovedor discurso sobre el valor de las {{ARMAS|AR • MAS|🛡️}} y de las {{LETRAS|LE • TRAS|🔤}}: —La valentía de los caballeros protege la paz, que es el mayor bien que podemos desear en esta vida, y defiende a los más débiles. ¡Y los libros, amigos míos, hacen crecer en el corazón la justicia, la verdad y la belleza!
+                Entonces don Quijote se levantó en la cabecera de la mesa y dio un discurso bonito y sabio sobre las {{ARMAS|AR • MAS|🛡️}} de los caballeros y las {{LETRAS|LE • TRAS|🔤}} de los libros: —La valentía de los caballeros protege la paz y defiende a los más débiles. ¡Y los libros, amigos míos, hacen crecer en el corazón la justicia, la verdad y la belleza!
 
-                Todos los oyentes se miraban maravillados, sorprendidos al descubrir la brillante sabiduría que habitaba en aquel hidalgo de mirada cariñosa. El cura y el barbero sonreían conmovidos: ¡era hora de llevar a aquel querido soñador de vuelta al calor de su hogar!`
+                Todos se miraron, encantados con la sabiduría de aquel caballero tan soñador. El cura y el barbero sonrieron, emocionados: ¡ya era hora de llevar a su querido amigo de vuelta al calorcito de su casa!`
         }
     ],
     textos: {
@@ -117,7 +117,7 @@
         '👓 Lente da Realidade: Sancho Tentando Lembrar': '👓 Lente de la Realidad: Sancho intenta recordar',
         '✨ Lente da Imaginação: A Carta Voando até o Toboso!': '✨ Lente de la Imaginación: ¡La carta vuela hasta el Toboso!',
         'Assinatura: toque nas palavras na ordem certa': 'Firma: toca las palabras en el orden correcto',
-        'O padre e o barbeiro se disfarçam numa pousada, o barbeiro com uma barba ruiva de rabo de boi': 'El cura y el barbero se disfrazan en una venta; el barbero, con una barba rojiza de cola de buey',
+        'O padre e o barbeiro se disfarçam numa pousada, o barbeiro com uma barba ruiva de rabo de boi': 'El cura y el barbero se disfrazan en una posada; el barbero, con una barba pelirroja de cola de buey',
         '👓 Lente da Realidade: Uma Barba Feita de Rabo de Boi': '👓 Lente de la Realidad: Una barba hecha con cola de buey',
         '✨ Lente da Imaginação: Uma Dama Nobre e seu Escudeiro Barbudo!': '✨ Lente de la Imaginación: ¡Una noble dama y su escudero barbudo!',
         'Tocar no barbeiro': 'Tocar al barbero',
@@ -125,13 +125,13 @@
         '👓 Lente da Realidade: Doroteia e um Plano Muito Esperto': '👓 Lente de la Realidad: Dorotea y un plan muy astuto',
         '✨ Lente da Imaginação: A Princesa do Reino de Micomicão!': '✨ Lente de la Imaginación: ¡La princesa del reino de Micomicón!',
         'Tocar na princesa': 'Tocar a la princesa',
-        'À luz de velas, Dom Quixote de camisolão golpeia odres de vinho pendurados no quarto da pousada': 'A la luz de las velas, don Quijote, en camisón, golpea los odres de vino colgados en el cuarto de la venta',
+        'À luz de velas, Dom Quixote de camisolão golpeia odres de vinho pendurados no quarto da pousada': 'A la luz de las velas, don Quijote, en camisón, golpea los odres de vino colgados en el cuarto de la posada',
         '👓 Lente da Realidade: Odres de Vinho Pendurados no Quarto': '👓 Lente de la Realidad: Odres de vino colgados en el cuarto',
         '✨ Lente da Imaginação: O Gigante Pandafilando da Fosca Vista!': '✨ Lente de la Imaginación: ¡El gigante Pandafilando de la Fosca Vista!',
         'ESPADA': 'ESPADA',
-        'Viajantes ao redor de uma mesa na pousada escutam Dom Quixote discursar': 'Viajeros alrededor de una mesa de la venta escuchan el discurso de don Quijote',
+        'Viajantes ao redor de uma mesa na pousada escutam Dom Quixote discursar': 'Viajeros alrededor de una mesa de la posada escuchan el discurso de don Quijote',
         '👓 Lente da Realidade: Viajantes ao Redor da Mesa': '👓 Lente de la Realidad: Viajeros alrededor de la mesa',
-        '✨ Lente da Imaginação: A Grande Távola dos Contadores de Histórias!': '✨ Lente de la Imaginación: ¡La gran Tabla Redonda de los contadores de historias!',
+        '✨ Lente da Imaginação: A Grande Mesa dos Contadores de Histórias!': '✨ Lente de la Imaginación: ¡La gran mesa de los contadores de historias!',
         'Tocar em Dom Quixote': 'Tocar a don Quijote',
         '👓 Lente da Realidade: Sancho Lembrou! "O Cavaleiro da Triste Figura"': '👓 Lente de la Realidad: ¡Sancho se acordó! «El Caballero de la Triste Figura»',
         '🎉 Fim da Parte 3! Na Parte 4: uma jaula encantada, o voo no cavalo de madeira e a grande sabedoria de Sancho governador!': '🎉 ¡Fin de la Parte 3! En la Parte 4: una jaula encantada, el vuelo en el caballo de madera ¡y la gran sabiduría de Sancho gobernador!',
