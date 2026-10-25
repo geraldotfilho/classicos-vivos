@@ -22,19 +22,21 @@ Este documento consolida a memória arquitetural, os princípios pedagógicos, a
 5. O **plano** do livro (`docs/PLANO-*.md`) e o **caderno** da parte em produção (`docs/cadernos/<livro>-parte-N.md`).
 6. Só então, os documentos da frente de trabalho: `ARTE-PELA-API.md`, `TODO-NARRACAO.md`, `docs/fila/` etc.
 
-### 0.3 Papéis
-| Papel | Quem é hoje | O que faz |
-| :--- | :--- | :--- |
-| **Humano** (responsável) | o autor do projeto, que lê os livros com o filho | aprova as paradas 🛑, autoriza a API paga e define o teto de gasto |
-| **Agente principal** | Claude Code (nos documentos, "o Claude") | adaptação e texto, plano de interações, código, testes, narração e, com autorização, arte pela API; escreve os documentos de plano, cadernos, receitas e `docs/fila/PEDIDOS.md` |
-| **Agente de arte** | Gemini no Google Antigravity (nos documentos, "o Gemini") | ilustrações na cota do plano Pro do humano, pela fila `docs/fila/`; escreve só `ENTREGAS.md` e os arquivos de arte que são dele |
+### 0.3 Papéis e agentes
+O humano (responsável pelo projeto, que lê os livros com o filho) aprova as paradas 🛑, autoriza a API paga e define o teto de gasto. **Qualquer agente pode receber qualquer tarefa** (adaptação, texto, código, testes, arte, narração, tradução, revisão): quem decide é o humano, sessão a sessão. Não há mais papéis fixos de "escritor" e "artista". O que muda de um agente para outro é **como ele produz a arte**:
 
-Outro agente pode assumir um papel: nesse caso, ele segue as mesmas regras e é dono dos mesmos arquivos (tabela de donos em `docs/fila/PEDIDOS.md`). As regras da API paga (§2.7) valem para todos.
+| Agente | Arte | Narração (vozes) |
+| :--- | :--- | :--- |
+| **Claude** (Claude Code) | **só pela API paga** (`npm run gerar:imagens`, Nano Banana 2 em Batch), sempre com autorização expressa do humano no prompt da sessão, porque custa dinheiro | pela API paga, com autorização (`npm run gravar:narracao`) |
+| **Gemini** (Google Antigravity) | **direto no Antigravity**, enquanto a cota do plano Pro do humano permitir (sem custo extra); ou pela API paga, só quando o humano autorizar expressamente **e** fornecer a chave no ambiente dele | pela API paga, nas mesmas condições |
+| Outro agente (Codex, Cursor…) | pela API paga, nas mesmas condições do Gemini | idem |
+
+Agentes podem estar trabalhando **em paralelo** no mesmo repositório, cada um na sua branch. Por isso a entrega sempre começa trazendo a `main` do remoto para a branch (§0.4, §6). As regras da API paga (§2.7) valem para todos. Em documentos antigos, "o Claude" e "o Gemini" aparecem nos papéis que tinham na época (escritor e artista); isso é histórico, não regra.
 
 ### 0.4 Regras de convivência
 - **Português do Brasil** em tudo (código comentado, documentos, commits).
 - **Nunca quebre o que está publicado**: obra nova ou versão nova nasce como **rascunho** (§2.5, §3.4).
-- **Trabalhe numa branch** e entregue por PR (§6); o humano autoriza o merge direto na `main`. Se o ambiente da sessão define uma branch, use-a.
+- **Trabalhe numa branch** (a que o ambiente da sessão definir) e, ao fim do trabalho, **entregue na `main`** quando o humano pedir (é o normal). Como outro agente pode estar trabalhando em paralelo, a `main` do remoto pode ter andado: **antes de entregar, mescle a `main` do remoto na sua branch** e resolva os conflitos; só então mande para a `main` (§6). Se um conflito não tiver solução que preserve o trabalho dos dois lados, **pergunte ao humano**.
 - **Feche a sessão** com o `npm run build` (se mexeu em HTML, classes, ícones ou imagens), os testes, o PR, o caderno e a `docs/RETOMADA.md` atualizados e, se houve gasto, quanto foi.
 - **Documente o que aprendeu**: regra geral → receita geral; regra de uma obra → receita específica; arquitetura → este arquivo; pendência → `docs/BACKLOG.md`; entrega → `docs/HISTORICO.md`.
 
@@ -67,7 +69,7 @@ O projeto adota uma filosofia **Zero-Build para o leitor**: cada livro é um HTM
 - **Ilustrações em WebP** (1376 × 768, qualidade 80, ~150–230 KB cada).
 - **PWA**: `manifest.webmanifest` + `sw.js` na raiz. O service worker baixa todos os livros na primeira visita via HTTPS (GitHub Pages). HTML segue a estratégia rede-primeiro; o resto, cache-primeiro.
 - **Web Audio API Procedural**: Todos os efeitos sonoros (fanfarras de cavaleiro, arpeggios mágicos, cliques táteis de cartões de leitura, pops lúdicos) são sintetizados matematicamente via código (`AudioContext`), dispensando dependências de arquivos MP3/WAV externos pesados.
-- **Narração**: gravada (vozes neurais da API de voz do Gemini, produzidas pelo agente principal, um MP3 por página com o tempo de cada frase) com a **Web Speech API** do aparelho como reserva automática. Ver §2.6.
+- **Narração**: gravada (vozes neurais da API de voz do Gemini, produzidas por um agente com autorização do humano, um MP3 por página com o tempo de cada frase) com a **Web Speech API** do aparelho como reserva automática. Ver §2.6.
 - **Pointer Events**: Eventos unificados (`pointerdown`, `pointermove`, `pointerup`) para drag-and-drop fluido compatível tanto com touchscreen/caneta quanto com mouse. O swipe de troca de página ignora toques iniciados em `.draggable-card`.
 
 ### 2.1.1 Ferramentas de Desenvolvimento (`npm run build`)
@@ -194,15 +196,15 @@ window.LIVRO = {
 - **Página inteira** (o padrão): `<voz>/parte-N/paginas.json` lista as páginas gravadas num áudio só (`pN.mp3`) e o tempo de cada frase (`ini`/`fim`). "Ouvir Página" toca esse MP3 e destaca a frase pelo `currentTime` (`lerPaginaInteira`). As páginas fora dele seguem frase a frase. O áudio que vem do service worker **não aceita salto no tempo** (`seekable` vazio); por isso, para começar numa frase do meio, o MP3 da página vira um blob na memória (`audioComSalto`, §2.2.2).
 - **Vozes dos personagens**: o roteiro (`narracao/parte-N/roteiro.json`) diz quem fala cada trecho, e o elenco fica em `ELENCO` (`tools/gravar-narracao.mjs`). **Economia** (limite de R$ 30/mês do humano): a API paga só produz vozes; a conferência é local (`tools/transcrever.py`, Whisper).
 - **Prévia**: uma voz com a parte em `previa` (no `vozes.js`) aparece no painel com só algumas frases gravadas (as demais usam a voz do aparelho) e nunca vira a voz padrão. Serve para o humano ouvir no livro antes de a produção seguir.
-- Produção das gravações: `docs/TODO-NARRACAO.md` e `npm run gravar:narracao` (Claude, via API do Gemini `gemini-3.8-flash-tts` com a chave como segredo de rede do ambiente, injetada pelo proxy; ela **nunca** é impressa nem versionada). **Regras de uso da API: §2.7.** Lista do que gravar: `docs/narracao/frases-<livro>-parte-N.json`.
+- Produção das gravações: `docs/TODO-NARRACAO.md` e `npm run gravar:narracao` (qualquer agente com autorização, via API do Gemini `gemini-3.8-flash-tts`; no ambiente do Claude, a chave é um segredo de rede injetado pelo proxy; ela **nunca** é impressa nem versionada). **Regras de uso da API: §2.7.** Lista do que gravar: `docs/narracao/frases-<livro>-parte-N.json`.
 
 ### 2.7 Uso da API paga do Gemini (regra do humano, 2026-10-24)
 A API é paga pelo humano, num projeto de hobby com **limite de R$ 30/mês** (era R$ 10 até 2026-10-24), e a verba precisa render para **muitos livros e, quem sabe, novas vozes**. Por isso:
-1. **Só para produzir as vozes da leitura** (narração e palavras-chave). **Nada mais**: nem testes de acesso, nem transcrição, nem avaliação de áudio, nem texto, nem imagens, nem listar ou criar vozes "para ver".
+1. **Só para produzir as vozes da leitura** (narração e palavras-chave) e, quando autorizado, **as ilustrações** (item 5). **Nada mais**: nem testes de acesso, nem transcrição, nem avaliação de áudio, nem texto, nem listar ou criar vozes "para ver".
 2. **Só com autorização explícita do humano no prompt inicial da sessão.** Sem ela, a API não é chamada (nem para "um teste rápido"). O `tools/gravar-narracao.mjs` recusa sem `--autorizado`; passe a opção só quando o humano tiver autorizado aquela produção.
 3. **Sempre do jeito mais econômico**: planeje com `--seco` (de graça), grave a página inteira num pedido só, não regrave o que já está bom (o `hash` evita), no máximo 2 tentativas, a conferência é **local e gratuita** (Whisper, `tools/transcrever.py`), e prefira o nível mais barato aprovado pelo humano (opções e preços em `docs/TODO-NARRACAO.md` §8.4).
 4. **Registre o gasto**: cada rodada vai para `docs/narracao/gastos.csv` (o script faz isso). Ao fim do trabalho, diga ao humano quanto foi gasto.
-5. **As imagens, por padrão, não usam a API paga** (decisão do humano, 2026-10-24): continuam com o agente Gemini no **Google Antigravity**, na cota do plano Pro do humano (com as pausas por cota). **Exceção pontual**: quando o humano autoriza (ex.: 2026-10-24, com a cota do Antigravity esgotada, as páginas 4–8 da Parte 2 e depois as Partes 3 e 4 inteiras), o Claude gera pela API com `npm run gerar:imagens` (Nano Banana 2, **Batch**, ~US$ 0,038 por imagem aceita), **só** o que foi autorizado. Método, preços e lições: `docs/ARTE-PELA-API.md` (§4.1: a **Lente da Imaginação transforma** personagens e cena, nunca só um detalhe).
+5. **Imagens pela API só com autorização expressa do humano**, e só o que ele autorizou (§0.3): é o único caminho de arte do Claude, e o caminho alternativo do Gemini quando a cota do plano Pro acaba (com a chave fornecida pelo humano no ambiente dele). Sem custo extra, só a arte feita direto no Antigravity, dentro da cota. Pela API: `npm run gerar:imagens` (Nano Banana 2, **Batch**, ~US$ 0,038 por imagem aceita), com o gasto em `docs/arte/gastos.csv`. Método, preços e lições: `docs/ARTE-PELA-API.md` (§4.1: a **Lente da Imaginação transforma** personagens e cena, nunca só um detalhe).
 
 ### 2.8 Idiomas (bandeirinhas no topo do livro)
 - O **português é o original** (`window.LIVRO` em `parte-N.html`). Cada tradução fica em `<livro>/traducoes/parte-N.<idioma>.js` (`en`, `fr`, `es`) e é carregada por `<script>` só quando o idioma é escolhido (funciona em `file://` e offline: o SW pré-baixa as traduções).
@@ -332,7 +334,7 @@ classicos-vivos/
 │   ├── receitas/                        # receitas específicas por obra ou tipo de adaptação (DOM-QUIXOTE.md)
 │   ├── cadernos/                        # um caderno por parte em produção (fases, decisões, notas do humano)
 │   ├── arquivo/                         # versões aposentadas guardadas para reaproveitar (ex.: traduções antigas)
-│   ├── fila/                            # canal Claude ↔ Gemini (PEDIDOS.md, ENTREGAS.md)
+│   ├── fila/                            # antiga fila Claude ↔ Gemini (encerrada em 2026-10-25; registro)
 │   ├── narracao/                        # frases e palavras-chave a gravar (gerado)
 │   └── traducao/                        # o que traduzir, parte por parte (gerado)
 ├── index.html                           # Biblioteca das crianças (estante de livros, quase sem texto)
@@ -364,9 +366,14 @@ classicos-vivos/
 
 ---
 
-## 5. Protocolo de Testes Automatizados no Tablet
+## 5. Como testar no tablet (sem tablet)
 
-Para validar a integridade da interface em tablets sem intervenção manual, use um navegador headless nas resoluções padronizadas. **Linux/macOS (contêineres de agentes)**: Chromium + Playwright (`require('playwright')`, `chromium.launch()`), servindo a raiz com `python3 -m http.server`, viewports 800 × 1280 e 1280 × 800, nas duas lentes, clicando nas atividades com `locator.click()` (o motor usa *pointer events*). **Windows (máquina do humano)**: os comandos abaixo, com o Google Chrome. Para testar o service worker (PWA offline), sirva por HTTP (`python -m http.server` na raiz) em vez de `file://`. Em Linux/macOS, o mesmo vale com Chromium/Playwright (`--window-size=800,1280` e `1280,800`). Um `npm test` multiplataforma está no backlog (M-8).
+Antes de entregar, o livro é aberto num **navegador automático** (sem janela), nos dois tamanhos de tablet: **retrato 800 × 1280** e **paisagem 1280 × 800**. Confira que o texto aparece inteiro, as duas lentes, cada atividade até o fim, o botão 🔄 Recomeçar e a virada de página, e tire capturas de tela das páginas mexidas.
+
+- **Agentes**: usam o **Chromium com o Playwright** (nos contêineres na nuvem do Claude Code, já vêm instalados; em outro ambiente, como o do Antigravity, instale o Playwright ou use o navegador que o agente controla). Sirva a pasta do projeto com `python3 -m http.server 8765` e abra `http://localhost:8765/dom-quixote/parte-N.html?page=P` (e `&imag=1` para a Imaginação). Clique nas atividades com `locator.click()`: o motor usa *pointer events*, e um `element.click()` dentro de `evaluate` não aciona os cartões. Pelo `http://` o service worker também funciona; pelo `file://`, não.
+- **Na máquina do humano** (Windows, com o Google Chrome): os comandos abaixo tiram as mesmas duas capturas pela linha de comando.
+
+Um `npm test` pronto, que qualquer agente rode igual, está no backlog (M-8).
 
 ### 5.1 Teste em Tablet Retrato (Portrait: 800 × 1280)
 ```powershell
@@ -385,22 +392,29 @@ cmd /c '"C:\Program Files\Google\Chrome\Application\chrome.exe" --headless=new -
 O repositório oficial é hospedado em:
 `https://github.com/geraldotfilho/classicos-vivos.git` (Branch: `main`, publicada no GitHub Pages).
 
-O trabalho é feito numa **branch** (a que o ambiente da sessão definir, ou uma nova a partir da `main`) e entregue por **PR**; o humano autoriza o merge direto na `main` pelas ferramentas do GitHub. Se a branch da sessão já foi mesclada, recomece-a a partir da `main` atual.
+O trabalho é feito numa **branch** (a que o ambiente da sessão definir) e, ao fim, entregue na **`main`** quando o humano pedir (é o normal). **Outro agente pode estar trabalhando em paralelo**, então a `main` do remoto pode ter andado desde que a sua branch começou. Por isso, a entrega é sempre:
+1. `git fetch origin main` e **mesclar a `main` do remoto na sua branch** (merge, sem reescrever o histórico de ninguém);
+2. **resolver os conflitos** preservando o trabalho dos dois lados. Arquivos gerados não se resolvem à mão: rode o gerador de novo (`npm run build:sw` para o `sw.js`, `npm run build` para o resto). **Se um conflito não tiver solução que não destrua o trabalho de alguém, pare e pergunte ao humano**;
+3. rodar o `npm run build` e os testes (§5) já com tudo mesclado;
+4. só então mandar para a `main` (PR com merge, ou push direto, como o humano preferir), já consolidado e sem conflitos.
+Se a branch da sessão já foi mesclada antes, recomece-a a partir da `main` atual.
 
 Ao finalizar qualquer ciclo de desenvolvimento:
 1. **Regenerar os arquivos gerados**: `npm run build` (obrigatório se mudou HTML, classes, ícones ou imagens).
    > A antiga cópia avulsa `dom_quixote_parte_1_livro_interativo_infantil.html` foi descontinuada: o livro depende de `assets/` e `imagens/`, então distribua a pasta do repositório inteira (ou o link do GitHub Pages).
-2. **Atualizar `AGENTS.md`** caso novos padrões arquiteturais tenham sido introduzidos, e **`docs/BACKLOG.md`** (o que falta; o que foi entregue vai para **`docs/HISTORICO.md`**). Ao fechar uma parte, a retrospectiva leva as lições novas para o diário da receita geral (`docs/RECEITA-CLASSICO-VIVO.md` §8) ou da receita específica (`docs/receitas/`). Pedidos de arte para o agente de arte vão para `docs/fila/PEDIDOS.md`, com arquivo, referências, prompt e critério de aceite (os `TODO-NANO-BANANA*.md` antigos já foram concluídos).
-   > **Trabalho entre agentes (agente principal ↔ agente de arte, hoje Claude ↔ Gemini)**: a coordenação assíncrona passa por `docs/fila/`. Em `PEDIDOS.md` (só o agente principal escreve) ficam os pedidos, as revisões e a linha `ESTADO: ATIVO|PARAR`; em `ENTREGAS.md` (só o agente de arte escreve), as entregas e o status. Cada arquivo tem **um único dono** (tabela em `PEDIDOS.md`) para não haver conflito de merge. Conflito em `sw.js`: regenere com `npm run build:sw`, nunca resolva à mão.
+2. **Atualizar `AGENTS.md`** caso novos padrões arquiteturais tenham sido introduzidos, e **`docs/BACKLOG.md`** (o que falta; o que foi entregue vai para **`docs/HISTORICO.md`**). Ao fechar uma parte, a retrospectiva leva as lições novas para o diário da receita geral (`docs/RECEITA-CLASSICO-VIVO.md` §8) ou da receita específica (`docs/receitas/`). Pedidos de arte ficam no caderno da parte (fase 2 da receita), com arquivo, referências, prompt e critério de aceite, para qualquer agente executar.
+   > **Trabalho em paralelo**: a coordenação entre agentes é feita pelo próprio Git (cada um na sua branch, mesclando a `main` antes de entregar) e pelos cadernos das partes. A antiga fila Claude ↔ Gemini (`docs/fila/`) foi **encerrada** em 2026-10-25 e fica só como registro.
 3. **Verificar Estado no Diretório Git**:
    ```powershell
    cd classicos-vivos
    git status
    ```
-4. **Adicionar, commitar, enviar e abrir o PR**:
+4. **Commitar, trazer a `main` e entregar**:
    ```bash
    git add .
    git commit -m "feat/fix/docs/arte/narração: descrição clara e concisa"
+   git fetch origin main && git merge origin/main   # resolva os conflitos (passo 2 acima)
+   npm run build                                    # e os testes (§5)
    git push -u origin <branch>
    ```
-   Depois, o PR para a `main` e o merge. Mensagens de commit em português, com o tipo na frente (`feat`, `fix`, `docs`, `texto`, `arte`, `narração`, `traducao`, `chore`).
+   Depois, a entrega na `main` (PR com merge ou push direto). Mensagens de commit em português, com o tipo na frente (`feat`, `fix`, `docs`, `texto`, `arte`, `narração`, `traducao`, `chore`).

@@ -43,7 +43,7 @@ e cada palavra-chave traz:
 { "slug": "estrelas", "palavra": "ESTRELAS", "silabas": "ES • TRE • LAS", "fala": "es... tre... las... estrelas!", "hash": "..." }
 ```
 
-**Saídas** (`dom-quixote/audio/**`, dono: Claude):
+**Saídas** (`dom-quixote/audio/**`):
 ```text
 dom-quixote/audio/
 ├── vozes.js                          # acrescente a parte em `partes` quando ela estiver completa

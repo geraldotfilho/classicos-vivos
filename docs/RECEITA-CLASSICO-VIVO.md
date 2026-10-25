@@ -104,7 +104,7 @@ O humano lê o rascunho **no tablet, com a criança**, na voz do aparelho, com o
 - Depois dos ajustes, **a estrutura fica congelada**: número de páginas, ordem, numeração dos capítulos e nomes de arquivo. Mudar isso depois da arte gera renomeações em cadeia.
 
 ### Fase 4: Ilustrações e atividades
-1. **Autorização e verba**: arte pela API só com autorização no prompt da sessão. Antes, some o gasto do mês (`docs/arte/gastos.csv` + `docs/narracao/gastos.csv`) e confira o teto. Sem autorização, a arte vai para o agente de arte no Antigravity (`docs/fila/PEDIDOS.md`).
+1. **Quem faz e com qual verba** (`AGENTS.md` §0.3): o humano escolhe o agente. Pela API paga (o único caminho do Claude; para o Gemini, quando a cota do plano Pro acabar), só com autorização expressa no prompt da sessão; antes, some o gasto do mês (`docs/arte/gastos.csv` + `docs/narracao/gastos.csv`) e confira o teto. O Gemini no Antigravity pode gerar direto, sem custo extra, enquanto a cota permitir. A lista de arte da fase 2, no caderno, serve para qualquer um dos caminhos.
 2. **Rodadas** (`ARTE-PELA-API.md` §3 e §5):
    - rodada 1: as cenas sem dependência e as camadas soltas;
    - rodada 2: as variações (no caso de *Dom Quixote*, as Imaginações) e as camadas que usam a cena como referência;
@@ -132,7 +132,7 @@ Só com autorização no prompt da sessão (`TODO-NARRACAO.md`):
 3. Sempre que der, a revisão de um leitor nativo (BACKLOG M-12).
 
 ### Fase 8: Fechamento e retrospectiva
-- `npm run build`, o PR e o merge na `main`.
+- `npm run build`, os testes e a entrega na `main`: antes, **mescle a `main` do remoto na sua branch** (outro agente pode ter entregado algo em paralelo) e resolva os conflitos; se algum não tiver solução que preserve o trabalho dos dois lados, pergunte ao humano (`AGENTS.md` §6).
 - Atualize o `docs/BACKLOG.md`, o `docs/HISTORICO.md`, o `docs/RETOMADA.md`, o caderno e o quadro do plano do livro.
 - Some o que foi gasto na parte e informe ao humano.
 - **Pergunte: o que aprendemos?** Toda lição nova entra no §8 (geral) ou no diário da receita específica.
@@ -221,7 +221,7 @@ Varie as mecânicas dentro da parte.
 # Caderno — <Livro>, Parte N: <título>
 Arquivo: <livro>/parte-N.html (rascunho: sim/não) · Trecho do original: … · Nossos capítulos: …
 
-| Fase | Situação | Data | PR | Gasto |
+| Fase | Situação | Data | Commit/PR | Gasto |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 Adaptação e texto | ⬜ / 🟡 / ✅ | | | — |
 | 2 Interações e visual | | | | — |
@@ -251,7 +251,8 @@ Leia AGENTS.md, docs/RETOMADA.md e o caderno docs/cadernos/<livro>-parte-N.md.
 Faça a(s) fase(s) <X> da Parte N, seguindo docs/RECEITA-CLASSICO-VIVO.md, a receita específica
 docs/receitas/<LIVRO>.md e o plano docs/PLANO-<…>.md.
 Minhas notas da revisão: <…>            (quando houver)
-Autorizo a API paga do Gemini para <produzir X da Parte N>, até US$ <teto>.   (só nas fases 4, 6 e 7)
+Autorizo a API paga do Gemini para <produzir X da Parte N>, até US$ <teto>.   (só se for usar a API: fases 4, 6 e 7)
+Ao terminar, mescle a main do remoto, resolva os conflitos e entregue na main.
 Pare na próxima parada 🛑 e me diga o que ler.
 ```
 

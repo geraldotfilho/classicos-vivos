@@ -146,19 +146,19 @@ O texto antigo fica no histórico do Git (versão de `6a55f61`) e serve de base 
 ## 6. Fase 0: preparar o terreno (uma vez, na primeira sessão, antes da fase 1 da Parte 4)
 
 1. ✅ **Modo rascunho no motor** (feito em 2026-10-25): `rascunho: true` no `window.LIVRO` mostra o selo "📝 Rascunho", ignora a narração gravada e as traduções (voz do aparelho em português; `?narracao=1` libera a gravação para a escuta da fase 6) e guarda o progresso numa chave separada, sem mexer no "Continuar lendo" da estante (`AGENTS.md` §2.5).
-2. **Arquivar a arte da Parte 4 atual sem quebrá-la**: `git mv dom-quixote/imagens/parte-4 dom-quixote/imagens/acervo/parte-4-v1` e trocar o `imagens:` do `parte-4.html` atual e a capa no `index.html`. A nova Parte 4 usa `imagens/parte-4/` e copia de lá as cenas reaproveitadas. A lista de arte antiga vira `tools/arte/dom-quixote-parte-4-v1.mjs`. (Exceção de dono do `CATALOGO.md`, como nas vezes anteriores.)
+2. **Arquivar a arte da Parte 4 atual sem quebrá-la**: `git mv dom-quixote/imagens/parte-4 dom-quixote/imagens/acervo/parte-4-v1` e trocar o `imagens:` do `parte-4.html` atual e a capa no `index.html`. A nova Parte 4 usa `imagens/parte-4/` e copia de lá as cenas reaproveitadas. A lista de arte antiga vira `tools/arte/dom-quixote-parte-4-v1.mjs`. Atualize também o `dom-quixote/biblioteca/CATALOGO.md`.
 3. **Rascunho da nova Parte 4** em `dom-quixote/parte-4-rascunho.html` (`parte: 4`, `rascunho: true`) e, no `assets/js/acervo.js`, a entrada `dom-quixote-parte-4-nova` passa a `situacao: 'rascunho'`. As Partes 5–7 já nascem nos arquivos finais (`parte-5.html`…), em rascunho, quando chegar a vez delas.
 4. ✅ **Estante e lista de rascunhos** (feito em 2026-10-25: `index.html`, `sobre.html`, `assets/js/acervo.js`, `assets/js/i18n-site.js`).
-5. `npm run build`, teste das duas orientações e merge.
+5. `npm run build`, teste das duas orientações e entrega na `main` (mesclando antes a `main` do remoto).
 
 ### 6.1 Publicação da nova Parte 4 (fim da fase 6)
-No mesmo PR, para nunca haver um momento com texto novo e áudio velho (ou o contrário) no ar:
+Na mesma entrega (um só merge na `main`), para nunca haver um momento com texto novo e áudio velho (ou o contrário) no ar:
 - o conteúdo do rascunho substitui o `parte-4.html`; o rascunho é apagado;
 - a narração nova da Parte 4 substitui a antiga;
 - as traduções antigas da Parte 4 vão para `docs/arquivo/`. Até a fase 7, a Parte 4 aparece em português nos outros idiomas (conferido: sem o arquivo da tradução, o motor fica no português e a bandeirinha só balança);
 - a entrada `dom-quixote-parte-4-nova` sai do `assets/js/acervo.js`, e a capa e a descrição da Parte 4 (em `index.html` e `sobre.html`, com as traduções em `i18n-site.js`) passam a ser as da nova;
 - `totalPartes: 7` nas Partes 1–4; o fim da Parte 4 anuncia o segundo livro;
-- `npm run build`, os testes, o merge e a `RETOMADA.md`.
+- `npm run build`, os testes, a `RETOMADA.md` e a entrega na `main`.
 
 ---
 
@@ -184,13 +184,14 @@ A API paga só pode ser usada com autorização **no prompt inicial da sessão**
 | Sessão | Fases | Termina em | Prompt de abertura (modelo) |
 | :--- | :--- | :--- | :--- |
 | **A** | 0 + 1 + 2 da Parte 4 | 🛑 o humano lê o rascunho | "Leia AGENTS.md e docs/RETOMADA.md e siga docs/PLANO-DOM-QUIXOTE-PARTES-4-7.md, docs/RECEITA-CLASSICO-VIVO.md e docs/receitas/DOM-QUIXOTE.md. Termine a fase 0 e faça as fases 1 e 2 da Parte 4. Mostre-me a escaleta antes de escrever o texto. Sem API paga nesta sessão." |
-| **B** | ajustes da 3 + fase 4 | 🛑 o humano lê o livro ilustrado | "Fase 4 da Parte 4 (caderno docs/cadernos/dom-quixote-parte-4.md). Minhas notas da revisão: … Autorizo a API paga do Gemini para gerar as ilustrações da Parte 4 (Nano Banana 2, Batch), até US$ 1,00." |
+| **B** | ajustes da 3 + fase 4 | 🛑 o humano lê o livro ilustrado | Claude (pela API): "Fase 4 da Parte 4 (caderno docs/cadernos/dom-quixote-parte-4.md). Minhas notas da revisão: … Autorizo a API paga do Gemini para gerar as ilustrações da Parte 4 (Nano Banana 2, Batch), até US$ 1,00." Gemini no Antigravity (na cota do plano Pro): o mesmo pedido, sem a autorização da API. |
 | **C** | ajustes da 5 + fase 6 + publicação | 🛑 o humano ouve a narração | "Fase 6 da Parte 4. Notas da revisão final: … Autorizo a API paga do Gemini para gravar a narração em português da Parte 4 (Flex), até US$ 0,20." |
 | **D** | fase 7 + 8 | Parte 4 completa | "Fase 7 da Parte 4. Autorizo traduzir para inglês, francês e espanhol e gravar a narração nesses idiomas, até US$ 0,40." |
 | E, F… | o mesmo ciclo para as Partes 5, 6 e 7 | | |
 
 - Se o humano preferir, as fases 6 e 7 de uma parte podem correr enquanto a parte seguinte está na fase 1 (sem API). Por padrão, uma parte por vez.
-- Toda sessão termina com o PR mesclado, o caderno e o quadro do §7 atualizados, a `RETOMADA.md` dizendo qual é a próxima sessão e, se houve gasto, quanto foi.
+- Qualquer agente pode fazer qualquer sessão (`AGENTS.md` §0.3); a diferença é só o caminho da arte na sessão B.
+- Toda sessão termina com a entrega na `main` (depois de mesclar a `main` do remoto e resolver os conflitos), o caderno e o quadro do §7 atualizados, a `RETOMADA.md` dizendo qual é a próxima sessão e, se houve gasto, quanto foi.
 
 ---
 
@@ -205,7 +206,7 @@ A API paga só pode ser usada com autorização **no prompt inicial da sessão**
 | **Total** | | | | **~US$ 4,00** (≈ R$ 22) |
 
 - Teto do humano: **R$ 30/mês**. Gasto de outubro até 2026-10-25: arte US$ 2,59 + narração US$ 1,04 ≈ **US$ 3,64** (≈ R$ 20). Antes de cada fase com API, some os dois `gastos.csv` do mês.
-- Com o Antigravity (cota do plano Pro), a arte não custa nada, mas leva mais tempo (pausas por cota).
+- Com o Gemini no Antigravity (cota do plano Pro), a arte não custa nada, mas pode parar quando a cota acabar.
 
 ---
 

@@ -29,17 +29,18 @@ Prompt de abertura sugerido (plano §8):
 
 ## 3. Frentes paradas (sem urgência)
 
-- **Agente de arte (Gemini no Antigravity)**: nenhuma tarefa aberta de Dom Quixote. P-005 (acabamento das camadas da pousada, Parte 1) segue `⏸️ ADIADO`. Quando a fase 4 de uma parte for feita sem a API paga, o pedido vai para `docs/fila/PEDIDOS.md`. A revisão automática das entregas está desligada; ao abrir uma sessão com entrega nova em `docs/fila/ENTREGAS.md`, revise: `git fetch origin main`, olhe as imagens, abra as páginas no Chromium (800 × 1280 e 1280 × 800, nas duas lentes), confira posição e escala das camadas e registre o veredito em `PEDIDOS.md`.
+- **Fila de arte Claude ↔ Gemini (`docs/fila/`)**: **encerrada** em 2026-10-25. Todas as tarefas foram concluídas (a maior parte pela API); o único pedido que sobrava, o acabamento das camadas da pousada da Parte 1, virou o item M-14 do backlog. Hoje qualquer agente pode receber qualquer tarefa, inclusive a arte (`AGENTS.md` §0.3).
 - **Narração em en/fr/es das Partes 2 e 3**: espera o humano ouvir a Parte 1 nesses idiomas e autorizar (BACKLOG M-11).
 - **Escuta do humano** das vozes novas das Partes 2–3 (pontos em `docs/narracao/qa-parte-N.md`).
 - Demais pendências: [`BACKLOG.md`](BACKLOG.md). O que já foi feito: [`HISTORICO.md`](HISTORICO.md).
 
 ## 4. Notas do ambiente (contêineres de agentes)
 
-- **Chave da API do Gemini**: segredo de rede do ambiente; o proxy injeta o cabeçalho `x-goog-api-key` nas requisições a `generativelanguage.googleapis.com`. O agente nunca vê, imprime ou versiona a chave.
+- **Chave da API do Gemini** (ambiente do Claude): segredo de rede do ambiente; o proxy injeta o cabeçalho `x-goog-api-key` nas requisições a `generativelanguage.googleapis.com`. O agente nunca vê, imprime ou versiona a chave.
 - **Whisper local** (conferência da narração): num contêiner novo, `pip install faster-whisper`.
-- **Testes**: Chromium + Playwright já instalados; sirva a raiz com `python3 -m http.server` (`AGENTS.md` §5).
+- **Testes**: o Chromium e o Playwright já vêm instalados no contêiner; sirva a raiz com `python3 -m http.server` e abra as páginas nos dois tamanhos de tablet (`AGENTS.md` §5).
+- No **Antigravity** (Gemini), a arte pode ser gerada direto, na cota do plano Pro; a API só com autorização expressa do humano e a chave fornecida por ele.
 
 ## 5. Como entregar
 
-Trabalhe na branch definida pela sessão (ou numa nova a partir de `origin/main`; se a da sessão já foi mesclada, recomece-a da `main`). Antes de entregar: `npm run build` (se mexeu em HTML, classes, ícones ou imagens) e os testes. Depois, o PR e o merge na `main` (o humano autoriza o merge direto). Atualize este arquivo dizendo qual é a próxima sessão. Nunca edite arquivos cujo dono é o agente de arte (tabela em `docs/fila/PEDIDOS.md`).
+Trabalhe na branch definida pela sessão (se ela já foi mesclada, recomece-a da `main`). Ao terminar, **outro agente pode ter entregado algo em paralelo**: mescle a `main` do remoto na sua branch (`git fetch origin main && git merge origin/main`), resolva os conflitos preservando o trabalho dos dois lados (arquivos gerados, como o `sw.js`, se regeneram com `npm run build`), rode o build e os testes e só então entregue na `main`. Se um conflito não tiver solução que não destrua o trabalho de alguém, pergunte ao humano. Atualize este arquivo dizendo qual é a próxima sessão. Detalhes: `AGENTS.md` §6.

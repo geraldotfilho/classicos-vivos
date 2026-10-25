@@ -1,6 +1,6 @@
 # 🗂️ Histórico de entregas
 
-O que já foi entregue, sprint a sprint, em ordem cronológica (o mais antigo primeiro). As pendências ficam em [`BACKLOG.md`](BACKLOG.md); o estado atual e a próxima sessão, em [`RETOMADA.md`](RETOMADA.md). "Claude" e "Gemini" aqui são os papéis de agente principal e agente de arte (`AGENTS.md` §0.3).
+O que já foi entregue, sprint a sprint, em ordem cronológica (o mais antigo primeiro). As pendências ficam em [`BACKLOG.md`](BACKLOG.md); o estado atual e a próxima sessão, em [`RETOMADA.md`](RETOMADA.md). Nos sprints antigos, o Claude escrevia e o Gemini desenhava; hoje qualquer agente pode receber qualquer tarefa (`AGENTS.md` §0.3).
 
 ---
 
