@@ -210,6 +210,13 @@ A API é paga pelo humano, num projeto de hobby com **limite de R$ 30/mês** (er
 
 ---
 
+### 3.5 Linguagem: simples sem perder a beleza
+- **Leitor de referência: uma criança de 6 anos ouvindo (ou lendo junto com) um adulto.** Retorno do humano (2026-10-25): o texto das Partes 2–4 estava rebuscado demais, com construções complexas e palavras arcaicas, longe da realidade brasileira.
+- **Faça**: frases curtas (uma ideia por frase), ordem direta, palavras do dia a dia do Brasil (pousada, moça, "o senhor", estilingue, "tremendo que nem gelatina"), verbos concretos e imagens vivas (o vinho "como um rio vermelho"). Diminutivos e expressões afetivas cabem.
+- **Evite**: "vossa mercê", "donzela", "estalagem", "aposento", "desventurada", "sonâmbulo", "carmesim", ênclises e mesóclises rebuscadas, adjetivos empilhados ("vívido", "colossal", "engenhoso" na mesma frase) e palavras que só aparecem em livro antigo.
+- **Palavras difíceis que fazem parte da história** (odre, elmo, bolota, fole, fidalgo) podem ficar, com uma explicação curta no próprio texto: "os odres: grandes sacos de couro, cheios de vinho". Nomes de Cervantes (Pandafilando da Fosca Vista, Alifanfarrão) ficam: são divertidos.
+- Vale também para as traduções (§2.8), cada uma no dia a dia de uma criança daquele idioma.
+
 ### 3.4 Biblioteca para Crianças, Detalhes para Adultos
 - `index.html` é uma **estante lúdica**: livros como capas grandes e tocáveis numa prateleira de madeira, com botão ▶. Na prateleira de cima ficam as 4 partes de Dom Quixote (a capa de cada uma é o `p0-real` da parte; cor e emoji provisórios só aparecem num livro novo, enquanto a arte não chega); na de baixo, os próximos clássicos com 🔒 "Em breve". **Quanto menos texto, melhor**: nada de descrições, pilares, faixas etárias ou títulos de capítulos.
 - Tudo que é informação para adultos (proposta pedagógica, acervo detalhado, instruções de instalação e voz, licença) fica em `sobre.html`, acessível por um botão discreto "Para adultos" (ícone ⓘ).

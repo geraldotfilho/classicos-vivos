@@ -6,7 +6,11 @@ Leia este arquivo primeiro numa sessão nova do Claude. Depois, `AGENTS.md` (arq
 
 ---
 
-## 0. Atualização de 2026-10-24, noite: Dom Quixote todo ilustrado
+## 0. Atualização de 2026-10-25: texto mais simples nas Partes 2–4
+- A pedido do humano (leu a Parte 2 com o filho de 6 anos), o Claude reescreveu as Partes 2, 3 e 4 em linguagem mais simples (regra em AGENTS.md §3.5), e agentes refizeram as traduções en/fr/es no mesmo tom.
+- **A narração gravada em português das Partes 2–4 ficou desatualizada** e saiu do `paginas.json` (o livro usa a voz do aparelho nessas páginas). Regravar só com autorização do humano: BACKLOG A-12 (roteiros prontos, ~US$ 0,22).
+
+## Atualização de 2026-10-24, noite: Dom Quixote todo ilustrado
 - Com autorização do humano, o Claude gerou pela API **as Partes 3 e 4 inteiras** (33 cenas + 10 camadas, US$ 1,60), com a bíblia da Imaginação desde o início. Método e lições: `ARTE-PELA-API.md` §5. **Não falta nenhuma ilustração em Dom Quixote.**
 - Gasto da API no mês (2026-10-24): imagens US$ 2,59 + narração ~US$ 0,79 ≈ **US$ 3,38** (teto R$ 30).
 - **Gemini (Antigravity)**: P-002 está concluído. Ao voltar da cota (29/10), o que resta para ele é P-005 (acabamento da pousada, Parte 1), que pode ser reaberto, e os próximos livros.

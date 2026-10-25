@@ -55,6 +55,12 @@ Levantado na inspeção completa do sprint 1 (2026-10): código, ilustrações e
 - **Narração gravada pronta para receber áudio**: tocador frase a frase com a voz do aparelho como reserva, voz offline quando a online falha, MP3 guardado sob demanda pelo service worker.
 - **Segmentação canônica** (`assets/js/texto.js`) e exportação das 214 frases e 105 palavras-chave (`docs/narracao/`) para o Gemini gravar (P-006, agora com o Claude: `docs/TODO-NARRACAO.md`). Conversor WAV/PCM → MP3 sem dependências nativas (`npm run build:audio`).
 
+## ✅ Entregue no sprint 12 (texto para 6 anos, 2026-10-25)
+
+- **Partes 2, 3 e 4 reescritas em linguagem mais simples** (pedido do humano depois de ler a Parte 2 com o filho): frases mais curtas, palavras do dia a dia do Brasil (pousada, moça, "o senhor", estilingue) e menos arcaísmos (vossa mercê, estalagem, donzela, desventurada, sonâmbulo, carmesim, azinheiras, távola), sem perder as imagens e o humor. Palavras difíceis que fazem parte da história ficaram, com uma explicação curta no próprio texto (odres, bolotas, elmo, fole). Palavras-chave, cartões e interações sem mudança. Regra registrada em AGENTS.md §3.5.
+- **Traduções (en, fr, es) das Partes 2–4 refeitas** no mesmo tom, por agentes, uma por idioma.
+- Roteiros de vozes (`roteiro.json`) das Partes 2–4 refeitos para o texto novo e conferidos com `--seco`.
+
 ## ✅ Entregue no sprint 11 (fluxos de leitura, PWA e portal multilíngue)
 
 - **Fluxos de Leitura ("Ler de Novo" e "Continuar")**:
@@ -102,6 +108,7 @@ Levantado na inspeção completa do sprint 1 (2026-10): código, ilustrações e
 
 | ID | Item | Detalhes |
 | :--- | :--- | :--- |
+| A-12 | **Regravar a narração em português das Partes 2–4** (precisa de autorização do humano, AGENTS.md §2.7) | O texto mudou em 2026-10-25 e as páginas gravadas antigas saíram do `paginas.json` (até regravar, o livro usa a voz do aparelho nessas páginas; as palavras-chave gravadas continuam valendo). Roteiros prontos: `npm run gravar:narracao -- --voz narracao --parte N --pagina-inteira --autorizado` para N = 2, 3, 4. Custo estimado pela última rodada: ~US$ 0,22 no total. |
 | A-8 | **Revisão humana do texto das Partes 2–4** | Ler em voz alta com a voz do tablet; decidir "vinho tinto" × "suco de uva" (Parte 3, cap. 20); validar a dificuldade da `ordem` (5 palavras) e da contagem com crianças. Ver `PLANO-PARTES-2-4.md` §5. |
 
 ## 🟡 Prioridade média
