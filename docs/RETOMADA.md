@@ -1,10 +1,17 @@
-# 🔁 Retomada — onde o trabalho parou (2026-10-24, manhã)
+# 🔁 Retomada — onde o trabalho parou (2026-10-25, tarde)
 
 Leia este arquivo primeiro numa sessão nova do Claude. Depois, `AGENTS.md` (arquitetura e regras) e o arquivo da frente de trabalho.
 
 > 💰 **API paga do Gemini (AGENTS.md §2.7)**: use **só para produzir as vozes da leitura**, **sempre de forma econômica** e **só se o humano autorizou no prompt inicial desta sessão**. Sem essa autorização, não chame a API para nada (nem teste). Limite: R$ 30/mês (desde 2026-10-24). Opções mais baratas em `TODO-NARRACAO.md` §8.4 (o Flex corta o preço pela metade, mas falta a aprovação do humano). **Imagens** pela API: só com autorização pontual do humano (`docs/ARTE-PELA-API.md`).
 
 ---
+
+## ⭐ Frente atual (2026-10-25, tarde): correção de rumo de Dom Quixote
+- O humano terminou a série com o filho: **gostou muito das Partes 1, 2 e 3**, mas achou a **Parte 4 apressada**, mal encadeada e com eventos mal explicados. A análise mostrou a causa: ela resumia **81 capítulos** de Cervantes (o fim do volume de 1605 e todo o de 1615) em 7 páginas, contra 8 a 16 nas outras partes.
+- **Decisão do humano**: as Partes 1–3 ficam; a **Parte 4 será refeita para fechar o primeiro volume**; o **segundo volume** vira pelo menos **3 partes novas (5–7)** na **prateleira de baixo**. Uma parte por vez, com paradas para ele ler e aprovar.
+- **Plano** (escaletas, fios da história, reaproveitamento da Parte 4 atual, fase 0, quadro de andamento, sessões e prompts): [`PLANO-DOM-QUIXOTE-PARTES-4-7.md`](PLANO-DOM-QUIXOTE-PARTES-4-7.md).
+- **Processo**: [`RECEITA-CLASSICO-VIVO.md`](RECEITA-CLASSICO-VIVO.md), a receita de como criar um clássico vivo (fases 1–8, paradas 🛑, crivo das atividades, padrão ouro da assinatura da carta, lições aprendidas). Atualize-a ao fim de cada parte.
+- **Próxima sessão (A)**: fase 0 (modo rascunho, arquivamento da arte da Parte 4 atual, estante com o segundo volume) e fases 1 e 2 da nova Parte 4, **sem API paga**. Mostrar a escaleta ao humano antes de escrever o texto. Termina na parada 🛑 da fase 3. O prompt de abertura está no plano, §8.
 
 ## 0. Atualização de 2026-10-25: texto mais simples nas Partes 2–4
 - A pedido do humano (leu a Parte 2 com o filho de 6 anos), o Claude reescreveu as Partes 2, 3 e 4 em linguagem mais simples (regra em AGENTS.md §3.5), e agentes refizeram as traduções en/fr/es no mesmo tom.

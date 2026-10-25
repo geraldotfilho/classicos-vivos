@@ -105,11 +105,17 @@ Levantado na inspeção completa do sprint 1 (2026-10): código, ilustrações e
 - **Livros da página 2 da Parte 1 com transformação** (antigo A-3): cada livro abre a sua cena (castelos, dragões, cavaleiros), em qualquer ordem. E a nuvem do sonho de Sancho flutua sobre ele na Imaginação (arte NB-6).
 - **Service worker**: os MP3 e as marcas vêm da rede primeiro (regravações chegam ao tablet), inteiros (o 206 não podia ser guardado), num cache próprio.
 
+## ✅ Entregue no sprint 13 (correção de rumo, 2026-10-25)
+
+- **Revisão humana das Partes 1–3 (antigo A-8)**: o humano leu a série inteira com o filho de 6 anos. As Partes 1, 2 e 3 foram aprovadas como estão; a assinatura da carta (`ordem`, Parte 3) foi a melhor atividade ("nota 10"). A Parte 4 foi reprovada: apressada, mal encadeada, com eventos mal explicados.
+- **Paralelo com Cervantes e plano da correção de rumo**: [`PLANO-DOM-QUIXOTE-PARTES-4-7.md`](PLANO-DOM-QUIXOTE-PARTES-4-7.md) (nova Parte 4 fechando o volume de 1605; Partes 5–7 para o volume de 1615, na prateleira de baixo).
+- **Receita de um clássico vivo**: [`RECEITA-CLASSICO-VIVO.md`](RECEITA-CLASSICO-VIVO.md), com as fases, as paradas para o humano, o crivo e o cardápio das atividades e o diário de lições.
+
 ## 🔴 Prioridade alta
 
 | ID | Item | Detalhes |
 | :--- | :--- | :--- |
-| A-8 | **Revisão humana do texto das Partes 2–4** | Ler em voz alta com a voz do tablet; decidir "vinho tinto" × "suco de uva" (Parte 3, cap. 20); validar a dificuldade da `ordem` (5 palavras) e da contagem com crianças. Ver `PLANO-PARTES-2-4.md` §5. |
+| A-10 | **Correção de rumo de Dom Quixote** | Refazer a Parte 4 (fecha o volume de 1605) e criar as Partes 5–7 (volume de 1615), uma por vez, pelas fases da receita. Começa pela fase 0 (modo rascunho no motor, arquivamento da arte da Parte 4 atual, estante com o segundo volume). Andamento no §7 do plano. |
 
 ## 🟡 Prioridade média
 

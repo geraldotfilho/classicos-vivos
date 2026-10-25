@@ -3,13 +3,17 @@
 
 Este documento consolida a memória arquitetural, os princípios pedagógicos, as regras de design de interface, o fluxo de ativos visuais e os protocolos de automação do projeto **Clássicos Vivos**. Ele serve como guia definitivo para agentes de IA e desenvolvedores que assumirem o projeto em sessões futuras.
 
+> **Para criar uma parte ou um livro novo**, siga a **receita** em `docs/RECEITA-CLASSICO-VIVO.md` (fases, paradas para o humano, crivos e lições aprendidas). Este arquivo guarda a arquitetura e as regras; a receita guarda o processo.
+
 ---
 
 ## 1. Visão Geral e Propósito
 
 - **Público-Alvo**: Crianças em fase de alfabetização e letramento (5 a 8 anos).
 - **Proposta Pedagógica**: Aproximar as crianças das maiores obras-primas da literatura universal através de uma experiência interativa, sensorial, visualmente rica e de toque acolhedor.
-- **Obra Piloto**: *Dom Quixote de La Mancha*, adaptado diretamente da obra de Miguel de Cervantes, em **4 partes** (capítulos numerados em sequência: 1–7, 8–15, 16–22, 23–29; Parte 2 com 9 páginas ao abrir com o tombo nos moinhos). Parte 1: *O Cavaleiro da Super Imaginação*; Parte 2: *Exércitos de Lã e o Elmo Encantado*; Parte 3: *Serra Morena e a Princesa Micomicona*; Parte 4: *A Jaula Encantada e a Ilha de Sancho*. Decisões de adaptação e o mapa de interações estão em `docs/PLANO-PARTES-2-4.md`.
+- **Obra Piloto**: *Dom Quixote de La Mancha*, adaptado diretamente da obra de Miguel de Cervantes, em **dois volumes, como o original**:
+  - **Primeiro volume (1605), Partes 1 a 4**, na prateleira de cima (capítulos numerados em sequência: 1–7, 8–15, 16–22, 23–29; Parte 2 com 9 páginas ao abrir com o tombo nos moinhos). Parte 1: *O Cavaleiro da Super Imaginação*; Parte 2: *Exércitos de Lã e o Elmo Encantado*; Parte 3: *Serra Morena e a Princesa Micomicona*. Decisões de adaptação e o mapa de interações das Partes 2–3 estão em `docs/PLANO-PARTES-2-4.md`.
+  - **Correção de rumo (2026-10-25)**: a Parte 4 atual (*A Jaula Encantada e a Ilha de Sancho*) resumia 81 capítulos em 7 páginas e ficou apressada. Ela será **refeita para fechar o primeiro volume**, e o **segundo volume (1615)** vira pelo menos **três partes novas (5 a 7)**, na prateleira de baixo. Plano, escaletas e andamento: `docs/PLANO-DOM-QUIXOTE-PARTES-4-7.md`.
 - **Diretriz de Dispositivo**: **Tablet-First** (iPad, Samsung Galaxy Tab). Dimensões alvo prioritárias:
   - **Tablet Retrato (Portrait)**: 800 × 1280 px
   - **Tablet Paisagem (Landscape)**: 1280 × 800 px
@@ -218,7 +222,7 @@ A API é paga pelo humano, num projeto de hobby com **limite de R$ 30/mês** (er
 - Vale também para as traduções (§2.8), cada uma no dia a dia de uma criança daquele idioma.
 
 ### 3.4 Biblioteca para Crianças, Detalhes para Adultos
-- `index.html` é uma **estante lúdica**: livros como capas grandes e tocáveis numa prateleira de madeira, com botão ▶. Na prateleira de cima ficam as 4 partes de Dom Quixote (a capa de cada uma é o `p0-real` da parte; cor e emoji provisórios só aparecem num livro novo, enquanto a arte não chega); na de baixo, os próximos clássicos com 🔒 "Em breve". **Quanto menos texto, melhor**: nada de descrições, pilares, faixas etárias ou títulos de capítulos.
+- `index.html` é uma **estante lúdica**: livros como capas grandes e tocáveis numa prateleira de madeira, com botão ▶. Na prateleira de cima ficam as 4 partes do primeiro volume de Dom Quixote (a capa de cada uma é o `p0-real` da parte; cor e emoji provisórios só aparecem num livro novo, enquanto a arte não chega); na de baixo, hoje com os próximos clássicos em 🔒 "Em breve", entra o **segundo volume** (Partes 5–7, com cadeado até cada uma ser publicada; ver `docs/PLANO-DOM-QUIXOTE-PARTES-4-7.md` §2). **Quanto menos texto, melhor**: nada de descrições, pilares, faixas etárias ou títulos de capítulos.
 - Tudo que é informação para adultos (proposta pedagógica, acervo detalhado, instruções de instalação e voz, licença) fica em `sobre.html`, acessível por um botão discreto "Para adultos" (ícone ⓘ).
 - Livro novo: uma capa nova na prateleira de cima e uma entrada no "Acervo" de `sobre.html`.
 - **Fluxos de Leitura ("Continuar", "Ler de Novo" e "Recomeçar Página")**:
@@ -278,7 +282,8 @@ classicos-vivos/
 │   ├── fonts/                           # woff2 locais
 │   └── icones/                          # ícones do app (PWA)
 ├── tools/                               # scripts de build (fontes, ícones, Tailwind, WebP, service worker)
-├── docs/  RETOMADA.md (comece por aqui numa sessão nova) · BACKLOG.md · TODO-NANO-BANANA.md · TODO-NANO-BANANA-PARTES-2-4.md · PLANO-PARTES-2-4.md · TODO-NARRACAO.md · ARTE-PELA-API.md
+├── docs/  RETOMADA.md (comece por aqui numa sessão nova) · RECEITA-CLASSICO-VIVO.md (como criar uma parte) · PLANO-DOM-QUIXOTE-PARTES-4-7.md · BACKLOG.md · TODO-NANO-BANANA.md · TODO-NANO-BANANA-PARTES-2-4.md · PLANO-PARTES-2-4.md · TODO-NARRACAO.md · ARTE-PELA-API.md
+│   ├── cadernos/                        # um caderno por parte em produção (fases, decisões, notas do humano)
 │   ├── fila/                            # canal Claude ↔ Gemini (PEDIDOS.md, ENTREGAS.md)
 │   ├── narracao/                        # frases e palavras-chave a gravar (gerado)
 │   └── traducao/                        # o que traduzir, parte por parte (gerado)
@@ -335,7 +340,7 @@ O repositório oficial é hospedado em:
 Ao finalizar qualquer ciclo de desenvolvimento:
 1. **Regenerar os arquivos gerados**: `npm run build` (obrigatório se mudou HTML, classes, ícones ou imagens).
    > A antiga cópia avulsa `dom_quixote_parte_1_livro_interativo_infantil.html` foi descontinuada: o livro depende de `assets/` e `imagens/`, então distribua a pasta do repositório inteira (ou o link do GitHub Pages).
-2. **Atualizar `AGENTS.md`** caso novos padrões arquiteturais tenham sido introduzidos, e **`docs/BACKLOG.md`** (mover o que foi entregue, registrar o que foi descoberto). Pedidos de arte nova vão para **`docs/TODO-NANO-BANANA.md`**, com arquivo, referências, prompt e critério de aceite.
+2. **Atualizar `AGENTS.md`** caso novos padrões arquiteturais tenham sido introduzidos, e **`docs/BACKLOG.md`** (mover o que foi entregue, registrar o que foi descoberto). Ao fechar uma parte, a retrospectiva leva as lições novas para o **Diário de lições** de `docs/RECEITA-CLASSICO-VIVO.md` §7. Pedidos de arte nova vão para **`docs/TODO-NANO-BANANA.md`**, com arquivo, referências, prompt e critério de aceite.
    > **Trabalho entre agentes (Claude ↔ Gemini)**: a coordenação assíncrona passa por `docs/fila/`. Em `PEDIDOS.md` (só o Claude escreve) ficam os pedidos, as revisões e a linha `ESTADO: ATIVO|PARAR`; em `ENTREGAS.md` (só o Gemini escreve), as entregas e o status. Cada arquivo tem **um único dono** (tabela em `PEDIDOS.md`) para não haver conflito de merge. Conflito em `sw.js`: regenere com `npm run build:sw`, nunca resolva à mão.
 3. **Verificar Estado no Diretório Git**:
    ```powershell

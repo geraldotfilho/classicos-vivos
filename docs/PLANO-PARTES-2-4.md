@@ -1,5 +1,7 @@
 # 🗺️ Plano Narrativo e de Interações — Dom Quixote, Partes 2 a 4
 
+> ⚠️ **Atualização de 2026-10-25**: as Partes 2 e 3 foram aprovadas pelo humano na leitura com o filho e continuam valendo como estão. A **Parte 4 deste plano foi substituída** pela correção de rumo em [`PLANO-DOM-QUIXOTE-PARTES-4-7.md`](PLANO-DOM-QUIXOTE-PARTES-4-7.md): ela vai fechar o primeiro volume (1605), e o volume de 1615 vira as Partes 5 a 7. As linhas da Parte 4 abaixo ficam como registro histórico.
+
 Registro das decisões de adaptação e de gamificação das Partes 2–4, para quem for revisar o texto, gerar a arte ou criar novas partes. O texto final está em `dom-quixote/parte-2.html`, `parte-3.html` e `parte-4.html`; a arte, em [`TODO-NANO-BANANA-PARTES-2-4.md`](TODO-NANO-BANANA-PARTES-2-4.md).
 
 ---
