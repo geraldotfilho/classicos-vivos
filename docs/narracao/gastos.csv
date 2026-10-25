@@ -27,3 +27,8 @@ data,comando,pedidos_voz,tokens_audio,tokens_qa,usd_estimado
 2026-10-24T15:23,"--voz palavras --idioma fr --parte 1 --agrupar 4 --autorizado",1,466,0,0.0021
 2026-10-24T15:23,"--voz palavras --idioma en --parte 1 --autorizado",1,529,0,0.0024
 2026-10-24T15:24,"--voz narracao --idioma en --amostra --autorizado",1,194,0,0.0009
+2026-10-25T07:20,"--voz palavras --idioma fr --parte 1 --ids moulins,vent,geants --autorizado",1,307,0,0.0014
+2026-10-25T07:21,"--voz palavras --idioma fr --parte 1 --ids pomme,ile --agrupar 1 --autorizado",2,195,0,0.0009
+2026-10-25T07:21,"--voz narracao --idioma fr --amostra --autorizado",1,148,0,0.0007
+2026-10-25T07:24,"--voz palavras --idioma es --parte 1 --autorizado",2,2641,0,0.0120
+2026-10-25T07:24,"--voz narracao --idioma es --amostra --autorizado",1,158,0,0.0007
