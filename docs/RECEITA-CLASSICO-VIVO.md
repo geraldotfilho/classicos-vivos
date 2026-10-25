@@ -152,7 +152,9 @@ Só com autorização no prompt da sessão (`TODO-NARRACAO.md`):
 - Uma ideia por frase. Verbos concretos, imagens vivas ("como um rio vermelho"), diminutivos e humor cabem.
 - Evite arcaísmos e palavras de livro antigo (vossa mercê, donzela, estalagem, desventurada, carmesim), ênclises e mesóclises rebuscadas e adjetivos empilhados.
 - Todo evento responde a três perguntas da criança: **por que** aconteceu, **o que** aconteceu e **o que mudou** depois.
-- Histórias dentro da história quase sempre saem; quando ficam, saem resumidas numa fala curta.
+- Histórias dentro da história quase sempre saem; quando ficam, saem resumidas numa fala curta e **com o conteúdo do autor** (se no original ela é fantasia, continua fantasia: nada de explicações "realistas" inventadas).
+- **A segunda metade da parte merece o mesmo cuidado da primeira.** Na nova Parte 4 de Dom Quixote, o humano sentiu a qualidade cair do meio para o fim ("cansativa"). Antes de entregar, releia as últimas páginas como se fossem as primeiras: cada uma com uma graça própria, sem lição de moral pendurada no fim, sem explicar o que a cena já mostra. Uma página que passa de 5 parágrafos provavelmente são **duas** (e ganha uma ilustração a mais).
+- **Tratamentos carinhosos**: personagens que se gostam se chamam com carinho ("minha Teresinha", "meu bem"). Um vocativo seco repetido ("mulher!") soa ríspido ou machista para o leitor de hoje.
 - **Comando da atividade em quadro separado (regra mandatória, 2026-10-25)**: o convite ou instrução da atividade (ex.: "Descubra as letras...") **nunca** deve entrar no meio dos parágrafos da narrativa. Ele fica num campo próprio da página (`comandoAtividade: '...'`), exibido num quadro destacado (`.quadro-atividade`), de leitura opcional, com um botão de alto-falante (🔊) exclusivo que só fala ao ser tocado. A narração automática da página ("Ouvir Página") **nunca** lê o comando da atividade.
 
 ### 6.2 Atividades: o crivo e o padrão ouro
@@ -161,7 +163,10 @@ Só com autorização no prompt da sessão (`TODO-NARRACAO.md`):
 2. A criança **ajuda um personagem** a fazer algo que a história precisa?
 3. A cena **muda de verdade** quando ela termina?
 4. Treina alguma coisa: **leitura, sílabas, letras, contagem** ou, no mínimo, observação de causa e efeito?
-5. É **curta** (até 5 toques, cerca de 1 minuto) e o erro gera só uma **dica gentil**?
+5. É **curta** (até 5 toques, cerca de 1 minuto) e o erro gera só uma **dica gentil**? (Exceção decidida pelo humano: as **pegadinhas** do tipo `pedido` recomeçam a brincadeira, sempre com uma fala engraçada que explica o porquê.)
+6. **A criança precisa ler (ou contar, ou observar) para acertar?** Se tocar em qualquer cartão já funciona, não há aprendizado (o 1º piquenique da nova Parte 4 de Dom Quixote foi reprovado por isso). Cartões de leitura vão **sem emoji**, que entregaria a resposta.
+
+**A recompensa**: nas páginas com atividade, a variação mágica da cena (em Dom Quixote, a Lente da Imaginação) fica **trancada até a criança acertar** (regra do humano, 2026-10-25; o motor faz sozinho, `AGENTS.md` §2.5).
 
 **Padrão ouro: a assinatura da carta** (*Dom Quixote*, Parte 3, cap. 18, nota 10 do humano). Sancho esqueceu a carta e não lembra como Dom Quixote assina; a criança toca nas palavras na ordem certa: O CAVALEIRO DA TRISTE FIGURA.
 - O problema vem da história; a criança ajuda um personagem.
@@ -179,6 +184,7 @@ Só com autorização no prompt da sessão (`TODO-NARRACAO.md`):
 | Contar com a voz | números | `contagem` | as cabras no barco |
 | Revelar o que está escondido | observação, causa e efeito | `camadas` com `ate` | o sopro na poeira, o sol na noite, a bengala |
 | Montar a cena com as palavras do texto | vocabulário (palavra ↔ coisa) | `camadas` | a mesa dos pastores, a mala |
+| Achar a palavra da figura entre pegadinhas quase iguais | leitura atenta (PÃO × PIÃO, QUEIJO × QUEIXO) | `pedido` | o lanche de Sancho (Dom Quixote, Parte 4) |
 | Montar uma palavra letra por letra | letra e som | **tipo novo** (a criar) | (ideia) uma gráfica, um bilhete |
 | Disparar um efeito físico da história | causa e efeito | `acao` / `camadas` + efeito | o VENTO nos moinhos, a cambalhota |
 
@@ -193,6 +199,8 @@ Varie as mecânicas dentro da parte.
 - Diga o que **não** pintar onde vai uma camada; peça objetos **seguros nas mãos** (senão flutuam); diga quais animais e pessoas estão na cena (o modelo acrescenta personagens recorrentes).
 - Sem texto legível na imagem. Nunca achatar recortes numa cena pronta.
 - Personagens novos nascem numa página e servem de referência para as seguintes; isso define a ordem das rodadas.
+- **Continuidade (fantasias, montarias, objetos)**: recorte o personagem da arte aprovada, passe o recorte como referência e mande **copiar** ("EXACTLY as in the second reference image (copy them)"); para consertar uma imagem quase boa, peça uma **edição** dela ("Repaint the first reference image EXACTLY ... ADD ONLY ..."). Detalhes e o que deu errado: `ARTE-PELA-API.md` §4.3.
+- **Quem está na cena da história está na ilustração** (o padre que acompanha a viagem não pode sumir de uma página), e cada um com a sua montaria.
 - **Olhe cada imagem também como um adulto atento**: nada que lembre símbolo de ódio, violência ou grupo real (o lençol branco com capuz pontudo dos "magos" da Parte 4 de Dom Quixote veio parecendo a Ku Klux Klan e foi refeito). Fantasia caseira = chapéu de papelão e cabeça descoberta.
 - Monstros e seres mágicos com a atmosfera da obra; descreva o rosto ("gentle face, kind ordinary eyes"), nunca assustador para a idade.
 
@@ -284,6 +292,10 @@ As lições que só valem para *Dom Quixote* ou para a condensação de obras lo
 
 | Data | Lição | Origem | Virou regra em |
 | :--- | :--- | :--- | :--- |
+| 2026-10-25 | A qualidade do texto caiu na segunda metade da parte e uma página longa cansou: revisar o fim com o cuidado do começo e dividir páginas longas | humano (Dom Quixote, Parte 4 nova, fase 5) | §6.1 |
+| 2026-10-25 | Atividade em que qualquer toque funciona não ensina: a criança precisa ler para acertar; a variação mágica da cena vira recompensa, trancada até o acerto | humano | §6.2, `AGENTS.md` §2.5 |
+| 2026-10-25 | Continuidade de personagens entre páginas: recortar da arte aprovada e mandar copiar; consertar por edição | arte (Parte 4 nova, fase 5) | §6.3, `ARTE-PELA-API.md` §4.3 |
+| 2026-10-25 | "Mulher!" como vocativo soou ríspido: tratamentos carinhosos entre quem se gosta | humano | §6.1 |
 | 2026-10-25 | Lençol branco + capuz pontudo saiu com cara de Ku Klux Klan: toda imagem é olhada também atrás de símbolos de ódio e violência | Dom Quixote, Parte 4 nova (arte) | §6.3 |
 | 2026-10-25 | O comando das atividades não deve poluir a narrativa nem ser lido automaticamente; fica num quadro destacado de leitura opcional com botão 🔊 próprio | humano | §6.1, §6.2, AGENTS §2.5 |
 | 2026-10-25 | Quem escreve a parte seguinte precisa ler o texto final das partes publicadas, sobretudo o final da anterior, para não quebrar estilo nem continuidade (a Parte 4 antiga começava contradizendo o fim da Parte 3) | humano | §5 fase 1.0 |

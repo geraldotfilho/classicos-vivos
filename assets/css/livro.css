@@ -293,6 +293,19 @@ h1, h2, h3, h4, .font-display {
     0%, 100% { box-shadow: 0 3px 0 rgba(0, 0, 0, 0.35), 0 0 0 0 rgba(250, 204, 21, 0); }
     50% { box-shadow: 0 3px 0 rgba(0, 0, 0, 0.35), 0 0 0 6px rgba(250, 204, 21, 0.85); }
 }
+/* Lente trancada: a Imaginação é a recompensa da atividade da página (abre quando a criança acerta) */
+.chave-lente.lente-trancada { filter: grayscale(0.75); opacity: 0.75; }
+.chave-lente.lente-trancada::after {
+    content: '🔒';
+    position: absolute;
+    top: -9px;
+    right: -7px;
+    z-index: 2;
+    font-size: 15px;
+    line-height: 1;
+    filter: none;
+}
+.legenda-lente.legenda-aviso { color: #B45309; }
 .legenda-lente {
     flex: 1 1 auto;
     min-width: 0;
@@ -846,6 +859,66 @@ h1, h2, h3, h4, .font-display {
 }
 .faixa-palavras .palavra-escrita { animation: popIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1); }
 .faixa-palavras .faixa-vazia { opacity: 0.55; font-weight: 600; font-size: 0.85rem; }
+
+/* Faixa do pedido (ex.: o lanche de Sancho): a figura do que o personagem quer; a da vez brilha */
+.faixa-pedido {
+    flex: none;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 3px 10px;
+    border-radius: 12px;
+    border: 2px dashed #D97706;
+    background: #FFF7E6;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #78350F;
+}
+.pedido-figura {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 9999px;
+    background: #FFFFFF;
+    border: 2px solid #FCD34D;
+    font-size: 1.4rem;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.pedido-figura img { width: 34px; height: 34px; object-fit: contain; pointer-events: none; }
+.pedido-figura.pedido-agora {
+    transform: scale(1.25);
+    border-color: #F59E0B;
+    box-shadow: 0 0 0 3px rgba(250, 204, 21, 0.6);
+    animation: pedidoBrilha 1.4s ease-in-out infinite;
+}
+.pedido-figura.pedido-agora.card-nudge { animation: cardNudge 0.3s ease-in-out 2; }
+.pedido-figura.pedido-depois { opacity: 0.4; filter: grayscale(0.6); }
+.pedido-figura.pedido-servido { opacity: 0.6; }
+.pedido-figura.pedido-servido::after {
+    content: '✔';
+    position: absolute;
+    right: -4px;
+    bottom: -4px;
+    font-size: 0.8rem;
+    color: #FFFFFF;
+    background: #16A34A;
+    border-radius: 9999px;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@keyframes pedidoBrilha {
+    0%, 100% { box-shadow: 0 0 0 3px rgba(250, 204, 21, 0.6); }
+    50% { box-shadow: 0 0 0 6px rgba(250, 204, 21, 0.25); }
+}
 
 /* Fim da parte: convite para a próxima */
 .fim-parte {

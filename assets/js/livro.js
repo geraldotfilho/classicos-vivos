@@ -34,7 +34,7 @@ function cenaDe(i) {
 }
 
 /* Cartões da página; uma tradução pode trocar as palavras de um cartão do tipo 'ordem' (a assinatura
-   tem outra quantidade de palavras em cada idioma) */
+   tem outra quantidade de palavras em cada idioma) ou 'pedido' (as pegadinhas mudam com o idioma) */
 function cartoesDe(i) {
     const c = cenaDe(i).cartoes || null;
     const p = c && traducaoDaPagina(i);
@@ -100,7 +100,8 @@ const IDIOMAS = {
             recomendada: '⭐ recomendada', offline: 'funciona offline', online: 'precisa de internet', gravada: 'gravada', maisNatural: 'mais natural',
             previa: '(prévia: só algumas páginas)', emProducao: '(em produção para esta parte)',
             amostraDe: (nome) => `Ouvir amostra de ${nome}`, amostra: 'Olá! Eu vou ler esta história com você.',
-            atividadeRotulo: 'Atividade', ouvirInstrucao: 'Ouvir instrução da atividade', atividadeOpcional: 'Atividade opcional'
+            atividadeRotulo: 'Atividade', ouvirInstrucao: 'Ouvir instrução da atividade', atividadeOpcional: 'Atividade opcional',
+            lenteTrancada: '🔒 Termine a atividade para abrir a Imaginação!', pedidoRotulo: 'Pedido:'
         }
     },
     en: {
@@ -135,7 +136,8 @@ const IDIOMAS = {
             recomendada: '⭐ recommended', offline: 'works offline', online: 'needs internet', gravada: 'recorded', maisNatural: 'most natural',
             previa: '(preview: only some pages)', emProducao: '(in production for this part)',
             amostraDe: (nome) => `Hear a sample of ${nome}`, amostra: 'Hello! I am going to read this story with you.',
-            atividadeRotulo: 'Activity', ouvirInstrucao: 'Listen to activity instructions', atividadeOpcional: 'Optional activity'
+            atividadeRotulo: 'Activity', ouvirInstrucao: 'Listen to activity instructions', atividadeOpcional: 'Optional activity',
+            lenteTrancada: '🔒 Finish the activity to open the Imagination!', pedidoRotulo: 'Wants:'
         }
     },
     fr: {
@@ -170,7 +172,8 @@ const IDIOMAS = {
             recomendada: '⭐ recommandée', offline: 'fonctionne hors ligne', online: 'besoin d’internet', gravada: 'enregistrée', maisNatural: 'plus naturelle',
             previa: '(aperçu : quelques pages)', emProducao: '(en préparation pour cette partie)',
             amostraDe: (nome) => `Écouter un extrait de ${nome}`, amostra: 'Bonjour ! Je vais lire cette histoire avec toi.',
-            atividadeRotulo: 'Activité', ouvirInstrucao: "Écouter l'instruction de l'activité", atividadeOpcional: 'Activité facultative'
+            atividadeRotulo: 'Activité', ouvirInstrucao: "Écouter l'instruction de l'activité", atividadeOpcional: 'Activité facultative',
+            lenteTrancada: '🔒 Termine l’activité pour ouvrir l’Imagination !', pedidoRotulo: 'Demande :'
         }
     },
     es: {
@@ -205,7 +208,8 @@ const IDIOMAS = {
             recomendada: '⭐ recomendada', offline: 'funciona sin internet', online: 'necesita internet', gravada: 'grabada', maisNatural: 'más natural',
             previa: '(avance: solo algunas páginas)', emProducao: '(en producción para esta parte)',
             amostraDe: (nome) => `Oír una muestra de ${nome}`, amostra: '¡Hola! Voy a leer esta historia contigo.',
-            atividadeRotulo: 'Actividad', ouvirInstrucao: 'Escuchar la instrucción de la actividad', atividadeOpcional: 'Actividad opcional'
+            atividadeRotulo: 'Actividad', ouvirInstrucao: 'Escuchar la instrucción de la actividad', atividadeOpcional: 'Actividad opcional',
+            lenteTrancada: '🔒 ¡Termina la actividad para abrir la Imaginación!', pedidoRotulo: 'Pide:'
         }
     }
 };
@@ -302,6 +306,7 @@ function allSceneSrcs(i) {
     const srcs = [cena.real, cena.imag];
     if (c.etapas) srcs.push(...c.etapas);
     if (c.variantes) Object.values(c.variantes).forEach(v => srcs.push(v.src));
+    (c.itens || []).forEach(item => { if (item.figura) srcs.push(item.figura); });
     (cena.camadas || []).forEach(l => { if (l.src) srcs.push(l.src); });
     (cena.precarregar || []).forEach(src => srcs.push(src));
     return srcs.filter(Boolean).map(img);
@@ -348,12 +353,15 @@ function montarCartoes(i) {
     const cols = GRID_COLS[c.colunas || (n <= 5 ? n : Math.min(Math.ceil(n / 2), 6))];
     const faixa = c.tipo === 'ordem'
         ? `<div id="faixa-${i}" class="faixa-palavras" aria-live="polite"><span class="faixa-vazia">${escapeHtml(t(c.faixaVazia) || ui('faixaVazia'))}</span></div>`
-        : '';
+        : c.tipo === 'pedido'
+            ? `<div id="pedido-${i}" class="faixa-pedido" aria-live="polite"></div>`
+            : '';
+    // Nos cartões de ler (ordem, pedido), o emoji entregaria a resposta: só a palavra
     const cards = c.itens.map(item => {
         const domId = item.domId || `card-${i}-${item.id}`;
         const icone = item.icone
             ? `<img src="${escapeHtml(img(item.icone))}" alt="" class="w-7 h-7 sm:w-8 sm:h-8 shrink-0 pointer-events-none" />`
-            : (item.emoji && c.tipo !== 'ordem' ? `<span class="text-xl sm:text-2xl leading-none pointer-events-none" aria-hidden="true">${item.emoji}</span>` : '');
+            : (item.emoji && c.tipo !== 'ordem' && c.tipo !== 'pedido' ? `<span class="text-xl sm:text-2xl leading-none pointer-events-none" aria-hidden="true">${item.emoji}</span>` : '');
         return `
             <div id="${escapeHtml(domId)}" data-drop-target="drop-zone-${i}" data-id="${escapeHtml(item.id)}"
                  data-word="${escapeHtml(t(item.palavra))}" data-emoji="${escapeHtml(item.emoji || '✨')}"
@@ -392,10 +400,10 @@ function montarPaginaArte(i, pagina) {
                     </div>
                 </div>
                 <div class="barra-lente z-20">
-                    <button type="button" id="lens-btn-${i}" data-lente="${i}" class="${LENS_BTN_REAL}" role="switch" aria-checked="false" aria-label="${escapeHtml(ui('lenteImag'))}" title="${escapeHtml(ui('lenteImag'))}">
+                    ${temImaginacao(i) ? `<button type="button" id="lens-btn-${i}" data-lente="${i}" class="${LENS_BTN_REAL}" role="switch" aria-checked="false" aria-label="${escapeHtml(ui('lenteImag'))}" title="${escapeHtml(ui('lenteImag'))}">
                         <span class="chave-lente-lado chave-lente-real" aria-hidden="true">👓 <span data-ui="lenteCurtaReal">${escapeHtml(ui('lenteCurtaReal'))}</span></span>
                         <span class="chave-lente-lado chave-lente-imag" aria-hidden="true">✨ <span data-ui="lenteCurtaImag">${escapeHtml(ui('lenteCurtaImag'))}</span></span>
-                    </button>
+                    </button>` : ''}
                     <span id="lens-badge-${i}" class="legenda-lente" title="${escapeHtml(legenda)}">${escapeHtml(legendaCurta(legenda))}</span>
                     ${!pagina.capa ? `
                     <button type="button" data-reiniciar-pagina="${i}" class="btn-chunky btn-reiniciar shrink-0 rounded-xl bg-amber-100 hover:bg-amber-200 text-amber-800 border-2 border-amber-400 flex items-center justify-center" title="${escapeHtml(ui('reiniciarPaginaTitulo'))}" aria-label="${escapeHtml(ui('reiniciarPagina'))}">
@@ -1514,7 +1522,8 @@ function atualizarRotulosDaLente(pageIdx, badgeText) {
     badge.textContent = legendaCurta(legenda);
     badge.title = legenda;
     const btn = document.getElementById(`lens-btn-${pageIdx}`);
-    btn.title = ui(isImag ? 'lenteReal' : 'lenteImag');
+    if (!btn) return;
+    btn.title = !isImag && lenteTrancada(pageIdx) ? ui('lenteTrancada') : ui(isImag ? 'lenteReal' : 'lenteImag');
     btn.setAttribute('aria-label', btn.title);
     btn.setAttribute('aria-checked', String(isImag));
 }
@@ -1523,7 +1532,8 @@ function updateLensUI(pageIdx, badgeText) {
     const isImag = lensImaginationState[pageIdx];
     const btn = document.getElementById(`lens-btn-${pageIdx}`);
     atualizarRotulosDaLente(pageIdx, badgeText);
-    btn.className = isImag ? LENS_BTN_IMAG : LENS_BTN_REAL;
+    if (btn) btn.className = isImag ? LENS_BTN_IMAG : LENS_BTN_REAL;
+    atualizarTrava(pageIdx);
 
     document.querySelectorAll(`#page-${pageIdx} .hotspot-real`).forEach(h => h.classList.toggle('hidden', isImag));
     document.querySelectorAll(`#page-${pageIdx} .hotspot-imag`).forEach(h => h.classList.toggle('hidden', !isImag));
@@ -1554,8 +1564,62 @@ function inviteImagination(pageIdx) {
 /* =====================================================================
    3. LENTE DA REALIDADE ↔ LENTE DA IMAGINAÇÃO
    ===================================================================== */
+/* Páginas sem Imaginação (ex.: uma história contada, que já é toda imaginação) não têm a chave */
+function temImaginacao(i) {
+    return !!cenaDe(i).imag;
+}
+
+/* A atividade da página está concluída? (cada tipo de cartão tem o seu "acertou") */
+function atividadeConcluida(i) {
+    const c = cartoesDe(i);
+    if (!c || !c.itens || !c.itens.length) return true;
+    const st = pageState[i];
+    if (st.concluida) return true;
+    switch (c.tipo) {
+        case 'progressivo':
+        case 'ordem': return st.usados.size >= c.ordem.length;
+        case 'contagem': return st.usados.size >= c.sequencia.length;
+        case 'pedido': return st.usados.size >= c.pedidos.length;
+        default: return todosUsados(i);
+    }
+}
+
+/* A Imaginação é a recompensa: nas páginas com atividade, a chave só abre depois que a criança acerta
+   (regra do humano, 2026-10-25). Voltar para a Realidade nunca é bloqueado. */
+function lenteTrancada(i) {
+    return temImaginacao(i) && !atividadeConcluida(i);
+}
+
+/* Cadeado na chave da lente enquanto a atividade não termina */
+function atualizarTrava(i) {
+    const btn = document.getElementById(`lens-btn-${i}`);
+    if (!btn) return;
+    // Só o caminho de ida é trancado: da Imaginação (ex.: aberta por ?imag=1) sempre se volta
+    const trancada = lenteTrancada(i) && !lensImaginationState[i];
+    btn.classList.toggle('lente-trancada', trancada);
+    btn.setAttribute('aria-disabled', String(trancada));
+    atualizarRotulosDaLente(i, sceneFor(i).badge);
+}
+
+const avisoLente = {};
+function avisarLenteTrancada(i) {
+    playSound('hint');
+    nudge(document.getElementById(`lens-btn-${i}`));
+    nudge(document.querySelector(`#cartoes-${i} .draggable-card:not(.card-completed)`));
+    const badge = document.getElementById(`lens-badge-${i}`);
+    if (!badge) return;
+    badge.textContent = ui('lenteTrancada');
+    badge.classList.add('legenda-aviso');
+    clearTimeout(avisoLente[i]);
+    avisoLente[i] = setTimeout(() => {
+        badge.classList.remove('legenda-aviso');
+        atualizarRotulosDaLente(i, sceneFor(i).badge);
+    }, 2600);
+}
+
 function toggleLens(pageIdx, event, forceState = null) {
     if (sceneBusy[pageIdx]) return;
+    if (!temImaginacao(pageIdx) && forceState !== false) return;
     lensImaginationState[pageIdx] = forceState !== null ? forceState : !lensImaginationState[pageIdx];
     const isImag = lensImaginationState[pageIdx];
 
@@ -1582,7 +1646,10 @@ function apiDaPagina(i) {
         estado: pageState[i],
         ocupada: () => !!sceneBusy[i],
         lenteImaginacao: () => lensImaginationState[i],
-        definirLente: (imag) => toggleLens(i, null, imag),
+        definirLente: (imag) => {
+            if (imag) pageState[i].concluida = true;
+            toggleLens(i, null, imag);
+        },
         renderizar: () => renderScene(i),
         efeito: (camadaId, efeito) => dispararEfeito(i, camadaId, efeito),
         convidarImaginacao: () => inviteImagination(i),
@@ -1718,6 +1785,9 @@ function triggerCardInteraction(card, coords) {
         case 'contagem':
             handleContagem(i, card, coords);
             break;
+        case 'pedido':
+            handlePedido(i, card, coords);
+            break;
         case 'variante': {
             // Itens independentes, em qualquer ordem: a cena mostra a variante do último item
             completeCard(card, coords);
@@ -1745,6 +1815,7 @@ function triggerCardInteraction(card, coords) {
         }
         case 'acao': {
             completeCard(card, coords);
+            st.usados.add(id);
             const acao = LIVRO.acoes && LIVRO.acoes[item.acao];
             if (acao) acao(apiDaPagina(i), { card, coords, item });
             break;
@@ -1763,6 +1834,7 @@ function triggerCardInteraction(card, coords) {
             }
         }
     }
+    atualizarTrava(i);
 }
 
 /* =====================================================================
@@ -1917,6 +1989,73 @@ function handleContagem(pageIdx, card, coords) {
     }
 }
 
+
+// Pedido (ex.: o lanche de Sancho): a figura mostra o que o personagem quer, e a criança acha a palavra
+// que se escreve assim. As pegadinhas (palavras parecidas que não servem: PIÃO, QUEIXO, ÁGUIA) bagunçam
+// tudo com uma fala engraçada, e a brincadeira recomeça (pedido do humano, 2026-10-25)
+function handlePedido(pageIdx, card, coords) {
+    const c = cartoesDe(pageIdx);
+    const st = pageState[pageIdx];
+    const id = card.dataset.id;
+    const item = itemDe(pageIdx, id) || {};
+    if (st.bagunca || card.classList.contains('card-completed')) return;
+
+    if (item.pegadinha) {
+        st.bagunca = true;
+        playSound('hint');
+        nudge(card);
+        const zona = document.getElementById(`drop-zone-${pageIdx}`).getBoundingClientRect();
+        spawnSparkles(zona.left + zona.width / 2, zona.top + zona.height * 0.65, item.emoji || '🌀');
+        falar(t(item.pegadinha));
+        const recomecar = () => {
+            if (sceneBusy[pageIdx]) return setTimeout(recomecar, 300);
+            reiniciarPagina(pageIdx);
+        };
+        setTimeout(recomecar, 1600);
+        return;
+    }
+
+    const esperado = c.pedidos[st.usados.size];
+    if (id !== esperado) {
+        // Comida certa na hora errada: dica gentil, a figura do pedido balança
+        playSound('hint');
+        nudge(card);
+        nudge(document.querySelector(`#pedido-${pageIdx} .pedido-agora`));
+        return;
+    }
+
+    st.usados.add(id);
+    st.ultimo = id;
+    completeCard(card, coords);
+    falar(card.dataset.word.toLocaleLowerCase(IDIOMAS[idioma].lang));
+    mostrarPedido(pageIdx);
+    lensImaginationState[pageIdx] = false;
+    if (st.usados.size === c.pedidos.length) {
+        setTimeout(() => playSound('fanfare'), 600);
+        renderScene(pageIdx).then(() => inviteImagination(pageIdx));
+    } else {
+        playSound('wordPop');
+        renderScene(pageIdx);
+    }
+}
+
+/* Faixa do pedido: as figuras do que o personagem quer; a da vez brilha, as servidas ganham ✔ */
+function mostrarPedido(pageIdx) {
+    const c = cartoesDe(pageIdx);
+    const faixa = document.getElementById(`pedido-${pageIdx}`);
+    if (!c || !faixa) return;
+    const st = pageState[pageIdx];
+    const daVez = c.pedidos[st.usados.size];
+    const figuras = c.pedidos.map(id => {
+        const item = itemDe(pageIdx, id) || {};
+        const estado = st.usados.has(id) ? 'pedido-servido' : id === daVez ? 'pedido-agora' : 'pedido-depois';
+        const arte = item.figura
+            ? `<img src="${escapeHtml(img(item.figura))}" alt="" draggable="false">`
+            : `<span aria-hidden="true">${item.emoji || '❓'}</span>`;
+        return `<span class="pedido-figura ${estado}">${arte}</span>`;
+    }).join('');
+    faixa.innerHTML = `<span class="pedido-rotulo">${escapeHtml(t(c.rotulo) || ui('pedidoRotulo'))}</span>${figuras}`;
+}
 
 /* =====================================================================
    PARTÍCULAS VISUAIS, NAVEGAÇÃO DE PÁGINAS E SWIPE PARA TABLET
@@ -2171,6 +2310,7 @@ function reiniciarPagina(i, opcoes = {}) {
     const c = cartoesDe(i);
     if (c && c.tipo === 'progressivo') updateProgressHints(i);
     if (c && c.tipo === 'ordem') escreverNaFaixa(i);
+    if (c && c.tipo === 'pedido') mostrarPedido(i);
     renderScene(i);
     if (!opcoes.silencioso) {
         playSound('wordPop');
@@ -2304,6 +2444,7 @@ function traduzirCartoes(i) {
         area.innerHTML = montarCartoes(i);
         initDraggableCards(area);
         if (c.tipo === 'progressivo') updateProgressHints(i);
+        if (c.tipo === 'pedido') mostrarPedido(i);
         renderScene(i);
         return;
     }
@@ -2315,6 +2456,7 @@ function traduzirCartoes(i) {
         if (rotulo) rotulo.textContent = t(item.palavra);
     });
     if (c.tipo === 'ordem') escreverNaFaixa(i);
+    if (c.tipo === 'pedido') mostrarPedido(i);
 }
 
 /* Refaz os textos de uma página no idioma atual (a cena e o progresso continuam como estão) */
@@ -2419,7 +2561,9 @@ function initEventos() {
         }
         const lente = e.target.closest('[data-lente]');
         if (lente) {
-            toggleLens(Number(lente.dataset.lente), e);
+            const i = Number(lente.dataset.lente);
+            if (!lensImaginationState[i] && lenteTrancada(i)) avisarLenteTrancada(i);
+            else toggleLens(i, e);
             return;
         }
         const hotspot = e.target.closest('.scene-hotspot');
@@ -2583,7 +2727,9 @@ function iniciarLivro() {
     for (let i = 0; i < totalPages; i++) {
         const c = cartoesDe(i);
         if (c && c.tipo === 'progressivo') updateProgressHints(i);
+        if (c && c.tipo === 'pedido') mostrarPedido(i);
         renderCamadas(i);
+        atualizarTrava(i);
     }
     initTextScrolling();
     updateScrollHint(currentPage);

@@ -120,6 +120,12 @@ O que já foi entregue, sprint a sprint, em ordem cronológica (o mais antigo pr
 - Atividades com arte: o piquenique (pão, queijo e moringa sobre a toalha) e a contagem dos tesouros do lago (concha, pérolas e peixinhos no balão da história). Áreas de toque medidas na arte de cada página.
 - Lição de arte: lençol branco + capuz pontudo vira imagem de ódio (Ku Klux Klan); fantasia de "mago" pede chapéu de papelão e cabeça descoberta (`ARTE-PELA-API.md` §4.2, receita geral §6.3).
 
+## ✅ Sprint 16 (fase 5 da nova Parte 4: notas da 1ª leitura, 2026-10-25)
+
+- O humano leu o livro ilustrado com o filho e mandou 8 notas; todas aplicadas (caderno da Parte 4, §5). Texto dos caps. 27 a 33 reescrito; o cap. 30 virou dois (12 páginas, caps. 23 a 33); o cap. 28 conta a história de Cervantes (o Cavaleiro do Lago) dentro do balão; o fim troca o teaser pelo "de boca em boca".
+- **Motor**: a Lente da Imaginação virou **recompensa** (trancada até a criança acertar a atividade, em todos os livros); tipo novo **`pedido`** com pegadinhas que recomeçam o jogo; páginas sem `imag` não mostram a chave. `conferir:traducoes` cobra as pegadinhas de cada idioma.
+- **Arte** (API Batch, autorizada): 9 imagens aceitas em 11, **US$ 0,38**. Método novo de continuidade (recortes da arte aprovada como referência + edições), registrado em `ARTE-PELA-API.md` §4.3.
+
 ---
 
 ## ✅ Interface: ilustração maior e botões que se escondem (2026-10-25)

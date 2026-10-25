@@ -23,6 +23,7 @@ O erro mais caro de Dom Quixote não foi de texto nem de arte: foi de **divisão
 - **Mapa de capítulos** completo antes de dividir (receita geral §3.2): cada capítulo com o episódio e a decisão.
 - Prefira os episódios **visuais e de ação clara** (moinhos, ovelhas, leão, Clavilenho) e os que **ensinam algo sem sermão** (dividir a comida, a luz que desfaz o medo, a sabedoria de Sancho).
 - **Histórias dentro da história** (Grisóstomo e Marcela, o Curioso Impertinente, o cativo, Cardênio) saem; quando um pedaço serve à trama ou à leitura, fica como objeto (o caderno de poemas de Cardênio).
+- **Quando Dom Quixote conta uma história de cavalaria, use a de Cervantes** (o Cavaleiro do Lago, I-50), só adequada à idade e com uma mensagem boa. Ela é fantasia de propósito: não invente explicações "reais" para o maravilhoso (a "estrelinha-do-mar" que era a luz do lago foi reprovada pelo humano, 2026-10-25).
 - Um episódio que **depende de outro que saiu** também sai, ou ganha outro motivo (os quadrilheiros vinham buscar Dom Quixote por ter soltado os galeotes, que não contamos).
 - **Fios longos** são o que mais sofre no resumo: a ilha prometida a Sancho, Sansão Carrasco, o elmo de Mambrino, o livro famoso. A tabela de fios do plano (§3) é obrigatória.
 
@@ -47,12 +48,12 @@ Registrados em [`PLANO-PARTES-2-4.md`](../PLANO-PARTES-2-4.md) §2. Em resumo: f
 | 1 · O Cavaleiro da Super Imaginação | 1605 | 1–8 | 1–7 | publicada |
 | 2 · Exércitos de Lã e o Elmo Encantado | 1605 | 8–21 | 8–15 | publicada |
 | 3 · Serra Morena e a Princesa Micomicona | 1605 | 23–38 | 16–22 | publicada |
-| 4 · (nova) O Elmo, a Bacia e a Jaula Encantada | 1605 | 39–52 | 23–32 | a Parte 4 antiga continua no ar até a nova ser publicada |
-| 5 · O Livro Famoso e o Cavaleiro dos Leões | 1615 | 1–29 | 30–37 | na fila |
-| 6 · O Palácio dos Duques e a Ilha de Sancho | 1615 | 30–57 | 38–45 | na fila |
-| 7 · O Cavaleiro da Branca Lua | 1615 | 58–74 | 46–53 | na fila |
+| 4 · (nova) O Elmo, a Bacia e a Jaula Encantada | 1605 | 39–52 | 23–33 | a Parte 4 antiga continua no ar até a nova ser publicada |
+| 5 · O Livro Famoso e o Cavaleiro dos Leões | 1615 | 1–29 | a partir do 34 | na fila |
+| 6 · O Palácio dos Duques e a Ilha de Sancho | 1615 | 30–57 | — | na fila |
+| 7 · O Cavaleiro da Branca Lua | 1615 | 58–74 | — | na fila |
 
-Títulos das Partes 4 a 7 provisórios. Escaletas, fios e andamento: plano.
+Títulos das Partes 4 a 7 provisórios. A nova Parte 4 ganhou um capítulo na fase 5 (o 30 virou dois), então a numeração das Partes 5–7 é fechada na fase 1 de cada uma, continuando de onde a anterior parou. Escaletas, fios e andamento: plano.
 
 ---
 
@@ -66,6 +67,11 @@ O motor tem as duas lentes; outro livro só usa um recurso assim se o mapa da ob
 - **Quem imagina?** Por padrão, Dom Quixote. Exceções escritas na página: Sancho governador vê a si mesmo como sábio; na liberdade, Sancho é ele mesmo; no final, a imaginação é a das crianças que ouvem o vovô Alonso.
 - **Episódios encenados por outros** (o teatro dos duques, Clavilenho, as Cortes da Morte, as damas barbudas): a Realidade mostra os bastidores (criados com foles e tochas), e a Imaginação, o que os heróis acreditam ver.
 - Na fase 2, cada página ganha uma linha da tabela: Realidade, Imaginação, legenda de cada lente e hotspots.
+- **Nem toda página precisa de lente** (humano, 2026-10-25). Sem `imag` na cena, o motor não mostra a chave:
+  - **uma história contada** por um personagem já é toda imaginação: ela é desenhada **dentro do balão** da cena (o Cavaleiro do Lago, Parte 4, cap. 28);
+  - **uma página da vida real** em que Dom Quixote não imagina nada (a cabra fujona, o encontro de perto com a romaria) fica só com a Realidade;
+  - a lente vale onde há **engano** de Dom Quixote para mostrar (a romaria vista de longe: vilões levando uma princesa).
+- **A Imaginação é a recompensa da atividade** (humano, 2026-10-25): nas páginas com atividade, a chave fica trancada (🔒) até a criança acertar; um toque nela antes disso só dá uma dica (motor, `AGENTS.md` §2.5).
 
 ### 3.2 A Imaginação precisa TRANSFORMAR (a lição mais importante da arte)
 - As 9 Imaginações da Parte 2 foram reprovadas pelo humano porque **trocavam só um detalhe** ("mantiveram os elementos da realidade, sem verdadeiramente transformar a cena e os personagens"). Foram refeitas.
@@ -82,6 +88,8 @@ O motor tem as duas lentes; outro livro só usa um recurso assim se o mapa da ob
 ### 3.3 Continuidade dos personagens
 - A bacia **amassada** depois do tombo nos moinhos (Parte 2), a **"janelinha"** de dois dentes depois das ovelhas (Parte 2), a **bacia nova do barbeiro** a partir do elmo de Mambrino (Parte 2, cap. 15), o **camisolão** (Parte 3).
 - Fichas de todos os personagens (Realidade) em `tools/arte/dom-quixote-comum.mjs` e em `docs/TODO-NANO-BANANA-PARTES-2-4.md` §0.3; referências em `dom-quixote/biblioteca/referencias/`.
+- **Fantasias, montarias e objetos que voltam numa página seguinte**: recorte-os da arte aprovada e passe o recorte como referência (`ARTE-PELA-API.md` §4.3). Na nova Parte 4: os "magos" do padre e de Nicolau (`biblioteca/referencias/personagens/magos-de-mentira-padre-e-nicolau.png` e `magos-celestes-padre-e-nicolau.png`) e **um cavalo para cada um** (o padre num tordilho, Nicolau num preto): ninguém monta Rocinante além de Dom Quixote.
+- **Quem está na viagem aparece na cena**: o padre e mestre Nicolau acompanham Dom Quixote dos caps. 25 a 32 da Parte 4; a página que os esquece (a cabra fujona, 1ª versão) recebe a crítica "cadê o padre?".
 
 ---
 
@@ -89,6 +97,9 @@ O motor tem as duas lentes; outro livro só usa um recurso assim se o mapa da ob
 
 | Data | Lição | Virou regra em |
 | :--- | :--- | :--- |
+| 2026-10-25 | Página de história contada ou de vida real não precisa de lente; a Imaginação vira recompensa da atividade | §3.1 |
+| 2026-10-25 | A história que Dom Quixote conta é a de Cervantes, fantasia de propósito: explicação "real" (a estrelinha-do-mar) estraga | §1.2 |
+| 2026-10-25 | Os "magos" da jaula mudaram de fantasia de uma página para a outra e Nicolau montou Rocinante: recortes da arte aprovada como referência resolvem | §3.3, `ARTE-PELA-API.md` §4.3 |
 | 2026-10-25 | 81 capítulos em 7 páginas deixaram a Parte 4 apressada e mal encadeada; a divisão precisa de regras de proporção e de uma tabela de fios | §1.1, §1.2 |
 | 2026-10-25 | A assinatura da carta funcionou porque retomava o apelido da Triste Figura, plantado uma parte antes: fios bons dão as melhores atividades | §1.2, receita geral §6.2 |
 | 2026-10-24 | Imaginação que muda só um detalhe não encanta; precisa transformar personagens e mundo | §3.2 |

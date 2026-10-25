@@ -3,12 +3,16 @@
 // dom-quixote/parte-4-rascunho.html. A lista da Parte 4 antiga ficou em dom-quixote-parte-4-v1.mjs.
 // Rodadas: (1) Realidades + camadas soltas; (2) Imaginações (edição da Realidade aceita) e a p6-real
 // (que usa a p5-real como cenário); (3) a p6-imag e o que falhar.
-// A p9 (chegada à aldeia) reaproveita a arte da v1 (imagens/acervo/parte-4-v1/p2-*), sem pedido aqui.
+// Revisão da fase 5 (2026-10-25, notas do humano): o cap. 30 virou dois (págs. 8 e 9), a estrutura passou a
+// 12 páginas (caps. 23 a 33) e a noite foi para a pág. 11 (p11-*). As págs. 6, 7 e 9 não têm Imaginação.
+// Continuidade das fantasias e dos cavalos: recortes da arte aprovada em biblioteca/referencias/personagens/
+// (magos-de-mentira-*, magos-celestes-*), passados como referência e citados no prompt (ARTE-PELA-API §4.3).
 import { P1, P2, REF, estilo, estiloCamada, imaginacao, personagens } from './dom-quixote-comum.mjs';
 
 const P3 = 'dom-quixote/imagens/parte-3';
 const P4 = 'dom-quixote/imagens/parte-4';
 const V1 = 'dom-quixote/imagens/acervo/parte-4-v1';
+const PERS = 'dom-quixote/biblioteca/referencias/personagens';
 
 export default {
     modelo: 'gemini-3.1-flash-image',
@@ -18,7 +22,9 @@ export default {
         BARBEIRO_BACIA: "the barber of the basin (from the rain episode of the second reference): a small, wiry village barber with a brown felt hat, a short grey travelling cape over a brown doublet and a long nose, comically indignant but harmless",
         EUGENIO: "Eugenio, a young goatherd of about twenty with curly brown hair, a sheepskin vest over a cream shirt, brown breeches and a wooden shepherd's crook",
         MANCHADINHA: "Manchadinha, a small, lively nanny goat with a white coat covered in big black patches, little curved horns and a tiny beard",
-        GATO: "the little orange tabby cat of Don Quixote's house (as in the reference)"
+        GATO: "the little orange tabby cat of Don Quixote's house (as in the reference)",
+        CAVALO_PADRE: "the priest's own horse: a plump, calm dapple-grey horse with a dark grey mane",
+        CAVALO_NICOLAU: "the barber's own horse: a black horse with a white blaze on its face and white socks"
     },
 
     pedidos: [
@@ -72,15 +78,17 @@ Mysterious but gentle and funny.`
         },
 
         // ---------------- Pág. 4 · Cap. 26: encantado sente fome? ----------------
+        // ---------------- Pág. 4 · Cap. 26: encantado sente fome? (refeita na revisão da fase 5) ----------------
+        // 1ª versão: os "magos" saíram sem a fantasia da pág. 3 e mestre Nicolau montado em Rocinante.
         {
             id: 'p4-real', destino: `${P4}/p4-real.png`,
-            refs: [`${V1}/p1-real.webp`, `${P3}/p7-real.webp`],
-            prompt: `A country road through golden wheat fields at midday.
-COMPOSITION (important):
-- Two white oxen pull a wooden ox cart from left to right, slowly; on the cart, a cage made of wooden slats, and inside it [QUIXOTE] (without his helmet) sits calmly, his thin hand on his belly.
-- In the LEFT third, next to the cage (from about 15% to 40% of the width), [SANCHO] rides [BURRICO] right up to the bars and whispers to his master, one finger raised, clever and caring.
-- Behind the cart, [PADRE] and [BARBEIRO] walk with the white bed sheets of their costume still over their shoulders and the pointed cardboard masks pushed up on top of their heads (faces visible), trying not to laugh.
-- [ROCINANTE] walks tied behind the cart.
+            refs: [`${P4}/p4-real.webp`, `${PERS}/magos-de-mentira-padre-e-nicolau.png`, `${P4}/p3-real.webp`],
+            prompt: `Repaint the FIRST reference image (an earlier version of this very page): keep the same country road through golden wheat fields at midday, the same camera, the two white oxen pulling the wooden ox cart from left to right, the cage of wooden slats with [QUIXOTE] (without his helmet) sitting calmly inside, one thin hand on his belly, and [SANCHO] on [BURRICO] right next to the bars, whispering to his master with one finger raised. Keep all of them exactly.
+CHANGE ONLY THE RIGHT PART OF THE PICTURE (from about 62% to 100% of the width):
+- [ROCINANTE] walks tied by a rope to the back of the cart, with an EMPTY saddle: NOBODY rides Rocinante.
+- Behind him, side by side, the two pretend wizards ride their OWN horses: [PADRE] on [CAVALO_PADRE] and [BARBEIRO] on [CAVALO_NICOLAU]. The two horses must look clearly different from Rocinante (a grey one and a black one).
+- The two riders wear EXACTLY the same costumes as in the SECOND reference image (copy them): an old white bed sheet hanging from the shoulders like a long robe, a wide-brimmed brown cardboard wizard hat painted with big yellow stars and a crescent moon, and the painted curly cardboard moustache; the priest keeps his small round spectacles. Same faces as in the second and third reference images. They try not to laugh.
+IMPORTANT: NO white pointed hoods, NO hoods covering the head, NO masks pushed up on the head: the sheets hang from the shoulders and the heads wear the cardboard star hats.
 Sunny, tender and funny.`
         },
 
@@ -114,14 +122,18 @@ Peaceful, sunny, friendly.`
         },
 
         // ---------------- Pág. 6 · Cap. 28: o Lago de Cristal (contagem: concha, pérolas, peixinhos) ----------------
+        // ---------------- Pág. 6 · Cap. 28: o Cavaleiro do Lago (contagem: concha, pérolas, peixinhos) ----------------
+        // Refeito na revisão da fase 5: a história é a de Cervantes (I-50), e a imaginação fica só no balão.
         {
             id: 'p6-real', destino: `${P4}/p6-real.png`,
-            refs: [`${P4}/p5-real.webp`, `${P2}/camadas/p6-balao-historia.webp`],
-            prompt: `The same meadow, oak tree and stream as the first reference image, in the afternoon (the tablecloth is folded away).
-COMPOSITION (important):
-- In the LEFT half, under the oak, [QUIXOTE] (without the basin) sits on a root, telling a story with one hand raised toward the sky, eyes shining. [SANCHO], [PADRE] and [BARBEIRO] sit around him on the grass, leaning against the trunk, listening open-mouthed.
-- In the RIGHT half (from about 50% to 97% of the width, from about 5% to 80% of the height), a big soft cloud-shaped STORY BALLOON painted in pale watercolour (like the second reference image), with a small trail of round bubbles going down toward Don Quixote. Inside the balloon: the bottom of a crystal-clear blue lake, with a shining palace of crystal and gold in the background and a little glowing golden starfish above it; the lower part of the balloon is a flat floor of WHITE SAND that stays EMPTY (no shells, no pearls, no fish: the book adds them).
-Dreamy and enchanting.`
+            refs: [`${P4}/p6-real.webp`, `${P1}/p7-imag.webp`],
+            prompt: `Repaint the FIRST reference image (an earlier version of this very page): keep EVERYTHING outside the big story balloon exactly as it is (the meadow, the oak tree, the stream, [QUIXOTE] telling the story with one hand raised, [SANCHO], [PADRE] and [BARBEIRO] listening, the same places and poses), and keep the balloon's shape, place and size and its trail of little round bubbles going down toward Don Quixote.
+REPAINT ONLY THE INSIDE OF THE STORY BALLOON: the tale of the Knight of the Lake from the old books of chivalry, after he has jumped into the enchanted lake. Inside the balloon:
+- a sunny field full of colourful flowers under a clear blue sky, with little birds flying;
+- on the right side of the balloon, a fairytale CASTLE with walls of gleaming gold and towers and battlements of sparkling diamonds, its gate wide open; three smiling FAIRIES (long pastel dresses, little translucent wings, crowns of flowers) come out of the gate to welcome the knight with flowers;
+- on the left side of the balloon, a young KNIGHT in shining silver armour with a blue plume walks toward the castle, amazed, a few water drops still glittering on him;
+- the LOWER THIRD of the balloon is a crystal-clear brook running across the whole balloon over a bed of GOLDEN SAND. This golden sand stays EMPTY: no shells, no pearls, no fish on it (the book adds them).
+Dreamy, luminous and enchanting, never dark or scary.`
         },
         {
             id: 'p6-concha', destino: `${P4}/camadas/p6-concha.png`, camada: true,
@@ -140,33 +152,54 @@ Dreamy and enchanting.`
         },
 
         // ---------------- Pág. 7 · Cap. 29: a cabra fujona ----------------
+        // ---------------- Pág. 7 · Cap. 29: a cabra fujona ----------------
+        // Revisão da fase 5: a 1ª versão (a 1ª referência) esqueceu o padre; esta edição só o acrescenta.
         {
             id: 'p7-real', destino: `${P4}/p7-real.png`,
-            refs: [`${P2}/p3-real.webp`, `${P3}/p7-real.webp`],
-            prompt: `The same green meadow by an old oak tree, with a rocky slope in the background, afternoon light. A red-and-white checkered tablecloth lies a little messed up on the grass.
-COMPOSITION (important):
-- In the CENTRE-RIGHT (from about 50% to 75% of the width), [QUIXOTE] (in his armour, the brass basin a little crooked on his head) kneels on one knee and gently holds out a piece of bread crust; [MANCHADINHA] (from about 38% to 52% of the width) sniffs his fingers and rubs her muzzle on his armour, calm and cuddly.
-- On the LEFT (from about 10% to 32% of the width), [EUGENIO] has just sat down on the grass, out of breath, his tongue out, his crook in his hand, laughing.
-- On the far RIGHT, [SANCHO] and [BARBEIRO] sit on the grass where they fell, one against the other, roaring with laughter.
-Funny, tender and lively.`
+            refs: [`${P4}/p7-real.webp`, `${P4}/p6-real.webp`],
+            prompt: `Repaint the FIRST reference image EXACTLY as it is (same meadow, oak tree, rocky slope, goats in the background, checkered tablecloth, the young goatherd laughing on the LEFT, Don Quixote kneeling and giving bread to the spotted goat in the CENTRE, Sancho and the barber laughing on the grass on the far RIGHT, same places, poses, colours and line work).
+ADD ONLY ONE CHARACTER: [PADRE] (exactly as in the second reference image: black cassock, small round spectacles, round kind face) standing by the oak trunk on the RIGHT, just behind Sancho and the barber, laughing with one hand on his belly. Do not change or add anything else.`
         },
 
         // ---------------- Pág. 8 · Cap. 30: a romaria ----------------
+        // ---------------- Pág. 8 · Cap. 30: a romaria lá longe (o que Dom Quixote vê) ----------------
         {
             id: 'p8-real', destino: `${P4}/p8-real.png`,
-            refs: [`${P2}/p8-real.webp`, `${P2}/p3-real.webp`],
-            prompt: `A dry country road in La Mancha under a hot afternoon sun: the fields are dry and cracked, dusty, a few thirsty olive trees, a windmill far away.
+            refs: [`${P4}/p9-real.webp`, `${P4}/p6-real.webp`, `${P2}/p8-real.webp`],
+            prompt: `A wide view of a dry country landscape of La Mancha under a hot afternoon sun: cracked dry fields, thirsty olive trees, a windmill on a far hill, a long dusty road winding into the distance.
 COMPOSITION (important):
-- In the LEFT half (from about 5% to 50% of the width), a humble procession of farming families walks toward the right: four men carry on their shoulders a small wooden litter decorated with wildflowers, on which stands a small figure completely covered by a plain blue cloak (nothing of it is visible). Around them, a woman plays a tambourine, a boy plays a little flute, children carry flowers; sunburnt, calm, kind faces.
-- In the RIGHT half (from about 58% to 85% of the width), [QUIXOTE] stands beside [ROCINANTE], his lance lowered to the ground, holding the brass basin against his chest, his head bowed with deep respect.
-- Between them, an old farmer with a kind smile offers Don Quixote a clay cup of water and a little bunch of wildflowers.
-- Next to Don Quixote, [SANCHO] smiles, relieved, one hand on Rocinante's neck.
-Warm, respectful, gentle; no weapons raised.`
+- In the LEFT FOREGROUND (from about 5% to 40% of the width, big and close), [QUIXOTE] rides [ROCINANTE], seen from three-quarter back so that we look where he looks: he leans forward in the saddle, eyes wide with excitement, pointing his long wooden lance toward the far road. Rocinante, startled, lifts a front leg.
+- Next to them, [SANCHO] on [BURRICO] scratches his head, puzzled.
+- Behind them, small: [PADRE] on [CAVALO_PADRE] and [BARBEIRO] on [CAVALO_NICOLAU] (in their ordinary clothes, as in the second reference image), next to the slow ox cart with the empty wooden cage loaded with travel bags.
+- FAR AWAY in the RIGHT half (from about 55% to 95% of the width, in the upper middle of the picture, SMALL), on the dusty road, a procession of farming families walking slowly (the same people as in the first reference image): four tiny men carry on their shoulders a wooden litter decorated with flowers, and on it stands a small figure wrapped in a BLUE MANTLE, like a lady; tiny people with a tambourine and coloured ribbons follow. It must clearly be far away and small.
+Bright, comic and adventurous.`
         },
 
-        // ---------------- Pág. 10 · Cap. 32: sonhos à janela ----------------
+        // ---------------- Pág. 9 · Cap. 31: os vizinhos da estrada (a 1ª referência é a antiga pág. 8) ----------------
+        {
+            id: 'p9-real', destino: `${P4}/p9-real.png`,
+            refs: [`${P4}/p9-real.webp`, `${P4}/p6-real.webp`],
+            prompt: `Repaint the FIRST reference image EXACTLY as it is (same dry country road, the procession of farming families with the tambourine, the flute and the flowers on the LEFT, the old farmer offering a clay cup and wild flowers in the CENTRE, Don Quixote with bowed head holding the brass basin beside Rocinante and Sancho on the RIGHT; same places, poses, colours and line work). Only TWO changes:
+1. The figure on the flowered litter must be a STATUE OF A SAINT, the Virgin Mary as in old Spanish village churches: a carved and painted wooden statue with a gentle, serene painted FACE clearly visible (rosy cheeks, kind eyes looking down), a small golden crown and a thin golden halo, a blue mantle with little golden stars over her head and shoulders, a white and pink dress, her hands joined in prayer. NOT a faceless hooded figure, NOT a mannequin, nothing covering her face.
+2. In the BACKGROUND, under the far windmill, small: [PADRE] and [BARBEIRO] (as in the second reference image) arrive on their horses, smiling.
+Warm, respectful, gentle.`
+        },
+
+        // ---------------- Pág. 10 · Cap. 32: de volta para casa (Teresa e Sanchica abraçam o burrico) ----------------
         {
             id: 'p10-real', destino: `${P4}/p10-real.png`,
+            refs: [`${V1}/p2-real.webp`, `${P4}/p6-real.webp`],
+            prompt: `The same sunny village square as the FIRST reference image (whitewashed houses with red tile roofs, a stone fountain, neighbours smiling at the windows), with the same characters' designs.
+COMPOSITION (important):
+- On the LEFT (from about 12% to 42% of the width), [QUIXOTE] (in his armour, without the basin) is hugged by [SOBRINHA] and [GOVERNANTA], both crying with joy, exactly as in the first reference image.
+- On the RIGHT (from about 58% to 95% of the width): [TERESA] (colourful headscarf) and [SANCHICA] (two braids) both hug the neck of [BURRICO] with their eyes closed, full of love. Right next to them, [SANCHO] stands with his arms wide open for a hug that nobody gives him, with a comically puzzled, disappointed face.
+- In the BACKGROUND, small: the ox cart with the empty wooden cage loaded with bags, [ROCINANTE], and [PADRE] and [BARBEIRO] standing next to their horses (a grey one and a black one), laughing.
+Joyful, warm and funny.`
+        },
+
+        // ---------------- Pág. 11 · Cap. 33: sonhos à janela ----------------
+        {
+            id: 'p11-real', destino: `${P4}/p11-real.png`,
             refs: [`${P1}/p1-real.webp`, `${P3}/camadas/p2-quixote-camisolao.webp`],
             prompt: `Don Quixote's bedroom in his house (same style of house as the first reference), at night, cosy and tidy, lit by moonlight and a small candle.
 COMPOSITION (important):
@@ -200,8 +233,9 @@ Peaceful, warm, poetic.`
         },
         {
             id: 'p4-imag', destino: `${P4}/p4-imag.png`, imaginacao: true,
-            refs: [`${P4}/p4-real.webp`, `${V1}/p1-imag.webp`, `${P1}/p7-imag.webp`],
-            prompt: `Don Quixote still believes he is enchanted: the wooden cage becomes the enchanted CRYSTAL CARRIAGE of the second reference image, glittering with light, pulled by the two white bulls with golden horns and flower garlands. Inside, the golden knight sits serenely. The wheat fields become a meadow of golden flowers with sparkles. The priest and the barber walking behind become two enchanters in starry cloaks with their starry masks pushed up on their heads. Sancho the squire, on his festive donkey in the same place, whispers to his master like a wise little counsellor, a small golden sparkle of wisdom above his raised finger.`
+            refs: [`${P4}/p4-real.webp`, `${PERS}/magos-celestes-padre-e-nicolau.png`, `${V1}/p1-imag.webp`, `${P1}/p7-imag.webp`],
+            prompt: `Don Quixote still believes he is enchanted: the wooden cage becomes the enchanted CRYSTAL CARRIAGE of the third reference image, glittering with light, pulled by the two white bulls with golden horns and flower garlands. Inside, the golden knight sits serenely. The wheat fields become a meadow of golden flowers with sparkles. Sancho the squire, on his festive donkey in the same place, whispers to his master like a wise little counsellor, a small golden sparkle of wisdom above his raised finger.
+The two riders on the right become the two CELESTIAL WIZARDS EXACTLY as in the SECOND reference image (copy them: long sky-blue cloaks embroidered with silver stars and moons, tall pointed starry wizard hats, long white beards, kind faces), each riding his OWN horse in the same place and pose: the grey horse becomes a silver horse with a starry blue blanket, the black horse becomes a midnight-black horse with a starry blanket. The skinny horse tied behind the cart becomes the white steed, tied with ribbons and with an empty saddle.`
         },
         {
             id: 'p5-imag', destino: `${P4}/p5-imag.png`, imaginacao: true,
@@ -209,24 +243,25 @@ Peaceful, warm, poetic.`
             prompt: `The picnic becomes a royal BANQUET of noble knights: the checkered cloth becomes a silk tablecloth embroidered with gold, covered with golden plates, a big golden loaf, a wheel of cheese, a crystal pitcher of sparkling water and baskets of fruit. The oak becomes a magnificent tree with golden fruits and little lanterns; the stream becomes a shimmering silver river. The priest and the barber become noble lords in velvet. The golden knight sits cross-legged in the same place, his golden helmet with the red plume resting on the grass next to him (his face uncovered). The white steed and the festive donkey graze by the river.`
         },
         {
-            id: 'p7-imag', destino: `${P4}/p7-imag.png`, imaginacao: true,
-            refs: [`${P4}/p7-real.webp`, `${P2}/p3-imag.webp`, `${P1}/p7-imag.webp`],
-            prompt: `The meadow becomes an enchanted FAIRY WOOD with giant flowers, glowing mushrooms and fireflies. The young goatherd becomes the GUARDIAN OF THE WOODS: a young shepherd of the Golden Age with a crown of leaves and flowers, a green tunic and a crook that sprouts leaves and little blossoms, laughing in the same place and pose. The spotted goat becomes a little magical creature: a snow-white goat with silver spots that sparkle like stars, small golden horns and a garland of flowers, in the same place and pose, nuzzling the knight's hand. The golden knight kneels in the same pose. Sancho the squire and the barber (now a jolly minstrel in colourful clothes) laugh on the grass in the same place.`
-        },
-        {
             id: 'p8-imag', destino: `${P4}/p8-imag.png`, imaginacao: true,
-            refs: [`${P4}/p8-real.webp`, `${P2}/p3-imag.webp`, `${P1}/p7-imag.webp`],
-            prompt: `The dry fields become a land waiting for spring, with soft golden light and the first green shoots sparkling in the cracks. The procession of farmers becomes a solemn and joyful procession of the GUARDIANS OF THE EARTH: farmers in tunics of green, ochre and wheat-gold with crowns of wheat ears and flowers, carrying the litter in the same place; the litter becomes a little altar covered with luminous flowers, glowing softly, with the plain blue cloak now embroidered with silver stars (still nothing visible under it). The tambourine and flute ribbons float in the air with little golden musical notes. On the right, the golden knight bows his head with respect beside the white steed, in the same place and pose, holding his golden helmet against his chest; the old farmer offers him a crystal cup of water and a bouquet of glowing flowers. Sancho the squire stands in the same place.`
+            refs: [`${P4}/p8-real.webp`, `${P1}/p7-imag.webp`, `${P4}/p0-imag.webp`],
+            // 1ª tentativa: o Sancho saiu duas vezes e a romaria veio para perto; refeita com as regras abaixo
+            prompt: `KEEP THE COMPOSITION OF THE FIRST REFERENCE IMAGE EXACTLY: the knight and his horse big in the left foreground, Sancho ONCE (only one Sancho in the whole picture) on his donkey just right of the horse, the priest and the barber on their two horses and the cart in the middle distance, and the procession FAR AWAY on the road on the right, as SMALL as in the reality version (the figures no taller than one tenth of the picture height).
+This is what Don Quixote believes he sees. The dry landscape becomes a dramatic fairytale valley under a violet and golden sky, with a castle on the far hill instead of the windmill. The golden knight on the white steed charges heroically in the same place and pose, pointing his golden lance toward the far road; Sancho the squire on his festive donkey scratches his head in the same place.
+FAR AWAY on the road, in the same place and as small as in the reality version, the procession becomes a band of comic storybook VILLAINS in dark purple capes and big floppy black hats with feathers, with twirled moustaches, looking more silly than scary (NO hoods, NO masks, NO weapons), carrying away on a dark wooden palanquin a captive PRINCESS in a blue mantle with a little golden crown, who reaches out her hand for help.
+The priest and the barber behind become two courtiers in velvet on their festive horses; the ox cart becomes the crystal carriage.`
         },
         {
-            id: 'p10-imag', destino: `${P4}/p10-imag.png`, imaginacao: true,
-            refs: [`${P4}/p10-real.webp`, `${P1}/p7-imag.webp`, `${REF}/leao-guardiao.png`],
+            id: 'p11-imag', destino: `${P4}/p11-imag.png`, imaginacao: true,
+            refs: [`${P4}/p11-real.webp`, `${P1}/p7-imag.webp`, `${REF}/leao-guardiao.png`],
             prompt: `EXCEPTION for this page: this is Don Quixote's DREAM. The sleeper in the bed stays exactly as he is (the old man in his white nightshirt, eyes closed, smiling, in the same place), NOT the golden knight. The walls and ceiling of the room dissolve into a deep blue night sky full of constellations, comets and stardust. Above the bed, as a glowing dream vision, the golden knight rides his white steed galloping among the stars, his crimson cape flying, with Sancho the squire on his festive donkey following him. At the foot of the bed, in the same place, the little cat has become the gentle GUARDIAN LION with a golden crown (like the third reference image), lying down peacefully, watching over the sleeper. Through the window on the right, the full moon smiles and the windmills shine softly. Tender, magical, never scary.`
         },
         {
-            id: 'p6-imag', destino: `${P4}/p6-imag.png`, imaginacao: true,
-            refs: [`${P4}/p6-real.webp`, `${P1}/p7-imag.webp`, `${REF}/don-quixote-cavaleiro-dourado.png`],
-            prompt: `EXCEPTION for this page: this is the story Don Quixote is telling, and the WHOLE page becomes the inside of the story balloon. At the bottom of a crystal-clear turquoise lake, on white sand, the golden knight stands where Don Quixote sits in the reality version, looking with wonder at a magnificent PALACE OF CRYSTAL AND GOLD rising on the right side of the picture, lit by a little glowing golden starfish shining above its tallest tower. Around him: a golden scallop shell on the sand, pearls glowing softly, and a happy school of little silver fish swimming by; seaweed, corals, sunbeams coming down through the water, a few bubbles. The other listeners are NOT in this picture. Luminous, peaceful, wondrous; never dark or scary.`
+            id: 'p10-imag', destino: `${P4}/p10-imag.png`, imaginacao: true,
+            // 1ª tentativa (com a imaginação da v1 como referência): copiou a composição antiga e perdeu a piada do burrico
+            refs: [`${P4}/p10-real.webp`, `${P1}/p7-imag.webp`],
+            prompt: `KEEP THE COMPOSITION OF THE FIRST REFERENCE IMAGE EXACTLY, especially the joke on the right: Teresa and Sanchica hug the DONKEY (NOT Sancho), and Sancho stands ALONE next to them with his arms wide open for a hug nobody gives him, with a comically puzzled face.
+The village square becomes a TRIUMPHAL RECEPTION for great heroes: arches of flowers, carpets of petals on the ground, banners and garlands between the houses, golden confetti in the air, the fountain sparkling. The golden knight is hugged by his niece and the housekeeper (now in festive dresses with flower crowns) in the same place and pose. On the right, Teresa and Sanchica (in festive dresses) hug the neck of the donkey, which wears a magnificent red-and-gold festive blanket with tassels and a garland of flowers, in the same place and pose; Sancho the squire stands next to them with his arms wide open, in the same comically puzzled pose. The cart in the background becomes the crystal carriage; the priest and the barber become smiling courtiers in velvet.`
         }
     ]
 };

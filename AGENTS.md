@@ -49,7 +49,7 @@ Agentes podem estar trabalhando **em paralelo** no mesmo repositório, cada um n
 - **Proposta Pedagógica**: Aproximar as crianças das maiores obras-primas da literatura universal através de uma experiência interativa, sensorial, visualmente rica e de toque acolhedor.
 - **Tipos de adaptação** (receita geral §2): **condensação** de obras longas (resumir e escolher, como em Dom Quixote) e **adequação/ampliação** de obras curtas (atualizar para hoje e para a idade, às vezes ficando maior que o original; receita ainda a escrever). As decisões de cada obra ficam na receita específica dela, em `docs/receitas/`.
 - **Obra Piloto**: *Dom Quixote de La Mancha*, adaptado diretamente da obra de Miguel de Cervantes, em **dois volumes, como o original**:
-  - **Primeiro volume (1605), Partes 1 a 4**, na prateleira de cima (capítulos numerados em sequência: 1–7, 8–15, 16–22, 23–29; Parte 2 com 9 páginas ao abrir com o tombo nos moinhos). Parte 1: *O Cavaleiro da Super Imaginação*; Parte 2: *Exércitos de Lã e o Elmo Encantado*; Parte 3: *Serra Morena e a Princesa Micomicona*. Decisões de adaptação e o mapa de interações das Partes 2–3 estão em `docs/PLANO-PARTES-2-4.md`.
+  - **Primeiro volume (1605), Partes 1 a 4**, na prateleira de cima (capítulos numerados em sequência: 1–7, 8–15, 16–22 e 23–33 na nova Parte 4; Parte 2 com 9 páginas ao abrir com o tombo nos moinhos). Parte 1: *O Cavaleiro da Super Imaginação*; Parte 2: *Exércitos de Lã e o Elmo Encantado*; Parte 3: *Serra Morena e a Princesa Micomicona*. Decisões de adaptação e o mapa de interações das Partes 2–3 estão em `docs/PLANO-PARTES-2-4.md`.
   - **Correção de rumo (2026-10-25)**: a Parte 4 atual (*A Jaula Encantada e a Ilha de Sancho*) resumia 81 capítulos em 7 páginas e ficou apressada. Ela será **refeita para fechar o primeiro volume**, e o **segundo volume (1615)** vira pelo menos **três partes novas (5 a 7)**, na prateleira de baixo. Plano, escaletas e andamento: `docs/PLANO-DOM-QUIXOTE-PARTES-4-7.md`. O que vale só para Dom Quixote (a condensação e as lentes): `docs/receitas/DOM-QUIXOTE.md`.
 - **Diretriz de Dispositivo**: **Tablet-First** (iPad, Samsung Galaxy Tab). Dimensões alvo prioritárias:
   - **Tablet Retrato (Portrait)**: 800 × 1280 px
@@ -167,10 +167,10 @@ window.LIVRO = {
     comandoAtividade?: '...',             // instrução da atividade num quadro destacado (.quadro-atividade); lida só pelo 🔊 próprio
     texto: `Parágrafos separados por linha em branco. Palavras-chave: {{CARVALHO|CAR • VA • LHO|🌳}}`,
     cena: {
-      real, imag, alt, emoji /* do aviso "ilustração a caminho" */, legendaReal, legendaImag,
+      real, imag? /* sem imag, a página não tem a chave das lentes */, alt, emoji /* do aviso "ilustração a caminho" */, legendaReal, legendaImag?,
       hotspots: [{ x, y, w, h, palavra, emoji, emojiImag?, lente?: 'real'|'imag', acao? }],
       camadas: [{ id, src | fundo /* véu CSS */, x, y, w, h?, z?, anim?, lente?, item?, ate?, emoji }],
-      cartoes: { tipo, itens: [{ id, palavra, emoji, icone?, borda?, som?, animar?, efeito?, acao?, domId? }], ... },
+      cartoes: { tipo, itens: [{ id, palavra, emoji, icone?, borda?, som?, animar?, efeito?, acao?, domId?, figura?, pegadinha? }], ... },
       realCena?: (estado) => ({ src, legenda }) | null,   // variação da Realidade calculada pelo estado
       extra?, precarregar?, aoTrocarLente?
     }
@@ -186,8 +186,11 @@ window.LIVRO = {
   | `camadas` | cada item mostra/esconde camadas (`item`/`ate`) e pode disparar um `efeito`; qualquer ordem | mesa dos pastores, bengala |
   | `contagem` | um cartão; cada toque revela a próxima camada de `sequencia` e fala `falas[n]` | cabras no barco |
   | `ordem` | palavras na ordem certa, escritas numa faixa e lidas em voz alta | assinatura da carta |
+  | `pedido` | a faixa mostra a **figura** do que o personagem quer (`pedidos`, na ordem; `figura` de cada item); os cartões têm só a palavra. Acerto: a camada do item aparece e a palavra é lida; item certo fora da vez: dica. Itens com `pegadinha` (uma fala) fazem uma bagunça engraçada e a brincadeira recomeça | o lanche de Sancho (PÃO × PIÃO, QUEIJO × QUEIXO, ÁGUA × ÁGUIA) |
   | `acao` | chama `LIVRO.acoes[item.acao]` com a API da página | vento nos moinhos |
   | `livre` | só celebra. **Evite** (§3.3) | (provisório) |
+- **A Imaginação é a recompensa** (regra do humano, 2026-10-25, vale para todos os livros): numa página com cartões, a chave da lente fica **trancada** (🔒, `.lente-trancada`) até a atividade terminar (`atividadeConcluida`: cada tipo tem o seu "acertou"; no `acao`, quando a ação chama `definirLente(true)` ou o cartão é usado). Um toque na chave trancada só dá uma dica (a legenda avisa e o próximo cartão balança). Voltar para a Realidade nunca é bloqueado; `?imag=1` (testes) abre direto; o 🔄 Recomeçar tranca de novo.
+- **Página sem Imaginação**: sem `imag` na cena, a chave não aparece (ex.: uma história contada por um personagem, já desenhada dentro do balão; uma página da vida real).
 - **Arte ausente não quebra nada**: cena sem arquivo mostra "🎨 Ilustração a caminho"; camada sem arquivo mostra o `emoji` dela. Assim o texto e as interações podem ser escritos e testados **antes** da arte do Nano-Banana.
 - **Rascunho** (`rascunho: true`): o livro mostra o selo "📝 Rascunho", lê só com a voz do aparelho em português (a narração gravada e as traduções seriam de outro texto; `?narracao=1` libera a gravação para a escuta da fase 6), não carrega traduções e guarda o progresso numa chave à parte (`cv-progresso-…-rascunho`), sem mexer no "Continuar lendo" da estante. A obra em produção também tem uma entrada em `assets/js/acervo.js` (§3.4). Uma versão nova de uma parte já publicada nasce num arquivo à parte (ex.: `parte-4-rascunho.html`).
 - **Eventos delegados** (sem `onclick` no HTML): palavras-chave (`data-palavra`), lente (`data-lente`), hotspots (`data-hotspot`) e navegação (`data-nav`).
@@ -255,7 +258,7 @@ A API é paga pelo humano, num projeto de hobby com **limite de R$ 30/mês** (er
 - **Regra Prática**: Botões ou cartões arrastáveis que não geram transformação tangível e divertida na cena são ruído pedagógico e devem ser banidos.
   - *Exemplo real (Página 6)*: Na cena da sagração de cavaleiro, havia cartões para arrastar "LUA CHEIA" e "ESPADA" que apenas faziam a imagem tremer sem alterar a ilustração. Foram eliminados para manter o quadro limpo, preservando a interatividade das palavras apenas no texto da história.
   - *Exemplo de boa interatividade (Página 8, `?page=7`)*: O botão "VENTO" não é decorativo; ele dispara fisicamente a rotação acelerada das pás dos moinhos com som sintetizado de rajada e partículas `💨`, até culminar na transformação mágica dos moinhos nos gigantes de Cervantes.
-- **Padrão ouro** (nota 10 do humano): a assinatura da carta (Dom Quixote, Parte 3, cap. 18), em que a criança ajuda Sancho a lembrar as palavras na ordem certa. O crivo de cinco perguntas e o cardápio de atividades alfabetizadoras estão na receita geral (`docs/RECEITA-CLASSICO-VIVO.md` §6.2).
+- **Padrão ouro** (nota 10 do humano): a assinatura da carta (Dom Quixote, Parte 3, cap. 18), em que a criança ajuda Sancho a lembrar as palavras na ordem certa. O crivo de seis perguntas e o cardápio de atividades alfabetizadoras estão na receita geral (`docs/RECEITA-CLASSICO-VIVO.md` §6.2).
 
 ### 3.4 Biblioteca para Crianças, Detalhes para Adultos
 - `index.html` é uma **estante lúdica**: livros como capas grandes e tocáveis numa prateleira de madeira, com botão ▶. **Quanto menos texto, melhor**: nada de descrições, pilares, faixas etárias ou títulos de capítulos.

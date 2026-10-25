@@ -1,6 +1,6 @@
 # Caderno — Dom Quixote de La Mancha, Parte 4: O Elmo, a Bacia e a Jaula Encantada
 
-Arquivo: `dom-quixote/parte-4-rascunho.html` (rascunho: sim) · Trecho do original: 1605, caps. 39 a 52 · Nossos capítulos: 23 a 32 (10 capítulos + capa = 11 páginas)
+Arquivo: `dom-quixote/parte-4-rascunho.html` (rascunho: sim) · Trecho do original: 1605, caps. 39 a 52 · Nossos capítulos: 23 a 33 (11 capítulos + capa = 12 páginas; o cap. 30 virou dois na fase 5)
 
 | Fase | Situação | Data | Commit/PR | Gasto |
 | :--- | :--- | :--- | :--- | :--- |
@@ -9,7 +9,7 @@ Arquivo: `dom-quixote/parte-4-rascunho.html` (rascunho: sim) · Trecho do origin
 | 2 Interações e visual | 🟡 planejadas | 2026-10-25 | 4 atividades alfabetizadoras + plano visual completo | — |
 | 3 Revisão humana 🛑 | ✅ aprovado pelo humano | 2026-10-25 | branch `ccr-0c6dd8bf-k3upnk` → `main` | — |
 | 4 Ilustrações e atividades | ✅ feito (Claude, API Batch) | 2026-10-25 | branch `claude/elegant-hawking-hmc85x` → `main` | US$ 0,90 |
-| 5 Revisão final 🛑 | 🟡 com o humano (livro ilustrado, ainda rascunho) | | | — |
+| 5 Revisão final 🛑 | 🟡 notas da 1ª leitura aplicadas (§5, 8 pontos; texto dos caps. 27–33 reescrito, cap. 30 dividido, atividade nova no piquenique, 9 ilustrações novas); aguarda a 2ª leitura | 2026-10-25 | branch `claude/clever-pascal-t84t5f` → `main` | US$ 0,38 |
 | 6 Narração (pt) + escuta 🛑 | ⬜ a fazer | | | US$ |
 | Publicação | ⬜ a fazer | | | — |
 | 7 Idiomas (en, fr, es) | ⬜ a fazer | | | US$ |
@@ -39,7 +39,7 @@ Arquivo: `dom-quixote/parte-4-rascunho.html` (rascunho: sim) · Trecho do origin
 
 ---
 
-## 1. Escaleta (10 Capítulos: 23 a 32 + Capa)
+## 1. Escaleta (11 capítulos: 23 a 33 + capa; o cap. 30 virou dois na fase 5)
 
 | Pág. | Capítulo | Episódio | Cervantes | O que acontece | Fio da história (Planta / Colhe) | Atividade |
 | :---: | :--- | :--- | :---: | :--- | :--- | :---: |
@@ -48,13 +48,13 @@ Arquivo: `dom-quixote/parte-4-rascunho.html` (rascunho: sim) · Trecho do origin
 | **2** | 👑 **Cap. 24** • Bacia ou Elmo? | A disputa do elmo de Mambrino | I-44–46 | O barbeiro da chuva reaparece e cobra a bacia. Dom Quixote insiste que é o elmo de Mambrino; Sancho inventa a palavra **bacielmo**! O padre paga a bacia e todos riem em paz. | **Colhe**: a bacia ganha na chuva na Parte 2 (cap. 15). | ⭐ **Atividade 1** (`ordem`): Juntar as sílabas `BA • CI • EL • MO`. |
 | **3** | 🪄 **Cap. 25** • A Jaula Encantada | A profecia dos magos e o carro de bois | I-46–47 | Amigos vestem lençóis e máscaras e colocam Dom Quixote na jaula num carro de bois, profetizando com vozes solenes a sua grande jornada. | **Planta**: a jaula (ecoada na Parte 5 com a jaula do leão). Reaproveita arte `p1` antiga. | ⭐ **Atividade 2** (`ordem`): Decifrar a profecia dos magos: `A` `GRANDE` `VIAGEM` `DO` `CAVALEIRO`. |
 | **4** | 🤔 **Cap. 26** • Encantado Sente Fome? | O teste de Sancho na estrada | I-48–49 | Sancho desconfia do feitiço: *"Quem tem fome e sono não está encantado!"*. Dom Quixote confirma que está faminto. Sancho convence os amigos a abrirem a jaula. | **Colhe**: o raciocínio afetuoso e perspicaz de Sancho. | *Página calma* |
-| **5** | 🧺 **Cap. 27** • O Piquenique no Prado | O lanche à sombra do carvalho | I-48–49 | Sob a copa verde de um carvalho, estendem uma toalha na relva e dividem comida fresca, celebrando a amizade. | **Ressonância**: a partilha da comida como nos pastores (Parte 2). | ⭐ **Atividade 3** (`camadas`): Montar o piquenique tocando nas palavras: `PÃO`, `QUEIJO`, `ÁGUA`. |
-| **6** | 🏰 **Cap. 28** • O Cavaleiro do Lago de Cristal | A história de cavalaria contada por Dom Quixote | I-49–50 | Descansando na relva, Dom Quixote conta a história do cavaleiro que mergulhou num lago e encontrou um palácio de cristal e ouro no fundo d'água. Todos ouvem encantados. | Dom Quixote como encantador contador de histórias para seus amigos. | ⭐ **Atividade 4** (`ordem`): Abrir o portão do castelo submarino: `O` `PALÁCIO` `DE` `CRISTAL`. |
-| **7** | 🐐 **Cap. 29** • A Cabra Fujona | O pastor e a cabrinha travessa | I-50–51 | Um pastor corre atrás de sua cabrinha malhada (Manchadinha) que adora saltar livre; senta-se com os viajantes e divide leite fresco. | **Ressonância**: a cabra que quer passear livre espelha a alma do cavaleiro. | *Página calma* |
-| **8** | 🎶 **Cap. 30** • A Romaria na Estrada | O cortejo festivo dos camponeses | I-52 | Pelo caminho, cruzam com camponeses vestidos com fitas e flores, cantando ao som de pandeiros. Dom Quixote acena da carroça e é saudado com carinho pelas crianças. | O carinho popular da gente simples do campo. | *Página calma* |
-| **9** | 🏡 **Cap. 31** • De Volta para Casa | Chegada à aldeia num domingo | I-52 | O carro de bois chega ao meio-dia. Sobrinha e governanta abraçam o tio; Teresa e Sanchica correm para ver Sancho e perguntam pela ilha; Sancho reafirma a promessa com orgulho. | **Planta**: apresenta Teresa e Sanchica e renova o fio da ilha (para a Parte 6). Reaproveita arte `p2` antiga. | ⭐ **Atividade 5** (`ordem`): Proclamação de Sancho: `SANCHO` `GOVERNADOR` `DA` `ILHA`. |
-| **10** | 🌙 **Cap. 32** • Sonhos à Janela | O repouso e o fim do 1º volume | I-52 | Dom Quixote descansa em seu quarto arrumadinho, olhando a lua e as estrelas de La Mancha, pronto para o sono e sonhando com o segundo livro. | **Fecha o volume de 1605** e abre as portas para o volume de 1615 (Parte 5 em diante). | *Página calma e poética* |
-
+| **5** | 🧺 **Cap. 27** • O Piquenique no Prado | O lanche à sombra do carvalho | I-48–49 | Sob o carvalho, Sancho abre o alforje bagunçado (pão, queijo, moringa, o pião da filha) enquanto uma águia ronda o céu; Dom Quixote reparte o pão. | **Planta**: o pião (presente da Sanchica, colhido no cap. 32). **Ressonância**: os pastores (Parte 2). | ⭐ **Atividade 3** (`pedido`): Sancho mostra a figura do que quer; a criança acha `PÃO`, `QUEIJO`, `ÁGUA` entre as pegadinhas `PIÃO`, `QUEIXO`, `ÁGUIA`. |
+| **6** | 🏰 **Cap. 28** • O Cavaleiro do Lago | A história de cavalaria contada por Dom Quixote | I-50 | Dom Quixote conta a história do Cavaleiro do Lago de Cervantes: o lago preto que ferve, as cobras e lagartos, a voz que desafia, o mergulho, o campo de flores, o riacho de cristal com areia de ouro, o castelo de ouro e diamantes e as sete fadas. Sancho: "pulava de cabeça!" (no banquete). | Dom Quixote contador de histórias; a coragem de pular no medo. | ⭐ **Atividade 4** (`contagem`): os tesouros do riacho encantado (concha, pérolas, peixinhos). Sem lente: a história fica no balão. |
+| **7** | 🐐 **Cap. 29** • A Cabra Fujona | O pastor e a cabrinha travessa | I-50–51 | A cabra Manchadinha invade o piquenique; Sancho e Nicolau trombam; Eugênio conversa com a cabra como se fosse gente (ela responde "Méé!") e Sancho tenta o mesmo com o burrico. "Eu sei bem o que é querer sair de uma jaula." | **Ressonância**: a jaula; "é muito bom ter para onde voltar" prepara a chegada. | *Página calma* (sem lente) |
+| **8** | 🎶 **Cap. 30** • A Romaria na Estrada | O que Dom Quixote vê de longe | I-52 | Seca. Lá longe, uma romaria com um andor e uma figura de manto azul; Dom Quixote acha que é uma dama raptada e parte a galope; Rocinante acorda assustado, o padre perde o chapéu, Sancho corre atrás. | Prepara o encontro de perto (cap. 31). | *Página calma* (lentes: romaria × vilões levando uma princesa) |
+| **9** | 🙏 **Cap. 31** • Os Vizinhos da Estrada | O encontro de perto | I-52 | Sancho para Rocinante de olhos fechados ("Já parou?"); é uma imagem de santa e são os lavradores vizinhos, rezando pela chuva; Dom Quixote se desculpa, recebe água e flores; "Seu Alonso, já está pertinho de casa!". | **Ponte** para a chegada. | *Página calma* (sem lente) |
+| **10** | 🏡 **Cap. 32** • De Volta para Casa | Chegada à aldeia num domingo | I-52 | Sobrinha e governanta abraçam o tio; Teresa e Sanchica passam direto por Sancho e abraçam o burrico ("E eu?"); a ilha que se come; as moedas da mala e o pião para a Sanchica. | **Colhe**: a ilha (Parte 1), as moedas da mala (Parte 3), o pião (cap. 27). | ⭐ **Atividade 5** (`ordem`): `SANCHO` `GOVERNADOR` `DA` `ILHA`. |
+| **11** | 🌙 **Cap. 33** • Sonhos à Janela | O repouso e o fim do 1º volume | I-52 | Dom Quixote descansa, o gatinho aos pés, "Boa noite, Dulcineia"; as aventuras correm de boca em boca até as cidades grandes, e o bom velhinho já vira um cavaleiro famoso de verdade. | **Fecha o volume de 1605**. Sem teaser do segundo livro no texto (só no quadro do fim). | *Página calma e poética* |
 ---
 
 ## 2. O que ficou de fora e por quê
@@ -77,9 +77,10 @@ Variedade rica de 5 mecânicas pedagógicas sem repetição:
 2. **Atividade 2 (Cap. 25, pág. 3) — Forca Adaptada / Chave de Letras (`letras`)**:
    - *Treina*: Consciência fonêmica (letra e som) e soletração.
    - *Mecânica*: A criança descobre as letras da palavra secreta gravada no fecho da jaula dos magos: `A` `M` `I` `G` `O`. Em vez de boneco enforcado, cada acerto preenche a casinha com brilho sonoro; toques em outras letras tremem suavemente e a voz pronuncia o som da letra com dica gentil. (No rascunho da Fase 1, já jogável via seleção ordenada de letras).
-3. **Atividade 3 (Cap. 27, pág. 5) — Vocabulário Concreto (`camadas`)**:
-   - *Treina*: Reconhecimento de vocabulário e associação palavra ↔ objeto.
-   - *Mecânica*: A criança toca nos alimentos citados no texto para compor a toalha de piquenique na relva: `PÃO`, `QUEIJO`, `ÁGUA`.
+3. **Atividade 3 (Cap. 27, pág. 5) — Pedido com pegadinhas (`pedido`, tipo novo da fase 5)**:
+   - *Treina*: leitura de palavras quase iguais (consciência fonêmica): PÃO × PIÃO, QUEIJO × QUEIXO, ÁGUA × ÁGUIA.
+   - *Mecânica*: a faixa "🧺 Sancho pede:" mostra a **figura** do que ele quer (pão, depois queijo, depois a moringa); os cartões têm **só a palavra**, sem emoji. Acerto: a comida aparece na toalha e a palavra é lida. Comida certa fora da vez: dica gentil. **Pegadinha**: uma fala engraçada (o pião espalha tudo, a águia leva o lanche, "queixo não se come!") e a brincadeira **recomeça** (pedido do humano). As três pegadinhas estão plantadas no texto (o pião da filha, a águia no céu).
+   - 1ª versão (reprovada): `camadas` com PÃO, QUEIJO, ÁGUA: "a criança só precisa clicar nas palavras e já funciona, não há aprendizado nenhum".
 4. **Atividade 4 (Cap. 28, pág. 6) — Contagem Poética de Tesouros (`contagem`)**:
    - *Treina*: Numeração e leitura ritmada.
    - *Mecânica*: A cada toque, um tesouro do lago de cristal surge na água e a voz narra: 1 (`Uma concha de ouro!`), 2 (`Duas pérolas que brilham!`), 3 (`Três peixinhos de cristal!`), culminando na fanfarra mágica.
@@ -98,13 +99,13 @@ Variedade rica de 5 mecânicas pedagógicas sem repetição:
 | **2** | O barbeiro da bacia, Dom Quixote segurando a bacia de latão e Sancho gesticulando no meio | Dom Quixote com o esplêndido Elmo Dourado de Mambrino emitindo raios mágicos de luz | 👓 Bacia de Latão ou Elmo? | ✨ O Brilho Lendário do Elmo de Mambrino! |
 | **3** | Carro de bois rústico com a jaula de madeira; padre e mestre Nicolau de lençóis brancos e máscaras; Rocinante e o burrico amarrados atrás | Uma carruagem mágica de madrepérola e cristal conduzida por magos com mantos celestes | 👓 A Jaula de Madeira no Carro de Bois | ✨ A Carruagem Encantada dos Magos Protetores! |
 | **4** | Sancho apontando para o cavaleiro e rindo na estrada ensolarada | Sancho discursando como um sábio filósofo diante de uma corte de amigos | 👓 A Esperteza de Sancho na Estrada | ✨ O Raciocínio de um Grande Sábio! |
-| **5** | Toalha xadrez estendida na grama com pão e queijo sob a sombra do carvalho; Rocinante e o burrico pastando juntos na beira do riacho | Um banquete real servido em toalhas de seda sob árvores de frutos dourados | 👓 Piquenique de Amigos no Prado | ✨ O Banquete dos Nobres Cavaleiros! |
-| **6** | Dom Quixote sentado na relva gesticulando animado enquanto todos ouvem | O cavaleiro no fundo de um lago cristalino diante de um palácio submarino de corais e ouro | 👓 Histórias à Beira do Riacho | ✨ O Palácio Submarino de Cristal! |
-| **7** | Pastor rindo enquanto corre atrás de uma cabrinha malhada saltitante | Um fauno mitológico brincando com um cordeirinho encantado no bosque de fadas | 👓 O Pastor e a Cabrinha Manchadinha | ✨ O Guardião dos Bosques e a Criatura Mágica! |
-| **8** | Lavradores em romaria pelo campo seco, com pandeiro e um andor coberto por um manto; Dom Quixote, ao lado de Rocinante, curva a cabeça sem o bacielmo | Um cortejo de guardiões da terra, com o andor como um altar de flores luminosas | 👓 Romaria de Vizinhos Pedindo Chuva | ✨ A Procissão Solene dos Guardiões da Terra! |
-| **9** | Chegada à aldeia branca; sobrinha, governanta, Teresa e Sanchica correndo com abraços | Recepção triunfal com tapetes de flores e arcos de vitória na entrada da aldeia | 👓 Acolhida com Abraços na Aldeia | ✨ A Recepção Triunfal dos Grandes Heróis! |
-| **10** | Dom Quixote descansando na cama macia, olhando a lua cheia pela janela do quarto, com o gatinho da casa (o da Parte 1, cap. 1) enrolado aos pés da cama | O cavaleiro dourado cavalgando pelo céu noturno entre constelações e cometas; aos pés da cama, o gatinho vira o **leão guardião** da Parte 1 (fecha o círculo do primeiro volume) | 👓 Descanso Sereno à Luz da Lua | ✨ Os Sonhos Eternos de Novas Aventuras! |
-
+| **5** | Toalha xadrez vazia na grama sob o carvalho (pão, queijo e moringa são camadas); Rocinante e o burrico bebendo no riacho | Um banquete real servido em toalhas de seda sob árvores de frutos dourados | 👓 Piquenique de Amigos no Prado | ✨ O Banquete dos Nobres Cavaleiros! |
+| **6** | Dom Quixote contando a história sob o carvalho; no balão, o cavaleiro chega ao castelo de ouro e diamantes, as fadas na porta e o riacho de cristal (tesouros em camadas) | — (a história já é imaginação, desenhada no balão) | 📖 A História do Cavaleiro do Lago | — |
+| **7** | Dom Quixote ajoelhado dá pão à Manchadinha; Eugênio ri; Sancho e Nicolau caídos; o padre rindo junto ao carvalho | — (página da vida real) | 🐐 O Pastor e a Cabrinha Manchadinha | — |
+| **8** | Paisagem seca e larga: Dom Quixote em Rocinante aponta a lança; Sancho coça a cabeça; o padre e Nicolau nos seus cavalos ao lado da carroça; a romaria pequena lá longe, com a figura de manto azul | Cavaleiro dourado no corcel branco; lá longe, vilões cômicos de capa e chapéu levando uma princesa de manto azul num palanquim; castelo no morro | 👓 Uma Romaria Lá Longe na Estrada | ✨ Uma Princesa Levada por Vilões! |
+| **9** | De perto: a imagem de Nossa Senhora no andor florido, os lavradores, o velhinho oferecendo água e flores, Dom Quixote de cabeça baixa; o padre e Nicolau chegando a cavalo | — (a página desfaz o engano) | 🙏 Os Vizinhos Pedem Chuva | — |
+| **10** | Chegada à aldeia: sobrinha e governanta abraçam Dom Quixote; Teresa e Sanchica abraçam o burrico, e Sancho de braços abertos para o vento | Recepção triunfal com arcos de flores e pétalas; o burrico com manta de festa | 👓 Abraços na Chegada à Aldeia | ✨ A Recepção Triunfal dos Grandes Heróis! |
+| **11** | Dom Quixote descansando na cama, a lua cheia na janela, o gatinho aos pés | O cavaleiro dourado cavalgando entre as estrelas; o gatinho vira o **leão guardião** | 👓 Descanso Sereno à Luz da Lua | ✨ Os Sonhos Eternos de Novas Aventuras! |
 ---
 
 ## 5. Notas do humano e o que mudou
@@ -157,6 +158,16 @@ Variedade rica de 5 mecânicas pedagógicas sem repetição:
 
 - **2026-10-25 (Parada 3)**: o humano aprovou o rascunho sem novas notas de texto e autorizou a API paga para as imagens da fase 4.
 
+- **2026-10-25 (Fase 5, 1ª leitura do livro ilustrado com o filho)**: "a leitura começou muito bem, prendendo atenção e com bom nível cômico", mas a qualidade literária caía a partir do meio do livro e ficava cansativa. Notas e o que mudou (Claude, com a API autorizada para as imagens):
+  1. **Qualidade da segunda metade**: os caps. 27 a 33 foram reescritos com o cuidado dos primeiros: parágrafos curtos, uma piada por cena (a barriga que "conversa", o "Já parou? Já posso abrir?", a cabra que responde, "Ninguém abraça o escudeiro?"), menos explicação e menos lição de moral, e fios plantados e colhidos dentro da parte (o pião da Sanchica, a águia, "é bom ter para onde voltar").
+  2. **Gravura do cap. 26** (pág. 4): os "magos" vinham com outra fantasia, e mestre Nicolau montava o cavalo de Dom Quixote enquanto o padre andava. Refeita como **edição** da versão anterior, com o **recorte dos dois magos da pág. 3** como referência ("EXACTLY as in the second reference image (copy them)"): agora cada um tem o seu cavalo (o padre num tordilho, Nicolau num preto) e Rocinante vem amarrado na carroça, de sela vazia. A Imaginação também (os magos celestes recortados da p3-imag). O método foi para a receita (`ARTE-PELA-API.md` §4.3, receita geral §6.3).
+  3. **Atividade do cap. 27**: virou o tipo novo `pedido` (§3, atividade 3), com pegadinhas que recomeçam o jogo. E a **regra nova para todas as páginas com atividade, em todos os livros**: a chave da Imaginação fica trancada (🔒) até a criança acertar; é a recompensa (motor, `AGENTS.md` §2.5).
+  4. **Cap. 28**: a história é a de Cervantes (I-50, o Cavaleiro do Lago: o lago de piche fervente com cobras e lagartos, a voz que desafia, o mergulho, o campo de flores, o castelo de ouro e as fadas), sem as explicações "reais" (a estrelinha-do-mar). A página **não tem mais lente**: é tudo imaginação, desenhada dentro do balão. Ilustração refeita (só o miolo do balão).
+  5. **Cap. 29**: texto melhorado (a cabra que responde, Sancho e o burrico, o padre rindo); o **padre voltou** à ilustração (edição que só o acrescenta); **sem lente**.
+  6. **Cap. 30**: era o mais longo (6 parágrafos). Virou **dois capítulos**: o 30 (a romaria vista **de longe**, com ilustração nova e as duas lentes: Dom Quixote vê vilões levando uma princesa) e o 31 (o encontro de perto, sem lente, com a ilustração antiga do cap. 30 e a **santa refeita** como imagem de Nossa Senhora com rosto, coroa e manto, em vez do "manequim coberto"), com mais alívio cômico. A estrutura passou a 12 páginas (caps. 23 a 33); a noite foi para a pág. 11 (`p11-*`).
+  7. **Cap. 32** (antigo 31): Sancho não chama mais a esposa de "mulher": "minha Teresinha", "meu bem", "minhas queridas". Ilustração nova: a família de Dom Quixote o abraça e a de Sancho **abraça o burrico** (Cervantes, I-52: a primeira pergunta de Teresa foi pelo burro).
+  8. **Cap. 33** (o fim): saiu do texto qualquer teaser do segundo livro (fica só no quadro do fim) e saiu o "alguém molhava a pena"; no lugar, as aventuras correm **de boca em boca** até as cidades grandes, e "o nosso bom velhinho, cheio de imaginação, já começava a ser um cavaleiro famoso de verdade".
+
 ---
 
 ## 6. Arte (lista, rodadas, refeitas, gasto)
@@ -168,11 +179,17 @@ Lista: `tools/arte/dom-quixote-parte-4.mjs` (a da Parte 4 antiga ficou em `dom-q
 | 1: Realidades (p0, p1, p2, p3, p4, p5, p7, p8, p10) + camadas (pão, queijo, água, concha, pérolas, peixinhos) | 15 | 14 | US$ 0,45 |
 | 2: p3-real refeita, p6-real (usa a p5-real como cenário) e 8 Imaginações | 10 | 9 | US$ 0,35 |
 | 3: p0-imag refeita, p3-imag e p6-imag | 3 | 3 | US$ 0,10 |
-| **Total** | **28** | **26** (+2 refeitas) | **US$ 0,90** |
+| **Total da fase 4** | **28** | **26** (+2 refeitas) | **US$ 0,90** |
+| 4 (fase 5): p4-real, p6-real, p7-real, p8-real (nova), p9-real (antiga p8 com a santa), p10-real (nova) | 6 | 6 | US$ 0,21 |
+| 5 (fase 5): p4-imag, p8-imag, p10-imag | 3 | 1 | US$ 0,10 |
+| 6 (fase 5): p8-imag e p10-imag refeitas | 2 | 2 | US$ 0,07 |
+| **Total da fase 5** | **11** | **9** | **US$ 0,38** |
 
 - **Reaproveitada da Parte 4 antiga**: a chegada à aldeia (cap. 31, pág. 9) usa `imagens/acervo/parte-4-v1/p2-real` e `p2-imag` por caminho, sem cópia. A jaula da v1 (`p1-*`) não casava com o texto novo (os amigos fantasiados, Sancho cochichando nas grades): as páginas 3 e 4 foram geradas de novo, com a v1 como referência (a carruagem de cristal da pág. 4 continua a da v1).
 - **Refeitas**: (1) a **p3-real** veio com os "magos" de lençol branco e **capuz branco pontudo com furos nos olhos**, uma imagem que lembra o capuz da Ku Klux Klan: inaceitável. Refeita com lençol só dos ombros para baixo, **chapéu de mago de papelão com estrelas** e meia-máscara de papelão; (2) a **p0-imag** repetia a princesa (na porta e na sacada) e a jaula não virava carruagem.
 - **Aceitas com ressalva**: na p2-real, Dom Quixote segura a mão de Sancho em vez de puxar a bacia (o momento em que Sancho pula no meio, serve); na p4-imag, o padre e mestre Nicolau aparecem a cavalo (como na v1); a p6-imag é a história inteira dentro de um balão, com os cantos claros, como uma vinheta.
 - **Atividades**: pão, queijo e moringa são camadas sobre a toalha vazia (pág. 5); a concha, as duas pérolas e os três peixinhos aparecem no chão de areia do **balão da história** pintado na p6-real (pág. 6, `contagem`), e a Imaginação mostra o palácio inteiro. As áreas de toque de todas as páginas foram medidas na arte; na pág. 10 o gatinho (Realidade) e o leão (Imaginação) têm cada um a sua.
 - **Testes**: Playwright (Chromium), 800 × 1280 e 1280 × 800, as 11 páginas nas duas lentes, sem erro de script nem arquivo faltando; piquenique e contagem jogados até o fim.
+- **Fase 5 (revisão)**: refeitas na rodada 6 a p8-imag (o Sancho saiu duas vezes e a romaria veio para perto: corrigido com "only ONE Sancho" e a altura máxima das figuras de longe) e a p10-imag (a Imaginação antiga da chegada, passada como referência, impôs a composição dela e a piada do burrico sumiu: tirada a referência e descrita a piada no começo do prompt). Aceitas com ressalva: na p8-real, Rocinante saiu com manchas; na p9-real, os cavalos do padre e de Nicolau, pequenos ao fundo, saíram marrons. Testado de novo no Playwright (12 páginas, duas orientações, piquenique com pegadinha e recomeço, trava da lente, contagem, Parte 1 com o VENTO e `?imag=1`), sem erros.
+- **Arte aposentada** (no histórico do Git): p6-imag, p7-imag e a p8-imag antiga (guardiões da terra); a p10 da noite virou p11.
 

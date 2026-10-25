@@ -50,7 +50,8 @@ function textosDoLivro(livro, fonte) {
         Object.values(c.variantes || {}).forEach(v => add(v.legenda, onde('selo da cena, ao tocar num cartão')));
         (c.falas || []).forEach(f => add(f, onde('fala da voz a cada toque no cartão')));
         add(c.faixaVazia, onde('faixa onde as palavras são escritas'));
-        if (c.tipo !== 'ordem') (c.itens || []).forEach(item => add(item.palavra, onde('cartão (MAIÚSCULAS, curto)')));
+        add(c.rotulo, onde('rótulo da faixa do pedido'));
+        if (c.tipo !== 'ordem' && c.tipo !== 'pedido') (c.itens || []).forEach(item => add(item.palavra, onde('cartão (MAIÚSCULAS, curto)')));
         (cena.hotspots || []).forEach(h => add(h.titulo || h.palavra, onde('dica ao passar o dedo na cena')));
     });
     // Legendas escritas dentro de funções (realCena): `legenda: '...'`
@@ -76,6 +77,8 @@ function exportar() {
             if (pagina.etiqueta) p.etiqueta = pagina.etiqueta;
             p.texto = pagina.texto.trim().split(/\n\s*\n/).map(par => par.trim().replace(/\s*\n\s*/g, ' ')).join('\n\n');
             if (c.tipo === 'ordem') p.cartoes = { tipo: 'ordem', ordem: c.ordem, itens: c.itens.map(({ id, palavra, emoji }) => ({ id, palavra, emoji })) };
+            // Pedido: as pegadinhas são palavras parecidas com as certas (PÃO/PIÃO); cada idioma escolhe as suas
+            if (c.tipo === 'pedido') p.cartoes = { tipo: 'pedido', pedidos: c.pedidos, itens: c.itens.map(({ id, palavra, emoji, figura, pegadinha }) => ({ id, palavra, emoji, figura, pegadinha })) };
             return p;
         });
         const destino = `docs/traducao/fonte-${pasta}-parte-${livro.parte}.json`;
@@ -102,6 +105,8 @@ function conferir() {
     const aviso = (m) => { avisos++; console.log(`  ⚠️  ${m}`); };
     for (const arquivo of globSync('*/parte-*.html').sort()) {
         const { livro, fonte } = carregarLivro(arquivo);
+        // Rascunho não carrega traduções (AGENTS §2.5); as de parte-N.<idioma>.js são da versão publicada
+        if (livro.rascunho) continue;
         const pasta = arquivo.split(/[\\/]/)[0];
         const textos = textosDoLivro(livro, fonte).map(t => t.texto);
         const traducoes = globSync(`${pasta}/traducoes/parte-${livro.parte}.*.js`).sort();
@@ -144,6 +149,12 @@ function conferir() {
                     const ids = new Set((tc.itens || []).map(item => item.id));
                     if (!tc.itens || !tc.ordem) erro(`${onde}: cartões em ordem precisam de \`cartoes: { ordem, itens }\` no idioma`);
                     else if (tc.ordem.length !== ids.size || !tc.ordem.every(id => ids.has(id))) erro(`${onde}: \`cartoes.ordem\` e \`cartoes.itens\` não batem (ids únicos, um por palavra)`);
+                }
+                if (c.tipo === 'pedido') {
+                    const tc = p.cartoes || {};
+                    const ids = new Set((tc.itens || []).map(item => item.id));
+                    if (!tc.itens || !tc.pedidos) erro(`${onde}: cartões de pedido precisam de \`cartoes: { pedidos, itens }\` no idioma (com as pegadinhas do idioma)`);
+                    else if (!tc.pedidos.every(id => ids.has(id))) erro(`${onde}: \`cartoes.pedidos\` cita um id que não está em \`cartoes.itens\``);
                 }
             });
             const dic = t.textos || {};

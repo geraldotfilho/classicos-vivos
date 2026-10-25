@@ -32,11 +32,12 @@ O que o humano sentiu ("apressada, mal encadeada, eventos mal explicados") tem c
 | 1 · O Cavaleiro da Super Imaginação | 1605 · de cima | 1–8 | 8 | 1–7 | ✅ fica |
 | 2 · Exércitos de Lã e o Elmo Encantado | 1605 · de cima | 8–21 | 14 | 8–15 | ✅ fica |
 | 3 · Serra Morena e a Princesa Micomicona | 1605 · de cima | 23–38 | 16 | 16–22 | ✅ fica |
-| **4 · O Elmo, a Bacia e a Jaula Encantada** (título provisório) | 1605 · de cima | 39–52 | 14 | 23–32 | 🔁 refazer |
+| **4 · O Elmo, a Bacia e a Jaula Encantada** (título provisório) | 1605 · de cima | 39–52 | 14 | 23–33 (o 30 virou dois na fase 5) | 🔁 refazer (rascunho ilustrado, fase 5) |
 | **5 · O Livro Famoso e o Cavaleiro dos Leões** | 1615 · de baixo | 1–29 | 29 | 30–37 | 🆕 |
 | **6 · O Palácio dos Duques e a Ilha de Sancho** | 1615 · de baixo | 30–57 | 28 | 38–45 | 🆕 |
 | **7 · O Cavaleiro da Branca Lua** | 1615 · de baixo | 58–74 | 17 | 46–53 | 🆕 |
 
+- **Numeração**: a nova Parte 4 terminou no cap. 33 (fase 5, 2026-10-25), então a Parte 5 começa no **34**; os números das Partes 5–7 na tabela acima e nas escaletas do §4 são da proposta antiga e serão fechados na fase 1 de cada parte.
 - Com isso, o volume de 1615 fica com 3 partes de 17 a 29 capítulos, perto da proporção das Partes 2 e 3. Se, na fase 1, a Parte 6 ficar densa demais (duques + ilha), ela pode virar duas (6 = palácio e Clavilenho; 7 = governo de Sancho; 8 = Branca Lua). O humano pediu "pelo menos 3".
 - **Estante** (`index.html`, ✅ feito em 2026-10-25): prateleira de cima = primeiro volume (Partes 1–4); **prateleira de baixo = segundo volume** (Partes 5–7 como capas-teaser com 🔒; ao tocar, um aviso diz que o livro está sendo feito). As capas-teaser vêm de `assets/js/acervo.js`, a lista das obras em produção. Os cadeados dos "próximos clássicos" (sem obra definida) **saíram**, por decisão do humano: na estante só aparece o que já é rascunho ou está na fila para virar rascunho em breve.
 - **Rascunhos** (✅ feito em 2026-10-25): o humano abre os rascunhos em `sobre.html` → Livros em produção → chave "Mostrar os rascunhos" (receita geral §4).
