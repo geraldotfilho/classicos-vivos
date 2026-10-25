@@ -7,9 +7,9 @@ Arquivo: `dom-quixote/parte-4-rascunho.html` (rascunho: sim) · Trecho do origin
 | 0 Terreno | ✅ feito | 2026-10-25 | branch `gemini/dom-quixote-parte-4` | — |
 | 1 Adaptação e texto | 🟡 em andamento | 2026-10-25 | escaleta expandida (10 caps) pronta para aprovação humana | — |
 | 2 Interações e visual | 🟡 planejadas | 2026-10-25 | 4 atividades alfabetizadoras + plano visual completo | — |
-| 3 Revisão humana 🛑 | 🟡 revisão de coautoria feita; falta o "aprovado" final do humano | 2026-10-25 | branch `ccr-0c6dd8bf-k3upnk` → `main` | — |
-| 4 Ilustrações e atividades | ⬜ a fazer | | | US$ |
-| 5 Revisão final 🛑 | ⬜ a fazer | | | — |
+| 3 Revisão humana 🛑 | ✅ aprovado pelo humano | 2026-10-25 | branch `ccr-0c6dd8bf-k3upnk` → `main` | — |
+| 4 Ilustrações e atividades | ✅ feito (Claude, API Batch) | 2026-10-25 | branch `claude/elegant-hawking-hmc85x` → `main` | US$ 0,90 |
+| 5 Revisão final 🛑 | 🟡 com o humano (livro ilustrado, ainda rascunho) | | | — |
 | 6 Narração (pt) + escuta 🛑 | ⬜ a fazer | | | US$ |
 | Publicação | ⬜ a fazer | | | — |
 | 7 Idiomas (en, fr, es) | ⬜ a fazer | | | US$ |
@@ -154,4 +154,25 @@ Variedade rica de 5 mecânicas pedagógicas sem repetição:
   11. **Cap. 30**: a "dama cativa" agora é o que Dom Quixote vê de verdade (a figura coberta no andor), e não "vilões de branco"; o lavrador o chama de **"Seu Alonso"** e avisa que a casa está perto (ponte para o cap. 31).
   12. **Cap. 31**: sobrinha e governanta apresentadas; Teresa não sabe o que é ilha ("Ilha se come?"), e Sancho explica (Cervantes, I-52); **as moedas da mala da Parte 3 (cap. 16)** voltam como presente do amo para os sapatinhos da Sanchica (fio solto colhido).
   13. **Cap. 32**: saiu "os primeiros livros começavam a ser impressos" (estragava a surpresa do "Viramos livro!" da Parte 5); no lugar, "alguém molhava a pena na tinta e começava a escrever...". Entraram o **gatinho** da Parte 1 aos pés da cama, o Rocinante no estábulo e o "Boa noite, Dulcineia" à lua; o fim troca o resumo moral por uma imagem e um gancho ("um cavaleiro andante descansa, sim. Mas nunca, nunca para de sonhar"). A mensagem do fim avisa que ele vai sair de novo no segundo livro.
+
+- **2026-10-25 (Parada 3)**: o humano aprovou o rascunho sem novas notas de texto e autorizou a API paga para as imagens da fase 4.
+
+---
+
+## 6. Arte (lista, rodadas, refeitas, gasto)
+
+Lista: `tools/arte/dom-quixote-parte-4.mjs` (a da Parte 4 antiga ficou em `dom-quixote-parte-4-v1.mjs`). Nano Banana 2, Batch, cada lote voltou em ~3 minutos.
+
+| Rodada | Pedidos | Aceitas | Gasto |
+| :--- | :--- | :--- | :--- |
+| 1: Realidades (p0, p1, p2, p3, p4, p5, p7, p8, p10) + camadas (pão, queijo, água, concha, pérolas, peixinhos) | 15 | 14 | US$ 0,45 |
+| 2: p3-real refeita, p6-real (usa a p5-real como cenário) e 8 Imaginações | 10 | 9 | US$ 0,35 |
+| 3: p0-imag refeita, p3-imag e p6-imag | 3 | 3 | US$ 0,10 |
+| **Total** | **28** | **26** (+2 refeitas) | **US$ 0,90** |
+
+- **Reaproveitada da Parte 4 antiga**: a chegada à aldeia (cap. 31, pág. 9) usa `imagens/acervo/parte-4-v1/p2-real` e `p2-imag` por caminho, sem cópia. A jaula da v1 (`p1-*`) não casava com o texto novo (os amigos fantasiados, Sancho cochichando nas grades): as páginas 3 e 4 foram geradas de novo, com a v1 como referência (a carruagem de cristal da pág. 4 continua a da v1).
+- **Refeitas**: (1) a **p3-real** veio com os "magos" de lençol branco e **capuz branco pontudo com furos nos olhos**, uma imagem que lembra o capuz da Ku Klux Klan: inaceitável. Refeita com lençol só dos ombros para baixo, **chapéu de mago de papelão com estrelas** e meia-máscara de papelão; (2) a **p0-imag** repetia a princesa (na porta e na sacada) e a jaula não virava carruagem.
+- **Aceitas com ressalva**: na p2-real, Dom Quixote segura a mão de Sancho em vez de puxar a bacia (o momento em que Sancho pula no meio, serve); na p4-imag, o padre e mestre Nicolau aparecem a cavalo (como na v1); a p6-imag é a história inteira dentro de um balão, com os cantos claros, como uma vinheta.
+- **Atividades**: pão, queijo e moringa são camadas sobre a toalha vazia (pág. 5); a concha, as duas pérolas e os três peixinhos aparecem no chão de areia do **balão da história** pintado na p6-real (pág. 6, `contagem`), e a Imaginação mostra o palácio inteiro. As áreas de toque de todas as páginas foram medidas na arte; na pág. 10 o gatinho (Realidade) e o leão (Imaginação) têm cada um a sua.
+- **Testes**: Playwright (Chromium), 800 × 1280 e 1280 × 800, as 11 páginas nas duas lentes, sem erro de script nem arquivo faltando; piquenique e contagem jogados até o fim.
 

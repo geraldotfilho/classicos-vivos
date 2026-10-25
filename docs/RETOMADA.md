@@ -1,4 +1,4 @@
-# 🔁 Retomada — onde o trabalho parou (2026-10-25, tarde)
+# 🔁 Retomada — onde o trabalho parou (2026-10-25, noite)
 
 **Leia este arquivo primeiro numa sessão nova**, seja qual for o agente. Depois, siga a ordem de leitura do `AGENTS.md` §0.2 (AGENTS → receita geral → receita específica → plano → caderno da parte).
 
@@ -10,28 +10,20 @@
 
 - **Dom Quixote**:
   - Partes 1, 2 e 3 **publicadas e aprovadas** pelo humano, que leu a série com o filho de 6 anos: ilustradas, narradas em português e traduzidas (en, fr, es).
-  - **Parte 4 antiga arquivada** em `dom-quixote/imagens/acervo/parte-4-v1/` e [dom-quixote/parte-4.html](dom-quixote/parte-4.html) continua no ar até a nova ser publicada.
-  - **Nova Parte 4 em Rascunho**: Fases 0, 1 e 2 **concluídas e revisadas** na branch `main`!
-    - Arquivo: [dom-quixote/parte-4-rascunho.html](dom-quixote/parte-4-rascunho.html) (`rascunho: true`).
-    - Caderno: [docs/cadernos/dom-quixote-parte-4.md](cadernos/dom-quixote-parte-4.md).
-    - 10 capítulos (Capítulos 23 a 32) + Capa = 11 páginas, cobrindo com calma e riqueza narrativa o retorno e o fim do volume de 1605.
-    - **Quadro de atividades separado (`.quadro-atividade`)**: comandos de atividade desvinculados do texto narrativo, com botão 🔊 próprio (leitura opcional; a narração automática da página não os lê).
-    - 5 atividades ricas e variadas sem repetição: sílabas (`BACIELMO`), descoberta da palavra secreta sem spoilers (Cap. 25), vocabulário do piquenique (`PÃO`, `QUEIJO`, `ÁGUA`), contagem poética dos tesouros do lago e ordem de frase (`SANCHO GOVERNADOR DA ILHA`).
-    - Narrativa aprofundada: a lógica de Sancho e a palavra de honra de Dom Quixote (Cap. 26); a lenda do Lago de Cristal (Cap. 28); o humor da cabrinha Manchadinha (Cap. 29); a romaria dos lavradores da terra sem chuva mágica e com respeito à labuta do campo (Cap. 30); o diálogo clássico de Teresa Pança e a cobrança da ilha (Cap. 31); e o fechamento nobre e emocionante de Cervantes com o fidalgo em seu leito sereno (Cap. 32).
-    - **Revisão de coautoria (Claude, 2026-10-25, noite)** aplicada a pedido do humano: mestre Nicolau sempre pelo nome (dois barbeiros), Rocinante de volta à viagem, linguagem simplificada sem encurtar as páginas, humor e poesia de Cervantes (votação do elmo, profecia em versos, "encantados modernos", "ilha se come?"), a palavra AMIGO colhida no cap. 26, as moedas da Parte 3 colhidas no cap. 31 e um fim sem spoiler da Parte 5, com o gatinho da Parte 1. Detalhes no caderno, §5.
-    - Testado em Playwright (Chromium) nas duas orientações (800×1280 e 1280×800) com zero erros de script e de carregamento.
-- **Gasto da API nesta sessão**: **US$ 0,00** (sem uso de API paga). Gasto acumulado de outubro: **US$ 3,64** (≈ R$ 20).
+  - **Parte 4 antiga** continua no ar ([dom-quixote/parte-4.html](../dom-quixote/parte-4.html), arte em `dom-quixote/imagens/acervo/parte-4-v1/`) até a nova ser publicada.
+  - **Nova Parte 4 em rascunho, agora ILUSTRADA**: [dom-quixote/parte-4-rascunho.html](../dom-quixote/parte-4-rascunho.html) (`rascunho: true`), 10 capítulos (23 a 32) + capa. Caderno: [docs/cadernos/dom-quixote-parte-4.md](cadernos/dom-quixote-parte-4.md).
+    - Fase 3 **aprovada** pelo humano (2026-10-25).
+    - Fase 4 **feita** (Claude, API Batch autorizada): 23 cenas novas + 6 camadas (pão, queijo, moringa; concha, pérolas, peixinhos), a chegada à aldeia reaproveitada da v1; áreas de toque medidas na arte; testado no Playwright nas duas orientações. Detalhes, refeitas e ressalvas no caderno, §6.
+- **Gasto da API nesta sessão**: **US$ 0,90** (imagens). Acumulado de outubro: **US$ 4,54** (≈ R$ 25 de R$ 30).
 
-## 2. Próxima sessão: 🛑 Parada 3 (Revisão Humana) ➔ Sessão B (Fase 4: Arte e Atividades)
+## 2. Próxima sessão: 🛑 Parada 5 (Revisão final) ➔ Fase 6 (Narração)
 
-1. **Parada 🛑 Fase 3**: falta só o "aprovado" final. O humano lê o rascunho em [dom-quixote/parte-4-rascunho.html](dom-quixote/parte-4-rascunho.html) no tablet com o filho de 6 anos (aberto pela página `sobre.html` → "Mostrar os rascunhos", ou via `?page=N`), ouvindo na voz do aparelho em português, com o roteiro de observação da receita geral §7.3.
-2. **Sessão B (Arte e Atividades)**:
-   - Registrar no caderno as notas da revisão humana e fazer os ajustes finos de texto.
-   - Fase 4: gerar as ilustrações (6 cenas novas: capa, despedida de Micomicona, bacielmo, piquenique, cabrinha fujona e quarto/janela; reaproveitando a jaula e a chegada à aldeia da v1).
-   - Gemini no Antigravity: pode gerar direto na cota do plano Pro; ou Claude pela API paga com autorização expressa no prompt da sessão.
+1. **🛑 Fase 5**: o humano lê o livro ilustrado (ainda rascunho, voz do aparelho) com o filho, pela página `sobre.html` → "Mostrar os rascunhos". Ajustes pequenos de texto ou arte entram na mesma sessão; depois do "aprovado", o texto congela.
+2. **Fase 6**: roteiro de vozes e narração em português da nova Parte 4 (`npm run gravar:narracao`, Flex, só com autorização), escuta do humano 🛑 e **publicação** (trocar `parte-4.html` pela nova, receita geral §4).
+   - Atenção ao teto: em outubro sobram ~R$ 5 (a narração de uma parte custa ~US$ 0,08–0,10).
 
-Prompt de abertura sugerido para a Sessão B:
-> Fase 4 da Parte 4 (caderno docs/cadernos/dom-quixote-parte-4.md). Minhas notas da revisão da fase 3: <...>. Sem API paga nesta sessão (gerar direto no Antigravity sob cota Pro) [OU: Autorizo a API paga do Gemini para gerar as ilustrações da Parte 4 (Batch), até US$ 0,60].
+Prompt de abertura sugerido:
+> Fase 5 da nova Parte 4 (caderno docs/cadernos/dom-quixote-parte-4.md). Minhas notas da leitura com meu filho: <...>. [Aprovado: autorizo a API paga para a narração em português (Flex).]
 
 ## 3. Frentes paradas (sem urgência)
 

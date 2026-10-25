@@ -2,7 +2,7 @@
 
 > Regras gerais de ilustração (valem para qualquer obra e qualquer agente): receita geral, `docs/RECEITA-CLASSICO-VIVO.md` §6.3. As regras da Imaginação de Dom Quixote (§4.1 abaixo) estão resumidas em `docs/receitas/DOM-QUIXOTE.md` §3.
 
-Caminho de reserva para as ilustrações quando a cota do Antigravity acaba. **Só com autorização do humano no prompt inicial da sessão** (AGENTS.md §2.7) e só para o que ele autorizou. Primeiro uso: 2026-10-24, Parte 2, páginas 4 a 8 (10 cenas + 5 camadas), **US$ 0,57**. Na mesma tarde, a pedido do humano, as **9 Imaginações da Parte 2 foram refeitas** com a bíblia da Imaginação (§4.1): **US$ 0,42**. Total da Parte 2: **US$ 0,99**. À noite, com autorização do humano, as **Partes 3 e 4 inteiras** (33 cenas + 10 camadas): **US$ 1,60** (§5). **Dom Quixote está todo ilustrado.**
+Caminho de reserva para as ilustrações quando a cota do Antigravity acaba. **Só com autorização do humano no prompt inicial da sessão** (AGENTS.md §2.7) e só para o que ele autorizou. Primeiro uso: 2026-10-24, Parte 2, páginas 4 a 8 (10 cenas + 5 camadas), **US$ 0,57**. Na mesma tarde, a pedido do humano, as **9 Imaginações da Parte 2 foram refeitas** com a bíblia da Imaginação (§4.1): **US$ 0,42**. Total da Parte 2: **US$ 0,99**. À noite, com autorização do humano, as **Partes 3 e 4 inteiras** (33 cenas + 10 camadas): **US$ 1,60** (§5). **Dom Quixote está todo ilustrado.** Em 2026-10-25, a **nova Parte 4** (rascunho, 11 páginas): 26 imagens aceitas em 28, **US$ 0,90** (caderno da parte, §6).
 
 ## 1. Modelo e preço (página de preços do Gemini, 2026-10-24)
 | Modelo | ID | Imagem 1K Standard | **Batch** | 512 px Batch |
@@ -59,6 +59,8 @@ npm run build:images && npm run build
 
 - **Contorno branco de "adesivo"**: às vezes o modelo pinta um contorno branco em volta da camada (o Clavilenho veio assim duas vezes, mesmo com "NO white outline" no pedido). Não pague outra geração: `recortar-camada.py --sem-contorno` descasca, a partir do fundo, os pixels claros (pela cor já desmisturada do magenta) até o traço de lápis do desenho.
 - **Objeto que pendura**: em vez de depender de ganchos pintados no cenário (o modelo os pôs num cabideiro fora do lugar), a camada traz **o próprio gancho** no alto (`p6-odre` da Parte 3) e pendura em qualquer ponto da parede.
+- **Fantasias com lençol branco: nunca capuz pontudo.** Na nova Parte 4, "dois homens de lençol branco com máscara pontuda" (os magos de mentira da jaula) veio como capuz branco pontudo com furos nos olhos: a imagem da Ku Klux Klan. Peça o lençol "só dos ombros para baixo", um **chapéu de mago de papelão colorido** e uma meia-máscara, e escreva "NO white pointed hoods, NO hoods covering the head". Olhe toda imagem também por esse lado: símbolos de ódio, de violência ou de grupos reais nunca passam, por mais engraçada que a cena seja.
+- **Arte antiga que casa com o texto novo pode ser reaproveitada por caminho** (`real: './imagens/acervo/parte-4-v1/p2-real.webp'`), sem copiar o arquivo; a que não casa serve de referência para a nova (a carruagem de cristal da v1 virou a referência da nova pág. 4).
 - **Teste das interações**: o motor usa *pointer events*; no Playwright, clique com `locator.click()` (um `element.click()` dentro de `evaluate` não aciona os cartões).
 
 ## 5. Partes 3 e 4 (2026-10-24, noite): o que mudou no método

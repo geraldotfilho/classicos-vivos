@@ -6,7 +6,7 @@
    - Narração gravada (*.mp3 e as marcas *.json em audio/): rede primeiro, para frases regravadas chegarem ao tablet;
      cada arquivo fica num cache próprio (que sobrevive às novas versões) e toca offline depois.
    - Demais arquivos: cache primeiro (abre instantâneo no tablet). */
-const CACHE = 'classicos-vivos-0ed68a9ee79d';
+const CACHE = 'classicos-vivos-6fe76392cbf5';
 const CACHE_AUDIO = 'cv-narracao';
 const FILES = [
     "./assets/css/fonts.css",
@@ -147,6 +147,32 @@ const FILES = [
     "./dom-quixote/imagens/parte-3/p6-real.webp",
     "./dom-quixote/imagens/parte-3/p7-imag.webp",
     "./dom-quixote/imagens/parte-3/p7-real.webp",
+    "./dom-quixote/imagens/parte-4/camadas/p5-agua.webp",
+    "./dom-quixote/imagens/parte-4/camadas/p5-pao.webp",
+    "./dom-quixote/imagens/parte-4/camadas/p5-queijo.webp",
+    "./dom-quixote/imagens/parte-4/camadas/p6-concha.webp",
+    "./dom-quixote/imagens/parte-4/camadas/p6-peixinhos.webp",
+    "./dom-quixote/imagens/parte-4/camadas/p6-perolas.webp",
+    "./dom-quixote/imagens/parte-4/p0-imag.webp",
+    "./dom-quixote/imagens/parte-4/p0-real.webp",
+    "./dom-quixote/imagens/parte-4/p1-imag.webp",
+    "./dom-quixote/imagens/parte-4/p1-real.webp",
+    "./dom-quixote/imagens/parte-4/p10-imag.webp",
+    "./dom-quixote/imagens/parte-4/p10-real.webp",
+    "./dom-quixote/imagens/parte-4/p2-imag.webp",
+    "./dom-quixote/imagens/parte-4/p2-real.webp",
+    "./dom-quixote/imagens/parte-4/p3-imag.webp",
+    "./dom-quixote/imagens/parte-4/p3-real.webp",
+    "./dom-quixote/imagens/parte-4/p4-imag.webp",
+    "./dom-quixote/imagens/parte-4/p4-real.webp",
+    "./dom-quixote/imagens/parte-4/p5-imag.webp",
+    "./dom-quixote/imagens/parte-4/p5-real.webp",
+    "./dom-quixote/imagens/parte-4/p6-imag.webp",
+    "./dom-quixote/imagens/parte-4/p6-real.webp",
+    "./dom-quixote/imagens/parte-4/p7-imag.webp",
+    "./dom-quixote/imagens/parte-4/p7-real.webp",
+    "./dom-quixote/imagens/parte-4/p8-imag.webp",
+    "./dom-quixote/imagens/parte-4/p8-real.webp",
     "./dom-quixote/parte-1.html",
     "./dom-quixote/parte-2.html",
     "./dom-quixote/parte-3.html",

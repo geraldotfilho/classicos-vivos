@@ -113,3 +113,10 @@ O que já foi entregue, sprint a sprint, em ordem cronológica (o mais antigo pr
 - **Estante e rascunhos**: os cadeados de "próximos clássicos" saíram da estante (decisão do humano); a prateleira de baixo mostra o segundo volume de Dom Quixote (Partes 5–7) como capas-teaser com cadeado e um aviso gentil ao tocar. Lista única das obras em produção em `assets/js/acervo.js`. Em `sobre.html`, a seção "Livros em produção" com a chave "Mostrar os rascunhos". No motor, o modo rascunho (`rascunho: true`).
 - **Receita geral × receitas específicas**: `RECEITA-CLASSICO-VIVO.md` passou a valer para qualquer obra e tipo de adaptação; o que só vale para Dom Quixote (condensação e lentes) foi para `receitas/DOM-QUIXOTE.md`. Revisão de todos os documentos e do `AGENTS.md` (nova §0: como trabalhar, para qualquer agente).
 - **Concluídos de vez** (estavam no backlog): consistência das ilustrações da Parte 1 (antigo M-7: NB-4, NB-5, NB-6 aprovados), ícone definitivo do app (antigo B-3, NB-7) e Leão Guardião em aquarela (antigo B-4, NB-8).
+
+## ✅ Sprint 15 (nova Parte 4 ilustrada, 2026-10-25)
+
+- **Fase 3 aprovada** pelo humano e **fase 4 feita** pelo Claude pela API paga (autorizada no prompt): 23 ilustrações novas e 6 camadas para o rascunho da nova Parte 4 (`dom-quixote/parte-4-rascunho.html`, caps. 23 a 32), em 3 rodadas Batch, **US$ 0,90**. A chegada à aldeia reaproveita a arte da Parte 4 antiga.
+- Atividades com arte: o piquenique (pão, queijo e moringa sobre a toalha) e a contagem dos tesouros do lago (concha, pérolas e peixinhos no balão da história). Áreas de toque medidas na arte de cada página.
+- Lição de arte: lençol branco + capuz pontudo vira imagem de ódio (Ku Klux Klan); fantasia de "mago" pede chapéu de papelão e cabeça descoberta (`ARTE-PELA-API.md` §4.2, receita geral §6.3).
+

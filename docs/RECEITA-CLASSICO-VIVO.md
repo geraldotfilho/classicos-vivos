@@ -193,6 +193,7 @@ Varie as mecânicas dentro da parte.
 - Diga o que **não** pintar onde vai uma camada; peça objetos **seguros nas mãos** (senão flutuam); diga quais animais e pessoas estão na cena (o modelo acrescenta personagens recorrentes).
 - Sem texto legível na imagem. Nunca achatar recortes numa cena pronta.
 - Personagens novos nascem numa página e servem de referência para as seguintes; isso define a ordem das rodadas.
+- **Olhe cada imagem também como um adulto atento**: nada que lembre símbolo de ódio, violência ou grupo real (o lençol branco com capuz pontudo dos "magos" da Parte 4 de Dom Quixote veio parecendo a Ku Klux Klan e foi refeito). Fantasia caseira = chapéu de papelão e cabeça descoberta.
 - Monstros e seres mágicos com a atmosfera da obra; descreva o rosto ("gentle face, kind ordinary eyes"), nunca assustador para a idade.
 
 ### 6.4 Narração
@@ -283,6 +284,7 @@ As lições que só valem para *Dom Quixote* ou para a condensação de obras lo
 
 | Data | Lição | Origem | Virou regra em |
 | :--- | :--- | :--- | :--- |
+| 2026-10-25 | Lençol branco + capuz pontudo saiu com cara de Ku Klux Klan: toda imagem é olhada também atrás de símbolos de ódio e violência | Dom Quixote, Parte 4 nova (arte) | §6.3 |
 | 2026-10-25 | O comando das atividades não deve poluir a narrativa nem ser lido automaticamente; fica num quadro destacado de leitura opcional com botão 🔊 próprio | humano | §6.1, §6.2, AGENTS §2.5 |
 | 2026-10-25 | Quem escreve a parte seguinte precisa ler o texto final das partes publicadas, sobretudo o final da anterior, para não quebrar estilo nem continuidade (a Parte 4 antiga começava contradizendo o fim da Parte 3) | humano | §5 fase 1.0 |
 | 2026-10-25 | A receita precisa separar o que é geral do que é próprio de uma obra ou de um tipo de adaptação | humano | §2, `receitas/` |

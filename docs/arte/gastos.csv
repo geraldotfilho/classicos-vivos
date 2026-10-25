@@ -13,3 +13,6 @@ data,modelo,nivel,comando,pedidos,imagens_ok,tokens_entrada,tokens_imagem,tokens
 2026-10-24T16:14,gemini-3.1-flash-image,batch,"--lista tools/arte/dom-quixote-parte-4.mjs --ids p1-imag,p4-imag,p5-imag,p6-imag,p3-imag,p5-bengala-inteira",6,6,7648,6347,2780,0.1965
 2026-10-24T16:16,gemini-3.1-flash-image,batch,"--lista tools/arte/dom-quixote-parte-4.mjs --ids p5-bengala-quebrada",1,1,747,1120,353,0.0343
 2026-10-24T16:17,gemini-3.1-flash-image,batch,"--lista tools/arte/dom-quixote-parte-3.mjs --ids p7-imag",1,1,1425,1120,589,0.0348
+2026-10-25T19:40,gemini-3.1-flash-image,batch,"--lista tools/arte/dom-quixote-parte-4.mjs --ids p0-real,p1-real,p2-real,p3-real,p4-real,p5-real,p7-real,p8-real,p10-real,p5-pao,p5-queijo,p5-agua,p6-concha,p6-perolas,p6-peixinhos",15,15,12130,14562,6318,0.4494
+2026-10-25T19:46,gemini-3.1-flash-image,batch,"--lista tools/arte/dom-quixote-parte-4.mjs --ids p3-real,p6-real,p0-imag,p1-imag,p2-imag,p4-imag,p5-imag,p7-imag,p8-imag,p10-imag",10,10,13665,11200,5477,0.3476
+2026-10-25T19:49,gemini-3.1-flash-image,batch,"--lista tools/arte/dom-quixote-parte-4.mjs --ids p0-imag,p3-imag,p6-imag",3,3,4372,3360,1702,0.1044
