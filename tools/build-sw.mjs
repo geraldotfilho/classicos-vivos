@@ -15,7 +15,8 @@ const files = [
     ...globSync('assets/icones/bandeiras/*.svg'),
     ...globSync('*/parte-*.html'),
     ...globSync('*/traducoes/*.js'),
-    ...globSync('*/imagens/**/*.{webp,svg,png}')
+    // imagens/acervo/: arte aposentada (ex.: a Parte 4 antiga), guardada só como registro: não vai para o tablet
+    ...globSync('*/imagens/**/*.{webp,svg,png}').filter(f => !/[\\/]acervo[\\/]/.test(f))
 ].sort();
 
 const hash = createHash('sha256');

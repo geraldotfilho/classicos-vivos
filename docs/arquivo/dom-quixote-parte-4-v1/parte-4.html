@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#78350F">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>Dom Quixote de La Mancha - Parte 4 | Clássicos Vivos</title>
+    <!-- Estilos locais (offline): Tailwind compilado, fontes, ícones e o estilo comum dos livros. Regerar com `npm run build`. -->
+    <link rel="stylesheet" href="../assets/css/tailwind.css">
+    <link rel="stylesheet" href="../assets/css/fonts.css">
+    <link rel="stylesheet" href="../assets/css/icons.css">
+    <link rel="stylesheet" href="../assets/css/livro.css">
+    <link rel="manifest" href="../manifest.webmanifest">
+    <link rel="apple-touch-icon" href="../assets/icones/icone-180.png">
+</head>
+<body class="p-1 sm:p-2.5 select-none">
+    <noscript>Este livro interativo precisa de JavaScript ativado no navegador.</noscript>
+
+    <script>
+    /* =========================================================================
+       DOM QUIXOTE DE LA MANCHA — PARTE 4: A JAULA ENCANTADA E A ILHA DE SANCHO
+       Adaptação de Cervantes: fim da Primeira Parte (caps. 46–52) e momentos
+       da Segunda Parte (1615): Clavilenho, a ilha Barataria e o regresso.
+       Ilustrações: docs/TODO-NANO-BANANA-PARTES-2-4.md (pasta imagens/acervo/parte-4-v1/).
+       ========================================================================= */
+    window.LIVRO = {
+        obra: 'Dom Quixote de La Mancha',
+        autor: 'Miguel de Cervantes',
+        parte: 4,
+        totalPartes: 4,
+        imagens: './imagens/acervo/parte-4-v1/',
+        fim: {
+            mensagem: '🎉 Fim de Dom Quixote de La Mancha! Agora as maiores aventuras moram para sempre na sua imaginação. Que clássico você vai abrir amanhã?'
+        },
+        paginas: [
+            {
+                capa: true,
+                titulo: 'Parte 4: A Jaula Encantada e a Ilha de Sancho',
+                texto: `Chegou a hora da última parte da nossa grande viagem! Dom Quixote vai voltar para a sua aldeia dentro de uma {{JAULA|JAU • LA|🔒}} de madeira, sair de novo em busca de aventuras, voar pelo céu num cavalo de madeira e ver o seu fiel escudeiro realizar o sonho de governar uma {{ILHA|I • LHA|🏝️}}!
+
+                    Nesta despedida, Sancho Pança vai ensinar para todos nós que a verdadeira {{SABEDORIA|SA • BE • DO • RI • A|🦉}} não depende de coroas nem de riquezas: ela nasce no coração das pessoas simples e generosas.
+
+                    Vire a página, sinta o vento no rosto e venha viver o final desta história que o mundo inteiro ama!`,
+                cena: {
+                    real: 'p0-real.webp', imag: 'p0-imag.webp', emoji: '🏝️',
+                    alt: 'Dom Quixote e Sancho Pança olhando o horizonte, prontos para a última aventura',
+                    legendaReal: '👓 Lente da Realidade: Dois Amigos e um Longo Caminho',
+                    legendaImag: '✨ Lente da Imaginação: O Cavaleiro e o Governador da Ilha!'
+                }
+            },
+            {
+                capitulo: '🪄 Capítulo 23 • A Jaula Encantada', corCapitulo: 'text-purple-700',
+                titulo: 'Uma Viagem de Carro de Boi',
+                texto: `Para levar Dom Quixote de volta para casa sem magoar o seu coração, os amigos construíram uma grande {{JAULA|JAU • LA|🔒}} de madeira em cima de uma carroça puxada por dois {{BOIS|BOIS|🐂}} brancos, mansos e bem lentos. Enquanto o cavaleiro dormia, cansado de tantas batalhas, eles o colocaram lá dentro com todo o cuidado.
+
+                    Quando acordou atrás das grades de madeira, Dom Quixote não ficou bravo. Ele sorriu, bem tranquilo: — Estou {{ENCANTADO|EN • CAN • TA • DO|🪄}} por um mago poderoso! — contou ele aos amigos. — Só os cavaleiros mais famosos da história viajam em carruagens encantadas como esta!
+
+                    E assim a carroça seguiu devagarinho pelos campos dourados: as rodas rangendo, os bois mugindo baixinho, Sancho ao lado no seu fiel burrico e Dom Quixote acenando feliz lá de dentro, sonhando com as aventuras que ainda viriam!`,
+                cena: {
+                    real: 'p1-real.webp', imag: 'p1-imag.webp', emoji: '🐂',
+                    alt: 'Dom Quixote dentro de uma jaula de madeira num carro de bois, com Sancho caminhando ao lado',
+                    legendaReal: '👓 Lente da Realidade: Uma Jaula num Carro de Bois',
+                    legendaImag: '✨ Lente da Imaginação: A Carruagem Encantada de um Mago!',
+                    hotspots: [
+                        { x: 3, y: 45, w: 36, h: 50, palavra: 'BOIS', emoji: '🐂', emojiImag: '✨', titulo: 'Tocar nos bois' }
+                    ]
+                }
+            },
+            {
+                capitulo: '🏡 Capítulo 24 • De Volta para Casa', corCapitulo: 'text-amber-700',
+                titulo: 'Abraços em La Mancha',
+                texto: `Num domingo de sol, ao meio-dia, a carroça de bois chegou à pracinha da aldeia, e a vizinhança toda correu para ver os viajantes. A carinhosa {{SOBRINHA|SO • BRI • NHA|👧}} Antônia e a governanta, que cuidava da casa, encheram Dom Quixote de beijos e lágrimas de alegria, puseram o tio numa cama macia e serviram uma canja bem quentinha.
+
+                    Sancho correu para a sua casinha de paredes brancas. A esposa, Teresa Pança, e a filhinha, Sanchica, vieram correndo abraçá-lo. — Trouxe moedas de ouro? — perguntou Teresa. — Trouxe vestidos bonitos? — quis saber Sanchica, pulando de alegria. — Trouxe uma coisa muito mais preciosa! — respondeu Sancho, girando a filha no ar. — Trouxe lembranças que nunca vou esquecer, muita coragem e a certeza de que ainda vou governar uma ilha bem bonita!
+
+                    Em volta da mesa, com pão caseiro e azeitonas, a {{FAMÍLIA|FA • MÍ • LI • A|👨‍👩‍👧}} ouviu as histórias dos moinhos e das ovelhas até tarde da noite. Mas, olhando a lua pela janela do quarto, Dom Quixote já sentia uma grande {{SAUDADE|SAU • DA • DE|💭}} da poeira mágica das estradas...`,
+                cena: {
+                    real: 'p2-real.webp', imag: 'p2-imag.webp', emoji: '🏡',
+                    alt: 'Na aldeia, a sobrinha abraça Dom Quixote, e Sancho é recebido por Teresa e Sanchica',
+                    legendaReal: '👓 Lente da Realidade: Abraços na Aldeia',
+                    legendaImag: '✨ Lente da Imaginação: A Volta Triunfal do Cavaleiro!',
+                    hotspots: [
+                        { x: 55, y: 25, w: 40, h: 70, palavra: 'FAMÍLIA', emoji: '❤️', emojiImag: '✨', titulo: 'Tocar na família de Sancho' }
+                    ]
+                }
+            },
+            {
+                capitulo: '🐴 Capítulo 25 • Clavilenho, o Cavalo Voador', corCapitulo: 'text-sky-700',
+                titulo: 'Uma Viagem pelo Céu sem Sair do Lugar',
+                texto: `Meses depois, com saudade das aventuras, os dois amigos partiram outra vez pelos caminhos do mundo! E tiveram uma surpresa: as suas aventuras tinham sido escritas num livro, e o Cavaleiro da Triste Figura estava famoso na Espanha inteira! Um duque e uma duquesa muito ricos, que adoravam esse livro, receberam os dois no seu palácio.
+
+                    Lá, eles inventaram uma brincadeira de teatro: apresentaram {{CLAVILENHO|CLA • VI • LE • NHO|🐴}}, um enorme cavalo de madeira com um pino no pescoço que, diziam, fazia o cavalo voar acima das nuvens. Dom Quixote e Sancho subiram no cavalo e cobriram os olhos com uma {{VENDA|VEN • DA|🙈}} preta.
+
+                    Para fingir o voo, os criados do palácio sopravam vento com um grande {{FOLE|FO • LE|🌬️}}, aquele soprador de ferreiro, e chegavam pertinho com uma tocha bem quente. — Estamos passando pelas nuvens mais altas! — gritava Sancho, com medo e encantado ao mesmo tempo, agarrado à cintura do seu senhor. — E agora estamos pertinho do sol! — Coragem, Sancho! Segure firme! — respondeu Dom Quixote. Ajude os amigos nessa viagem fantástica pelo céu!`,
+                cena: {
+                    real: 'p3-real.webp', imag: 'p3-imag.webp', emoji: '🐴',
+                    alt: 'No jardim do castelo, Dom Quixote e Sancho de olhos vendados montam um cavalo de madeira, rodeados de criados com foles e tochas',
+                    legendaReal: '👓 Lente da Realidade: Um Cavalo de Madeira no Jardim',
+                    legendaImag: '✨ Lente da Imaginação: Voando entre as Estrelas em Clavilenho!',
+                    camadas: [
+                        { id: 'clavilenho', src: 'camadas/p3-clavilenho.webp', x: 49, y: 95, w: 36, emoji: '🐴' },
+                        { id: 'vento-fole', src: 'camadas/p3-vento-fole.webp', item: 'fole', x: 39, y: 68, w: 18, anim: 'flutuar', emoji: '💨' },
+                        { id: 'calor-tocha', src: 'camadas/p3-calor-tocha.webp', item: 'tocha', x: 72, y: 42, w: 7, anim: 'pulsar', emoji: '🔥' }
+                    ],
+                    cartoes: {
+                        tipo: 'camadas',
+                        itens: [
+                            { id: 'fole', palavra: 'FOLE', emoji: '🌬️', som: 'windGust', animar: 'clavilenho', efeito: 'pulo', borda: 'border-sky-500' },
+                            { id: 'tocha', palavra: 'TOCHA', emoji: '🔥', som: 'lensMagic', animar: 'clavilenho', efeito: 'pulo', borda: 'border-orange-400' }
+                        ]
+                    }
+                }
+            },
+            {
+                capitulo: '💡 Capítulo 26 • Conselhos para um Governador', corCapitulo: 'text-emerald-700',
+                titulo: 'Sancho Vai Governar uma Ilha',
+                texto: `Continuando a brincadeira, o duque deu a Sancho o governo da Ilha Barataria, que, na verdade, era uma vila bonita no meio do campo, sem nenhum mar em volta! Na véspera da viagem, Dom Quixote sentou com o seu fiel escudeiro num banco de pedra do jardim e deu a ele os {{CONSELHOS|CON • SE • LHOS|💡}} mais sábios que um amigo pode dar:
+
+                    — Sancho, meu companheiro de estrada, nunca tenha vergonha de ser filho de lavradores, gente simples e honesta. Trate com o mesmo carinho quem anda descalço e quem é rico. Tenha sempre {{HUMILDADE|HU • MIL • DA • DE|🌱}}, procure a verdade com paciência e lembre-se: a {{JUSTIÇA|JUS • TI • ÇA|⚖️}} mais bonita é aquela que anda de mãos dadas com o perdão.
+
+                    Sancho ouviu cada conselho com os olhos cheios de lágrimas. Abraçou o seu querido amigo, prometeu guardar cada palavra no coração e partiu para governar a ilha, todo orgulhoso, montado no seu burrico.`,
+                cena: {
+                    real: 'p4-real.webp', imag: 'p4-imag.webp', emoji: '💡',
+                    alt: 'No jardim do castelo, Dom Quixote aconselha Sancho, que escuta com atenção',
+                    legendaReal: '👓 Lente da Realidade: Conselhos de um Amigo',
+                    legendaImag: '✨ Lente da Imaginação: O Futuro Governador da Ilha Barataria!',
+                    hotspots: [
+                        { x: 55, y: 25, w: 30, h: 70, palavra: 'SANCHO', emoji: '💡', emojiImag: '👑', titulo: 'Tocar em Sancho' }
+                    ]
+                }
+            },
+            {
+                capitulo: '⚖️ Capítulo 27 • O Mistério da Bengala', corCapitulo: 'text-indigo-700',
+                titulo: 'O Julgamento Mais Esperto',
+                texto: `Logo no seu primeiro dia como juiz da ilha, Sancho recebeu um mistério para resolver: uma briga entre dois velhinhos vizinhos. O primeiro reclamou: — Eu emprestei dez {{MOEDAS|MO • E • DAS|🪙}} de ouro para ele, e ele não quer devolver! O segundo jurou, com a mão no peito: — Eu juro que já devolvi cada moeda nas mãos dele!
+
+                    Mas, antes de jurar, o segundo velhinho pediu ao vizinho que segurasse a sua {{BENGALA|BEN • GA • LA|🦯}} de madeira. Jurou, pegou a bengala de volta e já ia embora, todo tranquilo. Sancho coçou a barba, desconfiado: — Hum... Por que alguém pede para o outro segurar a bengala bem na hora de jurar?
+
+                    — Tragam essa bengala aqui! — mandou o governador, com um olhar esperto. Quebre a bengala e descubra o segredo! Quando a bengala se partiu, rolaram pelo chão as dez moedas de ouro, que estavam escondidas dentro da madeira oca! Enquanto jurava, o velhinho tinha mesmo deixado o dinheiro nas mãos do vizinho, escondido na bengala! Todo mundo aplaudiu, admirado com a grande {{SABEDORIA|SA • BE • DO • RI • A|🦉}} do governador Sancho Pança!`,
+                cena: {
+                    real: 'p5-real.webp', imag: 'p5-imag.webp', emoji: '⚖️',
+                    alt: 'Sancho, sentado na cadeira de governador, observa dois velhinhos, um deles com uma bengala',
+                    legendaReal: '👓 Lente da Realidade: O Tribunal da Vila',
+                    legendaImag: '✨ Lente da Imaginação: O Trono do Sábio Governador!',
+                    camadas: [
+                        { id: 'bengala-inteira', src: 'camadas/p5-bengala-inteira.webp', ate: 'bengala', x: 50, y: 93, w: 11, emoji: '🦯' },
+                        { id: 'bengala-quebrada', src: 'camadas/p5-bengala-quebrada.webp', item: 'bengala', x: 50, y: 95, w: 20, emoji: '🪙' }
+                    ],
+                    cartoes: {
+                        tipo: 'camadas',
+                        colunas: 1,
+                        itens: [
+                            { id: 'bengala', palavra: 'BENGALA', emoji: '🦯', som: 'crunch', animar: 'bengala-quebrada', efeito: 'pulo' }
+                        ]
+                    }
+                }
+            },
+            {
+                capitulo: '🕊️ Capítulo 28 • Sancho Escolhe seu Burrico', corCapitulo: 'text-teal-700',
+                titulo: 'A Liberdade de um Homem Simples',
+                texto: `Sancho governou a vila por dez dias, sempre com muita honestidade. Mas a vida no palácio era cansativa: um doutor muito bravo não o deixava comer nada gostoso, as reuniões não acabavam nunca, e tanta pose de governador roubava a sua paz.
+
+                    Numa bela manhã, com as suas roupas simples de camponês, Sancho foi até o estábulo, abraçou com carinho o pescoço do seu {{BURRICO|BUR • RI • CO|🫏}} e falou baixinho: — Meu fiel {{AMIGO|A • MI • GO|🤝}}, quando eu viajava com você, os meus dias eram cheios de paz e alegria. Eu prefiro mil vezes a minha {{LIBERDADE|LI • BER • DA • DE|🕊️}} e um pedaço de pão com cebola a todos os banquetes de quem manda num reino!
+
+                    E assim, sem levar nem uma moeda do cofre da vila, Sancho se despediu da ilha de cabeça erguida: ia embora sem riquezas, mas com o coração cheio de bondade e sabedoria. Os moradores enxugaram as lágrimas, agradecidos, vendo partir aquele governador tão bom, que agora ia em busca da sua paz.`,
+                cena: {
+                    real: 'p6-real.webp', imag: 'p6-imag.webp', emoji: '🫏',
+                    alt: 'No estábulo, Sancho abraça o seu burrico com carinho',
+                    legendaReal: '👓 Lente da Realidade: Um Abraço no Velho Amigo',
+                    legendaImag: '✨ Lente da Imaginação: O Governador que Escolheu a Liberdade!',
+                    hotspots: [
+                        { x: 30, y: 20, w: 45, h: 75, palavra: 'BURRICO', emoji: '❤️', emojiImag: '🕊️', titulo: 'Tocar em Sancho e no burrico' }
+                    ]
+                }
+            },
+            {
+                capitulo: '🌙 Capítulo 29 • O Cavaleiro da Branca Lua', corCapitulo: 'text-slate-700',
+                titulo: 'As Aventuras Moram nos Livros',
+                texto: `Numa praia de areia dourada, em Barcelona, ao som das ondas do mar, apareceu a cavalo um cavaleiro misterioso, com uma lua prateada pintada no escudo: o Cavaleiro da {{BRANCA LUA|BRAN • CA • LU • A|🌙}}. Na verdade, era o jovem Sansão Carrasco, um vizinho querido de La Mancha, que só queria levar Dom Quixote para casa em segurança. Na luta na areia, Dom Quixote perdeu e, como um cavaleiro que sempre cumpre a palavra, fez o que tinha prometido: guardou a lança e voltou para a sua aldeia.
+
+                    De volta à sua sala de leitura, Alonso Quixano sentou-se perto da lareira acesa, rodeado dos livros que tanto amava. Todas as tardes, as crianças da aldeia sentavam no tapete, aos pés do vovô Alonso, para ouvir as histórias dos gigantes-moinhos, das ovelhas-exércitos, do voo de Clavilenho e do escudeiro que governou uma ilha com justiça no coração. — Era uma vez um fidalgo de La Mancha que sonhava de olhos abertos... — começava o vovô, com um brilho sapeca no olhar.
+
+                    E foi assim que a {{IMAGINAÇÃO|I • MA • GI • NA • ÇÃO|✨}} de Dom Quixote nunca se apagou: ela foi morar para sempre no coração dos pequenos {{LEITORES|LEI • TO • RES|📚}} do mundo inteiro. Porque quem lê e sonha com o bem, como você, nunca para de cavalgar pelas estradas mais bonitas que existem!`,
+                cena: {
+                    real: 'p7-real.webp', imag: 'p7-imag.webp', emoji: '📚',
+                    alt: 'Alonso Quixano, junto à lareira, conta histórias para as crianças da aldeia',
+                    legendaReal: '👓 Lente da Realidade: Histórias Junto à Lareira',
+                    legendaImag: '✨ Lente da Imaginação: Todas as Aventuras Ganham Vida!',
+                    hotspots: [
+                        { x: 44, y: 15, w: 26, h: 80, palavra: 'ALONSO QUIXANO', emoji: '📚', emojiImag: '✨', titulo: 'Tocar em Alonso Quixano' }
+                    ]
+                }
+            }
+        ]
+    };
+    </script>
+    <script src="../assets/js/texto.js"></script>
+    <script src="../assets/js/livro.js"></script>
+</body>
+</html>

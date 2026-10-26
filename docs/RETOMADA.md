@@ -1,4 +1,4 @@
-# 🔁 Retomada — onde o trabalho parou (2026-10-26, fase 6 da nova Parte 4)
+# 🔁 Retomada — onde o trabalho parou (2026-10-26, nova Parte 4 publicada)
 
 **Leia este arquivo primeiro numa sessão nova**, seja qual for o agente. Depois, siga a ordem de leitura do `AGENTS.md` §0.2 (AGENTS → receita geral → receita específica → plano → caderno da parte).
 
@@ -8,27 +8,19 @@
 
 ## 1. Estado atual
 
-- **Dom Quixote**:
-  - Partes 1, 2 e 3 **publicadas e aprovadas** pelo humano, que leu a série com o filho de 6 anos: ilustradas, narradas em português e traduzidas (en, fr, es).
-  - **Parte 4 antiga** continua no ar ([dom-quixote/parte-4.html](../dom-quixote/parte-4.html), arte em `dom-quixote/imagens/acervo/parte-4-v1/`, narração em `audio/narracao/parte-4/`) até a nova ser publicada.
-  - **Nova Parte 4 em rascunho, ILUSTRADA e NARRADA**: [dom-quixote/parte-4-rascunho.html](../dom-quixote/parte-4-rascunho.html) (`rascunho: true`), 11 capítulos (23 a 33) + capa = 12 páginas. Caderno: [docs/cadernos/dom-quixote-parte-4.md](cadernos/dom-quixote-parte-4.md).
-    - Fases 3, 4 e 5 aprovadas; o texto está congelado.
-    - **Fase 6 gravada (2026-10-26)**: 12 páginas inteiras com as vozes dos personagens (elenco novo: mestre Nicolau, barbeiro da bacia, Eugênio, velhinho, sobrinha, povo) e 34 palavras-chave. A narração fica numa pasta própria, `audio/narracao/parte-4-rascunho/` (`pastaAudio` no `window.LIVRO`), para não mexer na da parte publicada. **🛑 Esperando a escuta do humano**: abrir o rascunho com `?narracao=1`; o que ouvir está em [docs/narracao/qa-parte-4-rascunho.md](narracao/qa-parte-4-rascunho.md).
-- **Motor (vale para todos os livros)**: a Imaginação é recompensa (lente trancada 🔒 até a criança acertar), tipo de atividade `pedido`, páginas sem `imag` sem a chave, e agora `pastaAudio` (`AGENTS.md` §2.5).
-- **Gasto da API nesta sessão**: **US$ 0,20** (narração, Flex, 63 pedidos). Acumulado de outubro: **~US$ 5,12** (≈ R$ 28 de R$ 30): **a verba de outubro acabou**; a próxima produção paga fica para novembro.
+- **Dom Quixote, primeiro volume (Partes 1 a 4) completo e publicado**:
+  - Partes 1, 2 e 3: ilustradas, narradas em português e traduzidas (en, fr, es).
+  - **Parte 4 nova publicada em 2026-10-26** ([dom-quixote/parte-4.html](../dom-quixote/parte-4.html), caps. 23 a 33, 12 páginas): ilustrada e **narrada em português** (escuta aprovada pelo humano). Ainda **sem tradução**: em inglês, francês ou espanhol, ela abre em português com um aviso no idioma escolhido. Caderno: [docs/cadernos/dom-quixote-parte-4.md](cadernos/dom-quixote-parte-4.md). A antiga está em `docs/arquivo/dom-quixote-parte-4-v1/`.
+- **Motor**: a Imaginação é recompensa (lente trancada até a criança acertar), tipo `pedido`, `pastaAudio` para gravar a versão nova de uma parte publicada, e o aviso de parte sem tradução (`AGENTS.md` §2.5, §2.8).
+- **Gasto da API em outubro**: ~US$ 5,12 (≈ R$ 28 de R$ 30). **A verba de outubro acabou**: a próxima produção paga fica para novembro.
 
-## 2. Próxima sessão: escuta 🛑 ➔ publicação da nova Parte 4 ➔ fase 7
+## 2. Próximas sessões (escolha do humano)
 
-1. **Escuta do humano** (`?narracao=1`). Ajustes de voz ou entonação: regravar só a página ou o trecho (`--paginas N` ou `--ids ... --pagina-inteira`), com autorização.
-2. **Publicação** (receita geral §4), sem API:
-   - arquivar a Parte 4 antiga: `parte-4.html` → `docs/arquivo/` ou `imagens/acervo/`, e `audio/narracao/parte-4/` → `audio/narracao/acervo/parte-4-v1/` (ou só o histórico do Git); as traduções antigas `traducoes/parte-4.*.js` saem (as frases `docs/narracao/frases-dom-quixote-parte-4-*.json` também);
-   - `parte-4-rascunho.html` vira `parte-4.html`, sem `rascunho` e sem `pastaAudio`; `audio/narracao/parte-4-rascunho/` vira `parte-4/`; rodar `npm run exportar:frases` e conferir que os `hash` do `paginas.json` batem (a gravação não é refeita);
-   - tirar a entrada do `acervo.js`, atualizar a capa da estante (`index.html`) e o "Acervo" de `sobre.html` (com `i18n-site.js`); `npm run build` e o teste no Playwright.
-   - Enquanto a Parte 4 nova não tiver tradução, os idiomas en/fr/es caem no português nessa parte (ou se mostra um aviso): decidir com o humano.
-3. **Fase 7** (só com autorização e verba de novembro): traduções (o piquenique precisa de pegadinhas próprias em cada idioma: `cartoes: { pedidos, itens }`; o `conferir:traducoes` cobra) e a narração delas.
+1. **Fase 7 da Parte 4** (na fila; traduções sem custo, narração só com autorização e verba de novembro): traduzir para en, fr e es (o piquenique precisa de pegadinhas próprias em cada idioma: `cartoes: { pedidos, itens }`; o `conferir:traducoes` cobra), o humano aprova, e depois a narração nesses idiomas. As traduções da Parte 4 antiga estão em `docs/arquivo/dom-quixote-parte-4-v1/traducoes/`, para reaproveitar o que servir (pouco: o texto mudou quase todo). Depois, a fase 8 (retrospectiva) da Parte 4.
+2. **Parte 5** (segundo volume): fases 0 a 2, pelo plano `docs/PLANO-DOM-QUIXOTE-PARTES-4-7.md`.
 
 Prompt de abertura sugerido:
-> Ouvi a narração da nova Parte 4: <notas>. Pode publicar a nova Parte 4 no lugar da antiga (receita geral §4). Sem API paga nesta sessão.
+> Fase 7 da Parte 4 (caderno docs/cadernos/dom-quixote-parte-4.md): traduza para inglês, francês e espanhol. Sem API paga nesta sessão.
 
 ## 3. Frentes paradas (sem urgência)
 

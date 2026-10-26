@@ -57,7 +57,7 @@
             p1Desc: '<strong>Parte 1: O Cavaleiro da Super Imaginação</strong> (8 páginas): o fidalgo leitor, a armadura do bisavô, Rocinante e Dulcineia, a pousada-castelo, a sagração sob a lua cheia, o escudeiro Sancho Pança e o duelo contra os moinhos-gigantes.',
             p2Desc: '<strong>Parte 2: Exércitos de Lã e o Elmo Encantado</strong>: a carga contra os gigantes e o tombo nos moinhos, a lança de carvalho, os pastores e a Idade de Ouro, a batalha das ovelhas, o Cavaleiro da Triste Figura, as cabras que atravessam o rio e o elmo de Mambrino.',
             p3Desc: '<strong>Parte 3: Serra Morena e a Princesa Micomicona</strong>: a mala perdida, as cambalhotas, a carta para Dulcineia, os amigos disfarçados, a princesa Micomicona, a batalha dos odres e a volta à pousada.',
-            p4Desc: '<strong>Parte 4: A Jaula Encantada e a Ilha de Sancho</strong>: a volta para casa, o cavalo voador Clavilenho, Sancho governador e o mistério da bengala, e o reencontro de Alonso Quixano com as histórias.',
+            p4Desc: '<strong>Parte 4: O Elmo, a Bacia e a Jaula Encantada</strong>: o bacielmo, a jaula que vira carruagem de magos, o piquenique de Sancho, o Cavaleiro do Lago, a cabra fujona, a romaria e a volta para casa.',
             todasIlustradas: 'O primeiro volume de Dom Quixote (Partes 1 a 4) está todo ilustrado e interativo. O segundo volume está em produção.',
             comoUsarTitulo: 'Como usar no tablet',
             comoUsarItens: [
@@ -119,7 +119,7 @@
             p1Desc: '<strong>Part 1: The Knight of Super Imagination</strong> (8 pages): the book-loving gentleman, the great-grandfather\'s armour, Rocinante and Dulcinea, the castle-inn, knighthood under the full moon, squire Sancho Panza, and the duel against the giant windmills.',
             p2Desc: '<strong>Part 2: Armies of Wool and the Enchanted Helmet</strong>: the charge against giants, the oak branch lance, the goatherds and the Golden Age, the battle of the sheep, the Knight of the Rueful Countenance, and the helmet of Mambrino.',
             p3Desc: '<strong>Part 3: Sierra Morena and Princess Micomicona</strong>: the lost suitcase, the acrobatics, the letter to Dulcinea, disguised friends, Princess Micomicona, and the battle of the wine skins.',
-            p4Desc: '<strong>Part 4: The Enchanted Cage and Sancho\'s Island</strong>: the journey home, the wooden flying horse Clavileño, Sancho as governor and the walking stick trial, and Alonso Quixano\'s rediscovery of stories.',
+            p4Desc: '<strong>Part 4: The Helmet, the Basin and the Enchanted Cage</strong>: the basin-helmet, the cage that becomes a wizards\' carriage, Sancho\'s picnic, the Knight of the Lake, the runaway goat, the procession and the journey home. (For now, this part is only in Portuguese.)',
             todasIlustradas: 'The first volume of Don Quixote (Parts 1 to 4) is fully illustrated and interactive. The second volume is in progress.',
             comoUsarTitulo: 'How to use on a tablet',
             comoUsarItens: [
@@ -181,7 +181,7 @@
             p1Desc: '<strong>Partie 1 : Le Chevalier à la Super Imagination</strong> (8 pages) : le gentilhomme lecteur, l\'armure de l\'arrière-grand-père, Rossinante et Dulcinée, l\'auberge-château, l\'adoubement sous la pleine lune, l\'écuyer Sancho Panza et les moulins à vent.',
             p2Desc: '<strong>Partie 2 : Armées de Laine et le Casque Enchanté</strong> : la charge contre les géants, la lance de chêne, les chevriers et l\'Âge d\'or, la bataille des moutons, le Chevalier à la Triste Figure et le casque de Mambrin.',
             p3Desc: '<strong>Partie 3 : Sierra Morena et la Princesse Micomicona</strong> : la valise perdue, les cabrioles, la lettre à Dulcinée, les amis déguisés, la princesse Micomicona et la bataille des outres.',
-            p4Desc: '<strong>Partie 4 : La Cage Enchantée et l\'Île de Sancho</strong> : le retour au village, le cheval volant Clavileño, Sancho gouverneur et l\'énigme du bâton, et la redécouverte des histoires par Alonso Quijano.',
+            p4Desc: '<strong>Partie 4 : Le Heaume, la Bassine et la Cage Enchantée</strong> : le bassin-heaume, la cage qui devient le carrosse des magiciens, le pique-nique de Sancho, le Chevalier du Lac, la chèvre fugueuse, la procession et le retour à la maison. (Pour l\'instant, cette partie n\'existe qu\'en portugais.)',
             todasIlustradas: 'Le premier volume de Don Quichotte (parties 1 à 4) est entièrement illustré et interactif. Le second volume est en préparation.',
             comoUsarTitulo: 'Comment utiliser sur tablette',
             comoUsarItens: [
@@ -243,7 +243,7 @@
             p1Desc: '<strong>Parte 1: El Caballero de la Super Imaginación</strong> (8 páginas): el hidalgo lector, la armadura del bisabuelo, Rocinante y Dulcinea, la venta-castillo, la vela de las armas, el escudero Sancho Panza y el duelo con los molinos.',
             p2Desc: '<strong>Parte 2: Ejércitos de Lana y el Yelmo Encantado</strong>: la carga contra los gigantes, el ramo de encina, los cabreros y la Edad de Oro, la batalla de las ovejas, el Caballero de la Triste Figura y el yelmo de Mambrino.',
             p3Desc: '<strong>Parte 3: Sierra Morena y la Princesa Micomicona</strong>: la maleta perdida, las zapatetas, la carta a Dulcinea, los amigos disfrazados, la princesa Micomicona y la batalla de los cueros de vino.',
-            p4Desc: '<strong>Parte 4: La Jaula Encantada y la Ínsula de Sancho</strong>: la vuelta a casa, el caballo volador Clavileño, Sancho gobernador y el juicio de la caña, y el reencuentro de Alonso Quijano con las historias.',
+            p4Desc: '<strong>Parte 4: El Yelmo, la Bacía y la Jaula Encantada</strong>: el baciyelmo, la jaula que se vuelve carroza de magos, la merienda de Sancho, el Caballero del Lago, la cabra fujona, la romería y la vuelta a casa. (Por ahora, esta parte solo está en portugués.)',
             todasIlustradas: 'El primer volumen de Don Quijote (partes 1 a 4) está totalmente ilustrado e interactivo. El segundo volumen está en preparación.',
             comoUsarTitulo: 'Cómo usar en la tableta',
             comoUsarItens: [

@@ -134,7 +134,7 @@
         '✨ Lente da Imaginação: A Grande Mesa dos Contadores de Histórias!': '✨ Lente de la Imaginación: ¡La gran mesa de los contadores de historias!',
         'Tocar em Dom Quixote': 'Tocar a don Quijote',
         '👓 Lente da Realidade: Sancho Lembrou! "O Cavaleiro da Triste Figura"': '👓 Lente de la Realidad: ¡Sancho se acordó! «El Caballero de la Triste Figura»',
-        '🎉 Fim da Parte 3! Na Parte 4: uma jaula encantada, o voo no cavalo de madeira e a grande sabedoria de Sancho governador!': '🎉 ¡Fin de la Parte 3! En la Parte 4: una jaula encantada, el vuelo en el caballo de madera ¡y la gran sabiduría de Sancho gobernador!',
+        '🎉 Fim da Parte 3! Na Parte 4: uma bacia que vira elmo, uma jaula que vira carruagem e a volta do nosso cavaleiro para casa!': '🎉 ¡Fin de la Parte 3! En la Parte 4: una bacía que se vuelve yelmo, una jaula que se vuelve carroza y la vuelta de nuestro caballero a casa!',
         'Ir para a Parte 4': 'Ir a la Parte 4'
     }
 };

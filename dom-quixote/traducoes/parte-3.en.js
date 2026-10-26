@@ -134,7 +134,7 @@ Everyone looked at one another, amazed at how wise that dreamy knight was. The p
         '✨ Lente da Imaginação: A Grande Mesa dos Contadores de Histórias!': '✨ Imagination Lens: The Great Table of Storytellers!',
         'Tocar em Dom Quixote': 'Tap Don Quixote',
         '👓 Lente da Realidade: Sancho Lembrou! "O Cavaleiro da Triste Figura"': '👓 Reality Lens: Sancho Remembered! “The Knight of the Sorrowful Face”',
-        '🎉 Fim da Parte 3! Na Parte 4: uma jaula encantada, o voo no cavalo de madeira e a grande sabedoria de Sancho governador!': '🎉 The End of Part 3! In Part 4: a magic cage, a flight on a wooden horse and wise Governor Sancho!',
+        '🎉 Fim da Parte 3! Na Parte 4: uma bacia que vira elmo, uma jaula que vira carruagem e a volta do nosso cavaleiro para casa!': '🎉 The End of Part 3! In Part 4: a basin that becomes a helmet, a cage that becomes a carriage and our knight\'s journey home!',
         'Ir para a Parte 4': 'Go to Part 4'
     }
 };

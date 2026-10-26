@@ -97,6 +97,7 @@ const IDIOMAS = {
             normal: '🐇 Normal', devagar: '🐢 Devagar',
             semVoz: 'Nenhuma voz em português foi encontrada neste aparelho. Peça a um adulto para instalar a voz <strong>Português (Brasil)</strong> nas configurações de "Texto para fala" do tablet.',
             gravadaEmBreve: '',
+            semTraducao: '🌍 Esta parte ainda não foi traduzida. Por enquanto, ela fica em português.',
             recomendada: '⭐ recomendada', offline: 'funciona offline', online: 'precisa de internet', gravada: 'gravada', maisNatural: 'mais natural',
             previa: '(prévia: só algumas páginas)', emProducao: '(em produção para esta parte)',
             amostraDe: (nome) => `Ouvir amostra de ${nome}`, amostra: 'Olá! Eu vou ler esta história com você.',
@@ -133,6 +134,7 @@ const IDIOMAS = {
             normal: '🐇 Normal', devagar: '🐢 Slow',
             semVoz: 'No English voice was found on this device. Ask a grown-up to install an <strong>English</strong> voice in the tablet\'s "Text-to-speech" settings.',
             gravadaEmBreve: '🎙️ A recorded narration in English is coming soon. For now, the device\'s voice reads the story.',
+            semTraducao: '🌍 This part has not been translated into English yet. For now, it stays in Portuguese.',
             recomendada: '⭐ recommended', offline: 'works offline', online: 'needs internet', gravada: 'recorded', maisNatural: 'most natural',
             previa: '(preview: only some pages)', emProducao: '(in production for this part)',
             amostraDe: (nome) => `Hear a sample of ${nome}`, amostra: 'Hello! I am going to read this story with you.',
@@ -169,6 +171,7 @@ const IDIOMAS = {
             normal: '🐇 Normale', devagar: '🐢 Lente',
             semVoz: 'Aucune voix française n’a été trouvée sur cet appareil. Demande à un adulte d’installer une voix <strong>Français</strong> dans les réglages « Synthèse vocale » de la tablette.',
             gravadaEmBreve: '🎙️ Une narration enregistrée en français arrive bientôt. Pour l’instant, c’est la voix de l’appareil qui lit l’histoire.',
+            semTraducao: '🌍 Cette partie n’est pas encore traduite en français. Pour l’instant, elle reste en portugais.',
             recomendada: '⭐ recommandée', offline: 'fonctionne hors ligne', online: 'besoin d’internet', gravada: 'enregistrée', maisNatural: 'plus naturelle',
             previa: '(aperçu : quelques pages)', emProducao: '(en préparation pour cette partie)',
             amostraDe: (nome) => `Écouter un extrait de ${nome}`, amostra: 'Bonjour ! Je vais lire cette histoire avec toi.',
@@ -205,6 +208,7 @@ const IDIOMAS = {
             normal: '🐇 Normal', devagar: '🐢 Despacio',
             semVoz: 'No se encontró ninguna voz en español en este aparato. Pide a un adulto que instale una voz <strong>Español</strong> en los ajustes de «Texto a voz» de la tableta.',
             gravadaEmBreve: '🎙️ Pronto habrá una narración grabada en español. Por ahora, la voz del aparato lee la historia.',
+            semTraducao: '🌍 Esta parte todavía no está traducida al español. Por ahora, se queda en portugués.',
             recomendada: '⭐ recomendada', offline: 'funciona sin internet', online: 'necesita internet', gravada: 'grabada', maisNatural: 'más natural',
             previa: '(avance: solo algunas páginas)', emProducao: '(en producción para esta parte)',
             amostraDe: (nome) => `Oír una muestra de ${nome}`, amostra: '¡Hola! Voy a leer esta historia contigo.',
@@ -2508,7 +2512,27 @@ function trocarIdioma(codigo, botao) {
         // Esta parte ainda não tem tradução neste idioma
         playSound('hint');
         nudge(botao);
+        avisarSemTraducao(codigo);
     });
+}
+
+/* Aviso gentil, no idioma escolhido, de que esta parte ainda está só em português (pedido do humano,
+   2026-10-26). A escolha do idioma continua guardada: as outras partes abrem traduzidas. */
+function avisarSemTraducao(codigo) {
+    const texto = IDIOMAS[codigo] && IDIOMAS[codigo].ui.semTraducao;
+    if (!texto || RASCUNHO) return;
+    document.getElementById('aviso-sem-traducao')?.remove();
+    const aviso = document.createElement('div');
+    aviso.id = 'aviso-sem-traducao';
+    aviso.setAttribute('role', 'status');
+    aviso.className = 'fixed top-16 left-1/2 -translate-x-1/2 z-50 max-w-[90vw] bg-amber-950/95 text-amber-100 border-2 border-amber-400 rounded-2xl px-4 py-2.5 shadow-2xl flex items-center gap-3 backdrop-blur-sm';
+    aviso.innerHTML = `
+        <span class="font-display font-semibold text-xs sm:text-sm">${escapeHtml(texto)}</span>
+        <button type="button" class="text-amber-300 hover:text-white p-1 text-sm leading-none" aria-label="OK">✕</button>
+    `;
+    aviso.querySelector('button').addEventListener('click', () => aviso.remove());
+    document.body.appendChild(aviso);
+    setTimeout(() => aviso.remove(), 8000);
 }
 
 function atualizarBotaoMaiusculas() {
@@ -2759,7 +2783,10 @@ function iniciarLivro() {
 function prepararIdioma() {
     const pedido = new URLSearchParams(window.location.search).get('lang') || lerPreferencia(PREF_IDIOMA) || PT;
     const codigo = IDIOMAS[pedido] ? pedido : PT;
-    return carregarTraducao(codigo).then(() => { idioma = codigo; }, () => { idioma = PT; });
+    return carregarTraducao(codigo).then(() => { idioma = codigo; }, () => {
+        idioma = PT;
+        if (codigo !== PT) domPronto.then(() => setTimeout(() => avisarSemTraducao(codigo), 600));
+    });
 }
 
 const domPronto = new Promise(resolve => {

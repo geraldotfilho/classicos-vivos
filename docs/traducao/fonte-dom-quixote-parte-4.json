@@ -6,274 +6,642 @@
   "paginas": [
     {
       "indice": 0,
-      "hash": "5249469a86",
+      "hash": "8a76388535",
       "capa": true,
-      "titulo": "Parte 4: A Jaula Encantada e a Ilha de Sancho",
-      "texto": "Chegou a hora da última parte da nossa grande viagem! Dom Quixote vai voltar para a sua aldeia dentro de uma {{JAULA|JAU • LA|🔒}} de madeira, sair de novo em busca de aventuras, voar pelo céu num cavalo de madeira e ver o seu fiel escudeiro realizar o sonho de governar uma {{ILHA|I • LHA|🏝️}}!\n\nNesta despedida, Sancho Pança vai ensinar para todos nós que a verdadeira {{SABEDORIA|SA • BE • DO • RI • A|🦉}} não depende de coroas nem de riquezas: ela nasce no coração das pessoas simples e generosas.\n\nVire a página, sinta o vento no rosto e venha viver o final desta história que o mundo inteiro ama!"
+      "titulo": "Parte 4: O Elmo, a Bacia e a Jaula Encantada",
+      "texto": "Depois de tantas aventuras na serra e na pousada, Dom Quixote acredita que o {{REINO|REI • NO|👑}} da princesa Micomicona está livre de todo o perigo. Mas os seus melhores amigos prepararam um plano, com muito carinho, para levá-lo de volta para casa!\n\nNesta viagem cheia de surpresas, uma bacia de latão vai virar uma confusão engraçada, uma {{JAULA|JAU • LA|🔒}} de madeira vai virar carruagem mágica, e o fiel Sancho Pança vai mostrar que a esperteza e a {{AMIZADE|A • MI • ZA • DE|🤝}} desfazem qualquer feitiço.\n\nAbra o livro, sinta a brisa do caminho e venha acompanhar a volta do nosso cavaleiro sonhador!"
     },
     {
       "indice": 1,
-      "hash": "a0b7ba483c",
-      "capitulo": "🪄 Capítulo 23 • A Jaula Encantada",
-      "titulo": "Uma Viagem de Carro de Boi",
-      "texto": "Para levar Dom Quixote de volta para casa sem magoar o seu coração, os amigos construíram uma grande {{JAULA|JAU • LA|🔒}} de madeira em cima de uma carroça puxada por dois {{BOIS|BOIS|🐂}} brancos, mansos e bem lentos. Enquanto o cavaleiro dormia, cansado de tantas batalhas, eles o colocaram lá dentro com todo o cuidado.\n\nQuando acordou atrás das grades de madeira, Dom Quixote não ficou bravo. Ele sorriu, bem tranquilo: — Estou {{ENCANTADO|EN • CAN • TA • DO|🪄}} por um mago poderoso! — contou ele aos amigos. — Só os cavaleiros mais famosos da história viajam em carruagens encantadas como esta!\n\nE assim a carroça seguiu devagarinho pelos campos dourados: as rodas rangendo, os bois mugindo baixinho, Sancho ao lado no seu fiel burrico e Dom Quixote acenando feliz lá de dentro, sonhando com as aventuras que ainda viriam!"
+      "hash": "58c0652471",
+      "capitulo": "💐 Capítulo 23 • O Reino Está Salvo!",
+      "titulo": "A Despedida da Princesa",
+      "texto": "O sol da manhã entrou pelas janelas da pousada e encheu o pátio de luz dourada. Doroteia ainda fazia o papel da princesa Micomicona, para o plano dos amigos dar certo até o fim. Já vestida para a viagem, ela veio agradecer ao cavaleiro com uma linda {{REVERÊNCIA|RE • VE • RÊN • CI • A|🙇}}:\n\n— Ó cavaleiro valente! — disse ela, com a voz doce e os olhos brilhando. — Graças à sua espada, o gigante malvado foi vencido para sempre! O meu povo agora canta de alegria, e eu já posso voltar em paz para o meu reino!\n\nSancho cochichou no ouvido do padre: — Vencido, sim... mas deixou a pousada inteira cheirando a vinho! O padre precisou tapar a boca para não rir.\n\nDom Quixote bateu a mão no peito, todo orgulhoso: — Cumprir o meu {{DEVER|DE • VER|🛡️}} e defender quem precisa é a maior alegria de um cavaleiro andante! Já sinto o coração bater forte para a próxima {{BATALHA|BA • TA • LHA|⚔️}}!\n\nO padre e mestre Nicolau, o barbeiro da aldeia, trocaram um olhar preocupado. O amigo estava cansado e magrinho de tanto andar pelo mundo. Era hora de levá-lo para casa, antes que ele encontrasse outro perigo pela {{ESTRADA|ES • TRA • DA|🛣️}}!"
     },
     {
       "indice": 2,
-      "hash": "cfe4c9bff8",
-      "capitulo": "🏡 Capítulo 24 • De Volta para Casa",
-      "titulo": "Abraços em La Mancha",
-      "texto": "Num domingo de sol, ao meio-dia, a carroça de bois chegou à pracinha da aldeia, e a vizinhança toda correu para ver os viajantes. A carinhosa {{SOBRINHA|SO • BRI • NHA|👧}} Antônia e a governanta, que cuidava da casa, encheram Dom Quixote de beijos e lágrimas de alegria, puseram o tio numa cama macia e serviram uma canja bem quentinha.\n\nSancho correu para a sua casinha de paredes brancas. A esposa, Teresa Pança, e a filhinha, Sanchica, vieram correndo abraçá-lo. — Trouxe moedas de ouro? — perguntou Teresa. — Trouxe vestidos bonitos? — quis saber Sanchica, pulando de alegria. — Trouxe uma coisa muito mais preciosa! — respondeu Sancho, girando a filha no ar. — Trouxe lembranças que nunca vou esquecer, muita coragem e a certeza de que ainda vou governar uma ilha bem bonita!\n\nEm volta da mesa, com pão caseiro e azeitonas, a {{FAMÍLIA|FA • MÍ • LI • A|👨‍👩‍👧}} ouviu as histórias dos moinhos e das ovelhas até tarde da noite. Mas, olhando a lua pela janela do quarto, Dom Quixote já sentia uma grande {{SAUDADE|SAU • DA • DE|💭}} da poeira mágica das estradas..."
+      "hash": "f0528a0445",
+      "capitulo": "👑 Capítulo 24 • Bacia ou Elmo?",
+      "titulo": "A Grande Invenção de Sancho",
+      "texto": "Quando todos amarravam as malas para partir, ouviu-se uma gritaria no portão da pousada. Era o barbeiro da bacia, aquele que tinha fugido de Dom Quixote naquele dia de chuva! Ele viu o metal brilhando na cabeça do cavaleiro, arregalou os olhos e gritou: — Olhem lá o ladrão da minha bacia! Devolva a minha {{BACIA|BA • CI • A|🥣}} de {{LATÃO|LA • TÃO|🪙}} agora mesmo!\n\n— Bacia de barbeiro? Que bobagem! — respondeu Dom Quixote, estufando o peito como um rei. — Este é o famoso {{ELMO|EL • MO|👑}} de Mambrino, que eu conquistei com bravura debaixo de chuva!\n\nMestre Nicolau, segurando o riso, teve uma ideia. Virou-se para os viajantes da pousada e perguntou, bem sério: — Vamos votar, minha gente! Isto aqui é bacia ou elmo? E todos, entrando na brincadeira, responderam juntos: — É um elmo! O barbeiro da bacia coçou a cabeça, sem entender mais nada: — Então eu passei a vida inteira fazendo barba com o elmo de um rei?\n\nMas ele não largava a bacia, e Dom Quixote também não. Os dois puxavam de um lado e do outro, e a pousada inteira segurava o riso. Até que Sancho Pança pulou no meio deles, de braços abertos: — Calma, meus senhores! Não é só bacia nem só elmo... É um {{BACIELMO|BA • CI • EL • MO|✨}}!\n\nO padre aproveitou a deixa e deu umas moedinhas ao barbeiro, para ele comprar uma bacia novinha. O bacielmo ficou com o cavaleiro, e todos caíram na gargalhada, em paz!",
+      "cartoes": {
+        "tipo": "ordem",
+        "ordem": [
+          "ba",
+          "ci",
+          "el",
+          "mo"
+        ],
+        "itens": [
+          {
+            "id": "el",
+            "palavra": "EL",
+            "emoji": "👑"
+          },
+          {
+            "id": "ba",
+            "palavra": "BA",
+            "emoji": "🥣"
+          },
+          {
+            "id": "mo",
+            "palavra": "MO",
+            "emoji": "✨"
+          },
+          {
+            "id": "ci",
+            "palavra": "CI",
+            "emoji": "🪙"
+          }
+        ]
+      }
     },
     {
       "indice": 3,
-      "hash": "2f75bcf278",
-      "capitulo": "🐴 Capítulo 25 • Clavilenho, o Cavalo Voador",
-      "titulo": "Uma Viagem pelo Céu sem Sair do Lugar",
-      "texto": "Meses depois, com saudade das aventuras, os dois amigos partiram outra vez pelos caminhos do mundo! E tiveram uma surpresa: as suas aventuras tinham sido escritas num livro, e o Cavaleiro da Triste Figura estava famoso na Espanha inteira! Um duque e uma duquesa muito ricos, que adoravam esse livro, receberam os dois no seu palácio.\n\nLá, eles inventaram uma brincadeira de teatro: apresentaram {{CLAVILENHO|CLA • VI • LE • NHO|🐴}}, um enorme cavalo de madeira com um pino no pescoço que, diziam, fazia o cavalo voar acima das nuvens. Dom Quixote e Sancho subiram no cavalo e cobriram os olhos com uma {{VENDA|VEN • DA|🙈}} preta.\n\nPara fingir o voo, os criados do palácio sopravam vento com um grande {{FOLE|FO • LE|🌬️}}, aquele soprador de ferreiro, e chegavam pertinho com uma tocha bem quente. — Estamos passando pelas nuvens mais altas! — gritava Sancho, com medo e encantado ao mesmo tempo, agarrado à cintura do seu senhor. — E agora estamos pertinho do sol! — Coragem, Sancho! Segure firme! — respondeu Dom Quixote. Ajude os amigos nessa viagem fantástica pelo céu!"
+      "hash": "2d5f271fb5",
+      "capitulo": "🪄 Capítulo 25 • A Jaula Encantada",
+      "titulo": "A Carruagem dos Magos",
+      "texto": "Para levar Dom Quixote para casa sem ferir o seu orgulho de cavaleiro, o padre e mestre Nicolau inventaram um teatro. Construíram uma grande {{JAULA|JAU • LA|🔒}} de ripas de madeira em cima de uma carroça puxada por dois bois bem lentos. Depois, vestiram lençóis brancos até os pés, chapéus pontudos de papelão pintados de estrelas e máscaras com bigodes de mentira, para parecerem {{MAGOS|MA • GOS|🧙}} de terras distantes. Rocinante iria amarrado atrás da carroça, e os dois amigos, cada um no seu cavalo, logo ao lado.\n\nDesta vez, os amigos não contaram nada a Sancho: tinham medo de que ele, com pena, avisasse o amo. Por isso Sancho só olhava de longe, montado no burrico, franzindo a testa. Aqueles magos de lençol tinham um jeitinho muito conhecido...\n\nCom tochas acesas e passos misteriosos, os falsos magos se aproximaram de Dom Quixote. Mestre Nicolau engrossou a voz, abriu um velho {{PERGAMINHO|PER • GA • MI • NHO|📜}} e leu uma {{PROFECIA|PRO • FE • CI • A|🔮}} em versos:\n\n— Não tenha medo, cavaleiro valente! Nesta carruagem você vai em frente. Vai voltar para a sua terra e descansar de tanta guerra. E um dia sairá de novo, contente!\n\nDom Quixote sorriu, maravilhado: — Os maiores cavaleiros da história sempre viajaram em carruagens mágicas! Então o mago mascarado anunciou: — A porta desta carruagem só se abre com uma palavra secreta: a palavra que une os corações mais leais!",
+      "cartoes": {
+        "tipo": "ordem",
+        "ordem": [
+          "a",
+          "m",
+          "i",
+          "g",
+          "o"
+        ],
+        "itens": [
+          {
+            "id": "m",
+            "palavra": "M",
+            "emoji": "🪄"
+          },
+          {
+            "id": "a",
+            "palavra": "A",
+            "emoji": "📜"
+          },
+          {
+            "id": "o",
+            "palavra": "O",
+            "emoji": "⭐"
+          },
+          {
+            "id": "g",
+            "palavra": "G",
+            "emoji": "🔒"
+          },
+          {
+            "id": "i",
+            "palavra": "I",
+            "emoji": "✨"
+          }
+        ]
+      }
     },
     {
       "indice": 4,
-      "hash": "f98be0890f",
-      "capitulo": "💡 Capítulo 26 • Conselhos para um Governador",
-      "titulo": "Sancho Vai Governar uma Ilha",
-      "texto": "Continuando a brincadeira, o duque deu a Sancho o governo da Ilha Barataria, que, na verdade, era uma vila bonita no meio do campo, sem nenhum mar em volta! Na véspera da viagem, Dom Quixote sentou com o seu fiel escudeiro num banco de pedra do jardim e deu a ele os {{CONSELHOS|CON • SE • LHOS|💡}} mais sábios que um amigo pode dar:\n\n— Sancho, meu companheiro de estrada, nunca tenha vergonha de ser filho de lavradores, gente simples e honesta. Trate com o mesmo carinho quem anda descalço e quem é rico. Tenha sempre {{HUMILDADE|HU • MIL • DA • DE|🌱}}, procure a verdade com paciência e lembre-se: a {{JUSTIÇA|JUS • TI • ÇA|⚖️}} mais bonita é aquela que anda de mãos dadas com o perdão.\n\nSancho ouviu cada conselho com os olhos cheios de lágrimas. Abraçou o seu querido amigo, prometeu guardar cada palavra no coração e partiu para governar a ilha, todo orgulhoso, montado no seu burrico."
+      "hash": "b4385c5e68",
+      "capitulo": "🤔 Capítulo 26 • Encantado Sente Fome?",
+      "titulo": "A Palavra de Honra",
+      "texto": "A carroça de bois seguia rangendo devagar pela estrada de La Mancha, com Dom Quixote sentado dentro da jaula, quietinho como um rei no trono. Sancho não aguentava mais ver o amo preso atrás daquelas grades. Com o coração apertado, chegou o burrico bem pertinho e cochichou: — Meu amo... esses magos têm a voz de mestre Nicolau e o cheiro de vela da igreja do padre! Isso é invenção deles para levar a gente de volta!\n\n— Você não entende de encantos, Sancho — respondeu Dom Quixote, com toda a calma. — Os magos mudam de voz e de cara só para nos testar!\n\nMas Sancho não desistiu e usou a sua esperteza de homem do campo: — Então me responda a verdade, meu senhor: o senhor sente a barriga roncar de {{FOME|FO • ME|🥖}}? Sente a garganta seca de {{SEDE|SE • DE|💧}}? E vontade de fazer xixi atrás da moita, o senhor sente?\n\n— Ora, Sancho! — respondeu o fidalgo, passando a mão na barriga magra. — Sinto fome de leão, sede de deserto, e comeria três pães inteiros se tivesse! E a moita... bem, a moita também está me chamando!\n\n— Viram só? — comemorou Sancho. — Gente encantada não come, não bebe e nem faz xixi! Isso não é {{FEITIÇO|FEI • TI • ÇO|🪄}} coisa nenhuma! Dom Quixote levantou um dedo, muito sábio: — Os encantamentos de hoje são modernos, Sancho. Agora os encantados comem, sim! Sancho revirou os olhos, e o padre virou o rosto para esconder o riso.\n\nEntão o padre desceu do cavalo e chegou perto das grades: — Nós abrimos a porta para almoçarmos juntos, Dom Quixote, se o senhor nos der a sua palavra de honra de cavaleiro: não vai fugir e vai seguir com a gente, em paz, até a aldeia. Dom Quixote estendeu a mão por entre as grades, muito sério: — Dou a minha palavra de {{HONRA|HON • RA|🤝}}!\n\nO padre encostou a boca na fechadura e sussurrou a palavra secreta: — AMIGO. E a porta se abriu. Era a palavra mais verdadeira de todo aquele teatro, porque tudo tinha sido feito por amizade. A palavra de Dom Quixote valia mais que mil trancas de ferro: dali em diante, ele seguiu montado em Rocinante, ao lado da carroça, e a jaula foi viajando vazia, levando só as malas."
     },
     {
       "indice": 5,
-      "hash": "1804a9529d",
-      "capitulo": "⚖️ Capítulo 27 • O Mistério da Bengala",
-      "titulo": "O Julgamento Mais Esperto",
-      "texto": "Logo no seu primeiro dia como juiz da ilha, Sancho recebeu um mistério para resolver: uma briga entre dois velhinhos vizinhos. O primeiro reclamou: — Eu emprestei dez {{MOEDAS|MO • E • DAS|🪙}} de ouro para ele, e ele não quer devolver! O segundo jurou, com a mão no peito: — Eu juro que já devolvi cada moeda nas mãos dele!\n\nMas, antes de jurar, o segundo velhinho pediu ao vizinho que segurasse a sua {{BENGALA|BEN • GA • LA|🦯}} de madeira. Jurou, pegou a bengala de volta e já ia embora, todo tranquilo. Sancho coçou a barba, desconfiado: — Hum... Por que alguém pede para o outro segurar a bengala bem na hora de jurar?\n\n— Tragam essa bengala aqui! — mandou o governador, com um olhar esperto. Quebre a bengala e descubra o segredo! Quando a bengala se partiu, rolaram pelo chão as dez moedas de ouro, que estavam escondidas dentro da madeira oca! Enquanto jurava, o velhinho tinha mesmo deixado o dinheiro nas mãos do vizinho, escondido na bengala! Todo mundo aplaudiu, admirado com a grande {{SABEDORIA|SA • BE • DO • RI • A|🦉}} do governador Sancho Pança!"
+      "hash": "c5e68aea5e",
+      "capitulo": "🧺 Capítulo 27 • O Piquenique no Prado",
+      "titulo": "O Lanche sob o Carvalho",
+      "texto": "Livre da jaula, Dom Quixote esticou as pernas compridas e encheu o peito de ar: — Ah, Sancho! Até o capim tem cheiro de liberdade!\n\nPararam num prado verdinho, à sombra de um {{CARVALHO|CAR • VA • LHO|🌳}} tão grande que parecia um guarda-chuva de folhas. Ali perto corria um riacho de água clarinha, fazendo cócegas nas pedras. Rocinante e o burrico foram beber juntos, como dois velhos amigos.\n\nSancho estendeu uma toalha xadrez na grama e abriu o alforje. Que bagunça! O {{LANCHE|LAN • CHE|🧺}} estava todo misturado lá dentro: o pão caseiro, o queijo de ovelha e a moringa de água fresca, junto com um pião de madeira que ele levava de presente para a filha. E, lá no alto, uma águia dava voltas no céu, de olho na comida.\n\nA barriga de Sancho roncou tão alto que o padre olhou para as nuvens: — Será trovão? — É a minha barriga, seu padre — explicou Sancho, muito sério. — Ela conversa quando está com fome!\n\nQuando o lanche ficou pronto, Dom Quixote tirou o bacielmo e repartiu o primeiro pedaço de pão com o escudeiro: — Lembra dos pastores, Sancho, que dividiram o jantar com a gente debaixo das estrelas? Pão dividido com amigos é mais gostoso que o banquete de um rei! E Sancho, de bochechas cheias, só conseguiu responder: — Hum-hum!",
+      "cartoes": {
+        "tipo": "pedido",
+        "pedidos": [
+          "pao",
+          "queijo",
+          "agua"
+        ],
+        "itens": [
+          {
+            "id": "piao",
+            "palavra": "PIÃO",
+            "emoji": "🌀",
+            "pegadinha": "Pião? O pião rodou, rodou em cima da toalha e espalhou o lanche todo! Vamos arrumar de novo!"
+          },
+          {
+            "id": "queijo",
+            "palavra": "QUEIJO",
+            "emoji": "🧀",
+            "figura": "camadas/p5-queijo.webp"
+          },
+          {
+            "id": "aguia",
+            "palavra": "ÁGUIA",
+            "emoji": "🦅",
+            "pegadinha": "Águia? A águia desceu do céu e... nhac! Levou o lanche embora! Vamos arrumar de novo!"
+          },
+          {
+            "id": "pao",
+            "palavra": "PÃO",
+            "emoji": "🥖",
+            "figura": "camadas/p5-pao.webp"
+          },
+          {
+            "id": "queixo",
+            "palavra": "QUEIXO",
+            "emoji": "🧔",
+            "pegadinha": "Queixo? Queixo não se come! Sancho riu tanto que derrubou o lanche todo. Vamos arrumar de novo!"
+          },
+          {
+            "id": "agua",
+            "palavra": "ÁGUA",
+            "emoji": "🏺",
+            "figura": "camadas/p5-agua.webp"
+          }
+        ]
+      }
     },
     {
       "indice": 6,
-      "hash": "36edc2eb91",
-      "capitulo": "🕊️ Capítulo 28 • Sancho Escolhe seu Burrico",
-      "titulo": "A Liberdade de um Homem Simples",
-      "texto": "Sancho governou a vila por dez dias, sempre com muita honestidade. Mas a vida no palácio era cansativa: um doutor muito bravo não o deixava comer nada gostoso, as reuniões não acabavam nunca, e tanta pose de governador roubava a sua paz.\n\nNuma bela manhã, com as suas roupas simples de camponês, Sancho foi até o estábulo, abraçou com carinho o pescoço do seu {{BURRICO|BUR • RI • CO|🫏}} e falou baixinho: — Meu fiel {{AMIGO|A • MI • GO|🤝}}, quando eu viajava com você, os meus dias eram cheios de paz e alegria. Eu prefiro mil vezes a minha {{LIBERDADE|LI • BER • DA • DE|🕊️}} e um pedaço de pão com cebola a todos os banquetes de quem manda num reino!\n\nE assim, sem levar nem uma moeda do cofre da vila, Sancho se despediu da ilha de cabeça erguida: ia embora sem riquezas, mas com o coração cheio de bondade e sabedoria. Os moradores enxugaram as lágrimas, agradecidos, vendo partir aquele governador tão bom, que agora ia em busca da sua paz."
+      "hash": "2e4a580977",
+      "capitulo": "🏰 Capítulo 28 • O Cavaleiro do Lago",
+      "titulo": "O Castelo das Sete Fadas",
+      "texto": "Depois do lanche, todos se deitaram na sombra do carvalho, de barriga cheia. Foi então que Dom Quixote se sentou numa raiz, levantou a mão para o céu e disse: — Escutem, meus amigos, uma das histórias mais bonitas dos meus velhos livros de cavalaria!\n\n— Era uma vez um cavaleiro que chegou à beira de um {{LAGO|LA • GO|🌊}} muito estranho. A água era preta como piche e borbulhava: blub, blub, blub! Parecia cheia de cobras e lagartos de cara amarrada. De repente, uma voz fraquinha saiu lá do fundo: \"Ó cavaleiro! Sete {{FADAS|FA • DAS|🧚}} estão presas num encanto aqui embaixo. Ajude a gente!\"\n\n— E ele pulou? — perguntou Sancho, de olhos arregalados. — Primeiro, ele sentiu medo — respondeu Dom Quixote. — E o medo dizia: \"Cuidado!\". Por isso ele não pulou de olhos fechados. Ajoelhou-se na beira e olhou com calma, bem de pertinho. E viu que as cobras eram só raízes balançando, os lagartos eram sombras de nuvens, e a fervura era só o borbulhar de uma fonte morninha. Era um encanto feito para assustar!\n\n— Então, sim, ele entrou na água. E o lago escuro virou um campo cheio de flores, debaixo de um céu azulzinho. Ali corria um riacho de água transparente como {{CRISTAL|CRIS • TAL|💎}}, com areia de ouro e pedrinhas brancas que pareciam pérolas. E lá adiante brilhava um {{CASTELO|CAS • TE • LO|🏰}} de paredes de ouro e torres de diamante! Quando o cavaleiro chegou, o encanto se desfez, e as sete fadas saíram pela porta, livres, cantando e jogando flores.\n\nTodos ficaram em silêncio, encantados. Então Dom Quixote explicou: — O medo é um amigo que cuida da gente: quando o perigo é de verdade, ele avisa, e é preciso escutar. Mas às vezes ele exagera e inventa monstros onde não tem. Quem para, respira e olha com calma descobre o que é de verdade... e, do outro lado do medo, às vezes encontra maravilhas!\n\nSancho coçou o queixo: — Que nem os gigantes que eram moinhos, meu amo? Dom Quixote tossiu, ajeitou o bacielmo e olhou para as nuvens: — Hum... essa é outra história, Sancho. E todo mundo caiu na risada."
     },
     {
       "indice": 7,
-      "hash": "f62842cf8d",
-      "capitulo": "🌙 Capítulo 29 • O Cavaleiro da Branca Lua",
-      "titulo": "As Aventuras Moram nos Livros",
-      "texto": "Numa praia de areia dourada, em Barcelona, ao som das ondas do mar, apareceu a cavalo um cavaleiro misterioso, com uma lua prateada pintada no escudo: o Cavaleiro da {{BRANCA LUA|BRAN • CA • LU • A|🌙}}. Na verdade, era o jovem Sansão Carrasco, um vizinho querido de La Mancha, que só queria levar Dom Quixote para casa em segurança. Na luta na areia, Dom Quixote perdeu e, como um cavaleiro que sempre cumpre a palavra, fez o que tinha prometido: guardou a lança e voltou para a sua aldeia.\n\nDe volta à sua sala de leitura, Alonso Quixano sentou-se perto da lareira acesa, rodeado dos livros que tanto amava. Todas as tardes, as crianças da aldeia sentavam no tapete, aos pés do vovô Alonso, para ouvir as histórias dos gigantes-moinhos, das ovelhas-exércitos, do voo de Clavilenho e do escudeiro que governou uma ilha com justiça no coração. — Era uma vez um fidalgo de La Mancha que sonhava de olhos abertos... — começava o vovô, com um brilho sapeca no olhar.\n\nE foi assim que a {{IMAGINAÇÃO|I • MA • GI • NA • ÇÃO|✨}} de Dom Quixote nunca se apagou: ela foi morar para sempre no coração dos pequenos {{LEITORES|LEI • TO • RES|📚}} do mundo inteiro. Porque quem lê e sonha com o bem, como você, nunca para de cavalgar pelas estradas mais bonitas que existem!"
+      "hash": "55d7e02b6c",
+      "capitulo": "🐐 Capítulo 29 • A Cabra Fujona",
+      "titulo": "A Travessa Manchadinha",
+      "texto": "Ainda riam da fome de Sancho quando o mato se sacudiu: — Méééé! Uma cabrinha malhada, de manchas pretas e brancas, pulou do barranco bem no meio do piquenique! Abocanhou um pedaço de queijo, deu uma cabeçadinha no bacielmo, TÓIM!, e saiu pulando entre as pedras.\n\nAtrás dela vinha correndo um jovem {{PASTOR|PAS • TOR|🧑‍🌾}} chamado Eugênio, sem fôlego, com o {{CAJADO|CA • JA • DO|🦯}} no ar: — Volta aqui, Manchadinha! Sancho e mestre Nicolau correram para ajudar, um pela direita, outro pela esquerda... e PUF! Trombaram no meio do caminho e caíram sentados na grama.\n\nDom Quixote não correu. Ajoelhou-se devagar e estendeu uma casquinha de pão. A {{CABRA|CA • BRA|🐐}} parou, cheirou os dedos dele e encostou o focinho na armadura, mansinha.\n\nEugênio sentou-se com eles e começou a conversar com a cabrinha como se ela fosse gente: — Ah, Manchadinha, Manchadinha! Por que você vive fugindo, hein? — Méé! — respondeu a cabra. — E ainda responde! — riu o padre. — Essa cabra conversa melhor que muito doutor! Sancho gostou da ideia e virou-se para o burrico: — E você, amigo, também quer fugir? O burrico só abanou as orelhas e continuou comendo capim.\n\nDom Quixote fez um carinho na cabeça da Manchadinha: — Não brigue com ela, meu bom pastor. Eu sei bem o que é querer sair de uma jaula. A {{LIBERDADE|LI • BER • DA • DE|🕊️}} mora no coração dos bichos e das pessoas. Mas, depois de passear pelo mundo, é muito bom ter para onde voltar."
+    },
+    {
+      "indice": 8,
+      "hash": "3a567a9b5c",
+      "capitulo": "🎶 Capítulo 30 • A Romaria na Estrada",
+      "titulo": "Uma Dama num Manto Azul?",
+      "texto": "A viagem continuou pela tarde quente. Fazia tanto tempo que não chovia que a terra estava rachada, como um biscoito quebrado, e o trigo dos campos tinha ficado murchinho.\n\nDe repente, lá longe na estrada, apareceu uma {{ROMARIA|RO • MA • RI • A|🎉}}: uma fila comprida de gente do campo, caminhando devagar, cantando ao som de um {{PANDEIRO|PAN • DEI • RO|🪘}}. Na frente, quatro homens carregavam nos ombros um andor, uma espécie de caminha de madeira enfeitada com flores. E, em cima do andor, ia uma figura toda coberta por um {{MANTO|MAN • TO|🧣}} azul.\n\nDom Quixote apertou os olhos e quase caiu da sela: — Uma dama embrulhada num manto, carregada por um bando de desconhecidos! Esses vilões estão levando uma princesa embora!\n\nSancho coçou a cabeça: — Princesa? Meu amo, aquilo está me parecendo uma procissão... Mas Dom Quixote já não ouvia nada. Ajeitou o bacielmo, apontou a lança e gritou: — Avante, Rocinante! Vamos salvar a dama!\n\nRocinante, que cochilava em pé, levou um susto tão grande que saiu num galope todo torto, levantando poeira para todo lado. O padre deixou cair o chapéu, mestre Nicolau engasgou com a água da moringa, e Sancho pulou do burrico e saiu correndo atrás do amo, com as perninhas curtas voando: — Lá vai ele de novo!"
+    },
+    {
+      "indice": 9,
+      "hash": "c2a3ed0bd1",
+      "capitulo": "🙏 Capítulo 31 • Os Vizinhos da Estrada",
+      "titulo": "Uma Santa, Não uma Princesa",
+      "texto": "Sancho correu como nunca tinha corrido na vida. Passou na frente de Rocinante, abriu os braços e fechou os olhos: — Pare, meu amo! Pare, pelo amor de Deus!\n\nRocinante parou tão de repente que Dom Quixote escorregou para a frente e ficou abraçado no pescoço do cavalo, com o bacielmo tapando os olhos. E Sancho, de olhos bem fechados, ainda perguntava: — Já parou? Já posso abrir?\n\n— Não é princesa nenhuma, meu senhor! — explicou ele, ofegante. — É uma imagem de {{SANTA|SAN • TA|🙏}}! E essa gente não é bandido: são os lavradores da nossa terra, nossos vizinhos! Estão rezando para a chuva cair e o trigo crescer!\n\nDom Quixote ajeitou o bacielmo e olhou bem. De perto, ele via tudo: o rosto sereno da santa debaixo do manto azul, as flores do andor, as mãos calejadas dos {{LAVRADORES|LA • VRA • DO • RES|🌾}} e os rostos queimados de sol. Então desceu do cavalo, tirou o bacielmo e baixou a cabeça: — Perdoem o meu engano, boa gente. Eu vim salvar uma dama... e encontrei gente que cuida da terra com paciência e esperança. Não existe coragem maior que essa.\n\nUm velhinho da romaria abriu um sorriso: — Ora, se não é o Seu Alonso, lá da nossa aldeia! O senhor já está pertinho de casa! E ofereceu a ele uma caneca de água fresquinha e um ramalhete de {{FLORES|FLO • RES|🌸}} do campo. Dom Quixote bebeu, agradecido, e a romaria seguiu cantando pela estrada, com Sancho batendo palmas no ritmo do pandeiro."
+    },
+    {
+      "indice": 10,
+      "hash": "1726e08f09",
+      "capitulo": "🏡 Capítulo 32 • De Volta para Casa",
+      "titulo": "O Abraço no Burrico",
+      "texto": "Era domingo, na hora do almoço, quando a carroça de bois entrou devagarinho na {{ALDEIA|AL • DEI • A|🏡}}, com Dom Quixote montado em Rocinante logo ao lado. Os sinos da igreja tocavam, e os vizinhos corriam para as janelas: — Olha quem chegou! É o Seu Alonso!\n\nDa casa do fidalgo saíram correndo a sobrinha Antônia e a governanta, a senhora que cuidava da casa. As duas abraçaram Dom Quixote, chorando e rindo ao mesmo tempo: — O nosso tio querido voltou! Que saudade!\n\nDo outro lado da rua vinha Teresa Pança, a {{ESPOSA|ES • PO • SA|👩}} de Sancho, com a filhinha Sanchica pela mão. Sancho desceu do burrico e abriu os braços, todo feliz... mas as duas passaram direto por ele e foram abraçar o burrico! — Que bom que você voltou, burriquinho! — dizia Teresa. — Está até mais gordinho! E Sancho ficou ali, de braços abertos para o vento: — E eu? Ninguém abraça o escudeiro?\n\nTeresa riu e finalmente deu no marido um abraço bem apertado. Mas logo quis saber: — E os vestidos que você prometeu, meu bem? E a tal da {{ILHA|I • LHA|🏝️}} que você ia governar? Trouxe no bolso? — Ilha não cabe no bolso, minha Teresinha! — riu Sancho. — Mas ela ainda vai chegar, você vai ver!\n\nVestidos, ele não trouxe. Mas abriu o alforje e tirou umas moedas de ouro: eram as moedas da mala perdida na serra, que o seu amo tinha lhe dado de presente. — Estas são para os sapatinhos da Sanchica! Depois tirou o pião de madeira, e a menina deu um grito de alegria. Então Sancho estufou o peito: — E guardem bem o que eu digo, minhas queridas: um dia vocês ainda vão me ver como {{GOVERNADOR|GO • VER • NA • DOR|👑}} da minha ilha!",
+      "cartoes": {
+        "tipo": "ordem",
+        "ordem": [
+          "sancho",
+          "governador",
+          "da",
+          "ilha"
+        ],
+        "itens": [
+          {
+            "id": "governador",
+            "palavra": "GOVERNADOR",
+            "emoji": "👑"
+          },
+          {
+            "id": "sancho",
+            "palavra": "SANCHO",
+            "emoji": "🫏"
+          },
+          {
+            "id": "ilha",
+            "palavra": "ILHA",
+            "emoji": "🏝️"
+          },
+          {
+            "id": "da",
+            "palavra": "DA",
+            "emoji": "✍️"
+          }
+        ]
+      }
+    },
+    {
+      "indice": 11,
+      "hash": "577e60c616",
+      "capitulo": "🌙 Capítulo 33 • Sonhos à Janela",
+      "titulo": "O Repouso do Cavaleiro",
+      "texto": "A noite chegou devagarinho sobre La Mancha e cobriu as casinhas brancas da aldeia com um céu cheio de {{ESTRELAS|ES • TRE • LAS|⭐}}. No quarto arrumado e quentinho, a sobrinha e a governanta tiraram a armadura gasta de Dom Quixote com mãos carinhosas, cuidaram dos arranhões dele com água de flores e o vestiram com um camisolão bem macio.\n\nEle tinha cumprido a sua palavra de honra: estava em casa. Deitado na cama fofa, com cheirinho de lavanda, tomou uma tigela de caldo quente. Lá no estábulo, Rocinante mastigava feno, feliz da vida. Pela janela aberta entrava uma {{BRISA|BRI • SA|🌬️}} fresquinha, e a {{LUA|LU • A|🌕}} cheia clareava as colinas, onde os velhos moinhos de vento pareciam dormir em paz.\n\nAos pés da cama, o gatinho da casa se enrolou feito um novelo e começou a ronronar. Dom Quixote olhou para a lua e cochichou: — Boa noite, Dulcineia.\n\nEnquanto isso, as aventuras do cavaleiro da bacia na cabeça corriam de boca em boca. Os pastores contavam aos viajantes, os viajantes contavam aos tropeiros, e os tropeiros levavam as histórias pelas estradas, até as cidades grandes e distantes. Lá, muita gente ria e se encantava com os gigantes de vento, os exércitos de lã e a jaula que virou carruagem. E o nosso bom velhinho, cheio de imaginação, já começava a ser um cavaleiro {{FAMOSO|FA • MO • SO|🌟}} de verdade.\n\nDom Quixote fechou os olhos devagar, com um sorrisinho no canto da boca. Porque um cavaleiro andante descansa, sim. Mas nunca, nunca para de {{SONHAR|SO • NHAR|💤}}."
     }
   ],
   "textos": [
     {
-      "texto": "Dom Quixote e Sancho Pança olhando o horizonte, prontos para a última aventura",
+      "texto": "Dom Quixote e Sancho Pança na pousada, com amigos preparando a volta para casa",
       "onde": [
         "página 0: descrição da ilustração (leitor de tela)"
       ]
     },
     {
-      "texto": "👓 Lente da Realidade: Dois Amigos e um Longo Caminho",
+      "texto": "👓 Lente da Realidade: A Pousada sob a Luz da Manhã",
       "onde": [
         "página 0: selo da Lente da Realidade",
         "selo da cena"
       ]
     },
     {
-      "texto": "✨ Lente da Imaginação: O Cavaleiro e o Governador da Ilha!",
+      "texto": "✨ Lente da Imaginação: A Despedida do Castelo Encantado!",
       "onde": [
         "página 0: selo da Lente da Imaginação",
         "selo da cena"
       ]
     },
     {
-      "texto": "Dom Quixote dentro de uma jaula de madeira num carro de bois, com Sancho caminhando ao lado",
+      "texto": "Doroteia sorrindo e se despedindo de Dom Quixote no pátio da pousada",
       "onde": [
         "página 1: descrição da ilustração (leitor de tela)"
       ]
     },
     {
-      "texto": "👓 Lente da Realidade: Uma Jaula num Carro de Bois",
+      "texto": "👓 Lente da Realidade: Doroteia Agradece na Pousada",
       "onde": [
         "página 1: selo da Lente da Realidade",
         "selo da cena"
       ]
     },
     {
-      "texto": "✨ Lente da Imaginação: A Carruagem Encantada de um Mago!",
+      "texto": "✨ Lente da Imaginação: A Princesa Coroa o Vencedor de Gigantes!",
       "onde": [
         "página 1: selo da Lente da Imaginação",
         "selo da cena"
       ]
     },
     {
-      "texto": "Tocar nos bois",
+      "texto": "DOROTEIA",
       "onde": [
         "página 1: dica ao passar o dedo na cena"
       ]
     },
     {
-      "texto": "Na aldeia, a sobrinha abraça Dom Quixote, e Sancho é recebido por Teresa e Sanchica",
+      "texto": "DOM QUIXOTE",
+      "onde": [
+        "página 1: dica ao passar o dedo na cena",
+        "página 2: dica ao passar o dedo na cena",
+        "página 4: dica ao passar o dedo na cena",
+        "página 5: dica ao passar o dedo na cena",
+        "página 6: dica ao passar o dedo na cena",
+        "página 7: dica ao passar o dedo na cena",
+        "página 8: dica ao passar o dedo na cena",
+        "página 9: dica ao passar o dedo na cena",
+        "página 10: dica ao passar o dedo na cena",
+        "página 11: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "SANCHO",
+      "onde": [
+        "página 1: dica ao passar o dedo na cena",
+        "página 2: dica ao passar o dedo na cena",
+        "página 3: dica ao passar o dedo na cena",
+        "página 4: dica ao passar o dedo na cena",
+        "página 5: dica ao passar o dedo na cena",
+        "página 6: dica ao passar o dedo na cena",
+        "página 8: dica ao passar o dedo na cena",
+        "página 10: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "O barbeiro reclamando a bacia enquanto Dom Quixote a segura como um elmo e Sancho concilia no meio",
       "onde": [
         "página 2: descrição da ilustração (leitor de tela)"
       ]
     },
     {
-      "texto": "👓 Lente da Realidade: Abraços na Aldeia",
+      "texto": "👓 Lente da Realidade: Bacia de Latão ou Elmo?",
       "onde": [
         "página 2: selo da Lente da Realidade",
         "selo da cena"
       ]
     },
     {
-      "texto": "✨ Lente da Imaginação: A Volta Triunfal do Cavaleiro!",
+      "texto": "✨ Lente da Imaginação: O Brilho Lendário do Elmo de Mambrino!",
       "onde": [
         "página 2: selo da Lente da Imaginação",
         "selo da cena"
       ]
     },
     {
-      "texto": "Tocar na família de Sancho",
+      "texto": "BACIELMO",
+      "onde": [
+        "página 2: dica ao passar o dedo na cena",
+        "página 5: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "BARBEIRO",
       "onde": [
         "página 2: dica ao passar o dedo na cena"
       ]
     },
     {
-      "texto": "No jardim do castelo, Dom Quixote e Sancho de olhos vendados montam um cavalo de madeira, rodeados de criados com foles e tochas",
+      "texto": "Dom Quixote dentro da jaula de madeira num carro de bois, com amigos de lençóis brancos ao redor e Rocinante amarrado atrás",
       "onde": [
         "página 3: descrição da ilustração (leitor de tela)"
       ]
     },
     {
-      "texto": "👓 Lente da Realidade: Um Cavalo de Madeira no Jardim",
+      "texto": "👓 Lente da Realidade: A Jaula de Madeira no Carro de Bois",
       "onde": [
         "página 3: selo da Lente da Realidade",
         "selo da cena"
       ]
     },
     {
-      "texto": "✨ Lente da Imaginação: Voando entre as Estrelas em Clavilenho!",
+      "texto": "✨ Lente da Imaginação: A Carruagem Encantada dos Magos Protetores!",
       "onde": [
         "página 3: selo da Lente da Imaginação",
         "selo da cena"
       ]
     },
     {
-      "texto": "FOLE",
+      "texto": "Descubra a palavra secreta de 5 letras:",
       "onde": [
-        "página 3: cartão (MAIÚSCULAS, curto)"
+        "página 3: faixa onde as palavras são escritas"
       ]
     },
     {
-      "texto": "TOCHA",
+      "texto": "JAULA",
       "onde": [
-        "página 3: cartão (MAIÚSCULAS, curto)"
+        "página 3: dica ao passar o dedo na cena"
       ]
     },
     {
-      "texto": "No jardim do castelo, Dom Quixote aconselha Sancho, que escuta com atenção",
+      "texto": "BOIS",
+      "onde": [
+        "página 3: dica ao passar o dedo na cena",
+        "página 4: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "MAGOS",
+      "onde": [
+        "página 3: dica ao passar o dedo na cena",
+        "página 4: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "Sancho, no burrico, cochicha com Dom Quixote pelas grades da jaula; atrás, o padre e mestre Nicolau, fantasiados de magos, seguem cada um no seu cavalo, e Rocinante vem amarrado na carroça",
       "onde": [
         "página 4: descrição da ilustração (leitor de tela)"
       ]
     },
     {
-      "texto": "👓 Lente da Realidade: Conselhos de um Amigo",
+      "texto": "👓 Lente da Realidade: A Esperteza de Sancho na Estrada",
       "onde": [
         "página 4: selo da Lente da Realidade",
         "selo da cena"
       ]
     },
     {
-      "texto": "✨ Lente da Imaginação: O Futuro Governador da Ilha Barataria!",
+      "texto": "✨ Lente da Imaginação: A Carruagem de Cristal Segue Viagem!",
       "onde": [
         "página 4: selo da Lente da Imaginação",
         "selo da cena"
       ]
     },
     {
-      "texto": "Tocar em Sancho",
+      "texto": "ROCINANTE",
       "onde": [
         "página 4: dica ao passar o dedo na cena"
       ]
     },
     {
-      "texto": "Sancho, sentado na cadeira de governador, observa dois velhinhos, um deles com uma bengala",
+      "texto": "Dom Quixote, Sancho e amigos sentados na relva sob um carvalho fazendo um piquenique, com Rocinante e o burrico pastando",
       "onde": [
         "página 5: descrição da ilustração (leitor de tela)"
       ]
     },
     {
-      "texto": "👓 Lente da Realidade: O Tribunal da Vila",
+      "texto": "👓 Lente da Realidade: Piquenique de Amigos no Prado",
       "onde": [
         "página 5: selo da Lente da Realidade",
         "selo da cena"
       ]
     },
     {
-      "texto": "✨ Lente da Imaginação: O Trono do Sábio Governador!",
+      "texto": "✨ Lente da Imaginação: O Banquete dos Nobres Cavaleiros!",
       "onde": [
         "página 5: selo da Lente da Imaginação",
         "selo da cena"
       ]
     },
     {
-      "texto": "BENGALA",
+      "texto": "🧺 Sancho pede:",
       "onde": [
-        "página 5: cartão (MAIÚSCULAS, curto)"
+        "página 5: rótulo da faixa do pedido"
       ]
     },
     {
-      "texto": "No estábulo, Sancho abraça o seu burrico com carinho",
+      "texto": "Debaixo do carvalho, Dom Quixote conta uma história aos amigos; no balão, o cavaleiro chega ao castelo de ouro e as fadas, livres do encanto, vêm recebê-lo",
       "onde": [
         "página 6: descrição da ilustração (leitor de tela)"
       ]
     },
     {
-      "texto": "👓 Lente da Realidade: Um Abraço no Velho Amigo",
+      "texto": "📖 A História do Cavaleiro do Lago",
       "onde": [
-        "página 6: selo da Lente da Realidade",
-        "selo da cena"
+        "página 6: selo da Lente da Realidade"
       ]
     },
     {
-      "texto": "✨ Lente da Imaginação: O Governador que Escolheu a Liberdade!",
-      "onde": [
-        "página 6: selo da Lente da Imaginação",
-        "selo da cena"
-      ]
-    },
-    {
-      "texto": "Tocar em Sancho e no burrico",
+      "texto": "CASTELO",
       "onde": [
         "página 6: dica ao passar o dedo na cena"
       ]
     },
     {
-      "texto": "Alonso Quixano, junto à lareira, conta histórias para as crianças da aldeia",
+      "texto": "CAVALEIRO",
+      "onde": [
+        "página 6: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "FADAS",
+      "onde": [
+        "página 6: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "Dom Quixote ajoelhado dá pão à cabrinha malhada; o pastor Eugênio ri sentado, Sancho e mestre Nicolau caídos na grama, e o padre ri junto ao carvalho",
       "onde": [
         "página 7: descrição da ilustração (leitor de tela)"
       ]
     },
     {
-      "texto": "👓 Lente da Realidade: Histórias Junto à Lareira",
+      "texto": "🐐 O Pastor e a Cabrinha Manchadinha",
       "onde": [
-        "página 7: selo da Lente da Realidade",
-        "selo da cena"
+        "página 7: selo da Lente da Realidade"
       ]
     },
     {
-      "texto": "✨ Lente da Imaginação: Todas as Aventuras Ganham Vida!",
-      "onde": [
-        "página 7: selo da Lente da Imaginação",
-        "selo da cena"
-      ]
-    },
-    {
-      "texto": "Tocar em Alonso Quixano",
+      "texto": "CABRINHA",
       "onde": [
         "página 7: dica ao passar o dedo na cena"
       ]
     },
     {
-      "texto": "🎉 Fim de Dom Quixote de La Mancha! Agora as maiores aventuras moram para sempre na sua imaginação. Que clássico você vai abrir amanhã?",
+      "texto": "PASTOR",
+      "onde": [
+        "página 7: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "PADRE",
+      "onde": [
+        "página 7: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "Dom Quixote, montado em Rocinante, aponta a lança para uma romaria que passa lá longe na estrada, com uma figura de manto azul no andor",
+      "onde": [
+        "página 8: descrição da ilustração (leitor de tela)"
+      ]
+    },
+    {
+      "texto": "👓 Lente da Realidade: Uma Romaria Lá Longe na Estrada",
+      "onde": [
+        "página 8: selo da Lente da Realidade",
+        "selo da cena"
+      ]
+    },
+    {
+      "texto": "✨ Lente da Imaginação: Uma Princesa Levada por Vilões!",
+      "onde": [
+        "página 8: selo da Lente da Imaginação",
+        "selo da cena"
+      ]
+    },
+    {
+      "texto": "ROMARIA",
+      "onde": [
+        "página 8: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "Os lavradores da romaria com a imagem da santa no andor; um velhinho oferece água e flores a Dom Quixote, que baixa a cabeça com respeito ao lado de Rocinante",
+      "onde": [
+        "página 9: descrição da ilustração (leitor de tela)"
+      ]
+    },
+    {
+      "texto": "🙏 Os Vizinhos Pedem Chuva",
+      "onde": [
+        "página 9: selo da Lente da Realidade"
+      ]
+    },
+    {
+      "texto": "SANTA",
+      "onde": [
+        "página 9: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "LAVRADORES",
+      "onde": [
+        "página 9: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "FLORES",
+      "onde": [
+        "página 9: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "Chegada à aldeia: a sobrinha e a governanta abraçam Dom Quixote, enquanto Teresa e Sanchica abraçam o burrico e Sancho espera de braços abertos",
+      "onde": [
+        "página 10: descrição da ilustração (leitor de tela)"
+      ]
+    },
+    {
+      "texto": "👓 Lente da Realidade: Abraços na Chegada à Aldeia",
+      "onde": [
+        "página 10: selo da Lente da Realidade",
+        "selo da cena"
+      ]
+    },
+    {
+      "texto": "✨ Lente da Imaginação: A Recepção Triunfal dos Grandes Heróis!",
+      "onde": [
+        "página 10: selo da Lente da Imaginação",
+        "selo da cena"
+      ]
+    },
+    {
+      "texto": "TERESA",
+      "onde": [
+        "página 10: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "BURRICO",
+      "onde": [
+        "página 10: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "Dom Quixote dormindo em paz em sua cama macia, com o gatinho aos pés, enquanto a lua cheia brilha na janela aberta",
+      "onde": [
+        "página 11: descrição da ilustração (leitor de tela)"
+      ]
+    },
+    {
+      "texto": "👓 Lente da Realidade: Descanso Sereno à Luz da Lua",
+      "onde": [
+        "página 11: selo da Lente da Realidade",
+        "selo da cena"
+      ]
+    },
+    {
+      "texto": "✨ Lente da Imaginação: Os Sonhos Eternos de Novas Aventuras!",
+      "onde": [
+        "página 11: selo da Lente da Imaginação",
+        "selo da cena"
+      ]
+    },
+    {
+      "texto": "JANELA",
+      "onde": [
+        "página 11: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "LUA",
+      "onde": [
+        "página 11: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "GATINHO",
+      "onde": [
+        "página 11: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "LEÃO",
+      "onde": [
+        "página 11: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "🎉 Fim do primeiro livro de Dom Quixote! O nosso cavaleiro descansa em casa... mas não por muito tempo: no segundo livro, ele vai sair em busca de novas aventuras!",
       "onde": [
         "mensagem do fim da parte"
+      ]
+    },
+    {
+      "texto": "Voltar à estante",
+      "onde": [
+        "botão para a próxima parte"
       ]
     }
   ]

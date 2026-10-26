@@ -6,7 +6,7 @@
    - Narração gravada (*.mp3 e as marcas *.json em audio/): rede primeiro, para frases regravadas chegarem ao tablet;
      cada arquivo fica num cache próprio (que sobrevive às novas versões) e toca offline depois.
    - Demais arquivos: cache primeiro (abre instantâneo no tablet). */
-const CACHE = 'classicos-vivos-9da5733dcd21';
+const CACHE = 'classicos-vivos-3bd61123ed5d';
 const CACHE_AUDIO = 'cv-narracao';
 const FILES = [
     "./assets/css/fonts.css",
@@ -31,27 +31,6 @@ const FILES = [
     "./assets/js/i18n-site.js",
     "./assets/js/livro.js",
     "./assets/js/texto.js",
-    "./dom-quixote/imagens/acervo/parte-4-v1/camadas/p3-calor-tocha.webp",
-    "./dom-quixote/imagens/acervo/parte-4-v1/camadas/p3-clavilenho.webp",
-    "./dom-quixote/imagens/acervo/parte-4-v1/camadas/p3-vento-fole.webp",
-    "./dom-quixote/imagens/acervo/parte-4-v1/camadas/p5-bengala-inteira.webp",
-    "./dom-quixote/imagens/acervo/parte-4-v1/camadas/p5-bengala-quebrada.webp",
-    "./dom-quixote/imagens/acervo/parte-4-v1/p0-imag.webp",
-    "./dom-quixote/imagens/acervo/parte-4-v1/p0-real.webp",
-    "./dom-quixote/imagens/acervo/parte-4-v1/p1-imag.webp",
-    "./dom-quixote/imagens/acervo/parte-4-v1/p1-real.webp",
-    "./dom-quixote/imagens/acervo/parte-4-v1/p2-imag.webp",
-    "./dom-quixote/imagens/acervo/parte-4-v1/p2-real.webp",
-    "./dom-quixote/imagens/acervo/parte-4-v1/p3-imag.webp",
-    "./dom-quixote/imagens/acervo/parte-4-v1/p3-real.webp",
-    "./dom-quixote/imagens/acervo/parte-4-v1/p4-imag.webp",
-    "./dom-quixote/imagens/acervo/parte-4-v1/p4-real.webp",
-    "./dom-quixote/imagens/acervo/parte-4-v1/p5-imag.webp",
-    "./dom-quixote/imagens/acervo/parte-4-v1/p5-real.webp",
-    "./dom-quixote/imagens/acervo/parte-4-v1/p6-imag.webp",
-    "./dom-quixote/imagens/acervo/parte-4-v1/p6-real.webp",
-    "./dom-quixote/imagens/acervo/parte-4-v1/p7-imag.webp",
-    "./dom-quixote/imagens/acervo/parte-4-v1/p7-real.webp",
     "./dom-quixote/imagens/camadas/p4-estalajadeiro-acenando.webp",
     "./dom-quixote/imagens/camadas/p4-estalajadeiro-sopa.webp",
     "./dom-quixote/imagens/camadas/p4-notas-musicais.webp",
@@ -174,7 +153,6 @@ const FILES = [
     "./dom-quixote/parte-1.html",
     "./dom-quixote/parte-2.html",
     "./dom-quixote/parte-3.html",
-    "./dom-quixote/parte-4-rascunho.html",
     "./dom-quixote/parte-4.html",
     "./dom-quixote/traducoes/parte-1.en.js",
     "./dom-quixote/traducoes/parte-1.es.js",
@@ -185,9 +163,6 @@ const FILES = [
     "./dom-quixote/traducoes/parte-3.en.js",
     "./dom-quixote/traducoes/parte-3.es.js",
     "./dom-quixote/traducoes/parte-3.fr.js",
-    "./dom-quixote/traducoes/parte-4.en.js",
-    "./dom-quixote/traducoes/parte-4.es.js",
-    "./dom-quixote/traducoes/parte-4.fr.js",
     "./index.html",
     "./manifest.webmanifest",
     "./sobre.html"

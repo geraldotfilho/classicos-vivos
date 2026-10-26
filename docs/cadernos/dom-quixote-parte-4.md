@@ -1,6 +1,6 @@
 # Caderno — Dom Quixote de La Mancha, Parte 4: O Elmo, a Bacia e a Jaula Encantada
 
-Arquivo: `dom-quixote/parte-4-rascunho.html` (rascunho: sim) · Trecho do original: 1605, caps. 39 a 52 · Nossos capítulos: 23 a 33 (11 capítulos + capa = 12 páginas; o cap. 30 virou dois na fase 5)
+Arquivo: `dom-quixote/parte-4.html` (**publicada em 2026-10-26**; a antiga está em `docs/arquivo/dom-quixote-parte-4-v1/`) · Trecho do original: 1605, caps. 39 a 52 · Nossos capítulos: 23 a 33 (11 capítulos + capa = 12 páginas; o cap. 30 virou dois na fase 5)
 
 | Fase | Situação | Data | Commit/PR | Gasto |
 | :--- | :--- | :--- | :--- | :--- |
@@ -10,9 +10,9 @@ Arquivo: `dom-quixote/parte-4-rascunho.html` (rascunho: sim) · Trecho do origin
 | 3 Revisão humana 🛑 | ✅ aprovado pelo humano | 2026-10-25 | branch `ccr-0c6dd8bf-k3upnk` → `main` | — |
 | 4 Ilustrações e atividades | ✅ feito (Claude, API Batch) | 2026-10-25 | branch `claude/elegant-hawking-hmc85x` → `main` | US$ 0,90 |
 | 5 Revisão final 🛑 | ✅ **aprovada** pelo humano (2026-10-26), com os dois últimos ajustes de texto (§5); **texto congelado** | 2026-10-25/26 | branch `claude/clever-pascal-t84t5f` → `main` | US$ 0,38 |
-| 6 Narração (pt) + escuta 🛑 | 🛑 **gravada; esperando a escuta do humano** (`?narracao=1`, `docs/narracao/qa-parte-4-rascunho.md`) | 2026-10-26 | branch `claude/eloquent-franklin-rq1wgn` → `main` | US$ 0,20 |
-| Publicação | ⬜ a fazer | | | — |
-| 7 Idiomas (en, fr, es) | ⬜ a fazer | | | US$ |
+| 6 Narração (pt) + escuta 🛑 | ✅ gravada e **aprovada** pelo humano (`docs/narracao/qa-parte-4.md`) | 2026-10-26 | branch `claude/eloquent-franklin-rq1wgn` → `main` | US$ 0,20 |
+| Publicação | ✅ no lugar da antiga; nos outros idiomas, aviso de "ainda só em português" (escolha do humano) | 2026-10-26 | branch `claude/eloquent-franklin-rq1wgn` → `main` | — |
+| 7 Idiomas (en, fr, es) | ⬜ na fila (com autorização e verba) | | | US$ |
 | 8 Retrospectiva | ⬜ a fazer | | | — |
 
 ---
@@ -201,8 +201,8 @@ Lista: `tools/arte/dom-quixote-parte-4.mjs` (a da Parte 4 antiga ficou em `dom-q
 
 ## 7. Narração (elenco, QA, gasto)
 
-- **2026-10-26 (fase 6, Claude, API autorizada pelo humano)**: 12 páginas inteiras (220 frases, ~24 min) e 34 palavras-chave novas, Flex, conferidas no Whisper local. **US$ 0,20** (63 pedidos). QA e o que ouvir: [`docs/narracao/qa-parte-4-rascunho.md`](../narracao/qa-parte-4-rascunho.md).
-- **Pasta própria**: a narração fica em `dom-quixote/audio/narracao/parte-4-rascunho/` (`pastaAudio` no `window.LIVRO` do rascunho), para não sobrescrever a da Parte 4 publicada. **Na publicação**: arquivar `narracao/parte-4/` (antiga), renomear `parte-4-rascunho/` para `parte-4/`, tirar o `pastaAudio` e trocar o `parte-4.html` pelo rascunho.
+- **2026-10-26 (fase 6, Claude, API autorizada pelo humano)**: 12 páginas inteiras (220 frases, ~24 min) e 34 palavras-chave novas, Flex, conferidas no Whisper local. **US$ 0,20** (63 pedidos). QA e o que ouvir: [`docs/narracao/qa-parte-4.md`](../narracao/qa-parte-4.md).
+- **Pasta própria** durante a produção: `narracao/parte-4-rascunho/` (`pastaAudio`), para não sobrescrever a da Parte 4 antiga. **Publicação (2026-10-26)**: escuta aprovada pelo humano; a pasta virou `narracao/parte-4/`, o rascunho virou `parte-4.html` (sem `rascunho` e `pastaAudio`); a Parte 4 antiga (HTML, traduções, roteiro e QA da narração) foi para `docs/arquivo/dom-quixote-parte-4-v1/` (os MP3 antigos e a arte de `imagens/acervo/` ficam no histórico do Git e no acervo, fora do service worker). A estante, o `sobre.html` (4 idiomas) e o fim da Parte 3 ("Na Parte 4: …", com as traduções) foram atualizados.
 - **Roteiro**: `dom-quixote/audio/narracao/parte-4-rascunho/roteiro.json` (119 frases com fala de personagem). Toda a história do Cavaleiro do Lago (cap. 28) é contada na voz de Dom Quixote; o "méééé" da cabra é da narradora.
 - **Elenco novo**: mestre Nicolau `storyteller-4` (e `NICOLAU_MAGO`, a mesma voz fantasiada), barbeiro da bacia `techagent-4` (a voz da Parte 2), Eugênio `storyteller-6`, velhinho da romaria `tutor-8`, sobrinha `podcaster-4`, povo `csagent-8`.
 - **Lições**: (1) esta parte tem 3× o texto da antiga (220 frases, ~50 blocos): a cota de 100 pedidos por dia acabou no meio (a produção da véspera já tinha usado parte dela), e o cache de blocos salvou o que foi pago; numa parte grande, conte os blocos no `--seco` e veja se cabem na cota do dia. (2) Num bloco longo (13 frases), a voz pulou frases na 1ª tentativa; a conferência local pegou e a 2ª veio certa. (3) Palavras curtas (fome, sede, lanche) se cortam mal em grupo: grave uma por pedido (`--agrupar 1`).

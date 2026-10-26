@@ -18,16 +18,6 @@
    ===================================================================== */
 window.ACERVO_PRODUCAO = [
     {
-        id: 'dom-quixote-parte-4-nova',
-        obra: 'Dom Quixote de La Mancha',
-        parte: 4,
-        titulo: 'Parte 4 (nova): O Elmo, a Bacia e a Jaula Encantada',
-        nota: 'Substitui a Parte 4 atual e fecha o primeiro volume (1605).',
-        situacao: 'rascunho',
-        estante: null,
-        href: './dom-quixote/parte-4-rascunho.html'
-    },
-    {
         id: 'dom-quixote-parte-5',
         obra: 'Dom Quixote de La Mancha',
         parte: 5,

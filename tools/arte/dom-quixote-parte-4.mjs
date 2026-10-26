@@ -1,6 +1,6 @@
 // Pedidos de arte da NOVA Parte 4 de Dom Quixote (rascunho, caps. 23 a 32) para tools/gerar-imagens.mjs
 // (Nano Banana 2 pela API, Batch). Fonte: docs/cadernos/dom-quixote-parte-4.md §4 e o texto de
-// dom-quixote/parte-4-rascunho.html. A lista da Parte 4 antiga ficou em dom-quixote-parte-4-v1.mjs.
+// dom-quixote/parte-4.html (era parte-4-rascunho.html até a publicação, 2026-10-26). A lista da Parte 4 antiga ficou em dom-quixote-parte-4-v1.mjs.
 // Rodadas: (1) Realidades + camadas soltas; (2) Imaginações (edição da Realidade aceita) e a p6-real
 // (que usa a p5-real como cenário); (3) a p6-imag e o que falhar.
 // Revisão da fase 5 (2026-10-25, notas do humano): o cap. 30 virou dois (págs. 8 e 9), a estrutura passou a
