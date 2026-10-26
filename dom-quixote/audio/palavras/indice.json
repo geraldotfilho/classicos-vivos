@@ -125,7 +125,12 @@
     "estrada": "303a3c074f",
     "latao": "769aeefa07",
     "bacielmo": "9fff3bf9ff",
-    "magos": "a38e0eccc4"
+    "magos": "a38e0eccc4",
+    "fome": "b420566ce9",
+    "honra": "bcc3543c10",
+    "sede": "696d73282c",
+    "reverencia": "1bb94c4205",
+    "lanche": "cb55f49eb7"
   },
   "modelo": "gemini-3.8-flash-tts",
   "voz": "pt-br-storyteller-9",

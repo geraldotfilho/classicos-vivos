@@ -211,7 +211,7 @@ Varie as mecânicas dentro da parte.
 ### 6.4 Narração
 - **Página inteira** num pedido só, com a narradora e uma voz por personagem, a mesma em todas as partes do livro.
 - **Voz de criança por descrição é bloqueada** pela API: use a voz mais jovem da biblioteca. Não tente contornar.
-- Limite de 100 pedidos por dia: cache de blocos e palavras-chave em grupos de até 10.
+- Limite de 100 pedidos por dia (o dia vira às 07:00 UTC): cache de blocos e palavras-chave em grupos de até 10. Numa parte grande, conte os blocos no `--seco` e veja se cabem no que resta da cota do dia; senão, grave em dois dias. Palavras curtas (fome, sede) e as que falharem no grupo: uma por pedido (`--agrupar 1`).
 - A conferência é **local** (Whisper). A API paga só produz vozes.
 - Nomes estrangeiros com pronúncia anotada (`TODO-NARRACAO.md` §5).
 
@@ -296,6 +296,7 @@ As lições que só valem para *Dom Quixote* ou para a condensação de obras lo
 
 | Data | Lição | Origem | Virou regra em |
 | :--- | :--- | :--- | :--- |
+| 2026-10-26 | Uma parte grande (220 frases, ~50 blocos) não coube na cota de 100 pedidos por dia, já gasta em parte na véspera; o cache de blocos salvou o que foi pago. Palavras curtas se cortam mal em grupo | narração (Dom Quixote, Parte 4 nova) | §6.4 |
 | 2026-10-26 | A moral "quem pula no meio do medo encontra maravilhas" incentivaria a enfrentar um medo real: o medo protege; a lição é sobre o medo exagerado e olhar com calma | humano (Dom Quixote, Parte 4 nova) | §6.1 |
 | 2026-10-25 | Contagem que não nasce de uma necessidade da história ("conte os tesouros") é bestinha; e a arte precisa ter exatamente a quantidade que a voz conta (vieram 4 peixes para "três peixinhos"). Atividade que não acrescenta sai: página calma também é boa | humano (Dom Quixote, Parte 4 nova) | §6.2 |
 | 2026-10-25 | A qualidade do texto caiu na segunda metade da parte e uma página longa cansou: revisar o fim com o cuidado do começo e dividir páginas longas | humano (Dom Quixote, Parte 4 nova, fase 5) | §6.1 |

@@ -10,7 +10,7 @@ Arquivo: `dom-quixote/parte-4-rascunho.html` (rascunho: sim) · Trecho do origin
 | 3 Revisão humana 🛑 | ✅ aprovado pelo humano | 2026-10-25 | branch `ccr-0c6dd8bf-k3upnk` → `main` | — |
 | 4 Ilustrações e atividades | ✅ feito (Claude, API Batch) | 2026-10-25 | branch `claude/elegant-hawking-hmc85x` → `main` | US$ 0,90 |
 | 5 Revisão final 🛑 | ✅ **aprovada** pelo humano (2026-10-26), com os dois últimos ajustes de texto (§5); **texto congelado** | 2026-10-25/26 | branch `claude/clever-pascal-t84t5f` → `main` | US$ 0,38 |
-| 6 Narração (pt) + escuta 🛑 | ⬜ a fazer | | | US$ |
+| 6 Narração (pt) + escuta 🛑 | 🛑 **gravada; esperando a escuta do humano** (`?narracao=1`, `docs/narracao/qa-parte-4-rascunho.md`) | 2026-10-26 | branch `claude/eloquent-franklin-rq1wgn` → `main` | US$ 0,20 |
 | Publicação | ⬜ a fazer | | | — |
 | 7 Idiomas (en, fr, es) | ⬜ a fazer | | | US$ |
 | 8 Retrospectiva | ⬜ a fazer | | | — |
@@ -196,4 +196,14 @@ Lista: `tools/arte/dom-quixote-parte-4.mjs` (a da Parte 4 antiga ficou em `dom-q
 - **Testes**: Playwright (Chromium), 800 × 1280 e 1280 × 800, as 11 páginas nas duas lentes, sem erro de script nem arquivo faltando; piquenique e contagem jogados até o fim.
 - **Fase 5 (revisão)**: refeitas na rodada 6 a p8-imag (o Sancho saiu duas vezes e a romaria veio para perto: corrigido com "only ONE Sancho" e a altura máxima das figuras de longe) e a p10-imag (a Imaginação antiga da chegada, passada como referência, impôs a composição dela e a piada do burrico sumiu: tirada a referência e descrita a piada no começo do prompt). Aceitas com ressalva: na p8-real, Rocinante saiu com manchas; na p9-real, os cavalos do padre e de Nicolau, pequenos ao fundo, saíram marrons. Testado de novo no Playwright (12 páginas, duas orientações, piquenique com pegadinha e recomeço, trava da lente, contagem, Parte 1 com o VENTO e `?imag=1`), sem erros.
 - **Arte aposentada** (no histórico do Git): p6-imag, p7-imag e a p8-imag antiga (guardiões da terra); a p10 da noite virou p11.
+
+---
+
+## 7. Narração (elenco, QA, gasto)
+
+- **2026-10-26 (fase 6, Claude, API autorizada pelo humano)**: 12 páginas inteiras (220 frases, ~24 min) e 34 palavras-chave novas, Flex, conferidas no Whisper local. **US$ 0,20** (63 pedidos). QA e o que ouvir: [`docs/narracao/qa-parte-4-rascunho.md`](../narracao/qa-parte-4-rascunho.md).
+- **Pasta própria**: a narração fica em `dom-quixote/audio/narracao/parte-4-rascunho/` (`pastaAudio` no `window.LIVRO` do rascunho), para não sobrescrever a da Parte 4 publicada. **Na publicação**: arquivar `narracao/parte-4/` (antiga), renomear `parte-4-rascunho/` para `parte-4/`, tirar o `pastaAudio` e trocar o `parte-4.html` pelo rascunho.
+- **Roteiro**: `dom-quixote/audio/narracao/parte-4-rascunho/roteiro.json` (119 frases com fala de personagem). Toda a história do Cavaleiro do Lago (cap. 28) é contada na voz de Dom Quixote; o "méééé" da cabra é da narradora.
+- **Elenco novo**: mestre Nicolau `storyteller-4` (e `NICOLAU_MAGO`, a mesma voz fantasiada), barbeiro da bacia `techagent-4` (a voz da Parte 2), Eugênio `storyteller-6`, velhinho da romaria `tutor-8`, sobrinha `podcaster-4`, povo `csagent-8`.
+- **Lições**: (1) esta parte tem 3× o texto da antiga (220 frases, ~50 blocos): a cota de 100 pedidos por dia acabou no meio (a produção da véspera já tinha usado parte dela), e o cache de blocos salvou o que foi pago; numa parte grande, conte os blocos no `--seco` e veja se cabem na cota do dia. (2) Num bloco longo (13 frases), a voz pulou frases na 1ª tentativa; a conferência local pegou e a 2ª veio certa. (3) Palavras curtas (fome, sede, lanche) se cortam mal em grupo: grave uma por pedido (`--agrupar 1`).
 

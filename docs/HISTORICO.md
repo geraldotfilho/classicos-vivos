@@ -127,6 +127,13 @@ O que já foi entregue, sprint a sprint, em ordem cronológica (o mais antigo pr
 - Depois: saiu a contagem dos tesouros do cap. 28 ("muito bestinha"); o cap. 28 ganhou uma lição melhor sobre o medo (ele protege; o exagerado inventa monstros) e o cap. 32 perdeu o "Ilha se come?". **Fase 5 aprovada em 2026-10-26; texto congelado.**
 - **Arte** (API Batch, autorizada): 9 imagens aceitas em 11, **US$ 0,38**. Método novo de continuidade (recortes da arte aprovada como referência + edições), registrado em `ARTE-PELA-API.md` §4.3.
 
+## ✅ Sprint 17 (fase 6 da nova Parte 4: narração em português, 2026-10-26)
+
+- **Narração gravada** pelo Claude pela API paga (autorizada no prompt, Flex): 12 páginas inteiras (220 frases, ~24 min) com a narradora e as vozes dos personagens, e 34 palavras-chave novas, conferidas no Whisper local. **US$ 0,20** (63 pedidos). QA: `docs/narracao/qa-parte-4-rascunho.md`.
+- **Elenco novo**: mestre Nicolau (também fantasiado de mago), o barbeiro da bacia (a voz da Parte 2), o pastor Eugênio, o velhinho da romaria, a sobrinha Antônia e o povo em coro.
+- **Motor e ferramentas**: `pastaAudio` no `window.LIVRO` deixa a versão nova de uma parte publicada gravar numa pasta própria (`narracao/parte-4-rascunho/`), sem mexer na narração que está no ar; o `exportar:frases` gera `frases-dom-quixote-parte-4-rascunho.json` (antes, o rascunho e a parte publicada escreviam o mesmo arquivo) e não exporta mais traduções de rascunho.
+- A cota diária da API (100 pedidos) acabou no meio; a gravação foi retomada sozinha na manhã seguinte, com os blocos já pagos vindos do cache.
+
 ---
 
 ## ✅ Interface: ilustração maior e botões que se escondem (2026-10-25)

@@ -8,7 +8,7 @@ Pendências abertas, por prioridade. O que já foi entregue está em [`HISTORICO
 
 | ID | Item | Detalhes |
 | :--- | :--- | :--- |
-| A-10 | **Correção de rumo de Dom Quixote** | Refazer a Parte 4 (fecha o volume de 1605) e criar as Partes 5–7 (volume de 1615), uma por vez, pelas fases da receita. Receitas: [`RECEITA-CLASSICO-VIVO.md`](RECEITA-CLASSICO-VIVO.md) (geral) e [`receitas/DOM-QUIXOTE.md`](receitas/DOM-QUIXOTE.md). Fase 0: modo rascunho no motor e estante com o segundo volume ✅ (2026-10-25); nova Parte 4 em rascunho ilustrado, na fase 5 (notas da 1ª leitura aplicadas; caderno `cadernos/dom-quixote-parte-4.md`). Andamento no §7 do [plano](PLANO-DOM-QUIXOTE-PARTES-4-7.md). |
+| A-10 | **Correção de rumo de Dom Quixote** | Refazer a Parte 4 (fecha o volume de 1605) e criar as Partes 5–7 (volume de 1615), uma por vez, pelas fases da receita. Receitas: [`RECEITA-CLASSICO-VIVO.md`](RECEITA-CLASSICO-VIVO.md) (geral) e [`receitas/DOM-QUIXOTE.md`](receitas/DOM-QUIXOTE.md). Fase 0: modo rascunho no motor e estante com o segundo volume ✅ (2026-10-25); nova Parte 4 em rascunho ilustrado e **narrado** (fase 6 gravada em 2026-10-26, esperando a escuta do humano; depois, a publicação; caderno `cadernos/dom-quixote-parte-4.md`). Andamento no §7 do [plano](PLANO-DOM-QUIXOTE-PARTES-4-7.md). |
 
 ## 🟡 Prioridade média
 

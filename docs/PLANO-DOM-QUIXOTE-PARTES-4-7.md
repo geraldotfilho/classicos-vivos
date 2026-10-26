@@ -169,7 +169,7 @@ Na mesma entrega (um só merge na `main`), para nunca haver um momento com texto
 
 | Parte | 0 Terreno | 1 Texto | 2 Interações e lentes | 3 Revisão 🛑 | 4 Arte e atividades | 5 Revisão final 🛑 | 6 Narração 🛑 | Publicada | 7 Idiomas | 8 Retrospectiva |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 4 | ✅ | 🟡 (escaleta pronta) | 🟡 (planejadas) | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| 4 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | 🛑 (gravada, esperando a escuta) | ⬜ | ⬜ | ⬜ |
 | 5 | — | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | 6 | — | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | 7 | — | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
