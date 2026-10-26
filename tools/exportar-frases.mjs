@@ -55,13 +55,15 @@ function exportar(livro, pasta, idioma) {
     });
 
     // Português: frases-<livro>-parte-N.json, na pasta `narracao`. Outros idiomas: ...-parte-N-<idioma>.json, `narracao-<idioma>`
+    // A versão nova de uma parte publicada tem a sua pasta (`pastaAudio`, ex.: parte-4-rascunho): `--parte 4-rascunho` na gravação
     const sufixo = idioma ? `-${idioma}` : '';
-    const destino = `docs/narracao/frases-${pasta}-parte-${livro.parte}${sufixo}.json`;
+    const pastaAudio = livro.pastaAudio || `parte-${livro.parte}`;
+    const destino = `docs/narracao/frases-${pasta}-${pastaAudio}${sufixo}.json`;
     writeFileSync(destino, JSON.stringify({
         obra: livro.obra,
         parte: livro.parte,
         ...(idioma ? { idioma } : {}),
-        audio: `${pasta}/audio/<voz>${sufixo}/parte-${livro.parte}/<id>.mp3`,
+        audio: `${pasta}/audio/<voz>${sufixo}/${pastaAudio}/<id>.mp3`,
         audioPalavras: `${pasta}/audio/palavras${sufixo}/<slug>.mp3`,
         frases,
         palavras: [...palavras.values()]
@@ -78,5 +80,6 @@ for (const arquivo of globSync('*/parte-*.html').sort()) {
     const livro = contexto.window.LIVRO;
     const pasta = arquivo.split(/[\\/]/)[0];
     exportar(livro, pasta, null);
-    traducoesDe(pasta, livro).forEach(t => exportar(t.livro, pasta, t.idioma));
+    // Rascunho não carrega traduções (AGENTS §2.5): as de parte-N.<idioma>.js são da versão publicada
+    if (!livro.rascunho) traducoesDe(pasta, livro).forEach(t => exportar(t.livro, pasta, t.idioma));
 }

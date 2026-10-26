@@ -74,7 +74,16 @@ let ELENCO = {
     TERESA: { voz: 'pt-br-advisor-1', estilo: 'warm-hearted wife, eager and affectionate' },
     SANCHICA: { voz: 'pt-br-concierge-6', estilo: 'excited little girl, bouncing with joy, playful' },
     CREDOR: { voz: 'pt-br-techagent-5', estilo: 'old man complaining indignantly' },
-    DEVEDOR: { voz: 'pt-br-concierge-10', estilo: 'old man swearing solemnly, a little too calm' }
+    DEVEDOR: { voz: 'pt-br-concierge-10', estilo: 'old man swearing solemnly, a little too calm' },
+    // Nova Parte 4 (2026-10-26). O barbeiro da bacia é a mesma voz do BARBEIRO da Parte 2, agora indignado;
+    // mestre Nicolau fantasiado de mago é a mesma voz dele, com outro jeito de falar
+    BARBEIRO_BACIA: { voz: 'pt-br-techagent-4', estilo: 'indignant barber demanding his basin back, then comically puzzled' },
+    NICOLAU: { voz: 'pt-br-storyteller-4', estilo: 'village barber, playful and good-natured, holding back a laugh' },
+    NICOLAU_MAGO: { voz: 'pt-br-storyteller-4', estilo: 'pretending to be a mysterious wizard: deep, slow and theatrical, a bit funny' },
+    EUGENIO: { voz: 'pt-br-storyteller-6', estilo: 'young goatherd, out of breath at first, then tender and chatty with his goat' },
+    VELHINHO: { voz: 'pt-br-tutor-8', estilo: 'kind old farmer, warm and smiling, glad to meet a neighbor' },
+    SOBRINHA: { voz: 'pt-br-podcaster-4', estilo: 'young woman laughing and crying with joy, hugging her uncle' },
+    POVO: { voz: 'pt-br-csagent-8', estilo: 'cheerful villagers calling out together, lively and playful' }
 };
 
 function opcoes(argv) {

@@ -61,7 +61,7 @@ Antes da primeira página, escreva o mapa da obra (na receita específica ou no 
 - **Toda obra em produção** tem uma entrada em `assets/js/acervo.js` (`situacao: 'fila'` → `'rascunho'`). Na estante (`index.html`) ela aparece só como **capa-teaser com cadeado**; ao tocar, um aviso diz que o livro está sendo feito. Só entra no acervo o que já é rascunho ou vai virar rascunho em breve: nada de "próximos clássicos" vagos (regra do humano, 2026-10-25).
 - **O rascunho é o próprio arquivo do livro** com `rascunho: true` no `window.LIVRO`: mostra o selo "Rascunho", lê só com a voz do aparelho em português (`?narracao=1` libera a narração gravada para a escuta da fase 6), não carrega traduções e guarda o progresso à parte.
 - **O humano abre os rascunhos** em `sobre.html` (Para adultos → Livros em produção → chave "Mostrar os rascunhos", lembrada no aparelho).
-- **Uma versão nova de uma parte já publicada** nasce num arquivo à parte (ex.: `parte-4-rascunho.html`, com `estante: null` no acervo) e a publicada continua no ar até a troca.
+- **Uma versão nova de uma parte já publicada** nasce num arquivo à parte (ex.: `parte-4-rascunho.html`, com `estante: null` no acervo) e a publicada continua no ar até a troca. A narração dela fica numa pasta própria (`pastaAudio: 'parte-4-rascunho'` no `window.LIVRO`; grava-se com `--parte 4-rascunho`). Na troca: arquivar a pasta `parte-N` antiga, renomear `parte-N-rascunho` para `parte-N` e tirar o `pastaAudio`.
 - **Publicar** = tirar o `rascunho`, tirar a entrada do `acervo.js`, pôr a capa fixa na estante do `index.html` e a descrição no "Acervo" de `sobre.html`, e (com a narração pronta) pôr a parte em `partes` no `vozes.js`.
 
 ---

@@ -736,8 +736,12 @@ function carregarVozesGravadas() {
     document.head.appendChild(script);
 }
 
+/* Pasta da parte dentro de cada voz: parte-N. A versão nova de uma parte publicada grava à parte
+   (`pastaAudio: 'parte-4-rascunho'` no LIVRO), para não misturar com a narração que está no ar */
+const PASTA_AUDIO = LIVRO.pastaAudio || `parte-${LIVRO.parte}`;
+
 function urlFrase(voz, id) {
-    return `${AUDIO_BASE}${voz.id}/parte-${LIVRO.parte}/${id}.mp3`;
+    return `${AUDIO_BASE}${voz.id}/${PASTA_AUDIO}/${id}.mp3`;
 }
 
 /* Páginas gravadas inteiras (um MP3 por página, entonação contínua), com o tempo de cada frase:
@@ -745,7 +749,7 @@ function urlFrase(voz, id) {
 const paginasGravadas = {};
 function paginasDaVoz(voz) {
     if (!paginasGravadas[voz.id]) {
-        paginasGravadas[voz.id] = fetch(`${AUDIO_BASE}${voz.id}/parte-${LIVRO.parte}/paginas.json`)
+        paginasGravadas[voz.id] = fetch(`${AUDIO_BASE}${voz.id}/${PASTA_AUDIO}/paginas.json`)
             .then(r => (r.ok ? r.json() : {})).catch(() => ({}));
     }
     return paginasGravadas[voz.id];
@@ -1368,7 +1372,7 @@ function lerPaginaInteira(voz, gravada, sentences, session, inicio, reserva) {
         }
         quadro = requestAnimationFrame(acompanhar);
     };
-    const src = `${AUDIO_BASE}${voz.id}/parte-${LIVRO.parte}/${gravada.arquivo}`;
+    const src = `${AUDIO_BASE}${voz.id}/${PASTA_AUDIO}/${gravada.arquivo}`;
     const tocar = desde > 0
         ? audioComSalto(src).then(url => (session === readingSession ? tocarGravacao(url, desde) : null))
         : tocarGravacao(src);
