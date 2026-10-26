@@ -76,6 +76,9 @@
 
             // Coleção / Boxset (index.html)
             colecaoCompletaBadge: 'Coleção Completa · 4 Partes',
+            colecaoSegundoBadge: 'Em breve · Partes 5 a 7',
+            colecaoSegundoVolume: 'Segundo Volume (1615)',
+            boxsetAria2: 'Dom Quixote: Segundo Volume (1615). Ainda sendo feito, será liberado em breve.',
             colecaoPrimeiroVolume: 'Primeiro Volume (1605)',
             toqueParaAbrir: 'Toque para abrir a coleção',
             fecharColecao: 'Recolher',
@@ -275,6 +278,9 @@
 
             // Coleção / Boxset (index.html)
             colecaoCompletaBadge: 'Complete Collection · 4 Parts',
+            colecaoSegundoBadge: 'Coming soon · Parts 5 to 7',
+            colecaoSegundoVolume: 'Second Volume (1615)',
+            boxsetAria2: 'Don Quixote: Second Volume (1615). Still being made, it will be unlocked soon.',
             colecaoPrimeiroVolume: 'First Volume (1605)',
             toqueParaAbrir: 'Tap to open the collection',
             fecharColecao: 'Collapse',
@@ -474,6 +480,9 @@
 
             // Coleção / Boxset (index.html)
             colecaoCompletaBadge: 'Collection Complète · 4 Parties',
+            colecaoSegundoBadge: 'Bientôt · Parties 5 à 7',
+            colecaoSegundoVolume: 'Second Volume (1615)',
+            boxsetAria2: 'Don Quichotte : Second Volume (1615). En préparation, il sera bientôt débloqué.',
             colecaoPrimeiroVolume: 'Premier Volume (1605)',
             toqueParaAbrir: 'Toucher pour ouvrir la collection',
             fecharColecao: 'Replier',
@@ -673,6 +682,9 @@
 
             // Coleção / Boxset (index.html)
             colecaoCompletaBadge: 'Colección Completa · 4 Partes',
+            colecaoSegundoBadge: 'Pronto · Partes 5 a 7',
+            colecaoSegundoVolume: 'Segundo Volumen (1615)',
+            boxsetAria2: 'Don Quijote: Segundo Volumen (1615). Todavía se está haciendo, se desbloqueará pronto.',
             colecaoPrimeiroVolume: 'Primer Volumen (1605)',
             toqueParaAbrir: 'Toca para abrir la colección',
             fecharColecao: 'Recoger',

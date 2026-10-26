@@ -151,6 +151,18 @@
             border: 4px solid #F59E0B;
         }
 
+
+        /* Volume 2 (em produção): mesmo empilhamento do volume 1, apagado e com cadeado */
+        .boxset-trancado { filter: saturate(0.55); animation: none; }
+        .boxset-trancado .boxset-layer-3 { background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%); border-color: #4338ca; }
+        .boxset-trancado .boxset-layer-2 { background: linear-gradient(135deg, #312e81 0%, #3730a3 100%); border-color: #6366f1; }
+        .boxset-trancado .boxset-layer-1 { background: linear-gradient(135deg, #3730a3 0%, #4f46e5 100%); border-color: #818cf8; }
+        .boxset-trancado .boxset-front { border-color: #a5b4fc; }
+        .cadeado-grande {
+            width: 4rem; height: 4rem; font-size: 2rem;
+        }
+        #fileira-volumes { gap: 2.5rem; }
+
         /* Animação suave de entrada dos livros espalhados */
         .book-spread-enter {
             animation: bookSpread 0.45s cubic-bezier(0.16, 1, 0.3, 1) backwards;
@@ -362,7 +374,8 @@
         <section id="shelf-quixote" class="shelf" aria-label="Dom Quixote de La Mancha">
 
             <!-- Estado 1: Boxset unificado da coleção (fechada) -->
-            <div id="container-boxset" class="flex flex-col items-center justify-end w-full">
+            <div id="container-boxset" class="w-full"><div id="fileira-volumes" class="flex flex-wrap items-end justify-center">
+                <div class="flex flex-col items-center justify-end">
                 <button id="boxset-quixote" type="button" class="boxset-card" aria-expanded="false" aria-label="Coleção Dom Quixote: Primeiro Volume (1605) com 4 partes. Toque para abrir." data-i18n-aria="boxsetAria">
                     <!-- Camadas simulando volumes empilhados em perspectiva -->
                     <span class="boxset-layer boxset-layer-3" aria-hidden="true"></span>
@@ -390,7 +403,33 @@
                         </span>
                     </span>
                 </button>
-            </div>
+                </div>
+
+                <!-- Volume 2 (1615): empilhado como o volume 1, com cadeado até ser liberado -->
+                <div class="flex flex-col items-center justify-end">
+                    <button id="boxset-quixote-2" type="button" class="boxset-card boxset-trancado" data-em-producao="dom-quixote-volume-2" aria-label="Dom Quixote: Segundo Volume (1615). Ainda sendo feito, será liberado em breve." data-i18n-aria="boxsetAria2">
+                        <span class="boxset-layer boxset-layer-3" aria-hidden="true"></span>
+                        <span class="boxset-layer boxset-layer-2" aria-hidden="true"></span>
+                        <span class="boxset-layer boxset-layer-1" aria-hidden="true"></span>
+                        <span class="boxset-front relative block aspect-[3/4] rounded-r-3xl rounded-l-lg overflow-hidden bg-gradient-to-b from-amber-200 to-orange-300">
+                            <span class="absolute inset-0 bg-indigo-950/50"></span>
+                            <span class="absolute top-3 right-3 bg-indigo-500 text-white font-display font-bold text-xs sm:text-sm px-3 py-1 rounded-full border-2 border-white shadow-md flex items-center gap-1.5">
+                                <i class="ph-bold ph-books"></i>
+                                <span data-i18n="colecaoSegundoBadge">Em breve · Partes 5 a 7</span>
+                            </span>
+                            <span class="cadeado-grande absolute left-1/2 top-[40%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-indigo-900 border-4 border-indigo-300 flex items-center justify-center shadow-lg" aria-hidden="true">🔒</span>
+                            <span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-indigo-950/95 via-indigo-950/80 to-transparent pt-10 pb-4 px-3 text-center block">
+                                <span class="block font-display font-bold text-2xl sm:text-3xl text-amber-200 leading-none drop-shadow" data-i18n="domQuixote">Dom Quixote</span>
+                                <span class="block text-xs sm:text-sm font-semibold text-amber-300 mt-1" data-i18n="colecaoSegundoVolume">Segundo Volume (1615)</span>
+                                <span class="mt-2.5 inline-flex items-center gap-1.5 bg-indigo-300 text-indigo-950 font-display font-bold text-xs sm:text-sm px-3 py-1 rounded-full border border-white shadow">
+                                    <i class="ph-bold ph-lock-simple text-xs"></i>
+                                    <span data-i18n="emBreve">Em breve</span>
+                                </span>
+                            </span>
+                        </span>
+                    </button>
+                </div>
+            </div></div>
 
             <!-- Estado 2: Coleção expandida (as 4 partes alinhadas lateralmente na prateleira) -->
             <div id="colecao-expandida" class="hidden w-full flex-col items-center">
@@ -474,12 +513,6 @@
             </div>
         </section>
 
-        <!-- Prateleira 2: Dom Quixote, segundo volume (1615). As capas-teaser com cadeado vêm de
-             assets/js/acervo.js (obras em produção); ao tocar, um aviso diz que o livro está sendo feito.
-             Só entra na estante o que já é rascunho ou está na fila para virar rascunho em breve. -->
-        <section id="shelf-quixote-2" class="shelf hidden" data-estante-producao aria-label="Dom Quixote, segundo volume">
-            <div class="fila-capas flex flex-wrap items-end justify-center gap-3 sm:gap-6"></div>
-        </section>
 
     </main>
 
