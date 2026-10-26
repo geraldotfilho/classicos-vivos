@@ -154,6 +154,8 @@ Só com autorização no prompt da sessão (`TODO-NARRACAO.md`):
 - Todo evento responde a três perguntas da criança: **por que** aconteceu, **o que** aconteceu e **o que mudou** depois.
 - Histórias dentro da história quase sempre saem; quando ficam, saem resumidas numa fala curta e **com o conteúdo do autor** (se no original ela é fantasia, continua fantasia: nada de explicações "realistas" inventadas).
 - **A segunda metade da parte merece o mesmo cuidado da primeira.** Na nova Parte 4 de Dom Quixote, o humano sentiu a qualidade cair do meio para o fim ("cansativa"). Antes de entregar, releia as últimas páginas como se fossem as primeiras: cada uma com uma graça própria, sem lição de moral pendurada no fim, sem explicar o que a cena já mostra. Uma página que passa de 5 parágrafos provavelmente são **duas** (e ganha uma ilustração a mais).
+- **Mensagens sobre emoções, com cuidado**: a história não pode ensinar a "pular no medo". O medo **protege** e deve ser escutado quando o perigo é real; a lição boa é sobre o medo **exagerado**, que inventa monstros: parar, respirar e olhar com calma para descobrir o que é de verdade (o Cavaleiro do Lago, Dom Quixote, Parte 4). Coragem com motivo bom (ajudar alguém), nunca por riquezas.
+- **Não explique o óbvio**: a criança sabe o que é uma ilha; um personagem adulto estranhando uma palavra banal soa falso (o "Ilha se come?" de Teresa saiu).
 - **Tratamentos carinhosos**: personagens que se gostam se chamam com carinho ("minha Teresinha", "meu bem"). Um vocativo seco repetido ("mulher!") soa ríspido ou machista para o leitor de hoje.
 - **Comando da atividade em quadro separado (regra mandatória, 2026-10-25)**: o convite ou instrução da atividade (ex.: "Descubra as letras...") **nunca** deve entrar no meio dos parágrafos da narrativa. Ele fica num campo próprio da página (`comandoAtividade: '...'`), exibido num quadro destacado (`.quadro-atividade`), de leitura opcional, com um botão de alto-falante (🔊) exclusivo que só fala ao ser tocado. A narração automática da página ("Ouvir Página") **nunca** lê o comando da atividade.
 
@@ -294,6 +296,7 @@ As lições que só valem para *Dom Quixote* ou para a condensação de obras lo
 
 | Data | Lição | Origem | Virou regra em |
 | :--- | :--- | :--- | :--- |
+| 2026-10-26 | A moral "quem pula no meio do medo encontra maravilhas" incentivaria a enfrentar um medo real: o medo protege; a lição é sobre o medo exagerado e olhar com calma | humano (Dom Quixote, Parte 4 nova) | §6.1 |
 | 2026-10-25 | Contagem que não nasce de uma necessidade da história ("conte os tesouros") é bestinha; e a arte precisa ter exatamente a quantidade que a voz conta (vieram 4 peixes para "três peixinhos"). Atividade que não acrescenta sai: página calma também é boa | humano (Dom Quixote, Parte 4 nova) | §6.2 |
 | 2026-10-25 | A qualidade do texto caiu na segunda metade da parte e uma página longa cansou: revisar o fim com o cuidado do começo e dividir páginas longas | humano (Dom Quixote, Parte 4 nova, fase 5) | §6.1 |
 | 2026-10-25 | Atividade em que qualquer toque funciona não ensina: a criança precisa ler para acertar; a variação mágica da cena vira recompensa, trancada até o acerto | humano | §6.2, `AGENTS.md` §2.5 |
