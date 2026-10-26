@@ -8,9 +8,9 @@
 
 ## 1. Estado atual
 
-- **Dom Quixote, primeiro volume (Partes 1 a 4) completo e publicado**:
-  - Partes 1, 2 e 3: ilustradas, narradas em português e traduzidas (en, fr, es). **Lente da Imaginação como recompensa e `comandoAtividade` padronizados** em todas as atividades, com traduções integradas.
-  - **Parte 4 nova publicada em 2026-10-26** ([dom-quixote/parte-4.html](../dom-quixote/parte-4.html), caps. 23 a 33, 12 páginas): ilustrada e **narrada em português** (escuta aprovada pelo humano). Ainda **sem tradução**: em inglês, francês ou espanhol, ela abre em português com um aviso no idioma escolhido. Caderno: [docs/cadernos/dom-quixote-parte-4.md](cadernos/dom-quixote-parte-4.md). A antiga está em `docs/arquivo/dom-quixote-parte-4-v1/`.
+- **Dom Quixote, primeiro volume (Partes 1 a 4) completo e publicado em 4 idiomas**:
+  - Partes 1, 2, 3 e 4: totalmente ilustradas, narradas em português e traduzidas com rigor literário para **Inglês, Espanhol e Francês** (`parte-4.en.js`, `parte-4.es.js`, `parte-4.fr.js` concluídos com 0 erros e 0 avisos em `tools/traducoes.mjs`).
+  - **Parte 4**: 12 páginas (caps. 23 a 33), atividades interativas de ordenação (BACIELMO / BASIN-HELMET, FRIEND / AMIGO / AMI, SANCHO GOVERNOR...) e piquenique com pegadinhas sonoras adaptadas a cada língua (*bread/thread/bees/chin*, *pan/flan/queso/hueso/águila*, *pain/bain/fromage/orage/menton*). Caderno: [docs/cadernos/dom-quixote-parte-4.md](cadernos/dom-quixote-parte-4.md).
 - **Home e Portal (`index.html` e `sobre.html`)**:
   - **Prateleira 1 da estante**: a antiga assimetria de livro gigante virou uma **Coleção Dom Quixote 3D unificada** (Volume 1, 1605), que se expande/espalha suavemente em 4 capas proporcionais e harmônicas ao toque, com botão de recolhimento e feedback sonoro.
   - **Página de Adultos (`sobre.html`)**: reestruturada em **4 abas** (Como Funciona, A Nossa Receita, Acervo & Em Produção, Quem Faz & Contato). A receita de adaptação está explicada de forma transparente e generalista; foi incluída a nota sobre criação original em português, tradução via IA e o convite aos leitores nativos para leitura prévia e correções; perfil e contatos de Geraldo Travassos com link preferencial para GitHub Issues e e-mail.
@@ -20,11 +20,12 @@
 
 ## 2. Próximas sessões (escolha do humano)
 
-1. **Fase 7 da Parte 4** (na fila; traduções sem custo, narração só com autorização e verba de novembro): traduzir para en, fr e es (o piquenique precisa de pegadinhas próprias em cada idioma: `cartoes: { pedidos, itens }`; o `conferir:traducoes` cobra), o humano aprova, e depois a narração nesses idiomas. As traduções da Parte 4 antiga estão em `docs/arquivo/dom-quixote-parte-4-v1/traducoes/`, para reaproveitar o que servir (pouco: o texto mudou quase todo). Depois, a fase 8 (retrospectiva) da Parte 4.
-2. **Parte 5** (segundo volume): fases 0 a 2, pelo plano `docs/PLANO-DOM-QUIXOTE-PARTES-4-7.md`.
+1. **Fase 8 da Parte 4** (retrospectiva do primeiro volume concluído).
+2. **Parte 5** (segundo volume, 1615): fases 0 a 2, pelo plano `docs/PLANO-DOM-QUIXOTE-PARTES-4-7.md` (o leão guardião, o cavaleiro dos espelhos, etc.).
+3. **Narração em en/fr/es da Parte 4** (quando houver cota/verba de API em novembro).
 
 Prompt de abertura sugerido:
-> Fase 7 da Parte 4 (caderno docs/cadernos/dom-quixote-parte-4.md): traduza para inglês, francês e espanhol. Sem API paga nesta sessão.
+> Vamos iniciar o segundo volume de Dom Quixote: Parte 5 (fases 0 a 2), seguindo docs/PLANO-DOM-QUIXOTE-PARTES-4-7.md e docs/RECEITA-CLASSICO-VIVO.md.
 
 ## 3. Frentes paradas (sem urgência)
 

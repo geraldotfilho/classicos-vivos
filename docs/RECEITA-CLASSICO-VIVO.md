@@ -215,6 +215,9 @@ Varie as mecânicas dentro da parte.
 - Limite de 100 pedidos por dia (o dia vira às 07:00 UTC): cache de blocos e palavras-chave em grupos de até 10. Numa parte grande, conte os blocos no `--seco` e veja se cabem no que resta da cota do dia; senão, grave em dois dias. Palavras curtas (fome, sede) e as que falharem no grupo: uma por pedido (`--agrupar 1`).
 - A conferência é **local** (Whisper). A API paga só produz vozes.
 - Nomes estrangeiros com pronúncia anotada (`TODO-NARRACAO.md` §5).
+- **Prevenção de chiados e estalos (clicks/pops) entre frases e páginas**:
+  - No motor (`livro.js`): o elemento `<audio>` da narração precisa ser explicitamente pausado (`narrador.pause()`, `src = ''`, `load()`) no evento `onended` e durante o intervalo de silêncio entre frases (150–250 ms). Deixar o áudio sem pausar mantém o DAC do dispositivo aberto gerando chiado de fundo; a troca abrupta de `src` provoca estalo (transiente DC).
+  - Nas ferramentas de áudio (`tools/otimizar-audio.mjs`, `tools/gravar-narracao.mjs`): **nunca cortar ou concatenar em degrau reto**. Aplicar obrigatoriamente janela de suavização (rampa Hann de fade-in e fade-out de 10 ms) nas bordas de cortes por limiar de silêncio e nas junções de blocos gerados por TTS, evitando degraus bruscos entre o piso de ruído da síntese neural e o silêncio digital absoluto.
 
 ### 6.5 Traduções
 - Só depois do português aprovado.
@@ -297,6 +300,7 @@ As lições que só valem para *Dom Quixote* ou para a condensação de obras lo
 
 | Data | Lição | Origem | Virou regra em |
 | :--- | :--- | :--- | :--- |
+| 2026-10-26 | Chiado e estalos entre frases na narração eram provocados por falta de `narrador.pause()` no `onended` (mantendo o DAC ligado) e cortes secos sem rampa de fade de 10 ms (Hann window) nas ferramentas de áudio | escuta do humano (Dom Quixote, Parte 4) | §6.4, `AGENTS.md` §2.6 |
 | 2026-10-26 | Uma parte grande (220 frases, ~50 blocos) não coube na cota de 100 pedidos por dia, já gasta em parte na véspera; o cache de blocos salvou o que foi pago. Palavras curtas se cortam mal em grupo | narração (Dom Quixote, Parte 4 nova) | §6.4 |
 | 2026-10-26 | A moral "quem pula no meio do medo encontra maravilhas" incentivaria a enfrentar um medo real: o medo protege; a lição é sobre o medo exagerado e olhar com calma | humano (Dom Quixote, Parte 4 nova) | §6.1 |
 | 2026-10-25 | Contagem que não nasce de uma necessidade da história ("conte os tesouros") é bestinha; e a arte precisa ter exatamente a quantidade que a voz conta (vieram 4 peixes para "três peixinhos"). Atividade que não acrescenta sai: página calma também é boa | humano (Dom Quixote, Parte 4 nova) | §6.2 |

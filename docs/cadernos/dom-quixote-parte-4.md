@@ -12,7 +12,7 @@ Arquivo: `dom-quixote/parte-4.html` (**publicada em 2026-10-26**; a antiga está
 | 5 Revisão final 🛑 | ✅ **aprovada** pelo humano (2026-10-26), com os dois últimos ajustes de texto (§5); **texto congelado** | 2026-10-25/26 | branch `claude/clever-pascal-t84t5f` → `main` | US$ 0,38 |
 | 6 Narração (pt) + escuta 🛑 | ✅ gravada e **aprovada** pelo humano (`docs/narracao/qa-parte-4.md`) | 2026-10-26 | branch `claude/eloquent-franklin-rq1wgn` → `main` | US$ 0,20 |
 | Publicação | ✅ no lugar da antiga; nos outros idiomas, aviso de "ainda só em português" (escolha do humano) | 2026-10-26 | branch `claude/eloquent-franklin-rq1wgn` → `main` | — |
-| 7 Idiomas (en, fr, es) | ⬜ na fila (com autorização e verba) | | | US$ |
+| 7 Idiomas (en, fr, es) | ✅ concluído (en, es, fr validados; 0 erros, 0 avisos) | 2026-10-26 | commit | US$ 0,00 |
 | 8 Retrospectiva | ⬜ a fazer | | | — |
 
 ---

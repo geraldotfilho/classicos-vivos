@@ -162,3 +162,30 @@ O que já foi entregue, sprint a sprint, em ordem cronológica (o mais antigo pr
   - Chamada rigorosa de `pararGravacao()` ao término de cada frase, durante a pausa de 150/250 ms e no final da leitura no motor (`assets/js/livro.js`), eliminando vazamentos de ruído de buffer e estalos de DAC.
   - Inclusão de rampas de atenuação Hann suaves (10 ms) em `tools/otimizar-audio.mjs` e `tools/gravar-narracao.mjs` nas bordas de corte e concatenação com silêncio.
   - Suavização de 62 arquivos MP3 com corte abrupto no acervo. **Nenhum texto narrado foi alterado e o custo foi de US$ 0,00**.
+
+---
+
+## ✅ Sprint 19 (Traduções da Parte 4, título localizado e lições de áudio, 2026-10-26)
+
+- **Traduções da Parte 4 completas em 3 idiomas (Fase 7)**:
+  - Criados os arquivos `dom-quixote/traducoes/parte-4.en.js` (Inglês Britânico), `parte-4.es.js` (Espanhol) e `parte-4.fr.js` (Francês).
+  - 12 páginas em cada idioma, com hashes coincidentes, contagem idêntica de palavras-chave alfabetizadoras em MAIÚSCULAS com pontos medianos (`{{PALAVRA|SÍ • LA • BAS|emoji}}`).
+  - Atividades interativas adaptadas culturalmente para cada idioma:
+    - **Cap. 24 (pág. 2)**: ordenação silábica do *bacielmo* (*BASIN-HELMET*, *BACIELMO*).
+    - **Cap. 25 (pág. 3)**: soletrar da palavra mágica de amizade (*FRIEND*, *AMIGO*, *AMI*).
+    - **Cap. 27 (pág. 5)**: piquenique com pegadinhas sonoras/visuais próprias (*bread/thread/bees/chin*, *pan/flan/queso/hueso/águila*, *pain/bain/fromage/orage/menton*).
+    - **Cap. 32 (pág. 10)**: ordenação do título sonhado por Sancho (*SANCHO GOVERNOR OF THE ISLAND*, *SANCHO GOBERNADOR DE LA ISLA*, *SANCHO GOUVERNEUR DE L'ÎLE*).
+  - Validador oficial `tools/traducoes.mjs` executado: **0 erro(s), 0 aviso(s)** em todas as partes e idiomas.
+- **Título do projeto localizado na Home Page (`index.html`)**:
+  - Traduções refinadas para manter o sentido e as nuances de cada língua:
+    - Português: **Clássicos Vivos**
+    - Inglês: **Living Classics**
+    - Espanhol: **Clásicos Vivos**
+    - Francês: **Classiques Vivants**
+  - Configurado `data-i18n="nomeApp"` no `<h1>` de `index.html` e integrado aos dicionários de `assets/js/i18n-site.js` juntamente com `tituloIndex`, `tituloSobre` e `sobreTituloPrincipal`.
+- **Registro da Lição Aprendida sobre Áudio**:
+  - Incorporada em `docs/RECEITA-CLASSICO-VIVO.md` (§6.4 e diário §8) e `AGENTS.md` (§2.6) a obrigatoriedade do ciclo de pausa do DAC via `pararGravacao()` e da atenuação com rampa Hann de 10 ms em cortes e uniões de blocos neurais em ferramentas de áudio.
+- **PWA e Service Worker**:
+  - `tools/build-sw.mjs` executado, atualizando `sw.js` com 160 arquivos cacheados offline.
+- **Custo zero e respeito aos textos**: nenhum texto narrado em português alterado, custo financeiro US$ 0,00.
+
