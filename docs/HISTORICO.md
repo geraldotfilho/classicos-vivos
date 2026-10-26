@@ -230,3 +230,13 @@ O que já foi entregue, sprint a sprint, em ordem cronológica (o mais antigo pr
     - `tools/build-sw.mjs` atualizado para injetar a versão calculada do cache diretamente em `assets/js/offline-manager.js` de forma determinística, mantendo `sw.js` e `CV_OFFLINE` perfeitamente sincronizados a cada build.
 - **Validação e Testes**:
   - Testes visuais e de interação ponta a ponta executados com Playwright (Google Chrome) em modo tablet paisagem (1280 × 800) e retrato (800 × 1280), validando a remoção do ícone flutuante, abertura lateral contida, transição de estados offline, exclusão via lixeira, recolhimento da estante e troca de idiomas com 100% de aprovação.
+
+
+---
+
+## ✅ Sprint 22 (Honestidade Radical e Humildade: IA como Co-Autora, 2026-10-26)
+
+- **Revisão Honesta e Humilde da Filosofia sobre Inteligência Artificial (`sobre.html` e `assets/js/i18n-site.js`)**:
+  - **Humildade e despretensão**: Removida qualquer pretensão de equiparação ou comparação com grandes editoras profissionais. O projeto explicita com total simplicidade que nasce do esforço independente e artesanal de um pai dedicado a aproximar crianças das grandes histórias, sem qualquer pretensão comercial.
+  - **Reconhecimento da IA como Co-Autora**: Ajustada a definição para reconhecer com honestidade cristalina a inteligência artificial como **co-autora**. O autor humano é o cérebro criativo por trás de tudo, com a sensibilidade pedagógica, a curadoria do afeto e a proteção inegociável da infância guiando cada linha; contudo, a IA é parceira e co-autora indispensável, sem a qual seria humanamente impossível encontrar tempo e fôlego para produzir tais obras em meio à rotina corrida do dia a dia.
+  - **Tradução completa nos 4 idiomas**: Texto reformulado e integrado em Português (`pt-BR`), Inglês (`en`), Francês (`fr`) e Espanhol (`es`).
