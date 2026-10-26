@@ -60,4 +60,4 @@ Sugestões de melhorias pedagógicas, novas interações visuais, correções de
 Este projeto é totalmente livre e aberto, distribuído sob licenciamento duplo para cobrir tanto o software quanto o conteúdo criativo:
 
 - **Código-fonte (HTML/CSS/JS):** Licenciado sob a [MIT License](LICENSE).
-- **Textos adaptados e ilustrações:** Licenciados sob a [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.pt_BR) — você pode usar, compartilhar, imprimir em escolas e adaptar livremente para qualquer fim, bastando manter o crédito ao projeto **Clássicos Vivos**.
+- **Textos adaptados e ilustrações:** Licenciados sob a [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.pt_BR) — completamente livres para usar, reproduzir, copiar, compartilhar, distribuir e readaptar para qualquer fim (livre como em liberdade!), bastando manter os créditos ao projeto **Clássicos Vivos**.

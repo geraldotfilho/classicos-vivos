@@ -69,7 +69,7 @@
                 'Botão <strong>🔄 Recomeçar</strong>: cada página tem um botão para reiniciar as interações e brincadeiras daquela página específica.',
                 'Melhor experiência em tablets (retrato ou paisagem). Também funciona no celular e no computador.'
             ],
-            licenca1: 'Projeto aberto e gratuito. Código sob licença MIT; textos adaptados e ilustrações sob CC BY 4.0, livres para uso em escolas mantendo o crédito ao <strong>Clássicos Vivos</strong>.',
+            licenca1: 'Projeto aberto e gratuito. Código sob licença MIT; textos adaptados e ilustrações sob CC BY 4.0: completamente livres para usar, reproduzir, copiar, compartilhar e readaptar para qualquer fim (livre como em liberdade!), bastando manter os créditos ao <strong>Clássicos Vivos</strong>.',
             licenca2: 'Sugestões e contribuições: <a class="text-indigo-700 underline" href="https://github.com/geraldotfilho/classicos-vivos/issues">github.com/geraldotfilho/classicos-vivos</a>',
             swNovaVersao: 'Nova versão disponível! ✨',
             swAtualizar: 'Atualizar',
@@ -95,7 +95,75 @@
 
             // Aba 2: Receita de adaptação
             receitaTitulo: 'A Nossa Receita de Adaptação',
-            receitaIntro: 'Como transformar as maiores obras-primas da literatura universal em livros digitais interativos, acolhedores e formativos para crianças de 5 a 8 anos (com leitor de referência de 6 anos). Nossa receita geral vale para qualquer clássico:',
+            receitaIntro: 'Como transformar as maiores obras-primas da literatura universal em livros digitais interativos, acolhedores e formativos para crianças de 5 a 8 anos (com leitor de referência de 6 anos). Nossa receita combina objetivos pedagógicos inegociáveis com um fluxo de trabalho transparente entre sensibilidade humana e inteligência artificial:',
+            metasTitulo: 'Metas & Princípios Inegociáveis (O Que Buscamos)',
+            metasIntro: 'Estes cinco pilares funcionam como os objetivos fundamentais e critérios de qualidade que toda adaptação precisa alcançar antes de ser considerada concluída:',
+            fluxoTitulo: 'O Nosso Fluxo de Criação Passo a Passo',
+            fluxoIntro: 'Criar cada livro é um encontro constante entre a curadoria artesanal humana e o que há de mais avançado em inteligência artificial. Eis exatamente como uma parte nasce, etapa por etapa, com os modelos utilizados e onde o olhar humano intervém:',
+            rotuloIa: 'Modelos de IA',
+            rotuloHumano: 'Olhar & Decisão Humana',
+            fluxoEtapas: [
+                {
+                    etapa: 'Etapa 1: Mapeamento da Obra & Arquitetura',
+                    fase: 'Fase 0 · Estrutura',
+                    desc: 'Estudo minucioso da obra em domínio público, seleção criteriosa de episódios (condensação sem perder o fio da história), divisão em partes (7 a 9 páginas por parte, arcos com início, meio e fim) e planejamento dos fios narrativos (o que plantar e colher ao longo do livro).',
+                    ia: 'LLMs avançados (Claude 3.7 Sonnet / Gemini 3.8 Pro) auxiliam no cotejo estrutural com o texto original e no levantamento de temas.',
+                    humano: 'O autor humano define o recorte, elimina arcaísmos nocivos e aprova o plano geral antes de qualquer texto narrativo ser escrito.'
+                },
+                {
+                    etapa: 'Etapa 2: Redação Literária e Alfabetização Fonética',
+                    fase: 'Fase 1 · Texto em Português',
+                    desc: 'Criação do texto original em língua portuguesa com frases curtas e ordem direta para o leitor de 6 anos. São selecionadas de 25 a 30 palavras-chave silabadas por livro (com pronúncia pausada e emojis) para apoiar o letramento.',
+                    ia: 'Modelos de linguagem sugerem simplificações de períodos complexos mantendo o humor, a cadência e o lirismo clássico.',
+                    humano: 'Lapidação artesanal por Geraldo Travassos. Cada frase é lida em voz alta para conferir ritmo, afeto e acolhimento.'
+                },
+                {
+                    etapa: 'Etapa 3: Interações, Cartões e Rascunho Funcional',
+                    fase: 'Fases 1b e 2 · Código e Mecânicas',
+                    desc: 'Planejamento das brincadeiras interativas que nascem do enredo (vestir armaduras, ordenar palavras, contagens, piquenique com rimas e lentes de realidade/imaginação). O livro é montado no motor web como rascunho funcional antes de gerar qualquer imagem final.',
+                    ia: 'LLMs auxiliam na programação do frontend leve (HTML5 semântico, Tailwind CSS, síntese sonora de efeitos via Web Audio API).',
+                    humano: 'Validação da ergonomia de toque (alvos ≥ 48px), clareza pedagógica e testes técnicos no navegador.'
+                },
+                {
+                    etapa: '🛑 Parada Humana 1: Leitura do Rascunho no Tablet com a Criança',
+                    fase: 'Fase 3 · Parada Crítica',
+                    parada: true,
+                    desc: 'Antes de investir qualquer recurso na geração de arte final ou narração, o autor instala o rascunho no tablet e lê a história completa junto com seu filho de 6 anos.',
+                    ia: 'Nenhum modelo de IA atua aqui: é um momento 100% de escuta humana e conexão familiar.',
+                    humano: 'Avaliação real da atenção, do riso e da compreensão da criança. A estrutura de páginas e capítulos só é congelada após a aprovação do filho.'
+                },
+                {
+                    etapa: 'Etapa 4: Pintura em Aquarela Digital e Camadas Táteis',
+                    fase: 'Fase 4 · Arte Visual',
+                    desc: 'Geração das ilustrações panorâmicas (1376 × 768 px) em formato WebP leve, no estilo aquarela suave com iluminação lírica, e recorte de camadas transparentes que reagem ao toque.',
+                    ia: 'Google Imagen 3 / Nano Banana 2 (via API Batch ou geração direta no Antigravity), guiados por prompts artesanais detalhados; scripts de recorte e otimização WebP.',
+                    humano: 'Curadoria artística visual minuciosa: cada pintura é avaliada. Se um olhar parecer frio ou a cena não transmitir ternura, o prompt é retrabalhado até a ilustração ficar perfeita.'
+                },
+                {
+                    etapa: '🛑 Parada Humana 2: Revisão da Obra Ilustrada',
+                    fase: 'Fase 5 · Congelamento do Texto',
+                    parada: true,
+                    desc: 'Segunda sessão de leitura no tablet com o livro totalmente ilustrado, testando a resposta visual de cada toque e a harmonia entre texto e arte.',
+                    ia: 'Momento de conferência visual e leitura conjunta pai-filho.',
+                    humano: 'Ajustes de diagramação e contraste. O texto narrativo em português é 100% congelado para gravação e tradução.'
+                },
+                {
+                    etapa: 'Etapa 5: Narração Expressiva com Vozes Neurais',
+                    fase: 'Fase 6 · Áudio e Acessibilidade',
+                    desc: 'Gravação da leitura guiada frase por frase e de página inteira (com destaque visual sincronizado), além da pronúncia silabada de cada palavra-chave.',
+                    ia: 'API Gemini Voice / TTS neural (gemini-3.8-flash-tts com vozes expressivas como Aoede para a narradora e Puck, Fenrir e Kore para os personagens); modelo Whisper local (gratuito) para conferência automática das transcrições.',
+                    humano: 'Escuta atenta com fones de ouvido para calibrar pausas, aplicar janelas suaves contra chiados de áudio e garantir um tom acolhedor de conto de fadas.'
+                },
+                {
+                    etapa: 'Etapa 6: Internacionalização e Adaptação Cultural',
+                    fase: 'Fase 7 · Idiomas Globais',
+                    desc: 'Adaptação literária para Inglês, Espanhol e Francês, recriando jogos de palavras, trocadilhos sonoros e separação silábica culturalmente adequada para cada língua.',
+                    ia: 'Agentes LLM especializados em tradução literária infanto-juvenil.',
+                    humano: 'Testes automatizados de consistência (traducoes.mjs) e convite aberto a leitores nativos para revisarem o texto antes da leitura com crianças.'
+                }
+            ],
+            filosofiaIaTitulo: 'A Nossa Filosofia sobre Inteligência Artificial',
+            filosofiaIaTexto: '<p class="leading-relaxed">A inteligência artificial funciona neste projeto como um estúdio de amplificação criativa. Ela permite que um pai apaixonado por livros e educação, trabalhando de forma independente e sem fins lucrativos, entregue uma biblioteca digital viva com o rigor visual, sonoro e tecnológico das maiores editoras infantis do mundo.</p><p class="leading-relaxed">Contudo, <strong>a IA é apenas o instrumento, nunca a autora</strong>. A sensibilidade pedagógica, a ética da proteção infantil, a curadoria artística e cada decisão de corte ou afeto nascem exclusivamente do coração humano e do convívio real com a infância.</p>',
             pilares: [
                 {
                     titulo: '🏛️ Fidelidade ao espírito e essência do clássico',
@@ -189,7 +257,7 @@
                 '<strong>🔄 Restart button</strong>: each page has a dedicated button to reset that page\'s interactive activities.',
                 'Optimised for tablets (portrait or landscape). Also works on smartphones and computers.'
             ],
-            licenca1: 'Open and free project. Code under MIT licence; adapted texts and illustrations under CC BY 4.0, free for educational use with attribution to <strong>Living Classics</strong>.',
+            licenca1: 'Open and free project. Code under MIT licence; adapted texts and illustrations under CC BY 4.0: completely free to use, reproduce, copy, share, and remix for any purpose (free as in freedom!), simply keeping attribution to <strong>Living Classics</strong>.',
             licenca2: 'Suggestions and contributions: <a class="text-indigo-700 underline" href="https://github.com/geraldotfilho/classicos-vivos/issues">github.com/geraldotfilho/classicos-vivos</a>',
             swNovaVersao: 'New version available! ✨',
             swAtualizar: 'Update',
@@ -215,7 +283,75 @@
 
             // Aba 2: Receita de adaptação
             receitaTitulo: 'Our Adaptation Recipe',
-            receitaIntro: 'How we adapt the greatest masterpieces of world literature into warm, formative interactive books for children aged 5 to 8 (with a reference reader aged 6). Our general recipe applies to any classic:',
+            receitaIntro: 'How we adapt the greatest masterpieces of world literature into warm, formative interactive books for children aged 5 to 8 (with a reference reader aged 6). Our recipe combines non-negotiable pedagogical goals with a transparent workflow blending human sensitivity and artificial intelligence:',
+            metasTitulo: 'Core Goals & Non-Negotiable Principles (What We Seek)',
+            metasIntro: 'These five pillars serve as the fundamental goals and quality criteria that every adaptation must achieve before publication:',
+            fluxoTitulo: 'Our Step-by-Step Creation Workflow',
+            fluxoIntro: 'Crafting each book is a continuous partnership between meticulous human curation and cutting-edge artificial intelligence. Here is exactly how a book comes to life, step by step, showing the models used and where human judgment intervenes:',
+            rotuloIa: 'AI Models',
+            rotuloHumano: 'Human Judgment & Oversight',
+            fluxoEtapas: [
+                {
+                    etapa: 'Step 1: Story Mapping & Architectural Blueprint',
+                    fase: 'Phase 0 · Structure',
+                    desc: 'Thorough study of the public-domain original, thoughtful episode selection (condensing without losing the narrative thread), division into chapters (7 to 9 pages per part, complete story arcs), and planning key motifs (planting and harvesting narrative payoffs).',
+                    ia: 'Advanced LLMs (Claude 3.7 Sonnet / Gemini 3.8 Pro) assist in comparative text analysis, structural synthesis, and thematic outlining.',
+                    humano: 'The author chooses what stays and what is cut (removing outdated tropes and violence) and approves the outline before any narrative prose is written.'
+                },
+                {
+                    etapa: 'Step 2: Literary Writing & Phonics-Based Literacy',
+                    fase: 'Phase 1 · Original Text in Portuguese',
+                    desc: 'Original prose composition with short, active sentences tailored to a 6-year-old reference reader. Selecting and syllabifying 25 to 30 keywords per book (with audio and emojis) to nurture early literacy.',
+                    ia: 'Language models suggest accessible phrasing and vocabulary simplifications while preserving humor, rhythm, and classical charm.',
+                    humano: 'Meticulous line-by-line craft by Geraldo Travassos. Every sentence is read aloud to ensure tenderness, cadence, and warmth.'
+                },
+                {
+                    etapa: 'Step 3: Interactive Design, Cards & Functional Draft',
+                    fase: 'Phases 1b & 2 · Code & Mechanics',
+                    desc: 'Designing story-driven playful interactions (equipping armor, ordering words, counting, rhyming games, and reality/imagination lenses). The book is built into the lightweight offline web engine as a functional draft before any final artwork is generated.',
+                    ia: 'LLMs assist in coding clean frontend modules (semantic HTML5, Tailwind CSS, procedural audio synthesis via Web Audio API).',
+                    humano: 'Evaluating touch ergonomics (touch targets ≥ 48px), pedagogical clarity, and browser performance.'
+                },
+                {
+                    etapa: '🛑 Human Checkpoint 1: Reading the Draft with a Child on Tablet',
+                    fase: 'Phase 3 · Critical Stop',
+                    parada: true,
+                    desc: 'Before spending resources on final artwork or studio voiceovers, the author loads the interactive draft onto a tablet and reads the complete story together with his 6-year-old son.',
+                    ia: 'No AI operates here: this is 100% human active listening and family connection.',
+                    humano: 'Observing the child\'s real reactions, laughter, and comprehension. Story pacing and page sequence are only frozen once approved by the child.'
+                },
+                {
+                    etapa: 'Step 4: Digital Watercolour Painting & Tactile Layers',
+                    fase: 'Phase 4 · Visual Art',
+                    desc: 'Generating wide panoramic paintings (1376 × 768 px) in lightweight WebP format, featuring a delicate watercolour style with warm lighting, plus transparent interactive layers that react to touch.',
+                    ia: 'Google Imagen 3 / Nano Banana 2 (via Batch API or Antigravity generation) guided by descriptive prompts; Python/Node scripts for cutout layering and WebP optimization.',
+                    humano: 'Rigorous manual art curation: every image is inspected. If an expression feels cold or a scene lacks warmth, the prompt is reworked until it feels just right.'
+                },
+                {
+                    etapa: '🛑 Human Checkpoint 2: Reviewing the Illustrated Book',
+                    fase: 'Phase 5 · Text Freeze',
+                    parada: true,
+                    desc: 'A second joint reading session on tablet with full illustrations, testing touch feedback and visual harmony between art and typography.',
+                    ia: 'Co-reading and visual inspection milestone.',
+                    humano: 'Layout and contrast tuning. The Portuguese narrative text is 100% frozen for voice recording and multilingual translations.'
+                },
+                {
+                    etapa: 'Step 5: Expressive Narration with Neural Voices',
+                    fase: 'Phase 6 · Audio & Accessibility',
+                    desc: 'Recording guided sentence-by-sentence and full-page voiceovers (with synchronized karaoke highlighting), alongside syllable-by-syllable keyword pronunciations.',
+                    ia: 'Gemini Voice API / neural TTS (gemini-3.8-flash-tts with distinct expressive voices like Aoede for the narrator and Puck, Fenrir, and Kore for characters); local Whisper model for automated transcript verification.',
+                    humano: 'Attentive listening with headphones to adjust pacing, apply Hann ramps against audio pops/clicks, and guarantee a cozy storytelling warmth.'
+                },
+                {
+                    etapa: 'Step 6: Multilingual Adaptation & Cultural Transcreation',
+                    fase: 'Phase 7 · Global Languages',
+                    desc: 'Literary transcreation into English, Spanish, and French, recreating wordplay, rhyming jokes, and language-specific syllable breakdowns for young learners.',
+                    ia: 'Specialized LLM agents focused on children\'s literary translation.',
+                    humano: 'Automated test verification (traducoes.mjs) and an open invitation to native-speaking families and educators to review stories before reading with children.'
+                }
+            ],
+            filosofiaIaTitulo: 'Our Philosophy on Artificial Intelligence',
+            filosofiaIaTexto: '<p class="leading-relaxed">In this project, artificial intelligence acts as a creative amplification studio. It enables a passionate father and educator, working independently without commercial motives, to build a living digital library with the aesthetic, auditory, and technical excellence of major publishing houses.</p><p class="leading-relaxed">However, <strong>AI is merely an instrument, never the author</strong>. Pedagogical sensitivity, child protection ethics, artistic taste, and every decision born of warmth and care belong entirely to human hearts and real engagement with children.</p>',
             pilares: [
                 {
                     titulo: '🏛️ Faithful to the spirit of the classic',
@@ -309,7 +445,7 @@
                 'Bouton <strong>🔄 Recommencer</strong> : chaque page dispose d\'un bouton pour réinitialiser les activités de cette page.',
                 'Expérience optimale sur tablette (portrait ou paysage). Fonctionne également sur mobile et ordinateur.'
             ],
-            licenca1: 'Projet ouvert et gratuit. Code sous licence MIT ; textes et illustrations sous licence CC BY 4.0, libres d\'utilisation avec mention de <strong>Classiques Vivants</strong>.',
+            licenca1: 'Projet ouvert et gratuit. Code sous licence MIT ; textes et illustrations sous licence CC BY 4.0 : entièrement libres d\'utilisation, de reproduction, de copie, de partage et de réadaptation pour tout usage (libre au sens de la liberté !), avec mention de <strong>Classiques Vivants</strong>.',
             licenca2: 'Suggestions et contributions : <a class="text-indigo-700 underline" href="https://github.com/geraldotfilho/classicos-vivos/issues">github.com/geraldotfilho/classicos-vivos</a>',
             swNovaVersao: 'Nouvelle version disponible ! ✨',
             swAtualizar: 'Mettre à jour',
@@ -335,7 +471,75 @@
 
             // Aba 2: Receita de adaptação
             receitaTitulo: 'Notre Recette d\'Adaptation',
-            receitaIntro: 'Comment adapter les chefs-d\'œuvre de la littérature universelle en livres numériques interactifs, chaleureux et formateurs pour enfants de 5 à 8 ans (lecteur de référence de 6 ans). Notre recette générale vaut pour tous les classiques :',
+            receitaIntro: 'Comment adapter les chefs-d\'œuvre de la littérature universelle en livres numériques interactifs, chaleureux et formateurs pour enfants de 5 à 8 ans (lecteur de référence de 6 ans). Notre recette allie des exigences pédagogiques fondamentales à un flux de travail transparent unissant sensibilité humaine et intelligence artificielle :',
+            metasTitulo: 'Objectifs & Principes Non Négociables (Ce Que Nous Visons)',
+            metasIntro: 'Ces cinq piliers constituent les objectifs fondamentaux et les critères d\'excellence que chaque adaptation doit atteindre avant publication :',
+            fluxoTitulo: 'Notre Processus de Création Étape par Étape',
+            fluxoIntro: 'La création de chaque livre repose sur une collaboration étroite entre l\'artisanat humain et l\'intelligence artificielle la plus avancée. Voici précisément comment un livre prend vie, avec les modèles utilisés et la vigilance humaine :',
+            rotuloIa: 'Modèles d\'IA',
+            rotuloHumano: 'Regard & Décision Humaine',
+            fluxoEtapas: [
+                {
+                    etapa: 'Étape 1 : Cartographie de l\'Œuvre & Architecture',
+                    fase: 'Phase 0 · Structure',
+                    desc: 'Étude attentive du classique dans le domaine public, sélection rigoureuse des épisodes (condenser sans perdre le fil du récit), découpage en tomes (7 à 9 pages par tome) et planification des motifs narratifs.',
+                    ia: 'Modèles LLM avancés (Claude 3.7 Sonnet / Gemini 3.8 Pro) pour la comparaison structurelle et l\'analyse thématique avec l\'original.',
+                    humano: 'L\'auteur choisit ce qui est conservé et ce qui est écarté (suppression de la violence et des archaïsmes) et valide le plan général.'
+                },
+                {
+                    etapa: 'Étape 2 : Écriture Littéraire & Apprentissage Phonétique',
+                    fase: 'Phase 1 · Texte en Portugais',
+                    desc: 'Création du texte original en portugais avec des phrases courtes et directes pour un lecteur de 6 ans. Sélection de 25 à 30 mots-clés découpés en syllabes par livre pour encourager la lecture autonome.',
+                    ia: 'Modèles de langage pour suggérer des formulations simples et poétiques tout en préservant le charme et l\'humour classique.',
+                    humano: 'Travail minutieux par Geraldo Travassos. Chaque phrase est lue à voix haute pour s\'assurer de sa douceur et de son rythme.'
+                },
+                {
+                    etapa: 'Étape 3 : Interactions, Cartes & Brouillon Fonctionnel',
+                    fase: 'Phases 1b et 2 · Code et Mécaniques',
+                    desc: 'Conception d\'activités ludiques nées de l\'histoire (habiller le chevalier, ordonner les mots, compter, pique-nique avec rimes et lentilles réalité/imagination). Le livre fonctionne comme brouillon avant même de générer l\'art final.',
+                    ia: 'Les LLM assistent la programmation du moteur web autonome (HTML5, Tailwind CSS, synthèse sonore Web Audio API).',
+                    humano: 'Validation de l\'ergonomie tactile (zones de contact ≥ 48px) et essais techniques dans le navigateur.'
+                },
+                {
+                    etapa: '🛑 Étape d\'Arrêt Humain 1 : Lecture du Brouillon sur Tablette avec l\'Enfant',
+                    fase: 'Phase 3 · Arrêt Critique',
+                    parada: true,
+                    desc: 'Avant d\'engager des ressources d\'art final ou de voix, l\'auteur installe le brouillon sur la tablette et lit l\'histoire complète avec son fils de 6 ans.',
+                    ia: 'Aucune IA ici : c\'est un instant d\'écoute et de complicité familiale purement humain.',
+                    humano: 'Observation attentive des réactions et de la joie de l\'enfant. Le découpage des pages n\'est figé qu\'après validation par l\'enfant.'
+                },
+                {
+                    etapa: 'Étape 4 : Peinture à l\'Aquarelle Numérique & Couches Tactiles',
+                    fase: 'Phase 4 · Art Visuel',
+                    desc: 'Génération de peintures panoramiques (1376 × 768 px) au format WebP léger, dans un style aquarelle délicat avec lumière douce, et détourage d\'éléments transparents réactifs.',
+                    ia: 'Google Imagen 3 / Nano Banana 2 (via API Batch ou génération assistée) guidés par des prompts minutieux ; scripts d\'optimisation WebP.',
+                    humano: 'Curation artistique exigeante : chaque image est examinée. Si un visage paraît distant ou si l\'atmosphère manque de tendresse, le prompt est retravaillé.'
+                },
+                {
+                    etapa: '🛑 Étape d\'Arrêt Humain 2 : Relecture de l\'Œuvre Illustrée',
+                    fase: 'Phase 5 · Gel du Texte',
+                    parada: true,
+                    desc: 'Seconde lecture partagée sur tablette avec toutes les illustrations finales, pour tester l\'équilibre entre texte et dessin.',
+                    ia: 'Moment de vérification conjointe père-fils.',
+                    humano: 'Ajustements de lisibilité et de contraste. Le texte narratif en portugais est figé à 100 % pour l\'enregistrement et la traduction.'
+                },
+                {
+                    etapa: 'Étape 5 : Narration Expressive avec Voix Neurales',
+                    fase: 'Phase 6 · Audio & Accessibilité',
+                    desc: 'Enregistrement de la lecture guidée phrase par phrase et pleine page (avec surlignage synchronisé), ainsi que la prononciation syllabique des mots-clés.',
+                    ia: 'API Gemini Voice / TTS neural (gemini-3.8-flash-tts avec des voix expressives pour le narrateur et les personnages) ; modèle local Whisper pour le contrôle automatique de transcription.',
+                    humano: 'Écoute attentive au casque pour affiner le rythme, éliminer tout bruit numérique et garantir une intonation chaleureuse.'
+                },
+                {
+                    etapa: 'Étape 6 : Internationalisation & Adaptation Culturelle',
+                    fase: 'Phase 7 · Langues Mondiales',
+                    desc: 'Adaptation littéraire en anglais, espagnol et français, en recréant les rimes, devinettes et découpages syllabiques propres à chaque langue.',
+                    ia: 'Agents LLM spécialisés en traduction littéraire jeunesse.',
+                    humano: 'Tests unitaires de cohérence (traducoes.mjs) et invitation ouverte aux familles et enseignants natifs pour relire les textes avant de les partager.'
+                }
+            ],
+            filosofiaIaTitulo: 'Notre Philosophie sur l\'Intelligence Artificielle',
+            filosofiaIaTexto: '<p class="leading-relaxed">Dans ce projet, l\'intelligence artificielle fait office d\'atelier de création étendu. Elle permet à un père passionné par les livres et l\'éducation, œuvrant de manière bénévole et indépendante, de concevoir une bibliothèque vivante avec le niveau de qualité visuel, sonore et interactif des grandes maisons d\'édition jeunesse.</p><p class="leading-relaxed">Toutefois, <strong>l\'IA n\'est qu\'un outil, jamais l\'auteur</strong>. La sensibilité pédagogique, l\'éthique de la protection de l\'enfance, le discernement artistique et chaque geste d\'affection relèvent exclusivement du cœur humain et de l\'écoute des enfants.</p>',
             pilares: [
                 {
                     titulo: '🏛️ Fidélité à l\'esprit du classique',
@@ -429,7 +633,7 @@
                 'Botón <strong>🔄 Reiniciar</strong>: cada página tiene un botón para reiniciar las interacciones de esa página.',
                 'Mejor experiencia en tableta (vertical u horizontal). También funciona en móvil y ordenador.'
             ],
-            licenca1: 'Proyecto abierto y gratuito. Código bajo licencia MIT; textos e ilustraciones bajo CC BY 4.0, libres para uso educativo citando a <strong>Clássicos Vivos</strong>.',
+            licenca1: 'Proyecto abierto y gratuito. Código bajo licencia MIT; textos e ilustraciones bajo CC BY 4.0: completamente libres para usar, reproducir, copiar, compartir y readaptar para cualquier fin (¡libre como en libertad!), manteniendo el crédito a <strong>Clássicos Vivos</strong>.',
             licenca2: 'Sugerencias y contribuciones: <a class="text-indigo-700 underline" href="https://github.com/geraldotfilho/classicos-vivos/issues">github.com/geraldotfilho/classicos-vivos</a>',
             swNovaVersao: '¡Nueva versión disponible! ✨',
             swAtualizar: 'Actualizar',
@@ -455,7 +659,75 @@
 
             // Aba 2: Receita de adaptação
             receitaTitulo: 'Nuestra Receta de Adaptación',
-            receitaIntro: 'Cómo transformamos las grandes obras maestras de la literatura universal en libros digitales interactivos, acogedores y formativos para niños de 5 a 8 años (lector de referencia de 6 años). Nuestra receta general vale para cualquier clásico:',
+            receitaIntro: 'Cómo transformamos las grandes obras maestras de la literatura universal en libros digitales interactivos, acogedores y formativos para niños de 5 a 8 años (lector de referencia de 6 años). Nuestra receta combina objetivos pedagógicos innegociables con un flujo de trabajo transparente entre sensibilidad humana e inteligencia artificial:',
+            metasTitulo: 'Metas y Principios Innegociables (Lo Que Buscamos)',
+            metasIntro: 'Estos cinco pilares funcionan como los objetivos fundamentales y criterios de calidad que toda adaptación debe cumplir antes de su publicación:',
+            fluxoTitulo: 'Nuestro Flujo de Creación Paso a Paso',
+            fluxoIntro: 'Crear cada libro es un encuentro continuo entre el esmero artesanal humano y lo más avanzado en inteligencia artificial. Así nace una obra, paso a paso, con los modelos utilizados y la intervención humana en cada etapa:',
+            rotuloIa: 'Modelos de IA',
+            rotuloHumano: 'Mirada y Decisión Humana',
+            fluxoEtapas: [
+                {
+                    etapa: 'Etapa 1: Mapa de la Obra y Arquitectura',
+                    fase: 'Fase 0 · Estructura',
+                    desc: 'Estudio detallado del clásico en dominio público, selección esmerada de episodios (condensación sin perder el hilo de la historia), división en partes (7 a 9 páginas por parte, arcos con inicio, nudo y desenlace) y diseño de motivos narrativos.',
+                    ia: 'Modelos LLM avanzados (Claude 3.7 Sonnet / Gemini 3.8 Pro) para el cotejo estructural y análisis temático con la obra original.',
+                    humano: 'El autor define qué se conserva y qué se recorta (eliminando violencia y arcaísmos nocivos) y aprueba la escaleta previa al texto narrativo.'
+                },
+                {
+                    etapa: 'Etapa 2: Redacción Literaria y Alfabetización Fonética',
+                    fase: 'Fase 1 · Texto en Portugués',
+                    desc: 'Creación del texto original en lengua portuguesa con frases breves y directas para el lector de 6 años. Selección de 25 a 30 palabras clave silabeadas por libro (con audio pausado y emojis) para apoyar el aprendizaje de la lectura.',
+                    ia: 'Modelos de lenguaje para sugerir simplificaciones accesibles manteniendo el humor, el ritmo y el lirismo clásico.',
+                    humano: 'Pulido artesanal por Geraldo Travassos. Cada frase se lee en voz alta para asegurar calidez, ritmo y ternura.'
+                },
+                {
+                    etapa: 'Etapa 3: Interacciones, Tarjetas y Borrador Funcional',
+                    fase: 'Fases 1b y 2 · Código y Mecánicas',
+                    desc: 'Diseño de dinámicas interactivas nacidas del argumento (vestir la armadura, ordenar palabras, contar, merienda con rimas y lentes de realidad/imaginación). El libro funciona en el motor web como borrador antes de generar cualquier imagen final.',
+                    ia: 'Los LLM asisten en la programación del código frontend ligero (HTML5 semántico, Tailwind CSS, síntesis sonora con Web Audio API).',
+                    humano: 'Validación de ergonomía táctil (áreas de toque ≥ 48px), claridad pedagógica y pruebas en navegador.'
+                },
+                {
+                    etapa: '🛑 Parada Humana 1: Lectura del Borrador en Tableta con el Niño',
+                    fase: 'Fase 3 · Parada Crítica',
+                    parada: true,
+                    desc: 'Antes de invertir recursos en arte final o locución, el autor instala el borrador en la tableta y lee la historia completa junto con su hijo de 6 años.',
+                    ia: 'Ninguna IA interviene aquí: es un momento 100% de escucha humana y conexión familiar.',
+                    humano: 'Evaluación real de la atención, la risa y la comprensión del niño. La estructura de páginas y capítulos solo se congela tras la aprobación del hijo.'
+                },
+                {
+                    etapa: 'Etapa 4: Pintura en Acuarela Digital y Capas Táctiles',
+                    fase: 'Fase 4 · Arte Visual',
+                    desc: 'Generación de pinturas panorámicas (1376 × 768 px) en formato WebP ligero, con estilo de acuarela suave e iluminación lírica, y recorte de capas transparentes que reaccionan al tacto.',
+                    ia: 'Google Imagen 3 / Nano Banana 2 (vía API Batch o generación asistida) guiados por prompts artesanales detallados; scripts de optimización WebP.',
+                    humano: 'Criterio artístico minucioso: cada imagen se inspecciona. Si una mirada parece fría o la escena no transmite ternura, el prompt se reelabora hasta alcanzar la excelencia.'
+                },
+                {
+                    etapa: '🛑 Parada Humana 2: Revisión de la Obra Ilustrada',
+                    fase: 'Fase 5 · Congelación del Texto',
+                    parada: true,
+                    desc: 'Segunda sesión de lectura compartida en tableta con todas las ilustraciones activas, comprobando la armonía entre texto y arte.',
+                    ia: 'Momento de revisión conjunta entre padre e hijo.',
+                    humano: 'Ajustes de contraste y maquetación. El texto narrativo en portugués se congela al 100% para la grabación y traducción.'
+                },
+                {
+                    etapa: 'Etapa 5: Narración Expresiva con Voces Neurales',
+                    fase: 'Fase 6 · Audio y Accesibilidad',
+                    desc: 'Grabación de la lectura guiada frase a frase y de página completa (con resaltado sincronizado), además de la pronunciación silabeada de las palabras clave.',
+                    ia: 'API Gemini Voice / TTS neural (gemini-3.8-flash-tts con voces expresivas para el narrador y personajes); modelo Whisper local para verificación automática de transcripciones.',
+                    humano: 'Escucha atenta con auriculares para calibrar pausas, aplicar fundidos suaves contra chasquidos de audio y asegurar un tono entrañable de cuento.'
+                },
+                {
+                    etapa: 'Etapa 6: Internacionalização y Adaptación Cultural',
+                    fase: 'Fase 7 · Idiomas Globales',
+                    desc: 'Adaptación literaria al español, inglés y francés, recreando juegos de palabras, rimas y silabeo infantil propios de cada idioma.',
+                    ia: 'Agentes LLM especializados en traducción literaria infantil.',
+                    humano: 'Pruebas automatizadas de consistencia (traducoes.mjs) e invitación abierta a familias y docentes nativos para revisar los textos antes de compartirlos.'
+                }
+            ],
+            filosofiaIaTitulo: 'Nuestra Filosofía sobre la Inteligencia Artificial',
+            filosofiaIaTexto: '<p class="leading-relaxed">La inteligencia artificial funciona en este proyecto como un estudio de amplificación creativa. Permite que un padre apasionado por los libros y la educación, trabajando de forma independiente y sin ánimo de lucro, ofrezca una biblioteca interactiva viva con la calidad visual, sonora y técnica de las mayores editoriales infantiles del mundo.</p><p class="leading-relaxed">Sin embargo, <strong>la IA es solo un instrumento, nunca la autora</strong>. La sensibilidad pedagógica, la ética del cuidado infantil, el criterio estético y cada decisión llena de cariño nacen exclusivamente del corazón humano y de la convivencia real con la infancia.</p>',
             pilares: [
                 {
                     titulo: '🏛️ Fidelidad al espíritu del clásico',
@@ -611,10 +883,49 @@
             if (listaPil && d.pilares) {
                 listaPil.innerHTML = d.pilares.map(p => `
                     <li class="bg-amber-50 border-2 border-amber-300 rounded-2xl p-4 space-y-1">
-                        <h3 class="font-display font-bold text-amber-950 text-base sm:text-lg">${escapar(p.titulo)}</h3>
+                        <h4 class="font-display font-bold text-amber-950 text-base sm:text-lg">${escapar(p.titulo)}</h4>
                         <p class="text-sm font-semibold text-slate-700 leading-relaxed">${escapar(p.desc)}</p>
                     </li>
                 `).join('');
+            }
+            const listaFluxo = document.getElementById('lista-fluxo');
+            if (listaFluxo && d.fluxoEtapas) {
+                const rotuloIa = d.rotuloIa || 'Modelos de IA';
+                const rotuloHumano = d.rotuloHumano || 'Olhar & Decisão Humana';
+                listaFluxo.innerHTML = d.fluxoEtapas.map(e => {
+                    const isParada = Boolean(e.parada);
+                    const cardBg = isParada ? 'bg-amber-100/90 border-amber-500 shadow-sm' : 'bg-amber-50 border-amber-300';
+                    const badgeBg = isParada ? 'bg-rose-600 text-white shadow' : 'bg-amber-200 text-amber-950';
+                    return `
+                        <div class="${cardBg} border-2 rounded-2xl p-4 sm:p-5 space-y-3 shadow-sm transition-all">
+                            <div class="flex flex-wrap items-center justify-between gap-2">
+                                <h4 class="font-display font-bold text-amber-950 text-base sm:text-lg flex items-center gap-2">
+                                    ${escapar(e.etapa)}
+                                </h4>
+                                <span class="text-xs font-bold px-2.5 py-1 rounded-full ${badgeBg} tracking-wide uppercase">
+                                    ${escapar(e.fase)}
+                                </span>
+                            </div>
+                            <p class="text-sm font-semibold text-slate-700 leading-relaxed">
+                                ${escapar(e.desc)}
+                            </p>
+                            <div class="grid sm:grid-cols-2 gap-2.5 pt-1 text-xs sm:text-sm">
+                                <div class="bg-white/80 border border-indigo-200 rounded-xl p-2.5 space-y-1">
+                                    <span class="font-bold text-indigo-900 flex items-center gap-1.5">
+                                        <span aria-hidden="true">🤖</span> ${escapar(rotuloIa)}
+                                    </span>
+                                    <p class="text-slate-600 font-semibold leading-snug">${escapar(e.ia)}</p>
+                                </div>
+                                <div class="bg-white/80 border border-emerald-300 rounded-xl p-2.5 space-y-1">
+                                    <span class="font-bold text-emerald-950 flex items-center gap-1.5">
+                                        <span aria-hidden="true">👤</span> ${escapar(rotuloHumano)}
+                                    </span>
+                                    <p class="text-slate-600 font-semibold leading-snug">${escapar(e.humano)}</p>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
             }
             const listaUso = document.getElementById('lista-como-usar');
             if (listaUso && d.comoUsarItens) {

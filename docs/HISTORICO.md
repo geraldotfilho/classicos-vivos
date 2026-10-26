@@ -189,3 +189,23 @@ O que já foi entregue, sprint a sprint, em ordem cronológica (o mais antigo pr
   - `tools/build-sw.mjs` executado, atualizando `sw.js` com 160 arquivos cacheados offline.
 - **Custo zero e respeito aos textos**: nenhum texto narrado em português alterado, custo financeiro US$ 0,00.
 
+
+---
+
+## ✅ Sprint 20 (Transparência do Fluxo de Criação com IA e Licença Livre Total, 2026-10-26)
+
+- **Transparência Total na Receita de Adaptação (`sobre.html` e `assets/js/i18n-site.js`)**:
+  - **Reenquadramento das Metas Pedagógicas**: Os 5 pilares fundamentais (Fidelidade ao espírito, Proteção da infância, Ritmo para 6 anos, Gamificação com propósito e Paradas de aprovação) foram clarificados como os objetivos inegociáveis e critérios de qualidade que cada livro deve cumprir.
+  - **Fluxo de Trabalho Passo a Passo**: Detalhamento exato de como uma obra ganha vida (Fases 0 a 7), especificando para cada etapa:
+    - *O que acontece* na narrativa e na tecnologia;
+    - *Modelos de IA envolvidos*: Claude 3.7 Sonnet e Gemini 3.8 Pro (análise estrutural, assistência literária e código), Google Imagen 3 / Nano Banana 2 (pinturas em aquarela e camadas táteis), Gemini Voice TTS neural (`gemini-3.8-flash-tts` com vozes expressivas como Aoede, Puck, Fenrir e Kore) e Whisper local para conferência;
+    - *Intervenções humanas & Paradas críticas*: Aprovação do mapa da obra, lapidação artesanal do texto em português, e especialmente as **duas paradas humanas inegociáveis** onde o pai lê a história no tablet com o filho de 6 anos (Parada 1: rascunho funcional para congelar a estrutura; Parada 2: obra ilustrada para congelar o texto antes da gravação e tradução).
+  - **Filosofia sobre o Uso de IA**: Inclusão de seção dedicada evidenciando que a IA atua como um estúdio de amplificação criativa, mas o discernimento pedagógico, a proteção infantil, a curadoria estética e o afeto pertencem exclusivamente à sensibilidade humana.
+  - **Suporte Multilíngue Completo**: As novas seções foram traduzidas e integradas com rigor aos 4 idiomas suportados no portal (Português, Inglês, Francês e Espanhol) via `assets/js/i18n-site.js`.
+- **Licença Livre Total — Livre como em Liberdade**:
+  - Removida qualquer menção restritiva que limitava a liberação a "escolas" em `sobre.html`, `assets/js/i18n-site.js` (em pt-BR, en, fr, es) e no `README.md`.
+  - O projeto explicita agora que textos e ilustrações sob CC BY 4.0 são **completamente livres para usar, reproduzir, copiar, compartilhar, distribuir e readaptar para qualquer fim (livre como em liberdade!)**, bastando citar o projeto Clássicos Vivos.
+- **PWA & Validação**:
+  - Service worker atualizado via `tools/build-sw.mjs` (versão `f67a1cc6719b`).
+  - Sintaxe e testes de tradução validados (`tools/traducoes.mjs`: 0 erros, 0 avisos).
+  - Testes visuais em tablet paisagem e retrato confirmados com sucesso via Playwright e Chrome.
