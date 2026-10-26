@@ -1,4 +1,4 @@
-# 🔁 Retomada — onde o trabalho parou (2026-10-26, Transparência total da receita/fluxo IA e Licença Livre)
+# 🔁 Retomada — onde o trabalho parou (2026-10-26, UX da Biblioteca: Abertura Lateral e Gerenciador Offline)
 
 **Leia este arquivo primeiro numa sessão nova**, seja qual for o agente. Depois, siga a ordem de leitura do `AGENTS.md` §0.2 (AGENTS → receita geral → receita específica → plano → caderno da parte).
 
@@ -10,13 +10,15 @@
 
 - **Dom Quixote, primeiro volume (Partes 1 a 4) completo e publicado em 4 idiomas**:
   - Partes 1, 2, 3 e 4: totalmente ilustradas, narradas em português e traduzidas com rigor literário para **Inglês, Espanhol e Francês** (`parte-4.en.js`, `parte-4.es.js`, `parte-4.fr.js` concluídos com 0 erros e 0 avisos em `tools/traducoes.mjs`).
-  - **Parte 4**: 12 páginas (caps. 23 a 33), atividades interativas de ordenação (BACIELMO / BASIN-HELMET, FRIEND / AMIGO / AMI, SANCHO GOVERNOR...) e piquenique com pegadinhas sonoras adaptadas a cada língua. Caderno: [docs/cadernos/dom-quixote-parte-4.md](cadernos/dom-quixote-parte-4.md).
-- **Home e Portal (`index.html` e `sobre.html`)**:
-  - **Página de Adultos (`sobre.html`) e motor multilíngue (`assets/js/i18n-site.js`)**:
-    - **Aba "A Nossa Receita"**: Reestruturada com transparência total. Os 5 pilares fundamentais foram enquadrados como **Metas e Critérios de Qualidade inegociáveis**; foi adicionada a seção **Fluxo de Trabalho Passo a Passo** (Fases 0 a 7), detalhando o processo criativo, os modelos de IA envolvidos (Claude Opus 5.5 ou superior para arquitetura, Claude/Gemini para texto e código, Google Imagen 3 / Nano Banana 2 para pintura digital, Gemini Voice TTS e Whisper local para áudio) e as intervenções humanas em cada etapa, com destaque à leitura do rascunho a solas pelo autor (Fase 3) e à leitura da obra ilustrada com o filho de 6 anos (Fase 5); e a nova seção sobre a **Filosofia do uso de IA** (IA como amplificador de capacidade sob autoria, sensibilidade e curadoria humana). Sincronizado e testado nos 4 idiomas (pt-BR, en, fr, es).
-    - **Licença Livre ("Livre como em Liberdade")**: Eliminada a antiga restrição a escolas em `sobre.html`, `README.md` e em todos os idiomas de `i18n-site.js`. O projeto é 100% livre e aberto para usar, reproduzir, copiar, compartilhar, distribuir e readaptar para qualquer fim pessoal, educacional ou comercial, mantendo o crédito ao Clássicos Vivos.
+  - **Parte 4**: 12 páginas (caps. 23 a 33), atividades interativas de ordenação (BACIELMO, AMIGO, SANCHO GOVERNADOR) e piquenique com pegadinhas sonoras adaptadas a cada língua. Caderno: [docs/cadernos/dom-quixote-parte-4.md](cadernos/dom-quixote-parte-4.md).
+- **Home e Biblioteca (`index.html`)**:
+  - **UX da Coleção Aprimorada**: Capa do boxset limpa (sem o botão flutuante central), com perspectiva 3D das 3 camadas de volumes empilhados atrás.
+  - **Abertura Lateral Contida na Prateleira**: Ao tocar para abrir, os livros alinham-se horizontalmente sobre a madeira da prateleira (`quixote-parts-shelf`), crescendo na medida certa para exibir o badge com o número da parte e o título, com botão de recolher.
+  - **Gerenciador de Armazenamento Offline (`assets/js/offline-manager.js`)**: Botão explícito "Baixar" em volumes disponíveis, indicador verde "Offline" e lixeira em volumes baixados, e botão de destaque "Atualizar" (`ph-arrows-clockwise`) para novas edições ou correções. Efeitos sonoros procedurais Web Audio API e suporte multilíngue em pt-BR, en, fr e es.
+- **Página de Adultos (`sobre.html`)**:
+  - Transparência total na receita e no fluxo passo a passo de criação com IA (Fases 0 a 7, modelos envolvidos, leitura do rascunho pelo autor a solas na Fase 3 e leitura ilustrada com o filho de 6 anos na Fase 5). Licença totalmente livre CC BY 4.0 (sem restrição a escolas).
 - **PWA & Offline**:
-  - `sw.js` gerado e atualizado (versão `f67a1cc6719b`, 160 arquivos em cache).
+  - `sw.js` e `offline-manager.js` sincronizados via `tools/build-sw.mjs` (161 arquivos em cache).
 - **Gasto da API em outubro**: ~US$ 5,12 (≈ R$ 28 de R$ 30). **A verba de outubro acabou**: a próxima produção paga fica para novembro.
 
 ## 2. Próximas sessões (escolha do humano)

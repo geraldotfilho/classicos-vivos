@@ -187,6 +187,104 @@
         }
         .play-pulse { animation: playPulse 1.8s ease-in-out infinite; }
 
+        /* Controles offline de cada volume */
+        .btn-offline {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            cursor: pointer;
+            border-radius: 14px;
+            font-family: Fredoka, sans-serif;
+            font-weight: 700;
+            transition: transform 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+            box-shadow: 0 3px 0 rgba(0, 0, 0, 0.35);
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .btn-offline:active {
+            transform: translateY(2px);
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
+        }
+        .btn-offline-baixar {
+            background: #F59E0B;
+            color: #451A03;
+            border: 2px solid #B45309;
+            padding: 6px 12px;
+            font-size: 0.85rem;
+            width: 100%;
+            min-height: 44px;
+        }
+        .btn-offline-baixar:hover {
+            background: #FBBF24;
+        }
+        .btn-offline-atualizar {
+            background: linear-gradient(135deg, #F59E0B 0%, #EA580C 100%);
+            color: #451A03;
+            border: 2px solid #FFFFFF;
+            padding: 6px 10px;
+            font-size: 0.8rem;
+            font-weight: 800;
+            box-shadow: 0 0 0 2px #F59E0B, 0 4px 12px rgba(234, 88, 12, 0.5);
+            min-height: 44px;
+        }
+        .btn-offline-atualizar:hover {
+            filter: brightness(1.1);
+        }
+        .btn-offline-lixeira {
+            background: rgba(127, 29, 29, 0.45);
+            color: #FECACA;
+            border: 2px solid rgba(239, 68, 68, 0.5);
+            width: 44px;
+            height: 44px;
+            flex-shrink: 0;
+            font-size: 1.15rem;
+        }
+        .btn-offline-lixeira:hover {
+            background: rgba(220, 38, 38, 0.7);
+            color: #FFFFFF;
+            border-color: #EF4444;
+        }
+        .badge-offline-ok {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            background: rgba(16, 185, 129, 0.25);
+            color: #6EE7B7;
+            border: 2px solid #10B981;
+            border-radius: 14px;
+            padding: 6px 10px;
+            font-family: Fredoka, sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            min-height: 44px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+        }
+        .badge-offline-baixando {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            background: rgba(245, 158, 11, 0.22);
+            color: #FDE68A;
+            border: 2px solid rgba(245, 158, 11, 0.6);
+            border-radius: 14px;
+            padding: 6px 8px;
+            font-family: Nunito, sans-serif;
+            font-weight: 700;
+            font-size: 0.75rem;
+            min-height: 44px;
+            width: 100%;
+        }
+        #quixote-parts-shelf::-webkit-scrollbar {
+            height: 6px;
+        }
+        #quixote-parts-shelf::-webkit-scrollbar-thumb {
+            background: rgba(245, 158, 11, 0.4);
+            border-radius: 9999px;
+        }
+
         /* Livro em produção: capa-teaser apagada, com cadeado */
         .book-teaser {
             display: block;
@@ -281,11 +379,6 @@
                             <span data-i18n="colecaoCompletaBadge">Coleção Completa · 4 Partes</span>
                         </span>
 
-                        <!-- Botão pulsante central -->
-                        <span class="play-pulse absolute left-1/2 top-[40%] -translate-x-1/2 -translate-y-1/2 w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-amber-400 border-4 border-white text-amber-950 text-3xl sm:text-4xl flex items-center justify-center shadow-2xl">
-                            <i class="ph-bold ph-books"></i>
-                        </span>
-
                         <!-- Faixa inferior com título e chamada ao toque -->
                         <span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-amber-950/95 via-amber-950/80 to-transparent pt-10 pb-4 px-3 text-center block">
                             <h2 class="font-display font-bold text-2xl sm:text-3xl text-amber-200 leading-none drop-shadow" data-i18n="domQuixote">Dom Quixote</h2>
@@ -299,88 +392,86 @@
                 </button>
             </div>
 
-            <!-- Estado 2: Coleção expandida (as 4 partes espalhadas lado a lado) -->
+            <!-- Estado 2: Coleção expandida (as 4 partes alinhadas lateralmente na prateleira) -->
             <div id="colecao-expandida" class="hidden w-full flex-col items-center">
-                <!-- Barra superior com título da coleção e botão de fechar -->
-                <div class="flex items-center justify-between w-full max-w-4xl mb-3 sm:mb-4 px-2">
-                    <div class="flex items-center gap-2 sm:gap-3">
-                        <span class="text-3xl sm:text-4xl" aria-hidden="true">📖</span>
+                <!-- Barra superior compacta com título da coleção e botão de recolher -->
+                <div class="flex items-center justify-between w-full max-w-4xl mb-2 sm:mb-3 px-2">
+                    <div class="flex items-center gap-2">
+                        <span class="text-2xl sm:text-3xl" aria-hidden="true">📖</span>
                         <div>
-                            <h2 class="font-display font-bold text-lg sm:text-2xl text-amber-200 leading-tight">
+                            <h2 class="font-display font-bold text-base sm:text-xl text-amber-200 leading-tight">
                                 <span data-i18n="domQuixote">Dom Quixote</span> · <span data-i18n="colecaoPrimeiroVolume">Primeiro Volume (1605)</span>
                             </h2>
-                            <p class="text-xs sm:text-sm font-semibold text-amber-300/90" data-i18n="escolhaParte">Escolha uma das 4 partes para começar a ler:</p>
                         </div>
                     </div>
-                    <button id="btn-fechar-colecao" type="button" class="btn-round bg-amber-400 hover:bg-amber-300 text-amber-950 font-display font-bold text-xs sm:text-sm px-3.5 py-2.5 rounded-2xl border-2 border-amber-600 flex items-center gap-1.5 shadow min-h-[48px] cursor-pointer" aria-label="Fechar coleção e recolher livros" data-i18n-aria="fecharColecaoAria">
+                    <button id="btn-fechar-colecao" type="button" class="btn-round bg-amber-400 hover:bg-amber-300 text-amber-950 font-display font-bold text-xs sm:text-sm px-3.5 py-1.5 rounded-xl border border-amber-600 flex items-center gap-1.5 shadow min-h-[44px] cursor-pointer" aria-label="Recolher coleção" data-i18n-aria="fecharColecaoAria">
                         <i class="ph-bold ph-x text-base"></i>
-                        <span data-i18n="fecharColecao">Fechar coleção</span>
+                        <span data-i18n="fecharColecao">Recolher</span>
                     </button>
                 </div>
 
-                <!-- Grade das 4 partes com tamanho harmônico e equilibrado -->
-                <div id="quixote-parts-grid" class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 md:gap-5 w-full max-w-4xl mx-auto">
+                <!-- Prateleira com as 4 partes alinhadas lateralmente -->
+                <div id="quixote-parts-shelf" class="flex flex-nowrap overflow-x-auto sm:overflow-x-visible justify-start sm:justify-center items-end gap-3 sm:gap-4 md:gap-5 w-full max-w-4xl mx-auto px-2 pb-1">
                     <!-- Parte 1 -->
-                    <a id="link-parte-1" href="./dom-quixote/parte-1.html" class="book book-spread-enter flex flex-col" aria-label="Ler Dom Quixote, parte 1">
-                        <div class="book-cover relative aspect-[3/4] rounded-r-2xl rounded-l-md overflow-hidden border-4 border-amber-500 bg-amber-100 shadow-lg">
-                            <img src="./dom-quixote/imagens/p0-real.webp" alt="" class="absolute inset-0 w-full h-full object-cover object-[30%_50%]" />
-                            <span id="badge-parte-1" class="absolute top-2.5 right-2.5 bg-rose-500 text-white font-display font-bold text-xs sm:text-sm px-2.5 py-0.5 rounded-full border-2 border-white shadow">Parte 1</span>
-                            <span class="play-pulse absolute left-1/2 top-[42%] -translate-x-1/2 -translate-y-1/2 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-amber-400 border-3 border-white text-amber-950 text-2xl sm:text-3xl flex items-center justify-center shadow-md">
-                                <i class="ph-fill ph-play"></i>
-                            </span>
-                            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-amber-950/95 via-amber-950/80 to-transparent pt-8 pb-3 px-2 text-center">
-                                <h3 id="titulo-parte-1" class="font-display font-bold text-xs sm:text-sm text-amber-200 leading-tight" data-i18n="p1TituloCurto">O Cavaleiro da Super Imaginação</h3>
+                    <div class="volume-item flex flex-col items-center w-36 sm:w-40 md:w-44 shrink-0 book-spread-enter">
+                        <a id="link-parte-1" href="./dom-quixote/parte-1.html" class="book w-full flex flex-col" aria-label="Ler Dom Quixote, parte 1">
+                            <div class="book-cover relative aspect-[3/4] rounded-r-2xl rounded-l-md overflow-hidden border-3 border-amber-500 bg-amber-100 shadow-md">
+                                <img src="./dom-quixote/imagens/p0-real.webp" alt="" class="absolute inset-0 w-full h-full object-cover object-[30%_50%]" />
+                                <span id="badge-parte-1" class="absolute top-2 right-2 bg-rose-500 text-white font-display font-bold text-xs sm:text-sm px-2.5 py-0.5 rounded-full border-2 border-white shadow">Parte 1</span>
+                                <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-amber-950/95 via-amber-950/80 to-transparent pt-6 pb-2.5 px-2 text-center">
+                                    <h3 id="titulo-parte-1" class="font-display font-bold text-xs sm:text-sm text-amber-200 leading-tight" data-i18n="p1TituloCurto">O Cavaleiro da Super Imaginação</h3>
+                                </div>
                             </div>
-                        </div>
-                    </a>
+                        </a>
+                        <div id="offline-ctrl-1" class="offline-ctrl-bar w-full mt-2 flex items-center justify-center gap-1.5 min-h-[44px]"></div>
+                    </div>
 
                     <!-- Parte 2 -->
-                    <a id="link-parte-2" href="./dom-quixote/parte-2.html" class="book book-spread-enter flex flex-col" style="animation-delay: -0.6s" aria-label="Ler Dom Quixote, parte 2">
-                        <div class="book-cover relative aspect-[3/4] rounded-r-2xl rounded-l-md overflow-hidden border-4 border-amber-500 bg-gradient-to-b from-amber-200 to-orange-300 shadow-lg">
-                            <span class="absolute inset-x-0 bottom-3 flex justify-center text-4xl" aria-hidden="true">🐑</span>
-                            <img src="./dom-quixote/imagens/parte-2/p0-real.webp" alt="" onerror="this.remove()" class="absolute inset-0 w-full h-full object-cover" />
-                            <span id="badge-parte-2" class="absolute top-2.5 right-2.5 bg-rose-500 text-white font-display font-bold text-xs sm:text-sm px-2.5 py-0.5 rounded-full border-2 border-white shadow">Parte 2</span>
-                            <span class="play-pulse absolute left-1/2 top-[42%] -translate-x-1/2 -translate-y-1/2 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-amber-400 border-3 border-white text-amber-950 text-2xl sm:text-3xl flex items-center justify-center shadow-md">
-                                <i class="ph-fill ph-play"></i>
-                            </span>
-                            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-amber-950/95 via-amber-950/80 to-transparent pt-8 pb-3 px-2 text-center">
-                                <h3 id="titulo-parte-2" class="font-display font-bold text-xs sm:text-sm text-amber-200 leading-tight" data-i18n="p2TituloCurto">Exércitos de Lã e o Elmo Encantado</h3>
+                    <div class="volume-item flex flex-col items-center w-36 sm:w-40 md:w-44 shrink-0 book-spread-enter" style="animation-delay: -0.6s">
+                        <a id="link-parte-2" href="./dom-quixote/parte-2.html" class="book w-full flex flex-col" aria-label="Ler Dom Quixote, parte 2">
+                            <div class="book-cover relative aspect-[3/4] rounded-r-2xl rounded-l-md overflow-hidden border-3 border-amber-500 bg-gradient-to-b from-amber-200 to-orange-300 shadow-md">
+                                <span class="absolute inset-x-0 bottom-3 flex justify-center text-4xl" aria-hidden="true">🐑</span>
+                                <img src="./dom-quixote/imagens/parte-2/p0-real.webp" alt="" onerror="this.remove()" class="absolute inset-0 w-full h-full object-cover" />
+                                <span id="badge-parte-2" class="absolute top-2 right-2 bg-rose-500 text-white font-display font-bold text-xs sm:text-sm px-2.5 py-0.5 rounded-full border-2 border-white shadow">Parte 2</span>
+                                <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-amber-950/95 via-amber-950/80 to-transparent pt-6 pb-2.5 px-2 text-center">
+                                    <h3 id="titulo-parte-2" class="font-display font-bold text-xs sm:text-sm text-amber-200 leading-tight" data-i18n="p2TituloCurto">Exércitos de Lã e o Elmo Encantado</h3>
+                                </div>
                             </div>
-                        </div>
-                    </a>
+                        </a>
+                        <div id="offline-ctrl-2" class="offline-ctrl-bar w-full mt-2 flex items-center justify-center gap-1.5 min-h-[44px]"></div>
+                    </div>
 
                     <!-- Parte 3 -->
-                    <a id="link-parte-3" href="./dom-quixote/parte-3.html" class="book book-spread-enter flex flex-col" style="animation-delay: -1.2s" aria-label="Ler Dom Quixote, parte 3">
-                        <div class="book-cover relative aspect-[3/4] rounded-r-2xl rounded-l-md overflow-hidden border-4 border-amber-500 bg-gradient-to-b from-emerald-200 to-teal-300 shadow-lg">
-                            <span class="absolute inset-x-0 bottom-3 flex justify-center text-4xl" aria-hidden="true">⛰️</span>
-                            <img src="./dom-quixote/imagens/parte-3/p0-real.webp" alt="" onerror="this.remove()" class="absolute inset-0 w-full h-full object-cover" />
-                            <span id="badge-parte-3" class="absolute top-2.5 right-2.5 bg-rose-500 text-white font-display font-bold text-xs sm:text-sm px-2.5 py-0.5 rounded-full border-2 border-white shadow">Parte 3</span>
-                            <span class="play-pulse absolute left-1/2 top-[42%] -translate-x-1/2 -translate-y-1/2 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-amber-400 border-3 border-white text-amber-950 text-2xl sm:text-3xl flex items-center justify-center shadow-md">
-                                <i class="ph-fill ph-play"></i>
-                            </span>
-                            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-amber-950/95 via-amber-950/80 to-transparent pt-8 pb-3 px-2 text-center">
-                                <h3 id="titulo-parte-3" class="font-display font-bold text-xs sm:text-sm text-amber-200 leading-tight" data-i18n="p3TituloCurto">Serra Morena e a Princesa Micomicona</h3>
+                    <div class="volume-item flex flex-col items-center w-36 sm:w-40 md:w-44 shrink-0 book-spread-enter" style="animation-delay: -1.2s">
+                        <a id="link-parte-3" href="./dom-quixote/parte-3.html" class="book w-full flex flex-col" aria-label="Ler Dom Quixote, parte 3">
+                            <div class="book-cover relative aspect-[3/4] rounded-r-2xl rounded-l-md overflow-hidden border-3 border-amber-500 bg-gradient-to-b from-emerald-200 to-teal-300 shadow-md">
+                                <span class="absolute inset-x-0 bottom-3 flex justify-center text-4xl" aria-hidden="true">⛰️</span>
+                                <img src="./dom-quixote/imagens/parte-3/p0-real.webp" alt="" onerror="this.remove()" class="absolute inset-0 w-full h-full object-cover" />
+                                <span id="badge-parte-3" class="absolute top-2 right-2 bg-rose-500 text-white font-display font-bold text-xs sm:text-sm px-2.5 py-0.5 rounded-full border-2 border-white shadow">Parte 3</span>
+                                <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-amber-950/95 via-amber-950/80 to-transparent pt-6 pb-2.5 px-2 text-center">
+                                    <h3 id="titulo-parte-3" class="font-display font-bold text-xs sm:text-sm text-amber-200 leading-tight" data-i18n="p3TituloCurto">Serra Morena e a Princesa Micomicona</h3>
+                                </div>
                             </div>
-                        </div>
-                    </a>
+                        </a>
+                        <div id="offline-ctrl-3" class="offline-ctrl-bar w-full mt-2 flex items-center justify-center gap-1.5 min-h-[44px]"></div>
+                    </div>
 
                     <!-- Parte 4 -->
-                    <a id="link-parte-4" href="./dom-quixote/parte-4.html" class="book book-spread-enter flex flex-col" style="animation-delay: -1.8s" aria-label="Ler Dom Quixote, parte 4">
-                        <div class="book-cover relative aspect-[3/4] rounded-r-2xl rounded-l-md overflow-hidden border-4 border-amber-500 bg-gradient-to-b from-sky-200 to-indigo-300 shadow-lg">
-                            <span class="absolute inset-x-0 bottom-3 flex justify-center text-4xl" aria-hidden="true">🛡️</span>
-                            <img src="./dom-quixote/imagens/parte-4/p0-real.webp" alt="" onerror="this.remove()" class="absolute inset-0 w-full h-full object-cover" />
-                            <span id="badge-parte-4" class="absolute top-2.5 right-2.5 bg-rose-500 text-white font-display font-bold text-xs sm:text-sm px-2.5 py-0.5 rounded-full border-2 border-white shadow">Parte 4</span>
-                            <span class="play-pulse absolute left-1/2 top-[42%] -translate-x-1/2 -translate-y-1/2 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-amber-400 border-3 border-white text-amber-950 text-2xl sm:text-3xl flex items-center justify-center shadow-md">
-                                <i class="ph-fill ph-play"></i>
-                            </span>
-                            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-amber-950/95 via-amber-950/80 to-transparent pt-8 pb-3 px-2 text-center">
-                                <h3 id="titulo-parte-4" class="font-display font-bold text-xs sm:text-sm text-amber-200 leading-tight" data-i18n="p4TituloCurto">O Elmo, a Bacia e a Jaula Encantada</h3>
+                    <div class="volume-item flex flex-col items-center w-36 sm:w-40 md:w-44 shrink-0 book-spread-enter" style="animation-delay: -1.8s">
+                        <a id="link-parte-4" href="./dom-quixote/parte-4.html" class="book w-full flex flex-col" aria-label="Ler Dom Quixote, parte 4">
+                            <div class="book-cover relative aspect-[3/4] rounded-r-2xl rounded-l-md overflow-hidden border-3 border-amber-500 bg-gradient-to-b from-sky-200 to-indigo-300 shadow-md">
+                                <span class="absolute inset-x-0 bottom-3 flex justify-center text-4xl" aria-hidden="true">🛡️</span>
+                                <img src="./dom-quixote/imagens/parte-4/p0-real.webp" alt="" onerror="this.remove()" class="absolute inset-0 w-full h-full object-cover" />
+                                <span id="badge-parte-4" class="absolute top-2 right-2 bg-rose-500 text-white font-display font-bold text-xs sm:text-sm px-2.5 py-0.5 rounded-full border-2 border-white shadow">Parte 4</span>
+                                <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-amber-950/95 via-amber-950/80 to-transparent pt-6 pb-2.5 px-2 text-center">
+                                    <h3 id="titulo-parte-4" class="font-display font-bold text-xs sm:text-sm text-amber-200 leading-tight" data-i18n="p4TituloCurto">O Elmo, a Bacia e a Jaula Encantada</h3>
+                                </div>
                             </div>
-                        </div>
-                    </a>
+                        </a>
+                        <div id="offline-ctrl-4" class="offline-ctrl-bar w-full mt-2 flex items-center justify-center gap-1.5 min-h-[44px]"></div>
+                    </div>
                 </div>
             </div>
-
         </section>
 
         <!-- Prateleira 2: Dom Quixote, segundo volume (1615). As capas-teaser com cadeado vêm de
@@ -392,6 +483,7 @@
 
     </main>
 
+    <script src="./assets/js/offline-manager.js"></script>
     <script>
         function toggleFullscreen() {
             const docEl = document.documentElement;
@@ -411,7 +503,7 @@
             }
         });
 
-        /* Síntese sonora procedural Web Audio API para expansão/recolhimento da coleção */
+        /* Síntese sonora procedural Web Audio API para expansão, recolhimento e ações offline */
         let portalAudioCtx = null;
         function playPortalSound(type) {
             try {
@@ -451,8 +543,156 @@
                         osc.start(now + idx * 0.04);
                         osc.stop(now + idx * 0.04 + 0.16);
                     });
+                } else if (type === 'download-start') {
+                    const osc = portalAudioCtx.createOscillator();
+                    const gain = portalAudioCtx.createGain();
+                    osc.type = 'sine';
+                    osc.frequency.setValueAtTime(523.25, now);
+                    osc.frequency.exponentialRampToValueAtTime(783.99, now + 0.12);
+                    gain.gain.setValueAtTime(0.08, now);
+                    gain.gain.exponentialRampToValueAtTime(0.001, now + 0.15);
+                    osc.connect(gain);
+                    gain.connect(portalAudioCtx.destination);
+                    osc.start(now);
+                    osc.stop(now + 0.15);
+                } else if (type === 'download-success') {
+                    // Fanfarra triunfal alegre
+                    const notes = [523.25, 659.25, 783.99, 1046.50];
+                    notes.forEach((freq, idx) => {
+                        const osc = portalAudioCtx.createOscillator();
+                        const gain = portalAudioCtx.createGain();
+                        osc.type = 'triangle';
+                        osc.frequency.setValueAtTime(freq, now + idx * 0.06);
+                        gain.gain.setValueAtTime(0.09, now + idx * 0.06);
+                        gain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.06 + 0.3);
+                        osc.connect(gain);
+                        gain.connect(portalAudioCtx.destination);
+                        osc.start(now + idx * 0.06);
+                        osc.stop(now + idx * 0.06 + 0.3);
+                    });
+                } else if (type === 'trash') {
+                    const osc = portalAudioCtx.createOscillator();
+                    const gain = portalAudioCtx.createGain();
+                    osc.type = 'sine';
+                    osc.frequency.setValueAtTime(392, now);
+                    osc.frequency.exponentialRampToValueAtTime(196, now + 0.15);
+                    gain.gain.setValueAtTime(0.07, now);
+                    gain.gain.exponentialRampToValueAtTime(0.001, now + 0.18);
+                    osc.connect(gain);
+                    gain.connect(portalAudioCtx.destination);
+                    osc.start(now);
+                    osc.stop(now + 0.18);
                 }
             } catch (e) {}
+        }
+
+        /* Toast flutuante de confirmação */
+        let toastTimeout = null;
+        function showToast(msg) {
+            let toast = document.getElementById('cv-toast');
+            if (!toast) {
+                toast = document.createElement('div');
+                toast.id = 'cv-toast';
+                toast.className = 'fixed bottom-5 left-1/2 -translate-x-1/2 z-50 bg-amber-950/95 text-amber-100 border-2 border-amber-400 rounded-2xl px-5 py-3 shadow-2xl flex items-center gap-2.5 backdrop-blur-sm transition-all duration-300 pointer-events-none opacity-0 translate-y-3';
+                document.body.appendChild(toast);
+            }
+            toast.innerHTML = `<span class="text-xl" aria-hidden="true">✨</span><span class="font-display font-semibold text-xs sm:text-sm">${msg}</span>`;
+            toast.classList.remove('opacity-0', 'translate-y-3', 'pointer-events-none');
+            toast.classList.add('opacity-100', 'translate-y-0');
+            if (toastTimeout) clearTimeout(toastTimeout);
+            toastTimeout = setTimeout(() => {
+                toast.classList.remove('opacity-100', 'translate-y-0');
+                toast.classList.add('opacity-0', 'translate-y-3', 'pointer-events-none');
+            }, 3500);
+        }
+
+        /* Renderização dinâmica dos controles offline em cada volume */
+        function renderControlesOffline(parte) {
+            const el = document.getElementById(`offline-ctrl-${parte}`);
+            if (!el || !window.CV_OFFLINE) return;
+
+            const d = window.CV_I18N ? window.CV_I18N.getDicionario() : null;
+            const statusObj = window.CV_OFFLINE.obterStatus(parte);
+            const status = statusObj.status;
+
+            const txtBaixar = d?.baixarVolume || 'Baixar';
+            const txtBaixado = d?.volumeBaixado || 'Offline';
+            const txtAtualizar = d?.atualizarVolume || 'Atualizar';
+            const txtBaixando = d?.baixandoVolume || 'Baixando...';
+            const ariaBaixar = d?.baixarVolumeAria ? d.baixarVolumeAria(parte) : `Baixar Parte ${parte}`;
+            const ariaLimpar = d?.limparVolumeAria ? d.limparVolumeAria(parte) : `Limpar Parte ${parte}`;
+            const ariaAtualizar = d?.atualizarVolumeAria ? d.atualizarVolumeAria(parte) : `Atualizar Parte ${parte}`;
+
+            if (status === 'baixando') {
+                el.innerHTML = `
+                    <div class="badge-offline-baixando" role="status" aria-live="polite">
+                        <i class="ph-bold ph-arrows-clockwise animate-spin text-sm"></i>
+                        <span>${txtBaixando} ${statusObj.porcentagem || 0}%</span>
+                    </div>
+                `;
+            } else if (status === 'baixado') {
+                el.innerHTML = `
+                    <div class="flex items-center justify-between w-full gap-1.5">
+                        <span class="badge-offline-ok flex-1" title="${txtBaixado}">
+                            <i class="ph-bold ph-check-circle text-base text-emerald-400"></i>
+                            <span>${txtBaixado}</span>
+                        </span>
+                        <button type="button" class="btn-offline btn-offline-lixeira" data-parte="${parte}" data-acao="excluir" aria-label="${ariaLimpar}" title="${ariaLimpar}">
+                            <i class="ph-bold ph-trash text-base"></i>
+                        </button>
+                    </div>
+                `;
+            } else if (status === 'atualizacao') {
+                el.innerHTML = `
+                    <div class="flex items-center justify-between w-full gap-1.5">
+                        <button type="button" class="btn-offline btn-offline-atualizar flex-1" data-parte="${parte}" data-acao="atualizar" aria-label="${ariaAtualizar}" title="${ariaAtualizar}">
+                            <i class="ph-bold ph-arrows-clockwise text-base"></i>
+                            <span>${txtAtualizar}</span>
+                        </button>
+                        <button type="button" class="btn-offline btn-offline-lixeira" data-parte="${parte}" data-acao="excluir" aria-label="${ariaLimpar}" title="${ariaLimpar}">
+                            <i class="ph-bold ph-trash text-base"></i>
+                        </button>
+                    </div>
+                `;
+            } else {
+                el.innerHTML = `
+                    <button type="button" class="btn-offline btn-offline-baixar" data-parte="${parte}" data-acao="baixar" aria-label="${ariaBaixar}">
+                        <i class="ph-bold ph-download-simple text-base"></i>
+                        <span>${txtBaixar}</span>
+                    </button>
+                `;
+            }
+        }
+
+        function renderTodosControlesOffline() {
+            [1, 2, 3, 4].forEach(p => renderControlesOffline(p));
+        }
+
+        async function acaoOffline(parte, tipo) {
+            const d = window.CV_I18N ? window.CV_I18N.getDicionario() : null;
+            if (!window.CV_OFFLINE) return;
+
+            if (tipo === 'baixar' || tipo === 'atualizar') {
+                playPortalSound('download-start');
+                try {
+                    await window.CV_OFFLINE.baixarVolume(parte);
+                    renderControlesOffline(parte);
+                    playPortalSound('download-success');
+                    const msg = d?.toastBaixado ? d.toastBaixado(parte) : `Parte ${parte} pronta para leitura offline! ✨`;
+                    showToast(msg);
+                } catch (err) {
+                    alert('Não foi possível concluir o download offline. Verifique sua conexão.');
+                }
+            } else if (tipo === 'excluir') {
+                const confMsg = d?.confirmarLimpeza || 'Deseja remover os arquivos locais desta parte do tablet para liberar espaço?';
+                if (confirm(confMsg)) {
+                    await window.CV_OFFLINE.excluirVolume(parte);
+                    renderControlesOffline(parte);
+                    playPortalSound('trash');
+                    const msg = d?.toastLimpo ? d.toastLimpo(parte) : `Arquivos locais da Parte ${parte} removidos do tablet.`;
+                    showToast(msg);
+                }
+            }
         }
 
         /* Controle do estado de expansão/recolhimento da Coleção */
@@ -468,6 +708,7 @@
                 colecaoExp.classList.remove('hidden');
                 colecaoExp.classList.add('flex');
                 if (btnBox) btnBox.setAttribute('aria-expanded', 'true');
+                renderTodosControlesOffline();
                 const p1Link = document.getElementById('link-parte-1');
                 if (p1Link) p1Link.focus();
             } else {
@@ -492,8 +733,24 @@
                 }
             }
         });
-    </script>
-    <script src="./assets/js/acervo.js"></script>
+
+        // Delegação de cliques nos botões de controle offline
+        document.getElementById('quixote-parts-shelf')?.addEventListener('click', (e) => {
+            const btn = e.target.closest('[data-acao]');
+            if (!btn) return;
+            e.preventDefault();
+            e.stopPropagation();
+            const parte = btn.dataset.parte;
+            const acao = btn.dataset.acao;
+            if (parte && acao) acaoOffline(parte, acao);
+        });
+
+        if (window.CV_OFFLINE) {
+            window.CV_OFFLINE.adicionarListener((parte) => renderControlesOffline(parte));
+        }
+        window.addEventListener('cv-idioma-mudou', () => renderTodosControlesOffline());
+        document.addEventListener('DOMContentLoaded', () => renderTodosControlesOffline());    </script>
+        <script src="./assets/js/acervo.js"></script>
     <script src="./assets/js/i18n-site.js"></script>
 </body>
 </html>

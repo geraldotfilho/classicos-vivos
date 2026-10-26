@@ -78,7 +78,18 @@
             colecaoCompletaBadge: 'Coleção Completa · 4 Partes',
             colecaoPrimeiroVolume: 'Primeiro Volume (1605)',
             toqueParaAbrir: 'Toque para abrir a coleção',
-            fecharColecao: 'Fechar coleção',
+            fecharColecao: 'Recolher',
+            baixarVolume: 'Baixar',
+            volumeBaixado: 'Offline',
+            atualizarVolume: 'Atualizar',
+            baixandoVolume: 'Baixando...',
+            confirmarLimpeza: 'Deseja remover os arquivos locais desta parte do tablet para liberar espaço?',
+            toastBaixado: (n) => `Parte ${n} pronta para leitura offline! ✨`,
+            toastLimpo: (n) => `Arquivos locais da Parte ${n} removidos do tablet.`,
+            limparVolumeAria: (n) => `Limpar arquivos locais da Parte ${n}`,
+            baixarVolumeAria: (n) => `Baixar Parte ${n} para ler offline`,
+            atualizarVolumeAria: (n) => `Atualizar Parte ${n} para a nova edição`,
+
             fecharColecaoAria: 'Fechar coleção e recolher livros',
             escolhaParte: 'Escolha uma das 4 partes para começar a ler:',
             boxsetAria: 'Coleção Dom Quixote: Primeiro Volume (1605) com 4 partes. Toque para abrir.',
@@ -266,7 +277,18 @@
             colecaoCompletaBadge: 'Complete Collection · 4 Parts',
             colecaoPrimeiroVolume: 'First Volume (1605)',
             toqueParaAbrir: 'Tap to open the collection',
-            fecharColecao: 'Close collection',
+            fecharColecao: 'Collapse',
+            baixarVolume: 'Download',
+            volumeBaixado: 'Offline',
+            atualizarVolume: 'Update',
+            baixandoVolume: 'Downloading...',
+            confirmarLimpeza: 'Do you want to remove local files for this part to free up tablet storage?',
+            toastBaixado: (n) => `Part ${n} ready for offline reading! ✨`,
+            toastLimpo: (n) => `Local files for Part ${n} removed from tablet.`,
+            limparVolumeAria: (n) => `Clear local files for Part ${n}`,
+            baixarVolumeAria: (n) => `Download Part ${n} for offline reading`,
+            atualizarVolumeAria: (n) => `Update Part ${n} to new edition`,
+
             fecharColecaoAria: 'Close collection and collapse books',
             escolhaParte: 'Choose one of the 4 parts to start reading:',
             boxsetAria: 'Don Quixote Collection: First Volume (1605) with 4 parts. Tap to open.',
@@ -454,8 +476,19 @@
             colecaoCompletaBadge: 'Collection Complète · 4 Parties',
             colecaoPrimeiroVolume: 'Premier Volume (1605)',
             toqueParaAbrir: 'Toucher pour ouvrir la collection',
-            fecharColecao: 'Fermer la collection',
-            fecharColecaoAria: 'Fermer la collection et replier les livres',
+            fecharColecao: 'Replier',
+            fecharColecaoAria: 'Replier la collection et ranger les livres',
+            baixarVolume: 'Télécharger',
+            volumeBaixado: 'Hors ligne',
+            atualizarVolume: 'Mettre à jour',
+            baixandoVolume: 'Téléchargement...',
+            confirmarLimpeza: 'Voulez-vous supprimer les fichiers locaux de cette partie pour libérer de l\'espace ?',
+            toastBaixado: (n) => `Partie ${n} prête pour la lecture hors ligne ! ✨`,
+            toastLimpo: (n) => `Fichiers locaux de la Partie ${n} supprimés de la tablette.`,
+            limparVolumeAria: (n) => `Nettoyer les fichiers locaux de la Partie ${n}`,
+            baixarVolumeAria: (n) => `Télécharger la Partie ${n} pour lecture hors ligne`,
+            atualizarVolumeAria: (n) => `Mettre à jour la Partie ${n} vers la nouvelle édition`,
+
             escolhaParte: 'Choisissez l\'une des 4 parties pour commencer la lecture :',
             boxsetAria: 'Collection Don Quichotte : Premier Volume (1605) en 4 parties. Toucher pour ouvrir.',
             p1TituloCurto: 'Le Chevalier à la Super Imagination',
@@ -642,7 +675,18 @@
             colecaoCompletaBadge: 'Colección Completa · 4 Partes',
             colecaoPrimeiroVolume: 'Primer Volumen (1605)',
             toqueParaAbrir: 'Toca para abrir la colección',
-            fecharColecao: 'Cerrar colección',
+            fecharColecao: 'Recoger',
+            baixarVolume: 'Descargar',
+            volumeBaixado: 'Offline',
+            atualizarVolume: 'Actualizar',
+            baixandoVolume: 'Descargando...',
+            confirmarLimpeza: '¿Deseas eliminar los archivos locales de esta parte para liberar espacio en la tableta?',
+            toastBaixado: (n) => `¡Parte ${n} lista para lectura offline! ✨`,
+            toastLimpo: (n) => `Archivos locales de la Parte ${n} eliminados de la tableta.`,
+            limparVolumeAria: (n) => `Limpiar archivos locales de la Parte ${n}`,
+            baixarVolumeAria: (n) => `Descargar Parte ${n} para leer offline`,
+            atualizarVolumeAria: (n) => `Actualizar Parte ${n} a la nueva edición`,
+
             fecharColecaoAria: 'Cerrar colección y recoger libros',
             escolhaParte: 'Elige una de las 4 partes para comenzar a leer:',
             boxsetAria: 'Colección Don Quijote: Primer Volumen (1605) con 4 partes. Toca para abrir.',
@@ -866,6 +910,7 @@
             if (boxset && d.boxsetAria) boxset.setAttribute('aria-label', d.boxsetAria);
             renderEstanteEmProducao(d);
             renderBannerContinuar(d);
+            window.dispatchEvent(new CustomEvent('cv-idioma-mudou', { detail: { idioma: idiomaAtual, d } }));
         }
 
         // Atualizações específicas da página sobre (sobre.html)
@@ -1109,6 +1154,16 @@
             });
         });
     }
+
+    // Objeto de tradução acessível para componentes
+    window.CV_I18N = {
+        getIdioma: () => idiomaAtual,
+        getDicionario: () => DICIONARIO[idiomaAtual] || DICIONARIO[PT],
+        t: (chave) => {
+            const d = DICIONARIO[idiomaAtual] || DICIONARIO[PT];
+            return d[chave];
+        }
+    };
 
     // Inicialização
     function iniciar() {

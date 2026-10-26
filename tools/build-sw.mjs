@@ -20,7 +20,10 @@ const files = [
 ].sort();
 
 const hash = createHash('sha256');
-for (const f of files) hash.update(f).update(readFileSync(f));
+// Exclui offline-manager.js do cálculo do hash para poder injetar a versão nele de forma determinística
+for (const f of files.filter(f => !f.replace(/\\/g, '/').endsWith('offline-manager.js'))) {
+    hash.update(f).update(readFileSync(f));
+}
 const version = hash.digest('hex').slice(0, 12);
 
 const template = readFileSync('tools/sw.template.js', 'utf8');
@@ -28,4 +31,13 @@ const sw = template
     .replace('__VERSION__', version)
     .replace('__FILES__', JSON.stringify(files.map(f => `./${f.replace(/\\/g, '/')}`), null, 4).replace(/\n/g, '\n'));
 writeFileSync('sw.js', sw);
+
+// Atualiza também VERSAO_ATUAL em offline-manager.js
+try {
+    const offPath = 'assets/js/offline-manager.js';
+    let offContent = readFileSync(offPath, 'utf8');
+    offContent = offContent.replace(/const VERSAO_ATUAL = '[^']+';/, `const VERSAO_ATUAL = '${version}';`);
+    writeFileSync(offPath, offContent);
+} catch (e) {}
+
 console.log(`sw.js gerado: versão ${version}, ${files.length} arquivos`);

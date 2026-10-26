@@ -211,3 +211,22 @@ O que já foi entregue, sprint a sprint, em ordem cronológica (o mais antigo pr
   - Service worker atualizado via `tools/build-sw.mjs` (versão `f67a1cc6719b`).
   - Sintaxe e testes de tradução validados (`tools/traducoes.mjs`: 0 erros, 0 avisos).
   - Testes visuais em tablet paisagem e retrato confirmados com sucesso via Playwright e Chrome.
+
+
+---
+
+## ✅ Sprint 21 (UX da Biblioteca na Home: Abertura Lateral na Prateleira e Gerenciador Offline por Volume, 2026-10-26)
+
+- **Aprimoramento da UX da Biblioteca (`index.html`)**:
+  - **Capa da Coleção Limpa e Elegante**: Removido o botão circular pulsante central que flutuava sobre o boxset. A capa da série brilha com a aquarela original de Dom Quixote e Sancho Pança, mantendo em destaque as 3 camadas em perspectiva 3D dos volumes empilhados atrás da capa frontal (`.boxset-layer-1`, `.boxset-layer-2`, `.boxset-layer-3`).
+  - **Abertura Lateral na Prateleira (`#quixote-parts-shelf`)**: Ao clicar para abrir a coleção, os livros não explodem mais numa grade enorme vertical. Em vez disso, abrem-se **lateralmente ao longo da tábua de madeira da prateleira**, com proporção compacta (`w-36` a `w-44`, `aspect-[3/4]`), crescendo estritamente o suficiente para exibir o número da parte (`badge-parte-N`), a gravura e o título da parte (`titulo-parte-N`). Incluído botão compacto de "Recolher" (`btn-fechar-colecao`) no topo.
+  - **Controle de Leitura Offline por Volume (`assets/js/offline-manager.js`)**:
+    - **Botão explícito "Baixar"**: Cada volume que ainda não está salvo no tablet exibe um botão dourado claro com ícone `ph-download-simple` e rótulo "Baixar" (com alvos de toque $\ge$ 44-48px).
+    - **Indicador "Offline" e Lixeira**: Nos volumes já armazenados no tablet, surge a etiqueta verde de confirmação "Offline" (`ph-check-circle`) acompanhada de um botão de lixeira discreto (`ph-trash`) para remover os arquivos locais e liberar espaço no dispositivo, com diálogo de confirmação.
+    - **Notificação e Destaque de Atualização ("Atualizar")**: Caso uma nova edição ou correção do livro seja detectada (divergência entre a versão armazenada e a versão corrente do service worker), o volume exibe em destaque vibrante o botão "Atualizar" (`ph-arrows-clockwise`, gradiente solar e brilho pulsante) para baixar a versão revista com um único toque.
+    - **Feedback tátil e sonoro procedural**: Síntese sonora via Web Audio API para início de download, fanfarra triunfal ao concluir, estalo suave na exclusão e toast flutuante (`#cv-toast`) confirmando o estado.
+    - **Internacionalização completa**: Todos os rótulos, avisos, títulos e atributos `aria-label` dos controles offline integrados a `assets/js/i18n-site.js` em Português, Inglês, Francês e Espanhol, com atualização em tempo real ao alternar o seletor de idiomas.
+  - **Automação do Service Worker (`tools/build-sw.mjs`)**:
+    - `tools/build-sw.mjs` atualizado para injetar a versão calculada do cache diretamente em `assets/js/offline-manager.js` de forma determinística, mantendo `sw.js` e `CV_OFFLINE` perfeitamente sincronizados a cada build.
+- **Validação e Testes**:
+  - Testes visuais e de interação ponta a ponta executados com Playwright (Google Chrome) em modo tablet paisagem (1280 × 800) e retrato (800 × 1280), validando a remoção do ícone flutuante, abertura lateral contida, transição de estados offline, exclusão via lixeira, recolhimento da estante e troca de idiomas com 100% de aprovação.
