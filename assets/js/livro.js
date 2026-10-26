@@ -2759,26 +2759,49 @@ function initEventos() {
         if (e.key === 'ArrowLeft') prevPage();
     });
 
-    // Swipe para virar páginas no tablet
+    /* Swipe para virar páginas no tablet, de acordo com o desenho do livro aberto:
+       paisagem (folhas lado a lado) → arrastar para os lados; retrato (folhas empilhadas, lombada
+       horizontal) → arrastar para cima avança e para baixo volta. No retrato, o texto rola na vertical:
+       o gesto só vira a página se começou fora de uma área rolável ou se ela já estava no limite. */
     let touchStartX = 0, touchStartY = 0, swipeFromCard = false;
+    let rolavelNoTopo = true, rolavelNoFim = true;
     const viewportEl = document.getElementById('pages-viewport');
+
+    // Estado de rolagem da área rolável mais próxima do toque (se não houver, vale como "nos dois limites")
+    const limitesDeRolagem = (alvo) => {
+        for (let n = alvo; n && n !== viewportEl; n = n.parentElement) {
+            const oy = getComputedStyle(n).overflowY;
+            if ((oy === 'auto' || oy === 'scroll') && n.scrollHeight > n.clientHeight + 1) {
+                return { topo: n.scrollTop <= 1, fim: n.scrollTop + n.clientHeight >= n.scrollHeight - 1 };
+            }
+        }
+        return { topo: true, fim: true };
+    };
+
     viewportEl.addEventListener('touchstart', (e) => {
         if (e.touches.length === 1) {
             touchStartX = e.touches[0].clientX;
             touchStartY = e.touches[0].clientY;
             // Arrastar um cartão até a cena não pode virar a página
             swipeFromCard = !!e.target.closest('.draggable-card');
+            const lim = limitesDeRolagem(e.target);
+            rolavelNoTopo = lim.topo;
+            rolavelNoFim = lim.fim;
         }
     }, { passive: true });
 
     viewportEl.addEventListener('touchend', (e) => {
-        if (e.changedTouches.length === 1 && !swipeFromCard) {
-            const dx = e.changedTouches[0].clientX - touchStartX;
-            const dy = e.changedTouches[0].clientY - touchStartY;
+        if (e.changedTouches.length !== 1 || swipeFromCard) return;
+        const dx = e.changedTouches[0].clientX - touchStartX;
+        const dy = e.changedTouches[0].clientY - touchStartY;
+        if (window.matchMedia('(orientation: landscape)').matches) {
             if (Math.abs(dx) > 75 && Math.abs(dx) > Math.abs(dy) * 1.8) {
                 if (dx < 0) nextPage();
                 else prevPage();
             }
+        } else if (Math.abs(dy) > 75 && Math.abs(dy) > Math.abs(dx) * 1.8) {
+            if (dy < 0 && rolavelNoFim) nextPage();
+            else if (dy > 0 && rolavelNoTopo) prevPage();
         }
     }, { passive: true });
 }
