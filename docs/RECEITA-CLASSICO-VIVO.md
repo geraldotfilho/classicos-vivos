@@ -108,7 +108,7 @@ Registre no caderno, em poucas linhas, onde a parte anterior termina e as notas 
 **Lista de arte**: cenas e camadas, referências e o que cada cena deve deixar livre para as camadas. Para a API, já escreva a lista `tools/arte/<livro>-parte-N.mjs` e rode `--seco` para saber o custo.
 
 ### 🛑 Fase 3: Revisão humana do texto e do plano
-O humano lê o rascunho **no tablet, com a criança**, na voz do aparelho, com o plano da fase 2 ao lado (no caderno). Roteiro de observação no §7.3. As notas vêm no prompt da sessão seguinte (ou no chat), e o agente as registra no caderno.
+O humano lê o rascunho **no tablet, sozinho (sem a criança)**, na voz do aparelho, com o plano da fase 2 ao lado (no caderno), conferindo ritmo, clareza e interações. O filho só entra na obra já ilustrada (fase 5). Roteiro de observação no §7.3. As notas vêm no prompt da sessão seguinte (ou no chat), e o agente as registra no caderno.
 - Depois dos ajustes, **a estrutura fica congelada**: número de páginas, ordem, numeração dos capítulos e nomes de arquivo. Mudar isso depois da arte gera renomeações em cadeia.
 
 ### Fase 4: Ilustrações e atividades
@@ -123,7 +123,7 @@ O humano lê o rascunho **no tablet, com a criança**, na voz do aparelho, com o
 5. **Teste** no Chromium/Playwright em 800 × 1280 e 1280 × 800, cada atividade até o fim (clique com `locator.click()`), o botão 🔄 Recomeçar e a virada de página. Mande ao humano capturas das páginas com atividade.
 
 ### 🛑 Fase 5: Revisão final
-O humano lê o livro ilustrado (ainda rascunho) com a criança. Ajustes pequenos entram na mesma sessão.
+O humano lê o livro ilustrado (ainda rascunho) **com seu filho de 6 anos** no tablet. É aqui que a criança entra no processo: o pai observa as reações reais, o humor, o encantamento e a resposta ao toque. Ajustes pequenos entram na mesma sessão.
 - Depois do "aprovado", **o texto fica congelado**: qualquer mudança custa regravar a narração e refazer as traduções.
 
 ### Fase 6: Narração em português (API)

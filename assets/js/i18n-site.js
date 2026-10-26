@@ -107,7 +107,7 @@
                     etapa: 'Etapa 1: Mapeamento da Obra & Arquitetura',
                     fase: 'Fase 0 · Estrutura',
                     desc: 'Estudo minucioso da obra em domínio público, seleção criteriosa de episódios (condensação sem perder o fio da história), divisão em partes (7 a 9 páginas por parte, arcos com início, meio e fim) e planejamento dos fios narrativos (o que plantar e colher ao longo do livro).',
-                    ia: 'LLMs avançados (Claude 3.7 Sonnet / Gemini 3.8 Pro) auxiliam no cotejo estrutural com o texto original e no levantamento de temas.',
+                    ia: 'LLMs de alta capacidade de raciocínio (Claude Opus 5.5 ou superior) auxiliam no cotejo estrutural com o texto original e no levantamento de temas.',
                     humano: 'O autor humano define o recorte, elimina arcaísmos nocivos e aprova o plano geral antes de qualquer texto narrativo ser escrito.'
                 },
                 {
@@ -125,12 +125,12 @@
                     humano: 'Validação da ergonomia de toque (alvos ≥ 48px), clareza pedagógica e testes técnicos no navegador.'
                 },
                 {
-                    etapa: '🛑 Parada Humana 1: Leitura do Rascunho no Tablet com a Criança',
+                    etapa: '🛑 Parada Humana 1: Leitura do Rascunho pelo Autor no Tablet',
                     fase: 'Fase 3 · Parada Crítica',
                     parada: true,
-                    desc: 'Antes de investir qualquer recurso na geração de arte final ou narração, o autor instala o rascunho no tablet e lê a história completa junto com seu filho de 6 anos.',
-                    ia: 'Nenhum modelo de IA atua aqui: é um momento 100% de escuta humana e conexão familiar.',
-                    humano: 'Avaliação real da atenção, do riso e da compreensão da criança. A estrutura de páginas e capítulos só é congelada após a aprovação do filho.'
+                    desc: 'Antes de investir recursos na geração de arte final ou narração, o autor instala o rascunho funcional no tablet e lê a história completa sozinho (sem a criança), conferindo a cadência do texto e a mecânica das telas.',
+                    ia: 'Nenhum modelo de IA atua aqui: avaliação crítica solitária do autor.',
+                    humano: 'O pai avalia o ritmo, a clareza sintática, a adequação ética e a ergonomia dos botões. A estrutura de páginas e capítulos só é congelada após esse crivo autoral.'
                 },
                 {
                     etapa: 'Etapa 4: Pintura em Aquarela Digital e Camadas Táteis',
@@ -140,12 +140,12 @@
                     humano: 'Curadoria artística visual minuciosa: cada pintura é avaliada. Se um olhar parecer frio ou a cena não transmitir ternura, o prompt é retrabalhado até a ilustração ficar perfeita.'
                 },
                 {
-                    etapa: '🛑 Parada Humana 2: Revisão da Obra Ilustrada',
+                    etapa: '🛑 Parada Humana 2: Leitura da Obra Ilustrada com o Filho',
                     fase: 'Fase 5 · Congelamento do Texto',
                     parada: true,
-                    desc: 'Segunda sessão de leitura no tablet com o livro totalmente ilustrado, testando a resposta visual de cada toque e a harmonia entre texto e arte.',
-                    ia: 'Momento de conferência visual e leitura conjunta pai-filho.',
-                    humano: 'Ajustes de diagramação e contraste. O texto narrativo em português é 100% congelado para gravação e tradução.'
+                    desc: 'É aqui que a criança entra no processo! Com o livro totalmente ilustrado em aquarela, o pai senta com seu filho de 6 anos para ler a história no tablet, observando o encantamento e a resposta visual de cada toque.',
+                    ia: 'Nenhum modelo de IA atua aqui: momento 100% humano de escuta atenta e conexão familiar.',
+                    humano: 'Observação real das reações da criança: o riso, a curiosidade e o brilho nos olhos. O texto narrativo em português é 100% congelado para gravação e tradução.'
                 },
                 {
                     etapa: 'Etapa 5: Narração Expressiva com Vozes Neurais',
@@ -183,7 +183,7 @@
                 },
                 {
                     titulo: '🛑 Paradas de aprovação e escuta real',
-                    desc: 'Cada capítulo e cada atividade são lidos e experimentados no tablet por um pai com seu filho antes de qualquer publicação definitiva.'
+                    desc: 'O rascunho funcional é revisado no tablet pelo autor a solas, e a obra ilustrada é experimentada e aprovada com seu filho antes de qualquer publicação definitiva.'
                 }
             ],
             transparenciaTitulo: 'Transparência de Idiomas & Convite aos Leitores Nativos',
@@ -295,7 +295,7 @@
                     etapa: 'Step 1: Story Mapping & Architectural Blueprint',
                     fase: 'Phase 0 · Structure',
                     desc: 'Thorough study of the public-domain original, thoughtful episode selection (condensing without losing the narrative thread), division into chapters (7 to 9 pages per part, complete story arcs), and planning key motifs (planting and harvesting narrative payoffs).',
-                    ia: 'Advanced LLMs (Claude 3.7 Sonnet / Gemini 3.8 Pro) assist in comparative text analysis, structural synthesis, and thematic outlining.',
+                    ia: 'Frontier reasoning LLMs (Claude Opus 5.5 or higher) assist in structural text comparison, thematic mapping, and condensation planning.',
                     humano: 'The author chooses what stays and what is cut (removing outdated tropes and violence) and approves the outline before any narrative prose is written.'
                 },
                 {
@@ -313,12 +313,12 @@
                     humano: 'Evaluating touch ergonomics (touch targets ≥ 48px), pedagogical clarity, and browser performance.'
                 },
                 {
-                    etapa: '🛑 Human Checkpoint 1: Reading the Draft with a Child on Tablet',
+                    etapa: '🛑 Human Checkpoint 1: Solo Draft Review on Tablet by the Author',
                     fase: 'Phase 3 · Critical Stop',
                     parada: true,
-                    desc: 'Before spending resources on final artwork or studio voiceovers, the author loads the interactive draft onto a tablet and reads the complete story together with his 6-year-old son.',
-                    ia: 'No AI operates here: this is 100% human active listening and family connection.',
-                    humano: 'Observing the child\'s real reactions, laughter, and comprehension. Story pacing and page sequence are only frozen once approved by the child.'
+                    desc: 'Before allocating resources to final artwork or narration, the author installs the functional draft on the tablet and reads the entire story alone (without the child), assessing prose rhythm and screen mechanics.',
+                    ia: 'No AI operates here: independent critical author review.',
+                    humano: 'The father inspects narrative flow, sentence length, direct word order, and touch ergonomics. Page sequence is frozen only after this solo approval.'
                 },
                 {
                     etapa: 'Step 4: Digital Watercolour Painting & Tactile Layers',
@@ -328,12 +328,12 @@
                     humano: 'Rigorous manual art curation: every image is inspected. If an expression feels cold or a scene lacks warmth, the prompt is reworked until it feels just right.'
                 },
                 {
-                    etapa: '🛑 Human Checkpoint 2: Reviewing the Illustrated Book',
+                    etapa: '🛑 Human Checkpoint 2: Reading the Illustrated Book with the Child',
                     fase: 'Phase 5 · Text Freeze',
                     parada: true,
-                    desc: 'A second joint reading session on tablet with full illustrations, testing touch feedback and visual harmony between art and typography.',
-                    ia: 'Co-reading and visual inspection milestone.',
-                    humano: 'Layout and contrast tuning. The Portuguese narrative text is 100% frozen for voice recording and multilingual translations.'
+                    desc: 'This is where the child enters! With full watercolour artwork loaded, the father reads the book together with his 6-year-old son on the tablet, observing genuine joy and touch feedback.',
+                    ia: '100% human moment of active listening and family connection.',
+                    humano: 'Observing the child\'s authentic reactions: laughter, wonder, and visual engagement. The Portuguese narrative prose is 100% frozen for voice recording and translation.'
                 },
                 {
                     etapa: 'Step 5: Expressive Narration with Neural Voices',
@@ -371,7 +371,7 @@
                 },
                 {
                     titulo: '🛑 Human review checkpoints',
-                    desc: 'Every chapter and activity is read and tested on a tablet by a father with his child before publication.'
+                    desc: 'The functional draft is thoroughly reviewed by the author on tablet, and the fully illustrated book is experienced and approved with his child before publication.'
                 }
             ],
             transparenciaTitulo: 'Language Transparency & Call for Native Readers',
@@ -483,7 +483,7 @@
                     etapa: 'Étape 1 : Cartographie de l\'Œuvre & Architecture',
                     fase: 'Phase 0 · Structure',
                     desc: 'Étude attentive du classique dans le domaine public, sélection rigoureuse des épisodes (condenser sans perdre le fil du récit), découpage en tomes (7 à 9 pages par tome) et planification des motifs narratifs.',
-                    ia: 'Modèles LLM avancés (Claude 3.7 Sonnet / Gemini 3.8 Pro) pour la comparaison structurelle et l\'analyse thématique avec l\'original.',
+                    ia: 'Modèles LLM de haut niveau de raisonnement (Claude Opus 5.5 ou supérieur) pour la comparaison structurelle et l\'analyse thématique avec l\'original.',
                     humano: 'L\'auteur choisit ce qui est conservé et ce qui est écarté (suppression de la violence et des archaïsmes) et valide le plan général.'
                 },
                 {
@@ -501,12 +501,12 @@
                     humano: 'Validation de l\'ergonomie tactile (zones de contact ≥ 48px) et essais techniques dans le navigateur.'
                 },
                 {
-                    etapa: '🛑 Étape d\'Arrêt Humain 1 : Lecture du Brouillon sur Tablette avec l\'Enfant',
+                    etapa: '🛑 Étape d\'Arrêt Humain 1 : Relecture Solitaire du Brouillon sur Tablette',
                     fase: 'Phase 3 · Arrêt Critique',
                     parada: true,
-                    desc: 'Avant d\'engager des ressources d\'art final ou de voix, l\'auteur installe le brouillon sur la tablette et lit l\'histoire complète avec son fils de 6 ans.',
-                    ia: 'Aucune IA ici : c\'est un instant d\'écoute et de complicité familiale purement humain.',
-                    humano: 'Observation attentive des réactions et de la joie de l\'enfant. Le découpage des pages n\'est figé qu\'après validation par l\'enfant.'
+                    desc: 'Avant d\'engager des ressources d\'art final ou de voix, l\'auteur installe le brouillon fonctionnel sur tablette et lit l\'histoire seul (sans l\'enfant), en vérifiant la fluidité du texte et la mécanique des pages.',
+                    ia: 'Aucune IA ici : regard critique et solitaire de l\'auteur.',
+                    humano: 'Le père évalue le rythme, la clarté syntaxique et l\'ergonomie tactile. Le découpage des pages n\'est figé qu\'après cette validation rigoureuse.'
                 },
                 {
                     etapa: 'Étape 4 : Peinture à l\'Aquarelle Numérique & Couches Tactiles',
@@ -516,12 +516,12 @@
                     humano: 'Curation artistique exigeante : chaque image est examinée. Si un visage paraît distant ou si l\'atmosphère manque de tendresse, le prompt est retravaillé.'
                 },
                 {
-                    etapa: '🛑 Étape d\'Arrêt Humain 2 : Relecture de l\'Œuvre Illustrée',
+                    etapa: '🛑 Étape d\'Arrêt Humain 2 : Lecture de l\'Œuvre Illustrée avec l\'Enfant',
                     fase: 'Phase 5 · Gel du Texte',
                     parada: true,
-                    desc: 'Seconde lecture partagée sur tablette avec toutes les illustrations finales, pour tester l\'équilibre entre texte et dessin.',
-                    ia: 'Moment de vérification conjointe père-fils.',
-                    humano: 'Ajustements de lisibilité et de contraste. Le texte narratif en portugais est figé à 100 % pour l\'enregistrement et la traduction.'
+                    desc: 'C\'est ici que l\'enfant entre en scène ! Avec les aquarelles finalisées, le père lit l\'histoire sur tablette avec son fils de 6 ans, observant son émerveillement et ses interactions.',
+                    ia: 'Instant 100 % humain d\'écoute bienveillante et de complicité familiale.',
+                    humano: 'Observation attentive des réactions réelles de l\'enfant : rires, curiosité et regard captivé. Le texte en portugais est figé à 100 % pour la voix et les traductions.'
                 },
                 {
                     etapa: 'Étape 5 : Narration Expressive avec Voix Neurales',
@@ -559,7 +559,7 @@
                 },
                 {
                     titulo: '🛑 Étapes d\'approbation et écoute réelle',
-                    desc: 'Chaque chapitre et chaque activité sont lus et testés sur tablette par un père avec son enfant avant toute publication définitive.'
+                    desc: 'Le brouillon fonctionnel est relu sur tablette par l\'auteur et l\'œuvre illustrée est partagée et approuvée avec son enfant avant toute publication.'
                 }
             ],
             transparenciaTitulo: 'Transparence Linguistique & Appel aux Locuteurs Natifs',
@@ -671,7 +671,7 @@
                     etapa: 'Etapa 1: Mapa de la Obra y Arquitectura',
                     fase: 'Fase 0 · Estructura',
                     desc: 'Estudio detallado del clásico en dominio público, selección esmerada de episodios (condensación sin perder el hilo de la historia), división en partes (7 a 9 páginas por parte, arcos con inicio, nudo y desenlace) y diseño de motivos narrativos.',
-                    ia: 'Modelos LLM avanzados (Claude 3.7 Sonnet / Gemini 3.8 Pro) para el cotejo estructural y análisis temático con la obra original.',
+                    ia: 'Modelos LLM de alta capacidad de razonamiento (Claude Opus 5.5 o superior) para el cotejo estructural y análisis temático con la obra original.',
                     humano: 'El autor define qué se conserva y qué se recorta (eliminando violencia y arcaísmos nocivos) y aprueba la escaleta previa al texto narrativo.'
                 },
                 {
@@ -689,12 +689,12 @@
                     humano: 'Validación de ergonomía táctil (áreas de toque ≥ 48px), claridad pedagógica y pruebas en navegador.'
                 },
                 {
-                    etapa: '🛑 Parada Humana 1: Lectura del Borrador en Tableta con el Niño',
+                    etapa: '🛑 Parada Humana 1: Lectura en Solitario del Borrador en Tableta',
                     fase: 'Fase 3 · Parada Crítica',
                     parada: true,
-                    desc: 'Antes de invertir recursos en arte final o locución, el autor instala el borrador en la tableta y lee la historia completa junto con su hijo de 6 años.',
-                    ia: 'Ninguna IA interviene aquí: es un momento 100% de escucha humana y conexión familiar.',
-                    humano: 'Evaluación real de la atención, la risa y la comprensión del niño. La estructura de páginas y capítulos solo se congela tras la aprobación del hijo.'
+                    desc: 'Antes de destinar recursos a arte final o locución, el autor instala el borrador interactivo en la tableta y lee la historia completa a solas (sin el niño), evaluando el ritmo del texto y la dinámica en pantalla.',
+                    ia: 'Ninguna IA interviene aquí: criterio crítico individual del autor.',
+                    humano: 'El padre analiza el flujo narrativo, la sintaxis directa y la ergonomía de toque. La estructura de páginas solo se congela tras esta aprobación personal.'
                 },
                 {
                     etapa: 'Etapa 4: Pintura en Acuarela Digital y Capas Táctiles',
@@ -704,12 +704,12 @@
                     humano: 'Criterio artístico minucioso: cada imagen se inspecciona. Si una mirada parece fría o la escena no transmite ternura, el prompt se reelabora hasta alcanzar la excelencia.'
                 },
                 {
-                    etapa: '🛑 Parada Humana 2: Revisión de la Obra Ilustrada',
+                    etapa: '🛑 Parada Humana 2: Lectura de la Obra Ilustrada con el Hijo',
                     fase: 'Fase 5 · Congelación del Texto',
                     parada: true,
-                    desc: 'Segunda sesión de lectura compartida en tableta con todas las ilustraciones activas, comprobando la armonía entre texto y arte.',
-                    ia: 'Momento de revisión conjunta entre padre e hijo.',
-                    humano: 'Ajustes de contraste y maquetación. El texto narrativo en portugués se congela al 100% para la grabación y traducción.'
+                    desc: '¡Aquí es donde entra el niño! Con las acuarelas terminadas, el padre lee el libro junto a su hijo de 6 años en la tableta, observando su asombro y la respuesta a cada interacción.',
+                    ia: 'Momento 100% humano de escucha atenta y conexión familiar.',
+                    humano: 'Comprobación real de las reacciones del pequeño: su risa, curiosidad y emoción. El texto narrativo en portugués se congela al 100% para locución y traducción.'
                 },
                 {
                     etapa: 'Etapa 5: Narración Expresiva con Voces Neurales',
@@ -747,7 +747,7 @@
                 },
                 {
                     titulo: '🛑 Paradas de aprobación y lectura real',
-                    desc: 'Cada capítulo y actividad se lee y prueba en tableta por un padre con su hijo antes de ser publicado definitivamente.'
+                    desc: 'El borrador funcional es revisado en tableta por el autor a solas y la obra ilustrada se prueba y aprueba con su hijo antes de publicarse.'
                 }
             ],
             transparenciaTitulo: 'Transparencia de Idiomas y Llamada a Lectores Nativos',
