@@ -111,9 +111,10 @@
         })));
     }
 
-    /* HTML do texto da página: cada frase num <span class="sentence" data-frase="pX-sY"> */
-    function paginaParaHtml(texto, pagina) {
-        return frasesDaPagina(texto, pagina).map(frases => frases.map(({ id, frase }) => {
+    /* HTML do texto da página: cada frase num <span class="sentence" data-frase="pX-sY">.
+       `botaoParagrafo(idDaPrimeiraFrase)` (opcional) devolve o HTML que abre cada parágrafo (o autofalante). */
+    function paginaParaHtml(texto, pagina, botaoParagrafo) {
+        return frasesDaPagina(texto, pagina).map(frases => (botaoParagrafo && frases.length ? botaoParagrafo(frases[0].id) : '') + frases.map(({ id, frase }) => {
             const html = frase.partes.map(p => p.tipo === 'palavra'
                 ? `<span class="literacy-word" data-palavra="${escapeHtml(p.palavra)}" data-silabas="${escapeHtml(p.silabas)}" data-emoji="${escapeHtml(p.emoji)}" data-slug="${escapeHtml(p.slug)}">${escapeHtml(p.palavra)}</span>`
                 : p.texto).join('');

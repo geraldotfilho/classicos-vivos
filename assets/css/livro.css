@@ -223,9 +223,32 @@ h1, h2, h3, h4, .font-display {
     letter-spacing: 0.03em;
 }
 
-/* Toque numa frase: a narração começa por ela */
-.page-text .sentence { cursor: pointer; }
-.page-text .sentence:active:not(.sentence-reading) { background-color: #FEF3C7; }
+/* Autofalante no início de cada parágrafo: único comando da narração pelo texto
+   (tocar nas frases não faz nada). Pequeno, com área de toque maior que o desenho. */
+.btn-par-falar {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    margin: 0 8px 2px 0;
+    padding: 0;
+    vertical-align: middle;
+    border-radius: 9999px;
+    border: 2px solid #D97706;
+    background: #FEF3C7;
+    color: #92400E;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 2px 0 rgba(146, 64, 14, 0.35);
+    transition: transform 0.12s ease, background-color 0.2s ease;
+    text-transform: none;
+}
+.btn-par-falar::before { content: ''; position: absolute; inset: -9px; }
+.btn-par-falar:active { transform: scale(0.9); }
+.btn-par-falar.par-lendo { background: #F43F5E; border-color: #BE123C; color: #fff; }
+.btn-par-falar:focus-visible { outline: 3px solid #FBBF24; outline-offset: 2px; }
 
 /* Barra estreita da lente, logo abaixo da ilustração:
    [👓 Realidade | ✨ Imaginação] (chave deslizante) · legenda da cena · 🔄 */
@@ -1054,6 +1077,35 @@ body.barras-auto #barra-base.barra-visivel ~ .contador-canto { display: none; }
 body.barras-auto .alca-barra { display: flex; }
 body.barras-auto #barra-topo.barra-visivel ~ .alca-topo,
 body.barras-auto #barra-base.barra-visivel ~ .alca-base { display: none; }
+/* Setas flutuantes de virar página (só com os botões escondidos): pequenas e discretas,
+   juntas no centro da borda de baixo (longe da seta "Continuar lendo", dos cantinhos e do texto) */
+.nav-flutuante {
+    position: absolute;
+    z-index: 35;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    bottom: 2px;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border-radius: 9999px;
+    border: 2px solid rgba(245, 158, 11, 0.7);
+    background: rgba(254, 243, 199, 0.55);
+    color: #92400E;
+    font-size: 1rem;
+    cursor: pointer;
+    opacity: 0.75;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.2s ease, transform 0.12s ease;
+}
+.nav-flutuante::before { content: ''; position: absolute; inset: -10px; }
+.nav-flutuante:active { opacity: 1; transform: scale(0.92); }
+.nav-flutuante:disabled { opacity: 0.2; pointer-events: none; }
+.nav-flut-prev { left: calc(50% - 38px); }
+.nav-flut-next { left: calc(50% + 8px); }
+body.barras-auto .nav-flutuante { display: flex; }
+body.barras-auto #barra-base.barra-visivel ~ .nav-flutuante { display: none; }
 @keyframes alcaEntra {
     from { opacity: 0; }
     to { opacity: 1; }
