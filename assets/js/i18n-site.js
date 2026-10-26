@@ -208,10 +208,14 @@
             geraldoCitacao: '“Geraldo Travassos — pernambucano orgulhoso, pai apaixonado, faminto por conhecimento, amante dos livros, fã da ciência, defensor de uma educação respeitosa e entusiasta da tecnologia.”',
             geraldoBio: 'O Clássicos Vivos nasceu de forma afetiva e artesanal: do desejo de um pai em aproximar seu filho dos maiores tesouros da literatura mundial de um jeito vivo, acolhedor e contemporâneo. Ao notar que os clássicos costumam ficar distantes dos pequenos pela linguagem arcaica ou pela violência desnecessária, Geraldo uniu o amor pelos livros e pela tecnologia para criar uma biblioteca viva, acolhedora e acessível a qualquer família.',
             contatoTitulo: 'Canais de Contato e Contribuição',
-            contatoGithubTexto: 'O canal preferencial para dúvidas, sugestões, colaborações e reporte de traduções é direto pelo repositório no GitHub, abrindo uma Issue ou Discussão:',
+            contatoGithubTexto: 'Para quem usa o GitHub, também dá para abrir uma Issue ou Discussão no repositório do projeto:',
             contatoGithubBtn: 'Abrir uma Issue no GitHub',
             contatoEmailTexto: 'Para contato pessoal, parcerias pedagógicas ou conversas sobre literatura e educação:',
-            contatoEmail: 'geraldotfilho@gmail.com'
+            contatoEmail: 'geraldotfilho@gmail.com',
+            contatoFamiliasTexto: 'Encontrou um erro, uma tradução estranha ou algo que não parece adequado para crianças? Conte para nós por e-mail (se puder, diga o livro, a parte, a página e o idioma):',
+            contatoFamiliasBtn: 'Avisar sobre um problema',
+            avisoPaisTitulo: 'Aviso aos pais e responsáveis',
+            avisoPaisTexto: '<p class=\"leading-relaxed\">Os livros foram feitos para a criança ler <strong>junto com um adulto</strong>. Recomendamos que você leia cada história antes (ou junto com a criança) e decida se ela combina com os valores da sua família. Na primeira vez que um livro é aberto no aparelho, um aviso pede a um adulto que o libere resolvendo uma conta, e escolha se libera só o português ou todos os idiomas.</p><p class=\"leading-relaxed\">Usamos inteligência artificial no texto, nas ilustrações e nas vozes, com revisão humana em português. <strong>As traduções foram feitas com IA e ainda não foram revisadas por falantes nativos</strong>: podem ter erros ou frases estranhas.</p><p class=\"leading-relaxed\">O Clássicos Vivos é um projeto pessoal e gratuito, oferecido como está, sem garantias. Os livros não coletam nenhum dado: o progresso da leitura fica só no próprio aparelho. Como o projeto é aberto, outras pessoas podem copiar e modificar os livros; a versão oficial é a publicada em <strong>geraldotfilho.github.io/classicos-vivos</strong>.</p>'
         },
         'en': {
             lang: 'en-GB',
@@ -410,10 +414,14 @@
             geraldoCitacao: '“Geraldo Travassos — proud native of Pernambuco (Brazil), passionate father, hungry for knowledge, lover of books, fan of science, advocate of respectful education, and technology enthusiast.”',
             geraldoBio: 'Clássicos Vivos was born from a father\'s loving wish to bring the treasures of world literature to his child in a living, gentle, and modern format. Realising that classics often feel distant to young children due to archaic vocabulary or needless violence, Geraldo combined his love for books and technology to craft an interactive library accessible to every family.',
             contatoTitulo: 'Contact & Collaboration',
-            contatoGithubTexto: 'The preferred channel for questions, suggestions, collaborations, and translation feedback is GitHub, by opening an Issue or Discussion:',
+            contatoGithubTexto: 'If you use GitHub, you can also open an Issue or Discussion in the project repository:',
             contatoGithubBtn: 'Open an Issue on GitHub',
             contatoEmailTexto: 'For personal contact, pedagogical partnerships, or educational dialogue:',
-            contatoEmail: 'geraldotfilho@gmail.com'
+            contatoEmail: 'geraldotfilho@gmail.com',
+            contatoFamiliasTexto: 'Found a mistake, an odd translation or something that does not seem right for children? Tell us by email (if you can, mention the book, part, page and language):',
+            contatoFamiliasBtn: 'Report a problem',
+            avisoPaisTitulo: 'A note for parents and carers',
+            avisoPaisTexto: '<p class=\"leading-relaxed\">These books are meant for children to read <strong>together with an adult</strong>. We recommend that you read each story first (or together with the child) and decide whether it fits your family’s values. The first time a book is opened on a device, a notice asks an adult to unlock it by solving a sum and to choose whether to unlock Portuguese only or all languages.</p><p class=\"leading-relaxed\">We use artificial intelligence for the text, illustrations and voices, with human review in Portuguese. <strong>The translations were made with AI and have not yet been reviewed by native speakers</strong>: they may contain mistakes or odd sentences.</p><p class=\"leading-relaxed\">Clássicos Vivos is a personal, free project, offered as it is, without warranties. The books collect no data at all: reading progress stays on the device. As the project is open, others may copy and modify the books; the official version is the one published at <strong>geraldotfilho.github.io/classicos-vivos</strong>.</p>'
         },
         'fr': {
             lang: 'fr-FR',
@@ -612,10 +620,14 @@
             geraldoCitacao: '« Geraldo Travassos — fier habitant du Pernambouc (Brésil), père passionné, assoiffé de savoir, amoureux des livres, féru de science, défenseur d\'une éducation bienveillante et enthousiaste des nouvelles technologies. »',
             geraldoBio: 'Clássicos Vivos est né de l\'élan affectueux d\'un père désireux d\'initier son enfant aux plus grands chefs-d\'œuvre de la littérature sous une forme vivante, sensible et moderne. Constatant que les classiques intimident souvent les plus jeunes par leur vocabulaire ancien ou leur violence inutile, Geraldo a allié son amour des livres et de la technologie pour bâtir une bibliothèque interactive ouverte à chaque foyer.',
             contatoTitulo: 'Contact & Contribution',
-            contatoGithubTexto: 'Le canal privilégié pour vos questions, suggestions, contributions et retours linguistiques est GitHub, en ouvrant une Issue ou une Discussion :',
+            contatoGithubTexto: 'Si vous utilisez GitHub, vous pouvez aussi ouvrir une Issue ou une Discussion dans le dépôt du projet :',
             contatoGithubBtn: 'Ouvrir une Issue sur GitHub',
             contatoEmailTexto: 'Pour contact direct, partenariats éducatifs ou échanges littéraires :',
-            contatoEmail: 'geraldotfilho@gmail.com'
+            contatoEmail: 'geraldotfilho@gmail.com',
+            contatoFamiliasTexto: 'Vous avez trouvé une erreur, une traduction étrange ou un contenu qui ne semble pas adapté aux enfants ? Écrivez-nous (si possible, indiquez le livre, la partie, la page et la langue) :',
+            contatoFamiliasBtn: 'Signaler un problème',
+            avisoPaisTitulo: 'Avis aux parents',
+            avisoPaisTexto: '<p class=\"leading-relaxed\">Ces livres sont faits pour que l’enfant lise <strong>avec un adulte</strong>. Nous vous recommandons de lire chaque histoire avant (ou avec l’enfant) et de décider si elle correspond aux valeurs de votre famille. La première fois qu’un livre est ouvert sur l’appareil, un message demande à un adulte de le débloquer en résolvant un calcul et de choisir entre le portugais seulement ou toutes les langues.</p><p class=\"leading-relaxed\">Nous utilisons l’intelligence artificielle pour le texte, les illustrations et les voix, avec une relecture humaine en portugais. <strong>Les traductions ont été faites avec l’IA et n’ont pas encore été relues par des locuteurs natifs</strong> : elles peuvent contenir des erreurs ou des phrases étranges.</p><p class=\"leading-relaxed\">Clássicos Vivos est un projet personnel et gratuit, proposé tel quel, sans garantie. Les livres ne collectent aucune donnée : la progression de lecture reste sur l’appareil. Le projet étant ouvert, d’autres personnes peuvent copier et modifier les livres ; la version officielle est celle publiée sur <strong>geraldotfilho.github.io/classicos-vivos</strong>.</p>'
         },
         'es': {
             lang: 'es-ES',
@@ -814,10 +826,14 @@
             geraldoCitacao: '“Geraldo Travassos — pernambucano orgulloso, padre apasionado, hambriento de conocimiento, amante de los libros, seguidor de la ciencia, defensor de una educación respetuosa y entusiasta de la tecnología.”',
             geraldoBio: 'Clássicos Vivos nació del deseo afectuoso de un padre de acercar a su hijo a los grandes tesoros de la literatura universal de un modo vivo, tierno y contemporáneo. Al ver que los clásicos suelen quedar lejos de los niños por un lenguaje arcaico o una violencia innecesaria, Geraldo unió su amor por los libros y la tecnología para crear una biblioteca viva y accesible a cualquier familia.',
             contatoTitulo: 'Canales de Contacto y Colaboración',
-            contatoGithubTexto: 'El canal preferente para dudas, sugerencias, colaboraciones y reporte de traducciones es GitHub, abriendo una Incidencia o Discusión:',
+            contatoGithubTexto: 'Si usa GitHub, también puede abrir una Incidencia o Discusión en el repositorio del proyecto:',
             contatoGithubBtn: 'Abrir una Incidencia en GitHub',
             contatoEmailTexto: 'Para contacto directo, colaboraciones pedagógicas o diálogo educativo:',
-            contatoEmail: 'geraldotfilho@gmail.com'
+            contatoEmail: 'geraldotfilho@gmail.com',
+            contatoFamiliasTexto: '¿Encontró un error, una traducción extraña o algo que no parece adecuado para niños? Cuéntenoslo por correo (si puede, indique el libro, la parte, la página y el idioma):',
+            contatoFamiliasBtn: 'Avisar de un problema',
+            avisoPaisTitulo: 'Aviso a madres, padres y tutores',
+            avisoPaisTexto: '<p class=\"leading-relaxed\">Estos libros están pensados para que el niño lea <strong>junto con un adulto</strong>. Le recomendamos leer cada historia antes (o junto con el niño) y decidir si encaja con los valores de su familia. La primera vez que se abre un libro en el aparato, un aviso pide a un adulto que lo desbloquee resolviendo una cuenta y que elija si desbloquea solo el portugués o todos los idiomas.</p><p class=\"leading-relaxed\">Usamos inteligencia artificial en el texto, las ilustraciones y las voces, con revisión humana en portugués. <strong>Las traducciones se hicieron con IA y todavía no las han revisado hablantes nativos</strong>: pueden tener errores o frases extrañas.</p><p class=\"leading-relaxed\">Clássicos Vivos es un proyecto personal y gratuito, ofrecido tal cual, sin garantías. Los libros no recogen ningún dato: el progreso de lectura se queda en el propio aparato. Como el proyecto es abierto, otras personas pueden copiar y modificar los libros; la versión oficial es la publicada en <strong>geraldotfilho.github.io/classicos-vivos</strong>.</p>'
         }
     };
 

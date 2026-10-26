@@ -2591,6 +2591,10 @@ function aplicarIdioma() {
 /* Toque numa bandeirinha: carrega a tradução da parte e troca os textos sem sair da página */
 function trocarIdioma(codigo, botao) {
     if (!IDIOMAS[codigo] || codigo === idioma) return;
+    if (!idiomaLiberado(codigo)) {
+        abrirPortao(codigo, false).then(ok => { if (ok) trocarIdioma(codigo, botao); });
+        return;
+    }
     carregarTraducao(codigo).then(() => {
         closePhonicsCard();
         stopReadingPage();
@@ -2626,6 +2630,170 @@ function avisarSemTraducao(codigo) {
     aviso.querySelector('button').addEventListener('click', () => aviso.remove());
     document.body.appendChild(aviso);
     setTimeout(() => aviso.remove(), 8000);
+}
+
+/* =====================================================================
+   PORTÃO DO ADULTO (pedido do humano, 2026-10-26)
+   Na primeira abertura de uma obra neste aparelho, um aviso pede que um adulto leia o livro antes
+   (ou junto) e libere com uma conta que muda a cada vez. O adulto escolhe liberar só o português ou
+   todos os idiomas; um idioma ainda não liberado pede o aviso de novo. É ciência informada, não
+   segurança: o texto não promete que só adultos passam. Fica guardado por obra (vale para todas as
+   partes) em cv-adulto-v<versão>-<obra>, com 'pt' ou 'todos'. Mudou o texto do aviso de um jeito que
+   todos precisam ler de novo? Suba VERSAO_PORTAO. Rascunhos e ?adulto=1 (testes) não pedem.
+   ===================================================================== */
+const VERSAO_PORTAO = 1;
+const CONTATO = 'geraldotfilho@gmail.com';
+
+const TEXTOS_PORTAO = {
+    'pt-BR': {
+        titulo: '👋 Chame um adulto, por favor!',
+        paragrafos: [
+            'Este livro foi feito para a criança ler <strong>junto com um adulto</strong>. Antes de liberar, recomendamos que você leia a história uma primeira vez, sozinho ou com a criança, para ver se ela combina com a sua família.',
+            'Adaptamos os clássicos com cuidado: sem violência como centro da história, sem humilhação como piada, sem medo gratuito e sem preconceito. Mas cada família tem os seus valores, e quem melhor conhece a criança é você.',
+            'Usamos inteligência artificial para ajudar no texto, nas ilustrações e nas vozes, sempre com revisão humana em português. <strong>As traduções para inglês, francês e espanhol foram feitas com IA e ainda não foram revisadas por falantes nativos</strong>: podem ter erros ou frases estranhas.',
+            (email) => `Projeto gratuito, oferecido como está, sem garantias. Encontrou algo errado ou inadequado? Escreva para <a href="mailto:${email}?subject=Cl%C3%A1ssicos%20Vivos">${email}</a>. <a href="../sobre.html">Saiba mais sobre o projeto</a>.`
+        ],
+        desafio: 'Para liberar, resolva a conta:', conferir: 'Conferir', resposta: 'Resposta da conta',
+        erro: 'Não foi dessa vez. Tente esta outra conta.',
+        escolha: 'Liberar quais idiomas neste aparelho?', soPt: 'Só o português', todos: 'Todos os idiomas',
+        voltar: 'Voltar à biblioteca', agoraNao: 'Agora não'
+    },
+    en: {
+        titulo: '👋 Please call a grown-up!',
+        paragrafos: [
+            'This book is meant for children to read <strong>together with an adult</strong>. Before unlocking it, we recommend that you read the story once, on your own or with the child, to check that it suits your family.',
+            'We adapt the classics with care: no violence at the centre of the story, no humiliation as a joke, no needless fear and no prejudice. But every family has its own values, and you know your child best.',
+            'We use artificial intelligence to help with the text, the illustrations and the voices, always with human review in Portuguese, the original language. <strong>The English, French and Spanish translations were made with AI and have not yet been reviewed by native speakers</strong>: they may contain mistakes or odd sentences.',
+            (email) => `A free project, offered as it is, without warranties. Found something wrong or inappropriate? Write to <a href="mailto:${email}?subject=Cl%C3%A1ssicos%20Vivos">${email}</a>. <a href="../sobre.html">Learn more about the project</a>.`
+        ],
+        desafio: 'To unlock, solve this sum:', conferir: 'Check', resposta: 'Answer',
+        erro: 'Not quite. Try this other one.',
+        escolha: 'Which languages should be unlocked on this device?', soPt: 'Portuguese only', todos: 'All languages',
+        voltar: 'Back to the library', agoraNao: 'Not now'
+    },
+    fr: {
+        titulo: '👋 Appelle un adulte, s’il te plaît !',
+        paragrafos: [
+            'Ce livre est fait pour que l’enfant lise <strong>avec un adulte</strong>. Avant de le débloquer, nous vous recommandons de lire l’histoire une première fois, seul ou avec l’enfant, pour vérifier qu’elle convient à votre famille.',
+            'Nous adaptons les classiques avec soin : pas de violence au centre de l’histoire, pas d’humiliation pour faire rire, pas de peur gratuite ni de préjugés. Mais chaque famille a ses valeurs, et c’est vous qui connaissez le mieux votre enfant.',
+            'Nous utilisons l’intelligence artificielle pour le texte, les illustrations et les voix, toujours avec une relecture humaine en portugais, la langue d’origine. <strong>Les traductions en anglais, en français et en espagnol ont été faites avec l’IA et n’ont pas encore été relues par des locuteurs natifs</strong> : elles peuvent contenir des erreurs ou des phrases étranges.',
+            (email) => `Projet gratuit, proposé tel quel, sans garantie. Vous avez trouvé une erreur ou un contenu inadapté ? Écrivez à <a href="mailto:${email}?subject=Cl%C3%A1ssicos%20Vivos">${email}</a>. <a href="../sobre.html">En savoir plus sur le projet</a>.`
+        ],
+        desafio: 'Pour débloquer, résolvez ce calcul :', conferir: 'Vérifier', resposta: 'Réponse',
+        erro: 'Raté. Essayez cet autre calcul.',
+        escolha: 'Quelles langues débloquer sur cet appareil ?', soPt: 'Portugais seulement', todos: 'Toutes les langues',
+        voltar: 'Retour à la bibliothèque', agoraNao: 'Pas maintenant'
+    },
+    es: {
+        titulo: '👋 ¡Llama a un adulto, por favor!',
+        paragrafos: [
+            'Este libro está pensado para que el niño lo lea <strong>junto con un adulto</strong>. Antes de desbloquearlo, le recomendamos leer la historia una primera vez, solo o con el niño, para ver si encaja con su familia.',
+            'Adaptamos los clásicos con cuidado: sin violencia como centro de la historia, sin humillaciones como chiste, sin miedo gratuito y sin prejuicios. Pero cada familia tiene sus valores, y quien mejor conoce al niño es usted.',
+            'Usamos inteligencia artificial para ayudar con el texto, las ilustraciones y las voces, siempre con revisión humana en portugués, el idioma original. <strong>Las traducciones al inglés, francés y español se hicieron con IA y todavía no las han revisado hablantes nativos</strong>: pueden tener errores o frases extrañas.',
+            (email) => `Proyecto gratuito, ofrecido tal cual, sin garantías. ¿Encontró algo incorrecto o inadecuado? Escriba a <a href="mailto:${email}?subject=Cl%C3%A1ssicos%20Vivos">${email}</a>. <a href="../sobre.html">Más información sobre el proyecto</a>.`
+        ],
+        desafio: 'Para desbloquear, resuelva la cuenta:', conferir: 'Comprobar', resposta: 'Respuesta',
+        erro: 'No es correcto. Pruebe con esta otra cuenta.',
+        escolha: '¿Qué idiomas desbloquear en este aparato?', soPt: 'Solo portugués', todos: 'Todos los idiomas',
+        voltar: 'Volver a la biblioteca', agoraNao: 'Ahora no'
+    }
+};
+
+function chavePortao() {
+    const obra = String(LIVRO.obra || 'livro').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+    return `cv-adulto-v${VERSAO_PORTAO}-` + obra.replace(/[^a-z0-9]+/g, '-');
+}
+
+function idiomaLiberado(codigo) {
+    if (RASCUNHO || new URLSearchParams(window.location.search).get('adulto') === '1') return true;
+    const liberado = lerPreferencia(chavePortao());
+    return liberado === 'todos' || (liberado === 'pt' && codigo === PT);
+}
+
+/* Conta de duas operações (ex.: 14 × 6 − 29): fácil para um adulto, difícil para quem tem 5 a 8 anos */
+function novaConta() {
+    const sorteio = (min, max) => min + Math.floor(Math.random() * (max - min + 1));
+    const a = sorteio(12, 19), b = sorteio(3, 8), c = sorteio(11, 39);
+    return { texto: `${a} × ${b} − ${c}`, resposta: a * b - c };
+}
+
+/* Mostra o aviso no idioma pedido. Resolve true se o idioma ficou liberado; false se o adulto
+   escolheu só o português para um outro idioma ou fechou ("Agora não"). Na abertura do livro
+   (`naAbertura`), não há "Agora não": o caminho de saída é voltar à biblioteca. */
+function abrirPortao(codigo, naAbertura) {
+    return new Promise(resolve => {
+        document.getElementById('portao-adulto')?.remove();
+        const tx = TEXTOS_PORTAO[codigo] || TEXTOS_PORTAO[PT];
+        const def = IDIOMAS[codigo] || IDIOMAS[PT];
+        let conta = novaConta();
+        const portao = document.createElement('div');
+        portao.id = 'portao-adulto';
+        portao.className = 'portao-fundo';
+        portao.setAttribute('role', 'dialog');
+        portao.setAttribute('aria-modal', 'true');
+        portao.setAttribute('aria-labelledby', 'portao-titulo');
+        portao.lang = def.lang;
+        portao.innerHTML = `
+            <div class="portao-cartao">
+                <h2 id="portao-titulo" class="portao-titulo">${escapeHtml(tx.titulo)}</h2>
+                ${tx.paragrafos.map(p => `<p>${typeof p === 'function' ? p(CONTATO) : p}</p>`).join('')}
+                <form class="portao-desafio" novalidate>
+                    <label for="portao-resposta">${escapeHtml(tx.desafio)} <strong class="portao-conta"></strong> =</label>
+                    <input id="portao-resposta" type="text" inputmode="numeric" autocomplete="off" maxlength="4" aria-label="${escapeHtml(tx.resposta)}">
+                    <button type="submit" class="portao-botao">${escapeHtml(tx.conferir)}</button>
+                </form>
+                <p class="portao-erro" aria-live="polite"></p>
+                <div class="portao-escolha" hidden>
+                    <p><strong>${escapeHtml(tx.escolha)}</strong></p>
+                    <div class="portao-opcoes">
+                        <button type="button" class="portao-botao" data-portao-liberar="pt">${escapeHtml(tx.soPt)}</button>
+                        <button type="button" class="portao-botao" data-portao-liberar="todos">${escapeHtml(tx.todos)}</button>
+                    </div>
+                </div>
+                ${naAbertura
+                    ? `<a href="../index.html" class="portao-sair">${escapeHtml(tx.voltar)}</a>`
+                    : `<button type="button" class="portao-sair" data-portao-fechar>${escapeHtml(tx.agoraNao)}</button>`}
+            </div>
+        `;
+        const campo = portao.querySelector('#portao-resposta');
+        const mostrarConta = () => { portao.querySelector('.portao-conta').textContent = conta.texto; };
+        const fechar = (ok) => { portao.remove(); resolve(ok); };
+        mostrarConta();
+
+        portao.querySelector('form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            if (parseInt(campo.value.replace(/\D/g, ''), 10) === conta.resposta) {
+                portao.querySelector('form').hidden = true;
+                portao.querySelector('.portao-erro').textContent = '';
+                portao.querySelector('.portao-escolha').hidden = false;
+                portao.querySelector('[data-portao-liberar="todos"]').focus();
+            } else {
+                conta = novaConta();
+                mostrarConta();
+                campo.value = '';
+                portao.querySelector('.portao-erro').textContent = tx.erro;
+                nudge(campo);
+            }
+        });
+        portao.querySelectorAll('[data-portao-liberar]').forEach(btn => btn.addEventListener('click', () => {
+            salvarPreferencia(chavePortao(), btn.dataset.portaoLiberar);
+            fechar(idiomaLiberado(codigo));
+        }));
+        portao.querySelector('[data-portao-fechar]')?.addEventListener('click', () => fechar(false));
+
+        document.body.appendChild(portao);
+        campo.focus({ preventScroll: true });
+    });
+}
+
+/* Na abertura do livro: se a obra (ou o idioma guardado) ainda não foi liberada neste aparelho */
+function conferirPortaoNaAbertura() {
+    if (idiomaLiberado(idioma)) return;
+    stopReadingPage();
+    abrirPortao(idioma, true).then(ok => {
+        // O adulto liberou só o português, mas o livro abriu em outro idioma: volta para o português
+        if (!ok) trocarIdioma(PT);
+    });
 }
 
 function atualizarBotaoMaiusculas() {
@@ -2754,7 +2922,7 @@ function initEventos() {
             closePhonicsCard();
             fecharPainelVoz();
         }
-        if (document.querySelector('.phonics-backdrop.is-open')) return;
+        if (document.querySelector('.phonics-backdrop.is-open') || document.getElementById('portao-adulto')) return;
         if (e.key === 'ArrowRight') nextPage();
         if (e.key === 'ArrowLeft') prevPage();
     });
@@ -2889,6 +3057,8 @@ function iniciarLivro() {
             toggleLens(p, null, true);
         }
     }
+
+    conferirPortaoNaAbertura();
 
     // Leitura offline: registra o service worker quando servido por http(s) (ex.: GitHub Pages)
     if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {

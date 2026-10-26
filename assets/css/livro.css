@@ -1110,3 +1110,94 @@ body.barras-auto #barra-base.barra-visivel ~ .nav-flutuante { display: none; }
     from { opacity: 0; }
     to { opacity: 1; }
 }
+
+/* =====================================================================
+   PORTÃO DO ADULTO (livro.js, abrirPortao): aviso da primeira abertura da obra, com a conta
+   ===================================================================== */
+.portao-fundo {
+    position: fixed;
+    inset: 0;
+    z-index: 80;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 16px;
+    overflow-y: auto;
+    background: rgba(41, 22, 10, 0.82);
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+}
+.portao-cartao {
+    width: 100%;
+    max-width: 36rem;
+    margin: auto 0;
+    background: #fffbeb;
+    color: #334155;
+    border: 3px solid #f59e0b;
+    border-radius: 1.25rem;
+    padding: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.5;
+}
+.portao-cartao p { margin: 0 0 10px; }
+.portao-cartao a { color: #92400e; text-decoration: underline; }
+.portao-titulo {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #451a03;
+    margin: 0 0 12px;
+}
+.portao-desafio {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-top: 14px;
+    padding: 12px;
+    background: #fef3c7;
+    border: 2px solid #fcd34d;
+    border-radius: 1rem;
+    color: #451a03;
+}
+.portao-conta { font-family: 'Fredoka', sans-serif; font-size: 1.25rem; white-space: nowrap; }
+.portao-desafio input {
+    width: 6rem;
+    min-height: 48px;
+    font: 700 1.25rem 'Fredoka', sans-serif;
+    text-align: center;
+    border: 2px solid #d97706;
+    border-radius: 0.75rem;
+    background: #fff;
+}
+.portao-botao {
+    min-height: 48px;
+    padding: 8px 18px;
+    font: 700 1rem 'Fredoka', sans-serif;
+    color: #fff;
+    background: #4f46e5;
+    border: 2px solid #3730a3;
+    border-radius: 0.9rem;
+    cursor: pointer;
+}
+.portao-botao:hover { background: #4338ca; }
+.portao-erro { min-height: 1.5em; margin: 8px 0 0; color: #b91c1c; }
+.portao-erro:empty { min-height: 0; }
+.portao-escolha { margin-top: 12px; }
+.portao-opcoes { display: flex; flex-wrap: wrap; gap: 10px; }
+.portao-sair {
+    display: inline-flex;
+    align-items: center;
+    min-height: 48px;
+    margin-top: 10px;
+    padding: 0 4px;
+    font: 600 0.95rem 'Fredoka', sans-serif;
+    color: #92400e;
+    background: none;
+    border: 0;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.portao-desafio[hidden], .portao-escolha[hidden] { display: none; }
