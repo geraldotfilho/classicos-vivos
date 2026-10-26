@@ -74,7 +74,7 @@ const IDIOMAS = {
             lerNesteIdioma: 'Ler em português',
             rascunho: '📝 Rascunho', biblioteca: 'Voltar à biblioteca', bibliotecaTitulo: 'Voltar à Biblioteca Clássicos Vivos',
             parte: (n, total) => `Parte ${n} de ${total}`,
-            ouvirPagina: 'Ouvir Página', pararVoz: 'Parar Voz', ouvirTitulo: 'Ouvir a página inteira (ou toque numa frase)',
+            ouvirPagina: 'Ouvir Página', pararVoz: 'Parar Voz', ouvirTitulo: 'Ouvir a página inteira', ouvirParagrafo: 'Ouvir este parágrafo', pausarParagrafo: 'Pausar a leitura',
             maiusculas: 'Mostrar o texto todo em LETRAS MAIÚSCULAS', minusculas: 'Mostrar o texto com letras normais',
             vozTitulo: 'Escolher a voz e a velocidade da leitura', vozAria: 'Escolher a voz',
             sfxTitulo: 'Ativar/Desativar Efeitos Sonoros', sfxAria: 'Efeitos sonoros',
@@ -111,7 +111,7 @@ const IDIOMAS = {
             lerNesteIdioma: 'Read in English',
             rascunho: '📝 Draft', biblioteca: 'Back to the library', bibliotecaTitulo: 'Back to the Clássicos Vivos Library',
             parte: (n, total) => `Part ${n} of ${total}`,
-            ouvirPagina: 'Listen', pararVoz: 'Stop', ouvirTitulo: 'Listen to the whole page (or tap a sentence)',
+            ouvirPagina: 'Listen', pararVoz: 'Stop', ouvirTitulo: 'Listen to the whole page', ouvirParagrafo: 'Listen to this paragraph', pausarParagrafo: 'Pause reading',
             maiusculas: 'Show all the text in CAPITAL LETTERS', minusculas: 'Show the text in normal letters',
             vozTitulo: 'Choose the reading voice and speed', vozAria: 'Choose the voice',
             sfxTitulo: 'Sound effects on/off', sfxAria: 'Sound effects',
@@ -148,7 +148,7 @@ const IDIOMAS = {
             lerNesteIdioma: 'Lire en français',
             rascunho: '📝 Brouillon', biblioteca: 'Retour à la bibliothèque', bibliotecaTitulo: 'Retour à la bibliothèque Clássicos Vivos',
             parte: (n, total) => `Partie ${n} sur ${total}`,
-            ouvirPagina: 'Écouter', pararVoz: 'Arrêter', ouvirTitulo: 'Écouter toute la page (ou touche une phrase)',
+            ouvirPagina: 'Écouter', pararVoz: 'Arrêter', ouvirTitulo: 'Écouter toute la page', ouvirParagrafo: 'Écouter ce paragraphe', pausarParagrafo: 'Mettre la lecture en pause',
             maiusculas: 'Afficher tout le texte en LETTRES MAJUSCULES', minusculas: 'Afficher le texte en lettres normales',
             vozTitulo: 'Choisir la voix et la vitesse de lecture', vozAria: 'Choisir la voix',
             sfxTitulo: 'Activer/désactiver les effets sonores', sfxAria: 'Effets sonores',
@@ -185,7 +185,7 @@ const IDIOMAS = {
             lerNesteIdioma: 'Leer en español',
             rascunho: '📝 Borrador', biblioteca: 'Volver a la biblioteca', bibliotecaTitulo: 'Volver a la Biblioteca Clássicos Vivos',
             parte: (n, total) => `Parte ${n} de ${total}`,
-            ouvirPagina: 'Escuchar', pararVoz: 'Parar', ouvirTitulo: 'Escuchar toda la página (o toca una frase)',
+            ouvirPagina: 'Escuchar', pararVoz: 'Parar', ouvirTitulo: 'Escuchar toda la página', ouvirParagrafo: 'Escuchar este párrafo', pausarParagrafo: 'Pausar la lectura',
             maiusculas: 'Mostrar todo el texto en LETRAS MAYÚSCULAS', minusculas: 'Mostrar el texto con letras normales',
             vozTitulo: 'Elegir la voz y la velocidad de lectura', vozAria: 'Elegir la voz',
             sfxTitulo: 'Activar/desactivar los efectos de sonido', sfxAria: 'Efectos de sonido',
@@ -420,6 +420,13 @@ function montarPaginaArte(i, pagina) {
 }
 
 /* Conteúdo da folha de texto no idioma atual (refeito ao trocar de idioma) */
+/* Autofalante no início de cada parágrafo: único jeito de comandar a narração pelo texto
+   (tocar nas frases não faz nada, para evitar leituras acidentais) */
+function botaoParagrafo(idPrimeiraFrase) {
+    const rotulo = escapeHtml(ui('ouvirParagrafo'));
+    return `<button type="button" class="btn-par-falar" data-ler-par="${idPrimeiraFrase}" data-ui-aria="ouvirParagrafo" data-ui-title="ouvirParagrafo" aria-label="${rotulo}" title="${rotulo}"><i class="ph-fill ph-speaker-high"></i></button>`;
+}
+
 function montarConteudoDoTexto(i) {
     const pagina = paginaNoIdioma(i);
     const ultima = i === totalPages - 1;
@@ -500,7 +507,7 @@ function montarConteudoDoTexto(i) {
     return `
                 <div class="page-text-inner flex flex-col ${alinhamento} space-y-3">
                     ${topo}
-                    <p id="page-text-${i}" class="text-base sm:text-lg text-slate-800 font-bold leading-relaxed">${Texto.paginaParaHtml(pagina.texto, i)}</p>
+                    <p id="page-text-${i}" class="text-base sm:text-lg text-slate-800 font-bold leading-relaxed">${Texto.paginaParaHtml(pagina.texto, i, botaoParagrafo)}</p>
                     ${quadroAtividade}
                     ${abrir}
                     ${final}
@@ -633,6 +640,13 @@ function montarLivro() {
         <!-- Com os botões escondidos, eles voltam por estes controles flutuantes nos cantinhos -->
         <button type="button" id="alca-topo" class="alca-barra alca-topo" data-ui-title="mostrarTopo" title="${escapeHtml(ui('mostrarTopo'))}" data-ui-aria="mostrarTopo" aria-label="${escapeHtml(ui('mostrarTopo'))}">
             <i class="ph-bold ph-caret-down"></i>
+        </button>
+        <!-- Com os botões escondidos, setas pequenas e discretas para virar a página -->
+        <button type="button" id="nav-flut-prev" class="nav-flutuante nav-flut-prev" data-ui-title="anterior" title="${escapeHtml(ui('anterior'))}" data-ui-aria="anterior" aria-label="${escapeHtml(ui('anterior'))}">
+            <i class="ph-bold ph-caret-left"></i>
+        </button>
+        <button type="button" id="nav-flut-next" class="nav-flutuante nav-flut-next" data-ui-title="proxima" title="${escapeHtml(ui('proxima'))}" data-ui-aria="proxima" aria-label="${escapeHtml(ui('proxima'))}">
+            <i class="ph-bold ph-caret-right"></i>
         </button>
         <button type="button" id="alca-base" class="alca-barra alca-base" data-ui-title="mostrarBase" title="${escapeHtml(ui('mostrarBase'))}" data-ui-aria="mostrarBase" aria-label="${escapeHtml(ui('mostrarBase'))}">
             <i class="ph-bold ph-caret-up"></i>
@@ -1266,6 +1280,59 @@ function clearSentenceHighlight() {
     document.querySelectorAll('.sentence-reading').forEach(el => el.classList.remove('sentence-reading'));
 }
 
+/* Frases do parágrafo que o autofalante `btn` abre (até o próximo autofalante) */
+function frasesDoParagrafo(btn) {
+    const frases = [];
+    for (let n = btn.nextElementSibling; n && !n.matches('.btn-par-falar'); n = n.nextElementSibling) {
+        if (n.matches('.sentence')) frases.push(n);
+    }
+    return frases;
+}
+
+/* O autofalante do parágrafo em leitura vira ⏸ (os outros ficam 🔊) */
+function sincronizarBotoesParagrafo(lendo) {
+    let ativo = null;
+    for (let n = lendo && lendo.previousElementSibling; n; n = n.previousElementSibling) {
+        if (n.matches('.btn-par-falar')) { ativo = n; break; }
+    }
+    document.querySelectorAll('.btn-par-falar').forEach(b => {
+        const pausa = b === ativo;
+        b.classList.toggle('par-lendo', pausa);
+        b.querySelector('i').className = pausa ? 'ph-fill ph-pause' : 'ph-fill ph-speaker-high';
+        const rotulo = ui(pausa ? 'pausarParagrafo' : 'ouvirParagrafo');
+        b.dataset.uiAria = b.dataset.uiTitle = pausa ? 'pausarParagrafo' : 'ouvirParagrafo';
+        b.setAttribute('aria-label', rotulo);
+        b.title = rotulo;
+    });
+}
+
+function destacarFrase(el) {
+    el.classList.add('sentence-reading');
+    sincronizarBotoesParagrafo(el);
+    scrollTextToSentence(el);
+}
+
+/* Autofalante do parágrafo: ouve (a partir do parágrafo, até o fim da página) ou pausa.
+   Depois de uma pausa, o mesmo autofalante retoma da frase em que parou. */
+let pausaDaLeitura = null;
+function comandarParagrafo(btn) {
+    if (btn.classList.contains('par-lendo')) {
+        const atual = document.querySelector('.sentence-reading');
+        pausaDaLeitura = atual ? { pagina: currentPage, frase: atual.dataset.frase } : null;
+        stopReadingPage();
+        return;
+    }
+    const frases = frasesDoParagrafo(btn);
+    if (!frases.length) return;
+    let inicio = frases[0];
+    if (pausaDaLeitura && pausaDaLeitura.pagina === currentPage) {
+        const parada = frases.find(f => f.dataset.frase === pausaDaLeitura.frase);
+        if (parada) inicio = parada;
+    }
+    pausaDaLeitura = null;
+    lerAPartirDaFrase(inicio);
+}
+
 function stopReadingPage() {
     readingSession++;
     calarTudo();
@@ -1331,8 +1398,7 @@ function lerPagina(inicio = 0) {
             speakSentence(i + 1);
             return;
         }
-        sentence.classList.add('sentence-reading');
-        scrollTextToSentence(sentence);
+        destacarFrase(sentence);
 
         const comAparelho = () => falarComAparelho(text).then(proxima(i), falhou);
         if (voz) {
@@ -1390,8 +1456,7 @@ function lerPaginaInteira(voz, gravada, sentences, session, inicio, reserva) {
         const el = marca && porId.get(marca.id);
         if (el && el !== atual) {
             clearSentenceHighlight();
-            el.classList.add('sentence-reading');
-            scrollTextToSentence(el);
+            destacarFrase(el);
             atual = el;
         }
         quadro = requestAnimationFrame(acompanhar);
@@ -1401,8 +1466,7 @@ function lerPaginaInteira(voz, gravada, sentences, session, inicio, reserva) {
         ? audioComSalto(src).then(url => (session === readingSession ? tocarGravacao(url, desde) : null))
         : tocarGravacao(src);
     if (desde > 0) {
-        sentences[inicio].classList.add('sentence-reading');
-        scrollTextToSentence(sentences[inicio]);
+        destacarFrase(sentences[inicio]);
         atual = sentences[inicio];
     }
     tocar.then(() => {
@@ -1420,6 +1484,7 @@ function lerPaginaInteira(voz, gravada, sentences, session, inicio, reserva) {
 
 function setReadingPageUI(reading) {
     isReadingPage = reading;
+    if (!reading) sincronizarBotoesParagrafo(null);
     const btn = document.getElementById('btn-tts');
     const label = document.getElementById('tts-label');
     const icon = document.getElementById('tts-icon');
@@ -2426,6 +2491,8 @@ function goToPage(index, options = {}) {
 
     document.getElementById('btn-prev').disabled = currentPage === 0;
     document.getElementById('btn-next').disabled = currentPage === totalPages - 1;
+    document.getElementById('nav-flut-prev').disabled = currentPage === 0;
+    document.getElementById('nav-flut-next').disabled = currentPage === totalPages - 1;
     atualizarContadores();
 
     renderPaginationDots();
@@ -2602,10 +2669,9 @@ function initEventos() {
             speakWord(palavra, palavra.dataset.palavra, palavra.dataset.silabas, palavra.dataset.emoji);
             return;
         }
-        // Toque numa frase do texto: a narração começa por ela
-        const frase = e.target.closest('.page-text .sentence');
-        if (frase && !e.target.closest('button, a')) {
-            lerAPartirDaFrase(frase);
+        const autofalante = e.target.closest('.btn-par-falar');
+        if (autofalante) {
+            comandarParagrafo(autofalante);
             return;
         }
         const bandeira = e.target.closest('[data-idioma]');
@@ -2668,6 +2734,8 @@ function initEventos() {
 
     document.getElementById('btn-prev').addEventListener('click', prevPage);
     document.getElementById('btn-next').addEventListener('click', nextPage);
+    document.getElementById('nav-flut-prev').addEventListener('click', prevPage);
+    document.getElementById('nav-flut-next').addEventListener('click', nextPage);
     document.getElementById('btn-tts').addEventListener('click', toggleReadPageAloud);
     document.getElementById('btn-voz').addEventListener('click', abrirPainelVoz);
     document.getElementById('btn-sfx').addEventListener('click', toggleSoundEffects);
