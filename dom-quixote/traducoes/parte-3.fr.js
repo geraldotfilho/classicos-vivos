@@ -102,6 +102,10 @@
         }
     ],
     textos: {
+        "Abra a mala velha achada na serra: toque no caderno de poesias e nas moedas de ouro!": "Ouvre la vieille valise trouvée dans la sierra : touche le cahier de poèmes et les pièces d’or !",
+        "Toque na cambalhota para ver as piruetas heroicas de Dom Quixote na montanha!": "Touche la culbute pour voir les pirouettes héroïques de Don Quichotte sur la montagne !",
+        "Ajude Sancho a assinar a carta de amor: toque nas palavras na ordem certa para formar O CAVALEIRO DA TRISTE FIGURA!": "Aide Sancho à signer la lettre d’amour : touche les mots dans le bon ordre pour former LE CHEVALIER À LA TRISTE FIGURE !",
+        "Dom Quixote sonha que enfrenta um gigante: toque na espada para furar os odres de vinho!": "Don Quichotte rêve qu’il affronte un géant : touche l’épée pour percer les outres de vin !",
         'Dom Quixote e Sancho sobem uma trilha entre as montanhas rochosas da Serra Morena': 'Don Quichotte et Sancho montent un sentier entre les montagnes rocheuses de la Sierra Morena',
         '👓 Lente da Realidade: A Trilha da Serra Morena': '👓 Lentille de la Réalité : Le sentier de la Sierra Morena',
         '✨ Lente da Imaginação: As Montanhas de um Reino Encantado!': '✨ Lentille de l’Imagination : Les montagnes d’un royaume enchanté !',

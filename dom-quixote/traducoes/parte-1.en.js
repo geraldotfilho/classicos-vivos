@@ -91,6 +91,11 @@ At that very moment, a strong gust of {{WIND|WIND|💨}} blew, and the sails spu
         }
     ],
     textos: {
+        "Toque nos três livros de Alonso para descobrir as aventuras de cavaleiros, castelos e dragões!": "Tap Alonso’s three books to discover adventures of knights, castles, and dragons!",
+        "Ajude o vovô Alonso a se equipar: toque nos itens na ordem certa para vestir a armadura, a bacia, o escudo e a lança!": "Help Grandad Alonso get equipped: tap the items in the right order to put on the armour, the basin, the shield, and the lance!",
+        "Cuide com carinho do Rocinante: dê a maçã doce, a cenoura crocante e escove suas crinas!": "Take good care of Rocinante: give him the sweet apple, the crunchy carrot, and brush his mane!",
+        "Toque na trombeta para ouvir a música do pastor e na sopa quentinha para se aquecer na pousada!": "Tap the trumpet to hear the shepherd’s music and the warm soup to warm up at the inn!",
+        "Toque no vento forte para fazer as pás dos moinhos girarem cada vez mais rápido!": "Tap the strong wind to make the windmill blades spin faster and faster!",
         'Cena Capa Dom Quixote': 'Don Quixote cover scene',
         '👓 Lente da Realidade: O Vovô Alonso e seus Amigos': '👓 Reality Lens: Grandad Alonso and his Friends',
         '✨ Lente da Imaginação: O Herói Dourado de La Mancha!': '✨ Imagination Lens: The Golden Hero of La Mancha!',

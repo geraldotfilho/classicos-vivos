@@ -400,6 +400,19 @@ const LIMIAR_RMS = 250;
 const amostrasDe = (wav) => new Int16Array(wav.buffer.slice(wav.byteOffset + 44, wav.byteOffset + wav.length - ((wav.length - 44) % 2)));
 const wavDe = (a) => comCabecalhoWav(Buffer.from(a.buffer, a.byteOffset, a.byteLength));
 
+/* Aplica rampa suave (cosseno elevado de 10 ms) nas pontas para evitar descontinuidades e cliques */
+function aplicarFade(amostras, duracaoMs = 10) {
+    const n = Math.min(Math.round(TAXA * duracaoMs / 1000), Math.floor(amostras.length / 2));
+    if (n <= 0) return amostras;
+    const resultado = new Int16Array(amostras);
+    for (let i = 0; i < n; i++) {
+        const fator = 0.5 * (1 - Math.cos(Math.PI * i / n));
+        resultado[i] = Math.round(resultado[i] * fator);
+        resultado[resultado.length - 1 - i] = Math.round(resultado[resultado.length - 1 - i] * fator);
+    }
+    return resultado;
+}
+
 /* Trechos de pelo menos 120 ms com energia baixa, dentro da fala: [{ ini, fim, meio, s }] em amostras */
 function pausas(a, vozIni, vozFim) {
     const lista = [];
@@ -496,7 +509,8 @@ async function sintetizarBloco(frases, roteiro, personagem, estilo = ELENCO.NARR
         let ini = 0, fim = a.length - 1;
         while (ini < fim && Math.abs(a[ini]) < 500) ini++;
         while (fim > ini && Math.abs(a[fim]) < 500) fim--;
-        partes.push(a.subarray(Math.max(0, ini - 1920), Math.min(a.length, fim + 1920)), new Int16Array(Math.round(TAXA * 0.15)));
+        const fala = aplicarFade(a.subarray(Math.max(0, ini - 1920), Math.min(a.length, fim + 1920)));
+        partes.push(fala, new Int16Array(Math.round(TAXA * 0.15)));
     }
     const tudo = new Int16Array(partes.reduce((t, a) => t + a.length, 0));
     let pos = 0;
@@ -537,7 +551,8 @@ async function tentarBloco(bloco, roteiro) {
     while (vozFim > vozIni && Math.abs(a[vozFim]) < 500) vozFim--;
     const margem = Math.round(TAXA * 0.08);
     const ini = Math.max(0, vozIni - margem), fim = Math.min(a.length, vozFim + margem);
-    if (bloco.palavras) return { erros: 0, pior: 0, avisos: [], marcas: [], amostras: a.subarray(ini, fim), motivo: '' };
+    const amostrasBloco = aplicarFade(a.subarray(ini, fim));
+    if (bloco.palavras) return { erros: 0, pior: 0, avisos: [], marcas: [], amostras: amostrasBloco, motivo: '' };
 
     let cortes, ouvidos = null;
     if (!o['sem-qa']) {
@@ -571,7 +586,7 @@ async function tentarBloco(bloco, roteiro) {
         pior = Math.max(pior, dif);
         marcas.push({ id: frases[k].id, ini: (cortes[k] - ini) / TAXA, fim: (cortes[k + 1] - ini) / TAXA });
     }
-    return { erros, pior, avisos, marcas, amostras: a.subarray(ini, fim), motivo: avisos.join('; ') };
+    return { erros, pior, avisos, marcas, amostras: amostrasBloco, motivo: avisos.join('; ') };
 }
 
 /* Cache de blocos (fora do git): um bloco pago nunca é pedido de novo, mesmo que outro bloco da mesma
@@ -615,14 +630,15 @@ function juntarBlocos(resultados) {
     const partes = [], marcas = [];
     let pos = 0;
     resultados.forEach((r, k) => {
+        const blocoAmostras = aplicarFade(r.amostras);
         if (k) {
             partes.push(new Int16Array(PAUSA_ENTRE_BLOCOS));
             marcas[marcas.length - 1].fim += PAUSA_ENTRE_BLOCOS / TAXA;   // a frase anterior vai até o bloco novo
             pos += PAUSA_ENTRE_BLOCOS;
         }
         r.marcas.forEach(m => marcas.push({ id: m.id, ini: m.ini + pos / TAXA, fim: m.fim + pos / TAXA }));
-        partes.push(r.amostras);
-        pos += r.amostras.length;
+        partes.push(blocoAmostras);
+        pos += blocoAmostras.length;
     });
     const tudo = new Int16Array(pos);
     let p = 0;

@@ -92,6 +92,11 @@
         }
     ],
     textos: {
+        "Toque nos três livros de Alonso para descobrir as aventuras de cavaleiros, castelos e dragões!": "Touche les trois livres d’Alonso pour découvrir les aventures de chevaliers, de châteaux et de dragons !",
+        "Ajude o vovô Alonso a se equipar: toque nos itens na ordem certa para vestir a armadura, a bacia, o escudo e a lança!": "Aide grand-père Alonso à s’équiper : touche les objets dans le bon ordre pour enfiler l’armure, le plat à barbe, le bouclier et la lance !",
+        "Cuide com carinho do Rocinante: dê a maçã doce, a cenoura crocante e escove suas crinas!": "Prends bien soin de Rossinante : donne-lui la pomme sucrée, la carotte croquante et brosse sa crinière !",
+        "Toque na trombeta para ouvir a música do pastor e na sopa quentinha para se aquecer na pousada!": "Touche la trompette pour écouter la musique du berger et la soupe bien chaude pour te réchauffer à l’auberge !",
+        "Toque no vento forte para fazer as pás dos moinhos girarem cada vez mais rápido!": "Touche le vent fort pour faire tourner les ailes des moulins de plus en plus vite !",
         'Cena Capa Dom Quixote': 'Scène de couverture de Don Quichotte',
         '👓 Lente da Realidade: O Vovô Alonso e seus Amigos': '👓 Lentille de la Réalité : Papi Alonso et ses amis',
         '✨ Lente da Imaginação: O Herói Dourado de La Mancha!': '✨ Lentille de l’Imagination : Le héros doré de la Manche !',

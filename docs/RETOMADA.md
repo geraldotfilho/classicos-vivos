@@ -1,4 +1,4 @@
-# 🔁 Retomada — onde o trabalho parou (2026-10-26, nova Parte 4 publicada)
+# 🔁 Retomada — onde o trabalho parou (2026-10-26, Coleção expandida, abas e chiado de áudio resolvido)
 
 **Leia este arquivo primeiro numa sessão nova**, seja qual for o agente. Depois, siga a ordem de leitura do `AGENTS.md` §0.2 (AGENTS → receita geral → receita específica → plano → caderno da parte).
 
@@ -9,9 +9,13 @@
 ## 1. Estado atual
 
 - **Dom Quixote, primeiro volume (Partes 1 a 4) completo e publicado**:
-  - Partes 1, 2 e 3: ilustradas, narradas em português e traduzidas (en, fr, es).
+  - Partes 1, 2 e 3: ilustradas, narradas em português e traduzidas (en, fr, es). **Lente da Imaginação como recompensa e `comandoAtividade` padronizados** em todas as atividades, com traduções integradas.
   - **Parte 4 nova publicada em 2026-10-26** ([dom-quixote/parte-4.html](../dom-quixote/parte-4.html), caps. 23 a 33, 12 páginas): ilustrada e **narrada em português** (escuta aprovada pelo humano). Ainda **sem tradução**: em inglês, francês ou espanhol, ela abre em português com um aviso no idioma escolhido. Caderno: [docs/cadernos/dom-quixote-parte-4.md](cadernos/dom-quixote-parte-4.md). A antiga está em `docs/arquivo/dom-quixote-parte-4-v1/`.
-- **Motor**: a Imaginação é recompensa (lente trancada até a criança acertar), tipo `pedido`, `pastaAudio` para gravar a versão nova de uma parte publicada, e o aviso de parte sem tradução (`AGENTS.md` §2.5, §2.8).
+- **Home e Portal (`index.html` e `sobre.html`)**:
+  - **Prateleira 1 da estante**: a antiga assimetria de livro gigante virou uma **Coleção Dom Quixote 3D unificada** (Volume 1, 1605), que se expande/espalha suavemente em 4 capas proporcionais e harmônicas ao toque, com botão de recolhimento e feedback sonoro.
+  - **Página de Adultos (`sobre.html`)**: reestruturada em **4 abas** (Como Funciona, A Nossa Receita, Acervo & Em Produção, Quem Faz & Contato). A receita de adaptação está explicada de forma transparente e generalista; foi incluída a nota sobre criação original em português, tradução via IA e o convite aos leitores nativos para leitura prévia e correções; perfil e contatos de Geraldo Travassos com link preferencial para GitHub Issues e e-mail.
+- **Áudio e Narração**:
+  - **Chiado e estalos entre frases eliminados**: `pararGravacao()` é executado no fim de cada frase, durante a pausa de silêncio e ao término da leitura, silenciando o DAC/buffer do navegador; ferramentas de áudio (`otimizar-audio.mjs` e `gravar-narracao.mjs`) ganharam rampas suaves Hann (10 ms) nas bordas de corte e concatenação; 62 arquivos MP3 com corte abrupto foram suavizados no acervo. **Nenhum texto narrado foi alterado e o gasto foi de US$ 0,00**.
 - **Gasto da API em outubro**: ~US$ 5,12 (≈ R$ 28 de R$ 30). **A verba de outubro acabou**: a próxima produção paga fica para novembro.
 
 ## 2. Próximas sessões (escolha do humano)

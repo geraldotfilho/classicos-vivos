@@ -105,6 +105,10 @@ With his oak lance pointing forward, the knight charged at a gallop. “Help! He
         }
     ],
     textos: {
+        "Ajude a preparar o lanche dos pastores: toque nas bolotas doces, no queijo fresco e no leite quentinho!": "Help prepare the goatherds’ snack: tap the sweet acorns, the fresh cheese, and the warm milk!",
+        "Sopre a nuvem de poeira para descobrir o que está escondido no caminho!": "Blow away the cloud of dust to find out what is hidden on the road!",
+        "Ajude Sancho a contar as cabrinhas que atravessam o rio no barquinho, uma por uma!": "Help Sancho count the little goats crossing the river in the boat, one by one!",
+        "Toque no sol nascente para iluminar o rio e desvendar o mistério dos barulhos da noite!": "Tap the rising sun to light up the river and solve the mystery of the night sounds!",
         'Dom Quixote e Sancho Pança na estrada, com um rebanho de ovelhas ao longe': 'Don Quixote and Sancho Panza on the road, with a flock of sheep in the distance',
         '👓 Lente da Realidade: Dois Amigos na Estrada Poeirenta': '👓 Reality Lens: Two Friends on the Dusty Road',
         '✨ Lente da Imaginação: O Cavaleiro do Elmo de Ouro!': '✨ Imagination Lens: The Knight of the Golden Helmet!',

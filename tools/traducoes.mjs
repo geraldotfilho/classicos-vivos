@@ -42,6 +42,8 @@ function textosDoLivro(livro, fonte) {
         const cena = pagina.cena || {};
         const c = cena.cartoes || {};
         const onde = (o) => `página ${i}: ${o}`;
+        add(pagina.comandoAtividade, onde('instrução da atividade'));
+        add(c.comando, onde('instrução da atividade'));
         add(cena.alt, onde('descrição da ilustração (leitor de tela)'));
         add(cena.legendaReal, onde('selo da Lente da Realidade'));
         add(cena.legendaImag, onde('selo da Lente da Imaginação'));

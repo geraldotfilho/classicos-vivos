@@ -101,6 +101,10 @@ Everyone looked at one another, amazed at how wise that dreamy knight was. The p
         }
     ],
     textos: {
+        "Abra a mala velha achada na serra: toque no caderno de poesias e nas moedas de ouro!": "Open the old suitcase found on the mountain: tap the poetry notebook and the gold coins!",
+        "Toque na cambalhota para ver as piruetas heroicas de Dom Quixote na montanha!": "Tap the somersault to see Don Quixote’s heroic somersaults on the mountain!",
+        "Ajude Sancho a assinar a carta de amor: toque nas palavras na ordem certa para formar O CAVALEIRO DA TRISTE FIGURA!": "Help Sancho sign the love letter: tap the words in the right order to form THE KNIGHT OF THE SORROWFUL FACE!",
+        "Dom Quixote sonha que enfrenta um gigante: toque na espada para furar os odres de vinho!": "Don Quixote dreams he is facing a giant: tap the sword to pierce the wineskins!",
         'Dom Quixote e Sancho sobem uma trilha entre as montanhas rochosas da Serra Morena': 'Don Quixote and Sancho climb a path in the rocky mountains of the Sierra Morena',
         '👓 Lente da Realidade: A Trilha da Serra Morena': '👓 Reality Lens: The Mountain Path',
         '✨ Lente da Imaginação: As Montanhas de um Reino Encantado!': '✨ Imagination Lens: The Mountains of a Magic Kingdom!',

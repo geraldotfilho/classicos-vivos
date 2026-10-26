@@ -766,14 +766,26 @@ function urlPalavra(slugPalavra) {
 
 /* Toca um áudio gravado (a partir de `inicio` segundos); rejeita se o arquivo não existir (aí entra a voz do aparelho) */
 function tocarGravacao(src, inicio = 0) {
+    pararGravacao();
     return new Promise((resolve, reject) => {
-        narrador.onended = () => resolve();
-        narrador.onerror = () => reject(new Error('sem gravação'));
+        narrador.onended = () => {
+            pararGravacao();
+            resolve();
+        };
+        narrador.onerror = () => {
+            pararGravacao();
+            reject(new Error('sem gravação'));
+        };
         narrador.onloadedmetadata = inicio ? () => { narrador.currentTime = inicio; } : null;
         narrador.src = src;
         narrador.playbackRate = VELOCIDADES[velocidade].gravada;
         const tentativa = narrador.play();
-        if (tentativa && tentativa.catch) tentativa.catch(reject);
+        if (tentativa && tentativa.catch) {
+            tentativa.catch(e => {
+                pararGravacao();
+                reject(e);
+            });
+        }
     });
 }
 
@@ -781,7 +793,9 @@ function pararGravacao() {
     narrador.onended = null;
     narrador.onerror = null;
     narrador.onloadedmetadata = null;
-    narrador.pause();
+    try {
+        narrador.pause();
+    } catch (e) {}
 }
 
 /* Fala um texto com a voz do aparelho; resolve ao terminar.
@@ -1296,12 +1310,18 @@ function lerPagina(inicio = 0) {
 
     const falhou = () => { if (session === readingSession) stopReadingPage(); };
     // Pequena pausa entre as frases para respeitar o ritmo da leitura
-    const proxima = (i) => () => { if (session === readingSession) setTimeout(() => speakSentence(i + 1), voz ? 150 : 250); };
+    const proxima = (i) => () => {
+        if (session === readingSession) {
+            pararGravacao();
+            setTimeout(() => speakSentence(i + 1), voz ? 150 : 250);
+        }
+    };
 
     const speakSentence = (i) => {
         if (session !== readingSession) return;
         clearSentenceHighlight();
         if (i >= sentences.length) {
+            pararGravacao();
             setReadingPageUI(false);
             return;
         }
@@ -1388,6 +1408,7 @@ function lerPaginaInteira(voz, gravada, sentences, session, inicio, reserva) {
     tocar.then(() => {
         cancelAnimationFrame(quadro);
         if (session !== readingSession) return;
+        pararGravacao();
         clearSentenceHighlight();
         setReadingPageUI(false);
     }, () => {
@@ -1803,7 +1824,12 @@ function triggerCardInteraction(card, coords) {
             st.ultimo = id;
             playSound(item.som || 'wordPop');
             lensImaginationState[i] = false;
-            renderScene(i).then(() => { if (todosUsados(i)) inviteImagination(i); });
+            renderScene(i).then(() => {
+                if (todosUsados(i)) {
+                    playSound('fanfare');
+                    inviteImagination(i);
+                }
+            });
             break;
         }
         case 'camadas': {

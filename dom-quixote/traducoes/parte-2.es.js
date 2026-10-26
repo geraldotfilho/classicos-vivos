@@ -106,6 +106,10 @@
         }
     ],
     textos: {
+        "Ajude a preparar o lanche dos pastores: toque nas bolotas doces, no queijo fresco e no leite quentinho!": "¡Ayuda a preparar la merienda de los pastores: toca las bellotas dulces, el queso fresco y la leche calentita!",
+        "Sopre a nuvem de poeira para descobrir o que está escondido no caminho!": "¡Sopla la nube de polvo para descubrir qué se esconde en el camino!",
+        "Ajude Sancho a contar as cabrinhas que atravessam o rio no barquinho, uma por uma!": "¡Ayuda a Sancho a contar las cabritas que cruzan el río en la barca, una por una!",
+        "Toque no sol nascente para iluminar o rio e desvendar o mistério dos barulhos da noite!": "¡Toca el sol naciente para iluminar el río y resolver el misterio de los ruidos de la noche!",
         'Dom Quixote e Sancho Pança na estrada, com um rebanho de ovelhas ao longe': 'Don Quijote y Sancho Panza en el camino, con un rebaño de ovejas a lo lejos',
         '👓 Lente da Realidade: Dois Amigos na Estrada Poeirenta': '👓 Lente de la Realidad: Dos amigos en el camino polvoriento',
         '✨ Lente da Imaginação: O Cavaleiro do Elmo de Ouro!': '✨ Lente de la Imaginación: ¡El Caballero del Yelmo de Oro!',

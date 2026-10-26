@@ -31,6 +31,59 @@
             box-shadow: 0 20px 50px -12px rgba(0, 0, 0, 0.7), 0 0 0 4px #78350F;
         }
 
+        .btn-round {
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+            box-shadow: 0 4px 0 rgba(0, 0, 0, 0.35);
+        }
+        .btn-round:active {
+            transform: translateY(3px);
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
+        }
+
+        /* Abas estilizadas e acolhedoras com touch targets >= 48px */
+        .tabs-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            border-bottom: 2px solid #FDE68A;
+            padding-bottom: 12px;
+        }
+        .tab-btn {
+            min-height: 48px;
+            padding: 10px 16px;
+            border-radius: 16px;
+            border: 2px solid #FCD34D;
+            background: #FEF3C7;
+            color: #78350F;
+            font-family: 'Fredoka', sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            outline: none;
+        }
+        .tab-btn:hover {
+            background: #FDE68A;
+            border-color: #F59E0B;
+        }
+        .tab-btn:focus-visible {
+            outline: 3px solid #D97706;
+            outline-offset: 2px;
+        }
+        .tab-btn:active {
+            transform: scale(0.97);
+        }
+        .tab-btn.tab-ativo {
+            background: #F59E0B;
+            border-color: #B45309;
+            color: #451A03;
+            font-weight: 700;
+            box-shadow: 0 4px 10px -2px rgba(180, 83, 9, 0.35);
+        }
+
         /* Bandeirinhas dos idiomas */
         .btn-idioma {
             width: 34px;
@@ -67,8 +120,9 @@
 </head>
 <body data-pagina="sobre" class="flex flex-col items-center px-4 py-5 sm:py-8">
 
-    <main class="paper w-full max-w-3xl rounded-[28px] p-5 sm:p-8 space-y-7">
+    <main class="paper w-full max-w-3xl rounded-[28px] p-5 sm:p-8 space-y-6">
 
+        <!-- Cabeçalho -->
         <header class="flex flex-wrap items-center justify-between gap-3">
             <div>
                 <p class="font-display font-semibold text-amber-700 text-sm uppercase tracking-wider" data-i18n="paraPais">Para pais, mães e educadores</p>
@@ -77,103 +131,285 @@
             <div class="flex items-center gap-2">
                 <!-- Seletor de Idiomas -->
                 <div id="seletor-idiomas" data-icon-path="./assets/icones/"></div>
-                <a href="./index.html" class="shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-amber-400 border-2 border-amber-600 text-amber-950 text-xl sm:text-2xl flex items-center justify-center shadow" aria-label="Voltar para a biblioteca" title="Voltar para a biblioteca" data-i18n-aria="voltarBiblioteca" data-i18n-title="voltarBiblioteca">
+                <a href="./index.html" class="shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-amber-400 border-2 border-amber-600 text-amber-950 text-xl sm:text-2xl flex items-center justify-center shadow min-h-[48px] min-w-[48px]" aria-label="Voltar para a biblioteca" title="Voltar para a biblioteca" data-i18n-aria="voltarBiblioteca" data-i18n-title="voltarBiblioteca">
                     <i class="ph-bold ph-books"></i>
                 </a>
             </div>
         </header>
 
-        <section class="space-y-2">
-            <p class="text-base sm:text-lg font-semibold leading-relaxed" data-i18n-html="introSobre">
-                Uma biblioteca aberta de livros digitais interativos que aproxima crianças em fase de
-                alfabetização e letramento (<strong>5 a 8 anos</strong>) das grandes obras da literatura
-                universal, com ilustrações em aquarela, narração em português e interações pensadas
-                para o toque no tablet.
-            </p>
-        </section>
+        <!-- Barra de Navegação por Abas -->
+        <nav class="tabs-nav" role="tablist" aria-label="Seções informativas sobre o Clássicos Vivos">
+            <button type="button" role="tab" id="tab-btn-proposta" data-aba-alvo="proposta" aria-controls="tab-painel-proposta" aria-selected="true" class="tab-btn tab-ativo">
+                <i class="ph-bold ph-books"></i>
+                <span data-i18n="abaProposta">Proposta & Como Funciona</span>
+            </button>
+            <button type="button" role="tab" id="tab-btn-receita" data-aba-alvo="receita" aria-controls="tab-painel-receita" aria-selected="false" class="tab-btn">
+                <i class="ph-bold ph-music-notes"></i>
+                <span data-i18n="abaReceita">A Nossa Receita</span>
+            </button>
+            <button type="button" role="tab" id="tab-btn-acervo" data-aba-alvo="acervo" aria-controls="tab-painel-acervo" aria-selected="false" class="tab-btn">
+                <i class="ph-bold ph-eye"></i>
+                <span data-i18n="abaAcervo">Acervo & Produção</span>
+            </button>
+            <button type="button" role="tab" id="tab-btn-quemfaz" data-aba-alvo="quemfaz" aria-controls="tab-painel-quemfaz" aria-selected="false" class="tab-btn">
+                <i class="ph-bold ph-info"></i>
+                <span data-i18n="abaQuemFaz">Quem Faz & Contato</span>
+            </button>
+        </nav>
 
-        <section class="space-y-3">
-            <h2 class="font-display font-bold text-2xl text-amber-900" data-i18n="comoAjudam">Como os livros ajudam a ler</h2>
-            <ul id="lista-beneficios" class="grid sm:grid-cols-2 gap-3">
-                <li class="bg-amber-50 border-2 border-amber-300 rounded-2xl p-3">
-                    <h3 class="font-display font-bold text-amber-900">🗣️ Palavras em destaque</h3>
-                    <p class="text-sm font-semibold">Tocar numa PALAVRA MAIÚSCULA abre um cartão com a palavra separada em sílabas e a pronúncia em voz alta.</p>
-                </li>
-                <li class="bg-amber-50 border-2 border-amber-300 rounded-2xl p-3">
-                    <h3 class="font-display font-bold text-amber-900">🔊 Leitura guiada</h3>
-                    <p class="text-sm font-semibold">"Ouvir Página" narra o texto frase por frase, destacando a frase lida para a criança acompanhar.</p>
-                </li>
-                <li class="bg-amber-50 border-2 border-amber-300 rounded-2xl p-3">
-                    <h3 class="font-display font-bold text-amber-900">👓 Duas lentes</h3>
-                    <p class="text-sm font-semibold">Cada cena pode ser vista como ela é (Realidade) ou como Dom Quixote a imagina (Imaginação). O texto não muda: muda o olhar.</p>
-                </li>
-                <li class="bg-amber-50 border-2 border-amber-300 rounded-2xl p-3">
-                    <h3 class="font-display font-bold text-amber-900">👆 Interações com sentido</h3>
-                    <p class="text-sm font-semibold">Vestir o cavaleiro, alimentar o Rocinante, soprar o vento: cada toque transforma a ilustração, sem competir com a leitura.</p>
-                </li>
-            </ul>
-        </section>
+        <!-- ABA 1: PROPOSTA & COMO FUNCIONA -->
+        <div id="tab-painel-proposta" role="tabpanel" aria-labelledby="tab-btn-proposta" class="space-y-6">
+            <section class="space-y-2">
+                <p class="text-base sm:text-lg font-semibold leading-relaxed text-slate-800" data-i18n-html="introSobre">
+                    Uma biblioteca aberta de livros digitais interativos que aproxima crianças em fase de
+                    alfabetização e letramento (<strong>5 a 8 anos</strong>) das grandes obras da literatura
+                    universal, com ilustrações em aquarela, narração em português e interações pensadas
+                    para o toque no tablet.
+                </p>
+            </section>
 
-        <section class="space-y-3">
-            <h2 class="font-display font-bold text-2xl text-amber-900" data-i18n="acervoTitulo">Acervo</h2>
-            <div class="flex flex-col sm:flex-row gap-4 bg-amber-50 border-2 border-amber-300 rounded-2xl p-3">
-                <img src="./dom-quixote/imagens/p0-real.webp" alt="Dom Quixote e Sancho Pança" class="w-full sm:w-48 aspect-[16/9] sm:aspect-square object-cover rounded-xl border-2 border-amber-400" />
-                <div class="space-y-1">
-                    <h3 class="font-display font-bold text-xl text-amber-950"><span data-i18n="shelfQuixote">Dom Quixote de La Mancha</span> <span class="text-amber-700 text-base" data-i18n="autorQuixote">· Miguel de Cervantes</span></h3>
-                    <p class="text-sm font-semibold leading-relaxed" data-i18n-html="p1Desc">
-                        <strong>Parte 1: O Cavaleiro da Super Imaginação</strong> (8 páginas): o fidalgo leitor,
-                        a armadura do bisavô, Rocinante e Dulcineia, a pousada-castelo, a sagração sob a lua cheia,
-                        o escudeiro Sancho Pança e o duelo contra os moinhos-gigantes.
-                    </p>
-                    <p class="text-sm font-semibold leading-relaxed" data-i18n-html="p2Desc">
-                        <strong>Parte 2: Exércitos de Lã e o Elmo Encantado</strong>: a carga contra os gigantes e o tombo nos moinhos, a lança de carvalho, os pastores e a Idade de Ouro,
-                        a batalha das ovelhas, o Cavaleiro da Triste Figura, as cabras que atravessam o rio e o elmo de Mambrino.
-                    </p>
-                    <p class="text-sm font-semibold leading-relaxed" data-i18n-html="p3Desc">
-                        <strong>Parte 3: Serra Morena e a Princesa Micomicona</strong>: a mala perdida, as cambalhotas, a carta para Dulcineia,
-                        os amigos disfarçados, a princesa Micomicona, a batalha dos odres e o discurso das armas e das letras.
-                    </p>
-                    <p class="text-sm font-semibold leading-relaxed" data-i18n-html="p4Desc">
-                        <strong>Parte 4: O Elmo, a Bacia e a Jaula Encantada</strong>: o bacielmo, a jaula que vira carruagem de magos,
-                        o piquenique de Sancho, o Cavaleiro do Lago, a cabra fujona, a romaria e a volta para casa.
-                    </p>
-                    <p class="text-sm font-semibold text-emerald-800" data-i18n="todasIlustradas">O primeiro volume de Dom Quixote (Partes 1 a 4) está todo ilustrado e interativo. O segundo volume está em produção.</p>
+            <section class="space-y-3">
+                <h2 class="font-display font-bold text-2xl text-amber-900" data-i18n="comoAjudam">Como os livros ajudam a ler</h2>
+                <ul id="lista-beneficios" class="grid sm:grid-cols-2 gap-3">
+                    <li class="bg-amber-50 border-2 border-amber-300 rounded-2xl p-3">
+                        <h3 class="font-display font-bold text-amber-900">🗣️ Palavras em destaque</h3>
+                        <p class="text-sm font-semibold">Tocar numa PALAVRA MAIÚSCULA abre um cartão com a palavra separada em sílabas e a pronúncia em voz alta.</p>
+                    </li>
+                    <li class="bg-amber-50 border-2 border-amber-300 rounded-2xl p-3">
+                        <h3 class="font-display font-bold text-amber-900">🔊 Leitura guiada</h3>
+                        <p class="text-sm font-semibold">"Ouvir Página" narra o texto frase por frase, destacando a frase lida para a criança acompanhar.</p>
+                    </li>
+                    <li class="bg-amber-50 border-2 border-amber-300 rounded-2xl p-3">
+                        <h3 class="font-display font-bold text-amber-900">👓 Duas lentes</h3>
+                        <p class="text-sm font-semibold">Cada cena pode ser vista como ela é (Realidade) ou como Dom Quixote a imagina (Imaginação). O texto não muda: muda o olhar.</p>
+                    </li>
+                    <li class="bg-amber-50 border-2 border-amber-300 rounded-2xl p-3">
+                        <h3 class="font-display font-bold text-amber-900">👆 Interações com sentido</h3>
+                        <p class="text-sm font-semibold">Vestir o cavaleiro, alimentar o Rocinante, soprar o vento: cada toque transforma a ilustração, sem competir com a leitura.</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="space-y-3">
+                <h2 class="font-display font-bold text-2xl text-amber-900" data-i18n="comoUsarTitulo">Como usar no tablet</h2>
+                <ul id="lista-como-usar" class="list-disc pl-6 space-y-1.5 text-sm sm:text-base font-semibold text-slate-700">
+                    <li>Funciona <strong>sem internet</strong>: depois da primeira visita, o navegador guarda os livros. No Chrome Android, use <em>"Adicionar à tela inicial"</em> para abrir como aplicativo, em tela cheia.</li>
+                    <li>Toque em <strong>🗣️ Voz</strong>, no topo do livro, para escolher quem lê: a <strong>narração gravada</strong> (quando disponível) ou uma das vozes do aparelho, e a velocidade (normal ou devagar). A escolha fica guardada no tablet.</li>
+                    <li><strong>Toque numa frase</strong> do texto para a narração começar por ela. O botão <strong>Aa</strong> mostra o texto todo em <strong>LETRAS MAIÚSCULAS</strong> (as letras de forma ajudam quem está começando a ler sozinho).</li>
+                    <li>As <strong>bandeirinhas</strong> no topo trocam o idioma do texto: português (original), inglês, francês e espanhol. O idioma escolhido fica gravado e vale para toda a biblioteca.</li>
+                    <li>Botão <strong>🔄 Recomeçar</strong>: cada página tem um botão para reiniciar as interações e brincadeiras daquela página específica.</li>
+                    <li>Melhor experiência em tablets (retrato ou paisagem). Também funciona no celular e no computador.</li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- ABA 2: A NOSSA RECEITA DE ADAPTAÇÃO -->
+        <div id="tab-painel-receita" role="tabpanel" aria-labelledby="tab-btn-receita" class="hidden space-y-6">
+            <section class="space-y-2">
+                <h2 class="font-display font-bold text-2xl sm:text-3xl text-amber-950" data-i18n="receitaTitulo">A Nossa Receita de Adaptação</h2>
+                <p class="text-base sm:text-lg font-semibold leading-relaxed text-slate-800" data-i18n="receitaIntro">
+                    Como transformar as maiores obras-primas da literatura universal em livros digitais interativos, acolhedores e formativos para crianças de 5 a 8 anos (com leitor de referência de 6 anos). Nossa receita geral vale para qualquer clássico:
+                </p>
+            </section>
+
+            <!-- Os 5 Pilares Fundamentais -->
+            <section class="space-y-3">
+                <ul id="lista-pilares" class="space-y-3">
+                    <!-- Preenchido dinamicamente por i18n-site.js (d.pilares) -->
+                    <li class="bg-amber-50 border-2 border-amber-300 rounded-2xl p-4 space-y-1">
+                        <h3 class="font-display font-bold text-amber-950 text-base sm:text-lg">🏛️ Fidelidade ao espírito e essência do clássico</h3>
+                        <p class="text-sm font-semibold text-slate-700 leading-relaxed">Não descaracterizamos a força poética, os arcos narrativos fundamentais ou os dilemas morais do autor original. Resumimos e selecionamos episódios com cuidado para que o fio da história nunca se perca.</p>
+                    </li>
+                    <li class="bg-amber-50 border-2 border-amber-300 rounded-2xl p-4 space-y-1">
+                        <h3 class="font-display font-bold text-amber-950 text-base sm:text-lg">🛡️ Proteção da infância</h3>
+                        <p class="text-sm font-semibold text-slate-700 leading-relaxed">Removemos violência explícita, crueldade física ou moral, humilhação usada como piada, preconceitos e medo gratuito. Preservamos o conflito ético e o perigo simbólico necessários ao amadurecimento, mas de forma segura e saudável.</p>
+                    </li>
+                    <li class="bg-amber-50 border-2 border-amber-300 rounded-2xl p-4 space-y-1">
+                        <h3 class="font-display font-bold text-amber-950 text-base sm:text-lg">📏 Adequação de ritmo e linguagem (leitor de 6 anos)</h3>
+                        <p class="text-sm font-semibold text-slate-700 leading-relaxed">Frases em ordem direta, ritmo leve e parágrafos curtos. Vocabulário acolhedor com palavras-chave destacadas para apoiar a alfabetização fonética e o letramento.</p>
+                    </li>
+                    <li class="bg-amber-50 border-2 border-amber-300 rounded-2xl p-4 space-y-1">
+                        <h3 class="font-display font-bold text-amber-950 text-base sm:text-lg">🎯 Gamificação literária com propósito</h3>
+                        <p class="text-sm font-semibold text-slate-700 leading-relaxed">Toda interação nasce do enredo e transforma a cena. Sem placares, cronômetros, vidas perdidas ou advertências em vermelho: a brincadeira ensina, engaja e alfabetiza sem dispersar.</p>
+                    </li>
+                    <li class="bg-amber-50 border-2 border-amber-300 rounded-2xl p-4 space-y-1">
+                        <h3 class="font-display font-bold text-amber-950 text-base sm:text-lg">🛑 Paradas de aprovação e escuta real</h3>
+                        <p class="text-sm font-semibold text-slate-700 leading-relaxed">Cada capítulo e cada atividade são lidos e experimentados no tablet por um pai com seu filho antes de qualquer publicação definitiva.</p>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Card de Transparência Linguística e Convite a Leitores Nativos -->
+            <section class="bg-amber-50/90 border-2 border-amber-400 rounded-2xl p-4 sm:p-6 space-y-3 shadow-sm">
+                <div class="flex items-center gap-2.5">
+                    <span class="text-2xl sm:text-3xl" aria-hidden="true">🌍</span>
+                    <h3 class="font-display font-bold text-xl sm:text-2xl text-amber-950" data-i18n="transparenciaTitulo">Transparência de Idiomas & Convite aos Leitores Nativos</h3>
                 </div>
-            </div>
-        </section>
+                <div class="text-sm sm:text-base font-semibold text-slate-700 space-y-2.5" data-i18n-html="transparenciaTexto">
+                    <p class="leading-relaxed">Todos os textos da biblioteca são <strong>criados e lapidados originalmente em língua portuguesa</strong> pelo criador do projeto, passando por minuciosa revisão artesanal até chegarem à versão final definitiva.</p>
+                    <p class="leading-relaxed">Apenas após essa consolidação em português, os livros são traduzidos com o suporte de agentes avançados de inteligência artificial para os demais idiomas (inglês, espanhol e francês).</p>
+                    <p class="leading-relaxed bg-amber-100/90 border border-amber-300 rounded-xl p-3 text-amber-950 font-semibold">Convidamos carinhosamente pais, mães e educadores nativos desses idiomas a <strong>lerem as histórias antes de apresentá-las às crianças</strong> e colaborarem reportando qualquer detalhe, sutileza cultural ou inconsistência de tradução!</p>
+                </div>
+            </section>
+        </div>
 
-        <!-- Livros em produção: a chave (lembrada no aparelho, cv-rascunhos) mostra a lista de assets/js/acervo.js;
-             os rascunhos só se abrem por aqui. Na estante das crianças eles aparecem só como teaser com cadeado. -->
-        <section id="secao-rascunhos" class="space-y-3">
-            <h2 class="font-display font-bold text-2xl text-amber-900" data-i18n="rascunhosTitulo">Livros em produção</h2>
-            <p class="text-sm font-semibold leading-relaxed" data-i18n="rascunhosIntro">Na estante, os livros em produção aparecem com um cadeado. Para ler os rascunhos (por exemplo, para revisar o texto antes da publicação), ligue a chave abaixo. Rascunhos podem ter texto provisório e ilustrações a caminho.</p>
-            <label class="inline-flex items-center gap-3 cursor-pointer select-none bg-amber-50 border-2 border-amber-300 rounded-2xl px-4 py-2.5 min-h-[48px]">
-                <input id="chave-rascunhos" type="checkbox" class="peer sr-only">
-                <span class="relative w-12 h-7 rounded-full bg-slate-300 peer-checked:bg-emerald-500 transition-colors after:content-[''] after:absolute after:top-1 after:left-1 after:w-5 after:h-5 after:rounded-full after:bg-white after:shadow after:transition-transform peer-checked:after:translate-x-5" aria-hidden="true"></span>
-                <span class="font-display font-semibold text-amber-950" data-i18n="rascunhosToggle">Mostrar os rascunhos</span>
-            </label>
-            <ul id="lista-rascunhos" class="hidden space-y-2"></ul>
-        </section>
+        <!-- ABA 3: ACERVO & OBRAS EM PRODUÇÃO -->
+        <div id="tab-painel-acervo" role="tabpanel" aria-labelledby="tab-btn-acervo" class="hidden space-y-6">
+            <section class="space-y-3">
+                <h2 class="font-display font-bold text-2xl text-amber-900" data-i18n="acervoTitulo">Acervo</h2>
+                <div class="flex flex-col sm:flex-row gap-4 bg-amber-50 border-2 border-amber-300 rounded-2xl p-4">
+                    <img src="./dom-quixote/imagens/p0-real.webp" alt="Dom Quixote e Sancho Pança" class="w-full sm:w-48 aspect-[16/9] sm:aspect-square object-cover rounded-xl border-2 border-amber-400" />
+                    <div class="space-y-1.5">
+                        <h3 class="font-display font-bold text-xl text-amber-950"><span data-i18n="shelfQuixote">Dom Quixote de La Mancha</span> <span class="text-amber-700 text-base" data-i18n="autorQuixote">· Miguel de Cervantes</span></h3>
+                        <p class="text-sm font-semibold leading-relaxed text-slate-700" data-i18n-html="p1Desc">
+                            <strong>Parte 1: O Cavaleiro da Super Imaginação</strong> (8 páginas): o fidalgo leitor,
+                            a armadura do bisavô, Rocinante e Dulcineia, a pousada-castelo, a sagração sob a lua cheia,
+                            o escudeiro Sancho Pança e o duelo contra os moinhos-gigantes.
+                        </p>
+                        <p class="text-sm font-semibold leading-relaxed text-slate-700" data-i18n-html="p2Desc">
+                            <strong>Parte 2: Exércitos de Lã e o Elmo Encantado</strong>: a carga contra os gigantes e o tombo nos moinhos, a lança de carvalho, os pastores e a Idade de Ouro,
+                            a batalha das ovelhas, o Cavaleiro da Triste Figura, as cabras que atravessam o rio e o elmo de Mambrino.
+                        </p>
+                        <p class="text-sm font-semibold leading-relaxed text-slate-700" data-i18n-html="p3Desc">
+                            <strong>Parte 3: Serra Morena e a Princesa Micomicona</strong>: a mala perdida, as cambalhotas, a carta para Dulcineia,
+                            os amigos disfarçados, a princesa Micomicona, a batalha dos odres e a volta à pousada.
+                        </p>
+                        <p class="text-sm font-semibold leading-relaxed text-slate-700" data-i18n-html="p4Desc">
+                            <strong>Parte 4: O Elmo, a Bacia e a Jaula Encantada</strong>: o bacielmo, a jaula que vira carruagem de magos,
+                            o piquenique de Sancho, o Cavaleiro do Lago, a cabra fujona, a romaria e a volta para casa.
+                        </p>
+                        <p class="text-sm font-semibold text-emerald-800 pt-1" data-i18n="todasIlustradas">O primeiro volume de Dom Quixote (Partes 1 a 4) está todo ilustrado e interativo. O segundo volume está em produção.</p>
+                    </div>
+                </div>
+            </section>
 
-        <section class="space-y-3">
-            <h2 class="font-display font-bold text-2xl text-amber-900" data-i18n="comoUsarTitulo">Como usar no tablet</h2>
-            <ul id="lista-como-usar" class="list-disc pl-6 space-y-1.5 text-sm sm:text-base font-semibold">
-                <li>Funciona <strong>sem internet</strong>: depois da primeira visita, o navegador guarda os livros. No Chrome Android, use <em>"Adicionar à tela inicial"</em> para abrir como aplicativo, em tela cheia.</li>
-                <li>Toque em <strong>🗣️ Voz</strong>, no topo do livro, para escolher quem lê: a <strong>narração gravada</strong> (quando disponível) ou uma das vozes do aparelho, e a velocidade (normal ou devagar). A escolha fica guardada no tablet.</li>
-                <li><strong>Toque numa frase</strong> do texto para a narração começar por ela. O botão <strong>Aa</strong> mostra o texto todo em <strong>LETRAS MAIÚSCULAS</strong> (as letras de forma ajudam quem está começando a ler sozinho).</li>
-                <li>As <strong>bandeirinhas</strong> no topo trocam o idioma do texto: português (original), inglês, francês e espanhol. O idioma escolhido fica gravado e vale para toda a biblioteca.</li>
-                <li>Botão <strong>🔄 Recomeçar</strong>: cada página tem um botão para reiniciar as interações e brincadeiras daquela página específica.</li>
-                <li>Melhor experiência em tablets (retrato ou paisagem). Também funciona no celular e no computador.</li>
-            </ul>
-        </section>
+            <!-- Livros em produção: chave cv-rascunhos e lista de acervo.js -->
+            <section id="secao-rascunhos" class="space-y-3">
+                <h2 class="font-display font-bold text-2xl text-amber-900" data-i18n="rascunhosTitulo">Livros em produção</h2>
+                <p class="text-sm font-semibold leading-relaxed text-slate-700" data-i18n="rascunhosIntro">Na estante, os livros em produção aparecem com um cadeado. Para ler os rascunhos (por exemplo, para revisar o texto antes da publicação), ligue a chave abaixo. Rascunhos podem ter texto provisório e ilustrações a caminho.</p>
+                <label class="inline-flex items-center gap-3 cursor-pointer select-none bg-amber-50 border-2 border-amber-300 rounded-2xl px-4 py-2.5 min-h-[48px]">
+                    <input id="chave-rascunhos" type="checkbox" class="peer sr-only">
+                    <span class="relative w-12 h-7 rounded-full bg-slate-300 peer-checked:bg-emerald-500 transition-colors after:content-[''] after:absolute after:top-1 after:left-1 after:w-5 after:h-5 after:rounded-full after:bg-white after:shadow after:transition-transform peer-checked:after:translate-x-5" aria-hidden="true"></span>
+                    <span class="font-display font-semibold text-amber-950" data-i18n="rascunhosToggle">Mostrar os rascunhos</span>
+                </label>
+                <ul id="lista-rascunhos" class="hidden space-y-2"></ul>
+            </section>
+        </div>
 
-        <section class="space-y-2 text-sm font-semibold text-slate-600 border-t-2 border-amber-200 pt-4">
-            <p data-i18n-html="licenca1">Projeto aberto e gratuito. Código sob licença MIT; textos adaptados e ilustrações sob CC BY 4.0, livres para uso em escolas mantendo o crédito ao <strong>Clássicos Vivos</strong>.</p>
-            <p data-i18n-html="licenca2">Sugestões e contribuições: <a class="text-indigo-700 underline" href="https://github.com/geraldotfilho/classicos-vivos">github.com/geraldotfilho/classicos-vivos</a></p>
-        </section>
+        <!-- ABA 4: QUEM FAZ & CONTATO -->
+        <div id="tab-painel-quemfaz" role="tabpanel" aria-labelledby="tab-btn-quemfaz" class="hidden space-y-6">
+            <section class="space-y-4">
+                <h2 class="font-display font-bold text-2xl sm:text-3xl text-amber-950" data-i18n="quemFazTitulo">Quem Faz o Clássicos Vivos</h2>
+
+                <!-- Apresentação do Criador -->
+                <blockquote class="bg-amber-100/90 border-l-4 border-amber-600 rounded-r-2xl p-4 sm:p-5 text-amber-950 font-bold text-base sm:text-lg leading-relaxed shadow-sm italic" data-i18n="geraldoCitacao">
+                    “Geraldo Travassos — pernambucano orgulhoso, pai apaixonado, faminto por conhecimento, amante dos livros, fã da ciência, defensor de uma educação respeitosa e entusiasta da tecnologia.”
+                </blockquote>
+
+                <p class="text-sm sm:text-base font-semibold text-slate-700 leading-relaxed" data-i18n="geraldoBio">
+                    O Clássicos Vivos nasceu de forma afetiva e artesanal: do desejo de um pai em aproximar seu filho dos maiores tesouros da literatura mundial de um jeito vivo, acolhedor e contemporâneo. Ao notar que os clássicos costumam ficar distantes dos pequenos pela linguagem arcaica ou pela violência desnecessária, Geraldo uniu o amor pelos livros e pela tecnologia para criar uma biblioteca viva, acolhedora e acessível a qualquer família.
+                </p>
+            </section>
+
+            <!-- Canais de Contato e Contribuição -->
+            <section class="bg-amber-50 border-2 border-amber-300 rounded-2xl p-5 space-y-4">
+                <div class="flex items-center gap-2.5">
+                    <span class="text-2xl sm:text-3xl" aria-hidden="true">📬</span>
+                    <h3 class="font-display font-bold text-xl sm:text-2xl text-amber-950" data-i18n="contatoTitulo">Canais de Contato e Contribuição</h3>
+                </div>
+
+                <div class="space-y-3">
+                    <p class="text-sm sm:text-base font-semibold text-slate-700" data-i18n="contatoGithubTexto">
+                        O canal preferencial para dúvidas, sugestões, colaborações e reporte de traduções é direto pelo repositório no GitHub, abrindo uma Issue ou Discussão:
+                    </p>
+
+                    <div>
+                        <a href="https://github.com/geraldotfilho/classicos-vivos/issues" target="_blank" rel="noopener noreferrer" class="btn-round inline-flex items-center gap-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-display font-bold text-sm sm:text-base px-5 py-3 rounded-2xl border-2 border-indigo-800 shadow min-h-[48px] cursor-pointer">
+                            <i class="ph-bold ph-info text-xl"></i>
+                            <span data-i18n="contatoGithubBtn">Abrir uma Issue no GitHub</span>
+                            <i class="ph-bold ph-arrow-right text-base"></i>
+                        </a>
+                    </div>
+
+                    <div class="pt-2 border-t border-amber-200">
+                        <p class="text-sm sm:text-base font-semibold text-slate-700">
+                            <span data-i18n="contatoEmailTexto">Para contato pessoal, parcerias pedagógicas ou conversas sobre literatura e educação:</span>
+                            <a href="mailto:geraldotfilho@gmail.com" class="block sm:inline font-bold text-amber-900 underline hover:text-amber-700 mt-1 sm:mt-0 sm:ml-1">geraldotfilho@gmail.com</a>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Licenças e Filosofia Aberta -->
+            <section class="space-y-2 text-sm font-semibold text-slate-600 border-t-2 border-amber-200 pt-4">
+                <p data-i18n-html="licenca1">Projeto aberto e gratuito. Código sob licença MIT; textos adaptados e ilustrações sob CC BY 4.0, livres para uso em escolas mantendo o crédito ao <strong>Clássicos Vivos</strong>.</p>
+                <p data-i18n-html="licenca2">Sugestões e contribuições: <a class="text-indigo-700 underline" href="https://github.com/geraldotfilho/classicos-vivos/issues">github.com/geraldotfilho/classicos-vivos</a></p>
+            </section>
+        </div>
 
     </main>
 
+    <script>
+        /* Gerenciador de navegação por abas com acessibilidade ARIA */
+        function trocarAba(abaId) {
+            const abas = ['proposta', 'receita', 'acervo', 'quemfaz'];
+            if (!abas.includes(abaId)) abaId = 'proposta';
+
+            abas.forEach(id => {
+                const btn = document.getElementById(`tab-btn-${id}`);
+                const painel = document.getElementById(`tab-painel-${id}`);
+                const ativa = (id === abaId);
+
+                if (btn) {
+                    btn.setAttribute('aria-selected', String(ativa));
+                    btn.classList.toggle('tab-ativo', ativa);
+                    btn.tabIndex = ativa ? 0 : -1;
+                }
+                if (painel) {
+                    painel.classList.toggle('hidden', !ativa);
+                }
+            });
+
+            try {
+                history.replaceState(null, '', `#${abaId}`);
+            } catch (e) {}
+        }
+
+        // Delegação de cliques e navegação por teclado nas abas
+        document.querySelectorAll('[data-aba-alvo]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                trocarAba(btn.dataset.abaAlvo);
+            });
+            btn.addEventListener('keydown', (e) => {
+                const abas = ['proposta', 'receita', 'acervo', 'quemfaz'];
+                const atualIdx = abas.indexOf(btn.dataset.abaAlvo);
+                let proxIdx = -1;
+                if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+                    proxIdx = (atualIdx + 1) % abas.length;
+                } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+                    proxIdx = (atualIdx - 1 + abas.length) % abas.length;
+                } else if (e.key === 'Home') {
+                    proxIdx = 0;
+                } else if (e.key === 'End') {
+                    proxIdx = abas.length - 1;
+                }
+                if (proxIdx !== -1) {
+                    e.preventDefault();
+                    const proxId = abas[proxIdx];
+                    trocarAba(proxId);
+                    document.getElementById(`tab-btn-${proxId}`)?.focus();
+                }
+            });
+        });
+
+        // Inicialização de aba via hash na URL ou padrão
+        const hash = window.location.hash.replace('#', '');
+        if (['proposta', 'receita', 'acervo', 'quemfaz'].includes(hash)) {
+            trocarAba(hash);
+        } else {
+            trocarAba('proposta');
+        }
+    </script>
     <script src="./assets/js/acervo.js"></script>
     <script src="./assets/js/i18n-site.js"></script>
 </body>

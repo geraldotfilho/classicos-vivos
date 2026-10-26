@@ -10,6 +10,19 @@ import { Mp3Encoder } from '@breezystack/lamejs';
 const KBPS = 48;
 const MARGEM_MS = 80;
 const LIMIAR = 500; // amplitude (de 32767) abaixo da qual consideramos silêncio
+const FADE_MS = 10; // rampa suave de 10 ms nas pontas para eliminar cliques e ruído de corte
+
+function aplicarFade(amostras, taxa, duracaoMs = FADE_MS) {
+    const n = Math.min(Math.round(taxa * duracaoMs / 1000), Math.floor(amostras.length / 2));
+    if (n <= 0) return amostras;
+    const resultado = new Int16Array(amostras);
+    for (let i = 0; i < n; i++) {
+        const fator = 0.5 * (1 - Math.cos(Math.PI * i / n));
+        resultado[i] = Math.round(resultado[i] * fator);
+        resultado[resultado.length - 1 - i] = Math.round(resultado[resultado.length - 1 - i] * fator);
+    }
+    return resultado;
+}
 
 function lerWav(buf) {
     if (buf.toString('ascii', 0, 4) !== 'RIFF' || buf.toString('ascii', 8, 12) !== 'WAVE') throw new Error('não é WAV');
@@ -45,7 +58,8 @@ function aparar({ taxa, mono }) {
     while (ini < fim && Math.abs(mono[ini]) < LIMIAR) ini++;
     while (fim > ini && Math.abs(mono[fim]) < LIMIAR) fim--;
     const margem = Math.round(taxa * MARGEM_MS / 1000);
-    return mono.subarray(Math.max(0, ini - margem), Math.min(mono.length, fim + margem));
+    const cortado = mono.subarray(Math.max(0, ini - margem), Math.min(mono.length, fim + margem));
+    return aplicarFade(cortado, taxa);
 }
 
 function paraMp3(taxa, mono) {

@@ -145,3 +145,20 @@ O que já foi entregue, sprint a sprint, em ordem cronológica (o mais antigo pr
 - **Modo "esconder os botões"** (👁 no topo, lembrado no aparelho): as barras somem sozinhas e voltam com um toque nos controles flutuantes dos cantinhos de cima e de baixo.
 - **Contador no cantinho**: com os botões escondidos, o número da página e o % do livro lido aparecem discretos no canto inferior direito (pedido do humano).
 - Testado no Playwright em 1280 × 800, 800 × 1280 e 1865 × 892 (Partes 1, 3 e rascunho da 4; português e inglês).
+
+
+## ✅ Sprint 18 (Coleção expandida, abas e chiado de áudio resolvido, 2026-10-26)
+
+- **Lente da Imaginação como recompensa nas Partes 1 a 3 (Tarefa 1)**:
+  - Todas as páginas com atividades das Partes 1 a 3 ganharam o quadro com `comandoAtividade` e botão 🔊 para instrução audível da atividade.
+  - No motor (`assets/js/livro.js`), o tipo `variante` agora toca `playSound('fanfare')` ao concluir todos os itens antes de convidar à Imaginação (`inviteImagination`).
+  - As novas instruções foram traduzidas e validadas nos 9 arquivos de tradução (`traducoes/parte-{1,2,3}.{en,es,fr}.js`), passando com 0 erros no validador.
+- **Home page (`index.html`) e Sobre (`sobre.html`) (Tarefa 2)**:
+  - **Prateleira 1 com Coleção 3D Expandida**: substituída a antiga disparidade de livro gigante por uma caixa/boxset tridimensional elegante de Dom Quixote Volume 1 (1605). Ao tocar, expande-se suavemente em 4 capas com proporções 3/4 equilibradas, capas em aquarela, badges (Partes 1 a 4) e botão play, com botão para recolher e áudio procedural via Web Audio API.
+  - **Página de Adultos (`sobre.html`) estruturada em 4 abas**: Proposta & Como Funciona, A Nossa Receita de Adaptação, Acervo & Em Produção, Quem Faz & Contato.
+  - **Transparência de Adaptação e Idiomas**: receita generalista explicada; transparência de que os textos são criados em português, aprovados pelo autor e traduzidos com suporte de IA, com convite caloroso para leitura prévia por nativos e reporte de inconsistências.
+  - **Apresentação e Contato**: perfil de Geraldo Travassos com canal preferencial no GitHub (Issues) e e-mail pessoal. `i18n-site.js` atualizado nos 4 idiomas.
+- **Eliminação de Chiados e Estalos entre Frases (Tarefa 3)**:
+  - Chamada rigorosa de `pararGravacao()` ao término de cada frase, durante a pausa de 150/250 ms e no final da leitura no motor (`assets/js/livro.js`), eliminando vazamentos de ruído de buffer e estalos de DAC.
+  - Inclusão de rampas de atenuação Hann suaves (10 ms) em `tools/otimizar-audio.mjs` e `tools/gravar-narracao.mjs` nas bordas de corte e concatenação com silêncio.
+  - Suavização de 62 arquivos MP3 com corte abrupto no acervo. **Nenhum texto narrado foi alterado e o custo foi de US$ 0,00**.

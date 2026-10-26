@@ -120,6 +120,12 @@
       ]
     },
     {
+      "texto": "Toque nos três livros de Alonso para descobrir as aventuras de cavaleiros, castelos e dragões!",
+      "onde": [
+        "página 1: instrução da atividade"
+      ]
+    },
+    {
       "texto": "Sala de Leitura de Alonso Quixano",
       "onde": [
         "página 1: descrição da ilustração (leitor de tela)"
@@ -192,6 +198,12 @@
       ]
     },
     {
+      "texto": "Ajude o vovô Alonso a se equipar: toque nos itens na ordem certa para vestir a armadura, a bacia, o escudo e a lança!",
+      "onde": [
+        "página 2: instrução da atividade"
+      ]
+    },
+    {
       "texto": "Dom Quixote no Sótão",
       "onde": [
         "página 2: descrição da ilustração (leitor de tela)"
@@ -261,6 +273,12 @@
       ]
     },
     {
+      "texto": "Cuide com carinho do Rocinante: dê a maçã doce, a cenoura crocante e escove suas crinas!",
+      "onde": [
+        "página 3: instrução da atividade"
+      ]
+    },
+    {
       "texto": "Rocinante e Dulcineia",
       "onde": [
         "página 3: descrição da ilustração (leitor de tela)"
@@ -321,6 +339,12 @@
       "texto": "Tocar em Aldonza / Dulcineia",
       "onde": [
         "página 3: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "Toque na trombeta para ouvir a música do pastor e na sopa quentinha para se aquecer na pousada!",
+      "onde": [
+        "página 4: instrução da atividade"
       ]
     },
     {
@@ -411,6 +435,12 @@
       "texto": "Tocar em Dom Quixote",
       "onde": [
         "página 6: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "Toque no vento forte para fazer as pás dos moinhos girarem cada vez mais rápido!",
+      "onde": [
+        "página 7: instrução da atividade"
       ]
     },
     {
