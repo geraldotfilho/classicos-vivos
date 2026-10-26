@@ -168,6 +168,19 @@
                 </p>
             </section>
 
+            <!-- Aviso aos pais e responsáveis (o mesmo espírito do aviso que abre cada livro, livro.js: abrirPortao) -->
+            <section class="bg-amber-50/90 border-2 border-amber-400 rounded-2xl p-4 sm:p-6 space-y-3 shadow-sm">
+                <div class="flex items-center gap-2.5">
+                    <span class="text-2xl sm:text-3xl" aria-hidden="true">👨‍👩‍👧</span>
+                    <h2 class="font-display font-bold text-xl sm:text-2xl text-amber-950" data-i18n="avisoPaisTitulo">Aviso aos pais e responsáveis</h2>
+                </div>
+                <div class="text-sm sm:text-base font-semibold text-slate-700 space-y-2.5" data-i18n-html="avisoPaisTexto">
+                    <p class="leading-relaxed">Os livros foram feitos para a criança ler <strong>junto com um adulto</strong>. Recomendamos que você leia cada história antes (ou junto com a criança) e decida se ela combina com os valores da sua família. Na primeira vez que um livro é aberto no aparelho, um aviso pede a um adulto que o libere resolvendo uma conta, e escolha se libera só o português ou todos os idiomas.</p>
+                    <p class="leading-relaxed">Usamos inteligência artificial no texto, nas ilustrações e nas vozes, com revisão humana em português. <strong>As traduções foram feitas com IA e ainda não foram revisadas por falantes nativos</strong>: podem ter erros ou frases estranhas.</p>
+                    <p class="leading-relaxed">O Clássicos Vivos é um projeto pessoal e gratuito, oferecido como está, sem garantias. Os livros não coletam nenhum dado: o progresso da leitura fica só no próprio aparelho. Como o projeto é aberto, outras pessoas podem copiar e modificar os livros; a versão oficial é a publicada em <strong>geraldotfilho.github.io/classicos-vivos</strong>.</p>
+                </div>
+            </section>
+
             <section class="space-y-3">
                 <h2 class="font-display font-bold text-2xl text-amber-900" data-i18n="comoAjudam">Como os livros ajudam a ler</h2>
                 <ul id="lista-beneficios" class="grid sm:grid-cols-2 gap-3">
@@ -575,8 +588,19 @@
                 </div>
 
                 <div class="space-y-3">
-                    <p class="text-sm sm:text-base font-semibold text-slate-700" data-i18n="contatoGithubTexto">
-                        O canal preferencial para dúvidas, sugestões, colaborações e reporte de traduções é direto pelo repositório no GitHub, abrindo uma Issue ou Discussão:
+                    <p class="text-sm sm:text-base font-semibold text-slate-700" data-i18n="contatoFamiliasTexto">
+                        Encontrou um erro, uma tradução estranha ou algo que não parece adequado para crianças? Conte para nós por e-mail (se puder, diga o livro, a parte, a página e o idioma):
+                    </p>
+
+                    <div>
+                        <a href="mailto:geraldotfilho@gmail.com?subject=Cl%C3%A1ssicos%20Vivos%3A%20problema%20num%20livro" class="btn-round inline-flex items-center gap-2.5 bg-amber-600 hover:bg-amber-700 text-white font-display font-bold text-sm sm:text-base px-5 py-3 rounded-2xl border-2 border-amber-800 shadow min-h-[48px] cursor-pointer">
+                            <span aria-hidden="true">✉️</span>
+                            <span data-i18n="contatoFamiliasBtn">Avisar sobre um problema</span>
+                        </a>
+                    </div>
+
+                    <p class="text-sm sm:text-base font-semibold text-slate-700 pt-2 border-t border-amber-200" data-i18n="contatoGithubTexto">
+                        Para quem usa o GitHub, também dá para abrir uma Issue ou Discussão no repositório do projeto:
                     </p>
 
                     <div>

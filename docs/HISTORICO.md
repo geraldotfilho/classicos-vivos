@@ -265,3 +265,11 @@ O que já foi entregue, sprint a sprint, em ordem cronológica (o mais antigo pr
   - 291 arquivos foram tratados e regravados com a nova lógica.
 - **Custo zero e respeito aos textos**: Nenhum texto narrado em português foi alterado, US$ 0,00 de custo financeiro de API.
 
+
+---
+
+## ✅ Preparação para a divulgação (2026-10-26): aviso do adulto, aviso aos pais e contato
+
+- **Aviso do adulto na primeira abertura** (`livro.js`, `abrirPortao`): na primeira vez que uma obra é aberta no aparelho, um aviso pede que um adulto leia a história antes (ou junto), fala dos cuidados da adaptação, do uso de IA e de que as traduções ainda não foram revisadas por falantes nativos. O adulto libera resolvendo uma conta que muda a cada vez (ex.: `14 × 6 − 29`) e escolhe **só o português** ou **todos os idiomas**. Um idioma não liberado pede o aviso de novo ao tocar na bandeirinha. Vale para todas as partes da obra (`cv-adulto-v1-<obra>`). É ciência informada, não segurança.
+- **Aviso aos pais e responsáveis** em `sobre.html` (4 idiomas): leitura com adulto, IA e traduções não revisadas, projeto gratuito sem garantias, nenhum dado coletado, versão oficial no GitHub Pages.
+- **Contato simples para famílias**: botão "Avisar sobre um problema" (e-mail com assunto pronto) em `sobre.html` e o e-mail no próprio aviso do livro; o GitHub ficou como alternativa.
