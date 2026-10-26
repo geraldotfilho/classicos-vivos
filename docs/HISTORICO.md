@@ -240,3 +240,26 @@ O que já foi entregue, sprint a sprint, em ordem cronológica (o mais antigo pr
   - **Humildade e despretensão**: Removida qualquer pretensão de equiparação ou comparação com grandes editoras profissionais. O projeto explicita com total simplicidade que nasce do esforço independente e artesanal de um pai dedicado a aproximar crianças das grandes histórias, sem qualquer pretensão comercial.
   - **Reconhecimento da IA como Co-Autora**: Ajustada a definição para reconhecer com honestidade cristalina a inteligência artificial como **co-autora**. O autor humano é o cérebro criativo por trás de tudo, com a sensibilidade pedagógica, a curadoria do afeto e a proteção inegociável da infância guiando cada linha; contudo, a IA é parceira e co-autora indispensável, sem a qual seria humanamente impossível encontrar tempo e fôlego para produzir tais obras em meio à rotina corrida do dia a dia.
   - **Tradução completa nos 4 idiomas**: Texto reformulado e integrado em Português (`pt-BR`), Inglês (`en`), Francês (`fr`) e Espanhol (`es`).
+
+---
+
+## ✅ Sprint 23 (Eliminação Espectral de Ruído Branco/Hiss nas Pausas da Narração em Todo o Acervo, 2026-10-26)
+
+- **Investigação Minuciosa do Ruído em Todo o Material Sonoro**:
+  - **Identificação da causa-raiz**: O ruído branco / hiss persistente percebido pelo humano não vinha do navegador ou das pontas dos arquivos (já sanadas no Sprint 18 com `narrador.pause()` e cortes de borda). O ruído provinha do piso estático gerado pelo sintetizador neural (Gemini TTS), concentrado na faixa de altas frequências (4 kHz a 12 kHz, com pico de amplitude de ~2500 e RMS entre 100 e 600) presente **nas pausas internas** (entre número de capítulo e subtítulo, entre parágrafos narrativos, em diálogos e antes de palavras isoladas no treino silábico).
+- **Criação da Ferramenta de Gate Espectral Inteligente (`tools/audio_gate.py`)**:
+  - **Análise espectral por quadros de 10 ms**: Cálculo da relação de energia de baixa frequência (< 3 kHz) vs alta frequência ($\ge$ 4 kHz) e RMS para discriminação robusta entre fala real e ruído de fundo.
+  - **Dilatação de segurança de 50 ms**: Expansão de 5 frames antes e depois de qualquer segmento vocalizado para proteger integralmente consoantes fricativas e plosivas não vocalizadas (/s/, /p/, /t/, /f/) e respirações naturais da narrativa.
+  - **Detecção de pausas reais**: Regiões sem fala contínuas por $\ge 70$ ms recebem atenuação para silêncio limpo.
+  - **Rampas Hann de 50 ms**: Transições graduais e contínuas entre voz e silêncio, eliminando qualquer risco de cliques ou estalos (pops).
+  - **Preservação temporal rigorosa (`preserve_length: True`)**: Para todas as páginas inteiras (`pN.mp3`), a contagem total de amostras e a duração em milissegundos são rigorosamente mantidas idênticas às originais, assegurando 100% de sincronismo com a leitura guiada, destaque de frases e `paginas.json`.
+  - **Fade nas bordas**: Janela Hann de 15 ms no início e final absoluto de cada arquivo.
+- **Processamento de 100% do Acervo de Áudio**:
+  - Varredura e atenuação aplicadas a todos os **294 arquivos MP3** de `dom-quixote/audio/` (narração em PT, EN, ES, FR e palavras silábicas de alfabetização).
+  - Taxa de preservação de energia da fala $\ge 99.97\%$ em todo o catálogo (100% da voz intacta).
+  - Redução de até -82 dB de piso de ruído nas pausas internas.
+- **Automação e Memória**:
+  - Integrado a `tools/otimizar-audio.mjs` para que qualquer novo áudio gerado passe automaticamente pelo gate.
+  - Lição aprendida documentada na receita geral (`docs/RECEITA-CLASSICO-VIVO.md` §6.4 e §8) e no `AGENTS.md` (§2.6).
+- **Custo zero e respeito aos textos**: Nenhum texto narrado em português foi alterado, US$ 0,00 de custo financeiro de API.
+

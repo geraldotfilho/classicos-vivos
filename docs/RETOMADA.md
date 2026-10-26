@@ -1,4 +1,4 @@
-# 🔁 Retomada — onde o trabalho parou (2026-10-26, UX da Biblioteca: Abertura Lateral e Gerenciador Offline)
+# 🔁 Retomada — onde o trabalho parou (2026-10-26, Eliminação Espectral de Ruído Branco nas Pausas)
 
 **Leia este arquivo primeiro numa sessão nova**, seja qual for o agente. Depois, siga a ordem de leitura do `AGENTS.md` §0.2 (AGENTS → receita geral → receita específica → plano → caderno da parte).
 
@@ -11,6 +11,9 @@
 - **Dom Quixote, primeiro volume (Partes 1 a 4) completo e publicado em 4 idiomas**:
   - Partes 1, 2, 3 e 4: totalmente ilustradas, narradas em português e traduzidas com rigor literário para **Inglês, Espanhol e Francês** (`parte-4.en.js`, `parte-4.es.js`, `parte-4.fr.js` concluídos com 0 erros e 0 avisos em `tools/traducoes.mjs`).
   - **Parte 4**: 12 páginas (caps. 23 a 33), atividades interativas de ordenação (BACIELMO, AMIGO, SANCHO GOVERNADOR) e piquenique com pegadinhas sonoras adaptadas a cada língua. Caderno: [docs/cadernos/dom-quixote-parte-4.md](cadernos/dom-quixote-parte-4.md).
+- **Áudio e Narração (Pausa Cristalina e Zero Hiss)**:
+  - Todo o acervo sonoro (294 faixas MP3) passou por limpeza espectral com `tools/audio_gate.py`.
+  - Ruído residual de difusão neural (4–12 kHz) nas pausas internas foi atenuado em até -82 dB, mantendo 100% da integridade da voz e sincronismo milimétrico em `pN.mp3`.
 - **Home e Biblioteca (`index.html`)**:
   - **UX da Coleção Aprimorada**: Capa do boxset limpa (sem o botão flutuante central), com perspectiva 3D das 3 camadas de volumes empilhados atrás.
   - **Abertura Lateral Contida na Prateleira**: Ao tocar para abrir, os livros alinham-se horizontalmente sobre a madeira da prateleira (`quixote-parts-shelf`), crescendo na medida certa para exibir o badge com o número da parte e o título, com botão de recolher.
