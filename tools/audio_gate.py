@@ -1,9 +1,13 @@
 # -*- coding: utf-8 -*-
 """
-Ferramenta de limpeza espectral e gate de ruído branco / hiss nas pausas da narração.
-Preserva 100% da voz, consoantes e vogais da narrativa.
-Elimina o piso de ruído estático (hiss neural de difusão de 4 kHz a 12 kHz)
-nas pausas entre títulos, parágrafos, frases e sílabas.
+Ferramenta de limpeza espectral e eliminação de ruídos na narração:
+1. Eliminação de rajada/estalo de fim de arquivo (Tail Burst): Gemini TTS frequentemente
+   produz um pacote de ruído de alta amplitude (pico até 32768, RMS > 10000) nos últimos
+   150-200 ms, logo após o término da fala e de uma pausa de silêncio. Essa rajada é
+   zerada suavemente com rampa Hann, mantendo rigorosamente a contagem de amostras
+   (preserve_length: True) para compatibilidade com paginas.json.
+2. Gate espectral de pausas internas: elimina o piso estático (hiss neural de difusão de
+   4 kHz a 12 kHz) nas pausas entre títulos, parágrafos e frases, preservando 100% da voz.
 
 Uso:
   python tools/audio_gate.py                     (processa todos os MP3 de dom-quixote/audio/)
@@ -35,6 +39,34 @@ def clean_audio_stream(samples, sample_rate=24000, preserve_length=True):
     frame_len = int(sample_rate * 0.01) # 10 ms = 240 amostras
     n_frames = len(samples_f) // frame_len
     
+    # -------------------------------------------------------------
+    # 1. ELIMINAÇÃO DE RAJADA DE FIM DE ARQUIVO (Tail Burst / Shutdown Click)
+    # -------------------------------------------------------------
+    check_frames = min(80, n_frames) # últimos 800 ms
+    tail_frames = samples_f[(n_frames - check_frames)*frame_len : n_frames*frame_len].reshape(check_frames, frame_len)
+    tail_rms = np.sqrt(np.mean(tail_frames**2, axis=1))
+    
+    # Se nos últimos 25 frames (250 ms) houver energia alta (RMS > 200)
+    burst_candidates = np.where(tail_rms[-25:] > 200)[0]
+    if len(burst_candidates) > 0:
+        burst_start_local = (check_frames - 25) + burst_candidates[0]
+        pre_burst = tail_rms[:burst_start_local]
+        quiet_local = np.where(pre_burst < 60)[0]
+        
+        # Se houve pelo menos 4 frames (40 ms) de silêncio antes do pico
+        if len(quiet_local) >= 4:
+            last_speech_local = quiet_local[0]
+            cutoff_sample = (n_frames - check_frames + last_speech_local) * frame_len
+            
+            fade_samples = int(sample_rate * 0.03) # fade out suave de 30 ms
+            if cutoff_sample > fade_samples:
+                ramp = 0.5 * (1 + np.cos(np.pi * np.arange(fade_samples) / fade_samples))
+                samples_f[cutoff_sample - fade_samples : cutoff_sample] *= ramp
+            samples_f[cutoff_sample:] = 0.0
+
+    # -------------------------------------------------------------
+    # 2. ANÁLISE ESPECTRAL E GATE DE RUÍDO NAS PAUSAS INTERNAS
+    # -------------------------------------------------------------
     frames = samples_f[:n_frames * frame_len].reshape(n_frames, frame_len)
     frame_rms = np.sqrt(np.mean(frames**2, axis=1))
     
@@ -50,7 +82,7 @@ def clean_audio_stream(samples, sample_rate=24000, preserve_length=True):
     lf_ratio = lf_energy / total_energy
     
     # Detecção de fala:
-    # - Energia robusta (RMS >= 700)
+    # - Fala robusta (RMS >= 700)
     # - OU voz suave (RMS >= 250 e predominância de baixas frequências lf_ratio >= 0.50)
     is_speech = (frame_rms >= 700) | ((frame_rms >= 250) & (lf_ratio >= 0.50))
     
@@ -85,7 +117,7 @@ def clean_audio_stream(samples, sample_rate=24000, preserve_length=True):
     # Curva de ganho inicial
     frame_gain = np.where(gated_mask, 0.0, 1.0)
     
-    # Suavização com janela de Hann de 5 frames (50 ms) para transições perfeitamente graduais
+    # Suavização com janela de Hann de 5 frames (50 ms) para transições graduais
     kernel = np.hanning(5)
     kernel /= np.sum(kernel)
     smoothed_gain = np.convolve(frame_gain, kernel, mode='same')
@@ -149,6 +181,8 @@ def process_file(path):
         return False
     is_page = ('narracao' in path and 'p' in os.path.basename(path) and not '-s' in os.path.basename(path))
     samples_clean = clean_audio_stream(samples_orig, sample_rate=24000, preserve_length=is_page)
+    if len(samples_orig) != len(samples_clean):
+        return encode_mp3(samples_clean, path)
     diff = np.abs(samples_orig.astype(np.float32) - samples_clean.astype(np.float32))
     if np.max(diff) > 10:
         return encode_mp3(samples_clean, path)
@@ -159,12 +193,12 @@ def main():
     files = args if args else sorted(glob.glob('classicos-vivos/dom-quixote/audio/**/*.mp3', recursive=True))
     if not files and os.path.exists('dom-quixote/audio'):
         files = sorted(glob.glob('dom-quixote/audio/**/*.mp3', recursive=True))
-    print(f"Processando gate de áudio em {len(files)} arquivos...")
+    print(f"Processando gate de áudio e eliminação de rajadas em {len(files)} arquivos...")
     modificados = 0
     for f in files:
         if process_file(f):
             modificados += 1
-    print(f"Concluído: {modificados} arquivos tiveram o ruído de pausa atenuado.")
+    print(f"Concluído: {modificados} arquivos tratados com sucesso.")
 
 if __name__ == '__main__':
     main()

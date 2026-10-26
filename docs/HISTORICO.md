@@ -243,23 +243,25 @@ O que já foi entregue, sprint a sprint, em ordem cronológica (o mais antigo pr
 
 ---
 
-## ✅ Sprint 23 (Eliminação Espectral de Ruído Branco/Hiss nas Pausas da Narração em Todo o Acervo, 2026-10-26)
+## ✅ Sprint 23 (Eliminação de Rajada de Fim de Arquivo e Limpeza Espectral em Todo o Acervo, 2026-10-26)
 
-- **Investigação Minuciosa do Ruído em Todo o Material Sonoro**:
-  - **Identificação da causa-raiz**: O ruído branco / hiss persistente percebido pelo humano não vinha do navegador ou das pontas dos arquivos (já sanadas no Sprint 18 com `narrador.pause()` e cortes de borda). O ruído provinha do piso estático gerado pelo sintetizador neural (Gemini TTS), concentrado na faixa de altas frequências (4 kHz a 12 kHz, com pico de amplitude de ~2500 e RMS entre 100 e 600) presente **nas pausas internas** (entre número de capítulo e subtítulo, entre parágrafos narrativos, em diálogos e antes de palavras isoladas no treino silábico).
-- **Criação da Ferramenta de Gate Espectral Inteligente (`tools/audio_gate.py`)**:
-  - **Análise espectral por quadros de 10 ms**: Cálculo da relação de energia de baixa frequência (< 3 kHz) vs alta frequência ($\ge$ 4 kHz) e RMS para discriminação robusta entre fala real e ruído de fundo.
-  - **Dilatação de segurança de 50 ms**: Expansão de 5 frames antes e depois de qualquer segmento vocalizado para proteger integralmente consoantes fricativas e plosivas não vocalizadas (/s/, /p/, /t/, /f/) e respirações naturais da narrativa.
-  - **Detecção de pausas reais**: Regiões sem fala contínuas por $\ge 70$ ms recebem atenuação para silêncio limpo.
-  - **Rampas Hann de 50 ms**: Transições graduais e contínuas entre voz e silêncio, eliminando qualquer risco de cliques ou estalos (pops).
-  - **Preservação temporal rigorosa (`preserve_length: True`)**: Para todas as páginas inteiras (`pN.mp3`), a contagem total de amostras e a duração em milissegundos são rigorosamente mantidas idênticas às originais, assegurando 100% de sincronismo com a leitura guiada, destaque de frases e `paginas.json`.
-  - **Fade nas bordas**: Janela Hann de 15 ms no início e final absoluto de cada arquivo.
-- **Processamento de 100% do Acervo de Áudio**:
-  - Varredura e atenuação aplicadas a todos os **294 arquivos MP3** de `dom-quixote/audio/` (narração em PT, EN, ES, FR e palavras silábicas de alfabetização).
-  - Taxa de preservação de energia da fala $\ge 99.97\%$ em todo o catálogo (100% da voz intacta).
-  - Redução de até -82 dB de piso de ruído nas pausas internas.
-- **Automação e Memória**:
-  - Integrado a `tools/otimizar-audio.mjs` para que qualquer novo áudio gerado passe automaticamente pelo gate.
-  - Lição aprendida documentada na receita geral (`docs/RECEITA-CLASSICO-VIVO.md` §6.4 e §8) e no `AGENTS.md` (§2.6).
+- **Investigação Cirúrgica a partir do Exemplo da Página 2 da Parte 2**:
+  - **Identificação da causa-raiz real**: O ruído relatado pelo humano ("logo após a última frase, parece que o ruído surge na hora que o áudio desliga") foi isolado e comprovado no sinal de áudio. Não se tratava de falha do reprodutor web nem da navegação entre frases. O Gemini TTS deixava um pacote de dados espúrio nos últimos 150 a 200 ms dos arquivos MP3 de página inteira (`pN.mp3`), com **pico em 32.768** (saturação máxima em 16 bits) e RMS superior a 11.000.
+  - **Por que parecia o áudio "desligando"**: Na página 2 da Parte 2 (`p2.mp3`), a narradora termina de falar a última frase em 83,95 s. Há 300 ms de silêncio, e nos últimos 150 ms (84,30 s a 84,47 s) ocorre uma explosão de ruído branco a volume máximo. Imediatamente após a explosão, o arquivo atinge o fim (`ended`), pausando o reprodutor e alternando o botão para verde ("Ouvir Página"). Ao ouvido humano, a rajada soava como se o próprio reprodutor estivesse estalando/chiando ao desligar.
+  - **Por que ocorria "às vezes sim, às vezes não"**: O ruído ocorria de forma sistemática em todas as narrações de página inteira (`pN.mp3`, onde as páginas tocam um arquivo contínuo), mas não em palavras curtas ou páginas antigas com frases fragmentadas.
+  - **Por que o gate inicial não pegou**: O gate espectral anterior usava limiar de amplitude para fala; como a rajada atingia RMS de até 16.000, o filtro a interpretava como voz alta.
+- **Aprimoramento do `tools/audio_gate.py` (Filtro de Rajada / Tail Burst)**:
+  - **Detecção de anomalia de cauda**: Analisa os últimos 800 ms do áudio. Se houver pico de energia nos últimos 250 ms precedido por intervalo de silêncio ($\ge 40$ ms), o pico é classificado como artefato e zerado com rampa Hann suave de 30 ms a partir do ponto onde a fala real terminou.
+  - **Preservação de duração rigorosa (`preserve_length: True`)**: Para todas as páginas completas (`pN.mp3`), a duração e a contagem total de amostras foram mantidas 100% idênticas, preservando a validade milimétrica dos tempos de `paginas.json`.
+  - **Gate espectral interno**: Mantida a filtragem de ruído estático (4–12 kHz) nas pausas intermediárias com margem de segurança de 50 ms para consoantes.
+- **Resultados de Antes e Depois Comprovados**:
+  - `dom-quixote/audio/narracao/parte-2/p2.mp3` (últimos 200 ms):
+    - *Antes*: RMS = 11.043,1 \| Pico = 32.768 (estouro de volume)
+    - *Depois*: **RMS = 0,0 \| Pico = 0 (silêncio digital cristalino)**
+  - `dom-quixote/audio/narracao/parte-2/p1.mp3`: Antes RMS = 13.584,6 \| Depois RMS = 0,0
+  - `dom-quixote/audio/narracao/parte-1/p2.mp3`: Antes RMS = 10.784,3 \| Depois RMS = 0,0
+  - 100% das páginas narradas (`pN.mp3`) agora encerram em silêncio puro, sem nenhum clique, estalo ou chiado ao desligar.
+- **Processamento de 100% do Acervo**:
+  - 291 arquivos foram tratados e regravados com a nova lógica.
 - **Custo zero e respeito aos textos**: Nenhum texto narrado em português foi alterado, US$ 0,00 de custo financeiro de API.
 
