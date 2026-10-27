@@ -1,11 +1,24 @@
 {
   "codigoVoz": "fr-FR",
   "amostra": "Bonjour ! Je vais lire cette histoire avec toi. Tourne la page quand tu veux !",
-  "nomes": "Don Quichotte, Miguel de Cervantes, Alonso Quichano, Rossinante, la Manche, Aldonza Lorenzo, Dulcinée du Toboso, Montiel, Sancho Pança, Campo de Criptana",
+  "nomes": "Don Quichotte, Miguel de Cervantes, Alonso Quichano, Rossinante, la Manche, Aldonza Lorenzo, Dulcinée du Toboso, Montiel, Sancho Pança, Campo de Criptana, Mambrin, Micomicona, Pandafilando, Alifanfaron, Trapobane, Pentapolin, Freston, maître Nicolas, Dorothée, Teresa Pança, Sanchica, Eugène, Tachounette, Sierra Morena, Chevalier à la Triste Figure, Lope Ruiz, Amadis de Gaule, Pandafilando de la Fosca Vista",
   "elenco": {
-    "NARRADORA": { "voz": "fr-fr-tutor-4", "estilo": "warm, gentle storyteller reading aloud to young children in French from France; calm, clear pace; expressive but not theatrical" },
-    "QUIXOTE": { "voz": "fr-fr-assistant-4", "estilo": "elderly knight in French from France; noble, solemn and dreamy, speaking with heartfelt conviction; never mocking" },
-    "SANCHO": { "voz": "fr-fr-training-2", "estilo": "simple country squire in French from France; warm, good-humored, plain and practical" },
-    "PALAVRAS": { "estilo": "literacy teacher in French from France: each syllable slowly and clearly separated with short pauses, then the whole word joyfully" }
+    "NARRADORA": {"voz": "fr-fr-tutor-4", "estilo": "warm, gentle storyteller reading aloud to young children in French from France; calm, clear pace; expressive but not theatrical"},
+    "QUIXOTE": {"voz": "fr-fr-assistant-4", "estilo": "elderly knight in French from France; noble, solemn and dreamy, speaking with heartfelt conviction; never mocking"},
+    "SANCHO": {"voz": "fr-fr-training-2", "estilo": "simple country squire in French from France; warm, good-humored, plain and practical"},
+    "PASTOR": {"voz": "fr-fr-tutor-6", "estilo": "old goatherd, warm, welcoming and generous in French from France"},
+    "BARBEIRO": {"voz": "fr-fr-csagent-2", "estilo": "frightened barber, shouting for help while running away, comic in French from France"},
+    "PADRE": {"voz": "fr-fr-podcaster-12", "estilo": "kind village priest, gentle, cheerful and clever in French from France"},
+    "DOROTEIA": {"voz": "fr-fr-advisor-9", "estilo": "clever young woman playing a princess in distress, dramatic and graceful in French from France"},
+    "ESTALAJADEIRO": {"voz": "fr-fr-podcaster-4", "estilo": "innkeeper in comic despair over his spilled wine in French from France"},
+    "BARBEIRO_BACIA": {"voz": "fr-fr-csagent-2", "estilo": "indignant barber demanding his basin back, then comically puzzled in French from France"},
+    "NICOLAU": {"voz": "fr-fr-tutor-1", "estilo": "village barber, playful and good-natured, holding back a laugh in French from France"},
+    "NICOLAU_MAGO": {"voz": "fr-fr-tutor-1", "estilo": "pretending to be a mysterious wizard: deep, slow and theatrical, a bit funny in French from France"},
+    "EUGENIO": {"voz": "fr-fr-podcaster-8", "estilo": "young goatherd, out of breath at first, then tender and chatty with his goat in French from France"},
+    "VELHINHO": {"voz": "fr-fr-tutor-7", "estilo": "kind old farmer, warm and smiling, glad to meet a neighbor in French from France"},
+    "SOBRINHA": {"voz": "fr-fr-assistant-12", "estilo": "young woman laughing and crying with joy, hugging her uncle in French from France"},
+    "TERESA": {"voz": "fr-fr-csagent-6", "estilo": "warm-hearted wife, eager and affectionate in French from France"},
+    "POVO": {"voz": "fr-fr-concierge-6", "estilo": "cheerful villagers calling out together, lively and playful in French from France"},
+    "PALAVRAS": {"estilo": "literacy teacher in French from France: each syllable slowly and clearly separated with short pauses, then the whole word joyfully"}
   }
 }

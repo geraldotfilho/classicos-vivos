@@ -1,8 +1,8 @@
-# 🔁 Retomada — onde o trabalho parou (2026-10-26, Eliminação Espectral de Ruído Branco nas Pausas)
+# 🔁 Retomada — onde o trabalho parou (2026-10-27, narração em en/fr/es das Partes 2–4)
 
 **Leia este arquivo primeiro numa sessão nova**, seja qual for o agente. Depois, siga a ordem de leitura do `AGENTS.md` §0.2 (AGENTS → receita geral → receita específica → plano → caderno da parte).
 
-> 💰 **API paga do Gemini (`AGENTS.md` §2.7)**: só com **autorização do humano no prompt inicial da sessão**, só para o que ele autorizou, sempre no modo mais barato (Flex na narração, Batch nas imagens) e com o gasto registrado em `docs/narracao/gastos.csv` e `docs/arte/gastos.csv`. Teto: **R$ 30/mês**. Sem autorização, não chame a API para nada (nem para um teste).
+> 💰 **API paga do Gemini (`AGENTS.md` §2.7)**: só com **autorização do humano no prompt inicial da sessão**, só para o que ele autorizou, sempre no modo mais barato (Flex na narração, Batch nas imagens) e com o gasto registrado em `docs/narracao/gastos.csv` e `docs/arte/gastos.csv`. Teto: **R$ 50/mês** (subiu em 2026-10-27). Sem autorização, não chame a API para nada (nem para um teste).
 
 ---
 
@@ -24,19 +24,19 @@
 - **Aviso do adulto (2026-10-26)**: cada obra pede, na primeira abertura no aparelho, que um adulto leia o aviso e libere com uma conta (só português ou todos os idiomas). Testes automáticos: abra com `?adulto=1`. Detalhes em `AGENTS.md` §3.4.
 - **PWA & Offline**:
   - `sw.js` e `offline-manager.js` sincronizados via `tools/build-sw.mjs` (161 arquivos em cache).
-- **Gasto da API em outubro**: ~US$ 5,12 (≈ R$ 28 de R$ 30). **A verba de outubro acabou**: a próxima produção paga fica para novembro.
+- **Narração em inglês, francês e espanhol (2026-10-27, autorizada pelo humano, teto R$ 50/mês)**: **Parte 2 entregue nos três idiomas**; Partes 3 e 4 em andamento pela fila `tools/gravar-fila-traducoes.sh` (retomada automática depois das 07:00 UTC, quando a cota de 100 pedidos por dia renova). Situação a qualquer momento: `node tools/conferir-narracao.mjs`. Método para poupar pedidos (palavras de todas as partes em lotes de 25, blocos que atravessam páginas, reparo cirúrgico em vez de regravar bloco): `docs/TODO-NARRACAO.md` itens 17–19. Notas e pontos para escuta: `docs/narracao/qa-partes-2-4-traducoes.md`. Ambiente novo: `pip install faster-whisper imageio-ffmpeg` e `npm install` antes de gravar.
+- **Gasto da API em outubro**: ~US$ 5,12 (≈ R$ 28) até 2026-10-26, mais o desta fila (centavos de dólar: o gargalo é o limite de pedidos por dia, não o dinheiro; ver `docs/narracao/gastos.csv`).
 
 ## 2. Próximas sessões (escolha do humano)
 
 1. **Fase 8 da Parte 4** (retrospectiva do primeiro volume concluído).
 2. **Parte 5** (segundo volume, 1615): fases 0 a 2, pelo plano `docs/PLANO-DOM-QUIXOTE-PARTES-4-7.md` (o leão guardião, o cavaleiro dos espelhos, etc.).
-3. **Narração em en/fr/es da Parte 4** (quando houver cota/verba de API em novembro).
+3. **Terminar a narração em en/fr/es das Partes 3 e 4** (fila em andamento, ver acima) e **ouvir as vozes novas** dos personagens.
 
 Prompt de abertura sugerido:
 > Vamos iniciar o segundo volume de Dom Quixote: Parte 5 (fases 0 a 2), seguindo docs/PLANO-DOM-QUIXOTE-PARTES-4-7.md e docs/RECEITA-CLASSICO-VIVO.md.
 
 ## 3. Frentes paradas (sem urgência)
 
-- **Narração em en/fr/es das Partes 2 e 3**: espera o humano ouvir a Parte 1 nesses idiomas e autorizar (BACKLOG M-11).
 - **Escuta do humano** das vozes novas das Partes 2–3 (pontos em `docs/narracao/qa-parte-N.md`).
 - Demais pendências: [`BACKLOG.md`](BACKLOG.md). O que já foi feito: [`HISTORICO.md`](HISTORICO.md).

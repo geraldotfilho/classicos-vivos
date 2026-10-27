@@ -1,0 +1,226 @@
+{
+  "p2": {
+    "arquivo": "p2.mp3",
+    "hash": "21e66a3894",
+    "frases": [
+      {
+        "id": "p2-s0",
+        "ini": 0,
+        "fim": 5.96
+      },
+      {
+        "id": "p2-s1",
+        "ini": 5.96,
+        "fim": 27.19
+      },
+      {
+        "id": "p2-s2",
+        "ini": 27.19,
+        "fim": 33.53
+      },
+      {
+        "id": "p2-s3",
+        "ini": 33.53,
+        "fim": 45.62
+      },
+      {
+        "id": "p2-s4",
+        "ini": 45.62,
+        "fim": 50.17
+      },
+      {
+        "id": "p2-s5",
+        "ini": 50.17,
+        "fim": 61.5
+      },
+      {
+        "id": "p2-s6",
+        "ini": 61.5,
+        "fim": 68.6
+      },
+      {
+        "id": "p2-s7",
+        "ini": 68.6,
+        "fim": 72.12
+      }
+    ]
+  },
+  "modelo": "gemini-3.8-flash-tts",
+  "elenco": {
+    "NARRADORA": {
+      "voz": "en-gb-storyteller-2",
+      "estilo": "warm, gentle storyteller reading aloud to young children in British English; calm, clear pace; expressive but not theatrical"
+    },
+    "QUIXOTE": {
+      "voz": "en-gb-storyteller-4",
+      "estilo": "noble, solemn and dreamy elderly knight in British English, speaking with heartfelt conviction; never mocking"
+    },
+    "SANCHO": {
+      "voz": "en-gb-advisor-2",
+      "estilo": "simple, warm and good-humoured country farmer in British English, plain and practical"
+    },
+    "PASTOR": {
+      "voz": "en-gb-csagent-3",
+      "estilo": "old goatherd, warm, welcoming and generous in British English"
+    },
+    "BARBEIRO": {
+      "voz": "en-gb-training-12",
+      "estilo": "frightened barber, shouting for help while running away, comic in British English"
+    },
+    "PADRE": {
+      "voz": "en-gb-tutor-9",
+      "estilo": "kind village priest, gentle, cheerful and clever in British English"
+    },
+    "DOROTEIA": {
+      "voz": "en-gb-commercial-9",
+      "estilo": "clever young woman playing a princess in distress, dramatic and graceful in British English"
+    },
+    "ESTALAJADEIRO": {
+      "voz": "en-gb-advisor-9",
+      "estilo": "innkeeper in comic despair over his spilled wine in British English"
+    },
+    "BARBEIRO_BACIA": {
+      "voz": "en-gb-training-12",
+      "estilo": "indignant barber demanding his basin back, then comically puzzled in British English"
+    },
+    "NICOLAU": {
+      "voz": "en-gb-tutor-2",
+      "estilo": "village barber, playful and good-natured, holding back a laugh in British English"
+    },
+    "NICOLAU_MAGO": {
+      "voz": "en-gb-tutor-2",
+      "estilo": "pretending to be a mysterious wizard: deep, slow and theatrical, a bit funny in British English"
+    },
+    "EUGENIO": {
+      "voz": "en-gb-commercial-7",
+      "estilo": "young goatherd, out of breath at first, then tender and chatty with his goat in British English"
+    },
+    "VELHINHO": {
+      "voz": "en-gb-concierge-10",
+      "estilo": "kind old farmer, warm and smiling, glad to meet a neighbor in British English"
+    },
+    "SOBRINHA": {
+      "voz": "en-gb-commercial-1",
+      "estilo": "young woman laughing and crying with joy, hugging her uncle in British English"
+    },
+    "TERESA": {
+      "voz": "en-gb-assistant-7",
+      "estilo": "warm-hearted wife, eager and affectionate in British English"
+    },
+    "POVO": {
+      "voz": "en-gb-csagent-10",
+      "estilo": "cheerful villagers calling out together, lively and playful in British English"
+    },
+    "PALAVRAS": {
+      "estilo": "British English literacy teacher: each syllable slowly and clearly separated with short pauses, then the whole word joyfully"
+    }
+  },
+  "qa": "whisper-large-v3-turbo (local)",
+  "p3": {
+    "arquivo": "p3.mp3",
+    "hash": "fbf073de2a",
+    "frases": [
+      {
+        "id": "p3-s0",
+        "ini": 0,
+        "fim": 6.78
+      },
+      {
+        "id": "p3-s1",
+        "ini": 6.78,
+        "fim": 17.7
+      },
+      {
+        "id": "p3-s2",
+        "ini": 17.7,
+        "fim": 26.14
+      },
+      {
+        "id": "p3-s3",
+        "ini": 26.14,
+        "fim": 36.91
+      },
+      {
+        "id": "p3-s4",
+        "ini": 36.91,
+        "fim": 45.58
+      },
+      {
+        "id": "p3-s5",
+        "ini": 45.58,
+        "fim": 48.56
+      },
+      {
+        "id": "p3-s6",
+        "ini": 48.56,
+        "fim": 49.36
+      },
+      {
+        "id": "p3-s7",
+        "ini": 49.36,
+        "fim": 50.42
+      },
+      {
+        "id": "p3-s8",
+        "ini": 50.42,
+        "fim": 52.06
+      },
+      {
+        "id": "p3-s9",
+        "ini": 52.06,
+        "fim": 58.86
+      }
+    ]
+  },
+  "p4": {
+    "arquivo": "p4.mp3",
+    "hash": "0c07944102",
+    "frases": [
+      {
+        "id": "p4-s0",
+        "ini": 0,
+        "fim": 9.41
+      },
+      {
+        "id": "p4-s1",
+        "ini": 9.41,
+        "fim": 23
+      },
+      {
+        "id": "p4-s2",
+        "ini": 23,
+        "fim": 31.88
+      },
+      {
+        "id": "p4-s3",
+        "ini": 31.88,
+        "fim": 39.58
+      },
+      {
+        "id": "p4-s4",
+        "ini": 39.58,
+        "fim": 43.76
+      },
+      {
+        "id": "p4-s5",
+        "ini": 43.76,
+        "fim": 47.3
+      },
+      {
+        "id": "p4-s6",
+        "ini": 47.3,
+        "fim": 53.1
+      },
+      {
+        "id": "p4-s7",
+        "ini": 53.1,
+        "fim": 64.94
+      },
+      {
+        "id": "p4-s8",
+        "ini": 64.94,
+        "fim": 71.51
+      }
+    ]
+  }
+}

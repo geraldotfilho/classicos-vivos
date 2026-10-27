@@ -39,3 +39,18 @@ data,comando,pedidos_voz,tokens_audio,tokens_qa,usd_estimado
 2026-10-26T01:23,"--voz narracao --parte 4-rascunho --pagina-inteira --autorizado --paralelo 4",33,24737,0,0.1130
 2026-10-26T07:26,"--voz narracao --parte 4-rascunho --pagina-inteira --autorizado --paralelo 4",18,12600,0,0.0575
 2026-10-26T07:27,"--voz palavras --parte 4-rascunho --agrupar 1 --autorizado",8,1280,0,0.0058
+2026-10-27T00:52,"--voz palavras --idioma en --parte 2,3,4 --autorizado",4,7710,0,0.0350
+2026-10-27T01:09,"--voz narracao --idioma en --parte 2 --pagina-inteira --autorizado",12,21868,0,0.0998
+2026-10-27T01:16,"--voz narracao --idioma en --parte 2 --pagina-inteira --remontar --autorizado",1,433,0,0.0020
+2026-10-27T01:17,"--voz palavras --idioma fr --parte 2,3,4 --autorizado",4,8518,0,0.0387
+2026-10-27T01:18,"--voz palavras --idioma es --parte 2,3,4 --autorizado",4,10354,0,0.0470
+2026-10-27T02:02,"--voz narracao --idioma fr --parte 2 --pagina-inteira --paralelo 3 --autorizado",12,18568,0,0.0850
+2026-10-27T02:10,"--voz narracao --idioma fr --parte 2 --pagina-inteira --paralelo 3 --autorizado",4,4469,0,0.0204
+2026-10-27T02:11,"--voz palavras --idioma en --parte 2,3,4 --autorizado",1,471,0,0.0021
+2026-10-27T02:13,"--voz palavras --idioma fr --parte 2,3,4 --autorizado",1,1440,0,0.0065
+2026-10-27T02:14,"--voz palavras --idioma es --parte 2,3,4 --autorizado",1,530,0,0.0024
+2026-10-27T02:15,"--voz narracao --idioma es --parte 2 --pagina-inteira --paralelo 3 --autorizado",10,18657,0,0.0852
+2026-10-27T02:18,"--voz narracao --idioma en --parte 3 --pagina-inteira --paralelo 3 --autorizado",7,6697,0,0.0306
+2026-10-27T02:18,"--voz palavras --idioma fr --parte 2,3,4 --autorizado",1,847,0,0.0038
+2026-10-27T02:18,"--voz palavras --idioma es --parte 2,3,4 --autorizado",1,229,0,0.0010
+2026-10-27T02:19,"--voz palavras --idioma en --parte 2,3,4 --autorizado",1,99,0,0.0004

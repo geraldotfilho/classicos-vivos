@@ -1,11 +1,24 @@
 {
   "codigoVoz": "es-ES",
   "amostra": "¡Hola! Voy a leer esta historia contigo. ¡Pasa la página cuando quieras!",
-  "nomes": "Don Quijote de la Mancha, Alonso Quijano, Sancho Panza, Rocinante, Dulcinea del Toboso, Aldonza Lorenzo, Miguel de Cervantes, Montiel, Campo de Criptana, vuestra merced, ínsula, bacía, yelmo",
+  "nomes": "Don Quijote de la Mancha, Alonso Quijano, Sancho Panza, Rocinante, Dulcinea del Toboso, Aldonza Lorenzo, Miguel de Cervantes, Montiel, Campo de Criptana, vuestra merced, ínsula, bacía, yelmo, Mambrino, Micomicona, Pandafilando, Alifanfarón, Trapobana, Pentapolín, Frestón, maese Nicolás, Dorotea, Teresa Panza, Sanchica, Eugenio, Manchada, Sierra Morena, Caballero de la Triste Figura, Lope Ruiz, Amadís de Gaula, bacía, bacielmo",
   "elenco": {
-    "NARRADORA": { "voz": "es-es-tutor-12", "estilo": "warm, gentle storyteller reading aloud to young children in Castilian Spanish from Spain; calm, clear pace; savouring Cervantes' classic phrases with a smile; expressive but not theatrical" },
-    "QUIXOTE": { "voz": "es-es-assistant-3", "estilo": "elderly noble knight in Castilian Spanish from Spain; solemn, dreamy and grand, speaking with heartfelt conviction and old-fashioned dignity; never mocking" },
-    "SANCHO": { "voz": "es-es-techagent-4", "estilo": "plain, warm-hearted country farmer in Castilian Spanish from Spain; simple, good-humoured and practical, gently astonished" },
-    "PALAVRAS": { "estilo": "kind literacy teacher in Castilian Spanish from Spain: each syllable slowly and clearly separated with short pauses, then the whole word joyfully" }
+    "NARRADORA": {"voz": "es-es-tutor-12", "estilo": "warm, gentle storyteller reading aloud to young children in Castilian Spanish from Spain; calm, clear pace; savouring Cervantes' classic phrases with a smile; expressive but not theatrical"},
+    "QUIXOTE": {"voz": "es-es-assistant-3", "estilo": "elderly noble knight in Castilian Spanish from Spain; solemn, dreamy and grand, speaking with heartfelt conviction and old-fashioned dignity; never mocking"},
+    "SANCHO": {"voz": "es-es-techagent-4", "estilo": "plain, warm-hearted country farmer in Castilian Spanish from Spain; simple, good-humoured and practical, gently astonished"},
+    "PASTOR": {"voz": "es-es-podcaster-7", "estilo": "old goatherd, warm, welcoming and generous in Castilian Spanish from Spain"},
+    "BARBEIRO": {"voz": "es-es-training-11", "estilo": "frightened barber, shouting for help while running away, comic in Castilian Spanish from Spain"},
+    "PADRE": {"voz": "es-es-training-3", "estilo": "kind village priest, gentle, cheerful and clever in Castilian Spanish from Spain"},
+    "DOROTEIA": {"voz": "es-es-commercial-3", "estilo": "clever young woman playing a princess in distress, dramatic and graceful in Castilian Spanish from Spain"},
+    "ESTALAJADEIRO": {"voz": "es-es-advisor-9", "estilo": "innkeeper in comic despair over his spilled wine in Castilian Spanish from Spain"},
+    "BARBEIRO_BACIA": {"voz": "es-es-training-11", "estilo": "indignant barber demanding his basin back, then comically puzzled in Castilian Spanish from Spain"},
+    "NICOLAU": {"voz": "es-es-advisor-2", "estilo": "village barber, playful and good-natured, holding back a laugh in Castilian Spanish from Spain"},
+    "NICOLAU_MAGO": {"voz": "es-es-advisor-2", "estilo": "pretending to be a mysterious wizard: deep, slow and theatrical, a bit funny in Castilian Spanish from Spain"},
+    "EUGENIO": {"voz": "es-es-concierge-12", "estilo": "young goatherd, out of breath at first, then tender and chatty with his goat in Castilian Spanish from Spain"},
+    "VELHINHO": {"voz": "es-es-assistant-4", "estilo": "kind old farmer, warm and smiling, glad to meet a neighbor in Castilian Spanish from Spain"},
+    "SOBRINHA": {"voz": "es-es-techagent-5", "estilo": "young woman laughing and crying with joy, hugging her uncle in Castilian Spanish from Spain"},
+    "TERESA": {"voz": "es-es-training-12", "estilo": "warm-hearted wife, eager and affectionate in Castilian Spanish from Spain"},
+    "POVO": {"voz": "es-es-commercial-7", "estilo": "cheerful villagers calling out together, lively and playful in Castilian Spanish from Spain"},
+    "PALAVRAS": {"estilo": "kind literacy teacher in Castilian Spanish from Spain: each syllable slowly and clearly separated with short pauses, then the whole word joyfully"}
   }
 }

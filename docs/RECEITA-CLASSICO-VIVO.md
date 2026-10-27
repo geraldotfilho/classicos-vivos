@@ -212,7 +212,12 @@ Varie as mecânicas dentro da parte.
 ### 6.4 Narração
 - **Página inteira** num pedido só, com a narradora e uma voz por personagem, a mesma em todas as partes do livro.
 - **Voz de criança por descrição é bloqueada** pela API: use a voz mais jovem da biblioteca. Não tente contornar.
-- Limite de 100 pedidos por dia (o dia vira às 07:00 UTC): cache de blocos e palavras-chave em grupos de até 10. Numa parte grande, conte os blocos no `--seco` e veja se cabem no que resta da cota do dia; senão, grave em dois dias. Palavras curtas (fome, sede) e as que falharem no grupo: uma por pedido (`--agrupar 1`).
+- **Poupar o limite de 100 pedidos por dia** (o dia vira às 07:00 UTC; cada pedido conta igual, curto ou longo, então prefira poucos pedidos grandes):
+  - **Palavras-chave**: até 25 por pedido, de **várias partes juntas** (`--parte 2,3,4`); o corte é por script, com o Whisper local. Quatro pedidos cobrem ~90 palavras. As que o crivo recusar (corte errado) sobram para **um** pedido de repescagem por idioma; `--so-cache` refaz só o corte de um grupo já pago, sem pedido novo.
+  - **Narração**: os blocos (narradora + no máximo 1 personagem, limite da API) **atravessam as páginas** (`--max-letras`, padrão 3500): a página só é montada e salva quando todos os blocos que a tocam estão prontos. O que força um bloco novo é a entrada de um segundo personagem; peças curtas de personagens que se alternam (Sancho × Dom Quixote) são o que mais custa.
+  - **Regravação só com defeito de verdade** (`--retentar-acima`, padrão 2 palavras diferentes numa frase): uma palavra fora do lugar vai para a escuta do humano, não para um pedido a mais.
+  - Cache de blocos (`.cache-narracao/`, fora do git): nada pago é pedido de novo. Cota diária esgotada → o script termina com **código 75** e `COTA_DIARIA_ESGOTADA`; é só rodar o mesmo comando depois das 07:00 UTC (`tools/gravar-fila-traducoes.sh` reúne a fila das traduções).
+  - Antes de começar, conte os pedidos no `--seco` e compare com o que resta da cota do dia.
 - A conferência é **local** (Whisper). A API paga só produz vozes.
 - Nomes estrangeiros com pronúncia anotada (`TODO-NARRACAO.md` §5).
 - **Prevenção de chiados e estalos (clicks/pops) entre frases e páginas**:
