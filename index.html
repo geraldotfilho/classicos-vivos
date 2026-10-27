@@ -203,6 +203,47 @@
         @media (min-width: 640px) { .v2-titulo { font-size: 1.9rem; } }
         #fileira-volumes { gap: 2.5rem; }
 
+        /* Próximas Obras na Fila: Robin Hood e Viagem ao Centro da Terra */
+        .boxset-robin .boxset-layer-3 { background: linear-gradient(135deg, #064e3b 0%, #065f46 100%); border-color: #047857; }
+        .boxset-robin .boxset-layer-2 { background: linear-gradient(135deg, #065f46 0%, #047857 100%); border-color: #059669; }
+        .boxset-robin .boxset-layer-1 { background: linear-gradient(135deg, #047857 0%, #059669 100%); border-color: #10b981; }
+        .boxset-robin .boxset-front {
+            position: relative; display: block; aspect-ratio: 3 / 4; overflow: hidden;
+            border-radius: 6px 24px 24px 6px; background: #064e3b; border-color: #6ee7b7;
+        }
+        .robin-arte {
+            position: absolute; inset: 0;
+            background: radial-gradient(circle at 50% 30%, #059669 0%, #047857 35%, #064e3b 70%, #022c22 100%);
+        }
+        .boxset-robin .v2-selo { background: #059669; border-color: #a7f3d0; }
+        .boxset-robin .v2-cadeado {
+            background: rgba(6,78,59,0.92); border-color: #6ee7b7;
+            box-shadow: 0 0 0 6px rgba(110,231,183,0.25), 0 8px 18px rgba(0,0,0,0.55);
+        }
+        .boxset-robin .v2-titulo { color: #fef08a; }
+        .boxset-robin .v2-sub { color: #a7f3d0; }
+        .boxset-robin .v2-embreve { background: #a7f3d0; color: #064e3b; }
+
+        .boxset-viagem .boxset-layer-3 { background: linear-gradient(135deg, #451a03 0%, #7c2d12 100%); border-color: #9a3412; }
+        .boxset-viagem .boxset-layer-2 { background: linear-gradient(135deg, #7c2d12 0%, #9a3412 100%); border-color: #c2410c; }
+        .boxset-viagem .boxset-layer-1 { background: linear-gradient(135deg, #9a3412 0%, #c2410c 100%); border-color: #ea580c; }
+        .boxset-viagem .boxset-front {
+            position: relative; display: block; aspect-ratio: 3 / 4; overflow: hidden;
+            border-radius: 6px 24px 24px 6px; background: #451a03; border-color: #fdba74;
+        }
+        .viagem-arte {
+            position: absolute; inset: 0;
+            background: radial-gradient(circle at 50% 30%, #c2410c 0%, #9a3412 35%, #451a03 70%, #1c0a00 100%);
+        }
+        .boxset-viagem .v2-selo { background: #ea580c; border-color: #fed7aa; }
+        .boxset-viagem .v2-cadeado {
+            background: rgba(69,26,3,0.92); border-color: #fdba74;
+            box-shadow: 0 0 0 6px rgba(253,186,116,0.25), 0 8px 18px rgba(0,0,0,0.55);
+        }
+        .boxset-viagem .v2-titulo { color: #fef08a; }
+        .boxset-viagem .v2-sub { color: #fed7aa; }
+        .boxset-viagem .v2-embreve { background: #fed7aa; color: #451a03; }
+
         /* Animação suave de entrada dos livros espalhados */
         .book-spread-enter {
             animation: bookSpread 0.45s cubic-bezier(0.16, 1, 0.3, 1) backwards;
@@ -544,6 +585,56 @@
                         </a>
                         <div id="offline-ctrl-4" class="offline-ctrl-bar w-full mt-2 flex items-center justify-center gap-1.5 min-h-[44px]"></div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prateleira 2: Robin Hood -->
+        <section id="shelf-robin-hood" class="shelf" aria-label="Robin Hood" data-i18n-aria="shelfRobinHood">
+            <div class="w-full flex justify-center">
+                <div class="flex flex-col items-center justify-end">
+                    <button id="boxset-robin-hood" type="button" class="boxset-card boxset-trancado boxset-robin" data-em-producao="robin-hood" aria-label="Robin Hood. Nova adaptação na fila, com cadeado até ser liberada." data-i18n-aria="boxsetRobinAria">
+                        <span class="boxset-layer boxset-layer-3" aria-hidden="true"></span>
+                        <span class="boxset-layer boxset-layer-2" aria-hidden="true"></span>
+                        <span class="boxset-layer boxset-layer-1" aria-hidden="true"></span>
+                        <span class="boxset-front">
+                            <span class="robin-arte" aria-hidden="true"></span>
+                            <span class="absolute inset-x-0 top-14 flex justify-center text-7xl opacity-40 select-none pointer-events-none" aria-hidden="true">🏹</span>
+                            <span class="v2-veu"></span>
+                            <span class="v2-selo" data-i18n="emBreveNovaObra">Em breve · Nova Adaptação</span>
+                            <span class="v2-cadeado" aria-hidden="true">🔒</span>
+                            <span class="v2-rodape">
+                                <span class="v2-titulo" data-i18n="robinHood">Robin Hood</span>
+                                <span class="v2-sub" data-i18n="robinHoodSub">O Herói de Sherwood</span>
+                                <span class="v2-embreve" data-i18n="emBreve">Em breve</span>
+                            </span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prateleira 3: Viagem ao Centro da Terra -->
+        <section id="shelf-viagem" class="shelf" aria-label="Viagem ao Centro da Terra" data-i18n-aria="shelfViagem">
+            <div class="w-full flex justify-center">
+                <div class="flex flex-col items-center justify-end">
+                    <button id="boxset-viagem" type="button" class="boxset-card boxset-trancado boxset-viagem" data-em-producao="viagem-ao-centro-da-terra" aria-label="Viagem ao Centro da Terra. Nova adaptação na fila, com cadeado até ser liberada." data-i18n-aria="boxsetViagemAria">
+                        <span class="boxset-layer boxset-layer-3" aria-hidden="true"></span>
+                        <span class="boxset-layer boxset-layer-2" aria-hidden="true"></span>
+                        <span class="boxset-layer boxset-layer-1" aria-hidden="true"></span>
+                        <span class="boxset-front">
+                            <span class="viagem-arte" aria-hidden="true"></span>
+                            <span class="absolute inset-x-0 top-14 flex justify-center text-7xl opacity-40 select-none pointer-events-none" aria-hidden="true">🌋</span>
+                            <span class="v2-veu"></span>
+                            <span class="v2-selo" data-i18n="emBreveNovaObra">Em breve · Nova Adaptação</span>
+                            <span class="v2-cadeado" aria-hidden="true">🔒</span>
+                            <span class="v2-rodape">
+                                <span class="v2-titulo" data-i18n="viagemCentroTerra">Viagem ao Centro da Terra</span>
+                                <span class="v2-sub" data-i18n="viagemCentroTerraSub">Júlio Verne</span>
+                                <span class="v2-embreve" data-i18n="emBreve">Em breve</span>
+                            </span>
+                        </span>
+                    </button>
                 </div>
             </div>
         </section>

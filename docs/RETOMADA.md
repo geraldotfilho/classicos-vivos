@@ -32,6 +32,7 @@
 1. **Fase 8 da Parte 4** (retrospectiva do primeiro volume concluído).
 2. **Parte 5** (segundo volume, 1615): fases 0 a 2, pelo plano `docs/PLANO-DOM-QUIXOTE-PARTES-4-7.md` (o leão guardião, o cavaleiro dos espelhos, etc.).
 3. **Terminar a narração em en/fr/es da Parte 4** (fila em andamento, ver acima) e **ouvir as vozes novas** dos personagens.
+4. **Planejamento das novas adaptações na fila**: *Robin Hood* e *Viagem ao Centro da Terra* (adicionados com prateleiras com cadeado na estante `index.html` e registrados em `acervo.js`).
 
 Prompt de abertura sugerido:
 > Vamos iniciar o segundo volume de Dom Quixote: Parte 5 (fases 0 a 2), seguindo docs/PLANO-DOM-QUIXOTE-PARTES-4-7.md e docs/RECEITA-CLASSICO-VIVO.md.

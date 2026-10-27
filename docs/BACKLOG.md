@@ -9,6 +9,7 @@ Pendências abertas, por prioridade. O que já foi entregue está em [`HISTORICO
 | ID | Item | Detalhes |
 | :--- | :--- | :--- |
 | A-10 | **Correção de rumo de Dom Quixote** | Refazer a Parte 4 (fecha o volume de 1605) e criar as Partes 5–7 (volume de 1615), uma por vez, pelas fases da receita. Receitas: [`RECEITA-CLASSICO-VIVO.md`](RECEITA-CLASSICO-VIVO.md) (geral) e [`receitas/DOM-QUIXOTE.md`](receitas/DOM-QUIXOTE.md). Fase 0: modo rascunho no motor e estante com o segundo volume ✅ (2026-10-25); **nova Parte 4 publicada** em 2026-10-26, ilustrada e narrada em português (caderno `cadernos/dom-quixote-parte-4.md`); **na fila: a fase 7 dela** (traduções en/fr/es e a narração delas, com autorização e verba; até lá, o livro avisa que a parte está só em português). Próximas: Partes 5–7. Andamento no §7 do [plano](PLANO-DOM-QUIXOTE-PARTES-4-7.md). |
+| A-11 | **Próximas adaptações: Robin Hood e Viagem ao Centro da Terra** | Fila de novas obras para a coleção após o término de Dom Quixote (ou em paralelo). Prateleiras inferiores com cadeado adicionadas à estante (`index.html`). (1) **Robin Hood**: lendas clássicas e Howard Pyle, foco em justiça, amizade, floresta de Sherwood e arco/flecha. (2) **Viagem ao Centro da Terra**: Júlio Verne, foco na curiosidade científica, exploração de cavernas, fósseis e vulcão. Planejar escaletas e adequação pedagógica (receita geral §2). |
 
 ## 🟡 Prioridade média
 

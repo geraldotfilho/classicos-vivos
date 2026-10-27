@@ -286,3 +286,8 @@ O que já foi entregue, sprint a sprint, em ordem cronológica (o mais antigo pr
 - **Ambiente Antigravity no Windows e palavras-chave (2026-10-27)**:
   - Suporte completo a geração de áudio no Windows: fallback do `imageio_ffmpeg` para ffmpeg em `tools/transcrever.py` e comunicação com Python via pipe unbuffered (`-u` e `readline()`) em `tools/gravar-narracao.mjs`.
   - Gravadas palavras-chave pendentes: `fr` Parte 2 (`armees`), `fr` Parte 4 (`heaume`) e `es` Parte 4 (`flores`). Todas as palavras de todas as partes em PT, EN e FR estão 100% completas; em ES restou apenas `cayado` (42/43) para renovação da cota diária de 100 pedidos. Gasto adicional: ~US$ 0,0021.
+
+- **Prateleiras das próximas adaptações na Home (2026-10-27)**:
+  - Adicionadas prateleiras de madeira inferiores em `index.html` com capas em 3D e cadeado 🔒 para as duas próximas obras na fila: **Robin Hood** (verde-floresta Sherwood com arco e flecha 🏹) e **Viagem ao Centro da Terra** (tons de magma/caverna com vulcão 🌋).
+  - Obras cadastradas na fonte única `assets/js/acervo.js` e internacionalizadas em 4 idiomas (pt, en, fr, es) em `assets/js/i18n-site.js`. Toque na capa abre o modal gentil explicativo.
+  - Documentação atualizada em `AGENTS.md`, `docs/BACKLOG.md` (item A-11) e `docs/RETOMADA.md`.
