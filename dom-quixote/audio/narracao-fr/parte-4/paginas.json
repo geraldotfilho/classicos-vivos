@@ -1,0 +1,286 @@
+{
+  "p0": {
+    "arquivo": "p0.mp3",
+    "hash": "a4d12a1995",
+    "frases": [
+      {
+        "id": "p0-s0",
+        "ini": 0,
+        "fim": 6.92
+      },
+      {
+        "id": "p0-s1",
+        "ini": 6.92,
+        "fim": 16.85
+      },
+      {
+        "id": "p0-s2",
+        "ini": 16.85,
+        "fim": 22.27
+      },
+      {
+        "id": "p0-s3",
+        "ini": 22.27,
+        "fim": 38.12
+      },
+      {
+        "id": "p0-s4",
+        "ini": 38.12,
+        "fim": 44.94
+      }
+    ]
+  },
+  "modelo": "gemini-3.8-flash-tts",
+  "elenco": {
+    "NARRADORA": {
+      "voz": "fr-fr-tutor-4",
+      "estilo": "warm, gentle storyteller reading aloud to young children in French from France; calm, clear pace; expressive but not theatrical"
+    },
+    "QUIXOTE": {
+      "voz": "fr-fr-assistant-4",
+      "estilo": "elderly knight in French from France; noble, solemn and dreamy, speaking with heartfelt conviction; never mocking"
+    },
+    "SANCHO": {
+      "voz": "fr-fr-training-2",
+      "estilo": "simple country squire in French from France; warm, good-humored, plain and practical"
+    },
+    "PASTOR": {
+      "voz": "fr-fr-tutor-6",
+      "estilo": "old goatherd, warm, welcoming and generous in French from France"
+    },
+    "BARBEIRO": {
+      "voz": "fr-fr-csagent-2",
+      "estilo": "frightened barber, shouting for help while running away, comic in French from France"
+    },
+    "PADRE": {
+      "voz": "fr-fr-podcaster-12",
+      "estilo": "kind village priest, gentle, cheerful and clever in French from France"
+    },
+    "DOROTEIA": {
+      "voz": "fr-fr-advisor-9",
+      "estilo": "clever young woman playing a princess in distress, dramatic and graceful in French from France"
+    },
+    "ESTALAJADEIRO": {
+      "voz": "fr-fr-podcaster-4",
+      "estilo": "innkeeper in comic despair over his spilled wine in French from France"
+    },
+    "BARBEIRO_BACIA": {
+      "voz": "fr-fr-csagent-2",
+      "estilo": "indignant barber demanding his basin back, then comically puzzled in French from France"
+    },
+    "NICOLAU": {
+      "voz": "fr-fr-tutor-1",
+      "estilo": "village barber, playful and good-natured, holding back a laugh in French from France"
+    },
+    "NICOLAU_MAGO": {
+      "voz": "fr-fr-tutor-1",
+      "estilo": "pretending to be a mysterious wizard: deep, slow and theatrical, a bit funny in French from France"
+    },
+    "EUGENIO": {
+      "voz": "fr-fr-podcaster-8",
+      "estilo": "young goatherd, out of breath at first, then tender and chatty with his goat in French from France"
+    },
+    "VELHINHO": {
+      "voz": "fr-fr-tutor-7",
+      "estilo": "kind old farmer, warm and smiling, glad to meet a neighbor in French from France"
+    },
+    "SOBRINHA": {
+      "voz": "fr-fr-assistant-12",
+      "estilo": "young woman laughing and crying with joy, hugging her uncle in French from France"
+    },
+    "TERESA": {
+      "voz": "fr-fr-csagent-6",
+      "estilo": "warm-hearted wife, eager and affectionate in French from France"
+    },
+    "POVO": {
+      "voz": "fr-fr-concierge-6",
+      "estilo": "cheerful villagers calling out together, lively and playful in French from France"
+    },
+    "PALAVRAS": {
+      "estilo": "literacy teacher in French from France: each syllable slowly and clearly separated with short pauses, then the whole word joyfully"
+    }
+  },
+  "qa": "whisper-large-v3-turbo (local)",
+  "p1": {
+    "arquivo": "p1.mp3",
+    "hash": "a66abffbd0",
+    "frases": [
+      {
+        "id": "p1-s0",
+        "ini": 0,
+        "fim": 5.61
+      },
+      {
+        "id": "p1-s1",
+        "ini": 5.61,
+        "fim": 12.2
+      },
+      {
+        "id": "p1-s2",
+        "ini": 12.2,
+        "fim": 18.26
+      },
+      {
+        "id": "p1-s3",
+        "ini": 18.26,
+        "fim": 23.98
+      },
+      {
+        "id": "p1-s4",
+        "ini": 23.98,
+        "fim": 28.78
+      },
+      {
+        "id": "p1-s5",
+        "ini": 28.78,
+        "fim": 33.68
+      },
+      {
+        "id": "p1-s6",
+        "ini": 33.68,
+        "fim": 40.67
+      },
+      {
+        "id": "p1-s7",
+        "ini": 40.67,
+        "fim": 49.94
+      },
+      {
+        "id": "p1-s8",
+        "ini": 49.94,
+        "fim": 55.77
+      },
+      {
+        "id": "p1-s9",
+        "ini": 55.77,
+        "fim": 67.19
+      },
+      {
+        "id": "p1-s10",
+        "ini": 67.19,
+        "fim": 72.53
+      },
+      {
+        "id": "p1-s11",
+        "ini": 72.53,
+        "fim": 78.02
+      },
+      {
+        "id": "p1-s12",
+        "ini": 78.02,
+        "fim": 83.51
+      },
+      {
+        "id": "p1-s13",
+        "ini": 83.51,
+        "fim": 88.64
+      }
+    ]
+  },
+  "p2": {
+    "arquivo": "p2.mp3",
+    "hash": "f53456ecf8",
+    "frases": [
+      {
+        "id": "p2-s0",
+        "ini": 0,
+        "fim": 6.1
+      },
+      {
+        "id": "p2-s1",
+        "ini": 6.1,
+        "fim": 12.29
+      },
+      {
+        "id": "p2-s2",
+        "ini": 12.29,
+        "fim": 19.14
+      },
+      {
+        "id": "p2-s3",
+        "ini": 19.14,
+        "fim": 28.47
+      },
+      {
+        "id": "p2-s4",
+        "ini": 28.47,
+        "fim": 31.71
+      },
+      {
+        "id": "p2-s5",
+        "ini": 31.71,
+        "fim": 33.88
+      },
+      {
+        "id": "p2-s6",
+        "ini": 33.88,
+        "fim": 40.09
+      },
+      {
+        "id": "p2-s7",
+        "ini": 40.09,
+        "fim": 46.29
+      },
+      {
+        "id": "p2-s8",
+        "ini": 46.29,
+        "fim": 50.89
+      },
+      {
+        "id": "p2-s9",
+        "ini": 50.89,
+        "fim": 58.51
+      },
+      {
+        "id": "p2-s10",
+        "ini": 58.51,
+        "fim": 63.21
+      },
+      {
+        "id": "p2-s11",
+        "ini": 63.21,
+        "fim": 69.34
+      },
+      {
+        "id": "p2-s12",
+        "ini": 69.34,
+        "fim": 79.83
+      },
+      {
+        "id": "p2-s13",
+        "ini": 79.83,
+        "fim": 83.76
+      },
+      {
+        "id": "p2-s14",
+        "ini": 83.76,
+        "fim": 92.29
+      },
+      {
+        "id": "p2-s15",
+        "ini": 92.29,
+        "fim": 100.53
+      },
+      {
+        "id": "p2-s16",
+        "ini": 100.53,
+        "fim": 104.8
+      },
+      {
+        "id": "p2-s17",
+        "ini": 104.8,
+        "fim": 106.96
+      },
+      {
+        "id": "p2-s18",
+        "ini": 106.96,
+        "fim": 115.02
+      },
+      {
+        "id": "p2-s19",
+        "ini": 115.02,
+        "fim": 122.67
+      }
+    ]
+  }
+}

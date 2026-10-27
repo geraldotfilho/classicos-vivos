@@ -5,10 +5,10 @@ data,comando,pedidos_voz,tokens_audio,tokens_qa,usd_estimado
 2026-10-24T01:13,"--voz narracao --parte 1 --paginas 4,5,6,7 --pagina-inteira",6,7133,0,0.0647
 2026-10-24T01:17,"--voz palavras --parte 1",28,4860,0,0.0439
 2026-10-24T02:13,"--voz narracao --parte 2 --paginas 0 --pagina-inteira --autorizado",1,1324,0,0.0061
-2026-10-24T02:16,"--voz palavras --parte 2 --autorizado",13,2221,0,0.0101
 2026-10-24T02:16,"--voz narracao --parte 2 --pagina-inteira --autorizado",6,8310,0,0.0380
-2026-10-24T02:16,"--voz narracao --parte 4 --pagina-inteira --autorizado",6,8882,0,0.0406
+2026-10-24T02:16,"--voz palavras --parte 2 --autorizado",13,2221,0,0.0101
 2026-10-24T02:16,"--voz narracao --parte 3 --pagina-inteira --autorizado (interrompido; estimativa)",6,8000,0,0.0360
+2026-10-24T02:16,"--voz narracao --parte 4 --pagina-inteira --autorizado",6,8882,0,0.0406
 2026-10-24T07:09,"--voz narracao --parte 3 --pagina-inteira --autorizado --paralelo 3",13,12473,0,0.0569
 2026-10-24T07:10,"--voz narracao --parte 4 --pagina-inteira --autorizado --paralelo 3",12,15811,0,0.0722
 2026-10-24T07:11,"--voz narracao --parte 2 --pagina-inteira --autorizado --paralelo 3",16,19056,0,0.0870
@@ -18,9 +18,9 @@ data,comando,pedidos_voz,tokens_audio,tokens_qa,usd_estimado
 2026-10-24T07:21,"--voz palavras --parte 2 --autorizado",1,1098,0,0.0050
 2026-10-24T07:22,"--voz palavras --parte 4 --autorizado",1,641,0,0.0029
 2026-10-24T07:23,"--voz palavras --parte 2 --autorizado",1,212,0,0.0010
+2026-10-24T15:16,"--voz narracao --idioma en --parte 1 --pagina-inteira --autorizado",10,13497,0,0.0614
 2026-10-24T15:16,"--voz narracao --idioma fr --parte 1 --pagina-inteira --autorizado",9,11905,0,0.0544
 2026-10-24T15:16,"--voz narracao --idioma es --parte 1 --pagina-inteira --autorizado",9,12812,0,0.0584
-2026-10-24T15:16,"--voz narracao --idioma en --parte 1 --pagina-inteira --autorizado",10,13497,0,0.0614
 2026-10-24T15:19,"--voz palavras --idioma es --parte 1 --autorizado",1,1757,0,0.0080
 2026-10-24T15:21,"--voz palavras --idioma fr --parte 1 --autorizado",3,3390,0,0.0154
 2026-10-24T15:22,"--voz palavras --idioma en --parte 1 --autorizado",4,3332,0,0.0151
@@ -28,8 +28,8 @@ data,comando,pedidos_voz,tokens_audio,tokens_qa,usd_estimado
 2026-10-24T15:23,"--voz palavras --idioma en --parte 1 --autorizado",1,529,0,0.0024
 2026-10-24T15:24,"--voz narracao --idioma en --amostra --autorizado",1,194,0,0.0009
 2026-10-25T07:20,"--voz palavras --idioma fr --parte 1 --ids moulins,vent,geants --autorizado",1,307,0,0.0014
-2026-10-25T07:21,"--voz palavras --idioma fr --parte 1 --ids pomme,ile --agrupar 1 --autorizado",2,195,0,0.0009
 2026-10-25T07:21,"--voz narracao --idioma fr --amostra --autorizado",1,148,0,0.0007
+2026-10-25T07:21,"--voz palavras --idioma fr --parte 1 --ids pomme,ile --agrupar 1 --autorizado",2,195,0,0.0009
 2026-10-25T07:24,"--voz palavras --idioma es --parte 1 --autorizado",2,2641,0,0.0120
 2026-10-25T07:24,"--voz narracao --idioma es --amostra --autorizado",1,158,0,0.0007
 2026-10-25T10:04,"--voz narracao --parte 3 --pagina-inteira --autorizado --paralelo 3",16,15222,0,0.0695
@@ -51,13 +51,15 @@ data,comando,pedidos_voz,tokens_audio,tokens_qa,usd_estimado
 2026-10-27T02:14,"--voz palavras --idioma es --parte 2,3,4 --autorizado",1,530,0,0.0024
 2026-10-27T02:15,"--voz narracao --idioma es --parte 2 --pagina-inteira --paralelo 3 --autorizado",10,18657,0,0.0852
 2026-10-27T02:18,"--voz narracao --idioma en --parte 3 --pagina-inteira --paralelo 3 --autorizado",7,6697,0,0.0306
-2026-10-27T02:18,"--voz palavras --idioma fr --parte 2,3,4 --autorizado",1,847,0,0.0038
 2026-10-27T02:18,"--voz palavras --idioma es --parte 2,3,4 --autorizado",1,229,0,0.0010
+2026-10-27T02:18,"--voz palavras --idioma fr --parte 2,3,4 --autorizado",1,847,0,0.0038
 2026-10-27T02:19,"--voz palavras --idioma en --parte 2,3,4 --autorizado",1,99,0,0.0004
 2026-10-27T07:10,"--voz palavras --idioma fr --parte 3,4 --autorizado",1,179,0,0.0008
 2026-10-27T07:12,"--voz narracao --idioma en --parte 3 --pagina-inteira --autorizado",6,8209,0,0.0374
 2026-10-27T07:15,"--voz narracao --idioma fr --parte 3 --pagina-inteira --autorizado",11,13289,0,0.0607
 2026-10-27T07:18,"--voz narracao --idioma es --parte 3 --pagina-inteira --autorizado",11,13633,0,0.0622
+2026-10-27T07:27,"--voz narracao --idioma en --parte 4 --pagina-inteira --autorizado",47,37625,0,0.1714
+2026-10-27T07:30,"--voz narracao --idioma fr --parte 4 --pagina-inteira --autorizado",18,12177,0,0.0557
 2026-10-27T12:46,"--voz palavras --idioma fr --parte 2 --autorizado",1,113,0,0.0005
 2026-10-27T12:56,"--voz palavras --idioma fr --parte 4 --autorizado",1,90,0,0.0004
 2026-10-27T12:57,"--voz palavras --idioma es --parte 4 --autorizado",1,256,0,0.0012
