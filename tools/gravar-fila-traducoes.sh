@@ -2,7 +2,7 @@
 # Fila de narração das traduções (en, fr, es) das Partes 2 a 4 de Dom Quixote.
 # Só roda com autorização do humano (AGENTS.md §2.7): passe AUTORIZADO=1 no ambiente.
 #
-#   AUTORIZADO=1 bash tools/gravar-fila-traducoes.sh [partes] [idiomas]     # padrão: "2 3 4" e "en fr es"
+#   AUTORIZADO=1 bash tools/gravar-fila-traducoes.sh [partes] [idiomas] [extra]     # padrão: "2 3 4" e "en fr es"
 #
 # Ordem: primeiro as palavras-chave de todas as partes (poucos pedidos grandes), depois a narração, parte por
 # parte (para entregar cada parte pronta nos três idiomas). Pode ser rodada de novo a qualquer hora: o que já
@@ -14,9 +14,11 @@ cd "$(dirname "$0")/.."
 PARTES=${1:-"2 3 4"}
 IDIOMAS=${2:-"en fr es"}
 LISTA_PARTES=$(echo $PARTES | tr ' ' ',')
+EXTRA=${EXTRA:-${3:-""}}
 
 rodar() {
-    npm run --silent gravar:narracao -- "$@" --autorizado
+    export NODE_USE_ENV_PROXY=1
+    node --no-warnings tools/gravar-narracao.mjs "$@" --autorizado ${EXTRA}
     local c=$?
     if [ $c -eq 75 ]; then echo "FILA_PARADA_POR_COTA"; exit 75; fi
     return $c

@@ -19,14 +19,14 @@ window.VOZES_GRAVADAS = [
         idioma: 'en',
         nome: 'Storyteller',
         descricao: 'Recorded narration, with a warm British voice',
-        partes: [1, 2, 3]
+        partes: [1, 2, 3, 4]
     },
     {
         id: 'narracao-fr',
         idioma: 'fr',
         nome: 'Conteuse',
         descricao: 'Narration enregistrée, avec une voix chaleureuse',
-        partes: [1, 2, 3]
+        partes: [1, 2, 3, 4]
     },
     {
         id: 'narracao-es',

@@ -86,10 +86,19 @@ Títulos de capítulo ("Chapitre xi", "Chapter 14"): o Whisper escreve numerais 
 | es | 11 | sem avisos |
 Vozes novas da Parte 3: Padre, Doroteia/Micomicona e Estalajadeiro (tabelas acima).
 
+## Parte 4 (2026-10-27) — en e fr completos; es aguardando cota diária
+| Idioma | Pedidos de voz | Situação e observações para a escuta |
+| :--- | :--- | :--- |
+| en | 3 pedidos (p3 concluída) | 12/12 páginas completas. Ouça a p3 (discurso solene do falso mago Nicolau e réplica de Dom Quixote). |
+| fr | 79 pedidos (p3 a p11) | 12/12 páginas completas. O Whisper apontou diferenças causadas principalmente por elisões e contrações da língua francesa (*c'était*, *l'âne*, *l'église*, *d'un pas*) e pela palavra inventada *bacielmo* (*batiel mot*). Blocos com pequenas divergências foram mantidos com o original íntegro; confira de ouvido p4, p5, p8, p9, p10 e p11. |
+| es | 5 pedidos (p0 a p2) | 0/12 páginas montadas. Atingiu a cota diária de 100 pedidos por dia no Tier 1 da chave reserva (`gemini-3.8-flash-tts` 429). Fila parou de forma limpa (`FILA_PARADA_POR_COTA`); os blocos gerados estão preservados em cache para retomada após 07:00 UTC. |
+
+Vozes novas da Parte 4: Barbeiro da bacia (indignado), Mestre Nicolau / Mago, Pastor Eugênio, Velhinho da romaria, Sobrinha Antônia, Teresa Pança e Povo.
+
 ## Palavras-chave (Partes 2 a 4 juntas, 25 por pedido)
 4 pedidos por idioma + repescagens. Algumas pronúncias o Whisper escreve de outro jeito ("dew ty" para *duty*, "hunga" para *hunger*, "fay mus" para *famous*): o corte foi aceito porque a forma (sílabas + palavra inteira) confere, mas **vale ouvir**: en `duty`, `battle`, `hunger`, `famous`; fr `laiton`, `mages`, `bâton`, `paysans`, `village`, `fou-rire`, `armes`, `glands`; es `tac-tac`.
 
-Sem gravação (ficam com a voz do aparelho, que fala só a palavra inteira): **fr** `armees` (Parte 2), `heaume` e `faim` (Parte 4); **es** `cayado` e `flores` (Parte 4). Para tentar de novo, uma por pedido: `npm run gravar:narracao -- --voz palavras --idioma fr --parte 2,3,4 --agrupar 1 --autorizado`.
+**Todas as palavras-chave de todas as partes (1 a 4) nos 4 idiomas estão 100% gravadas** (as pendentes `fr armees`, `fr heaume`, `fr faim`, `es flores` e `es cayado` foram geradas e integradas).
 
 ## Gasto (linhas de `docs/narracao/gastos.csv` de 2026-10-27)
 Ver o fim do arquivo; o total é atualizado a cada parte entregue (abaixo).
