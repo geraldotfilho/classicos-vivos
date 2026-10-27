@@ -25,6 +25,7 @@
 //   ... --retentar-acima N                                                # só regrava um bloco se alguma frase tiver mais que N palavras diferentes (padrão 2)
 //   ... --so-cache                                                        # (palavras) refaz só o corte dos grupos já pagos, sem nenhum pedido novo
 //   ... --remontar                                                        # (páginas) monta de novo as páginas já gravadas, com os blocos do cache (nenhum pedido novo)
+//   ... --chave-reserva                                                   # usa logo GEMINI_API_KEY_ANTIGRAVITY (sem ela, a reserva só entra quando a cota diária da principal acaba)
 //   (cota diária esgotada: encerra com código 75; rode o mesmo comando depois das 07:00 UTC)
 //   ... --autorizado                                                      # obrigatório para chamar a API (ver a regra acima)
 //   ... --standard                                                        # nível Standard (o padrão é o Flex: metade do preço, resposta em minutos)
@@ -96,7 +97,7 @@ function opcoes(argv) {
     const o = { livro: 'dom-quixote' };
     for (let i = 0; i < argv.length; i++) {
         const a = argv[i].replace(/^--/, '');
-        if (['seco', 'forcar', 'amostra', 'sem-qa', 'pagina-inteira', 'autorizado', 'standard', 'so-cache', 'remontar', 'sem-reparo'].includes(a)) o[a] = true;
+        if (['seco', 'forcar', 'amostra', 'sem-qa', 'pagina-inteira', 'autorizado', 'standard', 'so-cache', 'remontar', 'sem-reparo', 'chave-reserva'].includes(a)) o[a] = true;
         else o[a] = argv[++i];
     }
     return o;
@@ -144,7 +145,11 @@ const PRECO = { ttsSaida: 9, ttsEntrada: 0.5 };
 const gasto = { tts: 0, ttsEntrada: 0, pedidos: 0, ttsStandard: 0 };
 const dolares = () => ((gasto.tts - gasto.ttsStandard) * (flex ? 0.5 : 1) + gasto.ttsStandard) * PRECO.ttsSaida / 1e6 + gasto.ttsEntrada * PRECO.ttsEntrada / 1e6;
 
-const cabecalhos = { 'Content-Type': 'application/json', ...(process.env.GEMINI_API_KEY ? { 'x-goog-api-key': process.env.GEMINI_API_KEY } : {}) };
+// Chave reserva (outro projeto do AI Studio, com cota própria): GEMINI_API_KEY_ANTIGRAVITY. Só entra quando a cota diária da
+// chave principal (a do proxy do ambiente, ou GEMINI_API_KEY) acaba, ou sempre com --chave-reserva. Nunca é impressa.
+const CHAVE_RESERVA = process.env.GEMINI_API_KEY_ANTIGRAVITY || '';
+let usandoReserva = !!(o['chave-reserva'] && CHAVE_RESERVA);
+const cabecalhos = () => ({ 'Content-Type': 'application/json', ...(usandoReserva ? { 'x-goog-api-key': CHAVE_RESERVA } : process.env.GEMINI_API_KEY ? { 'x-goog-api-key': process.env.GEMINI_API_KEY } : {}) });
 const espera = (ms) => new Promise(r => setTimeout(r, ms));
 
 /* POST com novas tentativas: 429 respeita o retryDelay; 5xx e falha de rede, até 4 vezes com recuo */
@@ -152,7 +157,7 @@ async function postar(url, corpo) {
     for (let tentativa = 0; ; tentativa++) {
         let r, j;
         try {
-            r = await fetch(url, { method: 'POST', headers: cabecalhos, body: JSON.stringify(corpo) });
+            r = await fetch(url, { method: 'POST', headers: cabecalhos(), body: JSON.stringify(corpo) });
             j = await r.json().catch(() => ({}));
         } catch (e) {
             if (tentativa >= 4) throw e;
@@ -164,7 +169,11 @@ async function postar(url, corpo) {
         if (r.status === 429) {
             const atraso = JSON.stringify(j).match(/"retryDelay":\s*"(\d+)/);
             // o limite por dia aparece em quotaId/quotaMetric ("...PerDay..."), não só na mensagem
-            if (/per.?day|daily/i.test(msg + JSON.stringify(j.error?.details || '')) || tentativa >= 6) throw new Error(`cota esgotada: ${msg}`);
+            if (/per.?day|daily/i.test(msg + JSON.stringify(j.error?.details || '')) || tentativa >= 6) {
+                // cota diária da chave principal acabou: passa para a chave reserva (cota de outro projeto) e repete este pedido
+                if (CHAVE_RESERVA && !usandoReserva) { usandoReserva = true; console.log('  🔑 cota diária da chave principal esgotada: continuando com a chave reserva'); continue; }
+                throw new Error(`cota esgotada: ${msg}`);
+            }
             const s = atraso ? Number(atraso[1]) + 1 : 15 * 2 ** tentativa;
             console.log(`  ⏳ 429, esperando ${s} s (${msg.slice(0, 140).replace(/\s+/g, ' ')})`);
             await espera(s * 1000);
