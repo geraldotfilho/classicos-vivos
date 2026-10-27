@@ -233,7 +233,7 @@ let whisper = null;
 function transcritorLocal() {
     if (whisper) return whisper;
     const env = { ...process.env, CV_IDIOMA: (IDIOMA || 'pt').slice(0, 2), ...(NOMES_WHISPER ? { CV_NOMES: NOMES_WHISPER } : {}) };
-    const proc = spawn('python3', ['-I', join(RAIZ, 'tools', 'transcrever.py')], { stdio: ['pipe', 'pipe', 'inherit'], env });
+    const proc = spawn('python3', ['-u', join(RAIZ, 'tools', 'transcrever.py')], { stdio: ['pipe', 'pipe', 'inherit'], env });
     const fila = [];
     let resto = '', pronto;
     const carregou = new Promise((ok, falha) => { pronto = ok; proc.on('error', falha); proc.on('exit', c => falha(new Error(`transcrever.py saiu (${c}); instale com: pip install faster-whisper`))); });

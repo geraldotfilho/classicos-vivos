@@ -115,7 +115,8 @@
     "reino": "753c7d46de",
     "historias": "c3d66cbe23",
     "letras": "d2788ac3bb",
-    "jaula": "dc8249ae7f"
+    "jaula": "dc8249ae7f",
+    "flores": "b5434c883c"
   },
   "modelo": "gemini-3.8-flash-tts",
   "voz": "es-es-tutor-12",

@@ -16,6 +16,12 @@ import sys
 import numpy as np
 from faster_whisper import WhisperModel
 
+try:
+    import imageio_ffmpeg
+    FFMPEG_BIN = imageio_ffmpeg.get_ffmpeg_exe()
+except Exception:
+    FFMPEG_BIN = 'ffmpeg'
+
 MODELO = "large-v3-turbo"
 # Idioma da fala (pt, en, fr, es): o gravar-narracao.mjs passa CV_IDIOMA e, nas traduções, os nomes em CV_NOMES
 IDIOMA = os.environ.get("CV_IDIOMA", "pt")
@@ -29,7 +35,7 @@ NOMES = os.environ.get("CV_NOMES") or ("Dom Quixote de La Mancha, Alonso Quixano
 def ler(arquivo):
     # Decodifica com o ffmpeg (16 kHz, mono): evita a dependência do PyAV na versão certa.
     # -nostdin e stdin fechado: senão o ffmpeg "come" o começo da próxima linha da fila (o caminho seguinte)
-    pcm = subprocess.run(["ffmpeg", "-nostdin", "-loglevel", "error", "-i", arquivo, "-f", "s16le", "-ac", "1", "-ar", "16000", "-"],
+    pcm = subprocess.run([FFMPEG_BIN, "-nostdin", "-loglevel", "error", "-i", arquivo, "-f", "s16le", "-ac", "1", "-ar", "16000", "-"],
                          stdin=subprocess.DEVNULL, capture_output=True, check=True).stdout
     return np.frombuffer(pcm, np.int16).astype(np.float32) / 32768
 
@@ -49,7 +55,9 @@ def main():
             print(f"{arquivo}: {transcrever(modelo, arquivo)[0]}")
         return
     print(json.dumps({"pronto": True}), flush=True)
-    for linha in sys.stdin:
+    while True:
+        linha = sys.stdin.readline()
+        if not linha: break
         arquivo = linha.strip()
         if not arquivo:
             continue

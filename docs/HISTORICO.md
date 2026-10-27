@@ -282,3 +282,7 @@ O que já foi entregue, sprint a sprint, em ordem cronológica (o mais antigo pr
 - **Partes 2 e 3 narradas nos três idiomas** (elenco de personagens por idioma, palavras-chave), entregues na `main`; Parte 4 em andamento (BACKLOG M-11).
 - **Menos pedidos por dia**: palavras-chave de várias partes juntas (25 por pedido), blocos de narração que atravessam as páginas, reparo cirúrgico (só a frase com defeito) em vez de regravar o bloco, e parada limpa quando a cota diária acaba (`tools/gravar-fila-traducoes.sh`, código 75).
 - **Roteiros das traduções** derivados do roteiro em português (`tools/derivar-roteiro.mjs`); situação da narração: `tools/conferir-narracao.mjs`.
+
+- **Ambiente Antigravity no Windows e palavras-chave (2026-10-27)**:
+  - Suporte completo a geração de áudio no Windows: fallback do `imageio_ffmpeg` para ffmpeg em `tools/transcrever.py` e comunicação com Python via pipe unbuffered (`-u` e `readline()`) em `tools/gravar-narracao.mjs`.
+  - Gravadas palavras-chave pendentes: `fr` Parte 2 (`armees`), `fr` Parte 4 (`heaume`) e `es` Parte 4 (`flores`). Todas as palavras de todas as partes em PT, EN e FR estão 100% completas; em ES restou apenas `cayado` (42/43) para renovação da cota diária de 100 pedidos. Gasto adicional: ~US$ 0,0021.
