@@ -61,3 +61,4 @@ data,comando,pedidos_voz,tokens_audio,tokens_qa,usd_estimado
 2026-10-27T12:46,"--voz palavras --idioma fr --parte 2 --autorizado",1,113,0,0.0005
 2026-10-27T12:56,"--voz palavras --idioma fr --parte 4 --autorizado",1,90,0,0.0004
 2026-10-27T12:57,"--voz palavras --idioma es --parte 4 --autorizado",1,256,0,0.0012
+2026-10-27T13:43,"--voz palavras --idioma es --parte 4 --agrupar 1 --autorizado",1,148,0,0.0007

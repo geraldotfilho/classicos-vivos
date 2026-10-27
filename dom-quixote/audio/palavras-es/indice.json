@@ -116,7 +116,8 @@
     "historias": "c3d66cbe23",
     "letras": "d2788ac3bb",
     "jaula": "dc8249ae7f",
-    "flores": "b5434c883c"
+    "flores": "b5434c883c",
+    "cayado": "d8979c9964"
   },
   "modelo": "gemini-3.8-flash-tts",
   "voz": "es-es-tutor-12",
