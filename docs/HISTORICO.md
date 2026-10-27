@@ -275,3 +275,10 @@ O que já foi entregue, sprint a sprint, em ordem cronológica (o mais antigo pr
 - **Contato simples para famílias**: botão "Avisar sobre um problema" (e-mail com assunto pronto) em `sobre.html` e o e-mail no próprio aviso do livro; o GitHub ficou como alternativa.
 
 - **Divulgação (2026-10-27)**: prévia do link no WhatsApp e nas redes (Open Graph, `assets/icones/compartilhar.jpg`), `sitemap.xml` e verificação no Google Search Console, e contador de visitas anônimo (GoatCounter, `assets/js/contador.js`). O aviso aos pais passou a dizer que só contamos visitas de forma anônima, sem cookies nem dados pessoais.
+
+---
+
+## ✅ Narração em en/fr/es das Partes 2–4 (2026-10-27)
+- **Parte 2 narrada nos três idiomas** (9 páginas cada, elenco de personagens por idioma, 31 palavras-chave), entregue na `main`; Partes 3 e 4 em andamento (BACKLOG M-11).
+- **Menos pedidos por dia**: palavras-chave de várias partes juntas (25 por pedido), blocos de narração que atravessam as páginas, reparo cirúrgico (só a frase com defeito) em vez de regravar o bloco, e parada limpa quando a cota diária acaba (`tools/gravar-fila-traducoes.sh`, código 75).
+- **Roteiros das traduções** derivados do roteiro em português (`tools/derivar-roteiro.mjs`); situação da narração: `tools/conferir-narracao.mjs`.

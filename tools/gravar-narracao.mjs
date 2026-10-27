@@ -23,6 +23,8 @@
 //   ... --parte 2,3,4                                                     # (palavras-chave) as palavras de várias partes nos mesmos pedidos
 //   ... --max-letras N                                                    # teto de letras por pedido de narração (padrão 3500); os blocos atravessam páginas
 //   ... --retentar-acima N                                                # só regrava um bloco se alguma frase tiver mais que N palavras diferentes (padrão 2)
+//   ... --so-cache                                                        # (palavras) refaz só o corte dos grupos já pagos, sem nenhum pedido novo
+//   ... --remontar                                                        # (páginas) monta de novo as páginas já gravadas, com os blocos do cache (nenhum pedido novo)
 //   (cota diária esgotada: encerra com código 75; rode o mesmo comando depois das 07:00 UTC)
 //   ... --autorizado                                                      # obrigatório para chamar a API (ver a regra acima)
 //   ... --standard                                                        # nível Standard (o padrão é o Flex: metade do preço, resposta em minutos)
@@ -94,7 +96,7 @@ function opcoes(argv) {
     const o = { livro: 'dom-quixote' };
     for (let i = 0; i < argv.length; i++) {
         const a = argv[i].replace(/^--/, '');
-        if (['seco', 'forcar', 'amostra', 'sem-qa', 'pagina-inteira', 'autorizado', 'standard'].includes(a)) o[a] = true;
+        if (['seco', 'forcar', 'amostra', 'sem-qa', 'pagina-inteira', 'autorizado', 'standard', 'so-cache', 'remontar', 'sem-reparo'].includes(a)) o[a] = true;
         else o[a] = argv[++i];
     }
     return o;
@@ -164,7 +166,7 @@ async function postar(url, corpo) {
             // o limite por dia aparece em quotaId/quotaMetric ("...PerDay..."), não só na mensagem
             if (/per.?day|daily/i.test(msg + JSON.stringify(j.error?.details || '')) || tentativa >= 6) throw new Error(`cota esgotada: ${msg}`);
             const s = atraso ? Number(atraso[1]) + 1 : 15 * 2 ** tentativa;
-            console.log(`  ⏳ 429, esperando ${s} s`);
+            console.log(`  ⏳ 429, esperando ${s} s (${msg.slice(0, 140).replace(/\s+/g, ' ')})`);
             await espera(s * 1000);
         } else if (r.status >= 500 && tentativa < 4) {
             await espera(2000 * 2 ** tentativa);
@@ -579,15 +581,23 @@ async function tentarBloco(bloco, roteiro) {
     if (!o['sem-qa']) {
         const r = await transcrever(wav, true);
         const al = alinharFrases(frases, r.palavras);
-        if (al.some(x => !x)) return { erros: 999, motivo: `frase sem nenhuma palavra reconhecida: "${r.texto}"` };
+        if (al.every(x => !x)) return { erros: 999, motivo: `nenhuma palavra reconhecida: "${r.texto}"` };
         const gaps = pausas(a, vozIni, vozFim);
-        cortes = [ini, ...al.slice(1).map((x, k) => {
-            const ant = al[k].fim * TAXA, prox = x.ini * TAXA;
+        // Frase que a voz pulou (nenhuma palavra reconhecida) fica com duração zero, no ponto entre as vizinhas: vira
+        // defeito reparável (repararBloco pede só ela), em vez de jogar fora o bloco inteiro
+        const vizinha = (j) => {
+            let antes = j - 1, depois = j;
+            while (antes >= 0 && !al[antes]) antes--;
+            while (depois < al.length && !al[depois]) depois++;
+            return [antes >= 0 ? al[antes].fim * TAXA : ini, depois < al.length ? al[depois].ini * TAXA : fim];
+        };
+        cortes = [ini, ...frases.slice(1).map((_, j0) => {
+            const [ant, prox] = vizinha(j0 + 1);
             // de preferência, no meio da pausa que fica entre as duas palavras
             const pausa = gaps.filter(g => g.fim > ant - 0.15 * TAXA && g.ini < prox + 0.15 * TAXA).sort((p, q) => q.s - p.s)[0];
             return Math.round(pausa ? pausa.meio : (ant + prox) / 2);
         }), fim];
-        ouvidos = al.map(x => x.ouvido);
+        ouvidos = al.map(x => (x ? x.ouvido : ''));
     } else {
         const escolha = fronteiras(frases, pausas(a, vozIni, vozFim), vozIni, vozFim);
         if (!escolha) return { erros: 999, motivo: 'pausas de menos para separar as frases' };
@@ -618,7 +628,63 @@ function chaveBloco(bloco, roteiro) {
     return createHash('sha1').update(JSON.stringify([MODELO_TTS, bloco.estilo || null, vozes, bloco.frases.map(f => [f.id, f.fala, f.paragrafo ?? null, f.pagina ?? null, roteiro[f.id] || null])])).digest('hex').slice(0, 16);
 }
 
-/* Bloco com até 2 tentativas: regrava só se alguma frase tiver mais que TOLERANCIA palavras diferentes */
+/* Reparo cirúrgico: frases com defeito de verdade (mais que RETENTAR_ACIMA palavras diferentes, ex.: um trecho que a voz
+   pulou) são pedidas de novo SÓ elas (1 pedido por trecho seguido de frases ruins, em vez de regravar o bloco todo) e
+   emendadas no áudio do bloco, no meio das pausas onde as marcas já estão. */
+function frasesRuins(r) {
+    return new Set((r.avisos || []).map(a => a.match(/^(\S+): (\d+) palavra/)).filter(m => m && Number(m[2]) > RETENTAR_ACIMA).map(m => m[1]));
+}
+async function repararBloco(bloco, roteiro, melhor, rotulo) {
+    const ruins = frasesRuins(melhor);
+    if (!ruins.size || o['so-cache'] || o['sem-reparo']) return melhor;
+    // trechos seguidos de frases ruins, do fim para o começo (os índices das anteriores não mudam)
+    const trechos = [];
+    bloco.frases.forEach((f, k) => { if (ruins.has(f.id)) { if (trechos.length && trechos.at(-1).fim === k - 1) trechos.at(-1).fim = k; else trechos.push({ ini: k, fim: k }); } });
+    let atual = melhor;
+    for (const t of trechos.reverse()) {
+        const frases = bloco.frases.slice(t.ini, t.fim + 1);
+        const ids = new Set(frases.map(f => f.id));
+        const quemFala = (fs) => [...new Set(fs.flatMap(f => trechosDe(f, roteiro).map(x => x.falante)).filter(x => x !== 'NARRADORA'))];
+        if (quemFala(frases).length > 1) continue;
+        // A frase anterior vai junto como contexto (uma frase sozinha, ou no começo do pedido, às vezes é pulada ou lida
+        // como instrução); só o áudio das frases ruins é aproveitado
+        const ctx = t.ini > 0 && quemFala([bloco.frases[t.ini - 1], ...frases]).length <= 1 ? [bloco.frases[t.ini - 1]] : [];
+        console.log(`  🔧 ${rotulo}: pedindo só ${frases.map(f => f.id).join(', ')} (defeito) para emendar`);
+        const r = await tentarBloco({ frases: [...ctx, ...frases], personagem: quemFala([...ctx, ...frases])[0] || null, estilo: bloco.estilo }, roteiro);
+        if (r.erros >= 999) { console.log(`  ✗ reparo de ${frases[0].id} falhou (${r.motivo.slice(0, 80)}); fica o original (revise de ouvido)`); continue; }
+        const avisosNovos = (r.avisos || []).filter(a => ids.has(a.split(':')[0]));
+        const pior = Math.max(0, ...avisosNovos.map(a => Number(a.match(/: (\d+) palavra/)?.[1]) || 0));
+        if (pior > RETENTAR_ACIMA) { console.log(`  ✗ reparo de ${frases[0].id} também com defeito; fica o original (revise de ouvido)`); continue; }
+        const peca = pecaDaPagina(r, ids);
+        const m0 = atual.marcas[t.ini], m1 = atual.marcas[t.fim];
+        const i0 = Math.round(m0.ini * TAXA), i1 = Math.round(m1.fim * TAXA);
+        const amostras = new Int16Array(i0 + peca.amostras.length + (atual.amostras.length - i1));
+        amostras.set(atual.amostras.subarray(0, i0), 0);
+        amostras.set(peca.amostras, i0);
+        amostras.set(atual.amostras.subarray(i1), i0 + peca.amostras.length);
+        const delta = (peca.amostras.length - (i1 - i0)) / TAXA;
+        const marcas = atual.marcas.map((m, k) => {
+            if (k < t.ini) return m;
+            if (k > t.fim) return { id: m.id, ini: m.ini + delta, fim: m.fim + delta };
+            const novo = peca.marcas[k - t.ini];
+            return { id: m.id, ini: m0.ini + novo.ini, fim: m0.ini + novo.fim };
+        });
+        const avisos = [...(atual.avisos || []).filter(a => !ids.has(a.split(':')[0])), ...avisosNovos];
+        const dif = (a) => Number(a.match(/: (\d+) palavra/)?.[1]) || 0;
+        atual = { ...atual, amostras, marcas, avisos, erros: avisos.reduce((t2, a) => t2 + dif(a), 0), pior: Math.max(0, ...avisos.map(dif)), reparos: (atual.reparos || 0) + 1 };
+    }
+    return atual;
+}
+
+function guardarNoCache(chave, bloco) {
+    mkdirSync(CACHE, { recursive: true });
+    const { amostras, ...resto } = bloco;
+    writeFileSync(join(CACHE, `${chave}.pcm`), Buffer.from(amostras.buffer, amostras.byteOffset, amostras.byteLength));
+    writeFileSync(join(CACHE, `${chave}.json`), JSON.stringify(resto));
+}
+
+/* Bloco: 1 pedido; se a alinhagem falhar por inteiro (frase sem nenhuma palavra reconhecida), mais 1 pedido do bloco todo;
+   frases com defeito de verdade são repostas por reparo cirúrgico (acima). O resultado pago vai para o cache. */
 async function gravarBloco(bloco, roteiro, rotulo) {
     const chave = chaveBloco(bloco, roteiro);
     const arqCache = join(CACHE, `${chave}.json`);
@@ -626,21 +692,23 @@ async function gravarBloco(bloco, roteiro, rotulo) {
         const c = JSON.parse(readFileSync(arqCache, 'utf8'));
         const raw = readFileSync(join(CACHE, `${chave}.pcm`));
         console.log(`  ♻️  ${rotulo}: do cache (sem pedido novo)`);
-        return { ...c, amostras: new Int16Array(raw.buffer.slice(raw.byteOffset, raw.byteOffset + raw.length)) };
+        let r = { ...c, amostras: new Int16Array(raw.buffer.slice(raw.byteOffset, raw.byteOffset + raw.length)) };
+        if (frasesRuins(r).size && !o['so-cache']) { r = await repararBloco(bloco, roteiro, r, rotulo); guardarNoCache(chave, r); }
+        return r;
     }
+    if (o['so-cache']) throw new Error(`${rotulo}: sem cache e com --so-cache (nenhum pedido novo)`);
     let melhor = null;
     for (let tentativa = 1; tentativa <= TENTATIVAS; tentativa++) {
         const r = await tentarBloco(bloco, roteiro);
         r.tentativas = tentativa;
         if (!melhor || r.erros < melhor.erros) melhor = r;
-        if (r.erros < 999 && r.pior <= RETENTAR_ACIMA) break;
+        if (r.erros < 999) break;   // defeitos pontuais vão para o reparo; só o bloco "ilegível" é pedido de novo inteiro
         console.log(`  ↻ ${rotulo} tentativa ${tentativa}: ${r.motivo}`);
     }
     if (melhor.erros < 999) {
-        mkdirSync(CACHE, { recursive: true });
-        const { amostras, ...resto } = melhor;
-        writeFileSync(join(CACHE, `${chave}.pcm`), Buffer.from(amostras.buffer, amostras.byteOffset, amostras.byteLength));
-        writeFileSync(arqCache, JSON.stringify(resto));
+        if (melhor.pior > RETENTAR_ACIMA) console.log(`  ⚠️ ${rotulo}: ${melhor.motivo}`);
+        melhor = await repararBloco(bloco, roteiro, melhor, rotulo);
+        guardarNoCache(chave, melhor);
     }
     return melhor;
 }
@@ -709,7 +777,7 @@ async function gravarPaginas(fonte, pasta, paginas, ids) {
         if (ids) frases = frases.filter(f => ids.has(f.id));
         if (!frases.length) continue;
         const hash = createHash('sha1').update(frases.map(f => f.hash).join() + JSON.stringify(frases.map(f => roteiro[f.id] || null)) + elenco(frases)).digest('hex').slice(0, 10);
-        if (!ids && !o.forcar && registro[id]?.hash === hash && existsSync(join(pasta, `${id}.mp3`))) continue;
+        if (!ids && !o.forcar && !o.remontar && registro[id]?.hash === hash && existsSync(join(pasta, `${id}.mp3`))) continue;
         unidades.push({ n, id, frases, hash, blocos: [] });
     }
     if (!unidades.length) { console.log('nada a gravar: todas as páginas pedidas já estão gravadas'); return; }
@@ -823,10 +891,18 @@ async function cortarPalavras(grupo, amostras) {
     }
     let vozFim = amostras.length - 1;
     while (vozFim > 0 && Math.abs(amostras[vozFim]) < 500) vozFim--;
-    const gaps = pausas(amostras, 0, vozFim);
-    const corteDepois = (seg) => {
-        const g = gaps.find(x => x.fim > (seg - 0.15) * TAXA && x.s >= 0.2);
-        return Math.round(g ? g.meio : Math.min(amostras.length, (seg + 0.3) * TAXA));
+    // Ponto de corte depois da palavra inteira do item `k`: o instante mais silencioso entre o fim dela e o começo da
+    // próxima palavra falada (as pausas do francês e do espanhol são curtas: procurar uma pausa longa corta tarde demais)
+    const quadroRms = (q) => { let soma = 0; for (let i = q * QUADRO; i < Math.min(amostras.length, (q + 1) * QUADRO); i++) soma += amostras[i] * amostras[i]; return Math.sqrt(soma / QUADRO); };
+    const corteDepois = (seg, proxIni) => {
+        const de = Math.max(0, Math.round((seg - 0.02) * TAXA / QUADRO)), ate = Math.round(((proxIni ?? seg + 0.4) + 0.02) * TAXA / QUADRO);
+        if (ate <= de) return Math.round((seg + (proxIni ?? seg)) / 2 * TAXA);
+        let melhorQ = de, melhorV = Infinity;
+        for (let q = de; q <= Math.min(ate, Math.floor(amostras.length / QUADRO) - 1); q++) {
+            const v = quadroRms(q) + Math.abs(q - (de + ate) / 2) * 0.5;   // empate: o meio da janela
+            if (v < melhorV) { melhorV = v; melhorQ = q; }
+        }
+        return Math.min(amostras.length, Math.round((melhorQ + 0.5) * QUADRO));
     };
     const marcas = [], avisos = [];
     let inicio = 0;
@@ -836,7 +912,7 @@ async function cortarPalavras(grupo, amostras) {
             avisos.push(`${grupo[k].id}: palavra inteira não encontrada no áudio do grupo; fica para a próxima rodada`);
             continue;
         }
-        const fim = ultimo ? amostras.length : corteDepois(tokens[fimDe[k]].fim);
+        const fim = ultimo ? amostras.length : corteDepois(tokens[fimDe[k]].fim, tokens[fimDe[k] + 1]?.ini);
         marcas.push({ id: grupo[k].id, ini: inicio / TAXA, fim: fim / TAXA });
         inicio = fim;
     }
@@ -844,16 +920,30 @@ async function cortarPalavras(grupo, amostras) {
     const boas = [];
     for (const m of marcas) {
         const ouvido = normalizar(await transcrever(wavDe(amostras.subarray(Math.round(m.ini * TAXA), Math.round(m.fim * TAXA)))));
-        const tem = (palavra) => { const a = normalizar(palavra).replace(/ /g, ''); const b = ouvido.replace(/ /g, ''); return b.includes(a) || [...Array(Math.max(0, b.length - a.length + 1)).keys()].some(i => edicao(b.slice(i, i + a.length), a) <= (a.length >= 8 ? 2 : 1)); };
+        // `estrito` (para detectar palavras intrusas): palavras curtas só contam se aparecerem exatas; "goat" não é "boat"
+        const tem = (palavra, estrito = false) => {
+            const a = normalizar(palavra).replace(/ /g, ''), b = ouvido.replace(/ /g, '');
+            if (b.includes(a)) return true;
+            if (estrito && a.length < 7) return false;
+            return [...Array(Math.max(0, b.length - a.length + 1)).keys()].some(i => edicao(b.slice(i, i + a.length), a) <= (a.length >= 8 && !estrito ? 2 : 1));
+        };
         const item = grupo.find(g => g.id === m.id);
         // Palavra contida na própria ("wind" em "windmills", "knight" em "knights") não conta como intrusa
         const propria = normalizar(item.palavra).replace(/ /g, '');
         const intrusas = grupo.filter(g => {
             const outra = normalizar(g.palavra).replace(/ /g, '');
-            return g !== item && outra.length >= 4 && !propria.includes(outra) && tem(g.palavra);
+            return g !== item && outra.length >= 4 && !propria.includes(outra) && tem(g.palavra, true);
         }).map(g => g.id);
         if (intrusas.length) { avisos.push(`${m.id}: o trecho tem outra palavra (${intrusas.join(', ')}): "${ouvido}"; não foi salvo`); continue; }
         if (!tem(item.palavra)) {
+            // O Whisper escreve a pronúncia (sobretudo a britânica) de outro jeito: "duty" → "dew ty dew ty". Sem palavra
+            // intrusa e com a mesma "forma" do esperado (sílabas + palavra inteira), o corte está certo: salva e avisa.
+            const esperado = normalizar(item.fala).replace(/ /g, ''), ouvidoJunto = ouvido.replace(/ /g, '');
+            if (ouvidoJunto && edicao(ouvidoJunto, esperado) / Math.max(ouvidoJunto.length, esperado.length) <= 0.45) {
+                avisos.push(`${m.id}: salva; o Whisper ouviu "${ouvido}" (pronúncia a conferir de ouvido)`);
+                boas.push(m);
+                continue;
+            }
             // a última do grupo vai até o fim do áudio: não tem como invadir outra palavra (ex.: onomatopeias, que o Whisper escreve de mil jeitos)
             if (m !== marcas[marcas.length - 1] || m.id !== grupo[grupo.length - 1].id) { avisos.push(`${m.id}: a palavra inteira não está no trecho ("${ouvido}"), corte errado; não foi salvo`); continue; }
             avisos.push(`${m.id}: salva (última do grupo), mas o Whisper ouviu "${ouvido}"; revise de ouvido`);
@@ -865,7 +955,9 @@ async function cortarPalavras(grupo, amostras) {
 
 async function gravarPalavrasAgrupadas(itens, pasta, indiceArq, ids) {
     const indice = lerJson(indiceArq, { frases: {} });
-    const pendentes = itens.filter(i => (!ids || ids.has(i.id)) && (o.forcar || indice.frases[i.id] !== i.hash || !existsSync(join(pasta, `${i.id}.mp3`))))
+    // --so-cache: refaz o CORTE dos grupos já pagos (mesma divisão do pedido original, tudo vindo do cache, nenhum pedido novo) e salva só o que faltava
+    const salvo = (i) => indice.frases[i.id] === i.hash && existsSync(join(pasta, `${i.id}.mp3`));
+    const pendentes = itens.filter(i => (!ids || ids.has(i.id)) && (o.forcar || o['so-cache'] || !salvo(i)))
         .sort((a, b) => a.palavra.includes('-') - b.palavra.includes('-'));   // onomatopeias por último (não servem de âncora)
     // Grupos equilibrados de no máximo `agrupar` palavras (17 → 9 + 8, e não 8 + 8 + 1)
     const G = Math.ceil(pendentes.length / Math.ceil(pendentes.length / Number(o.agrupar ?? AGRUPAR_PADRAO)));
@@ -882,6 +974,7 @@ async function gravarPalavrasAgrupadas(itens, pasta, indiceArq, ids) {
             const { marcas, avisos } = await cortarPalavras(grupo, r.amostras);
             r.avisos = avisos;
             for (const m of marcas) {
+                if (o['so-cache'] && salvo(grupo.find(g => g.id === m.id))) continue;
                 const trecho = r.amostras.subarray(Math.round(m.ini * TAXA), Math.round(m.fim * TAXA));
                 salvarMp3(trecho, join(pasta, `${m.id}.mp3`));
                 const item = grupo.find(g => g.id === m.id);
