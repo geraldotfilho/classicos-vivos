@@ -287,11 +287,12 @@ O que já foi entregue, sprint a sprint, em ordem cronológica (o mais antigo pr
   - Suporte completo a geração de áudio no Windows: fallback do `imageio_ffmpeg` para ffmpeg em `tools/transcrever.py` e comunicação com Python via pipe unbuffered (`-u` e `readline()`) em `tools/gravar-narracao.mjs`.
   - Gravadas palavras-chave pendentes: `fr` Parte 2 (`armees`), `fr` Parte 4 (`heaume`) e `es` Parte 4 (`flores`). Todas as palavras de todas as partes em PT, EN e FR estão 100% completas; em ES concluída `cayado` (43/43), atingindo 100% das palavras-chave em todos os 4 idiomas. Confirmado empiricamente que a cota diária de 100 requisições do TTS é por projeto do Google AI Studio/Cloud, e não por conta. Gasto adicional: ~US$ 0,0021.
 
-- **Narração da Parte 4 completa em inglês e francês (2026-10-27)**:
-  - **Inglês (`en`)**: Gravada página pendente `p3` (3 blocos, discurso solene do Mago Mestre Nicolau e resposta de Dom Quixote). Parte 4 agora 100% gravada (12/12 páginas e 43/43 palavras). Ativada em `dom-quixote/audio/vozes.js` (`partes: [1, 2, 3, 4]`).
-  - **Francês (`fr`)**: Gravadas páginas `p3` a `p11` com alinhamento e reparos cirúrgicos de blocos emendados. Parte 4 agora 100% gravada (12/12 páginas e 43/43 palavras). Ativada em `dom-quixote/audio/vozes.js` (`partes: [1, 2, 3, 4]`).
-  - **Espanhol (`es`)**: 5 pedidos realizados com preservação em cache; atingiu a cota diária de 100 pedidos por dia no Tier 1 da chave reserva. Fila encerrou de forma limpa (`FILA_PARADA_POR_COTA`); pronta para ser concluída após as 07:00 UTC.
-  - **Gasto da sessão**: 87 pedidos de voz, 54.265 tokens de áudio, ~US$ 0,25 (~R$ 1,42) registrados em `docs/narracao/gastos.csv`.
+- **Narração da Parte 4 completa nos três idiomas: inglês, francês e espanhol (2026-10-27)**:
+  - **Inglês (`en`)**: Gravada página pendente `p3` (3 blocos, discurso solene do Mago Mestre Nicolau e resposta de Dom Quixote). Parte 4 100% gravada (12/12 páginas e 43/43 palavras). Ativada em `dom-quixote/audio/vozes.js` (`partes: [1, 2, 3, 4]`).
+  - **Francês (`fr`)**: Gravadas páginas `p3` a `p11` com alinhamento e reparos cirúrgicos de blocos emendados. Parte 4 100% gravada (12/12 páginas e 43/43 palavras). Ativada em `dom-quixote/audio/vozes.js` (`partes: [1, 2, 3, 4]`).
+  - **Espanhol (`es`)**: Gravadas todas as 12 páginas (`p0` a `p11`) utilizando a nova chave `GEMINI_API_KEY_RESERVA` fornecida pelo usuário, completando a Parte 4 (12/12 páginas e 43/43 palavras). Ativada em `dom-quixote/audio/vozes.js` (`partes: [1, 2, 3, 4]`).
+  - **Primeiro volume (Partes 1 a 4) 100% narrado em todos os 4 idiomas (pt, en, fr, es)**: Todas as vozes ativadas e disponíveis no seletor de áudio dos livros.
+  - **Gasto total da produção da Parte 4 em traduções**: 161 pedidos de voz, 103.504 tokens de áudio, ~US$ 0,47 (~R$ 2,70) registrados em `docs/narracao/gastos.csv`.
 
 - **Prateleiras das próximas adaptações na Home (2026-10-27)**:
   - Adicionadas prateleiras de madeira inferiores em `index.html` com capas em 3D e cadeado 🔒 para as duas próximas obras na fila: **Robin Hood** (verde-floresta Sherwood com arco e flecha 🏹) e **Viagem ao Centro da Terra** (tons de magma/caverna com vulcão 🌋).

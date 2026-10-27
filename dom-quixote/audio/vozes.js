@@ -33,6 +33,6 @@ window.VOZES_GRAVADAS = [
         idioma: 'es',
         nome: 'Cuentacuentos',
         descricao: 'Narración grabada, con una voz cálida',
-        partes: [1, 2, 3]
+        partes: [1, 2, 3, 4]
     }
 ];

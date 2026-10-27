@@ -67,3 +67,4 @@ data,comando,pedidos_voz,tokens_audio,tokens_qa,usd_estimado
 2026-10-27T18:18,"--voz narracao --idioma en --parte 4 --pagina-inteira --autorizado --chave-reserva",3,3060,0,0.0139
 2026-10-27T18:44,"--voz narracao --idioma fr --parte 4 --pagina-inteira --autorizado --chave-reserva",79,45974,0,0.2101
 2026-10-27T18:47,"--voz narracao --idioma es --parte 4 --pagina-inteira --autorizado --chave-reserva",5,5231,0,0.0239
+2026-10-27T21:27,"--voz narracao --idioma es --parte 4 --pagina-inteira --autorizado --chave-reserva",74,49239,0,0.2247

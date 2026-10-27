@@ -147,7 +147,7 @@ const dolares = () => ((gasto.tts - gasto.ttsStandard) * (flex ? 0.5 : 1) + gast
 
 // Chave reserva (outro projeto do AI Studio, com cota própria): GEMINI_API_KEY_ANTIGRAVITY. Só entra quando a cota diária da
 // chave principal (a do proxy do ambiente, ou GEMINI_API_KEY) acaba, ou sempre com --chave-reserva. Nunca é impressa.
-const CHAVE_RESERVA = process.env.GEMINI_API_KEY_ANTIGRAVITY || '';
+const CHAVE_RESERVA = process.env.GEMINI_API_KEY_RESERVA || process.env.GEMINI_API_KEY_ANTIGRAVITY || '';
 let usandoReserva = !!(o['chave-reserva'] && CHAVE_RESERVA);
 const cabecalhos = () => ({ 'Content-Type': 'application/json', ...(usandoReserva ? { 'x-goog-api-key': CHAVE_RESERVA } : process.env.GEMINI_API_KEY ? { 'x-goog-api-key': process.env.GEMINI_API_KEY } : {}) });
 const espera = (ms) => new Promise(r => setTimeout(r, ms));

@@ -24,14 +24,14 @@
 - **Aviso do adulto (2026-10-26)**: cada obra pede, na primeira abertura no aparelho, que um adulto leia o aviso e libere com uma conta (só português ou todos os idiomas). Testes automáticos: abra com `?adulto=1`. Detalhes em `AGENTS.md` §3.4.
 - **PWA & Offline**:
   - `sw.js` e `offline-manager.js` sincronizados via `tools/build-sw.mjs` (161 arquivos em cache).
-- **Narração em inglês, francês e espanhol (2026-10-27, autorizada pelo humano, teto R$ 50/mês)**: **Partes 1 a 4 100% completas e ativas em inglês e francês (`partes: [1, 2, 3, 4]` em `vozes.js`)**; Parte 4 em espanhol com palavras-chave 100% gravadas e 5 blocos em cache, aguardando renovação da cota diária de 100 pedidos por dia no Tier 1 da chave reserva (retomada após 07:00 UTC com `AUTORIZADO=1 bash tools/gravar-fila-traducoes.sh "4" "es" --chave-reserva`). Todas as palavras-chave de todas as partes (1 a 4) em todos os 4 idiomas gravadas (100%). Situação a qualquer momento: `node tools/conferir-narracao.mjs`. Notas e pontos para escuta: `docs/narracao/qa-partes-2-4-traducoes.md`.
+- **Narração em inglês, francês e espanhol (2026-10-27, autorizada pelo humano, teto R$ 50/mês)**: **Partes 1 a 4 100% completas e ativas nos três idiomas (`partes: [1, 2, 3, 4]` em `dom-quixote/audio/vozes.js`)**! Todo o primeiro volume de Dom Quixote (Partes 1 a 4) agora conta com narração gravada completa em português, inglês, francês e espanhol (100% de páginas e palavras-chave conferidas com `node tools/conferir-narracao.mjs`). A Parte 4 em espanhol foi concluída com a chave reserva `GEMINI_API_KEY_RESERVA`. Notas e pontos para escuta: `docs/narracao/qa-partes-2-4-traducoes.md`.
 - **Gasto da API em outubro**: ~US$ 5,12 (≈ R$ 28) até 2026-10-26, mais o desta fila (centavos de dólar: o gargalo é o limite de pedidos por dia, não o dinheiro; ver `docs/narracao/gastos.csv`).
 
 ## 2. Próximas sessões (escolha do humano)
 
 1. **Fase 8 da Parte 4** (retrospectiva do primeiro volume concluído).
 2. **Parte 5** (segundo volume, 1615): fases 0 a 2, pelo plano `docs/PLANO-DOM-QUIXOTE-PARTES-4-7.md` (o leão guardião, o cavaleiro dos espelhos, etc.).
-3. **Concluir a narração em espanhol da Parte 4** (retomar após as 07:00 UTC) e **ouvir as vozes novas** dos personagens.
+3. **Escuta humana das vozes novas** dos personagens das Partes 2 a 4 nos três idiomas (pontos de conferência em `docs/narracao/qa-partes-2-4-traducoes.md`).
 4. **Planejamento das novas adaptações na fila**: *Robin Hood* e *Viagem ao Centro da Terra* (adicionados com prateleiras com cadeado na estante `index.html` e registrados em `acervo.js`).
 
 Prompt de abertura sugerido:
