@@ -52,5 +52,29 @@ window.ACERVO_PRODUCAO = [
         emoji: '🌙',
         cor: 'from-slate-200 to-indigo-300',
         href: './dom-quixote/parte-7.html'
+    },
+    {
+        id: 'robin-hood',
+        obra: 'Robin Hood',
+        parte: 1,
+        titulo: 'Robin Hood: O Herói da Floresta de Sherwood',
+        nota: 'Próxima adaptação na fila. Lendas clássicas e Howard Pyle.',
+        situacao: 'fila',
+        estante: null,
+        emoji: '🏹',
+        cor: 'from-emerald-300 to-teal-500',
+        href: './robin-hood/parte-1.html'
+    },
+    {
+        id: 'viagem-ao-centro-da-terra',
+        obra: 'Viagem ao Centro da Terra',
+        parte: 1,
+        titulo: 'Viagem ao Centro da Terra: A Descida ao Vulcão',
+        nota: 'Próxima adaptação na fila. Obra de Júlio Verne.',
+        situacao: 'fila',
+        estante: null,
+        emoji: '🌋',
+        cor: 'from-amber-400 to-orange-600',
+        href: './viagem-ao-centro-da-terra/parte-1.html'
     }
 ];

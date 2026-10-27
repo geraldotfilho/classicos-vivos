@@ -115,7 +115,9 @@
     "lait": "dc6801edc7",
     "armet-de-mambrin": "5cb7b70101",
     "fees": "dfc934c41f",
-    "faim": "43dd8dc17f"
+    "faim": "43dd8dc17f",
+    "armees": "e10f72822f",
+    "heaume": "2be0618ec1"
   },
   "modelo": "gemini-3.8-flash-tts",
   "voz": "fr-fr-tutor-4",

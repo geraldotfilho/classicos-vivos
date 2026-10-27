@@ -51,6 +51,9 @@ Agentes podem estar trabalhando **em paralelo** no mesmo repositório, cada um n
 - **Obra Piloto**: *Dom Quixote de La Mancha*, adaptado diretamente da obra de Miguel de Cervantes, em **dois volumes, como o original**:
   - **Primeiro volume (1605), Partes 1 a 4**, na prateleira de cima (capítulos numerados em sequência: 1–7, 8–15, 16–22 e 23–33 na nova Parte 4; Parte 2 com 9 páginas ao abrir com o tombo nos moinhos). Parte 1: *O Cavaleiro da Super Imaginação*; Parte 2: *Exércitos de Lã e o Elmo Encantado*; Parte 3: *Serra Morena e a Princesa Micomicona*; Parte 4: *O Elmo, a Bacia e a Jaula Encantada* (publicada em 2026-10-26, ainda só em português). Decisões de adaptação e o mapa de interações das Partes 2–3 estão em `docs/PLANO-PARTES-2-4.md`.
   - **Correção de rumo (2026-10-25)**: a Parte 4 antiga (*A Jaula Encantada e a Ilha de Sancho*) resumia 81 capítulos em 7 páginas e ficou apressada. Foi **refeita para fechar o primeiro volume** (a antiga está em `docs/arquivo/dom-quixote-parte-4-v1/`), e o **segundo volume (1615)** vira pelo menos **três partes novas (5 a 7)**, na prateleira de baixo. Plano, escaletas e andamento: `docs/PLANO-DOM-QUIXOTE-PARTES-4-7.md`. O que vale só para Dom Quixote (a condensação e as lentes): `docs/receitas/DOM-QUIXOTE.md`.
+- **Próximas Obras na Fila** (anotadas em 2026-10-27, com prateleiras e cadeado na estante):
+  - *Robin Hood* (lendas medievais e Howard Pyle): a floresta de Sherwood, o arco e a flecha, o senso de justiça, a partilha e as aventuras lúdicas ao ar livre.
+  - *Viagem ao Centro da Terra* (Júlio Verne): o manuscrito rúnico, a descida pelo vulcão extinto na Islândia, as florestas de cogumelos gigantes, o oceano subterrâneo e a ciência da aventura.
 - **Diretriz de Dispositivo**: **Tablet-First** (iPad, Samsung Galaxy Tab). Dimensões alvo prioritárias:
   - **Tablet Retrato (Portrait)**: 800 × 1280 px
   - **Tablet Paisagem (Landscape)**: 1280 × 800 px
