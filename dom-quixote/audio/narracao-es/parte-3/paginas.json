@@ -1,0 +1,471 @@
+{
+  "p2": {
+    "arquivo": "p2.mp3",
+    "hash": "188ca09c73",
+    "frases": [
+      {
+        "id": "p2-s0",
+        "ini": 0,
+        "fim": 6.77
+      },
+      {
+        "id": "p2-s1",
+        "ini": 6.77,
+        "fim": 26.46
+      },
+      {
+        "id": "p2-s2",
+        "ini": 26.46,
+        "fim": 32.16
+      },
+      {
+        "id": "p2-s3",
+        "ini": 32.16,
+        "fim": 45.95
+      },
+      {
+        "id": "p2-s4",
+        "ini": 45.95,
+        "fim": 50.33
+      },
+      {
+        "id": "p2-s5",
+        "ini": 50.33,
+        "fim": 60.09
+      },
+      {
+        "id": "p2-s6",
+        "ini": 60.09,
+        "fim": 66.28
+      },
+      {
+        "id": "p2-s7",
+        "ini": 66.28,
+        "fim": 69.33
+      }
+    ]
+  },
+  "modelo": "gemini-3.8-flash-tts",
+  "elenco": {
+    "NARRADORA": {
+      "voz": "es-es-tutor-12",
+      "estilo": "warm, gentle storyteller reading aloud to young children in Castilian Spanish from Spain; calm, clear pace; savouring Cervantes' classic phrases with a smile; expressive but not theatrical"
+    },
+    "QUIXOTE": {
+      "voz": "es-es-assistant-3",
+      "estilo": "elderly noble knight in Castilian Spanish from Spain; solemn, dreamy and grand, speaking with heartfelt conviction and old-fashioned dignity; never mocking"
+    },
+    "SANCHO": {
+      "voz": "es-es-techagent-4",
+      "estilo": "plain, warm-hearted country farmer in Castilian Spanish from Spain; simple, good-humoured and practical, gently astonished"
+    },
+    "PASTOR": {
+      "voz": "es-es-podcaster-7",
+      "estilo": "old goatherd, warm, welcoming and generous in Castilian Spanish from Spain"
+    },
+    "BARBEIRO": {
+      "voz": "es-es-training-11",
+      "estilo": "frightened barber, shouting for help while running away, comic in Castilian Spanish from Spain"
+    },
+    "PADRE": {
+      "voz": "es-es-training-3",
+      "estilo": "kind village priest, gentle, cheerful and clever in Castilian Spanish from Spain"
+    },
+    "DOROTEIA": {
+      "voz": "es-es-commercial-3",
+      "estilo": "clever young woman playing a princess in distress, dramatic and graceful in Castilian Spanish from Spain"
+    },
+    "ESTALAJADEIRO": {
+      "voz": "es-es-advisor-9",
+      "estilo": "innkeeper in comic despair over his spilled wine in Castilian Spanish from Spain"
+    },
+    "BARBEIRO_BACIA": {
+      "voz": "es-es-training-11",
+      "estilo": "indignant barber demanding his basin back, then comically puzzled in Castilian Spanish from Spain"
+    },
+    "NICOLAU": {
+      "voz": "es-es-advisor-2",
+      "estilo": "village barber, playful and good-natured, holding back a laugh in Castilian Spanish from Spain"
+    },
+    "NICOLAU_MAGO": {
+      "voz": "es-es-advisor-2",
+      "estilo": "pretending to be a mysterious wizard: deep, slow and theatrical, a bit funny in Castilian Spanish from Spain"
+    },
+    "EUGENIO": {
+      "voz": "es-es-concierge-12",
+      "estilo": "young goatherd, out of breath at first, then tender and chatty with his goat in Castilian Spanish from Spain"
+    },
+    "VELHINHO": {
+      "voz": "es-es-assistant-4",
+      "estilo": "kind old farmer, warm and smiling, glad to meet a neighbor in Castilian Spanish from Spain"
+    },
+    "SOBRINHA": {
+      "voz": "es-es-techagent-5",
+      "estilo": "young woman laughing and crying with joy, hugging her uncle in Castilian Spanish from Spain"
+    },
+    "TERESA": {
+      "voz": "es-es-training-12",
+      "estilo": "warm-hearted wife, eager and affectionate in Castilian Spanish from Spain"
+    },
+    "POVO": {
+      "voz": "es-es-commercial-7",
+      "estilo": "cheerful villagers calling out together, lively and playful in Castilian Spanish from Spain"
+    },
+    "PALAVRAS": {
+      "estilo": "kind literacy teacher in Castilian Spanish from Spain: each syllable slowly and clearly separated with short pauses, then the whole word joyfully"
+    }
+  },
+  "qa": "whisper-large-v3-turbo (local)",
+  "p0": {
+    "arquivo": "p0.mp3",
+    "hash": "f0ab902777",
+    "frases": [
+      {
+        "id": "p0-s0",
+        "ini": 0,
+        "fim": 7.04
+      },
+      {
+        "id": "p0-s1",
+        "ini": 7.04,
+        "fim": 20.94
+      },
+      {
+        "id": "p0-s2",
+        "ini": 20.94,
+        "fim": 41.66
+      },
+      {
+        "id": "p0-s3",
+        "ini": 41.66,
+        "fim": 49.97
+      }
+    ]
+  },
+  "p1": {
+    "arquivo": "p1.mp3",
+    "hash": "2708f4c17f",
+    "frases": [
+      {
+        "id": "p1-s0",
+        "ini": 0,
+        "fim": 6.16
+      },
+      {
+        "id": "p1-s1",
+        "ini": 6.16,
+        "fim": 18.24
+      },
+      {
+        "id": "p1-s2",
+        "ini": 18.24,
+        "fim": 23.63
+      },
+      {
+        "id": "p1-s3",
+        "ini": 23.63,
+        "fim": 25.75
+      },
+      {
+        "id": "p1-s4",
+        "ini": 25.75,
+        "fim": 29.4
+      },
+      {
+        "id": "p1-s5",
+        "ini": 29.4,
+        "fim": 40.89
+      },
+      {
+        "id": "p1-s6",
+        "ini": 40.89,
+        "fim": 42.29
+      },
+      {
+        "id": "p1-s7",
+        "ini": 42.29,
+        "fim": 47.2
+      },
+      {
+        "id": "p1-s8",
+        "ini": 47.2,
+        "fim": 62.77
+      },
+      {
+        "id": "p1-s9",
+        "ini": 62.77,
+        "fim": 70.86
+      },
+      {
+        "id": "p1-s10",
+        "ini": 70.86,
+        "fim": 75.43
+      }
+    ]
+  },
+  "p3": {
+    "arquivo": "p3.mp3",
+    "hash": "6aaa419581",
+    "frases": [
+      {
+        "id": "p3-s0",
+        "ini": 0,
+        "fim": 5.75
+      },
+      {
+        "id": "p3-s1",
+        "ini": 5.75,
+        "fim": 18.66
+      },
+      {
+        "id": "p3-s2",
+        "ini": 18.66,
+        "fim": 25.06
+      },
+      {
+        "id": "p3-s3",
+        "ini": 25.06,
+        "fim": 37.64
+      },
+      {
+        "id": "p3-s4",
+        "ini": 37.64,
+        "fim": 46.33
+      },
+      {
+        "id": "p3-s5",
+        "ini": 46.33,
+        "fim": 49.09
+      },
+      {
+        "id": "p3-s6",
+        "ini": 49.09,
+        "fim": 50.35
+      },
+      {
+        "id": "p3-s7",
+        "ini": 50.35,
+        "fim": 51.44
+      },
+      {
+        "id": "p3-s8",
+        "ini": 51.44,
+        "fim": 53.15
+      },
+      {
+        "id": "p3-s9",
+        "ini": 53.15,
+        "fim": 59.32
+      }
+    ]
+  },
+  "p4": {
+    "arquivo": "p4.mp3",
+    "hash": "2e89d6e57e",
+    "frases": [
+      {
+        "id": "p4-s0",
+        "ini": 0,
+        "fim": 7.24
+      },
+      {
+        "id": "p4-s1",
+        "ini": 7.24,
+        "fim": 19.05
+      },
+      {
+        "id": "p4-s2",
+        "ini": 19.05,
+        "fim": 25.77
+      },
+      {
+        "id": "p4-s3",
+        "ini": 25.77,
+        "fim": 34.61
+      },
+      {
+        "id": "p4-s4",
+        "ini": 34.61,
+        "fim": 40.04
+      },
+      {
+        "id": "p4-s5",
+        "ini": 40.04,
+        "fim": 44.05
+      },
+      {
+        "id": "p4-s6",
+        "ini": 44.05,
+        "fim": 49.89
+      },
+      {
+        "id": "p4-s7",
+        "ini": 49.89,
+        "fim": 63.59
+      },
+      {
+        "id": "p4-s8",
+        "ini": 63.59,
+        "fim": 69.62
+      }
+    ]
+  },
+  "p5": {
+    "arquivo": "p5.mp3",
+    "hash": "fbaf95abca",
+    "frases": [
+      {
+        "id": "p5-s0",
+        "ini": 0,
+        "fim": 6.79
+      },
+      {
+        "id": "p5-s1",
+        "ini": 6.79,
+        "fim": 12.01
+      },
+      {
+        "id": "p5-s2",
+        "ini": 12.01,
+        "fim": 15.71
+      },
+      {
+        "id": "p5-s3",
+        "ini": 15.71,
+        "fim": 24.3
+      },
+      {
+        "id": "p5-s4",
+        "ini": 24.3,
+        "fim": 31.65
+      },
+      {
+        "id": "p5-s5",
+        "ini": 31.65,
+        "fim": 36.87
+      },
+      {
+        "id": "p5-s6",
+        "ini": 36.87,
+        "fim": 46.25
+      },
+      {
+        "id": "p5-s7",
+        "ini": 46.25,
+        "fim": 55.62
+      },
+      {
+        "id": "p5-s8",
+        "ini": 55.62,
+        "fim": 59.71
+      },
+      {
+        "id": "p5-s9",
+        "ini": 59.71,
+        "fim": 68.38
+      }
+    ]
+  },
+  "p6": {
+    "arquivo": "p6.mp3",
+    "hash": "d86f2caf1d",
+    "frases": [
+      {
+        "id": "p6-s0",
+        "ini": 0,
+        "fim": 8.35
+      },
+      {
+        "id": "p6-s1",
+        "ini": 8.35,
+        "fim": 19.76
+      },
+      {
+        "id": "p6-s2",
+        "ini": 19.76,
+        "fim": 21.18
+      },
+      {
+        "id": "p6-s3",
+        "ini": 21.18,
+        "fim": 35.45
+      },
+      {
+        "id": "p6-s4",
+        "ini": 35.45,
+        "fim": 40.87
+      },
+      {
+        "id": "p6-s5",
+        "ini": 40.87,
+        "fim": 49.48
+      },
+      {
+        "id": "p6-s6",
+        "ini": 49.48,
+        "fim": 54.64
+      },
+      {
+        "id": "p6-s7",
+        "ini": 54.64,
+        "fim": 55.38
+      },
+      {
+        "id": "p6-s8",
+        "ini": 55.38,
+        "fim": 61.51
+      },
+      {
+        "id": "p6-s9",
+        "ini": 61.51,
+        "fim": 67.06
+      },
+      {
+        "id": "p6-s10",
+        "ini": 67.06,
+        "fim": 77.17
+      }
+    ]
+  },
+  "p7": {
+    "arquivo": "p7.mp3",
+    "hash": "572af0ec67",
+    "frases": [
+      {
+        "id": "p7-s0",
+        "ini": 0,
+        "fim": 6.56
+      },
+      {
+        "id": "p7-s1",
+        "ini": 6.56,
+        "fim": 17.34
+      },
+      {
+        "id": "p7-s2",
+        "ini": 17.34,
+        "fim": 30.04
+      },
+      {
+        "id": "p7-s3",
+        "ini": 30.04,
+        "fim": 47.8
+      },
+      {
+        "id": "p7-s4",
+        "ini": 47.8,
+        "fim": 55.7
+      },
+      {
+        "id": "p7-s5",
+        "ini": 55.7,
+        "fim": 61.72
+      },
+      {
+        "id": "p7-s6",
+        "ini": 61.72,
+        "fim": 71.2
+      }
+    ]
+  }
+}

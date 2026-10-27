@@ -279,6 +279,6 @@ O que já foi entregue, sprint a sprint, em ordem cronológica (o mais antigo pr
 ---
 
 ## ✅ Narração em en/fr/es das Partes 2–4 (2026-10-27)
-- **Parte 2 narrada nos três idiomas** (9 páginas cada, elenco de personagens por idioma, 31 palavras-chave), entregue na `main`; Partes 3 e 4 em andamento (BACKLOG M-11).
+- **Partes 2 e 3 narradas nos três idiomas** (elenco de personagens por idioma, palavras-chave), entregues na `main`; Parte 4 em andamento (BACKLOG M-11).
 - **Menos pedidos por dia**: palavras-chave de várias partes juntas (25 por pedido), blocos de narração que atravessam as páginas, reparo cirúrgico (só a frase com defeito) em vez de regravar o bloco, e parada limpa quando a cota diária acaba (`tools/gravar-fila-traducoes.sh`, código 75).
 - **Roteiros das traduções** derivados do roteiro em português (`tools/derivar-roteiro.mjs`); situação da narração: `tools/conferir-narracao.mjs`.

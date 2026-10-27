@@ -114,7 +114,8 @@
     "sainte": "e2547264fd",
     "lait": "dc6801edc7",
     "armet-de-mambrin": "5cb7b70101",
-    "fees": "dfc934c41f"
+    "fees": "dfc934c41f",
+    "faim": "43dd8dc17f"
   },
   "modelo": "gemini-3.8-flash-tts",
   "voz": "fr-fr-tutor-4",
