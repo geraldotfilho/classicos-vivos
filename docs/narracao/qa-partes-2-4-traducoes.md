@@ -78,6 +78,14 @@ Voz nova ≠ aprovada: **o humano ainda não ouviu estas vozes**. Todas são da 
 | es | 10 | `p4-s6`: uma palavra diferente na conferência ("…solo un montón de…", provavelmente o "méééé" da cabra) |
 Títulos de capítulo ("Chapitre xi", "Chapter 14"): o Whisper escreve numerais romanos e algarismos de outro jeito que o texto; não é erro de voz.
 
+## Parte 3 (2026-10-27) — completa nos três idiomas
+| Idioma | Pedidos de voz | Observações para a escuta |
+| :--- | :--- | :--- |
+| en | 6 (as páginas 2 a 4 já estavam; um bloco teve 3 frases seguidas puladas e foi reparado) | `p4` (o começo do capítulo 19, depois do bloco de Sancho): confira a emenda do título e das duas primeiras frases |
+| fr | 11 | sem defeitos além dos numerais romanos dos títulos |
+| es | 11 | sem avisos |
+Vozes novas da Parte 3: Padre, Doroteia/Micomicona e Estalajadeiro (tabelas acima).
+
 ## Palavras-chave (Partes 2 a 4 juntas, 25 por pedido)
 4 pedidos por idioma + repescagens. Algumas pronúncias o Whisper escreve de outro jeito ("dew ty" para *duty*, "hunga" para *hunger*, "fay mus" para *famous*): o corte foi aceito porque a forma (sílabas + palavra inteira) confere, mas **vale ouvir**: en `duty`, `battle`, `hunger`, `famous`; fr `laiton`, `mages`, `bâton`, `paysans`, `village`, `fou-rire`, `armes`, `glands`; es `tac-tac`.
 
