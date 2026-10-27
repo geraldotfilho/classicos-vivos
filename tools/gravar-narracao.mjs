@@ -189,6 +189,11 @@ async function sintetizar(texto, estilo, voz = cfg.voz) {
 /* Diálogo (narradora + no máximo 1 personagem, limite da API): um item por fala, cada um com a sua voz */
 async function sintetizarDialogo(falas) {
     const falantes = [...new Set(falas.map(f => f.falante))];
+    // Um falante só (ex.: um bloco só com as falas do mago): a API de duas vozes exige exatamente 2; vai como voz única
+    if (falantes.length === 1) {
+        const f = falantes[0];
+        return sintetizar(falas.map(x => x.texto).join('\n\n'), ELENCO[f].estilo, ELENCO[f].voz);
+    }
     return pedirAudio({
         model: cfg.modelo,
         input: [{ type: 'user_input', content: falas.map(f => ({ type: 'text', text: f.texto, annotations: [{ type: 'speech_metadata', speaker: f.falante, style: ELENCO[f.falante].estilo }] })) }],
