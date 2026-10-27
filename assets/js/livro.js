@@ -3060,6 +3060,14 @@ function iniciarLivro() {
 
     conferirPortaoNaAbertura();
 
+    // Contador de visitas anônimo (assets/js/contador.js); rascunhos não contam
+    if (!RASCUNHO) {
+        const contador = document.createElement('script');
+        contador.async = true;
+        contador.src = '../assets/js/contador.js';
+        document.head.appendChild(contador);
+    }
+
     // Leitura offline: registra o service worker quando servido por http(s) (ex.: GitHub Pages)
     if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
         navigator.serviceWorker.register(LIVRO.serviceWorker || '../sw.js').then(reg => monitorarAtualizacoesSW(reg)).catch(() => {});
