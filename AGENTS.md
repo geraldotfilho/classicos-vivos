@@ -53,7 +53,7 @@ Agentes podem estar trabalhando **em paralelo** no mesmo repositório, cada um n
   - **Correção de rumo (2026-10-25)**: a Parte 4 antiga (*A Jaula Encantada e a Ilha de Sancho*) resumia 81 capítulos em 7 páginas e ficou apressada. Foi **refeita para fechar o primeiro volume** (a antiga está em `docs/arquivo/dom-quixote-parte-4-v1/`), e o **segundo volume (1615)** vira pelo menos **três partes novas (5 a 7)**, na prateleira de baixo. Plano, escaletas e andamento: `docs/PLANO-DOM-QUIXOTE-PARTES-4-7.md`. O que vale só para Dom Quixote (a condensação e as lentes): `docs/receitas/DOM-QUIXOTE.md`.
 - **Próximas Obras na Fila** (anotadas em 2026-10-27, com prateleiras e cadeado na estante):
   - *Robin Hood* (lendas medievais e Howard Pyle): a floresta de Sherwood, o arco e a flecha, o senso de justiça, a partilha e as aventuras lúdicas ao ar livre.
-  - *Viagem ao Centro da Terra* (Júlio Verne): o manuscrito rúnico, a descida pelo vulcão extinto na Islândia, as florestas de cogumelos gigantes, o oceano subterrâneo e a ciência da aventura.
+  - *Viagem ao Centro da Terra* (Júlio Verne): proposta de **transposição** para a Antártida, algumas décadas no futuro (o enigma num caderno de campo, a descida pelo gelo como máquina do tempo, um lago subglacial que brilha e uma "Antártida Verde" escondida). Mapa da obra em discussão (fase 0): `docs/PLANO-VIAGEM-AO-CENTRO-DA-TERRA.md` e `docs/receitas/VIAGEM-AO-CENTRO-DA-TERRA.md`.
 - **Diretriz de Dispositivo**: **Tablet-First** (iPad, Samsung Galaxy Tab). Dimensões alvo prioritárias:
   - **Tablet Retrato (Portrait)**: 800 × 1280 px
   - **Tablet Paisagem (Landscape)**: 1280 × 800 px

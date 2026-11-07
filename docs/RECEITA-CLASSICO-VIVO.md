@@ -29,6 +29,7 @@ Antes de tudo, diga **que tipo de adaptação** a obra pede. O tipo muda a fase 
 | :--- | :--- | :--- | :--- |
 | **Condensação** | A obra é muito maior que um livro infantil (romances, epopeias) | **Escolher e resumir** sem perder o fio: o que entra, o que sai, como dividir em partes | [`receitas/DOM-QUIXOTE.md`](receitas/DOM-QUIXOTE.md) (o primeiro caso; serve de ponto de partida para outras obras longas) |
 | **Adequação / ampliação** | A obra é curta (fábulas, contos de fadas, poemas) e a adaptação pode ficar **maior que o original** | **Atualizar** a obra para hoje e para a idade (§1.2) e, quando preciso, **desenvolver** cenas que o original só sugere, sem trair a moral, o tom e a estrutura | ainda não existe: escrever quando o primeiro livro desse tipo começar |
+| **Transposição** | A obra muda de **lugar, época e personagens**, e fica com a **estrutura e o espírito** do original | Mapear cada episódio para um equivalente que faça sentido no mundo novo, sem perder o que torna o clássico venerado, e manter o original **presente dentro da história** para a criança chegar a ele | [`receitas/VIAGEM-AO-CENTRO-DA-TERRA.md`](receitas/VIAGEM-AO-CENTRO-DA-TERRA.md) (proposta, 2026-11-07: Verne na Antártida do futuro) |
 
 Uma obra pode misturar os dois tipos (resumir uma parte, desenvolver outra). O que for decidido entra na receita específica dela.
 
