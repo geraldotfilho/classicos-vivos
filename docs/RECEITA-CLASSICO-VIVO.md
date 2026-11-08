@@ -51,7 +51,8 @@ Antes da primeira página, escreva o mapa da obra (na receita específica ou no 
    - A última página de uma parte e a primeira da seguinte precisam conversar (onde estão, por que estão ali, o que querem agora).
    - Fios bons rendem as melhores páginas e atividades: a criança se reconhece quando algo volta.
 5. **Proteção da infância**: lista do que a obra traz de problemático (§1.2) e como cada ponto será tratado.
-6. **Bíblias, antes da primeira imagem**: estilo da coleção (aquarela, guache, lápis de cor), fichas dos personagens e, se a obra tiver, o **recurso visual próprio** (em *Dom Quixote*, as lentes) com as regras dele.
+6. **Pesquisa com fontes** (regra do humano, 2026-11-08): todo fato (histórico, científico, sobre o original ou sobre traduções) é **conferido na internet** e anotado com a fonte em `docs/pesquisa/<OBRA>.md`, marcado como confirmado, corrigido ou ainda não confirmado. A memória do agente serve para ter ideias, nunca como fonte. Nada entra no texto do livro sem estar confirmado ali.
+7. **Bíblias, antes da primeira imagem**: estilo da coleção (aquarela, guache, lápis de cor), fichas dos personagens e, se a obra tiver, o **recurso visual próprio** (em *Dom Quixote*, as lentes) com as regras dele.
 
 🛑 O humano aprova o mapa antes da fase 1 da primeira parte.
 
@@ -307,6 +308,7 @@ As lições que só valem para *Dom Quixote* ou para a condensação de obras lo
 
 | Data | Lição | Origem | Virou regra em |
 | :--- | :--- | :--- | :--- |
+| 2026-11-08 | Fatos citados de memória pelo agente tinham erros e lacunas (a causa da bússola em Verne, a Estação Vostok "desativada" que acabou de ganhar prédio novo, as licenças das fotos do USAP que proíbem cortar a imagem). Toda afirmação é conferida na internet e registrada com a fonte | humano (Viagem ao Centro da Terra, fase 0) | §3 item 6, `docs/pesquisa/` |
 | 2026-10-26 | Ruído branco / hiss persistente e estalo ao desligar o áudio vinham do piso estático do sintetizador neural (4–12 kHz) nas pausas internas e de uma rajada anômala de volume máximo deixada pelo TTS nos últimos 150 ms de cada página (`tail burst`). Criada/aprimorada ferramenta `tools/audio_gate.py` com atenuação espectral e zeramento de cauda espúria com rampa Hann suave | escuta do humano (Parte 2, p2) | §6.4, `AGENTS.md` §2.6 |
 | 2026-10-26 | Chiado e estalos entre frases na narração eram provocados por falta de `narrador.pause()` no `onended` (mantendo o DAC ligado) e cortes secos sem rampa de fade de 10 ms (Hann window) nas ferramentas de áudio | escuta do humano (Dom Quixote, Parte 4) | §6.4, `AGENTS.md` §2.6 |
 | 2026-10-26 | Uma parte grande (220 frases, ~50 blocos) não coube na cota de 100 pedidos por dia, já gasta em parte na véspera; o cache de blocos salvou o que foi pago. Palavras curtas se cortam mal em grupo | narração (Dom Quixote, Parte 4 nova) | §6.4 |

@@ -12,6 +12,8 @@
 
 ## 0. A premissa do humano (2026-11-08, em construção)
 
+> **Pesquisa com fontes**: [`pesquisa/VIAGEM-AO-CENTRO-DA-TERRA.md`](pesquisa/VIAGEM-AO-CENTRO-DA-TERRA.md). Ela corrige alguns fatos dos §4 e §7 deste plano, que foram escritos de memória; na dúvida, vale a pesquisa.
+
 > Método combinado: **primeiro um enredo maduro para a transposição; só depois a adaptação ao público de 5 a 8 anos.** Esta seção manda sobre as anteriores: o que for contrário a ela no resto do plano (sobretudo §1, §3, §5 e §6) está desatualizado.
 
 1. **O antagonista não é a IA**, é a **dependência excessiva da tecnologia**: a confiança cega na IA, as distorções da realidade que ela produz e a desvalorização do intelecto humano. Um toque leve de distopia.
