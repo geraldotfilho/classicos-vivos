@@ -14,12 +14,13 @@
 
 > **Pesquisa com fontes**: [`pesquisa/VIAGEM-AO-CENTRO-DA-TERRA.md`](pesquisa/VIAGEM-AO-CENTRO-DA-TERRA.md). Ela corrige alguns fatos dos §4 e §7 deste plano, que foram escritos de memória; na dúvida, vale a pesquisa.
 
-> Método combinado: **primeiro um enredo maduro para a transposição; só depois a adaptação ao público de 5 a 8 anos.** Esta seção manda sobre as anteriores: o que for contrário a ela no resto do plano (sobretudo §1, §3, §5 e §6) está desatualizado.
+> Método combinado: **primeiro um enredo maduro para a transposição; só depois a adaptação ao público (de ~6 a ~10 anos, leitura em camadas; item 5 abaixo).** Esta seção manda sobre as anteriores: o que for contrário a ela no resto do plano (sobretudo §1, §3, §5 e §6) está desatualizado.
 
 1. **O antagonista não é a IA**, é a **dependência excessiva da tecnologia**: a confiança cega na IA, as distorções da realidade que ela produz e a desvalorização do intelecto humano. Um toque leve de distopia.
 2. **O mundo**: o dinheiro da pesquisa foi todo para o desenvolvimento da IAG (inteligência artificial geral). O trabalho de campo feito por pessoas foi sendo deixado de lado. A **estação de pesquisa foi desativada**, e a cientista antiga (**Aurora**) foi **aposentada antes de concluir o trabalho**, quando estava perto de responder um grande mistério que ajudaria a humanidade contra o aquecimento global.
 3. **A virada**: no lançamento de uma nova versão da IA, que todos acreditam ser enfim a IAG com todas as respostas, alguém pergunta como resolver um problema do aquecimento global (a delinear, com a ciência dura de Verne). Ao se tornar **sábia**, a IA ganha o que lhe faltava: passa a **delimitar o que não sabe e a fazer perguntas**, em vez de responder tudo com confiança. Ela revela que a grande resposta pode estar soterrada no gelo da Antártida e leva os personagens a procurar a velha cientista, **o último cérebro que ainda guarda as memórias daquelas pesquisas**.
 4. **O que a obra valoriza**: a ciência e o intelecto humano. Para as crianças: a importância da ciência, dos cientistas, da ciência experimental e das perguntas sem resposta.
+5. **Faixa etária própria, com leitura em camadas** (correção do humano, 2026-11-08): esta obra pede leitores **mais velhos** que o público padrão da coleção (5 a 8). A faixa **começa por volta dos 6 anos**, com compreensão **parcial** (a aventura, o gelo, os bichos, a amizade, as perguntas), e **leitores mais velhos** (até uns 10 anos, e os adultos que leem junto) captam **mais camadas de significado** (a dependência da tecnologia, o abandono da ciência, a humildade de saber o que não se sabe, o clima).
 
 ---
 
@@ -29,7 +30,7 @@ A concepção do Gemini é um bom ponto de partida: as 10 "características de o
 
 | Ponto | Na concepção inicial | Proposta | Por quê |
 | :--- | :--- | :--- | :--- |
-| Idade | 6 a 10 anos | **5 a 8, leitor de referência de 6** | É o público da coleção (`AGENTS.md` §3.5). O texto precisa caber numa leitura com um adulto. |
+| Idade | 6 a 10 anos | ~~5 a 8, leitor de referência de 6~~ → **faixa mais alta, leitura em camadas** (§0, item 5; decisão do humano, 2026-11-08) | O agente tinha puxado para o público padrão da coleção; o humano corrigiu: esta transposição pede leitores mais velhos para ser aproveitada por inteiro. |
 | Tipo de adaptação | não definido | **Transposição** (novo tipo, §2) | Não é condensação (Dom Quixote) nem ampliação de obra curta: muda o lugar, a época e os personagens e mantém a estrutura e o espírito. |
 | Ligação com Verne | só implícita | **Verne dentro da história** (§2.2) | Sem isso, vira "uma aventura inspirada em", e a coleção existe para levar a criança ao clássico. |
 | Trio | criança conectada + mais velho sábio + guia | **Mantém o triângulo de Verne**: a avó é a Lidenbrock (impaciente, apaixonada, cômica), a criança é o Axel (cuidadosa, com medo, encantada), a guia é o Hans (calma, prática, de poucas palavras) | Na concepção, o mais velho vira só "o sábio"; perde-se o humor do cientista que corre na frente e a criança que puxa o freio. |
@@ -192,7 +193,7 @@ Na fase 1, cada fato vai para o texto do jeito mais simples possível, sem aula.
 
 ## 8. Proteção da infância
 
-| Ponto (Verne ou tema novo) | Risco para 6 anos | Tratamento |
+| Ponto (Verne ou tema novo) | Risco para o leitor mais novo (~6 anos) | Tratamento |
 | :--- | :--- | :--- |
 | O tio tranca Axel e deixa a casa sem comida até decifrar | castigo cruel como piada | sai; a avó é impaciente, mas carinhosa |
 | A sede quase mata Axel | medo forte e longo | uma página só; a solução vem na seguinte, pela escuta de Hanna (trabalho em equipe) |
@@ -220,7 +221,7 @@ A antiga proposta de uma "Lente do Tempo" **caiu**. Esta obra muda a dinâmica d
 - **A fazer no motor** (fase 4 da primeira parte, sem afetar Dom Quixote): a cena padrão passa a ser a ilustração; a lente da página com foto mostra a foto e a legenda com o crédito; nomes da chave por livro. A regra "a variação é a recompensa, trancada até a atividade" precisa ser revista para esta obra.
 
 ### 9.2 Pop-ups de ciência
-- Quadros curtos ("Você sabia?") que explicam um fato da página, em linguagem de 6 anos, e às vezes convidam a cuidar do planeta.
+- Quadros curtos ("Você sabia?") que explicam um fato da página numa linguagem que o leitor mais novo acompanha com o adulto, com algo a mais para os mais velhos, e às vezes convidam a cuidar do planeta.
 - **Ler vem primeiro** (`AGENTS.md` §3.3): o quadro só abre quando a criança ou o adulto toca num ícone discreto; nunca abre sozinho nem interrompe a narração. Formato e quantidade por página a definir na fase 2.
 - Podem conversar com a Lente da Realidade (o pop-up explica a foto).
 

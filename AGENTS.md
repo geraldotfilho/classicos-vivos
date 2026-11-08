@@ -45,7 +45,7 @@ Agentes podem estar trabalhando **em paralelo** no mesmo repositório, cada um n
 
 ## 1. Visão Geral e Propósito
 
-- **Público-Alvo**: Crianças em fase de alfabetização e letramento (5 a 8 anos).
+- **Público-Alvo**: Crianças em fase de alfabetização e letramento (5 a 8 anos). **Uma obra pode ter faixa própria**, decidida pelo humano e registrada na receita dela: *Viagem ao Centro da Terra no Século XXI* vai de ~6 a ~10 anos, com leitura em camadas (`docs/receitas/VIAGEM-AO-CENTRO-DA-TERRA.md` §5).
 - **Proposta Pedagógica**: Aproximar as crianças das maiores obras-primas da literatura universal através de uma experiência interativa, sensorial, visualmente rica e de toque acolhedor.
 - **Tipos de adaptação** (receita geral §2): **condensação** de obras longas (resumir e escolher, como em Dom Quixote) e **adequação/ampliação** de obras curtas (atualizar para hoje e para a idade, às vezes ficando maior que o original; receita ainda a escrever). As decisões de cada obra ficam na receita específica dela, em `docs/receitas/`.
 - **Obra Piloto**: *Dom Quixote de La Mancha*, adaptado diretamente da obra de Miguel de Cervantes, em **dois volumes, como o original**:
