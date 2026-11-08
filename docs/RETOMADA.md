@@ -32,7 +32,7 @@
 1. **Fase 8 da Parte 4** (retrospectiva do primeiro volume concluído).
 2. **Parte 5** (segundo volume, 1615): fases 0 a 2, pelo plano `docs/PLANO-DOM-QUIXOTE-PARTES-4-7.md` (o leão guardião, o cavaleiro dos espelhos, etc.).
 3. **Escuta humana das vozes novas** dos personagens das Partes 2 a 4 nos três idiomas (pontos de conferência em `docs/narracao/qa-partes-2-4-traducoes.md`).
-4. **Viagem ao Centro da Terra, fase 0** (começou em 2026-11-07): o humano responde as decisões abertas do §12 de [`PLANO-VIAGEM-AO-CENTRO-DA-TERRA.md`](PLANO-VIAGEM-AO-CENTRO-DA-TERRA.md) e aprova o mapa 🛑; depois, Parte 1, fase 1. *Robin Hood* segue na fila (prateleira com cadeado na estante e entrada em `acervo.js`).
+4. **Viagem ao Centro da Terra no Século XXI, fase 0** (começou em 2026-11-07): o humano lê o **argumento da Parte 1 (prólogo, Recife 2085)** em [`cadernos/viagem-parte-1.md`](cadernos/viagem-parte-1.md) e reage; decisões em [`PLANO-VIAGEM-AO-CENTRO-DA-TERRA.md`](PLANO-VIAGEM-AO-CENTRO-DA-TERRA.md) §1; fatos em [`pesquisa/VIAGEM-AO-CENTRO-DA-TERRA.md`](pesquisa/VIAGEM-AO-CENTRO-DA-TERRA.md). Ritmo: devagar, enredo maduro primeiro. *Robin Hood* segue na fila (prateleira com cadeado na estante e entrada em `acervo.js`).
 
 Prompt de abertura sugerido:
 > Vamos iniciar o segundo volume de Dom Quixote: Parte 5 (fases 0 a 2), seguindo docs/PLANO-DOM-QUIXOTE-PARTES-4-7.md e docs/RECEITA-CLASSICO-VIVO.md.
