@@ -2,7 +2,9 @@
 
 **Fase 0 da receita geral: o Mapa da Obra.** Proposta escrita em 2026-11-07 a partir da concepção inicial que o humano fez com o Gemini (guardada sem alterações em [`arquivo/viagem-ao-centro-da-terra-concepcao-gemini.md`](arquivo/viagem-ao-centro-da-terra-concepcao-gemini.md)).
 
-> **Situação: 🟡 proposta em discussão.** Nada aqui está aprovado. As decisões que dependem do humano estão marcadas com ❓ e reunidas no §12. 🛑 O humano aprova o mapa antes da fase 1 da Parte 1.
+> **Situação: 🟡 em discussão.** O humano respondeu as primeiras perguntas em 2026-11-08 (§12). **O enredo ainda está em conversa**: o humano discorda de algumas suposições desta proposta, então os §3 a §6 e o §10 são só ponto de partida e **não** devem ser seguidos até a nova versão. 🛑 O humano aprova o mapa antes da fase 1.
+>
+> **Ritmo combinado (humano, 2026-11-08)**: avançar devagar, conversando sobre o enredo, com poucas perguntas por vez.
 >
 > Como trabalhar: o processo está na [receita geral](RECEITA-CLASSICO-VIVO.md); as regras próprias desta obra (o tipo **transposição**, a ciência de verdade × a imaginação, a Lente do Tempo), na [receita específica](receitas/VIAGEM-AO-CENTRO-DA-TERRA.md). Este arquivo diz **o que** fazer.
 
@@ -45,7 +47,7 @@ Mudam o **lugar** (Islândia → Antártida), a **época** (1863 → algumas dé
 - Os nomes homenageiam o trio (§3).
 - Fio de leitura (como o livro famoso de Dom Quixote): no fim, a criança pede para ler o livro da avó. A aventura empurra para o clássico.
 
-❓ **Título na estante**: manter *Viagem ao Centro da Terra* (com "uma aventura na Antártida, inspirada em Júlio Verne" na capa e no `sobre.html`) ou um título próprio (ex.: *Viagem ao Centro do Gelo*)? Proposta: manter o de Verne. A avó pode brincar: "O Verne também não chegou ao centro da Terra, sabia?"
+✅ **Título** (humano, 2026-11-08): ***Viagem ao Centro da Terra no Século XXI***, com um subtítulo (proposta: *uma aventura na Antártida, inspirada em Júlio Verne*; redação final a combinar).
 
 ---
 
@@ -148,7 +150,7 @@ Quatro partes, cada uma num lugar, com 8 ou 9 páginas (capa + 7 ou 8 capítulos
 
 ## 7. Ciência: o que é de verdade e o que é imaginação
 
-Na fase 1, cada fato vai para o texto do jeito mais simples possível, sem aula. A última página da Parte 4 (ou um quadro no fim) pode ter **"O que é de verdade nesta história?"** ❓.
+Na fase 1, cada fato vai para o texto do jeito mais simples possível, sem aula. ✅ **Pop-ups de ciência** (humano, 2026-11-08), em vez de uma página só no fim: ao longo do livro, quadros curtos explicam a ciência aos poucos e ajudam a conscientizar (§9.2). A tabela abaixo é a fonte desses quadros.
 
 | Na história | É de verdade? | Nota |
 | :--- | :--- | :--- |
@@ -194,18 +196,20 @@ Na fase 1, cada fato vai para o texto do jeito mais simples possível, sem aula.
 
 ---
 
-## 9. Recurso visual próprio: a Lente do Tempo (proposta ❓)
+## 9. Recursos próprios desta obra (decididos pelo humano em 2026-11-08)
 
-As lentes de Dom Quixote nasceram do tema da obra (o real × o imaginado). O tema de Verne, aqui, é a **viagem no tempo geológico** (pilares 3 e 9). Proposta: a mesma chave do motor, com outros nomes:
+A antiga proposta de uma "Lente do Tempo" **caiu**. Esta obra muda a dinâmica das lentes de Dom Quixote.
 
-- **🧭 Agora** ↔ **⏳ Há muito tempo**: a cena como Alex a vê ↔ o mesmo lugar no passado que o gelo guarda.
-- Exemplos: a costa gelada ↔ a floresta de 50 milhões de anos (capa da Parte 1); a parede listrada do túnel ↔ o céu e a neve do ano em que aquela faixa caiu; a faixa preta ↔ o vulcão antigo soltando a cinza; a Antártida Verde ↔ a floresta cobrindo o continente inteiro, sem gelo.
-- As regras de Dom Quixote valem: o texto não muda com a lente; a variação **transforma** a cena (não só um detalhe); nem toda página tem lente; nas páginas com atividade, a variação fica trancada até o acerto (a recompensa).
-- **Custo técnico**: hoje os nomes "Realidade" e "Imaginação" estão fixos na interface do motor (`IDIOMAS` em `assets/js/livro.js`). Precisa de um ajuste pequeno: o livro dizer os nomes e ícones da sua chave (`window.LIVRO.lentes`), traduzidos por idioma. Feito na fase 4 da Parte 1, sem mexer em Dom Quixote.
+### 9.1 Ilustração da obra + Lente da Realidade com fotos reais
+- **Todas as páginas são ilustradas** no estilo da coleção. A ilustração é a **ilustração da obra literária** (como num livro ilustrado), não "a imaginação de um personagem". Não há duas versões pintadas da mesma cena.
+- **Em algumas páginas**, a chave abre a **Lente da Realidade**: uma **fotografia real** do que a página mostra (o *moulin*, as camadas de um testemunho de gelo, a Estação Comandante Ferraz, o Monte Erebus, um peixe de caverna, um fóssil de pinguim gigante).
+- **Fotos só de uso livre**, com o crédito exigido pela licença sempre visível na própria foto e numa página de créditos em `sobre.html`. Preferência: domínio público (NASA, NOAA, USGS, Programa Antártico dos EUA e similares) e CC0; depois CC BY. CC BY-SA, só se não houver outra (a foto mantém a licença dela). Guardar fonte, autor e licença de cada foto num catálogo.
+- **A fazer no motor** (fase 4 da primeira parte, sem afetar Dom Quixote): a cena padrão passa a ser a ilustração; a lente da página com foto mostra a foto e a legenda com o crédito; nomes da chave por livro. A regra "a variação é a recompensa, trancada até a atividade" precisa ser revista para esta obra.
 
-Alternativa mais simples ❓: sem lente própria; a magia da cena vem das **lanternas** (revelar o escuro, com camadas) em algumas páginas.
-
----
+### 9.2 Pop-ups de ciência
+- Quadros curtos ("Você sabia?") que explicam um fato da página, em linguagem de 6 anos, e às vezes convidam a cuidar do planeta.
+- **Ler vem primeiro** (`AGENTS.md` §3.3): o quadro só abre quando a criança ou o adulto toca num ícone discreto; nunca abre sozinho nem interrompe a narração. Formato e quantidade por página a definir na fase 2.
+- Podem conversar com a Lente da Realidade (o pop-up explica a foto).
 
 ## 10. Atividades: banco de ideias (crivo da receita geral §6.2 na fase 2)
 
@@ -235,24 +239,22 @@ Alternativa mais simples ❓: sem lente própria; a magia da cena vem das **lant
 
 ---
 
-## 12. Decisões abertas para o humano ❓
+## 12. Decisões do humano (2026-11-08)
 
-1. **Transposição com Verne dentro da história** (§2): aprova a tese e o livro da avó como ponte?
-2. **Título** na estante: manter *Viagem ao Centro da Terra* (com o subtítulo "uma aventura na Antártida") ou um título próprio?
-3. **Personagens**: os nomes (Alex, Vó Lídia, Hanna, Aurora Sales, Lumi) e **Alex menino ou menina**. Avó ou avô?
-4. **Estação brasileira?** O Brasil tem a Estação Comandante Ferraz e o módulo Criosfera 1 no meio do continente. Uma estação brasileira aproxima a criança; o túnel fica longe, no gelo profundo.
-5. **Quatro partes** (§5) ou três (juntando o lago e a Antártida Verde)?
-6. **Lente do Tempo** (§9) ou só lanternas?
-7. **As criaturas do lago** (Verne cap. 33): sombras de baleias antigas que cantam (som de novo!), tartarugas gigantes, ou nenhuma?
-8. **Aurora no fim**: só a cápsula com a mensagem, ou um encontro (ela vê a notícia e liga, ou visita)?
-9. **"O que é de verdade?"**: uma página no fim da Parte 4, só no `sobre.html`, ou os dois?
-10. **Ordem na fila**: começar já a Parte 1 (fase 1), antes de Robin Hood e em paralelo com a Parte 5 de Dom Quixote?
-
----
+1. ✅ **Transposição** é exatamente o tipo desta obra.
+2. ✅ Título: ***Viagem ao Centro da Terra no Século XXI***, com subtítulo.
+3. 💬 Nomes: o humano perguntou quais nomes as traduções em português usam (resposta no chat de 2026-11-08: em geral os de Verne, sem mudança). Escolha em conversa.
+4. ✅ **Desembarque na Estação Antártica Comandante Ferraz** (Brasil), na Península Antártica. Depois, a expedição segue para o interior do continente, até uma **estação real** de lá (candidata natural: **Vostok**, que fica em cima do Lago Vostok; outras: Concordia, Amundsen-Scott, Kunlun e o módulo brasileiro Criosfera 1).
+5. ✅ Uma **parte de prólogo** para apresentar o desafio e começar a aventura no continente branco. A divisão em partes (§5) será refeita com ela.
+6. ✅ **Ilustrações da obra + Lente da Realidade com fotos reais de uso livre** (§9.1). Sem a Lente do Tempo.
+7. 💬 O enredo ainda está em conversa; algumas suposições desta proposta não foram aceitas.
+8. ✅ **Aurora**, já bem velhinha, fala com os heróis **antes da aventura**: ela é quem dá início a tudo (como o manuscrito de Saknussemm em Verne).
+9. ✅ **Pop-ups de ciência** ao longo do livro (§9.2), em vez de uma página "o que é de verdade" no fim.
+10. ✅ Esta obra é a próxima a ser escrita, **depois da conversa sobre o enredo**.
 
 ## 13. Próximos passos
 
-1. 🛑 O humano responde o §12 e aprova o mapa.
+1. 💬 Conversa sobre o enredo com o humano (o que ele não aceitou da proposta); depois, refazer os §3 a §6 e a divisão com o prólogo. 🛑 Aprovação do mapa.
 2. Ajustar este plano e a receita específica; atualizar a entrada em `assets/js/acervo.js` (título, nota) e os textos da estante em `assets/js/i18n-site.js`.
 3. **Parte 1, fase 1**: caderno `docs/cadernos/viagem-parte-1.md`, escaleta ✋, texto em rascunho em `viagem-ao-centro-da-terra/parte-1.html`.
 4. **Parte 1, fase 2**: atividades, visual de cada página, fichas dos personagens, lista de arte com `--seco`.
