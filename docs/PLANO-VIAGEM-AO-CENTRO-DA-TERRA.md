@@ -22,6 +22,17 @@
 4. **O que a obra valoriza**: a ciência e o intelecto humano. Para as crianças: a importância da ciência, dos cientistas, da ciência experimental e das perguntas sem resposta.
 5. **Faixa etária própria, com leitura em camadas** (correção do humano, 2026-11-08): esta obra pede leitores **mais velhos** que o público padrão da coleção (5 a 8). A faixa **começa por volta dos 6 anos**, com compreensão **parcial** (a aventura, o gelo, os bichos, a amizade, as perguntas), e **leitores mais velhos** (até uns 10 anos, e os adultos que leem junto) captam **mais camadas de significado** (a dependência da tecnologia, o abandono da ciência, a humildade de saber o que não se sabe, o clima).
 
+### 0.1 O começo em Recife (ideia do humano, 2026-11-08, em polimento)
+
+- A história **começa em Recife**. A criança quer salvar lugares queridos da cidade (as orlas, o **Parque da Jaqueira**) ameaçados pela subida do mar. A **avó** sente o mesmo: brincou na Jaqueira quando era criança.
+- Eles ouvem falar do lançamento da nova IA superpoderosa. A **escola faz uma campanha para juntar dinheiro** e pagar o plano caro dela. A resposta "não sei" vira um grande **anticlímax**.
+- O **ano de início** sai das projeções do IPCC para cidades costeiras como Recife (pesquisa §9).
+- **Pontos do polimento** (a decidir com o humano):
+  1. **O elo científico Recife → Antártida**: a maior incerteza sobre quanto o mar vai subir está no gelo antártico (pesquisa §9). O "não sei" da IA pode nascer daí.
+  2. **A Jaqueira e o mar**: nenhuma fonte confirma que o parque esteja em área de risco de maré; a orla de Boa Viagem e bairros como Madalena e a Ilha do Leite estão. É preciso uma fonte para o parque ou uma escolha honesta.
+  3. **O ano**: ideias em discussão (2064, bicentenário do livro de Verne; ou por volta de 2085, quando a avó seria uma criança que hoje lê o livro).
+
+
 ---
 
 ## 1. Leitura crítica da concepção inicial
