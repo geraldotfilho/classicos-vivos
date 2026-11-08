@@ -31,6 +31,11 @@
   1. **O elo científico Recife → Antártida**: a maior incerteza sobre quanto o mar vai subir está no gelo antártico (pesquisa §9). O "não sei" da IA pode nascer daí.
   2. **A Jaqueira e o mar**: nenhuma fonte confirma que o parque esteja em área de risco de maré; a orla de Boa Viagem e bairros como Madalena e a Ilha do Leite estão. É preciso uma fonte para o parque ou uma escolha honesta.
   3. **O ano**: ideias em discussão (2064, bicentenário do livro de Verne; ou por volta de 2085, quando a avó seria uma criança que hoje lê o livro).
+- **Decisões do humano (2026-11-08)**:
+  - O **Parque da Jaqueira fica à margem do Capibaribe** e alaga nos cenários extremos (conhecimento local do humano). No livro, a **prefeitura pensa em fechar o parque**: ele só pode ser usado poucas semanas por ano e fica alagado no resto do tempo; ela diz que, ano após ano, será pior e que **não há nada a fazer**.
+  - O livro também mostra **outros desafios da vida numa cidade costeira** nesse cenário (pesquisa §9.1).
+  - **Ano por volta de 2085.** A criança de hoje é o **avô** (uma referência ao filho do humano, que tem 6 anos em 2026). A **neta dele é a criança do livro**. O mais velho do trio passa a ser **avô** (não avó).
+  - **Nomes**: homenagens aos de Verne, **abrasileirados** (propostas no chat de 2026-11-08, a escolher).
 
 
 ---
