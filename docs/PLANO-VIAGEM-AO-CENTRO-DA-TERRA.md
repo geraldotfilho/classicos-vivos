@@ -217,15 +217,22 @@ A antiga proposta de uma "Lente do Tempo" **caiu**. Esta obra muda a dinâmica d
 ### 9.1 Ilustração da obra + Lente da Realidade com fotos reais
 - **Todas as páginas são ilustradas** no estilo da coleção. A ilustração é a **ilustração da obra literária** (como num livro ilustrado), não "a imaginação de um personagem". Não há duas versões pintadas da mesma cena.
 - **Em algumas páginas**, a chave abre a **Lente da Realidade**: uma **fotografia real** do que a página mostra (o *moulin*, as camadas de um testemunho de gelo, a Estação Comandante Ferraz, o Monte Erebus, um peixe de caverna, um fóssil de pinguim gigante).
-- **Fotos só de uso livre**, com o crédito exigido pela licença sempre visível na própria foto e numa página de créditos em `sobre.html`. Preferência: domínio público (NASA, NOAA, USGS, Programa Antártico dos EUA e similares) e CC0; depois CC BY. CC BY-SA, só se não houver outra (a foto mantém a licença dela). Guardar fonte, autor e licença de cada foto num catálogo.
-- **A fazer no motor** (fase 4 da primeira parte, sem afetar Dom Quixote): a cena padrão passa a ser a ilustração; a lente da página com foto mostra a foto e a legenda com o crédito; nomes da chave por livro. A regra "a variação é a recompensa, trancada até a atividade" precisa ser revista para esta obra.
+- **Fotos só de uso livre**, com o crédito exigido pela licença sempre visível na própria foto e numa página de créditos em `sobre.html`. Preferência: domínio público (NASA, NOAA, USGS, Programa Antártico dos EUA e similares) e CC0; depois CC BY. CC BY-SA, só se não houver outra (a foto mantém a licença dela). **Fotos que proíbem adaptação (ex.: CC BY-NC-ND, a maior parte do acervo do USAP) não são descartadas** (humano, 2026-11-08): podem entrar **inteiras, sem corte nem edição**, com a licença dela no crédito (pesquisa §8). Guardar fonte, autor e licença de cada foto num catálogo.
+- **A fazer no motor** (fase 4 da primeira parte, sem afetar Dom Quixote): a cena padrão passa a ser a ilustração; a lente da página com foto mostra a foto e a legenda com o crédito; nomes da chave por livro. A regra "a variação é a recompensa, trancada até a atividade" não se aplica aqui: a foto não depende de atividade (§10).
 
 ### 9.2 Pop-ups de ciência
 - Quadros curtos ("Você sabia?") que explicam um fato da página numa linguagem que o leitor mais novo acompanha com o adulto, com algo a mais para os mais velhos, e às vezes convidam a cuidar do planeta.
 - **Ler vem primeiro** (`AGENTS.md` §3.3): o quadro só abre quando a criança ou o adulto toca num ícone discreto; nunca abre sozinho nem interrompe a narração. Formato e quantidade por página a definir na fase 2.
 - Podem conversar com a Lente da Realidade (o pop-up explica a foto).
 
-## 10. Atividades: banco de ideias (crivo da receita geral §6.2 na fase 2)
+## 10. Atividades (decisão do humano, 2026-11-08)
+
+- **Poucas e especiais.** Bem mais raras que em Dom Quixote. Não há meta de "3 ou 4 por parte".
+- **O livro inteiro se lê e se aproveita sem nenhuma atividade.** Elas são um extra, nunca uma porta que a história precisa abrir.
+- **Propósito**: fazer o leitor **aplicar algo que acabou de aprender** no livro (um fato de ciência, um raciocínio, um jeito de observar), mais do que treinar sílabas.
+- **Só são planejadas depois que a história estiver pronta** (texto aprovado). Por isso, nesta obra, a fase 2 da receita geral cuida do visual, das fotos e dos pop-ups; as atividades vêm depois.
+- A tabela abaixo é **só um registro das ideias antigas**, escritas antes dessa decisão. Não é plano.
+
 
 | Parte | Ideia | Mecânica (motor) | Treina | Nasce da história porque… |
 | :--- | :--- | :--- | :--- | :--- |
@@ -239,7 +246,7 @@ A antiga proposta de uma "Lente do Tempo" **caiu**. Esta obra muda a dinâmica d
 | 4 | **O mistério da bússola**: as palavras da explicação de Alex ("O RAIO VIROU A AGULHA") | `ordem` | leitura | Alex explica para a Lumi (fecha o fio) |
 | 4 | **A cápsula de Aurora**: a mensagem final dela | `ordem` ou leitura | leitura | a última marca do precursor |
 
-3 ou 4 por parte, alternadas com páginas calmas, como pede a receita.
+~~3 ou 4 por parte, alternadas com páginas calmas~~ (substituído pela decisão acima).
 
 ---
 
@@ -271,7 +278,7 @@ A antiga proposta de uma "Lente do Tempo" **caiu**. Esta obra muda a dinâmica d
 1. 💬 Conversa sobre o enredo com o humano (o que ele não aceitou da proposta); depois, refazer os §3 a §6 e a divisão com o prólogo. 🛑 Aprovação do mapa.
 2. Ajustar este plano e a receita específica; atualizar a entrada em `assets/js/acervo.js` (título, nota) e os textos da estante em `assets/js/i18n-site.js`.
 3. **Parte 1, fase 1**: caderno `docs/cadernos/viagem-parte-1.md`, escaleta ✋, texto em rascunho em `viagem-ao-centro-da-terra/parte-1.html`.
-4. **Parte 1, fase 2**: atividades, visual de cada página, fichas dos personagens, lista de arte com `--seco`.
+4. **Parte 1, fase 2**: visual de cada página, fotos e pop-ups, fichas dos personagens, lista de arte com `--seco`. As atividades só depois do texto aprovado (§10).
 
 ## 14. Andamento
 

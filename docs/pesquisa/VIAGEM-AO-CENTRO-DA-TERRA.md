@@ -70,7 +70,7 @@ Legenda: ✅ confirmado · ⚠️ corrigido (o agente tinha dito diferente) · �
 
 | Fato | Situação | Fonte | Consequência |
 | :--- | :--- | :--- | :--- |
-| A maior parte das fotos da **biblioteca do Programa Antártico dos EUA (USAP)** é **CC BY-NC-ND 4.0**: proíbe uso comercial e **qualquer adaptação** (cortar a foto para 16:9 já é adaptar). Só algumas são de **domínio público**, marcadas com a palavra "Public Domain" | ✅ | [USAP Photo Library](https://photolibrary.usap.gov/Information.aspx) | Usar só as de domínio público (ou pedir permissão). A coleção é CC BY 4.0: fotos "NC-ND" não combinam com ela |
+| A maior parte das fotos da **biblioteca do Programa Antártico dos EUA (USAP)** é **CC BY-NC-ND 4.0**: proíbe uso comercial e **qualquer adaptação** (cortar a foto para 16:9 já é adaptar). Só algumas são de **domínio público**, marcadas com a palavra "Public Domain" | ✅ | [USAP Photo Library](https://photolibrary.usap.gov/Information.aspx) | **Não descartar** (humano, 2026-11-08): uma foto NC-ND pode entrar **inteira**, sem corte nem edição, mostrada dentro do quadro com margens, com crédito e a licença dela. Ela continua com a licença própria dentro de uma obra CC BY 4.0, e o crédito precisa dizer isso. ❓ Conferir no texto da licença se reduzir o tamanho e converter para WebP é permitido (as licenças CC 4.0 parecem permitir mudanças técnicas de formato) |
 | Fotos de sites militares dos EUA costumam vir marcadas "IMAGE IS PUBLIC DOMAIN", com pedido de crédito | ✅ | [PACOM](https://www.pacom.mil/Media/Photos/igphoto/2003866408/) | Outra fonte possível |
 | NASA, NOAA, USGS, Wikimedia Commons (CC0 e CC BY) | ❓ conferir a licença foto por foto | — | Catálogo com fonte, autor e licença de cada foto |
 

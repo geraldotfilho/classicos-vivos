@@ -35,7 +35,7 @@ O que vale **só para esta obra**, ou para o tipo de adaptação dela (**transpo
 ## 4. Ilustração, fotos reais e pop-ups (humano, 2026-11-08)
 
 - **A ilustração é a da obra literária**, não a imaginação de um personagem: uma cena pintada por página, sem par Realidade × Imaginação. As regras de Dom Quixote sobre as duas lentes **não** valem aqui.
-- **Lente da Realidade = foto real**, só em algumas páginas, quando a foto mostra algo que a criança acabou de ler e que existe de verdade. Só fotos de uso livre, com crédito visível e registrado (fonte, autor, licença) num catálogo; preferir domínio público e CC0.
+- **Lente da Realidade = foto real**, só em algumas páginas, quando a foto mostra algo que a criança acabou de ler e que existe de verdade. Só fotos de uso livre, com crédito visível e registrado (fonte, autor, licença) num catálogo; preferir domínio público e CC0. Fotos cuja licença **proíbe adaptação** (CC BY-NC-ND) também servem, desde que entrem **inteiras**: sem corte, sem retoque, mostradas dentro do quadro com margens se a proporção não for 16:9.
 - **Pop-ups de ciência**: curtos, numa linguagem que o leitor mais novo acompanha com o adulto, abertos por toque, nunca automáticos nem por cima da narração. Um fato por pop-up. Podem explicar a foto. Conscientizar sem sermão e sem culpa (§3).
 - Tudo isso pede ajustes no motor (plano §9), feitos sem mudar o comportamento de Dom Quixote.
 
@@ -45,7 +45,8 @@ O que vale **só para esta obra**, ou para o tipo de adaptação dela (**transpo
 - **As camadas fundas ficam na própria história, não em explicação**: a IA que diz "não sei", a estação abandonada, a velha cientista esquecida. A criança mais velha (e o adulto) entende o que a cena diz sem que o narrador aponte.
 - **A proteção da infância continua sendo pelo leitor mais novo** (receita geral §1): medo, perigo e tristeza dosados para 6 anos.
 - **Linguagem**: ainda clara e direta (`AGENTS.md` §3.5), com mais espaço para palavras de ciência, explicadas no texto ou nos pop-ups, e para frases e páginas um pouco mais longas que em Dom Quixote. O limite exato se acerta na fase 3, com a leitura do humano.
-- **Atividades e pop-ups em dois níveis**: as palavras-chave e as brincadeiras de leitura servem ao mais novo; os enigmas, os raciocínios e os pop-ups dão desafio ao mais velho.
+- **Pop-ups em dois níveis**: o fato simples para o mais novo, com algo a mais para o mais velho.
+- **Atividades: poucas, especiais e opcionais** (humano, 2026-11-08). O livro se lê inteiro sem elas. Cada uma faz o leitor **aplicar o que acabou de aprender** na história. São planejadas **só depois do texto aprovado**, e não seguem a meta de 3 ou 4 por parte da receita geral. A trava "a variação da cena é a recompensa da atividade" não vale nesta obra.
 - **Na publicação**: dizer aos pais, em `sobre.html` (nunca na estante), que esta obra é para uma faixa um pouco mais alta.
 
 ## 6. Diário de lições desta obra (mais recente primeiro)
@@ -54,5 +55,6 @@ O que vale **só para esta obra**, ou para o tipo de adaptação dela (**transpo
 | :--- | :--- | :--- |
 | 2026-11-08 | O humano quer uma dinâmica de lentes nova (ilustração da obra + fotos reais), não a de Dom Quixote: um recurso próprio não se copia de outra obra | §4 |
 | 2026-11-08 | Proposta de mapa com muitas perguntas de uma vez afogou o humano: na fase 0, conversar o enredo antes, poucas perguntas por vez | plano, ritmo combinado |
+| 2026-11-08 | Atividades decididas antes da história ficam forçadas: nesta obra, poucas, opcionais e planejadas só com o texto pronto, para aplicar o que se aprendeu | §5 |
 | 2026-11-08 | O agente trocou a faixa etária da concepção (6 a 10) pela padrão da coleção (5 a 8) sem perguntar. Uma obra pode ter público próprio; a faixa é decisão do humano, registrada na receita da obra | §5, topo |
 | 2026-11-07 | A concepção inicial tinha precursores "desaparecidos", uma explosão e uma IA vilã em potencial: a fase 0 confere tudo contra a receita geral antes de virar plano | §3, plano §1 |
