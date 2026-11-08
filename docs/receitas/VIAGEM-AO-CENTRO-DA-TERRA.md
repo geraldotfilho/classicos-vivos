@@ -46,6 +46,7 @@ O que vale **só para esta obra**, ou para o tipo de adaptação dela (**transpo
 - **A proteção da infância continua sendo pelo leitor mais novo** (receita geral §1): medo, perigo e tristeza dosados para 6 anos.
 - **Linguagem**: ainda clara e direta (`AGENTS.md` §3.5), com mais espaço para palavras de ciência, explicadas no texto ou nos pop-ups, e para frases e páginas um pouco mais longas que em Dom Quixote. O limite exato se acerta na fase 3, com a leitura do humano.
 - **Pop-ups em dois níveis**: o fato simples para o mais novo, com algo a mais para o mais velho.
+- **Os pop-ups são a aula do livro** (humano, 2026-11-08): ensinam bastante sobre o **aquecimento global e as suas causas**, aos poucos, ligados ao que a página mostra. Como só abrem por toque, podem ir fundo sem pesar na leitura. Cada número vem da pesquisa, com fonte.
 - **Atividades: poucas, especiais e opcionais** (humano, 2026-11-08). O livro se lê inteiro sem elas. Cada uma faz o leitor **aplicar o que acabou de aprender** na história. São planejadas **só depois do texto aprovado**, e não seguem a meta de 3 ou 4 por parte da receita geral. A trava "a variação da cena é a recompensa da atividade" não vale nesta obra.
 - **Na publicação**: dizer aos pais, em `sobre.html` (nunca na estante), que esta obra é para uma faixa um pouco mais alta.
 

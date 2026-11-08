@@ -36,6 +36,10 @@
   - O livro também mostra **outros desafios da vida numa cidade costeira** nesse cenário (pesquisa §9.1).
   - **Ano por volta de 2085.** A criança de hoje é o **avô** (uma referência ao filho do humano, que tem 6 anos em 2026). A **neta dele é a criança do livro**. O mais velho do trio passa a ser **avô** (não avó).
   - **Nomes**: homenagens aos de Verne, **abrasileirados** (propostas no chat de 2026-11-08, a escolher).
+  - **A neta se chama Axel**, como em Verne. A amiga da escola que puxa a vaquinha é **Grau** (apelido, homenagem a Grauben). Ainda propostas: Vô Otto, o guia João, Aurora (A.S.), Frederico na Estação Ferraz.
+  - **A referência ao filho do humano fica só na geração.** O avô solta lembranças em que o menino se reconheça: o **Colégio Apoio** (Casa Amarela), "do tempo em que as escolas podiam ficar no chão e tinham até parquinho de areia".
+  - **O primeiro livro termina no começo da viagem: a partida para a Antártida.**
+  - **Os pop-ups ensinam bastante sobre o aquecimento global e as suas causas** (base em pesquisa §9.2).
 
 
 ---

@@ -106,6 +106,25 @@ Legenda: ✅ confirmado · ⚠️ corrigido (o agente tinha dito diferente) · �
 | **IPCC (AR6, Grupo II)**: sem adaptação, o risco das cidades costeiras pode crescer **dez vezes ou mais** até 2100; **sair do caminho do mar (realocação planejada)** é a única medida que elimina o impacto; adaptar leva **décadas**; há um "vão" entre planejar e fazer | ✅ | [IPCC, ficha Nível do Mar](https://www.ipcc.ch/report/ar6/wg2/downloads/outreach/IPCC_AR6_WGII_FactSheet_SLR.pdf), [ficha Cidades](https://www.ipcc.ch/report/ar6/wg2/downloads/outreach/IPCC_AR6_WGII_FactSheet_CitiesSettlementsBtS.pdf) | A prefeitura que decide "fechar" a Jaqueira tem base real: recuar é uma opção legítima, e a briga é sobre **quando** e **com que certeza** |
 | **Hans** é forma curta de **Johannes**, a mesma raiz de **João** | ✅ | [Wikipedia](https://en.wikipedia.org/wiki/Hans_(given_name)), [Etymonline](https://www.etymonline.com/word/Hans) | Nome abrasileirado para o guia |
 
+### 9.2 Aquecimento global e suas causas (base para os pop-ups)
+
+| Fato | Situação | Fonte |
+| :--- | :--- | :--- |
+| **CO₂ no ar**: antes da Revolução Industrial, **280 ppm ou menos**; nos ciclos das eras do gelo do último milhão de anos, **nunca passou de 300 ppm**; média global de **2024: 422,8 ppm** (recorde); o pico de maio de 2025 em Mauna Loa passou de **430 ppm** pela primeira vez | ✅ | [climate.gov](https://www.climate.gov/news-features/understanding-climate/climate-change-atmospheric-carbon-dioxide), [Scripps](https://scripps.ucsd.edu/news/annual-carbon-dioxide-peak-passes-another-milestone) |
+| Níveis de CO₂ de hoje são como os de **4,1 a 4,5 milhões de anos atrás** (Plioceno, mares bem mais altos), segundo a NOAA (2022) | ✅ (declaração da NOAA relatada pela imprensa) | [Discover](https://www.discovermagazine.com/co2-in-the-atmosphere-climbs-to-highest-level-in-4-5-million-years-42589) |
+| Se as emissões continuarem, o CO₂ pode chegar a **800 ppm ou mais**, condição que a Terra **não vê há quase 50 milhões de anos** | ✅ | [climate.gov](https://www.climate.gov/news-features/understanding-climate/climate-change-atmospheric-carbon-dioxide) |
+| **Temperatura**: **2024 foi o ano mais quente já medido, ~1,55 °C** acima de 1850–1900 (primeiro ano acima de 1,5 °C; o aquecimento de longo prazo estava entre 1,34 e 1,41 °C, e a meta de Paris é medida em décadas); **2025, ~1,44 °C**, entre os três mais quentes | ✅ | [OMM, 2024](https://wmo.int/media/news/wmo-confirms-2024-warmest-year-record-about-155degc-above-pre-industrial-level), [OMM, 2025](https://wmo.int/news/media-centre/wmo-confirms-2025-was-one-of-warmest-years-record) |
+| **Por que o mar sobe** (1993–2018): a água do mar **se expande ao esquentar** (~40%), as **geleiras das montanhas** derretem (~20%), a **Groenlândia** (~15%) e a **Antártida** (~8%). Desde ~2006, o **gelo em terra** é a maior causa | ✅ (porcentagens de resumos do AR6; conferir a tabela do cap. 9) | [OMM](https://wmo.int/ar/node/10985), [AR6 cap. 9](https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_Chapter_09.pdf) |
+| **Emissões do Brasil (2024, SEEG)**: 2,145 bilhões de t de CO₂e (16,7% a menos que em 2023). Brutas: **mudança de uso da terra 42%** (98% disso é **desmatamento**), **agropecuária 29%**, **energia 20%**, resíduos 5%, processos industriais 4%. As queimadas ficam fora dessa conta | ✅ | [SEEG 13](https://seeg.eco.br/wp-content/uploads/2026/03/SEEG13-relatorio-analitico-BR.pdf), [Poder360](https://www.poder360.com.br/poder-sustentavel/brasil-reduz-167-das-emissoes-de-gases-do-efeito-estufa/) |
+| No mundo, a maior causa são os **combustíveis fósseis** (carvão, petróleo, gás) | ❓ conferir número e fonte antes de usar | — |
+
+### 9.3 Detalhes do Recife e da viagem
+
+| Fato | Situação | Fonte | Uso |
+| :--- | :--- | :--- | :--- |
+| **Colégio Apoio**: escola particular no bairro de **Casa Amarela** (Rua Conselheiro Nabuco, 44), da creche ao ensino médio | ✅ (diretórios de escolas) | [escol.as](https://www.escol.as/303501-apoio-grupo-de-asses-educac-e-pedagogica) | Lembrança do avô (a escola de quando ele era criança) |
+| **Como se chega a Ferraz hoje**: voos de apoio da FAB (**KC-390** desde dez/2021, antes o C-130 Hércules) levam pessoas e cargas do **Rio de Janeiro** a **Punta Arenas** (Chile) ou Ushuaia (Argentina); de lá, avião até a Base Frei (Ilha Rei George) ou navio pelo Estreito de Drake (~48 h). Os navios da Marinha também apoiam a estação | ✅ (sem detalhes da rota de passageiros) | [Força Aérea](https://forcaaerea.com.br/proantar-pela-primeira-vez-em-ushuaia), [Aviacionline](https://aviacionline.com/el-programa-antartico-brasileno-utiliza-por-primera-vez-el-apoyo-del-embraer-kc-390), [Marinha (SECIRM)](https://www.marinha.mil.br/secirm/pt-br/node/123), [Chile Travel](https://chile.travel/pt-br/atracoes/estacao-vernadsky-e-base-ohiggins/) | A cena da partida no fim do primeiro livro |
+
 ## 10. Ainda falta conferir
 
 - O som corre mais rápido no gelo que no ar (quanto?).
