@@ -10,6 +10,17 @@
 
 ---
 
+## 0. A premissa do humano (2026-11-08, em construção)
+
+> Método combinado: **primeiro um enredo maduro para a transposição; só depois a adaptação ao público de 5 a 8 anos.** Esta seção manda sobre as anteriores: o que for contrário a ela no resto do plano (sobretudo §1, §3, §5 e §6) está desatualizado.
+
+1. **O antagonista não é a IA**, é a **dependência excessiva da tecnologia**: a confiança cega na IA, as distorções da realidade que ela produz e a desvalorização do intelecto humano. Um toque leve de distopia.
+2. **O mundo**: o dinheiro da pesquisa foi todo para o desenvolvimento da IAG (inteligência artificial geral). O trabalho de campo feito por pessoas foi sendo deixado de lado. A **estação de pesquisa foi desativada**, e a cientista antiga (**Aurora**) foi **aposentada antes de concluir o trabalho**, quando estava perto de responder um grande mistério que ajudaria a humanidade contra o aquecimento global.
+3. **A virada**: no lançamento de uma nova versão da IA, que todos acreditam ser enfim a IAG com todas as respostas, alguém pergunta como resolver um problema do aquecimento global (a delinear, com a ciência dura de Verne). Ao se tornar **sábia**, a IA ganha o que lhe faltava: passa a **delimitar o que não sabe e a fazer perguntas**, em vez de responder tudo com confiança. Ela revela que a grande resposta pode estar soterrada no gelo da Antártida e leva os personagens a procurar a velha cientista, **o último cérebro que ainda guarda as memórias daquelas pesquisas**.
+4. **O que a obra valoriza**: a ciência e o intelecto humano. Para as crianças: a importância da ciência, dos cientistas, da ciência experimental e das perguntas sem resposta.
+
+---
+
 ## 1. Leitura crítica da concepção inicial
 
 A concepção do Gemini é um bom ponto de partida: as 10 "características de ouro" são um retrato fiel de Verne, a tabela de conversão de cenas é criativa e a ciência escolhida é real (testemunhos de gelo, Lago Vostok, Antártida do Eoceno, vulcanismo subglacial). O que **fica**, o que **muda** e por quê:
