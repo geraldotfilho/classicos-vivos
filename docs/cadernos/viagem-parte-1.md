@@ -94,4 +94,65 @@ Lá embaixo, a Jaqueira brilha alagada. A viagem começa.
 - **Quanto o mar terá subido em 2085**: ainda não pegamos o número do IPCC para esse ano (sabemos o de 2050 e o de 2100).
 
 ## 5. Notas do humano e o que mudou
-- (aguardando a leitura do argumento)
+
+### 2026-11-09: retorno sobre o argumento v1
+1. **Axel um pouco mais velho**, talvez 10 anos (no v1 já tinha 10; a confirmar, junto com "neta ou neto": o humano escreveu "ele").
+2. **Nova cena**: Axel pede ao avô para assinar o Oráculo novo; o avô, contra a dependência das IAs, recusa: "não adianta nada, é tudo uma grande enrolação".
+3. Por isso **as crianças assumem o protagonismo**: não aceitam uma realidade ruim como inevitável; são mais capazes de esperança e de **esperançar** que os adultos. Elas fazem a vaquinha e pagam a IA.
+4. Depois, **Axel usa o que aprendeu com a IA para convencer o avô** a levá-los até Aurora.
+5. **Mais ambientação**: uma vida de **resiliência** num novo normal climático, desenhada com a ciência do IPCC.
+6. **Idade de Aurora**: ela seria superidosa? (proposta abaixo). **Gostou de onde ela mora** (Olinda). Pesquisar a subcultura de Olinda para enriquecer a personagem.
+7. **A água revelando a escrita em espelho ficou forçada**: trocar.
+8. **A criança no interior da Antártida**: talvez a expedição demore, o bastante para Axel crescer, ou virar adulto. Pensar melhor.
+9. **Título**: não gostou de *O Oráculo Que Disse Não Sei*; pensar em mais opções.
+
+### Propostas da v2 (aguardando o humano)
+
+**Nova sequência** (o v1 continua acima, para comparação):
+1. **Recife, 2085: um dia de resiliência** (ver a ambientação abaixo).
+2. **A Jaqueira vai fechar** ("nada a fazer", segundo o Oráculo).
+3. **O lançamento do Oráculo 10.** Axel pede ao avô para assinar. **O avô recusa**: "É tudo uma grande enrolação." (E a ferida dele: foi o dinheiro dessas máquinas que acabou com a ciência que ele queria fazer.) Na mesma conversa, ele diz a frase que volta depois: "Essa máquina só sabe o que alguém mediu."
+4. **As crianças não aceitam.** Axel, Grau e a turma decidem que o fim da Jaqueira **não é inevitável** e fazem a vaquinha, apesar dos adultos que dão de ombros. É o **esperançar**: a ideia é de Paulo Freire, que nasceu ali mesmo, em **Casa Amarela**, o bairro do Colégio Apoio (✅). Usar a ideia sem pôr a frase literal na boca de Freire (a fonte exata não foi achada).
+5. **A pergunta e o "não sei".** O anticlímax.
+6. **O Oráculo ensina o que sabe e o que não sabe**: o gelo, a água debaixo dele, Aurora. Axel aprende de verdade (e o leitor, nos pop-ups).
+7. **Axel convence o avô**, com argumentos e não com pedidos: usa o que aprendeu e ainda devolve a frase do avô ("Ele disse que só sabe o que alguém mediu, vô. Igualzinho ao senhor."). E o nome de Aurora toca a ferida: ela foi professora dele.
+8. **Olinda**: Aurora (proposta: **78 anos**, ver abaixo).
+9. **O caderno e o enigma** (sem o reflexo na água; ver abaixo).
+10. **A decisão e o fim do primeiro livro** (depende da questão do tempo, abaixo).
+
+**Ambientação: o Recife de 2085, "um novo normal" com resiliência** (cada item com base na pesquisa §9 e §9.5; os detalhes concretos são ✍️):
+- O mundo esquentou cerca de **2,5 °C** (cenário intermediário do IPCC, perto do caminho das políticas de hoje).
+- **Tábua de marés** e **alertas** de maré e de chuva fazem parte da rotina, como hoje a previsão do tempo (alerta antecipado é medida de adaptação do IPCC).
+- **Escolas e casas sobre pilares**; o térreo das casas fica vazio para a água passar; passarelas altas.
+- **Calor**: aulas começam de madrugada e param no meio do dia; ruas com árvores e telhados verdes (medidas do IPCC contra o calor).
+- **Água**: secas mais longas e chuvas mais violentas (projeções do IPCC para o Nordeste); cisternas, água de reúso, usinas de dessalinização (os poços ficaram salgados).
+- **Mangue replantado** no Capibaribe e no litoral como defesa natural (solução baseada na natureza do IPCC).
+- **Muralha** na orla de Boa Viagem, praia quase sem areia.
+- **Parques que alagam de propósito**, para segurar a água (o fechamento da Jaqueira pode até ser parte disso: recuar é uma opção legítima do IPCC; o erro da prefeitura é a certeza).
+- Muito do que foi planejado **não saiu do papel** (o "vão da adaptação" do IPCC).
+
+**Aurora**:
+- **Idade**: se ela foi professora de Otto por volta de 2040, aos ~33 anos, nasceu em ~2007 e tem **78 anos em 2085**. Com a expectativa de vida de ~84 anos já em 2070 (IBGE), não é superidosa: é velhinha, lúcida, ativa. A Expedição Saknussemm foi de ~2035 a ~2065, quando a estação fechou e ela foi aposentada à força.
+- **Olinda**: mora na **Rua do Amparo**, a rua dos ateliês, num casarão colorido. É **bonequeira nas horas vagas**: ajuda a fazer bonecos gigantes para o carnaval (a tradição do Homem da Meia-Noite, 1932), e todo ano sai num bloco, ao som de frevo. A casa tem um boneco gigante no corredor. Ideia: o caderno estava guardado **dentro da cabeça do boneco**, onde nenhuma máquina procuraria.
+- Uma cientista que sabe medir o gelo e fazer boneco de carnaval: a ciência e a cultura popular na mesma pessoa.
+
+**O enigma, sem o reflexo** (duas propostas):
+- **A (preferida): as páginas "comidas pela traça".** Uma página do caderno está cheia de furinhos, que todos acham ser estrago da umidade e das traças (o Recife é úmido). Por acaso, ela cai por cima de outra página, e a luz da janela atravessa os furos: aparecem só algumas letras, que formam a mensagem. É uma **grade de Cardano**, um truque real de 1550. O Oráculo não podia achar: ele escaneou as páginas **uma de cada vez**; só quem segura o caderno de verdade vê as duas juntas. É acaso, como em Verne (Axel descobre o segredo sem querer, abanando-se com o pergaminho), e diz algo sobre o mundo físico.
+- **B: a chave é uma memória.** A mensagem só se abre com uma palavra que Aurora guarda na memória (o verso de um frevo que ela canta). Nenhum banco de dados tem a chave: só ela, "o último cérebro". Mais emotiva, mas depende da memória de uma personagem que já falha.
+
+**A criança e o interior da Antártida** (três caminhos):
+- **1 (preferido): o tempo passa.** O primeiro livro termina com a **decisão** (e talvez com uma primeira ida curta, à Península). A expedição de verdade leva **anos** para acontecer: juntar dinheiro, treinar, convencer as instituições, enquanto Grau mede a maré. Axel chega à expedição com **uns 15 anos**. Hoje já existem expedições de jovens à Antártida a partir dos 14 (a Students on Ice), então fica crível. Bônus: os leitores de 6 a 10 veem uma criança como eles crescer e cumprir a promessa. O Axel de Verne também é um rapaz.
+- **2: Axel continua criança e vai só até a Península** (navios de expedição aceitam crianças a partir de 6 ou 8 anos, com um responsável); o interior fica para os adultos. Crível, mas tira Axel do coração da aventura.
+- **3: Axel continua criança e vai até o fim**, com licença de ficção. É a mais fácil de escrever e a menos "ciência dura".
+
+**Títulos para o primeiro livro** (para reagir; a obra continua *Viagem ao Centro da Terra no Século XXI*):
+- *Quem Mediu o Mar?*
+- *As Crianças da Maré*
+- *Esperançar*
+- *A Pergunta de Axel*
+- *A Maré da Jaqueira*
+- *O Caderno de Aurora*
+- *Antes do Gelo*
+- *O Mar Bate à Porta*
+- *Ninguém Mediu*
+- *A Vaquinha, o Oráculo e o Mar* (o mais leve e engraçado)
