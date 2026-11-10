@@ -33,7 +33,7 @@ Decisão de cada bloco: ✅ entra · 🔀 entra fundido ou adaptado · ✂️ fi
 | :--- | :--- | :--- |
 | II-1 | O padre e o barbeiro visitam Dom Quixote, que parece curado até falarem de cavaleiros | ✅ cap. 34 (ponte com a Parte 4) |
 | II-2 | Sancho briga com a governanta na porta e traz a notícia do livro | 🔀 cap. 34 |
-| II-3–4 | Sansão Carrasco conta que viraram livro; Sancho quer saber se está nele | ✅ cap. 35 · **atividade** (o título do livro) |
+| II-3–4 | Sansão Carrasco conta que viraram livro; Sancho quer saber se está nele | ✅ cap. 35 · **atividade** (o nome de Sancho em sílabas) |
 | II-5 | Sancho e Teresa conversam sobre a nova saída | 🔀 cap. 36 (curto e carinhoso) |
 | II-6–7 | A sobrinha e a governanta pedem ajuda a Sansão; ele apoia a saída (tem um plano secreto); Sancho com ciúme; a partida | ✅ cap. 36 |
 | II-8–10 | El Toboso de noite; Sancho inventa que uma camponesa é a Dulcineia encantada | ✂️ mentira e zombaria (já decidido em `PLANO-PARTES-2-4.md` §2); com ela saem a Dulcineia da gruta e a profecia dos açoites |

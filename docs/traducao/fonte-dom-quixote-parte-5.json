@@ -6,57 +6,51 @@
   "paginas": [
     {
       "indice": 0,
-      "hash": "1179f4a503",
+      "hash": "4c3d1b03f9",
       "capa": true,
       "titulo": "Parte 5: O Livro Famoso e o Cavaleiro dos Leões",
-      "texto": "Dom Quixote descansou em casa quase um mês inteiro. Mas uma novidade espantosa vai bater à porta: as aventuras dele e de Sancho foram parar dentro de um {{LIVRO|LI • VRO|📖}}, e o mundo inteiro está lendo!\n\nNesta parte da história, os dois amigos pegam a {{ESTRADA|ES • TRA • DA|🛣️}} pela terceira vez. Vão encontrar uma carroça cheia de reis e anjos, um cavaleiro que brilha como espelho, um escudeiro com o maior nariz do mundo e um {{LEÃO|LE • ÃO|🦁}} de verdade, com juba e tudo!\n\nAjeite-se bem, vire a página e venha descobrir como é ser famoso!"
+      "texto": "Dom Quixote está em casa, descansando. Mas uma novidade incrível vai bater à porta: as aventuras dele e de Sancho foram parar dentro de um {{LIVRO|LI • VRO|📖}}, e o mundo inteiro está lendo!\n\nNesta parte da história, os dois amigos pegam a {{ESTRADA|ES • TRA • DA|🛣️}} pela terceira vez. Vão encontrar uma carroça cheia de reis e anjos, um cavaleiro que brilha como espelho, um escudeiro com o maior nariz do mundo e um {{LEÃO|LE • ÃO|🦁}} de verdade, com juba e tudo!\n\nAjeite-se bem, vire a página e venha descobrir como é ser famoso!"
     },
     {
       "indice": 1,
-      "hash": "4aea10b58a",
+      "hash": "6c88feffa7",
       "capitulo": "🧢 Capítulo 34 • Um Mês de Sossego",
       "titulo": "A Vassoura da Governanta",
-      "texto": "Fazia quase um mês que Dom Quixote descansava em casa. A sobrinha Antônia e a governanta cuidavam dele com caldinho quente, ovos fresquinhos e muito carinho. O padre e mestre Nicolau nem apareciam para visitar: tinham medo de que o amigo, só de olhar para eles, se lembrasse das aventuras.\n\nUm dia, os dois não aguentaram de saudade e foram vê-lo. Encontraram Dom Quixote sentado na cama, de colete verde e com uma {{TOUCA|TOU • CA|🧢}} vermelha na cabeça. Estava tão magrinho que parecia um palito de camisolão. Mas conversava tão sossegado, sobre a chuva, a horta e o preço do pão, que os amigos se olharam contentes.\n\nPara ter certeza, o padre contou, como quem não quer nada: — Dizem que o rei anda preocupado. Parece que vem perigo pelo mar... Dom Quixote levantou um dedo magro: — Pois o rei que mande chamar os {{CAVALEIROS|CA • VA • LEI • ROS|⚔️}} andantes! Basta um só para resolver tudo. E eu não digo quem é... O padre suspirou, e a sobrinha pôs as mãos na cintura: — Ai, titio! O senhor quer sair de novo!\n\nNessa hora, começou uma barulheira na porta da rua. Era a governanta, de {{VASSOURA|VAS • SOU • RA|🧹}} na mão, barrando a entrada de Sancho Pança: — Aqui você não entra! É você que leva o meu patrão para o meio do mundo! — Eu? — respondia Sancho, se esticando para espiar por cima da vassoura. — É ele que me leva! E ainda está me devendo uma ilha!\n\n— Deixem entrar o meu bom escudeiro! — pediu Dom Quixote lá de dentro. Sancho entrou sem fôlego, de olhos arregalados: — Meu amo, o senhor não vai acreditar! Sabe o Sansão, filho do vizinho Bartolomeu Carrasco? Voltou ontem da cidade grande, onde estava estudando. E trouxe uma {{NOTÍCIA|NO • TÍ • CIA|📣}} de cair o queixo!"
+      "texto": "Fazia quase um mês que Dom Quixote descansava em casa. A sobrinha Antônia e a governanta cuidavam dele com caldinho quente, ovos fresquinhos e muito carinho, e o gatinho da casa dormia enrolado nos pés da cama. O padre e mestre Nicolau nem apareciam para visitar: tinham medo de que o amigo, só de olhar para eles, se lembrasse das aventuras.\n\nUm dia, os dois não aguentaram de saudade e foram vê-lo. Encontraram Dom Quixote sentado na cama, de colete verde e com uma {{TOUCA|TOU • CA|🧢}} vermelha na cabeça. Estava tão magrinho que o camisolão parecia pendurado num cabide. Mas conversava tão sossegado, sobre a chuva, a horta e o preço do pão, que os amigos se olharam contentes.\n\nPara ver se o amigo tinha mesmo sossegado, o padre contou, como quem não quer nada: — Dizem que o rei anda preocupado. Parece que vem perigo pelo mar... Dom Quixote levantou um dedo magro: — Pois o rei que mande chamar os {{CAVALEIROS|CA • VA • LEI • ROS|⚔️}} andantes! Basta um só para resolver tudo. E eu não digo quem é... O padre suspirou, e a sobrinha pôs as mãos na cintura: — Ai, titio! O senhor quer sair de novo!\n\nNessa hora, começou uma barulheira na porta da rua. Era a governanta, de {{VASSOURA|VAS • SOU • RA|🧹}} na mão, barrando a entrada de Sancho Pança: — Aqui você não entra! É você que leva o meu patrão para o meio do mundo! — Eu? — respondia Sancho, se esticando para espiar por cima da vassoura. — É ele que me leva! E ainda está me devendo uma ilha!\n\n— Deixem entrar o meu bom escudeiro! — pediu Dom Quixote lá de dentro. Sancho entrou sem fôlego, de olhos arregalados: — Meu amo, o senhor não vai acreditar! Sabe o Sansão Carrasco, o filho do nosso vizinho? Voltou ontem da cidade grande, onde estava estudando. E trouxe uma {{NOTÍCIA|NO • TÍ • CIA|📣}} de cair o queixo!"
     },
     {
       "indice": 2,
-      "hash": "a1ae9567c2",
+      "hash": "2bceef6315",
       "capitulo": "📖 Capítulo 35 • Viramos Livro!",
       "titulo": "O Livro Mais Falado da Espanha",
-      "texto": "Sancho foi correndo buscar Sansão Carrasco. O rapaz era baixinho, de cara redonda e nariz achatado, e não havia na aldeia ninguém mais brincalhão. Tinha estudado tanto na cidade que todos o chamavam de {{BACHAREL|BA • CHA • REL|🎓}}: é o nome de quem termina os estudos.\n\nAssim que entrou, Sansão se ajoelhou diante da cama: — Dê cá a sua mão, grande Dom Quixote de La Mancha! As suas aventuras correram tanto de boca em boca que alguém escreveu tudinho. Viraram um {{LIVRO|LI • VRO|📖}}! Já são mais de doze mil livros iguaizinhos, espalhados pelo mundo. O senhor é um cavaleiro {{FAMOSO|FA • MO • SO|🌟}}!\n\nDom Quixote ficou sem fala. Quem teria escrito? Só podia ser um sábio encantador, desses que sabem de tudo! — E o que o povo mais gosta de ler? — perguntou ele, com a voz tremendo de emoção. — Uns preferem os gigantes que eram moinhos — contou Sansão. — Outros, os exércitos que eram ovelhas. As crianças folheiam, os jovens leem, e os velhinhos aplaudem!\n\nSancho puxou a manga do bacharel: — E eu? Eu estou aí dentro? — Está, sim! Você é o segundo {{PERSONAGEM|PER • SO • NA • GEM|🎭}} mais importante. Tem gente que gosta mais das suas falas do que de todo o resto! Sancho estufou a barriga, orgulhoso. Depois ficou sério: — E o meu burrico? — Também está. — Ah, bom. Então o livro é verdadeiro.\n\nSansão tirou o livro de debaixo do braço e o colocou no colo do cavaleiro. Dom Quixote passou os dedos pelas letras da capa, bem devagarinho. Sancho espiava por cima do ombro dele. Nunca tinha aprendido a ler, mas agora queria muito saber: o que estava escrito ali, com letras tão grandes?",
+      "texto": "Sancho foi correndo buscar Sansão Carrasco. O rapaz era baixinho, de cara redonda e nariz achatado, e era o moço mais brincalhão da aldeia. Tinha estudado tanto na cidade que todos o chamavam de {{BACHAREL|BA • CHA • REL|🎓}}: é o nome de quem termina os estudos.\n\nAssim que entrou, Sansão se ajoelhou diante da cama: — Dê cá a sua mão, grande Dom Quixote de La Mancha! As suas aventuras correram tanto de boca em boca que alguém escreveu tudinho. Viraram um {{LIVRO|LI • VRO|📖}}! Já são mais de doze mil livros iguaizinhos, espalhados pelo mundo. O senhor é um cavaleiro {{FAMOSO|FA • MO • SO|🌟}}!\n\nDom Quixote ficou sem fala. Quem teria escrito? Só podia ser um sábio encantador, desses que sabem de tudo! — E o que o povo mais gosta de ler? — perguntou ele, com a voz tremendo de emoção. — Uns preferem os gigantes que eram moinhos — contou Sansão. — Outros, os exércitos que eram ovelhas. As crianças folheiam, os jovens leem, e os velhinhos aplaudem!\n\nSancho puxou a manga do bacharel: — E eu? Eu estou aí dentro? — Está, sim! Você é o segundo {{PERSONAGEM|PER • SO • NA • GEM|🎭}} mais importante. Tem gente que gosta mais das suas falas do que de todo o resto! Sancho estufou a barriga, orgulhoso. Depois ficou sério: — E o meu burrico? — Também está. — Ah, bom. Então o livro é verdadeiro.\n\nSansão tirou o livro de debaixo do braço, abriu no colo do cavaleiro e apontou com o dedo: — Olhe aqui o seu nome, Sancho! Sancho chegou o nariz bem pertinho da página. Ele nunca tinha aprendido a ler, e aquelas letras pareciam formiguinhas em fila. Mas agora queria muito, muito saber: qual daquelas formiguinhas era ele?",
       "cartoes": {
         "tipo": "ordem",
         "ordem": [
-          "dom",
-          "quixote",
-          "de",
-          "la",
-          "mancha"
+          "san",
+          "cho",
+          "pan",
+          "ca"
         ],
         "itens": [
           {
-            "id": "mancha",
-            "palavra": "MANCHA",
+            "id": "pan",
+            "palavra": "PAN",
             "emoji": "📖"
           },
           {
-            "id": "de",
-            "palavra": "DE",
+            "id": "cho",
+            "palavra": "CHO",
             "emoji": "📖"
           },
           {
-            "id": "quixote",
-            "palavra": "QUIXOTE",
+            "id": "ca",
+            "palavra": "ÇA",
             "emoji": "📖"
           },
           {
-            "id": "la",
-            "palavra": "LA",
-            "emoji": "📖"
-          },
-          {
-            "id": "dom",
-            "palavra": "DOM",
+            "id": "san",
+            "palavra": "SAN",
             "emoji": "📖"
           }
         ]
@@ -64,31 +58,31 @@
     },
     {
       "indice": 3,
-      "hash": "e56d275a07",
+      "hash": "80f9cf66e1",
       "capitulo": "🤫 Capítulo 36 • A Terceira Saída",
       "titulo": "O Plano Secreto de Sansão",
-      "texto": "Sancho voltou para casa tão contente que Teresa estranhou: — Que alegria é essa, meu bem? — Vou sair de novo com o meu amo, minha Teresinha! Agora somos famosos, e a minha {{ILHA|I • LHA|🏝️}} está mais perto do que nunca! Teresa suspirou e ajeitou a gola do marido: — Eu não preciso de ilha, Sancho. Preciso é que você volte inteiro. E o burrico também!\n\nNa casa de Dom Quixote, a sobrinha e a governanta ficaram aflitas e correram atrás de Sansão: — Ajude a gente! Ele quer ir embora outra vez! O bacharel piscou um olho: — Fiquem tranquilas. Eu já conversei com o padre e com mestre Nicolau, e nós temos um {{PLANO|PLA • NO|🤫}}. Um plano secreto!\n\nSó que Sansão fez o contrário do que elas esperavam. Em vez de pedir ao cavaleiro que ficasse, ele disse: — Vá logo, Dom Quixote! O mundo está esperando! E, se precisar de escudeiro, eu mesmo vou! Sancho quase chorou de ciúme: — Escudeiro dele sou eu! Ninguém tira o meu lugar! A sobrinha e a governanta não entenderam nada. Que plano mais esquisito era aquele?\n\nTrês dias depois, ao cair da tarde, os dois amigos saíram de mansinho. Dom Quixote ia de bacielmo na cabeça e lança na mão. Sancho levava o {{ALFORJE|AL • FOR • JE|🎒}}, a sacola de viagem, cheinho de comida. Sansão foi com eles até a última casa da aldeia e se despediu com um abraço e um sorrisinho de quem guarda um segredo.\n\nQuando ficaram sozinhos na estrada, Rocinante soltou um relincho comprido, e o burrico respondeu com um zurro ainda maior. — Ouviu, Sancho? — alegrou-se Dom Quixote. — Até os bichos estão avisando: vem aí muita {{AVENTURA|A • VEN • TU • RA|🗺️}}! Depois olhou para a primeira estrela do céu e cochichou: — Esta saída é para você, Dulcineia."
+      "texto": "Sancho voltou para casa tão contente que Teresa estranhou: — Que alegria é essa, meu bem? — Vou sair de novo com o meu amo, minha Teresinha! Agora somos famosos, e a minha {{ILHA|I • LHA|🏝️}} está mais perto do que nunca! Teresa suspirou e ajeitou a gola do marido: — Eu não preciso de ilha, Sancho. Preciso é que você volte inteiro. E o burrico também!\n\nNa casa de Dom Quixote, a sobrinha e a governanta ficaram aflitas e correram atrás de Sansão: — Ajude a gente! Ele quer ir embora outra vez! O bacharel piscou um olho: — Fiquem tranquilas. Eu já conversei com o padre e com mestre Nicolau, e nós temos um {{PLANO|PLA • NO|🤫}}. Um plano secreto! E foi cochichar alguma coisa com Tomé, um vizinho de Sancho, que riu baixinho.\n\nSó que Sansão fez o contrário do que elas esperavam. Em vez de pedir ao cavaleiro que ficasse, ele disse: — Vá logo, Dom Quixote! O mundo está esperando! E, se precisar de escudeiro, eu mesmo vou! Sancho, que vinha chegando bem nessa hora, quase chorou de ciúme: — Escudeiro dele sou eu! Ninguém tira o meu lugar! A sobrinha e a governanta não entenderam nada. Que plano mais esquisito era aquele?\n\nTrês dias depois, ao cair da tarde, os dois amigos saíram de mansinho. Dom Quixote ia de bacielmo na cabeça e lança na mão. Sancho levava o {{ALFORJE|AL • FOR • JE|🎒}}, a sacola de viagem, cheinho de comida. Sansão foi com eles até a última casa da aldeia e se despediu com um abraço e um sorrisinho de quem guarda um segredo. Da janela, a governanta viu os dois sumindo na curva e suspirou: — Lá vai ele de novo!\n\nQuando ficaram sozinhos na estrada, Rocinante soltou um relincho comprido, e o burrico respondeu com um zurro ainda maior. — Ouviu, Sancho? — alegrou-se Dom Quixote. — Até os bichos estão avisando: vem aí muita {{AVENTURA|A • VEN • TU • RA|🗺️}}! Depois olhou para a primeira estrela do céu e cochichou: — Esta saída é para você, Dulcineia."
     },
     {
       "indice": 4,
-      "hash": "c65349b120",
+      "hash": "4e479936e7",
       "capitulo": "🎭 Capítulo 37 • A Carroça dos Atores",
       "titulo": "Reis, Anjos e um Diabinho",
-      "texto": "No dia seguinte, numa curva da estrada, apareceu uma {{CARROÇA|CAR • RO • ÇA|🛒}} aberta, puxada por mulas. E que passageiros! Na frente, guiando as mulas, ia um diabinho vermelho, de chifres. Atrás vinham um anjo de asas pintadas, um rei de coroa dourada, uma rainha e um guerreiro de armadura.\n\nDom Quixote parou Rocinante no meio do caminho e levantou a lança: — Alto lá! Digam quem são e para onde vão! Sancho já se encolhia atrás do burrico. Mas o diabinho puxou as rédeas e respondeu com toda a educação: — Calma, senhor! Somos {{ATORES|A • TO • RES|🎭}} de teatro. Hoje é dia de festa: fizemos uma peça de manhã numa aldeia e vamos fazer outra, de tarde, na aldeia vizinha. É tão pertinho que nem tiramos as {{FANTASIAS|FAN • TA • SI • AS|👑}}!\n\nDom Quixote olhou bem. Os chifres eram de papelão, as asas eram de pano, e a coroa era de lata pintada. Então baixou a lança e sorriu: — Sigam em paz, boa gente! Desde menino eu adoro teatro. Sancho quase caiu para trás. Pela primeira vez, o seu amo tinha visto as coisas do jeitinho que elas eram!\n\nMas o sossego durou pouco. De trás da carroça pulou o palhaço do grupo, com a roupa cheia de {{GUIZOS|GUI • ZOS|🔔}}, uns sininhos redondos, sacudindo três bolas cheias de ar na ponta de uma vara. Tlim, tlim, PÓ, PÓ, PÓ! Rocinante levou um susto tão grande que saiu disparado pelo campo, e Dom Quixote escorregou da sela e caiu sentado no capim.\n\nO palhaço achou graça, pulou em cima do burrico de Sancho e saiu trotando! — Meu burrico! — gritou Sancho. Só que o burrico não gostou nem um pouco da brincadeira. Parou de repente, e o palhaço caiu sentado também. O burrico voltou sozinho para o dono, de orelhas em pé. O palhaço pediu desculpas com uma cambalhota, e a carroça seguiu viagem, tilintando."
+      "texto": "No dia seguinte, numa curva da estrada, apareceu uma {{CARROÇA|CAR • RO • ÇA|🛒}} aberta, puxada por mulas. E que passageiros! Na frente, guiando as mulas, ia um diabinho vermelho, de chifres. Atrás vinham um anjo de asas pintadas, um rei de coroa dourada, uma rainha e um guerreiro de armadura.\n\nDom Quixote parou Rocinante no meio do caminho e levantou a lança: — Alto lá! Digam quem são e para onde vão! Sancho já se encolhia atrás do burrico. Mas o diabinho puxou as rédeas e respondeu com toda a educação: — Calma, senhor! Somos {{ATORES|A • TO • RES|🎭}} de teatro. Hoje é dia de festa: fizemos uma peça de manhã numa aldeia e vamos fazer outra, de tarde, na aldeia vizinha. É tão pertinho que nem tiramos as {{FANTASIAS|FAN • TA • SI • AS|👑}}!\n\nDom Quixote olhou bem. Os chifres eram de papelão, as asas eram de pano, e a coroa era de lata pintada. Então baixou a lança e sorriu: — Sigam em paz, boa gente! Desde menino eu adoro teatro. Sancho quase caiu para trás. Pela primeira vez, o seu amo tinha visto as coisas do jeitinho que elas eram!\n\nMas o sossego durou pouco. De trás da carroça pulou o palhaço do grupo, com a roupa cheia de {{GUIZOS|GUI • ZOS|🔔}}, uns sininhos redondos, sacudindo três bolas cheias de ar na ponta de uma vara. Tlim, tlim, PÓ, PÓ, PÓ! Rocinante levou um susto tão grande que saiu disparado pelo campo, e Dom Quixote escorregou da sela e caiu sentado no capim.\n\nO palhaço, de pura farra, pulou em cima do burrico de Sancho e saiu trotando! — Meu burrico! — gritou Sancho. Só que o burrico não gostou nem um pouco da brincadeira. Parou de repente, e o palhaço caiu sentado também. O burrico voltou sozinho para o dono, de orelhas em pé. O palhaço pediu desculpas com uma cambalhota, e a carroça seguiu viagem, tilintando."
     },
     {
       "indice": 5,
-      "hash": "6231eb1369",
+      "hash": "b6a5509d71",
       "capitulo": "🌲 Capítulo 38 • A Noite no Bosque",
       "titulo": "O Escudeiro Narigudo",
-      "texto": "Naquela noite, os dois amigos dormiam debaixo de umas árvores altas quando um barulho de ferro acordou Dom Quixote: tlim, tlam! Outro cavaleiro, de armadura, tinha acabado de chegar ao {{BOSQUE|BOS • QUE|🌲}}. Ele desceu do cavalo, sentou-se na grama e soltou um suspiro bem comprido.\n\nOs dois cavaleiros começaram a conversar no escuro, com muita cerimônia. O escudeiro do recém-chegado puxou Sancho para um canto: — Deixe os patrões falarem difícil. Vamos conversar nós dois, como bons {{ESCUDEIROS|ES • CU • DEI • ROS|🤝}}! Tirou do alforje uma {{EMPADA|EM • PA • DA|🥧}} do tamanho de uma roda de carroça e partiu ao meio.\n\nSancho nunca tinha gostado de alguém tão depressa. — O seu amo deve ser muito bom — disse, de boca cheia. — O meu só me dá queijo duro e promessa de ilha. Mas eu não troco ele por nenhum outro! Ele tem coração de criança: não sabe fazer mal a ninguém.\n\nEnquanto isso, o outro cavaleiro contava vantagem: — Já venci todos os cavaleiros da Espanha. Venci até o famoso Dom Quixote de La Mancha! Dom Quixote deu um pulo: — Isso é impossível! Dom Quixote sou eu, e ninguém me venceu! — Então vamos resolver isso quando o sol nascer — respondeu o outro. — E fica combinado: quem perder {{OBEDECE|O • BE • DE • CE|☝️}} ao vencedor, sem reclamar! — Combinado!\n\nQuando o dia clareou, Sancho olhou para o novo amigo e ficou branco de susto. O escudeiro tinha um {{NARIZ|NA • RIZ|👃}} enorme! Era comprido, torto, roxo como uma berinjela e cheio de verrugas, e descia até abaixo da boca. Sancho não pensou duas vezes: — Meu amo, me ajude a subir naquela árvore! Lá de cima eu enxergo melhor a luta..."
+      "texto": "Naquela noite, os dois amigos dormiam debaixo de umas árvores altas quando um barulho de ferro acordou Dom Quixote: tlim, tlam! Outro cavaleiro, de armadura, tinha acabado de chegar ao {{BOSQUE|BOS • QUE|🌲}}. Ele desceu do cavalo, sentou-se na grama e soltou um suspiro bem comprido, de quem está morrendo de saudade.\n\nOs dois cavaleiros começaram a conversar no escuro, falando bonito e difícil. O escudeiro do outro cavaleiro puxou Sancho para um canto: — Deixe os patrões falarem difícil. Vamos conversar nós dois, como bons {{ESCUDEIROS|ES • CU • DEI • ROS|🤝}}! Tirou do alforje uma {{EMPADA|EM • PA • DA|🥧}} do tamanho de uma roda de carroça e partiu ao meio.\n\nSancho nunca tinha gostado de alguém tão depressa. — O seu amo deve ser muito bom — disse, de boca cheia. — O meu só me dá queijo duro e promessa de ilha. Mas eu não troco ele por nenhum outro! Ele tem coração de criança: não sabe fazer mal a ninguém.\n\nEnquanto isso, o outro cavaleiro contava vantagem: — Já venci todos os cavaleiros da Espanha. Venci até o famoso Dom Quixote de La Mancha! Dom Quixote deu um pulo: — Isso é impossível! Dom Quixote sou eu, e ninguém me venceu! — Então vamos resolver isso quando o sol nascer — respondeu o outro. — E fica combinado: quem perder {{OBEDECE|O • BE • DE • CE|☝️}} ao vencedor, sem reclamar! — Combinado!\n\nQuando o dia clareou, Sancho olhou para o novo amigo e ficou branco de susto. O escudeiro tinha um {{NARIZ|NA • RIZ|👃}} enorme! Era comprido, torto, roxo como uma berinjela e cheio de verrugas, e descia até abaixo da boca. Sancho não pensou duas vezes: — Meu amo, me ajude a subir naquela árvore! Lá de cima eu enxergo melhor a luta..."
     },
     {
       "indice": 6,
-      "hash": "cd13e0635d",
+      "hash": "1ad756e486",
       "capitulo": "🪞 Capítulo 39 • O Cavaleiro dos Espelhos",
       "titulo": "Quem Está Debaixo do Elmo?",
-      "texto": "Com a luz da manhã, Dom Quixote viu bem o seu adversário. A armadura dele era toda coberta de espelhinhos em forma de lua, que brilhavam de doer os olhos. Era o Cavaleiro dos {{ESPELHOS|ES • PE • LHOS|🪞}}! Um {{ELMO|EL • MO|🪖}} fechado escondia o rosto inteiro, e ninguém sabia quem ele era.\n\nOs dois se afastaram, cada um para uma ponta do campo. Dom Quixote esperou Sancho se ajeitar no galho, apontou a lança e gritou: — Avante, Rocinante! E Rocinante, pela primeira vez na vida, galopou de verdade!\n\nJá o cavalo do outro empacou no meio do caminho. O Cavaleiro dos Espelhos puxava as rédeas, batia os calcanhares, e nada. Quando Rocinante passou zunindo, bastou um empurrãozinho com a ponta da lança: o cavaleiro escorregou para trás e caiu sentado na grama. PLOFT!\n\n— {{VITÓRIA|VI • TÓ • RIA|🏆}}! — gritou Sancho lá de cima. Dom Quixote desceu do cavalo e correu para ver se o adversário estava bem. O cavaleiro gemia baixinho, mais de vergonha que de dor. O escudeiro narigudo veio correndo, aflito, e Sancho desceu da árvore bem devagar, de olho naquele nariz.\n\n— Quem é o senhor? — perguntou Dom Quixote. O cavaleiro não respondeu, e o elmo continuava bem fechado. Sancho coçou a cabeça. Aquele jeito de cair sentado... aquela voz gemendo... Ele conhecia aquilo de algum lugar!",
+      "texto": "Com a luz da manhã, Dom Quixote viu bem o outro cavaleiro. A armadura dele era toda coberta de espelhinhos em forma de lua, que brilhavam de doer os olhos. Era o Cavaleiro dos {{ESPELHOS|ES • PE • LHOS|🪞}}! Um {{ELMO|EL • MO|🪖}} fechado escondia o rosto inteiro, e ninguém sabia quem ele era.\n\nOs dois se afastaram, cada um para uma ponta do campo. Dom Quixote esperou Sancho se ajeitar no galho, apontou a lança e gritou: — Avante, Rocinante! E Rocinante, pela primeira vez na vida, galopou de verdade!\n\nJá o cavalo do outro empacou no meio do caminho. O Cavaleiro dos Espelhos puxava as rédeas, batia os calcanhares, e nada. Quando Rocinante passou zunindo, bastou um empurrãozinho com a ponta da lança: o cavaleiro escorregou para trás e caiu sentado na grama. PLOFT!\n\n— {{VITÓRIA|VI • TÓ • RIA|🏆}}! — gritou Sancho lá de cima. Dom Quixote desceu do cavalo e correu para ver se ele estava bem. O cavaleiro gemia baixinho, mais de vergonha que de dor. O escudeiro narigudo veio correndo, aflito, e Sancho desceu da árvore bem devagar, de olho naquele nariz.\n\n— Quem é o senhor? — perguntou Dom Quixote. O cavaleiro não respondeu, e o elmo continuava bem fechado. Sancho coçou a cabeça. Aquele gemido... aquela voz... Ele já tinha ouvido aquilo lá na aldeia!",
       "cartoes": {
         "tipo": "pedido",
         "pedidos": [
@@ -116,31 +110,31 @@
             "id": "remo",
             "palavra": "REMO",
             "emoji": "🔍",
-            "pegadinha": "Remo? Aqui não tem barco nenhum! Sancho procurou um remo e só achou um sapo. Vamos tentar de novo!"
+            "pegadinha": "Remo? Sancho remou, remou no capim e não saiu do lugar. Aqui não tem rio! Vamos tentar de novo!"
           }
         ]
       }
     },
     {
       "indice": 7,
-      "hash": "1fbcb4d14a",
+      "hash": "92f034b251",
       "capitulo": "🧀 Capítulo 40 • O Cavaleiro do Casaco Verde",
       "titulo": "Requeijão no Bacielmo",
-      "texto": "Debaixo do elmo apareceu uma cara redonda, de nariz achatado. — É o bacharel Sansão Carrasco! — gritou Sancho. E o narigão do escudeiro? Era de papelão! Por trás dele estava Tomé, vizinho de Sancho lá da aldeia. Dom Quixote olhou, olhou e balançou a cabeça: — Não se engane, Sancho. Foram os magos invejosos que deram ao cavaleiro vencido a cara do nosso amigo, só para estragar a minha vitória!\n\nSansão não disse nada. O plano secreto era este: vencer Dom Quixote e, como vencedor, mandar que ele voltasse para casa e descansasse. Só que tinha saído tudo ao contrário! O bacharel foi embora mancando, com a mão nas costas, e resmungou para Tomé: — Eu ainda vou tentar de novo. E, da próxima vez, com um cavalo que não empaca!\n\nOs dois amigos seguiram viagem, felizes da vida. Logo alcançaram um viajante de casaco {{VERDE|VER • DE|🟢}}, montado numa égua cinzenta. Era Dom Diego, um senhor calmo e gentil, que gostava de livros, da família e de sossego. Ele olhava para aquele cavaleiro magro, de bacia na cabeça, e não sabia o que pensar: ora falava como um sábio, ora como um sonhador.\n\nEnquanto os dois conversavam, Sancho viu uns pastores e correu para comprar {{REQUEIJÃO|RE • QUEI • JÃO|🧀}} fresquinho, bem mole. Bem nessa hora, Dom Quixote avistou lá longe uma carroça com bandeiras e gritou: — Sancho! Depressa, o meu {{BACIELMO|BA • CI • EL • MO|✨}}! Vem aí uma aventura! Sancho não sabia onde guardar o requeijão. E, no susto, guardou... dentro do bacielmo.\n\nDom Quixote enfiou o bacielmo na cabeça e apertou bem. Um caldo branco começou a escorrer pela testa, pelas orelhas e pela barba. — Sancho! — disse ele, assustado. — Acho que os meus miolos estão derretendo! Tirou o bacielmo, cheirou e fez uma careta: — Isto é requeijão! Sancho olhou para as nuvens, muito sério: — Devem ter sido os magos, meu amo. Eles andam me perseguindo também. Dom Diego mordeu a boca para não rir."
+      "texto": "Debaixo do elmo apareceu uma cara redonda, de nariz achatado. — É o bacharel Sansão Carrasco! — gritou Sancho. E o narigão do escudeiro? Era de papelão! Por trás dele estava Tomé, o vizinho de Sancho! Dom Quixote olhou, olhou e balançou a cabeça: — Não se engane, Sancho. Foram os magos invejosos que deram ao cavaleiro vencido a cara do nosso amigo, só para estragar a minha vitória! Mas trato é trato, e quem perde obedece: nunca mais saia por aí dizendo que venceu Dom Quixote! — Eu obedeço — gemeu o cavaleiro.\n\nSansão não disse mais nada. O plano secreto era este: vencer Dom Quixote e, como vencedor, mandar que ele voltasse para casa e descansasse. Só que tinha saído tudo ao contrário! O bacharel foi embora mancando, com a mão nas costas, e resmungou para Tomé: — Eu ainda vou tentar de novo. E, da próxima vez, com um cavalo que não empaca!\n\nOs dois amigos seguiram viagem, felizes da vida. Logo alcançaram um viajante de casaco {{VERDE|VER • DE|🟢}}, montado numa égua cinzenta. Era Dom Diego, um senhor calmo e gentil, que gostava de livros, da família e de sossego. Dom Quixote logo deu a ele um apelido: o Cavaleiro do Casaco Verde.\n\nEnquanto os dois conversavam, Sancho viu uns pastores e correu para comprar {{REQUEIJÃO|RE • QUEI • JÃO|🧀}} fresquinho, bem mole. Bem nessa hora, Dom Quixote avistou lá longe uma carroça com bandeiras e gritou: — Sancho! Depressa, o meu {{BACIELMO|BA • CI • EL • MO|✨}}! Vem aí uma aventura! Sancho não sabia onde guardar o requeijão. E, no susto, guardou... dentro do bacielmo.\n\nDom Quixote enfiou o bacielmo na cabeça e apertou bem. Um caldo branco começou a escorrer pela testa, pelas orelhas e pela barba. — Sancho! — disse ele, assustado. — Acho que os meus miolos estão derretendo! Tirou o bacielmo, cheirou e fez uma careta: — Isto é requeijão! Sancho olhou para as nuvens, muito sério: — Devem ter sido os magos, meu amo... Dom Quixote apertou os olhos: — Magos que compram requeijão, Sancho? Sancho ficou vermelho até as orelhas: — É que eu não tinha onde guardar, meu amo. Dom Diego apertou os lábios para não rir."
     },
     {
       "indice": 8,
-      "hash": "7f5640b10d",
+      "hash": "691d7aa1b4",
       "capitulo": "🚩 Capítulo 41 • Um Leão de Verdade",
       "titulo": "A Jaula na Carroça das Bandeiras",
-      "texto": "A carroça das bandeiras chegou perto. Em cima dela vinha uma {{JAULA|JAU • LA|🔒}} enorme e, dentro da jaula, um {{LEÃO|LE • ÃO|🦁}} de verdade! Era um presente que viajava para o palácio do rei. — É o maior leão que já veio da África — avisou o tratador, o homem que cuidava dele. — E hoje ainda não almoçou!\n\n— Leõezinhos para cima de mim? — disse Dom Quixote, limpando o requeijão da barba. — Abra essa jaula, bom homem! Quero que todos vejam que eu não tenho medo!\n\nSancho ficou gelado: — Meu amo, isso não é moinho nem ovelha. É leão de verdade! Eu vi a unha dele pela grade, e é do tamanho da minha mão! Dom Diego também tentou: — Senhor cavaleiro, {{CORAGEM|CO • RA • GEM|💪}} não é isso. Quando o perigo é de verdade, o medo avisa, e é bom escutar! Mas Dom Quixote era teimoso que só ele.\n\nO tratador não teve outro jeito. Esperou todo mundo ir para bem longe: Dom Diego na égua, e Sancho e o burrico correndo tanto que levantaram poeira. Depois subiu no alto da carroça, onde o leão não alcançava, e segurou a tranca.\n\nDom Quixote ficou sozinho na frente da jaula, de espada na mão, com o coração batendo forte. A porta se abriu devagarinho: nhéééc..."
+      "texto": "A carroça das bandeiras chegou perto. Em cima dela vinha uma {{JAULA|JAU • LA|🔒}} enorme e, dentro da jaula, um {{LEÃO|LE • ÃO|🦁}} de verdade! Era um presente que viajava para o palácio do rei. — É o maior leão que já veio da África — avisou o tratador, o homem que cuidava dele. — E hoje ainda não almoçou!\n\n— Leõezinhos para cima de mim? — disse Dom Quixote, limpando o requeijão da barba. — Abra essa jaula, bom homem! Quero que todos vejam que eu não tenho medo!\n\nSancho ficou gelado: — Meu amo, isso não é moinho nem ovelha. É leão de verdade! Eu vi a unha dele pela grade, e é do tamanho da minha mão! Dom Diego também tentou: — Senhor cavaleiro, {{CORAGEM|CO • RA • GEM|💪}} não é isso. Quando o perigo é de verdade, o medo avisa, e é bom escutar! Mas Dom Quixote era teimoso que só ele.\n\nDom Quixote desceu de Rocinante, para o cavalo não se assustar, e parou bem no meio da estrada: dali a carroça não passava. O tratador viu que não tinha outro jeito. Esperou todo mundo ir para bem longe: Dom Diego na égua, Rocinante puxado pela rédea, e Sancho e o burrico correndo tanto que levantaram poeira. Depois subiu no alto da carroça, onde o leão não alcançava, e segurou a tranca.\n\nDom Quixote ficou sozinho na frente da jaula, de espada na mão, com o coração batendo forte. A porta se abriu devagarinho: nhéééc..."
     },
     {
       "indice": 9,
-      "hash": "6e527012ec",
+      "hash": "e84cb67bb7",
       "capitulo": "🦁 Capítulo 42 • O Leão que Bocejou",
       "titulo": "O Cavaleiro dos Leões",
-      "texto": "O leão abriu um olho. Depois, o outro. Levantou-se devagar e se {{ESPREGUIÇOU|ES • PRE • GUI • ÇOU|🐾}}, esticando uma pata de cada vez. Abriu um bocão cheio de dentes e {{BOCEJOU|BO • CE • JOU|🥱}}, sem pressa nenhuma. Pôs para fora uma língua comprida e {{LAVOU|LA • VOU|👅}} a cara, que nem um gato.\n\nPor fim, o leão pôs a cabeça para fora da jaula e olhou bem para o cavaleiro. Dom Quixote não se mexeu. O leão olhou, olhou... virou-se de costas, mostrou o traseiro e se {{DEITOU|DEI • TOU|💤}} para dormir.\n\n— Pode fechar a jaula, amigo! — disse Dom Quixote, soltando o ar. — Ele não quis lutar. A vitória é minha! O tratador fechou a porta bem depressa e prometeu contar ao rei tudinho o que tinha visto.\n\nSancho voltou correndo, apalpou o amo da cabeça aos pés e, vendo que estava inteiro, deu nele um abraço apertado. — De hoje em diante — anunciou o cavaleiro — não sou mais o Cavaleiro da Triste Figura. Sou o Cavaleiro dos {{LEÕES|LE • ÕES|🦁}}!\n\nDom Diego chegou perto, ainda pálido: — O senhor teve muita sorte, Dom Quixote. Leão não é gatinho! — Eu sei — cochichou o cavaleiro, com um sorriso sem jeito. — Acho que exagerei um tiquinho. Dom Diego riu e convidou os dois para descansar uns dias na casa dele. Sancho só quis saber de uma coisa: — Lá tem requeijão?",
+      "texto": "O leão abriu um olho. Depois, o outro. Levantou-se devagar e se {{ESPREGUIÇOU|ES • PRE • GUI • ÇOU|🐾}}, esticando uma pata de cada vez. Abriu um bocão, com muito mais dentes que o sorriso de janelinha de Dom Quixote, e {{BOCEJOU|BO • CE • JOU|🥱}}, sem pressa nenhuma. Pôs para fora uma língua comprida e {{LAVOU|LA • VOU|👅}} a cara, que nem um gato.\n\nPor fim, o leão pôs a cabeça para fora da jaula e olhou bem para o cavaleiro. Dom Quixote não se mexeu. O leão olhou, olhou... virou-se de costas, mostrou o traseiro e se {{DEITOU|DEI • TOU|💤}} para dormir.\n\n— Pode fechar a jaula, amigo! — disse Dom Quixote, soltando o ar. — Ele não quis lutar. A vitória é minha! O tratador fechou a porta bem depressa e prometeu contar ao rei tudinho o que tinha visto.\n\nSancho voltou correndo, passou a mão no amo da cabeça aos pés e, vendo que estava inteiro, deu nele um abraço apertado. — De hoje em diante — anunciou o cavaleiro — não sou mais o Cavaleiro da Triste Figura. Sou o Cavaleiro dos {{LEÕES|LE • ÕES|🦁}}!\n\nDom Diego chegou perto, ainda pálido: — O senhor teve muita sorte, Dom Quixote. Leão não é gatinho! — Eu sei — cochichou o cavaleiro, com um sorriso sem jeito. — Acho que exagerei um tiquinho. Dom Diego riu e convidou os dois para descansar uns dias na casa dele. Sancho só quis saber de uma coisa: — Lá tem requeijão?",
       "cartoes": {
         "tipo": "ordem",
         "ordem": [
@@ -208,13 +202,13 @@
       ]
     },
     {
-      "texto": "Sancho não sabe ler e quer muito saber o nome do livro. Ajude: toque nas palavras da capa na ordem certa!",
+      "texto": "Sancho não sabe ler e quer achar o nome dele no livro. Ajude: junte os pedacinhos do nome na ordem certa!",
       "onde": [
         "página 2: instrução da atividade"
       ]
     },
     {
-      "texto": "Sansão Carrasco, ajoelhado, entrega o livro a Dom Quixote na cama; Sancho espia a capa por cima do ombro do amo",
+      "texto": "Sansão Carrasco mostra o livro aberto no colo de Dom Quixote, na cama; Sancho chega o nariz bem perto da página",
       "onde": [
         "página 2: descrição da ilustração (leitor de tela)"
       ]
@@ -234,7 +228,7 @@
       ]
     },
     {
-      "texto": "O nome do livro é...",
+      "texto": "No livro está escrito...",
       "onde": [
         "página 2: faixa onde as palavras são escritas"
       ]
@@ -258,17 +252,9 @@
       ]
     },
     {
-      "texto": "👓 Lente da Realidade: Atores com Fantasias de Papelão",
+      "texto": "🎭 Atores com Fantasias de Papelão",
       "onde": [
-        "página 4: selo da Lente da Realidade",
-        "selo da cena"
-      ]
-    },
-    {
-      "texto": "✨ Lente da Imaginação: Por um Instante, um Rei e um Anjo de Verdade!",
-      "onde": [
-        "página 4: selo da Lente da Imaginação",
-        "selo da cena"
+        "página 4: selo da Lente da Realidade"
       ]
     },
     {
@@ -324,7 +310,7 @@
       ]
     },
     {
-      "texto": "Na estrada, o requeijão escorre do bacielmo pela barba de Dom Quixote; Sancho olha para as nuvens e Dom Diego, de casaco verde, segura o riso em sua égua cinzenta",
+      "texto": "Na estrada, o requeijão escorre do bacielmo pela barba de Dom Quixote; Sancho, vermelho, olha para as nuvens e Dom Diego, de casaco verde, segura o riso em sua égua cinzenta",
       "onde": [
         "página 7: descrição da ilustração (leitor de tela)"
       ]
@@ -342,7 +328,7 @@
       ]
     },
     {
-      "texto": "👓 Lente da Realidade: Um Leão Sonolento na Jaula",
+      "texto": "👓 Lente da Realidade: Um Leão de Verdade na Jaula",
       "onde": [
         "página 8: selo da Lente da Realidade",
         "selo da cena"

@@ -298,3 +298,8 @@ O que já foi entregue, sprint a sprint, em ordem cronológica (o mais antigo pr
   - Adicionadas prateleiras de madeira inferiores em `index.html` com capas em 3D e cadeado 🔒 para as duas próximas obras na fila: **Robin Hood** (verde-floresta Sherwood com arco e flecha 🏹) e **Viagem ao Centro da Terra** (tons de magma/caverna com vulcão 🌋).
   - Obras cadastradas na fonte única `assets/js/acervo.js` e internacionalizadas em 4 idiomas (pt, en, fr, es) em `assets/js/i18n-site.js`. Toque na capa abre o modal gentil explicativo.
   - Documentação atualizada em `AGENTS.md`, `docs/BACKLOG.md` (item A-11) e `docs/RETOMADA.md`.
+
+## ✅ 2026-11-10 — Segundo volume de Dom Quixote: plano em quatro partes e Parte 5 em rascunho
+- Plano do volume de 1615 em quatro partes (5 a 8): `PLANO-DOM-QUIXOTE-VOLUME-2.md`; regras em uma página: `DIRETRIZES_VOL2.md`.
+- Parte 5 (*O Livro Famoso e o Cavaleiro dos Leões*, caps. 34–42) escrita em rascunho, com três atividades, auditada por um crítico de contexto limpo e polida. Sem ilustrações nem narração; nenhuma API paga usada.
+- Motor: no tipo `ordem`, a cena acompanha cada acerto quando a página define `realCena`.

@@ -52,11 +52,11 @@ Plano do volume: [`../PLANO-DOM-QUIXOTE-VOLUME-2.md`](../PLANO-DOM-QUIXOTE-VOLUM
 ## 3. Atividades (crivo da receita §6.2)
 | # | Pág. | O que a criança faz | Nasce da história? Ajuda quem? | Treina | Tipo | Como a cena muda | Por que só acerta lendo |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | 2 (cap. 35) | Põe em ordem as palavras da capa: DOM · QUIXOTE · DE · LA · MANCHA | Sancho não sabe ler e quer saber o nome do livro | leitura de palavras, ordem | `ordem` | a faixa escreve o título, lido palavra por palavra; libera a Imaginação (as aventuras saem do livro) | os 5 cartões têm o mesmo emoji 📖; o comando não diz o título (mas a criança conhece o nome do herói: reconhecimento, como na assinatura da carta) |
+| 1 | 2 (cap. 35) | Junta as sílabas do nome que Sansão aponta no livro: SAN · CHO · PAN · ÇA | Sancho não sabe ler e quer achar o próprio nome ("E eu? Eu estou aí dentro?") | consciência silábica | `ordem` (sílabas) | a faixa escreve o nome, sílaba por sílaba; libera a Imaginação (as aventuras saem do livro) | os 4 cartões têm o mesmo emoji 📖; o comando não diz o nome. **Alternativa pronta** (1ª versão): ordenar o título DOM · QUIXOTE · DE · LA · MANCHA; trocada porque repetia a brincadeira da assinatura da carta |
 | 2 | 6 (cap. 39) | Vê a figura do que Sancho quer tirar e escolhe a palavra: ELMO (× REMO), NARIZ (× RAIZ) | Descobrir quem são os dois disfarçados | leitura atenta de palavras quase iguais | `pedido` | o elmo e o narigão (camadas) saem e aparecem Sansão e Tomé; libera a Imaginação | pegadinhas com as mesmas letras em outra ordem; cartões sem figura |
 | 3 | 9 (cap. 42) | Toca no que o leão fez, na ordem do texto: ESPREGUIÇOU → BOCEJOU → LAVOU → DEITOU | O tratador precisa contar ao rei o que viu | compreensão da sequência, leitura de verbos | `ordem` + `realCena` | **a cada acerto a ilustração muda** (4 etapas do leão); no fim, libera a Imaginação | 4 cartões com o mesmo emoji 🦁; é preciso reler (ou ouvir) o primeiro parágrafo |
 
-- Páginas calmas entre elas: 1, 3, 4, 5, 7, 8.
+- Páginas calmas entre elas: 1, 3, 4, 5, 7, 8. Páginas sem lente: 1, 3, 4, 7.
 - **Motor**: uma mudança pequena em `assets/js/livro.js` (`handleOrdemPalavra`): quando a página define `realCena`, a cena é redesenhada a cada acerto do tipo `ordem`. Não afeta as partes publicadas (nenhuma página `ordem` delas tem `realCena`).
 - Fase 4: trocar os emojis provisórios das figuras do pedido (🪖, 👃) por `figura: 'camadas/p6-…webp'` (já anotado no arquivo).
 
@@ -67,9 +67,9 @@ No segundo volume, quem engana é o mundo (gente fantasiada): a Realidade mostra
 | :--- | :--- | :--- | :--- | :--- |
 | 0 | `p0-real`, `p0-imag` | Dom Quixote e Sancho, na estrada, olham espantados um livro aberto com os dois desenhados | os moinhos-gigantes, as ovelhas-exércitos e o leão saltam das páginas em luz dourada | capa da estante |
 | 1 | `p1-real` | o quarto: Dom Quixote na cama, colete verde e touca vermelha; o padre e Nicolau sentados; ao fundo, na porta, a governanta de vassoura barra Sancho; o gatinho na cama | **sem lente** (vida real) | — |
-| 2 | `p2-real`, `p2-imag` | Sansão (baixinho, cara redonda, nariz achatado, roupa de estudante) ajoelhado entrega o livro; Sancho espia a capa; **sem texto legível na capa** | do livro aberto saem gigantes de pedra e musgo, exércitos, o elmo dourado; Dom Quixote como cavaleiro dourado na cama-trono | recompensa da atividade 1 |
+| 2 | `p2-real`, `p2-imag` | Sansão (baixinho, cara redonda, nariz achatado, roupa de estudante) mostra o livro aberto no colo de Dom Quixote; Sancho com o nariz na página; **sem texto legível** | do livro aberto saem gigantes de pedra e musgo, exércitos, o elmo dourado; Dom Quixote como cavaleiro dourado na cama-trono | recompensa da atividade 1 |
 | 3 | `p3-real` | entardecer na saída da aldeia; os dois partindo; Sansão acena na última casa, com sorriso de segredo; primeira estrela | **sem lente** | — |
-| 4 | `p4-real`, `p4-imag` | carroça aberta com atores: diabinho de chifres de papelão guiando as mulas, anjo de asas de pano, rei de coroa de lata, rainha, guerreiro; o palhaço de guizos com a vara das três bolas | "por um instante": rei e rainha de verdade, anjo que voa, um diabinho travesso (nunca assustador) | sem a Morte; fantasias visivelmente caseiras |
+| 4 | `p4-real` | carroça aberta com atores: diabinho de chifres de papelão guiando as mulas, anjo de asas de pano, rei de coroa de lata, rainha, guerreiro; o palhaço de guizos com a vara das três bolas | **sem lente**: é a página em que Dom Quixote vê as coisas como são | sem a Morte; fantasias visivelmente caseiras |
 | 5 | `p5-real`, `p5-imag` | amanhecer no bosque: Sancho tentando subir na árvore; o escudeiro com o narigão roxo de papelão (preso por um cordão); ao fundo, os dois cavaleiros | **o medo de Sancho**: o nariz do tamanho de um tronco, o escudeiro como ogro bonachão | a legenda diz que a imaginação é de Sancho |
 | 6 | `p6-real`, `p6-imag` + camadas `p6-elmo`, `p6-narigao` | **arte-base sem disfarce**: Sansão sentado na grama, de armadura de espelhinhos e **cabeça descoberta**, e Tomé de nariz normal; Dom Quixote ao lado; Sancho descendo da árvore | o Cavaleiro das Mil Luas vencido saúda o cavaleiro dourado | o elmo e o narigão são **camadas** que saem (`ate`); deixar limpo o rosto dos dois na base |
 | 7 | `p7-real` | estrada: o requeijão escorre do bacielmo; Sancho olha as nuvens; Dom Diego (casaco verde, égua cinzenta) segura o riso; lá longe, a carroça das bandeiras | **sem lente** | — |
@@ -78,13 +78,25 @@ No segundo volume, quem engana é o mundo (gente fantasiada): a Realidade mostra
 
 - **Personagens novos** (fichas na fase 4): Sansão Carrasco, Tomé, Dom Diego, o tratador, os atores e o palhaço. Sansão e Dom Diego voltam em outras partes: recortar da arte aprovada.
 - **Hotspots**: ficam para a fase 4 (a posição depende da arte).
-- **Estimativa de arte** (para a autorização futura): 10 cenas-base + 7 Imaginações + 4 etapas + 2 camadas = **23 imagens**, ~US$ 0,90 no Batch.
+- **Estimativa de arte** (para a autorização futura): 10 cenas-base + 6 Imaginações + 4 etapas + 2 camadas = **22 imagens**, ~US$ 0,85 no Batch.
 
 ## 5. Notas do humano e o que mudou
 *(à espera da leitura da fase 3)*
 
 ### 5.1 Crítica adversarial (subagente Opus, contexto limpo, 2026-11-10)
-*(preenchido abaixo, depois do relatório)*
+O crítico leu só as diretrizes e o texto exportado. Notas por página: 5 a 8 (as mais fracas: a 7, com dois episódios, e as 1, 3, 4 e 6). O que foi aceito e mudou:
+1. **A regra "quem perder obedece" não era cobrada** → no cap. 40, Dom Quixote cobra: "nunca mais saia por aí dizendo que venceu Dom Quixote!" — "Eu obedeço". A criança vê a regra funcionar antes da Parte 8.
+2. **A mentirinha de Sancho dava certo** → agora Dom Quixote desconfia ("Magos que compram requeijão?") e Sancho confessa, vermelho.
+3. **Tomé surgia do nada** → plantado no cap. 36 (Sansão cochicha com ele). **Sancho mudava de casa sem aviso** no cap. 36 → "que vinha chegando bem nessa hora".
+4. **Cap. 37, a lente contradizia o texto** → a página ficou **sem lente**. O palhaço não ri mais do tombo ("de pura farra").
+5. **Cap. 41, o tratador cedia sem motivo e Rocinante sumia** → Dom Quixote desce do cavalo e para no meio da estrada; Rocinante é levado pela rédea. A legenda "Leão Sonolento" entregava o fim → "Um Leão de Verdade".
+6. **Atividade 1** trocada (título do livro → o nome de Sancho em sílabas), por repetir a assinatura da Parte 3 e por haver outra `ordem` de palavras no cap. 42.
+7. **Cap. 34**: o teste do padre ganhou motivo ("para ver se o amigo tinha mesmo sossegado"); entrou o gatinho. **Cap. 39**: a pista de Sancho ("aquela voz... lá na aldeia"); pegadinha do REMO refeita. **Cap. 40**: saiu uma frase de Dom Diego e entrou o apelido "Cavaleiro do Casaco Verde".
+8. **Bordões**: "Lá vai ele de novo!" (a governanta, cap. 36) e a "janelinha" (cap. 42).
+9. **Palavras trocadas**: espantosa, "palito de camisolão", cerimônia, recém-chegado, adversário, apalpou, "mordeu a boca", Bartolomeu.
+
+Não aceito: a ordem a Sansão de ir a El Toboso (traria de volta o fio cortado da Dulcineia). O crítico julgou que a cena do leão não mudava a cada acerto; muda (`realCena`), só não aparece sem a arte.
+Marcado pelo crítico como "não mexer": "Então o livro é verdadeiro", "coração de criança", "Leõezinhos para cima de mim?", a coreografia do leão e o "nhéééc...", "volte inteiro. E o burrico também!" e "Lá tem requeijão?".
 
 ## 6. Arte · 7. Narração · 8. Traduções
 *(fases futuras; nada gasto)*
