@@ -2,6 +2,8 @@
 
 Plano registrado em 2026-10-25, depois de o humano terminar a série com o filho. As **Partes 1, 2 e 3 ficam como estão** (aprovadas na leitura). A **Parte 4 será refeita para fechar o primeiro volume** de Cervantes (1605), e o **segundo volume (1615)** vira pelo menos **três partes novas (5, 6 e 7)**, na **prateleira de baixo** da estante.
 
+> ⚠️ **2026-11-10**: as escaletas das Partes 5–7 (§4.2–4.4) foram **substituídas** por [`PLANO-DOM-QUIXOTE-VOLUME-2.md`](PLANO-DOM-QUIXOTE-VOLUME-2.md): o volume de 1615 agora tem quatro partes (5 a 8).
+>
 > **Como trabalhar**: uma parte por vez, do começo ao fim, com paradas para o humano ler e aprovar. O processo (fases, paradas, crivos, modelos) está na receita geral, [`RECEITA-CLASSICO-VIVO.md`](RECEITA-CLASSICO-VIVO.md); o que vale só para Dom Quixote (a condensação de uma obra enorme e as lentes), em [`receitas/DOM-QUIXOTE.md`](receitas/DOM-QUIXOTE.md). Este arquivo diz **o que** fazer nas Partes 4 a 7; as receitas dizem **como**. O trabalho em si é feito em sessões novas (§8), por qualquer agente que siga o `AGENTS.md`.
 
 ---

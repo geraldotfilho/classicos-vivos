@@ -5,7 +5,8 @@ O que valeu **só para Dom Quixote**, ou para o tipo de adaptação dele (**cond
 - **A obra**: *El ingenioso hidalgo don Quijote de la Mancha*, de Miguel de Cervantes, em dois volumes: **1605** (52 capítulos) e **1615** (74 capítulos). Cerca de mil páginas.
 - **Tipo de adaptação**: **condensação** (receita geral §2). O desafio não é só deixar a obra adequada para crianças de hoje, mas **escolher e resumir**: 126 capítulos viram cerca de 7 partes de 8 páginas.
 - **Recurso visual próprio**: as **lentes da Realidade e da Imaginação** (§3), porque o tema da obra é o choque entre o que existe e o que Dom Quixote imagina.
-- **Plano e andamento**: [`PLANO-DOM-QUIXOTE-PARTES-4-7.md`](../PLANO-DOM-QUIXOTE-PARTES-4-7.md) (a correção de rumo de 2026-10-25) e, para as Partes 2 e 3, [`PLANO-PARTES-2-4.md`](../PLANO-PARTES-2-4.md).
+- **Segundo volume (1615) em quatro partes (5 a 8)**: [`PLANO-DOM-QUIXOTE-VOLUME-2.md`](../PLANO-DOM-QUIXOTE-VOLUME-2.md) e [`DIRETRIZES_VOL2.md`](../DIRETRIZES_VOL2.md) (2026-11-10).
+- **Plano e andamento do primeiro volume**: [`PLANO-DOM-QUIXOTE-PARTES-4-7.md`](../PLANO-DOM-QUIXOTE-PARTES-4-7.md) (a correção de rumo de 2026-10-25) e, para as Partes 2 e 3, [`PLANO-PARTES-2-4.md`](../PLANO-PARTES-2-4.md).
 
 ---
 
