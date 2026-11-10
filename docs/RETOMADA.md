@@ -1,4 +1,4 @@
-# 🔁 Retomada — onde o trabalho parou (2026-10-27, narração em en/fr/es das Partes 2–4)
+# 🔁 Retomada — onde o trabalho parou (2026-11-10, Parte 5 de Dom Quixote em rascunho, esperando o humano)
 
 **Leia este arquivo primeiro numa sessão nova**, seja qual for o agente. Depois, siga a ordem de leitura do `AGENTS.md` §0.2 (AGENTS → receita geral → receita específica → plano → caderno da parte).
 
@@ -29,13 +29,18 @@
 
 ## 2. Próximas sessões (escolha do humano)
 
-1. **Fase 8 da Parte 4** (retrospectiva do primeiro volume concluído).
-2. **Parte 5** (segundo volume, 1615): fases 0 a 2, pelo plano `docs/PLANO-DOM-QUIXOTE-PARTES-4-7.md` (o leão guardião, o cavaleiro dos espelhos, etc.).
-3. **Escuta humana das vozes novas** dos personagens das Partes 2 a 4 nos três idiomas (pontos de conferência em `docs/narracao/qa-partes-2-4-traducoes.md`).
-4. **Viagem ao Centro da Terra no Século XXI, fase 0** (começou em 2026-11-07): o humano lê o **argumento da Parte 1 (prólogo, Recife 2085)** em [`cadernos/viagem-parte-1.md`](cadernos/viagem-parte-1.md) e reage; decisões em [`PLANO-VIAGEM-AO-CENTRO-DA-TERRA.md`](PLANO-VIAGEM-AO-CENTRO-DA-TERRA.md) §1; fatos em [`pesquisa/VIAGEM-AO-CENTRO-DA-TERRA.md`](pesquisa/VIAGEM-AO-CENTRO-DA-TERRA.md). Ritmo: devagar, enredo maduro primeiro. *Robin Hood* segue na fila (prateleira com cadeado na estante e entrada em `acervo.js`).
+> **2026-11-10 — sessão autônoma do segundo volume de Dom Quixote (sem API paga).** O volume de 1615 foi dividido em **quatro partes (5 a 8)**: [`PLANO-DOM-QUIXOTE-VOLUME-2.md`](PLANO-DOM-QUIXOTE-VOLUME-2.md). As regras, numa página só, para qualquer agente ou subagente: [`DIRETRIZES_VOL2.md`](DIRETRIZES_VOL2.md). A **Parte 5** (*O Livro Famoso e o Cavaleiro dos Leões*, caps. 34–42) está escrita em rascunho, com as 3 atividades funcionando e sem ilustrações: `dom-quixote/parte-5.html` (em `sobre.html` → Livros em produção → "Mostrar os rascunhos"). Caderno: [`cadernos/dom-quixote-parte-5.md`](cadernos/dom-quixote-parte-5.md).
 
-Prompt de abertura sugerido:
-> Vamos iniciar o segundo volume de Dom Quixote: Parte 5 (fases 0 a 2), seguindo docs/PLANO-DOM-QUIXOTE-PARTES-4-7.md e docs/RECEITA-CLASSICO-VIVO.md.
+1. 🛑 **Fase 3 da Parte 5**: o humano lê o rascunho no tablet (sozinho, na voz do aparelho) e manda as notas. Depois: ajustes + fase 4 (arte pela API, ~23 imagens, ~US$ 0,90, só com autorização).
+2. **Parte 6** (*O Teatrinho, o Barco e o Cavalo Voador*, II-18 a 41): fases 1 e 2 no mesmo método, se o humano aprovar o resultado e o consumo da Parte 5.
+3. **Fase 8 da Parte 4** (retrospectiva do primeiro volume).
+4. **Escuta humana das vozes novas** dos personagens das Partes 2 a 4 nos três idiomas (`docs/narracao/qa-partes-2-4-traducoes.md`).
+5. **Viagem ao Centro da Terra no Século XXI, fase 0**: o humano lê o argumento da Parte 1 em [`cadernos/viagem-parte-1.md`](cadernos/viagem-parte-1.md). *Robin Hood* segue na fila.
+
+Prompts de abertura sugeridos:
+> Fase 3 da Parte 5 de Dom Quixote: leia docs/RETOMADA.md, docs/DIRETRIZES_VOL2.md e docs/cadernos/dom-quixote-parte-5.md. Minhas notas da revisão: … (Se for gerar a arte: "Autorizo a API paga do Gemini para as ilustrações da Parte 5, até US$ 1,20.")
+
+> Parte 6 de Dom Quixote, fases 1 e 2, no mesmo método da Parte 5 (docs/DIRETRIZES_VOL2.md e docs/PLANO-DOM-QUIXOTE-VOLUME-2.md). Sem API paga.
 
 ## 3. Frentes paradas (sem urgência)
 

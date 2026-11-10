@@ -2043,6 +2043,8 @@ function handleOrdemPalavra(pageIdx, card, coords) {
         renderScene(pageIdx).then(() => inviteImagination(pageIdx));
     } else {
         playSound('wordPop');
+        // Página com `realCena`: a ilustração acompanha cada acerto (ex.: o leão da Parte 5)
+        if (cenaDe(pageIdx).realCena) renderScene(pageIdx);
     }
 }
 

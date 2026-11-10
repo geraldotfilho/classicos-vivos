@@ -12,13 +12,13 @@ Registrado em 2026-11-10 (Claude, sessão autônoma pedida pelo humano). **Subst
 
 | Parte (coleção) | No volume 2 | Título (provisório) | Cervantes (1615) | Caps. do original | Nossos capítulos | Arco | Situação |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **5** | 1ª | **O Livro Famoso e o Cavaleiro dos Leões** | II-1 a II-17 | 17 | 34–41 | **A fama**: viraram livro, a terceira saída, o primeiro disfarce de Sansão, o leão | 🟡 em escrita |
-| **6** | 2ª | **O Teatrinho, o Barco e o Cavalo Voador** | II-18 a II-41 | 24 | 42–50 (aprox.) | **O mundo faz teatro**: bonecos, barco, e os duques que leram o livro montam aventuras de mentira | ⬜ |
+| **5** | 1ª | **O Livro Famoso e o Cavaleiro dos Leões** | II-1 a II-17 | 17 | 34–42 | **A fama**: viraram livro, a terceira saída, o primeiro disfarce de Sansão, o leão | 🛑 rascunho escrito (fases 1–2), esperando o humano |
+| **6** | 2ª | **O Teatrinho, o Barco e o Cavalo Voador** | II-18 a II-41 | 24 | 43–51 (aprox.) | **O mundo faz teatro**: bonecos, barco, e os duques que leram o livro montam aventuras de mentira | ⬜ |
 | **7** | 3ª | **Sancho, Governador da Ilha** | II-42 a II-57 | 16 | a fechar | **A ilha**: a promessa mais antiga da série se cumpre; Sancho governa bem e escolhe a liberdade | ⬜ |
 | **8** | 4ª | **O Cavaleiro da Branca Lua** | II-58 a II-74 | 17 | a fechar | **A volta**: o mar, a oficina dos livros, a promessa cumprida e o final sereno | ⬜ |
 
 - Proporção: 17 + 24 + 16 + 17 = **74** capítulos; nenhuma parte passa de 25 (receita de Dom Quixote §1.1). A Parte 6 é a mais cheia e por isso corta mais (§2.2).
-- **Numeração**: segue contínua (a Parte 4 terminou no 33; a 5 vai de 34 a 41). A decisão em aberto "recomeçar do 1 no segundo livro?" continua do humano; trocar é só renumerar os rótulos.
+- **Numeração**: segue contínua (a Parte 4 terminou no 33; a 5 vai de 34 a 42). A decisão em aberto "recomeçar do 1 no segundo livro?" continua do humano; trocar é só renumerar os rótulos.
 - `totalPartes` passa a **8** quando a Parte 5 for publicada (hoje as Partes 1–4 dizem "de 4"; o rascunho da 5 já diz "5 de 8").
 - Estante: o boxset trancado do Volume 2 diz "Partes 5 a 7"; vira "5 a 8" (`index.html` e `i18n-site.js`) na publicação da Parte 5, para não mexer agora no que está no ar.
 
@@ -41,7 +41,7 @@ Decisão de cada bloco: ✅ entra · 🔀 entra fundido ou adaptado · ✂️ fi
 | II-12–13 | A noite no bosque: o outro cavaleiro e o escudeiro narigudo; os escudeiros dividem a empada | ✅ cap. 38 |
 | II-14–15 | O duelo com o Cavaleiro dos Espelhos; era Sansão; o narigudo era o vizinho Tomé Cecial | ✅ cap. 39 · **atividade** (ELMO × REMO, NARIZ × RAIZ) |
 | II-16 | Dom Diego de Miranda, o cavaleiro do casaco verde | 🔀 cap. 40 (testemunha sensata e gancho da Parte 6) |
-| II-17 | O requeijão no elmo e o leão que não quis sair | ✅ caps. 40 e 41 · **atividade** (a ordem do que o leão fez) |
+| II-17 | O requeijão no elmo e o leão que não quis sair | ✅ caps. 40, 41 e 42 · **atividade** (a ordem do que o leão fez) |
 
 ### 2.2 Parte 6 — O Teatrinho, o Barco e o Cavalo Voador (II-18 a 41) · proposta para a fase 1 dela
 | Cervantes | Episódio | Decisão proposta |
@@ -96,9 +96,9 @@ Decisão de cada bloco: ✅ entra · 🔀 entra fundido ou adaptado · ✂️ fi
 | O **livro famoso** | P5 cap. 35 | P6 (os duques leram) → P8 (o livro mentiroso, a oficina, o final) |
 | **Sansão Carrasco** e o plano de trazer o amigo para casa | P5 caps. 35–36 (o plano é segredo), cap. 39 (falha como Cavaleiro dos Espelhos e promete tentar de novo) | **P8** (Branca Lua) |
 | A regra "quem perder obedece ao vencedor" | P5 cap. 39 | P8 (a mesma regra, agora contra Dom Quixote) |
-| A **jaula** (P4) | P4 caps. 25–26 | **P5 cap. 41**: agora é ele quem manda abrir uma jaula |
-| O gatinho = **leão guardião** (P1 cap. 1; P4 cap. 33) | P1 | **P5 cap. 41**: o leão de verdade se lava "que nem gato" |
-| Os **apelidos** (Triste Figura, P2) | P2 | **P5 cap. 41**: Cavaleiro dos Leões |
+| A **jaula** (P4) | P4 caps. 25–26 | **P5 caps. 41–42**: agora é ele quem manda abrir uma jaula |
+| O gatinho = **leão guardião** (P1 cap. 1; P4 cap. 33) | P1 | **P5 cap. 42**: o leão de verdade se lava "que nem gato" |
+| Os **apelidos** (Triste Figura, P2) | P2 | **P5 cap. 42**: Cavaleiro dos Leões |
 | "O medo é um amigo que avisa" (P4 cap. 28) | P4 | **P5 cap. 41**: Dom Diego lembra que coragem não é teimosia |
 | A **ilha** de Sancho | P1, P4 cap. 32 | P5 cap. 36 (Teresa lembra) → **P7** |
 | **Teresa e Sanchica** | P4 cap. 32 | P5 cap. 36 → P7 (o colar de corais) |
@@ -118,7 +118,7 @@ Fora: a mentira de Sancho sobre Dulcineia e os açoites (II-10, 35, 71); as zomb
 
 | Parte | 1 Texto | 2 Interações | Crítica adversarial (subagente) | 3 Revisão 🛑 | 4 Arte (API) | 5 Revisão final 🛑 | 6 Narração (API) | Publicada |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 5 | 🟡 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| 5 | ✅ | ✅ | ✅ | 🛑 **esperando o humano** | ⬜ | ⬜ | ⬜ | ⬜ |
 | 6 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | 7 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | 8 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |

@@ -7,7 +7,7 @@
              'rascunho' → o arquivo existe com `rascunho: true` no window.LIVRO
    estante:  id de uma prateleira do index.html com `data-estante-producao`, onde
              apareceria a capa-teaser com cadeado; null = não aparece como capa própria
-             (as Partes 5–7 aparecem juntas no boxset trancado do Volume 2, fixo no index.html;
+             (as Partes 5–8 aparecem juntas no boxset trancado do Volume 2, fixo no index.html;
              vale também para a nova versão de uma parte já publicada).
    href:     o arquivo do rascunho (aberto pela lista para adultos em sobre.html)
 
@@ -22,8 +22,8 @@ window.ACERVO_PRODUCAO = [
         obra: 'Dom Quixote de La Mancha',
         parte: 5,
         titulo: 'Parte 5: O Livro Famoso e o Cavaleiro dos Leões',
-        nota: 'Segundo volume (1615), caps. 1–29.',
-        situacao: 'fila',
+        nota: 'Segundo volume (1615), caps. 1–17. Rascunho de texto e atividades, ainda sem ilustrações.',
+        situacao: 'rascunho',
         estante: null,
         emoji: '🦁',
         cor: 'from-amber-200 to-orange-300',
@@ -33,11 +33,11 @@ window.ACERVO_PRODUCAO = [
         id: 'dom-quixote-parte-6',
         obra: 'Dom Quixote de La Mancha',
         parte: 6,
-        titulo: 'Parte 6: O Palácio dos Duques e a Ilha de Sancho',
-        nota: 'Segundo volume (1615), caps. 30–57.',
+        titulo: 'Parte 6: O Teatrinho, o Barco e o Cavalo Voador',
+        nota: 'Segundo volume (1615), caps. 18–41.',
         situacao: 'fila',
         estante: null,
-        emoji: '🏝️',
+        emoji: '🎠',
         cor: 'from-sky-200 to-indigo-300',
         href: './dom-quixote/parte-6.html'
     },
@@ -45,13 +45,25 @@ window.ACERVO_PRODUCAO = [
         id: 'dom-quixote-parte-7',
         obra: 'Dom Quixote de La Mancha',
         parte: 7,
-        titulo: 'Parte 7: O Cavaleiro da Branca Lua',
+        titulo: 'Parte 7: Sancho, Governador da Ilha',
+        nota: 'Segundo volume (1615), caps. 42–57.',
+        situacao: 'fila',
+        estante: null,
+        emoji: '🏝️',
+        cor: 'from-emerald-200 to-teal-300',
+        href: './dom-quixote/parte-7.html'
+    },
+    {
+        id: 'dom-quixote-parte-8',
+        obra: 'Dom Quixote de La Mancha',
+        parte: 8,
+        titulo: 'Parte 8: O Cavaleiro da Branca Lua',
         nota: 'Segundo volume (1615), caps. 58–74.',
         situacao: 'fila',
         estante: null,
         emoji: '🌙',
         cor: 'from-slate-200 to-indigo-300',
-        href: './dom-quixote/parte-7.html'
+        href: './dom-quixote/parte-8.html'
     },
     {
         id: 'robin-hood',
