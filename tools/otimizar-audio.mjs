@@ -92,7 +92,11 @@ for (const arq of alvos) {
         for (const py of ['python3', 'python']) {
             try { execFileSync(py, [gateScript, destino], { stdio: 'ignore' }); gate = true; break; } catch (e) {}
         }
-        if (!gate) console.warn(`AVISO: audio_gate.py não rodou em ${destino} (precisa de python3 com numpy e do ffmpeg)`);
+        if (!gate) {
+            // Sem o gate, as rajadas do TTS ficam nas emendas (o "arranhão" entre frases): é erro, não aviso
+            console.error(`ERRO: audio_gate.py não rodou em ${destino}. Instale python3 com numpy e o ffmpeg (ou pip install imageio-ffmpeg) e converta de novo.`);
+            process.exitCode = 1;
+        }
         ok++;
         console.log(`${arq} → ${destino} (${(mono.length / audio.taxa).toFixed(1)} s, ${Math.round(mp3.length / 1024)} KB)`);
     } catch (e) {

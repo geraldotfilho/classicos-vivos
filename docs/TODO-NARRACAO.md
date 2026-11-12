@@ -130,7 +130,8 @@ Se o modelo errar um nome, reescreva só aquele trecho foneticamente no pedido (
 2. **Duração** (sem o silêncio das pontas): entre 0,5 s e 25 s por frase; palavras-chave entre 1 s e 12 s.
 3. **Ouça** (ou analise) as frases com nomes da tabela da seção 5 e as frases de diálogo.
 4. Grave `indice.json` em cada pasta (`{ "p2-s5": "<hash>" }`) com o `hash` da frase no momento da gravação. Quando o texto do livro mudar, o Claude regenera os JSON: compare os hashes e **regrave só o que mudou**.
-5. Quando **todas** as frases de uma parte estiverem gravadas numa voz, acrescente o número da parte em `partes` daquela voz em `dom-quixote/audio/vozes.js`. A partir daí ela aparece como opção no painel "Voz" do livro.
+5. **Sem rajadas** (o "arranhão de agulha" entre frases, `AGENTS.md` §2.6): `node tools/conferir-narracao.mjs --partes N --idiomas pt` tem de terminar com "✅ Sem rajadas de ruído". Ele confere todo `pN.mp3` com `tools/audio_gate.py --verificar` e sai com erro se achar alguma; para limpar: `python3 tools/audio_gate.py --so-rajadas <arquivos>`. A gravação já passa pelo gate (e para com erro se ele não rodar: falta de python3 com numpy ou do ffmpeg), mas a conferência é a garantia final, inclusive para áudio feito por outro caminho.
+6. Quando **todas** as frases de uma parte estiverem gravadas numa voz, acrescente o número da parte em `partes` daquela voz em `dom-quixote/audio/vozes.js`. A partir daí ela aparece como opção no painel "Voz" do livro.
 
 ## 7. Ordem de produção e entregas
 Uma entrega (commit + merge na `main` + uma linha nas Revisões de `docs/fila/PEDIDOS.md`) por item. **Antes do item 1**, entregue as amostras de 2 ou 3 narradoras e espere o humano escolher a voz de ouvido:

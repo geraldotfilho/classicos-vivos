@@ -752,7 +752,7 @@ function juntarBlocos(resultados) {
 function salvarMp3(amostras, destino) {
     const wav = destino.replace(/\.mp3$/, '.wav');
     writeFileSync(wav, wavDe(amostras));
-    execFileSync('node', [join(RAIZ, 'tools', 'otimizar-audio.mjs'), wav], { stdio: 'ignore' });
+    execFileSync('node', [join(RAIZ, 'tools', 'otimizar-audio.mjs'), wav], { stdio: ['ignore', 'ignore', 'inherit'] });   // o erro do gate aparece e interrompe a gravação
 }
 
 /* A fatia de um bloco que pertence a uma página: do começo da primeira frase ao fim da última, sem o silêncio
@@ -860,7 +860,7 @@ async function criarVoz() {
         const wav = Buffer.from(j.sample_audio.data, 'base64');
         const destino = join(dir, `${o['criar-voz'].toLowerCase()}.wav`);
         writeFileSync(destino, wav.toString('ascii', 0, 4) === 'RIFF' ? wav : comCabecalhoWav(wav));
-        execFileSync('node', [join(RAIZ, 'tools', 'otimizar-audio.mjs'), destino], { stdio: 'ignore' });
+        execFileSync('node', [join(RAIZ, 'tools', 'otimizar-audio.mjs'), destino], { stdio: ['ignore', 'ignore', 'inherit'] });
         console.log(`amostra: ${destino.replace(/\.wav$/, '.mp3')}`);
     }
 }
@@ -1057,7 +1057,7 @@ async function main() {
     await emParalelo(pendentes, PARALELO, async (p) => {
         try {
             const r = await gravar(p.item, p.wav, p.faixa);
-            execFileSync('node', [join(RAIZ, 'tools', 'otimizar-audio.mjs'), p.wav], { stdio: 'ignore' });
+            execFileSync('node', [join(RAIZ, 'tools', 'otimizar-audio.mjs'), p.wav], { stdio: ['ignore', 'ignore', 'inherit'] });
             indice.frases = { ...lerJson(indiceArq, { frases: {} }).frases, ...indice.frases, [p.item.id]: p.item.hash };
             Object.assign(indice, { modelo: cfg.modelo, voz: cfg.voz, estilo: cfg.estilo, qa: o['sem-qa'] ? 'sem' : 'whisper-large-v3-turbo (local)' });
             writeFileSync(indiceArq, JSON.stringify(indice, null, 2) + '\n');

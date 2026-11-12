@@ -23,6 +23,9 @@ Uso:
   python3 tools/audio_gate.py arquivo1.mp3 ...   (processa os arquivos informados)
   python3 tools/audio_gate.py --so-rajadas [arquivos]   (só tira as rajadas internas; não mexe
                                                  no resto nem recodifica arquivo sem rajada)
+  python3 tools/audio_gate.py --verificar [arquivos]    (só confere, sem mexer em nada: lista as
+                                                 rajadas e sai com erro se houver alguma; usado
+                                                 pelo tools/conferir-narracao.mjs)
 """
 
 import glob
@@ -280,9 +283,23 @@ def process_file(path):
         return encode_mp3(samples_clean, path)
     return False
 
+def verificar(files):
+    """Confere sem mexer: quantas rajadas cada arquivo ainda tem. Sai com código 1 se houver alguma."""
+    com_rajada = 0
+    for f in files:
+        samples_f = decode_mp3(f).astype(np.float32)
+        trechos = remover_rajadas_internas(samples_f)   # trabalha numa cópia em memória; o arquivo não muda
+        if trechos:
+            com_rajada += 1
+            print(f"  RAJADA {f}: " + ', '.join(f"{i / 24000:.2f}s" for i, _ in trechos))
+    print(f"Rajadas: {com_rajada} de {len(files)} arquivo(s) com rajada.")
+    sys.exit(1 if com_rajada else 0)
+
 def main():
     args = sys.argv[1:]
     so_rajadas = '--so-rajadas' in args
+    if '--verificar' in args:
+        return verificar([a for a in args if a != '--verificar'])
     args = [a for a in args if a != '--so-rajadas']
     files = args if args else sorted(glob.glob('classicos-vivos/dom-quixote/audio/**/*.mp3', recursive=True))
     if not files and os.path.exists('dom-quixote/audio'):
