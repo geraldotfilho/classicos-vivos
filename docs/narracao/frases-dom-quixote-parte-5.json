@@ -145,13 +145,53 @@
     {
       "id": "p1-s8",
       "pagina": 1,
+      "paragrafo": 1,
+      "texto": "O padre até contou a novidade da aldeia: — Sabe quem voltou da cidade grande?",
+      "fala": "O padre até contou a novidade da aldeia: Sabe quem voltou da cidade grande?",
+      "hash": "3dc0e0349d"
+    },
+    {
+      "id": "p1-s9",
+      "pagina": 1,
+      "paragrafo": 1,
+      "texto": "O Sansão Carrasco, o filho do nosso vizinho!",
+      "fala": "O Sansão Carrasco, o filho do nosso vizinho!",
+      "hash": "0155bc52c9"
+    },
+    {
+      "id": "p1-s10",
+      "pagina": 1,
+      "paragrafo": 1,
+      "texto": "Foi estudar menino e voltou doutor.",
+      "fala": "Foi estudar menino e voltou doutor.",
+      "hash": "97e81b7c32"
+    },
+    {
+      "id": "p1-s11",
+      "pagina": 1,
+      "paragrafo": 1,
+      "texto": "Dom Quixote sorriu: — O Sansãozinho?",
+      "fala": "Dom Quixote sorriu: O Sansãozinho?",
+      "hash": "40331e3ad3"
+    },
+    {
+      "id": "p1-s12",
+      "pagina": 1,
+      "paragrafo": 1,
+      "texto": "Aquele que vivia aqui em casa, pedindo os meus livros emprestados?",
+      "fala": "Aquele que vivia aqui em casa, pedindo os meus livros emprestados?",
+      "hash": "87e59007ea"
+    },
+    {
+      "id": "p1-s13",
+      "pagina": 1,
       "paragrafo": 2,
       "texto": "Para ver se o amigo tinha mesmo sossegado, o padre contou, como quem não quer nada: — Dizem que o rei anda preocupado.",
       "fala": "Para ver se o amigo tinha mesmo sossegado, o padre contou, como quem não quer nada: Dizem que o rei anda preocupado.",
       "hash": "568fab3d47"
     },
     {
-      "id": "p1-s9",
+      "id": "p1-s14",
       "pagina": 1,
       "paragrafo": 2,
       "texto": "Parece que vem perigo pelo mar...",
@@ -159,7 +199,7 @@
       "hash": "dae76d41fd"
     },
     {
-      "id": "p1-s10",
+      "id": "p1-s15",
       "pagina": 1,
       "paragrafo": 2,
       "texto": "Dom Quixote levantou um dedo magro: — Pois o rei que mande chamar os CAVALEIROS andantes!",
@@ -167,7 +207,7 @@
       "hash": "e26113e2c6"
     },
     {
-      "id": "p1-s11",
+      "id": "p1-s16",
       "pagina": 1,
       "paragrafo": 2,
       "texto": "Basta um só para resolver tudo.",
@@ -175,7 +215,7 @@
       "hash": "a00d0772e7"
     },
     {
-      "id": "p1-s12",
+      "id": "p1-s17",
       "pagina": 1,
       "paragrafo": 2,
       "texto": "E eu não digo quem é...",
@@ -183,7 +223,7 @@
       "hash": "ee6f2252d1"
     },
     {
-      "id": "p1-s13",
+      "id": "p1-s18",
       "pagina": 1,
       "paragrafo": 2,
       "texto": "A sobrinha pôs as mãos na cintura: — Ai, titio!",
@@ -191,7 +231,7 @@
       "hash": "9cb7ed424d"
     },
     {
-      "id": "p1-s14",
+      "id": "p1-s19",
       "pagina": 1,
       "paragrafo": 2,
       "texto": "O senhor quer sair de novo!",
@@ -199,7 +239,7 @@
       "hash": "8e8f49d5a4"
     },
     {
-      "id": "p1-s15",
+      "id": "p1-s20",
       "pagina": 1,
       "paragrafo": 2,
       "texto": "E o gatinho tapou os olhos com a pata.",
@@ -207,7 +247,7 @@
       "hash": "62f4d4f454"
     },
     {
-      "id": "p1-s16",
+      "id": "p1-s21",
       "pagina": 1,
       "paragrafo": 3,
       "texto": "Nessa hora, começou uma barulheira na porta da rua.",
@@ -215,7 +255,7 @@
       "hash": "901fd8e7f6"
     },
     {
-      "id": "p1-s17",
+      "id": "p1-s22",
       "pagina": 1,
       "paragrafo": 3,
       "texto": "Era a governanta, de VASSOURA na mão, barrando a entrada de Sancho Pança: — Aqui você não entra!",
@@ -223,15 +263,15 @@
       "hash": "f5ed485767"
     },
     {
-      "id": "p1-s18",
+      "id": "p1-s23",
       "pagina": 1,
       "paragrafo": 3,
-      "texto": "É você que leva o meu patrão para o meio do mundo!",
-      "fala": "É você que leva o meu patrão para o meio do mundo!",
-      "hash": "f0f0a3bf3b"
+      "texto": "É você que leva o senhor Alonso para o meio do mundo!",
+      "fala": "É você que leva o senhor Alonso para o meio do mundo!",
+      "hash": "192c1c6fdb"
     },
     {
-      "id": "p1-s19",
+      "id": "p1-s24",
       "pagina": 1,
       "paragrafo": 3,
       "texto": "Sancho tentou passar pela direita: vassoura.",
@@ -239,7 +279,7 @@
       "hash": "bad9152d94"
     },
     {
-      "id": "p1-s20",
+      "id": "p1-s25",
       "pagina": 1,
       "paragrafo": 3,
       "texto": "Tentou pela esquerda: vassoura.",
@@ -247,7 +287,7 @@
       "hash": "6f6517c1f0"
     },
     {
-      "id": "p1-s21",
+      "id": "p1-s26",
       "pagina": 1,
       "paragrafo": 3,
       "texto": "Tentou por baixo, e a barriga entalou.",
@@ -255,7 +295,7 @@
       "hash": "24d0fa6448"
     },
     {
-      "id": "p1-s22",
+      "id": "p1-s27",
       "pagina": 1,
       "paragrafo": 3,
       "texto": "— É ele que me leva! — gritava, com a vassoura fazendo cócegas no nariz.",
@@ -263,7 +303,7 @@
       "hash": "9ac1a8a23b"
     },
     {
-      "id": "p1-s23",
+      "id": "p1-s28",
       "pagina": 1,
       "paragrafo": 3,
       "texto": "— E ainda está me devendo uma ilha!",
@@ -271,7 +311,7 @@
       "hash": "e91fb1ffa4"
     },
     {
-      "id": "p1-s24",
+      "id": "p1-s29",
       "pagina": 1,
       "paragrafo": 3,
       "texto": "A... a...",
@@ -279,7 +319,7 @@
       "hash": "1cb0d882e6"
     },
     {
-      "id": "p1-s25",
+      "id": "p1-s30",
       "pagina": 1,
       "paragrafo": 3,
       "texto": "ATCHIM!",
@@ -287,7 +327,7 @@
       "hash": "5859bdbcbc"
     },
     {
-      "id": "p1-s26",
+      "id": "p1-s31",
       "pagina": 1,
       "paragrafo": 4,
       "texto": "— Deixem entrar o meu bom escudeiro! — pediu Dom Quixote lá de dentro.",
@@ -295,7 +335,7 @@
       "hash": "115db306bd"
     },
     {
-      "id": "p1-s27",
+      "id": "p1-s32",
       "pagina": 1,
       "paragrafo": 4,
       "texto": "Sancho entrou sem fôlego, de olhos arregalados: — Meu amo, está acontecendo uma coisa muito esquisita!",
@@ -303,7 +343,7 @@
       "hash": "fab55ddb9b"
     },
     {
-      "id": "p1-s28",
+      "id": "p1-s33",
       "pagina": 1,
       "paragrafo": 4,
       "texto": "Hoje passou na rua um viajante que eu nunca vi na vida.",
@@ -311,7 +351,7 @@
       "hash": "65354810ab"
     },
     {
-      "id": "p1-s29",
+      "id": "p1-s34",
       "pagina": 1,
       "paragrafo": 4,
       "texto": "Ele olhou para mim e disse: \"Bom dia, Sancho Pança!",
@@ -319,7 +359,7 @@
       "hash": "32c32fae0b"
     },
     {
-      "id": "p1-s30",
+      "id": "p1-s35",
       "pagina": 1,
       "paragrafo": 4,
       "texto": "Como vai o burrico?\".",
@@ -327,7 +367,7 @@
       "hash": "5342b6ede5"
     },
     {
-      "id": "p1-s31",
+      "id": "p1-s36",
       "pagina": 1,
       "paragrafo": 4,
       "texto": "Como é que ele sabia?",
@@ -335,20 +375,20 @@
       "hash": "bd463a74e5"
     },
     {
-      "id": "p1-s32",
+      "id": "p1-s37",
       "pagina": 1,
       "paragrafo": 4,
-      "texto": "E tem mais: o Sansão Carrasco, o filho do nosso vizinho, voltou ontem da cidade grande, onde estava estudando.",
-      "fala": "E tem mais: o Sansão Carrasco, o filho do nosso vizinho, voltou ontem da cidade grande, onde estava estudando.",
-      "hash": "ee8102880a"
+      "texto": "E tem mais: acabei de encontrar o Sansão Carrasco na praça.",
+      "fala": "E tem mais: acabei de encontrar o Sansão Carrasco na praça.",
+      "hash": "9cb20d1b4a"
     },
     {
-      "id": "p1-s33",
+      "id": "p1-s38",
       "pagina": 1,
       "paragrafo": 4,
-      "texto": "E disse que sabe o SEGREDO!",
-      "fala": "E disse que sabe o segredo!",
-      "hash": "35d1582039"
+      "texto": "Ele riu e disse que sabe o SEGREDO!",
+      "fala": "Ele riu e disse que sabe o segredo!",
+      "hash": "82a3e6ffad"
     },
     {
       "id": "p2-s0",
@@ -371,28 +411,44 @@
       "id": "p2-s2",
       "pagina": 2,
       "paragrafo": 0,
-      "texto": "O rapaz era baixinho, de cara redonda e nariz achatado, e era o moço mais brincalhão da aldeia.",
-      "fala": "O rapaz era baixinho, de cara redonda e nariz achatado, e era o moço mais brincalhão da aldeia.",
-      "hash": "5fa7ca62cb"
+      "texto": "O rapaz era baixinho, de cara redonda e nariz achatado, e era o moço mais brincalhão da aldeia: quando menino, escondia os óculos do padre só para ver o padre procurar.",
+      "fala": "O rapaz era baixinho, de cara redonda e nariz achatado, e era o moço mais brincalhão da aldeia: quando menino, escondia os óculos do padre só para ver o padre procurar.",
+      "hash": "4dd6275e8a"
     },
     {
       "id": "p2-s3",
       "pagina": 2,
       "paragrafo": 0,
-      "texto": "Tinha estudado tanto na cidade que todos o chamavam de BACHAREL: é o nome de quem termina os estudos.",
-      "fala": "Tinha estudado tanto na cidade que todos o chamavam de bacharel: é o nome de quem termina os estudos.",
-      "hash": "a6c03ca546"
+      "texto": "Mas era também o mais estudioso.",
+      "fala": "Mas era também o mais estudioso.",
+      "hash": "247c8784c6"
     },
     {
       "id": "p2-s4",
       "pagina": 2,
       "paragrafo": 0,
-      "texto": "Assim que entrou, ele se ajoelhou diante da cama: — Dê cá a sua mão, grande Dom Quixote de La Mancha!",
-      "fala": "Assim que entrou, ele se ajoelhou diante da cama: Dê cá a sua mão, grande Dom Quixote de La Mancha!",
-      "hash": "b6d2e99b4b"
+      "texto": "Tinha aprendido a gostar de histórias com os livros do senhor Alonso, e estudou tanto na cidade que agora todos o chamavam de BACHAREL: é o nome de quem termina os estudos.",
+      "fala": "Tinha aprendido a gostar de histórias com os livros do senhor Alonso, e estudou tanto na cidade que agora todos o chamavam de bacharel: é o nome de quem termina os estudos.",
+      "hash": "658631f19e"
     },
     {
       "id": "p2-s5",
+      "pagina": 2,
+      "paragrafo": 0,
+      "texto": "Sansão queria muito bem ao velho vizinho.",
+      "fala": "Sansão queria muito bem ao velho vizinho.",
+      "hash": "a90fe8ccaf"
+    },
+    {
+      "id": "p2-s6",
+      "pagina": 2,
+      "paragrafo": 0,
+      "texto": "Assim que entrou, ajoelhou-se diante da cama, meio brincando, meio a sério: — Dê cá a sua mão, grande Dom Quixote de La Mancha!",
+      "fala": "Assim que entrou, ajoelhou-se diante da cama, meio brincando, meio a sério: Dê cá a sua mão, grande Dom Quixote de La Mancha!",
+      "hash": "d380141441"
+    },
+    {
+      "id": "p2-s7",
       "pagina": 2,
       "paragrafo": 0,
       "texto": "Quer saber por que todo mundo conhece vocês?",
@@ -400,7 +456,7 @@
       "hash": "9ca2039bfc"
     },
     {
-      "id": "p2-s6",
+      "id": "p2-s8",
       "pagina": 2,
       "paragrafo": 0,
       "texto": "As suas aventuras correram tanto de boca em boca que alguém escreveu tudinho.",
@@ -408,7 +464,7 @@
       "hash": "a65a3aa4df"
     },
     {
-      "id": "p2-s7",
+      "id": "p2-s9",
       "pagina": 2,
       "paragrafo": 0,
       "texto": "Viraram um LIVRO!",
@@ -416,7 +472,7 @@
       "hash": "20d70d7b2d"
     },
     {
-      "id": "p2-s8",
+      "id": "p2-s10",
       "pagina": 2,
       "paragrafo": 0,
       "texto": "Já são mais de doze mil livros iguaizinhos, espalhados pelo mundo.",
@@ -424,7 +480,7 @@
       "hash": "127f862ac0"
     },
     {
-      "id": "p2-s9",
+      "id": "p2-s11",
       "pagina": 2,
       "paragrafo": 0,
       "texto": "O senhor é um cavaleiro FAMOSO!",
@@ -432,7 +488,7 @@
       "hash": "a4c7796cf9"
     },
     {
-      "id": "p2-s10",
+      "id": "p2-s12",
       "pagina": 2,
       "paragrafo": 1,
       "texto": "Dom Quixote ficou sem fala.",
@@ -440,7 +496,7 @@
       "hash": "fd3dfaf62c"
     },
     {
-      "id": "p2-s11",
+      "id": "p2-s13",
       "pagina": 2,
       "paragrafo": 1,
       "texto": "— E o que está escrito aí? — perguntou, por fim, com a voz tremendo.",
@@ -448,7 +504,7 @@
       "hash": "15974b3728"
     },
     {
-      "id": "p2-s12",
+      "id": "p2-s14",
       "pagina": 2,
       "paragrafo": 1,
       "texto": "— Tudo! — contou Sansão.",
@@ -456,7 +512,7 @@
       "hash": "04daf85938"
     },
     {
-      "id": "p2-s13",
+      "id": "p2-s15",
       "pagina": 2,
       "paragrafo": 1,
       "texto": "— Os gigantes que eram moinhos, os exércitos que eram ovelhas, as cambalhotas de camisolão lá na serra...",
@@ -464,7 +520,7 @@
       "hash": "b9f9412de1"
     },
     {
-      "id": "p2-s14",
+      "id": "p2-s16",
       "pagina": 2,
       "paragrafo": 1,
       "texto": "Dom Quixote tossiu: — As cambalhotas o escritor podia ter pulado.",
@@ -472,7 +528,7 @@
       "hash": "91675dde92"
     },
     {
-      "id": "p2-s15",
+      "id": "p2-s17",
       "pagina": 2,
       "paragrafo": 1,
       "texto": "— E os dois dentes que caíram...",
@@ -480,7 +536,7 @@
       "hash": "a7434cfb47"
     },
     {
-      "id": "p2-s16",
+      "id": "p2-s18",
       "pagina": 2,
       "paragrafo": 1,
       "texto": "— Esses também!",
@@ -488,7 +544,7 @@
       "hash": "bc7cfd964a"
     },
     {
-      "id": "p2-s17",
+      "id": "p2-s19",
       "pagina": 2,
       "paragrafo": 2,
       "texto": "Mas quem tinha escrito o livro?",
@@ -496,7 +552,7 @@
       "hash": "6ef30abb63"
     },
     {
-      "id": "p2-s18",
+      "id": "p2-s20",
       "pagina": 2,
       "paragrafo": 2,
       "texto": "Ninguém sabia.",
@@ -504,7 +560,7 @@
       "hash": "4a2f30bbf3"
     },
     {
-      "id": "p2-s19",
+      "id": "p2-s21",
       "pagina": 2,
       "paragrafo": 2,
       "texto": "E como essa pessoa sabia até o que os dois conversavam sozinhos, no meio da estrada?",
@@ -512,7 +568,7 @@
       "hash": "ac180c8aff"
     },
     {
-      "id": "p2-s20",
+      "id": "p2-s22",
       "pagina": 2,
       "paragrafo": 2,
       "texto": "— Só pode ser um mago, desses que ficam invisíveis e escutam tudo — decidiu Dom Quixote.",
@@ -520,7 +576,7 @@
       "hash": "9c30c65809"
     },
     {
-      "id": "p2-s21",
+      "id": "p2-s23",
       "pagina": 2,
       "paragrafo": 2,
       "texto": "Sancho, por via das dúvidas, olhou debaixo da cama.",
@@ -528,7 +584,7 @@
       "hash": "b2929b6bf5"
     },
     {
-      "id": "p2-s22",
+      "id": "p2-s24",
       "pagina": 2,
       "paragrafo": 2,
       "texto": "Só achou um chinelo.",
@@ -536,7 +592,7 @@
       "hash": "1a30b81b97"
     },
     {
-      "id": "p2-s23",
+      "id": "p2-s25",
       "pagina": 2,
       "paragrafo": 3,
       "texto": "Depois puxou a manga do bacharel: — E eu?",
@@ -544,7 +600,7 @@
       "hash": "303085737a"
     },
     {
-      "id": "p2-s24",
+      "id": "p2-s26",
       "pagina": 2,
       "paragrafo": 3,
       "texto": "Eu estou aí dentro?",
@@ -552,7 +608,7 @@
       "hash": "ce30bc3e13"
     },
     {
-      "id": "p2-s25",
+      "id": "p2-s27",
       "pagina": 2,
       "paragrafo": 3,
       "texto": "— Está, sim!",
@@ -560,7 +616,7 @@
       "hash": "ea4995c315"
     },
     {
-      "id": "p2-s26",
+      "id": "p2-s28",
       "pagina": 2,
       "paragrafo": 3,
       "texto": "Você é o segundo PERSONAGEM mais importante.",
@@ -568,7 +624,7 @@
       "hash": "d10ea7db87"
     },
     {
-      "id": "p2-s27",
+      "id": "p2-s29",
       "pagina": 2,
       "paragrafo": 3,
       "texto": "Tem gente que gosta mais das suas falas do que de todo o resto!",
@@ -576,7 +632,7 @@
       "hash": "7c437cdefe"
     },
     {
-      "id": "p2-s28",
+      "id": "p2-s30",
       "pagina": 2,
       "paragrafo": 3,
       "texto": "Sancho estufou a barriga, orgulhoso.",
@@ -584,7 +640,7 @@
       "hash": "0b7b8b4eee"
     },
     {
-      "id": "p2-s29",
+      "id": "p2-s31",
       "pagina": 2,
       "paragrafo": 3,
       "texto": "Depois ficou sério: — E o meu burrico?",
@@ -592,7 +648,7 @@
       "hash": "586aa8076e"
     },
     {
-      "id": "p2-s30",
+      "id": "p2-s32",
       "pagina": 2,
       "paragrafo": 3,
       "texto": "— Também está.",
@@ -600,7 +656,7 @@
       "hash": "b9c98431d3"
     },
     {
-      "id": "p2-s31",
+      "id": "p2-s33",
       "pagina": 2,
       "paragrafo": 3,
       "texto": "— Ah, bom.",
@@ -608,7 +664,7 @@
       "hash": "fd3f8fd767"
     },
     {
-      "id": "p2-s32",
+      "id": "p2-s34",
       "pagina": 2,
       "paragrafo": 3,
       "texto": "Então o livro é verdadeiro.",
@@ -616,7 +672,7 @@
       "hash": "8f574aee5b"
     },
     {
-      "id": "p2-s33",
+      "id": "p2-s35",
       "pagina": 2,
       "paragrafo": 4,
       "texto": "Sansão tirou o livro de debaixo do braço, abriu no colo do cavaleiro e apontou com o dedo: — Olhe aqui o seu nome, Sancho!",
@@ -624,7 +680,7 @@
       "hash": "b00328fe90"
     },
     {
-      "id": "p2-s34",
+      "id": "p2-s36",
       "pagina": 2,
       "paragrafo": 4,
       "texto": "Sancho chegou o nariz bem pertinho da página.",
@@ -632,7 +688,7 @@
       "hash": "6e8c8e250b"
     },
     {
-      "id": "p2-s35",
+      "id": "p2-s37",
       "pagina": 2,
       "paragrafo": 4,
       "texto": "Ele nunca tinha aprendido a ler, e aquelas letras pareciam formiguinhas em fila.",
@@ -640,7 +696,7 @@
       "hash": "6808dafbcb"
     },
     {
-      "id": "p2-s36",
+      "id": "p2-s38",
       "pagina": 2,
       "paragrafo": 4,
       "texto": "Mas agora queria muito, muito saber: qual daquelas formiguinhas era ele?",
@@ -732,12 +788,20 @@
       "id": "p3-s10",
       "pagina": 3,
       "paragrafo": 1,
-      "texto": "Eu já conversei com o padre e com mestre Nicolau, e nós temos um PLANO.",
-      "fala": "Eu já conversei com o padre e com mestre Nicolau, e nós temos um plano.",
-      "hash": "1c9b192511"
+      "texto": "Eu gosto demais do senhor Alonso para deixar que ele se machuque por aí.",
+      "fala": "Eu gosto demais do senhor Alonso para deixar que ele se machuque por aí.",
+      "hash": "d31f8344c3"
     },
     {
       "id": "p3-s11",
+      "pagina": 3,
+      "paragrafo": 1,
+      "texto": "Já conversei com o padre e com mestre Nicolau, e nós temos um PLANO.",
+      "fala": "Já conversei com o padre e com mestre Nicolau, e nós temos um plano.",
+      "hash": "05925277b2"
+    },
+    {
+      "id": "p3-s12",
       "pagina": 3,
       "paragrafo": 1,
       "texto": "Um plano secreto!",
@@ -745,7 +809,7 @@
       "hash": "e8369a3c9c"
     },
     {
-      "id": "p3-s12",
+      "id": "p3-s13",
       "pagina": 3,
       "paragrafo": 2,
       "texto": "Só que Sansão fez o contrário do que elas esperavam.",
@@ -753,7 +817,7 @@
       "hash": "93dba85fe1"
     },
     {
-      "id": "p3-s13",
+      "id": "p3-s14",
       "pagina": 3,
       "paragrafo": 2,
       "texto": "Em vez de pedir ao cavaleiro que ficasse, ele disse: — Vá logo, Dom Quixote!",
@@ -761,7 +825,7 @@
       "hash": "722385c89b"
     },
     {
-      "id": "p3-s14",
+      "id": "p3-s15",
       "pagina": 3,
       "paragrafo": 2,
       "texto": "O mundo está esperando!",
@@ -769,7 +833,7 @@
       "hash": "41a6d87b7c"
     },
     {
-      "id": "p3-s15",
+      "id": "p3-s16",
       "pagina": 3,
       "paragrafo": 2,
       "texto": "E, se precisar de escudeiro, eu mesmo vou!",
@@ -777,7 +841,7 @@
       "hash": "998d8c5f22"
     },
     {
-      "id": "p3-s16",
+      "id": "p3-s17",
       "pagina": 3,
       "paragrafo": 2,
       "texto": "Sancho, que vinha chegando bem nessa hora, abriu um berreiro: — Buááá!",
@@ -785,7 +849,7 @@
       "hash": "1e91f9d704"
     },
     {
-      "id": "p3-s17",
+      "id": "p3-s18",
       "pagina": 3,
       "paragrafo": 2,
       "texto": "Escudeiro dele sou eu!",
@@ -793,7 +857,7 @@
       "hash": "698482fd3b"
     },
     {
-      "id": "p3-s18",
+      "id": "p3-s19",
       "pagina": 3,
       "paragrafo": 2,
       "texto": "Ninguém tira o meu lugar!",
@@ -801,7 +865,7 @@
       "hash": "f06660ed64"
     },
     {
-      "id": "p3-s19",
+      "id": "p3-s20",
       "pagina": 3,
       "paragrafo": 2,
       "texto": "E se agarrou na perna do amo, feito carrapato.",
@@ -809,7 +873,7 @@
       "hash": "de48050435"
     },
     {
-      "id": "p3-s20",
+      "id": "p3-s21",
       "pagina": 3,
       "paragrafo": 3,
       "texto": "Naquela noite, coisas estranhas aconteceram na aldeia.",
@@ -817,7 +881,7 @@
       "hash": "ef39cc8b7f"
     },
     {
-      "id": "p3-s21",
+      "id": "p3-s22",
       "pagina": 3,
       "paragrafo": 3,
       "texto": "Sansão entrou escondido no celeiro com um saco que fazia tlim-tlim e brilhava pelos furinhos.",
@@ -825,7 +889,7 @@
       "hash": "2074804244"
     },
     {
-      "id": "p3-s22",
+      "id": "p3-s23",
       "pagina": 3,
       "paragrafo": 3,
       "texto": "E Tomé, um vizinho de Sancho, experimentava uma coisa comprida na frente do espelho e morria de rir.",
@@ -833,7 +897,7 @@
       "hash": "d15dbc1b8f"
     },
     {
-      "id": "p3-s23",
+      "id": "p3-s24",
       "pagina": 3,
       "paragrafo": 3,
       "texto": "O que será que os dois estavam aprontando?",
@@ -841,15 +905,31 @@
       "hash": "d132169063"
     },
     {
-      "id": "p3-s24",
+      "id": "p3-s25",
       "pagina": 3,
       "paragrafo": 4,
-      "texto": "Três dias depois, ao cair da tarde, os dois amigos saíram de mansinho: Dom Quixote de bacielmo e lança, e Sancho com o ALFORJE, a sacola de viagem, cheinho de comida.",
-      "fala": "Três dias depois, ao cair da tarde, os dois amigos saíram de mansinho: Dom Quixote de bacielmo e lança, e Sancho com o alforje, a sacola de viagem, cheinho de comida.",
-      "hash": "bc8a32ecc1"
+      "texto": "Três dias depois, ao cair da tarde, os dois amigos saíram de mansinho.",
+      "fala": "Três dias depois, ao cair da tarde, os dois amigos saíram de mansinho.",
+      "hash": "8774c67173"
     },
     {
-      "id": "p3-s25",
+      "id": "p3-s26",
+      "pagina": 3,
+      "paragrafo": 4,
+      "texto": "Um mês de caldinho e ovos tinha feito bem a Dom Quixote: continuava magrinho, mas já estava firme nas pernas compridas.",
+      "fala": "Um mês de caldinho e ovos tinha feito bem a Dom Quixote: continuava magrinho, mas já estava firme nas pernas compridas.",
+      "hash": "4c072e0bd8"
+    },
+    {
+      "id": "p3-s27",
+      "pagina": 3,
+      "paragrafo": 4,
+      "texto": "Ia de bacielmo e lança, e Sancho com o ALFORJE, a sacola de viagem, cheinho de comida.",
+      "fala": "Ia de bacielmo e lança, e Sancho com o alforje, a sacola de viagem, cheinho de comida.",
+      "hash": "f6f982cb9c"
+    },
+    {
+      "id": "p3-s28",
       "pagina": 3,
       "paragrafo": 4,
       "texto": "Da janela, a governanta suspirou: — Lá vai ele de novo!",
@@ -857,7 +937,7 @@
       "hash": "83da4b85aa"
     },
     {
-      "id": "p3-s26",
+      "id": "p3-s29",
       "pagina": 3,
       "paragrafo": 5,
       "texto": "Na estrada, Rocinante soltou um relincho comprido, e o burrico respondeu com um zurro ainda maior.",
@@ -865,7 +945,7 @@
       "hash": "d7570025be"
     },
     {
-      "id": "p3-s27",
+      "id": "p3-s30",
       "pagina": 3,
       "paragrafo": 5,
       "texto": "— Ouviu, Sancho?",
@@ -873,7 +953,7 @@
       "hash": "920703439f"
     },
     {
-      "id": "p3-s28",
+      "id": "p3-s31",
       "pagina": 3,
       "paragrafo": 5,
       "texto": "Até os bichos estão avisando: vem aí muita AVENTURA!",
@@ -881,7 +961,7 @@
       "hash": "cd69df90a8"
     },
     {
-      "id": "p3-s29",
+      "id": "p3-s32",
       "pagina": 3,
       "paragrafo": 5,
       "texto": "Depois o cavaleiro olhou para a primeira estrela do céu e cochichou: — Esta saída é para você, Dulcineia.",
@@ -889,7 +969,7 @@
       "hash": "c6686ec78d"
     },
     {
-      "id": "p3-s30",
+      "id": "p3-s33",
       "pagina": 3,
       "paragrafo": 5,
       "texto": "Nenhum dos dois reparou que, lá atrás, bem longe, duas sombras a cavalo vinham pelo mesmo caminho.",
@@ -897,7 +977,7 @@
       "hash": "945978b09f"
     },
     {
-      "id": "p3-s31",
+      "id": "p3-s34",
       "pagina": 3,
       "paragrafo": 5,
       "texto": "Tlim... tlim...",
@@ -1423,36 +1503,60 @@
       "id": "p6-s6",
       "pagina": 6,
       "paragrafo": 1,
-      "texto": "Dom Quixote esperou Sancho se ajeitar no galho, apontou a lança e gritou: — Avante, Rocinante!",
-      "fala": "Dom Quixote esperou Sancho se ajeitar no galho, apontou a lança e gritou: Avante, Rocinante!",
-      "hash": "b9d3052ff5"
+      "texto": "O Cavaleiro dos Espelhos era moço e forte, e saiu na frente.",
+      "fala": "O Cavaleiro dos Espelhos era moço e forte, e saiu na frente.",
+      "hash": "dde638177a"
     },
     {
       "id": "p6-s7",
       "pagina": 6,
       "paragrafo": 1,
-      "texto": "E Rocinante, pela primeira vez na vida, galopou de verdade!",
-      "fala": "E Rocinante, pela primeira vez na vida, galopou de verdade!",
-      "hash": "213c296191"
+      "texto": "Mas, no meio do caminho, viu que Dom Quixote ainda estava empurrando Sancho para cima da árvore, e parou para esperar.",
+      "fala": "Mas, no meio do caminho, viu que Dom Quixote ainda estava empurrando Sancho para cima da árvore, e parou para esperar.",
+      "hash": "b216b9292e"
     },
     {
       "id": "p6-s8",
       "pagina": 6,
       "paragrafo": 1,
+      "texto": "Foi o seu erro!",
+      "fala": "Foi o seu erro!",
+      "hash": "dd28f8b43c"
+    },
+    {
+      "id": "p6-s9",
+      "pagina": 6,
+      "paragrafo": 1,
+      "texto": "O cavalo dele era tão preguiçoso quanto Rocinante: aproveitou a parada, baixou a cabeça e começou a comer capim.",
+      "fala": "O cavalo dele era tão preguiçoso quanto Rocinante: aproveitou a parada, baixou a cabeça e começou a comer capim.",
+      "hash": "abc0621854"
+    },
+    {
+      "id": "p6-s10",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "— Avante, Rocinante! — gritou Dom Quixote, enfim.",
+      "fala": "Avante, Rocinante! gritou Dom Quixote, enfim.",
+      "hash": "3ac63b069c"
+    },
+    {
+      "id": "p6-s11",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "E Rocinante, pela primeira vez na vida, galopou de verdade!",
+      "fala": "E Rocinante, pela primeira vez na vida, galopou de verdade!",
+      "hash": "213c296191"
+    },
+    {
+      "id": "p6-s12",
+      "pagina": 6,
+      "paragrafo": 2,
       "texto": "Quer dizer: trotou um pouquinho mais depressa.",
       "fala": "Quer dizer: trotou um pouquinho mais depressa.",
       "hash": "82c4216697"
     },
     {
-      "id": "p6-s9",
-      "pagina": 6,
-      "paragrafo": 2,
-      "texto": "Já o cavalo do outro empacou no meio do caminho e começou a comer capim.",
-      "fala": "Já o cavalo do outro empacou no meio do caminho e começou a comer capim.",
-      "hash": "97271ff0bb"
-    },
-    {
-      "id": "p6-s10",
+      "id": "p6-s13",
       "pagina": 6,
       "paragrafo": 2,
       "texto": "O Cavaleiro dos Espelhos puxava as rédeas, batia os calcanhares, pedia por favor, e nada.",
@@ -1460,15 +1564,31 @@
       "hash": "39ba901d38"
     },
     {
-      "id": "p6-s11",
+      "id": "p6-s14",
       "pagina": 6,
       "paragrafo": 2,
-      "texto": "Quando Rocinante finalmente chegou, bastou um empurrãozinho com a ponta da lança: o cavaleiro escorregou para trás e caiu sentado na grama.",
-      "fala": "Quando Rocinante finalmente chegou, bastou um empurrãozinho com a ponta da lança: o cavaleiro escorregou para trás e caiu sentado na grama.",
-      "hash": "6b1bdc6d01"
+      "texto": "Quis apontar a lança, mas ela enroscou nos espelhinhos da armadura.",
+      "fala": "Quis apontar a lança, mas ela enroscou nos espelhinhos da armadura.",
+      "hash": "27760c9f9f"
     },
     {
-      "id": "p6-s12",
+      "id": "p6-s15",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "Quando Rocinante finalmente chegou, a lança de Dom Quixote só encostou no escudo dele.",
+      "fala": "Quando Rocinante finalmente chegou, a lança de Dom Quixote só encostou no escudo dele.",
+      "hash": "c7eacb29b2"
+    },
+    {
+      "id": "p6-s16",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "E o cavaleiro, todo torto e atrapalhado, escorregou para trás e caiu sentado na grama.",
+      "fala": "E o cavaleiro, todo torto e atrapalhado, escorregou para trás e caiu sentado na grama.",
+      "hash": "3ecf2cb0ca"
+    },
+    {
+      "id": "p6-s17",
       "pagina": 6,
       "paragrafo": 2,
       "texto": "PLOFT!",
@@ -1476,7 +1596,7 @@
       "hash": "a38934a162"
     },
     {
-      "id": "p6-s13",
+      "id": "p6-s18",
       "pagina": 6,
       "paragrafo": 3,
       "texto": "— VITÓRIA! — gritou Sancho lá de cima.",
@@ -1484,15 +1604,31 @@
       "hash": "ddb38307fa"
     },
     {
-      "id": "p6-s14",
+      "id": "p6-s19",
       "pagina": 6,
       "paragrafo": 3,
-      "texto": "Dom Quixote desceu do cavalo e correu para ver se ele estava bem.",
-      "fala": "Dom Quixote desceu do cavalo e correu para ver se ele estava bem.",
-      "hash": "5c621fd20b"
+      "texto": "Não tinha sido a força de Dom Quixote, magrinho como sempre: tinha sido a gula de um cavalo.",
+      "fala": "Não tinha sido a força de Dom Quixote, magrinho como sempre: tinha sido a gula de um cavalo.",
+      "hash": "4e5299c4aa"
     },
     {
-      "id": "p6-s15",
+      "id": "p6-s20",
+      "pagina": 6,
+      "paragrafo": 3,
+      "texto": "Mas vitória é vitória!",
+      "fala": "Mas vitória é vitória!",
+      "hash": "2c5a602f19"
+    },
+    {
+      "id": "p6-s21",
+      "pagina": 6,
+      "paragrafo": 3,
+      "texto": "Dom Quixote desceu de Rocinante e correu para ver se o outro estava bem.",
+      "fala": "Dom Quixote desceu de Rocinante e correu para ver se o outro estava bem.",
+      "hash": "1880d13a3d"
+    },
+    {
+      "id": "p6-s22",
       "pagina": 6,
       "paragrafo": 3,
       "texto": "O cavaleiro gemia baixinho, mais de vergonha que de dor.",
@@ -1500,7 +1636,7 @@
       "hash": "94452bcfe4"
     },
     {
-      "id": "p6-s16",
+      "id": "p6-s23",
       "pagina": 6,
       "paragrafo": 3,
       "texto": "O escudeiro narigudo veio correndo, aflito, e Sancho desceu da árvore bem devagar, de olho naquele nariz.",
@@ -1508,7 +1644,7 @@
       "hash": "57dab6bc0a"
     },
     {
-      "id": "p6-s17",
+      "id": "p6-s24",
       "pagina": 6,
       "paragrafo": 4,
       "texto": "— Quem é o senhor? — perguntou Dom Quixote.",
@@ -1516,7 +1652,7 @@
       "hash": "1438f11975"
     },
     {
-      "id": "p6-s18",
+      "id": "p6-s25",
       "pagina": 6,
       "paragrafo": 4,
       "texto": "O cavaleiro não respondeu, e o elmo continuava bem fechado.",
@@ -1524,7 +1660,7 @@
       "hash": "1aebe30cc3"
     },
     {
-      "id": "p6-s19",
+      "id": "p6-s26",
       "pagina": 6,
       "paragrafo": 4,
       "texto": "Sancho coçou a cabeça.",
@@ -1532,7 +1668,7 @@
       "hash": "f14a69d429"
     },
     {
-      "id": "p6-s20",
+      "id": "p6-s27",
       "pagina": 6,
       "paragrafo": 4,
       "texto": "Aquele gemido... aquela voz...",
@@ -1540,7 +1676,7 @@
       "hash": "04663cc783"
     },
     {
-      "id": "p6-s21",
+      "id": "p6-s28",
       "pagina": 6,
       "paragrafo": 4,
       "texto": "Ele já tinha ouvido aquilo lá na aldeia!",
@@ -1548,7 +1684,7 @@
       "hash": "d6d7095e74"
     },
     {
-      "id": "p6-s22",
+      "id": "p6-s29",
       "pagina": 6,
       "paragrafo": 4,
       "texto": "E por que o escudeiro corria segurando o nariz com a mão, como se ele fosse cair?",
@@ -1672,20 +1808,28 @@
       "id": "p7-s14",
       "pagina": 7,
       "paragrafo": 2,
-      "texto": "O bacharel foi embora mancando, com a mão nas costas, e resmungou para Tomé: — Eu ainda vou tentar de novo.",
-      "fala": "O bacharel foi embora mancando, com a mão nas costas, e resmungou para Tomé: Eu ainda vou tentar de novo.",
-      "hash": "4c8cee21c4"
+      "texto": "O bacharel, que entendia muito de livros e nada de cavalos, foi embora mancando, com a mão nas costas, e resmungou para Tomé: — Perdi para um cavalo guloso!",
+      "fala": "O bacharel, que entendia muito de livros e nada de cavalos, foi embora mancando, com a mão nas costas, e resmungou para Tomé: Perdi para um cavalo guloso!",
+      "hash": "bd2b2eaa02"
     },
     {
       "id": "p7-s15",
       "pagina": 7,
       "paragrafo": 2,
-      "texto": "E, da próxima vez, com um cavalo que não empaca!",
-      "fala": "E, da próxima vez, com um cavalo que não empaca!",
-      "hash": "abffa1f557"
+      "texto": "Mas eu ainda vou tentar de novo.",
+      "fala": "Mas eu ainda vou tentar de novo.",
+      "hash": "8e3a1cf9e7"
     },
     {
       "id": "p7-s16",
+      "pagina": 7,
+      "paragrafo": 2,
+      "texto": "E, da próxima vez, com um cavalo que não para para comer!",
+      "fala": "E, da próxima vez, com um cavalo que não para para comer!",
+      "hash": "9f52915e98"
+    },
+    {
+      "id": "p7-s17",
       "pagina": 7,
       "paragrafo": 3,
       "texto": "Os dois amigos seguiram viagem, felizes da vida, e logo alcançaram um viajante de casaco VERDE, montado numa égua cinzenta.",
@@ -1693,7 +1837,7 @@
       "hash": "fbbebcacc2"
     },
     {
-      "id": "p7-s17",
+      "id": "p7-s18",
       "pagina": 7,
       "paragrafo": 3,
       "texto": "Era Dom Diego, um senhor calmo e gentil, que gostava de livros, da família e de sossego.",
@@ -1701,7 +1845,7 @@
       "hash": "96d14d6cf9"
     },
     {
-      "id": "p7-s18",
+      "id": "p7-s19",
       "pagina": 7,
       "paragrafo": 3,
       "texto": "Dom Quixote logo deu a ele um apelido: o Cavaleiro do Casaco Verde.",
@@ -1709,7 +1853,7 @@
       "hash": "cf3699658f"
     },
     {
-      "id": "p7-s19",
+      "id": "p7-s20",
       "pagina": 7,
       "paragrafo": 3,
       "texto": "Enquanto os dois conversavam, Sancho viu uns pastores e correu para comprar REQUEIJÃO fresquinho, bem mole.",
@@ -1717,7 +1861,7 @@
       "hash": "602c1f0240"
     },
     {
-      "id": "p7-s20",
+      "id": "p7-s21",
       "pagina": 7,
       "paragrafo": 4,
       "texto": "Bem nessa hora, Dom Quixote avistou lá longe uma carroça com bandeiras e gritou: — Sancho!",
@@ -1725,7 +1869,7 @@
       "hash": "43d99cdce7"
     },
     {
-      "id": "p7-s21",
+      "id": "p7-s22",
       "pagina": 7,
       "paragrafo": 4,
       "texto": "Depressa, o meu BACIELMO!",
@@ -1733,7 +1877,7 @@
       "hash": "dced5ca993"
     },
     {
-      "id": "p7-s22",
+      "id": "p7-s23",
       "pagina": 7,
       "paragrafo": 4,
       "texto": "Vem aí uma aventura!",
@@ -1741,7 +1885,7 @@
       "hash": "252a6d653c"
     },
     {
-      "id": "p7-s23",
+      "id": "p7-s24",
       "pagina": 7,
       "paragrafo": 4,
       "texto": "Sancho não sabia onde guardar o requeijão.",
@@ -1749,7 +1893,7 @@
       "hash": "815cfa0b17"
     },
     {
-      "id": "p7-s24",
+      "id": "p7-s25",
       "pagina": 7,
       "paragrafo": 4,
       "texto": "E, no susto, guardou... dentro do bacielmo.",
@@ -1757,7 +1901,7 @@
       "hash": "1df1ce37ea"
     },
     {
-      "id": "p7-s25",
+      "id": "p7-s26",
       "pagina": 7,
       "paragrafo": 5,
       "texto": "Dom Quixote enfiou o bacielmo na cabeça e apertou bem.",
@@ -1765,7 +1909,7 @@
       "hash": "ba902c0d69"
     },
     {
-      "id": "p7-s26",
+      "id": "p7-s27",
       "pagina": 7,
       "paragrafo": 5,
       "texto": "Um caldo branco começou a escorrer pela testa, pelas orelhas e pela barba.",
@@ -1773,7 +1917,7 @@
       "hash": "7f02788417"
     },
     {
-      "id": "p7-s27",
+      "id": "p7-s28",
       "pagina": 7,
       "paragrafo": 5,
       "texto": "— Sancho! — disse ele, assustado.",
@@ -1781,7 +1925,7 @@
       "hash": "eab571df6e"
     },
     {
-      "id": "p7-s28",
+      "id": "p7-s29",
       "pagina": 7,
       "paragrafo": 5,
       "texto": "— Acho que os meus miolos estão derretendo!",
@@ -1789,7 +1933,7 @@
       "hash": "43fda4e512"
     },
     {
-      "id": "p7-s29",
+      "id": "p7-s30",
       "pagina": 7,
       "paragrafo": 5,
       "texto": "Tirou o bacielmo, cheirou e fez uma careta: — Isto é requeijão!",
@@ -1797,7 +1941,7 @@
       "hash": "0efd98e43e"
     },
     {
-      "id": "p7-s30",
+      "id": "p7-s31",
       "pagina": 7,
       "paragrafo": 5,
       "texto": "Sancho olhou para as nuvens, muito sério: — Devem ter sido os magos, meu amo...",
@@ -1805,7 +1949,7 @@
       "hash": "b5135d4201"
     },
     {
-      "id": "p7-s31",
+      "id": "p7-s32",
       "pagina": 7,
       "paragrafo": 5,
       "texto": "Dom Quixote apertou os olhos: — Magos que compram requeijão, Sancho?",
@@ -1813,7 +1957,7 @@
       "hash": "4f6150c546"
     },
     {
-      "id": "p7-s32",
+      "id": "p7-s33",
       "pagina": 7,
       "paragrafo": 5,
       "texto": "Sancho ficou vermelho até as orelhas: — É que eu não tinha onde guardar, meu amo.",
@@ -1821,7 +1965,7 @@
       "hash": "59c63b5562"
     },
     {
-      "id": "p7-s33",
+      "id": "p7-s34",
       "pagina": 7,
       "paragrafo": 5,
       "texto": "Dom Diego apertou os lábios para não rir.",
