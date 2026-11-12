@@ -99,12 +99,14 @@
           {
             "id": "elmo",
             "palavra": "ELMO",
-            "emoji": "🪖"
+            "emoji": "🪖",
+            "figura": "camadas/p6-elmo.webp"
           },
           {
             "id": "nariz",
             "palavra": "NARIZ",
-            "emoji": "👃"
+            "emoji": "👃",
+            "figura": "camadas/p6-narigao.webp"
           },
           {
             "id": "remo",
@@ -284,7 +286,7 @@
       ]
     },
     {
-      "texto": "O Cavaleiro dos Espelhos sentado na grama, de elmo fechado, com Dom Quixote ao lado; o escudeiro narigudo chega correndo e Sancho desce da árvore",
+      "texto": "O Cavaleiro dos Espelhos sentado na grama, de elmo fechado, com Dom Quixote ao lado; o escudeiro narigudo, aflito, e Sancho descendo da árvore",
       "onde": [
         "página 6: descrição da ilustração (leitor de tela)"
       ]
@@ -374,13 +376,13 @@
       ]
     },
     {
-      "texto": "🦁 Fim da Parte 5! O Cavaleiro dos Leões e Sancho vão descansar na casa de Dom Diego. Mas a estrada ainda guarda um teatrinho de bonecos, um barco encantado e um cavalo que voa!",
+      "texto": "🦁 Fim da Parte 5! O Cavaleiro dos Leões e Sancho vão descansar na casa de Dom Diego. Mas a estrada ainda guarda um teatrinho de bonecos, um barco encantado e um cavalo que voa! A Parte 6 está sendo preparada.",
       "onde": [
         "mensagem do fim da parte"
       ]
     },
     {
-      "texto": "Ler a Parte 6 (rascunho)",
+      "texto": "Voltar à estante",
       "onde": [
         "botão para a próxima parte"
       ]

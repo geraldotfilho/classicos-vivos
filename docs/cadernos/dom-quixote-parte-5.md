@@ -8,10 +8,10 @@ Plano do volume: [`../PLANO-DOM-QUIXOTE-VOLUME-2.md`](../PLANO-DOM-QUIXOTE-VOLUM
 | 2 Interações e visual | ✅ (lista de arte `.mjs` fica para a sessão da fase 4, depois da aprovação) | 2026-11-10 | idem | — |
 | Crítica adversarial (subagente de contexto limpo) + polimento | ✅ | 2026-11-10 | idem | — |
 | 3 Revisão humana 🛑 | 🟡 1ª nota aplicada (mais humor e mistério); **esperando a releitura** | 2026-11-12 | | — |
-| 4 Ilustrações e atividades | ⬜ | | | US$ |
-| 5 Revisão final 🛑 | ⬜ | | | — |
+| 4 Ilustrações e atividades | ✅ 22 imagens, 3 subagentes em paralelo (§6) | 2026-11-12 | branch `ccr-88e0ed1a-ujumbz` | US$ 1,11 |
+| 5 Revisão final 🛑 | ⏭️ pulada a pedido do humano (publicar já); notas virão da leitura no site | 2026-11-12 | | — |
 | 6 Narração (pt) + escuta 🛑 | ⬜ | | | US$ |
-| Publicação | ⬜ | | | — |
+| Publicação | ✅ estante principal, no boxset do segundo volume (só pt, voz do aparelho) | 2026-11-12 | | — |
 | 7 Idiomas (en, fr, es) | ⬜ | | | US$ |
 | 8 Retrospectiva | ⬜ | | | — |
 
@@ -111,7 +111,29 @@ Não aceito: a ordem a Sansão de ir a El Toboso (traria de volta o fio cortado 
 Marcado pelo crítico como "não mexer": "Então o livro é verdadeiro", "coração de criança", "Leõezinhos para cima de mim?", a coreografia do leão e o "nhéééc...", "volte inteiro. E o burrico também!" e "Lá tem requeijão?".
 
 ## 6. Arte · 7. Narração · 8. Traduções
-*(fases futuras; nada gasto)*
+
+### 6.A Arte, grupo A (págs. 0, 1, 3, 4; 2026-11-12) · US$ 0,28
+- Lista: `tools/arte/dom-quixote-parte-5-a.mjs`. Aceitas: `p0-real`, `p0-imag` (edição da real), `p1-real`, `p4-real` (de primeira) e `p3-real` (na 4ª geração).
+- **`p3-real` (lição)**: o modelo pôs Sancho **a pé** nas três primeiras (as referências `parte-1/p0-real` e `parte-4/p10-real` mostram Sancho a pé, e ele copiou; nas edições, manteve o Sancho a pé e acrescentou outro no burrico). Funcionou: **sem edição**, com uma referência em que Sancho já vai montado (`parte-4/p3-real`), "exactly TWO heroes, BOTH RIDING, nobody walks on foot, ONE Sancho". Passou do limite de 2 tentativas (gasto extra ~US$ 0,07).
+- A Imaginação da capa pegou de primeira: moinhos de pedra e musgo, ovelhas-exércitos e o leão saltam do livro (sem letras, nem dentro do livro).
+### 6.B Arte, grupo B (págs. 2, 5, 6, 7; 2026-11-12) · US$ 0,38
+Lista: `tools/arte/dom-quixote-parte-5-b.mjs`. 9 imagens no livro (7 cenas + 2 camadas), todas aceitas; 3 geradas a mais (duas refeitas, uma recortada à mão). Teto US$ 0,60.
+- **Rodada 1** (`p2-real`, `p5-real`, `p7-real`, sem dependência): as três de primeira. Daqui nasceram os **recortes de referência** (retângulos justos da arte aprovada): `sansao-carrasco.png` (da p2), `tome-cecial.png` (da p5, com o narigão) e `dom-diego-casaco-verde.png` (da p7), em `biblioteca/referencias/personagens/`. Sansão e Dom Diego voltam nas Partes 6 a 8 (Sansão com armadura de espelhos: `p6-real`).
+- **Rodada 2**: `p6-real` (refs: p5-real como cenário + recortes de Sansão e Tomé) saiu com os rostos limpos e iguais, mas com armadura de prata **lisa** (sem espelhinhos) e a bacia de Dom Quixote parecendo chapéu de palha. Refeita como **edição** ("só duas mudanças: espelhinhos na armadura, bacia de latão brilhante"): aceita. `p2-imag` (gigante de pedra e musgo, ovelhas e elmo dourado saem do livro, sem letras) e `p5-imag` (Tomé ogre bonachão, nariz enorme, árvores de olhos, Dom Quixote dourado ao fundo) de primeira.
+- **Rodada 3**: `p6-imag` veio linda, mas com **um burrico a mais** (Sancho em pé nele). Refeita como edição "só tire o burrico": aceita. Camada `p6-elmo` de primeira. `p6-narigao` na 1ª veio com uma tira de papelão atravessando a testa (cobriria os olhos de Tomé); refeita pedindo "só o nariz e dois cordões" com o recorte de Tomé como referência.
+- **Lição técnica**: `recortar-camada.py` **come um objeto roxo** (o roxo do narigão tem excesso de magenta e saiu meio transparente e esverdeado). Para peça roxa/rosa, recorte pela **distância ao magenta puro** (alfa = (d−80)/60 sobre a distância euclidiana a #FF00FF, desmisturando a borda), feito à mão com PIL/numpy. Vale um `--por-distancia` na ferramenta (backlog).
+- **Lição de continuidade**: o recorte de Tomé com o narigão serviu de referência para o rosto, mas o modelo precisa ouvir "mesmo rosto, SEM o nariz falso, nariz comum" explicitamente (funcionou). O mesmo vale para o elmo: "cabeça descoberta" na base.
+- **Integração (`parte-5.html`, pág. 6)**: `figura` nos itens ELMO e NARIZ; camadas medidas na p6-real (cabeça de Sansão: centro x 34,3%, base y 66,3%, w 12%; nariz de Tomé: x 74%, y 51,8%, w 9,1%). As camadas só aparecem na Realidade (padrão do motor, `lente: 'real'`), então não há desencontro na Imaginação. Teste em 800x1280 e 1280x800: RAIZ e REMO reiniciam, ELMO e NARIZ fazem as camadas sumirem, rostos de Sansão e Tomé aparecem no mesmo lugar, a Imaginação destrava ao fim.
+- Gasto: US$ 0,3809 (0,104 + 0,104 + 0,035 + 0,081 + 0,058).
+
+### 6.C Arte, grupo C (págs. 8 e 9, o leão; 2026-11-12) · US$ 0,45
+Lista: `tools/arte/dom-quixote-parte-5-c.mjs`. 9 imagens geradas (8 no livro), 9 aceitas, nenhuma falhou; 3 refeitas ou geradas de novo por motivo claro:
+- **p8-real** (aceita a 1ª tentativa, uma de 3 variantes do mesmo pedido): leão, tratador no alto, Dom Quixote a pé, Sancho e Dom Diego pequenos ao fundo. O modelo pôs escudos reais na carroça em vez de bandeiras em mastros; aceito (heráldica do rei). Rocinante levado pela rédea não aparece.
+- **p9-real**: a 1ª versão (pedido independente) veio com outra carroça, sem bois, e Dom Quixote com lança e espada ao mesmo tempo, e foi descartada. Refeita como **edição da p8-real** ("o momento seguinte": porta aberta, leão de olhos abertos, sem Sancho e Dom Diego): câmera e carroça idênticas.
+- **p8-imag**: a 1ª (com a Imaginação da Parte 4 como referência) trouxe de lá um rei, uma carruagem e um castelo com gente. Refeita sem essa referência e com "exatamente dois grupos ao longe, sem carruagem nem rei": aceita.
+- **p9-real-stage-1 a 4** (edições da p9-real, "só a pose do leão muda"): 1 a 3 de primeira; a 4 ("deitou de costas") veio de frente, dormindo, e foi refeita pedindo cabeça para dentro da jaula e o traseiro para Dom Quixote.
+- **p9-imag**: leão guardião coroado fazendo reverência ao cavaleiro dourado, aceita.
+Lições: (1) a cena da página seguinte deve nascer como **edição da anterior** (mesma carroça, mesmos bois); (2) uma Imaginação antiga como referência de estilo traz **personagens dela** para a cena: use só fichas de personagem recortadas; (3) para "de costas", descreva a direção da cabeça e do traseiro, não só "de costas". Teste (Playwright 800x1280 e 1280x800): cada acerto da atividade troca a cena (`p9-real-stage-1..4`) e a chave da Imaginação destrava ao fim. Gasto: US$ 0,448 (teto US$ 0,50).
 
 ## 9. Lições (candidatas à receita)
 - Um resumo de uma página (`DIRETRIZES_VOL2.md`) + o texto limpo exportado bastam para um crítico de contexto limpo: ele não precisa ler o repositório.

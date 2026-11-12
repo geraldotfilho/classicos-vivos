@@ -309,3 +309,9 @@ O que já foi entregue, sprint a sprint, em ordem cronológica (o mais antigo pr
 - Partes 6 (caps. 43–51), 7 (52–60) e 8 (61–69) escritas no mesmo método (orquestrador escreve; um crítico de contexto limpo audita cada parte; polimento; teste nos dois tamanhos de tablet), com três atividades cada. Nenhuma API paga.
 - As Partes 6 a 8 reaproveitam cinco cenas da Parte 4 antiga (`imagens/acervo/parte-4-v1/`).
 - Regra nova: entregar sempre na `main`, por merge (`AGENTS.md` §0.4 e §6). O selo da estante passou a "Partes 5 a 8".
+
+## ✅ Parte 5 de Dom Quixote ilustrada e publicada; segundo volume aberto na estante (2026-11-12)
+
+- **Arte pela API** (autorizada pelo humano, Nano Banana 2 em Batch): 22 imagens (10 cenas, 6 Imaginações, 4 etapas do leão, 2 camadas), produzidas por **três subagentes em paralelo**, cada um com um grupo de páginas e a sua lista (`tools/arte/dom-quixote-parte-5-{a,b,c}.mjs`, base comum em `dom-quixote-parte-5-comum.mjs`). **US$ 1,11** no total (A US$ 0,28 · B US$ 0,38 · C US$ 0,45), 7 refeitas. Fichas novas recortadas: Sansão, Tomé e Dom Diego (`biblioteca/referencias/personagens/`).
+- **Publicação**: `rascunho` tirado; o fim da Parte 4 leva à Parte 5, e o da 5 volta à estante. Só em português (as bandeirinhas mostram o aviso de "ainda não traduzida") e com a voz do aparelho.
+- **Estante**: o boxset do segundo volume abre, com a Parte 5 e as Partes 6 a 8 com cadeado; textos nos 4 idiomas; descrição no `sobre.html`. O `build:sw` passou a gerar a lista offline (`ARQUIVOS_PARTE`) de cada parte publicada.

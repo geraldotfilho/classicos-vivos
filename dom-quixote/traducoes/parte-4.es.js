@@ -288,6 +288,6 @@
         "GATINHO": "GATITO",
         "LEÃO": "LEÓN",
         "🎉 Fim do primeiro livro de Dom Quixote! O nosso cavaleiro descansa em casa... mas não por muito tempo: no segundo livro, ele vai sair em busca de novas aventuras!": "🎉 ¡Fin del primer libro de Don Quijote! Nuestro caballero descansa en casa... pero no por mucho tiempo: ¡en el segundo libro saldrá en busca de nuevas aventuras!",
-        "Voltar à estante": "Volver a la estantería"
+        "Ir para a Parte 5": "Ir a la Parte 5"
     }
 };

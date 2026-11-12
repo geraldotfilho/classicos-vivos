@@ -169,13 +169,15 @@
         }
 
 
-        /* Volume 2 (em produção): mesmo empilhamento do volume 1, noturno e com cadeado.
+        /* Volume 2 (1615): mesmo empilhamento do volume 1, em tons noturnos (.boxset-noturno).
+           .boxset-trancado = obra ainda com cadeado (Robin Hood, Viagem). Desde 2026-11-12 o volume 2 abre
+           (a Parte 5 está publicada; as Partes 6 a 8 aparecem com cadeado dentro dele).
            CSS próprio (sem classes Tailwind novas) para funcionar mesmo com o CSS antigo em cache. */
         .boxset-trancado { animation: none; }
-        .boxset-trancado .boxset-layer-3 { background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%); border-color: #4338ca; }
-        .boxset-trancado .boxset-layer-2 { background: linear-gradient(135deg, #312e81 0%, #3730a3 100%); border-color: #6366f1; }
-        .boxset-trancado .boxset-layer-1 { background: linear-gradient(135deg, #3730a3 0%, #4f46e5 100%); border-color: #818cf8; }
-        .boxset-trancado .boxset-front {
+        .boxset-noturno .boxset-layer-3 { background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%); border-color: #4338ca; }
+        .boxset-noturno .boxset-layer-2 { background: linear-gradient(135deg, #312e81 0%, #3730a3 100%); border-color: #6366f1; }
+        .boxset-noturno .boxset-layer-1 { background: linear-gradient(135deg, #3730a3 0%, #4f46e5 100%); border-color: #818cf8; }
+        .boxset-noturno .boxset-front {
             position: relative; display: block; aspect-ratio: 3 / 4; overflow: hidden;
             border-radius: 6px 24px 24px 6px; background: #1e1b4b; border-color: #a5b4fc;
         }
@@ -195,6 +197,15 @@
         .v2-rodape { position: absolute; left: 0; right: 0; bottom: 0; padding: 40px 12px 16px; text-align: center; }
         .v2-titulo { display: block; font-family: 'Fredoka', sans-serif; font-weight: 700; font-size: 1.6rem; line-height: 1; color: #fde68a; text-shadow: 0 2px 4px rgba(0,0,0,0.6); }
         .v2-sub { display: block; font-weight: 700; font-size: 0.85rem; color: #fcd34d; margin-top: 4px; }
+        .v2-abrir {
+            display: inline-flex; align-items: center; gap: 6px; margin-top: 10px; background: #fbbf24; color: #451a03;
+            font-family: 'Fredoka', sans-serif; font-weight: 700; font-size: 0.85rem;
+            padding: 4px 12px; border-radius: 9999px; border: 1px solid #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+        }
+        .boxset-noturno .v2-arte { filter: none; }
+        /* Partes ainda em produção dentro do volume 2 aberto */
+        .parte-trancada .book-cover { filter: saturate(0.6) brightness(0.85); }
+        .parte-trancada .v2-cadeado { width: 48px; height: 48px; margin: -24px 0 0 -24px; font-size: 1.4rem; top: 45%; }
         .v2-embreve {
             display: inline-block; margin-top: 10px; background: #c7d2fe; color: #1e1b4b;
             font-family: 'Fredoka', sans-serif; font-weight: 700; font-size: 0.85rem;
@@ -486,21 +497,23 @@
                 </button>
                 </div>
 
-                <!-- Volume 2 (1615): empilhado como o volume 1, com cadeado até ser liberado -->
+                <!-- Volume 2 (1615): empilhado como o volume 1; abre com a Parte 5 (publicada) e as Partes 6 a 8 com cadeado -->
                 <div class="flex flex-col items-center justify-end">
-                    <button id="boxset-quixote-2" type="button" class="boxset-card boxset-trancado" data-em-producao="dom-quixote-volume-2" aria-label="Dom Quixote: Segundo Volume (1615). Ainda sendo feito, será liberado em breve." data-i18n-aria="boxsetAria2">
+                    <button id="boxset-quixote-2" type="button" class="boxset-card boxset-noturno" aria-expanded="false" aria-label="Dom Quixote: Segundo Volume (1615). A Parte 5 já pode ser lida. Toque para abrir." data-i18n-aria="boxsetAria2">
                         <span class="boxset-layer boxset-layer-3" aria-hidden="true"></span>
                         <span class="boxset-layer boxset-layer-2" aria-hidden="true"></span>
                         <span class="boxset-layer boxset-layer-1" aria-hidden="true"></span>
                         <span class="boxset-front">
-                            <img src="./dom-quixote/imagens/p0-imag.webp" alt="" class="v2-arte" />
+                            <img src="./dom-quixote/imagens/parte-5/p0-real.webp" alt="" class="v2-arte" onerror="this.onerror=null;this.src='./dom-quixote/imagens/p0-imag.webp'" />
                             <span class="v2-veu"></span>
-                            <span class="v2-selo" data-i18n="colecaoSegundoBadge">Em breve · Partes 5 a 8</span>
-                            <span class="v2-cadeado" aria-hidden="true">🔒</span>
+                            <span class="v2-selo" data-i18n="colecaoSegundoBadge">Novo · Parte 5</span>
                             <span class="v2-rodape">
                                 <span class="v2-titulo" data-i18n="domQuixote">Dom Quixote</span>
                                 <span class="v2-sub" data-i18n="colecaoSegundoVolume">Segundo Volume (1615)</span>
-                                <span class="v2-embreve" data-i18n="emBreve">Em breve</span>
+                                <span class="v2-abrir">
+                                    <i class="ph-bold ph-arrow-down text-xs"></i>
+                                    <span data-i18n="toqueParaAbrir">Toque para abrir a coleção</span>
+                                </span>
                             </span>
                         </span>
                     </button>
@@ -587,13 +600,84 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Estado 2b: Segundo volume expandido (Parte 5 publicada; Partes 6 a 8 com cadeado) -->
+            <div id="colecao-expandida-2" class="hidden w-full flex-col items-center">
+                <div class="flex items-center justify-between w-full max-w-4xl mb-2 sm:mb-3 px-2">
+                    <div class="flex items-center gap-2">
+                        <span class="text-2xl sm:text-3xl" aria-hidden="true">🦁</span>
+                        <div>
+                            <h2 class="font-display font-bold text-base sm:text-xl text-amber-200 leading-tight">
+                                <span data-i18n="domQuixote">Dom Quixote</span> · <span data-i18n="colecaoSegundoVolume">Segundo Volume (1615)</span>
+                            </h2>
+                        </div>
+                    </div>
+                    <button id="btn-fechar-colecao-2" type="button" class="btn-round bg-amber-400 hover:bg-amber-300 text-amber-950 font-display font-bold text-xs sm:text-sm px-3.5 py-1.5 rounded-xl border border-amber-600 flex items-center gap-1.5 shadow min-h-[44px] cursor-pointer" aria-label="Recolher coleção" data-i18n-aria="fecharColecaoAria">
+                        <i class="ph-bold ph-x text-base"></i>
+                        <span data-i18n="fecharColecao">Recolher</span>
+                    </button>
+                </div>
+
+                <div id="quixote-parts-shelf-2" class="flex flex-nowrap overflow-x-auto sm:overflow-x-visible justify-start sm:justify-center items-end gap-3 sm:gap-4 md:gap-5 w-full max-w-4xl mx-auto px-2 pb-1">
+                    <!-- Parte 5 -->
+                    <div class="volume-item flex flex-col items-center w-36 sm:w-40 md:w-44 shrink-0 book-spread-enter">
+                        <a id="link-parte-5" href="./dom-quixote/parte-5.html" class="book w-full flex flex-col" aria-label="Ler Dom Quixote, parte 5">
+                            <div class="book-cover relative aspect-[3/4] rounded-r-2xl rounded-l-md overflow-hidden border-3 border-amber-500 bg-gradient-to-b from-amber-200 to-orange-300 shadow-md">
+                                <span class="absolute inset-x-0 bottom-3 flex justify-center text-4xl" aria-hidden="true">🦁</span>
+                                <img src="./dom-quixote/imagens/parte-5/p0-real.webp" alt="" onerror="this.remove()" class="absolute inset-0 w-full h-full object-cover" />
+                                <span id="badge-parte-5" class="absolute top-2 right-2 bg-rose-500 text-white font-display font-bold text-xs sm:text-sm px-2.5 py-0.5 rounded-full border-2 border-white shadow">Parte 5</span>
+                                <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-amber-950/95 via-amber-950/80 to-transparent pt-6 pb-2.5 px-2 text-center">
+                                    <h3 id="titulo-parte-5" class="font-display font-bold text-xs sm:text-sm text-amber-200 leading-tight" data-i18n="p5TituloCurto">O Livro Famoso e o Cavaleiro dos Leões</h3>
+                                </div>
+                            </div>
+                        </a>
+                        <div id="offline-ctrl-5" class="offline-ctrl-bar w-full mt-2 flex items-center justify-center gap-1.5 min-h-[44px]"></div>
+                    </div>
+
+                    <!-- Parte 6 (em produção) -->
+                    <div class="volume-item flex flex-col items-center w-36 sm:w-40 md:w-44 shrink-0 book-spread-enter parte-trancada" style="animation-delay: -0.6s">
+                        <button type="button" class="book w-full flex flex-col text-left" data-em-producao="dom-quixote-parte-6" aria-label="Dom Quixote, parte 6: em produção" data-i18n-aria-parte="6">
+                            <div class="book-cover relative aspect-[3/4] rounded-r-2xl rounded-l-md overflow-hidden border-3 border-indigo-300 bg-gradient-to-b from-sky-200 to-indigo-300 shadow-md">
+                                <span class="absolute inset-x-0 bottom-3 flex justify-center text-4xl" aria-hidden="true">🎠</span>
+                                <span id="badge-parte-6" class="absolute top-2 right-2 bg-indigo-500 text-white font-display font-bold text-xs sm:text-sm px-2.5 py-0.5 rounded-full border-2 border-white shadow">Parte 6</span>
+                                <span class="v2-cadeado" aria-hidden="true">🔒</span>
+                            </div>
+                        </button>
+                        <div class="w-full mt-2 min-h-[44px]"></div>
+                    </div>
+
+                    <!-- Parte 7 (em produção) -->
+                    <div class="volume-item flex flex-col items-center w-36 sm:w-40 md:w-44 shrink-0 book-spread-enter parte-trancada" style="animation-delay: -1.2s">
+                        <button type="button" class="book w-full flex flex-col text-left" data-em-producao="dom-quixote-parte-7" aria-label="Dom Quixote, parte 7: em produção" data-i18n-aria-parte="7">
+                            <div class="book-cover relative aspect-[3/4] rounded-r-2xl rounded-l-md overflow-hidden border-3 border-indigo-300 bg-gradient-to-b from-emerald-200 to-teal-300 shadow-md">
+                                <span class="absolute inset-x-0 bottom-3 flex justify-center text-4xl" aria-hidden="true">🏝️</span>
+                                <span id="badge-parte-7" class="absolute top-2 right-2 bg-indigo-500 text-white font-display font-bold text-xs sm:text-sm px-2.5 py-0.5 rounded-full border-2 border-white shadow">Parte 7</span>
+                                <span class="v2-cadeado" aria-hidden="true">🔒</span>
+                            </div>
+                        </button>
+                        <div class="w-full mt-2 min-h-[44px]"></div>
+                    </div>
+
+                    <!-- Parte 8 (em produção) -->
+                    <div class="volume-item flex flex-col items-center w-36 sm:w-40 md:w-44 shrink-0 book-spread-enter parte-trancada" style="animation-delay: -1.8s">
+                        <button type="button" class="book w-full flex flex-col text-left" data-em-producao="dom-quixote-parte-8" aria-label="Dom Quixote, parte 8: em produção" data-i18n-aria-parte="8">
+                            <div class="book-cover relative aspect-[3/4] rounded-r-2xl rounded-l-md overflow-hidden border-3 border-indigo-300 bg-gradient-to-b from-slate-200 to-indigo-300 shadow-md">
+                                <span class="absolute inset-x-0 bottom-3 flex justify-center text-4xl" aria-hidden="true">🌙</span>
+                                <span id="badge-parte-8" class="absolute top-2 right-2 bg-indigo-500 text-white font-display font-bold text-xs sm:text-sm px-2.5 py-0.5 rounded-full border-2 border-white shadow">Parte 8</span>
+                                <span class="v2-cadeado" aria-hidden="true">🔒</span>
+                            </div>
+                        </button>
+                        <div class="w-full mt-2 min-h-[44px]"></div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Prateleira 2: Robin Hood -->
         <section id="shelf-robin-hood" class="shelf" aria-label="Robin Hood" data-i18n-aria="shelfRobinHood">
             <div class="w-full flex justify-center">
                 <div class="flex flex-col items-center justify-end">
-                    <button id="boxset-robin-hood" type="button" class="boxset-card boxset-trancado boxset-robin" data-em-producao="robin-hood" aria-label="Robin Hood. Nova adaptação na fila, com cadeado até ser liberada." data-i18n-aria="boxsetRobinAria">
+                    <button id="boxset-robin-hood" type="button" class="boxset-card boxset-noturno boxset-trancado boxset-robin" data-em-producao="robin-hood" aria-label="Robin Hood. Nova adaptação na fila, com cadeado até ser liberada." data-i18n-aria="boxsetRobinAria">
                         <span class="boxset-layer boxset-layer-3" aria-hidden="true"></span>
                         <span class="boxset-layer boxset-layer-2" aria-hidden="true"></span>
                         <span class="boxset-layer boxset-layer-1" aria-hidden="true"></span>
@@ -618,7 +702,7 @@
         <section id="shelf-viagem" class="shelf" aria-label="Viagem ao Centro da Terra" data-i18n-aria="shelfViagem">
             <div class="w-full flex justify-center">
                 <div class="flex flex-col items-center justify-end">
-                    <button id="boxset-viagem" type="button" class="boxset-card boxset-trancado boxset-viagem" data-em-producao="viagem-ao-centro-da-terra" aria-label="Viagem ao Centro da Terra. Nova adaptação na fila, com cadeado até ser liberada." data-i18n-aria="boxsetViagemAria">
+                    <button id="boxset-viagem" type="button" class="boxset-card boxset-noturno boxset-trancado boxset-viagem" data-em-producao="viagem-ao-centro-da-terra" aria-label="Viagem ao Centro da Terra. Nova adaptação na fila, com cadeado até ser liberada." data-i18n-aria="boxsetViagemAria">
                         <span class="boxset-layer boxset-layer-3" aria-hidden="true"></span>
                         <span class="boxset-layer boxset-layer-2" aria-hidden="true"></span>
                         <span class="boxset-layer boxset-layer-1" aria-hidden="true"></span>
@@ -824,7 +908,7 @@
         }
 
         function renderTodosControlesOffline() {
-            [1, 2, 3, 4].forEach(p => renderControlesOffline(p));
+            [1, 2, 3, 4, 5].forEach(p => renderControlesOffline(p));
         }
 
         async function acaoOffline(parte, tipo) {
@@ -855,10 +939,13 @@
         }
 
         /* Controle do estado de expansão/recolhimento da Coleção */
-        function setColecaoExpandida(expandir, emitirSom = true) {
+        // volume 1 → #colecao-expandida (Partes 1 a 4); volume 2 → #colecao-expandida-2 (Partes 5 a 8)
+        let volumeAberto = 1;
+        function setColecaoExpandida(expandir, emitirSom = true, volume = volumeAberto) {
+            volumeAberto = volume;
             const containerBox = document.getElementById('container-boxset');
-            const colecaoExp = document.getElementById('colecao-expandida');
-            const btnBox = document.getElementById('boxset-quixote');
+            const colecaoExp = document.getElementById(volume === 2 ? 'colecao-expandida-2' : 'colecao-expandida');
+            const btnBox = document.getElementById(volume === 2 ? 'boxset-quixote-2' : 'boxset-quixote');
             if (!containerBox || !colecaoExp) return;
 
             if (expandir) {
@@ -868,7 +955,7 @@
                 colecaoExp.classList.add('flex');
                 if (btnBox) btnBox.setAttribute('aria-expanded', 'true');
                 renderTodosControlesOffline();
-                const p1Link = document.getElementById('link-parte-1');
+                const p1Link = document.getElementById(volume === 2 ? 'link-parte-5' : 'link-parte-1');
                 if (p1Link) p1Link.focus();
             } else {
                 if (emitirSom) playPortalSound('collapse');
@@ -882,19 +969,21 @@
             }
         }
 
-        document.getElementById('boxset-quixote')?.addEventListener('click', () => setColecaoExpandida(true));
-        document.getElementById('btn-fechar-colecao')?.addEventListener('click', () => setColecaoExpandida(false));
+        document.getElementById('boxset-quixote')?.addEventListener('click', () => setColecaoExpandida(true, true, 1));
+        document.getElementById('btn-fechar-colecao')?.addEventListener('click', () => setColecaoExpandida(false, true, 1));
+        document.getElementById('boxset-quixote-2')?.addEventListener('click', () => setColecaoExpandida(true, true, 2));
+        document.getElementById('btn-fechar-colecao-2')?.addEventListener('click', () => setColecaoExpandida(false, true, 2));
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
-                const colecaoExp = document.getElementById('colecao-expandida');
-                if (colecaoExp && !colecaoExp.classList.contains('hidden')) {
-                    setColecaoExpandida(false);
-                }
+                [1, 2].forEach(v => {
+                    const colecaoExp = document.getElementById(v === 2 ? 'colecao-expandida-2' : 'colecao-expandida');
+                    if (colecaoExp && !colecaoExp.classList.contains('hidden')) setColecaoExpandida(false, true, v);
+                });
             }
         });
 
         // Delegação de cliques nos botões de controle offline
-        document.getElementById('quixote-parts-shelf')?.addEventListener('click', (e) => {
+        ['quixote-parts-shelf', 'quixote-parts-shelf-2'].forEach(id => document.getElementById(id)?.addEventListener('click', (e) => {
             const btn = e.target.closest('[data-acao]');
             if (!btn) return;
             e.preventDefault();
@@ -902,7 +991,7 @@
             const parte = btn.dataset.parte;
             const acao = btn.dataset.acao;
             if (parte && acao) acaoOffline(parte, acao);
-        });
+        }));
 
         if (window.CV_OFFLINE) {
             window.CV_OFFLINE.adicionarListener((parte) => renderControlesOffline(parte));
