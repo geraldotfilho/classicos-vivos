@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#78350F">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>Dom Quixote de La Mancha - Parte 6 | Clássicos Vivos</title>
+    <!-- Estilos locais (offline): Tailwind compilado, fontes, ícones e o estilo comum dos livros. Regerar com `npm run build`. -->
+    <link rel="stylesheet" href="../assets/css/tailwind.css">
+    <link rel="stylesheet" href="../assets/css/fonts.css">
+    <link rel="stylesheet" href="../assets/css/icons.css">
+    <link rel="stylesheet" href="../assets/css/livro.css">
+    <link rel="manifest" href="../manifest.webmanifest">
+    <link rel="apple-touch-icon" href="../assets/icones/icone-180.png">
+</head>
+<body class="p-1 sm:p-2.5 select-none">
+    <noscript>Este livro interativo precisa de JavaScript ativado no navegador.</noscript>
+
+    <script>
+    /* =========================================================================
+       DOM QUIXOTE DE LA MANCHA — PARTE 6: O TEATRINHO, O BARCO E O CAVALO VOADOR
+       Adaptação de Cervantes, Segunda Parte (1615), capítulos 18 a 41.
+       RASCUNHO (fases 1 e 2, 2026-11-12): texto e atividades para a leitura do humano;
+       ilustrações, hotspots e narração só depois da aprovação (docs/cadernos/dom-quixote-parte-6.md).
+       A página do Clavilenho reaproveita a arte da Parte 4 antiga (imagens/acervo/parte-4-v1/).
+       ========================================================================= */
+    window.LIVRO = {
+        obra: 'Dom Quixote de La Mancha',
+        autor: 'Miguel de Cervantes',
+        parte: 6,
+        totalPartes: 8,
+        rascunho: true,
+        imagens: './imagens/parte-6/',
+        fim: {
+            mensagem: '🎠 Fim da Parte 6! A ilha de Sancho finalmente chegou. Mas que ilha será essa? E de quem é aquela voz grossa que vive aparecendo no palácio?',
+            proxima: '../index.html',
+            proximaRotulo: 'Voltar à estante'
+        },
+        paginas: [
+            {
+                capa: true,
+                titulo: 'Parte 6: O Teatrinho, o Barco e o Cavalo Voador',
+                texto: `O Cavaleiro dos Leões e Sancho estão descansando na casa de Dom Diego. Mas a estrada chama! E, desta vez, coisas muito estranhas vão acontecer: um {{MACACO|MA • CA • CO|🐒}} que adivinha segredos, uma gruta escura onde uma hora dura três dias, e um barco sem remos esperando na beira do rio...
+
+                    Nesta parte da história, os dois amigos vão conhecer um teatrinho de bonecos, um {{PALÁCIO|PA • LÁ • CIO|🏰}} de verdade e doze damas com um problema muito cabeludo. E vão voar mais alto que as nuvens, montados num {{CAVALO|CA • VA • LO|🐴}} de madeira!
+
+                    Segure firme, vire a página e não tire a venda dos olhos!`,
+                cena: {
+                    real: 'p0-real.webp', imag: 'p0-imag.webp', emoji: '🎠',
+                    alt: 'Dom Quixote e Sancho, de olhos vendados, montados num grande cavalo de madeira num jardim de palácio',
+                    legendaReal: '👓 Lente da Realidade: Um Cavalo de Madeira no Jardim',
+                    legendaImag: '✨ Lente da Imaginação: Voando Mais Alto que as Nuvens!'
+                }
+            },
+            {
+                capitulo: '🤫 Capítulo 43 • A Casa do Silêncio', corCapitulo: 'text-amber-700',
+                titulo: 'Quatro Dias de Requeijão',
+                texto: `Na casa de Dom Diego tinha requeijão, sim. Tinha também pão quentinho, mel, uvas e uma cama tão macia que Sancho dormiu dois dias seguidos. Era uma casa grande e sossegada. Lá ninguém gritava, ninguém corria, e até as galinhas pareciam andar na ponta dos pés.
+
+                    Dona Cristina, a esposa de Dom Diego, e o filho Lourenço, um rapaz que escrevia {{POEMAS|PO • E • MAS|📝}}, receberam os viajantes com carinho. Lourenço olhou para o cavaleiro magro, olhou para o escudeiro gordinho e deu um pulo: — Eu conheço os senhores! Li o livro inteirinho, três vezes! Sancho cochichou: — Até aqui, meu amo! Esse mago que escreveu o livro não descansa?
+
+                    Dom Quixote ouviu os poemas de Lourenço e bateu palmas de pé: — Viva o poeta! O rapaz ficou vermelho de alegria. Dom Diego olhava de longe e pensava: como pode um homem falar tão bonito de poesia e, no mesmo dia, mandar abrir a jaula de um leão?
+
+                    No quarto dia, Dom Quixote já não aguentava tanto {{SILÊNCIO|SI • LÊN • CIO|🤫}}: — Cavaleiro que descansa demais enferruja, Sancho! Ouvi falar de uma {{GRUTA|GRU • TA|🕳️}} muito funda aqui perto, a Gruta de Montesinos. Dizem que lá dentro moram maravilhas que ninguém nunca viu. Eu quero ver! Sancho olhou com saudade para a mesa do café: — Na gruta tem requeijão, meu amo? — Não. — Eu sabia.
+
+                    Dona Cristina encheu o alforje de Sancho até não caber mais nada. Dom Diego abraçou os dois e deu um último conselho: — Cuidado com os leões, senhor cavaleiro! — Fique tranquilo — respondeu Dom Quixote. — Na gruta não tem leão. Só tem escuro, morcego e mistério! Sancho engoliu em seco.`,
+                cena: {
+                    // Página da vida real: sem a chave das lentes
+                    real: 'p1-real.webp', emoji: '🏡',
+                    alt: 'Na casa sossegada de Dom Diego, o jovem Lourenço lê um poema para Dom Quixote, que aplaude de pé; Sancho toma café com requeijão e Dona Cristina sorri',
+                    legendaReal: '🏡 A Casa Sossegada de Dom Diego'
+                }
+            },
+            {
+                capitulo: '🍲 Capítulo 44 • A Festa das Panelas', corCapitulo: 'text-orange-700',
+                titulo: 'A Espuma de Sancho',
+                texto: `No caminho, Sancho levantou o nariz e parou o burrico. Vinha no vento um cheiro de assado tão bom, tão bom, que até Rocinante lambeu os beiços. Era uma festa de {{CASAMENTO|CA • SA • MEN • TO|💒}}! O noivo, o rico Camacho, tinha convidado a região inteira.
+
+                    Sancho nunca tinha visto tanta comida junta. Havia um boi inteiro assando, panelas do tamanho de banheiras, queijos empilhados feito tijolos e um muro de pães. Ele chegou perto de um cozinheiro, com a voz mais educada do mundo: — Bom senhor, posso molhar um pedacinho de pão nessa {{PANELA|PA • NE • LA|🍲}}?
+
+                    O cozinheiro riu: — Hoje ninguém passa fome, meu amigo! Pegue uma concha e tire a espuma da panela. Sancho procurou uma concha e não achou. Então o cozinheiro pegou uma panelinha, mergulhou no panelão e tirou... três galinhas e dois patos inteiros! — Tome. É só a {{ESPUMA|ES • PU • MA|🫧}}, para enganar a fome até o almoço.
+
+                    Dom Quixote assistia às danças, encantado. Sancho assistia às galinhas, mais encantado ainda. — Viva o noivo Camacho! — gritava ele, de boca cheia. — Que casamento bonito! — Sancho, você nem viu a noiva — disse Dom Quixote. — Não vi a noiva, meu amo, mas vi a panela. E gostei muito!
+
+                    Foi na festa que os dois conheceram um estudante magro, de óculos, com uma pilha de papéis debaixo do braço. Todos o chamavam de Primo, porque ele era primo de meia aldeia. O Primo estava escrevendo um livro importantíssimo: queria descobrir quem foi a primeira pessoa do mundo a ficar resfriada. — Essa eu sei — disse Sancho. — Foi a primeira que saiu na chuva sem chapéu. O Primo anotou, muito sério. Depois avisou: — Os senhores querem ir à Gruta de Montesinos? Eu conheço o caminho. E tenho uma {{CORDA|COR • DA|🪢}} bem comprida!`,
+                cena: {
+                    // Página da vida real: sem a chave das lentes
+                    real: 'p2-real.webp', emoji: '🍲',
+                    alt: 'Numa festa de casamento no campo, um cozinheiro entrega a Sancho uma panelinha com galinhas e patos; ao fundo, panelões, danças e o Primo, um estudante de óculos com papéis',
+                    legendaReal: '🍲 A Maior Festa que Sancho Já Viu'
+                }
+            },
+            {
+                capitulo: '🕳️ Capítulo 45 • A Gruta de Montesinos', corCapitulo: 'text-indigo-700',
+                titulo: 'Uma Hora ou Três Dias?',
+                texto: `A boca da gruta era um buraco escuro, tapado de mato e espinhos. Dom Quixote abriu caminho com a espada e, de repente, FRRRU! Uma nuvem de corvos e morcegos saiu voando lá de dentro e derrubou o cavaleiro sentado no chão. — É aviso, meu amo! — disse Sancho. — Os bichos estão dizendo: não entre! — Estão dizendo: bom dia — respondeu Dom Quixote, e se levantou.
+
+                    O Primo e Sancho amarraram a corda na cintura do cavaleiro e foram soltando devagar. Dom Quixote desceu, desceu, desceu, até sumir no {{ESCURO|ES • CU • RO|🌑}}. — Mais corda! — gritava a voz dele, cada vez mais longe. Até que a corda acabou. E a voz também. Lá embaixo, só silêncio.
+
+                    Esperaram um tempão. Sancho roeu as unhas de uma mão, depois as da outra. — Chega! Vamos puxar! Puxaram, puxaram, e a corda vinha leve, leve, como se não tivesse ninguém na ponta. Sancho já estava chorando quando, lá no fundo, apareceu o bacielmo. Era Dom Quixote! Mas vinha de olhos fechados, sem se mexer... e roncando.
+
+                    Sancho sacudiu o amo até ele acordar. Dom Quixote olhou em volta, espantado: — Ah, meus amigos, por que me tiraram de lá? Eu vi um palácio inteiro de {{CRISTAL|CRIS • TAL|💎}}! Um velhinho de barba branca até o chão, chamado Montesinos, me recebeu na porta. Lá dentro, cavaleiros e damas dormem há quinhentos anos, encantados pelo mago Merlim. Passei três dias com eles!
+
+                    — Três dias? — disse Sancho. — Meu amo, o senhor ficou lá embaixo uma hora! Nem deu tempo de eu sentir fome! — Então lá embaixo o tempo anda de outro jeito — respondeu Dom Quixote, muito sério. O Primo anotava tudo. Sancho coçava a cabeça. Tinha sido sonho? Tinha sido de verdade? Nem Dom Quixote sabia dizer. Alguém precisava resolver aquele {{MISTÉRIO|MIS • TÉ • RIO|🔎}}!`,
+                cena: {
+                    real: 'p3-real.webp', imag: 'p3-imag.webp', emoji: '🕳️',
+                    alt: 'Na boca da gruta, Sancho e o Primo puxam a corda e Dom Quixote sobe dormindo, de bacielmo; corvos e morcegos voam em volta',
+                    legendaReal: '👓 Lente da Realidade: Um Cavaleiro Dormindo na Ponta da Corda',
+                    legendaImag: '✨ Lente da Imaginação: O Palácio de Cristal de Montesinos!'
+                }
+            },
+            {
+                capitulo: '🐒 Capítulo 46 • O Macaco que Adivinha', corCapitulo: 'text-emerald-700',
+                titulo: 'Mestre Pedro do Olho Tapado',
+                texto: `Naquela noite, os três pararam numa pousada. Mal tinham sentado, a porta se abriu e entrou um homem de roupa de couro, com um pano verde tapando um olho e metade do rosto. — Tem lugar para Mestre Pedro, para o seu teatrinho e para o seu macaco adivinho? — Para Mestre Pedro sempre tem! — festejou o dono da pousada. E os dois ficaram um tempinho de conversa baixa, lá no canto.
+
+                    O {{MACACO|MA • CA • CO|🐒}} era grande, não tinha rabo e fazia uma cara muito séria. — Ele adivinha tudo o que já aconteceu — explicou Mestre Pedro. — O que ainda vai acontecer, não: disso ele não entende. São duas moedas por pergunta! Sancho quis logo testar: — Então diga, seu macaco: o que a minha Teresa está fazendo agora?
+
+                    Mestre Pedro bateu duas vezes no ombro. O macaco pulou ali em cima, chegou a boca no {{OUVIDO|OU • VI • DO|👂}} dele e bateu os dentes bem depressa: tatatatatá! Mestre Pedro arregalou o olho que estava de fora, correu e se ajoelhou: — Ó famoso Dom Quixote de La Mancha, Cavaleiro dos Leões! E você, bom Sancho Pança, o melhor escudeiro do mundo: a sua Teresa está agora mesmo penteando lã, com um jarro de água do lado!
+
+                    Sancho ficou de boca aberta. Dom Quixote também. Como é que um macaco sabia o nome deles? E até o apelido novo? Ninguém ali tinha contado nada! — Isso é coisa de mago — cochichou Sancho. — Ou então esse macaco também leu o livro.
+
+                    Dom Quixote pagou mais duas moedas: — Pergunte ao macaco: o que eu vi na Gruta de Montesinos foi sonho ou foi verdade? Tatatatatá! Mestre Pedro escutou e respondeu: — O macaco diz que uma parte foi verdade e a outra parte foi {{SONHO|SO • NHO|💭}}. Qual é qual, ele só conta na sexta-feira. — Viu, Sancho? — disse Dom Quixote. — Uma parte foi verdade! — Viu, meu amo? — disse Sancho. — A outra foi sonho!`,
+                cena: {
+                    // Página da vida real: sem a chave das lentes
+                    real: 'p4-real.webp', emoji: '🐒',
+                    alt: 'Na pousada, um macaco grande e sério cochicha no ouvido de Mestre Pedro, homem de roupa de couro com um pano verde sobre um olho; Dom Quixote, Sancho e o Primo olham espantados',
+                    legendaReal: '🐒 O Macaco Cochicha no Ouvido de Mestre Pedro'
+                }
+            },
+            {
+                capitulo: '🎭 Capítulo 47 • O Teatrinho de Mestre Pedro', corCapitulo: 'text-rose-700',
+                titulo: 'Dom Quixote Salva os Bonecos',
+                comandoAtividade: 'Ajude Dom Quixote a pagar o conserto! Mestre Pedro mostra o boneco quebrado: toque no nome certo. Cuidado com as pegadinhas!',
+                texto: `Mestre Pedro armou um palquinho cheio de velas acesas e se escondeu atrás dele, para mexer os {{BONECOS|BO • NE • COS|🎎}}. Um menino, com uma varinha na mão, ia contando a história: — Esta é a princesa Melisendra, presa numa torre bem alta! E este é o valente Dom Gaifeiros, que vem a cavalo para salvar a princesa!
+
+                    A pousada inteira assistia sem piscar. O cavaleiro de pano chegou à {{TORRE|TOR • RE|🗼}}. A princesa de pano pulou na garupa. Os dois fugiram a galope! — Mas vejam! — gritou o menino. — O rei da torre descobriu tudo e mandou os soldados atrás deles. Lá vão eles! Vão alcançar! Vão alcançar!
+
+                    Dom Quixote não aguentou. Deu um pulo, puxou a espada e gritou: — Parem, malvados! Enquanto eu viver, ninguém persegue esses dois! E avançou para o palquinho. ZÁS! Voou a cabeça de um soldado. ZÁS! Caiu o {{REI|REI|👑}}. ZÁS! Lá se foi a torre. Mestre Pedro se abaixou bem na hora, e o macaco fugiu para o telhado.
+
+                    Quando a poeira baixou, Dom Quixote olhou em volta, orgulhoso: — Pronto! Dom Gaifeiros e a princesa estão a salvo! — A salvo? — choramingou Mestre Pedro, catando pedaços pelo chão. — Olhe o meu rei, sem cabeça! Olhe o meu cavalo, sem perna! Olhe a minha torre! Eram bonecos, senhor! Bonecos de pano e papelão!
+
+                    Dom Quixote olhou para os bonecos. Olhou para a espada. Coçou a barba, sem jeito: — Juro que eles me pareceram de verdade... Os magos me enganaram outra vez. Mas eu pago tudo, Mestre Pedro! Sancho, traga a bolsa! Sancho suspirou: — Nunca vi uma vitória custar tão caro.`,
+                cena: {
+                    // Arte-base com os bonecos quebrados no chão; os consertados voltam como camadas (item)
+                    real: 'p5-real.webp', imag: 'p5-imag.webp', emoji: '🎭',
+                    alt: 'O palquinho de bonecos desarrumado: Dom Quixote de espada na mão, Mestre Pedro catando os bonecos quebrados, Sancho com a bolsa de moedas',
+                    legendaReal: '👓 Lente da Realidade: Bonecos de Pano e Papelão',
+                    legendaImag: '✨ Lente da Imaginação: A Grande Batalha para Salvar a Princesa!',
+                    camadas: [
+                        { id: 'rei', src: 'camadas/p5-rei.webp', emoji: '👑', item: 'rei', x: 38, y: 60, w: 9 },
+                        { id: 'cavalo', src: 'camadas/p5-cavalo.webp', emoji: '🐴', item: 'cavalo', x: 50, y: 60, w: 10 },
+                        { id: 'torre', src: 'camadas/p5-torre.webp', emoji: '🗼', item: 'torre', x: 62, y: 60, w: 9 }
+                    ],
+                    cartoes: {
+                        tipo: 'pedido',
+                        rotulo: '🧵 Mestre Pedro conserta:',
+                        pedidos: ['rei', 'cavalo', 'torre'],
+                        itens: [
+                            { id: 'torta', palavra: 'TORTA', emoji: '🥧', pegadinha: 'Torta? Sancho bem que queria! Mas torta não se conserta: se come. Vamos tentar de novo!' },
+                            { id: 'rei', palavra: 'REI', emoji: '👑' /* com a arte: figura: 'camadas/p5-rei.webp' */ },
+                            { id: 'cabelo', palavra: 'CABELO', emoji: '💈', pegadinha: 'Cabelo? Boneco não vai ao barbeiro! Mestre Pedro até riu. Vamos tentar de novo!' },
+                            { id: 'torre', palavra: 'TORRE', emoji: '🗼' /* com a arte: figura: 'camadas/p5-torre.webp' */ },
+                            { id: 'rio', palavra: 'RIO', emoji: '🌊', pegadinha: 'Rio? No teatrinho não tem rio! Sancho quase molhou os pés. Vamos tentar de novo!' },
+                            { id: 'cavalo', palavra: 'CAVALO', emoji: '🐴' /* com a arte: figura: 'camadas/p5-cavalo.webp' */ }
+                        ]
+                    }
+                }
+            },
+            {
+                capitulo: '⛵ Capítulo 48 • O Barco Encantado', corCapitulo: 'text-teal-700',
+                titulo: 'Moinho de Novo, Não!',
+                texto: `De manhã, Mestre Pedro já tinha ido embora com o macaco. Debaixo do banco dele, Sancho achou uma coisa esquecida: um livro. Olhou a capa e reconheceu as formiguinhas do seu nome: — É o nosso livro, meu amo! Então o macaco não adivinha coisa nenhuma: Mestre Pedro leu tudo sobre a gente! E o resto, aposto, perguntou ao dono da pousada. Dom Quixote ficou pensativo: — Esse livro anda mais depressa que o Rocinante.
+
+                    O Primo voltou para casa, com o caderno cheio. Dias depois, os dois amigos chegaram à beira de um {{RIO|RI • O|🏞️}} largo e bonito. Amarrado numa árvore, balançava um barquinho vazio, sem remos e sem dono. — Olhe, Sancho! Nos livros é sempre assim: um {{BARCO|BAR • CO|⛵}} encantado aparece para levar o cavaleiro até alguém que precisa de ajuda. Amarre os bichos e suba! — Meu amo, isso é barco de pescador... — Suba, Sancho!
+
+                    O barquinho foi descendo o rio, bem devagar. O burrico zurrava na margem, e Sancho chorava de saudade. — Já estamos longíssimo! — disse Dom Quixote. — Já devemos ter passado a linha do meio do mundo. Dizem que, quando se passa essa linha, todas as {{PULGAS|PUL • GAS|🪳}} somem. Veja aí, Sancho! Sancho enfiou a mão na gola e procurou: — Achei uma. Achei duas. Meu amo, a gente não andou quase nada: ainda dá para ver o Rocinante!
+
+                    Lá na frente, no meio do rio, apareceram umas casas de madeira com rodas enormes girando na água. Eram {{MOINHOS|MO • I • NHOS|🎡}} de água, de moer trigo. — Um castelo! — gritou Dom Quixote. — É lá que está o prisioneiro! Sancho pôs as mãos na cabeça: — Moinho de novo, não! Os moleiros saíram correndo, brancos de farinha da cabeça aos pés, sacudindo varas compridas: — Parem esse barco! Vocês vão bater na roda!
+
+                    — Que fantasmas mais feios! — disse Dom Quixote, e ficou de pé, de espada na mão. O barco balançou, virou, e TCHIBUM! Lá foram os dois para a água. Os moleiros pescaram cavaleiro e escudeiro com as varas, como dois peixes grandes. Na margem, encharcado, Dom Quixote pagou o barco aos pescadores e suspirou: — Desta vez os magos ganharam. Sancho torceu a camisa: — Mais um barco encantado desses, meu amo, e a gente fica sem bolsa e sem ceroula.`,
+                cena: {
+                    real: 'p6-real.webp', imag: 'p6-imag.webp', emoji: '⛵',
+                    alt: 'Um barquinho sem remos desce o rio com Dom Quixote de pé, de espada, e Sancho agarrado à borda; à frente, moinhos de água e moleiros brancos de farinha com varas',
+                    legendaReal: '👓 Lente da Realidade: Moinhos de Água e Moleiros Enfarinhados',
+                    legendaImag: '✨ Lente da Imaginação: O Castelo do Rio e os seus Fantasmas!'
+                }
+            },
+            {
+                capitulo: '🦅 Capítulo 49 • A Duquesa Caçadora', corCapitulo: 'text-purple-700',
+                titulo: 'O Recado de Sancho',
+                comandoAtividade: 'Deu um branco em Sancho! Ajude-o a lembrar o nome novo do seu amo: toque nas palavras na ordem certa.',
+                texto: `Ainda meio molhados, os dois saíram de um bosque e deram com um prado verdinho. Ali passeava um grupo de caçadores, com cães e cavalos. No meio deles, num cavalo branco como leite, vinha uma senhora vestida de verde, com um {{FALCÃO|FAL • CÃO|🦅}}, um pássaro caçador, pousado na luva.
+
+                    — Aquela é uma grande dama, Sancho! — disse Dom Quixote, ajeitando o bacielmo. — Vá até lá e leve um {{RECADO|RE • CA • DO|📣}}: diga que o seu amo quer cumprimentá-la e pergunte se pode chegar perto. E diga direitinho o meu nome de cavaleiro. Não o antigo: o novo! Sancho saiu trotando no burrico, repetindo baixinho. Mas, no meio do caminho, deu um branco. Como era mesmo o nome novo?
+
+                    A senhora ouviu o recado e abriu um sorriso enorme: — O Dom Quixote do livro? E você é o Sancho Pança, o do burrico? — Eu mesmo, senhora, e o burrico é aquele ali! A dama era uma {{DUQUESA|DU • QUE • SA|👸}}, dona de um palácio ali perto. Ela e o marido, o duque, tinham lido o livro tantas vezes que sabiam pedaços de cor.
+
+                    Dom Quixote veio se apresentar com toda a elegância. Sancho correu para segurar o estribo dele, mas prendeu o pé na sela do burrico e ficou pendurado de cabeça para baixo. Dom Quixote, sem ninguém para ajudar, desceu assim mesmo: a sela de Rocinante escorregou, e ele foi parar no chão, abraçado com ela. A duquesa mordeu a luva para não rir. Era igualzinho ao livro!
+
+                    O duque e a duquesa levaram os dois para o {{PALÁCIO|PA • LÁ • CIO|🏰}}. Lá, tocaram trombetas, espalharam água perfumada e gritaram: — Bem-vindo o grande cavaleiro andante! Dom Quixote parou na escada, com os olhos cheios d'água. Pela primeira vez na vida, o mundo de fora era igualzinho ao mundo que ele imaginava. Enquanto isso, o duque cochichava com a duquesa e com o mordomo do palácio, um homem alto, de voz bem grossa. Os três riam baixinho. O que será que estavam combinando?`,
+                cena: {
+                    real: 'p7-real.webp', imag: 'p7-imag.webp', emoji: '🦅',
+                    alt: 'Num prado, a duquesa de verde, num cavalo branco e com um falcão na luva, ouve o recado de Sancho, montado no burrico; ao fundo, Dom Quixote espera em Rocinante',
+                    legendaReal: '👓 Lente da Realidade: A Duquesa e o seu Falcão',
+                    legendaImag: '✨ Lente da Imaginação: A Rainha do Bosque Recebe o Embaixador!',
+                    // Todos os cartões com o mesmo emoji: só acerta quem lê
+                    cartoes: {
+                        tipo: 'ordem',
+                        faixaVazia: 'O meu amo agora se chama...',
+                        ordem: ['o', 'cavaleiro', 'dos', 'leoes'],
+                        itens: [
+                            { id: 'leoes', palavra: 'LEÕES', emoji: '📣' },
+                            { id: 'o', palavra: 'O', emoji: '📣' },
+                            { id: 'dos', palavra: 'DOS', emoji: '📣' },
+                            { id: 'cavaleiro', palavra: 'CAVALEIRO', emoji: '📣' }
+                        ]
+                    }
+                }
+            },
+            {
+                capitulo: '🧔 Capítulo 50 • As Damas Barbudas', corCapitulo: 'text-stone-700',
+                titulo: 'A Condessa de Voz Grossa',
+                texto: `Depois do jantar, no jardim do palácio, ouviu-se um tambor: BUM... BUM... BUM... Entrou um homenzarrão de barba branca até a cintura e anunciou: — A condessa Trifaldi veio de muito longe, a pé, para pedir a ajuda do famoso Dom Quixote! Sancho contou nos dedos: era a segunda dama em apuros que procurava o seu amo. E a primeira tinha sido de mentirinha...
+
+                    A {{CONDESSA|CON • DES • SA|👒}} entrou devagar, com um véu no rosto e um vestido de cauda tão comprida que três meninos seguravam as pontas. Atrás dela vinham doze damas, também de véu. — Senhor cavaleiro — disse a condessa, com uma voz estranhamente grossa —, um gigante malvado, chamado Malambruno, lançou em nós um castigo terrível. Vejam!
+
+                    As treze levantaram o véu ao mesmo tempo. Todas tinham {{BARBA|BAR • BA|🧔}}! Barbas loiras, pretas, ruivas, e uma branquinha feito algodão. Sancho deu um passo para trás: — Minha nossa! Quem faz a barba delas? Mestre Nicolau ia ficar rico! Depois olhou melhor e cochichou: — Meu amo, a condessa usa bota de homem. E eu já ouvi essa voz hoje, lá na escada...
+
+                    Dom Quixote nem escutou: já estava com a mão no peito. — Digam o que devo fazer, senhoras! — O gigante mora no reino de Candaia, do outro lado do mundo — explicou a condessa. — Só há um jeito de chegar lá: voando no {{CLAVILENHO|CLA • VI • LE • NHO|🐴}}, um cavalo de madeira que se guia por um pino na testa. Vão os dois, o cavaleiro e o escudeiro, de olhos vendados. Quando chegarem, as nossas barbas caem!
+
+                    — Os dois? — Sancho quase engasgou. — Eu não sou passarinho! E o que eu tenho a ver com a barba dos outros? As doze damas começaram a chorar bem alto e a enxugar as lágrimas nas barbas. Sancho tapou os ouvidos: — Está bem, está bem, eu vou! Mas, se eu cair lá de cima, quero ver quem vai governar a minha ilha! O duque piscou para a duquesa. Naquela noite, quatro homens cobertos de folhas trouxeram para o jardim um cavalo enorme, todo de madeira.`,
+                cena: {
+                    real: 'p8-real.webp', imag: 'p8-imag.webp', emoji: '🧔',
+                    alt: 'No jardim do palácio, a condessa Trifaldi, alta, de véu levantado, barba e botas, com doze damas barbudas atrás; Sancho recua espantado e Dom Quixote põe a mão no peito',
+                    legendaReal: '👓 Lente da Realidade: Barbas de Mentira no Jardim',
+                    legendaImag: '✨ Lente da Imaginação: Treze Damas Encantadas por um Gigante!'
+                }
+            },
+            {
+                capitulo: '🎠 Capítulo 51 • Clavilenho, o Cavalo Voador', corCapitulo: 'text-blue-900',
+                titulo: 'Mais Alto que as Nuvens',
+                comandoAtividade: 'Ajude os criados do duque a fazer o cavalo "voar"! Veja a figura do que eles precisam e toque na palavra certa. Cuidado com as pegadinhas!',
+                texto: `Dom Quixote subiu no cavalo de madeira e segurou o pino da testa. Sancho subiu atrás, reclamando: — Este cavalo é duro que nem tábua! Não tem uma almofadinha? Os dois cobriram os olhos com uma {{VENDA|VEN • DA|🙈}} preta. — Boa viagem, valentes! — gritaram todos. — Já estão subindo! Já passaram do telhado!
+
+                    Só que Clavilenho não tinha saído do lugar. Bem quietinhos, os criados do palácio chegaram por trás com um grande {{FOLE|FO • LE|🌬️}}, aquele soprador de ferreiro, e sopraram vento na cara dos dois. — Sinto o vento das alturas, Sancho! — Eu também, meu amo. E estou com uma vontade de espiar... — Não tire a venda! Quem espia fica tonto e cai!
+
+                    Depois os criados chegaram perto com uma {{TOCHA|TO • CHA|🔥}} acesa na ponta de uma vara. — Agora ficou quente! — disse Sancho. — Estamos passando pertinho do sol! — respondeu Dom Quixote. — Segure firme! O duque e a duquesa apertavam a barriga para não rir alto, e as vozes do jardim pareciam mesmo vir de muito, muito longe.
+
+                    Para terminar a viagem, alguém acendeu os foguetes escondidos no rabo do cavalo. PUM! PUM! PUM! Clavilenho deu um pulo, e os dois foram parar na grama. Quando tiraram a venda, o jardim estava vazio: nada de condessa, nada de barbas. Só um papel pendurado numa lança: "O famoso Dom Quixote venceu esta aventura só por ter tido a coragem de tentar. As barbas já caíram!".
+
+                    No jantar, Sancho contou vantagem: — Eu espiei um pouquinho. A Terra era do tamanho de um grão de mostarda! E eu desci do cavalo e brinquei com sete cabritinhas lá no céu: duas verdes, duas vermelhas, duas azuis e uma misturada. A duquesa chorava de rir. Dom Quixote chegou no ouvido dele: — Sancho, se você quer que eu acredite nas suas cabritinhas do céu, acredite no meu palácio de cristal da gruta. E não se fala mais nisso.
+
+                    Então o duque se levantou: — Sancho Pança, arrume a mala. Amanhã você vai governar a sua {{ILHA|I • LHA|🏝️}}! Sancho deixou a colher cair dentro da sopa.`,
+                cena: {
+                    // Arte reaproveitada da Parte 4 antiga (imagens/acervo/parte-4-v1/)
+                    real: '../acervo/parte-4-v1/p3-real.webp', imag: '../acervo/parte-4-v1/p3-imag.webp', emoji: '🎠',
+                    alt: 'No jardim do palácio, Dom Quixote e Sancho, de olhos vendados, montam o cavalo de madeira Clavilenho; criados sopram um fole e erguem uma tocha',
+                    legendaReal: '👓 Lente da Realidade: Um Cavalo de Madeira no Jardim',
+                    legendaImag: '✨ Lente da Imaginação: Voando entre as Estrelas em Clavilenho!',
+                    camadas: [
+                        { id: 'clavilenho', src: '../acervo/parte-4-v1/camadas/p3-clavilenho.webp', x: 49, y: 95, w: 36, emoji: '🐴' },
+                        { id: 'vento-fole', src: '../acervo/parte-4-v1/camadas/p3-vento-fole.webp', item: 'fole', x: 39, y: 68, w: 18, anim: 'flutuar', emoji: '💨' },
+                        { id: 'calor-tocha', src: '../acervo/parte-4-v1/camadas/p3-calor-tocha.webp', item: 'tocha', x: 72, y: 42, w: 7, anim: 'pulsar', emoji: '🔥' }
+                    ],
+                    cartoes: {
+                        tipo: 'pedido',
+                        rotulo: '🎬 Os criados precisam de:',
+                        pedidos: ['fole', 'tocha'],
+                        itens: [
+                            { id: 'touca', palavra: 'TOUCA', emoji: '🧢', pegadinha: 'Touca? Puseram uma touca no cavalo, e ele ficou só mais quentinho. Voar, que é bom, nada! Vamos tentar de novo!' },
+                            { id: 'fole', palavra: 'FOLE', emoji: '💨', figura: '../acervo/parte-4-v1/camadas/p3-vento-fole.webp' },
+                            { id: 'tocha', palavra: 'TOCHA', emoji: '🔥', figura: '../acervo/parte-4-v1/camadas/p3-calor-tocha.webp' },
+                            { id: 'folha', palavra: 'FOLHA', emoji: '🍃', pegadinha: 'Folha? Abanaram uma folhinha, e não saiu vento nem para espantar mosquito! Vamos tentar de novo!' }
+                        ]
+                    }
+                }
+            }
+        ]
+    };
+    </script>
+    <script src="../assets/js/texto.js"></script>
+    <script src="../assets/js/livro.js"></script>
+</body>
+</html>
