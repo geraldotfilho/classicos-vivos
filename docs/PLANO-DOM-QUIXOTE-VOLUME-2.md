@@ -13,14 +13,14 @@ Registrado em 2026-11-10 (Claude, sessão autônoma pedida pelo humano). **Subst
 | Parte (coleção) | No volume 2 | Título (provisório) | Cervantes (1615) | Caps. do original | Nossos capítulos | Arco | Situação |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | **5** | 1ª | **O Livro Famoso e o Cavaleiro dos Leões** | II-1 a II-17 | 17 | 34–42 | **A fama**: viraram livro, a terceira saída, o primeiro disfarce de Sansão, o leão | 🛑 rascunho escrito (fases 1–2), esperando o humano |
-| **6** | 2ª | **O Teatrinho, o Barco e o Cavalo Voador** | II-18 a II-41 | 24 | 43–51 (aprox.) | **O mundo faz teatro**: bonecos, barco, e os duques que leram o livro montam aventuras de mentira | ⬜ |
-| **7** | 3ª | **Sancho, Governador da Ilha** | II-42 a II-57 | 16 | a fechar | **A ilha**: a promessa mais antiga da série se cumpre; Sancho governa bem e escolhe a liberdade | ⬜ |
-| **8** | 4ª | **O Cavaleiro da Branca Lua** | II-58 a II-74 | 17 | a fechar | **A volta**: o mar, a oficina dos livros, a promessa cumprida e o final sereno | ⬜ |
+| **6** | 2ª | **O Teatrinho, o Barco e o Cavalo Voador** | II-18 a II-41 | 24 | 43–51 | **O mundo faz teatro**: bonecos, barco, e os duques que leram o livro montam aventuras de mentira | 🛑 rascunho escrito, esperando o humano |
+| **7** | 3ª | **Sancho, Governador da Ilha** | II-42 a II-57 | 16 | 52–60 | **A ilha**: a promessa mais antiga da série se cumpre; Sancho governa bem e escolhe a liberdade | 🛑 rascunho escrito, esperando o humano |
+| **8** | 4ª | **O Cavaleiro da Branca Lua** | II-58 a II-74 | 17 | 61–69 | **A volta**: o mar, a oficina dos livros, a promessa cumprida e o final sereno | 🛑 rascunho escrito, esperando o humano |
 
 - Proporção: 17 + 24 + 16 + 17 = **74** capítulos; nenhuma parte passa de 25 (receita de Dom Quixote §1.1). A Parte 6 é a mais cheia e por isso corta mais (§2.2).
 - **Numeração**: segue contínua (a Parte 4 terminou no 33; a 5 vai de 34 a 42). A decisão em aberto "recomeçar do 1 no segundo livro?" continua do humano; trocar é só renumerar os rótulos.
 - `totalPartes` passa a **8** quando a Parte 5 for publicada (hoje as Partes 1–4 dizem "de 4"; o rascunho da 5 já diz "5 de 8").
-- Estante: o boxset trancado do Volume 2 diz "Partes 5 a 7"; vira "5 a 8" (`index.html` e `i18n-site.js`) na publicação da Parte 5, para não mexer agora no que está no ar.
+- Estante: o selo do boxset trancado do Volume 2 já diz "Partes 5 a 8" (2026-11-12).
 
 ---
 
@@ -43,7 +43,7 @@ Decisão de cada bloco: ✅ entra · 🔀 entra fundido ou adaptado · ✂️ fi
 | II-16 | Dom Diego de Miranda, o cavaleiro do casaco verde | 🔀 cap. 40 (testemunha sensata e gancho da Parte 6) |
 | II-17 | O requeijão no elmo e o leão que não quis sair | ✅ caps. 40, 41 e 42 · **atividade** (a ordem do que o leão fez) |
 
-### 2.2 Parte 6 — O Teatrinho, o Barco e o Cavalo Voador (II-18 a 41) · proposta para a fase 1 dela
+### 2.2 Parte 6 — O Teatrinho, o Barco e o Cavalo Voador (II-18 a 41) · proposta inicial (a escaleta fechada está no caderno da parte)
 | Cervantes | Episódio | Decisão proposta |
 | :--- | :--- | :--- |
 | II-18 | A casa de Dom Diego (o filho poeta) | 🔀 meia página de descanso (colhe o convite do fim da Parte 5) |
@@ -57,7 +57,7 @@ Decisão de cada bloco: ✅ entra · 🔀 entra fundido ou adaptado · ✂️ fi
 | II-36–40 | A condessa Trifaldi e as damas barbudas | ✅ o motivo do voo |
 | II-41 | **Clavilenho**, o cavalo voador | ✅ clímax da parte (reaproveita a arte e a atividade da Parte 4 antiga: `docs/arquivo/dom-quixote-parte-4-v1/`) |
 
-### 2.3 Parte 7 — Sancho, Governador da Ilha (II-42 a 57) · proposta
+### 2.3 Parte 7 — Sancho, Governador da Ilha (II-42 a 57) · proposta inicial (a escaleta fechada está no caderno da parte)
 | Cervantes | Episódio | Decisão proposta |
 | :--- | :--- | :--- |
 | II-42–43 | Os conselhos de Dom Quixote | ✅ (arte antiga `p4`) |
@@ -71,7 +71,7 @@ Decisão de cada bloco: ✅ entra · 🔀 entra fundido ou adaptado · ✂️ fi
 | II-55 | O buraco; Dom Quixote ouve o amigo e o salva | ✅ o reencontro |
 | II-56–57 | O duelo com Tosilos; a despedida | 🔀 só a despedida |
 
-### 2.4 Parte 8 — O Cavaleiro da Branca Lua (II-58 a 74) · proposta
+### 2.4 Parte 8 — O Cavaleiro da Branca Lua (II-58 a 74) · proposta inicial (a escaleta fechada está no caderno da parte)
 | Cervantes | Episódio | Decisão proposta |
 | :--- | :--- | :--- |
 | II-58 | A liberdade ("um dos maiores presentes"); as redes verdes; os touros | 🔀 a fala da liberdade e as redes · ✂️ os touros |
@@ -119,9 +119,9 @@ Fora: a mentira de Sancho sobre Dulcineia e os açoites (II-10, 35, 71); as zomb
 | Parte | 1 Texto | 2 Interações | Crítica adversarial (subagente) | 3 Revisão 🛑 | 4 Arte (API) | 5 Revisão final 🛑 | 6 Narração (API) | Publicada |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 5 | ✅ | ✅ | ✅ | 🛑 **esperando o humano** | ⬜ | ⬜ | ⬜ | ⬜ |
-| 6 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
-| 7 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
-| 8 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| 6 | ✅ | ✅ | ✅ | 🛑 **esperando o humano** | ⬜ | ⬜ | ⬜ | ⬜ |
+| 7 | ✅ | ✅ | ✅ | 🛑 **esperando o humano** | ⬜ | ⬜ | ⬜ | ⬜ |
+| 8 | ✅ | ✅ | ✅ | 🛑 **esperando o humano** | ⬜ | ⬜ | ⬜ | ⬜ |
 
 Caderno de cada parte: `docs/cadernos/dom-quixote-parte-N.md`.
 

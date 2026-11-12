@@ -76,7 +76,7 @@
 
             // Coleção / Boxset (index.html)
             colecaoCompletaBadge: 'Coleção Completa · 4 Partes',
-            colecaoSegundoBadge: 'Em breve · Partes 5 a 7',
+            colecaoSegundoBadge: 'Em breve · Partes 5 a 8',
             colecaoSegundoVolume: 'Segundo Volume (1615)',
             boxsetAria2: 'Dom Quixote: Segundo Volume (1615). Ainda sendo feito, será liberado em breve.',
             shelfRobinHood: 'Robin Hood',
@@ -295,7 +295,7 @@
 
             // Coleção / Boxset (index.html)
             colecaoCompletaBadge: 'Complete Collection · 4 Parts',
-            colecaoSegundoBadge: 'Coming soon · Parts 5 to 7',
+            colecaoSegundoBadge: 'Coming soon · Parts 5 to 8',
             colecaoSegundoVolume: 'Second Volume (1615)',
             boxsetAria2: 'Don Quixote: Second Volume (1615). Still being made, it will be unlocked soon.',
             robinHood: 'Robin Hood',
@@ -508,7 +508,7 @@
 
             // Coleção / Boxset (index.html)
             colecaoCompletaBadge: 'Collection Complète · 4 Parties',
-            colecaoSegundoBadge: 'Bientôt · Parties 5 à 7',
+            colecaoSegundoBadge: 'Bientôt · Parties 5 à 8',
             colecaoSegundoVolume: 'Second Volume (1615)',
             boxsetAria2: 'Don Quichotte : Second Volume (1615). En préparation, il sera bientôt débloqué.',
             shelfRobinHood: 'Robin des Bois',
@@ -723,7 +723,7 @@
 
             // Coleção / Boxset (index.html)
             colecaoCompletaBadge: 'Colección Completa · 4 Partes',
-            colecaoSegundoBadge: 'Pronto · Partes 5 a 7',
+            colecaoSegundoBadge: 'Pronto · Partes 5 a 8',
             colecaoSegundoVolume: 'Segundo Volumen (1615)',
             boxsetAria2: 'Don Quijote: Segundo Volumen (1615). Todavía se está haciendo, se desbloqueará pronto.',
             robinHood: 'Robin Hood',
