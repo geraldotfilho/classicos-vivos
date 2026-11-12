@@ -288,6 +288,6 @@ Don Quixote closed his eyes slowly, with a little smile playing on his lips. Bec
         "GATINHO": "KITTEN",
         "LEÃO": "LION",
         "🎉 Fim do primeiro livro de Dom Quixote! O nosso cavaleiro descansa em casa... mas não por muito tempo: no segundo livro, ele vai sair em busca de novas aventuras!": "🎉 The End of the first book of Don Quixote! Our knight rests at home... but not for long: in the second book, he will set off in search of new adventures!",
-        "Voltar à estante": "Back to the Bookshelf"
+        "Ir para a Parte 5": "Go to Part 5"
     }
 };

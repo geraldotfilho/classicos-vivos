@@ -1,4 +1,4 @@
-# 🔁 Retomada — onde o trabalho parou (2026-11-12, segundo volume de Dom Quixote inteiro em rascunho de texto, esperando o humano)
+# 🔁 Retomada — onde o trabalho parou (2026-11-12, Parte 5 de Dom Quixote ilustrada e publicada; Partes 6 a 8 em rascunho de texto)
 
 **Leia este arquivo primeiro numa sessão nova**, seja qual for o agente. Depois, siga a ordem de leitura do `AGENTS.md` §0.2 (AGENTS → receita geral → receita específica → plano → caderno da parte).
 
@@ -29,6 +29,8 @@
 
 ## 2. Próximas sessões (escolha do humano)
 
+> **2026-11-12 (tarde) — a Parte 5 está publicada** na estante principal, dentro do boxset do segundo volume (que agora abre; as Partes 6 a 8 aparecem com cadeado). Ilustrada pela API (22 imagens, US$ 1,11, três subagentes em paralelo; caderno §6), só em português e com a voz do aparelho. A fase 5 (revisão final) foi pulada a pedido do humano. Pontos para o olho do humano: caderno da Parte 5, §6 (Tomé loiro de gorro, nariz de Sansão pouco achatado, escudos em vez de bandeiras na carroça do leão, Dom Quixote com duas espadas na pág. 9). Faltam a **narração (fase 6)** e as **traduções (fase 7)** da Parte 5.
+
 > **2026-11-12 — o segundo volume de Dom Quixote (1615) está inteiro em rascunho de texto**, em quatro partes, sem nenhuma API paga:
 > | Parte | Título | Capítulos | Arquivo | Caderno |
 > | :--- | :--- | :--- | :--- | :--- |
@@ -41,8 +43,8 @@
 >
 > **Entrega**: sempre na `main`, por merge, ao fim de cada entrega (`AGENTS.md` §0.4): é pelo site que o humano lê.
 
-1. 🛑 **Fase 3 das Partes 5 a 8**: o humano lê os rascunhos (a 5 é releitura) e manda as notas de cada uma. Os pontos de decisão estão no §3 e no §5 de cada caderno.
-2. **Fase 4 (arte pela API, só com autorização)**, uma parte por vez: Parte 5 ~22 imagens (~US$ 0,85); Parte 6 ~18 (~US$ 0,70); Parte 7 ~9 (~US$ 0,35); Parte 8 ~15 (~US$ 0,60). As Partes 6, 7 e 8 já mostram as cenas reaproveitadas da Parte 4 antiga (Clavilenho, conselhos, bengala, burrico, lareira). Antes: escrever `tools/arte/dom-quixote-parte-N.mjs` a partir da tabela "Visual" do caderno e as fichas dos personagens novos.
+1. 🛑 **Fase 3 das Partes 6 a 8** (e notas da Parte 5 já publicada): o humano lê os rascunhos e manda as notas de cada uma. Os pontos de decisão estão no §3 e no §5 de cada caderno.
+2. **Fase 4 (arte pela API, só com autorização)**, uma parte por vez (a Parte 5 já foi: modelo de três subagentes em paralelo, um por grupo de páginas, em `tools/arte/dom-quixote-parte-5-*.mjs`): Parte 6 ~18 (~US$ 0,70); Parte 7 ~9 (~US$ 0,35); Parte 8 ~15 (~US$ 0,60). As Partes 6, 7 e 8 já mostram as cenas reaproveitadas da Parte 4 antiga (Clavilenho, conselhos, bengala, burrico, lareira). Antes: escrever `tools/arte/dom-quixote-parte-N.mjs` a partir da tabela "Visual" do caderno e as fichas dos personagens novos.
 3. **Fase 8 da Parte 4** (retrospectiva do primeiro volume) e **escuta das vozes** das Partes 2 a 4 nos três idiomas (`docs/narracao/qa-partes-2-4-traducoes.md`).
 4. **Viagem ao Centro da Terra no Século XXI, fase 0**: o humano lê o argumento da Parte 1 em [`cadernos/viagem-parte-1.md`](cadernos/viagem-parte-1.md). *Robin Hood* segue na fila.
 

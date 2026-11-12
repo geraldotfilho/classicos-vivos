@@ -8,10 +8,10 @@ Plano do volume: [`../PLANO-DOM-QUIXOTE-VOLUME-2.md`](../PLANO-DOM-QUIXOTE-VOLUM
 | 2 Interações e visual | ✅ (lista de arte `.mjs` fica para a sessão da fase 4, depois da aprovação) | 2026-11-10 | idem | — |
 | Crítica adversarial (subagente de contexto limpo) + polimento | ✅ | 2026-11-10 | idem | — |
 | 3 Revisão humana 🛑 | 🟡 1ª nota aplicada (mais humor e mistério); **esperando a releitura** | 2026-11-12 | | — |
-| 4 Ilustrações e atividades | ⬜ | | | US$ |
-| 5 Revisão final 🛑 | ⬜ | | | — |
+| 4 Ilustrações e atividades | ✅ 22 imagens, 3 subagentes em paralelo (§6) | 2026-11-12 | branch `ccr-88e0ed1a-ujumbz` | US$ 1,11 |
+| 5 Revisão final 🛑 | ⏭️ pulada a pedido do humano (publicar já); notas virão da leitura no site | 2026-11-12 | | — |
 | 6 Narração (pt) + escuta 🛑 | ⬜ | | | US$ |
-| Publicação | ⬜ | | | — |
+| Publicação | ✅ estante principal, no boxset do segundo volume (só pt, voz do aparelho) | 2026-11-12 | | — |
 | 7 Idiomas (en, fr, es) | ⬜ | | | US$ |
 | 8 Retrospectiva | ⬜ | | | — |
 
