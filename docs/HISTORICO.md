@@ -303,3 +303,9 @@ O que já foi entregue, sprint a sprint, em ordem cronológica (o mais antigo pr
 - Plano do volume de 1615 em quatro partes (5 a 8): `PLANO-DOM-QUIXOTE-VOLUME-2.md`; regras em uma página: `DIRETRIZES_VOL2.md`.
 - Parte 5 (*O Livro Famoso e o Cavaleiro dos Leões*, caps. 34–42) escrita em rascunho, com três atividades, auditada por um crítico de contexto limpo e polida. Sem ilustrações nem narração; nenhuma API paga usada.
 - Motor: no tipo `ordem`, a cena acompanha cada acerto quando a página define `realCena`.
+
+## ✅ 2026-11-12 — Segundo volume de Dom Quixote inteiro em rascunho de texto (Partes 5 a 8)
+- Parte 5 revista com as notas do humano: mais humor e um mistério que atravessa a parte; Sansão construído em três passos; o duelo dos Espelhos contado passo a passo; a governanta diz "o senhor Alonso".
+- Partes 6 (caps. 43–51), 7 (52–60) e 8 (61–69) escritas no mesmo método (orquestrador escreve; um crítico de contexto limpo audita cada parte; polimento; teste nos dois tamanhos de tablet), com três atividades cada. Nenhuma API paga.
+- As Partes 6 a 8 reaproveitam cinco cenas da Parte 4 antiga (`imagens/acervo/parte-4-v1/`).
+- Regra nova: entregar sempre na `main`, por merge (`AGENTS.md` §0.4 e §6). O selo da estante passou a "Partes 5 a 8".

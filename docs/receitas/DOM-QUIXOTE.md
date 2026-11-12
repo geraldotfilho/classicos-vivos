@@ -50,9 +50,10 @@ Registrados em [`PLANO-PARTES-2-4.md`](../PLANO-PARTES-2-4.md) §2. Em resumo: f
 | 2 · Exércitos de Lã e o Elmo Encantado | 1605 | 8–21 | 8–15 | publicada |
 | 3 · Serra Morena e a Princesa Micomicona | 1605 | 23–38 | 16–22 | publicada |
 | 4 · (nova) O Elmo, a Bacia e a Jaula Encantada | 1605 | 39–52 | 23–33 | a Parte 4 antiga continua no ar até a nova ser publicada |
-| 5 · O Livro Famoso e o Cavaleiro dos Leões | 1615 | 1–29 | a partir do 34 | na fila |
-| 6 · O Palácio dos Duques e a Ilha de Sancho | 1615 | 30–57 | — | na fila |
-| 7 · O Cavaleiro da Branca Lua | 1615 | 58–74 | — | na fila |
+| 5 · O Livro Famoso e o Cavaleiro dos Leões | 1615 | 1–17 | 34–42 | rascunho de texto (2026-11-12) |
+| 6 · O Teatrinho, o Barco e o Cavalo Voador | 1615 | 18–41 | 43–51 | rascunho de texto |
+| 7 · Sancho, Governador da Ilha | 1615 | 42–57 | 52–60 | rascunho de texto |
+| 8 · O Cavaleiro da Branca Lua | 1615 | 58–74 | 61–69 | rascunho de texto |
 
 Títulos das Partes 4 a 7 provisórios. A nova Parte 4 ganhou um capítulo na fase 5 (o 30 virou dois), então a numeração das Partes 5–7 é fechada na fase 1 de cada uma, continuando de onde a anterior parou. Escaletas, fios e andamento: plano.
 
@@ -98,6 +99,9 @@ O motor tem as duas lentes; outro livro só usa um recurso assim se o mapa da ob
 
 | Data | Lição | Virou regra em |
 | :--- | :--- | :--- |
+| 2026-11-12 | Texto "bom" não prende: cada página pede uma cena de riso e a parte pede um mistério que atravessa as páginas | `DIRETRIZES_VOL2.md` §2 |
+| 2026-11-12 | Personagem que volta (Sansão) precisa ser anunciado, ter traço, jeito e motivo antes de agir; vitória de um velho magrinho só convence se o texto mostra como (o cavalo guloso) | `DIRETRIZES_VOL2.md` §2 |
+| 2026-11-12 | No volume de 1615 quem engana é o mundo: as brincadeiras dos duques só funcionam como presente de fãs do livro, com pedido de perdão; e Sancho vira o "detetive" que desconfia primeiro | cadernos das Partes 6 e 7 |
 | 2026-10-25 | Página de história contada ou de vida real não precisa de lente; a Imaginação vira recompensa da atividade | §3.1 |
 | 2026-10-25 | A história que Dom Quixote conta é a de Cervantes, fantasia de propósito: explicação "real" (a estrelinha-do-mar) estraga | §1.2 |
 | 2026-10-25 | Os "magos" da jaula mudaram de fantasia de uma página para a outra e Nicolau montou Rocinante: recortes da arte aprovada como referência resolvem | §3.3, `ARTE-PELA-API.md` §4.3 |
