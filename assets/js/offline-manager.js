@@ -5,7 +5,7 @@
 (function() {
     'use strict';
 
-    const VERSAO_ATUAL = '74f4d96c8815';
+    const VERSAO_ATUAL = 'f2d689fb6d82';
     const PREFIXO_CACHE = 'cv-volume-quixote-';
     const PREFIXO_STORAGE = 'cv-offline-quixote-';
 
@@ -285,7 +285,7 @@
 
         async verificarCachesExistentes() {
             if (!('caches' in window)) return;
-            for (let n = 1; n <= 4; n++) {
+            for (let n = 1; n <= 5; n++) {
                 if (localStorage.getItem(PREFIXO_STORAGE + n)) continue;
                 try {
                     const cacheName = PREFIXO_CACHE + n;

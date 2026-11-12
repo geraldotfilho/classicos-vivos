@@ -59,7 +59,8 @@
             p2Desc: '<strong>Parte 2: Exércitos de Lã e o Elmo Encantado</strong>: a carga contra os gigantes e o tombo nos moinhos, a lança de carvalho, os pastores e a Idade de Ouro, a batalha das ovelhas, o Cavaleiro da Triste Figura, as cabras que atravessam o rio e o elmo de Mambrino.',
             p3Desc: '<strong>Parte 3: Serra Morena e a Princesa Micomicona</strong>: a mala perdida, as cambalhotas, a carta para Dulcineia, os amigos disfarçados, a princesa Micomicona, a batalha dos odres e a volta à pousada.',
             p4Desc: '<strong>Parte 4: O Elmo, a Bacia e a Jaula Encantada</strong>: o bacielmo, a jaula que vira carruagem de magos, o piquenique de Sancho, o Cavaleiro do Lago, a cabra fujona, a romaria e a volta para casa.',
-            todasIlustradas: 'O primeiro volume de Dom Quixote (Partes 1 a 4) está todo ilustrado e interativo. O segundo volume está em produção.',
+            p5Desc: '<strong>Parte 5: O Livro Famoso e o Cavaleiro dos Leões</strong>: o livro que conta as aventuras dos dois heróis, a terceira saída, a carroça dos atores, o Cavaleiro dos Espelhos e o escudeiro narigudo, o requeijão no bacielmo e o leão que bocejou.',
+            todasIlustradas: 'O primeiro volume de Dom Quixote (Partes 1 a 4) está todo ilustrado e interativo. Do segundo volume, a Parte 5 já está na estante (por enquanto só em português); as Partes 6 a 8 estão em produção.',
             comoUsarTitulo: 'Como usar no tablet',
             comoUsarItens: [
                 'Funciona <strong>sem internet</strong>: depois da primeira visita, o navegador guarda os livros. No Chrome Android, use <em>"Adicionar à tela inicial"</em> para abrir como aplicativo, em tela cheia.',
@@ -76,9 +77,9 @@
 
             // Coleção / Boxset (index.html)
             colecaoCompletaBadge: 'Coleção Completa · 4 Partes',
-            colecaoSegundoBadge: 'Em breve · Partes 5 a 8',
+            colecaoSegundoBadge: 'Novo · Parte 5',
             colecaoSegundoVolume: 'Segundo Volume (1615)',
-            boxsetAria2: 'Dom Quixote: Segundo Volume (1615). Ainda sendo feito, será liberado em breve.',
+            boxsetAria2: 'Dom Quixote: Segundo Volume (1615). A Parte 5 já pode ser lida. Toque para abrir.',
             shelfRobinHood: 'Robin Hood',
             shelfViagem: 'Viagem ao Centro da Terra',
             shelfRobinHood: 'Robin Hood',
@@ -113,6 +114,7 @@
             p2TituloCurto: 'Exércitos de Lã e o Elmo Encantado',
             p3TituloCurto: 'Serra Morena e a Princesa Micomicona',
             p4TituloCurto: 'O Elmo, a Bacia e a Jaula Encantada',
+            p5TituloCurto: 'O Livro Famoso e o Cavaleiro dos Leões',
 
             // Abas (sobre.html)
             abaProposta: 'Proposta & Como Funciona',
@@ -278,7 +280,8 @@
             p2Desc: '<strong>Part 2: Armies of Wool and the Enchanted Helmet</strong>: the charge against giants, the oak branch lance, the goatherds and the Golden Age, the battle of the sheep, the Knight of the Rueful Countenance, and the helmet of Mambrino.',
             p3Desc: '<strong>Part 3: Sierra Morena and Princess Micomicona</strong>: the lost suitcase, the acrobatics, the letter to Dulcinea, disguised friends, Princess Micomicona, and the battle of the wine skins.',
             p4Desc: '<strong>Part 4: The Helmet, the Basin and the Enchanted Cage</strong>: the basin-helmet, the cage that becomes a wizards\' carriage, Sancho\'s picnic, the Knight of the Lake, the runaway goat, the procession and the journey home.',
-            todasIlustradas: 'The first volume of Don Quixote (Parts 1 to 4) is fully illustrated and interactive. The second volume is in progress.',
+            p5Desc: '<strong>Part 5: The Famous Book and the Knight of the Lions</strong>: the book that tells the two heroes\' adventures, the third journey, the actors\' cart, the Knight of the Mirrors and his big-nosed squire, the curd cheese in the basin-helmet and the lion that yawned.',
+            todasIlustradas: 'The first volume of Don Quixote (Parts 1 to 4) is fully illustrated and interactive. From the second volume, Part 5 is already on the shelf (for now only in Portuguese); Parts 6 to 8 are in progress.',
             comoUsarTitulo: 'How to use on a tablet',
             comoUsarItens: [
                 'Works <strong>offline</strong>: after the first visit, the browser saves the books. In Chrome Android, tap <em>"Add to Home Screen"</em> to open as a full-screen app.',
@@ -295,9 +298,9 @@
 
             // Coleção / Boxset (index.html)
             colecaoCompletaBadge: 'Complete Collection · 4 Parts',
-            colecaoSegundoBadge: 'Coming soon · Parts 5 to 8',
+            colecaoSegundoBadge: 'New · Part 5',
             colecaoSegundoVolume: 'Second Volume (1615)',
-            boxsetAria2: 'Don Quixote: Second Volume (1615). Still being made, it will be unlocked soon.',
+            boxsetAria2: 'Don Quixote: Second Volume (1615). Part 5 is ready to read. Tap to open.',
             robinHood: 'Robin Hood',
             robinHoodSub: 'The Hero of Sherwood',
             boxsetRobinAria: 'Robin Hood. Upcoming adaptation in queue, locked until release.',
@@ -326,6 +329,7 @@
             p2TituloCurto: 'Armies of Wool & Enchanted Helmet',
             p3TituloCurto: 'Sierra Morena & Princess Micomicona',
             p4TituloCurto: 'The Helmet, Basin & Enchanted Cage',
+            p5TituloCurto: 'The Famous Book & the Knight of the Lions',
 
             // Abas (sobre.html)
             abaProposta: 'Vision & How It Works',
@@ -491,7 +495,8 @@
             p2Desc: '<strong>Partie 2 : Armées de Laine et le Casque Enchanté</strong> : la charge contre les géants, la lance de chêne, les chevriers et l\'Âge d\'or, la bataille des moutons, le Chevalier à la Triste Figure et le casque de Mambrin.',
             p3Desc: '<strong>Partie 3 : Sierra Morena et la Princesse Micomicona</strong> : la valise perdue, les cabrioles, la lettre à Dulcinée, les amis déguisés, la princesse Micomicona et la bataille des outres.',
             p4Desc: '<strong>Partie 4 : Le Heaume, la Bassine et la Cage Enchantée</strong> : le bassin-heaume, la cage qui devient le carrosse des magiciens, le pique-nique de Sancho, le Chevalier du Lac, la chèvre fugueuse, la procession et le retour à la maison.',
-            todasIlustradas: 'Le premier volume de Don Quichotte (parties 1 à 4) est entièrement illustré et interactif. Le second volume est en préparation.',
+            p5Desc: '<strong>Partie 5 : Le Livre Célèbre et le Chevalier aux Lions</strong> : le livre qui raconte les aventures des deux héros, la troisième sortie, la charrette des comédiens, le Chevalier aux Miroirs et son écuyer au grand nez, le fromage frais dans le bassin-heaume et le lion qui a bâillé.',
+            todasIlustradas: 'Le premier volume de Don Quichotte (parties 1 à 4) est entièrement illustré et interactif. Du second volume, la partie 5 est déjà sur l\'étagère (pour l\'instant seulement en portugais) ; les parties 6 à 8 sont en préparation.',
             comoUsarTitulo: 'Comment utiliser sur tablette',
             comoUsarItens: [
                 'Fonctionne <strong>hors ligne</strong> : après la première visite, le navigateur enregistre les livres. Sur Chrome Android, touchez <em>« Ajouter à l\'écran d\'accueil »</em> pour ouvrir en plein écran.',
@@ -508,9 +513,9 @@
 
             // Coleção / Boxset (index.html)
             colecaoCompletaBadge: 'Collection Complète · 4 Parties',
-            colecaoSegundoBadge: 'Bientôt · Parties 5 à 8',
+            colecaoSegundoBadge: 'Nouveau · Partie 5',
             colecaoSegundoVolume: 'Second Volume (1615)',
-            boxsetAria2: 'Don Quichotte : Second Volume (1615). En préparation, il sera bientôt débloqué.',
+            boxsetAria2: 'Don Quichotte : Second Volume (1615). La partie 5 peut déjà être lue. Touchez pour ouvrir.',
             shelfRobinHood: 'Robin des Bois',
             shelfViagem: 'Voyage au centre de la Terre',
             robinHood: 'Robin des Bois',
@@ -541,6 +546,7 @@
             p2TituloCurto: 'Armées de Laine et Casque Enchanté',
             p3TituloCurto: 'Sierra Morena et la Princesse Micomicona',
             p4TituloCurto: 'Le Heaume, la Bassine et la Cage',
+            p5TituloCurto: 'Le Livre Célèbre et le Chevalier aux Lions',
 
             // Abas (sobre.html)
             abaProposta: 'Projet & Fonctionnement',
@@ -706,7 +712,8 @@
             p2Desc: '<strong>Parte 2: Ejércitos de Lana y el Yelmo Encantado</strong>: la carga contra los gigantes, el ramo de encina, los cabreros y la Edad de Oro, la batalla de las ovejas, el Caballero de la Triste Figura y el yelmo de Mambrino.',
             p3Desc: '<strong>Parte 3: Sierra Morena y la Princesa Micomicona</strong>: la maleta perdida, las zapatetas, la carta a Dulcinea, los amigos disfrazados, la princesa Micomicona y la batalla de los cueros de vino.',
             p4Desc: '<strong>Parte 4: El Yelmo, la Bacía y la Jaula Encantada</strong>: el baciyelmo, la jaula que se vuelve carroza de magos, la merienda de Sancho, el Caballero del Lago, la cabra fujona, la romería y la vuelta a casa.',
-            todasIlustradas: 'El primer volumen de Don Quijote (partes 1 a 4) está totalmente ilustrado e interactivo. El segundo volumen está en preparación.',
+            p5Desc: '<strong>Parte 5: El Libro Famoso y el Caballero de los Leones</strong>: el libro que cuenta las aventuras de los dos héroes, la tercera salida, la carreta de los actores, el Caballero de los Espejos y su escudero narigudo, el requesón en el baciyelmo y el león que bostezó.',
+            todasIlustradas: 'El primer volumen de Don Quijote (partes 1 a 4) está totalmente ilustrado e interactivo. Del segundo volumen, la parte 5 ya está en la estantería (por ahora solo en portugués); las partes 6 a 8 están en preparación.',
             comoUsarTitulo: 'Cómo usar en la tableta',
             comoUsarItens: [
                 'Funciona <strong>sin internet</strong>: tras la primera visita, el navegador guarda los libros. En Chrome Android, usa <em>«Añadir a pantalla de inicio»</em> para abrir como aplicación a pantalla completa.',
@@ -723,9 +730,9 @@
 
             // Coleção / Boxset (index.html)
             colecaoCompletaBadge: 'Colección Completa · 4 Partes',
-            colecaoSegundoBadge: 'Pronto · Partes 5 a 8',
+            colecaoSegundoBadge: 'Nuevo · Parte 5',
             colecaoSegundoVolume: 'Segundo Volumen (1615)',
-            boxsetAria2: 'Don Quijote: Segundo Volumen (1615). Todavía se está haciendo, se desbloqueará pronto.',
+            boxsetAria2: 'Don Quijote: Segundo Volumen (1615). La parte 5 ya se puede leer. Toca para abrir.',
             robinHood: 'Robin Hood',
             robinHoodSub: 'El Héroe de Sherwood',
             boxsetRobinAria: 'Robin Hood. Nueva adaptación en fila, con candado hasta su lanzamiento.',
@@ -754,6 +761,7 @@
             p2TituloCurto: 'Ejércitos de Lana y Yelmo Encantado',
             p3TituloCurto: 'Sierra Morena y la Princesa Micomicona',
             p4TituloCurto: 'El Yelmo, la Bacía y la Jaula',
+            p5TituloCurto: 'El Libro Famoso y el Caballero de los Leones',
 
             // Abas (sobre.html)
             abaProposta: 'Propuesta y Cómo Funciona',
@@ -960,7 +968,10 @@
         // Atualizações específicas da biblioteca (index.html)
         if (document.body.dataset.pagina === 'index') {
             // Badges, links e títulos curtos das partes
-            [1, 2, 3, 4].forEach(n => {
+            document.querySelectorAll('[data-i18n-aria-parte]').forEach(el => {
+                if (d.emProducaoAria) el.setAttribute('aria-label', d.emProducaoAria(Number(el.dataset.i18nAriaParte)));
+            });
+            [1, 2, 3, 4, 5, 6, 7, 8].forEach(n => {
                 const badge = document.getElementById(`badge-parte-${n}`);
                 if (badge) badge.textContent = d.parte(n);
                 const link = document.getElementById(`link-parte-${n}`);
