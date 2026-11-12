@@ -6,7 +6,7 @@ Resumo operacional para agentes e subagentes (2026-11-10). Condensa `AGENTS.md`,
 - **Sem API paga** (imagens e narração) até o humano autorizar no prompt. Só texto e estrutura.
 - **Não baixar nem ler o original de Cervantes**: use o conhecimento interno.
 - Trabalho **em fila**, uma parte por vez, commit a cada entrega. Subagentes só quando compensam: o orquestrador escreve e decide; um **crítico de contexto limpo** audita o rascunho; tarefas mecânicas vão para o modelo mais barato.
-- Ciclo de uma parte nesta fase: ler o fim da parte anterior → escaleta no caderno → texto em `dom-quixote/parte-N.html` (`rascunho: true`) → atividades e visual no caderno → crítica adversarial → polimento → `npm run build` + teste nos dois tamanhos de tablet → commit → 🛑 parar para o humano.
+- **Reaproveitar arte**: as cenas da Parte 4 antiga estão em `dom-quixote/imagens/acervo/parte-4-v1/` (Clavilenho `p3`, conselhos `p4`, bengala `p5`, burrico `p6`, lareira `p7`); o rascunho aponta para elas com `../acervo/parte-4-v1/…`. Ciclo de uma parte nesta fase: ler o fim da parte anterior → escaleta no caderno → texto em `dom-quixote/parte-N.html` (`rascunho: true`) → atividades e visual no caderno → crítica adversarial → polimento → `npm run build` + teste nos dois tamanhos de tablet → commit → 🛑 parar para o humano.
 
 ## 2. Leitor e voz
 - Uma criança de **6 anos** ouvindo um adulto ler. Narrador caloroso, humor gentil, falas com travessão.
@@ -19,6 +19,9 @@ Resumo operacional para agentes e subagentes (2026-11-10). Condensa `AGENTS.md`,
 - Bordões e fatos fixos: mestre Nicolau (o barbeiro amigo), o padre, a sobrinha Antônia, a governanta, Teresa e Sanchica, o **bacielmo**, a "janelinha" de dois dentes, "Lá vai ele de novo!", "Boa noite, Dulcineia". Sancho **não sabe ler**. O texto nunca muda com a lente.
 - **A segunda metade merece o cuidado da primeira** (foi onde a Parte 4 cansou).
 - **Humor de fazer rir e mistério que prende** (nota do humano na Parte 5, 2026-11-12): texto "bom" não basta. Cada página precisa de **uma cena de riso** de verdade (corpo, bicho, comida, resposta esperta de Sancho; quase sempre já está em Cervantes) e a parte precisa de **um mistério que atravessa as páginas**: uma pergunta plantada cedo, pistas pequenas no fim de algumas páginas (um barulho, uma sombra, uma voz conhecida) e a resposta mais adiante. Termine páginas com uma pergunta ou um "tlim... tlim...", não com um resumo.
+- **Personagem novo não entra de supetão** (nota do humano, 2026-11-12): antes de agir, ele é **anunciado** (alguém fala dele uma página antes, ou a cena o mostra chegando), ganha **um traço físico, um jeito e um motivo** ("por que ele faz isso?") e, se for importante, uma ligação afetiva com os heróis. Vale em dobro para quem volta em outra parte (Sansão, o mordomo do duque).
+- **Verossimilhança dentro da fantasia** (idem): o que acontece precisa ser possível para aquele personagem. Dom Quixote é velho e magrinho: quando vence, o texto mostra **como** (sorte, um cavalo guloso, a trapalhada do outro), passo a passo, e o narrador não finge que foi força. Quando perde, idem.
+- **Em casa ele é "o senhor Alonso"** (idem): a governanta, a sobrinha, o padre, Sansão e os vizinhos nunca dizem "patrão" nem "Dom Quixote" entre si; Sancho diz "meu amo".
 
 ## 3. Tamanho e forma
 - Parte = capa + **8 a 11 capítulos**; cada página = **um episódio**, **3 a 5 parágrafos** (6 é sinal de que são duas páginas). 1 a 3 capítulos de Cervantes por página; nunca mais de 25 por parte.
