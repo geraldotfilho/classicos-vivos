@@ -1,7 +1,9 @@
 // Situação da narração gravada: para cada idioma e parte, quantas páginas e palavras-chave já estão gravadas
-// (com o mesmo hash do texto atual) e o que falta. Não chama nenhuma API.
+// (com o mesmo hash do texto atual) e o que falta. Também confere se algum pN.mp3 ainda tem a rajada de ruído do TTS
+// (o "arranhão" entre frases, AGENTS.md §2.6) com tools/audio_gate.py --verificar. Não chama nenhuma API.
 // Uso: node tools/conferir-narracao.mjs [--livro dom-quixote] [--partes 1,2,3,4] [--idiomas pt,en,fr,es]
-import { readFileSync, existsSync } from 'node:fs';
+import { readFileSync, existsSync, readdirSync } from 'node:fs';
+import { spawnSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -34,4 +36,25 @@ for (const idioma of idiomas) {
         const faltam = (fonte.palavras || []).filter(w => !(indice[w.slug] === w.hash && existsSync(join(RAIZ, livro, 'audio', `palavras${sufixo}`, `${w.slug}.mp3`)))).map(w => w.slug);
         console.log(`${idioma} parte ${parte}: páginas ${paginas.length - pendentesPag.length}/${paginas.length}${pendentesPag.length ? ` (faltam p${pendentesPag.join(', p')})` : ''}; palavras ${(fonte.palavras || []).length - faltam.length}/${(fonte.palavras || []).length}${faltam.length ? ` (faltam ${faltam.join(', ')})` : ''}`);
     }
+}
+
+// Rajadas de ruído do TTS (o "arranhão de agulha" entre frases): nenhum pN.mp3 pode ter
+const mp3s = [];
+for (const idioma of idiomas) {
+    const sufixo = idioma === 'pt' ? '' : `-${idioma}`;
+    for (const parte of partes) {
+        const pasta = join(RAIZ, livro, 'audio', `narracao${sufixo}`, `parte-${parte}`);
+        if (existsSync(pasta)) for (const f of readdirSync(pasta)) if (/^p\d+\.mp3$/.test(f)) mp3s.push(join(pasta, f));
+    }
+}
+if (mp3s.length) {
+    let r = null;
+    for (const py of ['python3', 'python']) {
+        r = spawnSync(py, [join(RAIZ, 'tools', 'audio_gate.py'), '--verificar', ...mp3s], { encoding: 'utf8' });
+        if (!r.error && /Rajadas:/.test(r.stdout || '')) break;
+        r = null;
+    }
+    if (!r) console.error('⚠️  Não deu para conferir as rajadas (precisa de python3 com numpy e do ffmpeg).');
+    else if (r.status) { console.error((r.stdout || '').trim()); console.error('❌ Há rajadas: rode python3 tools/audio_gate.py --so-rajadas <arquivos> e confira de novo.'); process.exitCode = 1; }
+    else console.log(`✅ Sem rajadas de ruído nas ${mp3s.length} páginas gravadas.`);
 }
