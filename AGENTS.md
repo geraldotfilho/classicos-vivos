@@ -37,7 +37,7 @@ Agentes podem estar trabalhando **em paralelo** no mesmo repositório, cada um n
 ### 0.4 Regras de convivência
 - **Português do Brasil** em tudo (código comentado, documentos, commits).
 - **Nunca quebre o que está publicado**: obra nova ou versão nova nasce como **rascunho** (§2.5, §3.4).
-- **Trabalhe numa branch** (a que o ambiente da sessão definir) e, ao fim do trabalho, **entregue na `main`** quando o humano pedir (é o normal). Como outro agente pode estar trabalhando em paralelo, a `main` do remoto pode ter andado: **antes de entregar, mescle a `main` do remoto na sua branch** e resolva os conflitos; só então mande para a `main` (§6). Se um conflito não tiver solução que preserve o trabalho dos dois lados, **pergunte ao humano**.
+- **Trabalhe numa branch** (a que o ambiente da sessão definir) e **sempre entregue na `main`, por merge, ao fim de cada entrega** (regra do humano, 2026-11-12: é pelo site que ele lê, inclusive os rascunhos; não espere ele pedir e não deixe o trabalho parado só na branch ou num PR aberto). Como outro agente pode estar trabalhando em paralelo, a `main` do remoto pode ter andado: **antes de entregar, mescle a `main` do remoto na sua branch** e resolva os conflitos; só então mande para a `main` (§6). Se um conflito não tiver solução que preserve o trabalho dos dois lados, **pergunte ao humano**.
 - **Feche a sessão** com o `npm run build` (se mexeu em HTML, classes, ícones ou imagens), os testes, o PR, o caderno e a `docs/RETOMADA.md` atualizados e, se houve gasto, quanto foi.
 - **Documente o que aprendeu**: regra geral → receita geral; regra de uma obra → receita específica; arquitetura → este arquivo; pendência → `docs/BACKLOG.md`; entrega → `docs/HISTORICO.md`.
 
@@ -406,7 +406,7 @@ cmd /c '"C:\Program Files\Google\Chrome\Application\chrome.exe" --headless=new -
 O repositório oficial é hospedado em:
 `https://github.com/geraldotfilho/classicos-vivos.git` (Branch: `main`, publicada no GitHub Pages).
 
-O trabalho é feito numa **branch** (a que o ambiente da sessão definir) e, ao fim, entregue na **`main`** quando o humano pedir (é o normal). **Outro agente pode estar trabalhando em paralelo**, então a `main` do remoto pode ter andado desde que a sua branch começou. Por isso, a entrega é sempre:
+O trabalho é feito numa **branch** (a que o ambiente da sessão definir) e, ao fim de cada entrega, **sempre** mesclado na **`main`** (regra do humano, 2026-11-12: ele lê pelo site, inclusive os rascunhos; não é preciso ele pedir). **Outro agente pode estar trabalhando em paralelo**, então a `main` do remoto pode ter andado desde que a sua branch começou. Por isso, a entrega é sempre:
 1. `git fetch origin main` e **mesclar a `main` do remoto na sua branch** (merge, sem reescrever o histórico de ninguém);
 2. **resolver os conflitos** preservando o trabalho dos dois lados. Arquivos gerados não se resolvem à mão: rode o gerador de novo (`npm run build:sw` para o `sw.js`, `npm run build` para o resto). **Se um conflito não tiver solução que não destrua o trabalho de alguém, pare e pergunte ao humano**;
 3. rodar o `npm run build` e os testes (§5) já com tudo mesclado;
