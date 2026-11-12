@@ -19,3 +19,15 @@ data,modelo,nivel,comando,pedidos,imagens_ok,tokens_entrada,tokens_imagem,tokens
 2026-10-25T22:53,gemini-3.1-flash-image,batch,"--lista tools/arte/dom-quixote-parte-4.mjs --ids p4-real,p6-real,p7-real,p9-real,p8-real,p10-real",6,6,7128,6720,2980,0.2079
 2026-10-25T22:55,gemini-3.1-flash-image,batch,"--lista tools/arte/dom-quixote-parte-4.mjs --ids p4-imag,p8-imag,p10-imag",3,3,4720,3360,1726,0.1046
 2026-10-25T22:59,gemini-3.1-flash-image,batch,"--lista tools/arte/dom-quixote-parte-4.mjs --ids p8-imag,p10-imag",2,2,2844,2240,1245,0.0698
+2026-11-12T19:12,gemini-3.1-flash-image,batch,"--lista tools/arte/dom-quixote-parte-5-b.mjs --ids p2-real,p5-real,p7-real",3,3,3313,3360,1499,0.1039
+2026-11-12T19:12,gemini-3.1-flash-image,batch,"--lista tools/arte/dom-quixote-parte-5-a.mjs --ids p0-real,p1-real,p3-real,p4-real",4,4,4914,4480,2056,0.1387
+2026-11-12T19:12,gemini-3.1-flash-image,batch,"--lista tools/arte/dom-quixote-parte-5-c.mjs --ids p8-real,p9-real",2,2,1853,4480,1892,0.1377
+2026-11-12T19:15,gemini-3.1-flash-image,batch,"--lista tools/arte/dom-quixote-parte-5-a.mjs --ids p3-real,p0-imag",2,2,2452,2240,1062,0.0694
+2026-11-12T19:15,gemini-3.1-flash-image,batch,"--lista tools/arte/dom-quixote-parte-5-b.mjs --ids p6-real,p2-imag,p5-imag",3,3,4339,3360,1560,0.1042
+2026-11-12T19:15,gemini-3.1-flash-image,batch,"--lista tools/arte/dom-quixote-parte-5-c.mjs --ids p9-real,p8-imag",2,2,2441,2240,1064,0.0694
+2026-11-12T19:17,gemini-3.1-flash-image,batch,"--lista tools/arte/dom-quixote-parte-5-a.mjs --ids p3-real",1,1,1009,1120,527,0.0346
+2026-11-12T19:17,gemini-3.1-flash-image,batch,"--lista tools/arte/dom-quixote-parte-5-b.mjs --ids p6-real-v2",1,1,775,1120,483,0.0345
+2026-11-12T19:17,gemini-3.1-flash-image,batch,"--lista tools/arte/dom-quixote-parte-5-c.mjs --ids p8-imag,p9-real-stage-1,p9-real-stage-2,p9-real-stage-3,p9-real-stage-4,p9-imag",6,6,5329,6720,2405,0.2065
+2026-11-12T19:19,gemini-3.1-flash-image,batch,"--lista tools/arte/dom-quixote-parte-5-b.mjs --ids p6-imag,p6-elmo,p6-narigao",3,3,2176,2614,1168,0.0807
+2026-11-12T19:19,gemini-3.1-flash-image,batch,"--lista tools/arte/dom-quixote-parte-5-a.mjs --ids p3-real",1,1,1206,1120,621,0.0348
+2026-11-12T19:20,gemini-3.1-flash-image,batch,"--lista tools/arte/dom-quixote-parte-5-c.mjs --ids p9-real-stage-4",1,1,531,1120,393,0.0343
