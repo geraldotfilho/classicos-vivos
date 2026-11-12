@@ -6,22 +6,96 @@ Ferramenta de limpeza espectral e eliminação de ruídos na narração:
    150-200 ms, logo após o término da fala e de uma pausa de silêncio. Essa rajada é
    zerada suavemente com rampa Hann, mantendo rigorosamente a contagem de amostras
    (preserve_length: True) para compatibilidade com paginas.json.
-2. Gate espectral de pausas internas: elimina o piso estático (hiss neural de difusão de
+2. Eliminação das rajadas INTERNAS (o "arranhão de agulha no vinil" entre frases): a página
+   gravada é montada emendando vários pedidos à API (blocos: narradora + um personagem), e
+   cada pedido traz a sua rajada de fim (~150-230 ms de ruído quase branco, RMS ~0,3-0,45 do
+   fundo de escala, picos estourando) logo antes da pausa entre blocos, ou seja, exatamente
+   na passagem de uma frase para a outra. O item 1 só pegava a última, a do fim do arquivo.
+   Assinatura (sem nenhum falso positivo em todo o acervo, 2026-11-12): janelas de 30 ms
+   altas (RMS > 4900) e com cara de ruído (planura espectral > 0,06) por >= 50 ms seguidos;
+   a fala alta tem planura < 0,01. A rajada é zerada com rampas Hann de 10 ms, sem mudar a
+   contagem de amostras (os ini/fim do paginas.json continuam valendo).
+3. Gate espectral de pausas internas: elimina o piso estático (hiss neural de difusão de
    4 kHz a 12 kHz) nas pausas entre títulos, parágrafos e frases, preservando 100% da voz.
 
 Uso:
-  python tools/audio_gate.py                     (processa todos os MP3 de dom-quixote/audio/)
-  python tools/audio_gate.py arquivo1.mp3 ...    (processa os arquivos informados)
+  python3 tools/audio_gate.py                    (processa todos os MP3 de dom-quixote/audio/)
+  python3 tools/audio_gate.py arquivo1.mp3 ...   (processa os arquivos informados)
+  python3 tools/audio_gate.py --so-rajadas [arquivos]   (só tira as rajadas internas; não mexe
+                                                 no resto nem recodifica arquivo sem rajada)
 """
 
 import glob
 import os
+import shutil
 import sys
 import subprocess
-import imageio_ffmpeg
 import numpy as np
 
-ffmpeg = imageio_ffmpeg.get_ffmpeg_exe()
+try:
+    import imageio_ffmpeg
+    ffmpeg = imageio_ffmpeg.get_ffmpeg_exe()
+except ImportError:   # sem o pacote: o ffmpeg do sistema
+    ffmpeg = shutil.which('ffmpeg') or 'ffmpeg'
+
+
+def remover_rajadas_internas(samples_f, sample_rate=24000):
+    """Zera, no lugar, as rajadas de ruído das emendas entre blocos (ver item 2 do cabeçalho).
+    samples_f: float32 na escala do int16. Devolve a lista de trechos zerados (ini, fim) em amostras."""
+    frame_len = int(sample_rate * 0.01)          # passo de 10 ms
+    janela = 3 * frame_len                       # janela de 30 ms centrada no quadro
+    n = len(samples_f) // frame_len
+    if n < 10:
+        return []
+    pad = np.concatenate([np.zeros(frame_len, np.float32), samples_f.astype(np.float32),
+                          np.zeros(janela, np.float32)])
+    W = np.lib.stride_tricks.sliding_window_view(pad, janela)[::frame_len][:n]
+    rms = np.sqrt(np.mean(W ** 2, axis=1))
+    P = np.abs(np.fft.rfft(W * np.hanning(janela), axis=1)) ** 2 + 1e-9
+    planura = np.exp(np.mean(np.log(P), axis=1)) / np.mean(P, axis=1)
+    ruido = (rms > 4900) & (planura > 0.06)
+    quieto = 330                                 # ~0,01 do fundo de escala
+
+    # grupos de quadros ruidosos (buracos de até 30 ms não separam o grupo)
+    grupos, i = [], 0
+    while i < n:
+        if not ruido[i]:
+            i += 1
+            continue
+        j, ult, cont = i, i, 0
+        while j < n and j - ult <= 3:
+            if ruido[j]:
+                ult, cont = j, cont + 1
+            j += 1
+        grupos.append((i, ult + 1, cont))
+        i = ult + 1
+
+    trechos = []
+    for a, b, cont in grupos:
+        if cont < 5 or (b - a) > 35:             # >= 50 ms de ruído, no máximo 350 ms de extensão
+            continue
+        # estende pelas bordas da rajada (subida e descida) até o silêncio, sem entrar na fala:
+        # a fala é tonal de forma sustentada (planura < 0,01 em 3 quadros seguidos)
+        def fala(k, passo):
+            ks = [k + passo * d for d in range(3) if 0 <= k + passo * d < n]
+            return all(planura[q] < 0.01 for q in ks)
+        ext = 0
+        while a > 0 and ext < 8 and rms[a - 1] > quieto and not fala(a - 1, -1):
+            a, ext = a - 1, ext + 1
+        ext = 0
+        while b < n and ext < 8 and rms[b] > quieto and not fala(b, 1):
+            b, ext = b + 1, ext + 1
+        ini, fim = a * frame_len, min(len(samples_f), b * frame_len)
+        rampa = frame_len                        # Hann de 10 ms fora do trecho zerado
+        r0 = max(0, ini - rampa)
+        if ini > r0:
+            samples_f[r0:ini] *= 0.5 * (1 + np.cos(np.pi * np.arange(ini - r0) / (ini - r0)))
+        r1 = min(len(samples_f), fim + rampa)
+        if r1 > fim:
+            samples_f[fim:r1] *= 0.5 * (1 - np.cos(np.pi * np.arange(r1 - fim) / (r1 - fim)))
+        samples_f[ini:fim] = 0.0
+        trechos.append((ini, fim))
+    return trechos
 
 def clean_audio_stream(samples, sample_rate=24000, preserve_length=True):
     """
@@ -65,7 +139,12 @@ def clean_audio_stream(samples, sample_rate=24000, preserve_length=True):
             samples_f[cutoff_sample:] = 0.0
 
     # -------------------------------------------------------------
-    # 2. ANÁLISE ESPECTRAL E GATE DE RUÍDO NAS PAUSAS INTERNAS
+    # 2. RAJADAS INTERNAS (emendas entre blocos: o "arranhão" entre frases)
+    # -------------------------------------------------------------
+    remover_rajadas_internas(samples_f, sample_rate)
+
+    # -------------------------------------------------------------
+    # 3. ANÁLISE ESPECTRAL E GATE DE RUÍDO NAS PAUSAS INTERNAS
     # -------------------------------------------------------------
     frames = samples_f[:n_frames * frame_len].reshape(n_frames, frame_len)
     frame_rms = np.sqrt(np.mean(frames**2, axis=1))
@@ -175,6 +254,19 @@ def encode_mp3(samples, dest_path):
         return True
     return False
 
+def remover_so_rajadas(path):
+    """Só as rajadas internas; o arquivo só é recodificado se tiver alguma."""
+    samples_orig = decode_mp3(path)
+    samples_f = samples_orig.astype(np.float32)
+    trechos = remover_rajadas_internas(samples_f)
+    if not trechos:
+        return False
+    limpo = np.round(np.clip(samples_f, -32768, 32767)).astype(np.int16)
+    if not encode_mp3(limpo, path):
+        return False
+    print(f"  {path}: {len(trechos)} rajada(s) em " + ', '.join(f"{i / 24000:.2f}s" for i, _ in trechos))
+    return True
+
 def process_file(path):
     samples_orig = decode_mp3(path)
     if len(samples_orig) < 2400:
@@ -190,13 +282,15 @@ def process_file(path):
 
 def main():
     args = sys.argv[1:]
+    so_rajadas = '--so-rajadas' in args
+    args = [a for a in args if a != '--so-rajadas']
     files = args if args else sorted(glob.glob('classicos-vivos/dom-quixote/audio/**/*.mp3', recursive=True))
     if not files and os.path.exists('dom-quixote/audio'):
         files = sorted(glob.glob('dom-quixote/audio/**/*.mp3', recursive=True))
     print(f"Processando gate de áudio e eliminação de rajadas em {len(files)} arquivos...")
     modificados = 0
     for f in files:
-        if process_file(f):
+        if (remover_so_rajadas(f) if so_rajadas else process_file(f)):
             modificados += 1
     print(f"Concluído: {modificados} arquivos tratados com sucesso.")
 

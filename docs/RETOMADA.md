@@ -30,6 +30,8 @@
 ## 2. Próximas sessões (escolha do humano)
 
 > **2026-11-12 (tarde) — a Parte 5 está publicada** na estante principal, dentro do boxset do segundo volume (que agora abre; as Partes 6 a 8 aparecem com cadeado). Ilustrada pela API (22 imagens, US$ 1,11, três subagentes em paralelo; caderno §6), só em português e com a voz do aparelho. A fase 5 (revisão final) foi pulada a pedido do humano. Pontos para o olho do humano: caderno da Parte 5, §6 (Tomé loiro de gorro, nariz de Sansão pouco achatado, escudos em vez de bandeiras na carroça do leão, Dom Quixote com duas espadas na pág. 9). Faltam a **narração (fase 6)** e as **traduções (fase 7)** da Parte 5.
+>
+> **Áudio (2026-11-12)**: o "arranhão de agulha" entre frases era a rajada de ruído que o TTS deixa no fim de **cada pedido**, presa nas emendas de blocos dentro de `pN.mp3` (259 rajadas em 100 páginas, pt/en/fr/es). Zeradas com `tools/audio_gate.py --so-rajadas` (sem API, duração idêntica); o gate agora roda nas gravações futuras. 🛑 **Escuta do humano**: Parte 1 pág. 2 (~15,3 s) e Parte 4 pág. 2 (~33 s, 55 s, 65 s, 72 s); em espanhol, Parte 4 págs. 0 (~8,6 s) e 9 (~18,7 s).
 
 > **2026-11-12 — o segundo volume de Dom Quixote (1615) está inteiro em rascunho de texto**, em quatro partes, sem nenhuma API paga:
 > | Parte | Título | Capítulos | Arquivo | Caderno |

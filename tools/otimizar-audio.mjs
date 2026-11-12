@@ -2,7 +2,8 @@
 // saída do modelo de voz) em MP3 leve para o tablet, e apaga o original.
 // - Corta o silêncio do começo e do fim (deixa 80 ms), para as frases emendarem com ritmo natural.
 // - Mono, 48 kbps: ~6 KB por segundo de fala.
-// - Aplica gate de ruído nas pausas (audio_gate.py) para silêncio cristalino.
+// - Aplica gate de ruído nas pausas (audio_gate.py) para silêncio cristalino e tira as rajadas de ruído
+//   das emendas entre blocos (o "arranhão de agulha" entre frases).
 // Uso: npm run build:audio            (todos os livros: <livro>/audio/**/*.wav|.pcm)
 //      node tools/otimizar-audio.mjs arquivo.wav ...
 import { readFileSync, writeFileSync, unlinkSync, globSync } from 'node:fs';
@@ -85,10 +86,13 @@ for (const arq of alvos) {
         const destino = arq.replace(/\.(wav|pcm)$/, '.mp3');
         writeFileSync(destino, mp3);
         unlinkSync(arq);
-        try {
-            const gateScript = join(dirname(fileURLToPath(import.meta.url)), 'audio_gate.py');
-            execFileSync('python', [gateScript, destino], { stdio: 'ignore' });
-        } catch (e) {}
+        // Gate e rajadas (inclusive as das emendas entre blocos, o "arranhão" entre frases): python3 ou python
+        const gateScript = join(dirname(fileURLToPath(import.meta.url)), 'audio_gate.py');
+        let gate = false;
+        for (const py of ['python3', 'python']) {
+            try { execFileSync(py, [gateScript, destino], { stdio: 'ignore' }); gate = true; break; } catch (e) {}
+        }
+        if (!gate) console.warn(`AVISO: audio_gate.py não rodou em ${destino} (precisa de python3 com numpy e do ffmpeg)`);
         ok++;
         console.log(`${arq} → ${destino} (${(mono.length / audio.taxa).toFixed(1)} s, ${Math.round(mp3.length / 1024)} KB)`);
     } catch (e) {
