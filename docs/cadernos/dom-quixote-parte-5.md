@@ -7,7 +7,7 @@ Plano do volume: [`../PLANO-DOM-QUIXOTE-VOLUME-2.md`](../PLANO-DOM-QUIXOTE-VOLUM
 | 1 Adaptação e texto | ✅ | 2026-11-10 | branch `claude/sharp-brown-0enu6o` | — |
 | 2 Interações e visual | ✅ (lista de arte `.mjs` fica para a sessão da fase 4, depois da aprovação) | 2026-11-10 | idem | — |
 | Crítica adversarial (subagente de contexto limpo) + polimento | ✅ | 2026-11-10 | idem | — |
-| 3 Revisão humana 🛑 | **esperando o humano** | | | — |
+| 3 Revisão humana 🛑 | 🟡 1ª nota aplicada (mais humor e mistério); **esperando a releitura** | 2026-11-12 | | — |
 | 4 Ilustrações e atividades | ⬜ | | | US$ |
 | 5 Revisão final 🛑 | ⬜ | | | — |
 | 6 Narração (pt) + escuta 🛑 | ⬜ | | | US$ |
@@ -68,7 +68,7 @@ No segundo volume, quem engana é o mundo (gente fantasiada): a Realidade mostra
 | 0 | `p0-real`, `p0-imag` | Dom Quixote e Sancho, na estrada, olham espantados um livro aberto com os dois desenhados | os moinhos-gigantes, as ovelhas-exércitos e o leão saltam das páginas em luz dourada | capa da estante |
 | 1 | `p1-real` | o quarto: Dom Quixote na cama, colete verde e touca vermelha; o padre e Nicolau sentados; ao fundo, na porta, a governanta de vassoura barra Sancho; o gatinho na cama | **sem lente** (vida real) | — |
 | 2 | `p2-real`, `p2-imag` | Sansão (baixinho, cara redonda, nariz achatado, roupa de estudante) mostra o livro aberto no colo de Dom Quixote; Sancho com o nariz na página; **sem texto legível** | do livro aberto saem gigantes de pedra e musgo, exércitos, o elmo dourado; Dom Quixote como cavaleiro dourado na cama-trono | recompensa da atividade 1 |
-| 3 | `p3-real` | entardecer na saída da aldeia; os dois partindo; Sansão acena na última casa, com sorriso de segredo; primeira estrela | **sem lente** | — |
+| 3 | `p3-real` | entardecer na saída da aldeia; os dois partindo; a governanta na janela; primeira estrela; **bem longe, atrás, duas sombras a cavalo** (um brilho de espelho) | **sem lente** | — |
 | 4 | `p4-real` | carroça aberta com atores: diabinho de chifres de papelão guiando as mulas, anjo de asas de pano, rei de coroa de lata, rainha, guerreiro; o palhaço de guizos com a vara das três bolas | **sem lente**: é a página em que Dom Quixote vê as coisas como são | sem a Morte; fantasias visivelmente caseiras |
 | 5 | `p5-real`, `p5-imag` | amanhecer no bosque: Sancho tentando subir na árvore; o escudeiro com o narigão roxo de papelão (preso por um cordão); ao fundo, os dois cavaleiros | **o medo de Sancho**: o nariz do tamanho de um tronco, o escudeiro como ogro bonachão | a legenda diz que a imaginação é de Sancho |
 | 6 | `p6-real`, `p6-imag` + camadas `p6-elmo`, `p6-narigao` | **arte-base sem disfarce**: Sansão sentado na grama, de armadura de espelhinhos e **cabeça descoberta**, e Tomé de nariz normal; Dom Quixote ao lado; Sancho descendo da árvore | o Cavaleiro das Mil Luas vencido saúda o cavaleiro dourado | o elmo e o narigão são **camadas** que saem (`ate`); deixar limpo o rosto dos dois na base |
@@ -81,7 +81,15 @@ No segundo volume, quem engana é o mundo (gente fantasiada): a Realidade mostra
 - **Estimativa de arte** (para a autorização futura): 10 cenas-base + 6 Imaginações + 4 etapas + 2 camadas = **22 imagens**, ~US$ 0,85 no Batch.
 
 ## 5. Notas do humano e o que mudou
-*(à espera da leitura da fase 3)*
+- **2026-11-12 (fase 3, 1ª leitura do humano)**: "No geral, o texto ficou bom, porém senti falta de mais momentos com humor de fazer rir e/ou mistério para realmente prender o público." O que mudou (as dez páginas foram reescritas; estrutura, atividades e lentes iguais):
+  1. **Um mistério que atravessa a parte** (três perguntas, cada uma respondida algumas páginas depois):
+     - *Como gente desconhecida sabe o nome de Sancho e do burrico?* (cap. 34; a palavra-chave NOTÍCIA virou SEGREDO) → o livro (cap. 35).
+     - *Quem escreveu o livro e como sabia até das conversas na estrada?* (cap. 35: "só pode ser um mago invisível"; Sancho olha debaixo da cama) → fica aberto de propósito, para as Partes 6 a 8.
+     - *O que Sansão e Tomé estão aprontando?* (cap. 36: o saco que faz tlim-tlim e brilha, a "coisa comprida" diante do espelho) → **as duas sombras a cavalo** e o **tlim... tlim...** que seguem os heróis (fim dos caps. 36 e 37, começo do 38) → a voz fanhosa do escudeiro que não sai da sombra e "lembra alguém da aldeia" (cap. 38) → a armadura de espelhinhos e o nariz "no bolso" (cap. 40).
+  2. **Humor de rir, uma ou duas cenas por página**, quase tudo de Cervantes: a vassoura (direita, esquerda, por baixo, a barriga entala, ATCHIM!); o gatinho tapa os olhos; "as cambalhotas o escritor podia ter pulado"; o chinelo debaixo da cama; o berreiro de ciúme, "feito carrapato"; Sancho escondido atrás do burrico "mais baixo que ele" e o "diabo tão educado"; Sancho falando de boca cheia ("o beu abo..."); "Para aquele nariz não me alcançar!"; Rocinante que "galopou de verdade — quer dizer: trotou um pouquinho mais depressa" e o cavalo que empaca para comer capim; "E o seu narigão? — Está aqui, no bolso"; "Se o leão comer o senhor, quem é que vai me dar a minha ilha?"; "Leão dormindo ninguém cutuca!"; "Dois braços, duas pernas, um nariz... Está inteiro!".
+  3. **Tamanho**: os caps. 36, 37 e 40 ficaram com 6 parágrafos (curtos). Se cansar na leitura, o 40 é o candidato a virar dois (a revelação / o requeijão).
+  4. **Para a narração (fase 6)**: a fala de boca cheia do cap. 38 precisa de teste de pronúncia; se a voz tropeçar, volta ao texto normal.
+  5. **Arte**: o cap. 36 não mostra mais Sansão acenando, e sim as duas sombras ao longe; o cap. 39 pede o escudeiro segurando o nariz com a mão.
 
 ### 5.1 Crítica adversarial (subagente Opus, contexto limpo, 2026-11-10)
 O crítico leu só as diretrizes e o texto exportado. Notas por página: 5 a 8 (as mais fracas: a 7, com dois episódios, e as 1, 3, 4 e 6). O que foi aceito e mudou:

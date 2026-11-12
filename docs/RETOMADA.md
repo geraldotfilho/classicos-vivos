@@ -31,7 +31,7 @@
 
 > **2026-11-10 — sessão autônoma do segundo volume de Dom Quixote (sem API paga).** O volume de 1615 foi dividido em **quatro partes (5 a 8)**: [`PLANO-DOM-QUIXOTE-VOLUME-2.md`](PLANO-DOM-QUIXOTE-VOLUME-2.md). As regras, numa página só, para qualquer agente ou subagente: [`DIRETRIZES_VOL2.md`](DIRETRIZES_VOL2.md). A **Parte 5** (*O Livro Famoso e o Cavaleiro dos Leões*, caps. 34–42) está escrita em rascunho, com as 3 atividades funcionando e sem ilustrações: `dom-quixote/parte-5.html` (em `sobre.html` → Livros em produção → "Mostrar os rascunhos"). Caderno: [`cadernos/dom-quixote-parte-5.md`](cadernos/dom-quixote-parte-5.md).
 
-1. 🛑 **Fase 3 da Parte 5**: o humano lê o rascunho no tablet (sozinho, na voz do aparelho) e manda as notas. Depois: ajustes + fase 4 (arte pela API, ~22 imagens, ~US$ 0,85, só com autorização).
+1. 🛑 **Fase 3 da Parte 5**: a 1ª nota do humano (2026-11-12: faltava humor de rir e mistério) foi aplicada, com as dez páginas reescritas; falta a **releitura** dele. Depois: ajustes + fase 4 (arte pela API, ~22 imagens, ~US$ 0,85, só com autorização).
 2. **Parte 6** (*O Teatrinho, o Barco e o Cavalo Voador*, II-18 a 41): fases 1 e 2 no mesmo método, se o humano aprovar o resultado e o consumo da Parte 5.
 3. **Fase 8 da Parte 4** (retrospectiva do primeiro volume).
 4. **Escuta humana das vozes novas** dos personagens das Partes 2 a 4 nos três idiomas (`docs/narracao/qa-partes-2-4-traducoes.md`).

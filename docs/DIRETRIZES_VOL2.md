@@ -18,6 +18,7 @@ Resumo operacional para agentes e subagentes (2026-11-10). Condensa `AGENTS.md`,
 - Tratamento carinhoso entre quem se gosta ("minha Teresinha"); nunca "mulher!".
 - Bordões e fatos fixos: mestre Nicolau (o barbeiro amigo), o padre, a sobrinha Antônia, a governanta, Teresa e Sanchica, o **bacielmo**, a "janelinha" de dois dentes, "Lá vai ele de novo!", "Boa noite, Dulcineia". Sancho **não sabe ler**. O texto nunca muda com a lente.
 - **A segunda metade merece o cuidado da primeira** (foi onde a Parte 4 cansou).
+- **Humor de fazer rir e mistério que prende** (nota do humano na Parte 5, 2026-11-12): texto "bom" não basta. Cada página precisa de **uma cena de riso** de verdade (corpo, bicho, comida, resposta esperta de Sancho; quase sempre já está em Cervantes) e a parte precisa de **um mistério que atravessa as páginas**: uma pergunta plantada cedo, pistas pequenas no fim de algumas páginas (um barulho, uma sombra, uma voz conhecida) e a resposta mais adiante. Termine páginas com uma pergunta ou um "tlim... tlim...", não com um resumo.
 
 ## 3. Tamanho e forma
 - Parte = capa + **8 a 11 capítulos**; cada página = **um episódio**, **3 a 5 parágrafos** (6 é sinal de que são duas páginas). 1 a 3 capítulos de Cervantes por página; nunca mais de 25 por parte.
