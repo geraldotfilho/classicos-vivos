@@ -1,0 +1,2567 @@
+{
+  "obra": "Dom Quixote de La Mancha",
+  "parte": 7,
+  "audio": "dom-quixote/audio/<voz>/parte-7/<id>.mp3",
+  "audioPalavras": "dom-quixote/audio/palavras/<slug>.mp3",
+  "frases": [
+    {
+      "id": "p0-s0",
+      "pagina": 0,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Dom Quixote de La Mancha. Parte 7: Sancho, Governador da Ilha",
+      "fala": "Dom Quixote de La Mancha. Parte 7: Sancho, Governador da Ilha",
+      "hash": "5bd23b6bc5"
+    },
+    {
+      "id": "p0-s1",
+      "pagina": 0,
+      "paragrafo": 0,
+      "texto": "Sancho Pança esperou por este dia desde a primeira aventura: ele vai governar uma ILHA!",
+      "fala": "Sancho Pança esperou por este dia desde a primeira aventura: ele vai governar uma ilha!",
+      "hash": "8c98b5dd20"
+    },
+    {
+      "id": "p0-s2",
+      "pagina": 0,
+      "paragrafo": 0,
+      "texto": "Mas é uma ilha muito esquisita...",
+      "fala": "Mas é uma ilha muito esquisita...",
+      "hash": "1280503989"
+    },
+    {
+      "id": "p0-s3",
+      "pagina": 0,
+      "paragrafo": 0,
+      "texto": "Não tem praia, não tem peixe e, por mais que Sancho procure, não tem mar.",
+      "fala": "Não tem praia, não tem peixe e, por mais que Sancho procure, não tem mar.",
+      "hash": "e2a86daeb4"
+    },
+    {
+      "id": "p0-s4",
+      "pagina": 0,
+      "paragrafo": 1,
+      "texto": "Nesta parte da história, o novo governador vai resolver casos de detetive, enfrentar um doutor que não deixa ninguém comer e descobrir quem é o dono daquela voz grossa.",
+      "fala": "Nesta parte da história, o novo governador vai resolver casos de detetive, enfrentar um doutor que não deixa ninguém comer e descobrir quem é o dono daquela voz grossa.",
+      "hash": "213566781c"
+    },
+    {
+      "id": "p0-s5",
+      "pagina": 0,
+      "paragrafo": 1,
+      "texto": "Enquanto isso, no palácio, Dom Quixote vai sentir uma coisa nova: SAUDADE do seu escudeiro.",
+      "fala": "Enquanto isso, no palácio, Dom Quixote vai sentir uma coisa nova: saudade do seu escudeiro.",
+      "hash": "69261b4148"
+    },
+    {
+      "id": "p0-s6",
+      "pagina": 0,
+      "paragrafo": 2,
+      "texto": "Vire a página e descubra: será que um homem simples sabe GOVERNAR?",
+      "fala": "Vire a página e descubra: será que um homem simples sabe governar?",
+      "hash": "d167ae5395"
+    },
+    {
+      "id": "p1-s0",
+      "pagina": 1,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Capítulo 52. Conselhos para um Governador. Chega de Ditado, Sancho!",
+      "fala": "Capítulo 52. Conselhos para um Governador. Chega de Ditado, Sancho!",
+      "hash": "91ff6304b9"
+    },
+    {
+      "id": "p1-s1",
+      "pagina": 1,
+      "paragrafo": 0,
+      "texto": "Na véspera da viagem, Dom Quixote levou Sancho para um banco de pedra do jardim.",
+      "fala": "Na véspera da viagem, Dom Quixote levou Sancho para um banco de pedra do jardim.",
+      "hash": "b75fa643d2"
+    },
+    {
+      "id": "p1-s2",
+      "pagina": 1,
+      "paragrafo": 0,
+      "texto": "Estava feliz e preocupado ao mesmo tempo, como um pai no primeiro dia de escola do filho.",
+      "fala": "Estava feliz e preocupado ao mesmo tempo, como um pai no primeiro dia de escola do filho.",
+      "hash": "87c5d56a3b"
+    },
+    {
+      "id": "p1-s3",
+      "pagina": 1,
+      "paragrafo": 0,
+      "texto": "— Sente-se, Sancho.",
+      "fala": "Sente-se, Sancho.",
+      "hash": "63539d0b47"
+    },
+    {
+      "id": "p1-s4",
+      "pagina": 1,
+      "paragrafo": 0,
+      "texto": "Um governador precisa de bons CONSELHOS, e eu vou lhe dar os melhores que tenho.",
+      "fala": "Um governador precisa de bons conselhos, e eu vou lhe dar os melhores que tenho.",
+      "hash": "d41d6c726f"
+    },
+    {
+      "id": "p1-s5",
+      "pagina": 1,
+      "paragrafo": 1,
+      "texto": "— Primeiro: nunca tenha vergonha de ser filho de lavradores.",
+      "fala": "Primeiro: nunca tenha vergonha de ser filho de lavradores.",
+      "hash": "1628b22149"
+    },
+    {
+      "id": "p1-s6",
+      "pagina": 1,
+      "paragrafo": 1,
+      "texto": "Segundo: trate do mesmo jeito quem é rico e quem é pobre, e escute os dois até o fim.",
+      "fala": "Segundo: trate do mesmo jeito quem é rico e quem é pobre, e escute os dois até o fim.",
+      "hash": "fb73934d62"
+    },
+    {
+      "id": "p1-s7",
+      "pagina": 1,
+      "paragrafo": 1,
+      "texto": "Terceiro: quando tiver de dar um castigo, lembre que a JUSTIÇA fica mais bonita de mãos dadas com o perdão.",
+      "fala": "Terceiro: quando tiver de dar um castigo, lembre que a justiça fica mais bonita de mãos dadas com o perdão.",
+      "hash": "0bd01f8e44"
+    },
+    {
+      "id": "p1-s8",
+      "pagina": 1,
+      "paragrafo": 1,
+      "texto": "Sancho escutava de olhos bem abertos.",
+      "fala": "Sancho escutava de olhos bem abertos.",
+      "hash": "94311f7f3a"
+    },
+    {
+      "id": "p1-s9",
+      "pagina": 1,
+      "paragrafo": 2,
+      "texto": "— Agora, os conselhos para o corpo.",
+      "fala": "Agora, os conselhos para o corpo.",
+      "hash": "a3e4392389"
+    },
+    {
+      "id": "p1-s10",
+      "pagina": 1,
+      "paragrafo": 2,
+      "texto": "Corte as unhas.",
+      "fala": "Corte as unhas.",
+      "hash": "f5b0c4c37b"
+    },
+    {
+      "id": "p1-s11",
+      "pagina": 1,
+      "paragrafo": 2,
+      "texto": "Ande devagar.",
+      "fala": "Ande devagar.",
+      "hash": "f57a67151f"
+    },
+    {
+      "id": "p1-s12",
+      "pagina": 1,
+      "paragrafo": 2,
+      "texto": "Não coma alho nem cebola antes das reuniões, para ninguém sentir o cheiro de longe.",
+      "fala": "Não coma alho nem cebola antes das reuniões, para ninguém sentir o cheiro de longe.",
+      "hash": "2c13f6f3a3"
+    },
+    {
+      "id": "p1-s13",
+      "pagina": 1,
+      "paragrafo": 2,
+      "texto": "E, pelo amor de Deus, Sancho: não arrote na mesa!",
+      "fala": "E, pelo amor de Deus, Sancho: não arrote na mesa!",
+      "hash": "5e749a39e0"
+    },
+    {
+      "id": "p1-s14",
+      "pagina": 1,
+      "paragrafo": 2,
+      "texto": "— Nem unzinho?",
+      "fala": "Nem unzinho?",
+      "hash": "9fae10fa8f"
+    },
+    {
+      "id": "p1-s15",
+      "pagina": 1,
+      "paragrafo": 2,
+      "texto": "— Nem unzinho.",
+      "fala": "Nem unzinho.",
+      "hash": "e58f0ea878"
+    },
+    {
+      "id": "p1-s16",
+      "pagina": 1,
+      "paragrafo": 3,
+      "texto": "— E pare com essa mania de falar por DITADOS!",
+      "fala": "E pare com essa mania de falar por ditados!",
+      "hash": "8b2f63719d"
+    },
+    {
+      "id": "p1-s17",
+      "pagina": 1,
+      "paragrafo": 3,
+      "texto": "— Deixe comigo, meu amo.",
+      "fala": "Deixe comigo, meu amo.",
+      "hash": "dd0550d25d"
+    },
+    {
+      "id": "p1-s18",
+      "pagina": 1,
+      "paragrafo": 3,
+      "texto": "Quem avisa amigo é.",
+      "fala": "Quem avisa amigo é.",
+      "hash": "8c986bce79"
+    },
+    {
+      "id": "p1-s19",
+      "pagina": 1,
+      "paragrafo": 3,
+      "texto": "Em boca fechada não entra mosca.",
+      "fala": "Em boca fechada não entra mosca.",
+      "hash": "2e5bfb4816"
+    },
+    {
+      "id": "p1-s20",
+      "pagina": 1,
+      "paragrafo": 3,
+      "texto": "E devagar se vai ao longe!",
+      "fala": "E devagar se vai ao longe!",
+      "hash": "56dec6e51f"
+    },
+    {
+      "id": "p1-s21",
+      "pagina": 1,
+      "paragrafo": 3,
+      "texto": "— Sancho!",
+      "fala": "Sancho!",
+      "hash": "9fca0ce7ec"
+    },
+    {
+      "id": "p1-s22",
+      "pagina": 1,
+      "paragrafo": 3,
+      "texto": "Foram três de uma vez!",
+      "fala": "Foram três de uma vez!",
+      "hash": "458cc037df"
+    },
+    {
+      "id": "p1-s23",
+      "pagina": 1,
+      "paragrafo": 3,
+      "texto": "— É que eles moram na minha boca, meu amo, e saem todos juntos, feito galinha quando abrem o galinheiro.",
+      "fala": "É que eles moram na minha boca, meu amo, e saem todos juntos, feito galinha quando abrem o galinheiro.",
+      "hash": "51f10ee5b5"
+    },
+    {
+      "id": "p1-s24",
+      "pagina": 1,
+      "paragrafo": 4,
+      "texto": "Só uma coisa ainda preocupava o cavaleiro: — Um governador que não sabe ler...",
+      "fala": "Só uma coisa ainda preocupava o cavaleiro: Um governador que não sabe ler...",
+      "hash": "bfefa5a968"
+    },
+    {
+      "id": "p1-s25",
+      "pagina": 1,
+      "paragrafo": 4,
+      "texto": "Sancho estufou o peito: — Mas eu já conheço as formiguinhas do meu nome!",
+      "fala": "Sancho estufou o peito: Mas eu já conheço as formiguinhas do meu nome!",
+      "hash": "d237f60904"
+    },
+    {
+      "id": "p1-s26",
+      "pagina": 1,
+      "paragrafo": 4,
+      "texto": "E vou aprender a escrever todas elas.",
+      "fala": "E vou aprender a escrever todas elas.",
+      "hash": "4afa4deb01"
+    },
+    {
+      "id": "p1-s27",
+      "pagina": 1,
+      "paragrafo": 4,
+      "texto": "Dom Quixote abraçou o amigo.",
+      "fala": "Dom Quixote abraçou o amigo.",
+      "hash": "9d25ab4fc4"
+    },
+    {
+      "id": "p1-s28",
+      "pagina": 1,
+      "paragrafo": 4,
+      "texto": "Do outro lado do jardim, o mordomo do duque, aquele alto, de voz grossa, esperava para levar o novo governador.",
+      "fala": "Do outro lado do jardim, o mordomo do duque, aquele alto, de voz grossa, esperava para levar o novo governador.",
+      "hash": "98e1dac5bc"
+    },
+    {
+      "id": "p1-s29",
+      "pagina": 1,
+      "paragrafo": 4,
+      "texto": "Sancho olhou para ele e franziu a testa: — Meu amo... esse homem tem a cara da condessa barbuda.",
+      "fala": "Sancho olhou para ele e franziu a testa: Meu amo... esse homem tem a cara da condessa barbuda.",
+      "hash": "d72fffd676"
+    },
+    {
+      "id": "p1-s30",
+      "pagina": 1,
+      "paragrafo": 4,
+      "texto": "E a voz também!",
+      "fala": "E a voz também!",
+      "hash": "3ea47feee7"
+    },
+    {
+      "id": "p1-s31",
+      "pagina": 1,
+      "paragrafo": 4,
+      "texto": "Dom Quixote olhou bem: — Tem mesmo.",
+      "fala": "Dom Quixote olhou bem: Tem mesmo.",
+      "hash": "f41bd7eb2b"
+    },
+    {
+      "id": "p1-s32",
+      "pagina": 1,
+      "paragrafo": 4,
+      "texto": "Mas não pode ser: a condessa é condessa, e o mordomo é mordomo.",
+      "fala": "Mas não pode ser: a condessa é condessa, e o mordomo é mordomo.",
+      "hash": "457bd178a0"
+    },
+    {
+      "id": "p1-s33",
+      "pagina": 1,
+      "paragrafo": 4,
+      "texto": "Fique de olho, Sancho, e depois me conte.",
+      "fala": "Fique de olho, Sancho, e depois me conte.",
+      "hash": "74fd1d6444"
+    },
+    {
+      "id": "p2-s0",
+      "pagina": 2,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Capítulo 53. A Ilha sem Mar. O Caso dos Cinco Chapeuzinhos",
+      "fala": "Capítulo 53. A Ilha sem Mar. O Caso dos Cinco Chapeuzinhos",
+      "hash": "5d1f717734"
+    },
+    {
+      "id": "p2-s1",
+      "pagina": 2,
+      "paragrafo": 0,
+      "texto": "Sancho partiu vestido de governador, com um casacão comprido e um chapéu de pena.",
+      "fala": "Sancho partiu vestido de governador, com um casacão comprido e um chapéu de pena.",
+      "hash": "af09b4f296"
+    },
+    {
+      "id": "p2-s2",
+      "pagina": 2,
+      "paragrafo": 0,
+      "texto": "Ia montado numa mula, mas fez questão de que o burrico viesse logo atrás, de sela nova e enfeites de seda.",
+      "fala": "Ia montado numa mula, mas fez questão de que o burrico viesse logo atrás, de sela nova e enfeites de seda.",
+      "hash": "07faff900c"
+    },
+    {
+      "id": "p2-s3",
+      "pagina": 2,
+      "paragrafo": 0,
+      "texto": "De vez em quando virava a cabeça, só para olhar o amigo, todo contente.",
+      "fala": "De vez em quando virava a cabeça, só para olhar o amigo, todo contente.",
+      "hash": "ba9dbf05f7"
+    },
+    {
+      "id": "p2-s4",
+      "pagina": 2,
+      "paragrafo": 1,
+      "texto": "Chegaram a uma vila bonita, com um muro em volta.",
+      "fala": "Chegaram a uma vila bonita, com um muro em volta.",
+      "hash": "cb5e38ac7e"
+    },
+    {
+      "id": "p2-s5",
+      "pagina": 2,
+      "paragrafo": 1,
+      "texto": "Os sinos tocaram, o povo veio para a rua, e entregaram a Sancho as chaves do portão.",
+      "fala": "Os sinos tocaram, o povo veio para a rua, e entregaram a Sancho as chaves do portão.",
+      "hash": "b89dc64d20"
+    },
+    {
+      "id": "p2-s6",
+      "pagina": 2,
+      "paragrafo": 1,
+      "texto": "— Bem-vindo à Ilha BARATARIA, senhor governador!",
+      "fala": "Bem-vindo à Ilha barataria, senhor governador!",
+      "hash": "e25f9cd192"
+    },
+    {
+      "id": "p2-s7",
+      "pagina": 2,
+      "paragrafo": 1,
+      "texto": "Sancho olhou para a direita.",
+      "fala": "Sancho olhou para a direita.",
+      "hash": "9762485126"
+    },
+    {
+      "id": "p2-s8",
+      "pagina": 2,
+      "paragrafo": 1,
+      "texto": "Olhou para a esquerda.",
+      "fala": "Olhou para a esquerda.",
+      "hash": "2bfeb44397"
+    },
+    {
+      "id": "p2-s9",
+      "pagina": 2,
+      "paragrafo": 1,
+      "texto": "Subiu num banquinho e olhou por cima do muro.",
+      "fala": "Subiu num banquinho e olhou por cima do muro.",
+      "hash": "b22779236e"
+    },
+    {
+      "id": "p2-s10",
+      "pagina": 2,
+      "paragrafo": 1,
+      "texto": "— Com licença... e o mar, onde fica?",
+      "fala": "Com licença... e o mar, onde fica?",
+      "hash": "20883a27e1"
+    },
+    {
+      "id": "p2-s11",
+      "pagina": 2,
+      "paragrafo": 1,
+      "texto": "— O mar está de folga hoje — respondeu o mordomo, bem depressa.",
+      "fala": "O mar está de folga hoje, respondeu o mordomo, bem depressa.",
+      "hash": "6ee66cc625"
+    },
+    {
+      "id": "p2-s12",
+      "pagina": 2,
+      "paragrafo": 2,
+      "texto": "Levaram o governador para a sala do tribunal e o sentaram numa cadeira enorme.",
+      "fala": "Levaram o governador para a sala do tribunal e o sentaram numa cadeira enorme.",
+      "hash": "724e413070"
+    },
+    {
+      "id": "p2-s13",
+      "pagina": 2,
+      "paragrafo": 2,
+      "texto": "O mordomo, com um caderninho na mão, anotava tudo.",
+      "fala": "O mordomo, com um caderninho na mão, anotava tudo.",
+      "hash": "9c1c60aa51"
+    },
+    {
+      "id": "p2-s14",
+      "pagina": 2,
+      "paragrafo": 2,
+      "texto": "— É costume da ilha — avisou.",
+      "fala": "É costume da ilha, avisou.",
+      "hash": "712cef0b15"
+    },
+    {
+      "id": "p2-s15",
+      "pagina": 2,
+      "paragrafo": 2,
+      "texto": "— O governador novo resolve uns casos difíceis, para o povo ver se ele é esperto ou bobo.",
+      "fala": "O governador novo resolve uns casos difíceis, para o povo ver se ele é esperto ou bobo.",
+      "hash": "07833ed358"
+    },
+    {
+      "id": "p2-s16",
+      "pagina": 2,
+      "paragrafo": 2,
+      "texto": "Sancho engoliu em seco e arregaçou as mangas.",
+      "fala": "Sancho engoliu em seco e arregaçou as mangas.",
+      "hash": "833a414472"
+    },
+    {
+      "id": "p2-s17",
+      "pagina": 2,
+      "paragrafo": 3,
+      "texto": "Entraram um lavrador e um ALFAIATE, que é quem faz roupas.",
+      "fala": "Entraram um lavrador e um alfaiate, que é quem faz roupas.",
+      "hash": "ef4cb50628"
+    },
+    {
+      "id": "p2-s18",
+      "pagina": 2,
+      "paragrafo": 3,
+      "texto": "— Senhor governador — disse o lavrador —, eu levei um pedaço de pano e perguntei se dava para fazer um chapéu.",
+      "fala": "Senhor governador, disse o lavrador, eu levei um pedaço de pano e perguntei se dava para fazer um chapéu.",
+      "hash": "eb1a80e97b"
+    },
+    {
+      "id": "p2-s19",
+      "pagina": 2,
+      "paragrafo": 3,
+      "texto": "Ele disse que dava.",
+      "fala": "Ele disse que dava.",
+      "hash": "0b055b91ab"
+    },
+    {
+      "id": "p2-s20",
+      "pagina": 2,
+      "paragrafo": 3,
+      "texto": "Achei que ele queria ficar com a sobra, e perguntei se dava para dois.",
+      "fala": "Achei que ele queria ficar com a sobra, e perguntei se dava para dois.",
+      "hash": "9d22cb0e4c"
+    },
+    {
+      "id": "p2-s21",
+      "pagina": 2,
+      "paragrafo": 3,
+      "texto": "Dava.",
+      "fala": "Dava.",
+      "hash": "867f225d8e"
+    },
+    {
+      "id": "p2-s22",
+      "pagina": 2,
+      "paragrafo": 3,
+      "texto": "Para três?",
+      "fala": "Para três?",
+      "hash": "95a1ac9b8e"
+    },
+    {
+      "id": "p2-s23",
+      "pagina": 2,
+      "paragrafo": 3,
+      "texto": "Dava.",
+      "fala": "Dava.",
+      "hash": "867f225d8e"
+    },
+    {
+      "id": "p2-s24",
+      "pagina": 2,
+      "paragrafo": 3,
+      "texto": "Para cinco?",
+      "fala": "Para cinco?",
+      "hash": "7a76e6955a"
+    },
+    {
+      "id": "p2-s25",
+      "pagina": 2,
+      "paragrafo": 3,
+      "texto": "Dava!",
+      "fala": "Dava!",
+      "hash": "25cec6f63f"
+    },
+    {
+      "id": "p2-s26",
+      "pagina": 2,
+      "paragrafo": 3,
+      "texto": "Hoje fui buscar os meus cinco chapéus...",
+      "fala": "Hoje fui buscar os meus cinco chapéus...",
+      "hash": "1a0ba833e2"
+    },
+    {
+      "id": "p2-s27",
+      "pagina": 2,
+      "paragrafo": 3,
+      "texto": "— E aqui estão! — disse o alfaiate.",
+      "fala": "E aqui estão! disse o alfaiate.",
+      "hash": "a34c3054c4"
+    },
+    {
+      "id": "p2-s28",
+      "pagina": 2,
+      "paragrafo": 3,
+      "texto": "Abriu a mão: em cada DEDO havia um chapeuzinho, do tamanho de um dedal.",
+      "fala": "Abriu a mão: em cada dedo havia um chapeuzinho, do tamanho de um dedal.",
+      "hash": "18fb611bfd"
+    },
+    {
+      "id": "p2-s29",
+      "pagina": 2,
+      "paragrafo": 4,
+      "texto": "A sala inteira caiu na risada.",
+      "fala": "A sala inteira caiu na risada.",
+      "hash": "1e43f3aed7"
+    },
+    {
+      "id": "p2-s30",
+      "pagina": 2,
+      "paragrafo": 4,
+      "texto": "Sancho contou os chapeuzinhos, coçou a barba e decidiu: — Um quis ser mais esperto que o outro, e os dois se deram mal.",
+      "fala": "Sancho contou os chapeuzinhos, coçou a barba e decidiu: Um quis ser mais esperto que o outro, e os dois se deram mal.",
+      "hash": "1a13c06d84"
+    },
+    {
+      "id": "p2-s31",
+      "pagina": 2,
+      "paragrafo": 4,
+      "texto": "O lavrador fica sem o pano, e o alfaiate fica sem o pagamento.",
+      "fala": "O lavrador fica sem o pano, e o alfaiate fica sem o pagamento.",
+      "hash": "c8392513a0"
+    },
+    {
+      "id": "p2-s32",
+      "pagina": 2,
+      "paragrafo": 4,
+      "texto": "E os chapeuzinhos vão para as crianças da vila, que devem ter bonecas do tamanho certo!",
+      "fala": "E os chapeuzinhos vão para as crianças da vila, que devem ter bonecas do tamanho certo!",
+      "hash": "7e1750d89e"
+    },
+    {
+      "id": "p2-s33",
+      "pagina": 2,
+      "paragrafo": 4,
+      "texto": "O povo bateu palmas.",
+      "fala": "O povo bateu palmas.",
+      "hash": "6c8e34f071"
+    },
+    {
+      "id": "p2-s34",
+      "pagina": 2,
+      "paragrafo": 4,
+      "texto": "O mordomo escreveu no caderninho, espantado: \"Este governador não é bobo, não\".",
+      "fala": "O mordomo escreveu no caderninho, espantado: Este governador não é bobo, não.",
+      "hash": "5ebc0e1c05"
+    },
+    {
+      "id": "p3-s0",
+      "pagina": 3,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Capítulo 54. O Doutor Tira-Prato. A Varinha do Doutor",
+      "fala": "Capítulo 54. O Doutor Tira-Prato. A Varinha do Doutor",
+      "hash": "e8d6e5d719"
+    },
+    {
+      "id": "p3-s1",
+      "pagina": 3,
+      "paragrafo": 0,
+      "texto": "Depois de tanto julgar, o governador estava com uma fome de leão.",
+      "fala": "Depois de tanto julgar, o governador estava com uma fome de leão.",
+      "hash": "01035a093b"
+    },
+    {
+      "id": "p3-s2",
+      "pagina": 3,
+      "paragrafo": 0,
+      "texto": "Levaram Sancho para uma sala com uma mesa comprida, cheia de travessas fumegantes.",
+      "fala": "Levaram Sancho para uma sala com uma mesa comprida, cheia de travessas fumegantes.",
+      "hash": "39c999905d"
+    },
+    {
+      "id": "p3-s3",
+      "pagina": 3,
+      "paragrafo": 0,
+      "texto": "Ele amarrou o guardanapo no pescoço e esfregou as mãos.",
+      "fala": "Ele amarrou o guardanapo no pescoço e esfregou as mãos.",
+      "hash": "5fdcc95957"
+    },
+    {
+      "id": "p3-s4",
+      "pagina": 3,
+      "paragrafo": 0,
+      "texto": "Do lado da cadeira, de pé, ficou um homem magro e sério, com uma VARINHA fina na mão.",
+      "fala": "Do lado da cadeira, de pé, ficou um homem magro e sério, com uma varinha fina na mão.",
+      "hash": "75d2ef8ef7"
+    },
+    {
+      "id": "p3-s5",
+      "pagina": 3,
+      "paragrafo": 1,
+      "texto": "Puseram na frente de Sancho um prato de frutas.",
+      "fala": "Puseram na frente de Sancho um prato de frutas.",
+      "hash": "ef9bd258c6"
+    },
+    {
+      "id": "p3-s6",
+      "pagina": 3,
+      "paragrafo": 1,
+      "texto": "Ele mal pegou a primeira: a varinha tocou no prato, e um criado o levou embora num piscar de olhos.",
+      "fala": "Ele mal pegou a primeira: a varinha tocou no prato, e um criado o levou embora num piscar de olhos.",
+      "hash": "2483efcf50"
+    },
+    {
+      "id": "p3-s7",
+      "pagina": 3,
+      "paragrafo": 1,
+      "texto": "Veio um frango assado.",
+      "fala": "Veio um frango assado.",
+      "hash": "e1e6ad0c2e"
+    },
+    {
+      "id": "p3-s8",
+      "pagina": 3,
+      "paragrafo": 1,
+      "texto": "A varinha tocou: sumiu.",
+      "fala": "A varinha tocou: sumiu.",
+      "hash": "90b926dc41"
+    },
+    {
+      "id": "p3-s9",
+      "pagina": 3,
+      "paragrafo": 1,
+      "texto": "Veio um coelho: sumiu.",
+      "fala": "Veio um coelho: sumiu.",
+      "hash": "6777e778fc"
+    },
+    {
+      "id": "p3-s10",
+      "pagina": 3,
+      "paragrafo": 1,
+      "texto": "Sancho olhava os pratos chegando e partindo, como quem assiste a uma corrida.",
+      "fala": "Sancho olhava os pratos chegando e partindo, como quem assiste a uma corrida.",
+      "hash": "ca7ece2d00"
+    },
+    {
+      "id": "p3-s11",
+      "pagina": 3,
+      "paragrafo": 2,
+      "texto": "— Que brincadeira é essa?",
+      "fala": "Que brincadeira é essa?",
+      "hash": "3787a74f08"
+    },
+    {
+      "id": "p3-s12",
+      "pagina": 3,
+      "paragrafo": 2,
+      "texto": "— Eu sou o DOUTOR da ilha, senhor governador.",
+      "fala": "Eu sou o doutor da ilha, senhor governador.",
+      "hash": "bac4c1b309"
+    },
+    {
+      "id": "p3-s13",
+      "pagina": 3,
+      "paragrafo": 2,
+      "texto": "O meu trabalho é cuidar da sua saúde.",
+      "fala": "O meu trabalho é cuidar da sua saúde.",
+      "hash": "7f1cc9c06d"
+    },
+    {
+      "id": "p3-s14",
+      "pagina": 3,
+      "paragrafo": 2,
+      "texto": "Fruta é muito molhada.",
+      "fala": "Fruta é muito molhada.",
+      "hash": "45ac258a95"
+    },
+    {
+      "id": "p3-s15",
+      "pagina": 3,
+      "paragrafo": 2,
+      "texto": "Frango é muito seco.",
+      "fala": "Frango é muito seco.",
+      "hash": "343fdbeece"
+    },
+    {
+      "id": "p3-s16",
+      "pagina": 3,
+      "paragrafo": 2,
+      "texto": "Coelho tem pelo.",
+      "fala": "Coelho tem pelo.",
+      "hash": "1a942eea90"
+    },
+    {
+      "id": "p3-s17",
+      "pagina": 3,
+      "paragrafo": 2,
+      "texto": "E esse cozido tem tempero demais!",
+      "fala": "E esse cozido tem tempero demais!",
+      "hash": "8828e3a4ab"
+    },
+    {
+      "id": "p3-s18",
+      "pagina": 3,
+      "paragrafo": 2,
+      "texto": "— E o que eu posso comer, então?",
+      "fala": "E o que eu posso comer, então?",
+      "hash": "3d9dae9e15"
+    },
+    {
+      "id": "p3-s19",
+      "pagina": 3,
+      "paragrafo": 2,
+      "texto": "— Umas bolachinhas bem fininhas e uma fatiazinha de marmelada.",
+      "fala": "Umas bolachinhas bem fininhas e uma fatiazinha de marmelada.",
+      "hash": "2066e7140a"
+    },
+    {
+      "id": "p3-s20",
+      "pagina": 3,
+      "paragrafo": 3,
+      "texto": "Sancho se recostou na cadeira e olhou bem para o homem: — Como é o seu nome, doutor?",
+      "fala": "Sancho se recostou na cadeira e olhou bem para o homem: Como é o seu nome, doutor?",
+      "hash": "f993281ac4"
+    },
+    {
+      "id": "p3-s21",
+      "pagina": 3,
+      "paragrafo": 3,
+      "texto": "— Doutor Pedro Rezio, nascido na aldeia de Tirafora.",
+      "fala": "Doutor Pedro Rezio, nascido na aldeia de Tirafora.",
+      "hash": "6eca92feda"
+    },
+    {
+      "id": "p3-s22",
+      "pagina": 3,
+      "paragrafo": 3,
+      "texto": "— Pois, doutor Pedro Rezio de Tirafora: tire-se fora daqui agora mesmo!",
+      "fala": "Pois, doutor Pedro Rezio de Tirafora: tire-se fora daqui agora mesmo!",
+      "hash": "fa8ad97c32"
+    },
+    {
+      "id": "p3-s23",
+      "pagina": 3,
+      "paragrafo": 3,
+      "texto": "Senão eu pego esta cadeira e... e me sento nela muito bravo!",
+      "fala": "Senão eu pego esta cadeira e... e me sento nela muito bravo!",
+      "hash": "ef0d67957c"
+    },
+    {
+      "id": "p3-s24",
+      "pagina": 3,
+      "paragrafo": 3,
+      "texto": "Eu quero pão, cebola e um bom pedaço de QUEIJO, que foi a comida com que me criei!",
+      "fala": "Eu quero pão, cebola e um bom pedaço de queijo, que foi a comida com que me criei!",
+      "hash": "872e9d6be0"
+    },
+    {
+      "id": "p3-s25",
+      "pagina": 3,
+      "paragrafo": 4,
+      "texto": "O doutor saiu de fininho, com varinha e tudo.",
+      "fala": "O doutor saiu de fininho, com varinha e tudo.",
+      "hash": "68b960f3f9"
+    },
+    {
+      "id": "p3-s26",
+      "pagina": 3,
+      "paragrafo": 4,
+      "texto": "E naquela noite, pela primeira vez, o governador jantou: pão, queijo, cebola e um cacho de uvas.",
+      "fala": "E naquela noite, pela primeira vez, o governador jantou: pão, queijo, cebola e um cacho de uvas.",
+      "hash": "4d5530a369"
+    },
+    {
+      "id": "p3-s27",
+      "pagina": 3,
+      "paragrafo": 4,
+      "texto": "— Barriga vazia não governa ninguém — disse ele, feliz da vida.",
+      "fala": "Barriga vazia não governa ninguém, disse ele, feliz da vida.",
+      "hash": "7b4f3dc92a"
+    },
+    {
+      "id": "p3-s28",
+      "pagina": 3,
+      "paragrafo": 4,
+      "texto": "— Isso foi um ditado? — perguntou o mordomo, de lápis na mão.",
+      "fala": "Isso foi um ditado? perguntou o mordomo, de lápis na mão.",
+      "hash": "076864c7d0"
+    },
+    {
+      "id": "p3-s29",
+      "pagina": 3,
+      "paragrafo": 4,
+      "texto": "— Foi.",
+      "fala": "Foi.",
+      "hash": "7c4059f639"
+    },
+    {
+      "id": "p3-s30",
+      "pagina": 3,
+      "paragrafo": 4,
+      "texto": "Mas o meu amo não está aqui para ouvir.",
+      "fala": "Mas o meu amo não está aqui para ouvir.",
+      "hash": "208fc4ec81"
+    },
+    {
+      "id": "p4-s0",
+      "pagina": 4,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Capítulo 55. O Mistério da Bengala. O Julgamento Mais Esperto",
+      "fala": "Capítulo 55. O Mistério da Bengala. O Julgamento Mais Esperto",
+      "hash": "32d9f4a650"
+    },
+    {
+      "id": "p4-s1",
+      "pagina": 4,
+      "paragrafo": 0,
+      "texto": "No dia seguinte, entraram no tribunal dois velhinhos.",
+      "fala": "No dia seguinte, entraram no tribunal dois velhinhos.",
+      "hash": "23688dd785"
+    },
+    {
+      "id": "p4-s2",
+      "pagina": 4,
+      "paragrafo": 0,
+      "texto": "Um deles vinha apoiado numa BENGALA grossa, de madeira.",
+      "fala": "Um deles vinha apoiado numa bengala grossa, de madeira.",
+      "hash": "5e65a4d713"
+    },
+    {
+      "id": "p4-s3",
+      "pagina": 4,
+      "paragrafo": 0,
+      "texto": "— Senhor governador — disse o outro —, faz tempo que emprestei a este vizinho dez MOEDAS de ouro.",
+      "fala": "Senhor governador, disse o outro, faz tempo que emprestei a este vizinho dez moedas de ouro.",
+      "hash": "4d64c15536"
+    },
+    {
+      "id": "p4-s4",
+      "pagina": 4,
+      "paragrafo": 0,
+      "texto": "Agora ele diz que já me devolveu.",
+      "fala": "Agora ele diz que já me devolveu.",
+      "hash": "e19e2e3859"
+    },
+    {
+      "id": "p4-s5",
+      "pagina": 4,
+      "paragrafo": 0,
+      "texto": "Eu não me lembro disso!",
+      "fala": "Eu não me lembro disso!",
+      "hash": "c85df8c4cf"
+    },
+    {
+      "id": "p4-s6",
+      "pagina": 4,
+      "paragrafo": 0,
+      "texto": "Não tenho testemunha.",
+      "fala": "Não tenho testemunha.",
+      "hash": "f84c459678"
+    },
+    {
+      "id": "p4-s7",
+      "pagina": 4,
+      "paragrafo": 0,
+      "texto": "Só peço uma coisa: que ele jure.",
+      "fala": "Só peço uma coisa: que ele jure.",
+      "hash": "e7f235dc9d"
+    },
+    {
+      "id": "p4-s8",
+      "pagina": 4,
+      "paragrafo": 0,
+      "texto": "Se jurar, eu acredito.",
+      "fala": "Se jurar, eu acredito.",
+      "hash": "632dbe234b"
+    },
+    {
+      "id": "p4-s9",
+      "pagina": 4,
+      "paragrafo": 1,
+      "texto": "— Eu juro! — disse o velhinho da bengala.",
+      "fala": "Eu juro! disse o velhinho da bengala.",
+      "hash": "c63f0d8e42"
+    },
+    {
+      "id": "p4-s10",
+      "pagina": 4,
+      "paragrafo": 1,
+      "texto": "Mas, antes, virou-se para o vizinho: — Segure aqui a minha bengala, por favor, que ela me atrapalha.",
+      "fala": "Mas, antes, virou-se para o vizinho: Segure aqui a minha bengala, por favor, que ela me atrapalha.",
+      "hash": "2524e96315"
+    },
+    {
+      "id": "p4-s11",
+      "pagina": 4,
+      "paragrafo": 1,
+      "texto": "Pôs a mão no peito e falou bem alto: — Juro que entreguei as dez moedas nas mãos dele!",
+      "fala": "Pôs a mão no peito e falou bem alto: Juro que entreguei as dez moedas nas mãos dele!",
+      "hash": "b2681762b6"
+    },
+    {
+      "id": "p4-s12",
+      "pagina": 4,
+      "paragrafo": 1,
+      "texto": "Depois pegou a bengala de volta, fez uma reverência e foi saindo, bem tranquilo.",
+      "fala": "Depois pegou a bengala de volta, fez uma reverência e foi saindo, bem tranquilo.",
+      "hash": "26015ff013"
+    },
+    {
+      "id": "p4-s13",
+      "pagina": 4,
+      "paragrafo": 2,
+      "texto": "O outro velhinho baixou a cabeça: — Se ele jurou, deve ser verdade.",
+      "fala": "O outro velhinho baixou a cabeça: Se ele jurou, deve ser verdade.",
+      "hash": "c8e3432470"
+    },
+    {
+      "id": "p4-s14",
+      "pagina": 4,
+      "paragrafo": 2,
+      "texto": "Eu é que estou ficando esquecido.",
+      "fala": "Eu é que estou ficando esquecido.",
+      "hash": "8bd6ccdbf7"
+    },
+    {
+      "id": "p4-s15",
+      "pagina": 4,
+      "paragrafo": 2,
+      "texto": "Sancho pôs o dedo na testa e ficou um tempão quieto, de olhos fechados.",
+      "fala": "Sancho pôs o dedo na testa e ficou um tempão quieto, de olhos fechados.",
+      "hash": "f3c20ef94b"
+    },
+    {
+      "id": "p4-s16",
+      "pagina": 4,
+      "paragrafo": 2,
+      "texto": "A sala esperava.",
+      "fala": "A sala esperava.",
+      "hash": "8c5a394a3b"
+    },
+    {
+      "id": "p4-s17",
+      "pagina": 4,
+      "paragrafo": 2,
+      "texto": "O mordomo esperava, de lápis no ar.",
+      "fala": "O mordomo esperava, de lápis no ar.",
+      "hash": "3448b770ba"
+    },
+    {
+      "id": "p4-s18",
+      "pagina": 4,
+      "paragrafo": 2,
+      "texto": "De repente, o governador abriu os olhos: — Chamem aquele homem de volta!",
+      "fala": "De repente, o governador abriu os olhos: Chamem aquele homem de volta!",
+      "hash": "a5e4fd08d9"
+    },
+    {
+      "id": "p4-s19",
+      "pagina": 4,
+      "paragrafo": 3,
+      "texto": "— Por que alguém pede para o outro segurar a bengala bem na hora de jurar? — pensou Sancho em voz alta.",
+      "fala": "Por que alguém pede para o outro segurar a bengala bem na hora de jurar? pensou Sancho em voz alta.",
+      "hash": "69351bd4a8"
+    },
+    {
+      "id": "p4-s20",
+      "pagina": 4,
+      "paragrafo": 3,
+      "texto": "— E por que pega de volta tão depressa?",
+      "fala": "E por que pega de volta tão depressa?",
+      "hash": "f911e602e1"
+    },
+    {
+      "id": "p4-s21",
+      "pagina": 4,
+      "paragrafo": 3,
+      "texto": "Aí tem coisa...",
+      "fala": "Aí tem coisa...",
+      "hash": "d0d87f0b84"
+    },
+    {
+      "id": "p4-s22",
+      "pagina": 4,
+      "paragrafo": 3,
+      "texto": "O velhinho ficou branco.",
+      "fala": "O velhinho ficou branco.",
+      "hash": "06e569c9bf"
+    },
+    {
+      "id": "p4-s23",
+      "pagina": 4,
+      "paragrafo": 3,
+      "texto": "O governador estendeu a mão: — Passe para cá essa bengala!",
+      "fala": "O governador estendeu a mão: Passe para cá essa bengala!",
+      "hash": "b21cbf1ca3"
+    },
+    {
+      "id": "p4-s24",
+      "pagina": 4,
+      "paragrafo": 4,
+      "texto": "Quando a bengala se abriu, CLEC!, rolaram pelo chão dez moedas de ouro!",
+      "fala": "Quando a bengala se abriu, CLEC! rolaram pelo chão dez moedas de ouro!",
+      "hash": "7b64ea79b9"
+    },
+    {
+      "id": "p4-s25",
+      "pagina": 4,
+      "paragrafo": 4,
+      "texto": "A bengala era oca, e o dinheiro estava escondido lá dentro.",
+      "fala": "A bengala era oca, e o dinheiro estava escondido lá dentro.",
+      "hash": "eee0dd2d12"
+    },
+    {
+      "id": "p4-s26",
+      "pagina": 4,
+      "paragrafo": 4,
+      "texto": "Enquanto o vizinho segurava a bengala, as moedas estavam mesmo \"nas mãos dele\": por isso o espertinho podia jurar!",
+      "fala": "Enquanto o vizinho segurava a bengala, as moedas estavam mesmo nas mãos dele: por isso o espertinho podia jurar!",
+      "hash": "5a5743542a"
+    },
+    {
+      "id": "p4-s27",
+      "pagina": 4,
+      "paragrafo": 4,
+      "texto": "O velhinho pediu desculpas, vermelho de VERGONHA, e o dono das moedas foi embora feliz.",
+      "fala": "O velhinho pediu desculpas, vermelho de vergonha, e o dono das moedas foi embora feliz.",
+      "hash": "922d9ce12f"
+    },
+    {
+      "id": "p4-s28",
+      "pagina": 4,
+      "paragrafo": 4,
+      "texto": "O mordomo escreveu no caderninho, com a letra tremida: \"Mais sábio que muito doutor\".",
+      "fala": "O mordomo escreveu no caderninho, com a letra tremida: Mais sábio que muito doutor.",
+      "hash": "69c908263c"
+    },
+    {
+      "id": "p5-s0",
+      "pagina": 5,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Capítulo 56. O Colar de Corais. Uma Carta para Dona Teresa",
+      "fala": "Capítulo 56. O Colar de Corais. Uma Carta para Dona Teresa",
+      "hash": "419ec2c05e"
+    },
+    {
+      "id": "p5-s1",
+      "pagina": 5,
+      "paragrafo": 0,
+      "texto": "Enquanto isso, lá na aldeia de La Mancha, Teresa Pança lavava roupa no riacho, com Sanchica do lado.",
+      "fala": "Enquanto isso, lá na aldeia de La Mancha, Teresa Pança lavava roupa no riacho, com Sanchica do lado.",
+      "hash": "ca98e96164"
+    },
+    {
+      "id": "p5-s2",
+      "pagina": 5,
+      "paragrafo": 0,
+      "texto": "Chegou a cavalo um rapaz bem-vestido, um PAJEM do palácio dos duques: é como se chama o moço que leva recados.",
+      "fala": "Chegou a cavalo um rapaz bem-vestido, um pajem do palácio dos duques: é como se chama o moço que leva recados.",
+      "hash": "a8708df357"
+    },
+    {
+      "id": "p5-s3",
+      "pagina": 5,
+      "paragrafo": 0,
+      "texto": "Ele desceu, tirou o chapéu e se ajoelhou na frente de Teresa, que estava de avental e de pés molhados: — Dona Teresa Pança, esposa do senhor governador da Ilha Barataria: trago uma carta e um presente!",
+      "fala": "Ele desceu, tirou o chapéu e se ajoelhou na frente de Teresa, que estava de avental e de pés molhados: Dona Teresa Pança, esposa do senhor governador da Ilha Barataria: trago uma carta e um presente!",
+      "hash": "25950da7f4"
+    },
+    {
+      "id": "p5-s4",
+      "pagina": 5,
+      "paragrafo": 1,
+      "texto": "Teresa olhou para trás, para ver se havia outra Teresa por ali.",
+      "fala": "Teresa olhou para trás, para ver se havia outra Teresa por ali.",
+      "hash": "2a90152a1b"
+    },
+    {
+      "id": "p5-s5",
+      "pagina": 5,
+      "paragrafo": 1,
+      "texto": "Não havia.",
+      "fala": "Não havia.",
+      "hash": "4e302db2ee"
+    },
+    {
+      "id": "p5-s6",
+      "pagina": 5,
+      "paragrafo": 1,
+      "texto": "O pajem tirou do bolso um COLAR de corais, umas pedrinhas vermelhas que vêm do mar, com fecho de ouro.",
+      "fala": "O pajem tirou do bolso um colar de corais, umas pedrinhas vermelhas que vêm do mar, com fecho de ouro.",
+      "hash": "ca859a1171"
+    },
+    {
+      "id": "p5-s7",
+      "pagina": 5,
+      "paragrafo": 1,
+      "texto": "Era um presente da duquesa.",
+      "fala": "Era um presente da duquesa.",
+      "hash": "7e50552e2b"
+    },
+    {
+      "id": "p5-s8",
+      "pagina": 5,
+      "paragrafo": 1,
+      "texto": "Sanchica deu um grito: — Mãe!",
+      "fala": "Sanchica deu um grito: Mãe!",
+      "hash": "c830904559"
+    },
+    {
+      "id": "p5-s9",
+      "pagina": 5,
+      "paragrafo": 1,
+      "texto": "O pai conseguiu a ilha!",
+      "fala": "O pai conseguiu a ilha!",
+      "hash": "2095f752a4"
+    },
+    {
+      "id": "p5-s10",
+      "pagina": 5,
+      "paragrafo": 1,
+      "texto": "— Eu não disse? — respondeu Teresa, que nunca tinha dito.",
+      "fala": "Eu não disse? respondeu Teresa, que nunca tinha dito.",
+      "hash": "053dba8818"
+    },
+    {
+      "id": "p5-s11",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "Só havia um problema: Teresa também não sabia ler.",
+      "fala": "Só havia um problema: Teresa também não sabia ler.",
+      "hash": "09113c5599"
+    },
+    {
+      "id": "p5-s12",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "Saiu correndo pela rua, de colar no pescoço e carta na mão, até encontrar o padre, mestre Nicolau e Sansão Carrasco, que conversavam na praça.",
+      "fala": "Saiu correndo pela rua, de colar no pescoço e carta na mão, até encontrar o padre, mestre Nicolau e Sansão Carrasco, que conversavam na praça.",
+      "hash": "aa73f1478a"
+    },
+    {
+      "id": "p5-s13",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "Sansão leu em voz alta: \"Minha Teresinha: saiba que agora sou governador.",
+      "fala": "Sansão leu em voz alta: Minha Teresinha: saiba que agora sou governador.",
+      "hash": "64708a66cd"
+    },
+    {
+      "id": "p5-s14",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "Mando um beijo para você e dois para a Sanchica.",
+      "fala": "Mando um beijo para você e dois para a Sanchica.",
+      "hash": "b07eecdfed"
+    },
+    {
+      "id": "p5-s15",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "O burrico vai bem e manda lembranças.",
+      "fala": "O burrico vai bem e manda lembranças.",
+      "hash": "f965fdbea6"
+    },
+    {
+      "id": "p5-s16",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "Seu marido, Sancho Pança\".",
+      "fala": "Seu marido, Sancho Pança.",
+      "hash": "b4d2b2cb68"
+    },
+    {
+      "id": "p5-s17",
+      "pagina": 5,
+      "paragrafo": 3,
+      "texto": "O padre e mestre Nicolau ficaram de boca aberta: — Governador?",
+      "fala": "O padre e mestre Nicolau ficaram de boca aberta: Governador?",
+      "hash": "80ce6b1dca"
+    },
+    {
+      "id": "p5-s18",
+      "pagina": 5,
+      "paragrafo": 3,
+      "texto": "O nosso Sancho?",
+      "fala": "O nosso Sancho?",
+      "hash": "4350f74ee8"
+    },
+    {
+      "id": "p5-s19",
+      "pagina": 5,
+      "paragrafo": 3,
+      "texto": "— E de uma ilha! — disse Teresa.",
+      "fala": "E de uma ilha! disse Teresa.",
+      "hash": "8367fa0e57"
+    },
+    {
+      "id": "p5-s20",
+      "pagina": 5,
+      "paragrafo": 3,
+      "texto": "— Sanchica, minha filha, de hoje em diante a gente só anda de carruagem!",
+      "fala": "Sanchica, minha filha, de hoje em diante a gente só anda de carruagem!",
+      "hash": "ed6fa2fec1"
+    },
+    {
+      "id": "p5-s21",
+      "pagina": 5,
+      "paragrafo": 3,
+      "texto": "Sanchica quis saber: — Mãe, e eu posso ir de carruagem buscar água na fonte?",
+      "fala": "Sanchica quis saber: Mãe, e eu posso ir de carruagem buscar água na fonte?",
+      "hash": "addbf432e4"
+    },
+    {
+      "id": "p5-s22",
+      "pagina": 5,
+      "paragrafo": 4,
+      "texto": "Teresa mandou para a duquesa o melhor presente que tinha: um queijo e um saquinho de BOLOTAS, os frutinhos do carvalho, escolhidas uma por uma.",
+      "fala": "Teresa mandou para a duquesa o melhor presente que tinha: um queijo e um saquinho de bolotas, os frutinhos do carvalho, escolhidas uma por uma.",
+      "hash": "b0b15f233f"
+    },
+    {
+      "id": "p5-s23",
+      "pagina": 5,
+      "paragrafo": 4,
+      "texto": "Sansão ajudou a amarrar o pacote e puxou conversa com o pajem, como quem não quer nada: — Então o senhor Alonso está no palácio dos duques...",
+      "fala": "Sansão ajudou a amarrar o pacote e puxou conversa com o pajem, como quem não quer nada: Então o senhor Alonso está no palácio dos duques...",
+      "hash": "bb48757a20"
+    },
+    {
+      "id": "p5-s24",
+      "pagina": 5,
+      "paragrafo": 4,
+      "texto": "E depois, para onde ele pretende ir?",
+      "fala": "E depois, para onde ele pretende ir?",
+      "hash": "452ab1c4a2"
+    },
+    {
+      "id": "p5-s25",
+      "pagina": 5,
+      "paragrafo": 4,
+      "texto": "O pajem contou.",
+      "fala": "O pajem contou.",
+      "hash": "af26475e89"
+    },
+    {
+      "id": "p5-s26",
+      "pagina": 5,
+      "paragrafo": 4,
+      "texto": "Sansão deu aquele sorrisinho de quem guarda um segredo.",
+      "fala": "Sansão deu aquele sorrisinho de quem guarda um segredo.",
+      "hash": "61b11b5b4a"
+    },
+    {
+      "id": "p6-s0",
+      "pagina": 6,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Capítulo 57. A Saudade de Dom Quixote. A Primeira Assinatura do Governador",
+      "fala": "Capítulo 57. A Saudade de Dom Quixote. A Primeira Assinatura do Governador",
+      "hash": "04188275a4"
+    },
+    {
+      "id": "p6-s1",
+      "pagina": 6,
+      "paragrafo": 0,
+      "texto": "No palácio dos duques, tudo era festa.",
+      "fala": "No palácio dos duques, tudo era festa.",
+      "hash": "ced86b6ace"
+    },
+    {
+      "id": "p6-s2",
+      "pagina": 6,
+      "paragrafo": 0,
+      "texto": "Mas Dom Quixote andava calado.",
+      "fala": "Mas Dom Quixote andava calado.",
+      "hash": "4b994e1b68"
+    },
+    {
+      "id": "p6-s3",
+      "pagina": 6,
+      "paragrafo": 0,
+      "texto": "Sentia falta de alguém para reclamar do sol, da chuva e da fome.",
+      "fala": "Sentia falta de alguém para reclamar do sol, da chuva e da fome.",
+      "hash": "b3d65c41d0"
+    },
+    {
+      "id": "p6-s4",
+      "pagina": 6,
+      "paragrafo": 0,
+      "texto": "Sentia falta até dos ditados!",
+      "fala": "Sentia falta até dos ditados!",
+      "hash": "62ed52be8f"
+    },
+    {
+      "id": "p6-s5",
+      "pagina": 6,
+      "paragrafo": 0,
+      "texto": "Uma noite, sozinho no quarto, foi tirar a meia e, zip!, ela se desfiou todinha, de cima a baixo.",
+      "fala": "Uma noite, sozinho no quarto, foi tirar a meia e, zip! ela se desfiou todinha, de cima a baixo.",
+      "hash": "b2744e3d4f"
+    },
+    {
+      "id": "p6-s6",
+      "pagina": 6,
+      "paragrafo": 0,
+      "texto": "O cavaleiro ficou olhando o buraco.",
+      "fala": "O cavaleiro ficou olhando o buraco.",
+      "hash": "03ef681221"
+    },
+    {
+      "id": "p6-s7",
+      "pagina": 6,
+      "paragrafo": 0,
+      "texto": "Não tinha a quem mostrar.",
+      "fala": "Não tinha a quem mostrar.",
+      "hash": "d6b3efda15"
+    },
+    {
+      "id": "p6-s8",
+      "pagina": 6,
+      "paragrafo": 1,
+      "texto": "Então pegou pena e papel e escreveu uma CARTA: \"Sancho, meu amigo: contam que você governa como gente grande, e eu fico todo orgulhoso.",
+      "fala": "Então pegou pena e papel e escreveu uma carta: Sancho, meu amigo: contam que você governa como gente grande, e eu fico todo orgulhoso.",
+      "hash": "b7a22bc5ef"
+    },
+    {
+      "id": "p6-s9",
+      "pagina": 6,
+      "paragrafo": 1,
+      "texto": "Seja bom com os pobres.",
+      "fala": "Seja bom com os pobres.",
+      "hash": "e9679bab18"
+    },
+    {
+      "id": "p6-s10",
+      "pagina": 6,
+      "paragrafo": 1,
+      "texto": "Visite a feira e a padaria.",
+      "fala": "Visite a feira e a padaria.",
+      "hash": "ec5db46417"
+    },
+    {
+      "id": "p6-s11",
+      "pagina": 6,
+      "paragrafo": 1,
+      "texto": "E não esqueça de cortar as unhas.",
+      "fala": "E não esqueça de cortar as unhas.",
+      "hash": "5abffb3027"
+    },
+    {
+      "id": "p6-s12",
+      "pagina": 6,
+      "paragrafo": 1,
+      "texto": "Aqui o palácio é muito bonito, mas o Rocinante pergunta todo dia pelo burrico.",
+      "fala": "Aqui o palácio é muito bonito, mas o Rocinante pergunta todo dia pelo burrico.",
+      "hash": "410ef43e9c"
+    },
+    {
+      "id": "p6-s13",
+      "pagina": 6,
+      "paragrafo": 1,
+      "texto": "Seu amo, Dom Quixote\".",
+      "fala": "Seu amo, Dom Quixote.",
+      "hash": "d8fe2dd996"
+    },
+    {
+      "id": "p6-s14",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "A carta chegou à ilha, e o SECRETÁRIO leu em voz alta, porque Sancho não sabia ler.",
+      "fala": "A carta chegou à ilha, e o secretário leu em voz alta, porque Sancho não sabia ler.",
+      "hash": "6276abe135"
+    },
+    {
+      "id": "p6-s15",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "O governador ouviu, fungou e limpou os olhos na manga.",
+      "fala": "O governador ouviu, fungou e limpou os olhos na manga.",
+      "hash": "4e6381942d"
+    },
+    {
+      "id": "p6-s16",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "— Escreva aí a resposta: \"Meu amo: governar dá muito trabalho e pouca comida.",
+      "fala": "Escreva aí a resposta: Meu amo: governar dá muito trabalho e pouca comida.",
+      "hash": "1660c369ef"
+    },
+    {
+      "id": "p6-s17",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "Um doutor queria me matar de fome, mas eu o mandei passear.",
+      "fala": "Um doutor queria me matar de fome, mas eu o mandei passear.",
+      "hash": "4fd94dd7a9"
+    },
+    {
+      "id": "p6-s18",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "Já fiz uma lei boa: o pão da ilha tem de ser grande e barato.",
+      "fala": "Já fiz uma lei boa: o pão da ilha tem de ser grande e barato.",
+      "hash": "35f7dfdd2e"
+    },
+    {
+      "id": "p6-s19",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "O burrico manda um zurro para o Rocinante\".",
+      "fala": "O burrico manda um zurro para o Rocinante.",
+      "hash": "4a2454b93e"
+    },
+    {
+      "id": "p6-s20",
+      "pagina": 6,
+      "paragrafo": 3,
+      "texto": "— Agora o senhor governador precisa ASSINAR — disse o secretário.",
+      "fala": "Agora o senhor governador precisa assinar, disse o secretário.",
+      "hash": "cd675166ef"
+    },
+    {
+      "id": "p6-s21",
+      "pagina": 6,
+      "paragrafo": 3,
+      "texto": "Sancho segurou a pena como quem segura um garfo.",
+      "fala": "Sancho segurou a pena como quem segura um garfo.",
+      "hash": "d494d9a614"
+    },
+    {
+      "id": "p6-s22",
+      "pagina": 6,
+      "paragrafo": 3,
+      "texto": "Ele conhecia as formiguinhas do seu nome, de tanto olhar para elas no livro.",
+      "fala": "Ele conhecia as formiguinhas do seu nome, de tanto olhar para elas no livro.",
+      "hash": "13c58238cc"
+    },
+    {
+      "id": "p6-s23",
+      "pagina": 6,
+      "paragrafo": 3,
+      "texto": "Mas escrever era outra história!",
+      "fala": "Mas escrever era outra história!",
+      "hash": "2b0ff76622"
+    },
+    {
+      "id": "p6-s24",
+      "pagina": 6,
+      "paragrafo": 3,
+      "texto": "Qual delas vinha primeiro?",
+      "fala": "Qual delas vinha primeiro?",
+      "hash": "d4bf2b40e1"
+    },
+    {
+      "id": "p7-s0",
+      "pagina": 7,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Capítulo 58. O Ataque de Mentira. O Abraço no Burrico",
+      "fala": "Capítulo 58. O Ataque de Mentira. O Abraço no Burrico",
+      "hash": "f216203697"
+    },
+    {
+      "id": "p7-s1",
+      "pagina": 7,
+      "paragrafo": 0,
+      "texto": "Na sétima noite do governo, Sancho dormia quando a vila inteira acordou aos gritos.",
+      "fala": "Na sétima noite do governo, Sancho dormia quando a vila inteira acordou aos gritos.",
+      "hash": "7988ebd6b9"
+    },
+    {
+      "id": "p7-s2",
+      "pagina": 7,
+      "paragrafo": 0,
+      "texto": "Sinos, tambores, cornetas!",
+      "fala": "Sinos, tambores, cornetas!",
+      "hash": "9ddd5fc51e"
+    },
+    {
+      "id": "p7-s3",
+      "pagina": 7,
+      "paragrafo": 0,
+      "texto": "— Às armas, senhor governador!",
+      "fala": "Às armas, senhor governador!",
+      "hash": "b433c61df9"
+    },
+    {
+      "id": "p7-s4",
+      "pagina": 7,
+      "paragrafo": 0,
+      "texto": "Inimigos invadiram a ilha!",
+      "fala": "Inimigos invadiram a ilha!",
+      "hash": "fdbf293ec7"
+    },
+    {
+      "id": "p7-s5",
+      "pagina": 7,
+      "paragrafo": 0,
+      "texto": "Sancho sentou na cama, de touca: — Mas que inimigos?",
+      "fala": "Sancho sentou na cama, de touca: Mas que inimigos?",
+      "hash": "7d83e11297"
+    },
+    {
+      "id": "p7-s6",
+      "pagina": 7,
+      "paragrafo": 0,
+      "texto": "Esta ilha nem tem mar para eles chegarem!",
+      "fala": "Esta ilha nem tem mar para eles chegarem!",
+      "hash": "2b8d148469"
+    },
+    {
+      "id": "p7-s7",
+      "pagina": 7,
+      "paragrafo": 1,
+      "texto": "Não quiseram saber.",
+      "fala": "Não quiseram saber.",
+      "hash": "94c9f0e67e"
+    },
+    {
+      "id": "p7-s8",
+      "pagina": 7,
+      "paragrafo": 1,
+      "texto": "Amarraram nele dois escudos enormes, um na frente e outro atrás, tão apertados que só sobraram de fora a cabeça, as mãos e os pés.",
+      "fala": "Amarraram nele dois escudos enormes, um na frente e outro atrás, tão apertados que só sobraram de fora a cabeça, as mãos e os pés.",
+      "hash": "9fb37f224d"
+    },
+    {
+      "id": "p7-s9",
+      "pagina": 7,
+      "paragrafo": 1,
+      "texto": "— Ande, governador!",
+      "fala": "Ande, governador!",
+      "hash": "3fe4816c65"
+    },
+    {
+      "id": "p7-s10",
+      "pagina": 7,
+      "paragrafo": 1,
+      "texto": "Mostre o caminho!",
+      "fala": "Mostre o caminho!",
+      "hash": "c74dabb4b1"
+    },
+    {
+      "id": "p7-s11",
+      "pagina": 7,
+      "paragrafo": 1,
+      "texto": "Sancho tentou dar um passo e PLOFT: caiu de costas e ficou balançando, feito uma TARTARUGA de barriga para cima.",
+      "fala": "Sancho tentou dar um passo e PLOFT: caiu de costas e ficou balançando, feito uma tartaruga de barriga para cima.",
+      "hash": "26b1b3f5c9"
+    },
+    {
+      "id": "p7-s12",
+      "pagina": 7,
+      "paragrafo": 1,
+      "texto": "No escuro, a gritaria passava de um lado para o outro: — Por aqui!",
+      "fala": "No escuro, a gritaria passava de um lado para o outro: Por aqui!",
+      "hash": "2a8646f14b"
+    },
+    {
+      "id": "p7-s13",
+      "pagina": 7,
+      "paragrafo": 1,
+      "texto": "Fechem o portão!",
+      "fala": "Fechem o portão!",
+      "hash": "7cf20605cc"
+    },
+    {
+      "id": "p7-s14",
+      "pagina": 7,
+      "paragrafo": 1,
+      "texto": "Tragam as escadas!",
+      "fala": "Tragam as escadas!",
+      "hash": "4007f2ce19"
+    },
+    {
+      "id": "p7-s15",
+      "pagina": 7,
+      "paragrafo": 2,
+      "texto": "De repente, alguém gritou: — Vitória!",
+      "fala": "De repente, alguém gritou: Vitória!",
+      "hash": "18af55f5d0"
+    },
+    {
+      "id": "p7-s16",
+      "pagina": 7,
+      "paragrafo": 2,
+      "texto": "Os inimigos fugiram!",
+      "fala": "Os inimigos fugiram!",
+      "hash": "e237afae72"
+    },
+    {
+      "id": "p7-s17",
+      "pagina": 7,
+      "paragrafo": 2,
+      "texto": "Viva o governador!",
+      "fala": "Viva o governador!",
+      "hash": "7d579afa48"
+    },
+    {
+      "id": "p7-s18",
+      "pagina": 7,
+      "paragrafo": 2,
+      "texto": "Desamarraram os escudos e puseram Sancho de pé.",
+      "fala": "Desamarraram os escudos e puseram Sancho de pé.",
+      "hash": "7f0334b235"
+    },
+    {
+      "id": "p7-s19",
+      "pagina": 7,
+      "paragrafo": 2,
+      "texto": "Ele não disse nada.",
+      "fala": "Ele não disse nada.",
+      "hash": "277b795f58"
+    },
+    {
+      "id": "p7-s20",
+      "pagina": 7,
+      "paragrafo": 2,
+      "texto": "Olhou devagar para um, para outro... e viu que alguns escondiam o riso.",
+      "fala": "Olhou devagar para um, para outro... e viu que alguns escondiam o riso.",
+      "hash": "d12dae03e9"
+    },
+    {
+      "id": "p7-s21",
+      "pagina": 7,
+      "paragrafo": 2,
+      "texto": "Viu o mordomo guardando o caderninho.",
+      "fala": "Viu o mordomo guardando o caderninho.",
+      "hash": "f8427befaa"
+    },
+    {
+      "id": "p7-s22",
+      "pagina": 7,
+      "paragrafo": 2,
+      "texto": "Então Sancho entendeu tudo: o ataque era de mentira.",
+      "fala": "Então Sancho entendeu tudo: o ataque era de mentira.",
+      "hash": "9d31ca4d2a"
+    },
+    {
+      "id": "p7-s23",
+      "pagina": 7,
+      "paragrafo": 2,
+      "texto": "E a ilha, pelo jeito, também.",
+      "fala": "E a ilha, pelo jeito, também.",
+      "hash": "f7f41815ed"
+    },
+    {
+      "id": "p7-s24",
+      "pagina": 7,
+      "paragrafo": 3,
+      "texto": "Em silêncio, ele vestiu a sua roupa velha e foi até o estábulo.",
+      "fala": "Em silêncio, ele vestiu a sua roupa velha e foi até o estábulo.",
+      "hash": "0cf61d0abd"
+    },
+    {
+      "id": "p7-s25",
+      "pagina": 7,
+      "paragrafo": 3,
+      "texto": "Abraçou o pescoço do BURRICO e deu um beijo na testa dele: — Meu companheiro, quando eu andava com você, os meus dias eram felizes.",
+      "fala": "Abraçou o pescoço do burrico e deu um beijo na testa dele: Meu companheiro, quando eu andava com você, os meus dias eram felizes.",
+      "hash": "97ca5247fd"
+    },
+    {
+      "id": "p7-s26",
+      "pagina": 7,
+      "paragrafo": 3,
+      "texto": "Eu só pensava em remendar a sua sela e encher a sua barriga.",
+      "fala": "Eu só pensava em remendar a sua sela e encher a sua barriga.",
+      "hash": "60c0f3c373"
+    },
+    {
+      "id": "p7-s27",
+      "pagina": 7,
+      "paragrafo": 3,
+      "texto": "Depois que subi nas torres do governo, ganhei mil preocupações e nem um jantar sossegado.",
+      "fala": "Depois que subi nas torres do governo, ganhei mil preocupações e nem um jantar sossegado.",
+      "hash": "a6cb429369"
+    },
+    {
+      "id": "p7-s28",
+      "pagina": 7,
+      "paragrafo": 4,
+      "texto": "Sancho montou e falou a todos, sem raiva nenhuma: — Abram caminho, meus senhores.",
+      "fala": "Sancho montou e falou a todos, sem raiva nenhuma: Abram caminho, meus senhores.",
+      "hash": "77f7e53ae8"
+    },
+    {
+      "id": "p7-s29",
+      "pagina": 7,
+      "paragrafo": 4,
+      "texto": "Eu não nasci para governador.",
+      "fala": "Eu não nasci para governador.",
+      "hash": "ba97361404"
+    },
+    {
+      "id": "p7-s30",
+      "pagina": 7,
+      "paragrafo": 4,
+      "texto": "Sei cuidar da terra e das parreiras, e isso me basta.",
+      "fala": "Sei cuidar da terra e das parreiras, e isso me basta.",
+      "hash": "7be06d129f"
+    },
+    {
+      "id": "p7-s31",
+      "pagina": 7,
+      "paragrafo": 4,
+      "texto": "Cheguei sem uma moeda e saio sem uma moeda.",
+      "fala": "Cheguei sem uma moeda e saio sem uma moeda.",
+      "hash": "98921e84fe"
+    },
+    {
+      "id": "p7-s32",
+      "pagina": 7,
+      "paragrafo": 4,
+      "texto": "Só peço meio pão e meio queijo para a viagem.",
+      "fala": "Só peço meio pão e meio queijo para a viagem.",
+      "hash": "54b0ed5a16"
+    },
+    {
+      "id": "p7-s33",
+      "pagina": 7,
+      "paragrafo": 4,
+      "texto": "O mordomo, que já não ria, baixou os olhos: — O senhor foi o melhor governador que esta vila já teve.",
+      "fala": "O mordomo, que já não ria, baixou os olhos: O senhor foi o melhor governador que esta vila já teve.",
+      "hash": "2a30fb5335"
+    },
+    {
+      "id": "p7-s34",
+      "pagina": 7,
+      "paragrafo": 4,
+      "texto": "E tirou o chapéu.",
+      "fala": "E tirou o chapéu.",
+      "hash": "59d25f6ea9"
+    },
+    {
+      "id": "p7-s35",
+      "pagina": 7,
+      "paragrafo": 4,
+      "texto": "Debaixo do chapéu, Sancho reconheceu direitinho a testa da condessa barbuda.",
+      "fala": "Debaixo do chapéu, Sancho reconheceu direitinho a testa da condessa barbuda.",
+      "hash": "749c488576"
+    },
+    {
+      "id": "p7-s36",
+      "pagina": 7,
+      "paragrafo": 4,
+      "texto": "— Eu sabia! — disse ele.",
+      "fala": "Eu sabia! disse ele.",
+      "hash": "d4552b21a9"
+    },
+    {
+      "id": "p7-s37",
+      "pagina": 7,
+      "paragrafo": 4,
+      "texto": "E partiu de cabeça erguida, a caminho da sua LIBERDADE.",
+      "fala": "E partiu de cabeça erguida, a caminho da sua liberdade.",
+      "hash": "c6a5e8825e"
+    },
+    {
+      "id": "p8-s0",
+      "pagina": 8,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Capítulo 59. A Voz no Buraco. Esse Zurro Eu Conheço!",
+      "fala": "Capítulo 59. A Voz no Buraco. Esse Zurro Eu Conheço!",
+      "hash": "ca3f8f8a9b"
+    },
+    {
+      "id": "p8-s1",
+      "pagina": 8,
+      "paragrafo": 0,
+      "texto": "Sancho queria chegar depressa ao palácio, para abraçar o seu amo.",
+      "fala": "Sancho queria chegar depressa ao palácio, para abraçar o seu amo.",
+      "hash": "1b1bb23057"
+    },
+    {
+      "id": "p8-s2",
+      "pagina": 8,
+      "paragrafo": 0,
+      "texto": "Mas a noite caiu no meio do caminho, escura que nem carvão.",
+      "fala": "Mas a noite caiu no meio do caminho, escura que nem carvão.",
+      "hash": "4b778267f2"
+    },
+    {
+      "id": "p8-s3",
+      "pagina": 8,
+      "paragrafo": 0,
+      "texto": "Ele saiu da estrada para procurar um cantinho de dormir e... o chão sumiu!",
+      "fala": "Ele saiu da estrada para procurar um cantinho de dormir e... o chão sumiu!",
+      "hash": "3acfc6eec5"
+    },
+    {
+      "id": "p8-s4",
+      "pagina": 8,
+      "paragrafo": 0,
+      "texto": "Sancho e o burrico escorregaram para dentro de um BURACO fundo, no meio de umas ruínas.",
+      "fala": "Sancho e o burrico escorregaram para dentro de um buraco fundo, no meio de umas ruínas.",
+      "hash": "6514e6ddff"
+    },
+    {
+      "id": "p8-s5",
+      "pagina": 8,
+      "paragrafo": 0,
+      "texto": "Caíram em cima de um monte de folhas secas.",
+      "fala": "Caíram em cima de um monte de folhas secas.",
+      "hash": "827436a57a"
+    },
+    {
+      "id": "p8-s6",
+      "pagina": 8,
+      "paragrafo": 0,
+      "texto": "Não se machucaram, mas também não tinham como sair.",
+      "fala": "Não se machucaram, mas também não tinham como sair.",
+      "hash": "5cfe616248"
+    },
+    {
+      "id": "p8-s7",
+      "pagina": 8,
+      "paragrafo": 1,
+      "texto": "— Socorro! — gritou Sancho a noite inteira.",
+      "fala": "Socorro! gritou Sancho a noite inteira.",
+      "hash": "71ca11d933"
+    },
+    {
+      "id": "p8-s8",
+      "pagina": 8,
+      "paragrafo": 1,
+      "texto": "Só o eco respondia.",
+      "fala": "Só o eco respondia.",
+      "hash": "8ff45f9af8"
+    },
+    {
+      "id": "p8-s9",
+      "pagina": 8,
+      "paragrafo": 1,
+      "texto": "Ele repartiu com o burrico o meio pão e o meio queijo.",
+      "fala": "Ele repartiu com o burrico o meio pão e o meio queijo.",
+      "hash": "4253238e95"
+    },
+    {
+      "id": "p8-s10",
+      "pagina": 8,
+      "paragrafo": 1,
+      "texto": "— Está vendo, meu amigo?",
+      "fala": "Está vendo, meu amigo?",
+      "hash": "44c2486277"
+    },
+    {
+      "id": "p8-s11",
+      "pagina": 8,
+      "paragrafo": 1,
+      "texto": "Ontem, governador, numa cadeira de veludo.",
+      "fala": "Ontem, governador, numa cadeira de veludo.",
+      "hash": "e9667f2b5c"
+    },
+    {
+      "id": "p8-s12",
+      "pagina": 8,
+      "paragrafo": 1,
+      "texto": "Hoje, no fundo de um buraco.",
+      "fala": "Hoje, no fundo de um buraco.",
+      "hash": "fac0b77449"
+    },
+    {
+      "id": "p8-s13",
+      "pagina": 8,
+      "paragrafo": 1,
+      "texto": "O burrico mastigava e escutava, de orelhas murchas.",
+      "fala": "O burrico mastigava e escutava, de orelhas murchas.",
+      "hash": "d5119f8125"
+    },
+    {
+      "id": "p8-s14",
+      "pagina": 8,
+      "paragrafo": 2,
+      "texto": "De manhã cedinho, Dom Quixote saiu para passear com Rocinante ali por perto.",
+      "fala": "De manhã cedinho, Dom Quixote saiu para passear com Rocinante ali por perto.",
+      "hash": "00972cd8d5"
+    },
+    {
+      "id": "p8-s15",
+      "pagina": 8,
+      "paragrafo": 2,
+      "texto": "De repente, Rocinante parou na beira de um buraco, e lá de dentro saiu uma voz fraquinha: — Ei, aí de cima!",
+      "fala": "De repente, Rocinante parou na beira de um buraco, e lá de dentro saiu uma voz fraquinha: Ei, aí de cima!",
+      "hash": "297b46d2bd"
+    },
+    {
+      "id": "p8-s16",
+      "pagina": 8,
+      "paragrafo": 2,
+      "texto": "Tem alguma alma boa para ajudar um governador sem governo?",
+      "fala": "Tem alguma alma boa para ajudar um governador sem governo?",
+      "hash": "84c6dd0390"
+    },
+    {
+      "id": "p8-s17",
+      "pagina": 8,
+      "paragrafo": 2,
+      "texto": "Dom Quixote arregalou os olhos: — Quem está aí embaixo?",
+      "fala": "Dom Quixote arregalou os olhos: Quem está aí embaixo?",
+      "hash": "f6375a891e"
+    },
+    {
+      "id": "p8-s18",
+      "pagina": 8,
+      "paragrafo": 2,
+      "texto": "— Sancho Pança!",
+      "fala": "Sancho Pança!",
+      "hash": "61e33769d8"
+    },
+    {
+      "id": "p8-s19",
+      "pagina": 8,
+      "paragrafo": 2,
+      "texto": "— Não pode ser!",
+      "fala": "Não pode ser!",
+      "hash": "6b94452d88"
+    },
+    {
+      "id": "p8-s20",
+      "pagina": 8,
+      "paragrafo": 2,
+      "texto": "O meu Sancho está governando uma ilha.",
+      "fala": "O meu Sancho está governando uma ilha.",
+      "hash": "244144bec3"
+    },
+    {
+      "id": "p8-s21",
+      "pagina": 8,
+      "paragrafo": 2,
+      "texto": "Você deve ser um FANTASMA com a voz dele!",
+      "fala": "Você deve ser um fantasma com a voz dele!",
+      "hash": "c5376387e5"
+    },
+    {
+      "id": "p8-s22",
+      "pagina": 8,
+      "paragrafo": 3,
+      "texto": "— Fantasma coisa nenhuma, meu amo!",
+      "fala": "Fantasma coisa nenhuma, meu amo!",
+      "hash": "5ce0c210c2"
+    },
+    {
+      "id": "p8-s23",
+      "pagina": 8,
+      "paragrafo": 3,
+      "texto": "Sou eu, de carne, osso e fome!",
+      "fala": "Sou eu, de carne, osso e fome!",
+      "hash": "da9a327e08"
+    },
+    {
+      "id": "p8-s24",
+      "pagina": 8,
+      "paragrafo": 3,
+      "texto": "Bem nessa hora, o burrico encheu o peito e soltou um zurro tão forte que as pedras tremeram: IIIH-ÓÓÓ!",
+      "fala": "Bem nessa hora, o burrico encheu o peito e soltou um zurro tão forte que as pedras tremeram: IIIH-ÓÓÓ!",
+      "hash": "c529ea2777"
+    },
+    {
+      "id": "p8-s25",
+      "pagina": 8,
+      "paragrafo": 3,
+      "texto": "Dom Quixote bateu a mão na testa: — Esse ZURRO eu conheço como se fosse da família!",
+      "fala": "Dom Quixote bateu a mão na testa: Esse zurro eu conheço como se fosse da família!",
+      "hash": "e9fa9cef96"
+    },
+    {
+      "id": "p8-s26",
+      "pagina": 8,
+      "paragrafo": 3,
+      "texto": "É o burrico!",
+      "fala": "É o burrico!",
+      "hash": "ae1bac2ed9"
+    },
+    {
+      "id": "p8-s27",
+      "pagina": 8,
+      "paragrafo": 3,
+      "texto": "Então é você mesmo, Sancho!",
+      "fala": "Então é você mesmo, Sancho!",
+      "hash": "239a295c08"
+    },
+    {
+      "id": "p8-s28",
+      "pagina": 8,
+      "paragrafo": 3,
+      "texto": "Espere aí, que eu vou buscar ajuda!",
+      "fala": "Espere aí, que eu vou buscar ajuda!",
+      "hash": "dc9154d8dd"
+    },
+    {
+      "id": "p8-s29",
+      "pagina": 8,
+      "paragrafo": 4,
+      "texto": "Vieram os criados do palácio com cordas compridas e puxaram primeiro o burrico, depois o governador.",
+      "fala": "Vieram os criados do palácio com cordas compridas e puxaram primeiro o burrico, depois o governador.",
+      "hash": "01cad4aa69"
+    },
+    {
+      "id": "p8-s30",
+      "pagina": 8,
+      "paragrafo": 4,
+      "texto": "Sancho saiu cheio de folhas no cabelo.",
+      "fala": "Sancho saiu cheio de folhas no cabelo.",
+      "hash": "8ad2b66b9e"
+    },
+    {
+      "id": "p8-s31",
+      "pagina": 8,
+      "paragrafo": 4,
+      "texto": "Os dois amigos se olharam um instante e se abraçaram tão apertado que o bacielmo caiu no chão.",
+      "fala": "Os dois amigos se olharam um instante e se abraçaram tão apertado que o bacielmo caiu no chão.",
+      "hash": "c370bc549c"
+    },
+    {
+      "id": "p8-s32",
+      "pagina": 8,
+      "paragrafo": 4,
+      "texto": "— Senti a sua falta, Sancho — disse Dom Quixote.",
+      "fala": "Senti a sua falta, Sancho, disse Dom Quixote.",
+      "hash": "9a1b36c6da"
+    },
+    {
+      "id": "p8-s33",
+      "pagina": 8,
+      "paragrafo": 4,
+      "texto": "— Rasguei uma meia e não tinha a quem contar.",
+      "fala": "Rasguei uma meia e não tinha a quem contar.",
+      "hash": "aa2f8d17b1"
+    },
+    {
+      "id": "p8-s34",
+      "pagina": 8,
+      "paragrafo": 4,
+      "texto": "— E eu, meu amo, governei uma ilha inteirinha e não tinha a quem dizer um ditado.",
+      "fala": "E eu, meu amo, governei uma ilha inteirinha e não tinha a quem dizer um ditado.",
+      "hash": "afcd23c3a7"
+    },
+    {
+      "id": "p9-s0",
+      "pagina": 9,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Capítulo 60. A Despedida do Palácio. Pão com Liberdade",
+      "fala": "Capítulo 60. A Despedida do Palácio. Pão com Liberdade",
+      "hash": "5690f395f7"
+    },
+    {
+      "id": "p9-s1",
+      "pagina": 9,
+      "paragrafo": 0,
+      "texto": "No palácio, Sancho se ajoelhou diante do duque e da duquesa: — Senhores, eu governei a sua ilha por sete dias.",
+      "fala": "No palácio, Sancho se ajoelhou diante do duque e da duquesa: Senhores, eu governei a sua ilha por sete dias.",
+      "hash": "9d13da4fe8"
+    },
+    {
+      "id": "p9-s2",
+      "pagina": 9,
+      "paragrafo": 0,
+      "texto": "Não roubei nada e não ganhei nada.",
+      "fala": "Não roubei nada e não ganhei nada.",
+      "hash": "f24a4af2f9"
+    },
+    {
+      "id": "p9-s3",
+      "pagina": 9,
+      "paragrafo": 0,
+      "texto": "Fiz umas leis boas e resolvi uns casos difíceis.",
+      "fala": "Fiz umas leis boas e resolvi uns casos difíceis.",
+      "hash": "936b831e1c"
+    },
+    {
+      "id": "p9-s4",
+      "pagina": 9,
+      "paragrafo": 0,
+      "texto": "Agora devolvo as chaves e volto a ser escudeiro, que é um trabalho em que a gente come.",
+      "fala": "Agora devolvo as chaves e volto a ser escudeiro, que é um trabalho em que a gente come.",
+      "hash": "cce14a8684"
+    },
+    {
+      "id": "p9-s5",
+      "pagina": 9,
+      "paragrafo": 1,
+      "texto": "O duque e a duquesa ficaram sem jeito.",
+      "fala": "O duque e a duquesa ficaram sem jeito.",
+      "hash": "3600b845e4"
+    },
+    {
+      "id": "p9-s6",
+      "pagina": 9,
+      "paragrafo": 1,
+      "texto": "Tinham inventado a ilha como uma brincadeira, uma peça de teatro, igual à da condessa barbuda e do cavalo voador.",
+      "fala": "Tinham inventado a ilha como uma brincadeira, uma peça de teatro, igual à da condessa barbuda e do cavalo voador.",
+      "hash": "86713eea67"
+    },
+    {
+      "id": "p9-s7",
+      "pagina": 9,
+      "paragrafo": 1,
+      "texto": "Mas o mordomo tinha mostrado a eles o caderninho, com tudo anotado.",
+      "fala": "Mas o mordomo tinha mostrado a eles o caderninho, com tudo anotado.",
+      "hash": "86cb29bd48"
+    },
+    {
+      "id": "p9-s8",
+      "pagina": 9,
+      "paragrafo": 1,
+      "texto": "— Sancho — disse a duquesa, de olhos baixos —, a ilha era de faz de conta.",
+      "fala": "Sancho, disse a duquesa, de olhos baixos, a ilha era de faz de conta.",
+      "hash": "9c4c620de6"
+    },
+    {
+      "id": "p9-s9",
+      "pagina": 9,
+      "paragrafo": 1,
+      "texto": "Mas a sua SABEDORIA era de verdade.",
+      "fala": "Mas a sua sabedoria era de verdade.",
+      "hash": "f61f6fd101"
+    },
+    {
+      "id": "p9-s10",
+      "pagina": 9,
+      "paragrafo": 1,
+      "texto": "Perdoe a nossa brincadeira.",
+      "fala": "Perdoe a nossa brincadeira.",
+      "hash": "be9c268f5a"
+    },
+    {
+      "id": "p9-s11",
+      "pagina": 9,
+      "paragrafo": 1,
+      "texto": "— Está perdoada, senhora — respondeu Sancho.",
+      "fala": "Está perdoada, senhora, respondeu Sancho.",
+      "hash": "ed963e6236"
+    },
+    {
+      "id": "p9-s12",
+      "pagina": 9,
+      "paragrafo": 1,
+      "texto": "— Só o doutor é que eu não perdoo.",
+      "fala": "Só o doutor é que eu não perdoo.",
+      "hash": "d57b79922d"
+    },
+    {
+      "id": "p9-s13",
+      "pagina": 9,
+      "paragrafo": 2,
+      "texto": "Dom Quixote também quis partir.",
+      "fala": "Dom Quixote também quis partir.",
+      "hash": "859af3c91c"
+    },
+    {
+      "id": "p9-s14",
+      "pagina": 9,
+      "paragrafo": 2,
+      "texto": "O palácio era bonito e a comida era farta, mas ele sentia falta do céu aberto.",
+      "fala": "O palácio era bonito e a comida era farta, mas ele sentia falta do céu aberto.",
+      "hash": "1fefcfa686"
+    },
+    {
+      "id": "p9-s15",
+      "pagina": 9,
+      "paragrafo": 2,
+      "texto": "Os duques deram a Sancho uma bolsinha de moedas para a viagem, e a duquesa mostrou a todos, bem orgulhosa, as bolotas que Teresa tinha mandado.",
+      "fala": "Os duques deram a Sancho uma bolsinha de moedas para a viagem, e a duquesa mostrou a todos, bem orgulhosa, as bolotas que Teresa tinha mandado.",
+      "hash": "c109d8525f"
+    },
+    {
+      "id": "p9-s16",
+      "pagina": 9,
+      "paragrafo": 3,
+      "texto": "Na estrada, com o vento no rosto, Dom Quixote respirou fundo: — A LIBERDADE, Sancho, é um dos presentes mais valiosos que as pessoas receberam do céu.",
+      "fala": "Na estrada, com o vento no rosto, Dom Quixote respirou fundo: A liberdade, Sancho, é um dos presentes mais valiosos que as pessoas receberam do céu.",
+      "hash": "c00c146a29"
+    },
+    {
+      "id": "p9-s17",
+      "pagina": 9,
+      "paragrafo": 3,
+      "texto": "Nenhum tesouro da terra ou do mar vale tanto quanto ela.",
+      "fala": "Nenhum tesouro da terra ou do mar vale tanto quanto ela.",
+      "hash": "8becc8892d"
+    },
+    {
+      "id": "p9-s18",
+      "pagina": 9,
+      "paragrafo": 3,
+      "texto": "Lá no palácio, no meio de tantos banquetes, eu me sentia apertado.",
+      "fala": "Lá no palácio, no meio de tantos banquetes, eu me sentia apertado.",
+      "hash": "2e7eb245df"
+    },
+    {
+      "id": "p9-s19",
+      "pagina": 9,
+      "paragrafo": 3,
+      "texto": "Feliz de quem come o seu pedaço de pão sem dever favor a ninguém!",
+      "fala": "Feliz de quem come o seu pedaço de pão sem dever favor a ninguém!",
+      "hash": "80272e5aca"
+    },
+    {
+      "id": "p9-s20",
+      "pagina": 9,
+      "paragrafo": 4,
+      "texto": "— Falou bonito, meu amo.",
+      "fala": "Falou bonito, meu amo.",
+      "hash": "a22e8e0f68"
+    },
+    {
+      "id": "p9-s21",
+      "pagina": 9,
+      "paragrafo": 4,
+      "texto": "Pão com liberdade é bom.",
+      "fala": "Pão com liberdade é bom.",
+      "hash": "09856240ca"
+    },
+    {
+      "id": "p9-s22",
+      "pagina": 9,
+      "paragrafo": 4,
+      "texto": "Mas com queijo é melhor ainda.",
+      "fala": "Mas com queijo é melhor ainda.",
+      "hash": "ea5e4d37ab"
+    },
+    {
+      "id": "p9-s23",
+      "pagina": 9,
+      "paragrafo": 4,
+      "texto": "Dom Quixote riu.",
+      "fala": "Dom Quixote riu.",
+      "hash": "a417e99028"
+    },
+    {
+      "id": "p9-s24",
+      "pagina": 9,
+      "paragrafo": 4,
+      "texto": "— E agora, para onde vamos?",
+      "fala": "E agora, para onde vamos?",
+      "hash": "25c3ae787c"
+    },
+    {
+      "id": "p9-s25",
+      "pagina": 9,
+      "paragrafo": 4,
+      "texto": "— Para BARCELONA, Sancho!",
+      "fala": "Para barcelona, Sancho!",
+      "hash": "43712ba9e8"
+    },
+    {
+      "id": "p9-s26",
+      "pagina": 9,
+      "paragrafo": 4,
+      "texto": "Dizem que lá tem festa, cavaleiros e uma coisa que nós dois nunca vimos: o mar.",
+      "fala": "Dizem que lá tem festa, cavaleiros e uma coisa que nós dois nunca vimos: o mar.",
+      "hash": "935669fe3a"
+    },
+    {
+      "id": "p9-s27",
+      "pagina": 9,
+      "paragrafo": 4,
+      "texto": "— Mar de verdade?",
+      "fala": "Mar de verdade?",
+      "hash": "988499d15b"
+    },
+    {
+      "id": "p9-s28",
+      "pagina": 9,
+      "paragrafo": 4,
+      "texto": "Desta vez eu quero ver com estes olhos!",
+      "fala": "Desta vez eu quero ver com estes olhos!",
+      "hash": "33590a01ad"
+    },
+    {
+      "id": "p9-s29",
+      "pagina": 9,
+      "paragrafo": 4,
+      "texto": "E os dois seguiram pela estrada.",
+      "fala": "E os dois seguiram pela estrada.",
+      "hash": "44e3f3660b"
+    },
+    {
+      "id": "p9-s30",
+      "pagina": 9,
+      "paragrafo": 4,
+      "texto": "Lá atrás, bem longe, um cavaleiro sozinho vinha pelo mesmo caminho.",
+      "fala": "Lá atrás, bem longe, um cavaleiro sozinho vinha pelo mesmo caminho.",
+      "hash": "ec62a107f2"
+    },
+    {
+      "id": "p9-s31",
+      "pagina": 9,
+      "paragrafo": 4,
+      "texto": "No escudo dele brilhava uma lua branca.",
+      "fala": "No escudo dele brilhava uma lua branca.",
+      "hash": "3dd7beee41"
+    }
+  ],
+  "palavras": [
+    {
+      "slug": "ilha",
+      "palavra": "ILHA",
+      "silabas": "I • LHA",
+      "fala": "i... lha... ilha!",
+      "hash": "14b9fb74ee"
+    },
+    {
+      "slug": "saudade",
+      "palavra": "SAUDADE",
+      "silabas": "SAU • DA • DE",
+      "fala": "sau... da... de... saudade!",
+      "hash": "71379d6406"
+    },
+    {
+      "slug": "governar",
+      "palavra": "GOVERNAR",
+      "silabas": "GO • VER • NAR",
+      "fala": "go... ver... nar... governar!",
+      "hash": "5634c899b7"
+    },
+    {
+      "slug": "conselhos",
+      "palavra": "CONSELHOS",
+      "silabas": "CON • SE • LHOS",
+      "fala": "con... se... lhos... conselhos!",
+      "hash": "877506202a"
+    },
+    {
+      "slug": "justica",
+      "palavra": "JUSTIÇA",
+      "silabas": "JUS • TI • ÇA",
+      "fala": "jus... ti... ça... justiça!",
+      "hash": "8e08976eda"
+    },
+    {
+      "slug": "ditados",
+      "palavra": "DITADOS",
+      "silabas": "DI • TA • DOS",
+      "fala": "di... ta... dos... ditados!",
+      "hash": "9af9ded46b"
+    },
+    {
+      "slug": "barataria",
+      "palavra": "BARATARIA",
+      "silabas": "BA • RA • TA • RI • A",
+      "fala": "ba... ra... ta... ri... a... barataria!",
+      "hash": "78d46ec0d4"
+    },
+    {
+      "slug": "alfaiate",
+      "palavra": "ALFAIATE",
+      "silabas": "AL • FAI • A • TE",
+      "fala": "al... fai... a... te... alfaiate!",
+      "hash": "0ee0bc832a"
+    },
+    {
+      "slug": "dedo",
+      "palavra": "DEDO",
+      "silabas": "DE • DO",
+      "fala": "de... do... dedo!",
+      "hash": "cdc37969e7"
+    },
+    {
+      "slug": "varinha",
+      "palavra": "VARINHA",
+      "silabas": "VA • RI • NHA",
+      "fala": "va... ri... nha... varinha!",
+      "hash": "9651004188"
+    },
+    {
+      "slug": "doutor",
+      "palavra": "DOUTOR",
+      "silabas": "DOU • TOR",
+      "fala": "dou... tor... doutor!",
+      "hash": "486eb66650"
+    },
+    {
+      "slug": "queijo",
+      "palavra": "QUEIJO",
+      "silabas": "QUEI • JO",
+      "fala": "quei... jo... queijo!",
+      "hash": "dfed1955c7"
+    },
+    {
+      "slug": "bengala",
+      "palavra": "BENGALA",
+      "silabas": "BEN • GA • LA",
+      "fala": "ben... ga... la... bengala!",
+      "hash": "58393ecba7"
+    },
+    {
+      "slug": "moedas",
+      "palavra": "MOEDAS",
+      "silabas": "MO • E • DAS",
+      "fala": "mo... e... das... moedas!",
+      "hash": "76566b9d47"
+    },
+    {
+      "slug": "vergonha",
+      "palavra": "VERGONHA",
+      "silabas": "VER • GO • NHA",
+      "fala": "ver... go... nha... vergonha!",
+      "hash": "e254916f99"
+    },
+    {
+      "slug": "pajem",
+      "palavra": "PAJEM",
+      "silabas": "PA • JEM",
+      "fala": "pa... jem... pajem!",
+      "hash": "9667ce5b9e"
+    },
+    {
+      "slug": "colar",
+      "palavra": "COLAR",
+      "silabas": "CO • LAR",
+      "fala": "co... lar... colar!",
+      "hash": "330d686713"
+    },
+    {
+      "slug": "bolotas",
+      "palavra": "BOLOTAS",
+      "silabas": "BO • LO • TAS",
+      "fala": "bo... lo... tas... bolotas!",
+      "hash": "55f97d5116"
+    },
+    {
+      "slug": "carta",
+      "palavra": "CARTA",
+      "silabas": "CAR • TA",
+      "fala": "car... ta... carta!",
+      "hash": "291c021b82"
+    },
+    {
+      "slug": "secretario",
+      "palavra": "SECRETÁRIO",
+      "silabas": "SE • CRE • TÁ • RIO",
+      "fala": "se... cre... tá... rio... secretário!",
+      "hash": "f3a063b837"
+    },
+    {
+      "slug": "assinar",
+      "palavra": "ASSINAR",
+      "silabas": "AS • SI • NAR",
+      "fala": "as... si... nar... assinar!",
+      "hash": "b78eb45225"
+    },
+    {
+      "slug": "tartaruga",
+      "palavra": "TARTARUGA",
+      "silabas": "TAR • TA • RU • GA",
+      "fala": "tar... ta... ru... ga... tartaruga!",
+      "hash": "57f635b12b"
+    },
+    {
+      "slug": "burrico",
+      "palavra": "BURRICO",
+      "silabas": "BUR • RI • CO",
+      "fala": "bur... ri... co... burrico!",
+      "hash": "bdc4230049"
+    },
+    {
+      "slug": "liberdade",
+      "palavra": "LIBERDADE",
+      "silabas": "LI • BER • DA • DE",
+      "fala": "li... ber... da... de... liberdade!",
+      "hash": "8edd060c68"
+    },
+    {
+      "slug": "buraco",
+      "palavra": "BURACO",
+      "silabas": "BU • RA • CO",
+      "fala": "bu... ra... co... buraco!",
+      "hash": "6e4f43687e"
+    },
+    {
+      "slug": "fantasma",
+      "palavra": "FANTASMA",
+      "silabas": "FAN • TAS • MA",
+      "fala": "fan... tas... ma... fantasma!",
+      "hash": "955ebf5a8a"
+    },
+    {
+      "slug": "zurro",
+      "palavra": "ZURRO",
+      "silabas": "ZUR • RO",
+      "fala": "zur... ro... zurro!",
+      "hash": "b130bd4b5f"
+    },
+    {
+      "slug": "sabedoria",
+      "palavra": "SABEDORIA",
+      "silabas": "SA • BE • DO • RI • A",
+      "fala": "sa... be... do... ri... a... sabedoria!",
+      "hash": "5107c16d72"
+    },
+    {
+      "slug": "barcelona",
+      "palavra": "BARCELONA",
+      "silabas": "BAR • CE • LO • NA",
+      "fala": "bar... ce... lo... na... barcelona!",
+      "hash": "01ebf70eee"
+    }
+  ]
+}
