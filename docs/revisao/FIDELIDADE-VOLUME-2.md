@@ -118,7 +118,7 @@ Revisão literária das Partes 5 a 8 (`dom-quixote/parte-5.html` a `parte-8.html
 3. P8 cap. 65: trocar "No primeiro livro ele não pôs o nome" por algo verdadeiro: "No primeiro livro ele escondeu o nome no meio das páginas. Mas agora, por causa daquele livro mentiroso, resolveu assinar bem grande..." ou simplesmente tirar a frase.
 4. P6 cap. 48: "pulgas" → "piolhos" (ou "pulgas", se o humano preferir; é troca consciente a registrar). P6 cap. 44: "dois patos" → "dois gansos".
 5. P7 cap. 60: "por sete dias" → "por uns dias" ou "dez dias" (II-53 e II-55).
-6. P6 cap. 44: Sancho responde ao Primo "Foi Lúcifer, que caiu do céu rolando" (II-22), mais fiel e mais engraçado do que "quem saiu na chuva".
+6. ~~P6 cap. 44: Sancho responde ao Primo com o "Lúcifer" de II-22~~ **Vetada pelo humano (2026-11-13)**: falar em Lúcifer não é apropriado para o público; fica a resposta nossa, declarada como adaptação.
 
 **Contradição a resolver**
 7. P7 cap. 57 e atividade: em II-43 Sancho "sabe firmar". Duas saídas: (i) a atividade vira "ajudar Sancho a lembrar como assina" (ele aprendeu quando foi "prioste", e o narrador explica numa frase); ou (ii) registrar no caderno que a alfabetização é fio nosso e corrigir o texto "ele nunca aprendeu a ler" para não afirmar que ele não sabe escrever o nome.

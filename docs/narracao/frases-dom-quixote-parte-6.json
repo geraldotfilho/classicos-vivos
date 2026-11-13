@@ -459,28 +459,20 @@
       "id": "p2-s24",
       "pagina": 2,
       "paragrafo": 4,
-      "texto": "— Essa eu não sei — disse Sancho.",
-      "fala": "Essa eu não sei, disse Sancho.",
-      "hash": "96165acbd1"
+      "texto": "— Essa eu sei — disse Sancho.",
+      "fala": "Essa eu sei, disse Sancho.",
+      "hash": "063c7d9348"
     },
     {
       "id": "p2-s25",
       "pagina": 2,
       "paragrafo": 4,
-      "texto": "— Mas sei outra: quem foi o primeiro a dar cambalhota no mundo?",
-      "fala": "Mas sei outra: quem foi o primeiro a dar cambalhota no mundo?",
-      "hash": "f60e736f6a"
+      "texto": "— Foi a primeira que saiu na chuva sem chapéu.",
+      "fala": "Foi a primeira que saiu na chuva sem chapéu.",
+      "hash": "c4c4a0e77e"
     },
     {
       "id": "p2-s26",
-      "pagina": 2,
-      "paragrafo": 4,
-      "texto": "Foi Lúcifer, quando caiu do céu rolando!",
-      "fala": "Foi Lúcifer, quando caiu do céu rolando!",
-      "hash": "f9c400b9dc"
-    },
-    {
-      "id": "p2-s27",
       "pagina": 2,
       "paragrafo": 4,
       "texto": "O Primo anotou, muito sério.",
@@ -488,7 +480,7 @@
       "hash": "a60958145e"
     },
     {
-      "id": "p2-s28",
+      "id": "p2-s27",
       "pagina": 2,
       "paragrafo": 4,
       "texto": "Dom Quixote contou que ia à Gruta de Montesinos, e o Primo deu um pulo: — Uma gruta encantada!",
@@ -496,7 +488,7 @@
       "hash": "1f4915ba74"
     },
     {
-      "id": "p2-s29",
+      "id": "p2-s28",
       "pagina": 2,
       "paragrafo": 4,
       "texto": "Vai ficar linda no meu livro!",
@@ -504,7 +496,7 @@
       "hash": "9f0bf71301"
     },
     {
-      "id": "p2-s30",
+      "id": "p2-s29",
       "pagina": 2,
       "paragrafo": 4,
       "texto": "Eu conheço o caminho.",
@@ -512,7 +504,7 @@
       "hash": "c004430d8d"
     },
     {
-      "id": "p2-s31",
+      "id": "p2-s30",
       "pagina": 2,
       "paragrafo": 4,
       "texto": "E tenho uma CORDA bem comprida!",
