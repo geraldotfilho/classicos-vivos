@@ -250,6 +250,67 @@ h1, h2, h3, h4, .font-display {
 .btn-par-falar.par-lendo { background: #F43F5E; border-color: #BE123C; color: #fff; }
 .btn-par-falar:focus-visible { outline: 3px solid #FBBF24; outline-offset: 2px; }
 
+/* Autofalante do título: o "grande" da página (lê tudo desde o título). Redondo, laranja-dourado,
+   bem maior que o dos parágrafos e com um halo que pulsa de leve para convidar ao toque. */
+.titulo-com-falar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    max-width: 100%;
+}
+.btn-titulo-falar {
+    position: relative;
+    flex: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    padding: 0;
+    border-radius: 9999px;
+    border: 3px solid #fff;
+    background: radial-gradient(circle at 35% 30%, #FDBA74 0%, #F97316 55%, #C2410C 100%);
+    color: #fff;
+    font-size: 26px;
+    cursor: pointer;
+    box-shadow: 0 0 0 3px #F97316, 0 4px 0 #9A3412, 0 6px 14px rgba(154, 52, 18, 0.35);
+    transition: transform 0.12s ease, box-shadow 0.2s ease;
+    text-transform: none;
+    -webkit-tap-highlight-color: transparent;
+}
+.btn-titulo-falar::after {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    border-radius: inherit;
+    box-shadow: 0 0 0 0 rgba(251, 146, 60, 0.55);
+    animation: halo-titulo 2.6s ease-out infinite;
+    pointer-events: none;
+}
+.btn-titulo-falar:active { transform: scale(0.92) translateY(2px); box-shadow: 0 0 0 3px #F97316, 0 2px 0 #9A3412; }
+.btn-titulo-falar:focus-visible { outline: 3px solid #FBBF24; outline-offset: 4px; }
+.btn-titulo-falar.titulo-lendo {
+    background: radial-gradient(circle at 35% 30%, #FDA4AF 0%, #F43F5E 55%, #BE123C 100%);
+    box-shadow: 0 0 0 3px #F43F5E, 0 4px 0 #9F1239, 0 6px 14px rgba(159, 18, 57, 0.35);
+}
+.btn-titulo-falar.titulo-lendo::after { animation-duration: 1.3s; box-shadow: 0 0 0 0 rgba(244, 63, 94, 0.55); }
+.btn-titulo-falar.titulo-pausado {
+    background: radial-gradient(circle at 35% 30%, #FDE68A 0%, #F59E0B 55%, #B45309 100%);
+    box-shadow: 0 0 0 3px #F59E0B, 0 4px 0 #92400E, 0 6px 14px rgba(146, 64, 14, 0.35);
+}
+@keyframes halo-titulo {
+    0% { box-shadow: 0 0 0 0 rgba(251, 146, 60, 0.55); }
+    70%, 100% { box-shadow: 0 0 0 12px rgba(251, 146, 60, 0); }
+}
+@media (prefers-reduced-motion: reduce) {
+    .btn-titulo-falar::after { animation: none; }
+}
+@media (max-width: 640px) {
+    .btn-titulo-falar { width: 48px; height: 48px; font-size: 24px; }
+}
+/* Nas cópias da virada de página, nada pulsa */
+.turn-layer .btn-titulo-falar::after { animation: none; }
+
 /* Barra estreita da lente, logo abaixo da ilustração:
    [👓 Realidade | ✨ Imaginação] (chave deslizante) · legenda da cena · 🔄 */
 .barra-lente {
@@ -740,7 +801,9 @@ h1, h2, h3, h4, .font-display {
     .page-text-scroll { padding: 26px 24px 30px; }
 }
 
-/* Virada de página: folha 3D que gira em torno da lombada */
+/* Virada de página: folha 3D que gira em torno da lombada e acompanha o dedo (prepararVirada).
+   Paisagem: rotateY (lombada vertical). Retrato: rotateX (lombada horizontal). A posição e o
+   giro de cada face vêm do JS; aqui só o que não muda. */
 .turn-layer {
     position: absolute;
     inset: 0;
@@ -763,7 +826,6 @@ h1, h2, h3, h4, .font-display {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
-.turn-face.turn-back { transform: rotateY(180deg); }
 .turn-face > .book-page,
 .turn-static > .book-page,
 .turn-face > .spread,
@@ -776,6 +838,15 @@ h1, h2, h3, h4, .font-display {
     height: 100%;
     border-radius: 16px;
     background: #FFFBF0;
+}
+/* Sombra que a folha levantada joga sobre a página que vai aparecendo */
+.turn-cast {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 10;
+    border-radius: inherit;
 }
 .turn-shade {
     position: absolute;

@@ -318,3 +318,8 @@ O que já foi entregue, sprint a sprint, em ordem cronológica (o mais antigo pr
 
 ## ✅ Fim do "arranhão de agulha" entre as frases da narração gravada (2026-11-12)
 - Causa: cada página gravada é a emenda de vários pedidos à API (blocos narradora + personagem), e cada pedido trazia uma rajada de ruído de ~180 ms (picos estourando) logo antes da pausa entre blocos, ou seja, na passagem de uma frase para outra; o gate só tirava a do fim do arquivo. O player não tinha culpa (sem saltos nem pausas entre frases, conferido no Playwright). `tools/audio_gate.py` ganhou a remoção das rajadas internas (e o modo `--so-rajadas`), aplicada localmente em 100 MP3 de página (259 rajadas, em pt, en, fr e es), sem mudar a duração; nenhuma API paga.
+
+## ✅ Autofalante do título e virada de página que acompanha o dedo (2026-11-13)
+- **Autofalante do título** em todas as páginas, inclusive a capa (`.btn-titulo-falar`): redondo, maior e laranja-dourado, com halo pulsando de leve; lê a página inteira desde o título (`pN-s0`), pausa e retoma da frase em que parou, sincronizado com o 🔊 dos parágrafos e o "Ouvir Página". Rótulos nos 4 idiomas.
+- **Virada de página pelo dedo**: a folha dobra acompanhando o arrasto, com sombra; soltar antes de 20% devolve a folha sem mudar nada (o áudio segue tocando); depois de 20% (ou com um peteleco) a página vira. No retrato a dobra é vertical, em torno da lombada horizontal. Elástico na primeira e na última página; botões e setas usam a mesma folha; movimento reduzido troca sem dobra.
+- Testado no Playwright (800×1280 e 1280×800, toque pelo CDP, mouse, peteleco, rolagem do texto, cartões, elástico, movimento reduzido, Partes 1 e 5, inglês): 44 verificações. Nenhuma API paga.

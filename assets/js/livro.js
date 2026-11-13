@@ -75,6 +75,7 @@ const IDIOMAS = {
             rascunho: '📝 Rascunho', biblioteca: 'Voltar à biblioteca', bibliotecaTitulo: 'Voltar à Biblioteca Clássicos Vivos',
             parte: (n, total) => `Parte ${n} de ${total}`,
             ouvirPagina: 'Ouvir Página', pararVoz: 'Parar Voz', ouvirTitulo: 'Ouvir a página inteira', ouvirParagrafo: 'Ouvir este parágrafo', pausarParagrafo: 'Pausar a leitura',
+            ouvirDoTitulo: 'Ouvir a página desde o título', retomarLeitura: 'Continuar a leitura de onde parou',
             maiusculas: 'Mostrar o texto todo em LETRAS MAIÚSCULAS', minusculas: 'Mostrar o texto com letras normais',
             vozTitulo: 'Escolher a voz e a velocidade da leitura', vozAria: 'Escolher a voz',
             sfxTitulo: 'Ativar/Desativar Efeitos Sonoros', sfxAria: 'Efeitos sonoros',
@@ -112,6 +113,7 @@ const IDIOMAS = {
             rascunho: '📝 Draft', biblioteca: 'Back to the library', bibliotecaTitulo: 'Back to the Clássicos Vivos Library',
             parte: (n, total) => `Part ${n} of ${total}`,
             ouvirPagina: 'Listen', pararVoz: 'Stop', ouvirTitulo: 'Listen to the whole page', ouvirParagrafo: 'Listen to this paragraph', pausarParagrafo: 'Pause reading',
+            ouvirDoTitulo: 'Listen to the page from the title', retomarLeitura: 'Resume reading where it stopped',
             maiusculas: 'Show all the text in CAPITAL LETTERS', minusculas: 'Show the text in normal letters',
             vozTitulo: 'Choose the reading voice and speed', vozAria: 'Choose the voice',
             sfxTitulo: 'Sound effects on/off', sfxAria: 'Sound effects',
@@ -149,6 +151,7 @@ const IDIOMAS = {
             rascunho: '📝 Brouillon', biblioteca: 'Retour à la bibliothèque', bibliotecaTitulo: 'Retour à la bibliothèque Clássicos Vivos',
             parte: (n, total) => `Partie ${n} sur ${total}`,
             ouvirPagina: 'Écouter', pararVoz: 'Arrêter', ouvirTitulo: 'Écouter toute la page', ouvirParagrafo: 'Écouter ce paragraphe', pausarParagrafo: 'Mettre la lecture en pause',
+            ouvirDoTitulo: 'Écouter la page depuis le titre', retomarLeitura: 'Reprendre la lecture là où elle s’est arrêtée',
             maiusculas: 'Afficher tout le texte en LETTRES MAJUSCULES', minusculas: 'Afficher le texte en lettres normales',
             vozTitulo: 'Choisir la voix et la vitesse de lecture', vozAria: 'Choisir la voix',
             sfxTitulo: 'Activer/désactiver les effets sonores', sfxAria: 'Effets sonores',
@@ -186,6 +189,7 @@ const IDIOMAS = {
             rascunho: '📝 Borrador', biblioteca: 'Volver a la biblioteca', bibliotecaTitulo: 'Volver a la Biblioteca Clássicos Vivos',
             parte: (n, total) => `Parte ${n} de ${total}`,
             ouvirPagina: 'Escuchar', pararVoz: 'Parar', ouvirTitulo: 'Escuchar toda la página', ouvirParagrafo: 'Escuchar este párrafo', pausarParagrafo: 'Pausar la lectura',
+            ouvirDoTitulo: 'Escuchar la página desde el título', retomarLeitura: 'Seguir leyendo desde donde se detuvo',
             maiusculas: 'Mostrar todo el texto en LETRAS MAYÚSCULAS', minusculas: 'Mostrar el texto con letras normales',
             vozTitulo: 'Elegir la voz y la velocidad de lectura', vozAria: 'Elegir la voz',
             sfxTitulo: 'Activar/desactivar los efectos de sonido', sfxAria: 'Efectos de sonido',
@@ -427,6 +431,14 @@ function botaoParagrafo(idPrimeiraFrase) {
     return `<button type="button" class="btn-par-falar" data-ler-par="${idPrimeiraFrase}" data-ui-aria="ouvirParagrafo" data-ui-title="ouvirParagrafo" aria-label="${rotulo}" title="${rotulo}"><i class="ph-fill ph-speaker-high"></i></button>`;
 }
 
+/* Autofalante do título (um por página, inclusive a capa): maior e diferente dos parágrafos.
+   Lê a página inteira desde o título (frase pN-s0), com a mesma máquina de leitura:
+   🔊 começa, ⏸ pausa e ▶ retoma da frase em que parou (comandarTitulo). */
+function botaoTitulo() {
+    const rotulo = escapeHtml(ui('ouvirDoTitulo'));
+    return `<button type="button" class="btn-titulo-falar" data-ler-titulo data-ui-aria="ouvirDoTitulo" data-ui-title="ouvirDoTitulo" aria-label="${rotulo}" title="${rotulo}"><i class="ph-fill ph-speaker-high" aria-hidden="true"></i></button>`;
+}
+
 function montarConteudoDoTexto(i) {
     const pagina = paginaNoIdioma(i);
     const ultima = i === totalPages - 1;
@@ -438,18 +450,24 @@ function montarConteudoDoTexto(i) {
             <div class="inline-flex items-center gap-2 bg-amber-200 text-amber-950 font-display font-bold px-3.5 py-1 rounded-full text-xs sm:text-sm border-2 border-amber-400">
                 <span data-etiqueta>${escapeHtml(etiquetaDaCapa(pagina))}</span>
             </div>
-            <h2 class="sentence text-2xl sm:text-4xl font-display font-bold text-amber-950 leading-tight" data-frase="${titulo.id}">
-                ${escapeHtml(obraNoIdioma())}
-                <span class="block text-base sm:text-2xl text-amber-700 mt-1">${escapeHtml(pagina.titulo)}</span>
-            </h2>`;
+            <div class="titulo-com-falar titulo-capa">
+                ${botaoTitulo()}
+                <h2 class="sentence text-2xl sm:text-4xl font-display font-bold text-amber-950 leading-tight" data-frase="${titulo.id}">
+                    ${escapeHtml(obraNoIdioma())}
+                    <span class="block text-base sm:text-2xl text-amber-700 mt-1">${escapeHtml(pagina.titulo)}</span>
+                </h2>
+            </div>`;
     } else {
         // O título é a "frase 0" da leitura guiada (p{i}-s0): capítulo + título
         topo = `
-            <div class="sentence space-y-3" data-frase="${titulo.id}">
-                <div class="inline-flex items-center gap-2 ${pagina.corCapitulo || 'text-amber-700'} font-display font-bold text-xs sm:text-sm uppercase">
-                    <span>${escapeHtml(pagina.capitulo)}</span>
+            <div class="titulo-com-falar">
+                ${botaoTitulo()}
+                <div class="sentence space-y-3 min-w-0" data-frase="${titulo.id}">
+                    <div class="inline-flex items-center gap-2 ${pagina.corCapitulo || 'text-amber-700'} font-display font-bold text-xs sm:text-sm uppercase">
+                        <span>${escapeHtml(pagina.capitulo)}</span>
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl font-display font-bold text-amber-950">${escapeHtml(pagina.titulo)}</h2>
                 </div>
-                <h2 class="text-2xl sm:text-3xl font-display font-bold text-amber-950">${escapeHtml(pagina.titulo)}</h2>
             </div>`;
     }
     let abrir;
@@ -1333,6 +1351,43 @@ function comandarParagrafo(btn) {
     lerAPartirDaFrase(inicio);
 }
 
+/* Autofalante do título: lendo → pausa (guarda a frase); pausado nesta página → retoma de onde parou;
+   senão → lê a página inteira desde o título (frase 0) */
+function comandarTitulo() {
+    if (isReadingPage) {
+        const atual = document.querySelector('.sentence-reading');
+        pausaDaLeitura = atual ? { pagina: currentPage, frase: atual.dataset.frase } : null;
+        stopReadingPage();
+        return;
+    }
+    const frases = frasesDaPaginaAtual();
+    let inicio = 0;
+    if (pausaDaLeitura && pausaDaLeitura.pagina === currentPage) {
+        const k = frases.findIndex(f => f.dataset.frase === pausaDaLeitura.frase);
+        if (k >= 0) inicio = k;
+    }
+    pausaDaLeitura = null;
+    stopReadingPage();
+    lerPagina(inicio);
+}
+
+/* Estado dos autofalantes do título: ⏸ enquanto lê, ▶ com uma pausa guardada na página, 🔊 no resto */
+function sincronizarBotoesTitulo() {
+    document.querySelectorAll('.btn-titulo-falar').forEach(b => {
+        const pagina = pageIndexOf(b);
+        const lendo = isReadingPage && pagina === currentPage;
+        const pausado = !lendo && pausaDaLeitura && pausaDaLeitura.pagina === pagina;
+        const chave = lendo ? 'pausarParagrafo' : (pausado ? 'retomarLeitura' : 'ouvirDoTitulo');
+        b.classList.toggle('titulo-lendo', lendo);
+        b.classList.toggle('titulo-pausado', !!pausado);
+        b.querySelector('i').className = lendo ? 'ph-fill ph-pause' : (pausado ? 'ph-fill ph-play' : 'ph-fill ph-speaker-high');
+        b.dataset.uiAria = b.dataset.uiTitle = chave;
+        b.setAttribute('aria-label', ui(chave));
+        b.setAttribute('aria-pressed', lendo ? 'true' : 'false');
+        b.title = ui(chave);
+    });
+}
+
 function stopReadingPage() {
     readingSession++;
     calarTudo();
@@ -1371,6 +1426,7 @@ function lerPagina(inicio = 0) {
     if (!sentences.length) return;
 
     calarTudo();
+    pausaDaLeitura = null;   // uma leitura nova desfaz a pausa guardada
     const session = ++readingSession;
     const voz = vozGravadaAtiva();
     setReadingPageUI(true);
@@ -1485,6 +1541,7 @@ function lerPaginaInteira(voz, gravada, sentences, session, inicio, reserva) {
 function setReadingPageUI(reading) {
     isReadingPage = reading;
     if (!reading) sincronizarBotoesParagrafo(null);
+    sincronizarBotoesTitulo();
     const btn = document.getElementById('btn-tts');
     const label = document.getElementById('tts-label');
     const icon = document.getElementById('tts-icon');
@@ -2250,18 +2307,50 @@ function initTextScrolling() {
 }
 
 /* =====================================================================
-   VIRADA DE PÁGINA ANIMADA
-   Cópias inertes (sem ids) das páginas antiga e nova formam uma folha 3D
-   que gira em torno da lombada; a página real já trocou por baixo.
+   VIRADA DE PÁGINA (acompanha o dedo)
+   Uma camada (.turn-layer) de cópias inertes (sem ids, sem toques) cobre o livro durante a virada:
+   embaixo, a metade da página nova que a folha vai revelando e a metade da antiga que fica parada;
+   em cima, a folha que gira em torno da lombada (frente: a página antiga; verso: a nova).
+   - Paisagem (lombada vertical): a folha gira em rotateY; avançar vira a do texto (direita).
+   - Retrato (lombada horizontal): a folha gira em rotateX, na vertical; avançar levanta a do texto
+     (de baixo) pela borda de cima, e ela pousa sobre a ilustração; voltar baixa a da ilustração.
+   O progresso p (0 → 1) vem do dedo (initViradaPeloDedo) ou de uma animação (botões ‹ ›, setas).
+   A página real só troca quando a virada é confirmada, em goToPage; até lá nada muda (nem o áudio).
    ===================================================================== */
 const TURN_MS = 750;
+const LIMIAR_VIRADA = 0.2;   // soltar depois de 20% do caminho vira; antes, a folha volta
+const FLICK_VEL = 0.6;       // px/ms: um peteleco rápido no sentido da virada vira mesmo antes dos 20%...
+const FLICK_MIN = 0.04;      // ...desde que a folha já tenha andado um pouquinho (4%)
 let isTurning = false;
+
+const curvaSuave = (k) => (k < 0.5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2);   // botões
+const curvaSaida = (k) => 1 - Math.pow(1 - k, 3);                                        // depois do dedo
+
+function semAnimacao() { return window.matchMedia('(prefers-reduced-motion: reduce)').matches; }
+function emPaisagem() { return window.matchMedia('(orientation: landscape)').matches; }
+
+/* Anima um número de `de` até `para` em `ms` (requestAnimationFrame); `aCada(valor)` desenha */
+function animarValor(de, para, ms, curva, aCada) {
+    return new Promise(resolve => {
+        if (ms <= 0 || de === para) { aCada(para); resolve(); return; }
+        const t0 = performance.now();
+        const passo = (agora) => {
+            const k = Math.min(1, Math.max(0, (agora - t0) / ms));
+            aCada(de + (para - de) * curva(k));
+            if (k < 1) requestAnimationFrame(passo);
+            else resolve();
+        };
+        requestAnimationFrame(passo);
+    });
+}
 
 function inertClone(el) {
     const clone = el.cloneNode(true);
     clone.removeAttribute('id');
     clone.querySelectorAll('[id]').forEach(n => n.removeAttribute('id'));
     clone.classList.remove('page-hidden');
+    clone.setAttribute('aria-hidden', 'true');
+    clone.setAttribute('inert', '');
     return clone;
 }
 
@@ -2284,114 +2373,306 @@ function copyTextScroll(fromPage, clone) {
     if (src && dst) dst.scrollTop = src.scrollTop;
 }
 
-function animateTurn(oldSection, newSection, forward, showNew) {
+/* Folhas (ilustração e texto) de uma página, na posição em que a página atual está.
+   A página escondida é medida sem ser pintada (no retrato, a altura das folhas muda de página para
+   página): ela aparece invisível só durante a medição, dentro da mesma tarefa, e volta a .page-hidden. */
+function medirFolhas(section, base) {
+    const escondida = section.classList.contains('page-hidden');
+    if (escondida) {
+        section.style.visibility = 'hidden';
+        section.classList.remove('page-hidden');
+    }
+    const s = section.getBoundingClientRect();
+    const folha = (sel) => {
+        const b = section.querySelector(sel).getBoundingClientRect();
+        return { left: base.left + b.left - s.left, top: base.top + b.top - s.top, width: b.width, height: b.height };
+    };
+    const out = { art: folha('.page-art'), text: folha('.page-text') };
+    if (escondida) {
+        section.classList.add('page-hidden');
+        section.style.visibility = '';
+    }
+    return out;
+}
+
+/* Monta a camada da virada de `oldSection` para `newSection` sem trocar a página real.
+   Devolve { progresso, definir(p), animar(alvo, ms, curva), remover() } ou null (movimento reduzido). */
+function prepararVirada(oldSection, newSection, forward) {
+    if (semAnimacao()) return null;
     const viewport = document.getElementById('pages-viewport');
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (reduceMotion || !viewport.animate) {
-        showNew();
-        return Promise.resolve();
-    }
+    const paisagem = emPaisagem();
+    const base = rectIn(oldSection, viewport);
+    const velho = medirFolhas(oldSection, base);
+    const novo = medirFolhas(newSection, base);
 
-    const twoPages = window.matchMedia('(orientation: landscape)').matches;
-    const oldArt = oldSection.querySelector('.page-art');
-    const oldText = oldSection.querySelector('.page-text');
-    const rects = {
-        art: rectIn(oldArt, viewport),
-        text: rectIn(oldText, viewport),
-        spread: rectIn(oldSection, viewport)
-    };
-    const oldClones = { art: inertClone(oldArt), text: inertClone(oldText), spread: inertClone(oldSection) };
-
-    showNew();
-
-    const newClones = {
-        art: inertClone(newSection.querySelector('.page-art')),
-        text: inertClone(newSection.querySelector('.page-text')),
-        spread: inertClone(newSection)
-    };
-    const blank = () => { const b = document.createElement('div'); b.className = 'turn-blank'; return b; };
-
-    // Paisagem: só a folha da direita (avançar) ou da esquerda (voltar) gira.
-    // Retrato: a folha inteira gira pela borda esquerda, como num leitor de uma página.
-    let statics, leafRect, origin, front, back, from, to;
-    if (twoPages) {
-        if (forward) {
-            statics = [[oldClones.art, rects.art]];
-            leafRect = rects.text; origin = 'left center';
-            front = oldClones.text; back = newClones.art; from = 0; to = -180;
-        } else {
-            statics = [[oldClones.text, rects.text]];
-            leafRect = rects.art; origin = 'right center';
-            front = oldClones.art; back = newClones.text; from = 0; to = 180;
-        }
-    } else if (forward) {
-        statics = [];
-        leafRect = rects.spread; origin = 'left center';
-        front = oldClones.spread; back = blank(); from = 0; to = -180;
-    } else {
-        statics = [[oldClones.spread, rects.spread]];
-        leafRect = rects.spread; origin = 'left center';
-        front = newClones.spread; back = blank(); from = -180; to = 0;
-    }
+    // Avançar vira a folha do texto; voltar, a da ilustração
+    const ladoGira = forward ? '.page-text' : '.page-art';
+    const ladoFica = forward ? '.page-art' : '.page-text';
+    const leafRect = forward ? velho.text : velho.art;
+    const paradaRect = forward ? velho.art : velho.text;
+    const reveladaRect = forward ? novo.text : novo.art;
+    const versoRect = forward ? novo.art : novo.text;
 
     const layer = document.createElement('div');
     layer.className = 'turn-layer';
-    statics.forEach(([clone, rect]) => {
+    const caixa = (conteudo, rect, classe) => {
         const box = document.createElement('div');
-        box.className = 'turn-static';
+        box.className = classe;
         placeBox(box, rect);
-        box.appendChild(clone);
+        box.appendChild(conteudo);
         layer.appendChild(box);
-    });
+        return box;
+    };
+    // Embaixo: o que a folha revela (página nova) e a metade da antiga que não se mexe
+    const revelada = caixa(inertClone(newSection.querySelector(ladoGira)), reveladaRect, 'turn-static');
+    const sombra = document.createElement('div');
+    sombra.className = 'turn-cast';
+    sombra.style.background = paisagem
+        ? `linear-gradient(to ${forward ? 'right' : 'left'}, rgba(0,0,0,0.45), rgba(0,0,0,0) 70%)`
+        : `linear-gradient(to ${forward ? 'bottom' : 'top'}, rgba(0,0,0,0.45), rgba(0,0,0,0) 70%)`;
+    revelada.appendChild(sombra);
+    const paradaClone = inertClone(oldSection.querySelector(ladoFica));
+    const parada = caixa(paradaClone, paradaRect, 'turn-static');
+    const frenteClone = inertClone(oldSection.querySelector(ladoGira));
 
+    // A folha: gira em torno da lombada (a borda dela que encosta na outra folha)
     const leaf = document.createElement('div');
     leaf.className = 'turn-leaf';
     placeBox(leaf, leafRect);
-    leaf.style.transformOrigin = origin;
-    leaf.style.transform = `rotateY(${from}deg)`;
+    let eixo, sinal;
+    if (paisagem) {
+        eixo = 'rotateY';
+        leaf.style.transformOrigin = forward ? 'left center' : 'right center';
+        sinal = forward ? -1 : 1;
+    } else {
+        eixo = 'rotateX';
+        leaf.style.transformOrigin = forward ? 'center top' : 'center bottom';
+        sinal = forward ? 1 : -1;
+    }
+    // O verso pousa exatamente sobre a folha correspondente da página nova (que pode ter outro
+    // tamanho): a rotação de 180° espelha a posição em torno da lombada (x → 2·lombada − x)
+    const lombada = paisagem
+        ? (forward ? leafRect.left : leafRect.left + leafRect.width)
+        : (forward ? leafRect.top : leafRect.top + leafRect.height);
+    const versoPos = paisagem
+        ? { left: 2 * lombada - leafRect.left - versoRect.width - versoRect.left, top: versoRect.top - leafRect.top, width: versoRect.width, height: versoRect.height }
+        : { left: versoRect.left - leafRect.left, top: 2 * lombada - leafRect.top - versoRect.height - versoRect.top, width: versoRect.width, height: versoRect.height };
+    const frentePos = { left: 0, top: 0, width: leafRect.width, height: leafRect.height };
     const shades = [];
-    // Na paisagem as duas folhas podem ter larguras diferentes (a da ilustração cresce):
-    // o verso da folha que gira ganha a largura da folha onde ela vai pousar
-    const versoRect = twoPages ? (forward ? rects.art : rects.text) : null;
-    [[front, 'turn-front'], [back, 'turn-back']].forEach(([content, cls]) => {
+    [[frenteClone, 'turn-front', frentePos],
+     [inertClone(newSection.querySelector(ladoFica)), 'turn-back', versoPos]].forEach(([conteudo, cls, pos]) => {
         const face = document.createElement('div');
         face.className = `turn-face ${cls}`;
-        if (versoRect && cls === 'turn-back') {
-            face.style.width = `${versoRect.width}px`;
-            face.style.right = 'auto';
-            face.style.left = forward ? '0px' : `${leafRect.width - versoRect.width}px`;
-        }
-        face.appendChild(content);
+        placeBox(face, pos);
+        if (cls === 'turn-back') face.style.transform = paisagem ? 'rotateY(180deg)' : 'rotateX(180deg)';
+        face.appendChild(conteudo);
         const shade = document.createElement('div');
         shade.className = 'turn-shade';
-        shade.style.background = cls === 'turn-front'
-            ? 'linear-gradient(to left, rgba(0,0,0,0.35), rgba(0,0,0,0.05))'
-            : 'linear-gradient(to right, rgba(0,0,0,0.35), rgba(0,0,0,0.05))';
+        const [a, b] = paisagem ? ['left', 'right'] : ['top', 'bottom'];
+        shade.style.background = `linear-gradient(to ${cls === 'turn-front' ? a : b}, rgba(0,0,0,0.35), rgba(0,0,0,0.05))`;
         face.appendChild(shade);
         shades.push(shade);
         leaf.appendChild(face);
     });
     layer.appendChild(leaf);
     viewport.appendChild(layer);
+    // A cópia da página antiga continua na mesma rolagem de texto
+    copyTextScroll(oldSection, frenteClone);
+    copyTextScroll(oldSection, paradaClone);
 
-    // Preserva a posição de rolagem do texto nas cópias
-    [oldClones.text, oldClones.spread].forEach(c => copyTextScroll(oldSection, c));
+    let tweenId = 0;
+    const virada = {
+        progresso: 0,
+        // Desenha a folha no progresso p: só transform e opacity (GPU), sem medir nada
+        definir(p) {
+            virada.progresso = p;
+            const s = Math.sin(Math.PI * p);
+            leaf.style.transform = `${eixo}(${sinal * 180 * p}deg) translateZ(${(30 * s).toFixed(1)}px)`;
+            shades.forEach(sh => { sh.style.opacity = s.toFixed(3); });
+            sombra.style.opacity = (Math.min(1, p * 5) * (1 - p)).toFixed(3);
+            // No retrato as folhas podem ter alturas diferentes: a metade parada some no finzinho,
+            // quando o verso já cobre o lugar dela
+            parada.style.opacity = p < 0.8 ? '1' : Math.max(0, (1 - p) / 0.2).toFixed(3);
+        },
+        animar(alvo, ms, curva) {
+            const id = ++tweenId;
+            return animarValor(virada.progresso, alvo, ms, curva, (p) => { if (id === tweenId) virada.definir(p); });
+        },
+        remover() { tweenId++; layer.remove(); }
+    };
+    virada.definir(0);
+    return virada;
+}
 
-    const easing = 'cubic-bezier(0.45, 0.05, 0.35, 1)';
-    const turn = leaf.animate(
-        [
-            { transform: `rotateY(${from}deg)` },
-            { transform: `rotateY(${(from + to) / 2}deg) translateZ(30px)`, offset: 0.5 },
-            { transform: `rotateY(${to}deg)` }
-        ],
-        { duration: TURN_MS, easing, fill: 'forwards' }
-    );
-    shades.forEach(shade => shade.animate(
-        [{ opacity: 0 }, { opacity: 1, offset: 0.5 }, { opacity: 0 }],
-        { duration: TURN_MS, easing, fill: 'forwards' }
-    ));
+/* Elástico da primeira e da última página: a página real escorrega um pouquinho e volta */
+function puxarElastico(section, paisagem, desloc) {
+    section.style.transform = desloc ? (paisagem ? `translateX(${desloc}px)` : `translateY(${desloc}px)`) : '';
+}
 
-    return turn.finished.catch(() => {}).then(() => layer.remove());
+/* Gestos de virar a página (dedo, caneta ou mouse), de acordo com o desenho do livro aberto:
+   paisagem → arrastar para os lados; retrato → para cima avança e para baixo volta. No retrato o
+   texto rola na vertical: o gesto só vira se começou fora de uma área rolável ou se ela já estava no
+   limite. A folha acompanha o dedo; soltar antes de LIMIAR_VIRADA (20%) devolve a folha e nada muda;
+   depois disso (ou com um peteleco rápido no sentido certo) a virada se completa e a página troca.
+   Nada aqui para ou pausa a narração: só a troca confirmada (goToPage) faz isso. */
+function initViradaPeloDedo() {
+    const viewportEl = document.getElementById('pages-viewport');
+    let g = null;              // gesto em andamento
+    let quadro = 0;            // requestAnimationFrame pendente do arrasto
+    let suprimirClique = false;
+
+    // Estado de rolagem da área rolável mais próxima do toque (se não houver, vale como "nos dois limites")
+    const limitesDeRolagem = (alvo) => {
+        for (let n = alvo; n && n !== viewportEl; n = n.parentElement) {
+            const oy = getComputedStyle(n).overflowY;
+            if ((oy === 'auto' || oy === 'scroll') && n.scrollHeight > n.clientHeight + 1) {
+                return { topo: n.scrollTop <= 1, fim: n.scrollTop + n.clientHeight >= n.scrollHeight - 1 };
+            }
+        }
+        return { topo: true, fim: true };
+    };
+    const bloqueado = () => isTurning || !!document.querySelector('.phonics-backdrop.is-open') || !!document.getElementById('portao-adulto');
+
+    function comecar(x, y, alvo) {
+        g = null;
+        // Arrastar um cartão até a cena não pode virar a página
+        if (bloqueado() || !alvo || !alvo.closest || alvo.closest('.draggable-card')) return;
+        g = { x0: x, y0: y, estado: 'possivel', lim: limitesDeRolagem(alvo), amostras: [], p: 0, desloc: 0 };
+    }
+
+    // No primeiro movimento: é virada (true), não é (false) ou ainda não dá para saber (null)
+    function decidir(x, y) {
+        const dx = x - g.x0, dy = y - g.y0;
+        if (Math.hypot(dx, dy) < 10) return null;
+        const paisagem = emPaisagem();
+        const principal = paisagem ? dx : dy;
+        const cruzado = paisagem ? dy : dx;
+        if (Math.abs(principal) < Math.abs(cruzado) * 1.2) return false;
+        const forward = principal < 0;
+        if (!paisagem && (forward ? !g.lim.fim : !g.lim.topo)) return false;   // o texto ainda rola: rola
+        if (bloqueado()) return false;
+        g.paisagem = paisagem;
+        g.sinal = forward ? -1 : 1;   // sentido do dedo que vira
+        g.secao = document.getElementById(`page-${currentPage}`);
+        const destino = currentPage + (forward ? 1 : -1);
+        if (destino < 0 || destino >= totalPages) {
+            g.estado = 'elastico';
+            return true;
+        }
+        g.destino = destino;
+        const folha = g.secao.querySelector(forward ? '.page-text' : '.page-art').getBoundingClientRect();
+        g.tamanho = Math.max(1, paisagem ? folha.width : folha.height);
+        g.virada = prepararVirada(g.secao, document.getElementById(`page-${destino}`), forward);
+        g.estado = 'virando';
+        isTurning = true;   // botões, setas e outro gesto esperam esta virada acabar
+        return true;
+    }
+
+    function desenhar() {
+        quadro = 0;
+        if (!g) return;
+        if (g.estado === 'virando' && g.virada) g.virada.definir(g.p);
+        if (g.estado === 'elastico' && !semAnimacao()) puxarElastico(g.secao, g.paisagem, g.desloc);
+    }
+
+    function mover(x, y, t) {
+        const andou = (g.paisagem ? x - g.x0 : y - g.y0) * g.sinal;   // > 0: no sentido da virada
+        if (g.estado === 'elastico') {
+            const d = Math.max(0, andou);
+            g.desloc = g.sinal * 36 * (1 - Math.exp(-d / 140));
+        } else {
+            g.p = Math.min(1, Math.max(0, andou / g.tamanho));
+            g.amostras.push([t, andou]);
+            while (g.amostras.length > 2 && t - g.amostras[0][0] > 100) g.amostras.shift();
+        }
+        if (!quadro) quadro = requestAnimationFrame(desenhar);
+    }
+
+    function terminar(cancelado) {
+        const gesto = g;
+        g = null;
+        if (quadro) { cancelAnimationFrame(quadro); quadro = 0; }
+        if (!gesto || gesto.estado === 'possivel') return;
+        if (gesto.estado === 'elastico') {
+            const de = gesto.desloc;
+            animarValor(de, 0, 260, curvaSaida, (d) => puxarElastico(gesto.secao, gesto.paisagem, d))
+                .then(() => puxarElastico(gesto.secao, gesto.paisagem, 0));
+            return;
+        }
+        // Velocidade dos últimos ~100 ms, no sentido da virada (px/ms)
+        const a = gesto.amostras;
+        const vel = a.length > 1 ? (a[a.length - 1][1] - a[0][1]) / Math.max(1, a[a.length - 1][0] - a[0][0]) : 0;
+        let confirmar = !cancelado && (gesto.p >= LIMIAR_VIRADA || (vel > FLICK_VEL && gesto.p >= FLICK_MIN));
+        if (vel < -FLICK_VEL) confirmar = false;   // voltou o dedo depressa: desistiu
+        if (confirmar) {
+            if (gesto.virada) {
+                goToPage(gesto.destino, { virada: gesto.virada });
+            } else {
+                isTurning = false;
+                goToPage(gesto.destino);   // movimento reduzido: troca instantânea
+            }
+            return;
+        }
+        // Desistiu (ou gesto acidental): a folha volta e nada muda
+        if (!gesto.virada) { isTurning = false; return; }
+        gesto.virada.animar(0, Math.max(160, 480 * gesto.p), curvaSaida).then(() => {
+            gesto.virada.remover();
+            isTurning = false;
+        });
+    }
+
+    // Toque (dedo): touch events, para poder deixar o texto rolar e só "pegar" o gesto que vira
+    viewportEl.addEventListener('touchstart', (e) => {
+        if (e.touches.length !== 1) {
+            if (g) terminar(true);   // segundo dedo: desiste
+            return;
+        }
+        comecar(e.touches[0].clientX, e.touches[0].clientY, e.target);
+    }, { passive: true });
+    viewportEl.addEventListener('touchmove', (e) => {
+        if (!g || e.touches.length !== 1) return;
+        const toque = e.touches[0];
+        if (g.estado === 'possivel') {
+            const d = decidir(toque.clientX, toque.clientY);
+            if (d === null) return;
+            if (d === false) { g = null; return; }
+        }
+        if (e.cancelable) e.preventDefault();   // o gesto é da virada: o navegador não rola nada
+        mover(toque.clientX, toque.clientY, e.timeStamp);
+    }, { passive: false });
+    viewportEl.addEventListener('touchend', () => { if (g) terminar(false); }, { passive: true });
+    viewportEl.addEventListener('touchcancel', () => { if (g) terminar(true); }, { passive: true });
+
+    // Mouse e caneta: pointer events com captura
+    viewportEl.addEventListener('pointerdown', (e) => {
+        if (e.pointerType === 'touch' || e.button !== 0) return;
+        comecar(e.clientX, e.clientY, e.target);
+        if (g) g.ponteiro = e.pointerId;
+    });
+    viewportEl.addEventListener('pointermove', (e) => {
+        if (!g || e.pointerType === 'touch' || e.pointerId !== g.ponteiro) return;
+        if (g.estado === 'possivel') {
+            const d = decidir(e.clientX, e.clientY);
+            if (d === null) return;
+            if (d === false) { g = null; return; }
+            try { viewportEl.setPointerCapture(e.pointerId); } catch (err) {}
+            suprimirClique = true;   // o clique que vem depois de arrastar não aperta nenhum botão
+        }
+        mover(e.clientX, e.clientY, e.timeStamp);
+    });
+    const soltarPonteiro = (cancelado) => (e) => {
+        if (!g || e.pointerType === 'touch' || e.pointerId !== g.ponteiro) return;
+        terminar(cancelado);
+        setTimeout(() => { suprimirClique = false; }, 0);
+    };
+    viewportEl.addEventListener('pointerup', soltarPonteiro(false));
+    viewportEl.addEventListener('pointercancel', soltarPonteiro(true));
+    window.addEventListener('click', (e) => {
+        if (!suprimirClique) return;
+        suprimirClique = false;
+        e.stopPropagation();
+        e.preventDefault();
+    }, true);
 }
 
 
@@ -2446,10 +2727,16 @@ function reiniciarLivro() {
     playSound('fanfare');
 }
 
+/* Troca de página. options.animate === false: sem virada (abrir por ?page=N);
+   options.virada: a virada que o dedo começou (initViradaPeloDedo), completada daqui em diante. */
 function goToPage(index, options = {}) {
-    if (index < 0 || index >= totalPages || index === currentPage || isTurning) return;
+    if (index < 0 || index >= totalPages || index === currentPage || (isTurning && !options.virada)) {
+        if (options.virada) { options.virada.remover(); isTurning = false; }
+        return;
+    }
     closePhonicsCard();
     stopReadingPage();
+    pausaDaLeitura = null;
 
     const animate = options.animate !== false;
     if (animate) playSound('pageFlip');
@@ -2457,6 +2744,8 @@ function goToPage(index, options = {}) {
     const oldSection = document.getElementById(`page-${currentPage}`);
     const newSection = document.getElementById(`page-${index}`);
     const forward = index > currentPage;
+    // A camada da virada é montada antes da troca (copia a página antiga como ela está)
+    const virada = options.virada || (animate ? prepararVirada(oldSection, newSection, forward) : null);
     const showNew = () => {
         oldSection.classList.add('page-hidden');
         newSection.classList.remove('page-hidden');
@@ -2480,14 +2769,18 @@ function goToPage(index, options = {}) {
             localStorage.setItem('cv-ultimo-livro', JSON.stringify(ultimo));
         } catch (e) {}
     }
-    if (animate) {
+    // A página real troca já (por baixo da camada, que cobre o livro até a folha pousar)
+    showNew();
+    if (virada) {
         isTurning = true;
-        animateTurn(oldSection, newSection, forward, showNew).then(() => {
+        const fim = options.virada
+            ? virada.animar(1, Math.max(200, TURN_MS * 0.8 * (1 - virada.progresso)), curvaSaida)
+            : virada.animar(1, TURN_MS, curvaSuave);
+        fim.then(() => {
+            virada.remover();
             isTurning = false;
             updateScrollHint(currentPage);
         });
-    } else {
-        showNew();
     }
     updateScrollHint(currentPage);
 
@@ -2568,6 +2861,7 @@ function traduzirPagina(i) {
     const cena = cenaDe(i);
     montarFalas(i);
     page.querySelector('.page-text-inner').outerHTML = montarConteudoDoTexto(i);
+    sincronizarBotoesTitulo();
     page.setAttribute('aria-label', ui('secaoPagina', i + 1));
     document.getElementById(`scene-bg-${i}`).alt = t(cena.alt) || paginaNoIdioma(i).titulo || '';
     page.querySelectorAll('.scene-hotspot').forEach(h => {
@@ -2839,6 +3133,11 @@ function initEventos() {
             speakWord(palavra, palavra.dataset.palavra, palavra.dataset.silabas, palavra.dataset.emoji);
             return;
         }
+        const autofalanteTitulo = e.target.closest('.btn-titulo-falar');
+        if (autofalanteTitulo) {
+            comandarTitulo();
+            return;
+        }
         const autofalante = e.target.closest('.btn-par-falar');
         if (autofalante) {
             comandarParagrafo(autofalante);
@@ -2929,51 +3228,8 @@ function initEventos() {
         if (e.key === 'ArrowLeft') prevPage();
     });
 
-    /* Swipe para virar páginas no tablet, de acordo com o desenho do livro aberto:
-       paisagem (folhas lado a lado) → arrastar para os lados; retrato (folhas empilhadas, lombada
-       horizontal) → arrastar para cima avança e para baixo volta. No retrato, o texto rola na vertical:
-       o gesto só vira a página se começou fora de uma área rolável ou se ela já estava no limite. */
-    let touchStartX = 0, touchStartY = 0, swipeFromCard = false;
-    let rolavelNoTopo = true, rolavelNoFim = true;
-    const viewportEl = document.getElementById('pages-viewport');
-
-    // Estado de rolagem da área rolável mais próxima do toque (se não houver, vale como "nos dois limites")
-    const limitesDeRolagem = (alvo) => {
-        for (let n = alvo; n && n !== viewportEl; n = n.parentElement) {
-            const oy = getComputedStyle(n).overflowY;
-            if ((oy === 'auto' || oy === 'scroll') && n.scrollHeight > n.clientHeight + 1) {
-                return { topo: n.scrollTop <= 1, fim: n.scrollTop + n.clientHeight >= n.scrollHeight - 1 };
-            }
-        }
-        return { topo: true, fim: true };
-    };
-
-    viewportEl.addEventListener('touchstart', (e) => {
-        if (e.touches.length === 1) {
-            touchStartX = e.touches[0].clientX;
-            touchStartY = e.touches[0].clientY;
-            // Arrastar um cartão até a cena não pode virar a página
-            swipeFromCard = !!e.target.closest('.draggable-card');
-            const lim = limitesDeRolagem(e.target);
-            rolavelNoTopo = lim.topo;
-            rolavelNoFim = lim.fim;
-        }
-    }, { passive: true });
-
-    viewportEl.addEventListener('touchend', (e) => {
-        if (e.changedTouches.length !== 1 || swipeFromCard) return;
-        const dx = e.changedTouches[0].clientX - touchStartX;
-        const dy = e.changedTouches[0].clientY - touchStartY;
-        if (window.matchMedia('(orientation: landscape)').matches) {
-            if (Math.abs(dx) > 75 && Math.abs(dx) > Math.abs(dy) * 1.8) {
-                if (dx < 0) nextPage();
-                else prevPage();
-            }
-        } else if (Math.abs(dy) > 75 && Math.abs(dy) > Math.abs(dx) * 1.8) {
-            if (dy < 0 && rolavelNoFim) nextPage();
-            else if (dy > 0 && rolavelNoTopo) prevPage();
-        }
-    }, { passive: true });
+    // Virar a página arrastando (a folha acompanha o dedo): initViradaPeloDedo, na seção da virada
+    initViradaPeloDedo();
 }
 
 /* =====================================================================
