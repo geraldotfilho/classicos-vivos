@@ -355,9 +355,9 @@
       "id": "p2-s11",
       "pagina": 2,
       "paragrafo": 2,
-      "texto": "Então o cozinheiro pegou uma panelinha, mergulhou no panelão e tirou... três galinhas e dois patos inteiros!",
-      "fala": "Então o cozinheiro pegou uma panelinha, mergulhou no panelão e tirou... três galinhas e dois patos inteiros!",
-      "hash": "698f2dc910"
+      "texto": "Então o cozinheiro pegou uma panelinha, mergulhou no panelão e tirou... três galinhas e dois gansos inteiros!",
+      "fala": "Então o cozinheiro pegou uma panelinha, mergulhou no panelão e tirou... três galinhas e dois gansos inteiros!",
+      "hash": "7148081fab"
     },
     {
       "id": "p2-s12",
@@ -459,20 +459,28 @@
       "id": "p2-s24",
       "pagina": 2,
       "paragrafo": 4,
-      "texto": "— Essa eu sei — disse Sancho.",
-      "fala": "Essa eu sei, disse Sancho.",
-      "hash": "063c7d9348"
+      "texto": "— Essa eu não sei — disse Sancho.",
+      "fala": "Essa eu não sei, disse Sancho.",
+      "hash": "96165acbd1"
     },
     {
       "id": "p2-s25",
       "pagina": 2,
       "paragrafo": 4,
-      "texto": "— Foi a primeira que saiu na chuva sem chapéu.",
-      "fala": "Foi a primeira que saiu na chuva sem chapéu.",
-      "hash": "c4c4a0e77e"
+      "texto": "— Mas sei outra: quem foi o primeiro a dar cambalhota no mundo?",
+      "fala": "Mas sei outra: quem foi o primeiro a dar cambalhota no mundo?",
+      "hash": "f60e736f6a"
     },
     {
       "id": "p2-s26",
+      "pagina": 2,
+      "paragrafo": 4,
+      "texto": "Foi Lúcifer, quando caiu do céu rolando!",
+      "fala": "Foi Lúcifer, quando caiu do céu rolando!",
+      "hash": "f9c400b9dc"
+    },
+    {
+      "id": "p2-s27",
       "pagina": 2,
       "paragrafo": 4,
       "texto": "O Primo anotou, muito sério.",
@@ -480,7 +488,7 @@
       "hash": "a60958145e"
     },
     {
-      "id": "p2-s27",
+      "id": "p2-s28",
       "pagina": 2,
       "paragrafo": 4,
       "texto": "Dom Quixote contou que ia à Gruta de Montesinos, e o Primo deu um pulo: — Uma gruta encantada!",
@@ -488,7 +496,7 @@
       "hash": "1f4915ba74"
     },
     {
-      "id": "p2-s28",
+      "id": "p2-s29",
       "pagina": 2,
       "paragrafo": 4,
       "texto": "Vai ficar linda no meu livro!",
@@ -496,7 +504,7 @@
       "hash": "9f0bf71301"
     },
     {
-      "id": "p2-s29",
+      "id": "p2-s30",
       "pagina": 2,
       "paragrafo": 4,
       "texto": "Eu conheço o caminho.",
@@ -504,7 +512,7 @@
       "hash": "c004430d8d"
     },
     {
-      "id": "p2-s30",
+      "id": "p2-s31",
       "pagina": 2,
       "paragrafo": 4,
       "texto": "E tenho uma CORDA bem comprida!",
@@ -1110,9 +1118,9 @@
       "id": "p5-s3",
       "pagina": 5,
       "paragrafo": 0,
-      "texto": "E este é o valente Dom Gaifeiros, que vem a cavalo para salvar a princesa!",
-      "fala": "E este é o valente Dom Gaifeiros, que vem a cavalo para salvar a princesa!",
-      "hash": "33f06d4639"
+      "texto": "E este é o valente Dom Gaiferos, que vem a cavalo para salvar a princesa!",
+      "fala": "E este é o valente Dom Gaiferos, que vem a cavalo para salvar a princesa!",
+      "hash": "02c6a7457e"
     },
     {
       "id": "p5-s4",
@@ -1286,9 +1294,9 @@
       "id": "p5-s25",
       "pagina": 5,
       "paragrafo": 3,
-      "texto": "Dom Gaifeiros e a princesa estão a salvo!",
-      "fala": "Dom Gaifeiros e a princesa estão a salvo!",
-      "hash": "33c3793074"
+      "texto": "Dom Gaiferos e a princesa estão a salvo!",
+      "fala": "Dom Gaiferos e a princesa estão a salvo!",
+      "hash": "d1f5cb84e4"
     },
     {
       "id": "p5-s26",
@@ -1551,9 +1559,9 @@
       "id": "p6-s19",
       "pagina": 6,
       "paragrafo": 2,
-      "texto": "Dizem que, quando se passa essa linha, todas as PULGAS somem.",
-      "fala": "Dizem que, quando se passa essa linha, todas as pulgas somem.",
-      "hash": "7a1d8e6c89"
+      "texto": "Dizem que, quando se passa essa linha, todos os PIOLHOS morrem de frio.",
+      "fala": "Dizem que, quando se passa essa linha, todos os piolhos morrem de frio.",
+      "hash": "9a13b4f380"
     },
     {
       "id": "p6-s20",
@@ -2624,11 +2632,11 @@
       "hash": "d4e3a937c1"
     },
     {
-      "slug": "pulgas",
-      "palavra": "PULGAS",
-      "silabas": "PUL • GAS",
-      "fala": "pul... gas... pulgas!",
-      "hash": "cc15f6bb35"
+      "slug": "piolhos",
+      "palavra": "PIOLHOS",
+      "silabas": "PI • O • LHOS",
+      "fala": "pi... o... lhos... piolhos!",
+      "hash": "980fa1b5ff"
     },
     {
       "slug": "moinhos",

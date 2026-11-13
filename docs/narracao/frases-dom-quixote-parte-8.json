@@ -1254,17 +1254,17 @@
       "id": "p5-s20",
       "pagina": 5,
       "paragrafo": 3,
-      "texto": "— No primeiro livro ele não pôs o nome — contou o homem de avental.",
-      "fala": "No primeiro livro ele não pôs o nome, contou o homem de avental.",
-      "hash": "7ff4bb1e01"
+      "texto": "— O nome dele já estava no primeiro livro — contou o homem de avental.",
+      "fala": "O nome dele já estava no primeiro livro, contou o homem de avental.",
+      "hash": "823a13da2c"
     },
     {
       "id": "p5-s21",
       "pagina": 5,
       "paragrafo": 3,
-      "texto": "— Mas agora, por causa daquele livro mentiroso, resolveu assinar bem grande, para todo mundo saber qual é o verdadeiro.",
-      "fala": "Mas agora, por causa daquele livro mentiroso, resolveu assinar bem grande, para todo mundo saber qual é o verdadeiro.",
-      "hash": "e792003495"
+      "texto": "— Mas agora, por causa daquele livro mentiroso, ele faz questão de que todo mundo saiba qual é o verdadeiro.",
+      "fala": "Mas agora, por causa daquele livro mentiroso, ele faz questão de que todo mundo saiba qual é o verdadeiro.",
+      "hash": "901c82b508"
     },
     {
       "id": "p5-s22",
@@ -1832,9 +1832,9 @@
       "id": "p7-s31",
       "pagina": 7,
       "paragrafo": 3,
-      "texto": "O padre vai ser o pastor Curiambro, e mestre Nicolau, o pastor Nicoloso!",
-      "fala": "O padre vai ser o pastor Curiambro, e mestre Nicolau, o pastor Nicoloso!",
-      "hash": "fdafacad83"
+      "texto": "O padre vai ser o pastor Curiambro, e mestre Nicolau, o pastor Miculoso!",
+      "fala": "O padre vai ser o pastor Curiambro, e mestre Nicolau, o pastor Miculoso!",
+      "hash": "f2324f6564"
     },
     {
       "id": "p7-s32",

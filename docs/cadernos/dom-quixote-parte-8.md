@@ -22,7 +22,7 @@ Na estrada, livres do palácio, a caminho de Barcelona para ver o mar; lá atrá
 | 4 | 64 | A Cabeça Encantada | II-62 | O papel nas costas; a cabeça de bronze; Sancho acha o cano e o sobrinho | 🌾 a gruta ("um pouco de tudo") · 🌾 Sancho, o desconfiado |
 | 5 | 65 | A Oficina dos Livros | II-62 | Como se faz um livro; o livro verdadeiro; "Escrito por Miguel de Cervantes": não é mago, é escritor · **atividade 1** | 🌾 **quem escreveu o livro** (P5) |
 | 6 | 66 | O Cavaleiro da Branca Lua | II-64–65 | O trato dito antes; o cavalo forte; a lança erguida; a queda devagar; "trato é trato" | 🌾 "quem perde obedece" (P5) |
-| 7 | 67 | O Caminho de Volta | II-65–67 | Sancho descobre Sansão e guarda o segredo; a despedida de Dom Antônio; os pastores Quixotiz, Curiambro e Nicoloso · **atividade 2** | 🌾 a ideia dos pastores |
+| 7 | 67 | O Caminho de Volta | II-65–67 | Sancho descobre Sansão e guarda o segredo; a despedida de Dom Antônio; os pastores Quixotiz, Curiambro e Miculoso · **atividade 2** | 🌾 a ideia dos pastores |
 | 8 | 68 | A Chegada | II-72–73 | A aldeia; Teresa e o burrico; Sansão confessa; o perdão e o "castigo" da flauta | 🌾 **Sansão** (P5) |
 | 9 | 69 | As Aventuras Moram nos Livros | II-74 | O ano dos pastores; "sou outra vez Alonso Quixano, o Bom"; as histórias junto à lareira; Sancho lê · **atividade 3** | 🌾 o gatinho-leão (P1), "Boa noite, Dulcineia", o livro, a leitura de Sancho |
 
@@ -59,3 +59,13 @@ Estimativa de arte: 9 cenas + 6 Imaginações = **15 imagens novas** (~US$ 0,60)
 
 ### 5.1 Crítica adversarial (2026-11-12) — o que mudou
 Notas de 6,5 a 8,5. Aceito: o final saiu da cama (café da manhã, cantando) e ganhou o ano dos pastores, a flauta de Sansonino, Rocinante gordo, o "Boa noite, Dulcineia" e as aulas de letra a Sancho; o papel nas costas agora é lido por um menino e Dom Quixote ri junto ("a minha fama era de papel"); o nome de Cervantes ganhou explicação (não assinou o primeiro livro; assinou agora por causa do falso); Sancho só vai espiar o cavaleiro à noite, com o amo dormindo; Dom Antônio se despede; saiu a moral "venceu a si mesmo" (ficou "cumpriu a palavra") e o "Dom Quixote" dito em casa; Dom Quixote pergunta se Sancho sabia; as redes voltaram a ser de pegar passarinho (e soltar); os remos são de marinheiros cantando; pistas da lua branca nas págs. 4 e 5; "mais queijo nos capítulos"; ênclises e palavras trocadas (reverência, bacharel, dezenas, corais). Não aceito: nada relevante.
+
+## 10. Revisão de fidelidade a Cervantes (2026-11-13, nota 8,0)
+Relatório: [`../revisao/FIDELIDADE-VOLUME-2.md`](../revisao/FIDELIDADE-VOLUME-2.md). **Aplicado a pedido do humano**: pastor "Nicoloso" → Miculoso (cap. 67, II-67); na oficina (cap. 65), saiu o fato falso "no primeiro livro ele não pôs o nome" (a edição de 1605 já trazia o nome de Cervantes).
+**Pendente (decisão do humano, mudam o sentido):**
+- Cap. 66: a fala digna do derrotado (II-64): "Dulcineia é a mais bela do mundo, e eu o cavaleiro mais desajeitado da terra. Mas trato é trato".
+- Cap. 68: Sancho chama o amo de "vencedor de si mesmo" (II-73), como imagem, sem sermão.
+- Cap. 69: o pedido de perdão de Alonso a Sancho por tê-lo feito "parecer louco" (II-74). E declarar que o nosso final (os livros como lar das aventuras) **inverte** o de Cervantes, em que Alonso renuncia aos livros de cavalaria.
+- Cap. 65: mostrar de relance o livro falso sendo composto e a frase de Dom Quixote de II-62 ("história inventada só é boa se parece verdadeira"); hoje a oficina mostra só o verdadeiro (inversão declarada).
+- Cap. 69: Sancho "aprende a ler" (mesma questão da assinatura na Parte 7).
+- **Registrar como adaptação nossa**: a pergunta "no outro livro" (cap. 61); em II-65 quem descobre Sansão é Dom Antônio, não Sancho (cap. 67); a oficina de II-62 é a do mesmo capítulo da cabeça encantada.
