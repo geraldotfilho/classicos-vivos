@@ -326,5 +326,5 @@ O que já foi entregue, sprint a sprint, em ordem cronológica (o mais antigo pr
 
 ## ✅ Fidelidade a Cervantes: correções do segundo volume (2026-11-13)
 
-- Revisão de fidelidade das Partes 5 a 8 contra o texto espanhol (`docs/revisao/FIDELIDADE-VOLUME-2.md`; notas 9,0 · 8,5 · 8,5 · 8,0). Aplicadas a pedido do humano: Gaiferos, gansos, piolhos, Miculoso, dez dias de governo, a resposta de Sancho ao Primo (Lúcifer, II-22), o fato falso sobre o nome de Cervantes no primeiro livro e **o caso da ponte** (II-51) no cap. 55, com Sancho escolhendo o perdão. As decisões de sentido ficaram no §10 de cada caderno e no `BACKLOG.md`.
+- Revisão de fidelidade das Partes 5 a 8 contra o texto espanhol (`docs/revisao/FIDELIDADE-VOLUME-2.md`; notas 9,0 · 8,5 · 8,5 · 8,0). Aplicadas a pedido do humano: Gaiferos, gansos, piolhos, Miculoso, dez dias de governo, o fato falso sobre o nome de Cervantes no primeiro livro e **o caso da ponte** (II-51) no cap. 55, com Sancho escolhendo o perdão. As decisões de sentido ficaram no §10 de cada caderno e no `BACKLOG.md`.
 - **Conserto**: as ilustrações reaproveitadas da Parte 4 antiga não apareciam nos rascunhos das Partes 6 a 8 (caminho `../acervo/...`, que sai da pasta do livro); agora `./imagens/acervo/...`, como na Parte 4.
