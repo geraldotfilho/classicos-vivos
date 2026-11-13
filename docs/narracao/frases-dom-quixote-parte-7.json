@@ -1125,9 +1125,121 @@
       "id": "p4-s30",
       "pagina": 4,
       "paragrafo": 4,
-      "texto": "O mordomo devolveu a moeda e escreveu no caderninho, com a letra tremida: \"Mais sábio que muito doutor\".",
-      "fala": "O mordomo devolveu a moeda e escreveu no caderninho, com a letra tremida: Mais sábio que muito doutor.",
-      "hash": "0a1463c10c"
+      "texto": "O mordomo devolveu a moeda, depressinha.",
+      "fala": "O mordomo devolveu a moeda, depressinha.",
+      "hash": "8bc06fed1f"
+    },
+    {
+      "id": "p4-s31",
+      "pagina": 4,
+      "paragrafo": 5,
+      "texto": "No fim da tarde, chegou o caso mais difícil de todos.",
+      "fala": "No fim da tarde, chegou o caso mais difícil de todos.",
+      "hash": "42369467e5"
+    },
+    {
+      "id": "p4-s32",
+      "pagina": 4,
+      "paragrafo": 5,
+      "texto": "Um viajante contou: — Senhor governador, na minha terra há um rio com uma PONTE, e na ponte há uma lei: quem quer passar tem de dizer para onde vai.",
+      "fala": "Um viajante contou: Senhor governador, na minha terra há um rio com uma ponte, e na ponte há uma lei: quem quer passar tem de dizer para onde vai.",
+      "hash": "22090f01ef"
+    },
+    {
+      "id": "p4-s33",
+      "pagina": 4,
+      "paragrafo": 5,
+      "texto": "Se disser a verdade, passa.",
+      "fala": "Se disser a verdade, passa.",
+      "hash": "28066dcf70"
+    },
+    {
+      "id": "p4-s34",
+      "pagina": 4,
+      "paragrafo": 5,
+      "texto": "Se mentir, vai para a cadeia.",
+      "fala": "Se mentir, vai para a cadeia.",
+      "hash": "60d77f419a"
+    },
+    {
+      "id": "p4-s35",
+      "pagina": 4,
+      "paragrafo": 5,
+      "texto": "Pois ontem chegou um homem e disse: \"Eu vou para a cadeia!\".",
+      "fala": "Pois ontem chegou um homem e disse: Eu vou para a cadeia!.",
+      "hash": "dfbc2d4b3d"
+    },
+    {
+      "id": "p4-s36",
+      "pagina": 4,
+      "paragrafo": 5,
+      "texto": "E agora?",
+      "fala": "E agora?",
+      "hash": "53b214d006"
+    },
+    {
+      "id": "p4-s37",
+      "pagina": 4,
+      "paragrafo": 5,
+      "texto": "Se ele passar, mentiu, e tinha de ir para a cadeia.",
+      "fala": "Se ele passar, mentiu, e tinha de ir para a cadeia.",
+      "hash": "fdb4ee1b6c"
+    },
+    {
+      "id": "p4-s38",
+      "pagina": 4,
+      "paragrafo": 5,
+      "texto": "Se for para a cadeia, disse a verdade, e tinha de passar!",
+      "fala": "Se for para a cadeia, disse a verdade, e tinha de passar!",
+      "hash": "a85be05107"
+    },
+    {
+      "id": "p4-s39",
+      "pagina": 4,
+      "paragrafo": 6,
+      "texto": "O tribunal inteiro ficou de boca aberta.",
+      "fala": "O tribunal inteiro ficou de boca aberta.",
+      "hash": "2203433a76"
+    },
+    {
+      "id": "p4-s40",
+      "pagina": 4,
+      "paragrafo": 6,
+      "texto": "O mordomo coçou a cabeça com o lápis.",
+      "fala": "O mordomo coçou a cabeça com o lápis.",
+      "hash": "32fe37b784"
+    },
+    {
+      "id": "p4-s41",
+      "pagina": 4,
+      "paragrafo": 6,
+      "texto": "Sancho pensou, pensou, e então sorriu: — Quando a gente não sabe se deve castigar ou perdoar, é melhor perdoar.",
+      "fala": "Sancho pensou, pensou, e então sorriu: Quando a gente não sabe se deve castigar ou perdoar, é melhor perdoar.",
+      "hash": "b4de30fc3b"
+    },
+    {
+      "id": "p4-s42",
+      "pagina": 4,
+      "paragrafo": 6,
+      "texto": "Quem me ensinou foi o meu amo: a justiça fica mais bonita de mãos dadas com o perdão.",
+      "fala": "Quem me ensinou foi o meu amo: a justiça fica mais bonita de mãos dadas com o perdão.",
+      "hash": "194d4401ee"
+    },
+    {
+      "id": "p4-s43",
+      "pagina": 4,
+      "paragrafo": 6,
+      "texto": "Deixem o homem passar!",
+      "fala": "Deixem o homem passar!",
+      "hash": "529d95e5b8"
+    },
+    {
+      "id": "p4-s44",
+      "pagina": 4,
+      "paragrafo": 6,
+      "texto": "E o mordomo escreveu no caderninho, com a letra tremida: \"Mais sábio que muito doutor\".",
+      "fala": "E o mordomo escreveu no caderninho, com a letra tremida: Mais sábio que muito doutor.",
+      "hash": "c08a5c9e9a"
     },
     {
       "id": "p5-s0",
@@ -2226,9 +2338,9 @@
       "id": "p9-s1",
       "pagina": 9,
       "paragrafo": 0,
-      "texto": "No palácio, Sancho se ajoelhou diante do duque e da duquesa: — Senhores, eu governei a sua ilha por sete dias.",
-      "fala": "No palácio, Sancho se ajoelhou diante do duque e da duquesa: Senhores, eu governei a sua ilha por sete dias.",
-      "hash": "9d13da4fe8"
+      "texto": "No palácio, Sancho se ajoelhou diante do duque e da duquesa: — Senhores, eu governei a sua ilha por dez dias.",
+      "fala": "No palácio, Sancho se ajoelhou diante do duque e da duquesa: Senhores, eu governei a sua ilha por dez dias.",
+      "hash": "f345404b38"
     },
     {
       "id": "p9-s2",
@@ -2624,6 +2736,13 @@
       "silabas": "VER • GO • NHA",
       "fala": "ver... go... nha... vergonha!",
       "hash": "e254916f99"
+    },
+    {
+      "slug": "ponte",
+      "palavra": "PONTE",
+      "silabas": "PON • TE",
+      "fala": "pon... te... ponte!",
+      "hash": "d0415cfe2e"
     },
     {
       "slug": "pajem",

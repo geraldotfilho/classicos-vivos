@@ -140,3 +140,8 @@ Lições: (1) a cena da página seguinte deve nascer como **edição da anterior
 ## 9. Lições (candidatas à receita)
 - Um resumo de uma página (`DIRETRIZES_VOL2.md`) + o texto limpo exportado bastam para um crítico de contexto limpo: ele não precisa ler o repositório.
 - `ordem` + `realCena` dá uma atividade de sequência em que a cena muda a cada acerto, sem tipo de cartão novo.
+
+## 10. Revisão de fidelidade a Cervantes (2026-11-13, nota 9,0)
+Relatório: [`../revisao/FIDELIDADE-VOLUME-2.md`](../revisao/FIDELIDADE-VOLUME-2.md). Nada aplicado nesta parte. **Pendente (decisão do humano):**
+- Cap. 35: citar o autor "Cide Hamete Berenjena" numa frase de Sancho ("Berinjela?"), ligando ao nariz roxo "de berinjela" do cap. 38 (sugestão 13).
+- **Registrar como adaptação nossa** (não estava declarado): o cavalo dos Espelhos que para para comer capim (cap. 39; em II-14 ele só empaca) e o apelido "Cavaleiro do Casaco Verde" dado por Dom Quixote (cap. 40; em II-17 é o narrador quem o chama assim).

@@ -323,3 +323,8 @@ O que já foi entregue, sprint a sprint, em ordem cronológica (o mais antigo pr
 - **Autofalante do título** em todas as páginas, inclusive a capa (`.btn-titulo-falar`): redondo, maior e laranja-dourado, com halo pulsando de leve; lê a página inteira desde o título (`pN-s0`), pausa e retoma da frase em que parou, sincronizado com o 🔊 dos parágrafos e o "Ouvir Página". Rótulos nos 4 idiomas.
 - **Virada de página pelo dedo**: a folha dobra acompanhando o arrasto, com sombra; soltar antes de 20% devolve a folha sem mudar nada (o áudio segue tocando); depois de 20% (ou com um peteleco) a página vira. No retrato a dobra é vertical, em torno da lombada horizontal. Elástico na primeira e na última página; botões e setas usam a mesma folha; movimento reduzido troca sem dobra.
 - Testado no Playwright (800×1280 e 1280×800, toque pelo CDP, mouse, peteleco, rolagem do texto, cartões, elástico, movimento reduzido, Partes 1 e 5, inglês): 44 verificações. Nenhuma API paga.
+
+## ✅ Fidelidade a Cervantes: correções do segundo volume (2026-11-13)
+
+- Revisão de fidelidade das Partes 5 a 8 contra o texto espanhol (`docs/revisao/FIDELIDADE-VOLUME-2.md`; notas 9,0 · 8,5 · 8,5 · 8,0). Aplicadas a pedido do humano: Gaiferos, gansos, piolhos, Miculoso, dez dias de governo, a resposta de Sancho ao Primo (Lúcifer, II-22), o fato falso sobre o nome de Cervantes no primeiro livro e **o caso da ponte** (II-51) no cap. 55, com Sancho escolhendo o perdão. As decisões de sentido ficaram no §10 de cada caderno e no `BACKLOG.md`.
+- **Conserto**: as ilustrações reaproveitadas da Parte 4 antiga não apareciam nos rascunhos das Partes 6 a 8 (caminho `../acervo/...`, que sai da pasta do livro); agora `./imagens/acervo/...`, como na Parte 4.
