@@ -1,0 +1,587 @@
+/* =========================================================================
+   Clássicos Vivos — MODO DESAFIO (segunda camada). Carregado sob demanda por livro.js,
+   junto com assets/js/desafios.js. Cores: índigo/violeta (o desafio) sobre o papel âmbar do livro.
+   CSS próprio (sem classes Tailwind novas, para não precisar recompilar o tailwind.css).
+   ========================================================================= */
+
+/* ---------- Quadro no fim da folha de texto ---------- */
+.quadro-desafio {
+    margin-top: 0.5rem;
+    background: #F5F3FF;
+    border: 2px dashed #7C3AED;
+    border-radius: 1rem;
+    padding: 0.7rem 0.9rem 0.85rem;
+    box-shadow: 0 2px 6px rgba(76, 29, 149, 0.1);
+    font-family: 'Nunito', sans-serif;
+    color: #2E1065;
+    text-align: left;
+    align-self: stretch;
+}
+.quadro-desafio.qd-feito { background: #EDE9FE; border-style: solid; }
+.qd-topo { display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+.qd-rotulo {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 800;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #6D28D9;
+}
+.qd-selo {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    color: #4C1D95;
+    background: #FFFFFF;
+    border: 2px solid #A78BFA;
+    border-radius: 999px;
+    padding: 1px 9px 1px 4px;
+}
+.qd-selo-emoji { font-size: 20px; line-height: 1; }
+.qd-titulo {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    line-height: 1.25;
+    color: #2E1065;
+    margin-top: 2px;
+}
+.qd-convite { font-weight: 700; font-size: 0.9rem; line-height: 1.4; color: #4C1D95; margin-top: 2px; }
+.qd-abrir {
+    margin-top: 0.6rem;
+    min-height: 48px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 18px;
+    border-radius: 16px;
+    border: 3px solid #4C1D95;
+    background: #7C3AED;
+    color: #FFFFFF;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+    cursor: pointer;
+    box-shadow: 0 4px 0 #4C1D95;
+    transition: transform 0.12s ease, box-shadow 0.12s ease, background-color 0.12s ease;
+}
+.qd-abrir:hover { background: #6D28D9; }
+.qd-abrir:active { transform: translateY(3px); box-shadow: 0 1px 0 #4C1D95; }
+.qd-feito .qd-abrir { background: #FFFFFF; color: #5B21B6; border-color: #7C3AED; box-shadow: 0 4px 0 #A78BFA; }
+@media (min-width: 640px) {
+    .qd-abrir { width: auto; }
+    .qd-titulo { font-size: 1.2rem; }
+    .qd-convite { font-size: 0.95rem; }
+}
+
+/* ---------- Aviso curto ---------- */
+.desafio-aviso {
+    position: fixed;
+    top: 64px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 70;
+    max-width: min(92vw, 34rem);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 10px 10px 16px;
+    background: rgba(46, 16, 101, 0.96);
+    color: #EDE9FE;
+    border: 2px solid #A78BFA;
+    border-radius: 18px;
+    box-shadow: 0 16px 30px -10px rgba(0, 0, 0, 0.5);
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    line-height: 1.3;
+    animation: dzAvisoEntra 0.25s ease-out;
+}
+.desafio-aviso-fechar {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: transparent;
+    color: #C4B5FD;
+    border: 0;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.desafio-aviso-fechar:hover { color: #FFFFFF; }
+@keyframes dzAvisoEntra { from { opacity: 0; transform: translate(-50%, -8px); } to { opacity: 1; transform: translate(-50%, 0); } }
+
+/* ---------- Caderno (camada modal, como o cartão de alfabetização) ---------- */
+.desafio-backdrop { z-index: 65; }
+.desafio-card {
+    width: 100%;
+    max-width: 46rem;
+    max-height: calc(100vh - 32px);
+    max-height: calc(100dvh - 32px);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: #FFFDF8;
+    border: 6px solid #7C3AED;
+    border-radius: 28px;
+    box-shadow: 0 8px 0 #4C1D95, 0 30px 60px -15px rgba(0, 0, 0, 0.6);
+    animation: popIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    font-family: 'Nunito', sans-serif;
+    color: #1E1B4B;
+    text-align: left;
+    cursor: default;
+}
+.dz-topo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px 10px 14px;
+    background: #EDE9FE;
+    border-bottom: 3px solid #C4B5FD;
+    flex-shrink: 0;
+}
+.dz-selo-mini {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    line-height: 1;
+    background: #FFFFFF;
+    border: 3px solid #A78BFA;
+    border-radius: 50%;
+}
+.dz-topo-textos { flex: 1; min-width: 0; }
+.dz-rotulo {
+    display: block;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 800;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #6D28D9;
+}
+.dz-titulo {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    color: #2E1065;
+}
+.dz-passos { display: flex; gap: 6px; list-style: none; margin: 0; padding: 0; flex-shrink: 0; }
+.dz-passo {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    border: 3px solid #A78BFA;
+}
+.dz-passo-atual { background: #FBBF24; border-color: #D97706; transform: scale(1.15); }
+.dz-passo-feito { background: #7C3AED; border-color: #4C1D95; }
+.dz-fechar {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 16px;
+    background: #FBBF24;
+    border: 2px solid #D97706;
+    color: #451A03;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 3px 0 #B45309;
+}
+.dz-fechar:active { transform: translateY(2px); box-shadow: 0 1px 0 #B45309; }
+
+.dz-corpo {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: 14px 16px 18px;
+}
+.dz-pergunta { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 14px; }
+.dz-ouvir {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #7C3AED;
+    border: 3px solid #4C1D95;
+    color: #FFFFFF;
+    font-size: 1.35rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 3px 0 #4C1D95;
+}
+.dz-ouvir:active { transform: translateY(2px); box-shadow: 0 1px 0 #4C1D95; }
+.dz-pergunta-textos { flex: 1; min-width: 0; }
+.dz-etapa-num {
+    display: block;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    color: #7C3AED;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+.dz-pergunta-txt { font-weight: 800; font-size: 1.1rem; line-height: 1.4; color: #1E1B4B; }
+
+.dz-rodape {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px 16px 12px;
+    background: #FFFBEB;
+    border-top: 3px dashed #FCD34D;
+}
+.dz-rodape[hidden] { display: none; }
+.dz-feedback { min-height: 1.3em; font-family: 'Fredoka', sans-serif; font-weight: 700; font-size: 1rem; color: #6B7280; }
+.dz-feedback:empty { display: none; }
+.dz-feedback-erro { color: #B45309; }
+.dz-feedback-certo { color: #15803D; }
+.dz-dica, .dz-porque {
+    font-weight: 700;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    border-radius: 14px;
+    padding: 8px 12px;
+}
+.dz-dica { background: #FEF3C7; border: 2px solid #F59E0B; color: #78350F; animation: popIn 0.3s ease-out; }
+.dz-dica-rotulo { font-family: 'Fredoka', sans-serif; font-weight: 800; }
+.dz-porque { background: #DCFCE7; border: 2px solid #22C55E; color: #14532D; }
+.dz-dica[hidden], .dz-porque[hidden], .dz-proxima[hidden] { display: none; }
+
+/* ---------- Botões comuns ---------- */
+.dz-btn {
+    min-height: 48px;
+    border-radius: 16px;
+    border: 3px solid #F59E0B;
+    background: #FFFFFF;
+    color: #451A03;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.25;
+    padding: 8px 14px;
+    cursor: pointer;
+    box-shadow: 0 4px 0 #D97706;
+    transition: transform 0.12s ease, box-shadow 0.12s ease, background-color 0.15s ease, opacity 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+.dz-btn:active:not(:disabled) { transform: translateY(3px); box-shadow: 0 1px 0 #D97706; }
+.dz-btn:focus-visible { outline: 3px solid #7C3AED; outline-offset: 2px; }
+.dz-btn-primario, .dz-proxima {
+    background: #7C3AED;
+    border-color: #4C1D95;
+    color: #FFFFFF;
+    font-weight: 700;
+    box-shadow: 0 4px 0 #4C1D95;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.dz-btn-primario:active:not(:disabled), .dz-proxima:active { box-shadow: 0 1px 0 #4C1D95; }
+.dz-btn-primario:disabled { opacity: 0.4; cursor: default; }
+.dz-proxima { align-self: flex-end; min-width: 12rem; font-size: 1.1rem; }
+.dz-btn-secundario {
+    background: #FFFFFF;
+    border-color: #7C3AED;
+    color: #5B21B6;
+    box-shadow: 0 4px 0 #A78BFA;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 700;
+}
+
+/* Certo / errado / usado */
+.dz-certa, .dz-travada, .dz-lacuna-cheia {
+    background: #DCFCE7 !important;
+    border-color: #16A34A !important;
+    color: #14532D !important;
+    box-shadow: 0 4px 0 #15803D !important;
+}
+.dz-errada { opacity: 0.42; box-shadow: none; cursor: default; }
+.dz-usado { opacity: 0.25; box-shadow: none; cursor: default; }
+.dz-btn:disabled { cursor: default; }
+.dz-etapa-resolvida .dz-opcao:not(.dz-certa) { opacity: 0.4; }
+
+/* ---------- quiz ---------- */
+.dz-opcoes { display: flex; flex-direction: column; gap: 10px; }
+.dz-opcao { text-align: left; font-size: 1.05rem; padding: 10px 16px; }
+
+/* ---------- ordenar ---------- */
+.dz-lista { list-style: none; margin: 0 0 12px; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.dz-lista-item { display: flex; align-items: center; gap: 8px; }
+.dz-num {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #7C3AED;
+    color: #FFFFFF;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dz-vaga {
+    flex: 1;
+    min-width: 0;
+    text-align: left;
+    background: #F5F3FF;
+    border: 3px dashed #A78BFA;
+    box-shadow: none;
+    color: #2E1065;
+}
+.dz-vaga.dz-vaga-cheia { background: #FFFFFF; border-style: solid; border-color: #7C3AED; box-shadow: 0 3px 0 #A78BFA; }
+.dz-banco { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 12px; }
+.dz-chip { background: #FEF3C7; text-align: left; }
+.dz-tipo-ordenar .dz-chip { flex: 1 1 100%; }
+@media (min-width: 700px) {
+    .dz-tipo-ordenar .dz-chip { flex: 1 1 calc(50% - 8px); }
+}
+.dz-conferir { display: flex; margin: 0 auto; min-width: 10rem; }
+
+/* ---------- classificar ---------- */
+.dz-progresso {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #6D28D9;
+    text-align: center;
+    margin-bottom: 6px;
+}
+.dz-item-atual {
+    margin: 0 auto 14px;
+    max-width: 30rem;
+    min-height: 84px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 14px 18px;
+    background: #FFFFFF;
+    border: 4px solid #F59E0B;
+    border-radius: 22px;
+    box-shadow: 0 6px 0 #D97706;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 1.3;
+    color: #451A03;
+}
+.dz-item-atual.dz-entra { animation: popIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); }
+.dz-grupos { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.dz-grupos-3 { grid-template-columns: 1fr 1fr 1fr; }
+.dz-grupo { min-height: 60px; font-size: 1.1rem; font-weight: 700; }
+.dz-grupo-0 { background: #E0F2FE; border-color: #0284C7; color: #0C4A6E; box-shadow: 0 4px 0 #0369A1; }
+.dz-grupo-1 { background: #F3E8FF; border-color: #9333EA; color: #581C87; box-shadow: 0 4px 0 #7E22CE; }
+.dz-grupo-2 { background: #FFE4E6; border-color: #E11D48; color: #881337; box-shadow: 0 4px 0 #BE123C; }
+.dz-resumo { display: grid; grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); gap: 10px; }
+.dz-resumo-grupo { background: #FFFFFF; border: 3px solid #C4B5FD; border-radius: 18px; padding: 10px 12px; }
+.dz-resumo-nome { font-family: 'Fredoka', sans-serif; font-weight: 700; color: #4C1D95; margin-bottom: 4px; }
+.dz-resumo-grupo ul { margin: 0; padding-left: 1.1rem; list-style: disc; font-weight: 700; font-size: 0.95rem; line-height: 1.45; }
+
+/* ---------- lacunas ---------- */
+.dz-frase-lacunas {
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 2.3;
+    color: #1E1B4B;
+    background: #FFFFFF;
+    border: 2px solid #E9D5FF;
+    border-radius: 18px;
+    padding: 8px 14px;
+    margin-bottom: 14px;
+}
+.dz-lacuna {
+    display: inline-block;
+    min-width: 4.5em;
+    min-height: 1.6em;
+    line-height: 1.4;
+    padding: 0 8px;
+    margin: 0 2px;
+    vertical-align: middle;
+    border-bottom: 3px solid #A78BFA;
+    border-radius: 8px;
+    background: #F5F3FF;
+    text-align: center;
+    font-family: 'Fredoka', sans-serif;
+}
+.dz-lacuna-atual { background: #FEF3C7; border-bottom-color: #F59E0B; animation: dzPisca 1.4s ease-in-out infinite; }
+.dz-lacuna-cheia { border: 0; border-bottom: 3px solid #16A34A; box-shadow: none !important; }
+@keyframes dzPisca { 0%, 100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.5); } 50% { box-shadow: 0 0 0 5px rgba(245, 158, 11, 0); } }
+
+/* ---------- ligar ---------- */
+.dz-ligar { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 14px; }
+.dz-coluna { display: flex; flex-direction: column; gap: 10px; }
+.dz-ponta { width: 100%; text-align: left; font-size: 1rem; }
+.dz-ponta-dir { background: #FFFBEB; }
+.dz-selecionado { background: #FBBF24 !important; border-color: #B45309 !important; transform: scale(1.03); }
+.dz-ligado { cursor: default; }
+.dz-cor-0 { background: #DCFCE7 !important; border-color: #16A34A !important; color: #14532D !important; box-shadow: 0 4px 0 #15803D !important; }
+.dz-cor-1 { background: #E0F2FE !important; border-color: #0284C7 !important; color: #0C4A6E !important; box-shadow: 0 4px 0 #0369A1 !important; }
+.dz-cor-2 { background: #FCE7F3 !important; border-color: #DB2777 !important; color: #831843 !important; box-shadow: 0 4px 0 #BE185D !important; }
+.dz-cor-3 { background: #EDE9FE !important; border-color: #7C3AED !important; color: #4C1D95 !important; box-shadow: 0 4px 0 #6D28D9 !important; }
+.dz-cor-4 { background: #FFEDD5 !important; border-color: #EA580C !important; color: #7C2D12 !important; box-shadow: 0 4px 0 #C2410C !important; }
+
+/* ---------- enigma ---------- */
+.dz-cifra {
+    background: #1E1B4B;
+    color: #EDE9FE;
+    border-radius: 18px;
+    padding: 10px 14px 12px;
+    margin-bottom: 14px;
+    text-align: center;
+}
+.dz-cifra-rotulo { font-family: 'Fredoka', sans-serif; font-weight: 700; font-size: 0.85rem; color: #C4B5FD; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 4px; }
+.dz-cifra-msg { font-size: 2rem; line-height: 1.4; letter-spacing: 0.12em; margin: 2px 0 6px; word-break: break-word; }
+.dz-chave { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; margin-top: 4px; }
+.dz-chave-par {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: #312E81;
+    border: 2px solid #6366F1;
+    border-radius: 12px;
+    padding: 3px 9px;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 700;
+}
+.dz-chave-simbolo { font-size: 1.35rem; line-height: 1; }
+.dz-chave-igual { color: #A5B4FC; }
+.dz-chave-letra { font-size: 1.2rem; color: #FDE68A; min-width: 1ch; }
+.dz-resposta { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 22px; margin-bottom: 16px; }
+.dz-resposta-palavra { display: inline-flex; flex-wrap: wrap; justify-content: center; gap: 5px; }
+.dz-letra-vaga, .dz-letra {
+    width: 48px;
+    min-width: 48px;
+    height: 54px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+.dz-letra-vaga { background: #F5F3FF; border: 3px dashed #A78BFA; box-shadow: none; color: #2E1065; }
+.dz-letra-vaga.dz-vaga-cheia { background: #FFFFFF; border-style: solid; border-color: #7C3AED; box-shadow: 0 3px 0 #A78BFA; }
+.dz-letra-vaga.dz-vaga-atual { border-color: #F59E0B; background: #FEF3C7; }
+.dz-letra { background: #FEF3C7; }
+.dz-banco-letras { gap: 8px; }
+
+/* ---------- erro ---------- */
+.dz-reconto {
+    font-weight: 700;
+    font-size: 1.15rem;
+    line-height: 2.1;
+    color: #1E1B4B;
+    background: #FFFFFF;
+    border: 2px solid #E9D5FF;
+    border-radius: 18px;
+    padding: 8px 12px;
+}
+.dz-palavra {
+    display: inline;
+    min-height: 0;
+    padding: 6px 3px;
+    margin: 0;
+    border: 0;
+    border-radius: 8px;
+    background: transparent;
+    box-shadow: none;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+    border-bottom: 2px dotted #C4B5FD;
+}
+.dz-palavra:hover { background: #F5F3FF; }
+.dz-palavra:active:not(:disabled) { transform: none; box-shadow: none; background: #EDE9FE; }
+.dz-palavra.card-nudge { display: inline-block; }
+.dz-corrigida { background: #DCFCE7; border-bottom: 2px solid #16A34A; cursor: default; }
+.dz-corrigida s { color: #B91C1C; text-decoration-thickness: 2px; opacity: 0.75; }
+.dz-certo { color: #15803D; font-weight: 900; }
+
+/* ---------- conquista ---------- */
+.dz-conquista { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px; padding: 6px 0 4px; }
+.dz-selo-grande {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 72px;
+    line-height: 1;
+    background: radial-gradient(circle at 35% 30%, #FFFFFF, #EDE9FE 70%);
+    border: 6px solid #7C3AED;
+    border-radius: 50%;
+    box-shadow: 0 0 0 6px #FDE68A, 0 10px 24px -6px rgba(76, 29, 149, 0.55);
+    animation: dzSelo 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+@keyframes dzSelo { 0% { transform: scale(0.2) rotate(-30deg); opacity: 0; } 100% { transform: scale(1) rotate(0); opacity: 1; } }
+.dz-conquista-titulo { font-family: 'Fredoka', sans-serif; font-weight: 700; font-size: 1.6rem; color: #4C1D95; }
+.dz-sabia {
+    width: 100%;
+    text-align: left;
+    background: #FEF3C7;
+    border: 3px solid #F59E0B;
+    border-radius: 20px;
+    padding: 10px 14px 12px;
+}
+.dz-sabia-titulo { font-family: 'Fredoka', sans-serif; font-weight: 700; font-size: 1.1rem; color: #92400E; }
+.dz-sabia-texto { font-weight: 700; font-size: 1.05rem; line-height: 1.5; color: #451A03; margin-top: 2px; }
+.dz-selos-parte { width: 100%; background: #F5F3FF; border: 2px solid #C4B5FD; border-radius: 20px; padding: 10px 12px; }
+.dz-selos-fileira { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+.dz-selo-parte {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    border-radius: 50%;
+    background: #E5E7EB;
+    border: 3px solid #D1D5DB;
+    filter: grayscale(1);
+    opacity: 0.45;
+}
+.dz-selo-parte.dz-selo-ganho { background: #FFFFFF; border-color: #7C3AED; filter: none; opacity: 1; }
+.dz-selos-contagem { font-family: 'Fredoka', sans-serif; font-weight: 700; color: #4C1D95; margin-top: 6px; }
+.dz-conquista-acoes { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 4px; }
+.dz-conquista-acoes .dz-btn { min-width: 11rem; }
+
+/* Telas menores e paisagem baixa: tudo um pouco mais compacto */
+@media (max-height: 820px) {
+    .dz-corpo { padding: 12px 14px 14px; }
+    .dz-pergunta { margin-bottom: 10px; }
+    .dz-selo-grande { width: 96px; height: 96px; font-size: 56px; }
+}
+@media (max-width: 520px) {
+    .dz-ligar { gap: 8px; }
+    .dz-ponta { font-size: 0.92rem; padding: 8px 10px; }
+    .dz-letra-vaga, .dz-letra { width: 40px; min-width: 40px; height: 48px; font-size: 1.35rem; }
+    .dz-grupos-3 { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .desafio-card, .dz-item-atual.dz-entra, .dz-selo-grande, .dz-dica, .desafio-aviso { animation: none; }
+    .dz-lacuna-atual { animation: none; }
+}
