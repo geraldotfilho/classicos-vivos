@@ -75,6 +75,11 @@
             licenca2: 'Sugestões e contribuições: <a class="text-indigo-700 underline" href="https://github.com/geraldotfilho/classicos-vivos/issues">github.com/geraldotfilho/classicos-vivos</a>',
             swNovaVersao: 'Nova versão disponível! ✨',
             swAtualizar: 'Atualizar',
+            buscarVersao: 'Buscar a versão mais nova',
+            procurandoVersao: 'Procurando a versão mais nova…',
+            baixandoVersao: 'Baixando a versão nova… (pode levar um minutinho)',
+            versaoEmDia: 'Você já tem a versão mais nova ✓',
+            semInternetVersao: 'Sem internet agora: tente de novo mais tarde.',
 
             // Coleção / Boxset (index.html)
             colecaoCompletaBadge: 'Coleção Completa · 4 Partes',
@@ -298,6 +303,11 @@
             licenca2: 'Suggestions and contributions: <a class="text-indigo-700 underline" href="https://github.com/geraldotfilho/classicos-vivos/issues">github.com/geraldotfilho/classicos-vivos</a>',
             swNovaVersao: 'New version available! ✨',
             swAtualizar: 'Update',
+            buscarVersao: 'Get the newest version',
+            procurandoVersao: 'Looking for the newest version…',
+            baixandoVersao: 'Downloading the new version… (this may take a minute)',
+            versaoEmDia: 'You already have the newest version ✓',
+            semInternetVersao: 'No internet right now: please try again later.',
 
             // Coleção / Boxset (index.html)
             colecaoCompletaBadge: 'Complete Collection · 4 Parts',
@@ -515,6 +525,11 @@
             licenca2: 'Suggestions et contributions : <a class="text-indigo-700 underline" href="https://github.com/geraldotfilho/classicos-vivos/issues">github.com/geraldotfilho/classicos-vivos</a>',
             swNovaVersao: 'Nouvelle version disponible ! ✨',
             swAtualizar: 'Mettre à jour',
+            buscarVersao: 'Chercher la version la plus récente',
+            procurandoVersao: 'Recherche de la version la plus récente…',
+            baixandoVersao: 'Téléchargement de la nouvelle version… (cela peut prendre une minute)',
+            versaoEmDia: 'Vous avez déjà la version la plus récente ✓',
+            semInternetVersao: 'Pas d’internet pour l’instant : réessayez plus tard.',
 
             // Coleção / Boxset (index.html)
             colecaoCompletaBadge: 'Collection Complète · 4 Parties',
@@ -734,6 +749,11 @@
             licenca2: 'Sugerencias y contribuciones: <a class="text-indigo-700 underline" href="https://github.com/geraldotfilho/classicos-vivos/issues">github.com/geraldotfilho/classicos-vivos</a>',
             swNovaVersao: '¡Nueva versión disponible! ✨',
             swAtualizar: 'Actualizar',
+            buscarVersao: 'Buscar la versión más nueva',
+            procurandoVersao: 'Buscando la versión más nueva…',
+            baixandoVersao: 'Descargando la versión nueva… (puede tardar un minuto)',
+            versaoEmDia: 'Ya tienes la versión más nueva ✓',
+            semInternetVersao: 'Sin internet ahora: inténtalo de nuevo más tarde.',
 
             // Coleção / Boxset (index.html)
             colecaoCompletaBadge: 'Colección Completa · 4 Partes',
@@ -1236,6 +1256,83 @@
                 }
             });
         });
+
+        // O navegador só procura versão nova ao abrir uma página. No tablet, o app costuma voltar do
+        // segundo plano sem abrir página nenhuma: procura de novo ao voltar à tela (no máximo a cada 5 min).
+        let ultimaBusca = Date.now();
+        document.addEventListener('visibilitychange', () => {
+            if (document.visibilityState !== 'visible' || Date.now() - ultimaBusca < 5 * 60 * 1000) return;
+            ultimaBusca = Date.now();
+            reg.update().catch(() => {});
+        });
+        // Versão nova ativada por outra aba enquanto esta estava aberta: esta ainda usa a antiga
+        const tinhaControle = !!navigator.serviceWorker.controller;
+        navigator.serviceWorker.addEventListener('controllerchange', () => { if (tinhaControle) exibirAviso(); });
+    }
+
+    /* Botão "Buscar a versão mais nova" (pedido do humano, 2026-11-14): o aviso automático pode demorar,
+       então o adulto força a busca. Pede ao navegador o sw.js de novo; se houver versão nova, espera ela
+       terminar de baixar e ativar e recarrega; se não houver, recarrega do mesmo jeito (a página passa a
+       usar a versão ativa mais nova, mesmo que ela tenha chegado por outra aba). */
+    function mostrarStatusVersao(texto, carregando) {
+        let el = document.getElementById('sw-status-versao');
+        if (!el) {
+            el = document.createElement('div');
+            el.id = 'sw-status-versao';
+            el.setAttribute('role', 'status');
+            el.className = 'fixed bottom-4 left-1/2 -translate-x-1/2 z-50 bg-amber-950/95 text-amber-100 border-2 border-amber-400 rounded-2xl px-4 py-2.5 shadow-2xl flex items-center gap-2 font-display font-semibold text-xs sm:text-sm max-w-[90vw]';
+            document.body.appendChild(el);
+        }
+        el.innerHTML = `${carregando ? '<i class="ph-bold ph-arrows-clockwise animate-spin text-base"></i>' : ''}<span></span>`;
+        el.querySelector('span').textContent = texto;
+        return el;
+    }
+
+    function esperarAtivacao(sw, limiteMs) {
+        return new Promise(resolve => {
+            if (sw.state === 'activated') return resolve(true);
+            const fim = setTimeout(() => resolve(false), limiteMs);
+            sw.addEventListener('statechange', () => {
+                if (sw.state === 'installed') sw.postMessage({ type: 'SKIP_WAITING' });
+                if (sw.state === 'activated' || sw.state === 'redundant') { clearTimeout(fim); resolve(sw.state === 'activated'); }
+            });
+            if (sw.state === 'installed') sw.postMessage({ type: 'SKIP_WAITING' });
+        });
+    }
+
+    let buscandoVersao = false;
+    async function forcarAtualizacao(btn) {
+        if (buscandoVersao) return;
+        const d = DICIONARIO[idiomaAtual] || DICIONARIO[PT];
+        const icone = btn && btn.querySelector('i');
+        const recarregar = (ms) => setTimeout(() => window.location.reload(), ms);
+        if (!('serviceWorker' in navigator) || !location.protocol.startsWith('http')) return window.location.reload();
+        if (navigator.onLine === false) {
+            const el = mostrarStatusVersao(d.semInternetVersao);
+            setTimeout(() => el.remove(), 4000);
+            return;
+        }
+        buscandoVersao = true;
+        if (icone) icone.classList.add('animate-spin');
+        mostrarStatusVersao(d.procurandoVersao, true);
+        try {
+            const reg = await navigator.serviceWorker.getRegistration();
+            if (!reg) return window.location.reload();
+            await reg.update();
+            const novo = reg.installing || reg.waiting;
+            if (novo) {
+                mostrarStatusVersao(d.baixandoVersao, true);
+                await esperarAtivacao(novo, 3 * 60 * 1000);
+                return window.location.reload();
+            }
+            mostrarStatusVersao(d.versaoEmDia);
+            recarregar(1200);
+        } catch (e) {
+            const el = mostrarStatusVersao(d.semInternetVersao);
+            setTimeout(() => el.remove(), 4000);
+            buscandoVersao = false;
+            if (icone) icone.classList.remove('animate-spin');
+        }
     }
 
     // Objeto de tradução acessível para componentes
@@ -1252,6 +1349,8 @@
     function iniciar() {
         const seletor = document.getElementById('seletor-idiomas');
         if (seletor) montarSeletorBandeiras(seletor);
+        const btnVersao = document.getElementById('btn-buscar-versao');
+        if (btnVersao) btnVersao.addEventListener('click', () => forcarAtualizacao(btnVersao));
         aplicarIdiomaNaPagina();
         ligarInteracoes();
 

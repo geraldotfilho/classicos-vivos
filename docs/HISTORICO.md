@@ -347,3 +347,8 @@ O que já foi entregue, sprint a sprint, em ordem cronológica (o mais antigo pr
 ## 2026-11-14 — 🧩 Modo Desafio: segunda camada de atividades (leitores de ~8 a 10 anos)
 - Motor (`assets/js/desafios.js`, `assets/css/desafios.css`, ganchos em `livro.js`), sete tipos de etapa, selos e "Você sabia?", validador `npm run conferir:desafios`, pré-cache offline. Especificação: `docs/DESAFIOS.md`.
 - Conteúdo publicado: Dom Quixote, Partes 5, 6 e 1 (só em português; sem API paga).
+
+## ✅ Botão "Buscar a versão mais nova" e conferência das pausas da narração (2026-11-14)
+- **Botão na estante** (🔄 verde no topo, nos 4 idiomas): força a busca da versão nova do app, espera ela baixar e ativar e recarrega; se já estiver em dia, avisa e recarrega. A estante e os livros também passam a procurar versão nova sempre que o app volta à tela (antes, só ao abrir uma página, por isso o aviso demorava no tablet). Testado no Chromium (sem versão nova e com versão nova publicada no meio).
+- **Suspeita do humano: a remoção das rajadas (2026-11-12) teria tirado o ruído sem pôr silêncio no lugar**. Conferido nos 100 MP3 tratados, comparando com a versão anterior ao commit: a duração de cada arquivo é **idêntica** (amostra por amostra), e os 259 trechos zerados são só a rajada (~180 ms) e a cauda dela, com silêncio dos dois lados (mediana de 310 ms antes e 340 ms depois); nenhuma fala foi cortada e nenhuma marca do `paginas.json` mudou. As pausas medidas entre frases (silêncio contínuo na fronteira) ficam parecidas em todas as partes: mediana ~700–750 ms entre frases, ~820–910 ms entre parágrafos (Partes 5 e 6, gravadas depois, um pouco mais curtas: 660–695 ms e 765–870 ms). Nada foi regravado nem alterado no áudio; a opção de alongar as pausas curtas está no `BACKLOG.md`.
+
