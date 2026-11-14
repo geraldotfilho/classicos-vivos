@@ -1,0 +1,205 @@
+{
+  "p0": {
+    "arquivo": "p0.mp3",
+    "hash": "4dd8bfda53",
+    "frases": [
+      {
+        "id": "p0-s0",
+        "ini": 0,
+        "fim": 6.84
+      },
+      {
+        "id": "p0-s1",
+        "ini": 6.84,
+        "fim": 10.25
+      },
+      {
+        "id": "p0-s2",
+        "ini": 10.25,
+        "fim": 19.26
+      },
+      {
+        "id": "p0-s3",
+        "ini": 19.26,
+        "fim": 20.59
+      },
+      {
+        "id": "p0-s4",
+        "ini": 20.59,
+        "fim": 23.71
+      },
+      {
+        "id": "p0-s5",
+        "ini": 23.71,
+        "fim": 28.54
+      },
+      {
+        "id": "p0-s6",
+        "ini": 28.54,
+        "fim": 38.68
+      },
+      {
+        "id": "p0-s7",
+        "ini": 38.68,
+        "fim": 43.82
+      },
+      {
+        "id": "p0-s8",
+        "ini": 43.82,
+        "fim": 48.74
+      }
+    ]
+  },
+  "modelo": "gemini-3.8-flash-tts",
+  "elenco": {
+    "NARRADORA": {
+      "voz": "pt-br-storyteller-9",
+      "estilo": "warm, gentle storyteller reading aloud to young children; calm, clear pace; expressive but not theatrical"
+    },
+    "QUIXOTE": {
+      "voz": "pt-br-concierge-3",
+      "estilo": "noble, solemn and dreamy, speaking with heartfelt conviction; never mocking"
+    },
+    "SANCHO": {
+      "voz": "pt-br-storyteller-2",
+      "estilo": "simple, warm and good-humored, plain and practical"
+    },
+    "PASTOR": {
+      "voz": "pt-br-podcaster-5",
+      "estilo": "old goatherd, warm, welcoming and generous"
+    },
+    "BARBEIRO": {
+      "voz": "pt-br-techagent-4",
+      "estilo": "frightened, shouting for help while running away, comic"
+    },
+    "PADRE": {
+      "voz": "pt-br-podcaster-9",
+      "estilo": "kind village priest, gentle, cheerful and clever"
+    },
+    "DOROTEIA": {
+      "voz": "pt-br-concierge-4",
+      "estilo": "clever young woman playing a princess in distress, dramatic and graceful"
+    },
+    "ESTALAJADEIRO": {
+      "voz": "pt-br-csagent-10",
+      "estilo": "innkeeper in comic despair over his spilled wine"
+    },
+    "TERESA": {
+      "voz": "pt-br-advisor-1",
+      "estilo": "warm-hearted wife, eager and affectionate"
+    },
+    "SANCHICA": {
+      "voz": "pt-br-concierge-6",
+      "estilo": "excited little girl, bouncing with joy, playful"
+    },
+    "CREDOR": {
+      "voz": "pt-br-techagent-5",
+      "estilo": "old man complaining indignantly"
+    },
+    "DEVEDOR": {
+      "voz": "pt-br-concierge-10",
+      "estilo": "old man swearing solemnly, a little too calm"
+    },
+    "BARBEIRO_BACIA": {
+      "voz": "pt-br-techagent-4",
+      "estilo": "indignant barber demanding his basin back, then comically puzzled"
+    },
+    "NICOLAU": {
+      "voz": "pt-br-storyteller-4",
+      "estilo": "village barber, playful and good-natured, holding back a laugh"
+    },
+    "NICOLAU_MAGO": {
+      "voz": "pt-br-storyteller-4",
+      "estilo": "pretending to be a mysterious wizard: deep, slow and theatrical, a bit funny"
+    },
+    "EUGENIO": {
+      "voz": "pt-br-storyteller-6",
+      "estilo": "young goatherd, out of breath at first, then tender and chatty with his goat"
+    },
+    "VELHINHO": {
+      "voz": "pt-br-tutor-8",
+      "estilo": "kind old farmer, warm and smiling, glad to meet a neighbor"
+    },
+    "SOBRINHA": {
+      "voz": "pt-br-podcaster-4",
+      "estilo": "young woman laughing and crying with joy, hugging her uncle"
+    },
+    "POVO": {
+      "voz": "pt-br-csagent-8",
+      "estilo": "cheerful villagers calling out together, lively and playful"
+    },
+    "GOVERNANTA": {
+      "voz": "pt-br-assistant-12",
+      "estilo": "stern but loving housekeeper guarding the door, firm and a little comic, caring underneath"
+    },
+    "SANSAO": {
+      "voz": "pt-br-tutor-2",
+      "estilo": "cheerful young scholar, playful and bright, fond of his old neighbor"
+    },
+    "SANSAO_ESPELHOS": {
+      "voz": "pt-br-tutor-2",
+      "estilo": "young knight in disguise boasting with a deeper, grand voice, a bit theatrical and funny"
+    },
+    "TOME": {
+      "voz": "pt-br-training-10",
+      "estilo": "friendly young neighbor, easygoing, trying not to laugh"
+    },
+    "TOME_NARIGUDO": {
+      "voz": "pt-br-training-10",
+      "estilo": "friendly squire speaking in a stuffy, nasal voice as if his nose is blocked, jolly"
+    },
+    "DIABINHO": {
+      "voz": "pt-br-advisor-11",
+      "estilo": "very polite traveling actor dressed as a little devil, cheerful and courteous"
+    },
+    "TRATADOR": {
+      "voz": "pt-br-csagent-6",
+      "estilo": "practical lion keeper calling down from the top of the cart, firm, a bit nervous"
+    },
+    "DOM_DIEGO": {
+      "voz": "pt-br-podcaster-7",
+      "estilo": "calm, gentle and kind gentleman, wise and patient, concerned for his new friend"
+    },
+    "MESTRE_PEDRO": {
+      "voz": "pt-br-advisor-6",
+      "estilo": "showman puppeteer with one eye covered, lively and theatrical, a bit sly but friendly"
+    },
+    "DONO_POUSADA": {
+      "voz": "pt-br-techagent-1",
+      "estilo": "friendly innkeeper, calm and hospitable, cheerful"
+    },
+    "DUQUE": {
+      "voz": "pt-br-podcaster-1",
+      "estilo": "kind duke who laughs easily, warm and playful, hiding a surprise"
+    },
+    "DUQUESA": {
+      "voz": "pt-br-concierge-5",
+      "estilo": "elegant, warm duchess delighted to meet her favorite book hero, smiling"
+    },
+    "CONDESSA": {
+      "voz": "pt-br-training-8",
+      "estilo": "grand countess in distress, deep solemn voice, dramatic and comically serious, never mocking"
+    },
+    "ARAUTO": {
+      "voz": "pt-br-storyteller-8",
+      "estilo": "big herald announcing a visitor, deep and ceremonious"
+    },
+    "PRIMO": {
+      "voz": "pt-br-tutor-7",
+      "estilo": "eager thin student, bookish, enthusiastic and a little absent-minded"
+    },
+    "LOURENCO": {
+      "voz": "pt-br-commercial-5",
+      "estilo": "shy young poet, gentle, whispering then blushing with joy"
+    },
+    "COZINHEIRO": {
+      "voz": "pt-br-csagent-9",
+      "estilo": "jolly wedding cook, generous and laughing"
+    },
+    "MENINO": {
+      "voz": "pt-br-training-6",
+      "estilo": "young boy narrating a puppet show with a stick, eager and theatrical"
+    }
+  },
+  "qa": "whisper-large-v3-turbo (local)"
+}
