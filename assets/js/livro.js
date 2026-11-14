@@ -103,7 +103,20 @@ const IDIOMAS = {
             previa: '(prévia: só algumas páginas)', emProducao: '(em produção para esta parte)',
             amostraDe: (nome) => `Ouvir amostra de ${nome}`, amostra: 'Olá! Eu vou ler esta história com você.',
             atividadeRotulo: 'Atividade', ouvirInstrucao: 'Ouvir instrução da atividade', atividadeOpcional: 'Atividade opcional',
-            lenteTrancada: '🔒 Termine a atividade para abrir a Imaginação!', pedidoRotulo: 'Pedido:'
+            lenteTrancada: '🔒 Termine a atividade para abrir a Imaginação!', pedidoRotulo: 'Pedido:',
+            // Modo Desafio (segunda camada, docs/DESAFIOS.md)
+            nivelLigar: 'Ligar o modo Desafio (para quem já lê sozinho)', nivelDesligar: 'Desligar o modo Desafio',
+            desafioLigado: '🧩 Modo Desafio ligado! Procure o quadro roxo no fim do texto.',
+            desafiosPreparando: '🧩 Os desafios desta parte ainda estão sendo preparados.',
+            desafiosSoPortugues: '🧩 Os desafios ainda estão só em português.',
+            desafioRotulo: 'Desafio', abrirDesafio: 'Abrir o desafio', jogarDeNovo: 'Jogar de novo', seloGanho: 'Selo ganho!',
+            cadernoDesafio: 'Caderno de desafios', fecharCaderno: 'Fechar o caderno', ouvirPergunta: 'Ouvir a pergunta',
+            etapaDe: (n, total) => `Etapa ${n} de ${total}`, conferir: 'Conferir', proximaEtapa: 'Próxima etapa', ganharSelo: 'Ganhar o selo',
+            tenteDeNovo: 'Quase! Tente de novo.', acertou: 'Isso mesmo!', dicaRotulo: 'Dica', voceSabia: 'Você sabia?',
+            desafioVencido: 'Desafio vencido!', voltarAoLivro: 'Voltar ao livro',
+            selosDaParte: (n, total) => `${n} de ${total} selos desta parte`,
+            errosAchados: (n, total) => `Erros achados: ${n} de ${total}`, progressoItens: (n, total) => `${n} de ${total}`,
+            mensagemSecreta: 'Mensagem secreta', chaveCodigo: 'Chave do código', devolver: 'Toque para devolver', vagaVazia: 'Vaga vazia'
         }
     },
     en: {
@@ -141,7 +154,19 @@ const IDIOMAS = {
             previa: '(preview: only some pages)', emProducao: '(in production for this part)',
             amostraDe: (nome) => `Hear a sample of ${nome}`, amostra: 'Hello! I am going to read this story with you.',
             atividadeRotulo: 'Activity', ouvirInstrucao: 'Listen to activity instructions', atividadeOpcional: 'Optional activity',
-            lenteTrancada: '🔒 Finish the activity to open the Imagination!', pedidoRotulo: 'Wants:'
+            lenteTrancada: '🔒 Finish the activity to open the Imagination!', pedidoRotulo: 'Wants:',
+            nivelLigar: 'Turn on Challenge mode (for children who already read on their own)', nivelDesligar: 'Turn off Challenge mode',
+            desafioLigado: '🧩 Challenge mode is on! Look for the purple box at the end of the text.',
+            desafiosPreparando: '🧩 The challenges for this part are still being prepared.',
+            desafiosSoPortugues: '🧩 For now, the challenges are only in Portuguese.',
+            desafioRotulo: 'Challenge', abrirDesafio: 'Open the challenge', jogarDeNovo: 'Play again', seloGanho: 'Badge earned!',
+            cadernoDesafio: 'Challenge notebook', fecharCaderno: 'Close the notebook', ouvirPergunta: 'Listen to the question',
+            etapaDe: (n, total) => `Step ${n} of ${total}`, conferir: 'Check', proximaEtapa: 'Next step', ganharSelo: 'Get the badge',
+            tenteDeNovo: 'Almost! Try again.', acertou: 'That’s right!', dicaRotulo: 'Hint', voceSabia: 'Did you know?',
+            desafioVencido: 'Challenge complete!', voltarAoLivro: 'Back to the book',
+            selosDaParte: (n, total) => `${n} of ${total} badges in this part`,
+            errosAchados: (n, total) => `Mistakes found: ${n} of ${total}`, progressoItens: (n, total) => `${n} of ${total}`,
+            mensagemSecreta: 'Secret message', chaveCodigo: 'Code key', devolver: 'Tap to give it back', vagaVazia: 'Empty space'
         }
     },
     fr: {
@@ -179,7 +204,19 @@ const IDIOMAS = {
             previa: '(aperçu : quelques pages)', emProducao: '(en préparation pour cette partie)',
             amostraDe: (nome) => `Écouter un extrait de ${nome}`, amostra: 'Bonjour ! Je vais lire cette histoire avec toi.',
             atividadeRotulo: 'Activité', ouvirInstrucao: "Écouter l'instruction de l'activité", atividadeOpcional: 'Activité facultative',
-            lenteTrancada: '🔒 Termine l’activité pour ouvrir l’Imagination !', pedidoRotulo: 'Demande :'
+            lenteTrancada: '🔒 Termine l’activité pour ouvrir l’Imagination !', pedidoRotulo: 'Demande :',
+            nivelLigar: 'Activer le mode Défi (pour ceux qui lisent déjà seuls)', nivelDesligar: 'Désactiver le mode Défi',
+            desafioLigado: '🧩 Mode Défi activé ! Cherche le cadre violet à la fin du texte.',
+            desafiosPreparando: '🧩 Les défis de cette partie sont encore en préparation.',
+            desafiosSoPortugues: '🧩 Pour l’instant, les défis sont seulement en portugais.',
+            desafioRotulo: 'Défi', abrirDesafio: 'Ouvrir le défi', jogarDeNovo: 'Rejouer', seloGanho: 'Badge gagné !',
+            cadernoDesafio: 'Cahier de défis', fecharCaderno: 'Fermer le cahier', ouvirPergunta: 'Écouter la question',
+            etapaDe: (n, total) => `Étape ${n} sur ${total}`, conferir: 'Vérifier', proximaEtapa: 'Étape suivante', ganharSelo: 'Gagner le badge',
+            tenteDeNovo: 'Presque ! Essaie encore.', acertou: 'C’est ça !', dicaRotulo: 'Indice', voceSabia: 'Le savais-tu ?',
+            desafioVencido: 'Défi réussi !', voltarAoLivro: 'Retour au livre',
+            selosDaParte: (n, total) => `${n} badges sur ${total} dans cette partie`,
+            errosAchados: (n, total) => `Erreurs trouvées : ${n} sur ${total}`, progressoItens: (n, total) => `${n} sur ${total}`,
+            mensagemSecreta: 'Message secret', chaveCodigo: 'Clé du code', devolver: 'Touche pour la rendre', vagaVazia: 'Case vide'
         }
     },
     es: {
@@ -217,7 +254,19 @@ const IDIOMAS = {
             previa: '(avance: solo algunas páginas)', emProducao: '(en producción para esta parte)',
             amostraDe: (nome) => `Oír una muestra de ${nome}`, amostra: '¡Hola! Voy a leer esta historia contigo.',
             atividadeRotulo: 'Actividad', ouvirInstrucao: 'Escuchar la instrucción de la actividad', atividadeOpcional: 'Actividad opcional',
-            lenteTrancada: '🔒 ¡Termina la actividad para abrir la Imaginación!', pedidoRotulo: 'Pide:'
+            lenteTrancada: '🔒 ¡Termina la actividad para abrir la Imaginación!', pedidoRotulo: 'Pide:',
+            nivelLigar: 'Activar el modo Desafío (para quien ya lee solo)', nivelDesligar: 'Desactivar el modo Desafío',
+            desafioLigado: '🧩 ¡Modo Desafío activado! Busca el recuadro morado al final del texto.',
+            desafiosPreparando: '🧩 Los desafíos de esta parte todavía se están preparando.',
+            desafiosSoPortugues: '🧩 Por ahora, los desafíos están solo en portugués.',
+            desafioRotulo: 'Desafío', abrirDesafio: 'Abrir el desafío', jogarDeNovo: 'Jugar otra vez', seloGanho: '¡Sello ganado!',
+            cadernoDesafio: 'Cuaderno de desafíos', fecharCaderno: 'Cerrar el cuaderno', ouvirPergunta: 'Escuchar la pregunta',
+            etapaDe: (n, total) => `Paso ${n} de ${total}`, conferir: 'Comprobar', proximaEtapa: 'Siguiente paso', ganharSelo: 'Ganar el sello',
+            tenteDeNovo: '¡Casi! Inténtalo otra vez.', acertou: '¡Eso es!', dicaRotulo: 'Pista', voceSabia: '¿Sabías que...?',
+            desafioVencido: '¡Desafío superado!', voltarAoLivro: 'Volver al libro',
+            selosDaParte: (n, total) => `${n} de ${total} sellos de esta parte`,
+            errosAchados: (n, total) => `Errores encontrados: ${n} de ${total}`, progressoItens: (n, total) => `${n} de ${total}`,
+            mensagemSecreta: 'Mensaje secreto', chaveCodigo: 'Clave del código', devolver: 'Toca para devolverla', vagaVazia: 'Hueco vacío'
         }
     }
 };
@@ -527,6 +576,7 @@ function montarConteudoDoTexto(i) {
                     ${topo}
                     <p id="page-text-${i}" class="text-base sm:text-lg text-slate-800 font-bold leading-relaxed">${Texto.paginaParaHtml(pagina.texto, i, botaoParagrafo)}</p>
                     ${quadroAtividade}
+                    ${quadroDesafio(i)}
                     ${abrir}
                     ${final}
                 </div>`;
@@ -566,6 +616,9 @@ function montarIdiomas() {
             <div class="barra-leitura order-last sm:order-none w-full sm:w-auto flex items-center justify-center gap-1 shrink-0">
                 <button type="button" id="btn-maiusculas" class="btn-chunky btn-maiusculas btn-barra rounded-xl flex items-center justify-center border-2 font-display font-bold text-sm" aria-pressed="false">
                     <span id="maiusculas-label">Aa</span>
+                </button>
+                <button type="button" id="btn-nivel" class="btn-chunky btn-nivel btn-barra rounded-xl flex items-center justify-center border-2" aria-pressed="false">
+                    <i class="ph-bold ph-puzzle-piece" aria-hidden="true"></i>
                 </button>
                 <div class="grupo-idiomas flex items-center gap-0.5 bg-white/90 rounded-xl border-2 border-amber-300 p-0.5" role="group">${bandeiras}
                 </div>
@@ -2810,6 +2863,7 @@ function goToPage(index, options = {}) {
         return;
     }
     closePhonicsCard();
+    fecharDesafio();
     stopReadingPage();
     pausaDaLeitura = null;
 
@@ -2900,6 +2954,7 @@ function traduzirInterface() {
     setReadingPageUI(isReadingPage);
     renderPaginationDots();
     atualizarBotaoMaiusculas();
+    atualizarBotaoNivel();
     atualizarBotaoBarras();
 }
 
@@ -2968,12 +3023,15 @@ function trocarIdioma(codigo, botao) {
     }
     carregarTraducao(codigo).then(() => {
         closePhonicsCard();
+        fecharDesafio();
         stopReadingPage();
         idioma = codigo;
         salvarPreferencia(PREF_IDIOMA, codigo);
         aplicarIdioma();
         for (let i = 0; i < totalPages; i++) traduzirPagina(i);
         traduzirInterface();
+        // Modo Desafio: os quadros já foram refeitos por traduzirPagina; fora do português, avisa
+        if (modoDesafio && window.CamadaDesafios) window.CamadaDesafios.aoTrocarIdioma();
         updateScrollHint(currentPage);
         playSound('wordPop');
     }, () => {
@@ -3194,6 +3252,83 @@ function alternarMaiusculas() {
 }
 
 /* =====================================================================
+   MODO DESAFIO (segunda camada, para quem já lê sozinho; docs/DESAFIOS.md, AGENTS.md §2.9)
+   Aqui ficam só os ganchos: o botão 🧩, a preferência e o carregamento sob demanda.
+   O motor da camada (quadros, caderno e as 7 etapas) fica em assets/js/desafios.js (+ desafios.css),
+   e os dados de cada parte em <livro>/desafios/parte-N.js (window.DESAFIOS). Nada disso é baixado
+   com o modo desligado, e então o livro é exatamente o de sempre.
+   Preferência: cv-nivel ('1' desligado, '2' ligado). Testes: ?nivel=2 (força, sem gravar) e ?desafio=1.
+   ===================================================================== */
+const PREF_NIVEL = 'cv-nivel';
+const NIVEL_NA_URL = new URLSearchParams(window.location.search).get('nivel');
+let modoDesafio = NIVEL_NA_URL ? NIVEL_NA_URL === '2' : lerPreferencia(PREF_NIVEL) === '2';
+// Pasta de assets/ a partir do próprio <script src=".../assets/js/livro.js"> (padrão: ../assets/)
+const ASSETS_BASE = ((document.querySelector('script[src*="assets/js/livro.js"]') || {}).getAttribute?.('src') || '../assets/js/livro.js').replace(/js\/livro\.js.*$/, '');
+
+/* Quadro do desafio no fim da folha de texto (chamado por montarConteudoDoTexto; vazio com o modo desligado) */
+function quadroDesafio(i) {
+    return modoDesafio && window.CamadaDesafios ? window.CamadaDesafios.quadro(i) : '';
+}
+
+/* Fecha o caderno de desafios, se estiver aberto (troca de página, de idioma, Esc) */
+function fecharDesafio() {
+    if (window.CamadaDesafios) window.CamadaDesafios.fechar();
+}
+
+function atualizarBotaoNivel() {
+    const btn = document.getElementById('btn-nivel');
+    if (!btn) return;
+    btn.setAttribute('aria-pressed', String(modoDesafio));
+    btn.classList.toggle('nivel-ativo', modoDesafio);
+    btn.title = ui(modoDesafio ? 'nivelDesligar' : 'nivelLigar');
+    btn.setAttribute('aria-label', btn.title);
+}
+
+/* Carrega um <script>/<link> uma vez só (funciona em file:// e, pelo service worker, offline) */
+const recursosCarregando = {};
+function carregarRecurso(url, tipo) {
+    if (!recursosCarregando[url]) {
+        recursosCarregando[url] = new Promise((resolve, reject) => {
+            const el = document.createElement(tipo === 'css' ? 'link' : 'script');
+            if (tipo === 'css') { el.rel = 'stylesheet'; el.href = url; } else { el.src = url; }
+            el.onload = resolve;
+            el.onerror = () => { el.remove(); delete recursosCarregando[url]; reject(new Error('não carregou: ' + url)); };
+            document.head.appendChild(el);
+        });
+    }
+    return recursosCarregando[url];
+}
+
+/* O motor da camada (desafios.css + desafios.js); os dados da parte, quem pede é o próprio motor */
+function carregarCamadaDesafios() {
+    if (window.CamadaDesafios) return Promise.resolve(window.CamadaDesafios);
+    return Promise.all([
+        carregarRecurso(ASSETS_BASE + 'css/desafios.css', 'css').catch(() => {}),
+        carregarRecurso(ASSETS_BASE + 'js/desafios.js', 'js')
+    ]).then(() => window.CamadaDesafios);
+}
+
+/* Liga/desliga a camada. `doUsuario`: veio de um toque no 🧩 (mostra o aviso de "ligado") */
+function aplicarModoDesafio(doUsuario) {
+    document.body.classList.toggle('modo-desafio', modoDesafio);
+    atualizarBotaoNivel();
+    if (!modoDesafio) {
+        if (window.CamadaDesafios) window.CamadaDesafios.desligar();
+        return;
+    }
+    carregarCamadaDesafios().then(camada => {
+        if (camada && modoDesafio) camada.ligar({ doUsuario });
+    }, () => {});
+}
+
+function alternarModoDesafio() {
+    modoDesafio = !modoDesafio;
+    salvarPreferencia(PREF_NIVEL, modoDesafio ? '2' : '1');
+    playSound('wordPop');
+    aplicarModoDesafio(true);
+}
+
+/* =====================================================================
    EVENTOS (delegados: o HTML montado não tem onclick embutido)
    ===================================================================== */
 function initEventos() {
@@ -3286,6 +3421,7 @@ function initEventos() {
     document.getElementById('btn-fullscreen').addEventListener('click', toggleFullscreen);
     initBarras();
     document.getElementById('btn-maiusculas').addEventListener('click', alternarMaiusculas);
+    document.getElementById('btn-nivel').addEventListener('click', alternarModoDesafio);
     document.getElementById('phonics-card').addEventListener('click', replayPhonicsWord);
 
     // Cartão de alfabetização: fecha só com toque FORA do cartão (no fundo escurecido) ou com Esc
@@ -3297,6 +3433,7 @@ function initEventos() {
         if (e.key === 'Escape') {
             closePhonicsCard();
             fecharPainelVoz();
+            fecharDesafio();
         }
         if (document.querySelector('.phonics-backdrop.is-open') || document.getElementById('portao-adulto')) return;
         if (e.key === 'ArrowRight') nextPage();
@@ -3392,6 +3529,9 @@ function iniciarLivro() {
     }
 
     conferirPortaoNaAbertura();
+
+    // Modo Desafio lembrado no aparelho (ou ?nivel=2): carrega a camada sob demanda
+    if (modoDesafio) aplicarModoDesafio(false);
 
     // Contador de visitas anônimo (assets/js/contador.js); rascunhos não contam
     if (!RASCUNHO) {

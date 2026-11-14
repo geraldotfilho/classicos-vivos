@@ -173,6 +173,17 @@ h1, h2, h3, h4, .font-display {
     border-color: #0369A1;
     color: #FFFFFF;
 }
+/* Botão 🧩 do modo Desafio (segunda camada; o resto do estilo fica em desafios.css, carregado sob demanda) */
+.btn-nivel {
+    background: #FFFFFF;
+    border-color: #7C3AED;
+    color: #6D28D9;
+}
+.btn-nivel.nivel-ativo {
+    background: #7C3AED;
+    border-color: #4C1D95;
+    color: #FFFFFF;
+}
 .btn-idioma {
     width: 34px;
     height: 32px;
