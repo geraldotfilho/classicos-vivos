@@ -8,6 +8,7 @@
 
 ## 1. Estado atual
 
+- **2026-11-14**: corrigido o tablet preso na versão antiga dos livros (os volumes do botão "Baixar" ganhavam do cache novo no service worker; `HISTORICO.md`).
 - **2026-11-14**: botão "Buscar a versão mais nova" (🔄 verde no topo da estante) e busca automática de versão ao voltar à tela. A suspeita de que a remoção das rajadas encurtou as pausas da narração foi conferida e não se confirmou (duração idêntica; detalhes no `HISTORICO.md`); alongar pausas curtas aguarda o humano (`BACKLOG.md`).
 - **Dom Quixote, primeiro volume (Partes 1 a 4) completo e publicado em 4 idiomas**:
   - Partes 1, 2, 3 e 4: totalmente ilustradas, narradas em português e traduzidas com rigor literário para **Inglês, Espanhol e Francês** (`parte-4.en.js`, `parte-4.es.js`, `parte-4.fr.js` concluídos com 0 erros e 0 avisos em `tools/traducoes.mjs`).
