@@ -82,7 +82,9 @@ O leitor de referência desta camada é uma criança de **9 anos que lê sozinha
 | Dom Quixote | 2 | 8 páginas | ✅ publicada (2026-11-14) |
 | Dom Quixote | 3 | 7 páginas | ✅ publicada (2026-11-14) |
 | Dom Quixote | 4 | 11 páginas | ✅ publicada (2026-11-14) |
-| Dom Quixote | 7 (rascunho) | 4 páginas de amostra (usadas para testar o motor) | completar |
-| Dom Quixote | 8 (rascunho) | — | na fila |
+| Dom Quixote | 7 (rascunho) | 9 páginas | ✅ no rascunho (2026-11-14) |
+| Dom Quixote | 8 (rascunho) | 9 páginas | ✅ no rascunho (2026-11-14) |
+
+Se o texto de um rascunho mudar na fase 3, releia os desafios daquela página (o validador confere o formato, não o conteúdo).
 
 Pendências: 🛑 o humano experimentar com uma criança maior e mandar notas; tradução dos desafios (en, fr, es); citar o modo Desafio em `sobre.html`; avaliar deixar o texto da página legível com o caderno aberto (hoje a criança fecha o caderno para reler, e ele lembra a etapa).
