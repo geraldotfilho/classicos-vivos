@@ -108,10 +108,10 @@ let ELENCO = {
     CONDESSA: { voz: 'pt-br-training-8', estilo: 'grand countess in distress, deep solemn voice, dramatic and comically serious, never mocking' },
     ARAUTO: { voz: 'pt-br-storyteller-8', estilo: 'big herald announcing a visitor, deep and ceremonious' },
     PRIMO: { voz: 'pt-br-tutor-7', estilo: 'eager thin student, bookish, enthusiastic and a little absent-minded' },
-    LOURENCO: { voz: 'pt-br-training-10', estilo: 'shy young poet, gentle, whispering then blushing with joy' },
-    DOM_DIEGO: { voz: 'pt-br-assistant-3', estilo: 'dignified, kind gentleman of the house, calm and caring' },
+    LOURENCO: { voz: 'pt-br-commercial-5', estilo: 'shy young poet, gentle, whispering then blushing with joy' },
+    // DOM_DIEGO: a mesma voz da Parte 5 (podcaster-7)
     COZINHEIRO: { voz: 'pt-br-csagent-9', estilo: 'jolly wedding cook, generous and laughing' },
-    MENINO: { voz: 'pt-br-training-6', estilo: 'young boy narrating a puppet show with a stick, eager and theatrical' },
+    MENINO: { voz: 'pt-br-training-6', estilo: 'young boy narrating a puppet show with a stick, eager and theatrical' }
 };
 
 function opcoes(argv) {
