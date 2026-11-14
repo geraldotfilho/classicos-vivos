@@ -92,7 +92,26 @@ let ELENCO = {
     SOBRINHA: { voz: 'pt-br-podcaster-4', estilo: 'young woman laughing and crying with joy, hugging her uncle' },
     POVO: { voz: 'pt-br-csagent-8', estilo: 'cheerful villagers calling out together, lively and playful' },
     // Parte 5 (2026-11-14)
+    GOVERNANTA: { voz: 'pt-br-assistant-12', estilo: 'stern but loving housekeeper guarding the door, firm and a little comic, caring underneath' },
+    SANSAO: { voz: 'pt-br-tutor-2', estilo: 'cheerful young scholar, playful and bright, fond of his old neighbor' },
+    SANSAO_ESPELHOS: { voz: 'pt-br-tutor-2', estilo: 'young knight in disguise boasting with a deeper, grand voice, a bit theatrical and funny' },
+    TOME: { voz: 'pt-br-training-10', estilo: 'friendly young neighbor, easygoing, trying not to laugh' },
+    TOME_NARIGUDO: { voz: 'pt-br-training-10', estilo: 'friendly squire speaking in a stuffy, nasal voice as if his nose is blocked, jolly' },
+    DIABINHO: { voz: 'pt-br-advisor-11', estilo: 'very polite traveling actor dressed as a little devil, cheerful and courteous' },
+    TRATADOR: { voz: 'pt-br-csagent-6', estilo: 'practical lion keeper calling down from the top of the cart, firm, a bit nervous' },
+    DOM_DIEGO: { voz: 'pt-br-podcaster-7', estilo: 'calm, gentle and kind gentleman, wise and patient, concerned for his new friend' },
     // Parte 6 (2026-11-14)
+    MESTRE_PEDRO: { voz: 'pt-br-advisor-6', estilo: 'showman puppeteer with one eye covered, lively and theatrical, a bit sly but friendly' },
+    DONO_POUSADA: { voz: 'pt-br-techagent-1', estilo: 'friendly innkeeper, calm and hospitable, cheerful' },
+    DUQUE: { voz: 'pt-br-podcaster-1', estilo: 'kind duke who laughs easily, warm and playful, hiding a surprise' },
+    DUQUESA: { voz: 'pt-br-concierge-5', estilo: 'elegant, warm duchess delighted to meet her favorite book hero, smiling' },
+    CONDESSA: { voz: 'pt-br-training-8', estilo: 'grand countess in distress, deep solemn voice, dramatic and comically serious, never mocking' },
+    ARAUTO: { voz: 'pt-br-storyteller-8', estilo: 'big herald announcing a visitor, deep and ceremonious' },
+    PRIMO: { voz: 'pt-br-tutor-7', estilo: 'eager thin student, bookish, enthusiastic and a little absent-minded' },
+    LOURENCO: { voz: 'pt-br-training-10', estilo: 'shy young poet, gentle, whispering then blushing with joy' },
+    DOM_DIEGO: { voz: 'pt-br-assistant-3', estilo: 'dignified, kind gentleman of the house, calm and caring' },
+    COZINHEIRO: { voz: 'pt-br-csagent-9', estilo: 'jolly wedding cook, generous and laughing' },
+    MENINO: { voz: 'pt-br-training-6', estilo: 'young boy narrating a puppet show with a stick, eager and theatrical' },
 };
 
 function opcoes(argv) {

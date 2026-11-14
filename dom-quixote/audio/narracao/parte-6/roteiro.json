@@ -1,0 +1,1177 @@
+{
+  "_sobre": "Quem fala cada trecho das frases com fala de personagem (texto no formato do campo `fala`, sem mudar palavras). Frases fora daqui são da NARRADORA (inclusive os sons, o macaco que bate os dentes e o bilhete lido). Elenco em tools/gravar-narracao.mjs (ELENCO). Decisões da Parte 6: o menino do teatrinho (MENINO) conta a peça e os bonecos não falam; a condessa Trifaldi (CONDESSA) é o mordomo disfarçado, com voz grossa; moleiros, criados do palácio e a plateia da partida do Clavilenho falam em coro (POVO).",
+  "p1-s6": [
+    [
+      "NARRADORA",
+      "Lourenço olhou para o cavaleiro magro, olhou para o bacielmo e cochichou para a mãe:"
+    ],
+    [
+      "LOURENCO",
+      "Que homem mais diferente!"
+    ]
+  ],
+  "p1-s7": [
+    [
+      "NARRADORA",
+      "Sancho ouviu e respondeu, de boca cheia:"
+    ],
+    [
+      "SANCHO",
+      "Diferente é pouco, menino."
+    ]
+  ],
+  "p1-s8": [
+    [
+      "SANCHO",
+      "Espere até ele ver um moinho."
+    ]
+  ],
+  "p1-s9": [
+    [
+      "NARRADORA",
+      "Dom Quixote ouviu os poemas de Lourenço e bateu palmas de pé:"
+    ],
+    [
+      "QUIXOTE",
+      "Viva o poeta!"
+    ]
+  ],
+  "p1-s12": [
+    [
+      "NARRADORA",
+      "No quarto dia, Dom Quixote já não aguentava tanto silêncio:"
+    ],
+    [
+      "QUIXOTE",
+      "Cavaleiro que descansa demais enferruja, Sancho!"
+    ]
+  ],
+  "p1-s13": [
+    [
+      "QUIXOTE",
+      "Ouvi falar de uma gruta muito funda aqui perto, a Gruta de Montesinos."
+    ]
+  ],
+  "p1-s14": [
+    [
+      "QUIXOTE",
+      "Dizem que lá dentro moram maravilhas que ninguém nunca viu."
+    ]
+  ],
+  "p1-s15": [
+    [
+      "QUIXOTE",
+      "Eu quero ver!"
+    ]
+  ],
+  "p1-s16": [
+    [
+      "NARRADORA",
+      "Sancho olhou com saudade para a mesa do café:"
+    ],
+    [
+      "SANCHO",
+      "Na gruta tem requeijão, meu amo?"
+    ]
+  ],
+  "p1-s17": [
+    [
+      "QUIXOTE",
+      "Não."
+    ]
+  ],
+  "p1-s18": [
+    [
+      "SANCHO",
+      "Eu sabia."
+    ]
+  ],
+  "p1-s20": [
+    [
+      "NARRADORA",
+      "Dom Diego abraçou os dois e deu um último conselho:"
+    ],
+    [
+      "DOM_DIEGO",
+      "Cuidado com os leões, senhor cavaleiro!"
+    ]
+  ],
+  "p1-s21": [
+    [
+      "QUIXOTE",
+      "Fique tranquilo,"
+    ],
+    [
+      "NARRADORA",
+      "respondeu Dom Quixote."
+    ]
+  ],
+  "p1-s22": [
+    [
+      "QUIXOTE",
+      "Na gruta não tem leão."
+    ]
+  ],
+  "p1-s23": [
+    [
+      "QUIXOTE",
+      "Só tem escuro, morcego e mistério!"
+    ]
+  ],
+  "p2-s7": [
+    [
+      "NARRADORA",
+      "Ele chegou perto de um cozinheiro, com a voz mais educada do mundo:"
+    ],
+    [
+      "SANCHO",
+      "Bom senhor, posso molhar um pedacinho de pão nessa panela?"
+    ]
+  ],
+  "p2-s8": [
+    [
+      "NARRADORA",
+      "O cozinheiro riu:"
+    ],
+    [
+      "COZINHEIRO",
+      "Hoje ninguém passa fome, meu amigo!"
+    ]
+  ],
+  "p2-s9": [
+    [
+      "COZINHEIRO",
+      "Pegue uma concha e tire a espuma da panela."
+    ]
+  ],
+  "p2-s12": [
+    [
+      "COZINHEIRO",
+      "Tome."
+    ]
+  ],
+  "p2-s13": [
+    [
+      "COZINHEIRO",
+      "É só a espuma, para enganar a fome até o almoço."
+    ]
+  ],
+  "p2-s16": [
+    [
+      "SANCHO",
+      "Viva o noivo Camacho!"
+    ],
+    [
+      "NARRADORA",
+      "gritava ele, de boca cheia."
+    ]
+  ],
+  "p2-s17": [
+    [
+      "SANCHO",
+      "Que casamento bonito!"
+    ]
+  ],
+  "p2-s18": [
+    [
+      "QUIXOTE",
+      "Sancho, você nem viu a noiva,"
+    ],
+    [
+      "NARRADORA",
+      "disse Dom Quixote."
+    ]
+  ],
+  "p2-s19": [
+    [
+      "SANCHO",
+      "Não vi a noiva, meu amo, mas vi a panela."
+    ]
+  ],
+  "p2-s20": [
+    [
+      "SANCHO",
+      "E gostei muito!"
+    ]
+  ],
+  "p2-s24": [
+    [
+      "SANCHO",
+      "Essa eu sei,"
+    ],
+    [
+      "NARRADORA",
+      "disse Sancho."
+    ]
+  ],
+  "p2-s25": [
+    [
+      "SANCHO",
+      "Foi a primeira que saiu na chuva sem chapéu."
+    ]
+  ],
+  "p2-s27": [
+    [
+      "NARRADORA",
+      "Dom Quixote contou que ia à Gruta de Montesinos, e o Primo deu um pulo:"
+    ],
+    [
+      "PRIMO",
+      "Uma gruta encantada!"
+    ]
+  ],
+  "p2-s28": [
+    [
+      "PRIMO",
+      "Vai ficar linda no meu livro!"
+    ]
+  ],
+  "p2-s29": [
+    [
+      "PRIMO",
+      "Eu conheço o caminho."
+    ]
+  ],
+  "p2-s30": [
+    [
+      "PRIMO",
+      "E tenho uma corda bem comprida!"
+    ]
+  ],
+  "p3-s4": [
+    [
+      "SANCHO",
+      "É aviso, meu amo!"
+    ],
+    [
+      "NARRADORA",
+      "disse Sancho."
+    ]
+  ],
+  "p3-s5": [
+    [
+      "SANCHO",
+      "Os bichos estão dizendo: não entre!"
+    ]
+  ],
+  "p3-s6": [
+    [
+      "QUIXOTE",
+      "Estão dizendo: bom dia,"
+    ],
+    [
+      "NARRADORA",
+      "respondeu Dom Quixote, e se levantou."
+    ]
+  ],
+  "p3-s9": [
+    [
+      "QUIXOTE",
+      "Mais corda!"
+    ],
+    [
+      "NARRADORA",
+      "gritava a voz dele, cada vez mais longe."
+    ]
+  ],
+  "p3-s15": [
+    [
+      "SANCHO",
+      "Chega!"
+    ]
+  ],
+  "p3-s16": [
+    [
+      "SANCHO",
+      "Vamos puxar!"
+    ]
+  ],
+  "p3-s24": [
+    [
+      "NARRADORA",
+      "Dom Quixote olhou em volta, espantado:"
+    ],
+    [
+      "QUIXOTE",
+      "Ah, meus amigos, por que me tiraram de lá?"
+    ]
+  ],
+  "p3-s25": [
+    [
+      "QUIXOTE",
+      "Eu vi um palácio inteiro de cristal!"
+    ]
+  ],
+  "p3-s26": [
+    [
+      "QUIXOTE",
+      "Um velhinho de barba branca até o chão, chamado Montesinos, me recebeu na porta."
+    ]
+  ],
+  "p3-s27": [
+    [
+      "QUIXOTE",
+      "Lá dentro, cavaleiros e damas dormem há quinhentos anos, encantados pelo mago Merlim."
+    ]
+  ],
+  "p3-s28": [
+    [
+      "QUIXOTE",
+      "Passei três dias com eles!"
+    ]
+  ],
+  "p3-s29": [
+    [
+      "SANCHO",
+      "Três dias?"
+    ],
+    [
+      "NARRADORA",
+      "disse Sancho."
+    ]
+  ],
+  "p3-s30": [
+    [
+      "SANCHO",
+      "Meu amo, o senhor ficou lá embaixo uma hora!"
+    ]
+  ],
+  "p3-s31": [
+    [
+      "SANCHO",
+      "Nem deu tempo de eu sentir fome!"
+    ]
+  ],
+  "p3-s32": [
+    [
+      "QUIXOTE",
+      "Então lá embaixo o tempo anda de outro jeito,"
+    ],
+    [
+      "NARRADORA",
+      "respondeu Dom Quixote, muito sério."
+    ]
+  ],
+  "p4-s2": [
+    [
+      "NARRADORA",
+      "Dom Quixote bateu na mesa:"
+    ],
+    [
+      "QUIXOTE",
+      "Uma sopa para o Cavaleiro dos Leões, bom homem!"
+    ]
+  ],
+  "p4-s5": [
+    [
+      "MESTRE_PEDRO",
+      "Tem lugar para Mestre Pedro, para o seu teatrinho e para o seu macaco adivinho?"
+    ]
+  ],
+  "p4-s6": [
+    [
+      "DONO_POUSADA",
+      "Para Mestre Pedro sempre tem!"
+    ],
+    [
+      "NARRADORA",
+      "festejou o dono da pousada."
+    ]
+  ],
+  "p4-s9": [
+    [
+      "MESTRE_PEDRO",
+      "Ele adivinha tudo o que já aconteceu,"
+    ],
+    [
+      "NARRADORA",
+      "explicou Mestre Pedro."
+    ]
+  ],
+  "p4-s10": [
+    [
+      "MESTRE_PEDRO",
+      "O que ainda vai acontecer, não: disso ele não entende."
+    ]
+  ],
+  "p4-s11": [
+    [
+      "MESTRE_PEDRO",
+      "São duas moedas por pergunta!"
+    ]
+  ],
+  "p4-s12": [
+    [
+      "NARRADORA",
+      "Sancho quis logo testar:"
+    ],
+    [
+      "SANCHO",
+      "Então diga, seu macaco: o que a minha Teresa está fazendo agora?"
+    ]
+  ],
+  "p4-s15": [
+    [
+      "NARRADORA",
+      "Mestre Pedro arregalou o olho que estava de fora, correu e se ajoelhou:"
+    ],
+    [
+      "MESTRE_PEDRO",
+      "Ó famoso Dom Quixote de La Mancha, Cavaleiro dos Leões!"
+    ]
+  ],
+  "p4-s16": [
+    [
+      "MESTRE_PEDRO",
+      "E você, bom Sancho Pança, o melhor escudeiro do mundo: a sua Teresa está agora mesmo penteando lã, com um jarro de água do lado!"
+    ]
+  ],
+  "p4-s22": [
+    [
+      "SANCHO",
+      "Isso é coisa de mago,"
+    ],
+    [
+      "NARRADORA",
+      "cochichou Sancho."
+    ]
+  ],
+  "p4-s23": [
+    [
+      "SANCHO",
+      "Ou então esse macaco também leu o livro."
+    ]
+  ],
+  "p4-s24": [
+    [
+      "NARRADORA",
+      "Dom Quixote pagou mais duas moedas:"
+    ],
+    [
+      "QUIXOTE",
+      "Pergunte ao macaco: o que eu vi na Gruta de Montesinos foi sonho ou foi verdade?"
+    ]
+  ],
+  "p4-s26": [
+    [
+      "NARRADORA",
+      "Mestre Pedro escutou e respondeu:"
+    ],
+    [
+      "MESTRE_PEDRO",
+      "O macaco diz que uma parte foi verdade e a outra parte foi sonho."
+    ]
+  ],
+  "p4-s27": [
+    [
+      "MESTRE_PEDRO",
+      "Qual é qual, ele só conta na sexta-feira."
+    ]
+  ],
+  "p4-s28": [
+    [
+      "QUIXOTE",
+      "Viu, Sancho?"
+    ],
+    [
+      "NARRADORA",
+      "disse Dom Quixote."
+    ]
+  ],
+  "p4-s29": [
+    [
+      "QUIXOTE",
+      "Uma parte foi verdade!"
+    ]
+  ],
+  "p4-s30": [
+    [
+      "SANCHO",
+      "Viu, meu amo?"
+    ],
+    [
+      "NARRADORA",
+      "disse Sancho."
+    ]
+  ],
+  "p4-s31": [
+    [
+      "SANCHO",
+      "A outra foi sonho!"
+    ]
+  ],
+  "p5-s2": [
+    [
+      "NARRADORA",
+      "Um menino, com uma varinha na mão, ia contando a história:"
+    ],
+    [
+      "MENINO",
+      "Esta é a princesa Melisendra, presa numa torre bem alta!"
+    ]
+  ],
+  "p5-s3": [
+    [
+      "MENINO",
+      "E este é o valente Dom Gaiferos, que vem a cavalo para salvar a princesa!"
+    ]
+  ],
+  "p5-s8": [
+    [
+      "MENINO",
+      "Mas vejam!"
+    ],
+    [
+      "NARRADORA",
+      "gritou o menino."
+    ]
+  ],
+  "p5-s9": [
+    [
+      "MENINO",
+      "O rei da torre descobriu tudo e mandou os soldados atrás deles."
+    ]
+  ],
+  "p5-s14": [
+    [
+      "NARRADORA",
+      "Deu um pulo, puxou a espada e gritou:"
+    ],
+    [
+      "QUIXOTE",
+      "Parem, malvados!"
+    ]
+  ],
+  "p5-s15": [
+    [
+      "QUIXOTE",
+      "Enquanto eu viver, ninguém persegue esses dois!"
+    ]
+  ],
+  "p5-s24": [
+    [
+      "NARRADORA",
+      "Quando a poeira baixou, Dom Quixote olhou em volta, orgulhoso:"
+    ],
+    [
+      "QUIXOTE",
+      "Pronto!"
+    ]
+  ],
+  "p5-s25": [
+    [
+      "QUIXOTE",
+      "Dom Gaiferos e a princesa estão a salvo!"
+    ]
+  ],
+  "p5-s26": [
+    [
+      "MESTRE_PEDRO",
+      "A salvo?"
+    ],
+    [
+      "NARRADORA",
+      "choramingou Mestre Pedro, catando pedaços pelo chão."
+    ]
+  ],
+  "p5-s27": [
+    [
+      "MESTRE_PEDRO",
+      "Olhe o meu rei, sem cabeça!"
+    ]
+  ],
+  "p5-s28": [
+    [
+      "MESTRE_PEDRO",
+      "Olhe o meu cavalo, sem perna!"
+    ]
+  ],
+  "p5-s29": [
+    [
+      "MESTRE_PEDRO",
+      "Olhe a minha torre!"
+    ]
+  ],
+  "p5-s30": [
+    [
+      "MESTRE_PEDRO",
+      "Eram bonecos, senhor!"
+    ]
+  ],
+  "p5-s31": [
+    [
+      "MESTRE_PEDRO",
+      "Bonecos de pano e papelão!"
+    ]
+  ],
+  "p5-s34": [
+    [
+      "NARRADORA",
+      "Coçou a barba, sem jeito:"
+    ],
+    [
+      "QUIXOTE",
+      "Juro que eles me pareceram de verdade..."
+    ]
+  ],
+  "p5-s35": [
+    [
+      "QUIXOTE",
+      "Os magos me enganaram outra vez."
+    ]
+  ],
+  "p5-s36": [
+    [
+      "QUIXOTE",
+      "Mas eu pago tudo, Mestre Pedro!"
+    ]
+  ],
+  "p5-s37": [
+    [
+      "QUIXOTE",
+      "Sancho, traga a bolsa!"
+    ]
+  ],
+  "p5-s38": [
+    [
+      "NARRADORA",
+      "Sancho suspirou:"
+    ],
+    [
+      "SANCHO",
+      "Nunca vi uma vitória custar tão caro."
+    ]
+  ],
+  "p6-s3": [
+    [
+      "NARRADORA",
+      "Abriu numa página qualquer e, bem no meio, reconheceu as formiguinhas do seu nome:"
+    ],
+    [
+      "SANCHO",
+      "É o nosso livro, meu amo!"
+    ]
+  ],
+  "p6-s4": [
+    [
+      "SANCHO",
+      "Então o macaco não adivinha coisa nenhuma: Mestre Pedro leu tudo sobre a gente!"
+    ]
+  ],
+  "p6-s5": [
+    [
+      "SANCHO",
+      "E o resto, aposto, perguntou ao dono da pousada."
+    ]
+  ],
+  "p6-s6": [
+    [
+      "NARRADORA",
+      "Dom Quixote ficou pensativo:"
+    ],
+    [
+      "QUIXOTE",
+      "Esse livro anda mais depressa que o Rocinante."
+    ]
+  ],
+  "p6-s10": [
+    [
+      "QUIXOTE",
+      "Olhe, Sancho!"
+    ]
+  ],
+  "p6-s11": [
+    [
+      "QUIXOTE",
+      "Nos livros é sempre assim: um barco encantado aparece para levar o cavaleiro até alguém que precisa de ajuda."
+    ]
+  ],
+  "p6-s12": [
+    [
+      "QUIXOTE",
+      "Amarre os bichos e suba!"
+    ]
+  ],
+  "p6-s13": [
+    [
+      "SANCHO",
+      "Meu amo, isso é barco de pescador..."
+    ]
+  ],
+  "p6-s14": [
+    [
+      "QUIXOTE",
+      "Suba, Sancho!"
+    ]
+  ],
+  "p6-s17": [
+    [
+      "QUIXOTE",
+      "Já estamos longíssimo!"
+    ],
+    [
+      "NARRADORA",
+      "disse Dom Quixote."
+    ]
+  ],
+  "p6-s18": [
+    [
+      "QUIXOTE",
+      "Já devemos ter passado a linha do meio do mundo."
+    ]
+  ],
+  "p6-s19": [
+    [
+      "QUIXOTE",
+      "Dizem que, quando se passa essa linha, todos os piolhos morrem de frio."
+    ]
+  ],
+  "p6-s20": [
+    [
+      "QUIXOTE",
+      "Veja aí, Sancho!"
+    ]
+  ],
+  "p6-s21": [
+    [
+      "NARRADORA",
+      "Sancho enfiou a mão na gola e procurou:"
+    ],
+    [
+      "SANCHO",
+      "Achei uma."
+    ]
+  ],
+  "p6-s22": [
+    [
+      "SANCHO",
+      "Achei duas."
+    ]
+  ],
+  "p6-s23": [
+    [
+      "SANCHO",
+      "Meu amo, a gente não andou quase nada: ainda dá para ver o Rocinante!"
+    ]
+  ],
+  "p6-s26": [
+    [
+      "QUIXOTE",
+      "Um castelo!"
+    ],
+    [
+      "NARRADORA",
+      "gritou Dom Quixote."
+    ]
+  ],
+  "p6-s27": [
+    [
+      "QUIXOTE",
+      "É lá que está o prisioneiro!"
+    ]
+  ],
+  "p6-s28": [
+    [
+      "NARRADORA",
+      "Sancho pôs as mãos na cabeça:"
+    ],
+    [
+      "SANCHO",
+      "Moinho de novo, não!"
+    ]
+  ],
+  "p6-s29": [
+    [
+      "NARRADORA",
+      "Os moleiros, que são os donos dos moinhos, saíram correndo, brancos de farinha da cabeça aos pés, sacudindo varas compridas:"
+    ],
+    [
+      "POVO",
+      "Parem esse barco!"
+    ]
+  ],
+  "p6-s30": [
+    [
+      "POVO",
+      "Vocês vão bater na roda!"
+    ]
+  ],
+  "p6-s31": [
+    [
+      "QUIXOTE",
+      "Que fantasmas mais feios!"
+    ],
+    [
+      "NARRADORA",
+      "disse Dom Quixote, e ficou de pé, de espada na mão."
+    ]
+  ],
+  "p6-s35": [
+    [
+      "NARRADORA",
+      "Na margem, encharcado, Dom Quixote pagou o barco aos dois pescadores, que chegaram correndo e reclamando, e suspirou:"
+    ],
+    [
+      "QUIXOTE",
+      "Desta vez os magos ganharam."
+    ]
+  ],
+  "p6-s36": [
+    [
+      "NARRADORA",
+      "Sancho torceu a camisa:"
+    ],
+    [
+      "SANCHO",
+      "Mais um barco encantado desses, meu amo, e a gente fica sem bolsa e sem cueca."
+    ]
+  ],
+  "p7-s4": [
+    [
+      "QUIXOTE",
+      "Aquela é uma grande dama, Sancho!"
+    ],
+    [
+      "NARRADORA",
+      "disse Dom Quixote, ajeitando o bacielmo."
+    ]
+  ],
+  "p7-s5": [
+    [
+      "QUIXOTE",
+      "Vá até lá e leve um recado: diga que o seu amo quer cumprimentá-la e pergunte se pode chegar perto."
+    ]
+  ],
+  "p7-s6": [
+    [
+      "QUIXOTE",
+      "E diga direitinho o meu nome de cavaleiro."
+    ]
+  ],
+  "p7-s7": [
+    [
+      "QUIXOTE",
+      "Não o antigo: o novo!"
+    ]
+  ],
+  "p7-s11": [
+    [
+      "NARRADORA",
+      "A senhora ouviu o recado e abriu um sorriso enorme:"
+    ],
+    [
+      "DUQUESA",
+      "O Dom Quixote do livro?"
+    ]
+  ],
+  "p7-s12": [
+    [
+      "DUQUESA",
+      "E você é o Sancho Pança, o do burrico?"
+    ]
+  ],
+  "p7-s13": [
+    [
+      "SANCHO",
+      "Eu mesmo, senhora, e o burrico é aquele ali!"
+    ]
+  ],
+  "p7-s22": [
+    [
+      "NARRADORA",
+      "Lá, tocaram trombetas, espalharam água perfumada e gritaram:"
+    ],
+    [
+      "POVO",
+      "Bem-vindo o grande cavaleiro andante!"
+    ]
+  ],
+  "p8-s4": [
+    [
+      "NARRADORA",
+      "Entrou um homenzarrão de barba branca até a cintura e anunciou:"
+    ],
+    [
+      "ARAUTO",
+      "A condessa Trifaldi veio de muito longe, a pé, para pedir a ajuda do famoso Dom Quixote!"
+    ]
+  ],
+  "p8-s9": [
+    [
+      "CONDESSA",
+      "Senhor cavaleiro,"
+    ],
+    [
+      "NARRADORA",
+      "disse a condessa, com uma voz grossa, bem esquisita,"
+    ],
+    [
+      "CONDESSA",
+      "um gigante malvado, chamado Malambruno, jogou em nós um feitiço terrível."
+    ]
+  ],
+  "p8-s10": [
+    [
+      "CONDESSA",
+      "Vejam!"
+    ]
+  ],
+  "p8-s14": [
+    [
+      "NARRADORA",
+      "Sancho deu um passo para trás:"
+    ],
+    [
+      "SANCHO",
+      "Minha nossa!"
+    ]
+  ],
+  "p8-s15": [
+    [
+      "SANCHO",
+      "Quem faz a barba delas?"
+    ]
+  ],
+  "p8-s16": [
+    [
+      "SANCHO",
+      "Mestre Nicolau ia ficar rico!"
+    ]
+  ],
+  "p8-s17": [
+    [
+      "NARRADORA",
+      "Depois olhou melhor e cochichou:"
+    ],
+    [
+      "SANCHO",
+      "Meu amo, a condessa usa bota de homem."
+    ]
+  ],
+  "p8-s18": [
+    [
+      "SANCHO",
+      "E essa voz... onde foi que eu já ouvi essa voz?"
+    ]
+  ],
+  "p8-s20": [
+    [
+      "QUIXOTE",
+      "Digam o que devo fazer, senhoras!"
+    ]
+  ],
+  "p8-s21": [
+    [
+      "CONDESSA",
+      "O gigante mora no reino de Candaia, do outro lado do mundo,"
+    ],
+    [
+      "NARRADORA",
+      "explicou a condessa."
+    ]
+  ],
+  "p8-s22": [
+    [
+      "CONDESSA",
+      "Só há um jeito de chegar lá: voando no clavilenho, um cavalo de madeira que se guia por um pino na testa."
+    ]
+  ],
+  "p8-s23": [
+    [
+      "CONDESSA",
+      "Vão os dois, o cavaleiro e o escudeiro, de olhos vendados."
+    ]
+  ],
+  "p8-s24": [
+    [
+      "CONDESSA",
+      "Quando chegarem, as nossas barbas caem!"
+    ]
+  ],
+  "p8-s25": [
+    [
+      "SANCHO",
+      "Os dois?"
+    ]
+  ],
+  "p8-s27": [
+    [
+      "SANCHO",
+      "Eu não sou passarinho!"
+    ]
+  ],
+  "p8-s28": [
+    [
+      "SANCHO",
+      "E o que eu tenho a ver com a barba dos outros?"
+    ]
+  ],
+  "p8-s30": [
+    [
+      "NARRADORA",
+      "Sancho tapou os ouvidos:"
+    ],
+    [
+      "SANCHO",
+      "Está bem, está bem, eu vou!"
+    ]
+  ],
+  "p8-s31": [
+    [
+      "SANCHO",
+      "Mas, se eu cair lá de cima, quero ver quem vai governar a minha ilha!"
+    ]
+  ],
+  "p9-s2": [
+    [
+      "NARRADORA",
+      "Sancho subiu atrás, reclamando:"
+    ],
+    [
+      "SANCHO",
+      "Este cavalo é duro que nem tábua!"
+    ]
+  ],
+  "p9-s3": [
+    [
+      "SANCHO",
+      "Não tem uma almofadinha?"
+    ]
+  ],
+  "p9-s5": [
+    [
+      "POVO",
+      "Boa viagem, valentes!"
+    ],
+    [
+      "NARRADORA",
+      "gritaram todos."
+    ]
+  ],
+  "p9-s6": [
+    [
+      "POVO",
+      "Já estão subindo!"
+    ]
+  ],
+  "p9-s7": [
+    [
+      "POVO",
+      "Já passaram do telhado!"
+    ]
+  ],
+  "p9-s10": [
+    [
+      "QUIXOTE",
+      "Sinto o vento das alturas, Sancho!"
+    ]
+  ],
+  "p9-s11": [
+    [
+      "SANCHO",
+      "Eu também, meu amo."
+    ]
+  ],
+  "p9-s12": [
+    [
+      "SANCHO",
+      "E estou com uma vontade de espiar..."
+    ]
+  ],
+  "p9-s13": [
+    [
+      "QUIXOTE",
+      "Não tire a venda!"
+    ]
+  ],
+  "p9-s14": [
+    [
+      "QUIXOTE",
+      "Quem espia fica tonto e cai!"
+    ]
+  ],
+  "p9-s16": [
+    [
+      "SANCHO",
+      "Agora ficou quente!"
+    ],
+    [
+      "NARRADORA",
+      "disse Sancho."
+    ]
+  ],
+  "p9-s17": [
+    [
+      "QUIXOTE",
+      "Estamos passando pertinho do sol!"
+    ],
+    [
+      "NARRADORA",
+      "respondeu Dom Quixote."
+    ]
+  ],
+  "p9-s18": [
+    [
+      "QUIXOTE",
+      "Segure firme!"
+    ]
+  ],
+  "p9-s28": [
+    [
+      "NARRADORA",
+      "No jantar, Sancho contou vantagem:"
+    ],
+    [
+      "SANCHO",
+      "Eu espiei um pouquinho."
+    ]
+  ],
+  "p9-s29": [
+    [
+      "SANCHO",
+      "A Terra era do tamanho de um grão de mostarda!"
+    ]
+  ],
+  "p9-s30": [
+    [
+      "SANCHO",
+      "E eu desci do cavalo e brinquei com sete cabritinhas lá no céu: duas verdes, duas vermelhas, duas azuis e uma misturada."
+    ]
+  ],
+  "p9-s32": [
+    [
+      "NARRADORA",
+      "Dom Quixote chegou no ouvido dele:"
+    ],
+    [
+      "QUIXOTE",
+      "Sancho, se você quer que eu acredite nas suas cabritinhas do céu, acredite no meu palácio de cristal da gruta."
+    ]
+  ],
+  "p9-s33": [
+    [
+      "NARRADORA",
+      "Sancho pensou um pouquinho e piscou:"
+    ],
+    [
+      "SANCHO",
+      "Combinado, meu amo."
+    ]
+  ],
+  "p9-s35": [
+    [
+      "NARRADORA",
+      "Então o duque se levantou:"
+    ],
+    [
+      "DUQUE",
+      "Sancho Pança, arrume a mala."
+    ]
+  ],
+  "p9-s36": [
+    [
+      "DUQUE",
+      "Amanhã você vai governar a sua ilha!"
+    ]
+  ]
+}
