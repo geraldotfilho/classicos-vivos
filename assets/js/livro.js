@@ -3356,6 +3356,17 @@ function monitorarAtualizacoesSW(reg) {
             }
         });
     });
+
+    // O navegador só procura versão nova ao abrir uma página; o tablet volta do segundo plano sem abrir
+    // nenhuma. Procura de novo ao voltar à tela (no máximo a cada 5 min).
+    let ultimaBusca = Date.now();
+    document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState !== 'visible' || Date.now() - ultimaBusca < 5 * 60 * 1000) return;
+        ultimaBusca = Date.now();
+        reg.update().catch(() => {});
+    });
+    const tinhaControle = !!navigator.serviceWorker.controller;
+    navigator.serviceWorker.addEventListener('controllerchange', () => { if (tinhaControle) exibirAviso(); });
 }
 
 function iniciarLivro() {
