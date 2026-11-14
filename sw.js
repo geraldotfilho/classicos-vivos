@@ -6,7 +6,7 @@
    - Narração gravada (*.mp3 e as marcas *.json em audio/): rede primeiro, para frases regravadas chegarem ao tablet;
      cada arquivo fica num cache próprio (que sobrevive às novas versões) e toca offline depois.
    - Demais arquivos: cache primeiro (abre instantâneo no tablet). */
-const CACHE = 'classicos-vivos-de56f17dbf59';
+const CACHE = 'classicos-vivos-5c52d805a429';
 const CACHE_AUDIO = 'cv-narracao';
 const FILES = [
     "./assets/css/desafios.css",
@@ -36,6 +36,9 @@ const FILES = [
     "./assets/js/offline-manager.js",
     "./assets/js/texto.js",
     "./dom-quixote/desafios/parte-1.js",
+    "./dom-quixote/desafios/parte-2.js",
+    "./dom-quixote/desafios/parte-3.js",
+    "./dom-quixote/desafios/parte-4.js",
     "./dom-quixote/desafios/parte-5.js",
     "./dom-quixote/desafios/parte-6.js",
     "./dom-quixote/desafios/parte-7.js",

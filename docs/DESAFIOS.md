@@ -79,7 +79,9 @@ O leitor de referência desta camada é uma criança de **9 anos que lê sozinha
 | Dom Quixote | 5 | 9 páginas | ✅ publicada (2026-11-14) |
 | Dom Quixote | 6 | 9 páginas | ✅ publicada (2026-11-14) |
 | Dom Quixote | 1 | 7 páginas | ✅ publicada (2026-11-14) |
-| Dom Quixote | 2, 3, 4 | — | na fila |
+| Dom Quixote | 2 | 8 páginas | ✅ publicada (2026-11-14) |
+| Dom Quixote | 3 | 7 páginas | ✅ publicada (2026-11-14) |
+| Dom Quixote | 4 | 11 páginas | ✅ publicada (2026-11-14) |
 | Dom Quixote | 7 (rascunho) | 4 páginas de amostra (usadas para testar o motor) | completar |
 | Dom Quixote | 8 (rascunho) | — | na fila |
 

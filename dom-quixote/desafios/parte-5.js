@@ -201,7 +201,7 @@ window.DESAFIOS = {
     // Capítulo 39 — O Cavaleiro dos Espelhos
     6: {
       titulo: 'O tombo do Cavaleiro dos Espelhos',
-      selo: '🪞',
+      selo: '✨',
       convite: 'Dom Quixote venceu, mas será que foi por causa da força? Descubra como tudo aconteceu.',
       etapas: [
         {

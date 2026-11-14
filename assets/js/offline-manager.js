@@ -5,7 +5,7 @@
 (function() {
     'use strict';
 
-    const VERSAO_ATUAL = 'de56f17dbf59';
+    const VERSAO_ATUAL = '5c52d805a429';
     const PREFIXO_CACHE = 'cv-volume-quixote-';
     const PREFIXO_STORAGE = 'cv-offline-quixote-';
 
@@ -142,7 +142,8 @@
         "./dom-quixote/parte-2.html",
         "./dom-quixote/traducoes/parte-2.en.js",
         "./dom-quixote/traducoes/parte-2.es.js",
-        "./dom-quixote/traducoes/parte-2.fr.js"
+        "./dom-quixote/traducoes/parte-2.fr.js",
+        "./dom-quixote/desafios/parte-2.js"
     ],
     "3": [
         "./assets/icones/icone-192.png",
@@ -194,7 +195,8 @@
         "./dom-quixote/parte-3.html",
         "./dom-quixote/traducoes/parte-3.en.js",
         "./dom-quixote/traducoes/parte-3.es.js",
-        "./dom-quixote/traducoes/parte-3.fr.js"
+        "./dom-quixote/traducoes/parte-3.fr.js",
+        "./dom-quixote/desafios/parte-3.js"
     ],
     "4": [
         "./assets/icones/icone-192.png",
@@ -248,7 +250,8 @@
         "./dom-quixote/parte-4.html",
         "./dom-quixote/traducoes/parte-4.en.js",
         "./dom-quixote/traducoes/parte-4.es.js",
-        "./dom-quixote/traducoes/parte-4.fr.js"
+        "./dom-quixote/traducoes/parte-4.fr.js",
+        "./dom-quixote/desafios/parte-4.js"
     ],
     "5": [
         "./assets/icones/icone-192.png",

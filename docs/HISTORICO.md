@@ -346,7 +346,7 @@ O que já foi entregue, sprint a sprint, em ordem cronológica (o mais antigo pr
 
 ## 2026-11-14 — 🧩 Modo Desafio: segunda camada de atividades (leitores de ~8 a 10 anos)
 - Motor (`assets/js/desafios.js`, `assets/css/desafios.css`, ganchos em `livro.js`), sete tipos de etapa, selos e "Você sabia?", validador `npm run conferir:desafios`, pré-cache offline. Especificação: `docs/DESAFIOS.md`.
-- Conteúdo publicado: Dom Quixote, Partes 5, 6 e 1 (só em português; sem API paga).
+- Conteúdo publicado: Dom Quixote, Partes 1 a 6 (só em português; sem API paga).
 
 ## ✅ Botão "Buscar a versão mais nova" e conferência das pausas da narração (2026-11-14)
 - **Botão na estante** (🔄 verde no topo, nos 4 idiomas): força a busca da versão nova do app, espera ela baixar e ativar e recarrega; se já estiver em dia, avisa e recarrega. A estante e os livros também passam a procurar versão nova sempre que o app volta à tela (antes, só ao abrir uma página, por isso o aviso demorava no tablet). Testado no Chromium (sem versão nova e com versão nova publicada no meio).
