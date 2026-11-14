@@ -90,7 +90,9 @@ let ELENCO = {
     EUGENIO: { voz: 'pt-br-storyteller-6', estilo: 'young goatherd, out of breath at first, then tender and chatty with his goat' },
     VELHINHO: { voz: 'pt-br-tutor-8', estilo: 'kind old farmer, warm and smiling, glad to meet a neighbor' },
     SOBRINHA: { voz: 'pt-br-podcaster-4', estilo: 'young woman laughing and crying with joy, hugging her uncle' },
-    POVO: { voz: 'pt-br-csagent-8', estilo: 'cheerful villagers calling out together, lively and playful' }
+    POVO: { voz: 'pt-br-csagent-8', estilo: 'cheerful villagers calling out together, lively and playful' },
+    // Parte 5 (2026-11-14)
+    // Parte 6 (2026-11-14)
 };
 
 function opcoes(argv) {
