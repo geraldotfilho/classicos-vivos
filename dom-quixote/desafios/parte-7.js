@@ -1,143 +1,398 @@
-/* Desafios (segunda camada, leitores de 8 a 10 anos) — Dom Quixote, Parte 7 (RASCUNHO).
-   AMOSTRA para testar o motor (assets/js/desafios.js): cobre os 7 tipos de etapa.
-   Ainda não passou pelo crivo do humano. Formato: docs/DESAFIOS.md */
+/* Desafios (segunda camada, leitores de 8 a 10 anos) — Dom Quixote, Parte 7 (RASCUNHO). Formato: docs/DESAFIOS.md */
 window.DESAFIOS = {
-    livro: 'dom-quixote',
-    parte: 7,
-    paginas: {
-        1: {
-            titulo: 'Os conselhos do cavaleiro',
-            selo: '💡',
-            convite: 'Dom Quixote deu muitos conselhos. Será que Sancho escutou todos?',
-            etapas: [
-                {
-                    tipo: 'quiz',
-                    pergunta: 'Por que Dom Quixote estava "feliz e preocupado ao mesmo tempo"?',
-                    opcoes: [
-                        'Porque Sancho ia governar, mas talvez não soubesse como',
-                        'Porque ele queria ser governador no lugar de Sancho',
-                        'Porque o jantar do palácio estava atrasado',
-                        'Porque o mordomo tinha voz de condessa'
-                    ],
-                    certa: 0,
-                    dica: 'Releia o começo da página: ele se sente como um pai no primeiro dia de escola do filho.',
-                    porque: 'Como um pai na porta da escola: orgulhoso, e com o coração apertadinho.'
-                },
-                {
-                    tipo: 'lacunas',
-                    pergunta: 'Sancho soltou três ditados de uma vez! Complete um deles com as palavras certas.',
-                    texto: 'Em boca ___ não entra ___.',
-                    respostas: ['fechada', 'mosca'],
-                    distratores: ['aberta', 'abelha', 'comida'],
-                    dica: 'Procure os ditados no quarto parágrafo, logo depois de "Deixe comigo, meu amo".',
-                    porque: 'Quer dizer: quem fica quieto não se mete em encrenca.'
-                },
-                {
-                    tipo: 'ligar',
-                    pergunta: 'Ligue cada conselho de Dom Quixote ao motivo dele.',
-                    pares: [
-                        ['Não comer alho nem cebola', 'para ninguém sentir o cheiro'],
-                        ['Tratar igual rico e pobre', 'para ser justo com todos'],
-                        ['Não arrotar na mesa', 'para ter bons modos'],
-                        ['Não ter vergonha da família', 'porque ser lavrador é honrado']
-                    ],
-                    dica: 'Os conselhos estão no segundo e no terceiro parágrafos. Releia com calma.'
-                }
-            ],
-            sabia: 'Os conselhos de Dom Quixote a Sancho estão nos capítulos 42 e 43 da Segunda Parte do livro de Cervantes, publicada em 1615.'
+  livro: 'dom-quixote',
+  parte: 7,
+  paginas: {
+    // Capítulo 52 — Conselhos para um Governador
+    1: {
+      titulo: 'Conselhos e ditados',
+      selo: '💡',
+      convite: 'Dom Quixote tem conselhos de sobra, e Sancho tem ditados de sobra. Quem tem mais?',
+      etapas: [
+        {
+          tipo: 'classificar',
+          pergunta: 'Mande cada conselho de Dom Quixote para o lugar certo: o que cuida do coração e da cabeça, ou do corpo.',
+          grupos: ['🧠 Coração e cabeça', '🧼 Corpo'],
+          itens: [
+            { texto: 'Não ter vergonha de ser filho de lavradores', grupo: 0 },
+            { texto: 'Tratar do mesmo jeito o rico e o pobre', grupo: 0 },
+            { texto: 'Deixar a justiça de mãos dadas com o perdão', grupo: 0 },
+            { texto: 'Cortar as unhas', grupo: 1 },
+            { texto: 'Não comer alho nem cebola antes das reuniões', grupo: 1 },
+            { texto: 'Não arrotar na mesa', grupo: 1 }
+          ],
+          dica: 'Releia o segundo parágrafo e depois o terceiro, que começa com "conselhos para o corpo".',
+          porque: 'Nem unzinho! Até o arroto entrou na lista.'
         },
-        2: {
-            titulo: 'O tribunal de Barataria',
-            selo: '🎩',
-            convite: 'Cinco chapéus num pano só? Ajude o governador a pensar como um juiz.',
-            etapas: [
-                {
-                    tipo: 'ordenar',
-                    pergunta: 'Ponha o caso dos chapéus na ordem em que aconteceu.',
-                    itens: [
-                        'O lavrador leva um pedaço de pano ao alfaiate.',
-                        'Ele pergunta se dá para um, dois, três, quatro, cinco chapéus.',
-                        'O alfaiate mostra cinco chapeuzinhos, um em cada dedo.',
-                        'Sancho decide: nenhum dos dois ganha nada.'
-                    ],
-                    dica: 'Releia o quarto e o quinto parágrafos: a história vai do pano até a decisão.',
-                    porque: 'Primeiro o pedido, depois a esperteza, a surpresa e, por fim, a decisão do juiz.'
-                },
-                {
-                    tipo: 'classificar',
-                    pergunta: 'Na ilha de Barataria, o que é de verdade e o que é de faz de conta?',
-                    grupos: ['✅ De verdade', '🎭 Faz de conta'],
-                    itens: [
-                        { texto: 'Os sinos tocando e o povo na rua', grupo: 0 },
-                        { texto: 'O mar que "está de folga"', grupo: 1 },
-                        { texto: 'Os cinco chapeuzinhos nos dedos', grupo: 0 },
-                        { texto: 'Barataria ser uma ilha', grupo: 1 },
-                        { texto: 'O caderninho do mordomo', grupo: 0 }
-                    ],
-                    dica: 'Sancho subiu num banquinho e olhou por cima do muro. O que ele viu (e o que não viu)?'
-                },
-                {
-                    tipo: 'enigma',
-                    pergunta: 'O mordomo escreveu no caderninho uma palavra em código. Use a chave e descubra!',
-                    resposta: 'ESPERTO',
-                    extras: 'AB',
-                    cifra: {
-                        mensagem: '🌙🔔⭐🌙🍀🌳🐟',
-                        chave: [['🌙', 'E'], ['🔔', 'S'], ['⭐', 'P'], ['🍀', 'R'], ['🌳', 'T'], ['🐟', 'O']]
-                    },
-                    dica: 'Troque cada desenho pela letra da chave, um por um, da esquerda para a direita.',
-                    porque: '"Este governador não é bobo, não": é esperto!'
-                }
-            ],
-            sabia: 'Cervantes conta que a ilha se chamava Barataria porque o governo saiu "barato" para Sancho: ele ganhou de presente, sem pagar nada.'
+        {
+          tipo: 'ligar',
+          pergunta: 'Ligue o começo ao fim de cada frase. Três são ditados de Sancho; uma é conselho de Dom Quixote.',
+          pares: [
+            ['Quem avisa', 'amigo é'],
+            ['Em boca fechada', 'não entra mosca'],
+            ['Devagar', 'se vai ao longe'],
+            ['A justiça fica mais bonita', 'de mãos dadas com o perdão']
+          ],
+          dica: 'Os ditados estão no quarto parágrafo. O conselho está no segundo.',
+          porque: 'Os ditados saíram todos juntos, feito galinha no galinheiro!'
         },
-        3: {
-            titulo: 'O doutor Tira-Prato',
-            selo: '🧀',
-            convite: 'A varinha do doutor sumiu com o jantar. Você lembra de tudo o que aconteceu?',
-            etapas: [
-                {
-                    tipo: 'erro',
-                    pergunta: 'O mordomo anotou a história errado! Toque nas 3 palavras trocadas.',
-                    texto: 'O doutor tocava os pratos com uma [[colher|varinha]], e um criado levava a comida. Sancho expulsou o doutor e jantou pão, queijo, [[alface|cebola]] e um cacho de [[bananas|uvas]].',
-                    dica: 'Releia o primeiro e o último parágrafos da página.',
-                    porque: 'Varinha, cebola e uvas: agora o caderninho está certo!'
-                },
-                {
-                    tipo: 'quiz',
-                    pergunta: 'Quando Sancho diz que vai pegar a cadeira e "se sentar nela muito bravo", o que ele faz?',
-                    opcoes: [
-                        'Uma brincadeira: parece uma ameaça, mas ele só vai se sentar',
-                        'Uma ameaça de verdade de bater no doutor',
-                        'Um pedido de cadeira nova',
-                        'Um ditado antigo de cavaleiro'
-                    ],
-                    certa: 0,
-                    dica: 'Leia a frase até o fim: o que ele faria com a cadeira?',
-                    porque: 'O doutor levou um susto à toa: Sancho é bravo, mas é de paz.'
-                }
-            ],
-            sabia: 'No livro de Cervantes, o doutor se chama Pedro Recio de Tirteafuera. Tirteafuera é uma aldeia de verdade, na Espanha, e o nome soa como "tire-se para fora"!'
-        },
-        9: {
-            titulo: 'O governador volta à estrada',
-            selo: '🕊️',
-            convite: 'Recapitule a Parte 7 e ganhe o último selo.',
-            etapas: [
-                {
-                    tipo: 'quiz',
-                    pergunta: 'O que a duquesa quis dizer com "a ilha era de faz de conta, mas a sua sabedoria era de verdade"?',
-                    opcoes: [
-                        'Que a ilha foi inventada, mas Sancho governou bem de verdade',
-                        'Que Sancho também era de faz de conta',
-                        'Que a ilha ia virar de verdade no ano seguinte',
-                        'Que o mar ia voltar da folga'
-                    ],
-                    certa: 0,
-                    dica: 'Pense no caderninho do mordomo: o que estava anotado nele?'
-                }
-            ],
-            sabia: 'A fala de Dom Quixote sobre a liberdade abre o capítulo 58 da Segunda Parte e é um dos trechos mais famosos do livro.'
+        {
+          tipo: 'quiz',
+          pergunta: 'Sancho diz que os ditados "moram na minha boca" e saem "feito galinha quando abrem o galinheiro". O que ele quer dizer?',
+          opcoes: [
+            'Que os ditados saem sem ele ter tempo de escolher',
+            'Que ele guarda galinhas dentro da boca',
+            'Que os ditados só aparecem de manhã cedo',
+            'Que ele decorou todos para o governo'
+          ],
+          certa: 0,
+          dica: 'Releia o quarto parágrafo: Dom Quixote reclamou de quantos ditados de uma vez?',
+          porque: 'Abriu a porta, saiu tudo de uma vez, e ninguém segura!'
         }
+      ],
+      sabia: 'No livro de Cervantes, Dom Quixote dá estes conselhos a Sancho nos capítulos 42 e 43 do segundo volume, que saiu em 1615.'
+    },
+
+    // Capítulo 53 — A Ilha sem Mar
+    2: {
+      titulo: 'O juiz e os chapeuzinhos',
+      selo: '🎩',
+      convite: 'Cinco chapéus do tamanho de um dedo! Pense como um juiz: quem errou?',
+      etapas: [
+        {
+          tipo: 'lacunas',
+          pergunta: 'Complete o resumo do caso com as palavras certas.',
+          texto: 'O lavrador foi pedindo um ___, depois dois, até ___ chapéus. O alfaiate fez todos do tamanho da ponta do ___.',
+          respostas: ['chapéu', 'cinco', 'dedo'],
+          distratores: ['casaco', 'dez', 'nariz'],
+          dica: 'Releia o quarto parágrafo, a conversa do lavrador com o alfaiate.',
+          porque: 'Cinco chapéus, e nenhum cabia em cabeça de gente!'
+        },
+        {
+          tipo: 'quiz',
+          pergunta: 'Sancho diz: "Um quis ser mais esperto que o outro, e os dois se deram mal." O que cada um perdeu?',
+          opcoes: [
+            'O lavrador perdeu o pano, e o alfaiate perdeu o pagamento',
+            'O lavrador perdeu o chapéu, e o alfaiate perdeu a tesoura',
+            'Os dois perderam a vaga de governador',
+            'Os dois perderam a vergonha'
+          ],
+          certa: 0,
+          dica: 'Releia a decisão de Sancho, no último parágrafo da página.',
+          porque: 'E os chapeuzinhos foram parar nas bonecas das crianças. Ninguém saiu sem nada!'
+        },
+        {
+          tipo: 'enigma',
+          pergunta: 'Sancho disse que um quis ser mais ___ que o outro. Troque os desenhos pelas letras da chave e descubra a palavra.',
+          resposta: 'ESPERTO',
+          extras: 'AB',
+          cifra: {
+            mensagem: '🌙🔔⭐🌙🍀🌳🐟',
+            chave: [['🌙', 'E'], ['🔔', 'S'], ['⭐', 'P'], ['🍀', 'R'], ['🌳', 'T'], ['🐟', 'O']]
+          },
+          dica: 'Releia a decisão de Sancho: a palavra vem logo depois de "mais".',
+          porque: 'Esperto demais acaba se enrolando na própria linha!'
+        }
+      ],
+      sabia: 'No livro de Cervantes, Barataria é só uma vila, e fica em terra firme. O nome lembra a palavra "barato": o governo saiu de graça para Sancho.'
+    },
+
+    // Capítulo 54 — O Doutor Tira-Prato
+    3: {
+      titulo: 'As desculpas do doutor',
+      selo: '🥄',
+      convite: 'Fruta molhada, frango seco, coelho peludo! Será que você pega o doutor no pulo?',
+      etapas: [
+        {
+          tipo: 'ligar',
+          pergunta: 'Ligue cada comida à desculpa que o doutor deu para tirá-la do prato.',
+          pares: [
+            ['Fruta', 'é muito molhada'],
+            ['Frango', 'é muito seco'],
+            ['Coelho', 'tem pelo'],
+            ['Cozido', 'tem tempero demais']
+          ],
+          dica: 'Releia o terceiro parágrafo, a fala do doutor.',
+          porque: 'Molhada, seca, peluda e temperada: sobraram as bolachinhas!'
+        },
+        {
+          tipo: 'erro',
+          pergunta: 'O mordomo anotou tudo trocado no caderninho! Toque nas 3 palavras erradas para corrigir.',
+          texto: 'O doutor tocava os pratos com uma [[colher|varinha]]. Sancho mandou o doutor embora e pediu pão, cebola e [[chocolate|queijo]]. O doutor se dizia Pedro Rezio, da aldeia de [[Tiralonge|Tirafora]].',
+          dica: 'Releia o primeiro parágrafo e o quarto, o da resposta de Sancho.',
+          porque: 'Tirafora, sim: de onde o doutor foi mandado embora!'
+        }
+      ],
+      sabia: 'No original, a terra do doutor se chama Tirteafuera, e Cervantes faz uma brincadeira com isso: o nome parece "tire-se para fora"!'
+    },
+
+    // Capítulo 55 — O Velhinho Espertinho
+    4: {
+      titulo: 'O caso da bengala',
+      selo: '⚖️',
+      convite: 'Dez moedas sumiram e ninguém viu nada. Que pista resolve o caso?',
+      etapas: [
+        {
+          tipo: 'quiz',
+          pergunta: 'Que pista fez Sancho desconfiar do velhinho da bengala?',
+          opcoes: [
+            'Ele pediu ao vizinho que segurasse a bengala só na hora de jurar',
+            'Ele jurou em voz muito alta',
+            'Ele saiu de cabeça baixa',
+            'A bengala dele era grossa e de madeira'
+          ],
+          certa: 0,
+          dica: 'Releia o que Sancho pensa em voz alta, no quarto parágrafo.',
+          porque: 'Quem segura a bengala na hora do juramento? Aí tem coisa!'
+        },
+        {
+          tipo: 'ordenar',
+          pergunta: 'Ponha na ordem a trapaça do velhinho, do começo até o CLEC!',
+          itens: [
+            'Ele pede ao vizinho que segure a bengala por um instante',
+            'Com a mão no peito, jura que entregou as moedas nas mãos dele',
+            'Ele pega a bengala de volta e sai bem tranquilo',
+            'Sancho manda chamá-lo e pede a bengala',
+            'A bengala se abre e as dez moedas rolam pelo chão'
+          ],
+          dica: 'Releia o segundo parágrafo e depois o quarto e o quinto.',
+          porque: 'Quase deu certo. Sancho só precisava de uma bengala e de uma boa pergunta.'
+        },
+        {
+          tipo: 'lacunas',
+          pergunta: 'O caso da ponte é um nó! Complete para ver por que ele não tem saída fácil.',
+          texto: 'O homem disse: "Eu vou para a ___". Se passasse pela ponte, teria ___; se fosse preso, teria dito a ___.',
+          respostas: ['cadeia', 'mentido', 'verdade'],
+          distratores: ['feira', 'vencido'],
+          dica: 'Releia o último parágrafo e a lei da ponte: quem diz a verdade passa; quem mente vai para a cadeia.',
+          porque: 'Sem saída certa, Sancho escolheu perdoar, como o amo ensinou.'
+        }
+      ],
+      sabia: 'O caso da ponte é um paradoxo: uma situação em que qualquer resposta parece contradizer a outra. O desafio é um dos julgamentos de Sancho no livro de Cervantes.'
+    },
+
+    // Capítulo 56 — O Colar de Corais
+    5: {
+      titulo: 'Notícias na aldeia',
+      selo: '📿',
+      convite: 'A carta chega com colar e tudo. Mas tem alguém que está prestando atenção demais...',
+      etapas: [
+        {
+          tipo: 'enigma',
+          pergunta: 'Quem sou eu? Sou o moço que leva recados do palácio e chega a cavalo, de chapéu na mão.',
+          resposta: 'PAJEM',
+          extras: 'LT',
+          dica: 'A palavra vem em letras grandes e explicada no começo da página.',
+          porque: 'Um entregador de recados com chapéu e cavalo!'
+        },
+        {
+          tipo: 'classificar',
+          pergunta: 'Mande cada coisa para o lugar de onde ela veio.',
+          grupos: ['🏰 Veio do palácio', '🏡 Saiu da aldeia'],
+          itens: [
+            { texto: 'O colar de corais', grupo: 0 },
+            { texto: 'A carta para Teresa', grupo: 0 },
+            { texto: 'O moço que trouxe os presentes', grupo: 0 },
+            { texto: 'O queijo para a duquesa', grupo: 1 },
+            { texto: 'As bolotas escolhidas uma por uma', grupo: 1 }
+          ],
+          dica: 'Releia o segundo parágrafo e depois o penúltimo.',
+          porque: 'Cada lado mandou o melhor que tinha!'
+        },
+        {
+          tipo: 'quiz',
+          pergunta: 'Por que Sansão puxou conversa com o pajem "como quem não quer nada"?',
+          opcoes: [
+            'Queria saber por onde Dom Quixote ia passar',
+            'Queria entregar o queijo ao pajem',
+            'Estava com saudade do palácio',
+            'Teresa pediu para ele cuidar da carta'
+          ],
+          certa: 0,
+          dica: 'Releia o último parágrafo: o que Sansão perguntou e o que ele foi pedir emprestado depois?',
+          porque: 'Quem faz uma pergunta "à toa" e depois pede tinta branca está planejando algo.'
+        }
+      ],
+      sabia: 'Coral é, na verdade, formado por pequenos animais do mar. Por isso os colares de coral vermelho eram joias valiosas e raras.'
+    },
+
+    // Capítulo 57 — A Saudade de Dom Quixote
+    6: {
+      titulo: 'Cartas de amigo',
+      selo: '✍️',
+      convite: 'Um cavaleiro e um governador trocam cartas. Em qual delas cada coisa foi dita?',
+      etapas: [
+        {
+          tipo: 'lacunas',
+          pergunta: 'Complete a carta de Dom Quixote a Sancho.',
+          texto: 'Seja bom com os ___. Visite a feira e a ___. E não esqueça de cortar as ___.',
+          respostas: ['pobres', 'padaria', 'unhas'],
+          distratores: ['ricos', 'igreja'],
+          dica: 'Releia o segundo parágrafo, que começa com "Então pegou pena e papel".',
+          porque: 'Até na carta o conselho das unhas apareceu!'
+        },
+        {
+          tipo: 'ordenar',
+          pergunta: 'Ponha na ordem o que aconteceu com as cartas.',
+          itens: [
+            'A meia de Dom Quixote se desfiou e ele ficou sem ter a quem mostrar',
+            'Dom Quixote escreveu a carta para Sancho',
+            'O mordomo leu a carta em voz alta, porque Sancho não lia',
+            'Sancho ditou a resposta, com três Ós no zurro do burrico',
+            'O mordomo avisou que o governador precisava assinar'
+          ],
+          dica: 'Siga os parágrafos do primeiro até o último.',
+          porque: 'Ditar não é fácil: o Ó faltando no zurro seria um desastre!'
+        },
+        {
+          tipo: 'erro',
+          pergunta: 'Este resumo da resposta de Sancho tem 3 palavras erradas. Toque nelas para corrigir!',
+          texto: 'Sancho mandou dizer que governar dá muito [[descanso|trabalho]] e pouca comida. Um [[padre|doutor]] não o deixava jantar. E a lei nova era que o [[queijo|pão]] da ilha fosse grande e barato.',
+          dica: 'Releia o terceiro parágrafo, a resposta que Sancho ditou.',
+          porque: 'Pão grande e barato: a primeira lei do governador Pança!'
+        }
+      ],
+      sabia: 'A palavra "assinar" vem do latim "signum", que quer dizer "sinal": a assinatura é o sinal que cada pessoa deixa no papel.'
+    },
+
+    // Capítulo 58 — O Ataque de Mentira
+    7: {
+      titulo: 'A ilha de mentira',
+      selo: '🐢',
+      convite: 'Gritos, sinos e dois escudos! Sancho entendeu tudo, e agora você também vai entender.',
+      etapas: [
+        {
+          tipo: 'classificar',
+          pergunta: 'Sancho compara a vida de governador com a vida de antes. Mande cada frase para o lugar certo.',
+          grupos: ['🫏 Andando com o burrico', '👑 Depois de governador'],
+          itens: [
+            { texto: 'Os dias eram felizes', grupo: 0 },
+            { texto: 'Só pensava em remendar a sela e encher a barriga do burrico', grupo: 0 },
+            { texto: 'Ganhou mil preocupações', grupo: 1 },
+            { texto: 'Nem um jantar sossegado', grupo: 1 },
+            { texto: 'Acordou no meio da noite com sinos e tambores', grupo: 1 }
+          ],
+          dica: 'Releia o quarto parágrafo, a conversa de Sancho com o burrico.',
+          porque: 'Para Sancho, felicidade era um burrico de barriga cheia.'
+        },
+        {
+          tipo: 'enigma',
+          pergunta: 'Preso entre dois escudos, Sancho ficou balançando de barriga para cima, feito um bicho de casco. Que bicho?',
+          resposta: 'TARTARUGA',
+          extras: 'MS',
+          dica: 'A palavra aparece em letras grandes no segundo parágrafo.',
+          porque: 'Uma tartaruga de touca, imagine a cena!'
+        },
+        {
+          tipo: 'quiz',
+          pergunta: 'Por que Sancho disse "Eu sabia!" ao olhar para os pés do mordomo?',
+          opcoes: [
+            'Reconheceu as botas da condessa barbuda, e a voz também combinava',
+            'Viu que as botas do mordomo eram novas',
+            'Percebeu que o mordomo estava com frio',
+            'Achou que as botas eram do governador'
+          ],
+          certa: 0,
+          dica: 'Releia o último parágrafo e lembre da voz grossa de que Sancho já desconfiava na página dos conselhos.',
+          porque: 'Botas de homem na condessa e voz grossa no mordomo: só podia ser a mesma pessoa!'
+        }
+      ],
+      sabia: 'No livro de Cervantes, ao deixar o governo, Sancho diz que nasceu sem nada e sai sem nada: "nem perco nem ganho".'
+    },
+
+    // Capítulo 59 — A Voz no Buraco
+    8: {
+      titulo: 'Quem reconheceu quem',
+      selo: '🕳️',
+      convite: 'Um cheiro, um zurro e uma voz fraquinha. Quem foi o primeiro a reconhecer o amigo?',
+      etapas: [
+        {
+          tipo: 'lacunas',
+          pergunta: 'Complete a frase com as palavras certas.',
+          texto: 'Dom Quixote achou que a voz era de um ___, porque Sancho devia estar governando uma ___. Só se convenceu ao ouvir o ___ do burrico.',
+          respostas: ['fantasma', 'ilha', 'zurro'],
+          distratores: ['gigante', 'floresta', 'relincho'],
+          dica: 'Releia o terceiro e o quarto parágrafos.',
+          porque: 'Fantasma nenhum zurra assim: IIIH-ÓÓÓ!'
+        },
+        {
+          tipo: 'ligar',
+          pergunta: 'Ligue cada um ao que fez nesta página.',
+          pares: [
+            ['Rocinante', 'sentiu o cheiro do amigo'],
+            ['Dom Quixote', 'reconheceu o zurro'],
+            ['Sancho', 'repartiu o pão com o burrico'],
+            ['Os criados', 'puxaram os dois com cordas']
+          ],
+          dica: 'Releia a página do começo ao fim, uma ação por parágrafo.',
+          porque: 'Cada um fez a sua parte no resgate!'
+        },
+        {
+          tipo: 'quiz',
+          pergunta: 'Sancho diz: "Governei uma ilha inteirinha e não tinha a quem dizer um ditado." O que isso mostra?',
+          opcoes: [
+            'Que ele sentiu falta de Dom Quixote para conversar',
+            'Que ele esqueceu todos os ditados',
+            'Que a ilha não tinha ninguém para ouvir',
+            'Que ele queria governar de novo'
+          ],
+          certa: 0,
+          dica: 'Releia a última fala de Dom Quixote: ele também sentiu falta de contar algo. Do quê?',
+          porque: 'Um com a meia rasgada, o outro com os ditados guardados: os dois sentiam saudade.'
+        }
+      ],
+      sabia: 'No livro de Cervantes, o burrico de Sancho se chama Rucio, palavra que quer dizer de cor parda, entre cinza e marrom. Em português, "ruço" ainda quer dizer isso.'
+    },
+
+    // Capítulo 60 — A Despedida do Palácio (recapitulação da parte)
+    9: {
+      titulo: 'Recapitulando a Parte 7',
+      selo: '🕊️',
+      convite: 'Dos chapeuzinhos ao buraco, de Barataria à estrada: o que ficou na sua memória de juiz?',
+      etapas: [
+        {
+          tipo: 'ordenar',
+          pergunta: 'Ponha na ordem estes momentos da Parte 7.',
+          itens: [
+            'Sancho julgou o caso dos cinco chapeuzinhos',
+            'O doutor Rezio foi mandado embora da mesa',
+            'Sancho descobriu a bengala com as moedas',
+            'O ataque de mentira acordou a ilha no meio da noite',
+            'Sancho e o burrico caíram num buraco fundo'
+          ],
+          dica: 'Siga a ordem das páginas: tribunal, mesa, bengala, ataque e buraco.',
+          porque: 'Em dez dias, que governo!'
+        },
+        {
+          tipo: 'classificar',
+          pergunta: 'Mande cada coisa da Parte 7 para o lugar certo: era de faz de conta ou de verdade?',
+          grupos: ['🎭 Faz de conta', '💛 De verdade'],
+          itens: [
+            { texto: 'Barataria ser uma ilha', grupo: 0 },
+            { texto: 'O mar que estava "de folga"', grupo: 0 },
+            { texto: 'O ataque dos inimigos', grupo: 0 },
+            { texto: 'A sabedoria de Sancho', grupo: 1 },
+            { texto: 'A saudade dos dois amigos', grupo: 1 },
+            { texto: 'O zurro do burrico no buraco', grupo: 1 }
+          ],
+          dica: 'Releia o segundo parágrafo da última página, a conversa de Sancho com a duquesa.',
+          porque: 'A ilha era de mentira, mas o amigo e o zurro eram de verdade.'
+        },
+        {
+          tipo: 'quiz',
+          pergunta: 'Dom Quixote diz: "A ilha era de mentira. Mas o governador foi de verdade." O que ele quer dizer?',
+          opcoes: [
+            'Que Sancho governou com sabedoria, mesmo numa ilha inventada',
+            'Que Sancho também era de faz de conta',
+            'Que a ilha virou de verdade depois',
+            'Que o duque não existia'
+          ],
+          certa: 0,
+          dica: 'Releia a conversa com a duquesa: ela diz que algo "era de verdade".',
+          porque: 'O que Sancho fez de bom foi de verdade, mesmo com o cenário de teatro.'
+        }
+      ],
+      sabia: 'A fala de Dom Quixote sobre a liberdade é um dos trechos mais famosos do livro. Cervantes foi prisioneiro por vários anos em Argel, na África, e conhecia bem o valor de ser livre.'
     }
+  }
 };
