@@ -328,3 +328,13 @@ O que já foi entregue, sprint a sprint, em ordem cronológica (o mais antigo pr
 
 - Revisão de fidelidade das Partes 5 a 8 contra o texto espanhol (`docs/revisao/FIDELIDADE-VOLUME-2.md`; notas 9,0 · 8,5 · 8,5 · 8,0). Aplicadas a pedido do humano: Gaiferos, gansos, piolhos, Miculoso, dez dias de governo, o fato falso sobre o nome de Cervantes no primeiro livro e **o caso da ponte** (II-51) no cap. 55, com Sancho escolhendo o perdão. As decisões de sentido ficaram no §10 de cada caderno e no `BACKLOG.md`.
 - **Conserto**: as ilustrações reaproveitadas da Parte 4 antiga não apareciam nos rascunhos das Partes 6 a 8 (caminho `../acervo/...`, que sai da pasta do livro); agora `./imagens/acervo/...`, como na Parte 4.
+
+## ✅ Parte 6 de Dom Quixote ilustrada e publicada (2026-11-13)
+
+- **Arte híbrida com 3 subagentes paralelos + API Batch**:
+  - Ficha nova criada sem custo de API: `dom-quixote/biblioteca/referencias/personagens/primo-estudante.png`.
+  - 9 cenas geradas em paralelo sem API (`image-generator`, até a cota diária se esgotar): `p0-real`, `p1-real`, `p2-real`, `p3-real`, `p4-real`, `p6-real`, `p7-real`, `p7-imag`, `p8-real`.
+  - Com autorização do humano no prompt, a lista `tools/arte/dom-quixote-parte-6.mjs` concluiu em 3 lotes Batch (Nano Banana 2) as 9 ilustrações restantes + 2 retoques (`p0-imag`, `p3-imag-v3`, `p5-real-v2`, `p5-imag`, `p5-rei`, `p5-cavalo`, `p5-torre`, `p6-imag`, `p8-imag`), totalizando **US$ 0,3472** registrados em `docs/arte/gastos.csv`.
+  - Bonecos recortados em fundo `#FF00FF` via `tools/recortar-camada.py` (`p5-rei.webp`, `p5-cavalo.webp`, `p5-torre.webp`) e ajustados no palco do teatrinho de Mestre Pedro (`dom-quixote/parte-6.html`, pág. 5).
+  - As 5 artes reaproveitadas de Clavilenho (pág. 9) foram copiadas de `imagens/acervo/parte-4-v1/p3-*` para `imagens/parte-6/p9-*` e `camadas/p9-*` para entrar no `sw.js` e no botão offline.
+- **Publicação na estante**: `rascunho: true` removido de `dom-quixote/parte-6.html`; `parte-5.html` ligada à Parte 6; Parte 6 desbloqueada no Volume 2 da `index.html`, listada no acervo de `sobre.html` + `assets/js/i18n-site.js` (4 idiomas), removida de `assets/js/acervo.js`, `npm run build` atualizado e Playwright validado em retrato e paisagem. Falta a narração (fase 6) e as traduções (fase 7).

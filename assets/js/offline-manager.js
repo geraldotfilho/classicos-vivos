@@ -5,7 +5,7 @@
 (function() {
     'use strict';
 
-    const VERSAO_ATUAL = '045ab731c8a1';
+    const VERSAO_ATUAL = '9e55595426cd';
     const PREFIXO_CACHE = 'cv-volume-quixote-';
     const PREFIXO_STORAGE = 'cv-offline-quixote-';
 
@@ -287,6 +287,54 @@
         "./dom-quixote/imagens/parte-5/p9-real-stage-4.webp",
         "./dom-quixote/imagens/parte-5/p9-real.webp",
         "./dom-quixote/parte-5.html"
+    ],
+    "6": [
+        "./assets/icones/icone-192.png",
+        "./assets/css/fonts.css",
+        "./assets/css/icons.css",
+        "./assets/css/livro.css",
+        "./assets/css/tailwind.css",
+        "./assets/fonts/fredoka-latin-400-normal.woff2",
+        "./assets/fonts/fredoka-latin-500-normal.woff2",
+        "./assets/fonts/fredoka-latin-600-normal.woff2",
+        "./assets/fonts/fredoka-latin-700-normal.woff2",
+        "./assets/fonts/nunito-latin-400-normal.woff2",
+        "./assets/fonts/nunito-latin-600-normal.woff2",
+        "./assets/fonts/nunito-latin-700-normal.woff2",
+        "./assets/fonts/nunito-latin-800-normal.woff2",
+        "./assets/fonts/nunito-latin-900-normal.woff2",
+        "./assets/icones/bandeiras/br.svg",
+        "./assets/icones/bandeiras/es.svg",
+        "./assets/icones/bandeiras/fr.svg",
+        "./assets/icones/bandeiras/gb.svg",
+        "./assets/js/acervo.js",
+        "./assets/js/i18n-site.js",
+        "./assets/js/livro.js",
+        "./assets/js/texto.js",
+        "./dom-quixote/imagens/parte-6/camadas/p5-cavalo.webp",
+        "./dom-quixote/imagens/parte-6/camadas/p5-rei.webp",
+        "./dom-quixote/imagens/parte-6/camadas/p5-torre.webp",
+        "./dom-quixote/imagens/parte-6/camadas/p9-calor-tocha.webp",
+        "./dom-quixote/imagens/parte-6/camadas/p9-clavilenho.webp",
+        "./dom-quixote/imagens/parte-6/camadas/p9-vento-fole.webp",
+        "./dom-quixote/imagens/parte-6/p0-imag.webp",
+        "./dom-quixote/imagens/parte-6/p0-real.webp",
+        "./dom-quixote/imagens/parte-6/p1-real.webp",
+        "./dom-quixote/imagens/parte-6/p2-real.webp",
+        "./dom-quixote/imagens/parte-6/p3-imag.webp",
+        "./dom-quixote/imagens/parte-6/p3-real.webp",
+        "./dom-quixote/imagens/parte-6/p4-real.webp",
+        "./dom-quixote/imagens/parte-6/p5-imag.webp",
+        "./dom-quixote/imagens/parte-6/p5-real.webp",
+        "./dom-quixote/imagens/parte-6/p6-imag.webp",
+        "./dom-quixote/imagens/parte-6/p6-real.webp",
+        "./dom-quixote/imagens/parte-6/p7-imag.webp",
+        "./dom-quixote/imagens/parte-6/p7-real.webp",
+        "./dom-quixote/imagens/parte-6/p8-imag.webp",
+        "./dom-quixote/imagens/parte-6/p8-real.webp",
+        "./dom-quixote/imagens/parte-6/p9-imag.webp",
+        "./dom-quixote/imagens/parte-6/p9-real.webp",
+        "./dom-quixote/parte-6.html"
     ]
 };
 

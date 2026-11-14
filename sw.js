@@ -6,9 +6,10 @@
    - Narração gravada (*.mp3 e as marcas *.json em audio/): rede primeiro, para frases regravadas chegarem ao tablet;
      cada arquivo fica num cache próprio (que sobrevive às novas versões) e toca offline depois.
    - Demais arquivos: cache primeiro (abre instantâneo no tablet). */
-const CACHE = 'classicos-vivos-045ab731c8a1';
+const CACHE = 'classicos-vivos-9e55595426cd';
 const CACHE_AUDIO = 'cv-narracao';
 const FILES = [
+    "./assets/icones/icone-192.png",
     "./assets/css/fonts.css",
     "./assets/css/icons.css",
     "./assets/css/livro.css",
@@ -26,7 +27,6 @@ const FILES = [
     "./assets/icones/bandeiras/es.svg",
     "./assets/icones/bandeiras/fr.svg",
     "./assets/icones/bandeiras/gb.svg",
-    "./assets/icones/icone-192.png",
     "./assets/js/acervo.js",
     "./assets/js/contador.js",
     "./assets/js/i18n-site.js",
@@ -174,6 +174,29 @@ const FILES = [
     "./dom-quixote/imagens/parte-5/p9-real-stage-3.webp",
     "./dom-quixote/imagens/parte-5/p9-real-stage-4.webp",
     "./dom-quixote/imagens/parte-5/p9-real.webp",
+    "./dom-quixote/imagens/parte-6/camadas/p5-cavalo.webp",
+    "./dom-quixote/imagens/parte-6/camadas/p5-rei.webp",
+    "./dom-quixote/imagens/parte-6/camadas/p5-torre.webp",
+    "./dom-quixote/imagens/parte-6/camadas/p9-calor-tocha.webp",
+    "./dom-quixote/imagens/parte-6/camadas/p9-clavilenho.webp",
+    "./dom-quixote/imagens/parte-6/camadas/p9-vento-fole.webp",
+    "./dom-quixote/imagens/parte-6/p0-imag.webp",
+    "./dom-quixote/imagens/parte-6/p0-real.webp",
+    "./dom-quixote/imagens/parte-6/p1-real.webp",
+    "./dom-quixote/imagens/parte-6/p2-real.webp",
+    "./dom-quixote/imagens/parte-6/p3-imag.webp",
+    "./dom-quixote/imagens/parte-6/p3-real.webp",
+    "./dom-quixote/imagens/parte-6/p4-real.webp",
+    "./dom-quixote/imagens/parte-6/p5-imag.webp",
+    "./dom-quixote/imagens/parte-6/p5-real.webp",
+    "./dom-quixote/imagens/parte-6/p6-imag.webp",
+    "./dom-quixote/imagens/parte-6/p6-real.webp",
+    "./dom-quixote/imagens/parte-6/p7-imag.webp",
+    "./dom-quixote/imagens/parte-6/p7-real.webp",
+    "./dom-quixote/imagens/parte-6/p8-imag.webp",
+    "./dom-quixote/imagens/parte-6/p8-real.webp",
+    "./dom-quixote/imagens/parte-6/p9-imag.webp",
+    "./dom-quixote/imagens/parte-6/p9-real.webp",
     "./dom-quixote/parte-1.html",
     "./dom-quixote/parte-2.html",
     "./dom-quixote/parte-3.html",

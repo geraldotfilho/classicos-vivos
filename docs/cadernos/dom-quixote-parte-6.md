@@ -1,14 +1,18 @@
 # Caderno — Dom Quixote, Parte 6: O Teatrinho, o Barco e o Cavalo Voador
-Arquivo: `dom-quixote/parte-6.html` (rascunho: **sim**) · Trecho do original: 1615, caps. 18–41 · Nossos capítulos: 43–51 (capa + 9 páginas)
+Arquivo: `dom-quixote/parte-6.html` (**publicada** em 2026-11-13, sem narração gravada e só em português) · Trecho do original: 1615, caps. 18–41 · Nossos capítulos: 43–51 (capa + 9 páginas)
 Plano: [`../PLANO-DOM-QUIXOTE-VOLUME-2.md`](../PLANO-DOM-QUIXOTE-VOLUME-2.md) · Regras: [`../DIRETRIZES_VOL2.md`](../DIRETRIZES_VOL2.md)
 
 | Fase | Situação | Data | Gasto |
 | :--- | :--- | :--- | :--- |
 | 1 Adaptação e texto | ✅ | 2026-11-12 | — |
-| 2 Interações e visual | ✅ (lista de arte `.mjs` fica para a fase 4) | 2026-11-12 | — |
+| 2 Interações e visual | ✅ | 2026-11-12 | — |
 | Crítica adversarial (subagente de contexto limpo) + polimento | ✅ | 2026-11-12 | — |
-| 3 Revisão humana 🛑 | **esperando o humano** | | — |
-| 4 a 8 | ⬜ | | |
+| 3 Revisão humana 🛑 | ⏭️ publicada a pedido do humano antes de notas formais | | — |
+| 4 Arte (18 WebPs novos + 5 reaproveitados da P4 v1) | ✅ | 2026-11-13 | US$ 0,3472 |
+| 5 Revisão final 🛑 | ⏭️ pendente para leitura em família | | — |
+| 6 Narração | ⬜ | | — |
+| 7 Traduções | ⬜ | | — |
+| 8 Retrospectiva | ⬜ | | — |
 
 ## 0. Onde a Parte 5 termina
 Depois do leão, Dom Diego convida os dois para descansar na casa dele; Sancho pergunta: "Lá tem requeijão?". Fica aberto: quem escreveu o livro (até a Parte 8) e a promessa de Sansão de tentar de novo (Parte 8). A Parte 6 abre respondendo: "Na casa de Dom Diego tinha requeijão, sim."
@@ -65,3 +69,15 @@ Notas de 6 a 8 por página. Aceito: o apelido novo é dito na pousada antes de o
 
 ## 10. Revisão de fidelidade a Cervantes (2026-11-13, nota 8,5)
 Relatório: [`../revisao/FIDELIDADE-VOLUME-2.md`](../revisao/FIDELIDADE-VOLUME-2.md). **Aplicado a pedido do humano**: "Gaifeiros" → Gaiferos (cap. 47, II-26); "dois patos" → dois gansos (cap. 44, II-20); "pulgas" → piolhos (cap. 48, II-29: *piojos*; e o emoji de barata saiu). A resposta de Sancho ao Primo chegou a ser trocada pela de Cervantes (II-22: "o primeiro a dar cambalhota foi Lúcifer, caindo do céu"), mas o humano vetou no mesmo dia: falar em Lúcifer não é apropriado para o público. Voltou a nossa ("a primeira que saiu na chuva sem chapéu"), declarada como adaptação.
+
+## 6. Arte (2026-11-13)
+- **Organização paralela**: 3 grupos em paralelo com referências compartilhadas (`primo-estudante.png`, criada em `dom-quixote/biblioteca/referencias/personagens/`, mais o acervo do Volume 1 e da Parte 5):
+  - **Grupo A (págs. 0–3)**, **Grupo B (págs. 4–6)** e **Grupo C (págs. 7–9)** iniciaram pelo gerador nativo do Antigravity (sem custo de API), entregando 9 cenas (`p0-real`, `p1-real`, `p2-real`, `p3-real`, `p4-real`, `p6-real`, `p7-real`, `p7-imag`, `p8-real`) antes do limite diário de cota.
+  - **API Batch autorizada pelo humano (`tools/arte/dom-quixote-parte-6.mjs`, Nano Banana 2)**: completou as 9 imagens faltantes e 2 correções em 3 lotes (**11 imagens entregues, total US$ 0,3472** registrados em `docs/arte/gastos.csv`):
+    - Lote 1 (`US$ 0,1742`, 5/5): `p0-imag`, `p3-imag`, `p5-real`, `p6-imag`, `p8-imag`.
+    - Lote 2 (`US$ 0,1385`, 5/6): `p5-imag`, `p5-real-v2` (removeu cabo extra na cintura e cauda solta do macaco), `p5-rei`, `p5-cavalo`, `p5-torre` (`p3-imag-v2` retornou `NO_IMAGE`).
+    - Lote 3 (`US$ 0,0345`, 1/1): `p3-imag-v3` (Palácio de Cristal subterrâneo sem Sancho nem o Primo no penhasco).
+- **Recortes e ajustes no HTML**:
+  - Os três bonecos da pág. 5 (`p5-rei`, `p5-cavalo`, `p5-torre`) foram recortados de `#FF00FF` via `tools/recortar-camada.py` e posicionados dentro da boca de cena do palquinho em `dom-quixote/parte-6.html` (`x: 34.5 / 42.5 / 51.5`, `y: 63.5`, `w: 5.5 / 9.0 / 5.8`), com `figura` ativada nos cartões.
+  - As 5 artes reaproveitadas da Parte 4 v1 na pág. 9 (Clavilenho) foram copiadas para `dom-quixote/imagens/parte-6/p9-*.webp` e `camadas/p9-*.webp` para entrar no `sw.js` e no botão offline.
+- **Publicação**: 23 arquivos WebP na pasta da parte (17 cenas + 6 camadas). Falta gravar a narração (fase 6) e traduzir (fase 7).

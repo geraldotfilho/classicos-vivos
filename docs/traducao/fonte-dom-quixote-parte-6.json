@@ -62,7 +62,8 @@
           {
             "id": "rei",
             "palavra": "REI",
-            "emoji": "👑"
+            "emoji": "👑",
+            "figura": "camadas/p5-rei.webp"
           },
           {
             "id": "cabelo",
@@ -73,7 +74,8 @@
           {
             "id": "torre",
             "palavra": "TORRE",
-            "emoji": "🗼"
+            "emoji": "🗼",
+            "figura": "camadas/p5-torre.webp"
           },
           {
             "id": "rio",
@@ -84,7 +86,8 @@
           {
             "id": "cavalo",
             "palavra": "CAVALO",
-            "emoji": "🐴"
+            "emoji": "🐴",
+            "figura": "camadas/p5-cavalo.webp"
           }
         ]
       }
@@ -164,13 +167,13 @@
             "id": "fole",
             "palavra": "FOLE",
             "emoji": "💨",
-            "figura": "./imagens/acervo/parte-4-v1/camadas/p3-vento-fole.webp"
+            "figura": "camadas/p9-vento-fole.webp"
           },
           {
             "id": "tocha",
             "palavra": "TOCHA",
             "emoji": "🔥",
-            "figura": "./imagens/acervo/parte-4-v1/camadas/p3-calor-tocha.webp"
+            "figura": "camadas/p9-calor-tocha.webp"
           },
           {
             "id": "folha",
@@ -390,13 +393,13 @@
       ]
     },
     {
-      "texto": "🎠 Fim da Parte 6! A ilha de Sancho finalmente chegou. Mas que ilha será essa? E de quem é aquela voz grossa que vive aparecendo no palácio?",
+      "texto": "🎠 Fim da Parte 6! A ilha de Sancho finalmente chegou. Mas que ilha será essa? E de quem é aquela voz grossa que vive aparecendo no palácio? A Parte 7 está sendo preparada.",
       "onde": [
         "mensagem do fim da parte"
       ]
     },
     {
-      "texto": "Ler a Parte 7 (rascunho)",
+      "texto": "Voltar à estante",
       "onde": [
         "botão para a próxima parte"
       ]

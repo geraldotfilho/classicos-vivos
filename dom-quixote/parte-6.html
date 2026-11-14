@@ -22,21 +22,20 @@
     /* =========================================================================
        DOM QUIXOTE DE LA MANCHA — PARTE 6: O TEATRINHO, O BARCO E O CAVALO VOADOR
        Adaptação de Cervantes, Segunda Parte (1615), capítulos 18 a 41.
-       RASCUNHO (fases 1 e 2, 2026-11-12): texto e atividades para a leitura do humano;
-       ilustrações, hotspots e narração só depois da aprovação (docs/cadernos/dom-quixote-parte-6.md).
-       A página do Clavilenho reaproveita a arte da Parte 4 antiga (imagens/acervo/parte-4-v1/).
+       Texto e atividades: 2026-11-12; ilustrações (subagentes + API Nano Banana 2, Batch) e publicação: 2026-11-13,
+       a pedido do humano. Ainda sem narração gravada (voz do aparelho) e só em português
+       (docs/cadernos/dom-quixote-parte-6.md).
        ========================================================================= */
     window.LIVRO = {
         obra: 'Dom Quixote de La Mancha',
         autor: 'Miguel de Cervantes',
         parte: 6,
         totalPartes: 8,
-        rascunho: true,
         imagens: './imagens/parte-6/',
         fim: {
-            mensagem: '🎠 Fim da Parte 6! A ilha de Sancho finalmente chegou. Mas que ilha será essa? E de quem é aquela voz grossa que vive aparecendo no palácio?',
-            proxima: './parte-7.html',
-            proximaRotulo: 'Ler a Parte 7 (rascunho)'
+            mensagem: '🎠 Fim da Parte 6! A ilha de Sancho finalmente chegou. Mas que ilha será essa? E de quem é aquela voz grossa que vive aparecendo no palácio? A Parte 7 está sendo preparada.',
+            proxima: '../index.html',
+            proximaRotulo: 'Voltar à estante'
         },
         paginas: [
             {
@@ -150,9 +149,9 @@
                     legendaReal: '👓 Lente da Realidade: Bonecos de Pano e Papelão',
                     legendaImag: '✨ Lente da Imaginação: A Grande Batalha para Salvar a Princesa!',
                     camadas: [
-                        { id: 'rei', src: 'camadas/p5-rei.webp', emoji: '👑', item: 'rei', x: 38, y: 60, w: 9 },
-                        { id: 'cavalo', src: 'camadas/p5-cavalo.webp', emoji: '🐴', item: 'cavalo', x: 50, y: 60, w: 10 },
-                        { id: 'torre', src: 'camadas/p5-torre.webp', emoji: '🗼', item: 'torre', x: 62, y: 60, w: 9 }
+                        { id: 'rei', src: 'camadas/p5-rei.webp', emoji: '👑', item: 'rei', x: 34.5, y: 63.5, w: 5.5 },
+                        { id: 'cavalo', src: 'camadas/p5-cavalo.webp', emoji: '🐴', item: 'cavalo', x: 42.5, y: 63.5, w: 9.0 },
+                        { id: 'torre', src: 'camadas/p5-torre.webp', emoji: '🗼', item: 'torre', x: 51.5, y: 63.5, w: 5.8 }
                     ],
                     cartoes: {
                         tipo: 'pedido',
@@ -160,11 +159,11 @@
                         pedidos: ['rei', 'cavalo', 'torre'],
                         itens: [
                             { id: 'torta', palavra: 'TORTA', emoji: '🥧', pegadinha: 'Torta? Sancho bem que queria! Mas torta não se conserta: se come. Vamos tentar de novo!' },
-                            { id: 'rei', palavra: 'REI', emoji: '👑' /* com a arte: figura: 'camadas/p5-rei.webp' */ },
+                            { id: 'rei', palavra: 'REI', emoji: '👑', figura: 'camadas/p5-rei.webp' },
                             { id: 'cabelo', palavra: 'CABELO', emoji: '💈', pegadinha: 'Cabelo? Boneco não vai ao barbeiro! Mestre Pedro até riu. Vamos tentar de novo!' },
-                            { id: 'torre', palavra: 'TORRE', emoji: '🗼' /* com a arte: figura: 'camadas/p5-torre.webp' */ },
+                            { id: 'torre', palavra: 'TORRE', emoji: '🗼', figura: 'camadas/p5-torre.webp' },
                             { id: 'rio', palavra: 'RIO', emoji: '🌊', pegadinha: 'Rio? Mestre Pedro procurou um rio no teatrinho e só achou o macaco! Vamos tentar de novo!' },
-                            { id: 'cavalo', palavra: 'CAVALO', emoji: '🐴' /* com a arte: figura: 'camadas/p5-cavalo.webp' */ }
+                            { id: 'cavalo', palavra: 'CAVALO', emoji: '🐴', figura: 'camadas/p5-cavalo.webp' }
                         ]
                     }
                 }
@@ -253,15 +252,14 @@
 
                     No jantar, Sancho contou vantagem: — Eu espiei um pouquinho. A Terra era do tamanho de um grão de mostarda! E eu desci do cavalo e brinquei com sete cabritinhas lá no céu: duas verdes, duas vermelhas, duas azuis e uma misturada. A duquesa chorava de rir. Dom Quixote chegou no ouvido dele: — Sancho, se você quer que eu acredite nas suas cabritinhas do céu, acredite no meu palácio de cristal da gruta. Sancho pensou um pouquinho e piscou: — Combinado, meu amo. As cabritinhas e o palácio ficam lá, brincando juntos. Então o duque se levantou: — Sancho Pança, arrume a mala. Amanhã você vai governar a sua {{ILHA|I • LHA|🏝️}}! Sancho deixou a colher cair dentro da sopa.`,
                 cena: {
-                    // Arte reaproveitada da Parte 4 antiga (imagens/acervo/parte-4-v1/)
-                    real: './imagens/acervo/parte-4-v1/p3-real.webp', imag: './imagens/acervo/parte-4-v1/p3-imag.webp', emoji: '🎠',
+                    real: 'p9-real.webp', imag: 'p9-imag.webp', emoji: '🎠',
                     alt: 'No jardim do palácio, Dom Quixote e Sancho, de olhos vendados, montam o cavalo de madeira Clavilenho; criados sopram um fole e erguem uma tocha',
                     legendaReal: '👓 Lente da Realidade: Um Cavalo de Madeira no Jardim',
                     legendaImag: '✨ Lente da Imaginação: Voando entre as Estrelas em Clavilenho!',
                     camadas: [
-                        { id: 'clavilenho', src: './imagens/acervo/parte-4-v1/camadas/p3-clavilenho.webp', x: 49, y: 95, w: 36, emoji: '🐴' },
-                        { id: 'vento-fole', src: './imagens/acervo/parte-4-v1/camadas/p3-vento-fole.webp', item: 'fole', x: 39, y: 68, w: 18, anim: 'flutuar', emoji: '💨' },
-                        { id: 'calor-tocha', src: './imagens/acervo/parte-4-v1/camadas/p3-calor-tocha.webp', item: 'tocha', x: 72, y: 42, w: 7, anim: 'pulsar', emoji: '🔥' }
+                        { id: 'clavilenho', src: 'camadas/p9-clavilenho.webp', x: 49, y: 95, w: 36, emoji: '🐴' },
+                        { id: 'vento-fole', src: 'camadas/p9-vento-fole.webp', item: 'fole', x: 39, y: 68, w: 18, anim: 'flutuar', emoji: '💨' },
+                        { id: 'calor-tocha', src: 'camadas/p9-calor-tocha.webp', item: 'tocha', x: 72, y: 42, w: 7, anim: 'pulsar', emoji: '🔥' }
                     ],
                     cartoes: {
                         tipo: 'pedido',
@@ -269,8 +267,8 @@
                         pedidos: ['fole', 'tocha'],
                         itens: [
                             { id: 'touca', palavra: 'TOUCA', emoji: '🧢', pegadinha: 'Touca? Puseram uma touca no cavalo, e ele ficou só mais quentinho. Voar, que é bom, nada! Vamos tentar de novo!' },
-                            { id: 'fole', palavra: 'FOLE', emoji: '💨', figura: './imagens/acervo/parte-4-v1/camadas/p3-vento-fole.webp' },
-                            { id: 'tocha', palavra: 'TOCHA', emoji: '🔥', figura: './imagens/acervo/parte-4-v1/camadas/p3-calor-tocha.webp' },
+                            { id: 'fole', palavra: 'FOLE', emoji: '💨', figura: 'camadas/p9-vento-fole.webp' },
+                            { id: 'tocha', palavra: 'TOCHA', emoji: '🔥', figura: 'camadas/p9-calor-tocha.webp' },
                             { id: 'folha', palavra: 'FOLHA', emoji: '🍃', pegadinha: 'Folha? Abanaram uma folhinha, e não saiu vento nem para espantar mosquito! Vamos tentar de novo!' }
                         ]
                     }

@@ -1,4 +1,4 @@
-# 🔁 Retomada — onde o trabalho parou (2026-11-12, Parte 5 de Dom Quixote ilustrada e publicada; Partes 6 a 8 em rascunho de texto)
+# 🔁 Retomada — onde o trabalho parou (2026-11-13, Partes 5 e 6 de Dom Quixote ilustradas e publicadas; Partes 7 e 8 em rascunho de texto)
 
 **Leia este arquivo primeiro numa sessão nova**, seja qual for o agente. Depois, siga a ordem de leitura do `AGENTS.md` §0.2 (AGENTS → receita geral → receita específica → plano → caderno da parte).
 
@@ -29,26 +29,27 @@
 
 ## 2. Próximas sessões (escolha do humano)
 
-> **2026-11-12 (tarde) — a Parte 5 está publicada** na estante principal, dentro do boxset do segundo volume (que agora abre; as Partes 6 a 8 aparecem com cadeado). Ilustrada pela API (22 imagens, US$ 1,11, três subagentes em paralelo; caderno §6), só em português e com a voz do aparelho. A fase 5 (revisão final) foi pulada a pedido do humano. Pontos para o olho do humano: caderno da Parte 5, §6 (Tomé loiro de gorro, nariz de Sansão pouco achatado, escudos em vez de bandeiras na carroça do leão, Dom Quixote com duas espadas na pág. 9). Faltam a **narração (fase 6)** e as **traduções (fase 7)** da Parte 5.
+> **2026-11-13 — as Partes 5 e 6 estão publicadas** na estante principal, dentro do boxset do segundo volume (Partes 5 e 6 abertas; Partes 7 e 8 seguem com cadeado 🔒). A Parte 5 foi ilustrada em 2026-11-12 (22 imagens, US$ 1,11) e a **Parte 6** foi ilustrada e publicada em 2026-11-13 (9 cenas + ficha `primo-estudante.png` geradas em paralelo sem API + 11 imagens em 3 lotes Batch autorizados, US$ 0,3472, mais 5 artes de Clavilenho copiadas para `imagens/parte-6/`; caderno §6). Ambas ainda estão só em português e com a voz do aparelho. Faltam a **leitura em família (fase 5)**, a **narração (fase 6)** e as **traduções (fase 7)** das Partes 5 e 6.
 >
 > **Áudio (2026-11-12)**: o "arranhão de agulha" entre frases era a rajada de ruído que o TTS deixa no fim de **cada pedido**, presa nas emendas de blocos dentro de `pN.mp3` (259 rajadas em 100 páginas, pt/en/fr/es). Zeradas com `tools/audio_gate.py --so-rajadas` (sem API, duração idêntica); o gate agora roda nas gravações futuras. 🛑 **Escuta do humano**: Parte 1 pág. 2 (~15,3 s) e Parte 4 pág. 2 (~33 s, 55 s, 65 s, 72 s); em espanhol, Parte 4 págs. 0 (~8,6 s) e 9 (~18,7 s).
 
-> **2026-11-12 — o segundo volume de Dom Quixote (1615) está inteiro em rascunho de texto**, em quatro partes, sem nenhuma API paga:
-> | Parte | Título | Capítulos | Arquivo | Caderno |
+> **2026-11-12 — o segundo volume de Dom Quixote (1615) tem as Partes 7 e 8 em rascunho de texto**, sem API paga:
+> | Parte | Título | Capítulos | Situação | Caderno |
 > | :--- | :--- | :--- | :--- | :--- |
-> | 5 | O Livro Famoso e o Cavaleiro dos Leões | 34–42 | `dom-quixote/parte-5.html` | [`cadernos/dom-quixote-parte-5.md`](cadernos/dom-quixote-parte-5.md) |
-> | 6 | O Teatrinho, o Barco e o Cavalo Voador | 43–51 | `parte-6.html` | [`cadernos/dom-quixote-parte-6.md`](cadernos/dom-quixote-parte-6.md) |
-> | 7 | Sancho, Governador da Ilha | 52–60 | `parte-7.html` | [`cadernos/dom-quixote-parte-7.md`](cadernos/dom-quixote-parte-7.md) |
-> | 8 | O Cavaleiro da Branca Lua | 61–69 | `parte-8.html` | [`cadernos/dom-quixote-parte-8.md`](cadernos/dom-quixote-parte-8.md) |
+> | 5 | O Livro Famoso e o Cavaleiro dos Leões | 34–42 | Publicada (só PT, voz do aparelho) | [`cadernos/dom-quixote-parte-5.md`](cadernos/dom-quixote-parte-5.md) |
+> | 6 | O Teatrinho, o Barco e o Cavalo Voador | 43–51 | Publicada (só PT, voz do aparelho) | [`cadernos/dom-quixote-parte-6.md`](cadernos/dom-quixote-parte-6.md) |
+> | 7 | Sancho, Governador da Ilha | 52–60 | Rascunho (`parte-7.html`) | [`cadernos/dom-quixote-parte-7.md`](cadernos/dom-quixote-parte-7.md) |
+> | 8 | O Cavaleiro da Branca Lua | 61–69 | Rascunho (`parte-8.html`) | [`cadernos/dom-quixote-parte-8.md`](cadernos/dom-quixote-parte-8.md) |
 >
-> Todas com `rascunho: true`, três atividades funcionando, auditadas por um crítico de contexto limpo e polidas. Abrem em `sobre.html` → Livros em produção → "Mostrar os rascunhos"; o fim de cada uma leva à seguinte. A Parte 5 já recebeu duas rodadas de notas do humano (humor e mistério; Sansão, a governanta e o duelo), e as Partes 6 a 8 foram escritas com essas notas como regra. Plano: [`PLANO-DOM-QUIXOTE-VOLUME-2.md`](PLANO-DOM-QUIXOTE-VOLUME-2.md). Regras em uma página: [`DIRETRIZES_VOL2.md`](DIRETRIZES_VOL2.md).
+> Os rascunhos (Partes 7 e 8) têm `rascunho: true`, três atividades funcionando, crítica adversarial e polimento, e abrem em `sobre.html` → Livros em produção → "Mostrar os rascunhos". Plano: [`PLANO-DOM-QUIXOTE-VOLUME-2.md`](PLANO-DOM-QUIXOTE-VOLUME-2.md). Regras em uma página: [`DIRETRIZES_VOL2.md`](DIRETRIZES_VOL2.md).
 >
 > **Entrega**: sempre na `main`, por merge, ao fim de cada entrega (`AGENTS.md` §0.4): é pelo site que o humano lê.
 
-1. 🛑 **Fase 3 das Partes 6 a 8** (e notas da Parte 5 já publicada): o humano lê os rascunhos e manda as notas de cada uma. Os pontos de decisão estão no §3 e no §5 de cada caderno.
-2. **Fase 4 (arte pela API, só com autorização)**, uma parte por vez (a Parte 5 já foi: modelo de três subagentes em paralelo, um por grupo de páginas, em `tools/arte/dom-quixote-parte-5-*.mjs`): Parte 6 ~18 (~US$ 0,70); Parte 7 ~9 (~US$ 0,35); Parte 8 ~15 (~US$ 0,60). As Partes 6, 7 e 8 já mostram as cenas reaproveitadas da Parte 4 antiga (Clavilenho, conselhos, bengala, burrico, lareira). Antes: escrever `tools/arte/dom-quixote-parte-N.mjs` a partir da tabela "Visual" do caderno e as fichas dos personagens novos.
-3. **Fase 8 da Parte 4** (retrospectiva do primeiro volume) e **escuta das vozes** das Partes 2 a 4 nos três idiomas (`docs/narracao/qa-partes-2-4-traducoes.md`).
-4. **Viagem ao Centro da Terra no Século XXI, fase 0**: o humano lê o argumento da Parte 1 em [`cadernos/viagem-parte-1.md`](cadernos/viagem-parte-1.md). *Robin Hood* segue na fila.
+1. 🛑 **Fase 3 das Partes 7 e 8** (e leitura/notas das Partes 5 e 6 já publicadas): o humano lê e manda as notas de cada uma. Os pontos de decisão estão no §3 e no §5 de cada caderno.
+2. **Fase 4 das Partes 7 e 8 (arte)**: Parte 7 ~9 (~US$ 0,35 na API); Parte 8 ~15 (~US$ 0,60 na API) — ou via gerador sem API enquanto houver cota. As Partes 7 e 8 já mostram as cenas reaproveitadas da Parte 4 antiga (conselhos, bengala, burrico, lareira). Antes de usar a API paga, escrever `tools/arte/dom-quixote-parte-N.mjs` a partir da tabela "Visual" do caderno e as fichas dos personagens novos.
+3. **Narração (fase 6) e Traduções (fase 7) das Partes 5 e 6**, com autorização expressa para a API paga.
+4. **Fase 8 da Parte 4** (retrospectiva do primeiro volume) e **escuta das vozes** das Partes 2 a 4 nos três idiomas (`docs/narracao/qa-partes-2-4-traducoes.md`).
+5. **Viagem ao Centro da Terra no Século XXI, fase 0**: o humano lê o argumento da Parte 1 em [`cadernos/viagem-parte-1.md`](cadernos/viagem-parte-1.md). *Robin Hood* segue na fila.
 
 Prompts de abertura sugeridos:
 > Fase 3 da Parte N de Dom Quixote: leia docs/RETOMADA.md, docs/DIRETRIZES_VOL2.md e docs/cadernos/dom-quixote-parte-N.md. Minhas notas da revisão: …
