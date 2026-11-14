@@ -247,6 +247,14 @@ A API é paga pelo humano, num projeto de hobby com **limite de R$ 30/mês** (er
 - A segmentação de frases (`texto.js`) aceita o « » francês com espaço antes do fecho. Nas traduções, evite abreviações com ponto (Mr., Sr.), que cortariam a frase.
 - **Portal e Menus Multilíngues**: `assets/js/i18n-site.js` estende o funcionamento multilíngue para fora dos livros (estante da biblioteca `index.html` e página explicativa `sobre.html`), com seletor de bandeiras sincronizado via `cv-idioma`.
 
+### 2.9 Modo Desafio (segunda camada)
+Atividades para quem **já lê sozinho** (~8 a 10 anos), opcionais e fora do caminho de quem está aprendendo a ler (pedido do humano, 2026-11-14). **Especificação, formato dos dados e regras de conteúdo: `docs/DESAFIOS.md`.**
+- **Ganchos em `livro.js`** (seção "MODO DESAFIO", mínimos): o botão 🧩 `#btn-nivel` (junto do Aa, `aria-pressed`), a preferência `cv-nivel` (`'1'` desligado, `'2'` ligado), `body.modo-desafio`, `quadroDesafio(i)` (chamado por `montarConteudoDoTexto`, depois do `.quadro-atividade`, por isso sobrevive a idioma e maiúsculas), `fecharDesafio()` (troca de página, de idioma, Esc) e o carregamento **sob demanda** (`carregarRecurso`, como o contador). Com o modo desligado, nada da camada é baixado e o livro é exatamente o de antes.
+- **Motor da camada**: `assets/js/desafios.js` + `assets/css/desafios.css` (CSS próprio, sem classes Tailwind novas). Expõe `window.CamadaDesafios` (`ligar`, `desligar`, `quadro`, `abrir`, `fechar`, `aoTrocarIdioma`). Monta o **quadro** índigo no fim da folha de texto (não tem `.sentence`: a leitura guiada não o lê) e o **caderno** (`#caderno-desafio`, uma `.phonics-backdrop`: bloqueia a virada e as setas como o cartão de alfabetização; fecha com ✕, toque fora, Esc ou troca de página). Os 7 tipos de etapa (`quiz`, `ordenar`, `classificar`, `lacunas`, `ligar`, `enigma`, `erro`) são todos por toque, com botões ≥ 48 px; errar só balança, e a dica aparece depois de 2 erros na etapa. Sem relógio, pontos ou vidas.
+- **Dados**: `<livro>/desafios/<nome do HTML>.js` (`parte-5.html` → `desafios/parte-5.js`; `LIVRO.desafios` troca o caminho), com `window.DESAFIOS`. Sem o arquivo, ou fora do português, o 🧩 fica ligado sem quadros e um aviso curto explica (`desafiosPreparando`, `desafiosSoPortugues`). Textos da interface em `IDIOMAS` (`nivelLigar`, `abrirDesafio`, `conferir`, `voceSabia`...).
+- **Progresso** (selos ganhos): `cv-desafios-<livro>-<parte-N>` (lista de índices de página; rascunhos com `-rascunho`). Na última página, a tela de conquista mostra os selos da parte.
+- **Testes**: `?nivel=2` liga (sem gravar a preferência), `?nivel=1` desliga, `?desafio=1` abre o caderno da página de `?page=N`. `npm run conferir:desafios` valida todos os `*/desafios/parte-*.js` (erros saem com código 1). O `build:sw` põe os desafios no pré-cache e no "Baixar" de cada parte publicada.
+
 ---
 
 ## 3. Diretrizes Pedagógicas, UX e Crítica à Gamificação

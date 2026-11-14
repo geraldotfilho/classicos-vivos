@@ -343,3 +343,7 @@ O que já foi entregue, sprint a sprint, em ordem cronológica (o mais antigo pr
   - Bonecos recortados em fundo `#FF00FF` via `tools/recortar-camada.py` (`p5-rei.webp`, `p5-cavalo.webp`, `p5-torre.webp`) e ajustados no palco do teatrinho de Mestre Pedro (`dom-quixote/parte-6.html`, pág. 5).
   - As 5 artes reaproveitadas de Clavilenho (pág. 9) foram copiadas de `imagens/acervo/parte-4-v1/p3-*` para `imagens/parte-6/p9-*` e `camadas/p9-*` para entrar no `sw.js` e no botão offline.
 - **Publicação na estante**: `rascunho: true` removido de `dom-quixote/parte-6.html`; `parte-5.html` ligada à Parte 6; Parte 6 desbloqueada no Volume 2 da `index.html`, listada no acervo de `sobre.html` + `assets/js/i18n-site.js` (4 idiomas), removida de `assets/js/acervo.js`, `npm run build` atualizado e Playwright validado em retrato e paisagem. Falta a narração (fase 6) e as traduções (fase 7).
+
+## 2026-11-14 — 🧩 Modo Desafio: segunda camada de atividades (leitores de ~8 a 10 anos)
+- Motor (`assets/js/desafios.js`, `assets/css/desafios.css`, ganchos em `livro.js`), sete tipos de etapa, selos e "Você sabia?", validador `npm run conferir:desafios`, pré-cache offline. Especificação: `docs/DESAFIOS.md`.
+- Conteúdo publicado: Dom Quixote, Partes 5, 6 e 1 (só em português; sem API paga).

@@ -102,7 +102,10 @@
     line-height: 1.3;
     animation: dzAvisoEntra 0.25s ease-out;
 }
-.desafio-aviso-fechar {
+.dz-btn.desafio-aviso-fechar {
+    min-height: 40px;
+    padding: 0;
+    box-shadow: none;
     flex-shrink: 0;
     width: 40px;
     height: 40px;
@@ -113,7 +116,7 @@
     font-size: 1rem;
     cursor: pointer;
 }
-.desafio-aviso-fechar:hover { color: #FFFFFF; }
+.dz-btn.desafio-aviso-fechar:hover { color: #FFFFFF; }
 @keyframes dzAvisoEntra { from { opacity: 0; transform: translate(-50%, -8px); } to { opacity: 1; transform: translate(-50%, 0); } }
 
 /* ---------- Caderno (camada modal, como o cartão de alfabetização) ---------- */
@@ -210,7 +213,8 @@
     padding: 14px 16px 18px;
 }
 .dz-pergunta { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 14px; }
-.dz-ouvir {
+.dz-btn.dz-ouvir {
+    padding: 0;
     flex-shrink: 0;
     width: 48px;
     height: 48px;
@@ -225,7 +229,7 @@
     cursor: pointer;
     box-shadow: 0 3px 0 #4C1D95;
 }
-.dz-ouvir:active { transform: translateY(2px); box-shadow: 0 1px 0 #4C1D95; }
+.dz-btn.dz-ouvir:active { transform: translateY(2px); box-shadow: 0 1px 0 #4C1D95; }
 .dz-pergunta-textos { flex: 1; min-width: 0; }
 .dz-etapa-num {
     display: block;
@@ -247,7 +251,7 @@
     background: #FFFBEB;
     border-top: 3px dashed #FCD34D;
 }
-.dz-rodape[hidden] { display: none; }
+.dz-rodape[hidden], .dz-rodape.dz-rodape-vazio { display: none; }
 .dz-feedback { min-height: 1.3em; font-family: 'Fredoka', sans-serif; font-weight: 700; font-size: 1rem; color: #6B7280; }
 .dz-feedback:empty { display: none; }
 .dz-feedback-erro { color: #B45309; }
@@ -259,7 +263,8 @@
     border-radius: 14px;
     padding: 8px 12px;
 }
-.dz-dica { background: #FEF3C7; border: 2px solid #F59E0B; color: #78350F; animation: popIn 0.3s ease-out; }
+.dz-dica { background: #FEF3C7; border: 2px solid #F59E0B; color: #78350F; animation: dzSurge 0.3s ease-out; }
+@keyframes dzSurge { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
 .dz-dica-rotulo { font-family: 'Fredoka', sans-serif; font-weight: 800; }
 .dz-porque { background: #DCFCE7; border: 2px solid #22C55E; color: #14532D; }
 .dz-dica[hidden], .dz-porque[hidden], .dz-proxima[hidden] { display: none; }

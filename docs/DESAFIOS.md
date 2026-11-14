@@ -69,14 +69,18 @@ O leitor de referência desta camada é uma criança de **9 anos que lê sozinha
 - `?nivel=2` liga o modo Desafio (testes); `?desafio=1` abre o caderno da página pedida em `?page=N`.
   Ex.: `http://localhost:8765/dom-quixote/parte-5.html?page=3&adulto=1&nivel=2&desafio=1`
 - `npm run conferir:desafios` valida o formato de todos os `desafios/parte-N.js` (campos, índices, limites).
+- O motor fica em `assets/js/desafios.js` + `assets/css/desafios.css` (ganchos em `livro.js`: `AGENTS.md` §2.9). Os selos ganhos ficam no aparelho em `cv-desafios-<livro>-<parte-N>`; para jogar do zero num teste, apague essa chave do `localStorage`.
 - Playwright nos dois tamanhos de tablet (800 × 1280 e 1280 × 800), cada etapa até o fim, com `locator.click()`.
 
 ## 6. Andamento
 
 | Obra | Parte | Desafios | Situação |
 | :--- | :--- | :--- | :--- |
-| Dom Quixote | 5 | — | em produção |
-| Dom Quixote | 6 | — | em produção |
-| Dom Quixote | 1 | — | na fila |
+| Dom Quixote | 5 | 9 páginas | ✅ publicada (2026-11-14) |
+| Dom Quixote | 6 | 9 páginas | ✅ publicada (2026-11-14) |
+| Dom Quixote | 1 | 7 páginas | ✅ publicada (2026-11-14) |
 | Dom Quixote | 2, 3, 4 | — | na fila |
-| Dom Quixote | 7, 8 (rascunhos) | — | na fila |
+| Dom Quixote | 7 (rascunho) | 4 páginas de amostra (usadas para testar o motor) | completar |
+| Dom Quixote | 8 (rascunho) | — | na fila |
+
+Pendências: 🛑 o humano experimentar com uma criança maior e mandar notas; tradução dos desafios (en, fr, es); citar o modo Desafio em `sobre.html`; avaliar deixar o texto da página legível com o caderno aberto (hoje a criança fecha o caderno para reler, e ele lembra a etapa).

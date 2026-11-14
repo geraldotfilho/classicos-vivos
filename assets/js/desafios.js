@@ -228,13 +228,18 @@
         raiz.addEventListener('click', (e) => { if (e.target === raiz) fechar(); });
     }
 
+    /* Etapa em que a criança parou em cada página (para poder fechar, reler e voltar) */
+    const etapaEm = {};
+
     function abrir(i) {
         const d = desafioDe(i);
         if (!d) return;
         montarCaderno();
         stopReadingPage();
         closePhonicsCard();
-        st = { i, d, k: 0, erros: 0, resolvida: false };
+        // Fechar o caderno para reler o texto não faz perder as etapas já vencidas (só na memória, até recarregar)
+        const k = Math.min(etapaEm[i] || 0, d.etapas.length - 1);
+        st = { i, d, k, erros: 0, resolvida: false };
         R.selo.textContent = d.selo || '🏅';
         R.rotulo.textContent = ui('desafioRotulo');
         R.titulo.textContent = d.titulo || '';
@@ -281,6 +286,13 @@
         R.dica.hidden = true;
         R.porque.hidden = true;
         R.proxima.hidden = true;
+        atualizarRodape();
+    }
+
+    /* O rodapé só aparece quando tem algo a mostrar (aviso, dica, "porquê" ou o botão de seguir) */
+    function atualizarRodape() {
+        const vazio = !R.feedback.textContent && R.dica.hidden && R.porque.hidden && R.proxima.hidden;
+        R.rodape.classList.toggle('dz-rodape-vazio', vazio);
     }
 
     function renderEtapa() {
@@ -317,12 +329,14 @@
         R.feedback.textContent = ui('tenteDeNovo');
         R.feedback.className = 'dz-feedback dz-feedback-erro';
         if (st.erros >= 2 && st.d.etapas[st.k].dica) R.dica.hidden = false;
+        atualizarRodape();
     }
 
     /* Um acerto no meio da etapa (um par ligado, uma lacuna preenchida...) */
     function acertoParcial(alvo) {
         playSound('wordPop');
         R.feedback.textContent = '';
+        atualizarRodape();
         if (alvo) {
             const r = alvo.getBoundingClientRect();
             spawnSparkles(r.left + r.width / 2, r.top, '✨');
@@ -346,6 +360,7 @@
         const ultima = st.k === st.d.etapas.length - 1;
         R.proxima.innerHTML = `<span>${esc(ui(ultima ? 'ganharSelo' : 'proximaEtapa'))}</span> <i class="ph-bold ph-arrow-right" aria-hidden="true"></i>`;
         R.proxima.hidden = false;
+        atualizarRodape();
         R.proxima.focus({ preventScroll: true });
     }
 
@@ -353,6 +368,7 @@
         if (!st || !st.resolvida) return;
         if (st.k < st.d.etapas.length - 1) {
             st.k++;
+            etapaEm[st.i] = st.k;
             playSound('pageFlip');
             renderEtapa();
         } else {
@@ -363,6 +379,7 @@
     /* Tela de conquista: o selo grande, o "Você sabia?" e, na última página, os selos da parte */
     function concluir() {
         const i = st.i;
+        etapaEm[i] = 0;
         marcarConcluido(i);
         playSound('fanfare');
         renderPassos(true);

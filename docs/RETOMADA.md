@@ -29,6 +29,8 @@
 
 ## 2. Próximas sessões (escolha do humano)
 
+> **2026-11-14 — 🧩 modo Desafio (segunda camada, leitores de ~8 a 10 anos)**: botão 🧩 no topo do livro; desafios em `dom-quixote/desafios/parte-N.js`; especificação e andamento em [`DESAFIOS.md`](DESAFIOS.md) (`AGENTS.md` §2.9). **Publicados: Partes 5, 6 e 1.** Faltam as Partes 2, 3, 4 e os rascunhos 7 (só amostra) e 8. Sem API paga. Para escrever uma parte: um agente lê `docs/DESAFIOS.md` + o `parte-N.html`, usa `desafios/parte-5.js` como modelo e roda `npm run conferir:desafios`.
+
 > **2026-11-14 — narração em português das Partes 5 e 6 (autorizada pelo humano)**: roteiros de vozes escritos por subagentes (`narracao/parte-5/roteiro.json`, `parte-6/roteiro.json`) e 19 vozes novas no `ELENCO` (`tools/gravar-narracao.mjs`). **Parte 5: as 10 páginas gravadas** (pontos de escuta em `docs/narracao/qa-parte-5.md`) e 29 de 36 palavras-chave. **Parte 6: páginas 0 a 3 gravadas**; faltam as páginas 4 a 9 (~39 pedidos) e as palavras-chave. As duas estão em `previa` no `vozes.js` (só passam a `partes` quando completas). A cota diária (100 pedidos) acabou e a **chave reserva não entrou**: o segredo de rede do ambiente injeta `x-goog-api-key` e sobrescreve o cabeçalho da reserva (`TODO-NARRACAO.md`, decisão 20). Retomar depois das 07:00 UTC: `npm run gravar:narracao -- --voz narracao --parte 6 --pagina-inteira --autorizado` (o cache não paga de novo), depois `--voz palavras --parte 5 --agrupar 1` e `--voz palavras --parte 6 --agrupar 25`. Gasto até aqui: ~US$ 0,26.
 
 

@@ -14,7 +14,7 @@ window.DESAFIOS = {
                     tipo: 'quiz',
                     pergunta: 'Por que Dom Quixote estava "feliz e preocupado ao mesmo tempo"?',
                     opcoes: [
-                        'Porque o amigo ia ser governador, mas ele tinha medo de que Sancho não soubesse governar',
+                        'Porque Sancho ia governar, mas talvez não soubesse como',
                         'Porque ele queria ser governador no lugar de Sancho',
                         'Porque o jantar do palácio estava atrasado',
                         'Porque o mordomo tinha voz de condessa'
