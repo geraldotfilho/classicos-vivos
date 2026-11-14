@@ -1270,71 +1270,6 @@
         navigator.serviceWorker.addEventListener('controllerchange', () => { if (tinhaControle) exibirAviso(); });
     }
 
-    /* Botão "Buscar a versão mais nova" (pedido do humano, 2026-11-14): o aviso automático pode demorar,
-       então o adulto força a busca. Pede ao navegador o sw.js de novo; se houver versão nova, espera ela
-       terminar de baixar e ativar e recarrega; se não houver, recarrega do mesmo jeito (a página passa a
-       usar a versão ativa mais nova, mesmo que ela tenha chegado por outra aba). */
-    function mostrarStatusVersao(texto, carregando) {
-        let el = document.getElementById('sw-status-versao');
-        if (!el) {
-            el = document.createElement('div');
-            el.id = 'sw-status-versao';
-            el.setAttribute('role', 'status');
-            el.className = 'fixed bottom-4 left-1/2 -translate-x-1/2 z-50 bg-amber-950/95 text-amber-100 border-2 border-amber-400 rounded-2xl px-4 py-2.5 shadow-2xl flex items-center gap-2 font-display font-semibold text-xs sm:text-sm max-w-[90vw]';
-            document.body.appendChild(el);
-        }
-        el.innerHTML = `${carregando ? '<i class="ph-bold ph-arrows-clockwise animate-spin text-base"></i>' : ''}<span></span>`;
-        el.querySelector('span').textContent = texto;
-        return el;
-    }
-
-    function esperarAtivacao(sw, limiteMs) {
-        return new Promise(resolve => {
-            if (sw.state === 'activated') return resolve(true);
-            const fim = setTimeout(() => resolve(false), limiteMs);
-            sw.addEventListener('statechange', () => {
-                if (sw.state === 'installed') sw.postMessage({ type: 'SKIP_WAITING' });
-                if (sw.state === 'activated' || sw.state === 'redundant') { clearTimeout(fim); resolve(sw.state === 'activated'); }
-            });
-            if (sw.state === 'installed') sw.postMessage({ type: 'SKIP_WAITING' });
-        });
-    }
-
-    let buscandoVersao = false;
-    async function forcarAtualizacao(btn) {
-        if (buscandoVersao) return;
-        const d = DICIONARIO[idiomaAtual] || DICIONARIO[PT];
-        const icone = btn && btn.querySelector('i');
-        const recarregar = (ms) => setTimeout(() => window.location.reload(), ms);
-        if (!('serviceWorker' in navigator) || !location.protocol.startsWith('http')) return window.location.reload();
-        if (navigator.onLine === false) {
-            const el = mostrarStatusVersao(d.semInternetVersao);
-            setTimeout(() => el.remove(), 4000);
-            return;
-        }
-        buscandoVersao = true;
-        if (icone) icone.classList.add('animate-spin');
-        mostrarStatusVersao(d.procurandoVersao, true);
-        try {
-            const reg = await navigator.serviceWorker.getRegistration();
-            if (!reg) return window.location.reload();
-            await reg.update();
-            const novo = reg.installing || reg.waiting;
-            if (novo) {
-                mostrarStatusVersao(d.baixandoVersao, true);
-                await esperarAtivacao(novo, 3 * 60 * 1000);
-                return window.location.reload();
-            }
-            mostrarStatusVersao(d.versaoEmDia);
-            recarregar(1200);
-        } catch (e) {
-            const el = mostrarStatusVersao(d.semInternetVersao);
-            setTimeout(() => el.remove(), 4000);
-            buscandoVersao = false;
-            if (icone) icone.classList.remove('animate-spin');
-        }
-    }
-
     // Objeto de tradução acessível para componentes
     window.CV_I18N = {
         getIdioma: () => idiomaAtual,
@@ -1349,8 +1284,6 @@
     function iniciar() {
         const seletor = document.getElementById('seletor-idiomas');
         if (seletor) montarSeletorBandeiras(seletor);
-        const btnVersao = document.getElementById('btn-buscar-versao');
-        if (btnVersao) btnVersao.addEventListener('click', () => forcarAtualizacao(btnVersao));
         aplicarIdiomaNaPagina();
         ligarInteracoes();
 
