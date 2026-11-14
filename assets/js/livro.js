@@ -2310,7 +2310,8 @@ function initTextScrolling() {
    VIRADA DE PÁGINA (acompanha o dedo)
    Uma camada (.turn-layer) de cópias inertes (sem ids, sem toques) cobre o livro durante a virada:
    embaixo, a metade da página nova que a folha vai revelando e a metade da antiga que fica parada;
-   em cima, a folha que gira em torno da lombada (frente: a página antiga; verso: a nova).
+   em cima, a folha que gira em torno da lombada (frente: a página antiga; verso: a nova), cortada
+   em tiras que giram cada uma um pouco mais que a anterior: a folha se curva como papel.
    - Paisagem (lombada vertical): a folha gira em rotateY; avançar vira a do texto (direita).
    - Retrato (lombada horizontal): a folha gira em rotateX, na vertical; avançar levanta a do texto
      (de baixo) pela borda de cima, e ela pousa sobre a ilustração; voltar baixa a da ilustração.
@@ -2318,9 +2319,11 @@ function initTextScrolling() {
    A página real só troca quando a virada é confirmada, em goToPage; até lá nada muda (nem o áudio).
    ===================================================================== */
 const TURN_MS = 750;
-const LIMIAR_VIRADA = 0.2;   // soltar depois de 20% do caminho vira; antes, a folha volta
-const FLICK_VEL = 0.6;       // px/ms: um peteleco rápido no sentido da virada vira mesmo antes dos 20%...
+const LIMIAR_VIRADA = 0.5;   // soltar depois de 50% do caminho (a folha em pé) vira; antes, a folha volta
+const FLICK_VEL = 0.6;       // px/ms: um peteleco rápido no sentido da virada vira mesmo antes dos 50%...
 const FLICK_MIN = 0.04;      // ...desde que a folha já tenha andado um pouquinho (4%)
+const FATIAS = 8;            // tiras em que a folha é cortada para poder se curvar
+const CURVA_FOLHA = 50;      // graus de curvatura (da lombada à ponta) no meio da virada
 let isTurning = false;
 
 const curvaSuave = (k) => (k < 0.5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2);   // botões
@@ -2433,22 +2436,29 @@ function prepararVirada(oldSection, newSection, forward) {
     revelada.appendChild(sombra);
     const paradaClone = inertClone(oldSection.querySelector(ladoFica));
     const parada = caixa(paradaClone, paradaRect, 'turn-static');
-    const frenteClone = inertClone(oldSection.querySelector(ladoGira));
 
-    // A folha: gira em torno da lombada (a borda dela que encosta na outra folha)
+    // Sombra que a folha joga na metade parada depois de passar do meio do caminho
+    const sombraParada = document.createElement('div');
+    sombraParada.className = 'turn-cast';
+    sombraParada.style.background = paisagem
+        ? `linear-gradient(to ${forward ? 'left' : 'right'}, rgba(0,0,0,0.4), rgba(0,0,0,0) 70%)`
+        : `linear-gradient(to ${forward ? 'top' : 'bottom'}, rgba(0,0,0,0.4), rgba(0,0,0,0) 70%)`;
+    parada.appendChild(sombraParada);
+
+    // A folha: presa na lombada (a borda dela que encosta na outra folha) e cortada em FATIAS tiras
+    // paralelas à lombada. Cada tira gira um pouco mais que a anterior, e a folha se curva como
+    // papel de verdade (a ponta, que o dedo puxa, vai na frente; a lombada vem atrás).
+    // "p" = eixo principal (o do arrasto): x na paisagem, y no retrato; "c" = o outro eixo.
     const leaf = document.createElement('div');
     leaf.className = 'turn-leaf';
     placeBox(leaf, leafRect);
-    let eixo, sinal;
-    if (paisagem) {
-        eixo = 'rotateY';
-        leaf.style.transformOrigin = forward ? 'left center' : 'right center';
-        sinal = forward ? -1 : 1;
-    } else {
-        eixo = 'rotateX';
-        leaf.style.transformOrigin = forward ? 'center top' : 'center bottom';
-        sinal = forward ? 1 : -1;
-    }
+    const [pIni, pTam, cIni, cTam] = paisagem ? ['left', 'width', 'top', 'height'] : ['top', 'height', 'left', 'width'];
+    const dir = forward ? 1 : -1;                 // para que lado a folha se estende a partir da lombada
+    const sinalCss = paisagem ? -dir : dir;       // sinal do giro que levanta a folha para o leitor
+    const comprimento = leafRect[pTam];
+    // Divisas das tiras (distância da lombada), em pixels inteiros: divisa quebrada vira risco na dobra
+    const divisa = [];
+    for (let i = 0; i <= FATIAS; i++) divisa.push(i === FATIAS ? comprimento : Math.round(comprimento * i / FATIAS));
     // O verso pousa exatamente sobre a folha correspondente da página nova (que pode ter outro
     // tamanho): a rotação de 180° espelha a posição em torno da lombada (x → 2·lombada − x)
     const lombada = paisagem
@@ -2458,26 +2468,73 @@ function prepararVirada(oldSection, newSection, forward) {
         ? { left: 2 * lombada - leafRect.left - versoRect.width - versoRect.left, top: versoRect.top - leafRect.top, width: versoRect.width, height: versoRect.height }
         : { left: versoRect.left - leafRect.left, top: 2 * lombada - leafRect.top - versoRect.height - versoRect.top, width: versoRect.width, height: versoRect.height };
     const frentePos = { left: 0, top: 0, width: leafRect.width, height: leafRect.height };
-    const shades = [];
-    [[frenteClone, 'turn-front', frentePos],
-     [inertClone(newSection.querySelector(ladoFica)), 'turn-back', versoPos]].forEach(([conteudo, cls, pos]) => {
-        const face = document.createElement('div');
-        face.className = `turn-face ${cls}`;
-        placeBox(face, pos);
-        if (cls === 'turn-back') face.style.transform = paisagem ? 'rotateY(180deg)' : 'rotateX(180deg)';
-        face.appendChild(conteudo);
-        const shade = document.createElement('div');
-        shade.className = 'turn-shade';
-        const [a, b] = paisagem ? ['left', 'right'] : ['top', 'bottom'];
-        shade.style.background = `linear-gradient(to ${cls === 'turn-front' ? a : b}, rgba(0,0,0,0.35), rgba(0,0,0,0.05))`;
-        face.appendChild(shade);
-        shades.push(shade);
-        leaf.appendChild(face);
-    });
+    const frenteSel = oldSection.querySelector(ladoGira);
+    const versoSel = newSection.querySelector(ladoFica);
+    const frentes = [];
+    const fatias = [];
+    for (let i = 0; i < FATIAS; i++) {
+        const larguraFatia = divisa[i + 1] - divisa[i];
+        const ini = dir > 0 ? divisa[i] : comprimento - divisa[i + 1];
+        const fatia = document.createElement('div');
+        fatia.className = 'turn-fatia';
+        fatia.style[pIni] = `${ini}px`;
+        fatia.style[pTam] = `${larguraFatia}px`;
+        fatia.style[cIni] = '0px';
+        fatia.style[cTam] = `${leafRect[cTam]}px`;
+        fatia.style.transformOrigin = paisagem
+            ? (dir > 0 ? 'left center' : 'right center')
+            : (dir > 0 ? 'center top' : 'center bottom');
+        const ultima = i === FATIAS - 1;
+        const shades = [];
+        [['turn-front', frentePos, frenteSel], ['turn-back', versoPos, versoSel]].forEach(([cls, pos, origem]) => {
+            const verso = cls === 'turn-back';
+            // Trecho da folha (no eixo principal) que esta face mostra: a tira e 1 px de sobra para
+            // dentro das vizinhas (forra a borda suavizada da dobra, que senão vira um risco claro);
+            // na última tira, o verso vai até o fim da folha nova
+            let a = ini, b = ini + larguraFatia;
+            const paraLombada = i > 0 ? 1 : 0, paraPonta = ultima ? 0 : 1;
+            a -= dir > 0 ? paraLombada : paraPonta;
+            b += dir > 0 ? paraPonta : paraLombada;
+            if (ultima && verso) {
+                if (dir > 0) b = Math.max(b, pos[pIni] + pos[pTam]);
+                else a = Math.min(a, pos[pIni]);
+            }
+            const face = document.createElement('div');
+            face.className = `turn-face ${cls}`;
+            face.style[pIni] = `${a - ini}px`;
+            face.style[pTam] = `${b - a}px`;
+            face.style[cIni] = `${pos[cIni]}px`;
+            face.style[cTam] = `${pos[cTam]}px`;
+            if (verso) face.style.transform = paisagem ? 'rotateY(180deg)' : 'rotateX(180deg)';
+            const conteudo = document.createElement('div');
+            conteudo.className = 'turn-conteudo';
+            // O verso é espelhado em torno do centro da própria face: a conta do deslocamento inverte
+            conteudo.style[pIni] = `${verso ? b - pos[pIni] - pos[pTam] : pos[pIni] - a}px`;
+            conteudo.style[pTam] = `${pos[pTam]}px`;
+            conteudo.style[cIni] = '0px';
+            conteudo.style[cTam] = `${pos[cTam]}px`;
+            const clone = inertClone(origem);
+            if (!verso) frentes.push(clone);
+            conteudo.appendChild(clone);
+            face.appendChild(conteudo);
+            const shade = document.createElement('div');
+            shade.className = 'turn-shade';
+            face.appendChild(shade);
+            shades.push(shade);
+            fatia.appendChild(face);
+        });
+        leaf.appendChild(fatia);
+        fatias.push({ el: fatia, shades });
+    }
     layer.appendChild(leaf);
-    viewport.appendChild(layer);
+    // A camada vai direto no <body>, por cima do livro e fora do recorte de #pages-viewport: a folha
+    // levantada pode passar da borda do livro, e o Chrome erra o recorte de um ancestral sobre as
+    // tiras inclinadas (a folha saía serrilhada)
+    const vp = viewport.getBoundingClientRect();
+    placeBox(layer, { left: vp.left, top: vp.top, width: vp.width, height: vp.height });
+    document.body.appendChild(layer);
     // A cópia da página antiga continua na mesma rolagem de texto
-    copyTextScroll(oldSection, frenteClone);
+    frentes.forEach(clone => copyTextScroll(oldSection, clone));
     copyTextScroll(oldSection, paradaClone);
 
     let tweenId = 0;
@@ -2487,9 +2544,27 @@ function prepararVirada(oldSection, newSection, forward) {
         definir(p) {
             virada.progresso = p;
             const s = Math.sin(Math.PI * p);
-            leaf.style.transform = `${eixo}(${sinal * 180 * p}deg) translateZ(${(30 * s).toFixed(1)}px)`;
-            shades.forEach(sh => { sh.style.opacity = s.toFixed(3); });
+            const ponta = 180 * p;              // ângulo da ponta da folha (a que o dedo puxa)
+            const curva = CURVA_FOLHA * s;      // quanto a lombada vem atrás da ponta: zero pousada
+            let u = 0, z = 0;                   // onde começa a tira: distância da lombada e altura
+            for (let i = 0; i < FATIAS; i++) {
+                const ang = ponta - curva * (1 - i / (FATIAS - 1));
+                const rad = ang * Math.PI / 180;
+                const sen = Math.sin(rad);
+                const larguraFatia = divisa[i + 1] - divisa[i];
+                const desloc = (dir * (u - divisa[i])).toFixed(2);
+                fatias[i].el.style.transform = paisagem
+                    ? `translate3d(${desloc}px,0,${z.toFixed(2)}px) rotateY(${(sinalCss * ang).toFixed(2)}deg)`
+                    : `translate3d(0,${desloc}px,${z.toFixed(2)}px) rotateX(${(sinalCss * ang).toFixed(2)}deg)`;
+                // Cada tira escurece conforme se inclina: a luz desenha a curva do papel
+                const escuro = (0.34 * sen).toFixed(3);
+                fatias[i].shades[0].style.opacity = escuro;
+                fatias[i].shades[1].style.opacity = escuro;
+                u += larguraFatia * Math.cos(rad);
+                z += larguraFatia * sen;
+            }
             sombra.style.opacity = (Math.min(1, p * 5) * (1 - p)).toFixed(3);
+            sombraParada.style.opacity = (Math.min(1, (1 - p) * 5) * p * p).toFixed(3);
             // No retrato as folhas podem ter alturas diferentes: a metade parada some no finzinho,
             // quando o verso já cobre o lugar dela
             parada.style.opacity = p < 0.8 ? '1' : Math.max(0, (1 - p) / 0.2).toFixed(3);
@@ -2512,7 +2587,7 @@ function puxarElastico(section, paisagem, desloc) {
 /* Gestos de virar a página (dedo, caneta ou mouse), de acordo com o desenho do livro aberto:
    paisagem → arrastar para os lados; retrato → para cima avança e para baixo volta. No retrato o
    texto rola na vertical: o gesto só vira se começou fora de uma área rolável ou se ela já estava no
-   limite. A folha acompanha o dedo; soltar antes de LIMIAR_VIRADA (20%) devolve a folha e nada muda;
+   limite. A folha acompanha o dedo; soltar antes de LIMIAR_VIRADA (50%) devolve a folha e nada muda;
    depois disso (ou com um peteleco rápido no sentido certo) a virada se completa e a página troca.
    Nada aqui para ou pausa a narração: só a troca confirmada (goToPage) faz isso. */
 function initViradaPeloDedo() {

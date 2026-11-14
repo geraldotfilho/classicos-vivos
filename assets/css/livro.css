@@ -801,34 +801,46 @@ h1, h2, h3, h4, .font-display {
     .page-text-scroll { padding: 26px 24px 30px; }
 }
 
-/* Virada de página: folha 3D que gira em torno da lombada e acompanha o dedo (prepararVirada).
+/* Virada de página: folha 3D que se curva, gira em torno da lombada e acompanha o dedo (prepararVirada).
    Paisagem: rotateY (lombada vertical). Retrato: rotateX (lombada horizontal). A posição e o
    giro de cada face vêm do JS; aqui só o que não muda. */
 .turn-layer {
-    position: absolute;
-    inset: 0;
+    position: fixed;   /* no <body>, sobre o #pages-viewport (posição e tamanho vêm do JS) */
     pointer-events: none;
     z-index: 40;
     perspective: 2400px;
 }
 .turn-static,
-.turn-leaf {
+.turn-leaf,
+.turn-fatia,
+.turn-face,
+.turn-conteudo {
     position: absolute;
+}
+/* As cópias paradas ficam num plano só delas: nada de dentro (botões, cartões) passa na frente da folha */
+.turn-static {
+    z-index: 1;
+    isolation: isolate;
 }
 .turn-leaf {
     transform-style: preserve-3d;
-    will-change: transform;
     z-index: 2;
 }
+/* A folha é cortada em tiras paralelas à lombada; cada uma gira um pouco mais que a anterior */
+.turn-fatia {
+    transform-style: preserve-3d;
+    will-change: transform;
+}
+/* O recorte de cada tira é por clip-path: com overflow: hidden o Chrome erra o recorte de camadas
+   inclinadas em 3D (a folha saía serrilhada ou sumia) */
 .turn-face {
-    position: absolute;
-    inset: 0;
+    clip-path: inset(0);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
-.turn-face > .book-page,
+.turn-conteudo > .book-page,
 .turn-static > .book-page,
-.turn-face > .spread,
+.turn-conteudo > .spread,
 .turn-static > .spread {
     width: 100%;
     height: 100%;
@@ -848,11 +860,14 @@ h1, h2, h3, h4, .font-display {
     z-index: 10;
     border-radius: inherit;
 }
+/* Sombreado de cada tira da folha, mais forte quanto mais inclinada (a luz desenha a curva) */
 .turn-shade {
     position: absolute;
     inset: 0;
     pointer-events: none;
+    background: #000;
     opacity: 0;
+    will-change: opacity;
     z-index: 10;
 }
 

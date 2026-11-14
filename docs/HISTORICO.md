@@ -324,6 +324,11 @@ O que já foi entregue, sprint a sprint, em ordem cronológica (o mais antigo pr
 - **Virada de página pelo dedo**: a folha dobra acompanhando o arrasto, com sombra; soltar antes de 20% devolve a folha sem mudar nada (o áudio segue tocando); depois de 20% (ou com um peteleco) a página vira. No retrato a dobra é vertical, em torno da lombada horizontal. Elástico na primeira e na última página; botões e setas usam a mesma folha; movimento reduzido troca sem dobra.
 - Testado no Playwright (800×1280 e 1280×800, toque pelo CDP, mouse, peteleco, rolagem do texto, cartões, elástico, movimento reduzido, Partes 1 e 5, inglês): 44 verificações. Nenhuma API paga.
 
+## ✅ Virada de página: confirma com 50% e a folha se curva (2026-11-14)
+- **Limiar de 20% para 50%** (`LIMIAR_VIRADA`, pedido do humano): a página só vira se o dedo soltar a folha depois do meio do caminho (a folha em pé); antes disso ela volta e nada muda. O peteleco rápido continua virando.
+- **Folha que se curva, com mais sensação de 3D**: a folha é cortada em 8 tiras paralelas à lombada e cada uma gira um pouco mais que a anterior (a ponta vai na frente, a lombada vem atrás); cada tira escurece conforme se inclina, a folha joga sombra nas duas páginas e, levantada, passa por cima da borda do livro. Detalhes e lições do Chrome em `AGENTS.md` §2.4.
+- Testado no Playwright (800×1280 e 1280×800, avançar e voltar, mouse e toque, 40% volta e 60% vira, botões). Nenhuma API paga.
+
 ## ✅ Fidelidade a Cervantes: correções do segundo volume (2026-11-13)
 
 - Revisão de fidelidade das Partes 5 a 8 contra o texto espanhol (`docs/revisao/FIDELIDADE-VOLUME-2.md`; notas 9,0 · 8,5 · 8,5 · 8,0). Aplicadas a pedido do humano: Gaiferos, gansos, piolhos, Miculoso, dez dias de governo, o fato falso sobre o nome de Cervantes no primeiro livro e **o caso da ponte** (II-51) no cap. 55, com Sancho escolhendo o perdão. As decisões de sentido ficaram no §10 de cada caderno e no `BACKLOG.md`.
