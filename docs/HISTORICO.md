@@ -365,3 +365,8 @@ O que já foi entregue, sprint a sprint, em ordem cronológica (o mais antigo pr
   - Conferido com `node tools/conferir-narracao.mjs --partes 1,2,3,4,5,6 --idiomas pt` (zero rajadas de ruído nas 55 páginas gravadas).
   - Gasto desta retomada: 59 pedidos, 29.392 tokens de áudio, ~US$ 0,1341 (Flex); total das Partes 5 e 6: ~US$ 0,39.
 - **Whisper em GPU (CUDA)**: `tools/transcrever.py` passa a detectar GPU (CUDA) automaticamente (`CV_WHISPER_DEVICE`, `CV_CUDA_BIN` e pastas `nvidia/*/bin`), com fallback seguro para CPU; `gravar-narracao.mjs` e `otimizar-audio.mjs` aceitam `CV_PYTHON`. Na máquina local Windows, o ambiente `.venv` do *Ateliê Pericial* (`field-image-curator`) já inclui as DLLs CUDA 12/cuDNN 9 (RTX 4050, ~2,5 s/pág), documentado em `docs/TODO-NARRACAO.md` §19.
+
+## ✅ Revisões por página, sugestões de leitores e avaliações 0–5 estrelas (2026-11-15)
+- **Anotações por página (`assets/js/colaboracao.js` + ganchos em `livro.js`)**: botão discreto na barra inferior (trava infantil de 2 toques / segurar para terceiros; abertura direta + fila offline no Modo Autor). Envia referência exata da obra, parte, página (`?page=N`), lente, idioma e arquivo-fonte.
+- **Avaliações 0–5 estrelas e comentários moderados**: bloco ao fim das partes publicadas com média, nota 0–5 por aparelho e comentário + e-mail opcionais (e-mail privado, comentário só aparece após moderação).
+- **Backend (`backend/` para Vercel + Supabase + GitHub Issues)**: endpoints `/api/revisoes`, `/api/avaliacoes`, `/api/admin`, mini-painel de moderação em `/admin`, esquema `backend/supabase.sql`, ativação discreta do Modo Autor em `sobre.html` e comando `npm run revisoes` (`tools/revisoes.mjs`) para os agentes consultarem as Issues `revisao-autor` e `sugestao-leitor`.

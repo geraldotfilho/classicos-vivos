@@ -5,3 +5,7 @@ node_modules/
 # Imagens recebidas da API antes da escolha (tools/gerar-imagens.mjs)
 .cache-arte/
 __pycache__/
+.env
+.env.*
+!.env.example
+.vercel/

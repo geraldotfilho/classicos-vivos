@@ -558,6 +558,7 @@ function montarConteudoDoTexto(i) {
                     <i class="ph-bold ph-books text-lg"></i><span>${escapeHtml(ui('bibliotecaBotao'))}</span>
                 </a>`}
             </div>
+            ${RASCUNHO ? '' : '<div id="avaliacao-fim" class="avaliacao-fim"></div>'}
         </div>` : '';
     const comando = pagina.comandoAtividade || (pagina.cena && pagina.cena.cartoes && pagina.cena.cartoes.comando);
     const quadroAtividade = comando ? `
@@ -699,7 +700,12 @@ function montarLivro() {
                 <i class="ph-bold ph-arrow-left text-base"></i>
                 <span data-ui="anterior">${escapeHtml(ui('anterior'))}</span>
             </button>
-            <span id="page-counter-text" class="font-display font-bold text-amber-950 text-xs sm:text-sm bg-amber-200 px-3 py-0.5 rounded-full border-2 border-amber-400">${escapeHtml(ui('pagina', 1, totalPages))}</span>
+            <div class="flex items-center gap-1.5">
+                <span id="page-counter-text" class="font-display font-bold text-amber-950 text-xs sm:text-sm bg-amber-200 px-3 py-0.5 rounded-full border-2 border-amber-400">${escapeHtml(ui('pagina', 1, totalPages))}</span>
+                <button type="button" id="btn-anotar" class="btn-anotar" aria-label="Anotar revisão ou sugestão" title="Anotar revisão ou sugestão">
+                    <i class="ph-bold ph-note-pencil"></i>
+                </button>
+            </div>
             <button type="button" id="btn-next" class="btn-chunky btn-barra flex items-center gap-1.5 bg-amber-500 hover:bg-amber-600 text-white font-display font-bold px-3 sm:px-4 rounded-xl border-2 border-amber-700 text-xs sm:text-sm disabled:opacity-40 disabled:pointer-events-none">
                 <span data-ui="proxima">${escapeHtml(ui('proxima'))}</span>
                 <i class="ph-bold ph-arrow-right text-base"></i>
@@ -2956,6 +2962,7 @@ function traduzirInterface() {
     atualizarBotaoMaiusculas();
     atualizarBotaoNivel();
     atualizarBotaoBarras();
+    if (window.CVColaboracao) window.CVColaboracao.aoMudarIdioma();
 }
 
 /* Cartões da página no idioma atual. Se a tradução troca as palavras (cartões em ordem), a bandeja
@@ -3434,6 +3441,7 @@ function initEventos() {
             closePhonicsCard();
             fecharPainelVoz();
             fecharDesafio();
+            if (window.CVColaboracao) window.CVColaboracao.fecharModal();
         }
         if (document.querySelector('.phonics-backdrop.is-open') || document.getElementById('portao-adulto')) return;
         if (e.key === 'ArrowRight') nextPage();
@@ -3551,6 +3559,28 @@ function iniciarLivro() {
         contador.src = '../assets/js/contador.js';
         document.head.appendChild(contador);
     }
+
+    // Colaboração (revisões do autor, sugestões e avaliações 0–5 estrelas no fim da parte)
+    window.CVContexto = () => {
+        const pag = paginaNoIdioma(currentPage);
+        const obraSlug = String(LIVRO.obra || 'livro').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-');
+        const pathLimpo = (location.pathname.match(/([^/]+\/parte-\d+\.html)$/) || [])[1] || location.pathname.replace(/^\/+/, '');
+        return {
+            obra: LIVRO.obra || 'Clássicos Vivos',
+            parte: LIVRO.parte || 1,
+            pagina: currentPage,
+            paginaTotal: totalPages,
+            capitulo: pag.capitulo || '',
+            tituloPagina: pag.titulo || '',
+            lente: lensImaginationState[currentPage] ? 'imag' : 'real',
+            idioma,
+            rascunho: RASCUNHO,
+            slug: `${obraSlug}-parte-${LIVRO.parte || 1}`,
+            arquivo: pathLimpo,
+            urlPagina: location.href
+        };
+    };
+    carregarRecurso(ASSETS_BASE + 'js/colaboracao.js', 'js').catch(() => {});
 
     // Leitura offline: registra o service worker quando servido por http(s) (ex.: GitHub Pages)
     if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {

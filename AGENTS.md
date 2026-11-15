@@ -255,6 +255,14 @@ Atividades para quem **já lê sozinho** (~8 a 10 anos), opcionais e fora do cam
 - **Progresso** (selos ganhos): `cv-desafios-<livro>-<parte-N>` (lista de índices de página; rascunhos com `-rascunho`). Na última página, a tela de conquista mostra os selos da parte.
 - **Testes**: `?nivel=2` liga (sem gravar a preferência), `?nivel=1` desliga, `?desafio=1` abre o caderno da página de `?page=N`. `npm run conferir:desafios` valida todos os `*/desafios/parte-*.js` (erros saem com código 1). O `build:sw` põe os desafios no pré-cache e no "Baixar" de cada parte publicada.
 
+### 2.10 Revisões do Autor, Sugestões e Avaliações (`assets/js/colaboracao.js` + `backend/`)
+- **Anotação por página**: botão discreto `#btn-anotar` na barra inferior (`#barra-base`), disponível em livros publicados e rascunhos. Para leitores comuns, exige 2 toques seguidos ou segurar ~750 ms (trava infantil). Com o **Modo Autor** ativado (`cv-autor-chave` validada e salva no `localStorage`, via modal ou `sobre.html`), abre em 1 toque e funciona até offline (enfileira em `cv-revisoes-fila` e sincroniza ao reconectar).
+- **Ponte serverless (`backend/` na Vercel + Supabase + GitHub Issues)**:
+  - `POST /api/revisoes` cria Issues no GitHub com a referência exata da página (`?page=N`, lente, idioma e arquivo-fonte): etiqueta **`revisao-autor`** (quando autenticado com `AUTHOR_KEY`) ou **`sugestao-leitor`** (terceiros).
+  - `GET/POST /api/avaliacoes` grava notas de **0 a 5 estrelas** por parte (`avaliacoes`, 1 voto por `deviceId`) e comentários opcionais (`comentarios` nascem como `pendente`; `email` opcional fica privado no Supabase e nunca vai para o repositório público).
+  - `GET/POST /api/admin` + `backend/public/index.html` (`/admin`) formam o mini-painel de moderação protegido pela mesma `AUTHOR_KEY`.
+- **Fluxo para agentes**: quando o humano pedir para tratar as observações do site, rode **`npm run revisoes`** (`tools/revisoes.mjs`) para listar as Issues abertas separadas entre `revisao-autor` (prioritárias) e `sugestao-leitor`.
+
 ---
 
 ## 3. Diretrizes Pedagógicas, UX e Crítica à Gamificação

@@ -14,6 +14,7 @@
     "exportar:traducoes": "node tools/traducoes.mjs exportar",
     "conferir:traducoes": "node tools/traducoes.mjs",
     "conferir:desafios": "node tools/conferir-desafios.mjs",
+    "revisoes": "node tools/revisoes.mjs",
     "gravar:narracao": "NODE_USE_ENV_PROXY=1 node --no-warnings tools/gravar-narracao.mjs",
     "gerar:imagens": "NODE_USE_ENV_PROXY=1 node --no-warnings tools/gerar-imagens.mjs"
   },
