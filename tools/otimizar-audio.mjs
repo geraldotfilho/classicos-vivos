@@ -89,7 +89,7 @@ for (const arq of alvos) {
         // Gate e rajadas (inclusive as das emendas entre blocos, o "arranhão" entre frases): python3 ou python
         const gateScript = join(dirname(fileURLToPath(import.meta.url)), 'audio_gate.py');
         let gate = false;
-        for (const py of ['python3', 'python']) {
+        for (const py of [process.env.CV_PYTHON, 'python3', 'python'].filter(Boolean)) {
             try { execFileSync(py, [gateScript, destino], { stdio: 'ignore' }); gate = true; break; } catch (e) {}
         }
         if (!gate) {
