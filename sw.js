@@ -6,9 +6,11 @@
    - Narração gravada (*.mp3 e as marcas *.json em audio/): rede primeiro, para frases regravadas chegarem ao tablet;
      cada arquivo fica num cache próprio (que sobrevive às novas versões) e toca offline depois.
    - Demais arquivos: cache primeiro (abre instantâneo no tablet). */
-const CACHE = 'classicos-vivos-acc7c3f1ade5';
+const CACHE = 'classicos-vivos-2dc0296d8cfd';
 const CACHE_AUDIO = 'cv-narracao';
 const FILES = [
+    "./assets/icones/icone-192.png",
+    "./assets/css/desafios.css",
     "./assets/css/fonts.css",
     "./assets/css/icons.css",
     "./assets/css/livro.css",
@@ -26,13 +28,21 @@ const FILES = [
     "./assets/icones/bandeiras/es.svg",
     "./assets/icones/bandeiras/fr.svg",
     "./assets/icones/bandeiras/gb.svg",
-    "./assets/icones/icone-192.png",
     "./assets/js/acervo.js",
     "./assets/js/contador.js",
+    "./assets/js/desafios.js",
     "./assets/js/i18n-site.js",
     "./assets/js/livro.js",
     "./assets/js/offline-manager.js",
     "./assets/js/texto.js",
+    "./dom-quixote/desafios/parte-1.js",
+    "./dom-quixote/desafios/parte-2.js",
+    "./dom-quixote/desafios/parte-3.js",
+    "./dom-quixote/desafios/parte-4.js",
+    "./dom-quixote/desafios/parte-5.js",
+    "./dom-quixote/desafios/parte-6.js",
+    "./dom-quixote/desafios/parte-7.js",
+    "./dom-quixote/desafios/parte-8.js",
     "./dom-quixote/imagens/camadas/p4-estalajadeiro-acenando.webp",
     "./dom-quixote/imagens/camadas/p4-estalajadeiro-sopa.webp",
     "./dom-quixote/imagens/camadas/p4-notas-musicais.webp",
@@ -224,7 +234,10 @@ const FILES = [
 
 self.addEventListener('install', (event) => {
     event.waitUntil(
-        caches.open(CACHE).then(cache => cache.addAll(FILES)).then(() => self.skipWaiting())
+        // cache: 'reload' pula o cache HTTP do navegador (o GitHub Pages guarda por 10 min): sem isso, uma versão
+        // nova instalada logo depois de abrir o livro guardava o livro.js ANTIGO até a próxima versão.
+        caches.open(CACHE).then(cache => cache.addAll(FILES.map(url => new Request(url, { cache: 'reload' }))))
+            .then(() => self.skipWaiting())
     );
 });
 
@@ -256,7 +269,8 @@ self.addEventListener('fetch', (event) => {
                     if (res.ok) caches.open(CACHE).then(c => c.put(req, copy));
                     return res;
                 })
-                .catch(() => caches.match(req, { ignoreSearch: true }))
+                .catch(() => caches.open(CACHE).then(c => c.match(req, { ignoreSearch: true }))
+                    .then(hit => hit || caches.match(req, { ignoreSearch: true })))
         );
         return;
     }
@@ -278,14 +292,18 @@ self.addEventListener('fetch', (event) => {
         return;
     }
 
-    // Demais arquivos: cache primeiro; o que não foi pré-baixado fica guardado na primeira vez.
+    // Demais arquivos: cache DESTA versão primeiro; o que não foi pré-baixado vem da rede e fica guardado.
+    // Nunca procurar primeiro em todos os caches (caches.match): os volumes baixados pelo botão "Baixar"
+    // (cv-volume-quixote-N) guardam o livro.js e o livro.css da época do download e, por serem mais antigos,
+    // ganhavam da versão nova: o tablet que baixou partes ficava preso no motor velho (bug de 2026-11-14).
+    // Eles só servem de reserva sem internet.
     event.respondWith(
-        caches.match(req, { ignoreSearch: true }).then(hit => hit || fetch(req).then(res => {
+        caches.open(CACHE).then(c => c.match(req, { ignoreSearch: true })).then(hit => hit || fetch(req).then(res => {
             if (res.ok && res.status === 200) {
                 const copy = res.clone();
                 caches.open(CACHE).then(c => c.put(req, copy));
             }
             return res;
-        }))
+        }).catch(() => caches.match(req, { ignoreSearch: true }).then(velho => velho || Response.error())))
     );
 });

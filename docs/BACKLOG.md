@@ -14,6 +14,7 @@ Pendências abertas, por prioridade. O que já foi entregue está em [`HISTORICO
 - **Fidelidade do segundo volume a Cervantes** (revisão de 2026-11-13, `docs/revisao/FIDELIDADE-VOLUME-2.md`): as correções simples e o caso da ponte já entraram; ficam para a decisão do humano, com o detalhe no §10 de cada caderno (Partes 5 a 8): Sancho já sabe assinar em Cervantes (atividade do cap. 57 e "aprende a ler" no cap. 69); a fala digna do derrotado (II-64); "vencedor de si mesmo" (II-73); o perdão de Alonso a Sancho e o final que inverte o de Cervantes (II-74); o livro falso na oficina (II-62); Cide Hamete "Berenjena" (II-2); e o registro das adaptações ainda não declaradas.
 
 ## 🟡 Prioridade média
+- **Respiro mínimo entre as frases da narração (proposta, 2026-11-14, aguarda o humano)**: o humano sentiu a narração menos natural depois da remoção das rajadas, mas a medição mostrou a duração intacta (ver `HISTORICO.md`, 2026-11-14). Se a escuta confirmar pausas curtas, dá para alongar localmente e sem API só as fronteiras curtas (ex.: ≥ 450 ms entre frases, ≥ 750 ms entre parágrafos, ≥ 900 ms depois do título), inserindo silêncio no ponto mais quieto da pausa e deslocando as marcas do `paginas.json`. Cerca de 10–15% das fronteiras ficam abaixo de 450 ms (p10 de 190–400 ms), em todas as partes, desde a gravação. Pedir ao humano exemplos (parte, página, frase) de onde soou estranho antes de mexer.
 
 | ID | Item | Detalhes |
 | :--- | :--- | :--- |

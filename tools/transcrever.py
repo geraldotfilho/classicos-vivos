@@ -8,8 +8,11 @@ Instalação (só no ambiente de desenvolvimento, uma vez): pip install faster-w
 Na primeira execução o modelo (~800 MB) é baixado do Hugging Face e fica em cache.
 Uso avulso: python3 tools/transcrever.py arquivo.mp3 ...
 """
+import ctypes
+import glob
 import json
 import os
+import site
 import subprocess
 import sys
 
@@ -48,8 +51,44 @@ def transcrever(modelo, arquivo):
     return " ".join(t.text.strip() for t in trechos), palavras
 
 
+def _registrar_cuda_windows():
+    """Registra pastas bin CUDA/cuDNN de pacotes nvidia/* ou de CV_CUDA_BIN no Windows."""
+    if sys.platform != "win32":
+        return
+    candidatos = [p for p in os.environ.get("CV_CUDA_BIN", "").split(os.pathsep) if p]
+    raizes = list(site.getsitepackages()) + [site.getusersitepackages()]
+    for raiz in raizes:
+        candidatos.extend(glob.glob(os.path.join(raiz, "nvidia", "*", "bin")))
+    vistos = set()
+    for pasta in candidatos:
+        norm = os.path.normcase(os.path.abspath(pasta))
+        if norm not in vistos and os.path.isdir(pasta):
+            vistos.add(norm)
+            os.add_dll_directory(pasta)
+
+
+def _carregar_modelo():
+    """Usa GPU (CUDA) automaticamente quando há placa e DLLs CUDA 12/cuDNN 9; caso contrário, cai para CPU."""
+    pedido = os.environ.get("CV_WHISPER_DEVICE", "auto").lower()
+    if pedido != "cpu":
+        try:
+            import ctranslate2
+            if ctranslate2.get_cuda_device_count() > 0:
+                _registrar_cuda_windows()
+                if sys.platform == "win32":
+                    ctypes.WinDLL("cublas64_12.dll")
+                    ctypes.WinDLL("cudnn64_9.dll")
+                compute = os.environ.get("CV_WHISPER_COMPUTE", "int8_float16")
+                return WhisperModel(MODELO, device="cuda", compute_type=compute)
+        except Exception as e:  # noqa: BLE001 — fallback seguro para CPU
+            if pedido == "cuda":
+                raise
+            print(f"[transcrever] CUDA indisponível ({e}); usando CPU.", file=sys.stderr)
+    return WhisperModel(MODELO, device="cpu", compute_type="int8")
+
+
 def main():
-    modelo = WhisperModel(MODELO, device="cpu", compute_type="int8")
+    modelo = _carregar_modelo()
     if len(sys.argv) > 1:
         for arquivo in sys.argv[1:]:
             print(f"{arquivo}: {transcrever(modelo, arquivo)[0]}")

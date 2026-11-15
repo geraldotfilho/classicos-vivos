@@ -5,7 +5,7 @@
 (function() {
     'use strict';
 
-    const VERSAO_ATUAL = 'acc7c3f1ade5';
+    const VERSAO_ATUAL = '2dc0296d8cfd';
     const PREFIXO_CACHE = 'cv-volume-quixote-';
     const PREFIXO_STORAGE = 'cv-offline-quixote-';
 
@@ -83,7 +83,10 @@
         "./dom-quixote/parte-1.html",
         "./dom-quixote/traducoes/parte-1.en.js",
         "./dom-quixote/traducoes/parte-1.es.js",
-        "./dom-quixote/traducoes/parte-1.fr.js"
+        "./dom-quixote/traducoes/parte-1.fr.js",
+        "./assets/js/desafios.js",
+        "./assets/css/desafios.css",
+        "./dom-quixote/desafios/parte-1.js"
     ],
     "2": [
         "./assets/icones/icone-192.png",
@@ -108,6 +111,8 @@
         "./assets/js/i18n-site.js",
         "./assets/js/livro.js",
         "./assets/js/texto.js",
+        "./assets/js/desafios.js",
+        "./assets/css/desafios.css",
         "./dom-quixote/imagens/parte-2/camadas/p3-bolotas.webp",
         "./dom-quixote/imagens/parte-2/camadas/p3-leite.webp",
         "./dom-quixote/imagens/parte-2/camadas/p3-queijo.webp",
@@ -137,7 +142,8 @@
         "./dom-quixote/parte-2.html",
         "./dom-quixote/traducoes/parte-2.en.js",
         "./dom-quixote/traducoes/parte-2.es.js",
-        "./dom-quixote/traducoes/parte-2.fr.js"
+        "./dom-quixote/traducoes/parte-2.fr.js",
+        "./dom-quixote/desafios/parte-2.js"
     ],
     "3": [
         "./assets/icones/icone-192.png",
@@ -162,6 +168,8 @@
         "./assets/js/i18n-site.js",
         "./assets/js/livro.js",
         "./assets/js/texto.js",
+        "./assets/js/desafios.js",
+        "./assets/css/desafios.css",
         "./dom-quixote/imagens/parte-3/camadas/p1-caderno.webp",
         "./dom-quixote/imagens/parte-3/camadas/p1-moedas.webp",
         "./dom-quixote/imagens/parte-3/camadas/p2-quixote-camisolao.webp",
@@ -187,7 +195,8 @@
         "./dom-quixote/parte-3.html",
         "./dom-quixote/traducoes/parte-3.en.js",
         "./dom-quixote/traducoes/parte-3.es.js",
-        "./dom-quixote/traducoes/parte-3.fr.js"
+        "./dom-quixote/traducoes/parte-3.fr.js",
+        "./dom-quixote/desafios/parte-3.js"
     ],
     "4": [
         "./assets/icones/icone-192.png",
@@ -212,6 +221,8 @@
         "./assets/js/i18n-site.js",
         "./assets/js/livro.js",
         "./assets/js/texto.js",
+        "./assets/js/desafios.js",
+        "./assets/css/desafios.css",
         "./dom-quixote/imagens/parte-4/camadas/p5-agua.webp",
         "./dom-quixote/imagens/parte-4/camadas/p5-pao.webp",
         "./dom-quixote/imagens/parte-4/camadas/p5-queijo.webp",
@@ -239,7 +250,8 @@
         "./dom-quixote/parte-4.html",
         "./dom-quixote/traducoes/parte-4.en.js",
         "./dom-quixote/traducoes/parte-4.es.js",
-        "./dom-quixote/traducoes/parte-4.fr.js"
+        "./dom-quixote/traducoes/parte-4.fr.js",
+        "./dom-quixote/desafios/parte-4.js"
     ],
     "5": [
         "./assets/icones/icone-192.png",
@@ -264,6 +276,8 @@
         "./assets/js/i18n-site.js",
         "./assets/js/livro.js",
         "./assets/js/texto.js",
+        "./assets/js/desafios.js",
+        "./assets/css/desafios.css",
         "./dom-quixote/imagens/parte-5/camadas/p6-elmo.webp",
         "./dom-quixote/imagens/parte-5/camadas/p6-narigao.webp",
         "./dom-quixote/imagens/parte-5/p0-imag.webp",
@@ -286,7 +300,8 @@
         "./dom-quixote/imagens/parte-5/p9-real-stage-3.webp",
         "./dom-quixote/imagens/parte-5/p9-real-stage-4.webp",
         "./dom-quixote/imagens/parte-5/p9-real.webp",
-        "./dom-quixote/parte-5.html"
+        "./dom-quixote/parte-5.html",
+        "./dom-quixote/desafios/parte-5.js"
     ],
     "6": [
         "./assets/icones/icone-192.png",
@@ -311,6 +326,8 @@
         "./assets/js/i18n-site.js",
         "./assets/js/livro.js",
         "./assets/js/texto.js",
+        "./assets/js/desafios.js",
+        "./assets/css/desafios.css",
         "./dom-quixote/imagens/parte-6/camadas/p5-cavalo.webp",
         "./dom-quixote/imagens/parte-6/camadas/p5-rei.webp",
         "./dom-quixote/imagens/parte-6/camadas/p5-torre.webp",
@@ -334,7 +351,8 @@
         "./dom-quixote/imagens/parte-6/p8-real.webp",
         "./dom-quixote/imagens/parte-6/p9-imag.webp",
         "./dom-quixote/imagens/parte-6/p9-real.webp",
-        "./dom-quixote/parte-6.html"
+        "./dom-quixote/parte-6.html",
+        "./dom-quixote/desafios/parte-6.js"
     ]
 };
 

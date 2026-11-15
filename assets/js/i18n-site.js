@@ -75,6 +75,11 @@
             licenca2: 'Sugestões e contribuições: <a class="text-indigo-700 underline" href="https://github.com/geraldotfilho/classicos-vivos/issues">github.com/geraldotfilho/classicos-vivos</a>',
             swNovaVersao: 'Nova versão disponível! ✨',
             swAtualizar: 'Atualizar',
+            buscarVersao: 'Buscar a versão mais nova',
+            procurandoVersao: 'Procurando a versão mais nova…',
+            baixandoVersao: 'Baixando a versão nova… (pode levar um minutinho)',
+            versaoEmDia: 'Você já tem a versão mais nova ✓',
+            semInternetVersao: 'Sem internet agora: tente de novo mais tarde.',
 
             // Coleção / Boxset (index.html)
             colecaoCompletaBadge: 'Coleção Completa · 4 Partes',
@@ -298,6 +303,11 @@
             licenca2: 'Suggestions and contributions: <a class="text-indigo-700 underline" href="https://github.com/geraldotfilho/classicos-vivos/issues">github.com/geraldotfilho/classicos-vivos</a>',
             swNovaVersao: 'New version available! ✨',
             swAtualizar: 'Update',
+            buscarVersao: 'Get the newest version',
+            procurandoVersao: 'Looking for the newest version…',
+            baixandoVersao: 'Downloading the new version… (this may take a minute)',
+            versaoEmDia: 'You already have the newest version ✓',
+            semInternetVersao: 'No internet right now: please try again later.',
 
             // Coleção / Boxset (index.html)
             colecaoCompletaBadge: 'Complete Collection · 4 Parts',
@@ -515,6 +525,11 @@
             licenca2: 'Suggestions et contributions : <a class="text-indigo-700 underline" href="https://github.com/geraldotfilho/classicos-vivos/issues">github.com/geraldotfilho/classicos-vivos</a>',
             swNovaVersao: 'Nouvelle version disponible ! ✨',
             swAtualizar: 'Mettre à jour',
+            buscarVersao: 'Chercher la version la plus récente',
+            procurandoVersao: 'Recherche de la version la plus récente…',
+            baixandoVersao: 'Téléchargement de la nouvelle version… (cela peut prendre une minute)',
+            versaoEmDia: 'Vous avez déjà la version la plus récente ✓',
+            semInternetVersao: 'Pas d’internet pour l’instant : réessayez plus tard.',
 
             // Coleção / Boxset (index.html)
             colecaoCompletaBadge: 'Collection Complète · 4 Parties',
@@ -734,6 +749,11 @@
             licenca2: 'Sugerencias y contribuciones: <a class="text-indigo-700 underline" href="https://github.com/geraldotfilho/classicos-vivos/issues">github.com/geraldotfilho/classicos-vivos</a>',
             swNovaVersao: '¡Nueva versión disponible! ✨',
             swAtualizar: 'Actualizar',
+            buscarVersao: 'Buscar la versión más nueva',
+            procurandoVersao: 'Buscando la versión más nueva…',
+            baixandoVersao: 'Descargando la versión nueva… (puede tardar un minuto)',
+            versaoEmDia: 'Ya tienes la versión más nueva ✓',
+            semInternetVersao: 'Sin internet ahora: inténtalo de nuevo más tarde.',
 
             // Coleção / Boxset (index.html)
             colecaoCompletaBadge: 'Colección Completa · 4 Partes',
@@ -1236,6 +1256,18 @@
                 }
             });
         });
+
+        // O navegador só procura versão nova ao abrir uma página. No tablet, o app costuma voltar do
+        // segundo plano sem abrir página nenhuma: procura de novo ao voltar à tela (no máximo a cada 5 min).
+        let ultimaBusca = Date.now();
+        document.addEventListener('visibilitychange', () => {
+            if (document.visibilityState !== 'visible' || Date.now() - ultimaBusca < 5 * 60 * 1000) return;
+            ultimaBusca = Date.now();
+            reg.update().catch(() => {});
+        });
+        // Versão nova ativada por outra aba enquanto esta estava aberta: esta ainda usa a antiga
+        const tinhaControle = !!navigator.serviceWorker.controller;
+        navigator.serviceWorker.addEventListener('controllerchange', () => { if (tinhaControle) exibirAviso(); });
     }
 
     // Objeto de tradução acessível para componentes

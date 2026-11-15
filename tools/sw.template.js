@@ -12,7 +12,10 @@ const FILES = __FILES__;
 
 self.addEventListener('install', (event) => {
     event.waitUntil(
-        caches.open(CACHE).then(cache => cache.addAll(FILES)).then(() => self.skipWaiting())
+        // cache: 'reload' pula o cache HTTP do navegador (o GitHub Pages guarda por 10 min): sem isso, uma versão
+        // nova instalada logo depois de abrir o livro guardava o livro.js ANTIGO até a próxima versão.
+        caches.open(CACHE).then(cache => cache.addAll(FILES.map(url => new Request(url, { cache: 'reload' }))))
+            .then(() => self.skipWaiting())
     );
 });
 
@@ -44,7 +47,8 @@ self.addEventListener('fetch', (event) => {
                     if (res.ok) caches.open(CACHE).then(c => c.put(req, copy));
                     return res;
                 })
-                .catch(() => caches.match(req, { ignoreSearch: true }))
+                .catch(() => caches.open(CACHE).then(c => c.match(req, { ignoreSearch: true }))
+                    .then(hit => hit || caches.match(req, { ignoreSearch: true })))
         );
         return;
     }
@@ -66,14 +70,18 @@ self.addEventListener('fetch', (event) => {
         return;
     }
 
-    // Demais arquivos: cache primeiro; o que não foi pré-baixado fica guardado na primeira vez.
+    // Demais arquivos: cache DESTA versão primeiro; o que não foi pré-baixado vem da rede e fica guardado.
+    // Nunca procurar primeiro em todos os caches (caches.match): os volumes baixados pelo botão "Baixar"
+    // (cv-volume-quixote-N) guardam o livro.js e o livro.css da época do download e, por serem mais antigos,
+    // ganhavam da versão nova: o tablet que baixou partes ficava preso no motor velho (bug de 2026-11-14).
+    // Eles só servem de reserva sem internet.
     event.respondWith(
-        caches.match(req, { ignoreSearch: true }).then(hit => hit || fetch(req).then(res => {
+        caches.open(CACHE).then(c => c.match(req, { ignoreSearch: true })).then(hit => hit || fetch(req).then(res => {
             if (res.ok && res.status === 200) {
                 const copy = res.clone();
                 caches.open(CACHE).then(c => c.put(req, copy));
             }
             return res;
-        }))
+        }).catch(() => caches.match(req, { ignoreSearch: true }).then(velho => velho || Response.error())))
     );
 });

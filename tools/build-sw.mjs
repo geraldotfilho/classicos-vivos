@@ -2,7 +2,7 @@
 // A versão do cache é um hash do conteúdo: qualquer alteração em HTML, CSS, fonte ou imagem
 // gera uma versão nova e o tablet baixa a atualização na próxima visita com internet.
 // Rode com: npm run build:sw  (já incluído em `npm run build`)
-import { readFileSync, writeFileSync, globSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, globSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 
 const files = [
@@ -15,6 +15,8 @@ const files = [
     ...globSync('assets/icones/bandeiras/*.svg'),
     ...globSync('*/parte-*.html'),
     ...globSync('*/traducoes/*.js'),
+    // Modo Desafio (segunda camada, docs/DESAFIOS.md): os dados de cada parte; o motor já entra por assets/
+    ...globSync('*/desafios/*.js'),
     // imagens/acervo/: arte aposentada (ex.: a Parte 4 antiga), guardada só como registro: não vai para o tablet
     ...globSync('*/imagens/**/*.{webp,svg,png}').filter(f => !/[\\/]acervo[\\/]/.test(f))
 ].sort();
@@ -34,7 +36,9 @@ writeFileSync('sw.js', sw);
 
 // Atualiza também VERSAO_ATUAL em offline-manager.js e a lista de arquivos de cada parte publicada
 // (botão "Baixar" da estante). A Parte 1 guarda a lista própria (as imagens dela ficam na raiz de imagens/);
-// as Partes 2 em diante são refeitas aqui: os arquivos comuns + imagens/parte-N/ + o HTML + as traduções.
+// as Partes 2 em diante são refeitas aqui: os arquivos comuns + imagens/parte-N/ + o HTML + as traduções
+// + os desafios (desafios/parte-N.js e as traduções futuras deles, parte-N.<idioma>.js). O motor do modo
+// Desafio (assets/js/desafios.js e assets/css/desafios.css) entra nos arquivos comuns, inclusive na Parte 1.
 // Rascunhos (`rascunho: true` no window.LIVRO) ficam de fora.
 try {
     const offPath = 'assets/js/offline-manager.js';
@@ -43,8 +47,12 @@ try {
     const ini = offContent.indexOf('const ARQUIVOS_PARTE = ') + 'const ARQUIVOS_PARTE = '.length;
     const fim = offContent.indexOf('\n};', ini) + 2;
     const atual = JSON.parse(offContent.slice(ini, fim));
-    const comuns = atual['1'].filter(f => f.startsWith('./assets/'));
-    const novo = { '1': atual['1'] };
+    const desafiosDe = (n) => [...globSync(`dom-quixote/desafios/parte-${n}.js`), ...globSync(`dom-quixote/desafios/parte-${n}.*.js`)].sort();
+    const ehDesafio = (f) => /\/desafios(\/|\.(js|css)$)/.test(f);
+    const motorDesafios = ['assets/js/desafios.js', 'assets/css/desafios.css'].filter(f => existsSync(f)).map(f => `./${f}`);
+    const parte1 = atual['1'].filter(f => !ehDesafio(f));
+    const comuns = [...parte1.filter(f => f.startsWith('./assets/')), ...motorDesafios];
+    const novo = { '1': [...parte1, ...motorDesafios, ...desafiosDe(1).map(f => `./${f.replace(/\\/g, '/')}`)] };
     for (const html of globSync('dom-quixote/parte-*.html').sort()) {
         const n = (html.match(/parte-(\d+)\.html$/) || [])[1];
         if (!n || n === '1' || /rascunho:\s*true/.test(readFileSync(html, 'utf8'))) continue;
@@ -52,7 +60,8 @@ try {
             ...comuns,
             ...globSync(`dom-quixote/imagens/parte-${n}/**/*.{webp,svg,png}`).sort(),
             html,
-            ...globSync(`dom-quixote/traducoes/parte-${n}.*.js`).sort()
+            ...globSync(`dom-quixote/traducoes/parte-${n}.*.js`).sort(),
+            ...desafiosDe(n)
         ].map(f => f.startsWith('./') ? f : `./${f.replace(/\\/g, '/')}`);
     }
     const ordenado = Object.fromEntries(Object.entries(novo).sort((a, b) => a[0] - b[0]));

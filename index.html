@@ -450,6 +450,9 @@
             <button onclick="toggleFullscreen()" class="btn-round w-11 h-11 sm:w-14 sm:h-14 rounded-2xl bg-indigo-500 border-2 border-indigo-300 text-white text-xl sm:text-2xl flex items-center justify-center cursor-pointer min-h-[48px] min-w-[48px]" aria-label="Tela cheia" title="Tela cheia" data-i18n-aria="telaCheia" data-i18n-title="telaCheia">
                 <i id="fs-icon" class="ph-bold ph-corners-out"></i>
             </button>
+            <button type="button" id="btn-buscar-versao" class="btn-round w-11 h-11 sm:w-14 sm:h-14 rounded-2xl bg-emerald-600 border-2 border-emerald-300 text-white text-xl sm:text-2xl flex items-center justify-center cursor-pointer min-h-[48px] min-w-[48px]" aria-label="Buscar a versão mais nova" title="Buscar a versão mais nova" data-i18n-aria="buscarVersao" data-i18n-title="buscarVersao">
+                <i class="ph-bold ph-arrows-clockwise"></i>
+            </button>
             <a href="./sobre.html" class="btn-round h-11 sm:h-14 px-3.5 rounded-2xl bg-white/10 border-2 border-white/30 text-amber-100 flex items-center justify-center gap-1.5 font-display font-semibold text-xs sm:text-sm min-h-[48px]" aria-label="Sobre o projeto, para adultos" title="Sobre o projeto (para adultos)" data-i18n-aria="sobreAria" data-i18n-title="sobreTitulo">
                 <i class="ph-bold ph-info text-xl sm:text-2xl"></i>
                 <span class="hidden sm:inline" data-i18n="paraAdultos">Para adultos</span>
@@ -1003,5 +1006,99 @@
         document.addEventListener('DOMContentLoaded', () => renderTodosControlesOffline());    </script>
         <script src="./assets/js/acervo.js"></script>
     <script src="./assets/js/i18n-site.js"></script>
+
+    <!-- Botão "Buscar a versão mais nova" (🔄 verde no topo). Fica AQUI, no HTML, de propósito: a estante
+         sempre vem da rede, mas os .js e .css podem estar velhos no aparelho (era o caso do tablet preso na
+         versão antiga, 2026-11-14), e o botão precisa funcionar justamente nesse caso. Por isso não depende
+         de nenhum outro arquivo: textos e estilos próprios. -->
+    <script>
+    (function () {
+        var TEXTOS = {
+            pt: { procurando: 'Procurando a versão mais nova…', baixando: 'Baixando a versão nova… (pode levar um minutinho)', emDia: 'Você já tem a versão mais nova ✓', recarregando: 'Recarregando…', semInternet: 'Sem internet agora: tente de novo mais tarde.', erro: 'Não deu para conferir agora. Tente de novo.', versao: 'versão' },
+            en: { procurando: 'Looking for the newest version…', baixando: 'Downloading the new version… (this may take a minute)', emDia: 'You already have the newest version ✓', recarregando: 'Reloading…', semInternet: 'No internet right now: please try again later.', erro: 'Could not check right now. Please try again.', versao: 'version' },
+            fr: { procurando: 'Recherche de la version la plus récente…', baixando: 'Téléchargement de la nouvelle version… (cela peut prendre une minute)', emDia: 'Vous avez déjà la version la plus récente ✓', recarregando: 'Rechargement…', semInternet: 'Pas d’internet pour l’instant : réessayez plus tard.', erro: 'Impossible de vérifier maintenant. Réessayez.', versao: 'version' },
+            es: { procurando: 'Buscando la versión más nueva…', baixando: 'Descargando la versión nueva… (puede tardar un minuto)', emDia: 'Ya tienes la versión más nueva ✓', recarregando: 'Recargando…', semInternet: 'Sin internet ahora: inténtalo de nuevo más tarde.', erro: 'No se pudo comprobar ahora. Inténtalo de nuevo.', versao: 'versión' }
+        };
+        function textos() {
+            var id = 'pt';
+            try { id = localStorage.getItem('cv-idioma') || 'pt'; } catch (e) {}
+            return TEXTOS[id] || TEXTOS.pt;
+        }
+        function aviso(texto, girando) {
+            var el = document.getElementById('aviso-versao');
+            if (!el) {
+                el = document.createElement('div');
+                el.id = 'aviso-versao';
+                el.setAttribute('role', 'status');
+                el.setAttribute('aria-live', 'polite');
+                el.style.cssText = 'position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:9999;max-width:90vw;' +
+                    'display:flex;align-items:center;gap:10px;padding:14px 20px;border-radius:18px;border:3px solid #fbbf24;' +
+                    'background:#451a03;color:#fef3c7;font:600 17px/1.3 Fredoka,Nunito,system-ui,sans-serif;box-shadow:0 10px 30px rgba(0,0,0,.5);';
+                document.body.appendChild(el);
+            }
+            el.innerHTML = (girando ? '<span style="display:inline-block;width:18px;height:18px;border:3px solid #fbbf24;border-top-color:transparent;border-radius:50%;animation:cv-gira .8s linear infinite;flex:none"></span>' : '') + '<span></span>';
+            el.lastChild.textContent = texto;
+            clearTimeout(el._fim);
+            return el;
+        }
+        function sumir(ms) {
+            var el = document.getElementById('aviso-versao');
+            if (el) el._fim = setTimeout(function () { el.remove(); }, ms);
+        }
+        function esperarAtivacao(sw, limite) {
+            return new Promise(function (ok) {
+                if (sw.state === 'activated') return ok();
+                var t = setTimeout(ok, limite);
+                var pular = function () { if (sw.state === 'installed') sw.postMessage({ type: 'SKIP_WAITING' }); };
+                sw.addEventListener('statechange', function () {
+                    pular();
+                    if (sw.state === 'activated' || sw.state === 'redundant') { clearTimeout(t); ok(); }
+                });
+                pular();
+            });
+        }
+        function versaoAtiva() {
+            if (!('caches' in window)) return Promise.resolve('');
+            return caches.keys().then(function (ks) {
+                var k = ks.filter(function (n) { return n.indexOf('classicos-vivos-') === 0; })[0];
+                return k ? k.slice('classicos-vivos-'.length, 'classicos-vivos-'.length + 6) : '';
+            }).catch(function () { return ''; });
+        }
+        var ocupado = false;
+        function buscar() {
+            if (ocupado) return;
+            var T = textos();
+            ocupado = true;
+            aviso(T.procurando, true);   // retorno imediato ao toque
+            var fim = function (texto, ms) { aviso(texto); sumir(ms); ocupado = false; };
+            var recarregar = function (texto, ms) {
+                aviso(texto, true);
+                setTimeout(function () { location.reload(); }, ms);
+            };
+            if (!('serviceWorker' in navigator) || location.protocol.indexOf('http') !== 0) return recarregar(T.recarregando, 800);
+            if (navigator.onLine === false) return fim(T.semInternet, 5000);
+            navigator.serviceWorker.getRegistration().then(function (reg) {
+                if (!reg) return recarregar(T.recarregando, 800);
+                return reg.update().then(function () {
+                    var novo = reg.installing || reg.waiting;
+                    if (novo) {
+                        aviso(T.baixando, true);
+                        return esperarAtivacao(novo, 180000).then(function () { recarregar(T.recarregando, 400); });
+                    }
+                    // Já em dia: mostra por um tempo e recarrega, para a página usar a versão ativa
+                    return versaoAtiva().then(function (v) {
+                        aviso(T.emDia + (v ? ' (' + T.versao + ' ' + v + ')' : ''));
+                        setTimeout(function () { aviso(T.recarregando, true); location.reload(); }, 2500);
+                    });
+                });
+            }).catch(function () { fim(navigator.onLine === false ? T.semInternet : T.erro, 5000); });
+        }
+        var st = document.createElement('style');
+        st.textContent = '@keyframes cv-gira{to{transform:rotate(360deg)}}';
+        document.head.appendChild(st);
+        var btn = document.getElementById('btn-buscar-versao');
+        if (btn) btn.addEventListener('click', buscar);
+    })();
+    </script>
 </body>
 </html>
