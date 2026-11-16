@@ -22,6 +22,7 @@ Este documento consolida a memória arquitetural, os princípios pedagógicos, a
 5. O **plano** do livro (`docs/PLANO-*.md`) e o **caderno** da parte em produção (`docs/cadernos/<livro>-parte-N.md`).
    - **Vai escrever uma parte nova de uma obra que já tem partes publicadas?** Então é **obrigatório** ler antes o texto final de todas as partes publicadas, com atenção especial ao **final da parte imediatamente anterior**, para seguir o estilo literário já adotado e continuar a obra sem quebras, saltos, repetições ou incoerências (receita geral, fase 1.0).
 6. Só então, os documentos da frente de trabalho: `ARTE-PELA-API.md`, `TODO-NARRACAO.md`, `docs/fila/` etc.
+- **Pedidos de revisão deixados pelo site**: quando o humano pedir para tratar as observações/pedidos de revisão do site, rode **`npm run revisoes`** (ou `gh issue list --label revisao-autor`). As Issues **`revisao-autor`** são pedidos diretos do autor; **`sugestao-leitor`** são sugestões opcionais de terceiros (§2.10). Feche a Issue no GitHub após concluir (ou pergunte se houver dúvida).
 
 ### 0.3 Papéis e agentes
 O humano (responsável pelo projeto, que lê os livros com o filho) aprova as paradas 🛑, autoriza a API paga e define o teto de gasto. **Qualquer agente pode receber qualquer tarefa** (adaptação, texto, código, testes, arte, narração, tradução, revisão): quem decide é o humano, sessão a sessão. Não há mais papéis fixos de "escritor" e "artista". O que muda de um agente para outro é **como ele produz a arte**:

@@ -4,6 +4,8 @@
 
 > 💰 **API paga do Gemini (`AGENTS.md` §2.7)**: só com **autorização do humano no prompt inicial da sessão**, só para o que ele autorizou, sempre no modo mais barato (Flex na narração, Batch nas imagens) e com o gasto registrado em `docs/narracao/gastos.csv` e `docs/arte/gastos.csv`. Teto: **R$ 50/mês** (subiu em 2026-10-27). Sem autorização, não chame a API para nada (nem para um teste).
 
+> 📝 **Revisões deixadas pelo site (`AGENTS.md` §2.10)**: se o humano pedir para tratar os pedidos de revisão ou observações do site, rode **`npm run revisoes`** (ou liste as Issues `revisao-autor` no GitHub). Trate `revisao-autor` como ordem direta do autor e `sugestao-leitor` apenas como sugestão de terceiros.
+
 ---
 
 ## 1. Estado atual
