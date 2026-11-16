@@ -370,3 +370,11 @@ O que já foi entregue, sprint a sprint, em ordem cronológica (o mais antigo pr
 - **Anotações por página (`assets/js/colaboracao.js` + ganchos em `livro.js`)**: botão discreto na barra inferior (trava infantil de 2 toques / segurar para terceiros; abertura direta + fila offline no Modo Autor). Envia referência exata da obra, parte, página (`?page=N`), lente, idioma e arquivo-fonte.
 - **Avaliações 0–5 estrelas e comentários moderados**: bloco ao fim das partes publicadas com média, nota 0–5 por aparelho e comentário + e-mail opcionais (e-mail privado, comentário só aparece após moderação).
 - **Backend (`backend/` para Vercel + Supabase + GitHub Issues)**: endpoints `/api/revisoes`, `/api/avaliacoes`, `/api/admin`, mini-painel de moderação em `/admin`, esquema `backend/supabase.sql`, ativação discreta do Modo Autor em `sobre.html` e comando `npm run revisoes` (`tools/revisoes.mjs`) para os agentes consultarem as Issues `revisao-autor` e `sugestao-leitor`.
+
+## ✅ Aceleração do Service Worker e abertura dos livros (2026-11-16)
+- **Causa da lentidão**: desde `9cc9dd4`, cada mudança no `sw.js` disparava 222 requisições simultâneas com `cache: 'reload'` (~24,55 MB) para baixar todas as ilustrações de novo na instalação, saturando a conexão enquanto `isPage` (`Network-First`) esperava a rede sem limite de tempo.
+- **Correção (`tools/build-sw.mjs`, `tools/sw.template.js`)**:
+  - `sw.js` agora guarda o hash por arquivo (`cv-meta`): em qualquer atualização, arquivos inalterados são copiados do cache anterior sem rede e apenas os alterados são baixados (em lotes de 4).
+  - Na instalação, baixa apenas o núcleo leve (~1,45 MB); ilustrações faltantes aquecem em segundo plano (2 por vez) após ativar.
+  - `isPage` e narração usam limite de 2,5 s na rede quando já há cópia em cache (entregam do cache na hora e atualizam em segundo plano).
+- **Abertura mais leve (`assets/js/livro.js`, `assets/js/colaboracao.js`)**: `loading="lazy"` nas imagens das páginas 2 em diante (que já são pré-carregadas sob demanda por `warmImages`) e carregamento das avaliações da Vercel apenas ao chegar à última página.

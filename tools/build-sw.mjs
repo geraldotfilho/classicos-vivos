@@ -1,6 +1,5 @@
-// Gera sw.js (service worker) com a lista de arquivos de todos os livros para leitura offline.
-// A versão do cache é um hash do conteúdo: qualquer alteração em HTML, CSS, fonte ou imagem
-// gera uma versão nova e o tablet baixa a atualização na próxima visita com internet.
+// Gera sw.js (service worker) com a lista de arquivos e hash individual de cada arquivo.
+// Com o hash por arquivo, uma atualização baixa só o que mudou (em vez de baixar 24+ MB de novo).
 // Rode com: npm run build:sw  (já incluído em `npm run build`)
 import { readFileSync, writeFileSync, existsSync, globSync } from 'node:fs';
 import { createHash } from 'node:crypto';
@@ -22,16 +21,23 @@ const files = [
 ].sort();
 
 const hash = createHash('sha256');
+const entries = [];
 // Exclui offline-manager.js do cálculo do hash para poder injetar a versão nele de forma determinística
-for (const f of files.filter(f => !f.replace(/\\/g, '/').endsWith('offline-manager.js'))) {
-    hash.update(f).update(readFileSync(f));
+for (const f of files) {
+    const buf = readFileSync(f);
+    const norm = f.replace(/\\/g, '/');
+    const fileHash = createHash('sha256').update(buf).digest('hex').slice(0, 8);
+    entries.push([`./${norm}`, fileHash]);
+    if (!norm.endsWith('offline-manager.js')) {
+        hash.update(f).update(buf);
+    }
 }
 const version = hash.digest('hex').slice(0, 12);
 
 const template = readFileSync('tools/sw.template.js', 'utf8');
 const sw = template
     .replace('__VERSION__', version)
-    .replace('__FILES__', JSON.stringify(files.map(f => `./${f.replace(/\\/g, '/')}`), null, 4).replace(/\n/g, '\n'));
+    .replace('__FILES__', JSON.stringify(entries, null, 4).replace(/\n/g, '\n'));
 writeFileSync('sw.js', sw);
 
 // Atualiza também VERSAO_ATUAL em offline-manager.js e a lista de arquivos de cada parte publicada

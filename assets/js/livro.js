@@ -393,7 +393,7 @@ function montarCamadas(i, cena) {
     return (cena.camadas || []).map(l => {
         const arte = l.fundo
             ? `<div class="camada-arte" style="height:100%;background:${l.fundo};"></div>`
-            : `<div class="camada-arte"><img src="${escapeHtml(img(l.src))}" alt="" draggable="false"></div>`;
+            : `<div class="camada-arte"><img src="${escapeHtml(img(l.src))}" alt="" draggable="false"${i > 1 ? ' loading="lazy"' : ''}></div>`;
         return `
         <div class="camada${l.anim ? ` anim-${l.anim}` : ''}" data-camada="${escapeHtml(l.id)}" data-emoji="${escapeHtml(l.emoji || '✨')}"
              style="left:${l.x}%;top:${l.y}%;width:${l.w}%;${l.h ? `height:${l.h}%;` : ''}${l.z ? `z-index:${l.z};` : ''}">
@@ -448,7 +448,7 @@ function montarPaginaArte(i, pagina) {
             <div id="frame-${i}" class="art-plate relative w-full">
                 <div class="cena-caixa">
                     <div id="drop-zone-${i}" class="drop-zone-target relative aspect-[16/9] rounded-2xl overflow-hidden border-2 border-amber-400 shadow-md bg-slate-900 flex items-center justify-center">
-                        <img id="scene-bg-${i}" src="${escapeHtml(inicial.src)}" alt="${escapeHtml(t(cena.alt) || paginaNoIdioma(i).titulo || '')}" class="w-full h-full object-contain scene-img" />
+                        <img id="scene-bg-${i}" src="${escapeHtml(inicial.src)}" alt="${escapeHtml(t(cena.alt) || paginaNoIdioma(i).titulo || '')}" class="w-full h-full object-contain scene-img"${i > 1 ? ' loading="lazy"' : ''} />
                         <div class="scene-placeholder" aria-hidden="true"><span class="ph-emoji">${cena.emoji || '🎨'}</span><span data-ui="ilustracaoACaminho">${escapeHtml(ui('ilustracaoACaminho'))}</span></div>
                         ${montarCamadas(i, cena)}
                         ${cena.extra || ''}
@@ -2930,6 +2930,9 @@ function goToPage(index, options = {}) {
     // Aquece o cache com todas as ilustrações desta página e da próxima
     warmImages(allSceneSrcs(currentPage));
     if (currentPage + 1 < totalPages) warmImages(allSceneSrcs(currentPage + 1));
+    if (window.CVColaboracao && window.CVColaboracao.aoIrParaPagina) {
+        window.CVColaboracao.aoIrParaPagina(currentPage);
+    }
 }
 
 function nextPage() {

@@ -581,6 +581,7 @@
        AVALIAÇÃO (0 A 5 ESTRELAS) E COMENTÁRIOS MODERADOS NO FIM DA PARTE
        --------------------------------------------------------------------- */
     let resumoCache = null;
+    let carregandoAvaliacoes = false;
 
     function slugAtual() {
         const ctx = contextoAtual();
@@ -591,7 +592,8 @@
 
     async function carregarAvaliacoes() {
         const container = document.getElementById('avaliacao-fim');
-        if (!container) return;
+        if (!container || carregandoAvaliacoes) return;
+        carregandoAvaliacoes = true;
         try {
             const res = await fetch(`${obterApiBase()}/avaliacoes?slug=${encodeURIComponent(slugAtual())}`);
             if (!res.ok) return;
@@ -600,6 +602,8 @@
         } catch {
             // Sem conexão: mostra apenas se já havia algo ou mantém discreto sem erro
             renderAvaliacoes(container);
+        } finally {
+            carregandoAvaliacoes = false;
         }
     }
 
@@ -753,8 +757,19 @@
             vincularTravaAdulto(btn, abrirModal);
         }
         const avalEl = document.getElementById('avaliacao-fim');
-        if (avalEl) carregarAvaliacoes();
+        if (avalEl) {
+            renderAvaliacoes(avalEl);
+            const ctx = contextoAtual();
+            if (ctx.pagina >= ctx.paginaTotal - 1) carregarAvaliacoes();
+        }
         sincronizarFila();
+    }
+
+    function aoIrParaPagina(paginaIdx) {
+        const ctx = contextoAtual();
+        if (paginaIdx >= ctx.paginaTotal - 1 && !resumoCache) {
+            carregarAvaliacoes();
+        }
     }
 
     function aoMudarIdioma() {
@@ -773,6 +788,7 @@
 
     window.CVColaboracao = {
         iniciarNoLivro,
+        aoIrParaPagina,
         aoMudarIdioma,
         abrirModal,
         fecharModal,
