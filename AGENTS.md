@@ -259,7 +259,7 @@ Atividades para quem **já lê sozinho** (~8 a 10 anos), opcionais e fora do cam
 - **Anotação por página**: botão discreto `#btn-anotar` na barra inferior (`#barra-base`), disponível em livros publicados e rascunhos. Para leitores comuns, exige 2 toques seguidos ou segurar ~750 ms (trava infantil). Com o **Modo Autor** ativado (`cv-autor-chave` validada e salva no `localStorage`, via modal ou `sobre.html`), abre em 1 toque e funciona até offline (enfileira em `cv-revisoes-fila` e sincroniza ao reconectar).
 - **Ponte serverless (`backend/` na Vercel + Supabase + GitHub Issues)**:
   - `POST /api/revisoes` cria Issues no GitHub com a referência exata da página (`?page=N`, lente, idioma e arquivo-fonte): etiqueta **`revisao-autor`** (quando autenticado com `AUTHOR_KEY`) ou **`sugestao-leitor`** (terceiros).
-  - `GET/POST /api/avaliacoes` grava notas de **0 a 5 estrelas** por parte (`avaliacoes`, 1 voto por `deviceId`) e comentários opcionais (`comentarios` nascem como `pendente`; `email` opcional fica privado no Supabase e nunca vai para o repositório público).
+  - `GET/POST /api/avaliacoes` grava notas de **0 a 5 estrelas** por parte (`cv_avaliacoes`, 1 voto por `deviceId`) e comentários opcionais (`cv_comentarios` nascem como `pendente`; `email` opcional fica privado no Supabase e nunca vai para o repositório público).
   - `GET/POST /api/admin` + `backend/public/index.html` (`/admin`) formam o mini-painel de moderação protegido pela mesma `AUTHOR_KEY`.
 - **Fluxo para agentes**: quando o humano pedir para tratar as observações do site, rode **`npm run revisoes`** (`tools/revisoes.mjs`) para listar as Issues abertas separadas entre `revisao-autor` (prioritárias) e `sugestao-leitor`.
 

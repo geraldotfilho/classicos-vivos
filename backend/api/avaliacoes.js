@@ -12,8 +12,8 @@ function ehEmailValido(email) {
 async function obterResumo(slug) {
     const q = encodeURIComponent(slug);
     const [notas, comentarios] = await Promise.all([
-        supabaseFetch(`avaliacoes?slug=eq.${q}&select=estrelas`),
-        supabaseFetch(`comentarios?slug=eq.${q}&status=eq.aprovado&order=criado_em.desc&limit=50&select=id,nome,estrelas,comentario,criado_em`)
+        supabaseFetch(`cv_avaliacoes?slug=eq.${q}&select=estrelas`),
+        supabaseFetch(`cv_comentarios?slug=eq.${q}&status=eq.aprovado&order=criado_em.desc&limit=50&select=id,nome,estrelas,comentario,criado_em`)
     ]);
 
     const listaNotas = Array.isArray(notas) ? notas : [];
@@ -85,7 +85,7 @@ export default async function handler(req, res) {
                 }
             }
 
-            await supabaseFetch('avaliacoes?on_conflict=slug,device_id', {
+            await supabaseFetch('cv_avaliacoes?on_conflict=slug,device_id', {
                 method: 'POST',
                 prefer: 'resolution=merge-duplicates',
                 body: {
@@ -99,7 +99,7 @@ export default async function handler(req, res) {
             });
 
             if (comentario) {
-                await supabaseFetch('comentarios', {
+                await supabaseFetch('cv_comentarios', {
                     method: 'POST',
                     body: {
                         slug,

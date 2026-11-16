@@ -36,7 +36,7 @@ export async function supabaseFetch(caminho, { method = 'GET', body, prefer } = 
 }
 
 /**
- * Limite simples por janela de 1 hora na tabela rate_limits.
+ * Limite simples por janela de 1 hora na tabela cv_rate_limits.
  * Retorna true se ainda estiver dentro do limite, false se excedeu.
  */
 export async function verificarRateLimit(chave, maxPorHora = 15) {
@@ -44,11 +44,11 @@ export async function verificarRateLimit(chave, maxPorHora = 15) {
     const agora = Date.now();
     const umaHora = 60 * 60 * 1000;
 
-    const existentes = await supabaseFetch(`rate_limits?chave=eq.${q}&select=chave,contagem,janela_inicio`);
+    const existentes = await supabaseFetch(`cv_rate_limits?chave=eq.${q}&select=chave,contagem,janela_inicio`);
     const atual = Array.isArray(existentes) ? existentes[0] : null;
 
     if (!atual) {
-        await supabaseFetch('rate_limits', {
+        await supabaseFetch('cv_rate_limits', {
             method: 'POST',
             prefer: 'resolution=merge-duplicates',
             body: { chave, contagem: 1, janela_inicio: new Date(agora).toISOString() }
@@ -58,7 +58,7 @@ export async function verificarRateLimit(chave, maxPorHora = 15) {
 
     const inicio = new Date(atual.janela_inicio).getTime();
     if (agora - inicio > umaHora) {
-        await supabaseFetch(`rate_limits?chave=eq.${q}`, {
+        await supabaseFetch(`cv_rate_limits?chave=eq.${q}`, {
             method: 'PATCH',
             body: { contagem: 1, janela_inicio: new Date(agora).toISOString() }
         });
@@ -67,7 +67,7 @@ export async function verificarRateLimit(chave, maxPorHora = 15) {
 
     if (atual.contagem >= maxPorHora) return false;
 
-    await supabaseFetch(`rate_limits?chave=eq.${q}`, {
+    await supabaseFetch(`cv_rate_limits?chave=eq.${q}`, {
         method: 'PATCH',
         body: { contagem: atual.contagem + 1 }
     });

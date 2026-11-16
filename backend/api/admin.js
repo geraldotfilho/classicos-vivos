@@ -24,8 +24,8 @@ export default async function handler(req, res) {
 
         try {
             const [lista, todosStatus] = await Promise.all([
-                supabaseFetch(`comentarios?${filtro}order=criado_em.desc&limit=200&select=id,slug,obra,parte,estrelas,nome,email,comentario,status,criado_em,moderado_em`),
-                supabaseFetch('comentarios?select=status')
+                supabaseFetch(`cv_comentarios?${filtro}order=criado_em.desc&limit=200&select=id,slug,obra,parte,estrelas,nome,email,comentario,status,criado_em,moderado_em`),
+                supabaseFetch('cv_comentarios?select=status')
             ]);
 
             const contadores = { pendente: 0, aprovado: 0, rejeitado: 0 };
@@ -62,10 +62,10 @@ export default async function handler(req, res) {
 
         try {
             if (acao === 'excluir') {
-                await supabaseFetch(`comentarios?id=eq.${encodeURIComponent(id)}`, { method: 'DELETE' });
+                await supabaseFetch(`cv_comentarios?id=eq.${encodeURIComponent(id)}`, { method: 'DELETE' });
             } else {
                 const novoStatus = acao === 'aprovar' ? 'aprovado' : 'rejeitado';
-                await supabaseFetch(`comentarios?id=eq.${encodeURIComponent(id)}`, {
+                await supabaseFetch(`cv_comentarios?id=eq.${encodeURIComponent(id)}`, {
                     method: 'PATCH',
                     body: { status: novoStatus, moderado_em: new Date().toISOString() }
                 });
