@@ -1,0 +1,10 @@
+{
+  "name": "classicos-vivos-api",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Ponte serverless (Vercel + Supabase + GitHub Issues) para revisões, sugestões e avaliações do Clássicos Vivos.",
+  "engines": {
+    "node": ">=18"
+  }
+}

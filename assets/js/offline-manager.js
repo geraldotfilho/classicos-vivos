@@ -5,7 +5,7 @@
 (function() {
     'use strict';
 
-    const VERSAO_ATUAL = '2dc0296d8cfd';
+    const VERSAO_ATUAL = '80968667c1af';
     const PREFIXO_CACHE = 'cv-volume-quixote-';
     const PREFIXO_STORAGE = 'cv-offline-quixote-';
 
@@ -30,6 +30,7 @@
         "./assets/icones/bandeiras/fr.svg",
         "./assets/icones/bandeiras/gb.svg",
         "./assets/js/acervo.js",
+        "./assets/js/colaboracao.js",
         "./assets/js/i18n-site.js",
         "./assets/js/livro.js",
         "./assets/js/texto.js",
@@ -108,6 +109,7 @@
         "./assets/icones/bandeiras/fr.svg",
         "./assets/icones/bandeiras/gb.svg",
         "./assets/js/acervo.js",
+        "./assets/js/colaboracao.js",
         "./assets/js/i18n-site.js",
         "./assets/js/livro.js",
         "./assets/js/texto.js",
@@ -165,6 +167,7 @@
         "./assets/icones/bandeiras/fr.svg",
         "./assets/icones/bandeiras/gb.svg",
         "./assets/js/acervo.js",
+        "./assets/js/colaboracao.js",
         "./assets/js/i18n-site.js",
         "./assets/js/livro.js",
         "./assets/js/texto.js",
@@ -218,6 +221,7 @@
         "./assets/icones/bandeiras/fr.svg",
         "./assets/icones/bandeiras/gb.svg",
         "./assets/js/acervo.js",
+        "./assets/js/colaboracao.js",
         "./assets/js/i18n-site.js",
         "./assets/js/livro.js",
         "./assets/js/texto.js",
@@ -273,6 +277,7 @@
         "./assets/icones/bandeiras/fr.svg",
         "./assets/icones/bandeiras/gb.svg",
         "./assets/js/acervo.js",
+        "./assets/js/colaboracao.js",
         "./assets/js/i18n-site.js",
         "./assets/js/livro.js",
         "./assets/js/texto.js",
@@ -323,6 +328,7 @@
         "./assets/icones/bandeiras/fr.svg",
         "./assets/icones/bandeiras/gb.svg",
         "./assets/js/acervo.js",
+        "./assets/js/colaboracao.js",
         "./assets/js/i18n-site.js",
         "./assets/js/livro.js",
         "./assets/js/texto.js",

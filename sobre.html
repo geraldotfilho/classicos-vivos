@@ -644,6 +644,27 @@
                 </div>
             </section>
 
+            <!-- Modo Autor (discreto) -->
+            <details class="bg-slate-50 border border-slate-200 rounded-2xl p-4 text-xs sm:text-sm text-slate-700">
+                <summary class="cursor-pointer font-display font-bold text-slate-700 flex items-center gap-2">
+                    <i class="ph-bold ph-key text-amber-700"></i>
+                    <span>Modo Autor e Moderação</span>
+                </summary>
+                <div id="sobre-autor-painel" class="mt-3 space-y-2.5">
+                    <p class="font-semibold text-slate-600">Ative no seu aparelho para enviar anotações direto como <code>revisao-autor</code> (sem trava infantil e com fila offline).</p>
+                    <div id="sobre-autor-estado" class="font-bold"></div>
+                    <div id="sobre-autor-form" class="flex flex-wrap gap-2">
+                        <input id="sobre-autor-chave" type="password" placeholder="Chave secreta do autor" class="flex-1 min-w-[200px] rounded-xl border-2 border-amber-300 bg-white px-3 py-2 text-sm">
+                        <button id="sobre-autor-entrar" type="button" class="btn-round bg-emerald-600 hover:bg-emerald-700 text-white font-display font-bold px-4 py-2 rounded-xl border-2 border-emerald-800 cursor-pointer">Ativar Modo Autor</button>
+                    </div>
+                    <div class="flex flex-wrap items-center gap-3 pt-1">
+                        <button id="sobre-autor-sair" type="button" class="hidden text-rose-700 underline font-bold cursor-pointer">Sair do Modo Autor neste aparelho</button>
+                        <button id="sobre-autor-sync" type="button" class="hidden text-amber-800 underline font-bold cursor-pointer"></button>
+                        <a id="sobre-link-admin" href="https://classicos-vivos-api.vercel.app/admin" target="_blank" rel="noopener noreferrer" class="text-indigo-700 underline font-bold">Abrir painel de moderação →</a>
+                    </div>
+                </div>
+            </details>
+
             <!-- Licenças e Filosofia Aberta -->
             <section class="space-y-2 text-sm font-semibold text-slate-600 border-t-2 border-amber-200 pt-4">
                 <p data-i18n-html="licenca1">Projeto aberto e gratuito. Código sob licença MIT; textos adaptados e ilustrações sob CC BY 4.0, completamente livres para usar, reproduzir, copiar, compartilhar e readaptar para qualquer fim (livre como em liberdade!), bastando manter os créditos ao <strong>Clássicos Vivos</strong>.</p>
@@ -716,5 +737,64 @@
     </script>
     <script src="./assets/js/acervo.js"></script>
     <script src="./assets/js/i18n-site.js"></script>
+    <script src="./assets/js/colaboracao.js"></script>
+    <script>
+        (function () {
+            const C = window.CVColaboracao;
+            if (!C) return;
+            const estadoEl = document.getElementById('sobre-autor-estado');
+            const formEl = document.getElementById('sobre-autor-form');
+            const sairEl = document.getElementById('sobre-autor-sair');
+            const syncEl = document.getElementById('sobre-autor-sync');
+            const adminLink = document.getElementById('sobre-link-admin');
+            if (adminLink) adminLink.href = C.obterApiBase().replace(/\/api$/, '') + '/admin';
+
+            function atualizarSobreAutor() {
+                const ativo = C.autorAtivo();
+                const fila = C.contarFila();
+                estadoEl.textContent = ativo ? '🔑 Modo Autor ativo neste aparelho.' : 'Modo Autor desligado neste aparelho.';
+                estadoEl.className = ativo ? 'font-bold text-emerald-700' : 'font-bold text-slate-600';
+                formEl.classList.toggle('hidden', ativo);
+                sairEl.classList.toggle('hidden', !ativo);
+                if (fila > 0) {
+                    syncEl.textContent = `Enviar ${fila} anotação(ões) da fila offline`;
+                    syncEl.classList.remove('hidden');
+                } else {
+                    syncEl.classList.add('hidden');
+                }
+            }
+
+            document.getElementById('sobre-autor-entrar').addEventListener('click', async () => {
+                const inp = document.getElementById('sobre-autor-chave');
+                const btn = document.getElementById('sobre-autor-entrar');
+                const chave = inp.value.trim();
+                if (!chave) return;
+                btn.disabled = true;
+                try {
+                    await C.verificarChaveAutor(chave);
+                    inp.value = '';
+                    atualizarSobreAutor();
+                } catch (err) {
+                    estadoEl.textContent = err.message || 'Chave inválida.';
+                    estadoEl.className = 'font-bold text-rose-700';
+                } finally {
+                    btn.disabled = false;
+                }
+            });
+
+            sairEl.addEventListener('click', () => {
+                C.sairAutor();
+                atualizarSobreAutor();
+            });
+
+            syncEl.addEventListener('click', async () => {
+                const r = await C.sincronizarFila();
+                atualizarSobreAutor();
+                estadoEl.textContent = `Sincronizado: ${r.enviados} enviada(s), ${r.restantes} restante(s).`;
+            });
+
+            atualizarSobreAutor();
+        })();
+    </script>
 </body>
 </html>
