@@ -81,3 +81,6 @@ Relatório: [`../revisao/FIDELIDADE-VOLUME-2.md`](../revisao/FIDELIDADE-VOLUME-2
   - Os três bonecos da pág. 5 (`p5-rei`, `p5-cavalo`, `p5-torre`) foram recortados de `#FF00FF` via `tools/recortar-camada.py` e posicionados dentro da boca de cena do palquinho em `dom-quixote/parte-6.html` (`x: 34.5 / 42.5 / 51.5`, `y: 63.5`, `w: 5.5 / 9.0 / 5.8`), com `figura` ativada nos cartões.
   - As 5 artes reaproveitadas da Parte 4 v1 na pág. 9 (Clavilenho) foram copiadas para `dom-quixote/imagens/parte-6/p9-*.webp` e `camadas/p9-*.webp` para entrar no `sw.js` e no botão offline.
 - **Publicação**: 23 arquivos WebP na pasta da parte (17 cenas + 6 camadas). Falta gravar a narração (fase 6) e traduzir (fase 7).
+
+## Revisão do autor pelo app (2026-11-19, Issue #52)
+- **Pág. 3 (cap. 44, a festa das panelas)**: "a imagem onde aparece um animal inteiro sobre o fogo pode parecer perturbadora". A `p2-real` foi refeita pela API como edição da aprovada (lista `tools/arte/dom-quixote-revisoes-2026-11-19.mjs`): o boi no espeto saiu e, no lugar, há três panelões de cobre fumegando e uma mesa de pães e frutas. O resto da cena ficou igual. O texto (gravado na narração) não mudou.

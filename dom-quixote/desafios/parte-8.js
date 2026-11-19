@@ -3,7 +3,7 @@ window.DESAFIOS = {
   livro: 'dom-quixote',
   parte: 8,
   paginas: {
-    // Capítulo 61 — Pastores de Brincadeira
+    // Capítulo 62 — Pastores de Brincadeira
     1: {
       titulo: 'Pastores de mentirinha',
       selo: '🕸️',
@@ -40,7 +40,7 @@ window.DESAFIOS = {
       sabia: 'Antes de escrever Dom Quixote, Cervantes publicou um romance de pastores que cantam e fazem versos, chamado La Galatea. Ele conhecia bem essa moda!'
     },
 
-    // Capítulo 62 — Esse Não Sou Eu!
+    // Capítulo 63 — Esse Não Sou Eu!
     2: {
       titulo: 'O livro de mentirinha',
       selo: '📕',
@@ -82,7 +82,7 @@ window.DESAFIOS = {
       sabia: 'No livro de Cervantes é assim mesmo: ao saber que o livro falso mandava Dom Quixote para Saragoça, ele muda de rumo e vai para Barcelona, só para provar que o outro autor errou.'
     },
 
-    // Capítulo 63 — A Água que Não Acaba
+    // Capítulo 64 — A Água que Não Acaba
     3: {
       titulo: 'Sancho e o mar',
       selo: '🌊',
@@ -117,7 +117,7 @@ window.DESAFIOS = {
       sabia: 'No livro de Cervantes, Dom Quixote chega a Barcelona e vê o mar pela primeira vez, como na história que você acabou de ler.'
     },
 
-    // Capítulo 64 — O Papel nas Costas
+    // Capítulo 65 — O Papel nas Costas
     4: {
       titulo: 'O truque da cabeça de bronze',
       selo: '🗿',
@@ -166,7 +166,7 @@ window.DESAFIOS = {
       sabia: 'A palavra "fama" vem do latim fama, que quer dizer "o que se fala por aí". Ou seja: fama é conversa que corre de boca em boca!'
     },
 
-    // Capítulo 65 — O Nome do Mago
+    // Capítulo 66 — O Nome do Mago
     5: {
       titulo: 'Onde nascem os livros',
       selo: '🔤',
@@ -206,7 +206,7 @@ window.DESAFIOS = {
       sabia: 'No livro de Cervantes, Dom Quixote visita mesmo uma gráfica em Barcelona e vê como se imprimem livros. A impressão com letras de metal, inventada por Gutenberg, já existia havia mais de cem anos.'
     },
 
-    // Capítulo 66 — O Trato na Praia
+    // Capítulo 67 — O Trato na Praia
     6: {
       titulo: 'Trato é trato',
       selo: '🏖️',
@@ -255,7 +255,7 @@ window.DESAFIOS = {
       sabia: 'A palavra "cavaleiro" vem do latim caballarius, que vem de caballus, "cavalo". Faz sentido: cavaleiro é quem anda a cavalo!'
     },
 
-    // Capítulo 67 — O Pastor Quixotiz
+    // Capítulo 68 — O Pastor Quixotiz
     7: {
       titulo: 'Nomes de pastor',
       selo: '🏷️',
@@ -299,7 +299,7 @@ window.DESAFIOS = {
       sabia: 'A palavra "pastor" vem do latim pastor, de pascere, "alimentar, fazer pastar". "Pasto" e "pastar" são da mesma família!'
     },
 
-    // Capítulo 68 — O Segredo de Sansão
+    // Capítulo 69 — O Segredo de Sansão
     8: {
       titulo: 'O cavaleiro que era amigo',
       selo: '🤗',
@@ -337,7 +337,7 @@ window.DESAFIOS = {
       sabia: 'A palavra "segredo" vem do latim secretum, que quer dizer "separado, posto de lado". Segredo é aquilo que a gente guarda separado dos outros.'
     },
 
-    // Capítulo 69 — Era uma Vez...
+    // Capítulo 70 — Era uma Vez...
     9: {
       titulo: 'Recapitulando a Parte 8',
       selo: '🌟',

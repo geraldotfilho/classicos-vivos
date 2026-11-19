@@ -99,28 +99,41 @@ window.DESAFIOS = {
 
     // Capítulo 54 — O Doutor Tira-Prato
     3: {
-      titulo: 'As desculpas do doutor',
+      titulo: 'As razões do doutor',
       selo: '🥄',
-      convite: 'Fruta molhada, frango seco, coelho peludo! Será que você pega o doutor no pulo?',
+      convite: 'Torta some, torresmo some, frango some... mas uma maçã escapou. Você descobre por quê?',
       etapas: [
         {
           tipo: 'ligar',
-          pergunta: 'Ligue cada comida à desculpa que o doutor deu para tirá-la do prato.',
+          pergunta: 'Ligue cada comida ao que o doutor disse sobre ela.',
           pares: [
-            ['Fruta', 'é muito molhada'],
-            ['Frango', 'é muito seco'],
-            ['Coelho', 'tem pelo'],
-            ['Cozido', 'tem tempero demais']
+            ['Torta de creme e açúcar', 'tanto açúcar faz o dente chorar'],
+            ['Torresmo', 'tanta gordura deixa a barriga pesada'],
+            ['Frango', 'tem asa e pode querer sair voando'],
+            ['Maçã', 'fruta pode, fruta faz bem']
           ],
-          dica: 'Releia o terceiro parágrafo, a fala do doutor.',
-          porque: 'Molhada, seca, peluda e temperada: sobraram as bolachinhas!'
+          dica: 'Releia o segundo e o terceiro parágrafos: a varinha e a fala do doutor.',
+          porque: 'Até o frango virou ave de fuga na barriga do governador!'
+        },
+        {
+          tipo: 'quiz',
+          pergunta: 'Sancho diz: "Comer bem não é comer quase nada." Qual é a ideia dele?',
+          opcoes: [
+            'Comer de tudo um pouco, com fruta e verdura no prato',
+            'Comer só pão e queijo, todos os dias',
+            'Comer muita torta, mas só em dia de festa',
+            'Comer só bolachinhas bem fininhas'
+          ],
+          certa: 0,
+          dica: 'Releia o último parágrafo, logo depois do jantar do governador.',
+          porque: 'Nem tudo nem nada: um pouco de cada coisa, e fruta sempre!'
         },
         {
           tipo: 'erro',
           pergunta: 'O mordomo anotou tudo trocado no caderninho! Toque nas 3 palavras erradas para corrigir.',
-          texto: 'O doutor tocava os pratos com uma [[colher|varinha]]. Sancho mandou o doutor embora e pediu pão, cebola e [[chocolate|queijo]]. O doutor se dizia Pedro Rezio, da aldeia de [[Tiralonge|Tirafora]].',
-          dica: 'Releia o primeiro parágrafo e o quarto, o da resposta de Sancho.',
-          porque: 'Tirafora, sim: de onde o doutor foi mandado embora!'
+          texto: 'O doutor tocava os pratos com uma [[colher|varinha]]. Sancho escondeu uma [[pera|maçã]] atrás das costas. No jantar, comeu pão, queijo, cebola e sopa de [[carne|legumes]].',
+          dica: 'Releia o primeiro parágrafo, o terceiro e o último.',
+          porque: 'Varinha, maçã e sopa de legumes: o jantar foi bem melhor que as bolachinhas!'
         }
       ],
       sabia: 'No original, a terra do doutor se chama Tirteafuera, e Cervantes faz uma brincadeira com isso: o nome parece "tire-se para fora"!'
@@ -157,22 +170,58 @@ window.DESAFIOS = {
           ],
           dica: 'Releia o segundo parágrafo e depois o quarto e o quinto.',
           porque: 'Quase deu certo. Sancho só precisava de uma bengala e de uma boa pergunta.'
-        },
-        {
-          tipo: 'lacunas',
-          pergunta: 'O caso da ponte é um nó! Complete para ver por que ele não tem saída fácil.',
-          texto: 'O homem disse: "Eu vou para a ___". Se passasse pela ponte, teria ___; se fosse preso, teria dito a ___.',
-          respostas: ['cadeia', 'mentido', 'verdade'],
-          distratores: ['feira', 'vencido'],
-          dica: 'Releia o último parágrafo e a lei da ponte: quem diz a verdade passa; quem mente vai para a cadeia.',
-          porque: 'Sem saída certa, Sancho escolheu perdoar, como o amo ensinou.'
         }
       ],
-      sabia: 'O caso da ponte é um paradoxo: uma situação em que qualquer resposta parece contradizer a outra. O desafio é um dos julgamentos de Sancho no livro de Cervantes.'
+      sabia: 'Esse caso também está em Cervantes (Segunda Parte, cap. 45). Lá, Sancho manda o devedor entregar a bengala ao credor como pagamento e depois a quebra: as moedas estavam dentro.'
     },
 
-    // Capítulo 56 — O Colar de Corais
+    // Capítulo 56 — A Ponte da Pergunta Difícil
     5: {
+      titulo: 'Passa ou não passa?',
+      selo: '🌉',
+      convite: 'Se ele passa, mentiu. Se vai preso, falou a verdade. Até os guardas ficaram tontos!',
+      etapas: [
+        {
+          tipo: 'lacunas',
+          pergunta: 'Complete para ver por que o caso da ponte é um nó.',
+          texto: 'O homem disse: "Eu vou para a ___". Se o deixassem passar, ele teria ___; se o prendessem, teria dito a ___.',
+          respostas: ['cadeia', 'mentido', 'verdade'],
+          distratores: ['feira', 'vencido'],
+          dica: 'Releia o segundo parágrafo, com a lei da ponte, e o terceiro, com o raciocínio dos guardas.',
+          porque: 'Passando ou preso, os guardas ficavam errados. Dá tontura!'
+        },
+        {
+          tipo: 'classificar',
+          pergunta: 'Mande cada pensamento para o prato da balança em que ele pesa.',
+          grupos: ['🔒 Razão para prender', '🕊️ Razão para soltar'],
+          itens: [
+            { texto: 'Quem mente vai para a cadeia', grupo: 0 },
+            { texto: 'Se ele passar, não foi para a cadeia: então mentiu', grupo: 0 },
+            { texto: 'Quem diz a verdade passa', grupo: 1 },
+            { texto: 'Se for preso, foi mesmo para a cadeia: então disse a verdade', grupo: 1 }
+          ],
+          dica: 'Releia o terceiro parágrafo, o raciocínio dos guardas, e depois a fala de Sancho no último.',
+          porque: 'Dois pratos com o mesmo peso: a balança ficou parada no meio.'
+        },
+        {
+          tipo: 'quiz',
+          pergunta: 'Por que Sancho decidiu deixar o homem passar?',
+          opcoes: [
+            'As razões pesavam igual, e na dúvida é melhor perdoar',
+            'Porque o homem prometeu nunca mais passar por lá',
+            'Porque os guardas ficaram tontos e foram dormir',
+            'Porque o viajante pediu com muita educação'
+          ],
+          certa: 0,
+          dica: 'Releia o último parágrafo: o que Sancho diz quando os dois lados pesam igual?',
+          porque: 'O amo ensinou: a justiça fica mais bonita de mãos dadas com o perdão.'
+        }
+      ],
+      sabia: 'Um problema em que qualquer resposta parece desmentir a si mesma se chama paradoxo. Este está em Cervantes, na Segunda Parte (cap. 51); no livro original a punição era bem mais dura, e aqui virou cadeia.'
+    },
+
+    // Capítulo 57 — O Colar de Corais
+    6: {
       titulo: 'Notícias na aldeia',
       selo: '📿',
       convite: 'A carta chega com colar e tudo. Mas tem alguém que está prestando atenção demais...',
@@ -216,8 +265,8 @@ window.DESAFIOS = {
       sabia: 'Coral é, na verdade, formado por pequenos animais do mar. Por isso os colares de coral vermelho eram joias valiosas e raras.'
     },
 
-    // Capítulo 57 — A Saudade de Dom Quixote
-    6: {
+    // Capítulo 58 — A Saudade de Dom Quixote
+    7: {
       titulo: 'Cartas de amigo',
       selo: '✍️',
       convite: 'Um cavaleiro e um governador trocam cartas. Em qual delas cada coisa foi dita?',
@@ -255,8 +304,8 @@ window.DESAFIOS = {
       sabia: 'A palavra "assinar" vem do latim "signum", que quer dizer "sinal": a assinatura é o sinal que cada pessoa deixa no papel.'
     },
 
-    // Capítulo 58 — O Ataque de Mentira
-    7: {
+    // Capítulo 59 — O Ataque de Mentira
+    8: {
       titulo: 'A ilha de mentira',
       selo: '🐢',
       convite: 'Gritos, sinos e dois escudos! Sancho entendeu tudo, e agora você também vai entender.',
@@ -300,8 +349,8 @@ window.DESAFIOS = {
       sabia: 'No livro de Cervantes, ao deixar o governo, Sancho diz que nasceu sem nada e sai sem nada: "nem perco nem ganho".'
     },
 
-    // Capítulo 59 — A Voz no Buraco
-    8: {
+    // Capítulo 60 — A Voz no Buraco
+    9: {
       titulo: 'Quem reconheceu quem',
       selo: '🕳️',
       convite: 'Um cheiro, um zurro e uma voz fraquinha. Quem foi o primeiro a reconhecer o amigo?',
@@ -344,8 +393,8 @@ window.DESAFIOS = {
       sabia: 'No livro de Cervantes, o burrico de Sancho se chama Rucio, palavra que quer dizer de cor parda, entre cinza e marrom. Em português, "ruço" ainda quer dizer isso.'
     },
 
-    // Capítulo 60 — A Despedida do Palácio (recapitulação da parte)
-    9: {
+    // Capítulo 61 — A Despedida do Palácio (recapitulação da parte)
+    10: {
       titulo: 'Recapitulando a Parte 7',
       selo: '🕊️',
       convite: 'Dos chapeuzinhos ao buraco, de Barataria à estrada: o que ficou na sua memória de juiz?',

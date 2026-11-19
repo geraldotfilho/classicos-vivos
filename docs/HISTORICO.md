@@ -394,3 +394,10 @@ O que já foi entregue, sprint a sprint, em ordem cronológica (o mais antigo pr
     - **Total da sessão na API**: **US$ 0,5208** (registrado em `docs/arte/gastos.csv`; a Parte 7 teve 9/9 imagens novas gratuitas via Antigravity = US$ 0,00).
   - As 2 artes reaproveitadas da lareira (`acervo/parte-4-v1/p7-real.webp` e `p7-imag.webp`) foram copiadas como `p9-real.webp` e `p9-imag.webp` para `dom-quixote/imagens/parte-8/`.
 - **Publicação e fechamento dos dois volumes**: `rascunho: true` removido de `dom-quixote/parte-8.html`; `parte-7.html` aponta para `./parte-8.html`; Volume 2 da `index.html` passa a abrir completo (Partes 5 a 8 desbloqueadas, selo `Coleção Completa · 4 Partes`), com descrição em `sobre.html` e `assets/js/i18n-site.js` (PT/EN/FR/ES), `dom-quixote-parte-8` removida de `assets/js/acervo.js`, `AGENTS.md` §1 e documentação atualizados, `npm run build` e `npm run conferir:desafios` executados e verificados via Playwright em retrato (800×1280) e paisagem (1280×800). Falta leitura em família com notas pelo app, narração em português e traduções das Partes 7 e 8.
+
+## ✅ Revisões do autor pelo app: Issues #52, #53 e #54 (2026-11-19)
+- **#52 · Parte 6, pág. 3**: a `p2-real` (festa de Camacho) foi refeita sem o boi inteiro no espeto (panelões de cobre e mesa de pães e frutas no lugar).
+- **#53 · Parte 7, cap. 54**: o doutor Tira-Prato não barra mais a fruta; tira o açúcar e a gordura em excesso e o frango "que tem asa", e Sancho fecha com "comer de tudo um pouco, com fruta e verdura no prato".
+- **#54 · Parte 7, cap. 55**: dividido em dois capítulos (bengala; e a ponte, novo cap. 56, conferido em Cervantes II-51). Arte da bengala refeita com a bengala nas mãos do aldeão; cena nova para a ponte. Parte 7 com 11 páginas; capítulos renumerados (P7: 52–61, P8: 62–70); imagens `p5`..`p9` → `p6`..`p10`; desafios atualizados.
+- **Gasto**: 3 imagens pela API Batch (`tools/arte/dom-quixote-revisoes-2026-11-19.mjs`), **US$ 0,10** (`docs/arte/gastos.csv`).
+
