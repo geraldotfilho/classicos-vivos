@@ -7,8 +7,8 @@
              'rascunho' → o arquivo existe com `rascunho: true` no window.LIVRO
    estante:  id de uma prateleira do index.html com `data-estante-producao`, onde
              apareceria a capa-teaser com cadeado; null = não aparece como capa própria
-             (a Parte 8 aparece com cadeado dentro do Volume 2, fixo no index.html, que abre com as Partes 5 a 7 publicadas;
-             vale também para a nova versão de uma parte já publicada).
+             (os dois volumes de Dom Quixote já estão completos e publicados no index.html;
+             use null também para a nova versão de uma parte já publicada).
    href:     o arquivo do rascunho (aberto pela lista para adultos em sobre.html)
 
    Ao publicar uma obra: tire a entrada daqui, ponha a capa fixa no index.html
@@ -17,18 +17,6 @@
    na fila para virar rascunho em breve. Nada de "próximos clássicos" vagos.
    ===================================================================== */
 window.ACERVO_PRODUCAO = [
-    {
-        id: 'dom-quixote-parte-8',
-        obra: 'Dom Quixote de La Mancha',
-        parte: 8,
-        titulo: 'Parte 8: O Cavaleiro da Branca Lua',
-        nota: 'Segundo volume (1615), caps. 58–74. Rascunho de texto e atividades; só a última página tem ilustração.',
-        situacao: 'rascunho',
-        estante: null,
-        emoji: '🌙',
-        cor: 'from-slate-200 to-indigo-300',
-        href: './dom-quixote/parte-8.html'
-    },
     {
         id: 'robin-hood',
         obra: 'Robin Hood',
