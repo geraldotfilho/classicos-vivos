@@ -1,4 +1,4 @@
-# 🔁 Retomada — onde o trabalho parou (2026-11-18, Parte 7 de Dom Quixote ilustrada e publicada; Parte 8 em andamento)
+# 🔁 Retomada — onde o trabalho parou (2026-11-18, Partes 7 e 8 de Dom Quixote ilustradas e publicadas — Volume 2 completo na estante)
 
 **Leia este arquivo primeiro numa sessão nova**, seja qual for o agente. Depois, siga a ordem de leitura do `AGENTS.md` §0.2 (AGENTS → receita geral → receita específica → plano → caderno da parte).
 
@@ -33,7 +33,7 @@
 
 ## 2. Próximas sessões (escolha do humano)
 
-> **2026-11-14 — 🧩 modo Desafio (segunda camada, leitores de ~8 a 10 anos)**: botão 🧩 no topo do livro; desafios em `dom-quixote/desafios/parte-N.js`; especificação e andamento em [`DESAFIOS.md`](DESAFIOS.md) (`AGENTS.md` §2.9). **Prontos nas 8 partes** (1 a 6 publicadas; 7 e 8 nos rascunhos). 🛑 Falta o humano experimentar e mandar notas; se o texto das Partes 7 e 8 mudar, reler os desafios da página. Sem API paga. Para escrever uma parte: um agente lê `docs/DESAFIOS.md` + o `parte-N.html`, usa `desafios/parte-5.js` como modelo e roda `npm run conferir:desafios`.
+> **2026-11-14 — 🧩 modo Desafio (segunda camada, leitores de ~8 a 10 anos)**: botão 🧩 no topo do livro; desafios em `dom-quixote/desafios/parte-N.js`; especificação e andamento em [`DESAFIOS.md`](DESAFIOS.md) (`AGENTS.md` §2.9). **Prontos nas 8 partes** (todas publicadas na estante). 🛑 Falta o humano experimentar e mandar notas; se o texto das Partes 7 e 8 mudar, reler os desafios da página. Sem API paga. Para escrever uma parte: um agente lê `docs/DESAFIOS.md` + o `parte-N.html`, usa `desafios/parte-5.js` como modelo e roda `npm run conferir:desafios`.
 
 > **2026-11-14 — narração em português das Partes 5 e 6 concluída e ativada (`partes: [1, 2, 3, 4, 5, 6]` em `dom-quixote/audio/vozes.js`)**: todas as páginas (10/10 na Parte 5 e 10/10 na Parte 6) e todas as palavras-chave (36/36 na Parte 5 e 29/29 na Parte 6) gravadas, conferidas no Whisper local e verificadas com zero rajadas de ruído (`node tools/conferir-narracao.mjs --partes 1,2,3,4,5,6 --idiomas pt`). Pontos de escuta do humano: [`narracao/qa-parte-5.md`](narracao/qa-parte-5.md) e [`narracao/qa-parte-6.md`](narracao/qa-parte-6.md). Gasto da retomada local (págs. 4–9 da Parte 6 + palavras-chave das Partes 5 e 6): 59 pedidos, 29.392 tokens de áudio, ~US$ 0,1341 (Flex); total das Partes 5 e 6: ~US$ 0,39. **Dica local (Windows)**: `tools/transcrever.py` agora detecta GPU (CUDA) automaticamente; na máquina local, apontar `CV_PYTHON="C:\Users\geral\Projetos\field-image-curator\.venv\Scripts\python.exe"` aproveita as DLLs CUDA 12 / cuDNN 9 já instaladas no *Ateliê Pericial* (RTX 4050, ~2,5 s/pág sem sobrecarregar a CPU; detalhes em `docs/TODO-NARRACAO.md` §19).
 
@@ -42,23 +42,20 @@
 >
 > **Áudio (2026-11-12)**: o "arranhão de agulha" entre frases era a rajada de ruído que o TTS deixa no fim de **cada pedido**, presa nas emendas de blocos dentro de `pN.mp3` (259 rajadas em 100 páginas, pt/en/fr/es). Zeradas com `tools/audio_gate.py --so-rajadas` (sem API, duração idêntica); o gate agora roda nas gravações futuras. 🛑 **Escuta do humano**: Parte 1 pág. 2 (~15,3 s) e Parte 4 pág. 2 (~33 s, 55 s, 65 s, 72 s); em espanhol, Parte 4 págs. 0 (~8,6 s) e 9 (~18,7 s).
 
-> **2026-11-12 — o segundo volume de Dom Quixote (1615) tem as Partes 7 e 8 em rascunho de texto**, sem API paga:
+> **2026-11-18 — o segundo volume de Dom Quixote (1615) está todo ilustrado e publicado na estante (Partes 5 a 8)**! A Parte 7 recebeu 9 ilustrações novas no gerador gratuito do Antigravity (`US$ 0,00`, mais 9 reaproveitadas da P4 v1 = 18 WebPs) e a Parte 8 recebeu 15 ilustrações novas via API Batch autorizada em 2 lotes (`US$ 0,5208`, mais 2 reaproveitadas da lareira = 17 WebPs):
 > | Parte | Título | Capítulos | Situação | Caderno |
 > | :--- | :--- | :--- | :--- | :--- |
 > | 5 | O Livro Famoso e o Cavaleiro dos Leões | 34–42 | Publicada (PT + narração gravada; faltam traduções) | [`cadernos/dom-quixote-parte-5.md`](cadernos/dom-quixote-parte-5.md) |
 > | 6 | O Teatrinho, o Barco e o Cavalo Voador | 43–51 | Publicada (PT + narração gravada; faltam traduções) | [`cadernos/dom-quixote-parte-6.md`](cadernos/dom-quixote-parte-6.md) |
-> | 7 | Sancho, Governador da Ilha | 52–60 | Publicada na estante (PT, voz do aparelho; aguardando leitura/notas pelo app, narração e traduções) | [`cadernos/dom-quixote-parte-7.md`](cadernos/dom-quixote-parte-7.md) |
-> | 8 | O Cavaleiro da Branca Lua | 61–69 | Rascunho (`parte-8.html`) | [`cadernos/dom-quixote-parte-8.md`](cadernos/dom-quixote-parte-8.md) |
->
-> Os rascunhos (Partes 7 e 8) têm `rascunho: true`, três atividades funcionando, crítica adversarial e polimento, e abrem em `sobre.html` → Livros em produção → "Mostrar os rascunhos". Plano: [`PLANO-DOM-QUIXOTE-VOLUME-2.md`](PLANO-DOM-QUIXOTE-VOLUME-2.md). Regras em uma página: [`DIRETRIZES_VOL2.md`](DIRETRIZES_VOL2.md).
+> | 7 | Sancho, Governador da Ilha | 52–60 | Publicada na estante (18 WebPs; PT, voz do aparelho; aguardando leitura/notas pelo app, narração e traduções) | [`cadernos/dom-quixote-parte-7.md`](cadernos/dom-quixote-parte-7.md) |
+> | 8 | O Cavaleiro da Branca Lua | 61–69 | Publicada na estante (17 WebPs; PT, voz do aparelho; aguardando leitura/notas pelo app, narração e traduções) | [`cadernos/dom-quixote-parte-8.md`](cadernos/dom-quixote-parte-8.md) |
 >
 > **Entrega**: sempre na `main`, por merge, ao fim de cada entrega (`AGENTS.md` §0.4): é pelo site que o humano lê.
 
-1. 🛑 **Fase 3 das Partes 7 e 8** (e leitura/notas das Partes 5 e 6 já publicadas): o humano lê e manda as notas de cada uma. Os pontos de decisão estão no §3 e no §5 de cada caderno.
-2. **Fase 4 das Partes 7 e 8 (arte)**: Parte 7 ~9 (~US$ 0,35 na API); Parte 8 ~15 (~US$ 0,60 na API) — ou via gerador sem API enquanto houver cota. As Partes 7 e 8 já mostram as cenas reaproveitadas da Parte 4 antiga (conselhos, bengala, burrico, lareira). Antes de usar a API paga, escrever `tools/arte/dom-quixote-parte-N.mjs` a partir da tabela "Visual" do caderno e as fichas dos personagens novos.
-3. **Traduções (fase 7) das Partes 5 e 6** (e eventual narração nas traduções, com autorização para a API paga), mais escuta dos pontos de QA das Partes 5 e 6 (`docs/narracao/qa-parte-5.md`, `qa-parte-6.md`).
-4. **Fase 8 da Parte 4** (retrospectiva do primeiro volume) e **escuta das vozes** das Partes 2 a 4 nos três idiomas (`docs/narracao/qa-partes-2-4-traducoes.md`).
-5. **Viagem ao Centro da Terra no Século XXI, fase 0**: o humano lê o argumento da Parte 1 em [`cadernos/viagem-parte-1.md`](cadernos/viagem-parte-1.md). *Robin Hood* segue na fila.
+1. 🛑 **Fase 5 das Partes 5 a 8** (leitura em família das obras ilustradas e notas pelo app; desafios 🧩 também prontos nas 8 partes para experimentar): o humano lê com o filho e manda as observações pelo botão de revisão no app.
+2. **Narração em português das Partes 7 e 8 (fase 6)** e **traduções (fase 7) das Partes 5 a 8** (com autorização para a API paga quando chegar a vez), mais escuta dos pontos de QA das Partes 5 e 6 (`docs/narracao/qa-parte-5.md`, `qa-parte-6.md`).
+3. **Fase 8 da Parte 4** (retrospectiva do primeiro volume) e **escuta das vozes** das Partes 2 a 4 nos três idiomas (`docs/narracao/qa-partes-2-4-traducoes.md`).
+4. **Viagem ao Centro da Terra no Século XXI, fase 0**: o humano lê o argumento da Parte 1 em [`cadernos/viagem-parte-1.md`](cadernos/viagem-parte-1.md). *Robin Hood* segue na fila.
 
 Prompts de abertura sugeridos:
 > Fase 3 da Parte N de Dom Quixote: leia docs/RETOMADA.md, docs/DIRETRIZES_VOL2.md e docs/cadernos/dom-quixote-parte-N.md. Minhas notas da revisão: …

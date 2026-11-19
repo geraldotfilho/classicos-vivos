@@ -62,7 +62,8 @@
             p5Desc: '<strong>Parte 5: O Livro Famoso e o Cavaleiro dos Leões</strong>: o livro que conta as aventuras dos dois heróis, a terceira saída, a carroça dos atores, o Cavaleiro dos Espelhos e o escudeiro narigudo, o requeijão no bacielmo e o leão que bocejou.',
             p6Desc: '<strong>Parte 6: O Teatrinho, o Barco e o Cavalo Voador</strong>: a casa sossegada de Dom Diego, a festa das panelas, a Gruta de Montesinos, o macaco adivinho e o teatrinho de Mestre Pedro, o barco encantado, o encontro com a duquesa, as damas barbudas e o voo em Clavilenho.',
             p7Desc: '<strong>Parte 7: Sancho, Governador da Ilha</strong>: os conselhos de Dom Quixote, o caso dos cinco chapeuzinhos, o doutor Pedro Rezio, a bengala das moedas e a ponte, o colar de corais para Teresa, a primeira assinatura, o ataque de mentira, a queda no buraco e a despedida do palácio.',
-            todasIlustradas: 'O primeiro volume de Dom Quixote (Partes 1 a 4) está todo ilustrado e interativo. Do segundo volume, as Partes 5, 6 e 7 já estão na estante (por enquanto só em português); a Parte 8 está em produção.',
+            p8Desc: '<strong>Parte 8: O Cavaleiro da Branca Lua</strong>: as redes dos pastores, o livro mentiroso, a primeira vista do mar, a cabeça de bronze, a oficina onde nascem os livros, o duelo com a Branca Lua, os nomes de pastor, o abraço em Sansão e as histórias perto da lareira.',
+            todasIlustradas: 'Toda a aventura de Dom Quixote em dois volumes (Partes 1 a 4 no primeiro; Partes 5 a 8 no segundo) está ilustrada, interativa e na estante (Partes 5 a 8 por enquanto só em português).',
             comoUsarTitulo: 'Como usar no tablet',
             comoUsarItens: [
                 'Funciona <strong>sem internet</strong>: depois da primeira visita, o navegador guarda os livros. No Chrome Android, use <em>"Adicionar à tela inicial"</em> para abrir como aplicativo, em tela cheia.',
@@ -84,9 +85,9 @@
 
             // Coleção / Boxset (index.html)
             colecaoCompletaBadge: 'Coleção Completa · 4 Partes',
-            colecaoSegundoBadge: 'Novo · Parte 7',
+            colecaoSegundoBadge: 'Coleção Completa · 4 Partes',
             colecaoSegundoVolume: 'Segundo Volume (1615)',
-            boxsetAria2: 'Dom Quixote: Segundo Volume (1615). As Partes 5, 6 e 7 já podem ser lidas. Toque para abrir.',
+            boxsetAria2: 'Dom Quixote: Segundo Volume (1615). Coleção completa com as Partes 5 a 8. Toque para abrir.',
             shelfRobinHood: 'Robin Hood',
             shelfViagem: 'Viagem ao Centro da Terra',
             shelfRobinHood: 'Robin Hood',
@@ -124,6 +125,7 @@
             p5TituloCurto: 'O Livro Famoso e o Cavaleiro dos Leões',
             p6TituloCurto: 'O Teatrinho, o Barco e o Cavalo Voador',
             p7TituloCurto: 'Sancho, Governador da Ilha',
+            p8TituloCurto: 'O Cavaleiro da Branca Lua',
 
             // Abas (sobre.html)
             abaProposta: 'Proposta & Como Funciona',
@@ -292,7 +294,8 @@
             p5Desc: '<strong>Part 5: The Famous Book and the Knight of the Lions</strong>: the book that tells the two heroes\' adventures, the third journey, the actors\' cart, the Knight of the Mirrors and his big-nosed squire, the curd cheese in the basin-helmet and the lion that yawned.',
             p6Desc: '<strong>Part 6: The Puppet Show, the Boat and the Flying Horse</strong>: Don Diego\'s quiet house, the feast of the cauldrons, the Cave of Montesinos, the fortune-telling monkey and Master Peter\'s puppet show, the enchanted boat, meeting the duchess, the bearded ladies and the flight on Clavileño.',
             p7Desc: '<strong>Part 7: Sancho, Governor of the Island</strong>: Don Quixote\'s advice, the case of the five tiny caps, Doctor Pedro Recio, the coin-filled walking stick and the bridge riddle, the coral necklace for Teresa, Sancho\'s first signature, the fake attack, the pit and leaving the palace.',
-            todasIlustradas: 'The first volume of Don Quixote (Parts 1 to 4) is fully illustrated and interactive. From the second volume, Parts 5, 6 and 7 are already on the shelf (for now only in Portuguese); Part 8 is in progress.',
+            p8Desc: '<strong>Part 8: The Knight of the White Moon</strong>: the shepherds\' nets, the false book, the first sight of the sea, the bronze talking head, the printing workshop, the duel with the White Moon, shepherd names, hugging Sansón and stories by the hearth.',
+            todasIlustradas: 'The entire adventure of Don Quixote in two volumes (Parts 1 to 4 in the first; Parts 5 to 8 in the second) is fully illustrated, interactive and on the shelf (Parts 5 to 8 for now only in Portuguese).',
             comoUsarTitulo: 'How to use on a tablet',
             comoUsarItens: [
                 'Works <strong>offline</strong>: after the first visit, the browser saves the books. In Chrome Android, tap <em>"Add to Home Screen"</em> to open as a full-screen app.',
@@ -314,9 +317,9 @@
 
             // Coleção / Boxset (index.html)
             colecaoCompletaBadge: 'Complete Collection · 4 Parts',
-            colecaoSegundoBadge: 'New · Part 7',
+            colecaoSegundoBadge: 'Complete Collection · 4 Parts',
             colecaoSegundoVolume: 'Second Volume (1615)',
-            boxsetAria2: 'Don Quixote: Second Volume (1615). Parts 5, 6 and 7 are ready to read. Tap to open.',
+            boxsetAria2: 'Don Quixote: Second Volume (1615). Complete collection with Parts 5 to 8. Tap to open.',
             robinHood: 'Robin Hood',
             robinHoodSub: 'The Hero of Sherwood',
             boxsetRobinAria: 'Robin Hood. Upcoming adaptation in queue, locked until release.',
@@ -348,6 +351,7 @@
             p5TituloCurto: 'The Famous Book & the Knight of the Lions',
             p6TituloCurto: 'The Puppet Show, the Boat & the Flying Horse',
             p7TituloCurto: 'Sancho, Governor of the Island',
+            p8TituloCurto: 'The Knight of the White Moon',
 
             // Abas (sobre.html)
             abaProposta: 'Vision & How It Works',
@@ -516,7 +520,8 @@
             p5Desc: '<strong>Partie 5 : Le Livre Célèbre et le Chevalier aux Lions</strong> : le livre qui raconte les aventures des deux héros, la troisième sortie, la charrette des comédiens, le Chevalier aux Miroirs et son écuyer au grand nez, le fromage frais dans le bassin-heaume et le lion qui a bâillé.',
             p6Desc: '<strong>Partie 6 : Le Petit Théâtre, la Barque et le Cheval Volant</strong> : la maison paisible de Don Diego, le festin des marmites, la Grotte de Montesinos, le singe devin et le théâtre de maître Pierre, la barque enchantée, la rencontre avec la duchesse, les dames barbues et le vol sur Chevillard.',
             p7Desc: '<strong>Partie 7 : Sancho, Gouverneur de l’Île</strong> : les conseils de Don Quichotte, l’affaire des cinq petits chapeaux, le docteur Pedro Recio, le bâton aux pièces et l’énigme du pont, le collier de corail pour Teresa, la première signature, la fausse attaque, la chute dans le trou et le départ du palais.',
-            todasIlustradas: 'Le premier volume de Don Quichotte (parties 1 à 4) est entièrement illustré et interactif. Du second volume, les parties 5, 6 et 7 sont déjà sur l\'étagère (pour l\'instant seulement en portugais) ; la partie 8 est en préparation.',
+            p8Desc: '<strong>Partie 8 : Le Chevalier de la Blanche Lune</strong> : les filets des bergers, le livre menteur, la première vue de la mer, la tête de bronze, l’atelier d’imprimerie, le duel avec la Blanche Lune, les noms de berger, l’étreinte de Sansón et les histoires au coin du feu.',
+            todasIlustradas: 'Toute l\'aventure de Don Quichotte en deux volumes (parties 1 à 4 dans le premier ; parties 5 à 8 dans le second) est illustrée, interactive et sur l\'étagère (parties 5 à 8 pour l\'instant seulement en portugais).',
             comoUsarTitulo: 'Comment utiliser sur tablette',
             comoUsarItens: [
                 'Fonctionne <strong>hors ligne</strong> : après la première visite, le navigateur enregistre les livres. Sur Chrome Android, touchez <em>« Ajouter à l\'écran d\'accueil »</em> pour ouvrir en plein écran.',
@@ -538,9 +543,9 @@
 
             // Coleção / Boxset (index.html)
             colecaoCompletaBadge: 'Collection Complète · 4 Parties',
-            colecaoSegundoBadge: 'Nouveau · Partie 7',
+            colecaoSegundoBadge: 'Collection Complète · 4 Parties',
             colecaoSegundoVolume: 'Second Volume (1615)',
-            boxsetAria2: 'Don Quichotte : Second Volume (1615). Les parties 5, 6 et 7 peuvent déjà être lues. Touchez pour ouvrir.',
+            boxsetAria2: 'Don Quichotte : Second Volume (1615). Collection complète avec les parties 5 à 8. Touchez pour ouvrir.',
             shelfRobinHood: 'Robin des Bois',
             shelfViagem: 'Voyage au centre de la Terre',
             robinHood: 'Robin des Bois',
@@ -574,6 +579,7 @@
             p5TituloCurto: 'Le Livre Célèbre et le Chevalier aux Lions',
             p6TituloCurto: 'Le Petit Théâtre, la Barque et le Cheval Volant',
             p7TituloCurto: 'Sancho, Gouverneur de l’Île',
+            p8TituloCurto: 'Le Chevalier de la Blanche Lune',
 
             // Abas (sobre.html)
             abaProposta: 'Projet & Fonctionnement',
@@ -742,7 +748,8 @@
             p5Desc: '<strong>Parte 5: El Libro Famoso y el Caballero de los Leones</strong>: el libro que cuenta las aventuras de los dos héroes, la tercera salida, la carreta de los actores, el Caballero de los Espejos y su escudero narigudo, el requesón en el baciyelmo y el león que bostezó.',
             p6Desc: '<strong>Parte 6: El Teatrillo, el Barco y el Caballo Volador</strong>: la casa tranquila de Don Diego, la fiesta de las ollas, la Cueva de Montesinos, el mono adivino y el teatrillo de Maese Pedro, el barco encantado, el encuentro con la duquesa, las damas barbudas y el vuelo en Clavileño.',
             p7Desc: '<strong>Parte 7: Sancho, Gobernador de la Ínsula</strong>: los consejos de Don Quijote, el caso de las cinco caperuzas, el doctor Pedro Recio, el báculo con monedas y el puente, el collar de corales para Teresa, la primera firma, el ataque de mentira, la caída en el hoyo y la despedida del palacio.',
-            todasIlustradas: 'El primer volumen de Don Quijote (partes 1 a 4) está totalmente ilustrado e interactivo. Del segundo volumen, las partes 5, 6 y 7 ya están en la estantería (por ahora solo en portugués); la parte 8 está en preparación.',
+            p8Desc: '<strong>Parte 8: El Caballero de la Blanca Luna</strong>: las redes de los pastores, el libro mentiroso, la primera vista del mar, la cabeza de bronce, el taller donde nacen los libros, el duelo con la Blanca Luna, los nombres de pastor, el abrazo a Sansón y las historias junto al hogar.',
+            todasIlustradas: 'Toda la aventura de Don Quijote en dos volúmenes (partes 1 a 4 en el primero; partes 5 a 8 en el segundo) está ilustrada, interactiva y en la estantería (partes 5 a 8 por ahora solo en portugués).',
             comoUsarTitulo: 'Cómo usar en la tableta',
             comoUsarItens: [
                 'Funciona <strong>sin internet</strong>: tras la primera visita, el navegador guarda los libros. En Chrome Android, usa <em>«Añadir a pantalla de inicio»</em> para abrir como aplicación a pantalla completa.',
@@ -764,9 +771,9 @@
 
             // Coleção / Boxset (index.html)
             colecaoCompletaBadge: 'Colección Completa · 4 Partes',
-            colecaoSegundoBadge: 'Nuevo · Parte 7',
+            colecaoSegundoBadge: 'Colección Completa · 4 Partes',
             colecaoSegundoVolume: 'Segundo Volumen (1615)',
-            boxsetAria2: 'Don Quijote: Segundo Volumen (1615). Las partes 5, 6 y 7 ya se pueden leer. Toca para abrir.',
+            boxsetAria2: 'Don Quijote: Segundo Volumen (1615). Colección completa con las partes 5 a 8. Toca para abrir.',
             robinHood: 'Robin Hood',
             robinHoodSub: 'El Héroe de Sherwood',
             boxsetRobinAria: 'Robin Hood. Nueva adaptación en fila, con candado hasta su lanzamiento.',
@@ -798,6 +805,7 @@
             p5TituloCurto: 'El Libro Famoso y el Caballero de los Leones',
             p6TituloCurto: 'El Teatrillo, el Barco y el Caballo Volador',
             p7TituloCurto: 'Sancho, Gobernador de la Ínsula',
+            p8TituloCurto: 'El Caballero de la Blanca Luna',
 
             // Abas (sobre.html)
             abaProposta: 'Propuesta y Cómo Funciona',

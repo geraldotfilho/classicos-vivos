@@ -1,14 +1,16 @@
 # Caderno — Dom Quixote, Parte 8: O Cavaleiro da Branca Lua
-Arquivo: `dom-quixote/parte-8.html` (rascunho: **sim**) · Trecho do original: 1615, caps. 58–74 · Nossos capítulos: 61–69 (capa + 9 páginas) · **Fecha a obra**
+Arquivo: `dom-quixote/parte-8.html` (**publicada** na estante em 2026-11-18 para leitura em família e notas pelo app; fecha o segundo volume e a obra inteira; sem narração gravada e só em português) · Trecho do original: 1615, caps. 58–74 · Nossos capítulos: 61–69 (capa + 9 páginas) · **Fecha a obra**
 Plano: [`../PLANO-DOM-QUIXOTE-VOLUME-2.md`](../PLANO-DOM-QUIXOTE-VOLUME-2.md) · Regras: [`../DIRETRIZES_VOL2.md`](../DIRETRIZES_VOL2.md)
 
 | Fase | Situação | Data | Gasto |
 | :--- | :--- | :--- | :--- |
 | 1 Adaptação e texto | ✅ | 2026-11-12 | — |
-| 2 Interações e visual | ✅ (lista de arte `.mjs` fica para a fase 4) | 2026-11-12 | — |
+| 2 Interações e visual | ✅ | 2026-11-12 | — |
 | Crítica adversarial (subagente de contexto limpo) + polimento | ✅ | 2026-11-12 | — |
-| 3 Revisão humana 🛑 | **esperando o humano** | | — |
-| 4 a 8 | ⬜ | | |
+| 3 Revisão humana 🛑 | ⏭️ publicada a pedido do humano para leitura e notas diretas pelo app | | — |
+| 4 Arte (15 WebPs novos em 2 lotes Batch + 2 reaproveitados da P4 v1) | ✅ | 2026-11-18 | US$ 0,5208 |
+| 5 Revisão final 🛑 | ⏭️ pendente para leitura em família | | — |
+| 6 a 8 | ⬜ | | |
 
 ## 0. Onde a Parte 7 termina
 Na estrada, livres do palácio, a caminho de Barcelona para ver o mar; lá atrás, um cavaleiro sozinho com uma lua branca no escudo. Na aldeia, Sansão já sabe para onde vai o senhor Alonso e pediu um escudo velho e tinta branca.
@@ -69,3 +71,12 @@ Relatório: [`../revisao/FIDELIDADE-VOLUME-2.md`](../revisao/FIDELIDADE-VOLUME-2
 - Cap. 65: mostrar de relance o livro falso sendo composto e a frase de Dom Quixote de II-62 ("história inventada só é boa se parece verdadeira"); hoje a oficina mostra só o verdadeiro (inversão declarada).
 - Cap. 69: Sancho "aprende a ler" (mesma questão da assinatura na Parte 7).
 - **Registrar como adaptação nossa**: a pergunta "no outro livro" (cap. 61); em II-65 quem descobre Sansão é Dom Antônio, não Sancho (cap. 67); a oficina de II-62 é a do mesmo capítulo da cabeça encantada.
+
+## 6. Arte e publicação antecipada na estante (2026-11-18)
+- **Lista de arte**: `tools/arte/dom-quixote-parte-8.mjs` (15 imagens novas definidas no padrão Nano Banana 2 Batch, mantendo coerência com o Cavaleiro da Branca Lua de `parte-7/p9-real.webp`, o Sancho de face limpa, Dom Antônio e Teresa de colar de corais).
+- **Produção híbrida**: após os 5 primeiros pedidos no gerador nativo do Antigravity esgotarem a cota com `429 RESOURCE_EXHAUSTED`, as 15 artes novas foram produzidas via API Batch autorizada em 2 lotes (`gemini-3.1-flash-image`), todas aprovadas na primeira inspeção visual:
+  - **Lote 1** (`batches/sl4khmj39whkkp2zz061cnkdnoaveofug92m`): `p0-real`, `p1-real`, `p2-real`, `p3-real`, `p4-real`, `p5-real`, `p7-real`, `p8-real` (8/8 imagens, `US$ 0,2768` em `docs/arte/gastos.csv`).
+  - **Lote 2** (`batches/9f12aoon8k954lt3tb3nbd39n3vu5cgwb251`): `p6-real`, `p0-imag`, `p1-imag`, `p3-imag`, `p4-imag`, `p5-imag`, `p7-imag` (7/7 imagens, `US$ 0,2440` em `docs/arte/gastos.csv`).
+  - **Total da Parte 8 na API**: **US$ 0,5208** (15 imagens novas; zero retrabalho).
+- **Reaproveitadas da Parte 4 v1**: `p9-real.webp` e `p9-imag.webp` (cenas da lareira `acervo/parte-4-v1/p7-*`) copiadas para `dom-quixote/imagens/parte-8/` para entrar no `sw.js` e no pacote offline (17 WebPs ao todo).
+- **Publicação**: `rascunho: true` removido de `dom-quixote/parte-8.html`; `parte-7.html` ligada à Parte 8 (`./parte-8.html`); Parte 8 desbloqueada no Volume 2 de `index.html` (selo `Coleção Completa · 4 Partes`), descrita em `sobre.html` + `assets/js/i18n-site.js` (4 idiomas), removida de `assets/js/acervo.js`. Falta a leitura em família com notas pelo app (fase 5), narração em português (fase 6) e traduções (fase 7).

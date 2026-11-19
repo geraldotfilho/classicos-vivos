@@ -35,3 +35,5 @@ data,modelo,nivel,comando,pedidos,imagens_ok,tokens_entrada,tokens_imagem,tokens
 2026-11-13T23:38,gemini-3.1-flash-image,batch,"--lista tools/arte/dom-quixote-parte-6.mjs --ids p0-imag,p3-imag,p5-real,p6-imag,p8-imag",5,5,7928,5600,2819,0.1742
 2026-11-13T23:43,gemini-3.1-flash-image,batch,"--lista tools/arte/dom-quixote-parte-6.mjs --ids p5-imag,p3-imag-v2,p5-real-v2,p5-rei,p5-cavalo,p5-torre",6,5,4398,4481,1955,0.1385
 2026-11-13T23:50,gemini-3.1-flash-image,batch,"--lista tools/arte/dom-quixote-parte-6.mjs --ids p3-imag-v3",1,1,1439,1120,357,0.0345
+2026-11-19T02:21,gemini-3.1-flash-image,batch,"--lista tools/arte/dom-quixote-parte-8.mjs --ids p0-real,p1-real,p2-real,p3-real,p4-real,p5-real,p7-real,p8-real",8,8,8178,8960,3962,0.2768
+2026-11-19T02:28,gemini-3.1-flash-image,batch,"--lista tools/arte/dom-quixote-parte-8.mjs --ids p6-real,p0-imag,p1-imag,p3-imag,p4-imag,p5-imag,p7-imag",7,7,10839,7840,4059,0.2440
