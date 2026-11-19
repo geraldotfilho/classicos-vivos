@@ -1,14 +1,16 @@
 # Caderno — Dom Quixote, Parte 7: Sancho, Governador da Ilha
-Arquivo: `dom-quixote/parte-7.html` (rascunho: **sim**) · Trecho do original: 1615, caps. 42–57 (e a fala da liberdade, do 58) · Nossos capítulos: 52–60 (capa + 9 páginas)
+Arquivo: `dom-quixote/parte-7.html` (**publicada** na estante em 2026-11-18 para leitura em família e notas pelo app; sem narração gravada e só em português) · Trecho do original: 1615, caps. 42–57 (e a fala da liberdade, do 58) · Nossos capítulos: 52–60 (capa + 9 páginas)
 Plano: [`../PLANO-DOM-QUIXOTE-VOLUME-2.md`](../PLANO-DOM-QUIXOTE-VOLUME-2.md) · Regras: [`../DIRETRIZES_VOL2.md`](../DIRETRIZES_VOL2.md)
 
 | Fase | Situação | Data | Gasto |
 | :--- | :--- | :--- | :--- |
 | 1 Adaptação e texto | ✅ | 2026-11-12 | — |
-| 2 Interações e visual | ✅ (lista de arte `.mjs` fica para a fase 4) | 2026-11-12 | — |
+| 2 Interações e visual | ✅ | 2026-11-12 | — |
 | Crítica adversarial (subagente de contexto limpo) + polimento | ✅ | 2026-11-12 | — |
-| 3 Revisão humana 🛑 | **esperando o humano** | | — |
-| 4 a 8 | ⬜ | | |
+| 3 Revisão humana 🛑 | ⏭️ publicada a pedido do humano para leitura e notas diretas pelo app | | — |
+| 4 Arte (9 WebPs novos no Antigravity + 9 reaproveitados da P4 v1) | ✅ | 2026-11-18 | US$ 0,00 |
+| 5 Revisão final 🛑 | ⏭️ pendente para leitura em família | | — |
+| 6 a 8 | ⬜ | | |
 
 ## 0. Onde a Parte 6 termina
 No jantar depois do voo de Clavilenho, o duque anuncia: "Amanhã você vai governar a sua ilha!", e Sancho deixa a colher cair na sopa. Pistas abertas: a condessa barbuda tinha voz grossa e botas de homem; o mordomo do duque é alto e de voz grossa.
@@ -68,3 +70,11 @@ Relatório: [`../revisao/FIDELIDADE-VOLUME-2.md`](../revisao/FIDELIDADE-VOLUME-2
 **Pendente (decisão do humano):**
 - **Sancho já sabe assinar em Cervantes** (II-43: *bien sé firmar mi nombre*, aprendeu quando foi *prioste*). A atividade 3 (cap. 57, ele "aprende" a assinar) e a frase "Sancho não sabia ler" contradizem isso. Saídas: (i) a atividade vira "ajudar Sancho a lembrar como assina"; ou (ii) declarar a alfabetização como fio nosso e não afirmar que ele não sabe escrever o nome.
 - **Registrar como adaptação nossa**: Sancho percebe a burla do ataque e reconhece vozes (em II-44 e II-53 ele nunca percebe); os duques pedem perdão (em Cervantes, não; a burla é a crítica central).
+
+## 6. Arte e publicação antecipada na estante (2026-11-18)
+- **Produção sem custo de API (subagentes paralelos via gerador nativo do Antigravity)**:
+  - **Onda 7A**: `p2-real` (mão aberta com cinco dedos nus para encaixe dos chapeuzinhos), `camadas/p2-chapeuzinho` (recortado sobre `#FF00FF` via `tools/recortar-camada.py --sem-rosa --sem-contorno`, 0 px rosa visíveis), `p5-real`, `p8-real` e `p9-real` (estabelecendo o visual do Cavaleiro da Branca Lua).
+  - **Onda 7B**: `p3-real` (Doutor Tira-Prato), `p6-real` (pena como garfo, sem texto legível), `p2-imag` (ilha sonhada por Sancho, sem Dom Quixote) e `p6-imag` (governador escrevendo com pena dourada, sem texto legível).
+  - **Reaproveitadas da Parte 4 v1**: 9 artes copiadas para `dom-quixote/imagens/parte-7/` (`p0-real`, `p0-imag`, `p1-real`, `p1-imag`, `p4-real`, `p4-imag`, `camadas/p4-bengala-inteira`, `camadas/p4-bengala-quebrada`, `p7-real`) para entrar no `sw.js` e no botão offline.
+- **Ajuste de camadas**: os 5 chapeuzinhos da pág. 2 (`chapeu-1`..`chapeu-5`) foram medidos em grade 1% sobre `p2-real.webp` (`x: 66.0/67.1/68.5/70.2/72.1`, `y: 31.1/28.5/27.1/28.1/33.2`, `w: 1.85`).
+- **Publicação**: `rascunho: true` removido de `dom-quixote/parte-7.html`; `parte-6.html` ligada à Parte 7; Parte 7 desbloqueada no Volume 2 da `index.html`, descrita em `sobre.html` + `assets/js/i18n-site.js` (4 idiomas), removida de `assets/js/acervo.js`. Falta a leitura em família com notas pelo app (fase 5), narração em português (fase 6) e traduções (fase 7).

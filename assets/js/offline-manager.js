@@ -5,7 +5,7 @@
 (function() {
     'use strict';
 
-    const VERSAO_ATUAL = '3ef300cb85b9';
+    const VERSAO_ATUAL = '4e05da53283c';
     const PREFIXO_CACHE = 'cv-volume-quixote-';
     const PREFIXO_STORAGE = 'cv-offline-quixote-';
 
@@ -359,6 +359,53 @@
         "./dom-quixote/imagens/parte-6/p9-real.webp",
         "./dom-quixote/parte-6.html",
         "./dom-quixote/desafios/parte-6.js"
+    ],
+    "7": [
+        "./assets/icones/icone-192.png",
+        "./assets/css/fonts.css",
+        "./assets/css/icons.css",
+        "./assets/css/livro.css",
+        "./assets/css/tailwind.css",
+        "./assets/fonts/fredoka-latin-400-normal.woff2",
+        "./assets/fonts/fredoka-latin-500-normal.woff2",
+        "./assets/fonts/fredoka-latin-600-normal.woff2",
+        "./assets/fonts/fredoka-latin-700-normal.woff2",
+        "./assets/fonts/nunito-latin-400-normal.woff2",
+        "./assets/fonts/nunito-latin-600-normal.woff2",
+        "./assets/fonts/nunito-latin-700-normal.woff2",
+        "./assets/fonts/nunito-latin-800-normal.woff2",
+        "./assets/fonts/nunito-latin-900-normal.woff2",
+        "./assets/icones/bandeiras/br.svg",
+        "./assets/icones/bandeiras/es.svg",
+        "./assets/icones/bandeiras/fr.svg",
+        "./assets/icones/bandeiras/gb.svg",
+        "./assets/js/acervo.js",
+        "./assets/js/colaboracao.js",
+        "./assets/js/i18n-site.js",
+        "./assets/js/livro.js",
+        "./assets/js/texto.js",
+        "./assets/js/desafios.js",
+        "./assets/css/desafios.css",
+        "./dom-quixote/imagens/parte-7/camadas/p2-chapeuzinho.webp",
+        "./dom-quixote/imagens/parte-7/camadas/p4-bengala-inteira.webp",
+        "./dom-quixote/imagens/parte-7/camadas/p4-bengala-quebrada.webp",
+        "./dom-quixote/imagens/parte-7/p0-imag.webp",
+        "./dom-quixote/imagens/parte-7/p0-real.webp",
+        "./dom-quixote/imagens/parte-7/p1-imag.webp",
+        "./dom-quixote/imagens/parte-7/p1-real.webp",
+        "./dom-quixote/imagens/parte-7/p2-imag.webp",
+        "./dom-quixote/imagens/parte-7/p2-real.webp",
+        "./dom-quixote/imagens/parte-7/p3-real.webp",
+        "./dom-quixote/imagens/parte-7/p4-imag.webp",
+        "./dom-quixote/imagens/parte-7/p4-real.webp",
+        "./dom-quixote/imagens/parte-7/p5-real.webp",
+        "./dom-quixote/imagens/parte-7/p6-imag.webp",
+        "./dom-quixote/imagens/parte-7/p6-real.webp",
+        "./dom-quixote/imagens/parte-7/p7-real.webp",
+        "./dom-quixote/imagens/parte-7/p8-real.webp",
+        "./dom-quixote/imagens/parte-7/p9-real.webp",
+        "./dom-quixote/parte-7.html",
+        "./dom-quixote/desafios/parte-7.js"
     ]
 };
 
