@@ -1,4 +1,4 @@
-# 🔁 Retomada — onde o trabalho parou (2026-11-13, Partes 5 e 6 de Dom Quixote ilustradas e publicadas; Partes 7 e 8 em rascunho de texto)
+# 🔁 Retomada — onde o trabalho parou (2026-11-18, Parte 7 de Dom Quixote ilustrada e publicada; Parte 8 em andamento)
 
 **Leia este arquivo primeiro numa sessão nova**, seja qual for o agente. Depois, siga a ordem de leitura do `AGENTS.md` §0.2 (AGENTS → receita geral → receita específica → plano → caderno da parte).
 
@@ -47,7 +47,7 @@
 > | :--- | :--- | :--- | :--- | :--- |
 > | 5 | O Livro Famoso e o Cavaleiro dos Leões | 34–42 | Publicada (PT + narração gravada; faltam traduções) | [`cadernos/dom-quixote-parte-5.md`](cadernos/dom-quixote-parte-5.md) |
 > | 6 | O Teatrinho, o Barco e o Cavalo Voador | 43–51 | Publicada (PT + narração gravada; faltam traduções) | [`cadernos/dom-quixote-parte-6.md`](cadernos/dom-quixote-parte-6.md) |
-> | 7 | Sancho, Governador da Ilha | 52–60 | Rascunho (`parte-7.html`) | [`cadernos/dom-quixote-parte-7.md`](cadernos/dom-quixote-parte-7.md) |
+> | 7 | Sancho, Governador da Ilha | 52–60 | Publicada na estante (PT, voz do aparelho; aguardando leitura/notas pelo app, narração e traduções) | [`cadernos/dom-quixote-parte-7.md`](cadernos/dom-quixote-parte-7.md) |
 > | 8 | O Cavaleiro da Branca Lua | 61–69 | Rascunho (`parte-8.html`) | [`cadernos/dom-quixote-parte-8.md`](cadernos/dom-quixote-parte-8.md) |
 >
 > Os rascunhos (Partes 7 e 8) têm `rascunho: true`, três atividades funcionando, crítica adversarial e polimento, e abrem em `sobre.html` → Livros em produção → "Mostrar os rascunhos". Plano: [`PLANO-DOM-QUIXOTE-VOLUME-2.md`](PLANO-DOM-QUIXOTE-VOLUME-2.md). Regras em uma página: [`DIRETRIZES_VOL2.md`](DIRETRIZES_VOL2.md).

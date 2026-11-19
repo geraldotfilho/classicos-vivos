@@ -7,7 +7,7 @@
              'rascunho' → o arquivo existe com `rascunho: true` no window.LIVRO
    estante:  id de uma prateleira do index.html com `data-estante-producao`, onde
              apareceria a capa-teaser com cadeado; null = não aparece como capa própria
-             (as Partes 7–8 aparecem com cadeado dentro do Volume 2, fixo no index.html, que abre com as Partes 5 e 6 publicadas;
+             (a Parte 8 aparece com cadeado dentro do Volume 2, fixo no index.html, que abre com as Partes 5 a 7 publicadas;
              vale também para a nova versão de uma parte já publicada).
    href:     o arquivo do rascunho (aberto pela lista para adultos em sobre.html)
 
@@ -17,18 +17,6 @@
    na fila para virar rascunho em breve. Nada de "próximos clássicos" vagos.
    ===================================================================== */
 window.ACERVO_PRODUCAO = [
-    {
-        id: 'dom-quixote-parte-7',
-        obra: 'Dom Quixote de La Mancha',
-        parte: 7,
-        titulo: 'Parte 7: Sancho, Governador da Ilha',
-        nota: 'Segundo volume (1615), caps. 42–57. Rascunho de texto e atividades; quatro páginas já têm ilustração.',
-        situacao: 'rascunho',
-        estante: null,
-        emoji: '🏝️',
-        cor: 'from-emerald-200 to-teal-300',
-        href: './dom-quixote/parte-7.html'
-    },
     {
         id: 'dom-quixote-parte-8',
         obra: 'Dom Quixote de La Mancha',

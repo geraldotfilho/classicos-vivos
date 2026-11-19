@@ -378,3 +378,10 @@ O que já foi entregue, sprint a sprint, em ordem cronológica (o mais antigo pr
   - Na instalação, baixa apenas o núcleo leve (~1,45 MB); ilustrações faltantes aquecem em segundo plano (2 por vez) após ativar.
   - `isPage` e narração usam limite de 2,5 s na rede quando já há cópia em cache (entregam do cache na hora e atualizam em segundo plano).
 - **Abertura mais leve (`assets/js/livro.js`, `assets/js/colaboracao.js`)**: `loading="lazy"` nas imagens das páginas 2 em diante (que já são pré-carregadas sob demanda por `warmImages`) e carregamento das avaliações da Vercel apenas ao chegar à última página.
+
+## ✅ Parte 7 de Dom Quixote ilustrada e publicada na estante (2026-11-18)
+- **Arte sem custo de API (9 novas + 9 reaproveitadas = 18 WebPs)**:
+  - Subagentes `image-generator` em paralelo produziram `p2-real`, `camadas/p2-chapeuzinho` (recortada de `#FF00FF` com `tools/recortar-camada.py --sem-rosa --sem-contorno`), `p3-real`, `p5-real`, `p6-real`, `p8-real`, `p9-real`, `p2-imag` e `p6-imag` diretamente pela cota do plano no Antigravity (`US$ 0,00`).
+  - As 9 artes reaproveitadas da Parte 4 antiga (`p0-*`, `p4-*`, `p5-*`, `p6-real` e camadas da bengala) foram copiadas para `dom-quixote/imagens/parte-7/` para entrar no `sw.js` e no download offline.
+  - As 5 camadas de chapeuzinho na pág. 2 foram medidas e posicionadas sobre os cinco dedos do alfaiate em `p2-real.webp`.
+- **Publicação**: `rascunho: true` removido de `dom-quixote/parte-7.html`; `parte-6.html` aponta para `./parte-7.html`; Parte 7 liberada no Volume 2 de `index.html`, descrita em `sobre.html` e `assets/js/i18n-site.js` (4 idiomas), removida de `assets/js/acervo.js`, `npm run build` e `npm run conferir:desafios` atualizados e testados via Playwright em retrato (800×1280) e paisagem (1280×800). Falta a leitura em família com notas pelo app, narração e traduções.
