@@ -20,13 +20,14 @@ No jantar depois do voo de Clavilenho, o duque anuncia: "Amanhã você vai gover
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | 52 | Conselhos para um Governador | II-42–43 | Os conselhos (da alma e do corpo), a enxurrada de ditados, "já conheço as formiguinhas do meu nome"; a voz do mordomo | 🌾 a ilha (P1), o nome (P5) · 🌱 o mordomo |
 | 2 | 53 | A Ilha sem Mar | II-44–45 | A chegada ("o mar está de folga hoje"); o caderninho do mordomo; o caso dos cinco chapeuzinhos · **atividade 1** | 🌱 cadê o mar? |
-| 3 | 54 | O Doutor Tira-Prato | II-47 | O doutor Pedro Rezio de Tirafora e a varinha; pão, queijo e cebola | — |
-| 4 | 55 | O Velhinho Espertinho | II-45, 51 | O caso da bengala · **atividade 2**; o caso da ponte (misericórdia) | 🌾 o conselho da justiça com perdão (cap. 52) |
-| 5 | 56 | O Colar de Corais | II-50, 52 | O pajem na aldeia; Teresa "governadora"; Sansão lê a carta, descobre para onde vai o senhor Alonso e pede um escudo e tinta branca | 🌾 Teresa e Sanchica · 🌱 a Branca Lua (P8) |
-| 6 | 57 | A Saudade de Dom Quixote | II-44, 51 | A meia rasgada; as duas cartas; Sancho precisa assinar · **atividade 3** | 🌾 o nome (P5) |
-| 7 | 58 | O Ataque de Mentira | II-53 | A tartaruga de escudos; Sancho entende a brincadeira, abraça o burrico e vai embora; as botas do mordomo | 🌾 quem era a condessa (P6) |
-| 8 | 59 | A Voz no Buraco | II-55 | A queda; "um governador sem governo"; o zurro que Dom Quixote conhece; o abraço | 🌾 a saudade |
-| 9 | 60 | A Despedida do Palácio | II-55, 57–58 | Sancho devolve as chaves; os duques pedem perdão; "o mar nunca existiu"; a liberdade; rumo a Barcelona; um cavaleiro com uma lua branca, ao longe | 🌾 cadê o mar? · 🌱 a Branca Lua (P8) |
+| 3 | 54 | O Doutor Tira-Prato | II-47 | O doutor Pedro Rezio de Tirafora e a varinha (tira a torta de açúcar, o torresmo e o frango "que tem asa", mas deixa a fruta); pão, queijo, cebola, sopa e a maçã salva: "comer de tudo um pouco" (revisão do autor, #53) | — |
+| 4 | 55 | O Velhinho Espertinho | II-45 | O caso da bengala (o aldeão segura a bengala enquanto o vizinho jura; Sancho a entrega como pagamento, como em Cervantes) · **atividade 2** | — |
+| 5 | 56 | A Ponte da Pergunta Difícil | II-51 | O viajante e a lei da ponte; o homem que diz "vou para a cadeia"; a balança parada no meio e o perdão (página nova, revisão do autor, #54) | 🌾 o conselho da justiça com perdão (cap. 52) |
+| 6 | 57 | O Colar de Corais | II-50, 52 | O pajem na aldeia; Teresa "governadora"; Sansão lê a carta, descobre para onde vai o senhor Alonso e pede um escudo e tinta branca | 🌾 Teresa e Sanchica · 🌱 a Branca Lua (P8) |
+| 7 | 58 | A Saudade de Dom Quixote | II-44, 51 | A meia rasgada; as duas cartas; Sancho precisa assinar · **atividade 3** | 🌾 o nome (P5) |
+| 8 | 59 | O Ataque de Mentira | II-53 | A tartaruga de escudos; Sancho entende a brincadeira, abraça o burrico e vai embora; as botas do mordomo | 🌾 quem era a condessa (P6) |
+| 9 | 60 | A Voz no Buraco | II-55 | A queda; "um governador sem governo"; o zurro que Dom Quixote conhece; o abraço | 🌾 a saudade |
+| 10 | 61 | A Despedida do Palácio | II-55, 57–58 | Sancho devolve as chaves; os duques pedem perdão; "o mar nunca existiu"; a liberdade; rumo a Barcelona; um cavaleiro com uma lua branca, ao longe | 🌾 cadê o mar? · 🌱 a Branca Lua (P8) |
 
 ## 2. O que ficou de fora (ou mudou) e por quê
 - **Altisidora, os gatos com chocalhos, dona Rodríguez e Tosilos, Ricote, a ronda da noite**: fora (zombaria amorosa, arranhões, contexto adulto). A solidão de Dom Quixote ficou com a **meia desfiada** (é de Cervantes, II-44) e a troca de cartas.
@@ -41,7 +42,7 @@ No jantar depois do voo de Clavilenho, o duque anuncia: "Amanhã você vai gover
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | 2 | Põe em ordem UM · DOIS · TRÊS · QUATRO · CINCO (por extenso) | O governador confere os chapeuzinhos do alfaiate | `ordem` + camadas | a cada acerto, um chapeuzinho num dedo |
 | 2 | 4 | Acha BENGALA entre BALANÇA e BANDEJA | Sancho quer abrir o esconderijo das moedas | `pedido` | a bengala se abre (camadas da arte antiga) |
-| 3 | 6 | Ordena as letras S · A · N · C · H · O | O governador assina a primeira carta | `ordem` (letras) | libera o sonho de Sancho |
+| 3 | 7 | Ordena as letras S · A · N · C · H · O | O governador assina a primeira carta | `ordem` (letras) | libera o sonho de Sancho |
 - A atividade 1 nasceu como `contagem` (um cartão só) e foi reprovada pelo crítico: dava para acertar sem ler. A atividade 3 tem **6 toques** (um a mais que o teto do crivo): ponto para o humano.
 
 ## 4. Visual
@@ -51,12 +52,13 @@ No jantar depois do voo de Clavilenho, o duque anuncia: "Amanhã você vai gover
 | 1 | **arte antiga** `p4` (os conselhos no banco de pedra) | idem |
 | 2 | o tribunal: Sancho, a mão aberta do alfaiate, o mordomo de caderninho (+ 5 camadas de chapeuzinho) | o sonho de Sancho: uma ilha com mar e coqueiro |
 | 3 | o doutor, a varinha e o prato indo embora | sem lente |
-| 4 | **arte antiga** `p5` + camadas da bengala | idem |
-| 5 | o pajem ajoelhado, Teresa de avental, o colar | sem lente |
-| 6 | Sancho segura a pena como um garfo | o governador que sabe escrever |
-| 7 | **arte antiga** `p6` (o abraço no burrico) | sem lente |
-| 8 | Dom Quixote e Rocinante na beira do buraco | sem lente |
-| 9 | a estrada; ao longe, o cavaleiro da lua branca | sem lente |
+| 4 | **arte antiga** `p5`, refeita pela API em 2026-11-19 com a bengala nas mãos do aldeão (#54) + camada da bengala aberta | idem |
+| 5 | o tribunal: Sancho de braços abertos como balança, o viajante e o desenho da ponte, o mordomo coçando a cabeça (nova, 2026-11-19) | sem lente |
+| 6 | o pajem ajoelhado, Teresa de avental, o colar | sem lente |
+| 7 | Sancho segura a pena como um garfo | o governador que sabe escrever |
+| 8 | **arte antiga** `p6` (o abraço no burrico) | sem lente |
+| 9 | Dom Quixote e Rocinante na beira do buraco | sem lente |
+| 10 | a estrada; ao longe, o cavaleiro da lua branca | sem lente |
 Estimativa de arte: 6 cenas + 2 Imaginações + 1 camada = **9 imagens novas** (~US$ 0,35).
 
 ## 5. Notas do humano
@@ -70,6 +72,12 @@ Relatório: [`../revisao/FIDELIDADE-VOLUME-2.md`](../revisao/FIDELIDADE-VOLUME-2
 **Pendente (decisão do humano):**
 - **Sancho já sabe assinar em Cervantes** (II-43: *bien sé firmar mi nombre*, aprendeu quando foi *prioste*). A atividade 3 (cap. 57, ele "aprende" a assinar) e a frase "Sancho não sabia ler" contradizem isso. Saídas: (i) a atividade vira "ajudar Sancho a lembrar como assina"; ou (ii) declarar a alfabetização como fio nosso e não afirmar que ele não sabe escrever o nome.
 - **Registrar como adaptação nossa**: Sancho percebe a burla do ataque e reconhece vozes (em II-44 e II-53 ele nunca percebe); os duques pedem perdão (em Cervantes, não; a burla é a crítica central).
+
+## 7. Revisões do autor pelo app (2026-11-19, Issues #53 e #54)
+- **#53 (cap. 54, o doutor)**: "frutas são saudáveis, não deveriam ser barradas". O doutor agora tira a torta de creme e açúcar e o torresmo (com razão, mas exagerando), e o frango por um motivo absurdo ("tem asa, pode sair voando da barriga"); diante da cesta de frutas, a varinha para no ar: "Fruta pode. Fruta faz bem". O jantar de Sancho ganha sopa de legumes e a maçã salva, com a moral "comer bem não é comer quase nada: é comer de tudo um pouco". Afastamento declarado de Cervantes (II-47: o doutor tira a fruta "por demasiado húmeda"). A arte `p3-real` continua valendo (o doutor toca o frango).
+- **#54 (cap. 55, bengala + ponte)**: o capítulo foi dividido em dois. O **cap. 55** fica só com a bengala, agora mais perto de II-45: o aldeão segura a bengala com as duas mãos enquanto o vizinho jura, e Sancho entrega a bengala ao aldeão como pagamento antes de abri-la. O **cap. 56** novo, *A Ponte da Pergunta Difícil* (II-51, conferido no original: a lei da ponte com os juízes, o homem que jura "vou morrer naquela forca", e Sancho que, com as razões "en un fil", escolhe a misericórdia lembrando o conselho de Dom Quixote), explica a lei, o raciocínio dos guardas passo a passo e a solução com os braços de Sancho como os pratos de uma balança. Mantidos: a forca virou cadeia; a ideia de partir o homem ao meio continua fora (no lugar, Sancho pensa em deixar o homem "morando no meio da ponte"). Palavras-chave novas: CADEIA, BALANÇA.
+- **Consequências**: a Parte 7 passou a ter 11 páginas e os capítulos seguintes andaram um número (57 a 61), assim como os da Parte 8 (62 a 70). As imagens `p5`..`p9` viraram `p6`..`p10`; a camada `p4-bengala-inteira` saiu (a bengala agora está na arte). Desafios 🧩 atualizados (`desafios/parte-7.js`).
+- **Arte pela API** (autorizada no prompt da sessão): `p4-real` (edição da antiga) e `p5-real` (nova), lista `tools/arte/dom-quixote-revisoes-2026-11-19.mjs`, junto com a P6 p.3 (#52): 3/3 aceitas de primeira, **US$ 0,10**.
 
 ## 6. Arte e publicação antecipada na estante (2026-11-18)
 - **Produção sem custo de API (subagentes paralelos via gerador nativo do Antigravity)**:

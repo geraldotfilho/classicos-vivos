@@ -33,6 +33,8 @@
 
 ## 2. Próximas sessões (escolha do humano)
 
+> **2026-11-19 — revisões do autor pelo app (#52, #53, #54) resolvidas e publicadas**: P6 p.3 sem o animal inteiro no espeto (arte refeita); P7 cap. 54 reescrito (o doutor deixa a fruta: "comer de tudo um pouco"); P7 cap. 55 dividido em dois (bengala, com a arte refeita e a bengala nas mãos do aldeão; e o novo cap. 56, a ponte, conferido em Cervantes II-51, com arte nova). A Parte 7 tem agora **11 páginas** e os capítulos seguintes andaram um número (P7: 52–61; P8: 62–70). Arte pela API: 3 imagens, **US$ 0,10**. Detalhes no §7 do caderno da Parte 7.
+
 > **2026-11-14 — 🧩 modo Desafio (segunda camada, leitores de ~8 a 10 anos)**: botão 🧩 no topo do livro; desafios em `dom-quixote/desafios/parte-N.js`; especificação e andamento em [`DESAFIOS.md`](DESAFIOS.md) (`AGENTS.md` §2.9). **Prontos nas 8 partes** (todas publicadas na estante). 🛑 Falta o humano experimentar e mandar notas; se o texto das Partes 7 e 8 mudar, reler os desafios da página. Sem API paga. Para escrever uma parte: um agente lê `docs/DESAFIOS.md` + o `parte-N.html`, usa `desafios/parte-5.js` como modelo e roda `npm run conferir:desafios`.
 
 > **2026-11-14 — narração em português das Partes 5 e 6 concluída e ativada (`partes: [1, 2, 3, 4, 5, 6]` em `dom-quixote/audio/vozes.js`)**: todas as páginas (10/10 na Parte 5 e 10/10 na Parte 6) e todas as palavras-chave (36/36 na Parte 5 e 29/29 na Parte 6) gravadas, conferidas no Whisper local e verificadas com zero rajadas de ruído (`node tools/conferir-narracao.mjs --partes 1,2,3,4,5,6 --idiomas pt`). Pontos de escuta do humano: [`narracao/qa-parte-5.md`](narracao/qa-parte-5.md) e [`narracao/qa-parte-6.md`](narracao/qa-parte-6.md). Gasto da retomada local (págs. 4–9 da Parte 6 + palavras-chave das Partes 5 e 6): 59 pedidos, 29.392 tokens de áudio, ~US$ 0,1341 (Flex); total das Partes 5 e 6: ~US$ 0,39. **Dica local (Windows)**: `tools/transcrever.py` agora detecta GPU (CUDA) automaticamente; na máquina local, apontar `CV_PYTHON="C:\Users\geral\Projetos\field-image-curator\.venv\Scripts\python.exe"` aproveita as DLLs CUDA 12 / cuDNN 9 já instaladas no *Ateliê Pericial* (RTX 4050, ~2,5 s/pág sem sobrecarregar a CPU; detalhes em `docs/TODO-NARRACAO.md` §19).
@@ -47,8 +49,8 @@
 > | :--- | :--- | :--- | :--- | :--- |
 > | 5 | O Livro Famoso e o Cavaleiro dos Leões | 34–42 | Publicada (PT + narração gravada; faltam traduções) | [`cadernos/dom-quixote-parte-5.md`](cadernos/dom-quixote-parte-5.md) |
 > | 6 | O Teatrinho, o Barco e o Cavalo Voador | 43–51 | Publicada (PT + narração gravada; faltam traduções) | [`cadernos/dom-quixote-parte-6.md`](cadernos/dom-quixote-parte-6.md) |
-> | 7 | Sancho, Governador da Ilha | 52–60 | Publicada na estante (18 WebPs; PT, voz do aparelho; aguardando leitura/notas pelo app, narração e traduções) | [`cadernos/dom-quixote-parte-7.md`](cadernos/dom-quixote-parte-7.md) |
-> | 8 | O Cavaleiro da Branca Lua | 61–69 | Publicada na estante (17 WebPs; PT, voz do aparelho; aguardando leitura/notas pelo app, narração e traduções) | [`cadernos/dom-quixote-parte-8.md`](cadernos/dom-quixote-parte-8.md) |
+> | 7 | Sancho, Governador da Ilha | 52–61 | Publicada na estante (18 WebPs; PT, voz do aparelho; aguardando leitura/notas pelo app, narração e traduções) | [`cadernos/dom-quixote-parte-7.md`](cadernos/dom-quixote-parte-7.md) |
+> | 8 | O Cavaleiro da Branca Lua | 62–70 | Publicada na estante (17 WebPs; PT, voz do aparelho; aguardando leitura/notas pelo app, narração e traduções) | [`cadernos/dom-quixote-parte-8.md`](cadernos/dom-quixote-parte-8.md) |
 >
 > **Entrega**: sempre na `main`, por merge, ao fim de cada entrega (`AGENTS.md` §0.4): é pelo site que o humano lê.
 

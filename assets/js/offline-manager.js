@@ -5,7 +5,7 @@
 (function() {
     'use strict';
 
-    const VERSAO_ATUAL = '66bb710ca7fa';
+    const VERSAO_ATUAL = '078b70c6ac8f';
     const PREFIXO_CACHE = 'cv-volume-quixote-';
     const PREFIXO_STORAGE = 'cv-offline-quixote-';
 
@@ -387,20 +387,20 @@
         "./assets/js/desafios.js",
         "./assets/css/desafios.css",
         "./dom-quixote/imagens/parte-7/camadas/p2-chapeuzinho.webp",
-        "./dom-quixote/imagens/parte-7/camadas/p4-bengala-inteira.webp",
         "./dom-quixote/imagens/parte-7/camadas/p4-bengala-quebrada.webp",
         "./dom-quixote/imagens/parte-7/p0-imag.webp",
         "./dom-quixote/imagens/parte-7/p0-real.webp",
         "./dom-quixote/imagens/parte-7/p1-imag.webp",
         "./dom-quixote/imagens/parte-7/p1-real.webp",
+        "./dom-quixote/imagens/parte-7/p10-real.webp",
         "./dom-quixote/imagens/parte-7/p2-imag.webp",
         "./dom-quixote/imagens/parte-7/p2-real.webp",
         "./dom-quixote/imagens/parte-7/p3-real.webp",
         "./dom-quixote/imagens/parte-7/p4-imag.webp",
         "./dom-quixote/imagens/parte-7/p4-real.webp",
         "./dom-quixote/imagens/parte-7/p5-real.webp",
-        "./dom-quixote/imagens/parte-7/p6-imag.webp",
         "./dom-quixote/imagens/parte-7/p6-real.webp",
+        "./dom-quixote/imagens/parte-7/p7-imag.webp",
         "./dom-quixote/imagens/parte-7/p7-real.webp",
         "./dom-quixote/imagens/parte-7/p8-real.webp",
         "./dom-quixote/imagens/parte-7/p9-real.webp",

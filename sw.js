@@ -7,17 +7,13 @@
    - Páginas HTML e vozes.js: rede primeiro com limite de 2,5 s (se a rede estiver lenta, abre do cache na hora).
    - Narração gravada (*.mp3 e *.json): rede primeiro com limite de 2,5 s, cache próprio (cv-narracao).
    - Demais arquivos: cache primeiro (abre instantâneo no tablet). */
-const CACHE = 'classicos-vivos-66bb710ca7fa';
+const CACHE = 'classicos-vivos-078b70c6ac8f';
 const CACHE_AUDIO = 'cv-narracao';
 const CACHE_META = 'cv-meta';
 const FILES = [
     [
-        "./assets/icones/icone-192.png",
-        "bb91b0bf"
-    ],
-    [
         "./assets/css/desafios.css",
-        "86bb8b96"
+        "1148a983"
     ],
     [
         "./assets/css/fonts.css",
@@ -29,11 +25,11 @@ const FILES = [
     ],
     [
         "./assets/css/livro.css",
-        "2f6680da"
+        "f41f4b8d"
     ],
     [
         "./assets/css/tailwind.css",
-        "f915197e"
+        "227f9d19"
     ],
     [
         "./assets/fonts/fredoka-latin-400-normal.woff2",
@@ -73,83 +69,87 @@ const FILES = [
     ],
     [
         "./assets/icones/bandeiras/br.svg",
-        "98fb53db"
+        "e3994333"
     ],
     [
         "./assets/icones/bandeiras/es.svg",
-        "9dfeedd4"
+        "38e60176"
     ],
     [
         "./assets/icones/bandeiras/fr.svg",
-        "4f0040f0"
+        "3823b101"
     ],
     [
         "./assets/icones/bandeiras/gb.svg",
-        "e33cb4ca"
+        "b3a36204"
+    ],
+    [
+        "./assets/icones/icone-192.png",
+        "bb91b0bf"
     ],
     [
         "./assets/js/acervo.js",
-        "345d6343"
+        "817be808"
     ],
     [
         "./assets/js/colaboracao.js",
-        "7a6f62d9"
+        "b0786a18"
     ],
     [
         "./assets/js/contador.js",
-        "a38fb806"
+        "b5ab47d3"
     ],
     [
         "./assets/js/desafios.js",
-        "04bfa50c"
+        "e0f5e080"
     ],
     [
         "./assets/js/i18n-site.js",
-        "206de503"
+        "7372a527"
     ],
     [
         "./assets/js/livro.js",
-        "33c15bfa"
+        "332488fb"
     ],
     [
         "./assets/js/offline-manager.js",
-        "e1d9d144"
+        "88979598"
     ],
     [
         "./assets/js/texto.js",
-        "f1f450d5"
+        "829b8a1f"
     ],
     [
         "./dom-quixote/desafios/parte-1.js",
-        "9b5d7fba"
+        "daacebed"
     ],
     [
         "./dom-quixote/desafios/parte-2.js",
-        "4b79e06d"
+        "c1af6bc2"
     ],
     [
         "./dom-quixote/desafios/parte-3.js",
-        "89220547"
+        "0cd62d5a"
     ],
     [
         "./dom-quixote/desafios/parte-4.js",
-        "ad76ef8c"
+        "113ee8fd"
     ],
     [
         "./dom-quixote/desafios/parte-5.js",
-        "231df85d"
+        "864209f3"
     ],
     [
         "./dom-quixote/desafios/parte-6.js",
-        "b0084908"
+        "8e11adbd"
     ],
     [
         "./dom-quixote/desafios/parte-7.js",
-        "b329384a"
+        "6099ff7b"
     ],
     [
         "./dom-quixote/desafios/parte-8.js",
-        "0e80e0b2"
+        "731b8b70"
     ],
     [
         "./dom-quixote/imagens/camadas/p4-estalajadeiro-acenando.webp",
@@ -185,55 +185,55 @@ const FILES = [
     ],
     [
         "./dom-quixote/imagens/objetos/armadura-peitoral.svg",
-        "e8a86c17"
+        "774598e7"
     ],
     [
         "./dom-quixote/imagens/objetos/bacia-elmo.svg",
-        "fd88e9fc"
+        "7802ef22"
     ],
     [
         "./dom-quixote/imagens/objetos/cenoura.svg",
-        "366b1965"
+        "30cdcce0"
     ],
     [
         "./dom-quixote/imagens/objetos/escova.svg",
-        "7fc4af11"
+        "4111052e"
     ],
     [
         "./dom-quixote/imagens/objetos/escudo-panelao.svg",
-        "27a539ef"
+        "7b4f91d4"
     ],
     [
         "./dom-quixote/imagens/objetos/lanca-bandeirola.svg",
-        "9a0536ea"
+        "20795593"
     ],
     [
         "./dom-quixote/imagens/objetos/livro-castelos.svg",
-        "3ad5be96"
+        "f7f451ae"
     ],
     [
         "./dom-quixote/imagens/objetos/livro-cavaleiros.svg",
-        "81656112"
+        "0af820c9"
     ],
     [
         "./dom-quixote/imagens/objetos/livro-dragoes.svg",
-        "e3b154af"
+        "e69f36d2"
     ],
     [
         "./dom-quixote/imagens/objetos/maca.svg",
-        "1d4387bd"
+        "cf3d670b"
     ],
     [
         "./dom-quixote/imagens/objetos/sopa-banquete.svg",
-        "b4fbaad2"
+        "ae09842a"
     ],
     [
         "./dom-quixote/imagens/objetos/trombeta-flauta.svg",
-        "2b4048be"
+        "355584bb"
     ],
     [
         "./dom-quixote/imagens/objetos/vento-sopro.svg",
-        "d0b4e11a"
+        "8a662082"
     ],
     [
         "./dom-quixote/imagens/p0-imag.webp",
@@ -753,7 +753,7 @@ const FILES = [
     ],
     [
         "./dom-quixote/imagens/parte-6/p2-real.webp",
-        "3528951c"
+        "1f2b3f52"
     ],
     [
         "./dom-quixote/imagens/parte-6/p3-imag.webp",
@@ -812,10 +812,6 @@ const FILES = [
         "5bf35219"
     ],
     [
-        "./dom-quixote/imagens/parte-7/camadas/p4-bengala-inteira.webp",
-        "18835494"
-    ],
-    [
         "./dom-quixote/imagens/parte-7/camadas/p4-bengala-quebrada.webp",
         "e20e234d"
     ],
@@ -836,6 +832,10 @@ const FILES = [
         "4a17a1d5"
     ],
     [
+        "./dom-quixote/imagens/parte-7/p10-real.webp",
+        "b2b56676"
+    ],
+    [
         "./dom-quixote/imagens/parte-7/p2-imag.webp",
         "51989d0e"
     ],
@@ -853,31 +853,31 @@ const FILES = [
     ],
     [
         "./dom-quixote/imagens/parte-7/p4-real.webp",
-        "0f69cfae"
+        "e5cad59b"
     ],
     [
         "./dom-quixote/imagens/parte-7/p5-real.webp",
-        "9bc9b177"
-    ],
-    [
-        "./dom-quixote/imagens/parte-7/p6-imag.webp",
-        "2b07de43"
+        "61dad7ae"
     ],
     [
         "./dom-quixote/imagens/parte-7/p6-real.webp",
-        "f291846b"
+        "9bc9b177"
+    ],
+    [
+        "./dom-quixote/imagens/parte-7/p7-imag.webp",
+        "2b07de43"
     ],
     [
         "./dom-quixote/imagens/parte-7/p7-real.webp",
-        "bf4a201a"
+        "f291846b"
     ],
     [
         "./dom-quixote/imagens/parte-7/p8-real.webp",
-        "87d4097d"
+        "bf4a201a"
     ],
     [
         "./dom-quixote/imagens/parte-7/p9-real.webp",
-        "b2b56676"
+        "87d4097d"
     ],
     [
         "./dom-quixote/imagens/parte-8/p0-imag.webp",
@@ -949,95 +949,95 @@ const FILES = [
     ],
     [
         "./dom-quixote/parte-1.html",
-        "c02bd04c"
+        "cea80a60"
     ],
     [
         "./dom-quixote/parte-2.html",
-        "fc9a6002"
+        "da43e69b"
     ],
     [
         "./dom-quixote/parte-3.html",
-        "f8b85101"
+        "a47dbf87"
     ],
     [
         "./dom-quixote/parte-4.html",
-        "22e74092"
+        "b79aa9d0"
     ],
     [
         "./dom-quixote/parte-5.html",
-        "49dfed17"
+        "4bfa3498"
     ],
     [
         "./dom-quixote/parte-6.html",
-        "137e36d8"
+        "04f64d44"
     ],
     [
         "./dom-quixote/parte-7.html",
-        "ce6bb6d1"
+        "3bc3cfcb"
     ],
     [
         "./dom-quixote/parte-8.html",
-        "1b79df7b"
+        "0a67e23e"
     ],
     [
         "./dom-quixote/traducoes/parte-1.en.js",
-        "bd530027"
+        "0389eecf"
     ],
     [
         "./dom-quixote/traducoes/parte-1.es.js",
-        "dd9be3cb"
+        "66a206ed"
     ],
     [
         "./dom-quixote/traducoes/parte-1.fr.js",
-        "4a89cf98"
+        "c00e77e8"
     ],
     [
         "./dom-quixote/traducoes/parte-2.en.js",
-        "8a2af6e8"
+        "aa0d2392"
     ],
     [
         "./dom-quixote/traducoes/parte-2.es.js",
-        "4923bc17"
+        "509adbad"
     ],
     [
         "./dom-quixote/traducoes/parte-2.fr.js",
-        "6146171c"
+        "57d808a9"
     ],
     [
         "./dom-quixote/traducoes/parte-3.en.js",
-        "3d75cebd"
+        "128b7c8e"
     ],
     [
         "./dom-quixote/traducoes/parte-3.es.js",
-        "328db54f"
+        "00e40a48"
     ],
     [
         "./dom-quixote/traducoes/parte-3.fr.js",
-        "1318bf15"
+        "464b44fa"
     ],
     [
         "./dom-quixote/traducoes/parte-4.en.js",
-        "39ccc00d"
+        "ac10f310"
     ],
     [
         "./dom-quixote/traducoes/parte-4.es.js",
-        "49c1f611"
+        "47f386c2"
     ],
     [
         "./dom-quixote/traducoes/parte-4.fr.js",
-        "383db85a"
+        "3caf9bbd"
     ],
     [
         "./index.html",
-        "2d563efc"
+        "91662e16"
     ],
     [
         "./manifest.webmanifest",
-        "0a3da84b"
+        "638d778e"
     ],
     [
         "./sobre.html",
-        "d86dd8d4"
+        "cd10daa6"
     ]
 ];
 
