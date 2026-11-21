@@ -7,7 +7,7 @@
    - Páginas HTML e vozes.js: rede primeiro com limite de 2,5 s (se a rede estiver lenta, abre do cache na hora).
    - Narração gravada (*.mp3 e *.json): rede primeiro com limite de 2,5 s, cache próprio (cv-narracao).
    - Demais arquivos: cache primeiro (abre instantâneo no tablet). */
-const CACHE = 'classicos-vivos-fb6232871236';
+const CACHE = 'classicos-vivos-94c5df3a0b46';
 const CACHE_AUDIO = 'cv-narracao';
 const CACHE_META = 'cv-meta';
 const FILES = [
@@ -113,7 +113,7 @@ const FILES = [
     ],
     [
         "./assets/js/offline-manager.js",
-        "c71b895a"
+        "f9c161d6"
     ],
     [
         "./assets/js/texto.js",
@@ -1066,6 +1066,10 @@ const FILES = [
     [
         "./dom-quixote/traducoes/parte-5.es.js",
         "4cbc1e4b"
+    ],
+    [
+        "./dom-quixote/traducoes/parte-5.fr.js",
+        "b9ddea8c"
     ],
     [
         "./dom-quixote/traducoes/parte-6.en.js",
