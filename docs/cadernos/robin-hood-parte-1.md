@@ -10,7 +10,7 @@ Plano: [`../PLANO-ROBIN-HOOD.md`](../PLANO-ROBIN-HOOD.md) · Receita: [`../recei
 | 2 Interações e visual | ✅ concluído | 2026-11-21 | idem | — |
 | Crítica adversarial + polimento | ✅ concluído | 2026-11-21 | idem | — |
 | 3 Revisão humana 🛑 | 🟡 **pronto para leitura em família** | 2026-11-21 | Issue #68 resolvida | — |
-| 4 Ilustrações e atividades | 🟡 **7/10 cenas WebP prontas** (gerador nativo; faltam `p5`, `p8`, `p9`) | 2026-11-21 | branch `feat/robin-hood-parte-1-arte` | US$ 0,00 |
+| 4 Ilustrações e atividades | ✅ **10/10 cenas WebP prontas** (7 nativo + 3 API Batch) | 2026-11-21 | branch `feat/robin-hood-parte-1-arte-api` | US$ 0,1036 |
 | 5 Revisão final 🛑 | ⬜ | | | — |
 | 6 Narração (pt) + escuta 🛑 | ⬜ | | | US$ |
 | Publicação | ⬜ | | | — |
@@ -80,9 +80,10 @@ Primeira parte de *Robin Hood* (5 partes previstas). Estabelece:
 - **2026-11-21 — Issue #68 (`revisao-autor`)**: trocado `Dama Mariana` / `Dama Mariana de Sherwood` / `Mariana de Sherwood` por **`Lady Mariana`** (variando com *Mariana*), para remeter melhor ao original e soar mais natural junto com *Robin Hood*. Atualizados `robin-hood/parte-1.html` e toda a documentação de *Robin Hood*.
 - Autor pediu rascunho ilustrado para já realizar a revisão lendo com o filho.
 
-## 6. Arte (em andamento, gerador nativo sem custo de API)
-- **7/10 cenas convertidas para WebP em `robin-hood/imagens/parte-1/` (`US$ 0,00`)**: `p0-real` (Amostra A aprovada), `p1-real`, `p2-real`, `p3-real`, `p4-real`, `p6-real` e `p7-real` (Estilo A — Gouache estilizado de floresta).
-- **Faltam (`429 RESOURCE_EXHAUSTED` no gerador nativo, reinício às 16:59 BRT)**: `p5-real`, `p8-real` e `p9-real` (e eventuais camadas de `p7`/`p9`, hoje funcionando com fallback de emoji).
+## 6. Arte (10/10 cenas concluídas)
+- **7/10 cenas no gerador nativo (`US$ 0,00`)**: `p0-real`, `p1-real`, `p2-real`, `p3-real`, `p4-real`, `p6-real` e `p7-real` (Estilo A — Gouache estilizado de floresta).
+- **3/10 cenas pela API paga Batch (`tools/arte/robin-hood-parte-1.mjs`, `US$ 0,1036`)**: `p5-real`, `p8-real` e `p9-real` (`batches/ymffobzbvd3hgmrhru309wiyg9brekwx1r5j`, 3/3 aceitas de primeira, registradas em `docs/arte/gastos.csv`).
+- Camadas das atividades nas págs. 7 e 9 seguem com o fallback limpo de emoji nesta etapa de revisão em família.
 
 ### 5.1 Crítica adversarial (subagente de contexto limpo, 2026-11-21)
 Notas iniciais por página: de **4,0 a 8,0** (mais baixas na Pág. 7 e Pág. 9). Todas as 10 correções críticas apontadas pelo revisor foram aplicadas no polimento:
