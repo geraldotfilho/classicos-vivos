@@ -401,3 +401,9 @@ O que já foi entregue, sprint a sprint, em ordem cronológica (o mais antigo pr
 - **#54 · Parte 7, cap. 55**: dividido em dois capítulos (bengala; e a ponte, novo cap. 56, conferido em Cervantes II-51). Arte da bengala refeita com a bengala nas mãos do aldeão; cena nova para a ponte. Parte 7 com 11 páginas; capítulos renumerados (P7: 52–61, P8: 62–70); imagens `p5`..`p9` → `p6`..`p10`; desafios atualizados.
 - **Gasto**: 3 imagens pela API Batch (`tools/arte/dom-quixote-revisoes-2026-11-19.mjs`), **US$ 0,10** (`docs/arte/gastos.csv`).
 
+
+## ✅ Revisões do autor pelo app: Issues #55 a #67, e o livro falso (2026-11-21)
+- **Parte 7**: #55 cena final do julgamento da bengala (espanto, vergonha, orgulho); #56 a cadeia da ponte fica na entrada, antes da travessia (texto e desenho da parede); #57 a pena de ganso explicada; #58 Sancho admite no palácio que a ilha era de brincadeira (em Cervantes ele nunca descobre); #59 o doutor Pedro Rezio de Tirafora pelo nome; #60 atividade nova na última página (CHAVES → PORTÃO → ESTRADA, a cena muda a cada acerto) e Imaginação da estrada da liberdade.
+- **Parte 8**: #61 redes de borboleta; #65 capítulo novo 63, *A Boiada* (Cervantes II-58), que dá o motivo de Sansão (Parte 8 com 11 páginas, caps. 62–71, imagens e desafios renumerados); #62 a cabeça encantada abre na Imaginação (`cena.lenteInicial: 'imag'` no motor); #63 a desconfiança de Sancho como lição ligada ao livro falso; #64/#66 Rocinante deitado (não sentado), Imaginação do duelo e a pista "Descanse, senhor Alonso"; #67 "que duques?" explicado.
+- **Sugestão do autor**: o livro falso ganhou "Mari Gutiérrez" (II-59) e a conversa sobre mentira com cara de verdade; na gráfica, Dom Quixote confere o livro e o homem de avental faz a piscadela "Isso se já não fizeram, viu?" sobre um livro para crianças.
+- **Gasto**: 12 imagens pela API Batch (11 aceitas), **US$ 0,41** (`docs/arte/gastos.csv`).

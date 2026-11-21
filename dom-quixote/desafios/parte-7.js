@@ -197,7 +197,7 @@ window.DESAFIOS = {
           itens: [
             { texto: 'Quem mente vai para a cadeia', grupo: 0 },
             { texto: 'Se ele passar, não foi para a cadeia: então mentiu', grupo: 0 },
-            { texto: 'Quem diz a verdade passa', grupo: 1 },
+            { texto: 'Quem diz a verdade atravessa a ponte', grupo: 1 },
             { texto: 'Se for preso, foi mesmo para a cadeia: então disse a verdade', grupo: 1 }
           ],
           dica: 'Releia o terceiro parágrafo, o raciocínio dos guardas, e depois a fala de Sancho no último.',

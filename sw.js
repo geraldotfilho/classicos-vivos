@@ -7,7 +7,7 @@
    - Páginas HTML e vozes.js: rede primeiro com limite de 2,5 s (se a rede estiver lenta, abre do cache na hora).
    - Narração gravada (*.mp3 e *.json): rede primeiro com limite de 2,5 s, cache próprio (cv-narracao).
    - Demais arquivos: cache primeiro (abre instantâneo no tablet). */
-const CACHE = 'classicos-vivos-078b70c6ac8f';
+const CACHE = 'classicos-vivos-fcfcb623fdaa';
 const CACHE_AUDIO = 'cv-narracao';
 const CACHE_META = 'cv-meta';
 const FILES = [
@@ -29,7 +29,7 @@ const FILES = [
     ],
     [
         "./assets/css/tailwind.css",
-        "227f9d19"
+        "6d086969"
     ],
     [
         "./assets/fonts/fredoka-latin-400-normal.woff2",
@@ -109,11 +109,11 @@ const FILES = [
     ],
     [
         "./assets/js/livro.js",
-        "332488fb"
+        "0a192996"
     ],
     [
         "./assets/js/offline-manager.js",
-        "88979598"
+        "818d486f"
     ],
     [
         "./assets/js/texto.js",
@@ -145,11 +145,11 @@ const FILES = [
     ],
     [
         "./dom-quixote/desafios/parte-7.js",
-        "6099ff7b"
+        "f36edcc3"
     ],
     [
         "./dom-quixote/desafios/parte-8.js",
-        "731b8b70"
+        "bb1d334d"
     ],
     [
         "./dom-quixote/imagens/camadas/p4-estalajadeiro-acenando.webp",
@@ -832,6 +832,22 @@ const FILES = [
         "4a17a1d5"
     ],
     [
+        "./dom-quixote/imagens/parte-7/p10-imag.webp",
+        "2e15e97e"
+    ],
+    [
+        "./dom-quixote/imagens/parte-7/p10-real-chaves.webp",
+        "82ca99bd"
+    ],
+    [
+        "./dom-quixote/imagens/parte-7/p10-real-palacio.webp",
+        "284138d5"
+    ],
+    [
+        "./dom-quixote/imagens/parte-7/p10-real-portao.webp",
+        "6d692773"
+    ],
+    [
         "./dom-quixote/imagens/parte-7/p10-real.webp",
         "b2b56676"
     ],
@@ -852,12 +868,16 @@ const FILES = [
         "223db3ff"
     ],
     [
+        "./dom-quixote/imagens/parte-7/p4-real-fim.webp",
+        "e748cce3"
+    ],
+    [
         "./dom-quixote/imagens/parte-7/p4-real.webp",
         "e5cad59b"
     ],
     [
         "./dom-quixote/imagens/parte-7/p5-real.webp",
-        "61dad7ae"
+        "aee27b06"
     ],
     [
         "./dom-quixote/imagens/parte-7/p6-real.webp",
@@ -893,59 +913,71 @@ const FILES = [
     ],
     [
         "./dom-quixote/imagens/parte-8/p1-real.webp",
-        "ab3bb164"
+        "cc7a9a08"
     ],
     [
-        "./dom-quixote/imagens/parte-8/p2-real.webp",
-        "eb09e03b"
-    ],
-    [
-        "./dom-quixote/imagens/parte-8/p3-imag.webp",
-        "aea95c1c"
-    ],
-    [
-        "./dom-quixote/imagens/parte-8/p3-real.webp",
-        "50e1aa54"
-    ],
-    [
-        "./dom-quixote/imagens/parte-8/p4-imag.webp",
-        "268af3c8"
-    ],
-    [
-        "./dom-quixote/imagens/parte-8/p4-real.webp",
-        "2966d425"
-    ],
-    [
-        "./dom-quixote/imagens/parte-8/p5-imag.webp",
-        "55318d12"
-    ],
-    [
-        "./dom-quixote/imagens/parte-8/p5-real.webp",
-        "00232347"
-    ],
-    [
-        "./dom-quixote/imagens/parte-8/p6-real.webp",
-        "b64319c3"
-    ],
-    [
-        "./dom-quixote/imagens/parte-8/p7-imag.webp",
-        "10019337"
-    ],
-    [
-        "./dom-quixote/imagens/parte-8/p7-real.webp",
-        "49a9c642"
-    ],
-    [
-        "./dom-quixote/imagens/parte-8/p8-real.webp",
-        "9d021897"
-    ],
-    [
-        "./dom-quixote/imagens/parte-8/p9-imag.webp",
+        "./dom-quixote/imagens/parte-8/p10-imag.webp",
         "491b37cd"
     ],
     [
-        "./dom-quixote/imagens/parte-8/p9-real.webp",
+        "./dom-quixote/imagens/parte-8/p10-real.webp",
         "b143f864"
+    ],
+    [
+        "./dom-quixote/imagens/parte-8/p2-imag.webp",
+        "ed9e682c"
+    ],
+    [
+        "./dom-quixote/imagens/parte-8/p2-real.webp",
+        "7df01367"
+    ],
+    [
+        "./dom-quixote/imagens/parte-8/p3-real.webp",
+        "eb09e03b"
+    ],
+    [
+        "./dom-quixote/imagens/parte-8/p4-imag.webp",
+        "aea95c1c"
+    ],
+    [
+        "./dom-quixote/imagens/parte-8/p4-real.webp",
+        "50e1aa54"
+    ],
+    [
+        "./dom-quixote/imagens/parte-8/p5-imag.webp",
+        "268af3c8"
+    ],
+    [
+        "./dom-quixote/imagens/parte-8/p5-real.webp",
+        "2966d425"
+    ],
+    [
+        "./dom-quixote/imagens/parte-8/p6-imag.webp",
+        "55318d12"
+    ],
+    [
+        "./dom-quixote/imagens/parte-8/p6-real.webp",
+        "00232347"
+    ],
+    [
+        "./dom-quixote/imagens/parte-8/p7-imag.webp",
+        "4fa19681"
+    ],
+    [
+        "./dom-quixote/imagens/parte-8/p7-real.webp",
+        "ae56d80a"
+    ],
+    [
+        "./dom-quixote/imagens/parte-8/p8-imag.webp",
+        "10019337"
+    ],
+    [
+        "./dom-quixote/imagens/parte-8/p8-real.webp",
+        "49a9c642"
+    ],
+    [
+        "./dom-quixote/imagens/parte-8/p9-real.webp",
+        "9d021897"
     ],
     [
         "./dom-quixote/parte-1.html",
@@ -973,11 +1005,11 @@ const FILES = [
     ],
     [
         "./dom-quixote/parte-7.html",
-        "3bc3cfcb"
+        "b8edfa5f"
     ],
     [
         "./dom-quixote/parte-8.html",
-        "0a67e23e"
+        "1f9fd5ac"
     ],
     [
         "./dom-quixote/traducoes/parte-1.en.js",

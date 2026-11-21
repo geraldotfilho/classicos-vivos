@@ -5,7 +5,7 @@
 (function() {
     'use strict';
 
-    const VERSAO_ATUAL = '078b70c6ac8f';
+    const VERSAO_ATUAL = 'fcfcb623fdaa';
     const PREFIXO_CACHE = 'cv-volume-quixote-';
     const PREFIXO_STORAGE = 'cv-offline-quixote-';
 
@@ -392,11 +392,16 @@
         "./dom-quixote/imagens/parte-7/p0-real.webp",
         "./dom-quixote/imagens/parte-7/p1-imag.webp",
         "./dom-quixote/imagens/parte-7/p1-real.webp",
+        "./dom-quixote/imagens/parte-7/p10-imag.webp",
+        "./dom-quixote/imagens/parte-7/p10-real-chaves.webp",
+        "./dom-quixote/imagens/parte-7/p10-real-palacio.webp",
+        "./dom-quixote/imagens/parte-7/p10-real-portao.webp",
         "./dom-quixote/imagens/parte-7/p10-real.webp",
         "./dom-quixote/imagens/parte-7/p2-imag.webp",
         "./dom-quixote/imagens/parte-7/p2-real.webp",
         "./dom-quixote/imagens/parte-7/p3-real.webp",
         "./dom-quixote/imagens/parte-7/p4-imag.webp",
+        "./dom-quixote/imagens/parte-7/p4-real-fim.webp",
         "./dom-quixote/imagens/parte-7/p4-real.webp",
         "./dom-quixote/imagens/parte-7/p5-real.webp",
         "./dom-quixote/imagens/parte-7/p6-real.webp",
@@ -437,18 +442,21 @@
         "./dom-quixote/imagens/parte-8/p0-real.webp",
         "./dom-quixote/imagens/parte-8/p1-imag.webp",
         "./dom-quixote/imagens/parte-8/p1-real.webp",
+        "./dom-quixote/imagens/parte-8/p10-imag.webp",
+        "./dom-quixote/imagens/parte-8/p10-real.webp",
+        "./dom-quixote/imagens/parte-8/p2-imag.webp",
         "./dom-quixote/imagens/parte-8/p2-real.webp",
-        "./dom-quixote/imagens/parte-8/p3-imag.webp",
         "./dom-quixote/imagens/parte-8/p3-real.webp",
         "./dom-quixote/imagens/parte-8/p4-imag.webp",
         "./dom-quixote/imagens/parte-8/p4-real.webp",
         "./dom-quixote/imagens/parte-8/p5-imag.webp",
         "./dom-quixote/imagens/parte-8/p5-real.webp",
+        "./dom-quixote/imagens/parte-8/p6-imag.webp",
         "./dom-quixote/imagens/parte-8/p6-real.webp",
         "./dom-quixote/imagens/parte-8/p7-imag.webp",
         "./dom-quixote/imagens/parte-8/p7-real.webp",
+        "./dom-quixote/imagens/parte-8/p8-imag.webp",
         "./dom-quixote/imagens/parte-8/p8-real.webp",
-        "./dom-quixote/imagens/parte-8/p9-imag.webp",
         "./dom-quixote/imagens/parte-8/p9-real.webp",
         "./dom-quixote/parte-8.html",
         "./dom-quixote/desafios/parte-8.js"

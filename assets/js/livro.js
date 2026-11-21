@@ -17,8 +17,11 @@ let currentPage = 0;
 let soundEnabled = true;
 let isReadingPage = false;
 
-// Lente por página (false = Realidade, true = Imaginação) e progresso das interações
-const lensImaginationState = LIVRO.paginas.map(() => false);
+// Lente por página (false = Realidade, true = Imaginação) e progresso das interações.
+// `cena.lenteInicial: 'imag'` abre a página já na Imaginação (só em página sem atividade, cuja lente não tranca;
+// pedido do autor, Issue #62: a cabeça encantada da Parte 8 aparece primeiro como Dom Quixote a vê)
+const lenteInicialImag = (p) => !!(p.cena && p.cena.lenteInicial === 'imag' && p.cena.imag && !p.cena.cartoes);
+const lensImaginationState = LIVRO.paginas.map(lenteInicialImag);
 const pageState = LIVRO.paginas.map(() => ({ usados: new Set(), ultimo: null }));
 
 const IMG_BASE = LIVRO.imagens || './imagens/';
@@ -2816,7 +2819,7 @@ function initViradaPeloDedo() {
    ===================================================================== */
 function reiniciarPagina(i, opcoes = {}) {
     if (sceneBusy[i]) return;
-    lensImaginationState[i] = false;
+    lensImaginationState[i] = lenteInicialImag(LIVRO.paginas[i]);
     pageState[i] = { usados: new Set(), ultimo: null };
     const area = document.getElementById(`cartoes-${i}`);
     if (area) {
@@ -3535,6 +3538,7 @@ function iniciarLivro() {
         if (c && c.tipo === 'pedido') mostrarPedido(i);
         renderCamadas(i);
         atualizarTrava(i);
+        if (lensImaginationState[i]) updateLensUI(i, sceneFor(i).badge);   // página que abre na Imaginação
     }
     initTextScrolling();
     updateScrollHint(currentPage);

@@ -1,4 +1,4 @@
-# 🔁 Retomada — onde o trabalho parou (2026-11-18, Partes 7 e 8 de Dom Quixote ilustradas e publicadas — Volume 2 completo na estante)
+# 🔁 Retomada — onde o trabalho parou (2026-11-21, revisões do autor #55 a #67 nas Partes 7 e 8 resolvidas e publicadas)
 
 **Leia este arquivo primeiro numa sessão nova**, seja qual for o agente. Depois, siga a ordem de leitura do `AGENTS.md` §0.2 (AGENTS → receita geral → receita específica → plano → caderno da parte).
 
@@ -33,6 +33,8 @@
 
 ## 2. Próximas sessões (escolha do humano)
 
+> **2026-11-21 — revisões do autor pelo app (#55 a #67) resolvidas e publicadas**: P7 com atividade e Imaginação novas na última página, ponte e pena explicadas, cena final da bengala; P8 com **capítulo novo, o 63 (*A Boiada*)**, que dá o motivo de Sansão; a Parte 8 tem agora **11 páginas** (caps. 62–71). A cabeça encantada abre na Imaginação (campo novo `cena.lenteInicial`). Sugestão do autor no livro falso e na gráfica ("Isso se já não fizeram, viu?"). Arte pela API: 11 imagens aceitas, **US$ 0,41**. Detalhes: §8 do caderno da Parte 7 e §7 do da Parte 8.
+
 > **2026-11-19 — revisões do autor pelo app (#52, #53, #54) resolvidas e publicadas**: P6 p.3 sem o animal inteiro no espeto (arte refeita); P7 cap. 54 reescrito (o doutor deixa a fruta: "comer de tudo um pouco"); P7 cap. 55 dividido em dois (bengala, com a arte refeita e a bengala nas mãos do aldeão; e o novo cap. 56, a ponte, conferido em Cervantes II-51, com arte nova). A Parte 7 tem agora **11 páginas** e os capítulos seguintes andaram um número (P7: 52–61; P8: 62–70). Arte pela API: 3 imagens, **US$ 0,10**. Detalhes no §7 do caderno da Parte 7.
 
 > **2026-11-14 — 🧩 modo Desafio (segunda camada, leitores de ~8 a 10 anos)**: botão 🧩 no topo do livro; desafios em `dom-quixote/desafios/parte-N.js`; especificação e andamento em [`DESAFIOS.md`](DESAFIOS.md) (`AGENTS.md` §2.9). **Prontos nas 8 partes** (todas publicadas na estante). 🛑 Falta o humano experimentar e mandar notas; se o texto das Partes 7 e 8 mudar, reler os desafios da página. Sem API paga. Para escrever uma parte: um agente lê `docs/DESAFIOS.md` + o `parte-N.html`, usa `desafios/parte-5.js` como modelo e roda `npm run conferir:desafios`.
@@ -50,7 +52,7 @@
 > | 5 | O Livro Famoso e o Cavaleiro dos Leões | 34–42 | Publicada (PT + narração gravada; faltam traduções) | [`cadernos/dom-quixote-parte-5.md`](cadernos/dom-quixote-parte-5.md) |
 > | 6 | O Teatrinho, o Barco e o Cavalo Voador | 43–51 | Publicada (PT + narração gravada; faltam traduções) | [`cadernos/dom-quixote-parte-6.md`](cadernos/dom-quixote-parte-6.md) |
 > | 7 | Sancho, Governador da Ilha | 52–61 | Publicada na estante (18 WebPs; PT, voz do aparelho; aguardando leitura/notas pelo app, narração e traduções) | [`cadernos/dom-quixote-parte-7.md`](cadernos/dom-quixote-parte-7.md) |
-> | 8 | O Cavaleiro da Branca Lua | 62–70 | Publicada na estante (17 WebPs; PT, voz do aparelho; aguardando leitura/notas pelo app, narração e traduções) | [`cadernos/dom-quixote-parte-8.md`](cadernos/dom-quixote-parte-8.md) |
+> | 8 | O Cavaleiro da Branca Lua | 62–71 | Publicada na estante (17 WebPs; PT, voz do aparelho; aguardando leitura/notas pelo app, narração e traduções) | [`cadernos/dom-quixote-parte-8.md`](cadernos/dom-quixote-parte-8.md) |
 >
 > **Entrega**: sempre na `main`, por merge, ao fim de cada entrega (`AGENTS.md` §0.4): é pelo site que o humano lê.
 

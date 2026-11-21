@@ -16,7 +16,7 @@ window.DESAFIOS = {
           itens: [
             { texto: 'A armadilha dos magos contra Dom Quixote', grupo: 0 },
             { texto: 'Os pastores com roupas bonitas demais', grupo: 0 },
-            { texto: 'As redes de pegar passarinho', grupo: 1 },
+            { texto: 'As redes de pegar borboleta', grupo: 1 },
             { texto: 'Cavaleiro e cavalo enrolados na rede', grupo: 1 },
             { texto: 'A moça que leu as aventuras em voz alta', grupo: 1 }
           ],
@@ -40,8 +40,44 @@ window.DESAFIOS = {
       sabia: 'Antes de escrever Dom Quixote, Cervantes publicou um romance de pastores que cantam e fazem versos, chamado La Galatea. Ele conhecia bem essa moda!'
     },
 
-    // Capítulo 63 — Esse Não Sou Eu!
+    // Capítulo 63 — Saia da Estrada, Meu Amo!
     2: {
+      titulo: 'Touro não para',
+      selo: '🐂',
+      convite: 'Uma homenagem no meio da estrada e uma nuvem de poeira lá longe. Quem tinha razão?',
+      etapas: [
+        {
+          tipo: 'ordenar',
+          pergunta: 'Ponha na ordem o que aconteceu na estrada.',
+          itens: [
+            'Dom Quixote parou Rocinante no meio da estrada',
+            'Lá longe, subiu uma nuvem de poeira',
+            'Os vaqueiros e Sancho gritaram para ele sair',
+            'A boiada passou e derrubou todo mundo',
+            'Sancho ajudou o amo a tirar a armadura'
+          ],
+          dica: 'Releia a página do começo ao fim, um parágrafo de cada vez.',
+          porque: 'Quem avisa amigo é: Sancho e os vaqueiros avisaram a tempo!'
+        },
+        {
+          tipo: 'quiz',
+          pergunta: 'Por que o cavaleiro da lua branca balançou a cabeça "como quem toma uma decisão"?',
+          opcoes: [
+            'Viu o perigo que Dom Quixote correu e resolveu fazer alguma coisa',
+            'Queria comprar a boiada inteira',
+            'Estava com sono e quase dormiu em cima do cavalo',
+            'Achou os touros bonitos e quis ser vaqueiro'
+          ],
+          certa: 0,
+          dica: 'Releia o último parágrafo: o que ele tinha acabado de ver lá do alto do morro?',
+          porque: 'Guarde essa pista: o cavaleiro da lua branca ainda vai aparecer!'
+        }
+      ],
+      sabia: 'Na Espanha do tempo de Cervantes, as boiadas eram levadas a pé pelas estradas até as cidades, com vaqueiros a cavalo. Quem estivesse no caminho tinha mesmo de sair da frente!'
+    },
+
+    // Capítulo 64 — Esse Não Sou Eu!
+    3: {
       titulo: 'O livro de mentirinha',
       selo: '📕',
       convite: 'Alguém escreveu um livro falso sobre os dois. Dom Quixote vai deixar barato?',
@@ -82,8 +118,8 @@ window.DESAFIOS = {
       sabia: 'No livro de Cervantes é assim mesmo: ao saber que o livro falso mandava Dom Quixote para Saragoça, ele muda de rumo e vai para Barcelona, só para provar que o outro autor errou.'
     },
 
-    // Capítulo 64 — A Água que Não Acaba
-    3: {
+    // Capítulo 65 — A Água que Não Acaba
+    4: {
       titulo: 'Sancho e o mar',
       selo: '🌊',
       convite: 'Sancho nunca tinha visto o mar. Dá para entender as ideias engraçadas que ele teve?',
@@ -117,8 +153,8 @@ window.DESAFIOS = {
       sabia: 'No livro de Cervantes, Dom Quixote chega a Barcelona e vê o mar pela primeira vez, como na história que você acabou de ler.'
     },
 
-    // Capítulo 65 — O Papel nas Costas
-    4: {
+    // Capítulo 66 — O Papel nas Costas
+    5: {
       titulo: 'O truque da cabeça de bronze',
       selo: '🗿',
       convite: 'Todo mundo conhece Dom Quixote, e uma cabeça de bronze sabe tudo. Será mesmo?',
@@ -166,8 +202,8 @@ window.DESAFIOS = {
       sabia: 'A palavra "fama" vem do latim fama, que quer dizer "o que se fala por aí". Ou seja: fama é conversa que corre de boca em boca!'
     },
 
-    // Capítulo 66 — O Nome do Mago
-    5: {
+    // Capítulo 67 — O Nome do Mago
+    6: {
       titulo: 'Onde nascem os livros',
       selo: '🔤',
       convite: 'Tem uma oficina cheia de letrinhas de chumbo e um nome escondido na primeira página. Dá para descobrir?',
@@ -206,8 +242,8 @@ window.DESAFIOS = {
       sabia: 'No livro de Cervantes, Dom Quixote visita mesmo uma gráfica em Barcelona e vê como se imprimem livros. A impressão com letras de metal, inventada por Gutenberg, já existia havia mais de cem anos.'
     },
 
-    // Capítulo 67 — O Trato na Praia
-    6: {
+    // Capítulo 68 — O Trato na Praia
+    7: {
       titulo: 'Trato é trato',
       selo: '🏖️',
       convite: 'Um trato foi feito na areia. Quem ganha, quem perde, e quem será que está dentro daquela armadura?',
@@ -232,31 +268,31 @@ window.DESAFIOS = {
             'Os dois se afastaram e viraram os cavalos',
             'O cavalo da lua branca veio galopando de verdade',
             'O cavaleiro levantou a lança bem alto, de propósito',
-            'Rocinante sentou na areia, feito cachorro esperando biscoito',
-            'Dom Quixote escorregou para o lado, devagar'
+            'Rocinante dobrou os joelhos e se deitou na areia',
+            'Dom Quixote escorregou da sela, devagar'
           ],
           dica: 'Releia o quarto parágrafo, do começo ao fim.',
           porque: 'O cavaleiro erguer a lança foi um jeito de dizer: "não quero machucar o senhor".'
         },
         {
           tipo: 'quiz',
-          pergunta: 'No fim, Sancho pensa no "jeito de montar" e no cavalo que "não parava para comer". O que isso mostra?',
+          pergunta: 'O cavaleiro murmurou "Descanse, senhor Alonso". Por que isso deixou Sancho de boca aberta?',
           opcoes: [
-            'Que ele desconfia de quem está dentro da armadura',
-            'Que ele quer comprar aquele cavalo',
-            'Que ele tem medo de cavalos fortes',
-            'Que ele achou o cavalo parecido com Rocinante'
+            'Só o pessoal da aldeia chama o amo de "senhor Alonso"',
+            'Sancho não sabia que o amo se chamava Alonso',
+            'O cavaleiro errou o nome de Dom Quixote',
+            'Sancho achou que o cavaleiro falava com outra pessoa'
           ],
           certa: 0,
-          dica: 'Releia a última frase da página e lembre-se de que Sancho já tinha visto esse tipo de trato antes.',
+          dica: 'Releia a última frase da página: onde é que chamam o amo de "senhor Alonso"?',
           porque: 'Sancho desconfia primeiro e acredita depois. Detetive de burrico!'
         }
       ],
       sabia: 'A palavra "cavaleiro" vem do latim caballarius, que vem de caballus, "cavalo". Faz sentido: cavaleiro é quem anda a cavalo!'
     },
 
-    // Capítulo 68 — O Pastor Quixotiz
-    7: {
+    // Capítulo 69 — O Pastor Quixotiz
+    8: {
       titulo: 'Nomes de pastor',
       selo: '🏷️',
       convite: 'Dom Quixote inventou nomes de pastor para todo mundo. Dá para ver quem é quem?',
@@ -299,8 +335,8 @@ window.DESAFIOS = {
       sabia: 'A palavra "pastor" vem do latim pastor, de pascere, "alimentar, fazer pastar". "Pasto" e "pastar" são da mesma família!'
     },
 
-    // Capítulo 69 — O Segredo de Sansão
-    8: {
+    // Capítulo 70 — O Segredo de Sansão
+    9: {
       titulo: 'O cavaleiro que era amigo',
       selo: '🤗',
       convite: 'O segredo veio à tona. Por que Sansão fez tudo aquilo, e como Dom Quixote reagiu?',
@@ -337,8 +373,8 @@ window.DESAFIOS = {
       sabia: 'A palavra "segredo" vem do latim secretum, que quer dizer "separado, posto de lado". Segredo é aquilo que a gente guarda separado dos outros.'
     },
 
-    // Capítulo 70 — Era uma Vez...
-    9: {
+    // Capítulo 71 — Era uma Vez...
+    10: {
       titulo: 'Recapitulando a Parte 8',
       selo: '🌟',
       convite: 'Chegamos ao fim da viagem. Quanto você guardou da última parte, e de toda a história?',
@@ -348,13 +384,13 @@ window.DESAFIOS = {
           pergunta: 'Ponha na ordem estes momentos da Parte 8.',
           itens: [
             'Dom Quixote e Sancho se enroscaram nas redes dos pastores de brincadeira',
+            'Uma boiada passou por cima dos dois no meio da estrada',
             'Numa pousada, descobriram o livro mentiroso sobre os dois',
-            'Em Barcelona, viram o mar e a oficina onde nascem os livros',
             'Na praia, Dom Quixote perdeu a luta e prometeu voltar para casa',
             'Em casa, Sansão confessou o segredo e foi perdoado'
           ],
-          dica: 'Siga os capítulos: redes, livro mentiroso, mar, praia e, por último, a chegada.',
-          porque: 'Do bosque das redes até a porta de casa: que viagem!'
+          dica: 'Siga os capítulos: redes, boiada, livro mentiroso, praia e, por último, a chegada.',
+          porque: 'Do bosque das redes até a porta de casa, com boiada e tudo: que viagem!'
         },
         {
           tipo: 'quiz',

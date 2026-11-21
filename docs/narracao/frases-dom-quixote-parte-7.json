@@ -1342,28 +1342,36 @@
       "id": "p5-s7",
       "pagina": 5,
       "paragrafo": 1,
-      "texto": "O dono da ponte fez uma lei: quem quiser atravessar tem de dizer aos guardas para onde vai.",
-      "fala": "O dono da ponte fez uma lei: quem quiser atravessar tem de dizer aos guardas para onde vai.",
-      "hash": "a3eeea6c12"
+      "texto": "Logo na entrada, antes de começar a ponte, ficam dois guardas e uma CADEIA.",
+      "fala": "Logo na entrada, antes de começar a ponte, ficam dois guardas e uma cadeia.",
+      "hash": "0a02f582e0"
     },
     {
       "id": "p5-s8",
       "pagina": 5,
       "paragrafo": 1,
-      "texto": "Quem disser a verdade, passa.",
-      "fala": "Quem disser a verdade, passa.",
-      "hash": "077349f825"
+      "texto": "O dono da ponte fez uma lei: quem chega diz aos guardas para onde vai.",
+      "fala": "O dono da ponte fez uma lei: quem chega diz aos guardas para onde vai.",
+      "hash": "ba56922044"
     },
     {
       "id": "p5-s9",
       "pagina": 5,
       "paragrafo": 1,
-      "texto": "Quem mentir, vai para a CADEIA, que fica ali mesmo, na ponta da ponte.",
-      "fala": "Quem mentir, vai para a cadeia, que fica ali mesmo, na ponta da ponte.",
-      "hash": "723c9952fa"
+      "texto": "Quem disser a verdade atravessa a ponte.",
+      "fala": "Quem disser a verdade atravessa a ponte.",
+      "hash": "b56ed5ef62"
     },
     {
       "id": "p5-s10",
+      "pagina": 5,
+      "paragrafo": 1,
+      "texto": "Quem mentir não atravessa: vai direto para a cadeia, ali do lado.",
+      "fala": "Quem mentir não atravessa: vai direto para a cadeia, ali do lado.",
+      "hash": "f82e094b39"
+    },
+    {
+      "id": "p5-s11",
       "pagina": 5,
       "paragrafo": 1,
       "texto": "— Lei boa — disse Sancho.",
@@ -1371,7 +1379,7 @@
       "hash": "33899a0880"
     },
     {
-      "id": "p5-s11",
+      "id": "p5-s12",
       "pagina": 5,
       "paragrafo": 1,
       "texto": "— Lá ninguém mente.",
@@ -1379,7 +1387,7 @@
       "hash": "f8e3eca0f6"
     },
     {
-      "id": "p5-s12",
+      "id": "p5-s13",
       "pagina": 5,
       "paragrafo": 1,
       "texto": "— Ninguém mentia, senhor.",
@@ -1387,7 +1395,7 @@
       "hash": "551a684a17"
     },
     {
-      "id": "p5-s13",
+      "id": "p5-s14",
       "pagina": 5,
       "paragrafo": 1,
       "texto": "Um dizia \"vou para a feira\" e passava.",
@@ -1395,7 +1403,7 @@
       "hash": "4b287c0913"
     },
     {
-      "id": "p5-s14",
+      "id": "p5-s15",
       "pagina": 5,
       "paragrafo": 1,
       "texto": "Outro dizia \"vou visitar a minha avó\" e passava também.",
@@ -1403,7 +1411,7 @@
       "hash": "74158934c2"
     },
     {
-      "id": "p5-s15",
+      "id": "p5-s16",
       "pagina": 5,
       "paragrafo": 2,
       "texto": "— Até que ontem chegou um homem, e os guardas perguntaram, como sempre: \"Para onde você vai?\".",
@@ -1411,7 +1419,7 @@
       "hash": "07ee10139f"
     },
     {
-      "id": "p5-s16",
+      "id": "p5-s17",
       "pagina": 5,
       "paragrafo": 2,
       "texto": "E ele respondeu, bem tranquilo: \"Eu vou para a cadeia\".",
@@ -1419,47 +1427,47 @@
       "hash": "98f6414d73"
     },
     {
-      "id": "p5-s17",
-      "pagina": 5,
-      "paragrafo": 2,
-      "texto": "Os guardas pensaram assim: se deixarmos o homem passar, ele não foi para a cadeia.",
-      "fala": "Os guardas pensaram assim: se deixarmos o homem passar, ele não foi para a cadeia.",
-      "hash": "d5536a1f33"
-    },
-    {
       "id": "p5-s18",
       "pagina": 5,
       "paragrafo": 2,
-      "texto": "Então mentiu... e quem mente tem de ir para a cadeia!",
-      "fala": "Então mentiu... e quem mente tem de ir para a cadeia!",
-      "hash": "d2b1cdd170"
+      "texto": "Os guardas coçaram a cabeça.",
+      "fala": "Os guardas coçaram a cabeça.",
+      "hash": "534e6ae42d"
     },
     {
       "id": "p5-s19",
       "pagina": 5,
       "paragrafo": 2,
-      "texto": "Mas, se pusermos o homem na cadeia, ele foi mesmo para lá.",
-      "fala": "Mas, se pusermos o homem na cadeia, ele foi mesmo para lá.",
-      "hash": "1e8ce8bada"
+      "texto": "Se deixassem o homem atravessar a ponte, ele não ia para a cadeia: então tinha mentido... e quem mente não atravessa, vai para a cadeia!",
+      "fala": "Se deixassem o homem atravessar a ponte, ele não ia para a cadeia: então tinha mentido... e quem mente não atravessa, vai para a cadeia!",
+      "hash": "9637f7bd6a"
     },
     {
       "id": "p5-s20",
       "pagina": 5,
       "paragrafo": 2,
-      "texto": "Então disse a verdade... e quem diz a verdade tem de passar!",
-      "fala": "Então disse a verdade... e quem diz a verdade tem de passar!",
-      "hash": "e57eb4df0b"
+      "texto": "Mas, se pusessem o homem na cadeia, ele ia mesmo para onde disse: então tinha falado a verdade... e quem fala a verdade tem de atravessar!",
+      "fala": "Mas, se pusessem o homem na cadeia, ele ia mesmo para onde disse: então tinha falado a verdade... e quem fala a verdade tem de atravessar!",
+      "hash": "c6b58099e3"
     },
     {
       "id": "p5-s21",
       "pagina": 5,
       "paragrafo": 2,
-      "texto": "Os guardas andaram de um lado para o outro da ponte, pensando, até ficarem tontos.",
-      "fala": "Os guardas andaram de um lado para o outro da ponte, pensando, até ficarem tontos.",
-      "hash": "d15e336f11"
+      "texto": "Prende, solta, prende, solta...",
+      "fala": "Prende, solta, prende, solta...",
+      "hash": "68b717ffb1"
     },
     {
       "id": "p5-s22",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "Os guardas andaram de um lado para o outro, pensando, até ficarem tontos.",
+      "fala": "Os guardas andaram de um lado para o outro, pensando, até ficarem tontos.",
+      "hash": "8a1b6c294c"
+    },
+    {
+      "id": "p5-s23",
       "pagina": 5,
       "paragrafo": 3,
       "texto": "O tribunal inteiro ficou de boca aberta.",
@@ -1467,7 +1475,7 @@
       "hash": "2203433a76"
     },
     {
-      "id": "p5-s23",
+      "id": "p5-s24",
       "pagina": 5,
       "paragrafo": 3,
       "texto": "O mordomo coçou a cabeça com o lápis.",
@@ -1475,7 +1483,7 @@
       "hash": "32fe37b784"
     },
     {
-      "id": "p5-s24",
+      "id": "p5-s25",
       "pagina": 5,
       "paragrafo": 3,
       "texto": "Sancho pensou, pensou e disse: — Já sei!",
@@ -1483,7 +1491,7 @@
       "hash": "7a589001fc"
     },
     {
-      "id": "p5-s25",
+      "id": "p5-s26",
       "pagina": 5,
       "paragrafo": 3,
       "texto": "E se o homem ficar morando bem no meio da ponte, nem de um lado nem do outro?",
@@ -1491,7 +1499,7 @@
       "hash": "36005ed745"
     },
     {
-      "id": "p5-s26",
+      "id": "p5-s27",
       "pagina": 5,
       "paragrafo": 3,
       "texto": "— Mas, senhor governador, ninguém pode morar numa ponte!",
@@ -1499,7 +1507,7 @@
       "hash": "c628402b29"
     },
     {
-      "id": "p5-s27",
+      "id": "p5-s28",
       "pagina": 5,
       "paragrafo": 3,
       "texto": "— É... e a cama nem ia caber.",
@@ -1507,7 +1515,7 @@
       "hash": "e62916b014"
     },
     {
-      "id": "p5-s28",
+      "id": "p5-s29",
       "pagina": 5,
       "paragrafo": 3,
       "texto": "Estava só pensando em voz alta.",
@@ -1515,7 +1523,7 @@
       "hash": "fd1a479ade"
     },
     {
-      "id": "p5-s29",
+      "id": "p5-s30",
       "pagina": 5,
       "paragrafo": 4,
       "texto": "Então Sancho abriu os braços, como os dois pratos de uma BALANÇA: — Olhem.",
@@ -1523,7 +1531,7 @@
       "hash": "2f0bddf2ff"
     },
     {
-      "id": "p5-s30",
+      "id": "p5-s31",
       "pagina": 5,
       "paragrafo": 4,
       "texto": "Deste lado, há uma razão para prender o homem.",
@@ -1531,7 +1539,7 @@
       "hash": "021870a14e"
     },
     {
-      "id": "p5-s31",
+      "id": "p5-s32",
       "pagina": 5,
       "paragrafo": 4,
       "texto": "Deste outro, há uma razão igualzinha para soltar.",
@@ -1539,7 +1547,7 @@
       "hash": "9db2312ddf"
     },
     {
-      "id": "p5-s32",
+      "id": "p5-s33",
       "pagina": 5,
       "paragrafo": 4,
       "texto": "A balança ficou parada no meio.",
@@ -1547,7 +1555,7 @@
       "hash": "bc580de51a"
     },
     {
-      "id": "p5-s33",
+      "id": "p5-s34",
       "pagina": 5,
       "paragrafo": 4,
       "texto": "E, quando a gente não sabe se deve castigar ou perdoar, é melhor perdoar.",
@@ -1555,7 +1563,7 @@
       "hash": "e26bb66fc8"
     },
     {
-      "id": "p5-s34",
+      "id": "p5-s35",
       "pagina": 5,
       "paragrafo": 4,
       "texto": "Quem me ensinou foi o meu amo, antes de eu vir para cá: a justiça fica mais bonita de mãos dadas com o perdão.",
@@ -1563,7 +1571,7 @@
       "hash": "13c811341b"
     },
     {
-      "id": "p5-s35",
+      "id": "p5-s36",
       "pagina": 5,
       "paragrafo": 4,
       "texto": "Deixem o homem passar!",
@@ -1571,7 +1579,7 @@
       "hash": "529d95e5b8"
     },
     {
-      "id": "p5-s36",
+      "id": "p5-s37",
       "pagina": 5,
       "paragrafo": 4,
       "texto": "O viajante bateu palmas, o povo bateu palmas, e o mordomo escreveu no caderninho, com a letra tremida: \"Mais sábio que muito doutor\".",
@@ -1742,13 +1750,45 @@
     {
       "id": "p6-s20",
       "pagina": 6,
+      "paragrafo": 2,
+      "texto": "— Pena? — estranhou Sanchica.",
+      "fala": "Pena? estranhou Sanchica.",
+      "hash": "41dee4cd29"
+    },
+    {
+      "id": "p6-s21",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "— O pai virou passarinho?",
+      "fala": "O pai virou passarinho?",
+      "hash": "c3928631fb"
+    },
+    {
+      "id": "p6-s22",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "Todo mundo riu.",
+      "fala": "Todo mundo riu.",
+      "hash": "781667dd1a"
+    },
+    {
+      "id": "p6-s23",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "Naquele tempo ainda não existia caneta: as pessoas escreviam com uma PENA de ganso, de ponta cortada bem fininha, molhada num potinho de tinta.",
+      "fala": "Naquele tempo ainda não existia caneta: as pessoas escreviam com uma pena de ganso, de ponta cortada bem fininha, molhada num potinho de tinta.",
+      "hash": "2b1fd3fc1d"
+    },
+    {
+      "id": "p6-s24",
+      "pagina": 6,
       "paragrafo": 3,
       "texto": "O padre e mestre Nicolau ficaram de boca aberta: — Governador?",
       "fala": "O padre e mestre Nicolau ficaram de boca aberta: Governador?",
       "hash": "80ce6b1dca"
     },
     {
-      "id": "p6-s21",
+      "id": "p6-s25",
       "pagina": 6,
       "paragrafo": 3,
       "texto": "O nosso Sancho?",
@@ -1756,7 +1796,7 @@
       "hash": "4350f74ee8"
     },
     {
-      "id": "p6-s22",
+      "id": "p6-s26",
       "pagina": 6,
       "paragrafo": 3,
       "texto": "— E de uma ilha! — disse Teresa.",
@@ -1764,7 +1804,7 @@
       "hash": "8367fa0e57"
     },
     {
-      "id": "p6-s23",
+      "id": "p6-s27",
       "pagina": 6,
       "paragrafo": 3,
       "texto": "— Sanchica, minha filha, de hoje em diante a gente só anda de carruagem!",
@@ -1772,7 +1812,7 @@
       "hash": "ed6fa2fec1"
     },
     {
-      "id": "p6-s24",
+      "id": "p6-s28",
       "pagina": 6,
       "paragrafo": 3,
       "texto": "Sanchica quis saber: — Mãe, e eu posso ir de carruagem buscar água na fonte?",
@@ -1780,7 +1820,7 @@
       "hash": "addbf432e4"
     },
     {
-      "id": "p6-s25",
+      "id": "p6-s29",
       "pagina": 6,
       "paragrafo": 4,
       "texto": "Teresa mandou para a duquesa o melhor presente que tinha: um queijo e um saquinho de BOLOTAS, os frutinhos do carvalho, escolhidas uma por uma.",
@@ -1788,7 +1828,7 @@
       "hash": "b0b15f233f"
     },
     {
-      "id": "p6-s26",
+      "id": "p6-s30",
       "pagina": 6,
       "paragrafo": 4,
       "texto": "Sansão ajudou a amarrar o pacote e puxou conversa com o pajem, como quem não quer nada: — Então o senhor Alonso está no palácio dos duques...",
@@ -1796,7 +1836,7 @@
       "hash": "bb48757a20"
     },
     {
-      "id": "p6-s27",
+      "id": "p6-s31",
       "pagina": 6,
       "paragrafo": 4,
       "texto": "E depois, para onde ele pretende ir?",
@@ -1804,7 +1844,7 @@
       "hash": "452ab1c4a2"
     },
     {
-      "id": "p6-s28",
+      "id": "p6-s32",
       "pagina": 6,
       "paragrafo": 4,
       "texto": "O pajem contou.",
@@ -1812,7 +1852,7 @@
       "hash": "af26475e89"
     },
     {
-      "id": "p6-s29",
+      "id": "p6-s33",
       "pagina": 6,
       "paragrafo": 4,
       "texto": "Sansão deu aquele sorrisinho de quem guarda um segredo.",
@@ -1820,7 +1860,7 @@
       "hash": "61b11b5b4a"
     },
     {
-      "id": "p6-s30",
+      "id": "p6-s34",
       "pagina": 6,
       "paragrafo": 4,
       "texto": "Naquela mesma tarde, foi pedir emprestados a mestre Nicolau um escudo velho e uma lata de tinta branca.",
@@ -1828,7 +1868,7 @@
       "hash": "dd1ef344e4"
     },
     {
-      "id": "p6-s31",
+      "id": "p6-s35",
       "pagina": 6,
       "paragrafo": 4,
       "texto": "— Para quê?",
@@ -1836,7 +1876,7 @@
       "hash": "d1615bb226"
     },
     {
-      "id": "p6-s32",
+      "id": "p6-s36",
       "pagina": 6,
       "paragrafo": 4,
       "texto": "— Segredo!",
@@ -2675,31 +2715,31 @@
       "id": "p10-s1",
       "pagina": 10,
       "paragrafo": 0,
-      "texto": "No palácio, Sancho se ajoelhou diante do duque e da duquesa: — Senhores, eu governei a sua ilha por dez dias.",
-      "fala": "No palácio, Sancho se ajoelhou diante do duque e da duquesa: Senhores, eu governei a sua ilha por dez dias.",
-      "hash": "f345404b38"
+      "texto": "No palácio, Sancho se ajoelhou diante do duque e da duquesa, com as chaves da vila na mão: — Senhores, eu sei que aquela ilha era de brincadeira.",
+      "fala": "No palácio, Sancho se ajoelhou diante do duque e da duquesa, com as chaves da vila na mão: Senhores, eu sei que aquela ilha era de brincadeira.",
+      "hash": "0750d9a7fe"
     },
     {
       "id": "p10-s2",
       "pagina": 10,
       "paragrafo": 0,
-      "texto": "Não roubei nada e não ganhei nada.",
-      "fala": "Não roubei nada e não ganhei nada.",
-      "hash": "f24a4af2f9"
+      "texto": "Mas o povo de lá era de verdade, e a fome também.",
+      "fala": "Mas o povo de lá era de verdade, e a fome também.",
+      "hash": "adde68ad7f"
     },
     {
       "id": "p10-s3",
       "pagina": 10,
       "paragrafo": 0,
-      "texto": "Fiz umas leis boas e resolvi uns casos difíceis.",
-      "fala": "Fiz umas leis boas e resolvi uns casos difíceis.",
-      "hash": "936b831e1c"
+      "texto": "Governei dez dias: não roubei nada, não ganhei nada, fiz umas leis boas e resolvi uns casos difíceis.",
+      "fala": "Governei dez dias: não roubei nada, não ganhei nada, fiz umas leis boas e resolvi uns casos difíceis.",
+      "hash": "11f6d7c528"
     },
     {
       "id": "p10-s4",
       "pagina": 10,
       "paragrafo": 0,
-      "texto": "Agora devolvo as chaves e volto a ser escudeiro, que é um trabalho em que a gente come.",
+      "texto": "Agora devolvo as CHAVES e volto a ser escudeiro, que é um trabalho em que a gente come.",
       "fala": "Agora devolvo as chaves e volto a ser escudeiro, que é um trabalho em que a gente come.",
       "hash": "cce14a8684"
     },
@@ -2747,9 +2787,9 @@
       "id": "p10-s10",
       "pagina": 10,
       "paragrafo": 1,
-      "texto": "— E o mar, senhora?",
-      "fala": "E o mar, senhora?",
-      "hash": "e0d243fc7f"
+      "texto": "— Só me diga uma coisa, senhora: e o mar?",
+      "fala": "Só me diga uma coisa, senhora: e o mar?",
+      "hash": "16e4380acb"
     },
     {
       "id": "p10-s11",
@@ -2811,9 +2851,9 @@
       "id": "p10-s18",
       "pagina": 10,
       "paragrafo": 1,
-      "texto": "— Só o doutor é que eu não perdoo.",
-      "fala": "Só o doutor é que eu não perdoo.",
-      "hash": "d57b79922d"
+      "texto": "— Só não perdoo o doutor Pedro Rezio de Tirafora, que me fez jantar bolachinha!",
+      "fala": "Só não perdoo o doutor Pedro Rezio de Tirafora, que me fez jantar bolachinha!",
+      "hash": "1d2be64c34"
     },
     {
       "id": "p10-s19",
@@ -2842,13 +2882,21 @@
     {
       "id": "p10-s22",
       "pagina": 10,
+      "paragrafo": 2,
+      "texto": "Então o PORTÃO grande do palácio se abriu, rangendo, e os dois amigos saíram para a ESTRADA.",
+      "fala": "Então o portão grande do palácio se abriu, rangendo, e os dois amigos saíram para a estrada.",
+      "hash": "9aa1c686ae"
+    },
+    {
+      "id": "p10-s23",
+      "pagina": 10,
       "paragrafo": 3,
       "texto": "Na estrada, com o vento no rosto, Dom Quixote respirou fundo: — Ah, Sancho!",
       "fala": "Na estrada, com o vento no rosto, Dom Quixote respirou fundo: Ah, Sancho!",
       "hash": "adaf5e05d9"
     },
     {
-      "id": "p10-s23",
+      "id": "p10-s24",
       "pagina": 10,
       "paragrafo": 3,
       "texto": "A LIBERDADE é um dos presentes mais valiosos que as pessoas receberam do céu.",
@@ -2856,7 +2904,7 @@
       "hash": "d7ba54e50c"
     },
     {
-      "id": "p10-s24",
+      "id": "p10-s25",
       "pagina": 10,
       "paragrafo": 3,
       "texto": "Nenhum tesouro da terra ou do mar vale tanto quanto ela.",
@@ -2864,7 +2912,7 @@
       "hash": "8becc8892d"
     },
     {
-      "id": "p10-s25",
+      "id": "p10-s26",
       "pagina": 10,
       "paragrafo": 3,
       "texto": "Lá no palácio, no meio de tantos banquetes, eu me sentia apertado que nem pé em sapato novo!",
@@ -2872,7 +2920,7 @@
       "hash": "466988704f"
     },
     {
-      "id": "p10-s26",
+      "id": "p10-s27",
       "pagina": 10,
       "paragrafo": 4,
       "texto": "— Falou bonito, meu amo.",
@@ -2880,7 +2928,7 @@
       "hash": "a22e8e0f68"
     },
     {
-      "id": "p10-s27",
+      "id": "p10-s28",
       "pagina": 10,
       "paragrafo": 4,
       "texto": "Pão com liberdade é bom.",
@@ -2888,7 +2936,7 @@
       "hash": "09856240ca"
     },
     {
-      "id": "p10-s28",
+      "id": "p10-s29",
       "pagina": 10,
       "paragrafo": 4,
       "texto": "Mas com queijo é melhor ainda.",
@@ -2896,7 +2944,7 @@
       "hash": "ea5e4d37ab"
     },
     {
-      "id": "p10-s29",
+      "id": "p10-s30",
       "pagina": 10,
       "paragrafo": 4,
       "texto": "Dom Quixote riu.",
@@ -2904,7 +2952,7 @@
       "hash": "a417e99028"
     },
     {
-      "id": "p10-s30",
+      "id": "p10-s31",
       "pagina": 10,
       "paragrafo": 4,
       "texto": "— E agora, para onde vamos?",
@@ -2912,7 +2960,7 @@
       "hash": "25c3ae787c"
     },
     {
-      "id": "p10-s31",
+      "id": "p10-s32",
       "pagina": 10,
       "paragrafo": 4,
       "texto": "— Para BARCELONA, Sancho!",
@@ -2920,7 +2968,7 @@
       "hash": "43712ba9e8"
     },
     {
-      "id": "p10-s32",
+      "id": "p10-s33",
       "pagina": 10,
       "paragrafo": 4,
       "texto": "Dizem que lá tem festa, cavaleiros e uma coisa que nós dois nunca vimos: o mar.",
@@ -2928,7 +2976,7 @@
       "hash": "935669fe3a"
     },
     {
-      "id": "p10-s33",
+      "id": "p10-s34",
       "pagina": 10,
       "paragrafo": 4,
       "texto": "— Mar de verdade?",
@@ -2936,7 +2984,7 @@
       "hash": "988499d15b"
     },
     {
-      "id": "p10-s34",
+      "id": "p10-s35",
       "pagina": 10,
       "paragrafo": 4,
       "texto": "Desta vez eu quero ver com estes olhos!",
@@ -2944,7 +2992,7 @@
       "hash": "33590a01ad"
     },
     {
-      "id": "p10-s35",
+      "id": "p10-s36",
       "pagina": 10,
       "paragrafo": 4,
       "texto": "E os dois seguiram pela estrada.",
@@ -2952,7 +3000,7 @@
       "hash": "44e3f3660b"
     },
     {
-      "id": "p10-s36",
+      "id": "p10-s37",
       "pagina": 10,
       "paragrafo": 4,
       "texto": "Lá atrás, bem longe, um cavaleiro sozinho vinha pelo mesmo caminho.",
@@ -2960,7 +3008,7 @@
       "hash": "ec62a107f2"
     },
     {
-      "id": "p10-s37",
+      "id": "p10-s38",
       "pagina": 10,
       "paragrafo": 4,
       "texto": "No escudo dele brilhava uma lua branca.",
@@ -3110,6 +3158,13 @@
       "hash": "330d686713"
     },
     {
+      "slug": "pena",
+      "palavra": "PENA",
+      "silabas": "PE • NA",
+      "fala": "pe... na... pena!",
+      "hash": "1d4d4c3301"
+    },
+    {
       "slug": "bolotas",
       "palavra": "BOLOTAS",
       "silabas": "BO • LO • TAS",
@@ -3129,13 +3184,6 @@
       "silabas": "AS • SI • NAR",
       "fala": "as... si... nar... assinar!",
       "hash": "b78eb45225"
-    },
-    {
-      "slug": "pena",
-      "palavra": "PENA",
-      "silabas": "PE • NA",
-      "fala": "pe... na... pena!",
-      "hash": "1d4d4c3301"
     },
     {
       "slug": "tartaruga",
@@ -3180,11 +3228,32 @@
       "hash": "b130bd4b5f"
     },
     {
+      "slug": "chaves",
+      "palavra": "CHAVES",
+      "silabas": "CHA • VES",
+      "fala": "cha... ves... chaves!",
+      "hash": "1cea62d35f"
+    },
+    {
       "slug": "sabedoria",
       "palavra": "SABEDORIA",
       "silabas": "SA • BE • DO • RI • A",
       "fala": "sa... be... do... ri... a... sabedoria!",
       "hash": "5107c16d72"
+    },
+    {
+      "slug": "portao",
+      "palavra": "PORTÃO",
+      "silabas": "POR • TÃO",
+      "fala": "por... tão... portão!",
+      "hash": "c022e07277"
+    },
+    {
+      "slug": "estrada",
+      "palavra": "ESTRADA",
+      "silabas": "ES • TRA • DA",
+      "fala": "es... tra... da... estrada!",
+      "hash": "303a3c074f"
     },
     {
       "slug": "barcelona",

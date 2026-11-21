@@ -158,6 +158,12 @@
                     camadas: [
                         { id: 'bengala-quebrada', src: 'camadas/p4-bengala-quebrada.webp', item: 'bengala', x: 50, y: 95, w: 20, emoji: '🪙' }
                     ],
+                    // Pedido do autor (Issue #55): ao abrir a bengala, a cena mostra o espanto de todos, a vergonha do
+                    // velhinho espertinho e o orgulho de Sancho (o aldeão já sem a bengala, que está aberta no chão)
+                    realCena: (st) => (st.usados && st.usados.has('bengala')
+                        ? { src: 'p4-real-fim.webp', legenda: '👓 Lente da Realidade: Dez Moedas Dentro da Bengala!' }
+                        : null),
+                    precarregar: ['p4-real-fim.webp'],
                     cartoes: {
                         tipo: 'pedido',
                         rotulo: '🔎 O segredo está na:',
@@ -175,9 +181,9 @@
                 titulo: 'Passa ou Não Passa?',
                 texto: `No fim da tarde, quando Sancho já sonhava com o jantar, entrou no tribunal um viajante empoeirado, de chapéu largo e cajado na mão. — Senhor governador, venho de muito longe. Na minha terra aconteceu um caso que nenhum juiz consegue resolver. Disseram que quem descobre moedas dentro de bengala há de resolver este também.
 
-                    — Pois conte, que eu escuto — disse Sancho. — Na minha terra corre um rio largo, e por cima do rio passa uma {{PONTE|PON • TE|🌉}}. O dono da ponte fez uma lei: quem quiser atravessar tem de dizer aos guardas para onde vai. Quem disser a verdade, passa. Quem mentir, vai para a {{CADEIA|CA • DEI • A|🔒}}, que fica ali mesmo, na ponta da ponte. — Lei boa — disse Sancho. — Lá ninguém mente. — Ninguém mentia, senhor. Um dizia "vou para a feira" e passava. Outro dizia "vou visitar a minha avó" e passava também.
+                    — Pois conte, que eu escuto — disse Sancho. — Na minha terra corre um rio largo, e por cima do rio passa uma {{PONTE|PON • TE|🌉}}. Logo na entrada, antes de começar a ponte, ficam dois guardas e uma {{CADEIA|CA • DEI • A|🔒}}. O dono da ponte fez uma lei: quem chega diz aos guardas para onde vai. Quem disser a verdade atravessa a ponte. Quem mentir não atravessa: vai direto para a cadeia, ali do lado. — Lei boa — disse Sancho. — Lá ninguém mente. — Ninguém mentia, senhor. Um dizia "vou para a feira" e passava. Outro dizia "vou visitar a minha avó" e passava também.
 
-                    — Até que ontem chegou um homem, e os guardas perguntaram, como sempre: "Para onde você vai?". E ele respondeu, bem tranquilo: "Eu vou para a cadeia". Os guardas pensaram assim: se deixarmos o homem passar, ele não foi para a cadeia. Então mentiu... e quem mente tem de ir para a cadeia! Mas, se pusermos o homem na cadeia, ele foi mesmo para lá. Então disse a verdade... e quem diz a verdade tem de passar! Os guardas andaram de um lado para o outro da ponte, pensando, até ficarem tontos.
+                    — Até que ontem chegou um homem, e os guardas perguntaram, como sempre: "Para onde você vai?". E ele respondeu, bem tranquilo: "Eu vou para a cadeia". Os guardas coçaram a cabeça. Se deixassem o homem atravessar a ponte, ele não ia para a cadeia: então tinha mentido... e quem mente não atravessa, vai para a cadeia! Mas, se pusessem o homem na cadeia, ele ia mesmo para onde disse: então tinha falado a verdade... e quem fala a verdade tem de atravessar! Prende, solta, prende, solta... Os guardas andaram de um lado para o outro, pensando, até ficarem tontos.
 
                     O tribunal inteiro ficou de boca aberta. O mordomo coçou a cabeça com o lápis. Sancho pensou, pensou e disse: — Já sei! E se o homem ficar morando bem no meio da ponte, nem de um lado nem do outro? — Mas, senhor governador, ninguém pode morar numa ponte! — É... e a cama nem ia caber. Estava só pensando em voz alta.
 
@@ -185,7 +191,7 @@
                 cena: {
                     // Página da vida real: sem a chave das lentes. Cena nova pela API em 2026-11-19 (Issue #54)
                     real: 'p5-real.webp', emoji: '🌉',
-                    alt: 'No tribunal da vila, Sancho abre os braços como os pratos de uma balança, enquanto um viajante aponta um desenho da ponte com a cadeia na ponta e o mordomo coça a cabeça com o lápis',
+                    alt: 'No tribunal da vila, Sancho abre os braços como os pratos de uma balança, enquanto um viajante aponta um desenho da ponte com os guardas e a cadeia logo na entrada e o mordomo coça a cabeça com o lápis',
                     legendaReal: '🌉 A Ponte da Pergunta Difícil'
                 }
             },
@@ -196,7 +202,7 @@
 
                     Teresa olhou para trás, para ver se havia outra Teresa por ali. Não havia. O pajem tirou do bolso um {{COLAR|CO • LAR|📿}} de corais, umas pedrinhas vermelhas que vêm do mar, com fecho de ouro. Era um presente da duquesa. Sanchica deu um grito: — Mãe! O pai conseguiu a ilha! — Eu não disse? — respondeu Teresa, que nunca tinha dito.
 
-                    Só havia um problema: Teresa também não sabia ler. Saiu correndo pela rua, de colar no pescoço e carta na mão, até encontrar o padre, mestre Nicolau e Sansão Carrasco, que conversavam na praça. — Eu leio, dona Teresa! — ofereceu o pajem, correndo atrás. — Nada disso: quero que a aldeia inteira escute! Sansão leu em voz alta: "Minha Teresinha: saiba que agora sou governador. Mando um beijo para você e dois para a Sanchica. O burrico vai bem e manda lembranças. Seu marido, Sancho Pança. Quem escreveu foi o secretário, porque as formiguinhas do meu nome ainda não saem da minha pena".
+                    Só havia um problema: Teresa também não sabia ler. Saiu correndo pela rua, de colar no pescoço e carta na mão, até encontrar o padre, mestre Nicolau e Sansão Carrasco, que conversavam na praça. — Eu leio, dona Teresa! — ofereceu o pajem, correndo atrás. — Nada disso: quero que a aldeia inteira escute! Sansão leu em voz alta: "Minha Teresinha: saiba que agora sou governador. Mando um beijo para você e dois para a Sanchica. O burrico vai bem e manda lembranças. Seu marido, Sancho Pança. Quem escreveu foi o secretário, porque as formiguinhas do meu nome ainda não saem da minha pena". — Pena? — estranhou Sanchica. — O pai virou passarinho? Todo mundo riu. Naquele tempo ainda não existia caneta: as pessoas escreviam com uma {{PENA|PE • NA|🪶}} de ganso, de ponta cortada bem fininha, molhada num potinho de tinta.
 
                     O padre e mestre Nicolau ficaram de boca aberta: — Governador? O nosso Sancho? — E de uma ilha! — disse Teresa. — Sanchica, minha filha, de hoje em diante a gente só anda de carruagem! Sanchica quis saber: — Mãe, e eu posso ir de carruagem buscar água na fonte?
 
@@ -281,20 +287,43 @@
             {
                 capitulo: '🕊️ Capítulo 61 • A Despedida do Palácio', corCapitulo: 'text-blue-900',
                 titulo: 'Pão com Liberdade',
-                texto: `No palácio, Sancho se ajoelhou diante do duque e da duquesa: — Senhores, eu governei a sua ilha por dez dias. Não roubei nada e não ganhei nada. Fiz umas leis boas e resolvi uns casos difíceis. Agora devolvo as chaves e volto a ser escudeiro, que é um trabalho em que a gente come.
+                comandoAtividade: 'Hora de deixar o palácio! Ajude os dois amigos a ir embora: toque nas palavras na ordem em que tudo acontece.',
+                texto: `No palácio, Sancho se ajoelhou diante do duque e da duquesa, com as chaves da vila na mão: — Senhores, eu sei que aquela ilha era de brincadeira. Mas o povo de lá era de verdade, e a fome também. Governei dez dias: não roubei nada, não ganhei nada, fiz umas leis boas e resolvi uns casos difíceis. Agora devolvo as {{CHAVES|CHA • VES|🔑}} e volto a ser escudeiro, que é um trabalho em que a gente come.
 
-                    O duque e a duquesa ficaram sem jeito. Tinham inventado a ilha como uma brincadeira, uma peça de teatro, igual à da condessa barbuda e do cavalo voador. Mas o mordomo tinha mostrado a eles o caderninho, com tudo anotado. — Sancho — disse a duquesa, de olhos baixos —, a ilha era de faz de conta. Mas a sua {{SABEDORIA|SA • BE • DO • RI • A|🦉}} era de verdade. — E o mar, senhora? Estava de folga até hoje? — O mar... nunca existiu — disse ela, vermelha. — A culpa foi minha, Sancho — disse o duque. — Perdão. Dom Quixote pôs a mão no ombro do amigo: — A ilha era de mentira. Mas o governador foi de verdade. — Estão perdoados — respondeu Sancho. — Só o doutor é que eu não perdoo.
+                    O duque e a duquesa ficaram sem jeito. Tinham inventado a ilha como uma brincadeira, uma peça de teatro, igual à da condessa barbuda e do cavalo voador. Mas o mordomo tinha mostrado a eles o caderninho, com tudo anotado. — Sancho — disse a duquesa, de olhos baixos —, a ilha era de faz de conta. Mas a sua {{SABEDORIA|SA • BE • DO • RI • A|🦉}} era de verdade. — Só me diga uma coisa, senhora: e o mar? Estava de folga até hoje? — O mar... nunca existiu — disse ela, vermelha. — A culpa foi minha, Sancho — disse o duque. — Perdão. Dom Quixote pôs a mão no ombro do amigo: — A ilha era de mentira. Mas o governador foi de verdade. — Estão perdoados — respondeu Sancho. — Só não perdoo o doutor Pedro Rezio de Tirafora, que me fez jantar bolachinha!
 
-                    Dom Quixote também quis partir. O palácio era bonito e tinha muita comida, mas ele sentia falta do céu aberto. Os duques deram a Sancho uma bolsinha de moedas para a viagem, e a duquesa mostrou a todos, bem orgulhosa, as bolotas que Teresa tinha mandado.
+                    Dom Quixote também quis partir. O palácio era bonito e tinha muita comida, mas ele sentia falta do céu aberto. Os duques deram a Sancho uma bolsinha de moedas para a viagem, e a duquesa mostrou a todos, bem orgulhosa, as bolotas que Teresa tinha mandado. Então o {{PORTÃO|POR • TÃO|🚪}} grande do palácio se abriu, rangendo, e os dois amigos saíram para a {{ESTRADA|ES • TRA • DA|🛤️}}.
 
                     Na estrada, com o vento no rosto, Dom Quixote respirou fundo: — Ah, Sancho! A {{LIBERDADE|LI • BER • DA • DE|🕊️}} é um dos presentes mais valiosos que as pessoas receberam do céu. Nenhum tesouro da terra ou do mar vale tanto quanto ela. Lá no palácio, no meio de tantos banquetes, eu me sentia apertado que nem pé em sapato novo!
 
                     — Falou bonito, meu amo. Pão com liberdade é bom. Mas com queijo é melhor ainda. Dom Quixote riu. — E agora, para onde vamos? — Para {{BARCELONA|BAR • CE • LO • NA|🌊}}, Sancho! Dizem que lá tem festa, cavaleiros e uma coisa que nós dois nunca vimos: o mar. — Mar de verdade? Desta vez eu quero ver com estes olhos! E os dois seguiram pela estrada. Lá atrás, bem longe, um cavaleiro sozinho vinha pelo mesmo caminho. No escudo dele brilhava uma lua branca.`,
                 cena: {
-                    // Página da vida real: sem a chave das lentes
-                    real: 'p10-real.webp', emoji: '🕊️',
-                    alt: 'Na estrada aberta, Dom Quixote em Rocinante e Sancho no burrico seguem viagem; bem longe, atrás deles, um cavaleiro sozinho com uma lua branca no escudo',
-                    legendaReal: '🕊️ De Volta à Estrada e ao Céu Aberto'
+                    // Pedido do autor (Issue #60): atividade na última página e uma Imaginação. Cenas novas pela API em 2026-11-21;
+                    // a última etapa é a estrada que já existia (p10-real)
+                    real: 'p10-real-palacio.webp', imag: 'p10-imag.webp', emoji: '🕊️',
+                    alt: 'No salão do palácio, Sancho, ajoelhado, devolve as chaves ao duque e à duquesa; depois o portão se abre, e os dois amigos seguem pela estrada aberta; bem longe, atrás deles, um cavaleiro sozinho com uma lua branca no escudo',
+                    legendaReal: '👓 Lente da Realidade: Sancho Devolve a Ilha',
+                    legendaImag: '✨ Lente da Imaginação: A Estrada Dourada da Liberdade!',
+                    // A cena acompanha cada acerto (como o leão da Parte 5); todas as palavras com o mesmo emoji: só acerta quem lê
+                    realCena: (st) => {
+                        const n = st.usados ? st.usados.size : 0;
+                        if (!n) return null;
+                        return [null,
+                            { src: 'p10-real-chaves.webp', legenda: '👓 Lente da Realidade: As Chaves Voltam para o Duque' },
+                            { src: 'p10-real-portao.webp', legenda: '👓 Lente da Realidade: O Portão do Palácio se Abre!' },
+                            { src: 'p10-real.webp', legenda: '🕊️ Lente da Realidade: De Volta à Estrada e ao Céu Aberto' }][n];
+                    },
+                    precarregar: ['p10-real-chaves.webp', 'p10-real-portao.webp', 'p10-real.webp'],
+                    cartoes: {
+                        tipo: 'ordem',
+                        faixaVazia: 'Hora de ir embora...',
+                        ordem: ['chaves', 'portao', 'estrada'],
+                        itens: [
+                            { id: 'estrada', palavra: 'ESTRADA', emoji: '🕊️' },
+                            { id: 'chaves', palavra: 'CHAVES', emoji: '🕊️' },
+                            { id: 'portao', palavra: 'PORTÃO', emoji: '🕊️' }
+                        ]
+                    }
                 }
             }
         ]

@@ -38,3 +38,6 @@ data,modelo,nivel,comando,pedidos,imagens_ok,tokens_entrada,tokens_imagem,tokens
 2026-11-19T02:21,gemini-3.1-flash-image,batch,"--lista tools/arte/dom-quixote-parte-8.mjs --ids p0-real,p1-real,p2-real,p3-real,p4-real,p5-real,p7-real,p8-real",8,8,8178,8960,3962,0.2768
 2026-11-19T02:28,gemini-3.1-flash-image,batch,"--lista tools/arte/dom-quixote-parte-8.mjs --ids p6-real,p0-imag,p1-imag,p3-imag,p4-imag,p5-imag,p7-imag",7,7,10839,7840,4059,0.2440
 2026-11-19T10:52,gemini-3.1-flash-image,batch,"--lista tools/arte/dom-quixote-revisoes-2026-11-19.mjs",3,3,2105,3360,1407,0.1034
+2026-11-21T01:02,gemini-3.1-flash-image,batch,"--lista tools/arte/dom-quixote-revisoes-2026-11-21.mjs --ids p7-p4-real-fim,p7-p5-real,p7-p10-real-palacio,p7-p10-real-portao,p7-p10-imag,p8-p1-real,p8-p2-real,p8-p7-real",8,8,7608,8960,3579,0.2761
+2026-11-21T01:05,gemini-3.1-flash-image,batch,"--lista tools/arte/dom-quixote-revisoes-2026-11-21.mjs --ids p8-p7-real,p7-p10-real-chaves,p8-p2-imag",3,3,3315,3360,1346,0.1036
+2026-11-21T01:08,gemini-3.1-flash-image,batch,"--lista tools/arte/dom-quixote-revisoes-2026-11-21.mjs --ids p8-p7-imag",1,1,1666,1120,719,0.0351

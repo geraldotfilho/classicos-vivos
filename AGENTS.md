@@ -182,7 +182,8 @@ window.LIVRO = {
       camadas: [{ id, src | fundo /* véu CSS */, x, y, w, h?, z?, anim?, lente?, item?, ate?, emoji }],
       cartoes: { tipo, itens: [{ id, palavra, emoji, icone?, borda?, som?, animar?, efeito?, acao?, domId?, figura?, pegadinha? }], ... },
       realCena?: (estado) => ({ src, legenda }) | null,   // variação da Realidade calculada pelo estado
-      extra?, precarregar?, aoTrocarLente?
+      extra?, precarregar?, aoTrocarLente?,
+      lenteInicial?: 'imag'   // abre a página já na Imaginação (só sem cartões; ex.: a cabeça encantada da Parte 8)
     }
   }],
   acoes: { nome: (livro, contexto) => {} }   // ações personalizadas (ex.: o VENTO da Parte 1)
