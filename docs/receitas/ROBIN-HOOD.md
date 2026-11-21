@@ -5,7 +5,7 @@ O que vale **só para Robin Hood**, complementando a [receita geral](../RECEITA-
 > **Situação: ✅ Fase 0 aprovada pelo humano (2026-11-21). Parte 1 em produção.**
 > Plano: [`PLANO-ROBIN-HOOD.md`](../PLANO-ROBIN-HOOD.md) · Diretrizes operacionais: [`DIRETRIZES_ROBIN_HOOD.md`](../DIRETRIZES_ROBIN_HOOD.md) · Pesquisa com fontes: [`pesquisa/ROBIN-HOOD.md`](../pesquisa/ROBIN-HOOD.md).
 
-- **As obras-fonte**: *The Merry Adventures of Robin Hood*, de **Howard Pyle** (1883, Prefácio + 22 capítulos, domínio público), combinada com as baladas medievais (*A Gest of Robyn Hode*) e o folclore posterior (Grande Carvalho, Dama Mariana).
+- **As obras-fonte**: *The Merry Adventures of Robin Hood*, de **Howard Pyle** (1883, Prefácio + 22 capítulos, domínio público), combinada com as baladas medievais (*A Gest of Robyn Hode*) e o folclore posterior (Grande Carvalho, Lady Mariana).
 - **Tipo de adaptação**: **condensação** episódica em **5 partes** (receita geral §2), para evitar pressa e dar espaço ao desenvolvimento dos personagens, da trama e dos temas sociais.
 - **Público**: **5 a 8 anos** (leitor de referência: criança de **6 anos**, `AGENTS.md` §3.5), mais camada *"Você sabia?"* nos dois modos (tradicional 5–8 anos e Desafio 🧩 8–10 anos).
 
@@ -47,7 +47,7 @@ O que vale **só para Robin Hood**, complementando a [receita geral](../RECEITA-
 ## 4. Direção de arte, diversidade e recurso visual (fechados pelo humano)
 
 - **Estilo artístico — Opção A (Gouache estilizado de floresta)**: árvores altas com formas geométricas expressivas, camadas de verde-esmeralda e dourado, traço suave de carvão/tinta (inspiração Cartoon Saloon / *Wolfwalkers*), iluminado e distinto da aquarela terrosa de *Dom Quixote*.
-- **Diversidade editorial declarada**: **Dama Mariana de Sherwood** (jovem negra de cabelo trançado) e elenco diverso em toda a obra — **a representatividade infantil prevalece sobre a distribuição étnica da Europa medieval**. Registrar essa escolha também no texto para adultos em `sobre.html`.
+- **Diversidade editorial declarada**: **Lady Mariana** (jovem negra de cabelo trançado) e elenco diverso em toda a obra — **a representatividade infantil prevalece sobre a distribuição étnica da Europa medieval**. Registrar essa escolha também no texto para adultos em `sobre.html`.
 - **Recurso visual — Opção 1 (Cena única + camadas)**: sem a chave da 2ª lente (*Realidade × Imaginação* é própria de Dom Quixote). O quadro ganha vida com ilustrações ricas, hotspots de toque, variações por progresso (`realCena`) e camadas animadas (`camadas`).
 - **"Você sabia?" nos dois modos**: caixas curtas e curiosas no modo tradicional (5–8 anos, `voceSabia` na página) e versão mais completa no Modo Desafio 🧩 (8–10 anos).
 
@@ -56,7 +56,7 @@ O que vale **só para Robin Hood**, complementando a [receita geral](../RECEITA-
 ## 5. Nomes e aportuguesamento (regra do humano)
 
 - **Só *Robin Hood* não é aportuguesado.** Nos demais, variar o mínimo possível com escolhas naturais e fáceis de ler para crianças de 6 anos:
-  - **Dama Mariana de Sherwood** — variando entre *Dama Mariana*, *Mariana* e *Mariana de Sherwood* conforme o contexto (*Lady Marian* em inglês).
+  - **Lady Mariana** — variando entre *Lady Mariana*, *Lady Mariana* e *Mariana* conforme o contexto (*Lady Marian* em inglês).
   - **João Pequeno** (*Little John* em inglês).
   - **Grilo**, o filho do moleiro (*Much* em inglês).
   - **Rei Ricardo**, **Rainha Leonor**, **Xerife de Nottingham**.

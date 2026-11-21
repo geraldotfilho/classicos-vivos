@@ -27,7 +27,7 @@ Decisão de cada bloco: ✅ entra · 🔀 entra adaptado/fundido · ✂️ fica 
 | Fonte | Episódio | Decisão |
 | :--- | :--- | :--- |
 | Pyle cap. 1 (início) + Leis da Floresta | Imposto desigual e fuga para Sherwood | 🔀 sem morte do guarda: o Xerife cobra a mesma quantia (2 sacos) de todos — para o barão de carroça cheia não é nada; para o moleiro (pai de Grilo), tira quase tudo. Ao reclamar, o moleiro é preso sem provas; Robin ajuda Grilo a fugir |
-| Folclore (Major Oak + Mariana) | O Grande Carvalho e as túnicas verdes | ✅ Robin, **Dama Mariana de Sherwood** e **Grilo** se unem no carvalho, escolhem **roupas verde-floresta** (para sumir entre as folhas) e o sinal da corneta (3 toques) |
+| Folclore (Major Oak + Mariana) | O Grande Carvalho e as túnicas verdes | ✅ Robin, **Lady Mariana** e **Grilo** se unem no carvalho, escolhem **roupas verde-floresta** (para sumir entre as folhas) e o sinal da corneta (3 toques) |
 | Pyle cap. 1 (fim) | A ponte estreita e João Pequeno | ✅ duelo cômico de bastões; Robin cai no riacho, ri alto e **João Pequeno** entra para o bando vestindo o verde de Sherwood |
 | Adaptação (conflito prévio necessário) | A primeira ação do Bando Verde | ✅ o bando liberta o pai de Grilo sem violência e devolve a farinha; o Xerife só vê vultos verdes sumindo na mata e jura pegar **"esse bando de roupa verde!"** |
 | Pyle cap. 3 | O pregão da Flecha de Ouro e o torneio | ✅ furioso, o Xerife cria o torneio mandando vigiar roupas verdes; Mariana colhe a pista na feira; Robin vai de capuz vermelho, parte a flecha no centro do alvo e foge com o bando |
@@ -78,6 +78,6 @@ Decisão de cada bloco: ✅ entra · 🔀 entra adaptado/fundido · ✂️ fica 
 ## 4. Direção visual e recursos (fechados em 2026-11-21)
 
 - **Estilo artístico (Opção A)**: **Gouache estilizado de floresta** (inspirado em *Wolfwalkers* / Cartoon Saloon) — árvores geométricas expressivas, raios de sol dourados, traço suave de carvão/tinta.
-- **Diversidade**: elenco diverso desde a Parte 1 (**Dama Mariana de Sherwood** jovem negra, e diversidade nos personagens do bando e das aldeias), priorizando representatividade infantil (registrar também em `sobre.html`).
+- **Diversidade**: elenco diverso desde a Parte 1 (**Lady Mariana** jovem negra, e diversidade nos personagens do bando e das aldeias), priorizando representatividade infantil (registrar também em `sobre.html`).
 - **Recurso visual (Opção 1)**: **cena única + camadas interativas** (sem 2ª lente).
 - **"Você sabia?"**: presente tanto no **Modo Tradicional** (botão discreto no fim do texto, para 5–8 anos — suporte no motor a ligar depois) quanto no **Modo Desafio 🧩** (8–10 anos).

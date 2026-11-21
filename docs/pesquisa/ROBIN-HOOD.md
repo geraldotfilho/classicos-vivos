@@ -13,7 +13,7 @@ Legenda: ✅ confirmado · ✍️ licença ou escolha editorial declarada da ada
 | ***The Merry Adventures of Robin Hood***, escrita e ilustrada por **Howard Pyle** (1883): Prefácio + 22 capítulos episódicos em domínio público | ✅ | Project Gutenberg / Internet Archive | Base narrativa principal: dá o arco completo do bando, o humor das disputas (João Pequeno na ponte, Frei Tuck, o açougueiro, a flecha de ouro, Sir Ricardo, Rainha Leonor e Rei Ricardo) |
 | Capítulos de Pyle (1883): 1 Outlaw · 2 Tinker · 3 Shooting Match · 4 Will Stutely · 5 Butcher · 6 Little John at Nottingham Fair · 7 Sheriff's House · 8 Tanner of Blyth · 9 Will Scarlet · 10 Midge the Miller's Son · 11 Allan a Dale · 12 Curtal Friar · 13 Marriage · 14 Sorrowful Knight · 15 Sir Richard's Debts · 16 Barefoot Friar · 17 Beggar · 18 Queen Eleanor · 19 Chase · 20 Guy of Guisborne · 21 King Richard · 22 Epilogue | ✅ | Project Gutenberg / Internet Archive | Permite fazer um mapa de capítulos claro em **5 partes**, respeitando a regra de condensação (1 a 2 episódios por página) |
 | ***A Gest of Robyn Hode***: balada medieval mais longa e importante da tradição (~1400–1450, dividida em 8 *fyttes*, impressa por Wynkyn de Worde entre 1510 e 1515) | ✅ | Wikipedia / Bold Outlaw / UFMA | Traz os personagens nucleares mais antigos: Robin, Little John, Will Scarlet (*Scarlok*), Much (filho do moleiro), o Xerife de Nottingham, o Abade ganancioso de St. Mary e **Sir Richard at the Lee** |
-| **Maid Marian** não aparece nas baladas medievais mais antigas nem como protagonista no livro principal de Howard Pyle; surge a partir de romances pastorais franceses e das festas inglesas de *May Day* no século XVI | ✅ | Visit Sherwood / Sherwood Hideaway | Integrada desde a Parte 1 como licença folclórica declarada (**Dama Mariana de Sherwood** / *Dama Mariana* / *Mariana*) |
+| **Maid Marian** não aparece nas baladas medievais mais antigas nem como protagonista no livro principal de Howard Pyle; surge a partir de romances pastorais franceses e das festas inglesas de *May Day* no século XVI | ✅ | Visit Sherwood / Sherwood Hideaway | Integrada desde a Parte 1 como licença folclórica declarada (**Lady Mariana** / *Lady Mariana* / *Mariana*) |
 
 ---
 
@@ -32,10 +32,10 @@ Legenda: ✅ confirmado · ✍️ licença ou escolha editorial declarada da ada
 
 ## 3. Escolhas editoriais declaradas (diversidade e nomes)
 
-- **Diversidade e representatividade**: por decisão expressa do autor (2026-11-21), **a diversidade em todo o elenco (incluindo Dama Mariana como jovem negra) é prioridade editorial acima da distribuição étnica da Europa medieval**, para que toda criança leitora se sinta representada. Essa escolha será explicada na seção para adultos (`sobre.html`).
+- **Diversidade e representatividade**: por decisão expressa do autor (2026-11-21), **a diversidade em todo o elenco (incluindo Lady Mariana como jovem negra) é prioridade editorial acima da distribuição étnica da Europa medieval**, para que toda criança leitora se sinta representada. Essa escolha será explicada na seção para adultos (`sobre.html`).
 - **Nomes adotados (regra do autor: só *Robin Hood* sem aportuguesamento; variações mínimas e espertas nos demais)**:
   - **Robin Hood** (mantido em todas as línguas)
-  - **Dama Mariana de Sherwood** — variando entre *Dama Mariana*, *Mariana* e *Mariana de Sherwood* conforme o contexto (*Lady Marian* em inglês)
+  - **Lady Mariana** — variando entre *Lady Mariana*, *Lady Mariana* e *Mariana* conforme o contexto (*Lady Marian* em inglês)
   - **João Pequeno** (*Little John* em inglês)
   - **Grilo**, o filho do moleiro (*Much* em inglês)
   - **Frei Tuco** (*Friar Tuck*), **Gui Escarlate** (*Will Scarlet*), **Alan do Vale** (*Allan a Dale*) — ajustes mínimos para leitura fluida em português

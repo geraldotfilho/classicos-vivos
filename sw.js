@@ -7,7 +7,7 @@
    - Páginas HTML e vozes.js: rede primeiro com limite de 2,5 s (se a rede estiver lenta, abre do cache na hora).
    - Narração gravada (*.mp3 e *.json): rede primeiro com limite de 2,5 s, cache próprio (cv-narracao).
    - Demais arquivos: cache primeiro (abre instantâneo no tablet). */
-const CACHE = 'classicos-vivos-c31be1557604';
+const CACHE = 'classicos-vivos-8eb90a9b36a0';
 const CACHE_AUDIO = 'cv-narracao';
 const CACHE_META = 'cv-meta';
 const FILES = [
@@ -113,7 +113,7 @@ const FILES = [
     ],
     [
         "./assets/js/offline-manager.js",
-        "5f879a6d"
+        "07eeee00"
     ],
     [
         "./assets/js/texto.js",
@@ -1088,8 +1088,36 @@ const FILES = [
         "0a3da84b"
     ],
     [
+        "./robin-hood/imagens/parte-1/p0-real.webp",
+        "46b946d1"
+    ],
+    [
+        "./robin-hood/imagens/parte-1/p1-real.webp",
+        "1fcf33fd"
+    ],
+    [
+        "./robin-hood/imagens/parte-1/p2-real.webp",
+        "34d05061"
+    ],
+    [
+        "./robin-hood/imagens/parte-1/p3-real.webp",
+        "e5af9649"
+    ],
+    [
+        "./robin-hood/imagens/parte-1/p4-real.webp",
+        "5d9e1762"
+    ],
+    [
+        "./robin-hood/imagens/parte-1/p6-real.webp",
+        "6b501f05"
+    ],
+    [
+        "./robin-hood/imagens/parte-1/p7-real.webp",
+        "e644d42e"
+    ],
+    [
         "./robin-hood/parte-1.html",
-        "1fd6a398"
+        "eb63ec14"
     ],
     [
         "./sobre.html",
