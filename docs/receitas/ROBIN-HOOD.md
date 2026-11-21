@@ -2,69 +2,62 @@
 
 O que vale **só para Robin Hood**, complementando a [receita geral](../RECEITA-CLASSICO-VIVO.md). Leia a receita geral primeiro: esta só acrescenta ou especializa.
 
-> **Situação: 🟡 Fase 0 (Mapa da Obra proposto para aprovação do humano).**
+> **Situação: ✅ Fase 0 aprovada pelo humano (2026-11-21). Parte 1 em produção.**
 > Plano: [`PLANO-ROBIN-HOOD.md`](../PLANO-ROBIN-HOOD.md) · Diretrizes operacionais: [`DIRETRIZES_ROBIN_HOOD.md`](../DIRETRIZES_ROBIN_HOOD.md) · Pesquisa com fontes: [`pesquisa/ROBIN-HOOD.md`](../pesquisa/ROBIN-HOOD.md).
 
-- **As obras-fonte**: principalmente *The Merry Adventures of Robin Hood*, de **Howard Pyle** (1883, Prefácio + 22 capítulos, domínio público), combinada com elementos consagrados das baladas medievais (*A Gest of Robyn Hode*) e do folclore popular (como o Grande Carvalho e, se aprovado pelo humano, Lady Marian).
-- **Tipo de adaptação**: **condensação** episódica (receita geral §2). Pyle já funciona como uma sequência de aventuras curtas e bem-humoradas ligadas pelos mesmos personagens — o trabalho é escolher os melhores episódios, encadear causas e consequências para um leitor de **6 anos** e suavizar violências de época.
-- **Público**: **5 a 8 anos** (leitor de referência: criança de **6 anos**, `AGENTS.md` §3.5), no mesmo tom leve, acolhedor e visual de *Dom Quixote*.
+- **As obras-fonte**: *The Merry Adventures of Robin Hood*, de **Howard Pyle** (1883, Prefácio + 22 capítulos, domínio público), combinada com as baladas medievais (*A Gest of Robyn Hode*) e o folclore posterior (Grande Carvalho, Dama Mariana).
+- **Tipo de adaptação**: **condensação** episódica em **5 partes** (receita geral §2), para evitar pressa e dar espaço ao desenvolvimento dos personagens, da trama e dos temas sociais.
+- **Público**: **5 a 8 anos** (leitor de referência: criança de **6 anos**, `AGENTS.md` §3.5), mais camada *"Você sabia?"* nos dois modos (tradicional 5–8 anos e Desafio 🧩 8–10 anos).
 
 ---
 
-## 1. Condensação: como dividir as lendas em partes
+## 1. Os 3 pilares temáticos (decisão do humano, 2026-11-21)
 
-1. **Proporção**:
-   - **4 partes** (fechando uma prateleira completa da coleção na estante), com **capa + 8 a 9 capítulos nossos por parte** (9 a 10 páginas).
-   - Em média, **1 a 2 episódios/capítulos de Howard Pyle por página** (sem pressa; se um episódio tem dois momentos fortes — como o disfarce do açougueiro na feira e o jantar na casa do Xerife —, ele vira duas páginas).
-2. **Cada parte tem um arco e um gancho**:
-   - Parte 1: a formação do bando e a primeira vitória (o torneio da flecha de ouro).
-   - Parte 2: os grandes disfarces, novos amigos e o Xerife enganado na própria mesa.
-   - Parte 3: generosidade com Sir Ricardo e o desafio diante da Rainha.
-   - Parte 4: a cartada final do Xerife, a chegada do cavaleiro encapuzado (Rei Ricardo) e a festa da paz em Sherwood.
-3. **Numeração contínua dos nossos capítulos**: assim como em Dom Quixote, os capítulos seguem numerados em sequência pelas 4 partes (ex.: 1–8, 9–17, 18–25, 26–33), reforçando a sensação de livro único.
+1. **Justiça tributária (impostos desiguais)**:
+   - Mostrar de forma concreta para uma criança de 6 anos que cobrar a *mesma quantia* de todos é injusto: para o rico de celeiro ou carroça cheia, dois sacos de farinha não fazem diferença alguma; para quem só tem três sacos, quase não sobra pão. O bando recupera e devolve impostos injustos cobrados dos pobres.
+2. **Libertação de presos injustos e valor das provas**:
+   - Além da devolução de impostos, Robin e seu bando atuam para **libertar pessoas pobres presas injustamente** sem provas. Ao longo das 5 partes, o bando passa a observar vestígios reais (marcas, recibos, pistas) para provar a inocência dos acusados.
+3. **Pressão social e transformação do Estado no desfecho**:
+   - Os atos do bando despertam a coragem das aldeias. No final da série (Parte 5), a pressão popular unida diante do **Rei Ricardo** transforma as leis do reino: cria-se um sistema de **imposto mais justo** e um **corpo independente de investigadores das provas (peritos)** — que não obedece ao Xerife e averigua se existem provas reais para condenar alguém e quem são os verdadeiros culpados (referência discreta à autonomia constitucional da Polícia Científica no Brasil).
 
 ---
 
-## 2. Proteção da infância e ética da adaptação (regras próprias de *Robin Hood*)
+## 2. Condensação: divisão em 5 partes
 
-O maior risco pedagógico de *Robin Hood* para crianças de 6 anos é romantizar **briga de espada/arco** e **roubo**. Por isso:
-
-1. **Devolução de impostos injustos, não "roubo por diversão"**:
-   - O Xerife de Nottingham e o Abade cobram taxas abusivas e tomam a comida ou a casa de gente trabalhadora.
-   - Quando Robin e o bando tomam bolsas de ouro de autoridades gananciosas, o texto deixa claro que é **dinheiro de impostos cobrados injustamente do povo**, e o foco das cenas está em **partilhar, ajudar quem precisa (como Sir Ricardo) e enganar a ganância com humor**, nunca em atacar viajantes inocentes.
-2. **Duelos como esporte e brincadeira de equilíbrio (zero sangue)**:
-   - O cap. 1 de Pyle (em que Robin mata um guarda florestal ao reagir a uma aposta cruel) **sai inteiro**; a ida para Sherwood nasce de **proteger um lavrador ou defender a floresta diante de uma lei injusta**, sem mortes.
-   - As lutas de bastão (João Pequeno na ponte, Frei Tuck no riacho, o moleiro) viram **disputas cômicas de equilíbrio que terminam em tombo na água e gargalhada**, nascendo dali a amizade.
-3. **Sem forca e sem mortes em cena**:
-   - **Will Stutely** (Pyle cap. 4) é preso na torre/cadeia do castelo e resgatado por esperteza e corda — **nunca** vai para a forca.
-   - **Guy of Guisborne** (Pyle cap. 20) **não morre** em duelo: perde o torneio/armadilha de esperteza, cai sentado na lama ou fica preso sem machucados enquanto o bando salva os amigos.
-   - **Final sereno (sem Kirklees)**: a saga termina com o perdão do Rei Ricardo, o Xerife destituído dos abusos e uma festa acolhedora sob o Grande Carvalho (sem o epílogo triste da morte de Robin por traição).
-4. **Arquearia lúdica, nunca arma contra pessoas**:
-   - O arco e a flecha são mostrados como **arte e pontaria em alvos de palha, guirlandas e desafios esportivos** (partir o alvo, acertar o centro), jamais apontados para ferir alguém.
+1. **Proporção**: **5 partes**, cada uma com **capa + 8 a 9 capítulos nossos** (9 a 10 páginas), numeração contínua de capítulos entre as partes (1–9, 10–18…).
+2. **Cada parte tem arco, conflito prévio e gancho**:
+   - Nenhum plano do Xerife nasce do nada: primeiro ocorre o conflito e a identificação visual do bando (as roupas verdes de Sherwood), depois o Xerife elabora armadilhas.
+   - **P1**: *O Bando do Grande Carvalho* (imposto desigual, prisão do moleiro, roupas verdes, João Pequeno, 1º resgate/conflito com o Xerife, torneio da flecha de ouro, banquete e prisão de Gui).
+   - **P2**: *O Resgate da Torre e o Açougueiro* (resgate na torre, disfarce na feira e jantar na casa do Xerife, João Pequeno na cozinha).
+   - **P3**: *O Frade do Rio e a Canção da Floresta* (Frei Tuco no riacho, Alan do Vale, Gui Escarlate, o povo perdendo o medo nas feiras).
+   - **P4**: *O Cavaleiro Triste e a Flecha da Rainha* (Dom Ricardo do Vale × Abade isento de impostos, pressão social crescendo, torneio diante da Rainha Leonor).
+   - **P5**: *O Hóspede Encapuzado e as Novas Leis* (armação do Xerife desmascarada por provas, mobilização popular, Rei Ricardo, imposto justo e criação dos peritos das provas).
 
 ---
 
-## 3. Recurso visual e interações (sem copiar as lentes de Dom Quixote)
+## 3. Proteção da infância e ética da adaptação
 
-- *Dom Quixote* usa **Realidade × Imaginação** porque a obra trata do choque entre o real e o imaginado. Em *Robin Hood*, **não há delírio** — portanto, **por padrão as páginas NÃO usam a chave Realidade × Imaginação**.
-- **Como a cena ganha vida**:
-  1. **Ilustrações principais limpas + camadas animadas/interativas (`camadas`)**: flechas chegando no alvo, bolsas ou moedas repartidas, instrumentos musicais de Alan-a-Dale, chapéu/capuz, corda do resgate, folhas de Sherwood ao vento.
-  2. **Recurso pontual opcional ("Lente do Disfarce" / bastidores)**: apenas em páginas de disfarce (como o açougueiro, o frade ou o cavaleiro encapuzado), *se o humano aprovar*, podemos usar a segunda cena como **Por fora (o disfarce) ↔ Por dentro (quem realmente está ali)** — ou manter tudo com uma única cena + camadas que revelam o rosto. Esta decisão fica na parada da Fase 0.
-- **Atividades alfabetizadoras** (receita geral §6.2): 3 por parte, intercaladas com páginas calmas, usando tipos do motor (`ordem`, `pedido`, `progressivo`, `camadas`, `acao`) sem alterar `assets/js/livro.js`.
+1. **Devolução de impostos injustos, nunca furto glorificado**: deixa claro que o ouro recuperado veio de cobranças abusivas sobre o povo pobre, nunca de viajantes inocentes.
+2. **Duelos como esporte e amizade (zero sangue)**: sai a morte do guarda florestal (cap. 1 de Pyle); duelos de bastão são disputas de equilíbrio que terminam em banho no riacho e gargalhada.
+3. **Sem forca e sem mortes em cena**: resgates pela janela/corda e esperteza; Guy of Guisborne cai na própria armadilha sem ferimentos; **final sereno** com festa e novas leis (sem a morte em Kirklees).
+4. **Arco e flecha**: exclusivamente como arte e pontaria em alvos de torneio, nunca apontados contra pessoas.
 
 ---
 
-## 4. Elenco fixo e continuidade entre partes
+## 4. Direção de arte, diversidade e recurso visual (fechados pelo humano)
 
-| Personagem | Traço visual e jeito | Papel nas partes |
-| :--- | :--- | :--- |
-| **Robin Hood** | Túnica verde-musgo, chapéu com pena vermelha, sorriso esperto, ágil | Líder alegre e justo; inventa os planos |
-| **João Pequeno** | Gigante gentil, quase duas cabeças mais alto que todos, barba curta, bastão de carvalho | Braço direito de Robin; adora comer bem e rir alto |
-| **Frei Tuck** | Baixinho e rechonchudo, hábito marrom, bochechas rosadas, amante de tortas e cães | Entra na P2; traz humor e coração |
-| **Will Scarlet** | Primo elegante, chapéu estiloso de pena e roupas bordô/escarlate | Entra na P2; ajuda nos planos e disfarces |
-| **Alan-a-Dale** | Jovem trovador com alaúde/harpa e sorriso tímido | Entra na P2; traz música e a história do casamento |
-| **Midge (ou Much)** | Filho do moleiro, avental enfarinhado, rápido | Entra na P1/P2; ajuda na cozinha/logística |
-| **Lady Marian** *(❓ opcional)* | Capa verde-esmeralda e cabelo trançado, ágil e corajosa no arco | Se aprovada: amiga de infância que avisa o bando sobre os planos do Xerife |
-| **Xerife de Nottingham** | Capa pesada púrpura/preta, anéis dourados, cara azeda, sempre pensando em impostos | O antagonista cômico (sempre enganado pela própria ganância) |
-| **Sir Ricardo do Vale** | Cavaleiro honesto de manto gasto, rosto cansado que volta a sorrir | Entra na P3; mostra o valor da gratidão e palavra cumprida |
-| **Rei Ricardo** | Alto, manto de viagem com capuz escuro, depois coroa e leão no peito | Entra na P4; sela a paz e a justiça |
+- **Estilo artístico — Opção A (Gouache estilizado de floresta)**: árvores altas com formas geométricas expressivas, camadas de verde-esmeralda e dourado, traço suave de carvão/tinta (inspiração Cartoon Saloon / *Wolfwalkers*), iluminado e distinto da aquarela terrosa de *Dom Quixote*.
+- **Diversidade editorial declarada**: **Dama Mariana de Sherwood** (jovem negra de cabelo trançado) e elenco diverso em toda a obra — **a representatividade infantil prevalece sobre a distribuição étnica da Europa medieval**. Registrar essa escolha também no texto para adultos em `sobre.html`.
+- **Recurso visual — Opção 1 (Cena única + camadas)**: sem a chave da 2ª lente (*Realidade × Imaginação* é própria de Dom Quixote). O quadro ganha vida com ilustrações ricas, hotspots de toque, variações por progresso (`realCena`) e camadas animadas (`camadas`).
+- **"Você sabia?" nos dois modos**: caixas curtas e curiosas no modo tradicional (5–8 anos, `voceSabia` na página) e versão mais completa no Modo Desafio 🧩 (8–10 anos).
+
+---
+
+## 5. Nomes e aportuguesamento (regra do humano)
+
+- **Só *Robin Hood* não é aportuguesado.** Nos demais, variar o mínimo possível com escolhas naturais e fáceis de ler para crianças de 6 anos:
+  - **Dama Mariana de Sherwood** — variando entre *Dama Mariana*, *Mariana* e *Mariana de Sherwood* conforme o contexto (*Lady Marian* em inglês).
+  - **João Pequeno** (*Little John* em inglês).
+  - **Grilo**, o filho do moleiro (*Much* em inglês).
+  - **Rei Ricardo**, **Rainha Leonor**, **Xerife de Nottingham**.
+  - **Frei Tuco**, **Gui Escarlate**, **Alan do Vale**, **Dom Ricardo do Vale** (quando entrarem nas partes seguintes).

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#065F46">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>Robin Hood - Parte 1 | Clássicos Vivos</title>
+    <!-- Estilos locais (offline): Tailwind compilado, fontes, ícones e o estilo comum dos livros. Regerar com `npm run build`. -->
+    <link rel="stylesheet" href="../assets/css/tailwind.css">
+    <link rel="stylesheet" href="../assets/css/fonts.css">
+    <link rel="stylesheet" href="../assets/css/icons.css">
+    <link rel="stylesheet" href="../assets/css/livro.css">
+    <link rel="manifest" href="../manifest.webmanifest">
+    <link rel="apple-touch-icon" href="../assets/icones/icone-180.png">
+</head>
+<body class="p-1 sm:p-2.5 select-none">
+    <noscript>Este livro interativo precisa de JavaScript ativado no navegador.</noscript>
+
+    <script>
+    /* =========================================================================
+       ROBIN HOOD — PARTE 1: O BANDO DO GRANDE CARVALHO
+       Adaptação livre de Howard Pyle (1883) e lendas tradicionais de Sherwood.
+       Rascunho de texto (Fases 1-2) após crítica adversarial, em revisão humana (Fase 3):
+       docs/cadernos/robin-hood-parte-1.md
+       ========================================================================= */
+    window.LIVRO = {
+        obra: 'Robin Hood',
+        autor: 'Howard Pyle e lendas tradicionais',
+        parte: 1,
+        totalPartes: 5,
+        rascunho: true,
+        imagens: './imagens/parte-1/',
+        fim: {
+            mensagem: '🏹 Fim da Parte 1! O Bando Verde está unido debaixo do Grande Carvalho. Mas o Xerife trancou o amigo Gui na torre de Nottingham sem prova nenhuma! Na Parte 2, vem aí um resgate esperto e uma grande bagunça na cozinha do castelo!'
+            // proxima: './parte-2.html' (habilitar quando a Parte 2 for criada)
+        },
+        paginas: [
+            {
+                capa: true,
+                titulo: 'Parte 1: O Bando do Grande Carvalho',
+                texto: `Bem no meio da {{FLORESTA|FLO • RES • TA|🌳}} de Sherwood, as folhas escondem um bando muito alegre. Eles vestem roupas da cor do mato, sopram uma corneta dourada e lutam por {{JUSTIÇA|JUS • TI • ÇA|⚖️}}.
+
+                    Nesta primeira parte da história, uma cobrança injusta tira quase toda a comida de um menino. É aí que Robin Hood, Dama Mariana de Sherwood e um gigante muito bem-humorado juntam forças para ajudar quem precisa.
+
+                    Prepare o seu sorriso, vire a página e venha ver como o Bando Verde enfrenta uma grande {{ARMADILHA|AR • MA • DI • LHA|🕸️}}!`,
+                cena: {
+                    real: 'p0-real.webp', emoji: '🏹',
+                    alt: 'Na clareira ensolarada do Grande Carvalho em Sherwood, Robin Hood, Dama Mariana de Sherwood, João Pequeno e Grilo partilham pães e maçãs',
+                    legendaReal: '🌳 O Bando do Grande Carvalho'
+                }
+            },
+            {
+                capitulo: '🌾 Capítulo 1 • Os Dois Sacos de Farinha', corCapitulo: 'text-amber-700',
+                titulo: 'Uma Conta que Não Fecha',
+                voceSabia: 'Na Idade Média existiam leis muito duras chamadas Leis da Floresta: os moradores comuns podiam ser castigados até por juntar lenha caída ou caçar comida perto de casa!',
+                texto: `Numa manhã de feira, o Xerife de Nottingham parou na estrada do {{MOINHO|MO • I • NHO|⚙️}}, a casa de pedra onde se moía trigo. Enquanto o bom Rei Ricardo viajava para longe, o Xerife mandava na região com voz grossa: — Ordem nova! Cada família paga hoje dois sacos de {{FARINHA|FA • RI • NHA|🌾}} de imposto! Igualzinho para todo mundo!
+
+                    O barão da colina, um senhor muito rico dono das terras, vinha numa carroça enorme com cinquenta sacos bem cheinhos. Ele jogou dois para os guardas e saiu assobiando: para quem tem tanto, dois sacos não fazem falta nenhuma!
+
+                    Depois chegou a vez do moleiro, que só tinha três sacos para alimentar a casa inteira o mês todo. — Senhor Xerife, se os guardas levarem dois dos meus sacos como fizeram com os outros vizinhos, fico com um só para o meu filho comer! — reclamou ele. O Xerife fechou a cara azeda e apontou o dedo: — Aposto que você está escondendo sacos lá dentro! Guardas, prendam esse homem!
+
+                    — Não escondi nada! Pode procurar! — gritou o moleiro. Mas o Xerife riu: — Não preciso de {{PROVA|PRO • VA|🔎}} nenhuma! E os guardas levaram o pai preso junto com toda a farinha das famílias pobres. O filho do moleiro, um menino baixinho chamado Grilo, correu chorando para a mata. Ali encontrou Robin Hood, o rapaz de chapéu com pena vermelha famoso na aldeia pela ótima mira no arco: — Calma, Grilo! Venha comigo. Nós vamos tirar o seu pai de lá!`,
+                cena: {
+                    real: 'p1-real.webp', emoji: '🌾',
+                    alt: 'Na estrada do moinho, o Xerife cobra dois sacos de farinha; o barão passa de carroça lotada enquanto o moleiro triste segura poucos sacos ao lado de Grilo; Robin observa atrás de um arbusto',
+                    legendaReal: '🌾 Dois Sacos de Farinha para Todos?'
+                }
+            },
+            {
+                capitulo: '🌳 Capítulo 2 • O Grande Carvalho e as Roupas de Folha', corCapitulo: 'text-emerald-700',
+                titulo: 'Um Plano Debaixo das Folhas',
+                voceSabia: 'Em Sherwood existe até hoje um carvalho gigante de verdade chamado Major Oak, com cerca de 800 a 1.000 anos. Muita gente conta que ele foi o esconderijo de Robin Hood!',
+                texto: `Robin levou Grilo até o coração da mata, onde crescia um {{CARVALHO|CAR • VA • LHO|🌳}} tão imenso que vinte crianças de mãos dadas não abraçavam o tronco. Ali já esperava Dama Mariana de Sherwood, uma jovem negra de tranças compridas, sorriso firme e arco sempre pronto nas costas. Ela era amiga antiga de Robin e conhecia cada rua de Nottingham.
+
+                    — O pai de Grilo foi preso sem culpa e a farinha das famílias está trancada no depósito do Xerife — contou Robin. — Precisamos soltá-lo e devolver o alimento do povo!
+
+                    Mariana abriu uma trouxa de pano e tirou três camisas compridas cor de folha. — Se vamos agir na floresta, nada de roupa chamativa! De {{VERDE|VER • DE|🍃}}, nós sumimos no meio das árvores. Os guardas passam do lado e só enxergam folhagem!
+
+                    Robin vestiu a camisa verde, ajeitou a pena vermelha no chapéu e pendurou no cinto uma {{CORNETA|COR • NE • TA|📯}} dourada de caça. — Combinado: três sopros curtos querem dizer "preciso de ajuda, venham depressa!". Mas ainda precisamos de mais um amigo bem forte para alcançar o alto do depósito e carregar de volta aqueles sacos pesados!`,
+                cena: {
+                    real: 'p2-real.webp', emoji: '🌳',
+                    alt: 'Debaixo dos galhos enormes do Grande Carvalho, Robin Hood, Dama Mariana e Grilo experimentam camisas verde-folha e combinam o sinal da corneta dourada',
+                    legendaReal: '🌳 As Roupas Verdes e a Corneta'
+                }
+            },
+            {
+                capitulo: '🪵 Capítulo 3 • A Ponte do Riacho', corCapitulo: 'text-sky-700',
+                titulo: 'Ninguém Dá Passo para Trás',
+                texto: `Na manhã seguinte, Robin saiu cedo procurando gente corajosa pelas trilhas. Grilo veio atrás em passos ligeiros, ainda com um pouco de pó de trigo na ponta do nariz. Logo ouviram o barulho gostoso de um {{RIACHO|RI • A • CHO|💧}} correndo sobre as pedras.
+
+                    Por cima da água atravessava uma {{PONTE|PON • TE|🪵}} estreita, feita de um tronco só. Robin pegou um galho reto e firme caído no chão para usar de apoio. Mas, quando pisou na ponta de cá, um desconhecido enorme pisou na ponta de lá. O homem era tão alto que quase encostava a cabeça nos galhos baixos, e se apoiava num {{BASTÃO|BAS • TÃO|🦯}} comprido de madeira.
+
+                    Grilo levou um susto com aquele tamanho todo e se escondeu atrás de uma samambaia. Os dois homens pararam bem no meio da ponte, nariz de Robin quase encostando no peito do grandalhão! — Abra caminho, rapazinho! — disse o gigante, com voz de trovão que não assustava ninguém. — Eu cheguei primeiro!
+
+                    — Ora essa! — respondeu Robin, dando uma piscadinha para a samambaia. — Um arqueiro de Sherwood não volta atrás nem para uma montanha! Vamos resolver numa disputa limpa de bastão! Quem cair na água perde a vez!`,
+                cena: {
+                    real: 'p3-real.webp', emoji: '🪵',
+                    alt: 'Sobre uma ponte estreita de tronco em cima do riacho, Robin Hood e um gigante desconhecido de bastão comprido ficam frente a frente',
+                    legendaReal: '🪵 Frente a Frente na Ponte Estreita'
+                }
+            },
+            {
+                capitulo: '😂 Capítulo 4 • O Banho de Risadas', corCapitulo: 'text-teal-700',
+                titulo: 'O Gigante Chamado Pequeno',
+                comandoAtividade: 'Grilo vai contar para Dama Mariana como conheceu o novo amigo. Leia os cartões e toque na ordem certa do que aconteceu no riacho!',
+                texto: `TÁC! TÓC! TÁC! Os dois bastões batiam no ar enquanto Robin e o grandalhão faziam caras de concentração, se equilibrando na beirinha do tronco. Robin pulou para a esquerda, desviou para a direita e quase conseguiu... mas escorregou num musgo verdinho!
+
+                    PLOF! Robin caiu sentado bem no meio do riacho, levantando água para todo lado e molhando até a pena do chapéu! Grilo tapou a boca com as duas mãos, achando que ia dar briga.
+
+                    Só que Robin olhou para as próprias botas cheias de água, soltou uma {{RISADA|RI • SA • DA|😂}} gostosa e bateu palmas: — Que {{TOMBO|TOM • BO|💦}} bonito! Você venceu direitinho! E o grandalhão estendeu uma mão imensa para puxar Robin para cima, rindo mais alto ainda.
+
+                    — Como você se chama, meu {{AMIGO|A • MI • GO|🤝}}? — perguntou Robin, torcendo a camisa.
+
+                    — João! — respondeu o gigante. Grilo deu um pulo da moita e bateu rindo no joelho do homem, já que só alcançava a cintura dele: — Pois um sujeito desse tamanho só pode ter um apelido ao contrário! De hoje em diante, você é o João Pequeno! — Gostei! — riu o gigante, e foi com eles até o Grande Carvalho buscar uma camisa verde bem grande para vestir.`,
+                cena: {
+                    real: 'p4-real.webp', emoji: '😂',
+                    alt: 'Robin Hood sentado dentro da água rasa do riacho rindo muito, enquanto o gigante estende a mão sorrindo da ponte e Grilo espia alegre da margem',
+                    legendaReal: '😂 Um Banho que Virou Amizade',
+                    camadas: [
+                        { id: 'c-ponte', emoji: '🪵', item: 'ponte', x: 22, y: 78, w: 12 },
+                        { id: 'c-tombo', emoji: '💦', item: 'tombo', x: 42, y: 78, w: 12 },
+                        { id: 'c-risada', emoji: '😂', item: 'risada', x: 60, y: 78, w: 12 },
+                        { id: 'c-amigo', emoji: '🤝', item: 'amigo', x: 78, y: 78, w: 12 }
+                    ],
+                    cartoes: {
+                        tipo: 'ordem',
+                        faixaVazia: 'O que aconteceu primeiro no riacho?',
+                        ordem: ['ponte', 'tombo', 'risada', 'amigo'],
+                        itens: [
+                            { id: 'risada', palavra: 'RISADA', emoji: '💧' },
+                            { id: 'amigo', palavra: 'AMIGO', emoji: '💧' },
+                            { id: 'ponte', palavra: 'PONTE', emoji: '💧' },
+                            { id: 'tombo', palavra: 'TOMBO', emoji: '💧' }
+                        ]
+                    }
+                }
+            },
+            {
+                capitulo: '🗝️ Capítulo 5 • A Primeira Ação do Bando Verde', corCapitulo: 'text-purple-700',
+                titulo: 'Quem Mexeu na Cadeia?',
+                voceSabia: 'Prender alguém sem investigar as provas é uma grande injustiça. Hoje em dia, peritos independentes estudam pistas como pegadas e marcas para descobrir o que realmente aconteceu!',
+                texto: `Ao cair da tarde, o bando verde entrou em ação! Não houve briga nem confusão: foi tudo pura inteligência. Dama Mariana bateu no portão dos fundos fingindo procurar um cachorrinho perdido, e os dois guardas da {{CADEIA|CA • DEI • A|🔒}} correram para o jardim ajudar.
+
+                    Nesse instante, João Pequeno ergueu Grilo nos ombros com facilidade até a janelinha alta. O menino passou por dentro, pegou a {{CHAVE|CHA • VE|🗝️}} pendurada num prego e abriu a cela do pai sem fazer barulho! Enquanto isso, Robin conferia os sacos marcados com o nome dos moradores no depósito e João Pequeno erguia tudo com uma mão só, devolvendo a {{FARINHA|FA • RI • NHA|🌾}} de casa em casa.
+
+                    Quando o {{XERIFE|XE • RI • FE|😠}} chegou ofegante, só viu a porta aberta, o depósito vazio e quatro vultos vestidos de verde sumindo entre as árvores. Um guarda que estivera na estrada do moinho reconheceu logo a pena vermelha no chapéu: — É aquele rapaz de boa pontaria da aldeia! É Robin Hood!
+
+                    O Xerife bateu o pé no chão e ficou roxo de raiva: — Guardas, prestem muita atenção! Quem usa roupa verde é do bando de Robin Hood! E eu já tenho um plano brilhante para pegar esse bando de roupa verde de uma vez por todas!`,
+                cena: {
+                    real: 'p5-real.webp', emoji: '🗝️',
+                    alt: 'Na portaria da cadeia ao entardecer, o pai de Grilo sai feliz com sacos de farinha enquanto vultos de roupa verde somem na floresta e o Xerife aponta furioso',
+                    legendaReal: '🗝️ A Primeira Vitória do Bando Verde'
+                }
+            },
+            {
+                capitulo: '🎯 Capítulo 6 • O Convite da Flecha de Ouro', corCapitulo: 'text-rose-700',
+                titulo: 'Uma Armadilha Brilhante',
+                texto: `No dia seguinte, tambores tocaram na praça de Nottingham: TÁ-RÁ-TÁ-TÁ! Um mensageiro leu um cartaz enorme, desenhado com uma flecha brilhante: — Grande {{TORNEIO|TOR • NEI • O|🎯}} de arco e flecha na praça! O melhor arqueiro da terra ganhará uma flecha inteira de {{OURO|OU • RO|🪙}}!
+
+                    Mariana, que tinha ido à feira com um vestido simples de moradora para ninguém a reconhecer, chegou bem pertinho do palanque. E ouviu o Xerife cochichando para o capitão da guarda: — Esse Robin Hood é conhecido pela boa pontaria. Ele não vai resistir ao prêmio! Olhem bem para a multidão: prendam qualquer um que apareça de roupa {{VERDE|VER • DE|🍃}}!
+
+                    Era uma armadilha! Mas o Xerife não contava com os olhos atentos de Mariana de Sherwood. Ela decorou cada detalhe do plano e voltou correndo pelas trilhas secretas até o Grande Carvalho.
+
+                    — É perigoso ir lá — avisou Mariana. Mas Robin pensou nas famílias que ainda precisavam de ajuda: — Se eu ganhar aquela flecha de ouro, podemos trocar por comida e cobertores quentinhos para o povo! Só precisamos aparecer na praça sem mostrar nem um fiapo de roupa verde!`,
+                cena: {
+                    real: 'p6-real.webp', emoji: '🎯',
+                    alt: 'Na praça de Nottingham com bandeiras coloridas, guardas mostram um cartaz de torneio enquanto Dama Mariana, de vestido simples, ouve escondida o plano do Xerife',
+                    legendaReal: '🎯 A Armadilha da Flecha de Ouro'
+                }
+            },
+            {
+                capitulo: '🧥 Capítulo 7 • O Arqueiro de Capuz Vermelho', corCapitulo: 'text-rose-700',
+                titulo: 'Cadê a Roupa Verde?',
+                comandoAtividade: 'Ajude Robin Hood a montar o disfarce para passar pelos guardas sem usar nada verde! Veja o pedido lá em cima e escolha a palavra certa, fugindo das pegadinhas!',
+                texto: `No grande dia, a {{FEIRA|FEI • RA|🎪}} de Nottingham parecia um jardim colorido. Tinha barraquinha de maçã assada, bandeiras ao vento e guardas esticando o pescoço para todo lado. — Procurem roupas verdes! — mandava o Xerife, de olho em cada esquina.
+
+                    Escondidos atrás das barracas coloridas, os amigos começaram a trocar de roupa. João Pequeno esfregou um pouco de carvão no rosto para parecer ferreiro. Mariana pôs um lenço azul na cabeça. Grilo segurou uma cesta de pães quentinhos.
+
+                    Chegou a vez de Robin Hood montar o seu {{DISFARCE|DIS • FAR • CE|🧥}} antes de passar pelo capitão da guarda. Nada da camisa verde de Sherwood! Para ninguém o reconhecer na fila, ele precisava de um {{CAPUZ|CA • PUZ|🔴}} vermelho puxado sobre a testa, um {{MANTO|MAN • TO|🧥}} marrom comprido de viajante e o seu arco de madeira na mão.
+
+                    — Os guardas estão vindo aí perto! — cochichou Grilo, olhando pela fresta da barraca. Depressa: vamos conferir cada peça antes que o capitão chegue perto!`,
+                cena: {
+                    real: 'p7-real.webp', emoji: '🧥',
+                    alt: 'Nos fundos das barracas do torneio em Nottingham, Robin Hood prepara o disfarce ao lado de Dama Mariana, João Pequeno e Grilo enquanto guardas procuram roupas verdes ao longe',
+                    legendaReal: '🧥 Montando o Disfarce sem Nada Verde!',
+                    camadas: [
+                        { id: 'c-capuz', emoji: '🔴', item: 'capuz', x: 48, y: 36, w: 12 },
+                        { id: 'c-manto', emoji: '🧥', item: 'manto', x: 48, y: 56, w: 16 },
+                        { id: 'c-arco', emoji: '🏹', item: 'arco', x: 60, y: 50, w: 12 }
+                    ],
+                    cartoes: {
+                        tipo: 'pedido',
+                        rotulo: '🎭 Robin precisa para o disfarce:',
+                        pedidos: ['capuz', 'manto', 'arco'],
+                        itens: [
+                            { id: 'capim', palavra: 'CAPIM', emoji: '🌿', pegadinha: 'Capim? Com capim verde na cabeça os guardas reconhecem o bando na hora! Vamos tentar de novo!' },
+                            { id: 'capuz', palavra: 'CAPUZ', emoji: '🔴' },
+                            { id: 'manto', palavra: 'MANTO', emoji: '🧥' },
+                            { id: 'barco', palavra: 'BARCO', emoji: '⛵', pegadinha: 'Barco? Um barco no meio do torneio não acerta o alvo! Vamos tentar de novo!' },
+                            { id: 'arco', palavra: 'ARCO', emoji: '🏹' }
+                        ]
+                    }
+                }
+            },
+            {
+                capitulo: '🏹 Capítulo 8 • A Flecha Partida ao Meio', corCapitulo: 'text-emerald-700',
+                titulo: 'Bem no Centro do Alvo!',
+                voceSabia: 'Na Inglaterra medieval, treinar arco e flecha nos fins de semana e competir nos torneios das feiras era tão popular quanto jogar futebol hoje em dia!',
+                texto: `Quando Robin saiu de trás das barracas bem disfarçado, o capitão da guarda olhou dos pés à cabeça e deixou passar: — Nada de verde aqui. Pode entrar na fila! Na final, o campeão do Xerife ergueu o {{ARCO|AR • CO|🏹}}, respirou fundo e soltou a {{FLECHA|FLE • CHA|🏹}}: ZUP! Cravou bem no meio do {{ALVO|AL • VO|🎯}}, e a praça inteira aplaudiu!
+
+                    Então o arqueiro de capuz vermelho deu um passo à frente. Não havia medo nenhum nos olhos dele, só calma e {{CORAGEM|CO • RA • GEM|💪}}. Segurou o arco firme, mirou bem devagar e soltou: ZUUUP!
+
+                    A flecha voou reta como um raio e acertou exatamente a outra flecha... CRAC! Partiu a flecha do campeão ao meio, de ponta a ponta! O silêncio durou um segundo — e logo virou uma festa enorme na arquibancada!
+
+                    O Xerife entregou a flecha de ouro batendo palmas sem graça. Assim que segurou o prêmio, Robin puxou o capuz para trás e soprou a corneta: TÁ-TÁ-TÁ! No mesmo instante, Mariana jogou para o alto dezenas de fitas vermelhas parecidas com o capuz e Grilo soprou uma nuvem branca de farinha no ar. Enquanto os guardas espirravam confusos atrás das fitas, o bando inteiro pulou rindo o muro baixinho e sumiu na floresta!`,
+                cena: {
+                    real: 'p8-real.webp', emoji: '🏹',
+                    alt: 'Alvo de palha no centro do campo com uma flecha partida exatamente ao meio por outra; Robin Hood puxa o capuz vermelho sorrindo enquanto fitas vermelhas e pó branco voam no ar',
+                    legendaReal: '🏹 Uma Flecha Partida ao Meio!'
+                }
+            },
+            {
+                capitulo: '🍞 Capítulo 9 • A Festa da Partilha', corCapitulo: 'text-amber-700',
+                titulo: 'Ouro que Vira Pão e Cobertor',
+                comandoAtividade: 'Ajude o bando a separar o que a flecha de ouro vai comprar para as famílias da aldeia! Veja o pedido lá em cima e escolha a palavra certa, fugindo das pegadinhas!',
+                texto: `Naquela noite, o Grande Carvalho parecia brilhar com lanternas penduradas nos galhos. Foi um {{BANQUETE|BAN • QUE • TE|🍞}} de dar água na boca, com pães quentinhos assados pelo moleiro livre, maçãs doces e canções alegres ao redor da mesa.
+
+                    Robin colocou a flecha de ouro no centro da mesa para explicar a {{PARTILHA|PAR • TI • LHA|🧺}}. Com o prêmio do torneio, o bando ia buscar na cidade vizinha bastante trigo para fazer pão, leite fresquinho para as crianças e uma manta quentinha para cada família que o Xerife tinha deixado no aperto.
+
+                    Bem na hora da sobremesa, um vizinho chegou correndo pela trilha, quase sem fôlego: — Robin! Dama Mariana! Lembram do nosso amigo Gui, aquele rapaz alegre de casaco vermelho que emprestou a carroça para levar a farinha e comemorou a vitória no torneio? O Xerife ficou tão furioso que trancou Gui lá no alto da {{TORRE|TOR • RE|🏰}} de Nottingham! Sem {{PROVA|PRO • VA|🔎}} nenhuma de culpa!
+
+                    Robin levantou da mesa na mesma hora, com João Pequeno pegando o bastão e Mariana conferindo as cordas. A primeira aventura tinha terminado bem — mas salvar um amigo injustiçado pedia um plano ainda mais esperto na manhã seguinte!`,
+                cena: {
+                    real: 'p9-real.webp', emoji: '🍞',
+                    alt: 'Festa sob lanternas no Grande Carvalho com pães e maçãs: o pai abraça Grilo, João Pequeno e Mariana sorriem com Robin e um vizinho chega correndo ao fundo',
+                    legendaReal: '🍞 Festa da Partilha... e um Novo Chamado!',
+                    camadas: [
+                        { id: 'c-trigo', emoji: '🌾', item: 'trigo', x: 32, y: 66, w: 12 },
+                        { id: 'c-leite', emoji: '🥛', item: 'leite', x: 50, y: 66, w: 11 },
+                        { id: 'c-manta', emoji: '🧣', item: 'manta', x: 68, y: 66, w: 12 }
+                    ],
+                    cartoes: {
+                        tipo: 'pedido',
+                        rotulo: '🧺 Para levar às famílias:',
+                        pedidos: ['trigo', 'leite', 'manta'],
+                        itens: [
+                            { id: 'trevo', palavra: 'TREVO', emoji: '🍀', pegadinha: 'Trevo? Trevo dá sorte, mas não mata a fome nem faz pão! Vamos escolher de novo!' },
+                            { id: 'trigo', palavra: 'TRIGO', emoji: '🌾' },
+                            { id: 'leite', palavra: 'LEITE', emoji: '🥛' },
+                            { id: 'leque', palavra: 'LEQUE', emoji: '🪭', pegadinha: 'Leque? Numa noite fria na mata, leque só dá mais vento! Vamos escolher de novo!' },
+                            { id: 'manta', palavra: 'MANTA', emoji: '🧣' }
+                        ]
+                    }
+                }
+            }
+        ]
+    };
+    </script>
+    <script src="../assets/js/texto.js"></script>
+    <script src="../assets/js/livro.js"></script>
+</body>
+</html>
