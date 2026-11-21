@@ -41,9 +41,9 @@
       "id": "p0-s4",
       "pagina": 0,
       "paragrafo": 1,
-      "texto": "É aí que Robin Hood, Dama Mariana de Sherwood e um gigante muito bem-humorado juntam forças para ajudar quem precisa.",
-      "fala": "É aí que Robin Hood, Dama Mariana de Sherwood e um gigante muito bem-humorado juntam forças para ajudar quem precisa.",
-      "hash": "be22c0a881"
+      "texto": "É aí que Robin Hood, Lady Mariana e um gigante muito bem-humorado juntam forças para ajudar quem precisa.",
+      "fala": "É aí que Robin Hood, Lady Mariana e um gigante muito bem-humorado juntam forças para ajudar quem precisa.",
+      "hash": "f50b20e396"
     },
     {
       "id": "p0-s5",
@@ -227,9 +227,9 @@
       "id": "p2-s2",
       "pagina": 2,
       "paragrafo": 0,
-      "texto": "Ali já esperava Dama Mariana de Sherwood, uma jovem negra de tranças compridas, sorriso firme e arco sempre pronto nas costas.",
-      "fala": "Ali já esperava Dama Mariana de Sherwood, uma jovem negra de tranças compridas, sorriso firme e arco sempre pronto nas costas.",
-      "hash": "a11d3266ff"
+      "texto": "Ali já esperava Lady Mariana, uma jovem negra de tranças compridas, sorriso firme e arco sempre pronto nas costas.",
+      "fala": "Ali já esperava Lady Mariana, uma jovem negra de tranças compridas, sorriso firme e arco sempre pronto nas costas.",
+      "hash": "2be7390399"
     },
     {
       "id": "p2-s3",
@@ -606,9 +606,9 @@
       "id": "p5-s3",
       "pagina": 5,
       "paragrafo": 0,
-      "texto": "Dama Mariana bateu no portão dos fundos fingindo procurar um cachorrinho perdido, e os dois guardas da CADEIA correram para o jardim ajudar.",
-      "fala": "Dama Mariana bateu no portão dos fundos fingindo procurar um cachorrinho perdido, e os dois guardas da cadeia correram para o jardim ajudar.",
-      "hash": "84538c33cf"
+      "texto": "Lady Mariana bateu no portão dos fundos fingindo procurar um cachorrinho perdido, e os dois guardas da CADEIA correram para o jardim ajudar.",
+      "fala": "Lady Mariana bateu no portão dos fundos fingindo procurar um cachorrinho perdido, e os dois guardas da cadeia correram para o jardim ajudar.",
+      "hash": "277d54bee2"
     },
     {
       "id": "p5-s4",
@@ -759,9 +759,9 @@
       "id": "p6-s9",
       "pagina": 6,
       "paragrafo": 2,
-      "texto": "Mas o Xerife não contava com os olhos atentos de Mariana de Sherwood.",
-      "fala": "Mas o Xerife não contava com os olhos atentos de Mariana de Sherwood.",
-      "hash": "dd9ebba71c"
+      "texto": "Mas o Xerife não contava com os olhos atentos de Lady Mariana.",
+      "fala": "Mas o Xerife não contava com os olhos atentos de Lady Mariana.",
+      "hash": "88d2bedb3c"
     },
     {
       "id": "p6-s10",
@@ -1082,9 +1082,9 @@
       "id": "p9-s6",
       "pagina": 9,
       "paragrafo": 2,
-      "texto": "Dama Mariana!",
-      "fala": "Dama Mariana!",
-      "hash": "c0a3df37b2"
+      "texto": "Lady Mariana!",
+      "fala": "Lady Mariana!",
+      "hash": "d9e20d7b77"
     },
     {
       "id": "p9-s7",
