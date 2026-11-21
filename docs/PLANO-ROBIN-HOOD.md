@@ -1,98 +1,83 @@
-# 🗺️ Plano — Robin Hood (Obra Completa em 4 Partes)
+# 🗺️ Plano — Robin Hood (Obra Completa em 5 Partes)
 
-**Fase 0 da receita geral: o Mapa da Obra.** Planejado em 2026-11-21 seguindo o modelo de [`PLANO-DOM-QUIXOTE-VOLUME-2.md`](PLANO-DOM-QUIXOTE-VOLUME-2.md) e a receita geral ([`RECEITA-CLASSICO-VIVO.md`](RECEITA-CLASSICO-VIVO.md) §3).
+**Fase 0 da receita geral: o Mapa da Obra.** Planejado e **aprovado pelo humano em 2026-11-21** (`✅`), seguindo o modelo de [`PLANO-DOM-QUIXOTE-VOLUME-2.md`](PLANO-DOM-QUIXOTE-VOLUME-2.md) e a receita geral ([`RECEITA-CLASSICO-VIVO.md`](RECEITA-CLASSICO-VIVO.md) §3).
 
-> **Situação: 🟡 Fase 0 proposta para leitura e aprovação do humano (🛑 parada obrigatória antes da Fase 1).**
+> **Situação: ✅ Fase 0 fechada. Parte 1 em produção (Fase 1–2).**
 > **Documentos desta obra**: [pesquisa com fontes](pesquisa/ROBIN-HOOD.md) · [receita específica](receitas/ROBIN-HOOD.md) · [diretrizes de escrita (1 página)](DIRETRIZES_ROBIN_HOOD.md) · [caderno da Parte 1](cadernos/robin-hood-parte-1.md).
-> **Isolamento**: nesta Fase 0 nenhum arquivo compartilhado (`index.html`, `acervo.js`, `livro.js`, `sw.js`) foi alterado e nenhuma API paga foi chamada.
 
 ---
 
-## 1. A divisão em quatro partes
+## 1. A divisão em cinco partes
 
-| Parte | Título (provisório) | Fonte principal (Howard Pyle, 1883) | Caps. nossos | Arco | Situação |
+| Parte | Título | Fonte principal (Howard Pyle, 1883) | Caps. nossos | Arco | Situação |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **1** | **O Bando do Grande Carvalho** | Prefácio + Caps. 1–3 (+ tradição de Sherwood / Marian?) | 1–8 | **O nascimento do bando**: a lei injusta, o encontro na ponte com João Pequeno, o torneio da flecha de ouro em Nottingham | 🟡 proposta na Fase 0 |
-| **2** | **O Disfarce do Açougueiro e o Frade do Rio** | Caps. 4–7, 11–13 | 9–17 | **Esperteza e amizade**: resgate de Will Stutely sem violência, Robin engana o Xerife na feira, João Pequeno cozinha no castelo, Frei Tuck e a canção de Alan-a-Dale | ⬜ aguardando P1 |
-| **3** | **O Cavaleiro Triste e a Flecha da Rainha** | Caps. 14–15, 18–19 (com o Abade da *Gest* / Pyle) | 18–25 | **Generosidade e coragem**: o empréstimo a Sir Ricardo, a palavra cumprida, a viagem a Londres e o torneio diante da Rainha Leonor | ⬜ aguardando |
-| **4** | **O Hóspede Encapuzado de Sherwood** | Caps. 20–21 (adaptados + final sereno) | 26–33 | **A paz na floresta**: a última armadilha do Xerife falha, um cavaleiro misterioso visita Sherwood, revela ser o Rei Ricardo e traz justiça e festa | ⬜ aguardando |
-
-- **Tamanho padrão**: cada parte tem capa + 8 a 9 capítulos (9 a 10 páginas), seguindo `DIRETRIZES_ROBIN_HOOD.md` §3.
+| **1** | **O Bando do Grande Carvalho** | Caps. 1, 3 + Grande Carvalho + Mariana | 1–9 | **O começo e o bando verde**: imposto desigual, prisão injusta do moleiro, roupas verdes, João Pequeno na ponte, 1º resgate/conflito com o Xerife e o torneio da flecha de ouro | 🟡 em rascunho (Fases 1–2) |
+| **2** | **O Resgate da Torre e o Açougueiro** | Caps. 4–7 | 10–18 | **Esperteza e solidariedade**: resgate de presos sem prova na torre (com pistas concretas), Robin engana o Xerife na feira e João Pequeno vira o castelo de ponta-cabeça na cozinha | ⬜ aguardando P1 |
+| **3** | **O Frade do Rio e a Canção da Floresta** | Caps. 8–13 | 19–27 | **O bando cresce e o povo se anima**: Gui Escarlate, Frei Tuco no riacho, a história musical de Alan do Vale e as aldeias perdendo o medo nas feiras | ⬜ aguardando |
+| **4** | **O Cavaleiro Triste e a Flecha da Rainha** | Caps. 14–15, 18–19 | 28–36 | **Generosidade e pressão social**: empréstimo a Dom Ricardo do Vale diante do Abade isento de impostos, o povo cobrando justiça e o torneio diante da Rainha Leonor | ⬜ aguardando |
+| **5** | **O Hóspede Encapuzado e as Novas Leis** | Caps. 20–21 (adaptados + final institucional) | 37–45 | **Provas, povo unido e novas leis**: última armadilha do Xerife desmontada por vestígios, chegada do Rei Ricardo encapuzado, imposto justo e criação de um corpo independente de peritos das provas | ⬜ aguardando |
 
 ---
 
 ## 2. Mapa dos episódios por parte
 
-Decisão de cada episódio de Howard Pyle (1883) / baladas: ✅ entra · 🔀 entra adaptado ou fundido · ✂️ fica de fora (com o motivo).
+Decisão de cada bloco: ✅ entra · 🔀 entra adaptado/fundido · ✂️ fica de fora (com motivo).
 
-### 2.1 Parte 1 — O Bando do Grande Carvalho (caps. 1–8)
+### 2.1 Parte 1 — O Bando do Grande Carvalho (caps. 1–9)
 | Fonte | Episódio | Decisão |
 | :--- | :--- | :--- |
-| Pyle cap. 1 (início) | O jovem Robin se torna fora-da-lei | 🔀 entra sem a morte do guarda: o Xerife toma as terras/colheitas com impostos injustos e quer prender quem ajuda um vizinho com fome; Robin foge para Sherwood e faz a promessa de partilha |
-| Tradição (Major Oak + Marian ❓) | O esconderijo no Grande Carvalho (e apresentação de Marian, se aprovada) | ✅ o Grande Carvalho vira o coração do acampamento; os amigos se juntam por solidariedade |
-| Pyle cap. 1 (fim) | A ponte estreita e o encontro com João Pequeno | ✅ duelo de bastões de madeira com humor: Robin cai no riacho, ri da própria queda e convida o gigante para o bando |
-| Pyle cap. 2 | Robin Hood e o funileiro (*Tinker*) | 🔀 / ❓ ou entra como encontro leve antes do torneio (o funileiro que tem um mandado sem saber com quem fala), ou dá lugar à história de um aldeão ajudado antes da feira |
-| Pyle cap. 3 | O grande torneio da flecha de ouro em Nottingham | ✅ clímax da Parte 1: Robin disfarçado de mendigo de capuz vermelho/enfaixado vence o concurso, divide a flecha partida ao meio no alvo e volta para Sherwood com o bando |
+| Pyle cap. 1 (início) + Leis da Floresta | Imposto desigual e fuga para Sherwood | 🔀 sem morte do guarda: o Xerife cobra a mesma quantia (2 sacos) de todos — para o barão de carroça cheia não é nada; para o moleiro (pai de Grilo), tira quase tudo. Ao reclamar, o moleiro é preso sem provas; Robin ajuda Grilo a fugir |
+| Folclore (Major Oak + Mariana) | O Grande Carvalho e as túnicas verdes | ✅ Robin, **Dama Mariana de Sherwood** e **Grilo** se unem no carvalho, escolhem **roupas verde-floresta** (para sumir entre as folhas) e o sinal da corneta (3 toques) |
+| Pyle cap. 1 (fim) | A ponte estreita e João Pequeno | ✅ duelo cômico de bastões; Robin cai no riacho, ri alto e **João Pequeno** entra para o bando vestindo o verde de Sherwood |
+| Adaptação (conflito prévio necessário) | A primeira ação do Bando Verde | ✅ o bando liberta o pai de Grilo sem violência e devolve a farinha; o Xerife só vê vultos verdes sumindo na mata e jura pegar **"esse bando de roupa verde!"** |
+| Pyle cap. 3 | O pregão da Flecha de Ouro e o torneio | ✅ furioso, o Xerife cria o torneio mandando vigiar roupas verdes; Mariana colhe a pista na feira; Robin vai de capuz vermelho, parte a flecha no centro do alvo e foge com o bando |
+| Gancho P1 → P2 | Banquete e nova prisão injusta | ✅ festa da partilha no carvalho; chega a notícia de que o Xerife trancou um amigo do bando (**Gui**) na torre sem prova nenhuma |
 
-### 2.2 Parte 2 — O Disfarce do Açougueiro e o Frade do Rio (caps. 9–17)
+### 2.2 Parte 2 — O Resgate da Torre e o Açougueiro (caps. 10–18)
 | Fonte | Episódio | Decisão |
 | :--- | :--- | :--- |
-| Pyle cap. 4 | O resgate de Will Stutely | 🔀 sem forca: Will é trancado na torre de Nottingham após espionar disfarçado; o bando usa corda, disfarce e distração para tirá-lo pela janela |
-| Pyle cap. 5 | Robin vira açougueiro (ou mercador da feira) | ✅ Robin vende barato demais na praça, atrai o Xerife com a conversa de "rebanhos" e leva o Xerife para jantar em Sherwood (pagando a conta do povo!) |
-| Pyle caps. 6–7 | João Pequeno vai à feira e trabalha na cozinha do Xerife | ✅ cenas hilárias de cozinha: João Pequeno com o cozinheiro e levando as panelas de prata/comida de volta para o bando |
-| Pyle cap. 8 / 9 / 10 | O curtidor de Blyth / Will Scarlet / Midge | 🔀 Will Scarlet e Midge entram como reforços rápidos do bando (sem excesso de brigas repetidas de bastão) |
-| Pyle caps. 11–13 | Allan a Dale e Frei Tuck (o frade do rio) | ✅ o desafio cômico de carregar o outro nas costas através do rio (Frei Tuck joga Robin na água!) e o casamento alegre de Allan a Dale abençoado pelo frade |
+| Pyle cap. 4 | O resgate na torre | 🔀 sem forca: bando usa corda, disfarce e pistas para libertar Gui e outros aldeões presos sem prova |
+| Pyle caps. 5–7 | Robin açougueiro e João Pequeno na cozinha | ✅ Robin atrai o Xerife com vendas baratas e o leva a Sherwood (onde ele devolve tributos); João Pequeno apronta na cozinha do castelo e traz panelas/comida ao povo |
 
-### 2.3 Parte 3 — O Cavaleiro Triste e a Flecha da Rainha (caps. 18–25)
+### 2.3 Parte 3 — O Frade do Rio e a Canção da Floresta (caps. 19–27)
 | Fonte | Episódio | Decisão |
 | :--- | :--- | :--- |
-| Pyle caps. 14–15 | Sir Ricardo do Vale e o Abade ganancioso | ✅ o cavaleiro triste não consegue pagar uma dívida injusta; Robin empresta o ouro; o Xerife/Abade tenta cobrar mais caro, acaba perdendo a aposta de jantar na floresta e Sir Ricardo quita tudo com honra |
-| Pyle caps. 16–17 | João Pequeno de frade / Robin de mendigo | ✂️ repetem disfarces já feitos nas Partes 1 e 2; saem para a Parte 3 manter foco e ritmo |
-| Pyle cap. 18 | O torneio diante da Rainha Leonor em Londres | ✅ a Rainha envia um pajem convidando Robin; a equipe (Robin, João Pequeno, Will Scarlet e Marian/Alan) compete contra os arqueiros reais num desafio de precisão e ganha o perdão da Rainha |
-| Pyle cap. 19 | A perseguição na volta para Sherwood | 🔀 perseguição de esperteza (pistas falsas e passagens secretas na floresta, sem violência) até chegarem salvos em casa |
+| Pyle caps. 8–10 | Novos amigos do bando | 🔀 apresentação ágil de **Gui Escarlate** (que traz o gosto por disfarces e provas) sem repetir duelos longos |
+| Pyle caps. 11–13 | Frei Tuco e Alan do Vale | ✅ disputa cômica de atravessar o riacho nas costas + a canção de Alan do Vale; as feiras começam a cantar sobre justiça |
 
-### 2.4 Parte 4 — O Hóspede Encapuzado de Sherwood (caps. 26–33)
+### 2.4 Parte 4 — O Cavaleiro Triste e a Flecha da Rainha (caps. 28–36)
 | Fonte | Episódio | Decisão |
 | :--- | :--- | :--- |
-| Pyle cap. 20 | Guy of Guisborne (a última armadilha do Xerife) | 🔀 adaptado sem morte: o caçador fanfarrão tenta capturar o bando com uma corda; acaba preso na própria armadilha/lama e volta correndo para Nottingham sem o prêmio |
-| Pyle cap. 21 | O Rei Ricardo visita Sherwood disfarçado | ✅ o clímax da obra: um cavaleiro alto de manto escuro pede abrigo; o bando o recebe com festa, compartilha comida e mostra quem são de verdade; o Rei tira o capuz, perdoa a todos e tira os poderes abusivos do Xerife |
-| Pyle cap. 22 (Epílogo) | A morte de Robin Hood em Kirklees | ✂️ corte obrigatório de proteção da infância (como o final de Dom Quixote): em vez de traição e morte, a obra fecha em **final sereno e alegre**, com o povo livre na feira de Nottingham e o Grande Carvalho guardado para sempre |
+| Pyle caps. 14–15 | Dom Ricardo do Vale e o Abade | ✅ contraste entre Dom Ricardo sufocado por dívidas e o Abade rico que não paga imposto; o bando ajuda Dom Ricardo e o povo passa a cobrar direitos em voz alta |
+| Pyle caps. 16–17 | Disfarces repetidos | ✂️ cortados para manter ritmo |
+| Pyle caps. 18–19 | O torneio diante da Rainha Leonor | ✅ convite real em Londres, disputa de precisão em equipe e fuga inteligente de volta a Sherwood |
+
+### 2.5 Parte 5 — O Hóspede Encapuzado e as Novas Leis (caps. 37–45)
+| Fonte | Episódio | Decisão |
+| :--- | :--- | :--- |
+| Pyle cap. 20 (adaptado) | A armadilha desmascarada por provas | 🔀 sem morte de Guy of Guisborne: o bando usa vestígios reais (pegadas, tinta, recibos) para provar diante do povo quem armou a emboscada |
+| Pyle cap. 21 + desfecho institucional | O Rei Ricardo e as novas leis | ✅ pressão social nas aldeias + Rei Ricardo disfarçado conhece a bondade do bando; no fim, cria-se o **imposto justo** (quem tem muito contribui mais) e um **corpo independente de investigadores das provas (peritos)** que não obedece ao Xerife e apura os fatos antes de condenar ninguém |
+| Pyle cap. 22 | Morte em Kirklees | ✂️ substituída por **final sereno e alegre** sob o Grande Carvalho |
 
 ---
 
-## 3. Fios (plantar e colher através das 4 partes)
+## 3. Fios (plantar e colher através das 5 partes)
 
 | Fio | Planta | Colhe |
 | :--- | :--- | :--- |
-| **A corneta de caça de Robin** ("três toques quando precisar de ajuda") | P1 (quando forma o bando) | P2 (resgate na torre) · P3 (perseguição) · P4 (chama todos diante do Rei) |
-| **O Grande Carvalho** (árvore-casa do bando) | P1 (o primeiro refúgio) | P2–P4 (ponto de chegada de todo resgate e festa final) |
-| **A flecha partida / de ouro** | P1 (o tiro no torneio) | P3 (lembrada pela Rainha Leonor ao convidá-lo) |
-| **As taxas injustas cobradas do povo** | P1 (a família que perde a farinha/moedas) | P2 (Xerife devolve no jantar) · P3 (Sir Ricardo recupera a terra) · P4 (Rei anula os impostos) |
-| **A promessa ao Rei ausente** ("quando o Rei Ricardo voltar, tudo muda") | P1 (comentado pelos aldeões) | P3 (a Rainha Leonor protege o bando) · P4 (o Rei chega disfarçado) |
-| **A colher / panela de prata e o riso do Xerife** | P2 (João Pequeno na cozinha) | P4 (lembrado na festa final como piada) |
+| **As roupas verde-floresta** | P1 cap. 2 (escolha do bando) | P1 cap. 5–7 (Xerife caça o verde) → P2–P5 (símbolo de esperança do povo) |
+| **O imposto desigual** (2 sacos que pesam diferente) | P1 cap. 1 (barão × moleiro) | P2 (Xerife devolve) · P4 (Abade isento) → **P5** (nova lei proporcional do Rei) |
+| **Prisões sem prova × olhar de perito** | P1 cap. 1 (moleiro preso sem prova) · cap. 9 (Gui preso) | P2 (resgate + primeiras pistas) → P4–P5 (provas desmascaram armação e nasce o **corpo independente de peritos**) |
+| **A corneta de Robin** (3 toques) | P1 cap. 2 | P2–P4 (resgates e avisos) · P5 (reúne todos diante do Rei) |
+| **O Grande Carvalho** | P1 cap. 2 | P1–P5 (abrigo, banquetes e festa final) |
+| **A flecha partida** | P1 cap. 8 | P4 (lembrada pela Rainha Leonor) |
+| **A esperança no Rei Ricardo** | P1 cap. 1 | P4 (Rainha) → P5 (o Rei chega encapuzado) |
 
 ---
 
-## 4. Proteção da infância (resumo das 4 partes)
+## 4. Direção visual e recursos (fechados em 2026-11-21)
 
-- **Fora**: morte do guarda florestal (cap. 1); forca de Will Stutely (cap. 4); morte de Guy of Guisborne (cap. 20); morte por traição de Robin em Kirklees (cap. 22); ataques violentos a viajantes sem motivo.
-- **No lugar**: a "tomada de ouro" é explicada sempre como **devolução de impostos cobrados a mais pelo Xerife**; as lutas de bastão são **brincadeiras de equilíbrio que terminam em banho de riacho e amizade**; os resgates são **fugas de esperteza**; a flecha é **pontaria em alvo de torneio**; o desfecho é **justiça e reconciliação**.
-
----
-
-## 5. Bíblia visual inicial (para a Fase 2 / Fase 4 futura)
-
-- **Estilo**: o mesmo de toda a coleção Clássicos Vivos — **aquarela e guache infantil luminoso com contornos suaves de lápis de cor**.
-- **Paleta dominante**: verdes de copa iluminada pelo sol da manhã (musgo, esmeralda, folha nova), dourado de outono e mel nos troncos e tochas, pedra cinza-clara no castelo de Nottingham, azul-riacho transparente.
-- **Referências**: assim que a Fase 0 for aprovada e avançarmos para a Fase 4 de cada parte, criar fichas de personagem isoladas em `robin-hood/biblioteca/referencias/personagens/` (Robin, João Pequeno, Xerife, Frei Tuck, etc.) antes de gerar as cenas.
-
----
-
-## 6. Decisões abertas para o humano (🛑 parada da Fase 0)
-
-Antes de escrever o texto da Parte 1, preciso da sua palavra sobre **4 pontos**:
-
-1. **Aprovação do arco em 4 partes** (§1–§2): a divisão (P1 Bando/Torneio → P2 Resgate/Cozinha/Tuck/Alan → P3 Sir Ricardo/Rainha → P4 Rei Ricardo/Final sereno) está no ritmo certo?
-2. **Lady Marian**: prefere **incluir** Lady Marian desde a Parte 1 (como licença folclórica, trazendo protagonismo feminino ao bando) ou seguir **só o elenco de Howard Pyle** (onde ela não aparece)?
-3. **Recurso visual da cena**: seguimos **só com cena única + camadas interativas** (sem a 2ª lente, já que aqui não há delírio como em Dom Quixote), ou você quer uma **"Lente do Disfarce"** opcional em algumas cenas (ex.: ver quem está por trás do capuz)?
-4. **Título da Parte 1** e nome do amigo do moleiro: *O Bando do Grande Carvalho* agrada? E prefere **Midge** (como Pyle) ou **Much** (como nas baladas)?
+- **Estilo artístico (Opção A)**: **Gouache estilizado de floresta** (inspirado em *Wolfwalkers* / Cartoon Saloon) — árvores geométricas expressivas, raios de sol dourados, traço suave de carvão/tinta.
+- **Diversidade**: elenco diverso desde a Parte 1 (**Dama Mariana de Sherwood** jovem negra, e diversidade nos personagens do bando e das aldeias), priorizando representatividade infantil (registrar também em `sobre.html`).
+- **Recurso visual (Opção 1)**: **cena única + camadas interativas** (sem 2ª lente).
+- **"Você sabia?"**: presente tanto no **Modo Tradicional** (botão discreto no fim do texto, para 5–8 anos — suporte no motor a ligar depois) quanto no **Modo Desafio 🧩** (8–10 anos).
