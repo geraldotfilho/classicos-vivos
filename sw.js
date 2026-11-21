@@ -113,7 +113,7 @@ const FILES = [
     ],
     [
         "./assets/js/offline-manager.js",
-        "799049a6"
+        "00ba8726"
     ],
     [
         "./assets/js/texto.js",
