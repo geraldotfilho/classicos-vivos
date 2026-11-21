@@ -5,7 +5,7 @@
 (function() {
     'use strict';
 
-    const VERSAO_ATUAL = 'bcfca5ff2cd6';
+    const VERSAO_ATUAL = 'fb6232871236';
     const PREFIXO_CACHE = 'cv-volume-quixote-';
     const PREFIXO_STORAGE = 'cv-offline-quixote-';
 
@@ -360,6 +360,7 @@
         "./dom-quixote/imagens/parte-6/p9-imag.webp",
         "./dom-quixote/imagens/parte-6/p9-real.webp",
         "./dom-quixote/parte-6.html",
+        "./dom-quixote/traducoes/parte-6.en.js",
         "./dom-quixote/desafios/parte-6.js"
     ],
     "7": [
