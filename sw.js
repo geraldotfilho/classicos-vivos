@@ -7,13 +7,17 @@
    - Páginas HTML e vozes.js: rede primeiro com limite de 2,5 s (se a rede estiver lenta, abre do cache na hora).
    - Narração gravada (*.mp3 e *.json): rede primeiro com limite de 2,5 s, cache próprio (cv-narracao).
    - Demais arquivos: cache primeiro (abre instantâneo no tablet). */
-const CACHE = 'classicos-vivos-fcfcb623fdaa';
+const CACHE = 'classicos-vivos-1a9bd6cf322c';
 const CACHE_AUDIO = 'cv-narracao';
 const CACHE_META = 'cv-meta';
 const FILES = [
     [
+        "./assets/icones/icone-192.png",
+        "bb91b0bf"
+    ],
+    [
         "./assets/css/desafios.css",
-        "1148a983"
+        "86bb8b96"
     ],
     [
         "./assets/css/fonts.css",
@@ -25,7 +29,7 @@ const FILES = [
     ],
     [
         "./assets/css/livro.css",
-        "f41f4b8d"
+        "2f6680da"
     ],
     [
         "./assets/css/tailwind.css",
@@ -69,87 +73,83 @@ const FILES = [
     ],
     [
         "./assets/icones/bandeiras/br.svg",
-        "e3994333"
+        "98fb53db"
     ],
     [
         "./assets/icones/bandeiras/es.svg",
-        "38e60176"
+        "9dfeedd4"
     ],
     [
         "./assets/icones/bandeiras/fr.svg",
-        "3823b101"
+        "4f0040f0"
     ],
     [
         "./assets/icones/bandeiras/gb.svg",
-        "b3a36204"
-    ],
-    [
-        "./assets/icones/icone-192.png",
-        "bb91b0bf"
+        "e33cb4ca"
     ],
     [
         "./assets/js/acervo.js",
-        "817be808"
+        "dd559f82"
     ],
     [
         "./assets/js/colaboracao.js",
-        "b0786a18"
+        "7a6f62d9"
     ],
     [
         "./assets/js/contador.js",
-        "b5ab47d3"
+        "a38fb806"
     ],
     [
         "./assets/js/desafios.js",
-        "e0f5e080"
+        "04bfa50c"
     ],
     [
         "./assets/js/i18n-site.js",
-        "7372a527"
+        "206de503"
     ],
     [
         "./assets/js/livro.js",
-        "0a192996"
+        "4cf9a9b7"
     ],
     [
         "./assets/js/offline-manager.js",
-        "818d486f"
+        "eab3b1b0"
     ],
     [
         "./assets/js/texto.js",
-        "829b8a1f"
+        "f1f450d5"
     ],
     [
         "./dom-quixote/desafios/parte-1.js",
-        "daacebed"
+        "9b5d7fba"
     ],
     [
         "./dom-quixote/desafios/parte-2.js",
-        "c1af6bc2"
+        "4b79e06d"
     ],
     [
         "./dom-quixote/desafios/parte-3.js",
-        "0cd62d5a"
+        "89220547"
     ],
     [
         "./dom-quixote/desafios/parte-4.js",
-        "113ee8fd"
+        "ad76ef8c"
     ],
     [
         "./dom-quixote/desafios/parte-5.js",
-        "864209f3"
+        "231df85d"
     ],
     [
         "./dom-quixote/desafios/parte-6.js",
-        "8e11adbd"
+        "b0084908"
     ],
     [
         "./dom-quixote/desafios/parte-7.js",
-        "f36edcc3"
+        "42b1cfee"
     ],
     [
         "./dom-quixote/desafios/parte-8.js",
-        "bb1d334d"
+        "f5e21c7e"
     ],
     [
         "./dom-quixote/imagens/camadas/p4-estalajadeiro-acenando.webp",
@@ -185,55 +185,55 @@ const FILES = [
     ],
     [
         "./dom-quixote/imagens/objetos/armadura-peitoral.svg",
-        "774598e7"
+        "e8a86c17"
     ],
     [
         "./dom-quixote/imagens/objetos/bacia-elmo.svg",
-        "7802ef22"
+        "fd88e9fc"
     ],
     [
         "./dom-quixote/imagens/objetos/cenoura.svg",
-        "30cdcce0"
+        "366b1965"
     ],
     [
         "./dom-quixote/imagens/objetos/escova.svg",
-        "4111052e"
+        "7fc4af11"
     ],
     [
         "./dom-quixote/imagens/objetos/escudo-panelao.svg",
-        "7b4f91d4"
+        "27a539ef"
     ],
     [
         "./dom-quixote/imagens/objetos/lanca-bandeirola.svg",
-        "20795593"
+        "9a0536ea"
     ],
     [
         "./dom-quixote/imagens/objetos/livro-castelos.svg",
-        "f7f451ae"
+        "3ad5be96"
     ],
     [
         "./dom-quixote/imagens/objetos/livro-cavaleiros.svg",
-        "0af820c9"
+        "81656112"
     ],
     [
         "./dom-quixote/imagens/objetos/livro-dragoes.svg",
-        "e69f36d2"
+        "e3b154af"
     ],
     [
         "./dom-quixote/imagens/objetos/maca.svg",
-        "cf3d670b"
+        "1d4387bd"
     ],
     [
         "./dom-quixote/imagens/objetos/sopa-banquete.svg",
-        "ae09842a"
+        "b4fbaad2"
     ],
     [
         "./dom-quixote/imagens/objetos/trombeta-flauta.svg",
-        "355584bb"
+        "2b4048be"
     ],
     [
         "./dom-quixote/imagens/objetos/vento-sopro.svg",
-        "8a662082"
+        "d0b4e11a"
     ],
     [
         "./dom-quixote/imagens/p0-imag.webp",
@@ -981,95 +981,195 @@ const FILES = [
     ],
     [
         "./dom-quixote/parte-1.html",
-        "cea80a60"
+        "c02bd04c"
     ],
     [
         "./dom-quixote/parte-2.html",
-        "da43e69b"
+        "fc9a6002"
     ],
     [
         "./dom-quixote/parte-3.html",
-        "a47dbf87"
+        "f8b85101"
     ],
     [
         "./dom-quixote/parte-4.html",
-        "b79aa9d0"
+        "22e74092"
     ],
     [
         "./dom-quixote/parte-5.html",
-        "4bfa3498"
+        "49dfed17"
     ],
     [
         "./dom-quixote/parte-6.html",
-        "04f64d44"
+        "137e36d8"
     ],
     [
         "./dom-quixote/parte-7.html",
-        "b8edfa5f"
+        "f2f04be8"
     ],
     [
         "./dom-quixote/parte-8.html",
-        "1f9fd5ac"
+        "4228154b"
     ],
     [
         "./dom-quixote/traducoes/parte-1.en.js",
-        "0389eecf"
+        "bd530027"
     ],
     [
         "./dom-quixote/traducoes/parte-1.es.js",
-        "66a206ed"
+        "dd9be3cb"
     ],
     [
         "./dom-quixote/traducoes/parte-1.fr.js",
-        "c00e77e8"
+        "4a89cf98"
     ],
     [
         "./dom-quixote/traducoes/parte-2.en.js",
-        "aa0d2392"
+        "8a2af6e8"
     ],
     [
         "./dom-quixote/traducoes/parte-2.es.js",
-        "509adbad"
+        "4923bc17"
     ],
     [
         "./dom-quixote/traducoes/parte-2.fr.js",
-        "57d808a9"
+        "6146171c"
     ],
     [
         "./dom-quixote/traducoes/parte-3.en.js",
-        "128b7c8e"
+        "3d75cebd"
     ],
     [
         "./dom-quixote/traducoes/parte-3.es.js",
-        "00e40a48"
+        "328db54f"
     ],
     [
         "./dom-quixote/traducoes/parte-3.fr.js",
-        "464b44fa"
+        "1318bf15"
     ],
     [
         "./dom-quixote/traducoes/parte-4.en.js",
-        "ac10f310"
+        "39ccc00d"
     ],
     [
         "./dom-quixote/traducoes/parte-4.es.js",
-        "47f386c2"
+        "49c1f611"
     ],
     [
         "./dom-quixote/traducoes/parte-4.fr.js",
-        "3caf9bbd"
+        "383db85a"
+    ],
+    [
+        "./dom-quixote/traducoes/parte-5.en.js",
+        "e3c9cbaf"
+    ],
+    [
+        "./dom-quixote/traducoes/parte-5.es.js",
+        "b8c1e977"
+    ],
+    [
+        "./dom-quixote/traducoes/parte-5.fr.js",
+        "21c89e56"
+    ],
+    [
+        "./dom-quixote/traducoes/parte-6.en.js",
+        "6044571a"
+    ],
+    [
+        "./dom-quixote/traducoes/parte-6.es.js",
+        "76b1eed3"
     ],
     [
         "./index.html",
-        "91662e16"
+        "2d563efc"
     ],
     [
         "./manifest.webmanifest",
-        "638d778e"
+        "0a3da84b"
+    ],
+    [
+        "./robin-hood/imagens/parte-1/camadas/p1-pergaminho.webp",
+        "b0299186"
+    ],
+    [
+        "./robin-hood/imagens/parte-1/camadas/p2-roda.webp",
+        "2ed60a47"
+    ],
+    [
+        "./robin-hood/imagens/parte-1/p0-real.webp",
+        "86b8f903"
+    ],
+    [
+        "./robin-hood/imagens/parte-1/p1-real.webp",
+        "53ea5194"
+    ],
+    [
+        "./robin-hood/imagens/parte-1/p2-real.webp",
+        "af3ec36b"
+    ],
+    [
+        "./robin-hood/imagens/parte-1/p3-real.webp",
+        "4b660514"
+    ],
+    [
+        "./robin-hood/imagens/parte-1/p4-real.webp",
+        "282eb247"
+    ],
+    [
+        "./robin-hood/imagens/parte-1/p4-stage-1.webp",
+        "e8d254dc"
+    ],
+    [
+        "./robin-hood/imagens/parte-1/p4-stage-2.webp",
+        "53360f70"
+    ],
+    [
+        "./robin-hood/imagens/parte-1/p4-stage-3.webp",
+        "a564af5f"
+    ],
+    [
+        "./robin-hood/imagens/parte-1/p5-real.webp",
+        "0bc6aedc"
+    ],
+    [
+        "./robin-hood/imagens/parte-1/p6-real.webp",
+        "db982ca2"
+    ],
+    [
+        "./robin-hood/imagens/parte-1/p6-stage-1.webp",
+        "c6cb42d9"
+    ],
+    [
+        "./robin-hood/imagens/parte-1/p6-stage-2.webp",
+        "83c9d2bd"
+    ],
+    [
+        "./robin-hood/imagens/parte-1/p6-stage-3.webp",
+        "77783cb2"
+    ],
+    [
+        "./robin-hood/imagens/parte-1/p6-stage-4.webp",
+        "97432e2f"
+    ],
+    [
+        "./robin-hood/imagens/parte-1/p7-real.webp",
+        "4c69b189"
+    ],
+    [
+        "./robin-hood/imagens/parte-1/p8-real.webp",
+        "80b65c04"
+    ],
+    [
+        "./robin-hood/imagens/parte-1/p9-real.webp",
+        "f61ad89f"
+    ],
+    [
+        "./robin-hood/parte-1.html",
+        "eb784b81"
     ],
     [
         "./sobre.html",
-        "cd10daa6"
+        "d86dd8d4"
     ]
 ];
 
