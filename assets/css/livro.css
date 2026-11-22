@@ -919,14 +919,14 @@ h1, h2, h3, h4, .font-display {
 /* Animações contínuas das camadas visíveis (especificidade 0,3,0 > .camada-entrou 0,2,0) */
 .camada.anim-balanco > .camada-arte, .camada.anim-balanco.sem-arte::after { animation: animBalanco 1.1s ease-in-out infinite; transform-origin: 50% 100%; }
 .camada.anim-flutuar > .camada-arte, .camada.anim-flutuar.sem-arte::after { animation: animFlutuar 3s ease-in-out infinite; }
-.camada.anim-girar > .camada-arte, .camada.anim-girar.sem-arte::after { animation: animGirar 3s linear infinite; transform-origin: 50% 50%; }
+.camada.anim-girar > .camada-arte, .camada.anim-girar.sem-arte::after { animation: animGirar 12s linear infinite; transform-origin: 50% 50%; }
 .camada.anim-pulsar > .camada-arte, .camada.anim-pulsar.sem-arte::after { animation: animPulsar 1.6s ease-in-out infinite; transform-origin: 50% 50%; }
 /* Martelos pendurados num eixo: sobem e batem (TAC-TAC), girando em torno do eixo, no alto da camada */
 .camada.anim-martelar > .camada-arte, .camada.anim-martelar.sem-arte::after { animation: animMartelar 0.9s ease-in infinite; transform-origin: 40% 6%; }
 @keyframes animBalanco { 0%, 100% { transform: rotate(-6deg); } 50% { transform: rotate(6deg) translateY(-4%); } }
 @keyframes animFlutuar { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6%); } }
 @keyframes animGirar { to { transform: rotate(360deg); } }
-@keyframes animPulsar { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.09); } }
+@keyframes animPulsar { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.06); } }
 @keyframes animMartelar { 0%, 100% { transform: rotate(0); } 55% { transform: rotate(-10deg); } 75% { transform: rotate(1.5deg); } }
 /* Animações disparadas por um cartão (uma vez por toque; especificidade 0,4,0 > .camada.anim-* 0,3,0) */
 .camada.camada-visivel.efeito-cambalhota > .camada-arte, .camada.camada-visivel.efeito-cambalhota.sem-arte::after { animation: efCambalhota 0.9s cubic-bezier(0.45, 0.05, 0.35, 1); transform-origin: 50% 60%; }

@@ -49,9 +49,6 @@
                     real: 'p0-real.webp', emoji: '🏹',
                     alt: 'Na clareira ensolarada do Grande Carvalho em Xervedo, Robin Hood, Lady Mariana, João Pequeno e Grilo partilham pães e maçãs',
                     legendaReal: '🌳 O Bando do Grande Carvalho',
-                    camadas: [
-                        { id: 'c-banquete-p0', src: 'camadas/p0-banquete.webp', x: 48.51, y: 71.83, w: 18.97, anim: 'pulsar', emoji: '🍎' }
-                    ],
                     hotspots: [
                         { x: 34, y: 4, w: 32, h: 30, palavra: 'FLORESTA', emoji: '🌳' },
                         { x: 20, y: 34, w: 58, h: 34, palavra: 'AMIGOS', emoji: '🤝' },
@@ -74,7 +71,7 @@
                     alt: 'No salão luxuoso do palácio de Nortigão, o Rei Ricardo entre almofadas aprova o papel do imposto apresentado pelo Xerife de manto roxo',
                     legendaReal: '👑 Um Banquete Real e uma Conta Simples Demais',
                     camadas: [
-                        { id: 'c-pergaminho', src: 'camadas/p1-pergaminho.webp', x: 61.5, y: 69, w: 14, anim: 'pulsar', emoji: '📜' }
+                        { id: 'c-pergaminho', src: 'camadas/p1-pergaminho.webp', x: 61.5, y: 69, w: 14, anim: 'flutuar', emoji: '📜' }
                     ],
                     hotspots: [
                         { x: 54, y: 43, w: 15, h: 27, palavra: 'IMPOSTO', emoji: '🪙' },
@@ -149,9 +146,6 @@
                     alt: 'Na borda da Floresta de Xervedo, Lady Mariana entrega roupas verde-folha, um capuz com pena vermelha e uma corneta dourada a Robin e Grilo',
                     legendaReal: '🍃 As Roupas Verdes e a Corneta de Três Sopros',
                     precarregar: ['p4-stage-1.webp', 'p4-stage-2.webp', 'p4-stage-3.webp'],
-                    camadas: [
-                        { id: 'c-embrulho-p4', src: 'camadas/p4-embrulho.webp', x: 66.5, y: 95.61, w: 25.0, anim: 'pulsar', quando: (st) => st.usados.size === 0, emoji: '📯' }
-                    ],
                     realCena: (st) => {
                         const n = st.usados.size;
                         if (n === 0) return null;
@@ -195,9 +189,6 @@
                     real: 'p5-real.webp', emoji: '🪵',
                     alt: 'Sobre uma ponte estreita de tronco em cima do Riacho Fundo, Robin Hood (de roupa verde) e um gigante de couro marrom e bastão comprido ficam frente a frente, enquanto Grilo (de verde) espia atrás da samambaia',
                     legendaReal: '🪵 Frente a Frente na Ponte do Riacho Fundo',
-                    camadas: [
-                        { id: 'c-riacho-p5', src: 'camadas/p5-riacho.webp', x: 46.98, y: 98.06, w: 38.01, anim: 'pulsar', emoji: '💧' }
-                    ],
                     hotspots: [
                         { x: 30, y: 74, w: 38, h: 24, palavra: 'RIACHO', emoji: '💧' },
                         { x: 26, y: 64, w: 48, h: 10, palavra: 'PONTE', emoji: '🪵' },
@@ -221,9 +212,6 @@
                     alt: 'Robin Hood sentado dentro da água rasa do riacho rindo muito, enquanto o gigante estende a mão sorrindo da ponte e Grilo (de roupa verde) espia alegre da margem',
                     legendaReal: '😂 Um Banho que Virou Amizade',
                     precarregar: ['p6-stage-1.webp', 'p6-stage-2.webp', 'p6-stage-3.webp', 'p6-stage-4.webp'],
-                    camadas: [
-                        { id: 'c-duelo-p6', src: 'camadas/p6-duelo.webp', x: 51.49, y: 71.83, w: 21.0, anim: 'pulsar', quando: (st) => st.usados.size === 0, emoji: '🦯' }
-                    ],
                     realCena: (st) => {
                         const n = st.usados.size;
                         if (n === 0) return null;
@@ -269,9 +257,6 @@
                     real: 'p7-real.webp', emoji: '🤝',
                     alt: 'Na margem do Riacho Fundo, João Pequeno conversa com Robin Hood e Grilo (ambos de roupa verde) e ergue o bastão decidindo entrar para o bando',
                     legendaReal: '🤝 O Nascimento de João Pequeno',
-                    camadas: [
-                        { id: 'c-bota-p7', src: 'camadas/p7-bota-agua.webp', x: 32.01, y: 92.12, w: 10.97, anim: 'pulsar', emoji: '💦' }
-                    ],
                     hotspots: [
                         { x: 38, y: 4, w: 22, h: 40, palavra: 'FORÇA', emoji: '💪' },
                         { x: 65, y: 36, w: 15, h: 36, palavra: 'APELIDO', emoji: '😄' },
@@ -294,9 +279,6 @@
                     real: 'p8-real.webp', emoji: '🌳',
                     alt: 'Debaixo do Grande Carvalho oco de Xervedo, Lady Mariana recebe Robin Hood, Grilo e João Pequeno (todos vestindo verde-folha) enquanto Robin risca na terra o plano do resgate',
                     legendaReal: '🌳 O Esconderijo do Grande Carvalho',
-                    camadas: [
-                        { id: 'c-plano-p8', src: 'camadas/p8-plano.webp', x: 57.01, y: 94.19, w: 22.02, anim: 'pulsar', emoji: '🗺️' }
-                    ],
                     hotspots: [
                         { x: 35, y: 4, w: 30, h: 30, palavra: 'CARVALHO', emoji: '🌳' },
                         { x: 50, y: 34, w: 14, h: 36, palavra: 'ESCONDERIJO', emoji: '🍃' },
@@ -320,9 +302,6 @@
                     alt: 'Nos fundos da cadeia de pedra ao entardecer, João Pequeno ergue Grilo até a janela alta para pegar a chave enquanto Robin desce os sacos de farinha por uma corda',
                     legendaReal: '🗝️ Um Resgate Sem Fazer Barulho!',
                     precarregar: ['p9-stage-1.webp', 'p9-stage-2.webp', 'p9-stage-3.webp'],
-                    camadas: [
-                        { id: 'c-sacos-p9', src: 'camadas/p9-sacos.webp', x: 87.5, y: 47.03, w: 21.95, anim: 'pulsar', quando: (st) => st.usados.size === 0, emoji: '🌾' }
-                    ],
                     realCena: (st) => {
                         const n = st.usados.size;
                         if (n === 0) return null;
@@ -369,9 +348,6 @@
                     real: 'p10-real.webp', emoji: '🏹',
                     alt: 'Na beira da Floresta de Xervedo, Robin Hood rebate o Xerife furioso enquanto João Pequeno, Lady Mariana, Grilo e Mestre Tomé devolvem os sacos de farinha às famílias',
                     legendaReal: '🏹 Devolver o Pão Tomado Não É Roubar!',
-                    camadas: [
-                        { id: 'c-xerife-p10', src: 'camadas/p10-xerife.webp', x: 67.99, y: 91.21, w: 19.99, anim: 'pulsar', emoji: '😠' }
-                    ],
                     hotspots: [
                         { x: 25, y: 24, w: 20, h: 20, palavra: 'FARINHA', emoji: '🍞' },
                         { x: 60, y: 46, w: 18, h: 44, palavra: 'XERIFE', emoji: '😠' },
@@ -394,9 +370,6 @@
                     real: 'p11-real.webp', emoji: '🍞',
                     alt: 'Debaixo do Grande Carvalho iluminado por lanternas, Mestre Tomé abraça Grilo diante do banquete de pães enquanto Lady Mariana mostra a Robin e João Pequeno o cartaz da Flecha de Ouro',
                     legendaReal: '🍞 Festa no Grande Carvalho e o Cartaz da Flecha de Ouro',
-                    camadas: [
-                        { id: 'c-cartaz-p11', src: 'camadas/p11-cartaz.webp', x: 80.23, y: 78.29, w: 10.47, anim: 'pulsar', emoji: '🏹' }
-                    ],
                     hotspots: [
                         { x: 36, y: 62, w: 26, h: 26, palavra: 'BANQUETE', emoji: '🍞' },
                         { x: 76, y: 54, w: 9, h: 24, palavra: 'FLECHA', emoji: '🏹' },

@@ -7,7 +7,7 @@
    - Páginas HTML e vozes.js: rede primeiro com limite de 2,5 s (se a rede estiver lenta, abre do cache na hora).
    - Narração gravada (*.mp3 e *.json): rede primeiro com limite de 2,5 s, cache próprio (cv-narracao).
    - Demais arquivos: cache primeiro (abre instantâneo no tablet). */
-const CACHE = 'classicos-vivos-6c00d30e8db4';
+const CACHE = 'classicos-vivos-c5caec5ccb5e';
 const CACHE_AUDIO = 'cv-narracao';
 const CACHE_META = 'cv-meta';
 const FILES = [
@@ -29,7 +29,7 @@ const FILES = [
     ],
     [
         "./assets/css/livro.css",
-        "dbd3e468"
+        "1c506e21"
     ],
     [
         "./assets/css/tailwind.css",
@@ -113,7 +113,7 @@ const FILES = [
     ],
     [
         "./assets/js/offline-manager.js",
-        "cbf7444c"
+        "d8549bae"
     ],
     [
         "./assets/js/texto.js",
@@ -1092,48 +1092,12 @@ const FILES = [
         "0a3da84b"
     ],
     [
-        "./robin-hood/imagens/parte-1/camadas/p0-banquete.webp",
-        "5f046461"
-    ],
-    [
         "./robin-hood/imagens/parte-1/camadas/p1-pergaminho.webp",
         "b0299186"
     ],
     [
-        "./robin-hood/imagens/parte-1/camadas/p10-xerife.webp",
-        "ea0fa4c3"
-    ],
-    [
-        "./robin-hood/imagens/parte-1/camadas/p11-cartaz.webp",
-        "185d3d2d"
-    ],
-    [
         "./robin-hood/imagens/parte-1/camadas/p2-roda.webp",
         "2ed60a47"
-    ],
-    [
-        "./robin-hood/imagens/parte-1/camadas/p4-embrulho.webp",
-        "b4cf2a3d"
-    ],
-    [
-        "./robin-hood/imagens/parte-1/camadas/p5-riacho.webp",
-        "6f535dca"
-    ],
-    [
-        "./robin-hood/imagens/parte-1/camadas/p6-duelo.webp",
-        "bc84d99b"
-    ],
-    [
-        "./robin-hood/imagens/parte-1/camadas/p7-bota-agua.webp",
-        "8bd611df"
-    ],
-    [
-        "./robin-hood/imagens/parte-1/camadas/p8-plano.webp",
-        "8d3efae9"
-    ],
-    [
-        "./robin-hood/imagens/parte-1/camadas/p9-sacos.webp",
-        "604ba625"
     ],
     [
         "./robin-hood/imagens/parte-1/p0-real.webp",
@@ -1225,7 +1189,7 @@ const FILES = [
     ],
     [
         "./robin-hood/parte-1.html",
-        "89ae352d"
+        "e95a4637"
     ],
     [
         "./sobre.html",
