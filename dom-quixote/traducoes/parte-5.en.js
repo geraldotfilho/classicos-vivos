@@ -31,7 +31,7 @@ To see whether his friend had really settled down, the priest said, as if it wer
 
 Just then, a great racket started at the front door. It was the housekeeper, with a {{BROOM|BROOM|🧹}} in her hand, blocking Sancho Panza’s way: “You’re not coming in here! You’re the one who drags Master Alonso off to the ends of the earth!” Sancho tried to get past on the right: broom. He tried on the left: broom. He tried underneath, and his tummy got stuck. “He’s the one who drags me!” he shouted, with the broom tickling his nose. “And he still owes me an island! A... a... ATISHOO!”
 
-“Let my good squire in!” called Don Quixote from inside. Sancho came in out of breath, with his eyes wide open: “Master, something very strange is happening! Today a traveller I’ve never seen in my life came down the street. He looked at me and said: ‘Good morning, Sancho Panza! How is your donkey?’ How did he know? And there’s more: I’ve just met Sansón Carrasco in the square. He laughed and said he knows the {{SECRET|SE • CRET|🔎}}!”`
+“Let my good squire in!” called Don Quixote from inside. Sancho came in out of breath, with his eyes wide open: “Master, something very strange is happening! Today a traveller I’ve never seen in my life came down the street. He looked at me and said: ‘Good morning, Sancho Panza! How is your donkey?’ ... How did he know? And there’s more: I’ve just met Sansón Carrasco in the square. He laughed and said he knows the {{SECRET|SE • CRET|🔎}}!”`
         },
         {   // página 2
             hash: '7331c5ebfd',

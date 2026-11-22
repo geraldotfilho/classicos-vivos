@@ -2267,20 +2267,12 @@
       "id": "p9-s12",
       "pagina": 9,
       "paragrafo": 2,
-      "texto": "« Moi ?",
-      "fala": "Moi ?",
-      "hash": "9d0d8e94ed"
+      "texto": "« Moi, jamais ! répondit le gardien, tout là-haut.",
+      "fala": "Moi, jamais ! répondit le gardien, tout là-haut.",
+      "hash": "253c976a13"
     },
     {
       "id": "p9-s13",
-      "pagina": 9,
-      "paragrafo": 2,
-      "texto": "Jamais ! répondit le gardien, tout là-haut.",
-      "fala": "Jamais ! répondit le gardien, tout là-haut.",
-      "hash": "954e3d444f"
-    },
-    {
-      "id": "p9-s14",
       "pagina": 9,
       "paragrafo": 2,
       "texto": "Un lion qui dort, on ne le réveille pas !",
@@ -2288,7 +2280,7 @@
       "hash": "ccac83750b"
     },
     {
-      "id": "p9-s15",
+      "id": "p9-s14",
       "pagina": 9,
       "paragrafo": 2,
       "texto": "Vous avez déjà montré que vous êtes courageux. »",
@@ -2296,7 +2288,7 @@
       "hash": "5216258ee5"
     },
     {
-      "id": "p9-s16",
+      "id": "p9-s15",
       "pagina": 9,
       "paragrafo": 2,
       "texto": "« Alors vous pouvez fermer la cage, dit Don Quichotte en soufflant.",
@@ -2304,7 +2296,7 @@
       "hash": "913069d8b3"
     },
     {
-      "id": "p9-s17",
+      "id": "p9-s16",
       "pagina": 9,
       "paragrafo": 2,
       "texto": "Il n’a pas voulu se battre.",
@@ -2312,7 +2304,7 @@
       "hash": "49e8b92304"
     },
     {
-      "id": "p9-s18",
+      "id": "p9-s17",
       "pagina": 9,
       "paragrafo": 2,
       "texto": "La victoire est à moi ! »",
@@ -2320,7 +2312,7 @@
       "hash": "a8335990c5"
     },
     {
-      "id": "p9-s19",
+      "id": "p9-s18",
       "pagina": 9,
       "paragrafo": 2,
       "texto": "Le gardien referma la porte en vitesse et promit de raconter au roi tout ce qu’il avait vu.",
@@ -2328,7 +2320,7 @@
       "hash": "4be9be6e75"
     },
     {
-      "id": "p9-s20",
+      "id": "p9-s19",
       "pagina": 9,
       "paragrafo": 3,
       "texto": "Sancho revint en courant, tâta son maître de la tête aux pieds et compta : « Deux bras, deux jambes, un nez...",
@@ -2336,7 +2328,7 @@
       "hash": "aa21a01483"
     },
     {
-      "id": "p9-s21",
+      "id": "p9-s20",
       "pagina": 9,
       "paragrafo": 3,
       "texto": "Il est en un seul morceau ! »",
@@ -2344,7 +2336,7 @@
       "hash": "e816759c25"
     },
     {
-      "id": "p9-s22",
+      "id": "p9-s21",
       "pagina": 9,
       "paragrafo": 3,
       "texto": "Et il le serra très fort dans ses bras.",
@@ -2352,7 +2344,7 @@
       "hash": "763a399f2b"
     },
     {
-      "id": "p9-s23",
+      "id": "p9-s22",
       "pagina": 9,
       "paragrafo": 3,
       "texto": "« À partir d’aujourd’hui, annonça le chevalier, je ne suis plus le Chevalier à la Triste Figure.",
@@ -2360,7 +2352,7 @@
       "hash": "159e49e2d3"
     },
     {
-      "id": "p9-s24",
+      "id": "p9-s23",
       "pagina": 9,
       "paragrafo": 3,
       "texto": "Je suis le Chevalier aux LIONS ! »",
@@ -2368,7 +2360,7 @@
       "hash": "9d5ab518db"
     },
     {
-      "id": "p9-s25",
+      "id": "p9-s24",
       "pagina": 9,
       "paragrafo": 4,
       "texto": "Don Diego s’approcha, encore tout pâle : « Vous avez eu beaucoup de chance, Don Quichotte.",
@@ -2376,7 +2368,7 @@
       "hash": "6c5654db3f"
     },
     {
-      "id": "p9-s26",
+      "id": "p9-s25",
       "pagina": 9,
       "paragrafo": 4,
       "texto": "Un lion, ce n’est pas un chaton ! »",
@@ -2384,7 +2376,7 @@
       "hash": "63f4eab588"
     },
     {
-      "id": "p9-s27",
+      "id": "p9-s26",
       "pagina": 9,
       "paragrafo": 4,
       "texto": "« Je sais, chuchota le chevalier avec un petit sourire gêné.",
@@ -2392,7 +2384,7 @@
       "hash": "4bc4988da9"
     },
     {
-      "id": "p9-s28",
+      "id": "p9-s27",
       "pagina": 9,
       "paragrafo": 4,
       "texto": "Je crois que j’ai un tout petit peu exagéré. »",
@@ -2400,7 +2392,7 @@
       "hash": "39247012fb"
     },
     {
-      "id": "p9-s29",
+      "id": "p9-s28",
       "pagina": 9,
       "paragrafo": 4,
       "texto": "Don Diego se mit à rire et les invita tous les deux à se reposer quelques jours chez lui.",
@@ -2408,7 +2400,7 @@
       "hash": "3d6e8266ba"
     },
     {
-      "id": "p9-s30",
+      "id": "p9-s29",
       "pagina": 9,
       "paragrafo": 4,
       "texto": "Sancho ne voulut savoir qu’une seule chose : « Il y a du fromage frais, là-bas ? »",

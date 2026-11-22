@@ -5,7 +5,7 @@
 (function() {
     'use strict';
 
-    const VERSAO_ATUAL = '1a9bd6cf322c';
+    const VERSAO_ATUAL = '8375ec7c4761';
     const PREFIXO_CACHE = 'cv-volume-quixote-';
     const PREFIXO_STORAGE = 'cv-offline-quixote-';
 
