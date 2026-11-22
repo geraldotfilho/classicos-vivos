@@ -1710,7 +1710,9 @@ function renderCamadas(i) {
         const visivel = camadaVisivel(i, camada);
         const estava = el.classList.contains('camada-visivel');
         el.classList.toggle('camada-visivel', visivel);
-        if (visivel && !estava) {
+        if (!visivel) {
+            el.classList.remove('camada-entrou');
+        } else if (!estava && !camada.anim) {
             el.classList.remove('camada-entrou');
             void el.offsetWidth;
             el.classList.add('camada-entrou');
