@@ -5,13 +5,12 @@ Plano: [`../PLANO-ROBIN-HOOD.md`](../PLANO-ROBIN-HOOD.md) · Receita: [`../recei
 
 | Fase | Situação | Data | Commit/PR | Gasto |
 | :--- | :--- | :--- | :--- | :--- |
-| 0 Mapa da Obra (plano, pesquisa, receita) | ✅ aprovado pelo humano | 2026-11-21 | `ef3117d` + ajustes | — |
-| 1 Adaptação e texto (escaleta ✋ + rascunho) | ✅ concluído | 2026-11-21 | branch `feat/robin-hood-parte-1-rascunho` | — |
-| 2 Interações e visual | ✅ concluído | 2026-11-21 | idem | — |
-| Crítica adversarial + polimento | ✅ concluído | 2026-11-21 | idem | — |
-| 3 Revisão humana 🛑 | 🟡 **pronto para leitura em família** | 2026-11-21 | Issue #68 resolvida | — |
-| 4 Ilustrações e atividades | ✅ **10/10 cenas WebP prontas** (7 nativo + 3 API Batch) | 2026-11-21 | branch `feat/robin-hood-parte-1-arte-api` | US$ 0,1036 |
-| 5 Revisão final 🛑 | ⬜ | | | — |
+| 0 Mapa da Obra (plano, pesquisa, receita) | ✅ aprovado pelo humano | 2026-11-21 | `ef3117d` + reengenharia | — |
+| 1 Adaptação e texto v2 (Jornada do Herói, 11 caps., Hydrogen + Opus 5.5) | ✅ concluído (Capa + 11 caps.) | 2026-11-22 | `09b22f8` | US$ 0,00 |
+| 2 Interações e visual v2 (Opção C — Diorama de Papel + Método Híbrido) | ✅ concluído | 2026-11-22 | `f5afd97` | US$ 0,00 |
+| 3 Revisão humana 🛑 | ✅ **Capa + Caps. 1–7 revisados com o humano; Caps. 8–11 prontos** | 2026-11-22 | Issues #69 a #74 endereçadas na nova arquitetura | — |
+| 4 Ilustrações e atividades v2 (Opção C — Diorama de Papel Recortado) | ✅ **22/22 gravuras + 2 camadas animadas WebP prontas** (100% no gerador nativo) | 2026-11-22 | `main` | US$ 0,00 |
+| 5 Revisão final 🛑 | 🟡 **pronto para leitura em família** | 2026-11-22 | | — |
 | 6 Narração (pt) + escuta 🛑 | ⬜ | | | US$ |
 | Publicação | ⬜ | | | — |
 | 7 Idiomas (en, fr, es) | ⬜ | | | US$ |
