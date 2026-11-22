@@ -356,20 +356,12 @@
       "id": "p2-s11",
       "pagina": 2,
       "paragrafo": 2,
-      "texto": "Entonces el cocinero tomó una cacerolita, la metió en la olla grande y sacó...",
-      "fala": "Entonces el cocinero tomó una cacerolita, la metió en la olla grande y sacó...",
-      "hash": "91f31201e5"
+      "texto": "Entonces el cocinero tomó una cacerolita, la metió en la olla grande y sacó... tres gallinas y dos gansos enteros, ¡nada menos!",
+      "fala": "Entonces el cocinero tomó una cacerolita, la metió en la olla grande y sacó... tres gallinas y dos gansos enteros, ¡nada menos!",
+      "hash": "5a087984b4"
     },
     {
       "id": "p2-s12",
-      "pagina": 2,
-      "paragrafo": 2,
-      "texto": "¡tres gallinas y dos gansos enteros!",
-      "fala": "¡tres gallinas y dos gansos enteros!",
-      "hash": "0ff1599d64"
-    },
-    {
-      "id": "p2-s13",
       "pagina": 2,
       "paragrafo": 2,
       "texto": "—Toma.",
@@ -377,7 +369,7 @@
       "hash": "e1a2555e7f"
     },
     {
-      "id": "p2-s14",
+      "id": "p2-s13",
       "pagina": 2,
       "paragrafo": 2,
       "texto": "Es solo la espuma, para engañar el hambre hasta la comida.",
@@ -385,7 +377,7 @@
       "hash": "732c3d2310"
     },
     {
-      "id": "p2-s15",
+      "id": "p2-s14",
       "pagina": 2,
       "paragrafo": 3,
       "texto": "Don Quijote miraba los bailes, encantado.",
@@ -393,7 +385,7 @@
       "hash": "3e6d536b15"
     },
     {
-      "id": "p2-s16",
+      "id": "p2-s15",
       "pagina": 2,
       "paragrafo": 3,
       "texto": "Sancho miraba las gallinas, más encantado todavía.",
@@ -401,7 +393,7 @@
       "hash": "3b6d8be28b"
     },
     {
-      "id": "p2-s17",
+      "id": "p2-s16",
       "pagina": 2,
       "paragrafo": 3,
       "texto": "—¡Viva el novio Camacho! —gritaba, con la boca llena—.",
@@ -409,7 +401,7 @@
       "hash": "4a25381a4b"
     },
     {
-      "id": "p2-s18",
+      "id": "p2-s17",
       "pagina": 2,
       "paragrafo": 3,
       "texto": "¡Qué boda tan bonita!",
@@ -417,7 +409,7 @@
       "hash": "14c6021207"
     },
     {
-      "id": "p2-s19",
+      "id": "p2-s18",
       "pagina": 2,
       "paragrafo": 3,
       "texto": "—Sancho, si ni siquiera has visto a la novia —dijo don Quijote.",
@@ -425,7 +417,7 @@
       "hash": "e0854327a7"
     },
     {
-      "id": "p2-s20",
+      "id": "p2-s19",
       "pagina": 2,
       "paragrafo": 3,
       "texto": "—A la novia no la he visto, mi amo, pero he visto la olla.",
@@ -433,7 +425,7 @@
       "hash": "525e6c2d47"
     },
     {
-      "id": "p2-s21",
+      "id": "p2-s20",
       "pagina": 2,
       "paragrafo": 3,
       "texto": "¡Y me ha gustado mucho!",
@@ -441,7 +433,7 @@
       "hash": "094171ba7b"
     },
     {
-      "id": "p2-s22",
+      "id": "p2-s21",
       "pagina": 2,
       "paragrafo": 4,
       "texto": "Fue en la fiesta donde los dos conocieron a un estudiante flaco, con gafas y un montón de papeles debajo del brazo.",
@@ -449,7 +441,7 @@
       "hash": "1e6e3e80b4"
     },
     {
-      "id": "p2-s23",
+      "id": "p2-s22",
       "pagina": 2,
       "paragrafo": 4,
       "texto": "Todos lo llamaban el Primo, porque era primo de media aldea.",
@@ -457,7 +449,7 @@
       "hash": "d6eee104d3"
     },
     {
-      "id": "p2-s24",
+      "id": "p2-s23",
       "pagina": 2,
       "paragrafo": 4,
       "texto": "El Primo estaba escribiendo un libro importantísimo: quería descubrir quién fue la primera persona del mundo que se resfrió.",
@@ -465,7 +457,7 @@
       "hash": "9d6d6ab8a7"
     },
     {
-      "id": "p2-s25",
+      "id": "p2-s24",
       "pagina": 2,
       "paragrafo": 4,
       "texto": "—Esa la sé yo —dijo Sancho—.",
@@ -473,7 +465,7 @@
       "hash": "05e1042bb8"
     },
     {
-      "id": "p2-s26",
+      "id": "p2-s25",
       "pagina": 2,
       "paragrafo": 4,
       "texto": "Fue la primera que salió a la lluvia sin sombrero.",
@@ -481,7 +473,7 @@
       "hash": "861f017e81"
     },
     {
-      "id": "p2-s27",
+      "id": "p2-s26",
       "pagina": 2,
       "paragrafo": 4,
       "texto": "El Primo lo apuntó, muy serio.",
@@ -489,7 +481,7 @@
       "hash": "af312147eb"
     },
     {
-      "id": "p2-s28",
+      "id": "p2-s27",
       "pagina": 2,
       "paragrafo": 4,
       "texto": "Don Quijote le contó que iba a la cueva de Montesinos, y el Primo dio un salto: —¡Una cueva encantada!",
@@ -497,7 +489,7 @@
       "hash": "5dc97dc05e"
     },
     {
-      "id": "p2-s29",
+      "id": "p2-s28",
       "pagina": 2,
       "paragrafo": 4,
       "texto": "¡Va a quedar preciosa en mi libro!",
@@ -505,7 +497,7 @@
       "hash": "a3e6017fce"
     },
     {
-      "id": "p2-s30",
+      "id": "p2-s29",
       "pagina": 2,
       "paragrafo": 4,
       "texto": "Yo conozco el camino.",
@@ -513,7 +505,7 @@
       "hash": "6a3363c5e4"
     },
     {
-      "id": "p2-s31",
+      "id": "p2-s30",
       "pagina": 2,
       "paragrafo": 4,
       "texto": "¡Y tengo una CUERDA muy larga!",
@@ -2082,20 +2074,12 @@
       "id": "p8-s18",
       "pagina": 8,
       "paragrafo": 2,
-      "texto": "Y esa voz...",
-      "fala": "Y esa voz...",
-      "hash": "f1d53c4177"
+      "texto": "Y esa voz, ¿dónde he oído yo esa voz?",
+      "fala": "Y esa voz, ¿dónde he oído yo esa voz?",
+      "hash": "34d4e74466"
     },
     {
       "id": "p8-s19",
-      "pagina": 8,
-      "paragrafo": 2,
-      "texto": "¿dónde he oído yo esa voz?",
-      "fala": "¿dónde he oído yo esa voz?",
-      "hash": "1da9fa0174"
-    },
-    {
-      "id": "p8-s20",
       "pagina": 8,
       "paragrafo": 3,
       "texto": "Don Quijote ni lo escuchó: ya tenía la mano en el pecho.",
@@ -2103,7 +2087,7 @@
       "hash": "c3dcfb162a"
     },
     {
-      "id": "p8-s21",
+      "id": "p8-s20",
       "pagina": 8,
       "paragrafo": 3,
       "texto": "—¡Decid lo que debo hacer, señoras!",
@@ -2111,7 +2095,7 @@
       "hash": "871f0e6be0"
     },
     {
-      "id": "p8-s22",
+      "id": "p8-s21",
       "pagina": 8,
       "paragrafo": 3,
       "texto": "—El gigante vive en el reino de Candaya, al otro lado del mundo —explicó la condesa—.",
@@ -2119,7 +2103,7 @@
       "hash": "69088b8bc8"
     },
     {
-      "id": "p8-s23",
+      "id": "p8-s22",
       "pagina": 8,
       "paragrafo": 3,
       "texto": "Solo hay una manera de llegar: volando en CLAVILEÑO, un caballo de madera que se guía con una clavija en la frente.",
@@ -2127,7 +2111,7 @@
       "hash": "35f621b848"
     },
     {
-      "id": "p8-s24",
+      "id": "p8-s23",
       "pagina": 8,
       "paragrafo": 3,
       "texto": "Irán los dos, el caballero y el escudero, con los ojos vendados.",
@@ -2135,7 +2119,7 @@
       "hash": "0a1c529ccf"
     },
     {
-      "id": "p8-s25",
+      "id": "p8-s24",
       "pagina": 8,
       "paragrafo": 3,
       "texto": "¡Cuando lleguen, se nos caerán las barbas!",
@@ -2143,7 +2127,7 @@
       "hash": "827fba954f"
     },
     {
-      "id": "p8-s26",
+      "id": "p8-s25",
       "pagina": 8,
       "paragrafo": 4,
       "texto": "—¿Los dos?",
@@ -2151,7 +2135,7 @@
       "hash": "82bff85d3b"
     },
     {
-      "id": "p8-s27",
+      "id": "p8-s26",
       "pagina": 8,
       "paragrafo": 4,
       "texto": "—Sancho casi se atraganta—.",
@@ -2159,7 +2143,7 @@
       "hash": "bcb64f6dfb"
     },
     {
-      "id": "p8-s28",
+      "id": "p8-s27",
       "pagina": 8,
       "paragrafo": 4,
       "texto": "¡Yo no soy un pajarito!",
@@ -2167,7 +2151,7 @@
       "hash": "60460919f2"
     },
     {
-      "id": "p8-s29",
+      "id": "p8-s28",
       "pagina": 8,
       "paragrafo": 4,
       "texto": "¿Y qué tengo yo que ver con las barbas de los demás?",
@@ -2175,7 +2159,7 @@
       "hash": "a8f5eb8c39"
     },
     {
-      "id": "p8-s30",
+      "id": "p8-s29",
       "pagina": 8,
       "paragrafo": 4,
       "texto": "Las doce damas se pusieron a llorar muy fuerte y a secarse las lágrimas con las barbas.",
@@ -2183,7 +2167,7 @@
       "hash": "33ce8bc20b"
     },
     {
-      "id": "p8-s31",
+      "id": "p8-s30",
       "pagina": 8,
       "paragrafo": 4,
       "texto": "Sancho se tapó los oídos: —¡Está bien, está bien, iré!",
@@ -2191,7 +2175,7 @@
       "hash": "eb912ef7bb"
     },
     {
-      "id": "p8-s32",
+      "id": "p8-s31",
       "pagina": 8,
       "paragrafo": 4,
       "texto": "Pero, si me caigo desde allá arriba, ¡a ver quién gobierna mi isla!",
@@ -2199,7 +2183,7 @@
       "hash": "a72d37c41c"
     },
     {
-      "id": "p8-s33",
+      "id": "p8-s32",
       "pagina": 8,
       "paragrafo": 4,
       "texto": "El duque le guiñó un ojo a la duquesa.",
@@ -2207,7 +2191,7 @@
       "hash": "7c19b948f9"
     },
     {
-      "id": "p8-s34",
+      "id": "p8-s33",
       "pagina": 8,
       "paragrafo": 4,
       "texto": "Aquella noche, cuatro hombres cubiertos de hojas trajeron al jardín un caballo enorme, todo de madera.",

@@ -39,7 +39,7 @@ Doña Cristina llenó la alforja de Sancho hasta que no cupo nada más. Don Dieg
 
 Sancho nunca había visto tanta comida junta. Había un buey entero asándose, ollas del tamaño de bañeras, quesos apilados como ladrillos y un muro de panes. Se acercó a un cocinero y le habló con la voz más educada del mundo: —Buen señor, ¿puedo mojar un pedacito de pan en esa {{OLLA|O • LLA|🍲}}?
 
-El cocinero se rio: —¡Hoy nadie pasa hambre, amigo! Coge un cucharón y saca la espuma de la olla. Sancho buscó un cucharón y no lo encontró. Entonces el cocinero tomó una cacerolita, la metió en la olla grande y sacó... ¡tres gallinas y dos gansos enteros! —Toma. Es solo la espuma, para engañar el hambre hasta la comida.
+El cocinero se rio: —¡Hoy nadie pasa hambre, amigo! Coge un cucharón y saca la espuma de la olla. Sancho buscó un cucharón y no lo encontró. Entonces el cocinero tomó una cacerolita, la metió en la olla grande y sacó... tres gallinas y dos gansos enteros, ¡nada menos! —Toma. Es solo la espuma, para engañar el hambre hasta la comida.
 
 Don Quijote miraba los bailes, encantado. Sancho miraba las gallinas, más encantado todavía. —¡Viva el novio Camacho! —gritaba, con la boca llena—. ¡Qué boda tan bonita! —Sancho, si ni siquiera has visto a la novia —dijo don Quijote. —A la novia no la he visto, mi amo, pero he visto la olla. ¡Y me ha gustado mucho!
 
@@ -145,7 +145,7 @@ El duque y la duquesa llevaron a los dos al {{PALACIO|PA • LA • CIO|🏰}}. 
 
 La {{CONDESA|CON • DE • SA|👒}} entró despacio, con un velo en la cara y un vestido con una cola de tela tan larga que tres niños le sujetaban las puntas. Detrás de ella venían doce damas, también con velo. —Señor caballero —dijo la condesa, con una voz grave, muy rara—, un gigante malvado, llamado Malambruno, nos ha echado un hechizo terrible. ¡Mirad!
 
-Las trece se levantaron el velo a la vez. ¡Todas tenían {{BARBA|BAR • BA|🧔}}! Barbas rubias, negras, pelirrojas, y una blanquita como el algodón. Sancho dio un paso atrás: —¡Madre mía! ¿Quién las afeita? ¡Maese Nicolás se haría rico! Después miró mejor y susurró: —Mi amo, la condesa lleva botas de hombre. Y esa voz... ¿dónde he oído yo esa voz?
+Las trece se levantaron el velo a la vez. ¡Todas tenían {{BARBA|BAR • BA|🧔}}! Barbas rubias, negras, pelirrojas, y una blanquita como el algodón. Sancho dio un paso atrás: —¡Madre mía! ¿Quién las afeita? ¡Maese Nicolás se haría rico! Después miró mejor y susurró: —Mi amo, la condesa lleva botas de hombre. Y esa voz, ¿dónde he oído yo esa voz?
 
 Don Quijote ni lo escuchó: ya tenía la mano en el pecho. —¡Decid lo que debo hacer, señoras! —El gigante vive en el reino de Candaya, al otro lado del mundo —explicó la condesa—. Solo hay una manera de llegar: volando en {{CLAVILEÑO|CLA • VI • LE • ÑO|🐴}}, un caballo de madera que se guía con una clavija en la frente. Irán los dos, el caballero y el escudero, con los ojos vendados. ¡Cuando lleguen, se nos caerán las barbas!
 
