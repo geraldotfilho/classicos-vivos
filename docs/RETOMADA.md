@@ -53,7 +53,7 @@
 > | :--- | :--- | :--- | :--- | :--- |
 > | 5 | O Livro Famoso e o Cavaleiro dos Leões | 34–42 | Publicada (PT + narração gravada; faltam traduções) | [`cadernos/dom-quixote-parte-5.md`](cadernos/dom-quixote-parte-5.md) |
 > | 6 | O Teatrinho, o Barco e o Cavalo Voador | 43–51 | Publicada (PT + narração gravada; faltam traduções) | [`cadernos/dom-quixote-parte-6.md`](cadernos/dom-quixote-parte-6.md) |
-> | 7 | Sancho, Governador da Ilha | 52–61 | Publicada na estante (18 WebPs; PT + narração gravada; aguardando leitura/notas pelo app, narração e traduções) | [`cadernos/dom-quixote-parte-7.md`](cadernos/dom-quixote-parte-7.md) |
+> | 7 | Sancho, Governador da Ilha | 52–61 | Publicada na estante (18 WebPs; PT + narração gravada; aguardando leitura/notas pelo app e traduções) | [`cadernos/dom-quixote-parte-7.md`](cadernos/dom-quixote-parte-7.md) |
 > | 8 | O Cavaleiro da Branca Lua | 62–71 | Publicada na estante (17 WebPs; PT, narração em prévia nas págs. 0–6; aguardando leitura/notas pelo app, narração e traduções) | [`cadernos/dom-quixote-parte-8.md`](cadernos/dom-quixote-parte-8.md) |
 >
 > **Entrega**: sempre na `main`, por merge, ao fim de cada entrega (`AGENTS.md` §0.4): é pelo site que o humano lê.
