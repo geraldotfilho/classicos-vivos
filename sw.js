@@ -7,7 +7,7 @@
    - Páginas HTML e vozes.js: rede primeiro com limite de 2,5 s (se a rede estiver lenta, abre do cache na hora).
    - Narração gravada (*.mp3 e *.json): rede primeiro com limite de 2,5 s, cache próprio (cv-narracao).
    - Demais arquivos: cache primeiro (abre instantâneo no tablet). */
-const CACHE = 'classicos-vivos-507909774646';
+const CACHE = 'classicos-vivos-1a9bd6cf322c';
 const CACHE_AUDIO = 'cv-narracao';
 const CACHE_META = 'cv-meta';
 const FILES = [
@@ -113,7 +113,7 @@ const FILES = [
     ],
     [
         "./assets/js/offline-manager.js",
-        "59398a23"
+        "eab3b1b0"
     ],
     [
         "./assets/js/texto.js",
@@ -1113,19 +1113,47 @@ const FILES = [
     ],
     [
         "./robin-hood/imagens/parte-1/p4-real.webp",
-        "5d9e1762"
+        "282eb247"
+    ],
+    [
+        "./robin-hood/imagens/parte-1/p4-stage-1.webp",
+        "e8d254dc"
+    ],
+    [
+        "./robin-hood/imagens/parte-1/p4-stage-2.webp",
+        "53360f70"
+    ],
+    [
+        "./robin-hood/imagens/parte-1/p4-stage-3.webp",
+        "a564af5f"
     ],
     [
         "./robin-hood/imagens/parte-1/p5-real.webp",
-        "953278cc"
+        "0bc6aedc"
     ],
     [
         "./robin-hood/imagens/parte-1/p6-real.webp",
-        "6b501f05"
+        "db982ca2"
+    ],
+    [
+        "./robin-hood/imagens/parte-1/p6-stage-1.webp",
+        "c6cb42d9"
+    ],
+    [
+        "./robin-hood/imagens/parte-1/p6-stage-2.webp",
+        "83c9d2bd"
+    ],
+    [
+        "./robin-hood/imagens/parte-1/p6-stage-3.webp",
+        "77783cb2"
+    ],
+    [
+        "./robin-hood/imagens/parte-1/p6-stage-4.webp",
+        "97432e2f"
     ],
     [
         "./robin-hood/imagens/parte-1/p7-real.webp",
-        "e644d42e"
+        "4c69b189"
     ],
     [
         "./robin-hood/imagens/parte-1/p8-real.webp",
@@ -1137,7 +1165,7 @@ const FILES = [
     ],
     [
         "./robin-hood/parte-1.html",
-        "a9c5f3c3"
+        "eb784b81"
     ],
     [
         "./sobre.html",

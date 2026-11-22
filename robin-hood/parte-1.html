@@ -145,10 +145,23 @@
                     real: 'p4-real.webp', emoji: '🍃',
                     alt: 'Na borda da Floresta de Xervedo, Lady Mariana entrega roupas verde-folha, um capuz com pena vermelha e uma corneta dourada a Robin e Grilo',
                     legendaReal: '🍃 As Roupas Verdes e a Corneta de Três Sopros',
-                    camadas: [
-                        { id: 'c-verde', emoji: '🍃', item: 'verde', x: 34, y: 66, w: 12 },
-                        { id: 'c-capuz', emoji: '🧢', item: 'capuz', x: 52, y: 40, w: 12 },
-                        { id: 'c-corneta', emoji: '📯', item: 'corneta', x: 68, y: 62, w: 12 }
+                    precarregar: ['p4-stage-1.webp', 'p4-stage-2.webp', 'p4-stage-3.webp'],
+                    realCena: (st) => {
+                        const n = st.usados.size;
+                        if (n === 0) return null;
+                        const etapas = [null, 'p4-stage-1.webp', 'p4-stage-2.webp', 'p4-stage-3.webp'];
+                        const legendas = [
+                            null,
+                            '🍃 Roupas Verdes! Agora falta o capuz...',
+                            '🧢 Capuz com Pena Vermelha! Só falta a corneta!',
+                            '📯 Camuflados na Mata! Os guardas nem enxergaram!'
+                        ];
+                        return { src: etapas[n], legenda: legendas[n] };
+                    },
+                    hotspots: [
+                        { x: 56, y: 80, w: 21, h: 12, palavra: 'VERDE', emoji: '🍃' },
+                        { x: 58, y: 58, w: 14, h: 12, palavra: 'CAPUZ', emoji: '🧢' },
+                        { x: 64, y: 70, w: 13, h: 10, palavra: 'CORNETA', emoji: '📯' }
                     ],
                     cartoes: {
                         tipo: 'ordem',
@@ -175,7 +188,12 @@
                 cena: {
                     real: 'p5-real.webp', emoji: '🪵',
                     alt: 'Sobre uma ponte estreita de tronco em cima do Riacho Fundo, Robin Hood (de roupa verde) e um gigante de couro marrom e bastão comprido ficam frente a frente, enquanto Grilo (de verde) espia atrás da samambaia',
-                    legendaReal: '🪵 Frente a Frente na Ponte do Riacho Fundo'
+                    legendaReal: '🪵 Frente a Frente na Ponte do Riacho Fundo',
+                    hotspots: [
+                        { x: 30, y: 74, w: 38, h: 24, palavra: 'RIACHO', emoji: '💧' },
+                        { x: 26, y: 64, w: 48, h: 10, palavra: 'PONTE', emoji: '🪵' },
+                        { x: 58, y: 14, w: 12, h: 48, palavra: 'BASTÃO', emoji: '🦯' }
+                    ]
                 }
             },
             {
@@ -193,11 +211,24 @@
                     real: 'p6-real.webp', emoji: '😂',
                     alt: 'Robin Hood sentado dentro da água rasa do riacho rindo muito, enquanto o gigante estende a mão sorrindo da ponte e Grilo (de roupa verde) espia alegre da margem',
                     legendaReal: '😂 Um Banho que Virou Amizade',
-                    camadas: [
-                        { id: 'c-ponte', emoji: '🪵', item: 'ponte', x: 22, y: 78, w: 12 },
-                        { id: 'c-tombo', emoji: '💦', item: 'tombo', x: 42, y: 78, w: 12 },
-                        { id: 'c-risada', emoji: '😂', item: 'risada', x: 60, y: 78, w: 12 },
-                        { id: 'c-amigo', emoji: '🤝', item: 'amigo', x: 78, y: 78, w: 12 }
+                    precarregar: ['p6-stage-1.webp', 'p6-stage-2.webp', 'p6-stage-3.webp', 'p6-stage-4.webp'],
+                    realCena: (st) => {
+                        const n = st.usados.size;
+                        if (n === 0) return null;
+                        const etapas = [null, 'p6-stage-1.webp', 'p6-stage-2.webp', 'p6-stage-3.webp', 'p6-stage-4.webp'];
+                        const legendas = [
+                            null,
+                            '🪵 Escorregão no Musgo da Ponte!',
+                            '💦 Plof! Um Banho Frio no Riacho!',
+                            '😂 Gargalhada que Espantou os Passarinhos!',
+                            '🤝 Uma Mão Estendida e um Novo Amigo!'
+                        ];
+                        return { src: etapas[n], legenda: legendas[n] };
+                    },
+                    hotspots: [
+                        { x: 28, y: 66, w: 38, h: 18, palavra: 'TOMBO', emoji: '💦' },
+                        { x: 34, y: 26, w: 14, h: 20, palavra: 'RISADA', emoji: '😂' },
+                        { x: 50, y: 18, w: 18, h: 40, palavra: 'AMIGO', emoji: '🤝' }
                     ],
                     cartoes: {
                         tipo: 'ordem',
@@ -225,7 +256,12 @@
                 cena: {
                     real: 'p7-real.webp', emoji: '🤝',
                     alt: 'Na margem do Riacho Fundo, João Pequeno conversa com Robin Hood e Grilo (ambos de roupa verde) e ergue o bastão decidindo entrar para o bando',
-                    legendaReal: '🤝 O Nascimento de João Pequeno'
+                    legendaReal: '🤝 O Nascimento de João Pequeno',
+                    hotspots: [
+                        { x: 38, y: 4, w: 22, h: 40, palavra: 'FORÇA', emoji: '💪' },
+                        { x: 65, y: 36, w: 15, h: 36, palavra: 'APELIDO', emoji: '😄' },
+                        { x: 16, y: 36, w: 20, h: 52, palavra: 'BANDO', emoji: '🏹' }
+                    ]
                 }
             },
             {
