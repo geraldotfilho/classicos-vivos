@@ -114,14 +114,14 @@ Sancho’s tummy rumbled so loudly that the priest looked up at the clouds: “W
 When the food was ready, Don Quixote took off his basin-helmet and shared the first piece of bread with his squire: “Do you remember the goatherds, Sancho, who shared their supper with us beneath the stars? Bread shared with friends tastes sweeter than a king’s banquet!” And Sancho, with his cheeks stuffed full, could only mumble: “Mmm-hmm!”`,
             cartoes: {
                 tipo: 'pedido',
-                pedidos: ['bread', 'cheese', 'water'],
+                pedidos: ['pao', 'queijo', 'agua'],
                 itens: [
                     { id: 'thread', palavra: 'THREAD', emoji: '🧵', pegadinha: "Thread? Thread is for sewing, not for eating! The spool rolled across the blanket and made a mess. Let's try again!" },
-                    { id: 'cheese', palavra: 'CHEESE', emoji: '🧀', figura: 'camadas/p5-queijo.webp' },
+                    { id: 'queijo', palavra: 'CHEESE', emoji: '🧀', figura: 'camadas/p5-queijo.webp' },
                     { id: 'bees', palavra: 'BEES', emoji: '🐝', pegadinha: "Bees? Bzzzz! A buzzy bee flew over the picnic and made everyone jump! Let's try again!" },
-                    { id: 'bread', palavra: 'BREAD', emoji: '🥖', figura: 'camadas/p5-pao.webp' },
+                    { id: 'pao', palavra: 'BREAD', emoji: '🥖', figura: 'camadas/p5-pao.webp' },
                     { id: 'chin', palavra: 'CHIN', emoji: '🧔', pegadinha: "Chin? You can't eat your chin! Sancho laughed so hard his hat fell off. Let's try again!" },
-                    { id: 'water', palavra: 'WATER', emoji: '🏺', figura: 'camadas/p5-agua.webp' }
+                    { id: 'agua', palavra: 'WATER', emoji: '🏺', figura: 'camadas/p5-agua.webp' }
                 ]
             }
         },

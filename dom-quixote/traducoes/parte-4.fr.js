@@ -113,14 +113,14 @@
                 Quand le repas fut prêt, Don Quichotte retira son bacielmo et partagea le premier morceau de pain avec son écuyer : « Te souviens-tu des chevriers, Sancho, qui ont partagé leur dîner avec nous sous les étoiles ? Le pain partagé avec des amis est plus savoureux que le festin d’un roi ! » Et Sancho, les joues pleines, ne put répondre que : « Miam-miam ! »`,
             cartoes: {
                 tipo: 'pedido',
-                pedidos: ['pain', 'fromage', 'eau'],
+                pedidos: ['pao', 'queijo', 'agua'],
                 itens: [
                     { id: 'bain', palavra: 'BAIN', emoji: '🛁', pegadinha: "Bain ? Plouf ! Sancho n'a pas envie de prendre un bain dans le ruisseau, il a faim ! Rangeons tout à nouveau !" },
-                    { id: 'fromage', palavra: 'FROMAGE', emoji: '🧀', figura: 'camadas/p5-queijo.webp' },
+                    { id: 'queijo', palavra: 'FROMAGE', emoji: '🧀', figura: 'camadas/p5-queijo.webp' },
                     { id: 'orage', palavra: 'ORAGE', emoji: '⚡', pegadinha: "Orage ? Boum ! Le tonnerre a grondé et tout a tremblé sur la nappe ! Rangeons tout à nouveau !" },
-                    { id: 'pain', palavra: 'PAIN', emoji: '🥖', figura: 'camadas/p5-pao.webp' },
+                    { id: 'pao', palavra: 'PAIN', emoji: '🥖', figura: 'camadas/p5-pao.webp' },
                     { id: 'menton', palavra: 'MENTON', emoji: '🧔', pegadinha: "Menton ? On ne mange pas son menton ! Sancho a tellement ri qu'il a renversé le panier. Rangeons tout à nouveau !" },
-                    { id: 'eau', palavra: 'EAU', emoji: '🏺', figura: 'camadas/p5-agua.webp' }
+                    { id: 'agua', palavra: 'EAU', emoji: '🏺', figura: 'camadas/p5-agua.webp' }
                 ]
             }
         },

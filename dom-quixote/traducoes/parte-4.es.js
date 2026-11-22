@@ -114,12 +114,12 @@
                 Cuando la comida estuvo lista, don Quijote se quitó el bacielmo y compartió el primer pedazo de pan con su escudero: —¿Te acuerdas de los pastores, Sancho, que compartieron la cena con nosotros bajo las estrellas? ¡El pan compartido con amigos sabe mejor que el banquete de un rey! Y Sancho, con los mofletes llenos, solo pudo responder: —¡Hum-hum!`,
             cartoes: {
                 tipo: 'pedido',
-                pedidos: ['pan', 'queso', 'agua'],
+                pedidos: ['pao', 'queijo', 'agua'],
                 itens: [
                     { id: 'flan', palavra: 'FLAN', emoji: '🍮', pegadinha: "¡¿Flan?! El flan resbaló por el mantel y lo dejó todo pegajoso. ¡Vamos a ordenar la merienda otra vez!" },
-                    { id: 'queso', palavra: 'QUESO', emoji: '🧀', figura: 'camadas/p5-queijo.webp' },
+                    { id: 'queijo', palavra: 'QUESO', emoji: '🧀', figura: 'camadas/p5-queijo.webp' },
                     { id: 'aguila', palavra: 'ÁGUILA', emoji: '🦅', pegadinha: "¡¿Águila?! El águila bajó del cielo planeando y... ¡ñam! ¡Casi se lleva la comida! ¡Vamos a ordenar otra vez!" },
-                    { id: 'pan', palavra: 'PAN', emoji: '🥖', figura: 'camadas/p5-pao.webp' },
+                    { id: 'pao', palavra: 'PAN', emoji: '🥖', figura: 'camadas/p5-pao.webp' },
                     { id: 'hueso', palavra: 'HUESO', emoji: '🦴', pegadinha: "¡¿Hueso?! ¡Un hueso no se come, es para los cachorros! Sancho soltó una carcajada. ¡Vamos a ordenar otra vez!" },
                     { id: 'agua', palavra: 'AGUA', emoji: '🏺', figura: 'camadas/p5-agua.webp' }
                 ]
