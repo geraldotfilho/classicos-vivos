@@ -119,3 +119,23 @@ Validado por Teste de Conceito (Capítulos 1 e 2) em 2026-11-21. Combina **Palco
      2. **Coerência Geométrica 2D/3D das Animações**: a camada animada está no mesmo plano geométrico da superfície do cenário e toca fisicamente o que precisa tocar (ex.: roda d'água em parede 100% frontal tocando a água)?
      3. **Idade, Etnia e Roupas**: Grilo com porte de ~11–12 anos e pardo? Robin e Grilo sem verde antes do Cap. 4 e com verde a partir do Cap. 4? Quantidades exatas do texto (ex.: 3 sacos no moinho)?
      4. **Ausência de halo magenta/branco e de texto espúrio**.
+5. **Subagente 4 — `@engenheiro-ci-animacao` (Engenheiro de Motor, Animações no Runtime e CI/CD — modelo `gemini-4-argon-high`)**:
+   - Garante que **todas as páginas do livro** tenham uma camada animada contínua ativa (`anim: 'girar' | 'pulsar' | 'flutuar' | 'balanco'`) e verifica programaticamente no Playwright via `getComputedStyle(el).animationName` e amostragem temporal de `transform` (`t=120ms` vs `t=570ms`) que a animação está realmente rodando no navegador (e não bloqueada por especificidade CSS como `.camada-entrou` ou por `prefers-reduced-motion`).
+   - Nas páginas com atividade que trocam a gravura inteira (`realCena`), configura a camada animada inicial com `quando: (st) => st.usados.size === 0 && (st.ordem || []).length === 0`, para que ela anime a cena inicial e dê lugar limpo às etapas progressivas assim que a criança começar a atividade.
+   - Audita os workflows do GitHub Actions (`gh run list` / `gh run watch`), garantindo que `.nojekyll` esteja presente na raiz (para o Liquid/Jekyll não quebrar ao encontrar `{{PALAVRA|...}}` nos `.md`), que `npm run build`, `npm run conferir:traducoes` e `npm run conferir:desafios` passem com 0 erros e que o deploy do GitHub Pages termine **100% verde (`success`)**.
+
+---
+
+## 12. Tabela de Referência do Swarm Completo (para Replicar nos Próximos Livros da Série)
+
+Para iniciar qualquer nova Parte (ex.: *Robin Hood — Parte 2* ou *Viagem ao Centro da Terra*), o Agente Principal (`@coordinator`, Diretor Estratégico / Showrunner) instancia este time no Swarm (`swarm` tool):
+
+| Nome no Swarm (`name`) | Modelo Recomendado (`model`) | Papel na Equipe | Quando Atua |
+| :--- | :--- | :--- | :--- |
+| **`@coordinator`** *(Agente Principal)* | `Gemini 4 Argon (Medium / High)` | **Diretor Estratégico & Showrunner**: alinha a escaleta e a Jornada do Herói com o humano, redige os briefings parágrafo a parágrafo (1 capítulo por vez), invoca o `image-generator` nativo e gerencia agendamentos (`schedule`) de renovação de cota. | Do início ao fim da parte |
+| **`@escritor-hydrogen`** | `gemini-4-hydrogen-medium` (`flash`) | **Redator Literário Inicial**: estrutura rapidamente o capítulo de 4 parágrafos curtos (~170–185 palavras) com as 3 palavras-chave `{{...}}`, `comandoAtividade` e `voceSabia`, e passa direto ao `@revisor-opus`. | Fase 1 (1 capítulo por vez) |
+| **`@revisor-opus`** | `claude-opus-5-5-high` | **Lapidador Literário Exclusivo**: transforma explicações secas em imagens sensoriais, sons e poesia do cotidiano para 6 anos, mantendo o teto rígido de 4 parágrafos curtos (~185–190 palavras) sem alterar fatos do roteiro. | Fase 1 (logo após `@escritor-hydrogen`) |
+| **`@ilustrador-hydrogen`** | `gemini-4-hydrogen-medium` (`flash`) | **Arquiteto de Prompts de Diorama (Opção C)**: projeta os Palcos Reaproveitáveis, as etapas progressivas das atividades e as camadas animadas em fundo `#FF00FF`, respeitando a geometria 2D frontal e a continuidade de roupas/idades. | Fase 2 e Fase 4 |
+| **`@animador-hydrogen`** | `gemini-4-hydrogen-medium` (`flash`) | **Especialista em Recorte Chroma-Key e Montagem DOM**: roda `tools/recortar-camada.py` e `npm run build:images`, calibra coordenadas `(x, y, w)`, configura `realCena` e `hotspots` no HTML e gera capturas 1280×800 e 800×1280. | Fase 4 |
+| **`@critico-arte-hydrogen`** | `gemini-4-hydrogen-medium` (`flash`) | **Auditor Visual e de Continuidade**: inspeciona todas as gravuras `.webp` e screenshots renderizados contra o checklist (Estilo C sem contorno preto, geometria 2D/3D, idades, roupas antes/depois do Cap. 4, zero texto espúrio). | Fase 4 (após `@animador-hydrogen`) |
+| **`@engenheiro-ci-animacao`** | `gemini-4-argon-high` | **Engenheiro de Motor, Animações em Runtime e CI/CD**: valida por script no Playwright que `12/12` páginas estão com animação CSS ativa em tela, roda todos os validadores e acompanha o GitHub Actions (`gh run watch`) até o deploy ficar verde. | Fechamento da Fase 4 e Entrega na `main` |
