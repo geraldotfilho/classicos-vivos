@@ -20,17 +20,14 @@
 
     <script>
     /* =========================================================================
-       ROBIN HOOD — PARTE 1: O BANDO DO GRANDE CARVALHO
+       ROBIN HOOD — PARTE 1: O SEGREDO DA FLORESTA DE XERVEDO
        Adaptação livre de Howard Pyle (1883) e lendas tradicionais de Sherwood.
-       Rascunho de texto (Fases 1-2) após crítica adversarial, em revisão humana (Fase 3):
-       docs/cadernos/robin-hood-parte-1.md
        ========================================================================= */
     window.LIVRO = {
         obra: 'Robin Hood',
         autor: 'Howard Pyle e lendas tradicionais',
         parte: 1,
         totalPartes: 5,
-        rascunho: true,
         imagens: './imagens/parte-1/',
         fim: {
             mensagem: '🏹 Mestre Tomé está livre, e o Bando Verde do Grande Carvalho nasceu! Agora uma flecha de ouro espera Robin numa praça cheia de guardas. Descubra na Parte 2 como ele vai vencer sem cair na armadilha!'
@@ -49,6 +46,9 @@
                     real: 'p0-real.webp', emoji: '🏹',
                     alt: 'Na clareira ensolarada do Grande Carvalho em Xervedo, Robin Hood, Lady Mariana, João Pequeno e Grilo partilham pães e maçãs',
                     legendaReal: '🌳 O Bando do Grande Carvalho',
+                    camadas: [
+                        { id: 'c-passarinhos-p0', src: 'camadas/p0-passarinhos.webp', x: 80, y: 38, w: 14, anim: 'flutuar', emoji: '🐦' }
+                    ],
                     hotspots: [
                         { x: 34, y: 4, w: 32, h: 30, palavra: 'FLORESTA', emoji: '🌳' },
                         { x: 20, y: 34, w: 58, h: 34, palavra: 'AMIGOS', emoji: '🤝' },
@@ -189,6 +189,10 @@
                     real: 'p5-real.webp', emoji: '🪵',
                     alt: 'Sobre uma ponte estreita de tronco em cima do Riacho Fundo, Robin Hood (de roupa verde) e um gigante de couro marrom e bastão comprido ficam frente a frente, enquanto Grilo (de verde) espia atrás da samambaia',
                     legendaReal: '🪵 Frente a Frente na Ponte do Riacho Fundo',
+                    camadas: [
+                        { id: 'c-libelula-p5', src: 'camadas/p5-libelula.webp', x: 49, y: 90, w: 7, anim: 'flutuar', emoji: '🪰' },
+                        { id: 'c-samambaia-p5', src: 'camadas/p5-samambaia.webp', x: 92, y: 101, w: 16, anim: 'balanco', z: 9, emoji: '🌿' }
+                    ],
                     hotspots: [
                         { x: 30, y: 74, w: 38, h: 24, palavra: 'RIACHO', emoji: '💧' },
                         { x: 26, y: 64, w: 48, h: 10, palavra: 'PONTE', emoji: '🪵' },
@@ -257,6 +261,10 @@
                     real: 'p7-real.webp', emoji: '🤝',
                     alt: 'Na margem do Riacho Fundo, João Pequeno conversa com Robin Hood e Grilo (ambos de roupa verde) e ergue o bastão decidindo entrar para o bando',
                     legendaReal: '🤝 O Nascimento de João Pequeno',
+                    camadas: [
+                        { id: 'c-libelula-p7', src: 'camadas/p5-libelula.webp', x: 50, y: 89, w: 7, anim: 'flutuar', emoji: '🪰' },
+                        { id: 'c-samambaia-p7', src: 'camadas/p5-samambaia.webp', x: 92, y: 101, w: 16, anim: 'balanco', z: 9, emoji: '🌿' }
+                    ],
                     hotspots: [
                         { x: 38, y: 4, w: 22, h: 40, palavra: 'FORÇA', emoji: '💪' },
                         { x: 65, y: 36, w: 15, h: 36, palavra: 'APELIDO', emoji: '😄' },
@@ -279,6 +287,9 @@
                     real: 'p8-real.webp', emoji: '🌳',
                     alt: 'Debaixo do Grande Carvalho oco de Xervedo, Lady Mariana recebe Robin Hood, Grilo e João Pequeno (todos vestindo verde-folha) enquanto Robin risca na terra o plano do resgate',
                     legendaReal: '🌳 O Esconderijo do Grande Carvalho',
+                    camadas: [
+                        { id: 'c-borboleta-p8', src: 'camadas/p8-borboleta.webp', x: 18, y: 35, w: 7.5, anim: 'flutuar', emoji: '🦋' }
+                    ],
                     hotspots: [
                         { x: 35, y: 4, w: 30, h: 30, palavra: 'CARVALHO', emoji: '🌳' },
                         { x: 50, y: 34, w: 14, h: 36, palavra: 'ESCONDERIJO', emoji: '🍃' },
@@ -370,6 +381,10 @@
                     real: 'p11-real.webp', emoji: '🍞',
                     alt: 'Debaixo do Grande Carvalho iluminado por lanternas, Mestre Tomé abraça Grilo diante do banquete de pães enquanto Lady Mariana mostra a Robin e João Pequeno o cartaz da Flecha de Ouro',
                     legendaReal: '🍞 Festa no Grande Carvalho e o Cartaz da Flecha de Ouro',
+                    camadas: [
+                        { id: 'c-lanterna-p11', src: 'camadas/p11-lanterna.webp', x: 12.5, y: 45, w: 5.5, anim: 'pendulo', emoji: '🏮' },
+                        { id: 'c-fumaca-p11', src: 'camadas/p11-fumaca-pao.webp', x: 45.5, y: 67.5, w: 4.4, anim: 'flutuar', emoji: '♨️' }
+                    ],
                     hotspots: [
                         { x: 36, y: 62, w: 26, h: 26, palavra: 'BANQUETE', emoji: '🍞' },
                         { x: 76, y: 54, w: 9, h: 24, palavra: 'FLECHA', emoji: '🏹' },

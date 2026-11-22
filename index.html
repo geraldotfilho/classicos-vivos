@@ -685,27 +685,118 @@
             </div>
         </section>
 
-        <!-- Prateleira 2: Robin Hood -->
+        <!-- Prateleira 2: Robin Hood (Parte 1 publicada; Partes 2 a 5 em produção) -->
         <section id="shelf-robin-hood" class="shelf" aria-label="Robin Hood" data-i18n-aria="shelfRobinHood">
-            <div class="w-full flex justify-center">
+            <div id="container-boxset-robin" class="w-full flex justify-center">
                 <div class="flex flex-col items-center justify-end">
-                    <button id="boxset-robin-hood" type="button" class="boxset-card boxset-noturno boxset-trancado boxset-robin" data-em-producao="robin-hood" aria-label="Robin Hood. Nova adaptação na fila, com cadeado até ser liberada." data-i18n-aria="boxsetRobinAria">
+                    <button id="boxset-robin-hood" type="button" class="boxset-card boxset-noturno boxset-robin" aria-expanded="false" aria-label="Coleção Robin Hood: Parte 1 disponível. Toque para abrir." data-i18n-aria="boxsetRobinAria">
                         <span class="boxset-layer boxset-layer-3" aria-hidden="true"></span>
                         <span class="boxset-layer boxset-layer-2" aria-hidden="true"></span>
                         <span class="boxset-layer boxset-layer-1" aria-hidden="true"></span>
                         <span class="boxset-front">
-                            <span class="robin-arte" aria-hidden="true"></span>
-                            <span class="absolute inset-x-0 top-14 flex justify-center text-7xl opacity-40 select-none pointer-events-none" aria-hidden="true">🏹</span>
+                            <img src="./robin-hood/imagens/parte-1/p0-real.webp" alt="Robin Hood, Lady Mariana, Grilo e João Pequeno" class="v2-arte" />
                             <span class="v2-veu"></span>
-                            <span class="v2-selo" data-i18n="emBreveNovaObra">Em breve · Nova Adaptação</span>
-                            <span class="v2-cadeado" aria-hidden="true">🔒</span>
+                            <span class="v2-selo" data-i18n="rhBadgeDisponivel">Parte 1 · Disponível</span>
                             <span class="v2-rodape">
                                 <span class="v2-titulo" data-i18n="robinHood">Robin Hood</span>
                                 <span class="v2-sub" data-i18n="robinHoodSub">O Herói de Sherwood</span>
-                                <span class="v2-embreve" data-i18n="emBreve">Em breve</span>
+                                <span class="v2-abrir">
+                                    <i class="ph-bold ph-arrow-down text-xs"></i>
+                                    <span data-i18n="toqueParaAbrir">Toque para abrir a coleção</span>
+                                </span>
                             </span>
                         </span>
                     </button>
+                </div>
+            </div>
+
+            <div id="colecao-expandida-robin" class="hidden w-full flex-col items-center">
+                <div class="flex items-center justify-between w-full max-w-5xl mb-2 sm:mb-3 px-2">
+                    <div class="flex items-center gap-2">
+                        <span class="text-2xl sm:text-3xl" aria-hidden="true">🏹</span>
+                        <div>
+                            <h2 class="font-display font-bold text-base sm:text-xl text-emerald-200 leading-tight">
+                                <span data-i18n="robinHood">Robin Hood</span> · <span data-i18n="robinHoodSub">O Herói de Sherwood</span>
+                            </h2>
+                        </div>
+                    </div>
+                    <button id="btn-fechar-colecao-robin" type="button" class="btn-round bg-emerald-400 hover:bg-emerald-300 text-emerald-950 font-display font-bold text-xs sm:text-sm px-3.5 py-1.5 rounded-xl border border-emerald-600 flex items-center gap-1.5 shadow min-h-[44px] cursor-pointer" aria-label="Recolher coleção" data-i18n-aria="fecharColecaoAria">
+                        <i class="ph-bold ph-x text-base"></i>
+                        <span data-i18n="fecharColecao">Recolher</span>
+                    </button>
+                </div>
+
+                <div id="robin-parts-shelf" class="flex flex-nowrap overflow-x-auto lg:overflow-x-visible justify-start lg:justify-center items-end gap-3 sm:gap-4 md:gap-5 w-full max-w-5xl mx-auto px-2 pb-1">
+                    <!-- Parte 1 (Publicada) -->
+                    <div class="volume-item flex flex-col items-center w-36 sm:w-40 md:w-44 shrink-0 book-spread-enter">
+                        <a id="link-rh-parte-1" href="./robin-hood/parte-1.html" class="book w-full flex flex-col" aria-label="Ler Robin Hood, parte 1" data-i18n-aria="rhLerParte1">
+                            <div class="book-cover relative aspect-[3/4] rounded-r-2xl rounded-l-md overflow-hidden border-3 border-emerald-400 bg-emerald-950 shadow-md">
+                                <img src="./robin-hood/imagens/parte-1/p0-real.webp" alt="" class="absolute inset-0 w-full h-full object-cover" />
+                                <span id="badge-rh-parte-1" class="absolute top-2 right-2 bg-emerald-600 text-white font-display font-bold text-xs sm:text-sm px-2.5 py-0.5 rounded-full border-2 border-white shadow" data-i18n="parte1Badge">Parte 1</span>
+                                <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-emerald-950/95 via-emerald-950/80 to-transparent pt-6 pb-2.5 px-2 text-center">
+                                    <h3 id="titulo-rh-parte-1" class="font-display font-bold text-xs sm:text-sm text-amber-200 leading-tight" data-i18n="rh1TituloCurto">O Segredo da Floresta de Xervedo</h3>
+                                </div>
+                            </div>
+                        </a>
+                        <div id="offline-ctrl-rh-1" class="offline-ctrl-bar w-full mt-2 flex items-center justify-center gap-1.5 min-h-[44px]"></div>
+                    </div>
+
+                    <!-- Partes 2 a 5 (Em breve com cadeado) -->
+                    <div class="volume-item flex flex-col items-center w-36 sm:w-40 md:w-44 shrink-0 book-spread-enter" style="animation-delay: -0.4s">
+                        <button type="button" class="book-teaser parte-trancada w-full flex flex-col text-left" data-em-producao="robin-hood" aria-label="Robin Hood, parte 2: em produção" data-i18n-aria="rhEmProducaoAria2">
+                            <div class="book-cover relative aspect-[3/4] rounded-r-2xl rounded-l-md overflow-hidden border-3 border-emerald-500/70 bg-gradient-to-b from-emerald-800 to-emerald-950 shadow-md">
+                                <span class="absolute inset-x-0 bottom-8 flex justify-center text-5xl opacity-50" aria-hidden="true">🎯</span>
+                                <span class="v2-cadeado" aria-hidden="true">🔒</span>
+                                <span class="absolute top-2 right-2 bg-emerald-700/90 text-white font-display font-bold text-xs sm:text-sm px-2.5 py-0.5 rounded-full border-2 border-white shadow" data-i18n="parte2Badge">Parte 2</span>
+                                <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-emerald-950/95 via-emerald-950/80 to-transparent pt-6 pb-2.5 px-2 text-center">
+                                    <h3 class="font-display font-bold text-xs sm:text-sm text-emerald-200 leading-tight" data-i18n="emBreve">Em breve</h3>
+                                </div>
+                            </div>
+                        </button>
+                        <div class="w-full mt-2 min-h-[44px]"></div>
+                    </div>
+
+                    <div class="volume-item flex flex-col items-center w-36 sm:w-40 md:w-44 shrink-0 book-spread-enter" style="animation-delay: -0.8s">
+                        <button type="button" class="book-teaser parte-trancada w-full flex flex-col text-left" data-em-producao="robin-hood" aria-label="Robin Hood, parte 3: em produção" data-i18n-aria="rhEmProducaoAria3">
+                            <div class="book-cover relative aspect-[3/4] rounded-r-2xl rounded-l-md overflow-hidden border-3 border-emerald-500/70 bg-gradient-to-b from-emerald-800 to-emerald-950 shadow-md">
+                                <span class="absolute inset-x-0 bottom-8 flex justify-center text-5xl opacity-50" aria-hidden="true">🍃</span>
+                                <span class="v2-cadeado" aria-hidden="true">🔒</span>
+                                <span class="absolute top-2 right-2 bg-emerald-700/90 text-white font-display font-bold text-xs sm:text-sm px-2.5 py-0.5 rounded-full border-2 border-white shadow" data-i18n="parte3Badge">Parte 3</span>
+                                <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-emerald-950/95 via-emerald-950/80 to-transparent pt-6 pb-2.5 px-2 text-center">
+                                    <h3 class="font-display font-bold text-xs sm:text-sm text-emerald-200 leading-tight" data-i18n="emBreve">Em breve</h3>
+                                </div>
+                            </div>
+                        </button>
+                        <div class="w-full mt-2 min-h-[44px]"></div>
+                    </div>
+
+                    <div class="volume-item flex flex-col items-center w-36 sm:w-40 md:w-44 shrink-0 book-spread-enter" style="animation-delay: -1.2s">
+                        <button type="button" class="book-teaser parte-trancada w-full flex flex-col text-left" data-em-producao="robin-hood" aria-label="Robin Hood, parte 4: em produção" data-i18n-aria="rhEmProducaoAria4">
+                            <div class="book-cover relative aspect-[3/4] rounded-r-2xl rounded-l-md overflow-hidden border-3 border-emerald-500/70 bg-gradient-to-b from-emerald-800 to-emerald-950 shadow-md">
+                                <span class="absolute inset-x-0 bottom-8 flex justify-center text-5xl opacity-50" aria-hidden="true">📯</span>
+                                <span class="v2-cadeado" aria-hidden="true">🔒</span>
+                                <span class="absolute top-2 right-2 bg-emerald-700/90 text-white font-display font-bold text-xs sm:text-sm px-2.5 py-0.5 rounded-full border-2 border-white shadow" data-i18n="parte4Badge">Parte 4</span>
+                                <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-emerald-950/95 via-emerald-950/80 to-transparent pt-6 pb-2.5 px-2 text-center">
+                                    <h3 class="font-display font-bold text-xs sm:text-sm text-emerald-200 leading-tight" data-i18n="emBreve">Em breve</h3>
+                                </div>
+                            </div>
+                        </button>
+                        <div class="w-full mt-2 min-h-[44px]"></div>
+                    </div>
+
+                    <div class="volume-item flex flex-col items-center w-36 sm:w-40 md:w-44 shrink-0 book-spread-enter" style="animation-delay: -1.6s">
+                        <button type="button" class="book-teaser parte-trancada w-full flex flex-col text-left" data-em-producao="robin-hood" aria-label="Robin Hood, parte 5: em produção" data-i18n-aria="rhEmProducaoAria5">
+                            <div class="book-cover relative aspect-[3/4] rounded-r-2xl rounded-l-md overflow-hidden border-3 border-emerald-500/70 bg-gradient-to-b from-emerald-800 to-emerald-950 shadow-md">
+                                <span class="absolute inset-x-0 bottom-8 flex justify-center text-5xl opacity-50" aria-hidden="true">👑</span>
+                                <span class="v2-cadeado" aria-hidden="true">🔒</span>
+                                <span class="absolute top-2 right-2 bg-emerald-700/90 text-white font-display font-bold text-xs sm:text-sm px-2.5 py-0.5 rounded-full border-2 border-white shadow" data-i18n="parte5Badge">Parte 5</span>
+                                <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-emerald-950/95 via-emerald-950/80 to-transparent pt-6 pb-2.5 px-2 text-center">
+                                    <h3 class="font-display font-bold text-xs sm:text-sm text-emerald-200 leading-tight" data-i18n="emBreve">Em breve</h3>
+                                </div>
+                            </div>
+                        </button>
+                        <div class="w-full mt-2 min-h-[44px]"></div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -874,9 +965,10 @@
             const txtBaixado = d?.volumeBaixado || 'Offline';
             const txtAtualizar = d?.atualizarVolume || 'Atualizar';
             const txtBaixando = d?.baixandoVolume || 'Baixando...';
-            const ariaBaixar = d?.baixarVolumeAria ? d.baixarVolumeAria(parte) : `Baixar Parte ${parte}`;
-            const ariaLimpar = d?.limparVolumeAria ? d.limparVolumeAria(parte) : `Limpar Parte ${parte}`;
-            const ariaAtualizar = d?.atualizarVolumeAria ? d.atualizarVolumeAria(parte) : `Atualizar Parte ${parte}`;
+            const numParte = String(parte).replace(/^rh-/, '');
+            const ariaBaixar = d?.baixarVolumeAria ? d.baixarVolumeAria(numParte) : `Baixar Parte ${numParte}`;
+            const ariaLimpar = d?.limparVolumeAria ? d.limparVolumeAria(numParte) : `Limpar Parte ${numParte}`;
+            const ariaAtualizar = d?.atualizarVolumeAria ? d.atualizarVolumeAria(numParte) : `Atualizar Parte ${numParte}`;
 
             if (status === 'baixando') {
                 el.innerHTML = `
@@ -920,7 +1012,7 @@
         }
 
         function renderTodosControlesOffline() {
-            [1, 2, 3, 4, 5, 6, 7, 8].forEach(p => renderControlesOffline(p));
+            [1, 2, 3, 4, 5, 6, 7, 8, 'rh-1'].forEach(p => renderControlesOffline(p));
         }
 
         async function acaoOffline(parte, tipo) {
@@ -933,7 +1025,8 @@
                     await window.CV_OFFLINE.baixarVolume(parte);
                     renderControlesOffline(parte);
                     playPortalSound('download-success');
-                    const msg = d?.toastBaixado ? d.toastBaixado(parte) : `Parte ${parte} pronta para leitura offline! ✨`;
+                    const numParte = String(parte).replace(/^rh-/, '');
+                    const msg = d?.toastBaixado ? d.toastBaixado(numParte) : `Parte ${numParte} pronta para leitura offline! ✨`;
                     showToast(msg);
                 } catch (err) {
                     alert('Não foi possível concluir o download offline. Verifique sua conexão.');
@@ -944,7 +1037,8 @@
                     await window.CV_OFFLINE.excluirVolume(parte);
                     renderControlesOffline(parte);
                     playPortalSound('trash');
-                    const msg = d?.toastLimpo ? d.toastLimpo(parte) : `Arquivos locais da Parte ${parte} removidos do tablet.`;
+                    const numParte = String(parte).replace(/^rh-/, '');
+                    const msg = d?.toastLimpo ? d.toastLimpo(numParte) : `Arquivos locais da Parte ${numParte} removidos do tablet.`;
                     showToast(msg);
                 }
             }
@@ -985,17 +1079,47 @@
         document.getElementById('btn-fechar-colecao')?.addEventListener('click', () => setColecaoExpandida(false, true, 1));
         document.getElementById('boxset-quixote-2')?.addEventListener('click', () => setColecaoExpandida(true, true, 2));
         document.getElementById('btn-fechar-colecao-2')?.addEventListener('click', () => setColecaoExpandida(false, true, 2));
+
+        function setRobinExpandido(expandir, emitirSom = true) {
+            const box = document.getElementById('container-boxset-robin');
+            const exp = document.getElementById('colecao-expandida-robin');
+            const btn = document.getElementById('boxset-robin-hood');
+            if (!box || !exp) return;
+            if (expandir) {
+                if (emitirSom) playPortalSound('expand');
+                box.classList.add('hidden');
+                exp.classList.remove('hidden');
+                exp.classList.add('flex');
+                if (btn) btn.setAttribute('aria-expanded', 'true');
+                renderControlesOffline('rh-1');
+                document.getElementById('link-rh-parte-1')?.focus();
+            } else {
+                if (emitirSom) playPortalSound('collapse');
+                exp.classList.add('hidden');
+                exp.classList.remove('flex');
+                box.classList.remove('hidden');
+                if (btn) {
+                    btn.setAttribute('aria-expanded', 'false');
+                    btn.focus();
+                }
+            }
+        }
+        document.getElementById('boxset-robin-hood')?.addEventListener('click', () => setRobinExpandido(true, true));
+        document.getElementById('btn-fechar-colecao-robin')?.addEventListener('click', () => setRobinExpandido(false, true));
+
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
                 [1, 2].forEach(v => {
                     const colecaoExp = document.getElementById(v === 2 ? 'colecao-expandida-2' : 'colecao-expandida');
                     if (colecaoExp && !colecaoExp.classList.contains('hidden')) setColecaoExpandida(false, true, v);
                 });
+                const robinExp = document.getElementById('colecao-expandida-robin');
+                if (robinExp && !robinExp.classList.contains('hidden')) setRobinExpandido(false, true);
             }
         });
 
         // Delegação de cliques nos botões de controle offline
-        ['quixote-parts-shelf', 'quixote-parts-shelf-2'].forEach(id => document.getElementById(id)?.addEventListener('click', (e) => {
+        ['quixote-parts-shelf', 'quixote-parts-shelf-2', 'robin-parts-shelf'].forEach(id => document.getElementById(id)?.addEventListener('click', (e) => {
             const btn = e.target.closest('[data-acao]');
             if (!btn) return;
             e.preventDefault();

@@ -7,7 +7,7 @@
    - Páginas HTML e vozes.js: rede primeiro com limite de 2,5 s (se a rede estiver lenta, abre do cache na hora).
    - Narração gravada (*.mp3 e *.json): rede primeiro com limite de 2,5 s, cache próprio (cv-narracao).
    - Demais arquivos: cache primeiro (abre instantâneo no tablet). */
-const CACHE = 'classicos-vivos-c5caec5ccb5e';
+const CACHE = 'classicos-vivos-e938a4739f38';
 const CACHE_AUDIO = 'cv-narracao';
 const CACHE_META = 'cv-meta';
 const FILES = [
@@ -29,11 +29,11 @@ const FILES = [
     ],
     [
         "./assets/css/livro.css",
-        "1c506e21"
+        "adc4c404"
     ],
     [
         "./assets/css/tailwind.css",
-        "6d086969"
+        "91e001c6"
     ],
     [
         "./assets/fonts/fredoka-latin-400-normal.woff2",
@@ -89,7 +89,7 @@ const FILES = [
     ],
     [
         "./assets/js/acervo.js",
-        "dd559f82"
+        "ef36c0bc"
     ],
     [
         "./assets/js/colaboracao.js",
@@ -105,7 +105,7 @@ const FILES = [
     ],
     [
         "./assets/js/i18n-site.js",
-        "206de503"
+        "a7e026d8"
     ],
     [
         "./assets/js/livro.js",
@@ -113,7 +113,7 @@ const FILES = [
     ],
     [
         "./assets/js/offline-manager.js",
-        "d8549bae"
+        "39fea3d4"
     ],
     [
         "./assets/js/texto.js",
@@ -1085,19 +1085,43 @@ const FILES = [
     ],
     [
         "./index.html",
-        "2d563efc"
+        "ef6ab893"
     ],
     [
         "./manifest.webmanifest",
         "0a3da84b"
     ],
     [
+        "./robin-hood/imagens/parte-1/camadas/p0-passarinhos.webp",
+        "41c33a3e"
+    ],
+    [
         "./robin-hood/imagens/parte-1/camadas/p1-pergaminho.webp",
         "b0299186"
     ],
     [
+        "./robin-hood/imagens/parte-1/camadas/p11-fumaca-pao.webp",
+        "409295c6"
+    ],
+    [
+        "./robin-hood/imagens/parte-1/camadas/p11-lanterna.webp",
+        "39ae302d"
+    ],
+    [
         "./robin-hood/imagens/parte-1/camadas/p2-roda.webp",
         "2ed60a47"
+    ],
+    [
+        "./robin-hood/imagens/parte-1/camadas/p5-libelula.webp",
+        "1dbc9702"
+    ],
+    [
+        "./robin-hood/imagens/parte-1/camadas/p5-samambaia.webp",
+        "78691a05"
+    ],
+    [
+        "./robin-hood/imagens/parte-1/camadas/p8-borboleta.webp",
+        "34771d91"
     ],
     [
         "./robin-hood/imagens/parte-1/p0-real.webp",
@@ -1189,11 +1213,11 @@ const FILES = [
     ],
     [
         "./robin-hood/parte-1.html",
-        "e95a4637"
+        "629b1175"
     ],
     [
         "./sobre.html",
-        "d86dd8d4"
+        "275a85b5"
     ]
 ];
 

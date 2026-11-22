@@ -18,16 +18,16 @@
    ===================================================================== */
 window.ACERVO_PRODUCAO = [
     {
-        id: 'robin-hood',
+        id: 'robin-hood-parte-2',
         obra: 'Robin Hood',
-        parte: 1,
-        titulo: 'Parte 1: O Bando do Grande Carvalho',
-        nota: 'Rascunho de texto em revisão (Fase 3). 5 partes previstas.',
-        situacao: 'rascunho',
+        parte: 2,
+        titulo: 'Parte 2: A Flecha de Ouro',
+        nota: 'Próxima parte na fila. 5 partes previstas.',
+        situacao: 'fila',
         estante: null,
         emoji: '🏹',
         cor: 'from-emerald-300 to-teal-500',
-        href: './robin-hood/parte-1.html'
+        href: './robin-hood/parte-2.html'
     },
     {
         id: 'viagem-ao-centro-da-terra',

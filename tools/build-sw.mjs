@@ -70,7 +70,21 @@ try {
             ...desafiosDe(n)
         ].map(f => f.startsWith('./') ? f : `./${f.replace(/\\/g, '/')}`);
     }
-    const ordenado = Object.fromEntries(Object.entries(novo).sort((a, b) => a[0] - b[0]));
+    const ordenado = Object.fromEntries(
+        Object.entries(novo).sort((a, b) => Number(a[0]) - Number(b[0]))
+    );
+    for (const html of globSync('robin-hood/parte-*.html').sort()) {
+        const n = (html.match(/parte-(\d+)\.html$/) || [])[1];
+        if (!n || /rascunho:\s*true/.test(readFileSync(html, 'utf8'))) continue;
+        ordenado[`rh-${n}`] = [
+            ...comuns,
+            ...globSync(`robin-hood/imagens/parte-${n}/**/*.{webp,svg,png}`).sort(),
+            html,
+            ...globSync(`robin-hood/traducoes/parte-${n}.*.js`).sort(),
+            ...globSync(`robin-hood/desafios/parte-${n}.js`),
+            ...globSync(`robin-hood/desafios/parte-${n}.*.js`)
+        ].map(f => f.startsWith('./') ? f : `./${f.replace(/\\/g, '/')}`);
+    }
     offContent = offContent.slice(0, ini) + JSON.stringify(ordenado, null, 4) + offContent.slice(fim);
     writeFileSync(offPath, offContent);
 } catch (e) { console.warn('offline-manager.js não atualizado:', e.message); }

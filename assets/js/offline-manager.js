@@ -5,7 +5,7 @@
 (function() {
     'use strict';
 
-    const VERSAO_ATUAL = 'c5caec5ccb5e';
+    const VERSAO_ATUAL = 'e938a4739f38';
     const PREFIXO_CACHE = 'cv-volume-quixote-';
     const PREFIXO_STORAGE = 'cv-offline-quixote-';
 
@@ -466,6 +466,64 @@
         "./dom-quixote/imagens/parte-8/p9-real.webp",
         "./dom-quixote/parte-8.html",
         "./dom-quixote/desafios/parte-8.js"
+    ],
+    "rh-1": [
+        "./assets/icones/icone-192.png",
+        "./assets/css/fonts.css",
+        "./assets/css/icons.css",
+        "./assets/css/livro.css",
+        "./assets/css/tailwind.css",
+        "./assets/fonts/fredoka-latin-400-normal.woff2",
+        "./assets/fonts/fredoka-latin-500-normal.woff2",
+        "./assets/fonts/fredoka-latin-600-normal.woff2",
+        "./assets/fonts/fredoka-latin-700-normal.woff2",
+        "./assets/fonts/nunito-latin-400-normal.woff2",
+        "./assets/fonts/nunito-latin-600-normal.woff2",
+        "./assets/fonts/nunito-latin-700-normal.woff2",
+        "./assets/fonts/nunito-latin-800-normal.woff2",
+        "./assets/fonts/nunito-latin-900-normal.woff2",
+        "./assets/icones/bandeiras/br.svg",
+        "./assets/icones/bandeiras/es.svg",
+        "./assets/icones/bandeiras/fr.svg",
+        "./assets/icones/bandeiras/gb.svg",
+        "./assets/js/acervo.js",
+        "./assets/js/colaboracao.js",
+        "./assets/js/i18n-site.js",
+        "./assets/js/livro.js",
+        "./assets/js/texto.js",
+        "./assets/js/desafios.js",
+        "./assets/css/desafios.css",
+        "./robin-hood/imagens/parte-1/camadas/p0-passarinhos.webp",
+        "./robin-hood/imagens/parte-1/camadas/p1-pergaminho.webp",
+        "./robin-hood/imagens/parte-1/camadas/p11-fumaca-pao.webp",
+        "./robin-hood/imagens/parte-1/camadas/p11-lanterna.webp",
+        "./robin-hood/imagens/parte-1/camadas/p2-roda.webp",
+        "./robin-hood/imagens/parte-1/camadas/p5-libelula.webp",
+        "./robin-hood/imagens/parte-1/camadas/p5-samambaia.webp",
+        "./robin-hood/imagens/parte-1/camadas/p8-borboleta.webp",
+        "./robin-hood/imagens/parte-1/p0-real.webp",
+        "./robin-hood/imagens/parte-1/p1-real.webp",
+        "./robin-hood/imagens/parte-1/p10-real.webp",
+        "./robin-hood/imagens/parte-1/p11-real.webp",
+        "./robin-hood/imagens/parte-1/p2-real.webp",
+        "./robin-hood/imagens/parte-1/p3-real.webp",
+        "./robin-hood/imagens/parte-1/p4-real.webp",
+        "./robin-hood/imagens/parte-1/p4-stage-1.webp",
+        "./robin-hood/imagens/parte-1/p4-stage-2.webp",
+        "./robin-hood/imagens/parte-1/p4-stage-3.webp",
+        "./robin-hood/imagens/parte-1/p5-real.webp",
+        "./robin-hood/imagens/parte-1/p6-real.webp",
+        "./robin-hood/imagens/parte-1/p6-stage-1.webp",
+        "./robin-hood/imagens/parte-1/p6-stage-2.webp",
+        "./robin-hood/imagens/parte-1/p6-stage-3.webp",
+        "./robin-hood/imagens/parte-1/p6-stage-4.webp",
+        "./robin-hood/imagens/parte-1/p7-real.webp",
+        "./robin-hood/imagens/parte-1/p8-real.webp",
+        "./robin-hood/imagens/parte-1/p9-real.webp",
+        "./robin-hood/imagens/parte-1/p9-stage-1.webp",
+        "./robin-hood/imagens/parte-1/p9-stage-2.webp",
+        "./robin-hood/imagens/parte-1/p9-stage-3.webp",
+        "./robin-hood/parte-1.html"
     ]
 };
 
@@ -511,28 +569,31 @@
 
         async verificarCachesExistentes() {
             if (!('caches' in window)) return;
-            for (let n = 1; n <= 5; n++) {
-                if (localStorage.getItem(PREFIXO_STORAGE + n)) continue;
+            for (const key of Object.keys(ARQUIVOS_PARTE)) {
+                if (localStorage.getItem(PREFIXO_STORAGE + key)) continue;
                 try {
-                    const cacheName = PREFIXO_CACHE + n;
+                    const cacheName = PREFIXO_CACHE + key;
                     const existe = await caches.has(cacheName);
                     if (existe) {
-                        localStorage.setItem(PREFIXO_STORAGE + n, JSON.stringify({
+                        localStorage.setItem(PREFIXO_STORAGE + key, JSON.stringify({
                             versao: VERSAO_ATUAL,
                             baixadoEm: Date.now(),
-                            total: ARQUIVOS_PARTE[n]?.length || 0
+                            total: ARQUIVOS_PARTE[key]?.length || 0
                         }));
-                        notificar(n);
+                        notificar(key);
                     } else {
                         // Verifica se o Service Worker já cacheou a página
-                        const hit = await caches.match('./dom-quixote/parte-' + n + '.html', { ignoreSearch: true });
+                        const alvo = key.startsWith('rh-')
+                            ? './robin-hood/parte-' + key.slice(3) + '.html'
+                            : './dom-quixote/parte-' + key + '.html';
+                        const hit = await caches.match(alvo, { ignoreSearch: true });
                         if (hit) {
-                            localStorage.setItem(PREFIXO_STORAGE + n, JSON.stringify({
+                            localStorage.setItem(PREFIXO_STORAGE + key, JSON.stringify({
                                 versao: VERSAO_ATUAL,
                                 baixadoEm: Date.now(),
-                                total: ARQUIVOS_PARTE[n]?.length || 0
+                                total: ARQUIVOS_PARTE[key]?.length || 0
                             }));
-                            notificar(n);
+                            notificar(key);
                         }
                     }
                 } catch (e) {}
