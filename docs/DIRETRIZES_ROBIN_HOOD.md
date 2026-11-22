@@ -87,3 +87,35 @@ Escreva o rascunho enxuto e passe direto ao `@revisor-opus` para lapidar e entre
 - **Verbos e gestos no lugar de adjetivos abstratos**: o personagem bate palmas, esfrega as mãos, esvazia um riachinho de dentro da bota, fica parado feito estátua.
 - **Ritmo de leitura em voz alta**: frases curtas, ordem direta, onomatopeias naturais em português (`toc, tac, toc!`, `plof!`, `tuuu, tuuu, tuuu!`, `tum, tum, tum`), zero arcaísmos, zero abreviações com ponto (`Sr.`) e zero rótulos raciais assimétricos no texto.
 - **Respeito ao teto de cota do modelo**: quando a cota diária do Claude Opus 5.5 se aproxima do fim, o Diretor agenda (`schedule`) a retomada para o horário exato de renovação da cota, nunca trocando o modelo de lapidação literária sem autorização do humano.
+
+---
+
+## 11. Método Híbrido de Produção de Arte em Diorama de Papel Recortado (Opção C)
+
+Validado por Teste de Conceito (Capítulos 1 e 2) em 2026-11-21. Combina **Palcos-Base Reaproveitáveis em Diorama de Papel Recortado** com **Camadas Animadas em `.webp` transparente no DOM** e uma linha de montagem com 3 agentes especialistas em Hydrogen (`flash`) + `image-generator`.
+
+### 11.1. Os Papéis na Linha de Montagem de Arte
+1. **Agente Principal — Diretor Estratégico / Orquestrador**:
+   - Define os **Palcos Reaproveitáveis** da parte (ex.: Palco do Moinho para Caps. 2 e 3; Palco da Ponte do Riacho para Caps. 5, 6 e 7; Palco do Grande Carvalho para Capa, Cap. 8 e Cap. 11) e quais elementos serão **camadas animadas no DOM** ou **etapas progressivas (`progressivo`)**.
+   - Invoca o subagente nativo `image-generator` (já que workers de Swarm não têm permissão direta para chamar `invoke_subagent`) com os prompts redigidos pelo `@ilustrador-hydrogen` e entrega os arquivos gerados ao `@animador-hydrogen`.
+2. **Subagente 1 — `@ilustrador-hydrogen` (Arquiteto de Prompts de Diorama e Continuidade)**:
+   - Redige os prompts técnicos de cada palco e de cada camada em fundo magenta puro `#FF00FF`, garantindo o cabeçalho obrigatório da **Opção C (Diorama de Papel Recortado)**:
+     > *"Handcrafted 3D paper cut-out diorama illustration for a children's book, made of layered textured matte craft paper, construction paper and cotton paper fibers, visible paper thickness on cut edges, soft realistic drop shadows cast between paper layers creating deep theatrical stage depth, warm storybook lighting, NO black ink outlines, NO comic book line art, tactile paper-craft aesthetic."*
+   - **Regra obrigatória de Geometria 2D × 3D**: sempre que uma cena tiver uma camada com animação geométrica 2D no plano da tela (ex.: roda d'água com `anim: 'girar'`), a superfície onde ela se encaixa no palco-base **DEVE ser desenhada 100% frontal e paralela ao plano da tela (nunca em parede oblíqua 3D!)**, com o ponto de contato físico correto (ex.: as pás inferiores da roda mergulhando dentro do riacho azul).
+   - **Regras de Continuidade Visual dos Personagens**:
+     - **Mestre Tomé**: homem negro forte, avental branco enfarinhado.
+     - **Grilo (*Much*)**: **pré-adolescente/jovem de ~11 a 12 anos** (altura batendo no peito do pai Mestre Tomé — **nunca** uma criancinha pequena de 4–5 anos!), **pele parda**, cabelos cacheados escuros, nuvenzinha branca de farinha no nariz. Veste roupa de ajudante do moinho até o Cap. 3 e **traje verde-folha a partir do Cap. 4**.
+     - **Robin Hood**: jovem arqueiro ágil; veste **camisa de linho creme e colete marrom de morador da vila nos Caps. 2 e 3 (ZERO roupa verde antes do Cap. 4!)** e **traje verde-folha com capuz e pena vermelha a partir do Cap. 4**.
+     - **Lady Mariana**: jovem negra de tranças compridas, olhos vivos, traje verde-esmeralda de arqueira da floresta.
+     - **João Pequeno**: gigante gentil com barba castanha, túnica rústica de couro marrom nos Caps. 5–7 (ganhando verde ao chegar ao Grande Carvalho).
+3. **Subagente 2 — `@animador-hydrogen` (Especialista em Recorte Chroma-Key, Montagem e Animações no DOM)**:
+   - Recorta todas as camadas geradas em fundo magenta `#FF00FF` usando `python tools/recortar-camada.py <in> <out> --sem-rosa --sem-contorno` (conferindo `0 pixels rosa visíveis`).
+   - Converte tudo para `.webp` via `npm run build:images`.
+   - Inspeciona visualmente (`read_file`) o palco-base `.webp` para medir as coordenadas exatas `(x, y, w)` (lembrando que no motor `.camada` usa `transform: translate(-50%, -100%)`: `x` é o centro horizontal em % e `y` é a **base inferior** da camada em %; para uma roda de largura `w` em quadro 16:9 cujo centro do eixo está em `y_centro`, a base `y` é `y_centro + (w * 16/9) / 2`).
+   - Configura as `camadas`, animações (`girar`, `pulsar`, `balanco`, `flutuar`) e `hotspots` no `robin-hood/parte-1.html`, tira screenshots em Paisagem (1280×800) e Retrato (800×1280) e aciona o `@critico-arte-hydrogen`.
+4. **Subagente 3 — `@critico-arte-hydrogen` (Auditor Visual e de Geometria/Continuidade)**:
+   - Audita os arquivos `.webp` e os screenshots reais renderizados no navegador em 1280×800 e 800×1280 contra o checklist:
+     1. **Fidelidade ao Estilo C (Diorama de Papel Recortado)** e zero contorno preto estilo *Dom Quixote*.
+     2. **Coerência Geométrica 2D/3D das Animações**: a camada animada está no mesmo plano geométrico da superfície do cenário e toca fisicamente o que precisa tocar (ex.: roda d'água em parede 100% frontal tocando a água)?
+     3. **Idade, Etnia e Roupas**: Grilo com porte de ~11–12 anos e pardo? Robin e Grilo sem verde antes do Cap. 4 e com verde a partir do Cap. 4? Quantidades exatas do texto (ex.: 3 sacos no moinho)?
+     4. **Ausência de halo magenta/branco e de texto espúrio**.
