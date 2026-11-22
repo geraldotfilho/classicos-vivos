@@ -1,0 +1,1649 @@
+{
+  "_sobre": "Quem fala cada trecho das frases com fala de personagem (texto no formato do campo `fala`, sem mudar palavras). Frases fora daqui são da NARRADORA (inclusive os bilhetes do mordomo e os sons). Elenco em tools/gravar-narracao.mjs (ELENCO). Decisões da Parte 7: o mordomo (MORDOMO) tem voz grave de homem; o caso da bengala reaproveita as vozes dos dois velhos do tribunal da antiga Parte 4 (ALDEAO = credor, VELHO_BENGALA = devedor); o viajante da ponte conta o caso inteiro, inclusive o raciocínio dos guardas; a carta de Sancho é lida por Sansão e a de Dom Quixote sai na voz dele; os gritos do povo e dos criados no ataque de mentira são em coro (POVO).",
+  "p1-s3": [
+    [
+      "QUIXOTE",
+      "Sente-se, Sancho."
+    ]
+  ],
+  "p1-s4": [
+    [
+      "QUIXOTE",
+      "Um governador precisa de bons conselhos, e eu vou lhe dar os melhores que tenho."
+    ]
+  ],
+  "p1-s5": [
+    [
+      "QUIXOTE",
+      "Primeiro: nunca tenha vergonha de ser filho de lavradores."
+    ]
+  ],
+  "p1-s6": [
+    [
+      "QUIXOTE",
+      "Segundo: trate do mesmo jeito quem é rico e quem é pobre, e escute os dois até o fim."
+    ]
+  ],
+  "p1-s7": [
+    [
+      "QUIXOTE",
+      "Terceiro: quando tiver de dar um castigo, lembre que a justiça fica mais bonita de mãos dadas com o perdão."
+    ]
+  ],
+  "p1-s9": [
+    [
+      "QUIXOTE",
+      "Agora, os conselhos para o corpo."
+    ]
+  ],
+  "p1-s10": [
+    [
+      "QUIXOTE",
+      "Corte as unhas."
+    ]
+  ],
+  "p1-s11": [
+    [
+      "QUIXOTE",
+      "Ande devagar."
+    ]
+  ],
+  "p1-s12": [
+    [
+      "QUIXOTE",
+      "Não coma alho nem cebola antes das reuniões, para ninguém sentir o cheiro de longe."
+    ]
+  ],
+  "p1-s13": [
+    [
+      "QUIXOTE",
+      "E, pelo amor de Deus, Sancho: não arrote na mesa!"
+    ]
+  ],
+  "p1-s14": [
+    [
+      "SANCHO",
+      "Nem unzinho?"
+    ]
+  ],
+  "p1-s15": [
+    [
+      "QUIXOTE",
+      "Nem unzinho."
+    ]
+  ],
+  "p1-s16": [
+    [
+      "QUIXOTE",
+      "E pare com essa mania de falar por ditados!"
+    ]
+  ],
+  "p1-s17": [
+    [
+      "SANCHO",
+      "Deixe comigo, meu amo."
+    ]
+  ],
+  "p1-s18": [
+    [
+      "SANCHO",
+      "Quem avisa amigo é."
+    ]
+  ],
+  "p1-s19": [
+    [
+      "SANCHO",
+      "Em boca fechada não entra mosca."
+    ]
+  ],
+  "p1-s20": [
+    [
+      "SANCHO",
+      "E devagar se vai ao longe!"
+    ]
+  ],
+  "p1-s21": [
+    [
+      "QUIXOTE",
+      "Sancho!"
+    ]
+  ],
+  "p1-s22": [
+    [
+      "QUIXOTE",
+      "Foram três de uma vez!"
+    ]
+  ],
+  "p1-s23": [
+    [
+      "SANCHO",
+      "É que eles moram na minha boca, meu amo, e saem todos juntos, feito galinha quando abrem o galinheiro."
+    ]
+  ],
+  "p1-s24": [
+    [
+      "NARRADORA",
+      "Só uma coisa ainda preocupava o cavaleiro:"
+    ],
+    [
+      "QUIXOTE",
+      "Um governador que não sabe ler..."
+    ]
+  ],
+  "p1-s25": [
+    [
+      "NARRADORA",
+      "Sancho estufou o peito:"
+    ],
+    [
+      "SANCHO",
+      "Mas eu já conheço as formiguinhas do meu nome!"
+    ]
+  ],
+  "p1-s26": [
+    [
+      "SANCHO",
+      "E vou aprender a escrever todas elas."
+    ]
+  ],
+  "p1-s29": [
+    [
+      "NARRADORA",
+      "Sancho olhou para ele e franziu a testa:"
+    ],
+    [
+      "SANCHO",
+      "Meu amo... escute essa voz!"
+    ]
+  ],
+  "p1-s30": [
+    [
+      "SANCHO",
+      "É igualzinha à da condessa barbuda!"
+    ]
+  ],
+  "p1-s31": [
+    [
+      "NARRADORA",
+      "Dom Quixote escutou:"
+    ],
+    [
+      "QUIXOTE",
+      "Parecida é."
+    ]
+  ],
+  "p1-s32": [
+    [
+      "QUIXOTE",
+      "Mas não pode ser: a condessa é condessa, e o mordomo é mordomo."
+    ]
+  ],
+  "p1-s33": [
+    [
+      "QUIXOTE",
+      "Fique de olho, Sancho, e depois me conte."
+    ]
+  ],
+  "p2-s6": [
+    [
+      "POVO",
+      "Bem-vindo à Ilha barataria, senhor governador!"
+    ]
+  ],
+  "p2-s10": [
+    [
+      "SANCHO",
+      "Com licença... e o mar, onde fica?"
+    ]
+  ],
+  "p2-s11": [
+    [
+      "MORDOMO",
+      "O mar está de folga hoje,"
+    ],
+    [
+      "NARRADORA",
+      "respondeu o mordomo, bem depressa."
+    ]
+  ],
+  "p2-s14": [
+    [
+      "MORDOMO",
+      "É costume da ilha,"
+    ],
+    [
+      "NARRADORA",
+      "avisou."
+    ]
+  ],
+  "p2-s15": [
+    [
+      "MORDOMO",
+      "O governador novo resolve uns casos difíceis, para o povo ver se ele é esperto ou bobo."
+    ]
+  ],
+  "p2-s18": [
+    [
+      "LAVRADOR",
+      "Senhor governador,"
+    ],
+    [
+      "NARRADORA",
+      "disse o lavrador,"
+    ],
+    [
+      "LAVRADOR",
+      "eu levei um pedaço de pano e perguntei se dava para fazer um chapéu."
+    ]
+  ],
+  "p2-s19": [
+    [
+      "LAVRADOR",
+      "Ele disse que dava."
+    ]
+  ],
+  "p2-s20": [
+    [
+      "LAVRADOR",
+      "Achei que ele queria ficar com a sobra, e perguntei se dava para dois."
+    ]
+  ],
+  "p2-s21": [
+    [
+      "LAVRADOR",
+      "Dava."
+    ]
+  ],
+  "p2-s22": [
+    [
+      "LAVRADOR",
+      "Para três?"
+    ]
+  ],
+  "p2-s23": [
+    [
+      "LAVRADOR",
+      "Dava."
+    ]
+  ],
+  "p2-s24": [
+    [
+      "LAVRADOR",
+      "Para quatro?"
+    ]
+  ],
+  "p2-s25": [
+    [
+      "LAVRADOR",
+      "Dava."
+    ]
+  ],
+  "p2-s26": [
+    [
+      "LAVRADOR",
+      "Para cinco?"
+    ]
+  ],
+  "p2-s27": [
+    [
+      "LAVRADOR",
+      "Dava!"
+    ]
+  ],
+  "p2-s28": [
+    [
+      "LAVRADOR",
+      "Hoje fui buscar os meus cinco chapéus..."
+    ]
+  ],
+  "p2-s29": [
+    [
+      "ALFAIATE",
+      "E aqui estão!"
+    ],
+    [
+      "NARRADORA",
+      "disse o alfaiate."
+    ]
+  ],
+  "p2-s32": [
+    [
+      "NARRADORA",
+      "Sancho contou os chapeuzinhos, coçou a barba e decidiu:"
+    ],
+    [
+      "SANCHO",
+      "Um quis ser mais esperto que o outro, e os dois se deram mal."
+    ]
+  ],
+  "p2-s33": [
+    [
+      "SANCHO",
+      "O lavrador fica sem o pano, e o alfaiate fica sem o pagamento."
+    ]
+  ],
+  "p2-s34": [
+    [
+      "SANCHO",
+      "E os chapeuzinhos vão para as crianças da vila, que devem ter bonecas do tamanho certo!"
+    ]
+  ],
+  "p3-s12": [
+    [
+      "SANCHO",
+      "Que brincadeira é essa?"
+    ]
+  ],
+  "p3-s13": [
+    [
+      "DOUTOR",
+      "Eu sou o doutor da ilha, senhor governador."
+    ]
+  ],
+  "p3-s14": [
+    [
+      "DOUTOR",
+      "O meu trabalho é cuidar da sua saúde."
+    ]
+  ],
+  "p3-s15": [
+    [
+      "DOUTOR",
+      "Tanto açúcar faz o dente chorar."
+    ]
+  ],
+  "p3-s16": [
+    [
+      "DOUTOR",
+      "Tanta gordura deixa a barriga pesada."
+    ]
+  ],
+  "p3-s17": [
+    [
+      "SANCHO",
+      "Está bem."
+    ]
+  ],
+  "p3-s18": [
+    [
+      "SANCHO",
+      "E o frango?"
+    ]
+  ],
+  "p3-s19": [
+    [
+      "DOUTOR",
+      "O frango... tem asa."
+    ]
+  ],
+  "p3-s20": [
+    [
+      "DOUTOR",
+      "Pode querer sair voando da sua barriga!"
+    ]
+  ],
+  "p3-s24": [
+    [
+      "DOUTOR",
+      "Fruta pode,"
+    ],
+    [
+      "NARRADORA",
+      "disse o doutor."
+    ]
+  ],
+  "p3-s25": [
+    [
+      "DOUTOR",
+      "Fruta faz bem."
+    ]
+  ],
+  "p3-s26": [
+    [
+      "SANCHO",
+      "Ufa!"
+    ]
+  ],
+  "p3-s27": [
+    [
+      "SANCHO",
+      "E o que mais eu posso comer?"
+    ]
+  ],
+  "p3-s28": [
+    [
+      "DOUTOR",
+      "Mais nada."
+    ]
+  ],
+  "p3-s29": [
+    [
+      "DOUTOR",
+      "Só umas bolachinhas bem fininhas."
+    ]
+  ],
+  "p3-s30": [
+    [
+      "NARRADORA",
+      "Sancho se recostou na cadeira e olhou bem para o homem:"
+    ],
+    [
+      "SANCHO",
+      "Como é o seu nome, doutor?"
+    ]
+  ],
+  "p3-s31": [
+    [
+      "DOUTOR",
+      "Doutor Pedro Rezio, nascido na aldeia de Tirafora."
+    ]
+  ],
+  "p3-s32": [
+    [
+      "SANCHO",
+      "Pois, doutor Pedro Rezio de Tirafora: fora daqui agora mesmo!"
+    ]
+  ],
+  "p3-s33": [
+    [
+      "SANCHO",
+      "Senão eu pego esta cadeira e... e me sento nela muito bravo!"
+    ]
+  ],
+  "p3-s34": [
+    [
+      "SANCHO",
+      "Torta de açúcar eu deixo para dia de festa, mas quero pão, cebola e um bom pedaço de queijo, que foi a comida com que me criei!"
+    ]
+  ],
+  "p3-s37": [
+    [
+      "SANCHO",
+      "Comer bem não é comer quase nada,"
+    ],
+    [
+      "NARRADORA",
+      "disse ele, feliz da vida."
+    ]
+  ],
+  "p3-s38": [
+    [
+      "SANCHO",
+      "É comer de tudo um pouco, com fruta e verdura no prato."
+    ]
+  ],
+  "p3-s39": [
+    [
+      "SANCHO",
+      "Barriga vazia não governa ninguém!"
+    ]
+  ],
+  "p3-s40": [
+    [
+      "MORDOMO",
+      "Isso foi um ditado?"
+    ],
+    [
+      "NARRADORA",
+      "perguntou o mordomo, de lápis na mão."
+    ]
+  ],
+  "p3-s41": [
+    [
+      "SANCHO",
+      "Foi."
+    ]
+  ],
+  "p3-s42": [
+    [
+      "SANCHO",
+      "Mas o meu amo não está aqui para ouvir."
+    ]
+  ],
+  "p4-s3": [
+    [
+      "NARRADORA",
+      "O outro, um aldeão de chapéu na mão, falou primeiro:"
+    ],
+    [
+      "ALDEAO",
+      "Senhor governador, faz tempo que emprestei a este vizinho dez moedas de ouro."
+    ]
+  ],
+  "p4-s4": [
+    [
+      "ALDEAO",
+      "Agora ele diz que já me devolveu."
+    ]
+  ],
+  "p4-s5": [
+    [
+      "ALDEAO",
+      "Eu não me lembro disso, e ninguém viu!"
+    ]
+  ],
+  "p4-s6": [
+    [
+      "ALDEAO",
+      "Só peço uma coisa: que ele jure."
+    ]
+  ],
+  "p4-s7": [
+    [
+      "ALDEAO",
+      "Se jurar, eu acredito."
+    ]
+  ],
+  "p4-s8": [
+    [
+      "VELHO_BENGALA",
+      "Eu juro!"
+    ],
+    [
+      "NARRADORA",
+      "disse o velhinho da bengala."
+    ]
+  ],
+  "p4-s9": [
+    [
+      "NARRADORA",
+      "Mas, antes, virou-se para o aldeão:"
+    ],
+    [
+      "VELHO_BENGALA",
+      "Segure aqui a minha bengala, por favor, que ela me atrapalha."
+    ]
+  ],
+  "p4-s11": [
+    [
+      "NARRADORA",
+      "O velhinho pôs a mão no peito e falou bem alto:"
+    ],
+    [
+      "VELHO_BENGALA",
+      "Juro que entreguei as dez moedas nas mãos dele!"
+    ]
+  ],
+  "p4-s13": [
+    [
+      "NARRADORA",
+      "O aldeão suspirou:"
+    ],
+    [
+      "ALDEAO",
+      "Se ele jurou, deve ser verdade."
+    ]
+  ],
+  "p4-s14": [
+    [
+      "ALDEAO",
+      "Eu é que estou ficando esquecido."
+    ]
+  ],
+  "p4-s18": [
+    [
+      "NARRADORA",
+      "De repente, o governador abriu os olhos:"
+    ],
+    [
+      "SANCHO",
+      "Chamem aquele homem de volta!"
+    ]
+  ],
+  "p4-s19": [
+    [
+      "SANCHO",
+      "Por que alguém pede para o outro segurar a bengala bem na hora de jurar?"
+    ],
+    [
+      "NARRADORA",
+      "pensou Sancho em voz alta."
+    ]
+  ],
+  "p4-s20": [
+    [
+      "SANCHO",
+      "E por que pega de volta tão depressa?"
+    ]
+  ],
+  "p4-s21": [
+    [
+      "SANCHO",
+      "Aí tem coisa..."
+    ]
+  ],
+  "p4-s23": [
+    [
+      "NARRADORA",
+      "O governador estendeu a mão:"
+    ],
+    [
+      "SANCHO",
+      "Passe para cá essa bengala!"
+    ]
+  ],
+  "p4-s24": [
+    [
+      "NARRADORA",
+      "Depois, entregou a bengala ao aldeão:"
+    ],
+    [
+      "SANCHO",
+      "Leve esta bengala para casa."
+    ]
+  ],
+  "p4-s25": [
+    [
+      "SANCHO",
+      "Com ela, você está pago!"
+    ]
+  ],
+  "p4-s26": [
+    [
+      "ALDEAO",
+      "Pago?"
+    ],
+    [
+      "NARRADORA",
+      "espantou-se o aldeão."
+    ]
+  ],
+  "p4-s27": [
+    [
+      "ALDEAO",
+      "Com uma bengala velha, que não vale nem uma moeda?"
+    ]
+  ],
+  "p4-s28": [
+    [
+      "SANCHO",
+      "Isso é o que nós vamos ver."
+    ]
+  ],
+  "p4-s35": [
+    [
+      "SANCHO",
+      "Essa fica de gorjeta?"
+    ],
+    [
+      "NARRADORA",
+      "perguntou Sancho."
+    ]
+  ],
+  "p4-s37": [
+    [
+      "NARRADORA",
+      "E o povo saiu do tribunal comentando:"
+    ],
+    [
+      "POVO",
+      "Esse governador enxerga até dentro de bengala!"
+    ]
+  ],
+  "p5-s2": [
+    [
+      "VIAJANTE",
+      "Senhor governador, venho de muito longe."
+    ]
+  ],
+  "p5-s3": [
+    [
+      "VIAJANTE",
+      "Na minha terra aconteceu um caso que nenhum juiz consegue resolver."
+    ]
+  ],
+  "p5-s4": [
+    [
+      "VIAJANTE",
+      "Disseram que quem descobre moedas dentro de bengala há de resolver este também."
+    ]
+  ],
+  "p5-s5": [
+    [
+      "SANCHO",
+      "Pois conte, que eu escuto,"
+    ],
+    [
+      "NARRADORA",
+      "disse Sancho."
+    ]
+  ],
+  "p5-s6": [
+    [
+      "VIAJANTE",
+      "Na minha terra corre um rio largo, e por cima do rio passa uma ponte."
+    ]
+  ],
+  "p5-s7": [
+    [
+      "VIAJANTE",
+      "Logo na entrada, antes de começar a ponte, ficam dois guardas e uma cadeia."
+    ]
+  ],
+  "p5-s8": [
+    [
+      "VIAJANTE",
+      "O dono da ponte fez uma lei: quem chega diz aos guardas para onde vai."
+    ]
+  ],
+  "p5-s9": [
+    [
+      "VIAJANTE",
+      "Quem disser a verdade atravessa a ponte."
+    ]
+  ],
+  "p5-s10": [
+    [
+      "VIAJANTE",
+      "Quem mentir não atravessa: vai direto para a cadeia, ali do lado."
+    ]
+  ],
+  "p5-s11": [
+    [
+      "SANCHO",
+      "Lei boa,"
+    ],
+    [
+      "NARRADORA",
+      "disse Sancho."
+    ]
+  ],
+  "p5-s12": [
+    [
+      "SANCHO",
+      "Lá ninguém mente."
+    ]
+  ],
+  "p5-s13": [
+    [
+      "VIAJANTE",
+      "Ninguém mentia, senhor."
+    ]
+  ],
+  "p5-s14": [
+    [
+      "VIAJANTE",
+      "Um dizia vou para a feira e passava."
+    ]
+  ],
+  "p5-s15": [
+    [
+      "VIAJANTE",
+      "Outro dizia vou visitar a minha avó e passava também."
+    ]
+  ],
+  "p5-s16": [
+    [
+      "VIAJANTE",
+      "Até que ontem chegou um homem, e os guardas perguntaram, como sempre: Para onde você vai?."
+    ]
+  ],
+  "p5-s17": [
+    [
+      "VIAJANTE",
+      "E ele respondeu, bem tranquilo: Eu vou para a cadeia."
+    ]
+  ],
+  "p5-s18": [
+    [
+      "VIAJANTE",
+      "Os guardas coçaram a cabeça."
+    ]
+  ],
+  "p5-s19": [
+    [
+      "VIAJANTE",
+      "Se deixassem o homem atravessar a ponte, ele não ia para a cadeia: então tinha mentido... e quem mente não atravessa, vai para a cadeia!"
+    ]
+  ],
+  "p5-s20": [
+    [
+      "VIAJANTE",
+      "Mas, se pusessem o homem na cadeia, ele ia mesmo para onde disse: então tinha falado a verdade... e quem fala a verdade tem de atravessar!"
+    ]
+  ],
+  "p5-s21": [
+    [
+      "VIAJANTE",
+      "Prende, solta, prende, solta..."
+    ]
+  ],
+  "p5-s22": [
+    [
+      "VIAJANTE",
+      "Os guardas andaram de um lado para o outro, pensando, até ficarem tontos."
+    ]
+  ],
+  "p5-s25": [
+    [
+      "NARRADORA",
+      "Sancho pensou, pensou e disse:"
+    ],
+    [
+      "SANCHO",
+      "Já sei!"
+    ]
+  ],
+  "p5-s26": [
+    [
+      "SANCHO",
+      "E se o homem ficar morando bem no meio da ponte, nem de um lado nem do outro?"
+    ]
+  ],
+  "p5-s27": [
+    [
+      "VIAJANTE",
+      "Mas, senhor governador, ninguém pode morar numa ponte!"
+    ]
+  ],
+  "p5-s28": [
+    [
+      "SANCHO",
+      "É... e a cama nem ia caber."
+    ]
+  ],
+  "p5-s29": [
+    [
+      "SANCHO",
+      "Estava só pensando em voz alta."
+    ]
+  ],
+  "p5-s30": [
+    [
+      "NARRADORA",
+      "Então Sancho abriu os braços, como os dois pratos de uma balança:"
+    ],
+    [
+      "SANCHO",
+      "Olhem."
+    ]
+  ],
+  "p5-s31": [
+    [
+      "SANCHO",
+      "Deste lado, há uma razão para prender o homem."
+    ]
+  ],
+  "p5-s32": [
+    [
+      "SANCHO",
+      "Deste outro, há uma razão igualzinha para soltar."
+    ]
+  ],
+  "p5-s33": [
+    [
+      "SANCHO",
+      "A balança ficou parada no meio."
+    ]
+  ],
+  "p5-s34": [
+    [
+      "SANCHO",
+      "E, quando a gente não sabe se deve castigar ou perdoar, é melhor perdoar."
+    ]
+  ],
+  "p5-s35": [
+    [
+      "SANCHO",
+      "Quem me ensinou foi o meu amo, antes de eu vir para cá: a justiça fica mais bonita de mãos dadas com o perdão."
+    ]
+  ],
+  "p5-s36": [
+    [
+      "SANCHO",
+      "Deixem o homem passar!"
+    ]
+  ],
+  "p6-s3": [
+    [
+      "NARRADORA",
+      "Ele desceu, tirou o chapéu e se ajoelhou na frente de Teresa, que estava de avental e de pés molhados:"
+    ],
+    [
+      "PAJEM",
+      "Dona Teresa Pança, esposa do senhor governador da Ilha Barataria: trago uma carta e um presente!"
+    ]
+  ],
+  "p6-s8": [
+    [
+      "NARRADORA",
+      "Sanchica deu um grito:"
+    ],
+    [
+      "SANCHICA",
+      "Mãe!"
+    ]
+  ],
+  "p6-s9": [
+    [
+      "SANCHICA",
+      "O pai conseguiu a ilha!"
+    ]
+  ],
+  "p6-s10": [
+    [
+      "TERESA",
+      "Eu não disse?"
+    ],
+    [
+      "NARRADORA",
+      "respondeu Teresa, que nunca tinha dito."
+    ]
+  ],
+  "p6-s13": [
+    [
+      "PAJEM",
+      "Eu leio, dona Teresa!"
+    ],
+    [
+      "NARRADORA",
+      "ofereceu o pajem, correndo atrás."
+    ]
+  ],
+  "p6-s14": [
+    [
+      "TERESA",
+      "Nada disso: quero que a aldeia inteira escute!"
+    ]
+  ],
+  "p6-s15": [
+    [
+      "NARRADORA",
+      "Sansão leu em voz alta:"
+    ],
+    [
+      "SANSAO",
+      "Minha Teresinha: saiba que agora sou governador."
+    ]
+  ],
+  "p6-s16": [
+    [
+      "SANSAO",
+      "Mando um beijo para você e dois para a Sanchica."
+    ]
+  ],
+  "p6-s17": [
+    [
+      "SANSAO",
+      "O burrico vai bem e manda lembranças."
+    ]
+  ],
+  "p6-s18": [
+    [
+      "SANSAO",
+      "Seu marido, Sancho Pança."
+    ]
+  ],
+  "p6-s19": [
+    [
+      "SANSAO",
+      "Quem escreveu foi o secretário, porque as formiguinhas do meu nome ainda não saem da minha pena."
+    ]
+  ],
+  "p6-s20": [
+    [
+      "SANCHICA",
+      "Pena?"
+    ],
+    [
+      "NARRADORA",
+      "estranhou Sanchica."
+    ]
+  ],
+  "p6-s21": [
+    [
+      "SANCHICA",
+      "O pai virou passarinho?"
+    ]
+  ],
+  "p6-s24": [
+    [
+      "NARRADORA",
+      "O padre e mestre Nicolau ficaram de boca aberta:"
+    ],
+    [
+      "PADRE",
+      "Governador?"
+    ]
+  ],
+  "p6-s25": [
+    [
+      "PADRE",
+      "O nosso Sancho?"
+    ]
+  ],
+  "p6-s26": [
+    [
+      "TERESA",
+      "E de uma ilha!"
+    ],
+    [
+      "NARRADORA",
+      "disse Teresa."
+    ]
+  ],
+  "p6-s27": [
+    [
+      "TERESA",
+      "Sanchica, minha filha, de hoje em diante a gente só anda de carruagem!"
+    ]
+  ],
+  "p6-s28": [
+    [
+      "NARRADORA",
+      "Sanchica quis saber:"
+    ],
+    [
+      "SANCHICA",
+      "Mãe, e eu posso ir de carruagem buscar água na fonte?"
+    ]
+  ],
+  "p6-s30": [
+    [
+      "NARRADORA",
+      "Sansão ajudou a amarrar o pacote e puxou conversa com o pajem, como quem não quer nada:"
+    ],
+    [
+      "SANSAO",
+      "Então o senhor Alonso está no palácio dos duques..."
+    ]
+  ],
+  "p6-s31": [
+    [
+      "SANSAO",
+      "E depois, para onde ele pretende ir?"
+    ]
+  ],
+  "p6-s35": [
+    [
+      "NICOLAU",
+      "Para quê?"
+    ]
+  ],
+  "p6-s36": [
+    [
+      "SANSAO",
+      "Segredo!"
+    ]
+  ],
+  "p7-s8": [
+    [
+      "NARRADORA",
+      "Então pegou pena e papel e escreveu uma carta:"
+    ],
+    [
+      "QUIXOTE",
+      "Sancho, meu amigo: contam que você governa como gente grande, e eu fico todo orgulhoso."
+    ]
+  ],
+  "p7-s9": [
+    [
+      "QUIXOTE",
+      "Seja bom com os pobres."
+    ]
+  ],
+  "p7-s10": [
+    [
+      "QUIXOTE",
+      "Visite a feira e a padaria."
+    ]
+  ],
+  "p7-s11": [
+    [
+      "QUIXOTE",
+      "E não esqueça de cortar as unhas."
+    ]
+  ],
+  "p7-s12": [
+    [
+      "QUIXOTE",
+      "Aqui o palácio é muito bonito, mas o Rocinante pergunta todo dia pelo burrico."
+    ]
+  ],
+  "p7-s13": [
+    [
+      "QUIXOTE",
+      "Seu amo, Dom Quixote."
+    ]
+  ],
+  "p7-s16": [
+    [
+      "SANCHO",
+      "Escreva aí a resposta: Meu amo: governar dá muito trabalho e pouca comida."
+    ]
+  ],
+  "p7-s17": [
+    [
+      "SANCHO",
+      "Um doutor não me deixava jantar, mas eu mandei o doutor passear."
+    ]
+  ],
+  "p7-s18": [
+    [
+      "SANCHO",
+      "Já fiz uma lei boa: o pão da ilha tem de ser grande e barato."
+    ]
+  ],
+  "p7-s19": [
+    [
+      "SANCHO",
+      "O burrico manda um zurro para o Rocinante: IIIH-ÓÓÓ."
+    ]
+  ],
+  "p7-s20": [
+    [
+      "SANCHO",
+      "Com três Ós, mordomo!"
+    ]
+  ],
+  "p7-s21": [
+    [
+      "SANCHO",
+      "Não vá esquecer nenhum."
+    ]
+  ],
+  "p7-s22": [
+    [
+      "MORDOMO",
+      "Agora o senhor governador precisa assinar,"
+    ],
+    [
+      "NARRADORA",
+      "disse o mordomo."
+    ]
+  ],
+  "p8-s3": [
+    [
+      "POVO",
+      "Acorde, senhor governador!"
+    ]
+  ],
+  "p8-s4": [
+    [
+      "POVO",
+      "Inimigos invadiram a ilha!"
+    ]
+  ],
+  "p8-s5": [
+    [
+      "NARRADORA",
+      "Sancho sentou na cama, de touca:"
+    ],
+    [
+      "SANCHO",
+      "Mas que inimigos?"
+    ]
+  ],
+  "p8-s6": [
+    [
+      "SANCHO",
+      "Esta ilha nem tem mar para eles chegarem!"
+    ]
+  ],
+  "p8-s9": [
+    [
+      "POVO",
+      "Ande, governador!"
+    ]
+  ],
+  "p8-s10": [
+    [
+      "POVO",
+      "Mostre o caminho!"
+    ]
+  ],
+  "p8-s12": [
+    [
+      "NARRADORA",
+      "No escuro, a gritaria passava de um lado para o outro:"
+    ],
+    [
+      "POVO",
+      "Por aqui!"
+    ]
+  ],
+  "p8-s13": [
+    [
+      "POVO",
+      "Fechem o portão!"
+    ]
+  ],
+  "p8-s14": [
+    [
+      "POVO",
+      "Tragam as escadas!"
+    ]
+  ],
+  "p8-s15": [
+    [
+      "NARRADORA",
+      "De repente, o mordomo gritou mais alto que todos:"
+    ],
+    [
+      "MORDOMO",
+      "Chega!"
+    ]
+  ],
+  "p8-s16": [
+    [
+      "MORDOMO",
+      "Vitória!"
+    ]
+  ],
+  "p8-s17": [
+    [
+      "MORDOMO",
+      "Os inimigos fugiram!"
+    ]
+  ],
+  "p8-s18": [
+    [
+      "MORDOMO",
+      "Viva o governador!"
+    ]
+  ],
+  "p8-s26": [
+    [
+      "NARRADORA",
+      "Abraçou o pescoço do burrico e deu um beijo na testa dele:"
+    ],
+    [
+      "SANCHO",
+      "Meu companheiro, quando eu andava com você, os meus dias eram felizes."
+    ]
+  ],
+  "p8-s27": [
+    [
+      "SANCHO",
+      "Eu só pensava em remendar a sua sela e encher a sua barriga."
+    ]
+  ],
+  "p8-s28": [
+    [
+      "SANCHO",
+      "Depois que virei governador, ganhei mil preocupações e nem um jantar sossegado."
+    ]
+  ],
+  "p8-s29": [
+    [
+      "NARRADORA",
+      "Sancho montou e falou a todos, sem raiva nenhuma:"
+    ],
+    [
+      "SANCHO",
+      "Abram caminho, meus senhores."
+    ]
+  ],
+  "p8-s30": [
+    [
+      "SANCHO",
+      "Eu não nasci para governador."
+    ]
+  ],
+  "p8-s31": [
+    [
+      "SANCHO",
+      "Cheguei sem uma moeda e saio sem uma moeda."
+    ]
+  ],
+  "p8-s32": [
+    [
+      "SANCHO",
+      "Só peço meio pão e meio queijo para a viagem."
+    ]
+  ],
+  "p8-s33": [
+    [
+      "NARRADORA",
+      "O mordomo, que já não ria, baixou os olhos:"
+    ],
+    [
+      "MORDOMO",
+      "O senhor foi o melhor governador que esta vila já teve."
+    ]
+  ],
+  "p8-s36": [
+    [
+      "SANCHO",
+      "Eu sabia!"
+    ],
+    [
+      "NARRADORA",
+      "disse ele, e piscou."
+    ]
+  ],
+  "p9-s7": [
+    [
+      "SANCHO",
+      "Socorro!"
+    ],
+    [
+      "NARRADORA",
+      "gritou Sancho a noite inteira."
+    ]
+  ],
+  "p9-s10": [
+    [
+      "SANCHO",
+      "Está vendo, meu amigo?"
+    ]
+  ],
+  "p9-s11": [
+    [
+      "SANCHO",
+      "Ontem, governador, numa cadeira de veludo."
+    ]
+  ],
+  "p9-s12": [
+    [
+      "SANCHO",
+      "Hoje, no fundo de um buraco."
+    ]
+  ],
+  "p9-s16": [
+    [
+      "NARRADORA",
+      "Foi andando sozinho até a beira de um buraco, e lá de dentro saiu uma voz fraquinha:"
+    ],
+    [
+      "SANCHO",
+      "Ei, aí de cima!"
+    ]
+  ],
+  "p9-s17": [
+    [
+      "SANCHO",
+      "Tem alguma alma boa para ajudar um governador sem governo?"
+    ]
+  ],
+  "p9-s18": [
+    [
+      "NARRADORA",
+      "Dom Quixote arregalou os olhos:"
+    ],
+    [
+      "QUIXOTE",
+      "Quem está aí embaixo?"
+    ]
+  ],
+  "p9-s19": [
+    [
+      "SANCHO",
+      "Sancho Pança!"
+    ]
+  ],
+  "p9-s20": [
+    [
+      "QUIXOTE",
+      "Não pode ser!"
+    ]
+  ],
+  "p9-s21": [
+    [
+      "QUIXOTE",
+      "O meu Sancho está governando uma ilha."
+    ]
+  ],
+  "p9-s22": [
+    [
+      "QUIXOTE",
+      "Você deve ser um fantasma com a voz dele!"
+    ]
+  ],
+  "p9-s23": [
+    [
+      "SANCHO",
+      "Fantasma coisa nenhuma, meu amo!"
+    ]
+  ],
+  "p9-s24": [
+    [
+      "SANCHO",
+      "Sou eu, de carne, osso e fome!"
+    ]
+  ],
+  "p9-s26": [
+    [
+      "NARRADORA",
+      "Dom Quixote bateu a mão na testa:"
+    ],
+    [
+      "QUIXOTE",
+      "Esse zurro eu conheço como se fosse da família!"
+    ]
+  ],
+  "p9-s27": [
+    [
+      "QUIXOTE",
+      "É o burrico!"
+    ]
+  ],
+  "p9-s28": [
+    [
+      "QUIXOTE",
+      "Então é você mesmo, Sancho!"
+    ]
+  ],
+  "p9-s29": [
+    [
+      "QUIXOTE",
+      "Espere aí, que eu vou buscar ajuda!"
+    ]
+  ],
+  "p9-s33": [
+    [
+      "QUIXOTE",
+      "Senti a sua falta, Sancho,"
+    ],
+    [
+      "NARRADORA",
+      "disse Dom Quixote."
+    ]
+  ],
+  "p9-s34": [
+    [
+      "QUIXOTE",
+      "Rasguei uma meia e não tinha a quem contar."
+    ]
+  ],
+  "p9-s35": [
+    [
+      "SANCHO",
+      "E eu, meu amo, governei uma ilha inteirinha e não tinha a quem dizer um ditado."
+    ]
+  ],
+  "p10-s1": [
+    [
+      "NARRADORA",
+      "No palácio, Sancho se ajoelhou diante do duque e da duquesa, com as chaves da vila na mão:"
+    ],
+    [
+      "SANCHO",
+      "Senhores, eu sei que aquela ilha era de brincadeira."
+    ]
+  ],
+  "p10-s2": [
+    [
+      "SANCHO",
+      "Mas o povo de lá era de verdade, e a fome também."
+    ]
+  ],
+  "p10-s3": [
+    [
+      "SANCHO",
+      "Governei dez dias: não roubei nada, não ganhei nada, fiz umas leis boas e resolvi uns casos difíceis."
+    ]
+  ],
+  "p10-s4": [
+    [
+      "SANCHO",
+      "Agora devolvo as chaves e volto a ser escudeiro, que é um trabalho em que a gente come."
+    ]
+  ],
+  "p10-s8": [
+    [
+      "DUQUESA",
+      "Sancho,"
+    ],
+    [
+      "NARRADORA",
+      "disse a duquesa, de olhos baixos,"
+    ],
+    [
+      "DUQUESA",
+      "a ilha era de faz de conta."
+    ]
+  ],
+  "p10-s9": [
+    [
+      "DUQUESA",
+      "Mas a sua sabedoria era de verdade."
+    ]
+  ],
+  "p10-s10": [
+    [
+      "SANCHO",
+      "Só me diga uma coisa, senhora: e o mar?"
+    ]
+  ],
+  "p10-s11": [
+    [
+      "SANCHO",
+      "Estava de folga até hoje?"
+    ]
+  ],
+  "p10-s12": [
+    [
+      "DUQUESA",
+      "O mar... nunca existiu,"
+    ],
+    [
+      "NARRADORA",
+      "disse ela, vermelha."
+    ]
+  ],
+  "p10-s13": [
+    [
+      "DUQUE",
+      "A culpa foi minha, Sancho,"
+    ],
+    [
+      "NARRADORA",
+      "disse o duque."
+    ]
+  ],
+  "p10-s14": [
+    [
+      "DUQUE",
+      "Perdão."
+    ]
+  ],
+  "p10-s15": [
+    [
+      "NARRADORA",
+      "Dom Quixote pôs a mão no ombro do amigo:"
+    ],
+    [
+      "QUIXOTE",
+      "A ilha era de mentira."
+    ]
+  ],
+  "p10-s16": [
+    [
+      "QUIXOTE",
+      "Mas o governador foi de verdade."
+    ]
+  ],
+  "p10-s17": [
+    [
+      "SANCHO",
+      "Estão perdoados,"
+    ],
+    [
+      "NARRADORA",
+      "respondeu Sancho."
+    ]
+  ],
+  "p10-s18": [
+    [
+      "SANCHO",
+      "Só não perdoo o doutor Pedro Rezio de Tirafora, que me fez jantar bolachinha!"
+    ]
+  ],
+  "p10-s23": [
+    [
+      "NARRADORA",
+      "Na estrada, com o vento no rosto, Dom Quixote respirou fundo:"
+    ],
+    [
+      "QUIXOTE",
+      "Ah, Sancho!"
+    ]
+  ],
+  "p10-s24": [
+    [
+      "QUIXOTE",
+      "A liberdade é um dos presentes mais valiosos que as pessoas receberam do céu."
+    ]
+  ],
+  "p10-s25": [
+    [
+      "QUIXOTE",
+      "Nenhum tesouro da terra ou do mar vale tanto quanto ela."
+    ]
+  ],
+  "p10-s26": [
+    [
+      "QUIXOTE",
+      "Lá no palácio, no meio de tantos banquetes, eu me sentia apertado que nem pé em sapato novo!"
+    ]
+  ],
+  "p10-s27": [
+    [
+      "SANCHO",
+      "Falou bonito, meu amo."
+    ]
+  ],
+  "p10-s28": [
+    [
+      "SANCHO",
+      "Pão com liberdade é bom."
+    ]
+  ],
+  "p10-s29": [
+    [
+      "SANCHO",
+      "Mas com queijo é melhor ainda."
+    ]
+  ],
+  "p10-s31": [
+    [
+      "SANCHO",
+      "E agora, para onde vamos?"
+    ]
+  ],
+  "p10-s32": [
+    [
+      "QUIXOTE",
+      "Para barcelona, Sancho!"
+    ]
+  ],
+  "p10-s33": [
+    [
+      "QUIXOTE",
+      "Dizem que lá tem festa, cavaleiros e uma coisa que nós dois nunca vimos: o mar."
+    ]
+  ],
+  "p10-s34": [
+    [
+      "SANCHO",
+      "Mar de verdade?"
+    ]
+  ],
+  "p10-s35": [
+    [
+      "SANCHO",
+      "Desta vez eu quero ver com estes olhos!"
+    ]
+  ]
+}

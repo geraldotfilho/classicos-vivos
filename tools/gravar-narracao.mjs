@@ -111,7 +111,26 @@ let ELENCO = {
     LOURENCO: { voz: 'pt-br-commercial-5', estilo: 'shy young poet, gentle, whispering then blushing with joy' },
     // DOM_DIEGO: a mesma voz da Parte 5 (podcaster-7)
     COZINHEIRO: { voz: 'pt-br-csagent-9', estilo: 'jolly wedding cook, generous and laughing' },
-    MENINO: { voz: 'pt-br-training-6', estilo: 'young boy narrating a puppet show with a stick, eager and theatrical' }
+    MENINO: { voz: 'pt-br-training-6', estilo: 'young boy narrating a puppet show with a stick, eager and theatrical' },
+    // Parte 7 (2026-11-21). O aldeão e o velhinho da bengala reaproveitam as vozes do CREDOR e do DEVEDOR
+    MORDOMO: { voz: 'pt-br-storyteller-10', estilo: 'tall butler with a deep, formal voice, dry and polite, secretly amused' },
+    LAVRADOR: { voz: 'pt-br-assistant-3', estilo: 'simple farmer complaining to the judge, indignant and a bit suspicious' },
+    ALFAIATE: { voz: 'pt-br-csagent-7', estilo: 'cheeky tailor, proud of his little trick, comic' },
+    DOUTOR: { voz: 'pt-br-advisor-9', estilo: 'stiff, fussy doctor, serious and pompous, a bit comic' },
+    ALDEAO: { voz: 'pt-br-techagent-5', estilo: 'humble, honest old villager, trusting and a little confused' },
+    VELHO_BENGALA: { voz: 'pt-br-concierge-10', estilo: 'sly old man, overly calm and sweet, hiding a trick' },
+    VIAJANTE: { voz: 'pt-br-storyteller-5', estilo: 'dusty traveler telling a puzzling case, earnest and lively' },
+    PAJEM: { voz: 'pt-br-csagent-2', estilo: 'polite young page, ceremonious and eager, bowing' },
+    // Parte 8 (2026-11-21). O Cavaleiro da Branca Lua é a voz de Sansão (como o dos Espelhos), abafada pelo elmo
+    PASTORA: { voz: 'pt-br-commercial-3', estilo: 'cheerful young woman playing shepherdess, an excited fan of the book' },
+    VAQUEIROS: { voz: 'pt-br-csagent-8', estilo: 'cowherds on horseback shouting a warning together, urgent' },
+    VIAJANTE1: { voz: 'pt-br-tutor-3', estilo: 'inn guest about to read a book aloud, curious, then amazed' },
+    VIAJANTE2: { voz: 'pt-br-commercial-6', estilo: 'inn guest grumbling about a bad book, disappointed' },
+    DOM_ANTONIO: { voz: 'pt-br-podcaster-3', estilo: 'jovial, cheerful nobleman, warm host who loves a good joke' },
+    CABECA: { voz: 'pt-br-commercial-1', estilo: 'hollow, mysterious voice speaking through a pipe, slow, holding back a laugh' },
+    IMPRESSOR: { voz: 'pt-br-tutor-9', estilo: 'friendly printer proud of his craft, warm and a bit mischievous' },
+    BRANCA_LUA: { voz: 'pt-br-tutor-2', estilo: 'knight in a closed helmet: muffled, deep, solemn and respectful' },
+    CRIANCAS: { voz: 'pt-br-concierge-6', estilo: 'group of excited children begging for a story together' }
 };
 
 function opcoes(argv) {

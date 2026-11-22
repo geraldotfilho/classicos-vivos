@@ -89,3 +89,10 @@ Relatório: [`../revisao/FIDELIDADE-VOLUME-2.md`](../revisao/FIDELIDADE-VOLUME-2
 - **#64 e #66 (cap. 68, Branca Lua)**: Rocinante não senta mais "que nem cachorro": dobra os joelhos e se deita de lado na areia (`p7-real` nova, depois de uma edição que manteve o cavalo sentado). A página ganhou Imaginação (`p7-imag`, o duelo ao luar). A pista final deixou de ser o cavalo "que não parava para comer" (que o autor achou incoerente): ao partir, o cavaleiro murmura "Descanse, senhor Alonso...", e Sancho estranha, porque longe da aldeia ninguém chama o amo assim. O desafio da página foi atualizado.
 - **#67 (cap. 70)**: "a bolsinha de moedas que o duque e a duquesa, os donos do palácio e da ilha de mentirinha, tinham dado a ele".
 - **Arte pela API** (autorizada no prompt da sessão), lista `tools/arte/dom-quixote-revisoes-2026-11-21.mjs`, P7 + P8: 3 lotes, 12 imagens pedidas, 11 aceitas (só a 1ª tentativa de `p8-p7-real` foi descartada), **US$ 0,41**.
+
+## 8. Narração gravada em português (fase 6, 2026-11-22, em andamento)
+- **Páginas 0 a 6 gravadas** (caps. 62–67) e **29/29 palavras-chave**, liberadas como prévia (`previa: [8]` em `dom-quixote/audio/vozes.js`); sem rajadas de ruído. As **páginas 7 a 10** (caps. 68–71) pararam no limite diário de 100 pedidos (a chave reserva recebeu o mesmo 429): faltam ~27 pedidos.
+- Retomar (com autorização, depois das 07:00 UTC): `npm run gravar:narracao -- --voz narracao --parte 8 --pagina-inteira --autorizado`, conferir com `node tools/conferir-narracao.mjs --partes 8 --idiomas pt` e trocar a prévia por `8` em `partes`.
+- Roteiro em `dom-quixote/audio/narracao/parte-8/roteiro.json`; elenco novo no `ELENCO` (pastora, vaqueiros, dois viajantes, Dom Antônio, cabeça encantada, homem de avental, Cavaleiro da Branca Lua = voz de Sansão, crianças).
+- **Gasto até aqui**: 70 pedidos, ~US$ 0,152 (Flex).
+- 🛑 Escuta do humano: [`docs/narracao/qa-parte-8.md`](../narracao/qa-parte-8.md).

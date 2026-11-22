@@ -276,7 +276,8 @@
     {
       "texto": "FARINHA",
       "onde": [
-        "página 2: dica ao passar o dedo na cena"
+        "página 2: dica ao passar o dedo na cena",
+        "página 10: dica ao passar o dedo na cena"
       ]
     },
     {
@@ -466,6 +467,24 @@
       ]
     },
     {
+      "texto": "CARVALHO",
+      "onde": [
+        "página 8: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "ESCONDERIJO",
+      "onde": [
+        "página 8: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "PLANO",
+      "onde": [
+        "página 8: dica ao passar o dedo na cena"
+      ]
+    },
+    {
       "texto": "Ajude no resgate silencioso! Olhe a figura lá em cima e toque na palavra certa. Cuidado: tem palavras parecidas querendo enganar você!",
       "onde": [
         "página 9: instrução da atividade"
@@ -490,6 +509,24 @@
       ]
     },
     {
+      "texto": "CADEIA",
+      "onde": [
+        "página 9: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "CHAVE",
+      "onde": [
+        "página 9: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "CORDA",
+      "onde": [
+        "página 9: dica ao passar o dedo na cena"
+      ]
+    },
+    {
       "texto": "Na beira da Floresta de Xervedo, Robin Hood rebate o Xerife furioso enquanto João Pequeno, Lady Mariana, Grilo e Mestre Tomé devolvem os sacos de farinha às famílias",
       "onde": [
         "página 10: descrição da ilustração (leitor de tela)"
@@ -502,6 +539,18 @@
       ]
     },
     {
+      "texto": "XERIFE",
+      "onde": [
+        "página 10: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "VERDADE",
+      "onde": [
+        "página 10: dica ao passar o dedo na cena"
+      ]
+    },
+    {
       "texto": "Debaixo do Grande Carvalho iluminado por lanternas, Mestre Tomé abraça Grilo diante do banquete de pães enquanto Lady Mariana mostra a Robin e João Pequeno o cartaz da Flecha de Ouro",
       "onde": [
         "página 11: descrição da ilustração (leitor de tela)"
@@ -511,6 +560,24 @@
       "texto": "🍞 Festa no Grande Carvalho e o Cartaz da Flecha de Ouro",
       "onde": [
         "página 11: selo da Lente da Realidade"
+      ]
+    },
+    {
+      "texto": "BANQUETE",
+      "onde": [
+        "página 11: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "FLECHA",
+      "onde": [
+        "página 11: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "ARMADILHA",
+      "onde": [
+        "página 11: dica ao passar o dedo na cena"
       ]
     },
     {
