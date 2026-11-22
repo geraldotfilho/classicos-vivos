@@ -48,7 +48,12 @@
                 cena: {
                     real: 'p0-real.webp', emoji: '🏹',
                     alt: 'Na clareira ensolarada do Grande Carvalho em Xervedo, Robin Hood, Lady Mariana, João Pequeno e Grilo partilham pães e maçãs',
-                    legendaReal: '🌳 O Bando do Grande Carvalho'
+                    legendaReal: '🌳 O Bando do Grande Carvalho',
+                    hotspots: [
+                        { x: 34, y: 4, w: 32, h: 30, palavra: 'FLORESTA', emoji: '🌳' },
+                        { x: 20, y: 34, w: 58, h: 34, palavra: 'AMIGOS', emoji: '🤝' },
+                        { x: 36, y: 68, w: 26, h: 20, palavra: 'JUSTIÇA', emoji: '⚖️' }
+                    ]
                 }
             },
             {
@@ -113,7 +118,15 @@
                 cena: {
                     real: 'p3-real.webp', emoji: '⚖️',
                     alt: 'Diante do moinho, Robin e Mestre Tomé argumentam com o Xerife furioso; os guardas prendem Mestre Tomé enquanto Robin e Grilo fogem para a floresta',
-                    legendaReal: '⚖️ Um Desafio Corajoso e uma Prisão sem Provas'
+                    legendaReal: '⚖️ Um Desafio Corajoso e uma Prisão sem Provas',
+                    camadas: [
+                        { id: 'c-roda-p3', src: 'camadas/p2-roda.webp', x: 87.5, y: 89, w: 24, anim: 'girar', emoji: '⚙️' }
+                    ],
+                    hotspots: [
+                        { x: 8, y: 34, w: 26, h: 50, palavra: 'CORAGEM', emoji: '💪' },
+                        { x: 44, y: 34, w: 16, h: 19, palavra: 'CONTA', emoji: '🧮' },
+                        { x: 34, y: 54, w: 18, h: 33, palavra: 'PROVA', emoji: '🔎' }
+                    ]
                 }
             },
             {
