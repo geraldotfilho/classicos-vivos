@@ -44,20 +44,25 @@ O que vale **só para Robin Hood**, complementando a [receita geral](../RECEITA-
 
 ---
 
-## 4. Direção de arte, diversidade e recurso visual (fechados pelo humano)
+## 4. Direção de arte, diversidade e recurso visual (atualizados pelo humano em 2026-11-21)
 
-- **Estilo artístico — Opção A (Gouache estilizado de floresta)**: árvores altas com formas geométricas expressivas, camadas de verde-esmeralda e dourado, traço suave de carvão/tinta (inspiração Cartoon Saloon / *Wolfwalkers*), iluminado e distinto da aquarela terrosa de *Dom Quixote*.
-- **Diversidade editorial declarada**: **Lady Mariana** (jovem negra de cabelo trançado) e elenco diverso em toda a obra — **a representatividade infantil prevalece sobre a distribuição étnica da Europa medieval**. Registrar essa escolha também no texto para adultos em `sobre.html`.
-- **Recurso visual — Opção 1 (Cena única + camadas)**: sem a chave da 2ª lente (*Realidade × Imaginação* é própria de Dom Quixote). O quadro ganha vida com ilustrações ricas, hotspots de toque, variações por progresso (`realCena`) e camadas animadas (`camadas`).
+- **Estilo artístico — Opção C (Diorama de Papel Recortado / *Paper Cut-Out Craft*)**: planos com textura tátil de papel artesanal e sombras de profundidade entre as camadas, totalmente distinto da aquarela/guache de *Dom Quixote* e alinhado à estética de camadas animadas do motor.
+  - **📌 Pendência anotada para antes da produção das novas gravuras**: discutir e desenhar com o humano um **novo método de produção de ilustrações** para esta parte, baseado na **geração prévia de cenários-base reaproveitáveis** e **colagem posterior dos personagens em camadas independentes**, permitindo inclusive animações e variações de cena sem redesenhar o fundo inteiro.
+- **Diversidade editorial declarada**: **Lady Mariana** (jovem negra de cabelo trançado, mentora da floresta), **Mestre Tomé** (o moleiro, homem negro) e seu filho **Grilo** (menino pardo), além de elenco diverso em toda a obra — **a representatividade infantil prevalece sobre a distribuição étnica da Europa medieval**. Registrar essa escolha também no texto para adultos em `sobre.html`.
+- **Recurso visual — Opção 1 (Cena única + camadas e gravuras progressivas reais)**: sem a chave da 2ª lente (*Realidade × Imaginação* é própria de Dom Quixote). **Proibido usar apenas emojis soltos como resultado de atividade**: toda atividade deve mudar a gravura de verdade (`progressivo` com 4 etapas ilustradas ou `camadas` ilustradas em estilo papel recortado).
 - **"Você sabia?" nos dois modos**: caixas curtas e curiosas no modo tradicional (5–8 anos, `voceSabia` na página) e versão mais completa no Modo Desafio 🧩 (8–10 anos).
 
 ---
 
 ## 5. Nomes e aportuguesamento (regra do humano)
 
-- **Só *Robin Hood* não é aportuguesado.** Nos demais, variar o mínimo possível com escolhas naturais e fáceis de ler para crianças de 6 anos:
-  - **Lady Mariana** — variando entre *Lady Mariana*, *Lady Mariana* e *Mariana* conforme o contexto (*Lady Marian* em inglês).
+- **Lugares aportuguesados com sonoridade portuguesa e eco do original**:
+  - **Floresta de Xervedo** (*Sherwood* em inglês — une o som inicial de *Sher-* ao sufixo português de arvoredo/bosque *-edo*).
+  - **Nortigão** / **Xerife de Nortigão** (*Nottingham* em inglês).
+  - **Vila do Moinho** (a aldeia onde vivem Robin, Mestre Tomé e Grilo).
+- **Personagens (só *Robin Hood* não é aportuguesado; variações mínimas e naturais nos demais)**:
+  - **Lady Mariana** — variando entre *Lady Mariana* e *Mariana* conforme o contexto (*Lady Marian* em inglês).
+  - **Mestre Tomé**, o moleiro (pai de Grilo, homem negro) e **Grilo**, o filho do moleiro (*Much* em inglês, menino pardo).
   - **João Pequeno** (*Little John* em inglês).
-  - **Grilo**, o filho do moleiro (*Much* em inglês).
-  - **Rei Ricardo**, **Rainha Leonor**, **Xerife de Nottingham**.
+  - **Rei Ricardo**, **Rainha Leonor**, **Xerife de Nortigão**.
   - **Frei Tuco**, **Gui Escarlate**, **Alan do Vale**, **Dom Ricardo do Vale** (quando entrarem nas partes seguintes).

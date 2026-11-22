@@ -19,27 +19,42 @@ Plano: [`../PLANO-ROBIN-HOOD.md`](../PLANO-ROBIN-HOOD.md) · Receita: [`../recei
 
 ---
 
-## 0. Ponto de partida (início da obra)
+## 0.1. Reformulação Estrutural e Artística (2026-11-21 — Revisão Global do Autor + Issues #69 a #74)
+
+Após leitura em família da v1 do rascunho ilustrado, o humano determinou uma **reengenharia completa da Parte 1**:
+1. **Estrutura pela Jornada do Herói (Joseph Campbell)** e **Caminho 1** para a Parte 1 (Capa + 9 capítulos focados na *Origem do Bando Verde e o Resgate do Moleiro*, movendo o *Torneio da Flecha de Ouro* para abrir a Parte 2; número total de partes da série aberto para crescer, ex.: 6 partes).
+2. **Lugares aportuguesados**: **Vila do Moinho** (aldeia inicial), **Nortigão** (*Nottingham*) e **Floresta de Xervedo** (*Sherwood*).
+3. **Correções de enredo e continuidade das Issues #69 a #74**:
+   - **Mundo Comum e explicação do moleiro (#70)**: Cap. 1 apresenta a Vila do Moinho, explica com clareza o ofício do **moleiro** (**Mestre Tomé**, homem negro) e seu filho **Grilo** (menino pardo, **#69**), e mostra Robin Hood ainda em **roupas comuns de aldeão (sem roupa verde!)**.
+   - **Escalada do conflito com o Xerife (#69)**: Cap. 2 dedicado à argumentação de Mestre Tomé e ao desafio lógico de Robin diante do povo, fazendo o Xerife de Nortigão se irritar gradualmente antes de apelar para a acusação sem provas e a prisão.
+   - **Coerência geográfica e visual das roupas verdes (#71, #72)**: Cap. 3 ocorre na **borda da Floresta de Xervedo**, onde **Lady Mariana** atua como **Mentora** e entrega as roupas verdes e a corneta (**Atividade 1**: vestir o traje verde). Só depois disso (já de verde!) Robin e Grilo cruzam a **Ponte do Riacho Fundo** (Cap. 4, *Travessia do Limiar*), encontram **João Pequeno** (Cap. 5, **Atividade 2**: **4 gravuras progressivas reais** para `PONTE` → `TOMBO` → `RISADA` → `AMIGO`, **#73**) e chegam juntos ao **Grande Carvalho** (Cap. 6).
+   - **Tensão moral ("Ladrões" × "Devolver o que foi tomado")**: em vez de o Xerife "proibir a cor verde", no Cap. 8 (após o resgate silencioso do Cap. 7, **Atividade 3** com mudança real de gravura, **#74**) o Xerife tenta rotular o bando de *"ladrões"*, e Robin rebate diante da vila que apenas devolveram o pão tomado injustamente. No Cap. 9, a festa sob o Grande Carvalho termina com a notícia de que o Xerife espalhou cartazes de "ladrões" e criou a armadilha do **Torneio da Flecha de Ouro** (gancho para a Parte 2).
+4. **📌 Direção de Arte — Migração para a Opção C (Diorama de Papel Recortado) [CONVERSAR ANTES DE GERAR AS GRAVURAS]**:
+   - O Estilo A (Gouache) ficou parecido demais com *Dom Quixote*. Adotada a **Opção C — Diorama de Papel Recortado** (planos com textura tátil de papel artesanal e sombras de profundidade).
+   - **Método a desenhar com o humano após aprovar o texto**: geração prévia de **cenários-base reaproveitáveis** em diorama de papel + **colagem posterior dos personagens e adereços em camadas independentes**, permitindo animações e etapas progressivas reais.
+5. **Método de redação do texto**: 1 capítulo por vez no chat, com o agente principal atuando como **Diretor** e lançando subagentes escritores no modelo **Hydrogen (`flash`)**, revisando antes de apresentar ao humano.
 Primeira parte de *Robin Hood* (5 partes previstas). Estabelece:
 - **Imposto desigual**: cobrar "igual" (2 sacos de farinha) zera o moleiro e não faz diferença para o barão de carroça lotada;
 - **Injustiça sem prova**: o moleiro (pai de Grilo) é acusado sem provas e vai preso mesmo oferecendo busca;
 - **Identidade do bando**: **Robin Hood**, **Lady Mariana** (jovem negra, ágil e estratégica), **Grilo** (*Much* em inglês) e **João Pequeno** adotam as **roupas verde-floresta**, o Grande Carvalho e a corneta de 3 toques;
 - **Conflito prévio antes do torneio**: o bando age primeiro (solta o pai de Grilo e devolve só a farinha das famílias pobres), fazendo o Xerife jurar caçar "esse bando de roupa verde" com a armadilha da Flecha de Ouro.
 
-## 1. Escaleta final aprovada (capa + 9 capítulos)
+## 1. Nova Escaleta em 11 Capítulos (Capa + 11 Capítulos — Jornada do Herói)
 
-| Pág. | Cap. | Título | Fonte / referência | O que acontece | Fio (🌱 planta / 🌾 colhe) |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| 0 | — | capa | — | "Nesta parte…": uma cobrança injusta, roupas verdes na floresta, um gigante na ponte e uma grande armadilha | — |
-| 1 | 1 | Os Dois Sacos de Farinha | Pyle cap. 1 (adaptado) + Leis da Floresta | O Xerife cobra 2 sacos de todos: para o barão de carroça cheia não é nada; para o moleiro (só 3 sacos), falta pão. O Xerife o acusa sem provas e o prende; Robin (de boa mira) ajuda Grilo a fugir | 🌱 imposto desigual, prisão sem provas, boa mira de Robin |
-| 2 | 2 | O Grande Carvalho e as Roupas de Folha | Folclore (Major Oak + Mariana) | Robin, Lady Mariana e Grilo se reúnem no carvalho gigante, vestem **roupas verde-floresta**, combinam 3 toques da corneta e decidem soltar o pai de Grilo | 🌱 roupas verdes, Grande Carvalho, corneta de 3 toques |
-| 3 | 3 | A Ponte do Riacho | Pyle cap. 1 (fim) | Buscando mais um amigo forte e alegre, Robin pega um galho no caminho e encontra um gigante desconhecido numa ponte estreita de tronco; Grilo se esconde atrás da samambaia | 🌱 bastão de carvalho |
-| 4 | 4 | O Banho de Risadas | Pyle cap. 1 (fim) | Disputa cômica de equilíbrio com bastões: Robin cai sentado no riacho, solta uma gargalhada e nasce a amizade com **João Pequeno** · **atividade 1** | 🌾 encontro na ponte · 🌱 João Pequeno no bando |
-| 5 | 5 | A Primeira Ação do Bando Verde | Adaptação (conflito prévio) | Mariana distrai os guardas, João Pequeno ergue Grilo nos ombros até a janela alta, Robin confere os sacos dos moradores e devolvem a farinha; guarda reconhece Robin e o Xerife jura caçar o bando verde | 🌾 prisão do cap. 1 · 🌱 fúria do Xerife contra roupas verdes |
-| 6 | 6 | O Convite da Flecha de Ouro | Pyle cap. 3 (início) | Furioso, o Xerife anuncia um torneio de arco com Flecha de Ouro, mandando vigiar qualquer roupa verde. Mariana descobre a armadilha; Robin decide ir para trocar o prêmio por comida e cobertores | 🌾 caça ao verde · 🌱 armadilha da Flecha de Ouro |
-| 7 | 7 | O Arqueiro de Capuz Vermelho | Pyle cap. 3 (meio) | Nos fundos das barracas, o bando troca de roupa (sem nada verde); a criança ajuda Robin a conferir os itens do disfarce antes de o capitão chegar · **atividade 2** | 🌾 disfarce sem verde |
-| 8 | 8 | A Flecha Partida ao Meio | Pyle cap. 3 (fim) | Liberado na fila sem roupa verde, Robin parte a flecha do campeão ao meio, pega o prêmio e foge com chuva de fitas vermelhas de Mariana e farinha de Grilo | 🌱 flecha partida (lembrada pela Rainha Leonor na P4) |
-| 9 | 9 | A Festa da Partilha | Pyle cap. 3 (epílogo) + gancho P2 | Banquete sob o Grande Carvalho: a criança separa o que o prêmio vai comprar (trigo, leite, manta) · **atividade 3**. No fim, vizinho avisa que **Gui** (casaco vermelho, emprestou a carroça e comemorou na praça) foi preso na torre sem provas | 🌾 solidariedade · 🌱 resgate de Gui na torre (Parte 2) |
+| Pág. | Cap. | Etapa de Campbell | Título | Situação do Texto (Hydrogen + Opus 5.5) |
+| :--- | :--- | :--- | :--- | :--- |
+| 0 | — | — | **Capa — Parte 1: O Segredo da Floresta de Xervedo** | ✅ Aprovado e aplicado em `parte-1.html` |
+| 1 | 1 | 1. Mundo do Poder Alienado | **👑 Capítulo 1 • O Banquete do Rei Distante** (*Muito Pão para Uma Mesa Só*) | ✅ Aprovado e aplicado em `parte-1.html` |
+| 2 | 2 | 1. Mundo Comum & 2. Chamado | **🌾 Capítulo 2 • O Moinho de Mestre Tomé** (*Três Sacos e uma Conta que Não Fecha*) | ✅ Aprovado e aplicado em `parte-1.html` |
+| 3 | 3 | 3. Argumentação & Escalada | **⚖️ Capítulo 3 • Quem Desafia o Xerife?** (*Uma Mentira sem Prova Nenhuma*) | ✅ Aprovado e aplicado em `parte-1.html` |
+| 4 | 4 | 4. Encontro com a Mentora e Talismãs | **🍃 Capítulo 4 • A Mentora da Mata** (*Como Sumir no Meio das Folhas* · **Atividade 1**) | ✅ Aprovado (sem rótulo racial assimétrico) e aplicado em `parte-1.html` |
+| 5 | 5 | 5. Travessia do Limiar | **🪵 Capítulo 5 • A Ponte do Riacho Fundo** (*Pressa de um Lado, Teimosia do Outro*) | ✅ Aprovado e aplicado em `parte-1.html` |
+| 6 | 6 | 6. O Teste na Ponte | **😂 Capítulo 6 • O Banho de Risadas** (*Quem Caiu no Riacho?* · **Atividade 2: 4 gravuras progressivas**) | ✅ Aprovado e aplicado em `parte-1.html` |
+| 7 | 7 | 6. O Novo Aliado e Sua Dor | **🤝 Capítulo 7 • O Gigante Chamado Pequeno** (*Um Apelido ao Contrário*) | ✅ Aprovado e aplicado em `parte-1.html` |
+| 8 | 8 | 7. O Esconderijo e o Plano | **🌳 Capítulo 8 • O Segredo do Grande Carvalho** (*Um Plano Debaixo das Folhas*) | ⏳ Aguardando renovação da cota do Opus 5.5 (05:02 UTC) |
+| 9 | 9 | 8. A Provação (Resgate Silencioso) | **🗝️ Capítulo 9 • A Janela Alta e a Chave** (*Silêncio na Cadeia* · **Atividade 3**) | ⏳ Aguardando renovação da cota do Opus 5.5 (05:02 UTC) |
+| 10 | 10 | 8. Confronto Moral com o Xerife | **🏹 Capítulo 10 • Ladrões ou Justiceiros?** (*Devolver Não É Roubar!*) | ⏳ Aguardando renovação da cota do Opus 5.5 (05:02 UTC) |
+| 11 | 11 | 9. A Recompensa e Gancho para P2 | **🍞 Capítulo 11 • Pão Quentinho e uma Nova Armadilha** (*A Flecha de Ouro Vem Aí*) | ⏳ Aguardando renovação da cota do Opus 5.5 (05:02 UTC) |
 
 ## 2. O que ficou de fora nesta parte e por quê
 - **A morte do guarda florestal** (Pyle cap. 1): cortada por proteção da infância; substituída pelo imposto desigual e prisão injusta do moleiro sem provas.

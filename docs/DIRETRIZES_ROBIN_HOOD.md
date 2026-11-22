@@ -16,41 +16,74 @@ Resumo operacional para agentes e subagentes (atualizado em 2026-11-21 após apr
 - Palavras da época (xerife, aljava, tributo, capuz, barão) ficam, **explicadas na própria frase** ("a aljava: a bolsa de couro onde iam as flechas").
 - **Não explique o óbvio** nem pendure **lição de moral** no fim da página: termine com uma imagem, uma risada ou um gancho leve.
 - **3 pilares orgânicos (nunca viram sermão)**:
-  1. **Impostos desiguais**: a mesma cobrança que não pesa para o rico tira o pão do pobre; o bando devolve tributos cobrados injustamente dos pobres.
+  1. **Impostos desiguais e o Rei alienado**: o **Rei Ricardo** não é um "salvador bondoso viajando"; ele vive encastelado entre almofadas e cortinas de veludo no palácio de Nortigão, achando-se muito bom, mas totalmente alheio à vida do povo, e aprova o imposto extra sugerido pelo **Xerife de Nortigão** para bancar suas festas. A cobrança igual ("dois sacos para todos") não pesa para o barão rico e tira o pão do moleiro pobre; o bando devolve o que foi tomado injustamente (enquanto o Xerife tenta rotulá-los de "ladrões").
   2. **Presos injustos e provas**: o bando solta quem foi trancado sem provas e aprende a checar pistas e vestígios antes de julgar.
-  3. **Pressão social e Estado justo**: ao longo das 5 partes o povo perde o medo e se une até conquistar impostos justos e um corpo independente de investigadores das provas (peritos, referência discreta à autonomia constitucional da Polícia Científica no Brasil, na Parte 5).
-- **Nomes fixos**: só **Robin Hood** não é aportuguesado; **Lady Mariana** (variando entre *Lady Mariana*, *Lady Mariana* e *Mariana*), **João Pequeno**, **Grilo** (*Much* em inglês), **Rei Ricardo**, **Rainha Leonor**, **Xerife de Nottingham**; nas partes seguintes, ajustes mínimos e espertos (*Frei Tuco*, *Gui Escarlate*, *Alan do Vale*, *Dom Ricardo do Vale*).
-- **Diversidade**: elenco diverso em toda a obra (incluindo Mariana, jovem negra, e diversidade nas aldeias e no bando) — prioridade sobre a distribuição étnica medieval.
-- **Personagem novo e causalidade**: antes de agir, todo personagem é anunciado; todo plano do Xerife nasce de um conflito prévio já mostrado (ex.: primeiro o bando verde age, depois o Xerife caça quem usa verde).
+  3. **Pressão social e Estado justo**: ao longo da série o povo perde o medo e se mobiliza até obrigar o Rei a sair do palácio e mudar as leis — conquistando impostos justos e um corpo independente de investigadores das provas (peritos, referência discreta à autonomia constitucional da Polícia Científica no Brasil).
+- **Nomes fixos de lugares e personagens**:
+  - **Lugares aportuguesados**: **Vila do Moinho** (aldeia de Robin e Mestre Tomé), **Nortigão** (*Nottingham*) e **Floresta de Xervedo** (*Sherwood*).
+  - **Personagens**: só **Robin Hood** não é aportuguesado; **Mestre Tomé** (o moleiro, pai de Grilo, homem negro), **Grilo** (*Much* em inglês, menino pardo), **Lady Mariana** (variando entre *Lady Mariana* e *Mariana*, jovem negra, Mentora da Mata), **João Pequeno** (lenhador e ferreiro que teve as ferramentas tomadas pelo Xerife), **Rei Ricardo**, **Rainha Leonor**, **Xerife de Nortigão**; nas partes seguintes, *Frei Tuco*, *Gui Escarlate*, *Alan do Vale*, *Dom Ricardo do Vale*.
+- **Diversidade sem rotulagem assimétrica no texto**: elenco diverso em toda a obra (incluindo Lady Mariana como jovem negra, Mestre Tomé negro e Grilo pardo). **Regra editorial**: a representatividade visual brilha nas ilustrações; no texto literário, **não** se rotula a cor da pele apenas dos personagens negros enquanto os brancos ficam sem descrição racial (descreva todos pelo estilo, presença, roupas e ações).
+- **Jornada do Herói (Joseph Campbell) e causalidade**: toda etapa tem motivação e transição lógica (ex.: Mundo Comum na Vila do Moinho com roupas comuns → escalada verbal que irrita o Xerife → encontro com a Mentora Mariana na beira da mata e entrega das roupas verdes → Travessia do Limiar na Ponte do Riacho Fundo → encontro e identificação de dor com João Pequeno → chegada ao Grande Carvalho → Resgate e embate moral "Ladrões × Devolver o pão tomado").
 
 ## 3. Tamanho e forma
-- Parte = capa + **8 a 9 capítulos** (9 a 10 páginas); cada página = **um episódio**, **3 a 5 parágrafos** (6 é sinal de que são duas páginas). Numeração contínua de capítulos entre as 5 partes.
-- Capa: "Nesta parte…" em 3 parágrafos curtos, sem estragar surpresas. Primeira página (partes 2+): ponte com o fim da parte anterior. Última: gancho leve para a próxima (`fim.mensagem`).
-- **Palavras-chave**: 25 a 30 por parte, 2 a 4 por página: `{{PALAVRA|SÍ • LA • BAS|emoji}}`, só no texto; repetir de propósito algumas já ensinadas.
+- Parte 1 = capa + **11 capítulos** (12 páginas); cada página = **um episódio**, **4 parágrafos curtos (~170 a 195 palavras)**. Numeração contínua de capítulos entre as partes.
+- Capa: "Nesta parte…" em 3 parágrafos curtos, sem estragar surpresas. Primeira página (partes 2+): ponte com o fim da parte anterior. Última: gancho forte para a próxima (`fim.mensagem`).
+- **Palavras-chave**: ~30 por parte, 3 por página: `{{PALAVRA|SÍ • LA • BAS|emoji}}`, só no texto; repetir de propósito algumas já ensinadas.
 - Título do capítulo: `'🏹 Capítulo N • Nome'` + `titulo` (os dois são lidos em voz alta).
-- **"Você sabia?" (`voceSabia`)**: incluir 3 a 4 curiosidades curtas (para 6 anos) no campo `voceSabia` das páginas indicadas, deixando o conteúdo pronto para o futuro botão no modo tradicional (além do modo Desafio 🧩).
+- **"Você sabia?" (`voceSabia`)**: incluir 3 a 4 curiosidades curtas (para 6 anos) no campo `voceSabia` das páginas indicadas.
 
 ## 4. Proteção da infância
 - **Zero sangue e zero mortes em cena**: sem morte do guarda florestal (Pyle cap. 1), sem forca (resgate na torre), sem morte de Guy of Guisborne, sem o epílogo triste de Kirklees.
 - **Sem romantizar roubo**: os bens devolvidos são sempre impostos injustos cobrados de quem pouco tem.
 - **Duelos de bastão** são disputas cômicas de equilíbrio que terminam em banho no riacho e amizade. **Arco e flecha** são para alvos e torneios de pontaria, nunca apontados para ferir alguém.
 
-## 5. Atividades (3 por parte, nunca em páginas seguidas demais)
-- Crivo, tudo "sim": nasce da página · a criança **ajuda um personagem** · a cena **muda** · treina leitura/sílabas/letras/ordem · até 5 toques, erro = dica gentil · **só acerta quem lê** (cartões de leitura com o **mesmo emoji**, para ele não entregar a resposta).
+## 5. Atividades (3 por parte, com transformação real da gravura)
+- Crivo, tudo "sim": nasce da página · a criança **ajuda um personagem** · **a gravura muda de verdade** (**proibido usar apenas emojis soltos como resultado da atividade!** Use `progressivo` com 4 gravuras reais ou `camadas` ilustradas em estilo papel recortado) · treina leitura/sílabas/letras/ordem · até 5 toques, erro = dica gentil · **só acerta quem lê** (cartões de leitura com o **mesmo emoji**, para ele não entregar a resposta).
 - O convite vai em `comandoAtividade` (quadro separado, nunca no texto) e **não dá a resposta**.
-- Tipos prontos no motor: `ordem` (palavras, sílabas ou letras), `pedido` (figura + palavras com pegadinhas quase iguais), `progressivo` (etapas em ordem fixa), `camadas`, `contagem` (só se contar for necessidade da história), `acao`. Variar dentro da parte; nunca criar cartão que só enfeita.
 
-## 6. Visual de cena e direção de arte (Opção A + Opção 1)
-- **Estilo artístico (Opção A)**: **Gouache estilizado de floresta** (inspirado em *Wolfwalkers* / Cartoon Saloon), traço suave de carvão/tinta, copas geométricas luminosas, atmosfera acolhedora.
-- **Recurso visual (Opção 1)**: **cena única + camadas (`camadas`) e `realCena`** — sem `imag` e sem chave da 2ª lente.
+## 6. Visual de cena e direção de arte (Opção C + Opção 1)
+- **Estilo artístico (Opção C — Diorama de Papel Recortado / *Paper Cut-Out Craft*)**: planos com textura tátil de papel artesanal e sombras de profundidade entre as camadas, totalmente distinto de *Dom Quixote*.
+  - **📌 Pendência antes de produzir as gravuras**: desenhar com o humano o método de produção com **cenários-base reaproveitáveis** + **colagem posterior de personagens em camadas independentes e animáveis**.
+- **Recurso visual (Opção 1)**: **cena única + camadas (`camadas`) e `realCena` / `etapas` progressivas** — sem `imag` e sem chave da 2ª lente.
 
-## 7. Estrutura do arquivo (`robin-hood/parte-N.html`)
-- Copiar o esqueleto HTML de `dom-quixote/parte-5.html` (só `window.LIVRO`; motor em `../assets/js/livro.js`, nunca copiado).
-- Campos principais: `obra: 'Robin Hood'`, `autor: 'Howard Pyle e lendas tradicionais'`, `parte`, `totalPartes: 5`, `rascunho: true`, `imagens: './imagens/parte-N/'`.
-- Sem arquivo de imagem ainda pronto, o motor mostra "Ilustração a caminho" e os emojis das camadas. Ao criar `robin-hood/parte-1.html`, mudar `situacao` de `'fila'` para `'rascunho'` em `assets/js/acervo.js` e rodar `npm run build` na entrega.
+---
 
-## 8. Teste (grátis)
-- `python -m http.server 8765` e Playwright/Chromium em 800×1280 e 1280×800: `http://localhost:8765/robin-hood/parte-1.html?page=P&adulto=1`. Clicar cartões com `locator.click()`. Conferir: texto inteiro, palavras-chave, cada atividade até o fim, 🔄 Recomeçar, virada de página, sem erros no console.
+## 10. Método de Produção Literária em Três Camadas (Humano → Diretor Estratégico → Redator Hydrogen → Lapidador Opus 5.5)
 
-## 9. Papel do crítico adversarial (subagente de contexto limpo)
-- Simula o humano: pai exigente que lê com o filho de 6 anos. Procura, página por página: palavra ou construção rebuscada; frase longa; evento sem motivo ("por que ele fez isso?", "quem é esse?"); piada fraca ou repetida; moral pendurada; página cansativa (sobretudo na segunda metade); quebra de continuidade; atividade que não passa no crivo; qualquer coisa que um pai vetaria (violência ou furto romantizado). Entrega: nota por página (0–10), **os 10 problemas mais graves com a correção sugerida** e o que está bom e não deve ser mexido. Não reescreve o livro.
+Para garantir alta qualidade literária sem decaimento ao longo dos capítulos e com economia de cota, a redação segue esta arquitetura de 3 agentes no Swarm, capítulo por capítulo:
+
+### 10.1. Os Papéis
+1. **Humano (Autor e Diretor Geral)**: define a visão filosófica, política e pedagógica, aprova as escaletas e revisa os blocos de capítulos, apontando ajustes de motivação, ritmo ou psicologia dos personagens.
+2. **Agente Principal — Diretor Estratégico e Showrunner (ex.: Gemini Argon / Pro)**:
+   - **Não redige nem revisa o texto final sozinho.** Atua como *showrunner*: conversa com o humano, traduz as ideias dele em arquitetura narrativa (Jornada do Herói de Joseph Campbell, causalidade física e geográfica, divisão de capítulos para nada ficar corrido) e escreve **briefings de direção cirúrgicos, parágrafo por parágrafo**, para um capítulo de cada vez.
+   - Controla rigorosamente a **extensão** (trava de **4 parágrafos curtos, ~170 a 195 palavras por capítulo**) e a **continuidade** (quem veste o quê, quem sabe o quê, o que não antecipar).
+3. **Subagente 1 — Redator Inicial (`@escritor-hydrogen`, modelo `gemini-4-hydrogen-medium` / `flash`)**:
+   - Recebe o briefing de direção de **um único capítulo** por vez.
+   - Faz a estruturação rápida dos 4 parágrafos (~165–185 palavras), posiciona as 3 palavras-chave `{{PALAVRA|SÍ • LA • BAS|emoji}}`, o `comandoAtividade` e o `voceSabia`, e posta no quadro do Swarm chamando diretamente o `@revisor-opus`.
+4. **Subagente 2 — Lapidador Literário (`@revisor-opus`, modelo `claude-opus-5-5-high`)**:
+   - Recebe o rascunho enxuto do `@escritor-hydrogen` e tem **uma única missão**: dar **beleza literária, sensorialidade, sonoridade de leitura em voz alta e poesia do cotidiano para uma criança de 6 anos** (padrão Monteiro Lobato / Ruth Rocha / Ana Maria Machado), mantendo o teto rígido de 4 parágrafos curtos (~180–195 palavras) e sem alterar os fatos do roteiro.
+   - Devolve ao `@coordinator [done]` o texto lapidado + 3 a 5 notas curtas explicando as escolhas estilísticas e apontando qualquer dúvida de título ou continuidade.
+
+### 10.2. Template de Prompt do Diretor para o `@escritor-hydrogen` (1 capítulo por vez)
+```markdown
+@escritor-hydrogen Vamos produzir o **Capítulo N** (`<emoji> Capítulo N • <Título>`).
+Escreva o rascunho enxuto e passe direto ao `@revisor-opus` para lapidar e entregar ao `@coordinator [done]`.
+
+### Diretrizes de Direção Estratégica para o Capítulo N (Página N)
+- **Cabeçalho (`capitulo`)**: `<emoji> Capítulo N • <Nome>`
+- **Subtítulo (`titulo`)**: `<Subtítulo vivo>`
+- **Teto rigoroso de extensão**: **4 parágrafos curtos** (~165 a 190 palavras no total).
+- **3 palavras-chave de alfabetização**: `{{PALAVRA1|SÍ • LA • BAS|emoji}}`, `{{PALAVRA2|...}}`, `{{PALAVRA3|...}}`.
+- **O que deve acontecer em cada parágrafo**:
+  1. **Parágrafo 1 (<foco da cena 1>)**: <ação concreta, onde estão, como estão vestidos, ligação com o fim do capítulo anterior>.
+  2. **Parágrafo 2 (<foco da cena 2>)**: <desenvolvimento, reação sensorial, fala curta com travessão>.
+  3. **Parágrafo 3 (<foco da cena 3>)**: <ponto de virada do capítulo>.
+  4. **Parágrafo 4 (<gancho ou fechamento da cena>)**: <consequência concreta sem antecipar planos futuros e sem lição de moral pendurada>.
+- **(Quando houver) `comandoAtividade` / `voceSabia`**: <instrução clara>.
+```
+
+### 10.3. Diretrizes Permanentes do `@revisor-opus` (Claude Opus 5.5)
+- **Trocar explicações de dicionário por imagens sensoriais e sons**: a criança de 6 anos entende pela cena (*chuá, chuá, chuá* da roda d'água; farinha *"macia como talco"*; o rei *"afundado em almofadas macias, atrás de cortinas de veludo"*; o Xerife *"vermelho feito tomate"*).
+- **Verbos e gestos no lugar de adjetivos abstratos**: o personagem bate palmas, esfrega as mãos, esvazia um riachinho de dentro da bota, fica parado feito estátua.
+- **Ritmo de leitura em voz alta**: frases curtas, ordem direta, onomatopeias naturais em português (`toc, tac, toc!`, `plof!`, `tuuu, tuuu, tuuu!`, `tum, tum, tum`), zero arcaísmos, zero abreviações com ponto (`Sr.`) e zero rótulos raciais assimétricos no texto.
+- **Respeito ao teto de cota do modelo**: quando a cota diária do Claude Opus 5.5 se aproxima do fim, o Diretor agenda (`schedule`) a retomada para o horário exato de renovação da cota, nunca trocando o modelo de lapidação literária sem autorização do humano.

@@ -9,577 +9,1188 @@
       "pagina": 0,
       "paragrafo": -1,
       "titulo": true,
-      "texto": "Robin Hood. Parte 1: O Bando do Grande Carvalho",
-      "fala": "Robin Hood. Parte 1: O Bando do Grande Carvalho",
-      "hash": "47f9fb6ee9"
+      "texto": "Robin Hood. Parte 1: O Segredo da Floresta de Xervedo",
+      "fala": "Robin Hood. Parte 1: O Segredo da Floresta de Xervedo",
+      "hash": "2de441023c"
     },
     {
       "id": "p0-s1",
       "pagina": 0,
       "paragrafo": 0,
-      "texto": "Bem no meio da FLORESTA de Sherwood, as folhas escondem um bando muito alegre.",
-      "fala": "Bem no meio da floresta de Sherwood, as folhas escondem um bando muito alegre.",
-      "hash": "ac0bbcf665"
+      "texto": "Bem pertinho da grande FLORESTA de Xervedo existe uma vila onde o riacho canta e o vento cheira a pão quente.",
+      "fala": "Bem pertinho da grande floresta de Xervedo existe uma vila onde o riacho canta e o vento cheira a pão quente.",
+      "hash": "6aa743cc95"
     },
     {
       "id": "p0-s2",
       "pagina": 0,
       "paragrafo": 0,
-      "texto": "Eles vestem roupas da cor do mato, sopram uma corneta dourada e lutam por JUSTIÇA.",
-      "fala": "Eles vestem roupas da cor do mato, sopram uma corneta dourada e lutam por justiça.",
-      "hash": "0c3e2bc461"
+      "texto": "É a Vila do Moinho.",
+      "fala": "É a Vila do Moinho.",
+      "hash": "e5497c3e6c"
     },
     {
       "id": "p0-s3",
       "pagina": 0,
-      "paragrafo": 1,
-      "texto": "Nesta primeira parte da história, uma cobrança injusta tira quase toda a comida de um menino.",
-      "fala": "Nesta primeira parte da história, uma cobrança injusta tira quase toda a comida de um menino.",
-      "hash": "3996fbd7cd"
+      "paragrafo": 0,
+      "texto": "Lá, os vizinhos se chamam pelo nome e dividem o que têm.",
+      "fala": "Lá, os vizinhos se chamam pelo nome e dividem o que têm.",
+      "hash": "c929c562a7"
     },
     {
       "id": "p0-s4",
       "pagina": 0,
       "paragrafo": 1,
-      "texto": "É aí que Robin Hood, Lady Mariana e um gigante muito bem-humorado juntam forças para ajudar quem precisa.",
-      "fala": "É aí que Robin Hood, Lady Mariana e um gigante muito bem-humorado juntam forças para ajudar quem precisa.",
-      "hash": "f50b20e396"
+      "texto": "Mas um dia o Xerife de Nortigão chega com uma cobrança injusta.",
+      "fala": "Mas um dia o Xerife de Nortigão chega com uma cobrança injusta.",
+      "hash": "b064844bf9"
     },
     {
       "id": "p0-s5",
       "pagina": 0,
+      "paragrafo": 1,
+      "texto": "Para quem tem muito, pagar é moleza.",
+      "fala": "Para quem tem muito, pagar é moleza.",
+      "hash": "535cf87133"
+    },
+    {
+      "id": "p0-s6",
+      "pagina": 0,
+      "paragrafo": 1,
+      "texto": "Para quem tem pouquinho, pode faltar pão na mesa!",
+      "fala": "Para quem tem pouquinho, pode faltar pão na mesa!",
+      "hash": "eea8d700b5"
+    },
+    {
+      "id": "p0-s7",
+      "pagina": 0,
       "paragrafo": 2,
-      "texto": "Prepare o seu sorriso, vire a página e venha ver como o Bando Verde enfrenta uma grande ARMADILHA!",
-      "fala": "Prepare o seu sorriso, vire a página e venha ver como o Bando Verde enfrenta uma grande armadilha!",
-      "hash": "5a4e851d28"
+      "texto": "É aí que Robin Hood, Lady Mariana e seus AMIGOS corajosos se encontram debaixo do Grande Carvalho.",
+      "fala": "É aí que Robin Hood, Lady Mariana e seus amigos corajosos se encontram debaixo do Grande Carvalho.",
+      "hash": "07cf906604"
+    },
+    {
+      "id": "p0-s8",
+      "pagina": 0,
+      "paragrafo": 2,
+      "texto": "Com esperteza e bom coração, eles vão descobrir um jeito de defender a JUSTIÇA!",
+      "fala": "Com esperteza e bom coração, eles vão descobrir um jeito de defender a justiça!",
+      "hash": "f709ad4a38"
     },
     {
       "id": "p1-s0",
       "pagina": 1,
       "paragrafo": -1,
       "titulo": true,
-      "texto": "Capítulo 1. Os Dois Sacos de Farinha. Uma Conta que Não Fecha",
-      "fala": "Capítulo 1. Os Dois Sacos de Farinha. Uma Conta que Não Fecha",
-      "hash": "88182f149e"
+      "texto": "Capítulo 1. O Banquete do Rei Distante. Muito Pão para Uma Mesa Só",
+      "fala": "Capítulo 1. O Banquete do Rei Distante. Muito Pão para Uma Mesa Só",
+      "hash": "e674aab824"
     },
     {
       "id": "p1-s1",
       "pagina": 1,
       "paragrafo": 0,
-      "texto": "Numa manhã de feira, o Xerife de Nottingham parou na estrada do MOINHO, a casa de pedra onde se moía trigo.",
-      "fala": "Numa manhã de feira, o Xerife de Nottingham parou na estrada do moinho, a casa de pedra onde se moía trigo.",
-      "hash": "9c85832f1c"
+      "texto": "Lá no alto da colina de Nortigão brilhava o PALÁCIO do Rei Ricardo.",
+      "fala": "Lá no alto da colina de Nortigão brilhava o palácio do Rei Ricardo.",
+      "hash": "1ebfda5a36"
     },
     {
       "id": "p1-s2",
       "pagina": 1,
       "paragrafo": 0,
-      "texto": "Enquanto o bom Rei Ricardo viajava para longe, o Xerife mandava na região com voz grossa: — Ordem nova!",
-      "fala": "Enquanto o bom Rei Ricardo viajava para longe, o Xerife mandava na região com voz grossa: Ordem nova!",
-      "hash": "6d75323de3"
+      "texto": "O rei se achava o mais bondoso do mundo.",
+      "fala": "O rei se achava o mais bondoso do mundo.",
+      "hash": "1d9ecbe49c"
     },
     {
       "id": "p1-s3",
       "pagina": 1,
       "paragrafo": 0,
-      "texto": "Cada família paga hoje dois sacos de FARINHA de imposto!",
-      "fala": "Cada família paga hoje dois sacos de farinha de imposto!",
-      "hash": "84022b6e8a"
+      "texto": "Só que vivia afundado em almofadas macias, atrás de cortinas de veludo.",
+      "fala": "Só que vivia afundado em almofadas macias, atrás de cortinas de veludo.",
+      "hash": "b6a9cb26f1"
     },
     {
       "id": "p1-s4",
       "pagina": 1,
       "paragrafo": 0,
-      "texto": "Igualzinho para todo mundo!",
-      "fala": "Igualzinho para todo mundo!",
-      "hash": "d9d09c9e63"
+      "texto": "Nem via o povo das vilas trabalhando duro lá embaixo.",
+      "fala": "Nem via o povo das vilas trabalhando duro lá embaixo.",
+      "hash": "c868b661f8"
     },
     {
       "id": "p1-s5",
       "pagina": 1,
       "paragrafo": 1,
-      "texto": "O barão da colina, um senhor muito rico dono das terras, vinha numa carroça enorme com cinquenta sacos bem cheinhos.",
-      "fala": "O barão da colina, um senhor muito rico dono das terras, vinha numa carroça enorme com cinquenta sacos bem cheinhos.",
-      "hash": "9048f6430d"
+      "texto": "Certa manhã, o rei acordou querendo dar uma FESTA gigante para os nobres e barões.",
+      "fala": "Certa manhã, o rei acordou querendo dar uma festa gigante para os nobres e barões.",
+      "hash": "a33304af9c"
     },
     {
       "id": "p1-s6",
       "pagina": 1,
       "paragrafo": 1,
-      "texto": "Ele jogou dois para os guardas e saiu assobiando: para quem tem tanto, dois sacos não fazem falta nenhuma!",
-      "fala": "Ele jogou dois para os guardas e saiu assobiando: para quem tem tanto, dois sacos não fazem falta nenhuma!",
-      "hash": "89a3b4dac9"
+      "texto": "Sonhou com montanhas de pães doces, tortas e biscoitos.",
+      "fala": "Sonhou com montanhas de pães doces, tortas e biscoitos.",
+      "hash": "5b974a94d1"
     },
     {
       "id": "p1-s7",
       "pagina": 1,
-      "paragrafo": 2,
-      "texto": "Depois chegou a vez do moleiro, que só tinha três sacos para alimentar a casa inteira o mês todo.",
-      "fala": "Depois chegou a vez do moleiro, que só tinha três sacos para alimentar a casa inteira o mês todo.",
-      "hash": "bfe63f6ea1"
+      "paragrafo": 1,
+      "texto": "Chamou o Xerife de Nortigão, de manto roxo e sorriso esperto, e pediu farinha da boa.",
+      "fala": "Chamou o Xerife de Nortigão, de manto roxo e sorriso esperto, e pediu farinha da boa.",
+      "hash": "7af289a3f6"
     },
     {
       "id": "p1-s8",
       "pagina": 1,
       "paragrafo": 2,
-      "texto": "— Senhor Xerife, se os guardas levarem dois dos meus sacos como fizeram com os outros vizinhos, fico com um só para o meu filho comer! — reclamou ele.",
-      "fala": "Senhor Xerife, se os guardas levarem dois dos meus sacos como fizeram com os outros vizinhos, fico com um só para o meu filho comer! reclamou ele.",
-      "hash": "45441fe271"
+      "texto": "O Xerife esfregou as mãos e sugeriu um IMPOSTO extra.",
+      "fala": "O Xerife esfregou as mãos e sugeriu um imposto extra.",
+      "hash": "b467849e9e"
     },
     {
       "id": "p1-s9",
       "pagina": 1,
       "paragrafo": 2,
-      "texto": "O Xerife fechou a cara azeda e apontou o dedo: — Aposto que você está escondendo sacos lá dentro!",
-      "fala": "O Xerife fechou a cara azeda e apontou o dedo: Aposto que você está escondendo sacos lá dentro!",
-      "hash": "02a7a2ab95"
+      "texto": "Imposto é a parte que cada família entrega a quem governa.",
+      "fala": "Imposto é a parte que cada família entrega a quem governa.",
+      "hash": "7bb9b2764b"
     },
     {
       "id": "p1-s10",
       "pagina": 1,
       "paragrafo": 2,
-      "texto": "Guardas, prendam esse homem!",
-      "fala": "Guardas, prendam esse homem!",
-      "hash": "222ad293b3"
+      "texto": "Dois sacos de farinha por casa, igualzinho para todo mundo!",
+      "fala": "Dois sacos de farinha por casa, igualzinho para todo mundo!",
+      "hash": "26117e3bf7"
     },
     {
       "id": "p1-s11",
       "pagina": 1,
-      "paragrafo": 3,
-      "texto": "— Não escondi nada!",
-      "fala": "Não escondi nada!",
-      "hash": "ba4b647a1f"
+      "paragrafo": 2,
+      "texto": "O rei nem pensou que dois sacos pesam muito para quem tem pouco.",
+      "fala": "O rei nem pensou que dois sacos pesam muito para quem tem pouco.",
+      "hash": "66a8b57743"
     },
     {
       "id": "p1-s12",
       "pagina": 1,
-      "paragrafo": 3,
-      "texto": "Pode procurar! — gritou o moleiro.",
-      "fala": "Pode procurar! gritou o moleiro.",
-      "hash": "3d60d78568"
+      "paragrafo": 2,
+      "texto": "Bateu palmas e disse: — Dois sacos para todos?",
+      "fala": "Bateu palmas e disse: Dois sacos para todos?",
+      "hash": "2d9d1ab573"
     },
     {
       "id": "p1-s13",
       "pagina": 1,
-      "paragrafo": 3,
-      "texto": "Mas o Xerife riu: — Não preciso de PROVA nenhuma!",
-      "fala": "Mas o Xerife riu: Não preciso de prova nenhuma!",
-      "hash": "7f4c0f2904"
+      "paragrafo": 2,
+      "texto": "Que conta simples!",
+      "fala": "Que conta simples!",
+      "hash": "b19ae2e05d"
     },
     {
       "id": "p1-s14",
       "pagina": 1,
-      "paragrafo": 3,
-      "texto": "E os guardas levaram o pai preso junto com toda a farinha das famílias pobres.",
-      "fala": "E os guardas levaram o pai preso junto com toda a farinha das famílias pobres.",
-      "hash": "f3fdf56f00"
+      "paragrafo": 2,
+      "texto": "Pode cobrar, Xerife!",
+      "fala": "Pode cobrar, Xerife!",
+      "hash": "47a78a5b1f"
     },
     {
       "id": "p1-s15",
       "pagina": 1,
       "paragrafo": 3,
-      "texto": "O filho do moleiro, um menino baixinho chamado Grilo, correu chorando para a mata.",
-      "fala": "O filho do moleiro, um menino baixinho chamado Grilo, correu chorando para a mata.",
-      "hash": "23767fec43"
+      "texto": "Com o papel carimbado, o Xerife trocou o sorriso manso por uma cara azeda.",
+      "fala": "Com o papel carimbado, o Xerife trocou o sorriso manso por uma cara azeda.",
+      "hash": "bf60c71f56"
     },
     {
       "id": "p1-s16",
       "pagina": 1,
       "paragrafo": 3,
-      "texto": "Ali encontrou Robin Hood, o rapaz de chapéu com pena vermelha famoso na aldeia pela ótima mira no arco: — Calma, Grilo!",
-      "fala": "Ali encontrou Robin Hood, o rapaz de chapéu com pena vermelha famoso na aldeia pela ótima mira no arco: Calma, Grilo!",
-      "hash": "cd57ecfcf3"
+      "texto": "Chamou os guardas e desceu a estrada: tum, tum, tum.",
+      "fala": "Chamou os guardas e desceu a estrada: tum, tum, tum.",
+      "hash": "ff5ed5b534"
     },
     {
       "id": "p1-s17",
       "pagina": 1,
       "paragrafo": 3,
-      "texto": "Venha comigo.",
-      "fala": "Venha comigo.",
-      "hash": "f668748e0c"
-    },
-    {
-      "id": "p1-s18",
-      "pagina": 1,
-      "paragrafo": 3,
-      "texto": "Nós vamos tirar o seu pai de lá!",
-      "fala": "Nós vamos tirar o seu pai de lá!",
-      "hash": "6928a8a6c9"
+      "texto": "Na Vila do Moinho, ninguém imaginava que a vida ia virar de cabeça para baixo.",
+      "fala": "Na Vila do Moinho, ninguém imaginava que a vida ia virar de cabeça para baixo.",
+      "hash": "1734cec28b"
     },
     {
       "id": "p2-s0",
       "pagina": 2,
       "paragrafo": -1,
       "titulo": true,
-      "texto": "Capítulo 2. O Grande Carvalho e as Roupas de Folha. Um Plano Debaixo das Folhas",
-      "fala": "Capítulo 2. O Grande Carvalho e as Roupas de Folha. Um Plano Debaixo das Folhas",
-      "hash": "2ca281a16c"
+      "texto": "Capítulo 2. O Moinho de Mestre Tomé. Três Sacos e uma Conta que Não Fecha",
+      "fala": "Capítulo 2. O Moinho de Mestre Tomé. Três Sacos e uma Conta que Não Fecha",
+      "hash": "059881567f"
     },
     {
       "id": "p2-s1",
       "pagina": 2,
       "paragrafo": 0,
-      "texto": "Robin levou Grilo até o coração da mata, onde crescia um CARVALHO tão imenso que vinte crianças de mãos dadas não abraçavam o tronco.",
-      "fala": "Robin levou Grilo até o coração da mata, onde crescia um carvalho tão imenso que vinte crianças de mãos dadas não abraçavam o tronco.",
-      "hash": "d3586b350b"
+      "texto": "Pertinho da Floresta de Xervedo ficava a Vila do Moinho.",
+      "fala": "Pertinho da Floresta de Xervedo ficava a Vila do Moinho.",
+      "hash": "f220de3305"
     },
     {
       "id": "p2-s2",
       "pagina": 2,
       "paragrafo": 0,
-      "texto": "Ali já esperava Lady Mariana, uma jovem negra de tranças compridas, sorriso firme e arco sempre pronto nas costas.",
-      "fala": "Ali já esperava Lady Mariana, uma jovem negra de tranças compridas, sorriso firme e arco sempre pronto nas costas.",
-      "hash": "2be7390399"
+      "texto": "Lá, toda manhã começava com uma música: chuá, chuá, chuá.",
+      "fala": "Lá, toda manhã começava com uma música: chuá, chuá, chuá.",
+      "hash": "fb243dfc49"
     },
     {
       "id": "p2-s3",
       "pagina": 2,
       "paragrafo": 0,
-      "texto": "Ela era amiga antiga de Robin e conhecia cada rua de Nottingham.",
-      "fala": "Ela era amiga antiga de Robin e conhecia cada rua de Nottingham.",
-      "hash": "2104c21d65"
+      "texto": "Era a roda d'água do MOINHO girando para amassar o trigo.",
+      "fala": "Era a roda d'água do moinho girando para amassar o trigo.",
+      "hash": "cb04b813d4"
     },
     {
       "id": "p2-s4",
       "pagina": 2,
       "paragrafo": 1,
-      "texto": "— O pai de Grilo foi preso sem culpa e a farinha das famílias está trancada no depósito do Xerife — contou Robin.",
-      "fala": "O pai de Grilo foi preso sem culpa e a farinha das famílias está trancada no depósito do Xerife, contou Robin.",
-      "hash": "f044764bc1"
+      "texto": "Quem cuidava de tudo era Mestre Tomé, o MOLEIRO.",
+      "fala": "Quem cuidava de tudo era Mestre Tomé, o moleiro.",
+      "hash": "0c806aefaf"
     },
     {
       "id": "p2-s5",
       "pagina": 2,
       "paragrafo": 1,
-      "texto": "— Precisamos soltá-lo e devolver o alimento do povo!",
-      "fala": "Precisamos soltá-lo e devolver o alimento do povo!",
-      "hash": "6983d9a527"
+      "texto": "Ele transformava o trigo dourado em FARINHA branquinha, macia como talco.",
+      "fala": "Ele transformava o trigo dourado em farinha branquinha, macia como talco.",
+      "hash": "fde10c21b0"
     },
     {
       "id": "p2-s6",
       "pagina": 2,
-      "paragrafo": 2,
-      "texto": "Mariana abriu uma trouxa de pano e tirou três camisas compridas cor de folha.",
-      "fala": "Mariana abriu uma trouxa de pano e tirou três camisas compridas cor de folha.",
-      "hash": "5b344cc2fc"
+      "paragrafo": 1,
+      "texto": "O filho dele, Grilo, vivia com uma nuvenzinha branca na ponta do nariz.",
+      "fala": "O filho dele, Grilo, vivia com uma nuvenzinha branca na ponta do nariz.",
+      "hash": "c06c8b6fa3"
     },
     {
       "id": "p2-s7",
       "pagina": 2,
-      "paragrafo": 2,
-      "texto": "— Se vamos agir na floresta, nada de roupa chamativa!",
-      "fala": "Se vamos agir na floresta, nada de roupa chamativa!",
-      "hash": "42139c9583"
+      "paragrafo": 1,
+      "texto": "E sempre aparecia o vizinho Robin Hood, rapaz de riso fácil e flecha certeira.",
+      "fala": "E sempre aparecia o vizinho Robin Hood, rapaz de riso fácil e flecha certeira.",
+      "hash": "3dc8512153"
     },
     {
       "id": "p2-s8",
       "pagina": 2,
       "paragrafo": 2,
-      "texto": "De VERDE, nós sumimos no meio das árvores.",
-      "fala": "De verde, nós sumimos no meio das árvores.",
-      "hash": "1ce1f7d238"
+      "texto": "De repente, o Xerife chegou à estrada com o papel do rei.",
+      "fala": "De repente, o Xerife chegou à estrada com o papel do rei.",
+      "hash": "b04c3f00a6"
     },
     {
       "id": "p2-s9",
       "pagina": 2,
       "paragrafo": 2,
-      "texto": "Os guardas passam do lado e só enxergam folhagem!",
-      "fala": "Os guardas passam do lado e só enxergam folhagem!",
-      "hash": "12620d26de"
+      "texto": "— Dois sacos de farinha por família! — gritou.",
+      "fala": "Dois sacos de farinha por família! gritou.",
+      "hash": "6afccf726a"
     },
     {
       "id": "p2-s10",
       "pagina": 2,
-      "paragrafo": 3,
-      "texto": "Robin vestiu a camisa verde, ajeitou a pena vermelha no chapéu e pendurou no cinto uma CORNETA dourada de caça.",
-      "fala": "Robin vestiu a camisa verde, ajeitou a pena vermelha no chapéu e pendurou no cinto uma corneta dourada de caça.",
-      "hash": "ddbaf1080c"
+      "paragrafo": 2,
+      "texto": "Logo passou a carroça do barão, o homem mais rico da região, carregadinha com cinquenta sacos.",
+      "fala": "Logo passou a carroça do barão, o homem mais rico da região, carregadinha com cinquenta sacos.",
+      "hash": "f8647b9f66"
     },
     {
       "id": "p2-s11",
       "pagina": 2,
-      "paragrafo": 3,
-      "texto": "— Combinado: três sopros curtos querem dizer \"preciso de ajuda, venham depressa!\".",
-      "fala": "Combinado: três sopros curtos querem dizer preciso de ajuda, venham depressa!.",
-      "hash": "0121302642"
+      "paragrafo": 2,
+      "texto": "Ele riu, jogou dois para os guardas e seguiu assobiando.",
+      "fala": "Ele riu, jogou dois para os guardas e seguiu assobiando.",
+      "hash": "41f9ca3ca4"
     },
     {
       "id": "p2-s12",
       "pagina": 2,
+      "paragrafo": 2,
+      "texto": "Para ele, era só uma migalha.",
+      "fala": "Para ele, era só uma migalha.",
+      "hash": "123c4a66f8"
+    },
+    {
+      "id": "p2-s13",
+      "pagina": 2,
       "paragrafo": 3,
-      "texto": "Mas ainda precisamos de mais um amigo bem forte para alcançar o alto do depósito e carregar de volta aqueles sacos pesados!",
-      "fala": "Mas ainda precisamos de mais um amigo bem forte para alcançar o alto do depósito e carregar de volta aqueles sacos pesados!",
-      "hash": "be5c0e07e3"
+      "texto": "Então os guardas pararam na porta de Mestre Tomé.",
+      "fala": "Então os guardas pararam na porta de Mestre Tomé.",
+      "hash": "b86bceadc8"
+    },
+    {
+      "id": "p2-s14",
+      "pagina": 2,
+      "paragrafo": 3,
+      "texto": "Tudo ficou em silêncio, e até a roda parecia girar mais devagar.",
+      "fala": "Tudo ficou em silêncio, e até a roda parecia girar mais devagar.",
+      "hash": "7991b7d49d"
+    },
+    {
+      "id": "p2-s15",
+      "pagina": 2,
+      "paragrafo": 3,
+      "texto": "Lá dentro havia só três sacos para a família comer o mês inteiro!",
+      "fala": "Lá dentro havia só três sacos para a família comer o mês inteiro!",
+      "hash": "dd76f26fa4"
+    },
+    {
+      "id": "p2-s16",
+      "pagina": 2,
+      "paragrafo": 3,
+      "texto": "Grilo apertou a mão do pai, e Robin ficou firme ao lado deles.",
+      "fala": "Grilo apertou a mão do pai, e Robin ficou firme ao lado deles.",
+      "hash": "e13e073cbc"
+    },
+    {
+      "id": "p2-s17",
+      "pagina": 2,
+      "paragrafo": 3,
+      "texto": "Mestre Tomé limpou as mãos no avental e deu um passo à frente.",
+      "fala": "Mestre Tomé limpou as mãos no avental e deu um passo à frente.",
+      "hash": "11cec93851"
+    },
+    {
+      "id": "p2-s18",
+      "pagina": 2,
+      "paragrafo": 3,
+      "texto": "Ia mostrar que aquela conta não fechava.",
+      "fala": "Ia mostrar que aquela conta não fechava.",
+      "hash": "3f45acdead"
     },
     {
       "id": "p3-s0",
       "pagina": 3,
       "paragrafo": -1,
       "titulo": true,
-      "texto": "Capítulo 3. A Ponte do Riacho. Ninguém Dá Passo para Trás",
-      "fala": "Capítulo 3. A Ponte do Riacho. Ninguém Dá Passo para Trás",
-      "hash": "bf7685212c"
+      "texto": "Capítulo 3. Quem Desafia o Xerife? Uma Mentira sem Prova Nenhuma",
+      "fala": "Capítulo 3. Quem Desafia o Xerife? Uma Mentira sem Prova Nenhuma",
+      "hash": "32ed030641"
     },
     {
       "id": "p3-s1",
       "pagina": 3,
       "paragrafo": 0,
-      "texto": "Na manhã seguinte, Robin saiu cedo procurando gente corajosa pelas trilhas.",
-      "fala": "Na manhã seguinte, Robin saiu cedo procurando gente corajosa pelas trilhas.",
-      "hash": "335d708e52"
+      "texto": "Mestre Tomé apontou para o moinho e disse com voz mansa: — Só tenho três sacos.",
+      "fala": "Mestre Tomé apontou para o moinho e disse com voz mansa: Só tenho três sacos.",
+      "hash": "e4f99024f6"
     },
     {
       "id": "p3-s2",
       "pagina": 3,
       "paragrafo": 0,
-      "texto": "Grilo veio atrás em passos ligeiros, ainda com um pouco de pó de trigo na ponta do nariz.",
-      "fala": "Grilo veio atrás em passos ligeiros, ainda com um pouco de pó de trigo na ponta do nariz.",
-      "hash": "2452190b41"
+      "texto": "Se eu entregar dois, sobra um só para o Grilo comer o mês inteiro.",
+      "fala": "Se eu entregar dois, sobra um só para o Grilo comer o mês inteiro.",
+      "hash": "b36d7dd70e"
     },
     {
       "id": "p3-s3",
       "pagina": 3,
       "paragrafo": 0,
-      "texto": "Logo ouviram o barulho gostoso de um RIACHO correndo sobre as pedras.",
-      "fala": "Logo ouviram o barulho gostoso de um riacho correndo sobre as pedras.",
-      "hash": "7d4b1a1b63"
+      "texto": "O Xerife franziu a testa e bateu o pé na terra: — Lei do rei não aceita choro!",
+      "fala": "O Xerife franziu a testa e bateu o pé na terra: Lei do rei não aceita choro!",
+      "hash": "8144fc780e"
     },
     {
       "id": "p3-s4",
       "pagina": 3,
-      "paragrafo": 1,
-      "texto": "Por cima da água atravessava uma PONTE estreita, feita de um tronco só.",
-      "fala": "Por cima da água atravessava uma ponte estreita, feita de um tronco só.",
-      "hash": "ab39dcacc0"
+      "paragrafo": 0,
+      "texto": "Pague logo!",
+      "fala": "Pague logo!",
+      "hash": "8d014ce7ab"
     },
     {
       "id": "p3-s5",
       "pagina": 3,
       "paragrafo": 1,
-      "texto": "Robin pegou um galho reto e firme caído no chão para usar de apoio.",
-      "fala": "Robin pegou um galho reto e firme caído no chão para usar de apoio.",
-      "hash": "cb47c4b832"
+      "texto": "Cheio de CORAGEM, Robin falou alto, para a vila ouvir: — Essa CONTA não é justa, Xerife!",
+      "fala": "Cheio de coragem, Robin falou alto, para a vila ouvir: Essa conta não é justa, Xerife!",
+      "hash": "dcf96062eb"
     },
     {
       "id": "p3-s6",
       "pagina": 3,
       "paragrafo": 1,
-      "texto": "Mas, quando pisou na ponta de cá, um desconhecido enorme pisou na ponta de lá.",
-      "fala": "Mas, quando pisou na ponta de cá, um desconhecido enorme pisou na ponta de lá.",
-      "hash": "abfdb0e322"
+      "texto": "Tirar dois sacos de cinquenta não faz falta.",
+      "fala": "Tirar dois sacos de cinquenta não faz falta.",
+      "hash": "a50154237d"
     },
     {
       "id": "p3-s7",
       "pagina": 3,
       "paragrafo": 1,
-      "texto": "O homem era tão alto que quase encostava a cabeça nos galhos baixos, e se apoiava num BASTÃO comprido de madeira.",
-      "fala": "O homem era tão alto que quase encostava a cabeça nos galhos baixos, e se apoiava num bastão comprido de madeira.",
-      "hash": "bf620581c4"
+      "texto": "Mas tirar dois de três deixa uma criança com fome!",
+      "fala": "Mas tirar dois de três deixa uma criança com fome!",
+      "hash": "0d1d85c905"
     },
     {
       "id": "p3-s8",
       "pagina": 3,
-      "paragrafo": 2,
-      "texto": "Grilo levou um susto com aquele tamanho todo e se escondeu atrás de uma samambaia.",
-      "fala": "Grilo levou um susto com aquele tamanho todo e se escondeu atrás de uma samambaia.",
-      "hash": "6798e3424b"
+      "paragrafo": 1,
+      "texto": "Os vizinhos cochicharam: — É verdade!",
+      "fala": "Os vizinhos cochicharam: É verdade!",
+      "hash": "0a3d41e935"
     },
     {
       "id": "p3-s9",
       "pagina": 3,
-      "paragrafo": 2,
-      "texto": "Os dois homens pararam bem no meio da ponte, nariz de Robin quase encostando no peito do grandalhão!",
-      "fala": "Os dois homens pararam bem no meio da ponte, nariz de Robin quase encostando no peito do grandalhão!",
-      "hash": "9db836d066"
+      "paragrafo": 1,
+      "texto": "E o Xerife ficou vermelho feito tomate.",
+      "fala": "E o Xerife ficou vermelho feito tomate.",
+      "hash": "de12cff799"
     },
     {
       "id": "p3-s10",
       "pagina": 3,
       "paragrafo": 2,
-      "texto": "— Abra caminho, rapazinho! — disse o gigante, com voz de trovão que não assustava ninguém.",
-      "fala": "Abra caminho, rapazinho! disse o gigante, com voz de trovão que não assustava ninguém.",
-      "hash": "99c00fc4b1"
+      "texto": "Furioso, o Xerife inventou uma mentira na hora: — Vocês estão escondendo farinha no porão!",
+      "fala": "Furioso, o Xerife inventou uma mentira na hora: Vocês estão escondendo farinha no porão!",
+      "hash": "8b52323f6c"
     },
     {
       "id": "p3-s11",
       "pagina": 3,
       "paragrafo": 2,
-      "texto": "— Eu cheguei primeiro!",
-      "fala": "Eu cheguei primeiro!",
-      "hash": "9b515cc838"
+      "texto": "Mestre Tomé abriu os braços: — Pode entrar e procurar!",
+      "fala": "Mestre Tomé abriu os braços: Pode entrar e procurar!",
+      "hash": "153796f785"
     },
     {
       "id": "p3-s12",
       "pagina": 3,
-      "paragrafo": 3,
-      "texto": "— Ora essa! — respondeu Robin, dando uma piscadinha para a samambaia.",
-      "fala": "Ora essa! respondeu Robin, dando uma piscadinha para a samambaia.",
-      "hash": "88c551a870"
+      "paragrafo": 2,
+      "texto": "Não escondi nada!",
+      "fala": "Não escondi nada!",
+      "hash": "ba4b647a1f"
     },
     {
       "id": "p3-s13",
       "pagina": 3,
-      "paragrafo": 3,
-      "texto": "— Um arqueiro de Sherwood não volta atrás nem para uma montanha!",
-      "fala": "Um arqueiro de Sherwood não volta atrás nem para uma montanha!",
-      "hash": "0d67e6ac1a"
+      "paragrafo": 2,
+      "texto": "Mas o Xerife gritou mais alto: — Eu sou o Xerife de Nortigão!",
+      "fala": "Mas o Xerife gritou mais alto: Eu sou o Xerife de Nortigão!",
+      "hash": "ae23246fef"
     },
     {
       "id": "p3-s14",
       "pagina": 3,
-      "paragrafo": 3,
-      "texto": "Vamos resolver numa disputa limpa de bastão!",
-      "fala": "Vamos resolver numa disputa limpa de bastão!",
-      "hash": "0784722837"
+      "paragrafo": 2,
+      "texto": "Não preciso de PROVA nenhuma!",
+      "fala": "Não preciso de prova nenhuma!",
+      "hash": "40fe669c7a"
     },
     {
       "id": "p3-s15",
       "pagina": 3,
+      "paragrafo": 2,
+      "texto": "Guardas, prendam o moleiro e esse rapaz atrevido!",
+      "fala": "Guardas, prendam o moleiro e esse rapaz atrevido!",
+      "hash": "669cbd9ae5"
+    },
+    {
+      "id": "p3-s16",
+      "pagina": 3,
       "paragrafo": 3,
-      "texto": "Quem cair na água perde a vez!",
-      "fala": "Quem cair na água perde a vez!",
-      "hash": "855115570f"
+      "texto": "Os guardas agarraram Mestre Tomé e levaram a farinha dos vizinhos pobres.",
+      "fala": "Os guardas agarraram Mestre Tomé e levaram a farinha dos vizinhos pobres.",
+      "hash": "8b7f50a58f"
+    },
+    {
+      "id": "p3-s17",
+      "pagina": 3,
+      "paragrafo": 3,
+      "texto": "Mesmo preso, o moleiro se pôs na frente e gritou: — Corram para a floresta, meninos!",
+      "fala": "Mesmo preso, o moleiro se pôs na frente e gritou: Corram para a floresta, meninos!",
+      "hash": "bef5818de8"
+    },
+    {
+      "id": "p3-s18",
+      "pagina": 3,
+      "paragrafo": 3,
+      "texto": "Com o coração aos pulos, Robin segurou a mão de Grilo.",
+      "fala": "Com o coração aos pulos, Robin segurou a mão de Grilo.",
+      "hash": "51402b6a1b"
+    },
+    {
+      "id": "p3-s19",
+      "pagina": 3,
+      "paragrafo": 3,
+      "texto": "Pulou a cerca e mergulhou com ele no verde das árvores.",
+      "fala": "Pulou a cerca e mergulhou com ele no verde das árvores.",
+      "hash": "ce8f503d7a"
     },
     {
       "id": "p4-s0",
       "pagina": 4,
       "paragrafo": -1,
       "titulo": true,
-      "texto": "Capítulo 4. O Banho de Risadas. O Gigante Chamado Pequeno",
-      "fala": "Capítulo 4. O Banho de Risadas. O Gigante Chamado Pequeno",
-      "hash": "40170db132"
+      "texto": "Capítulo 4. A Mentora da Mata. Como Sumir no Meio das Folhas",
+      "fala": "Capítulo 4. A Mentora da Mata. Como Sumir no Meio das Folhas",
+      "hash": "3aba9a9a58"
     },
     {
       "id": "p4-s1",
       "pagina": 4,
       "paragrafo": 0,
-      "texto": "TÁC!",
-      "fala": "TÁC!",
-      "hash": "314f4ba25c"
+      "texto": "Robin e Grilo se esconderam atrás de um tronco, na beira da floresta.",
+      "fala": "Robin e Grilo se esconderam atrás de um tronco, na beira da floresta.",
+      "hash": "e3121ff8fd"
     },
     {
       "id": "p4-s2",
       "pagina": 4,
       "paragrafo": 0,
-      "texto": "TÓC!",
-      "fala": "TÓC!",
-      "hash": "0c5aa761cc"
+      "texto": "Ufa, tinham deixado os guardas para trás!",
+      "fala": "Ufa, tinham deixado os guardas para trás!",
+      "hash": "7b7ce93f27"
     },
     {
       "id": "p4-s3",
       "pagina": 4,
       "paragrafo": 0,
-      "texto": "TÁC!",
-      "fala": "TÁC!",
-      "hash": "314f4ba25c"
+      "texto": "Só que a camisa clara de Robin e o avental de Grilo brilhavam no mato feito lanterna!",
+      "fala": "Só que a camisa clara de Robin e o avental de Grilo brilhavam no mato feito lanterna!",
+      "hash": "25583401b0"
     },
     {
       "id": "p4-s4",
       "pagina": 4,
-      "paragrafo": 0,
-      "texto": "Os dois bastões batiam no ar enquanto Robin e o grandalhão faziam caras de concentração, se equilibrando na beirinha do tronco.",
-      "fala": "Os dois bastões batiam no ar enquanto Robin e o grandalhão faziam caras de concentração, se equilibrando na beirinha do tronco.",
-      "hash": "36987e5d3e"
+      "paragrafo": 1,
+      "texto": "De repente, um galho balançou sem barulho.",
+      "fala": "De repente, um galho balançou sem barulho.",
+      "hash": "c733c60acb"
     },
     {
       "id": "p4-s5",
       "pagina": 4,
-      "paragrafo": 0,
-      "texto": "Robin pulou para a esquerda, desviou para a direita e quase conseguiu... mas escorregou num musgo verdinho!",
-      "fala": "Robin pulou para a esquerda, desviou para a direita e quase conseguiu... mas escorregou num musgo verdinho!",
-      "hash": "e5d5f183d2"
+      "paragrafo": 1,
+      "texto": "Dele desceu Lady Mariana, de tranças compridas, olhos vivos e arco nas costas.",
+      "fala": "Dele desceu Lady Mariana, de tranças compridas, olhos vivos e arco nas costas.",
+      "hash": "b1210d5fb1"
     },
     {
       "id": "p4-s6",
       "pagina": 4,
       "paragrafo": 1,
-      "texto": "PLOF!",
-      "fala": "PLOF!",
-      "hash": "909ba71c6c"
+      "texto": "Ela era amiga de Robin e conhecia cada trilha de Xervedo.",
+      "fala": "Ela era amiga de Robin e conhecia cada trilha de Xervedo.",
+      "hash": "d84ec20d7d"
     },
     {
       "id": "p4-s7",
       "pagina": 4,
       "paragrafo": 1,
-      "texto": "Robin caiu sentado bem no meio do riacho, levantando água para todo lado e molhando até a pena do chapéu!",
-      "fala": "Robin caiu sentado bem no meio do riacho, levantando água para todo lado e molhando até a pena do chapéu!",
-      "hash": "fa4c9f3dcd"
+      "texto": "— Com essas roupas claras, os guardas acham vocês num instante! — cochichou, abrindo um embrulho.",
+      "fala": "Com essas roupas claras, os guardas acham vocês num instante! cochichou, abrindo um embrulho.",
+      "hash": "696837ba46"
     },
     {
       "id": "p4-s8",
       "pagina": 4,
-      "paragrafo": 1,
-      "texto": "Grilo tapou a boca com as duas mãos, achando que ia dar briga.",
-      "fala": "Grilo tapou a boca com as duas mãos, achando que ia dar briga.",
-      "hash": "5ff3202599"
+      "paragrafo": 2,
+      "texto": "Lá dentro havia roupas tingidas de VERDE, um CAPUZ com pena vermelha e uma CORNETA dourada.",
+      "fala": "Lá dentro havia roupas tingidas de verde, um capuz com pena vermelha e uma corneta dourada.",
+      "hash": "ac132f76f1"
     },
     {
       "id": "p4-s9",
       "pagina": 4,
       "paragrafo": 2,
-      "texto": "Só que Robin olhou para as próprias botas cheias de água, soltou uma RISADA gostosa e bateu palmas: — Que TOMBO bonito!",
-      "fala": "Só que Robin olhou para as próprias botas cheias de água, soltou uma risada gostosa e bateu palmas: Que tombo bonito!",
-      "hash": "51624ee72b"
+      "texto": "— Quem veste a cor da floresta vira parte dela! — ensinou Mariana.",
+      "fala": "Quem veste a cor da floresta vira parte dela! ensinou Mariana.",
+      "hash": "5f6c4b0982"
     },
     {
       "id": "p4-s10",
       "pagina": 4,
+      "paragrafo": 2,
+      "texto": "— A mata é grande, e é fácil se perder.",
+      "fala": "A mata é grande, e é fácil se perder.",
+      "hash": "2cfca60b3b"
+    },
+    {
+      "id": "p4-s11",
+      "pagina": 4,
+      "paragrafo": 2,
+      "texto": "Se alguém estiver em perigo, sopre três vezes: tuuu, tuuu, tuuu!",
+      "fala": "Se alguém estiver em perigo, sopre três vezes: tuuu, tuuu, tuuu!",
+      "hash": "f111bac313"
+    },
+    {
+      "id": "p4-s12",
+      "pagina": 4,
+      "paragrafo": 2,
+      "texto": "Quer dizer: venham me ajudar!",
+      "fala": "Quer dizer: venham me ajudar!",
+      "hash": "225d1b688c"
+    },
+    {
+      "id": "p4-s13",
+      "pagina": 4,
+      "paragrafo": 3,
+      "texto": "Rapidinho, os dois se vestiram de verde, e Grilo escondeu o avental na mochila.",
+      "fala": "Rapidinho, os dois se vestiram de verde, e Grilo escondeu o avental na mochila.",
+      "hash": "d4d49075da"
+    },
+    {
+      "id": "p4-s14",
+      "pagina": 4,
+      "paragrafo": 3,
+      "texto": "Os guardas voltaram pela trilha, devagar, cutucando as moitas com as lanças.",
+      "fala": "Os guardas voltaram pela trilha, devagar, cutucando as moitas com as lanças.",
+      "hash": "fd8a7428cb"
+    },
+    {
+      "id": "p4-s15",
+      "pagina": 4,
+      "paragrafo": 3,
+      "texto": "Robin e Grilo ficaram parados feito estátuas.",
+      "fala": "Robin e Grilo ficaram parados feito estátuas.",
+      "hash": "7af7ff2a33"
+    },
+    {
+      "id": "p4-s16",
+      "pagina": 4,
+      "paragrafo": 3,
+      "texto": "Os guardas olharam bem e só viram folhas!",
+      "fala": "Os guardas olharam bem e só viram folhas!",
+      "hash": "96aecd4426"
+    },
+    {
+      "id": "p4-s17",
+      "pagina": 4,
+      "paragrafo": 3,
+      "texto": "Mariana apontou o caminho: o Grande Carvalho, depois do Riacho Fundo.",
+      "fala": "Mariana apontou o caminho: o Grande Carvalho, depois do Riacho Fundo.",
+      "hash": "8c21c85ea8"
+    },
+    {
+      "id": "p4-s18",
+      "pagina": 4,
+      "paragrafo": 3,
+      "texto": "Lá estariam seguros para pensar em como ajudar Mestre Tomé.",
+      "fala": "Lá estariam seguros para pensar em como ajudar Mestre Tomé.",
+      "hash": "c947b2c298"
+    },
+    {
+      "id": "p5-s0",
+      "pagina": 5,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Capítulo 5. A Ponte do Riacho Fundo. Pressa de um Lado, Teimosia do Outro",
+      "fala": "Capítulo 5. A Ponte do Riacho Fundo. Pressa de um Lado, Teimosia do Outro",
+      "hash": "7710463421"
+    },
+    {
+      "id": "p5-s1",
+      "pagina": 5,
+      "paragrafo": 0,
+      "texto": "Vestidos de verde, Robin e Grilo seguiram sozinhos pela trilha.",
+      "fala": "Vestidos de verde, Robin e Grilo seguiram sozinhos pela trilha.",
+      "hash": "b9ff0f993e"
+    },
+    {
+      "id": "p5-s2",
+      "pagina": 5,
+      "paragrafo": 0,
+      "texto": "Mariana ficou mais atrás, vigiando o caminho.",
+      "fala": "Mariana ficou mais atrás, vigiando o caminho.",
+      "hash": "4640ba0a53"
+    },
+    {
+      "id": "p5-s3",
+      "pagina": 5,
+      "paragrafo": 0,
+      "texto": "Logo ouviram um barulhinho fresco: era o RIACHO Fundo, pulando entre as pedras.",
+      "fala": "Logo ouviram um barulhinho fresco: era o riacho Fundo, pulando entre as pedras.",
+      "hash": "718d893cc2"
+    },
+    {
+      "id": "p5-s4",
+      "pagina": 5,
+      "paragrafo": 0,
+      "texto": "Do outro lado ficava a mata fechada do Grande Carvalho.",
+      "fala": "Do outro lado ficava a mata fechada do Grande Carvalho.",
+      "hash": "67c967eb7c"
+    },
+    {
+      "id": "p5-s5",
+      "pagina": 5,
+      "paragrafo": 1,
+      "texto": "Sobre a água havia uma só PONTE: um tronco caído, estreito e escorregadio.",
+      "fala": "Sobre a água havia uma só ponte: um tronco caído, estreito e escorregadio.",
+      "hash": "ffa9dbc7d2"
+    },
+    {
+      "id": "p5-s6",
+      "pagina": 5,
+      "paragrafo": 1,
+      "texto": "Robin catou no chão um galho reto para se apoiar.",
+      "fala": "Robin catou no chão um galho reto para se apoiar.",
+      "hash": "ff84d925a2"
+    },
+    {
+      "id": "p5-s7",
+      "pagina": 5,
+      "paragrafo": 1,
+      "texto": "Mas, quando pisou numa ponta, um homem imenso pisou na outra!",
+      "fala": "Mas, quando pisou numa ponta, um homem imenso pisou na outra!",
+      "hash": "1a0effade2"
+    },
+    {
+      "id": "p5-s8",
+      "pagina": 5,
+      "paragrafo": 1,
+      "texto": "Era tão alto que quase batia a cabeça nos galhos.",
+      "fala": "Era tão alto que quase batia a cabeça nos galhos.",
+      "hash": "3ead35729b"
+    },
+    {
+      "id": "p5-s9",
+      "pagina": 5,
+      "paragrafo": 1,
+      "texto": "Vestia couro marrom e segurava um longo BASTÃO de madeira.",
+      "fala": "Vestia couro marrom e segurava um longo bastão de madeira.",
+      "hash": "b6fadfc50d"
+    },
+    {
+      "id": "p5-s10",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "Grilo arregalou os olhos e se escondeu atrás de uma samambaia.",
+      "fala": "Grilo arregalou os olhos e se escondeu atrás de uma samambaia.",
+      "hash": "3f50906355"
+    },
+    {
+      "id": "p5-s11",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "Passo a passo, os dois chegaram ao meio do tronco.",
+      "fala": "Passo a passo, os dois chegaram ao meio do tronco.",
+      "hash": "3db312f505"
+    },
+    {
+      "id": "p5-s12",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "O nariz de Robin ficou na altura do peito do grandalhão!",
+      "fala": "O nariz de Robin ficou na altura do peito do grandalhão!",
+      "hash": "d5bb4f5a30"
+    },
+    {
+      "id": "p5-s13",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "— Abra caminho, rapazinho de verde! — trovejou o gigante, com olhos risonhos.",
+      "fala": "Abra caminho, rapazinho de verde! trovejou o gigante, com olhos risonhos.",
+      "hash": "db60f219e3"
+    },
+    {
+      "id": "p5-s14",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "— Eu pisei aqui primeiro!",
+      "fala": "Eu pisei aqui primeiro!",
+      "hash": "057dfe5942"
+    },
+    {
+      "id": "p5-s15",
+      "pagina": 5,
+      "paragrafo": 3,
+      "texto": "Robin olhou para a água fria lá embaixo.",
+      "fala": "Robin olhou para a água fria lá embaixo.",
+      "hash": "40135cd3f2"
+    },
+    {
+      "id": "p5-s16",
+      "pagina": 5,
+      "paragrafo": 3,
+      "texto": "Depois olhou para o grandalhão, que não saía da frente e ainda sorria.",
+      "fala": "Depois olhou para o grandalhão, que não saía da frente e ainda sorria.",
+      "hash": "e1c2709f49"
+    },
+    {
+      "id": "p5-s17",
+      "pagina": 5,
+      "paragrafo": 3,
+      "texto": "Robin achou graça.",
+      "fala": "Robin achou graça.",
+      "hash": "af2a865f9b"
+    },
+    {
+      "id": "p5-s18",
+      "pagina": 5,
+      "paragrafo": 3,
+      "texto": "— Eu tenho pressa, e você tem teimosia! — disse, rindo.",
+      "fala": "Eu tenho pressa, e você tem teimosia! disse, rindo.",
+      "hash": "7f3f7982e5"
+    },
+    {
+      "id": "p5-s19",
+      "pagina": 5,
+      "paragrafo": 3,
+      "texto": "— Vamos fazer um jogo rápido de equilíbrio, com o galho e o bastão.",
+      "fala": "Vamos fazer um jogo rápido de equilíbrio, com o galho e o bastão.",
+      "hash": "b6f8daaa68"
+    },
+    {
+      "id": "p5-s20",
+      "pagina": 5,
+      "paragrafo": 3,
+      "texto": "Quem cair na água dá passagem ao outro!",
+      "fala": "Quem cair na água dá passagem ao outro!",
+      "hash": "5c5ebb52bf"
+    },
+    {
+      "id": "p6-s0",
+      "pagina": 6,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Capítulo 6. O Banho de Risadas. Quem Caiu no Riacho?",
+      "fala": "Capítulo 6. O Banho de Risadas. Quem Caiu no Riacho?",
+      "hash": "ee595f8c39"
+    },
+    {
+      "id": "p6-s1",
+      "pagina": 6,
+      "paragrafo": 0,
+      "texto": "Toc, tac, toc!",
+      "fala": "Toc, tac, toc!",
+      "hash": "30ed4999ae"
+    },
+    {
+      "id": "p6-s2",
+      "pagina": 6,
+      "paragrafo": 0,
+      "texto": "O galho de Robin e o bastão do gigante se cruzavam no ar.",
+      "fala": "O galho de Robin e o bastão do gigante se cruzavam no ar.",
+      "hash": "4a3e9cc253"
+    },
+    {
+      "id": "p6-s3",
+      "pagina": 6,
+      "paragrafo": 0,
+      "texto": "Os dois balançavam no tronco feito artistas de circo.",
+      "fala": "Os dois balançavam no tronco feito artistas de circo.",
+      "hash": "5f1a3b744e"
+    },
+    {
+      "id": "p6-s4",
+      "pagina": 6,
+      "paragrafo": 0,
+      "texto": "Robin pulou para um lado, desviou para o outro e quase venceu.",
+      "fala": "Robin pulou para um lado, desviou para o outro e quase venceu.",
+      "hash": "148dee5065"
+    },
+    {
+      "id": "p6-s5",
+      "pagina": 6,
+      "paragrafo": 0,
+      "texto": "Mas a bota dele pisou num musgo molhado e escorregou!",
+      "fala": "Mas a bota dele pisou num musgo molhado e escorregou!",
+      "hash": "496d6efc19"
+    },
+    {
+      "id": "p6-s6",
+      "pagina": 6,
+      "paragrafo": 1,
+      "texto": "Plof!",
+      "fala": "Plof!",
+      "hash": "2f977796a2"
+    },
+    {
+      "id": "p6-s7",
+      "pagina": 6,
+      "paragrafo": 1,
+      "texto": "Robin levou um TOMBO daqueles e caiu sentado no meio do riacho.",
+      "fala": "Robin levou um tombo daqueles e caiu sentado no meio do riacho.",
+      "hash": "5fc63e5699"
+    },
+    {
+      "id": "p6-s8",
+      "pagina": 6,
+      "paragrafo": 1,
+      "texto": "A água espirrou para todo lado e molhou até a pena vermelha do capuz!",
+      "fala": "A água espirrou para todo lado e molhou até a pena vermelha do capuz!",
+      "hash": "8760efad13"
+    },
+    {
+      "id": "p6-s9",
+      "pagina": 6,
+      "paragrafo": 1,
+      "texto": "Atrás da samambaia, Grilo tapou a boca com as duas mãos.",
+      "fala": "Atrás da samambaia, Grilo tapou a boca com as duas mãos.",
+      "hash": "a1cadb61a6"
+    },
+    {
+      "id": "p6-s10",
+      "pagina": 6,
+      "paragrafo": 1,
+      "texto": "Será que ia começar uma briga feia?",
+      "fala": "Será que ia começar uma briga feia?",
+      "hash": "139c0b0c19"
+    },
+    {
+      "id": "p6-s11",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "Só que Robin olhou para as botas cheias d'água e soltou uma RISADA gostosa.",
+      "fala": "Só que Robin olhou para as botas cheias d'água e soltou uma risada gostosa.",
+      "hash": "e5664bf2db"
+    },
+    {
+      "id": "p6-s12",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "— Que banho bonito!",
+      "fala": "Que banho bonito!",
+      "hash": "9fc967d47d"
+    },
+    {
+      "id": "p6-s13",
+      "pagina": 6,
       "paragrafo": 2,
       "texto": "Você venceu direitinho!",
       "fala": "Você venceu direitinho!",
       "hash": "20e9b46c27"
     },
     {
-      "id": "p4-s11",
-      "pagina": 4,
+      "id": "p6-s14",
+      "pagina": 6,
       "paragrafo": 2,
-      "texto": "E o grandalhão estendeu uma mão imensa para puxar Robin para cima, rindo mais alto ainda.",
-      "fala": "E o grandalhão estendeu uma mão imensa para puxar Robin para cima, rindo mais alto ainda.",
-      "hash": "e3ec4eae83"
+      "texto": "O gigante abriu um sorriso do tamanho do mundo.",
+      "fala": "O gigante abriu um sorriso do tamanho do mundo.",
+      "hash": "ccde086e56"
     },
     {
-      "id": "p4-s12",
-      "pagina": 4,
+      "id": "p6-s15",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "E riu tão alto que os passarinhos voaram assustados dos galhos.",
+      "fala": "E riu tão alto que os passarinhos voaram assustados dos galhos.",
+      "hash": "c8f47bbd9a"
+    },
+    {
+      "id": "p6-s16",
+      "pagina": 6,
       "paragrafo": 3,
-      "texto": "— Como você se chama, meu AMIGO? — perguntou Robin, torcendo a camisa.",
-      "fala": "Como você se chama, meu amigo? perguntou Robin, torcendo a camisa.",
-      "hash": "cb7ce963db"
+      "texto": "Depois, estendeu a mão imensa e, com um puxão só, tirou Robin da água.",
+      "fala": "Depois, estendeu a mão imensa e, com um puxão só, tirou Robin da água.",
+      "hash": "929adc45b9"
     },
     {
-      "id": "p4-s13",
-      "pagina": 4,
-      "paragrafo": 4,
-      "texto": "— João! — respondeu o gigante.",
-      "fala": "João! respondeu o gigante.",
-      "hash": "df9438cbf2"
+      "id": "p6-s17",
+      "pagina": 6,
+      "paragrafo": 3,
+      "texto": "Parecia que o rapaz era leve feito uma folha!",
+      "fala": "Parecia que o rapaz era leve feito uma folha!",
+      "hash": "a0c0ebeeb9"
     },
     {
-      "id": "p4-s14",
-      "pagina": 4,
-      "paragrafo": 4,
-      "texto": "Grilo deu um pulo da moita e bateu rindo no joelho do homem, já que só alcançava a cintura dele: — Pois um sujeito desse tamanho só pode ter um apelido ao contrário!",
-      "fala": "Grilo deu um pulo da moita e bateu rindo no joelho do homem, já que só alcançava a cintura dele: Pois um sujeito desse tamanho só pode ter um apelido ao contrário!",
-      "hash": "8d7ffbecd4"
+      "id": "p6-s18",
+      "pagina": 6,
+      "paragrafo": 3,
+      "texto": "— Você sabe perder com alegria, rapaz de verde! — disse o gigante, ajudando Robin a torcer a camisa.",
+      "fala": "Você sabe perder com alegria, rapaz de verde! disse o gigante, ajudando Robin a torcer a camisa.",
+      "hash": "ae98653164"
     },
     {
-      "id": "p4-s15",
-      "pagina": 4,
-      "paragrafo": 4,
+      "id": "p6-s19",
+      "pagina": 6,
+      "paragrafo": 3,
+      "texto": "— Quem sabe rir do próprio tombo já ganhou um AMIGO!",
+      "fala": "Quem sabe rir do próprio tombo já ganhou um amigo!",
+      "hash": "b0eaace5ed"
+    },
+    {
+      "id": "p7-s0",
+      "pagina": 7,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Capítulo 7. O Gigante Chamado Pequeno. Um Apelido ao Contrário",
+      "fala": "Capítulo 7. O Gigante Chamado Pequeno. Um Apelido ao Contrário",
+      "hash": "adb150fa0f"
+    },
+    {
+      "id": "p7-s1",
+      "pagina": 7,
+      "paragrafo": 0,
+      "texto": "Robin sentou na margem e esvaziou as botas: saiu um riachinho de cada uma!",
+      "fala": "Robin sentou na margem e esvaziou as botas: saiu um riachinho de cada uma!",
+      "hash": "a422ea8061"
+    },
+    {
+      "id": "p7-s2",
+      "pagina": 7,
+      "paragrafo": 0,
+      "texto": "O gigante contou que se chamava João.",
+      "fala": "O gigante contou que se chamava João.",
+      "hash": "419466afde"
+    },
+    {
+      "id": "p7-s3",
+      "pagina": 7,
+      "paragrafo": 0,
+      "texto": "Ele era lenhador e ferreiro, com uma FORÇA de urso.",
+      "fala": "Ele era lenhador e ferreiro, com uma força de urso.",
+      "hash": "fdd0c023ff"
+    },
+    {
+      "id": "p7-s4",
+      "pagina": 7,
+      "paragrafo": 0,
+      "texto": "Mas os guardas do Xerife cobraram um imposto impossível e levaram as ferramentas dele.",
+      "fala": "Mas os guardas do Xerife cobraram um imposto impossível e levaram as ferramentas dele.",
+      "hash": "2bd9781fd8"
+    },
+    {
+      "id": "p7-s5",
+      "pagina": 7,
+      "paragrafo": 0,
+      "texto": "Por isso, João fugiu para a floresta.",
+      "fala": "Por isso, João fugiu para a floresta.",
+      "hash": "78337006d6"
+    },
+    {
+      "id": "p7-s6",
+      "pagina": 7,
+      "paragrafo": 1,
+      "texto": "Grilo saiu de trás da samambaia, com os olhos brilhando de lágrimas.",
+      "fala": "Grilo saiu de trás da samambaia, com os olhos brilhando de lágrimas.",
+      "hash": "62f95db9ef"
+    },
+    {
+      "id": "p7-s7",
+      "pagina": 7,
+      "paragrafo": 1,
+      "texto": "— Com meu pai foi igualzinho!",
+      "fala": "Com meu pai foi igualzinho!",
+      "hash": "30b07cc33b"
+    },
+    {
+      "id": "p7-s8",
+      "pagina": 7,
+      "paragrafo": 1,
+      "texto": "O Xerife levou a farinha da vila e prendeu Mestre Tomé, sem prova nenhuma!",
+      "fala": "O Xerife levou a farinha da vila e prendeu Mestre Tomé, sem prova nenhuma!",
+      "hash": "fae8de84d2"
+    },
+    {
+      "id": "p7-s9",
+      "pagina": 7,
+      "paragrafo": 1,
+      "texto": "João fechou a cara e bateu o bastão no chão: toc!",
+      "fala": "João fechou a cara e bateu o bastão no chão: toc!",
+      "hash": "71f0859629"
+    },
+    {
+      "id": "p7-s10",
+      "pagina": 7,
+      "paragrafo": 1,
+      "texto": "— Esse Xerife passou de todos os limites!",
+      "fala": "Esse Xerife passou de todos os limites!",
+      "hash": "670b204b87"
+    },
+    {
+      "id": "p7-s11",
+      "pagina": 7,
+      "paragrafo": 2,
+      "texto": "Grilo esticou o pescoço para olhar o gigante lá em cima.",
+      "fala": "Grilo esticou o pescoço para olhar o gigante lá em cima.",
+      "hash": "2c992d7189"
+    },
+    {
+      "id": "p7-s12",
+      "pagina": 7,
+      "paragrafo": 2,
+      "texto": "Depois deu um tapinha no joelho dele, rindo: — Um amigo tão grandão merece um APELIDO ao contrário.",
+      "fala": "Depois deu um tapinha no joelho dele, rindo: Um amigo tão grandão merece um apelido ao contrário.",
+      "hash": "74dd4aa60f"
+    },
+    {
+      "id": "p7-s13",
+      "pagina": 7,
+      "paragrafo": 2,
       "texto": "De hoje em diante, você é o João Pequeno!",
       "fala": "De hoje em diante, você é o João Pequeno!",
       "hash": "8f68a3fe19"
     },
     {
-      "id": "p4-s16",
-      "pagina": 4,
-      "paragrafo": 4,
-      "texto": "— Gostei! — riu o gigante, e foi com eles até o Grande Carvalho buscar uma camisa verde bem grande para vestir.",
-      "fala": "Gostei! riu o gigante, e foi com eles até o Grande Carvalho buscar uma camisa verde bem grande para vestir.",
-      "hash": "53a91adacc"
+      "id": "p7-s14",
+      "pagina": 7,
+      "paragrafo": 2,
+      "texto": "O gigante soltou uma gargalhada que sacudiu as folhas.",
+      "fala": "O gigante soltou uma gargalhada que sacudiu as folhas.",
+      "hash": "e3b2128daf"
     },
     {
-      "id": "p5-s0",
-      "pagina": 5,
+      "id": "p7-s15",
+      "pagina": 7,
+      "paragrafo": 3,
+      "texto": "Robin pôs a mão no ombro largo de João.",
+      "fala": "Robin pôs a mão no ombro largo de João.",
+      "hash": "3c3da26b4d"
+    },
+    {
+      "id": "p7-s16",
+      "pagina": 7,
+      "paragrafo": 3,
+      "texto": "— Vamos para o Grande Carvalho pensar num jeito de soltar Mestre Tomé.",
+      "fala": "Vamos para o Grande Carvalho pensar num jeito de soltar Mestre Tomé.",
+      "hash": "14f073b95a"
+    },
+    {
+      "id": "p7-s17",
+      "pagina": 7,
+      "paragrafo": 3,
+      "texto": "Vem com a gente?",
+      "fala": "Vem com a gente?",
+      "hash": "0899e01867"
+    },
+    {
+      "id": "p7-s18",
+      "pagina": 7,
+      "paragrafo": 3,
+      "texto": "João Pequeno ergueu o bastão: — Vou!",
+      "fala": "João Pequeno ergueu o bastão: Vou!",
+      "hash": "b5f23819cf"
+    },
+    {
+      "id": "p7-s19",
+      "pagina": 7,
+      "paragrafo": 3,
+      "texto": "Juntos, vamos formar um BANDO que o Xerife nunca viu!",
+      "fala": "Juntos, vamos formar um bando que o Xerife nunca viu!",
+      "hash": "36108b9afb"
+    },
+    {
+      "id": "p7-s20",
+      "pagina": 7,
+      "paragrafo": 3,
+      "texto": "E os três atravessaram a ponte juntos.",
+      "fala": "E os três atravessaram a ponte juntos.",
+      "hash": "eb16f8843c"
+    },
+    {
+      "id": "p8-s0",
+      "pagina": 8,
       "paragrafo": -1,
       "titulo": true,
       "texto": "Capítulo 5. A Primeira Ação do Bando Verde. Quem Mexeu na Cadeia?",
@@ -587,104 +1198,104 @@
       "hash": "ec2f1bc420"
     },
     {
-      "id": "p5-s1",
-      "pagina": 5,
+      "id": "p8-s1",
+      "pagina": 8,
       "paragrafo": 0,
       "texto": "Ao cair da tarde, o bando verde entrou em ação!",
       "fala": "Ao cair da tarde, o bando verde entrou em ação!",
       "hash": "41bf4ac9c3"
     },
     {
-      "id": "p5-s2",
-      "pagina": 5,
+      "id": "p8-s2",
+      "pagina": 8,
       "paragrafo": 0,
       "texto": "Não houve briga nem confusão: foi tudo pura inteligência.",
       "fala": "Não houve briga nem confusão: foi tudo pura inteligência.",
       "hash": "250fe9a92a"
     },
     {
-      "id": "p5-s3",
-      "pagina": 5,
+      "id": "p8-s3",
+      "pagina": 8,
       "paragrafo": 0,
       "texto": "Lady Mariana bateu no portão dos fundos fingindo procurar um cachorrinho perdido, e os dois guardas da CADEIA correram para o jardim ajudar.",
       "fala": "Lady Mariana bateu no portão dos fundos fingindo procurar um cachorrinho perdido, e os dois guardas da cadeia correram para o jardim ajudar.",
       "hash": "277d54bee2"
     },
     {
-      "id": "p5-s4",
-      "pagina": 5,
+      "id": "p8-s4",
+      "pagina": 8,
       "paragrafo": 1,
       "texto": "Nesse instante, João Pequeno ergueu Grilo nos ombros com facilidade até a janelinha alta.",
       "fala": "Nesse instante, João Pequeno ergueu Grilo nos ombros com facilidade até a janelinha alta.",
       "hash": "de8fe8418a"
     },
     {
-      "id": "p5-s5",
-      "pagina": 5,
+      "id": "p8-s5",
+      "pagina": 8,
       "paragrafo": 1,
       "texto": "O menino passou por dentro, pegou a CHAVE pendurada num prego e abriu a cela do pai sem fazer barulho!",
       "fala": "O menino passou por dentro, pegou a chave pendurada num prego e abriu a cela do pai sem fazer barulho!",
       "hash": "5e3c532638"
     },
     {
-      "id": "p5-s6",
-      "pagina": 5,
+      "id": "p8-s6",
+      "pagina": 8,
       "paragrafo": 1,
       "texto": "Enquanto isso, Robin conferia os sacos marcados com o nome dos moradores no depósito e João Pequeno erguia tudo com uma mão só, devolvendo a FARINHA de casa em casa.",
       "fala": "Enquanto isso, Robin conferia os sacos marcados com o nome dos moradores no depósito e João Pequeno erguia tudo com uma mão só, devolvendo a farinha de casa em casa.",
       "hash": "7d7e6f7bb0"
     },
     {
-      "id": "p5-s7",
-      "pagina": 5,
+      "id": "p8-s7",
+      "pagina": 8,
       "paragrafo": 2,
       "texto": "Quando o XERIFE chegou ofegante, só viu a porta aberta, o depósito vazio e quatro vultos vestidos de verde sumindo entre as árvores.",
       "fala": "Quando o xerife chegou ofegante, só viu a porta aberta, o depósito vazio e quatro vultos vestidos de verde sumindo entre as árvores.",
       "hash": "d3bc4f32a5"
     },
     {
-      "id": "p5-s8",
-      "pagina": 5,
+      "id": "p8-s8",
+      "pagina": 8,
       "paragrafo": 2,
       "texto": "Um guarda que estivera na estrada do moinho reconheceu logo a pena vermelha no chapéu: — É aquele rapaz de boa pontaria da aldeia!",
       "fala": "Um guarda que estivera na estrada do moinho reconheceu logo a pena vermelha no chapéu: É aquele rapaz de boa pontaria da aldeia!",
       "hash": "fdc189fc18"
     },
     {
-      "id": "p5-s9",
-      "pagina": 5,
+      "id": "p8-s9",
+      "pagina": 8,
       "paragrafo": 2,
       "texto": "É Robin Hood!",
       "fala": "É Robin Hood!",
       "hash": "cc4f645bad"
     },
     {
-      "id": "p5-s10",
-      "pagina": 5,
+      "id": "p8-s10",
+      "pagina": 8,
       "paragrafo": 3,
       "texto": "O Xerife bateu o pé no chão e ficou roxo de raiva: — Guardas, prestem muita atenção!",
       "fala": "O Xerife bateu o pé no chão e ficou roxo de raiva: Guardas, prestem muita atenção!",
       "hash": "3f9db7521a"
     },
     {
-      "id": "p5-s11",
-      "pagina": 5,
+      "id": "p8-s11",
+      "pagina": 8,
       "paragrafo": 3,
       "texto": "Quem usa roupa verde é do bando de Robin Hood!",
       "fala": "Quem usa roupa verde é do bando de Robin Hood!",
       "hash": "791cf7ef32"
     },
     {
-      "id": "p5-s12",
-      "pagina": 5,
+      "id": "p8-s12",
+      "pagina": 8,
       "paragrafo": 3,
       "texto": "E eu já tenho um plano brilhante para pegar esse bando de roupa verde de uma vez por todas!",
       "fala": "E eu já tenho um plano brilhante para pegar esse bando de roupa verde de uma vez por todas!",
       "hash": "b95577ede9"
     },
     {
-      "id": "p6-s0",
-      "pagina": 6,
+      "id": "p9-s0",
+      "pagina": 9,
       "paragrafo": -1,
       "titulo": true,
       "texto": "Capítulo 6. O Convite da Flecha de Ouro. Uma Armadilha Brilhante",
@@ -692,112 +1303,112 @@
       "hash": "84b893a8e5"
     },
     {
-      "id": "p6-s1",
-      "pagina": 6,
+      "id": "p9-s1",
+      "pagina": 9,
       "paragrafo": 0,
       "texto": "No dia seguinte, tambores tocaram na praça de Nottingham: TÁ-RÁ-TÁ-TÁ!",
       "fala": "No dia seguinte, tambores tocaram na praça de Nottingham: TÁ-RÁ-TÁ-TÁ!",
       "hash": "a88a441d1b"
     },
     {
-      "id": "p6-s2",
-      "pagina": 6,
+      "id": "p9-s2",
+      "pagina": 9,
       "paragrafo": 0,
       "texto": "Um mensageiro leu um cartaz enorme, desenhado com uma flecha brilhante: — Grande TORNEIO de arco e flecha na praça!",
       "fala": "Um mensageiro leu um cartaz enorme, desenhado com uma flecha brilhante: Grande torneio de arco e flecha na praça!",
       "hash": "a843bc43ed"
     },
     {
-      "id": "p6-s3",
-      "pagina": 6,
+      "id": "p9-s3",
+      "pagina": 9,
       "paragrafo": 0,
       "texto": "O melhor arqueiro da terra ganhará uma flecha inteira de OURO!",
       "fala": "O melhor arqueiro da terra ganhará uma flecha inteira de ouro!",
       "hash": "3c32981901"
     },
     {
-      "id": "p6-s4",
-      "pagina": 6,
+      "id": "p9-s4",
+      "pagina": 9,
       "paragrafo": 1,
       "texto": "Mariana, que tinha ido à feira com um vestido simples de moradora para ninguém a reconhecer, chegou bem pertinho do palanque.",
       "fala": "Mariana, que tinha ido à feira com um vestido simples de moradora para ninguém a reconhecer, chegou bem pertinho do palanque.",
       "hash": "f932a31b8a"
     },
     {
-      "id": "p6-s5",
-      "pagina": 6,
+      "id": "p9-s5",
+      "pagina": 9,
       "paragrafo": 1,
       "texto": "E ouviu o Xerife cochichando para o capitão da guarda: — Esse Robin Hood é conhecido pela boa pontaria.",
       "fala": "E ouviu o Xerife cochichando para o capitão da guarda: Esse Robin Hood é conhecido pela boa pontaria.",
       "hash": "a57a4842ed"
     },
     {
-      "id": "p6-s6",
-      "pagina": 6,
+      "id": "p9-s6",
+      "pagina": 9,
       "paragrafo": 1,
       "texto": "Ele não vai resistir ao prêmio!",
       "fala": "Ele não vai resistir ao prêmio!",
       "hash": "1b6ba2d092"
     },
     {
-      "id": "p6-s7",
-      "pagina": 6,
+      "id": "p9-s7",
+      "pagina": 9,
       "paragrafo": 1,
       "texto": "Olhem bem para a multidão: prendam qualquer um que apareça de roupa VERDE!",
       "fala": "Olhem bem para a multidão: prendam qualquer um que apareça de roupa verde!",
       "hash": "d43cc74acc"
     },
     {
-      "id": "p6-s8",
-      "pagina": 6,
+      "id": "p9-s8",
+      "pagina": 9,
       "paragrafo": 2,
       "texto": "Era uma armadilha!",
       "fala": "Era uma armadilha!",
       "hash": "247ddb32df"
     },
     {
-      "id": "p6-s9",
-      "pagina": 6,
+      "id": "p9-s9",
+      "pagina": 9,
       "paragrafo": 2,
       "texto": "Mas o Xerife não contava com os olhos atentos de Lady Mariana.",
       "fala": "Mas o Xerife não contava com os olhos atentos de Lady Mariana.",
       "hash": "88d2bedb3c"
     },
     {
-      "id": "p6-s10",
-      "pagina": 6,
+      "id": "p9-s10",
+      "pagina": 9,
       "paragrafo": 2,
       "texto": "Ela decorou cada detalhe do plano e voltou correndo pelas trilhas secretas até o Grande Carvalho.",
       "fala": "Ela decorou cada detalhe do plano e voltou correndo pelas trilhas secretas até o Grande Carvalho.",
       "hash": "480626f7a1"
     },
     {
-      "id": "p6-s11",
-      "pagina": 6,
+      "id": "p9-s11",
+      "pagina": 9,
       "paragrafo": 3,
       "texto": "— É perigoso ir lá — avisou Mariana.",
       "fala": "É perigoso ir lá, avisou Mariana.",
       "hash": "159ecdf52c"
     },
     {
-      "id": "p6-s12",
-      "pagina": 6,
+      "id": "p9-s12",
+      "pagina": 9,
       "paragrafo": 3,
       "texto": "Mas Robin pensou nas famílias que ainda precisavam de ajuda: — Se eu ganhar aquela flecha de ouro, podemos trocar por comida e cobertores quentinhos para o povo!",
       "fala": "Mas Robin pensou nas famílias que ainda precisavam de ajuda: Se eu ganhar aquela flecha de ouro, podemos trocar por comida e cobertores quentinhos para o povo!",
       "hash": "214358ebe1"
     },
     {
-      "id": "p6-s13",
-      "pagina": 6,
+      "id": "p9-s13",
+      "pagina": 9,
       "paragrafo": 3,
       "texto": "Só precisamos aparecer na praça sem mostrar nem um fiapo de roupa verde!",
       "fala": "Só precisamos aparecer na praça sem mostrar nem um fiapo de roupa verde!",
       "hash": "260870da0c"
     },
     {
-      "id": "p7-s0",
-      "pagina": 7,
+      "id": "p10-s0",
+      "pagina": 10,
       "paragrafo": -1,
       "titulo": true,
       "texto": "Capítulo 7. O Arqueiro de Capuz Vermelho. Cadê a Roupa Verde?",
@@ -805,104 +1416,104 @@
       "hash": "992dd3d450"
     },
     {
-      "id": "p7-s1",
-      "pagina": 7,
+      "id": "p10-s1",
+      "pagina": 10,
       "paragrafo": 0,
       "texto": "No grande dia, a FEIRA de Nottingham parecia um jardim colorido.",
       "fala": "No grande dia, a feira de Nottingham parecia um jardim colorido.",
       "hash": "11113c1abe"
     },
     {
-      "id": "p7-s2",
-      "pagina": 7,
+      "id": "p10-s2",
+      "pagina": 10,
       "paragrafo": 0,
       "texto": "Tinha barraquinha de maçã assada, bandeiras ao vento e guardas esticando o pescoço para todo lado.",
       "fala": "Tinha barraquinha de maçã assada, bandeiras ao vento e guardas esticando o pescoço para todo lado.",
       "hash": "b08b07b1db"
     },
     {
-      "id": "p7-s3",
-      "pagina": 7,
+      "id": "p10-s3",
+      "pagina": 10,
       "paragrafo": 0,
       "texto": "— Procurem roupas verdes! — mandava o Xerife, de olho em cada esquina.",
       "fala": "Procurem roupas verdes! mandava o Xerife, de olho em cada esquina.",
       "hash": "bb1def289b"
     },
     {
-      "id": "p7-s4",
-      "pagina": 7,
+      "id": "p10-s4",
+      "pagina": 10,
       "paragrafo": 1,
       "texto": "Escondidos atrás das barracas coloridas, os amigos começaram a trocar de roupa.",
       "fala": "Escondidos atrás das barracas coloridas, os amigos começaram a trocar de roupa.",
       "hash": "acd3113afc"
     },
     {
-      "id": "p7-s5",
-      "pagina": 7,
+      "id": "p10-s5",
+      "pagina": 10,
       "paragrafo": 1,
       "texto": "João Pequeno esfregou um pouco de carvão no rosto para parecer ferreiro.",
       "fala": "João Pequeno esfregou um pouco de carvão no rosto para parecer ferreiro.",
       "hash": "44f7e70568"
     },
     {
-      "id": "p7-s6",
-      "pagina": 7,
+      "id": "p10-s6",
+      "pagina": 10,
       "paragrafo": 1,
       "texto": "Mariana pôs um lenço azul na cabeça.",
       "fala": "Mariana pôs um lenço azul na cabeça.",
       "hash": "1c774a4462"
     },
     {
-      "id": "p7-s7",
-      "pagina": 7,
+      "id": "p10-s7",
+      "pagina": 10,
       "paragrafo": 1,
       "texto": "Grilo segurou uma cesta de pães quentinhos.",
       "fala": "Grilo segurou uma cesta de pães quentinhos.",
       "hash": "f7d05cafd8"
     },
     {
-      "id": "p7-s8",
-      "pagina": 7,
+      "id": "p10-s8",
+      "pagina": 10,
       "paragrafo": 2,
       "texto": "Chegou a vez de Robin Hood montar o seu DISFARCE antes de passar pelo capitão da guarda.",
       "fala": "Chegou a vez de Robin Hood montar o seu disfarce antes de passar pelo capitão da guarda.",
       "hash": "5636a5fada"
     },
     {
-      "id": "p7-s9",
-      "pagina": 7,
+      "id": "p10-s9",
+      "pagina": 10,
       "paragrafo": 2,
       "texto": "Nada da camisa verde de Sherwood!",
       "fala": "Nada da camisa verde de Sherwood!",
       "hash": "86364e6a59"
     },
     {
-      "id": "p7-s10",
-      "pagina": 7,
+      "id": "p10-s10",
+      "pagina": 10,
       "paragrafo": 2,
       "texto": "Para ninguém o reconhecer na fila, ele precisava de um CAPUZ vermelho puxado sobre a testa, um MANTO marrom comprido de viajante e o seu arco de madeira na mão.",
       "fala": "Para ninguém o reconhecer na fila, ele precisava de um capuz vermelho puxado sobre a testa, um manto marrom comprido de viajante e o seu arco de madeira na mão.",
       "hash": "2f8ed83edd"
     },
     {
-      "id": "p7-s11",
-      "pagina": 7,
+      "id": "p10-s11",
+      "pagina": 10,
       "paragrafo": 3,
       "texto": "— Os guardas estão vindo aí perto! — cochichou Grilo, olhando pela fresta da barraca.",
       "fala": "Os guardas estão vindo aí perto! cochichou Grilo, olhando pela fresta da barraca.",
       "hash": "59261d37d0"
     },
     {
-      "id": "p7-s12",
-      "pagina": 7,
+      "id": "p10-s12",
+      "pagina": 10,
       "paragrafo": 3,
       "texto": "Depressa: vamos conferir cada peça antes que o capitão chegue perto!",
       "fala": "Depressa: vamos conferir cada peça antes que o capitão chegue perto!",
       "hash": "0eb59defcd"
     },
     {
-      "id": "p8-s0",
-      "pagina": 8,
+      "id": "p11-s0",
+      "pagina": 11,
       "paragrafo": -1,
       "titulo": true,
       "texto": "Capítulo 8. A Flecha Partida ao Meio. Bem no Centro do Alvo!",
@@ -910,128 +1521,128 @@
       "hash": "326adb2e8a"
     },
     {
-      "id": "p8-s1",
-      "pagina": 8,
+      "id": "p11-s1",
+      "pagina": 11,
       "paragrafo": 0,
       "texto": "Quando Robin saiu de trás das barracas bem disfarçado, o capitão da guarda olhou dos pés à cabeça e deixou passar: — Nada de verde aqui.",
       "fala": "Quando Robin saiu de trás das barracas bem disfarçado, o capitão da guarda olhou dos pés à cabeça e deixou passar: Nada de verde aqui.",
       "hash": "7da9166b4e"
     },
     {
-      "id": "p8-s2",
-      "pagina": 8,
+      "id": "p11-s2",
+      "pagina": 11,
       "paragrafo": 0,
       "texto": "Pode entrar na fila!",
       "fala": "Pode entrar na fila!",
       "hash": "9fea399e94"
     },
     {
-      "id": "p8-s3",
-      "pagina": 8,
+      "id": "p11-s3",
+      "pagina": 11,
       "paragrafo": 0,
       "texto": "Na final, o campeão do Xerife ergueu o ARCO, respirou fundo e soltou a FLECHA: ZUP!",
       "fala": "Na final, o campeão do Xerife ergueu o arco, respirou fundo e soltou a flecha: ZUP!",
       "hash": "7fdbcae573"
     },
     {
-      "id": "p8-s4",
-      "pagina": 8,
+      "id": "p11-s4",
+      "pagina": 11,
       "paragrafo": 0,
       "texto": "Cravou bem no meio do ALVO, e a praça inteira aplaudiu!",
       "fala": "Cravou bem no meio do alvo, e a praça inteira aplaudiu!",
       "hash": "67b5408683"
     },
     {
-      "id": "p8-s5",
-      "pagina": 8,
+      "id": "p11-s5",
+      "pagina": 11,
       "paragrafo": 1,
       "texto": "Então o arqueiro de capuz vermelho deu um passo à frente.",
       "fala": "Então o arqueiro de capuz vermelho deu um passo à frente.",
       "hash": "f2e2c12a4a"
     },
     {
-      "id": "p8-s6",
-      "pagina": 8,
+      "id": "p11-s6",
+      "pagina": 11,
       "paragrafo": 1,
       "texto": "Não havia medo nenhum nos olhos dele, só calma e CORAGEM.",
       "fala": "Não havia medo nenhum nos olhos dele, só calma e coragem.",
       "hash": "cbe2e8dd54"
     },
     {
-      "id": "p8-s7",
-      "pagina": 8,
+      "id": "p11-s7",
+      "pagina": 11,
       "paragrafo": 1,
       "texto": "Segurou o arco firme, mirou bem devagar e soltou: ZUUUP!",
       "fala": "Segurou o arco firme, mirou bem devagar e soltou: ZUUUP!",
       "hash": "3df4ff68d5"
     },
     {
-      "id": "p8-s8",
-      "pagina": 8,
+      "id": "p11-s8",
+      "pagina": 11,
       "paragrafo": 2,
       "texto": "A flecha voou reta como um raio e acertou exatamente a outra flecha...",
       "fala": "A flecha voou reta como um raio e acertou exatamente a outra flecha...",
       "hash": "885a9508af"
     },
     {
-      "id": "p8-s9",
-      "pagina": 8,
+      "id": "p11-s9",
+      "pagina": 11,
       "paragrafo": 2,
       "texto": "CRAC!",
       "fala": "CRAC!",
       "hash": "fec2ea592b"
     },
     {
-      "id": "p8-s10",
-      "pagina": 8,
+      "id": "p11-s10",
+      "pagina": 11,
       "paragrafo": 2,
       "texto": "Partiu a flecha do campeão ao meio, de ponta a ponta!",
       "fala": "Partiu a flecha do campeão ao meio, de ponta a ponta!",
       "hash": "cedeae2c4c"
     },
     {
-      "id": "p8-s11",
-      "pagina": 8,
+      "id": "p11-s11",
+      "pagina": 11,
       "paragrafo": 2,
       "texto": "O silêncio durou um segundo — e logo virou uma festa enorme na arquibancada!",
       "fala": "O silêncio durou um segundo, e logo virou uma festa enorme na arquibancada!",
       "hash": "36aa767123"
     },
     {
-      "id": "p8-s12",
-      "pagina": 8,
+      "id": "p11-s12",
+      "pagina": 11,
       "paragrafo": 3,
       "texto": "O Xerife entregou a flecha de ouro batendo palmas sem graça.",
       "fala": "O Xerife entregou a flecha de ouro batendo palmas sem graça.",
       "hash": "cb6b0763ba"
     },
     {
-      "id": "p8-s13",
-      "pagina": 8,
+      "id": "p11-s13",
+      "pagina": 11,
       "paragrafo": 3,
       "texto": "Assim que segurou o prêmio, Robin puxou o capuz para trás e soprou a corneta: TÁ-TÁ-TÁ!",
       "fala": "Assim que segurou o prêmio, Robin puxou o capuz para trás e soprou a corneta: TÁ-TÁ-TÁ!",
       "hash": "e7a4119fbe"
     },
     {
-      "id": "p8-s14",
-      "pagina": 8,
+      "id": "p11-s14",
+      "pagina": 11,
       "paragrafo": 3,
       "texto": "No mesmo instante, Mariana jogou para o alto dezenas de fitas vermelhas parecidas com o capuz e Grilo soprou uma nuvem branca de farinha no ar.",
       "fala": "No mesmo instante, Mariana jogou para o alto dezenas de fitas vermelhas parecidas com o capuz e Grilo soprou uma nuvem branca de farinha no ar.",
       "hash": "235467f4ab"
     },
     {
-      "id": "p8-s15",
-      "pagina": 8,
+      "id": "p11-s15",
+      "pagina": 11,
       "paragrafo": 3,
       "texto": "Enquanto os guardas espirravam confusos atrás das fitas, o bando inteiro pulou rindo o muro baixinho e sumiu na floresta!",
       "fala": "Enquanto os guardas espirravam confusos atrás das fitas, o bando inteiro pulou rindo o muro baixinho e sumiu na floresta!",
       "hash": "46216ce9a7"
     },
     {
-      "id": "p9-s0",
-      "pagina": 9,
+      "id": "p12-s0",
+      "pagina": 12,
       "paragrafo": -1,
       "titulo": true,
       "texto": "Capítulo 9. A Festa da Partilha. Ouro que Vira Pão e Cobertor",
@@ -1039,88 +1650,88 @@
       "hash": "d59e30c84d"
     },
     {
-      "id": "p9-s1",
-      "pagina": 9,
+      "id": "p12-s1",
+      "pagina": 12,
       "paragrafo": 0,
       "texto": "Naquela noite, o Grande Carvalho parecia brilhar com lanternas penduradas nos galhos.",
       "fala": "Naquela noite, o Grande Carvalho parecia brilhar com lanternas penduradas nos galhos.",
       "hash": "625509f3c5"
     },
     {
-      "id": "p9-s2",
-      "pagina": 9,
+      "id": "p12-s2",
+      "pagina": 12,
       "paragrafo": 0,
       "texto": "Foi um BANQUETE de dar água na boca, com pães quentinhos assados pelo moleiro livre, maçãs doces e canções alegres ao redor da mesa.",
       "fala": "Foi um banquete de dar água na boca, com pães quentinhos assados pelo moleiro livre, maçãs doces e canções alegres ao redor da mesa.",
       "hash": "13ae324207"
     },
     {
-      "id": "p9-s3",
-      "pagina": 9,
+      "id": "p12-s3",
+      "pagina": 12,
       "paragrafo": 1,
       "texto": "Robin colocou a flecha de ouro no centro da mesa para explicar a PARTILHA.",
       "fala": "Robin colocou a flecha de ouro no centro da mesa para explicar a partilha.",
       "hash": "867c22c5f6"
     },
     {
-      "id": "p9-s4",
-      "pagina": 9,
+      "id": "p12-s4",
+      "pagina": 12,
       "paragrafo": 1,
       "texto": "Com o prêmio do torneio, o bando ia buscar na cidade vizinha bastante trigo para fazer pão, leite fresquinho para as crianças e uma manta quentinha para cada família que o Xerife tinha deixado no aperto.",
       "fala": "Com o prêmio do torneio, o bando ia buscar na cidade vizinha bastante trigo para fazer pão, leite fresquinho para as crianças e uma manta quentinha para cada família que o Xerife tinha deixado no aperto.",
       "hash": "d72af485d1"
     },
     {
-      "id": "p9-s5",
-      "pagina": 9,
+      "id": "p12-s5",
+      "pagina": 12,
       "paragrafo": 2,
       "texto": "Bem na hora da sobremesa, um vizinho chegou correndo pela trilha, quase sem fôlego: — Robin!",
       "fala": "Bem na hora da sobremesa, um vizinho chegou correndo pela trilha, quase sem fôlego: Robin!",
       "hash": "44b1277549"
     },
     {
-      "id": "p9-s6",
-      "pagina": 9,
+      "id": "p12-s6",
+      "pagina": 12,
       "paragrafo": 2,
       "texto": "Lady Mariana!",
       "fala": "Lady Mariana!",
       "hash": "d9e20d7b77"
     },
     {
-      "id": "p9-s7",
-      "pagina": 9,
+      "id": "p12-s7",
+      "pagina": 12,
       "paragrafo": 2,
       "texto": "Lembram do nosso amigo Gui, aquele rapaz alegre de casaco vermelho que emprestou a carroça para levar a farinha e comemorou a vitória no torneio?",
       "fala": "Lembram do nosso amigo Gui, aquele rapaz alegre de casaco vermelho que emprestou a carroça para levar a farinha e comemorou a vitória no torneio?",
       "hash": "52f7dd1fd4"
     },
     {
-      "id": "p9-s8",
-      "pagina": 9,
+      "id": "p12-s8",
+      "pagina": 12,
       "paragrafo": 2,
       "texto": "O Xerife ficou tão furioso que trancou Gui lá no alto da TORRE de Nottingham!",
       "fala": "O Xerife ficou tão furioso que trancou Gui lá no alto da torre de Nottingham!",
       "hash": "c1d03b3129"
     },
     {
-      "id": "p9-s9",
-      "pagina": 9,
+      "id": "p12-s9",
+      "pagina": 12,
       "paragrafo": 2,
       "texto": "Sem PROVA nenhuma de culpa!",
       "fala": "Sem prova nenhuma de culpa!",
       "hash": "96d70eab55"
     },
     {
-      "id": "p9-s10",
-      "pagina": 9,
+      "id": "p12-s10",
+      "pagina": 12,
       "paragrafo": 3,
       "texto": "Robin levantou da mesa na mesma hora, com João Pequeno pegando o bastão e Mariana conferindo as cordas.",
       "fala": "Robin levantou da mesa na mesma hora, com João Pequeno pegando o bastão e Mariana conferindo as cordas.",
       "hash": "f959f82af0"
     },
     {
-      "id": "p9-s11",
-      "pagina": 9,
+      "id": "p12-s11",
+      "pagina": 12,
       "paragrafo": 3,
       "texto": "A primeira aventura tinha terminado bem — mas salvar um amigo injustiçado pedia um plano ainda mais esperto na manhã seguinte!",
       "fala": "A primeira aventura tinha terminado bem, mas salvar um amigo injustiçado pedia um plano ainda mais esperto na manhã seguinte!",
@@ -1136,6 +1747,13 @@
       "hash": "13be1691ca"
     },
     {
+      "slug": "amigos",
+      "palavra": "AMIGOS",
+      "silabas": "A • MI • GOS",
+      "fala": "a... mi... gos... amigos!",
+      "hash": "6686acf23a"
+    },
+    {
       "slug": "justica",
       "palavra": "JUSTIÇA",
       "silabas": "JUS • TI • ÇA",
@@ -1143,11 +1761,25 @@
       "hash": "8e08976eda"
     },
     {
-      "slug": "armadilha",
-      "palavra": "ARMADILHA",
-      "silabas": "AR • MA • DI • LHA",
-      "fala": "ar... ma... di... lha... armadilha!",
-      "hash": "812f962bf9"
+      "slug": "palacio",
+      "palavra": "PALÁCIO",
+      "silabas": "PA • LÁ • CIO",
+      "fala": "pa... lá... cio... palácio!",
+      "hash": "33debd9bac"
+    },
+    {
+      "slug": "festa",
+      "palavra": "FESTA",
+      "silabas": "FES • TA",
+      "fala": "fes... ta... festa!",
+      "hash": "8b3e1da233"
+    },
+    {
+      "slug": "imposto",
+      "palavra": "IMPOSTO",
+      "silabas": "IM • POS • TO",
+      "fala": "im... pos... to... imposto!",
+      "hash": "c12f761556"
     },
     {
       "slug": "moinho",
@@ -1157,11 +1789,32 @@
       "hash": "25c7ed7e3f"
     },
     {
+      "slug": "moleiro",
+      "palavra": "MOLEIRO",
+      "silabas": "MO • LEI • RO",
+      "fala": "mo... lei... ro... moleiro!",
+      "hash": "d5eef8c6a6"
+    },
+    {
       "slug": "farinha",
       "palavra": "FARINHA",
       "silabas": "FA • RI • NHA",
       "fala": "fa... ri... nha... farinha!",
       "hash": "4633571ebc"
+    },
+    {
+      "slug": "coragem",
+      "palavra": "CORAGEM",
+      "silabas": "CO • RA • GEM",
+      "fala": "co... ra... gem... coragem!",
+      "hash": "8d15b1b1cb"
+    },
+    {
+      "slug": "conta",
+      "palavra": "CONTA",
+      "silabas": "CON • TA",
+      "fala": "con... ta... conta!",
+      "hash": "9196293e8d"
     },
     {
       "slug": "prova",
@@ -1171,18 +1824,18 @@
       "hash": "817e5fe5f5"
     },
     {
-      "slug": "carvalho",
-      "palavra": "CARVALHO",
-      "silabas": "CAR • VA • LHO",
-      "fala": "car... va... lho... carvalho!",
-      "hash": "dffb799d97"
-    },
-    {
       "slug": "verde",
       "palavra": "VERDE",
       "silabas": "VER • DE",
       "fala": "ver... de... verde!",
       "hash": "84f5f9d1e6"
+    },
+    {
+      "slug": "capuz",
+      "palavra": "CAPUZ",
+      "silabas": "CA • PUZ",
+      "fala": "ca... puz... capuz!",
+      "hash": "9c1a68f97b"
     },
     {
       "slug": "corneta",
@@ -1213,13 +1866,6 @@
       "hash": "54f067fb9f"
     },
     {
-      "slug": "risada",
-      "palavra": "RISADA",
-      "silabas": "RI • SA • DA",
-      "fala": "ri... sa... da... risada!",
-      "hash": "f0bb9faa58"
-    },
-    {
       "slug": "tombo",
       "palavra": "TOMBO",
       "silabas": "TOM • BO",
@@ -1227,11 +1873,39 @@
       "hash": "5b4694b537"
     },
     {
+      "slug": "risada",
+      "palavra": "RISADA",
+      "silabas": "RI • SA • DA",
+      "fala": "ri... sa... da... risada!",
+      "hash": "f0bb9faa58"
+    },
+    {
       "slug": "amigo",
       "palavra": "AMIGO",
       "silabas": "A • MI • GO",
       "fala": "a... mi... go... amigo!",
       "hash": "d28542e8a2"
+    },
+    {
+      "slug": "forca",
+      "palavra": "FORÇA",
+      "silabas": "FOR • ÇA",
+      "fala": "for... ça... força!",
+      "hash": "329cb7540a"
+    },
+    {
+      "slug": "apelido",
+      "palavra": "APELIDO",
+      "silabas": "A • PE • LI • DO",
+      "fala": "a... pe... li... do... apelido!",
+      "hash": "9903faf429"
+    },
+    {
+      "slug": "bando",
+      "palavra": "BANDO",
+      "silabas": "BAN • DO",
+      "fala": "ban... do... bando!",
+      "hash": "e1e5fad10d"
     },
     {
       "slug": "cadeia",
@@ -1283,13 +1957,6 @@
       "hash": "0aa0cf2aba"
     },
     {
-      "slug": "capuz",
-      "palavra": "CAPUZ",
-      "silabas": "CA • PUZ",
-      "fala": "ca... puz... capuz!",
-      "hash": "9c1a68f97b"
-    },
-    {
       "slug": "manto",
       "palavra": "MANTO",
       "silabas": "MAN • TO",
@@ -1316,13 +1983,6 @@
       "silabas": "AL • VO",
       "fala": "al... vo... alvo!",
       "hash": "aad34eca69"
-    },
-    {
-      "slug": "coragem",
-      "palavra": "CORAGEM",
-      "silabas": "CO • RA • GEM",
-      "fala": "co... ra... gem... coragem!",
-      "hash": "8d15b1b1cb"
     },
     {
       "slug": "banquete",
