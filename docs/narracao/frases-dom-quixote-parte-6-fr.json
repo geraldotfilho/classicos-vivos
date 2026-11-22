@@ -2529,9 +2529,9 @@
     {
       "slug": "poemes",
       "palavra": "POÈMES",
-      "silabas": "PO • È • MES",
-      "fala": "po... è... mes... poèmes!",
-      "hash": "3e411d3a0b"
+      "silabas": "PO • ÈMES",
+      "fala": "po... èmes... poèmes!",
+      "hash": "1f38c35a5a"
     },
     {
       "slug": "grotte",
@@ -2585,9 +2585,9 @@
     {
       "slug": "reve",
       "palavra": "RÊVE",
-      "silabas": "RÊ • VE",
-      "fala": "rê... ve... rêve!",
-      "hash": "704bd15d57"
+      "silabas": "RÊVE",
+      "fala": "rêve... rêve!",
+      "hash": "f741f5167c"
     },
     {
       "slug": "marionnettes",
@@ -2620,9 +2620,9 @@
     {
       "slug": "barque",
       "palavra": "BARQUE",
-      "silabas": "BAR • QUE",
-      "fala": "bar... que... barque!",
-      "hash": "917f7c1428"
+      "silabas": "BARQUE",
+      "fala": "barque... barque!",
+      "hash": "05d1edaeda"
     },
     {
       "slug": "poux",
@@ -2669,9 +2669,9 @@
     {
       "slug": "barbe",
       "palavra": "BARBE",
-      "silabas": "BAR • BE",
-      "fala": "bar... be... barbe!",
-      "hash": "b527cb21ad"
+      "silabas": "BARBE",
+      "fala": "barbe... barbe!",
+      "hash": "fd35ec0dc0"
     },
     {
       "slug": "clavilegne",

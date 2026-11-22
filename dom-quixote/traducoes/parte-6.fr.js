@@ -24,7 +24,7 @@ Tiens-toi bien, tourne la page et n’enlève pas ton bandeau !`
             titulo: 'Quatre jours de fromage frais',
             texto: `Chez Don Diego, il y avait du fromage frais, oui. Il y avait aussi du pain tout chaud, du miel, du raisin et un lit si moelleux que Sancho dormit deux jours de suite. C’était une grande maison bien tranquille. Là-bas, personne ne criait, personne ne courait, et même les poules semblaient marcher sur la pointe des pattes.
 
-Doña Cristina, la femme de Don Diego, et leur fils Lorenzo, un jeune homme qui écrivait des {{POÈMES|PO • È • MES|📝}}, accueillirent les voyageurs avec tendresse. Lorenzo regarda le chevalier tout maigre, regarda le bacielmo et chuchota à sa mère : « Quel homme différent ! » Sancho l’entendit et répondit, la bouche pleine : « Différent, c’est peu dire, mon garçon. Attends qu’il voie un moulin. »
+Doña Cristina, la femme de Don Diego, et leur fils Lorenzo, un jeune homme qui écrivait des {{POÈMES|PO • ÈMES|📝}}, accueillirent les voyageurs avec tendresse. Lorenzo regarda le chevalier tout maigre, regarda le bacielmo et chuchota à sa mère : « Quel homme différent ! » Sancho l’entendit et répondit, la bouche pleine : « Différent, c’est peu dire, mon garçon. Attends qu’il voie un moulin. »
 
 Don Quichotte écouta les poèmes de Lorenzo et applaudit debout : « Vive le poète ! » Le jeune homme devint tout rouge de joie. Don Diego se grattait la tête : cet homme qui parlait si joliment de poésie, était-ce bien le même qui avait fait ouvrir la cage d’un lion ?
 
@@ -72,7 +72,7 @@ Maître Pierre se tapota deux fois l’épaule. Le singe sauta dessus, approcha 
 
 Sancho en resta bouche bée. Don Quichotte aussi. Comment un singe pouvait-il savoir leurs noms ? Et même le nouveau surnom ? Personne ici ne lui avait rien raconté ! « C’est une affaire de magicien, chuchota Sancho. Ou alors ce singe a lu le livre, lui aussi. »
 
-Don Quichotte paya deux pièces de plus : « Demande au singe : ce que j’ai vu dans la grotte de Montesinos, était-ce un rêve ou la vérité ? » Tatatatata ! Maître Pierre écouta et répondit : « Le singe dit qu’une partie était vraie et que l’autre partie était un {{RÊVE|RÊ • VE|💭}}. Laquelle est laquelle, il ne le dira que vendredi. — Tu vois, Sancho ? dit Don Quichotte. Une partie était vraie ! — Vous voyez, mon maître ? dit Sancho. L’autre était un rêve ! »`
+Don Quichotte paya deux pièces de plus : « Demande au singe : ce que j’ai vu dans la grotte de Montesinos, était-ce un rêve ou la vérité ? » Tatatatata ! Maître Pierre écouta et répondit : « Le singe dit qu’une partie était vraie et que l’autre partie était un {{RÊVE|RÊVE|💭}}. Laquelle est laquelle, il ne le dira que vendredi. — Tu vois, Sancho ? dit Don Quichotte. Une partie était vraie ! — Vous voyez, mon maître ? dit Sancho. L’autre était un rêve ! »`
         },
         {   // page 5
             hash: '9842fd0ce7',
@@ -106,7 +106,7 @@ Don Quichotte regarda les marionnettes. Il regarda son épée. Il se gratta la b
             titulo: 'Encore des moulins, non !',
             texto: `Au matin, maître Pierre était déjà parti avec son singe. Sous son banc, Sancho trouva quelque chose d’oublié : un livre. Il l’ouvrit à une page au hasard et, en plein milieu, il reconnut les petites fourmis de son nom : « C’est notre livre, mon maître ! Alors le singe ne devine rien du tout : maître Pierre a tout lu sur nous ! Et le reste, je parie qu’il l’a demandé à l’aubergiste. » Don Quichotte devint pensif : « Ce livre court plus vite que Rossinante. »
 
-Le Cousin rentra chez lui, son cahier bien rempli. Quelques jours plus tard, les deux amis arrivèrent au bord d’une {{RIVIÈRE|RI • VIÈ • RE|🏞️}} large et belle. Attachée à un arbre, une petite barque vide se balançait, sans rames et sans maître. « Regarde, Sancho ! Dans les livres, c’est toujours comme ça : une {{BARQUE|BAR • QUE|⛵}} enchantée apparaît pour emmener le chevalier jusqu’à quelqu’un qui a besoin d’aide. Attache les bêtes et monte ! — Mon maître, c’est une barque de pêcheur... — Monte, Sancho ! »
+Le Cousin rentra chez lui, son cahier bien rempli. Quelques jours plus tard, les deux amis arrivèrent au bord d’une {{RIVIÈRE|RI • VIÈ • RE|🏞️}} large et belle. Attachée à un arbre, une petite barque vide se balançait, sans rames et sans maître. « Regarde, Sancho ! Dans les livres, c’est toujours comme ça : une {{BARQUE|BARQUE|⛵}} enchantée apparaît pour emmener le chevalier jusqu’à quelqu’un qui a besoin d’aide. Attache les bêtes et monte ! — Mon maître, c’est une barque de pêcheur... — Monte, Sancho ! »
 
 La petite barque descendit la rivière, tout doucement. L’âne brayait sur la rive, et Sancho pleurait, car il lui manquait déjà. « Nous sommes déjà très, très loin ! dit Don Quichotte. Nous avons sûrement passé la ligne du milieu du monde. On dit que, quand on passe cette ligne, tous les {{POUX|POUX|🐛}} meurent de froid. Regarde donc, Sancho ! » Sancho glissa la main dans son col et chercha : « J’en trouve un. J’en trouve deux. Mon maître, on n’a presque pas bougé : on voit encore Rossinante ! »
 
@@ -146,7 +146,7 @@ Le duc et la duchesse emmenèrent les deux amis au {{PALAIS|PA • LAIS|🏰}}. 
 
 La {{COMTESSE|COM • TES • SE|👒}} entra lentement, un voile sur le visage, avec une robe à traîne si longue que trois garçons en tenaient les bouts. Derrière elle venaient douze dames, voilées elles aussi. « Seigneur chevalier, dit la comtesse d’une grosse voix, très bizarre, un géant méchant, nommé Malambruno, nous a jeté un terrible sortilège. Regardez ! »
 
-Les treize soulevèrent leur voile en même temps. Elles avaient toutes une {{BARBE|BAR • BE|🧔}} ! Des barbes blondes, noires, rousses, et une toute blanche comme du coton. Sancho recula d’un pas : « Ça alors ! Qui leur fait la barbe ? Maître Nicolas deviendrait riche ! » Puis il regarda mieux et chuchota : « Mon maître, la comtesse porte des bottes d’homme. Et cette voix... où est-ce que j’ai déjà entendu cette voix ? »
+Les treize soulevèrent leur voile en même temps. Elles avaient toutes une {{BARBE|BARBE|🧔}} ! Des barbes blondes, noires, rousses, et une toute blanche comme du coton. Sancho recula d’un pas : « Ça alors ! Qui leur fait la barbe ? Maître Nicolas deviendrait riche ! » Puis il regarda mieux et chuchota : « Mon maître, la comtesse porte des bottes d’homme. Et cette voix... où est-ce que j’ai déjà entendu cette voix ? »
 
 Don Quichotte ne l’écoutait même pas : il avait déjà la main sur le cœur. « Dites-moi ce que je dois faire, mesdames ! — Le géant habite le royaume de Candaya, de l’autre côté du monde, expliqua la comtesse. Il n’y a qu’un seul moyen d’y aller : voler sur {{CLAVILÈGNE|CLA • VI • LÈGNE|🐴}}, un cheval de bois qu’on dirige avec une cheville sur son front. Vous irez tous les deux, le chevalier et l’écuyer, les yeux bandés. Quand vous arriverez, nos barbes tomberont ! »
 

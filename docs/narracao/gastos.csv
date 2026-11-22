@@ -78,3 +78,8 @@ data,comando,pedidos_voz,tokens_audio,tokens_qa,usd_estimado
 2026-11-21T02:50,"--voz palavras --parte 7 --agrupar 25 --autorizado",1,2690,0,0.0122
 2026-11-21T02:51,"--voz palavras --parte 7 --agrupar 1 --paralelo 3 --autorizado",4,544,0,0.0025
 2026-11-21T02:59,"--voz narracao --parte 7 --pagina-inteira --autorizado",81,43850,0,0.2003
+2026-11-22T11:49,"--voz palavras --idioma en --parte 6 --autorizado",1,1843,0,0.0084
+2026-11-22T11:54,"--voz palavras --idioma es --parte 6 --autorizado",1,2190,0,0.0100
+2026-11-22T12:00,"--voz palavras --idioma fr --parte 6 --autorizado",2,2879,0,0.0131
+2026-11-22T12:02,"--voz palavras --idioma en --parte 6 --agrupar 1 --paralelo 2 --autorizado",1,113,0,0.0005
+2026-11-22T12:03,"--voz palavras --idioma fr --parte 6 --agrupar 1 --paralelo 2 --autorizado",3,384,0,0.0017

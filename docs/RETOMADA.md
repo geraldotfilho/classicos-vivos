@@ -33,6 +33,8 @@
 
 ## 2. Próximas sessões (escolha do humano)
 
+> **2026-11-22 — Parte 6 de Dom Quixote traduzida para inglês, espanhol e francês** (`traducoes/parte-6.{en,es,fr}.js`, 0 erro e 0 aviso, testada no Chrome). Narração nesses idiomas **pela metade**: elenco e roteiros prontos e palavras-chave gravadas (faltam OLLA no espanhol e PALAIS no francês); as páginas pararam no limite diário de pedidos. **Retomar depois das 07:00 UTC** com `AUTORIZADO=1 bash tools/gravar-fila-traducoes.sh 6 "en es fr"` (~190 pedidos, uns 2 dias), conferir e pôr `6` em `partes` de cada voz no `vozes.js`. Detalhes: §11 do caderno da Parte 6.
+
 > **2026-11-21 — revisões do autor pelo app (#55 a #67) resolvidas e publicadas**: P7 com atividade e Imaginação novas na última página, ponte e pena explicadas, cena final da bengala; P8 com **capítulo novo, o 63 (*A Boiada*)**, que dá o motivo de Sansão; a Parte 8 tem agora **11 páginas** (caps. 62–71). A cabeça encantada abre na Imaginação (campo novo `cena.lenteInicial`). Sugestão do autor no livro falso e na gráfica ("Isso se já não fizeram, viu?"). Arte pela API: 11 imagens aceitas, **US$ 0,41**. Detalhes: §8 do caderno da Parte 7 e §7 do da Parte 8.
 
 > **2026-11-19 — revisões do autor pelo app (#52, #53, #54) resolvidas e publicadas**: P6 p.3 sem o animal inteiro no espeto (arte refeita); P7 cap. 54 reescrito (o doutor deixa a fruta: "comer de tudo um pouco"); P7 cap. 55 dividido em dois (bengala, com a arte refeita e a bengala nas mãos do aldeão; e o novo cap. 56, a ponte, conferido em Cervantes II-51, com arte nova). A Parte 7 tem agora **11 páginas** e os capítulos seguintes andaram um número (P7: 52–61; P8: 62–70). Arte pela API: 3 imagens, **US$ 0,10**. Detalhes no §7 do caderno da Parte 7.
