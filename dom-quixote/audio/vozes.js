@@ -11,7 +11,8 @@ window.VOZES_GRAVADAS = [
         id: 'narracao',
         nome: 'Contadora de histórias',
         descricao: 'Narração gravada, com voz calorosa',
-        partes: [1, 2, 3, 4, 5, 6]
+        partes: [1, 2, 3, 4, 5, 6, 7],
+        previa: [8] // Parte 8: págs. 0–6 gravadas; 7–10 aguardam a cota diária (docs/narracao/qa-parte-8.md)
     },
     // Narrações das traduções (AGENTS.md §2.8): elenco em narracao-<idioma>/elenco.json
     {

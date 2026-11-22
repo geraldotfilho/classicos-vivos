@@ -1,7 +1,7 @@
 {
   "codigoVoz": "en-GB",
   "amostra": "Hello! I'm going to read this story with you. Turn the page whenever you like!",
-  "nomes": "Don Quixote, Sancho Panza, Alonso Quixano, Rocinante, Dulcinea, Aldonza Lorenzo, El Toboso, La Mancha, Miguel de Cervantes, Montiel, Campo de Criptana, Mambrino, Micomicona, Pandafilando, Alifanfarón, Trapobana, Pentapolín, Frestón, Master Nicolás, Dorothea, Teresa Panza, Sanchica, Eugenio, Spotty, Sierra Morena, Knight of the Sorrowful Face, Lope Ruiz, Amadís of Gaul",
+  "nomes": "Don Quixote, Sancho Panza, Alonso Quixano, Rocinante, Dulcinea, Aldonza Lorenzo, El Toboso, La Mancha, Miguel de Cervantes, Montiel, Campo de Criptana, Mambrino, Micomicona, Pandafilando, Alifanfarón, Trapobana, Pentapolín, Frestón, Master Nicolás, Dorothea, Teresa Panza, Sanchica, Eugenio, Spotty, Sierra Morena, Knight of the Sorrowful Face, Lope Ruiz, Amadís of Gaul, Sansón Carrasco, Tomé, Don Diego, Knight of the Mirrors, Knight of the Green Coat, Knight of the Lions, Africa, Doña Cristina, Camacho, Montesinos, Merlin, Master Peter, Melisendra, Don Gaiferos, Countess Trifaldi, Malambruno, Candaya, Clavileño",
   "elenco": {
     "NARRADORA": {"voz": "en-gb-storyteller-2", "estilo": "warm, gentle storyteller reading aloud to young children in British English; calm, clear pace; expressive but not theatrical"},
     "QUIXOTE": {"voz": "en-gb-storyteller-4", "estilo": "noble, solemn and dreamy elderly knight in British English, speaking with heartfelt conviction; never mocking"},
@@ -19,6 +19,24 @@
     "SOBRINHA": {"voz": "en-gb-commercial-1", "estilo": "young woman laughing and crying with joy, hugging her uncle in British English"},
     "TERESA": {"voz": "en-gb-assistant-7", "estilo": "warm-hearted wife, eager and affectionate in British English"},
     "POVO": {"voz": "en-gb-csagent-10", "estilo": "cheerful villagers calling out together, lively and playful in British English"},
+    "GOVERNANTA": {"voz": "en-gb-concierge-7", "estilo": "stern but loving housekeeper guarding the door, firm and a little comic, caring underneath in British English"},
+    "SANSAO": {"voz": "en-gb-assistant-10", "estilo": "cheerful young scholar, playful and bright, fond of his old neighbor in British English"},
+    "SANSAO_ESPELHOS": {"voz": "en-gb-assistant-10", "estilo": "young knight in disguise boasting with a deeper, grand voice, a bit theatrical and funny in British English"},
+    "TOME": {"voz": "en-gb-podcaster-4", "estilo": "friendly young neighbor, easygoing, trying not to laugh in British English"},
+    "TOME_NARIGUDO": {"voz": "en-gb-podcaster-4", "estilo": "friendly squire speaking in a stuffy, nasal voice as if his nose is blocked, jolly in British English"},
+    "DIABINHO": {"voz": "en-gb-csagent-7", "estilo": "very polite traveling actor dressed as a little devil, cheerful and courteous in British English"},
+    "TRATADOR": {"voz": "en-gb-advisor-8", "estilo": "practical lion keeper calling down from the top of the cart, firm, a bit nervous in British English"},
+    "DOM_DIEGO": {"voz": "en-gb-tutor-8", "estilo": "calm, gentle and kind gentleman, wise and patient, concerned for his new friend in British English"},
+    "LOURENCO": {"voz": "en-gb-podcaster-4", "estilo": "shy young poet, gentle, whispering then blushing with joy in British English"},
+    "COZINHEIRO": {"voz": "en-gb-assistant-4", "estilo": "jolly wedding cook, generous and laughing in British English"},
+    "PRIMO": {"voz": "en-gb-csagent-7", "estilo": "eager thin student, bookish, enthusiastic and a little absent-minded in British English"},
+    "MESTRE_PEDRO": {"voz": "en-gb-advisor-8", "estilo": "showman puppeteer with one eye covered, lively and theatrical, a bit sly but friendly in British English"},
+    "DONO_POUSADA": {"voz": "en-gb-training-1", "estilo": "friendly innkeeper, calm and hospitable, cheerful in British English"},
+    "MENINO": {"voz": "en-gb-training-3", "estilo": "young boy narrating a puppet show with a stick, eager and theatrical in British English"},
+    "DUQUESA": {"voz": "en-gb-tutor-7", "estilo": "elegant, warm duchess delighted to meet her favorite book hero, smiling in British English"},
+    "DUQUE": {"voz": "en-gb-assistant-10", "estilo": "kind duke who laughs easily, warm and playful, hiding a surprise in British English"},
+    "ARAUTO": {"voz": "en-gb-training-10", "estilo": "big herald announcing a visitor, deep and ceremonious in British English"},
+    "CONDESSA": {"voz": "en-gb-podcaster-2", "estilo": "grand countess in distress, deep solemn voice, dramatic and comically serious, never mocking in British English"},
     "PALAVRAS": {"estilo": "British English literacy teacher: each syllable slowly and clearly separated with short pauses, then the whole word joyfully"}
   }
 }

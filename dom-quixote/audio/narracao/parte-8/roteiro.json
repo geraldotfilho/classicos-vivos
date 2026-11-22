@@ -1,0 +1,1507 @@
+{
+  "_sobre": "Quem fala cada trecho das frases com fala de personagem (texto no formato do campo `fala`, sem mudar palavras). Frases fora daqui são da NARRADORA (inclusive a placa da oficina, o papel nas costas e o 'San-cho Pan-ça' que Sancho lê). Elenco em tools/gravar-narracao.mjs (ELENCO). Decisões da Parte 8: as moças e os rapazes pastores falam pela PASTORA; os vaqueiros gritam em coro (VAQUEIROS); os dois viajantes da pousada têm vozes próprias (VIAJANTE1 lê o livro e fala pelos dois depois; VIAJANTE2 reclama do livro); a cabeça encantada (CABECA) é o sobrinho de Dom Antônio no cano; o Cavaleiro da Branca Lua (BRANCA_LUA) é a voz de Sansão abafada pelo elmo; o vovô Alonso fala na voz de Dom Quixote; as crianças pedem em coro (CRIANCAS).",
+  "p1-s3": [
+    [
+      "QUIXOTE",
+      "Cuidado, Sancho!"
+    ]
+  ],
+  "p1-s4": [
+    [
+      "QUIXOTE",
+      "É uma armadilha dos magos!"
+    ]
+  ],
+  "p1-s5": [
+    [
+      "QUIXOTE",
+      "Eles querem me prender porque eu..."
+    ]
+  ],
+  "p1-s8": [
+    [
+      "PASTORA",
+      "Desculpe, senhor!"
+    ]
+  ],
+  "p1-s9": [
+    [
+      "PASTORA",
+      "As redes são para pegar borboletas."
+    ]
+  ],
+  "p1-s10": [
+    [
+      "PASTORA",
+      "A gente olha de pertinho as cores das asas e depois solta!"
+    ]
+  ],
+  "p1-s11": [
+    [
+      "PASTORA",
+      "Nós somos da aldeia aqui perto."
+    ]
+  ],
+  "p1-s12": [
+    [
+      "PASTORA",
+      "Viemos passar uns dias no campo, brincando de pastores: a gente canta, lê poesia e faz piquenique."
+    ]
+  ],
+  "p1-s13": [
+    [
+      "NARRADORA",
+      "Enquanto desenrolavam o cavaleiro, uma das moças olhou para o bacielmo e deu um grito:"
+    ],
+    [
+      "PASTORA",
+      "Eu não acredito!"
+    ]
+  ],
+  "p1-s14": [
+    [
+      "PASTORA",
+      "É o Dom Quixote do livro!"
+    ]
+  ],
+  "p1-s15": [
+    [
+      "PASTORA",
+      "E aquele é o Sancho!"
+    ]
+  ],
+  "p1-s16": [
+    [
+      "PASTORA",
+      "Nós lemos as aventuras de vocês em voz alta, toda noite, em volta da fogueira!"
+    ]
+  ],
+  "p1-s17": [
+    [
+      "NARRADORA",
+      "Sancho ajeitou a gola, todo importante:"
+    ],
+    [
+      "SANCHO",
+      "Com burrico e tudo, moça."
+    ]
+  ],
+  "p1-s20": [
+    [
+      "NARRADORA",
+      "Dom Quixote olhava aquilo com um sorriso sonhador:"
+    ],
+    [
+      "QUIXOTE",
+      "Que vida bonita, Sancho."
+    ]
+  ],
+  "p1-s21": [
+    [
+      "QUIXOTE",
+      "Sem lança, sem tombo."
+    ]
+  ],
+  "p1-s22": [
+    [
+      "QUIXOTE",
+      "Só campo, música e amigos..."
+    ]
+  ],
+  "p1-s23": [
+    [
+      "SANCHO",
+      "E queijo,"
+    ],
+    [
+      "NARRADORA",
+      "completou Sancho."
+    ]
+  ],
+  "p1-s24": [
+    [
+      "SANCHO",
+      "Guarde essa ideia, meu amo."
+    ]
+  ],
+  "p1-s25": [
+    [
+      "SANCHO",
+      "Um dia ela pode servir."
+    ]
+  ],
+  "p1-s26": [
+    [
+      "NARRADORA",
+      "Na hora da despedida, uma das moças perguntou:"
+    ],
+    [
+      "PASTORA",
+      "Para onde vão agora?"
+    ]
+  ],
+  "p1-s27": [
+    [
+      "QUIXOTE",
+      "Para Barcelona, ver o mar!"
+    ]
+  ],
+  "p1-s28": [
+    [
+      "PASTORA",
+      "Ué."
+    ]
+  ],
+  "p1-s29": [
+    [
+      "PASTORA",
+      "No outro livro, vocês iam para outra cidade..."
+    ]
+  ],
+  "p1-s30": [
+    [
+      "QUIXOTE",
+      "Outro livro?"
+    ]
+  ],
+  "p1-s32": [
+    [
+      "QUIXOTE",
+      "Que outro livro?"
+    ]
+  ],
+  "p2-s2": [
+    [
+      "NARRADORA",
+      "Parou Rocinante bem no meio da estrada, levantou a lança e anunciou:"
+    ],
+    [
+      "QUIXOTE",
+      "Atenção, viajantes!"
+    ]
+  ],
+  "p2-s3": [
+    [
+      "QUIXOTE",
+      "Fico aqui o dia inteiro e digo a quem passar que estas pastoras são as moças mais gentis do mundo!"
+    ]
+  ],
+  "p2-s5": [
+    [
+      "NARRADORA",
+      "Sancho só suspirou:"
+    ],
+    [
+      "SANCHO",
+      "Lá vai ele de novo!"
+    ]
+  ],
+  "p2-s11": [
+    [
+      "VAQUEIROS",
+      "Saia da estrada, senhor!"
+    ],
+    [
+      "NARRADORA",
+      "gritaram os vaqueiros."
+    ]
+  ],
+  "p2-s12": [
+    [
+      "VAQUEIROS",
+      "Touro não para!"
+    ]
+  ],
+  "p2-s13": [
+    [
+      "SANCHO",
+      "Saia, meu amo!"
+    ],
+    [
+      "NARRADORA",
+      "gritou Sancho, já puxando o burrico para o mato."
+    ]
+  ],
+  "p2-s14": [
+    [
+      "NARRADORA",
+      "Dom Quixote nem se mexeu:"
+    ],
+    [
+      "QUIXOTE",
+      "Um cavaleiro não sai do caminho, nem para touro, nem para..."
+    ]
+  ],
+  "p2-s22": [
+    [
+      "SANCHO",
+      "Meu amo,"
+    ],
+    [
+      "NARRADORA",
+      "disse ele baixinho,"
+    ],
+    [
+      "SANCHO",
+      "os touros não sabem que o senhor é cavaleiro."
+    ]
+  ],
+  "p2-s23": [
+    [
+      "SANCHO",
+      "E o senhor já não é nenhum mocinho."
+    ]
+  ],
+  "p2-s24": [
+    [
+      "SANCHO",
+      "Até os bois têm mais juízo: eles, pelo menos, não param no meio da estrada!"
+    ]
+  ],
+  "p2-s25": [
+    [
+      "QUIXOTE",
+      "Amanhã passa, Sancho..."
+    ],
+    [
+      "NARRADORA",
+      "gemeu o cavaleiro."
+    ]
+  ],
+  "p3-s1": [
+    [
+      "NARRADORA",
+      "Naquela noite, numa pousada, os dois jantavam quando ouviram vozes do outro lado da parede, que era fininha:"
+    ],
+    [
+      "VIAJANTE1",
+      "Vamos ler mais um capítulo do livro novo de Dom Quixote?"
+    ]
+  ],
+  "p3-s2": [
+    [
+      "VIAJANTE2",
+      "Ah, não!"
+    ]
+  ],
+  "p3-s3": [
+    [
+      "VIAJANTE2",
+      "Esse livro novo é ruim."
+    ]
+  ],
+  "p3-s4": [
+    [
+      "VIAJANTE2",
+      "Nele, Dom Quixote nem gosta mais de Dulcineia, e Sancho é um comilão sem graça nenhuma."
+    ]
+  ],
+  "p3-s6": [
+    [
+      "NARRADORA",
+      "Dom Quixote se levantou e bateu na porta do quarto vizinho:"
+    ],
+    [
+      "QUIXOTE",
+      "Quem diz que Dom Quixote esqueceu Dulcineia está muito enganado!"
+    ]
+  ],
+  "p3-s7": [
+    [
+      "NARRADORA",
+      "Os dois viajantes abriram a porta, olharam para o cavaleiro magro de bacia na cabeça, olharam para o escudeiro de frango na mão e deram um pulo:"
+    ],
+    [
+      "VIAJANTE1",
+      "São eles!"
+    ]
+  ],
+  "p3-s8": [
+    [
+      "VIAJANTE1",
+      "Os de verdade!"
+    ]
+  ],
+  "p3-s11": [
+    [
+      "NARRADORA",
+      "Dom Quixote folheou umas páginas e achou um erro logo de cara:"
+    ],
+    [
+      "QUIXOTE",
+      "Aqui diz que a mulher de Sancho se chama Mari Gutiérrez!"
+    ]
+  ],
+  "p3-s12": [
+    [
+      "SANCHO",
+      "Mari quem?"
+    ]
+  ],
+  "p3-s14": [
+    [
+      "SANCHO",
+      "A minha mulher é Teresa desde que nasceu!"
+    ]
+  ],
+  "p3-s15": [
+    [
+      "SANCHO",
+      "Quem escreveu isso nunca tomou uma sopa lá em casa."
+    ]
+  ],
+  "p3-s16": [
+    [
+      "SANCHO",
+      "E comilão, eu?"
+    ],
+    [
+      "NARRADORA",
+      "disse, e deu uma mordida no frango."
+    ]
+  ],
+  "p3-s17": [
+    [
+      "SANCHO",
+      "E sem graça?"
+    ]
+  ],
+  "p3-s18": [
+    [
+      "SANCHO",
+      "Eu faço graça até dormindo!"
+    ]
+  ],
+  "p3-s19": [
+    [
+      "VIAJANTE1",
+      "E aqui está escrito que os senhores foram a uma festa de cavaleiros na cidade de Saragoça,"
+    ],
+    [
+      "NARRADORA",
+      "contou um dos viajantes."
+    ]
+  ],
+  "p3-s20": [
+    [
+      "QUIXOTE",
+      "Ah, é?"
+    ],
+    [
+      "NARRADORA",
+      "disse Dom Quixote."
+    ]
+  ],
+  "p3-s21": [
+    [
+      "QUIXOTE",
+      "Pois eu ia mesmo passar por lá."
+    ]
+  ],
+  "p3-s22": [
+    [
+      "QUIXOTE",
+      "Mas agora não ponho os pés em Saragoça!"
+    ]
+  ],
+  "p3-s23": [
+    [
+      "QUIXOTE",
+      "Assim o mundo inteiro vai ver que esse livro é mentiroso."
+    ]
+  ],
+  "p3-s24": [
+    [
+      "QUIXOTE",
+      "Vamos direto para Barcelona!"
+    ]
+  ],
+  "p3-s25": [
+    [
+      "VIAJANTE1",
+      "Nós vamos na frente,"
+    ],
+    [
+      "NARRADORA",
+      "disseram os viajantes,"
+    ],
+    [
+      "VIAJANTE1",
+      "e avisamos a cidade!"
+    ]
+  ],
+  "p3-s26": [
+    [
+      "NARRADORA",
+      "Mais tarde, deitado na palha, Sancho ainda resmungava:"
+    ],
+    [
+      "SANCHO",
+      "Meu amo, como é que alguém escreve tanta mentira?"
+    ]
+  ],
+  "p3-s27": [
+    [
+      "QUIXOTE",
+      "Escrever é fácil, Sancho."
+    ]
+  ],
+  "p3-s28": [
+    [
+      "QUIXOTE",
+      "O perigo é que, num livro, a mentira fica com cara de verdade."
+    ]
+  ],
+  "p3-s29": [
+    [
+      "QUIXOTE",
+      "Quem lê sem desconfiar acredita em tudo."
+    ]
+  ],
+  "p3-s31": [
+    [
+      "SANCHO",
+      "Então, se qualquer um pode escrever um livro errado sobre a gente... quem será que escreveu o certo?"
+    ]
+  ],
+  "p3-s32": [
+    [
+      "QUIXOTE",
+      "Um dia nós vamos descobrir."
+    ]
+  ],
+  "p3-s33": [
+    [
+      "SANCHO",
+      "Quando eu encontrar esse mago, vou pedir que ponha mais comida nos capítulos."
+    ]
+  ],
+  "p4-s5": [
+    [
+      "QUIXOTE",
+      "É muito maior que a lagoa lá de casa,"
+    ],
+    [
+      "NARRADORA",
+      "sussurrou Dom Quixote."
+    ]
+  ],
+  "p4-s6": [
+    [
+      "SANCHO",
+      "E não tem margem do outro lado!"
+    ],
+    [
+      "NARRADORA",
+      "disse Sancho."
+    ]
+  ],
+  "p4-s7": [
+    [
+      "SANCHO",
+      "Quem será que encheu?"
+    ]
+  ],
+  "p4-s9": [
+    [
+      "NARRADORA",
+      "Fez uma careta:"
+    ],
+    [
+      "SANCHO",
+      "Está salgado!"
+    ]
+  ],
+  "p4-s10": [
+    [
+      "SANCHO",
+      "Alguém derrubou o saleiro aí dentro."
+    ]
+  ],
+  "p4-s16": [
+    [
+      "SANCHO",
+      "Ela está brincando comigo, meu amo!"
+    ]
+  ],
+  "p4-s18": [
+    [
+      "NARRADORA",
+      "Sancho arregalou os olhos:"
+    ],
+    [
+      "SANCHO",
+      "Meu amo, aqueles bichos têm mais de cem pés!"
+    ]
+  ],
+  "p4-s19": [
+    [
+      "SANCHO",
+      "E andam em cima da água!"
+    ]
+  ],
+  "p4-s20": [
+    [
+      "QUIXOTE",
+      "São navios, Sancho."
+    ]
+  ],
+  "p4-s21": [
+    [
+      "QUIXOTE",
+      "Os pés são remos."
+    ]
+  ],
+  "p4-s22": [
+    [
+      "SANCHO",
+      "Ah."
+    ]
+  ],
+  "p4-s23": [
+    [
+      "SANCHO",
+      "Então são burricos do mar."
+    ]
+  ],
+  "p4-s25": [
+    [
+      "NARRADORA",
+      "Na frente vinha um senhor alegre, de chapéu de pena, chamado Dom Antônio:"
+    ],
+    [
+      "DOM_ANTONIO",
+      "Bem-vindo a Barcelona, verdadeiro Dom Quixote de La Mancha!"
+    ]
+  ],
+  "p4-s26": [
+    [
+      "DOM_ANTONIO",
+      "Não o falso, o do livro mentiroso: o verdadeiro!"
+    ]
+  ],
+  "p4-s27": [
+    [
+      "DOM_ANTONIO",
+      "Os viajantes da pousada contaram tudo, e a cidade inteira está esperando!"
+    ]
+  ],
+  "p5-s2": [
+    [
+      "NARRADORA",
+      "Coisa estranha: todo mundo que passava dizia:"
+    ],
+    [
+      "POVO",
+      "Bom dia, Dom Quixote de La Mancha!"
+    ]
+  ],
+  "p5-s5": [
+    [
+      "QUIXOTE",
+      "Vê, Sancho, o que é a fama?"
+    ]
+  ],
+  "p5-s6": [
+    [
+      "QUIXOTE",
+      "Aqui me conhecem sem nunca terem me visto!"
+    ]
+  ],
+  "p5-s10": [
+    [
+      "NARRADORA",
+      "Dom Antônio ficou vermelho, e Dom Quixote caiu na risada:"
+    ],
+    [
+      "QUIXOTE",
+      "Ora, então a minha fama era de papel!"
+    ]
+  ],
+  "p5-s11": [
+    [
+      "NARRADORA",
+      "À noite, Dom Antônio fechou a porta de uma salinha e falou baixo:"
+    ],
+    [
+      "DOM_ANTONIO",
+      "Agora vou mostrar um segredo."
+    ]
+  ],
+  "p5-s13": [
+    [
+      "DOM_ANTONIO",
+      "Esta cabeça foi feita por um grande mago."
+    ]
+  ],
+  "p5-s14": [
+    [
+      "DOM_ANTONIO",
+      "Ela responde a qualquer pergunta."
+    ]
+  ],
+  "p5-s15": [
+    [
+      "DOM_ANTONIO",
+      "Só não fala às sextas-feiras."
+    ]
+  ],
+  "p5-s16": [
+    [
+      "NARRADORA",
+      "Dom Quixote chegou perto, com muito respeito:"
+    ],
+    [
+      "QUIXOTE",
+      "Diga, cabeça: o que eu vi na Gruta de Montesinos foi sonho ou foi verdade?"
+    ]
+  ],
+  "p5-s17": [
+    [
+      "NARRADORA",
+      "Uma voz saiu lá de dentro, sem a boca se mexer:"
+    ],
+    [
+      "CABECA",
+      "Tem um pouco de tudo."
+    ]
+  ],
+  "p5-s18": [
+    [
+      "NARRADORA",
+      "Depois foi a vez de Sancho:"
+    ],
+    [
+      "SANCHO",
+      "Cabeça, eu vou governar outra ilha?"
+    ]
+  ],
+  "p5-s19": [
+    [
+      "SANCHO",
+      "E vou voltar a ver a minha Teresa?"
+    ]
+  ],
+  "p5-s20": [
+    [
+      "CABECA",
+      "Vai governar a sua casa."
+    ]
+  ],
+  "p5-s21": [
+    [
+      "CABECA",
+      "E, se voltar para lá, vai ver a sua Teresa."
+    ]
+  ],
+  "p5-s22": [
+    [
+      "SANCHO",
+      "Grande novidade!"
+    ],
+    [
+      "NARRADORA",
+      "disse Sancho."
+    ]
+  ],
+  "p5-s23": [
+    [
+      "SANCHO",
+      "Isso até o burrico sabia!"
+    ]
+  ],
+  "p5-s27": [
+    [
+      "NARRADORA",
+      "Sancho encostou a boca na orelha de bronze e gritou:"
+    ],
+    [
+      "SANCHO",
+      "Tem alguém aí embaixo?"
+    ]
+  ],
+  "p5-s28": [
+    [
+      "CABECA",
+      "Não!"
+    ],
+    [
+      "NARRADORA",
+      "respondeu a voz."
+    ]
+  ],
+  "p5-s31": [
+    [
+      "QUIXOTE",
+      "Sancho, você descobre tudo!"
+    ]
+  ],
+  "p5-s32": [
+    [
+      "QUIXOTE",
+      "A bengala, o macaco, a condessa, a cabeça..."
+    ]
+  ],
+  "p5-s33": [
+    [
+      "QUIXOTE",
+      "Como é que você faz?"
+    ]
+  ],
+  "p5-s34": [
+    [
+      "SANCHO",
+      "É simples, meu amo."
+    ]
+  ],
+  "p5-s35": [
+    [
+      "SANCHO",
+      "Quando me dizem que uma coisa é mágica, eu não digo nem que sim nem que não: vou olhar debaixo da mesa."
+    ]
+  ],
+  "p5-s36": [
+    [
+      "SANCHO",
+      "Eu desconfio primeiro e acredito depois."
+    ]
+  ],
+  "p5-s37": [
+    [
+      "NARRADORA",
+      "Dom Quixote ficou sério um instante:"
+    ],
+    [
+      "QUIXOTE",
+      "Se todo mundo fizesse assim, livro mentiroso não enganava ninguém."
+    ]
+  ],
+  "p5-s38": [
+    [
+      "DOM_ANTONIO",
+      "Nem cabeça de bronze!"
+    ],
+    [
+      "NARRADORA",
+      "riu Dom Antônio."
+    ]
+  ],
+  "p6-s6": [
+    [
+      "IMPRESSOR",
+      "Cada letrinha destas é um carimbo,"
+    ],
+    [
+      "NARRADORA",
+      "explicou."
+    ]
+  ],
+  "p6-s7": [
+    [
+      "IMPRESSOR",
+      "Eu junto as letras para fazer as palavras, as palavras para fazer as linhas, e as linhas para fazer a página."
+    ]
+  ],
+  "p6-s8": [
+    [
+      "IMPRESSOR",
+      "Depois é só passar a tinta e apertar o papel em cima!"
+    ]
+  ],
+  "p6-s9": [
+    [
+      "SANCHO",
+      "Então é assim que um livro vira doze mil!"
+    ],
+    [
+      "NARRADORA",
+      "disse Sancho, admirado."
+    ]
+  ],
+  "p6-s10": [
+    [
+      "SANCHO",
+      "E que livro os senhores estão fazendo agora?"
+    ]
+  ],
+  "p6-s15": [
+    [
+      "QUIXOTE",
+      "É o verdadeiro, Sancho!"
+    ]
+  ],
+  "p6-s16": [
+    [
+      "NARRADORA",
+      "Sancho apontou uma linha no alto da página, com letras maiores:"
+    ],
+    [
+      "SANCHO",
+      "E essas formiguinhas grandes aqui, meu amo, o que dizem?"
+    ]
+  ],
+  "p6-s17": [
+    [
+      "NARRADORA",
+      "Dom Quixote leu devagar:"
+    ],
+    [
+      "QUIXOTE",
+      "Escrito por miguel de cervantes."
+    ]
+  ],
+  "p6-s20": [
+    [
+      "IMPRESSOR",
+      "O nome dele já estava no primeiro livro,"
+    ],
+    [
+      "NARRADORA",
+      "contou o homem de avental."
+    ]
+  ],
+  "p6-s21": [
+    [
+      "IMPRESSOR",
+      "Mas agora, por causa daquele livro mentiroso, ele faz questão de que todo mundo saiba qual é o verdadeiro."
+    ]
+  ],
+  "p6-s22": [
+    [
+      "IMPRESSOR",
+      "Dizem que é um senhor de barba branca, que já foi soldado e viajou muito."
+    ]
+  ],
+  "p6-s23": [
+    [
+      "IMPRESSOR",
+      "Ele escuta as histórias que correm pelo mundo e escreve tudo, com muito carinho e muita risada."
+    ]
+  ],
+  "p6-s24": [
+    [
+      "SANCHO",
+      "Então não é mago,"
+    ],
+    [
+      "NARRADORA",
+      "disse Sancho."
+    ]
+  ],
+  "p6-s25": [
+    [
+      "QUIXOTE",
+      "É melhor,"
+    ],
+    [
+      "NARRADORA",
+      "respondeu Dom Quixote."
+    ]
+  ],
+  "p6-s26": [
+    [
+      "QUIXOTE",
+      "É escritor."
+    ]
+  ],
+  "p6-s27": [
+    [
+      "IMPRESSOR",
+      "E os senhores ficaram tão famosos,"
+    ],
+    [
+      "NARRADORA",
+      "continuou o homem de avental,"
+    ],
+    [
+      "IMPRESSOR",
+      "que todo mundo quer contar essa história: em teatro, em versinhos, em outras línguas..."
+    ]
+  ],
+  "p6-s28": [
+    [
+      "NARRADORA",
+      "Sancho estufou o peito:"
+    ],
+    [
+      "SANCHO",
+      "Daqui a pouco vão querer fazer até livro para crianças, com desenho e tudo!"
+    ]
+  ],
+  "p6-s29": [
+    [
+      "NARRADORA",
+      "O homem deu uma risadinha:"
+    ],
+    [
+      "IMPRESSOR",
+      "Isso se já não fizeram, viu?"
+    ]
+  ],
+  "p6-s33": [
+    [
+      "IMPRESSOR",
+      "Ai, ai, ai!"
+    ]
+  ],
+  "p6-s34": [
+    [
+      "IMPRESSOR",
+      "Logo a palavra que a gente mais faz aqui!"
+    ]
+  ],
+  "p7-s6": [
+    [
+      "BRANCA_LUA",
+      "Famoso Dom Quixote de La Mancha!"
+    ],
+    [
+      "NARRADORA",
+      "disse ele, com a voz abafada pelo elmo."
+    ]
+  ],
+  "p7-s7": [
+    [
+      "BRANCA_LUA",
+      "Eu sou o Cavaleiro da Branca Lua e vim desafiar o senhor."
+    ]
+  ],
+  "p7-s8": [
+    [
+      "BRANCA_LUA",
+      "Mas, antes, vamos fazer um trato."
+    ]
+  ],
+  "p7-s9": [
+    [
+      "BRANCA_LUA",
+      "Se o senhor me derrubar, eu faço o que o senhor mandar."
+    ]
+  ],
+  "p7-s10": [
+    [
+      "BRANCA_LUA",
+      "Se eu derrubar o senhor, peço uma coisa só: que guarde a lança, volte para a sua casa e descanse lá por um ano inteiro, sem sair em aventuras."
+    ]
+  ],
+  "p7-s15": [
+    [
+      "QUIXOTE",
+      "Dou a minha palavra de cavaleiro,"
+    ],
+    [
+      "NARRADORA",
+      "respondeu."
+    ]
+  ],
+  "p7-s16": [
+    [
+      "BRANCA_LUA",
+      "Escolha o seu lado da praia!"
+    ]
+  ],
+  "p7-s25": [
+    [
+      "NARRADORA",
+      "Depois falou, baixinho e firme:"
+    ],
+    [
+      "QUIXOTE",
+      "Eu perdi, e trato é trato."
+    ]
+  ],
+  "p7-s26": [
+    [
+      "QUIXOTE",
+      "Um cavaleiro cumpre a sua palavra."
+    ]
+  ],
+  "p7-s27": [
+    [
+      "QUIXOTE",
+      "Vou voltar para casa."
+    ]
+  ],
+  "p7-s29": [
+    [
+      "NARRADORA",
+      "Ao virar o cavalo, murmurou, quase sem querer:"
+    ],
+    [
+      "BRANCA_LUA",
+      "Descanse, senhor Alonso..."
+    ]
+  ],
+  "p8-s4": [
+    [
+      "SANCHO",
+      "Eu sabia!"
+    ]
+  ],
+  "p8-s5": [
+    [
+      "SANCHO",
+      "Sansão Carrasco!"
+    ]
+  ],
+  "p8-s7": [
+    [
+      "NARRADORA",
+      "Depois sorriu, cansado:"
+    ],
+    [
+      "SANSAO",
+      "Psiu, Sancho."
+    ]
+  ],
+  "p8-s8": [
+    [
+      "SANSAO",
+      "Desta vez eu treinei três meses e arranjei um cavalo que não para para comer."
+    ]
+  ],
+  "p8-s9": [
+    [
+      "SANSAO",
+      "Eu vi a boiada passar por cima do senhor Alonso."
+    ]
+  ],
+  "p8-s10": [
+    [
+      "SANSAO",
+      "Da próxima vez, pode não ser só um susto!"
+    ]
+  ],
+  "p8-s11": [
+    [
+      "SANSAO",
+      "Eu só quero ele em casa, descansado e bem cuidado."
+    ]
+  ],
+  "p8-s12": [
+    [
+      "SANSAO",
+      "Você sabe quanto eu gosto dele."
+    ]
+  ],
+  "p8-s13": [
+    [
+      "SANSAO",
+      "Deixe que eu mesmo conto, quando chegarmos lá."
+    ]
+  ],
+  "p8-s16": [
+    [
+      "SANCHO",
+      "Está bem."
+    ]
+  ],
+  "p8-s17": [
+    [
+      "SANCHO",
+      "Mas, se ele ficar triste, eu vou cobrar de você!"
+    ]
+  ],
+  "p8-s18": [
+    [
+      "SANSAO",
+      "Combinado."
+    ]
+  ],
+  "p8-s19": [
+    [
+      "SANSAO",
+      "Eu vou na frente, avisar a sobrinha e a governanta."
+    ]
+  ],
+  "p8-s23": [
+    [
+      "NARRADORA",
+      "Sancho ia a pé, puxando conversa:"
+    ],
+    [
+      "SANCHO",
+      "Meu amo, quem cai hoje levanta amanhã."
+    ]
+  ],
+  "p8-s24": [
+    [
+      "SANCHO",
+      "Um ano passa depressa!"
+    ]
+  ],
+  "p8-s25": [
+    [
+      "QUIXOTE",
+      "Um ano sem aventuras, Sancho..."
+    ]
+  ],
+  "p8-s26": [
+    [
+      "QUIXOTE",
+      "O que faz um cavaleiro que não pode ser cavaleiro?"
+    ]
+  ],
+  "p8-s28": [
+    [
+      "NARRADORA",
+      "E os olhos de Dom Quixote se acenderam:"
+    ],
+    [
+      "QUIXOTE",
+      "Já sei!"
+    ]
+  ],
+  "p8-s29": [
+    [
+      "QUIXOTE",
+      "Lembra daquela vida bonita, Sancho?"
+    ]
+  ],
+  "p8-s30": [
+    [
+      "QUIXOTE",
+      "Vamos ser pastores!"
+    ]
+  ],
+  "p8-s31": [
+    [
+      "QUIXOTE",
+      "Compramos umas ovelhas e passamos o ano no campo, cantando e fazendo versos."
+    ]
+  ],
+  "p8-s32": [
+    [
+      "QUIXOTE",
+      "Eu vou me chamar pastor Quixotiz!"
+    ]
+  ],
+  "p8-s33": [
+    [
+      "QUIXOTE",
+      "O padre vai ser o pastor Curiambro, e mestre Nicolau, o pastor Miculoso!"
+    ]
+  ],
+  "p8-s34": [
+    [
+      "NARRADORA",
+      "Sancho ria tanto que precisou parar de andar:"
+    ],
+    [
+      "SANCHO",
+      "E a minha Teresa vai ser a pastora Teresona!"
+    ]
+  ],
+  "p8-s35": [
+    [
+      "SANCHO",
+      "E eu, meu amo?"
+    ]
+  ],
+  "p8-s36": [
+    [
+      "SANCHO",
+      "Eu também quero um nome de pastor!"
+    ]
+  ],
+  "p8-s37": [
+    [
+      "NARRADORA",
+      "Dom Quixote coçou a barba, com um sorriso:"
+    ],
+    [
+      "QUIXOTE",
+      "O seu é o mais bonito de todos, Sancho."
+    ]
+  ],
+  "p8-s38": [
+    [
+      "QUIXOTE",
+      "Vamos ver se você adivinha..."
+    ]
+  ],
+  "p9-s2": [
+    [
+      "NARRADORA",
+      "Sancho caiu de joelhos:"
+    ],
+    [
+      "SANCHO",
+      "Abra os olhos, minha terra querida!"
+    ]
+  ],
+  "p9-s3": [
+    [
+      "SANCHO",
+      "Aí vem o seu filho Sancho Pança: não muito rico, mas muito bem viajado!"
+    ]
+  ],
+  "p9-s4": [
+    [
+      "SANCHO",
+      "E vem também o meu amo, que perdeu uma luta, mas cumpriu a palavra!"
+    ]
+  ],
+  "p9-s7": [
+    [
+      "TERESA",
+      "Cadê a carruagem, meu bem?"
+    ]
+  ],
+  "p9-s8": [
+    [
+      "TERESA",
+      "Governador chega assim, a pé e cheio de poeira?"
+    ]
+  ],
+  "p9-s9": [
+    [
+      "SANCHO",
+      "Carruagem não tem, minha Teresinha."
+    ]
+  ],
+  "p9-s10": [
+    [
+      "SANCHO",
+      "Mas olhe aqui!"
+    ]
+  ],
+  "p9-s16": [
+    [
+      "NARRADORA",
+      "A governanta enxugava os olhos no avental:"
+    ],
+    [
+      "GOVERNANTA",
+      "Desta vez o senhor fica, não fica?"
+    ]
+  ],
+  "p9-s17": [
+    [
+      "QUIXOTE",
+      "Fico um ano inteiro."
+    ]
+  ],
+  "p9-s18": [
+    [
+      "QUIXOTE",
+      "Dei a minha palavra ao Cavaleiro da Branca Lua."
+    ]
+  ],
+  "p9-s22": [
+    [
+      "NARRADORA",
+      "Então o rapaz respirou fundo:"
+    ],
+    [
+      "SANSAO",
+      "Senhor Alonso... o Cavaleiro da Branca Lua era eu."
+    ]
+  ],
+  "p9-s23": [
+    [
+      "SANSAO",
+      "E o dos Espelhos também."
+    ]
+  ],
+  "p9-s24": [
+    [
+      "SANSAO",
+      "Fiz isso porque gosto muito do senhor e queria ver o senhor em casa, bem cuidado."
+    ]
+  ],
+  "p9-s25": [
+    [
+      "SANSAO",
+      "Me desculpe por guardar esse segredo."
+    ]
+  ],
+  "p9-s28": [
+    [
+      "NARRADORA",
+      "Depois abriu os braços:"
+    ],
+    [
+      "QUIXOTE",
+      "Então foi um amigo que me venceu?"
+    ]
+  ],
+  "p9-s29": [
+    [
+      "QUIXOTE",
+      "Melhor ainda!"
+    ]
+  ],
+  "p9-s30": [
+    [
+      "QUIXOTE",
+      "Você lutou limpo, Sansãozinho, e levantou a lança para não me ferir."
+    ]
+  ],
+  "p9-s31": [
+    [
+      "QUIXOTE",
+      "Está perdoado."
+    ]
+  ],
+  "p9-s32": [
+    [
+      "QUIXOTE",
+      "Mas tem um castigo: vai ser o pastor Sansonino e tocar flauta o ano inteiro!"
+    ]
+  ],
+  "p9-s33": [
+    [
+      "NARRADORA",
+      "Sansão riu de alívio:"
+    ],
+    [
+      "SANSAO",
+      "Mas eu nem sei tocar flauta!"
+    ]
+  ],
+  "p9-s34": [
+    [
+      "QUIXOTE",
+      "Então vai aprender."
+    ]
+  ],
+  "p9-s35": [
+    [
+      "QUIXOTE",
+      "E você, Sancho, sabia de tudo?"
+    ]
+  ],
+  "p9-s36": [
+    [
+      "SANCHO",
+      "Desde Barcelona, meu amo."
+    ]
+  ],
+  "p9-s37": [
+    [
+      "SANCHO",
+      "Segredo de amigo a gente guarda... um pouquinho."
+    ]
+  ],
+  "p10-s4": [
+    [
+      "NARRADORA",
+      "Numa manhã, o senhor Alonso desceu para o café cantando, de chinelo e barba penteada:"
+    ],
+    [
+      "QUIXOTE",
+      "Tenho uma novidade, meus amigos."
+    ]
+  ],
+  "p10-s5": [
+    [
+      "QUIXOTE",
+      "Eu já não sou Dom Quixote de La Mancha."
+    ]
+  ],
+  "p10-s6": [
+    [
+      "QUIXOTE",
+      "Sou outra vez Alonso Quixano, aquele que os vizinhos chamavam de o Bom."
+    ]
+  ],
+  "p10-s7": [
+    [
+      "NARRADORA",
+      "Sancho quase derrubou o pão:"
+    ],
+    [
+      "SANCHO",
+      "Não diga isso, meu amo!"
+    ]
+  ],
+  "p10-s8": [
+    [
+      "SANCHO",
+      "E as aventuras?"
+    ]
+  ],
+  "p10-s9": [
+    [
+      "SANCHO",
+      "E o ano que já está acabando?"
+    ]
+  ],
+  "p10-s10": [
+    [
+      "SANCHO",
+      "Eu até engraxei a sela do burrico!"
+    ]
+  ],
+  "p10-s11": [
+    [
+      "NARRADORA",
+      "Alonso sorriu e pôs a mão no ombro do amigo:"
+    ],
+    [
+      "QUIXOTE",
+      "Calma, Sancho."
+    ]
+  ],
+  "p10-s12": [
+    [
+      "QUIXOTE",
+      "As aventuras não acabaram."
+    ]
+  ],
+  "p10-s13": [
+    [
+      "QUIXOTE",
+      "Elas só mudaram de casa: agora moram nos livros."
+    ]
+  ],
+  "p10-s14": [
+    [
+      "QUIXOTE",
+      "E um livro a gente abre quantas vezes quiser."
+    ]
+  ],
+  "p10-s17": [
+    [
+      "NARRADORA",
+      "Sanchica vinha na frente, e Sancho ficava na porta, para corrigir:"
+    ],
+    [
+      "SANCHO",
+      "Não foram trinta moinhos, foram quarenta!"
+    ]
+  ],
+  "p10-s18": [
+    [
+      "SANCHO",
+      "E o burrico também estava lá!"
+    ]
+  ],
+  "p10-s20": [
+    [
+      "NARRADORA",
+      "E toda noite, da janela, o vovô Alonso ainda dizia baixinho:"
+    ],
+    [
+      "QUIXOTE",
+      "Boa noite, Dulcineia."
+    ]
+  ],
+  "p10-s28": [
+    [
+      "NARRADORA",
+      "As crianças pediram:"
+    ],
+    [
+      "CRIANCAS",
+      "Conta de novo, vovô Alonso!"
+    ]
+  ],
+  "p10-s29": [
+    [
+      "CRIANCAS",
+      "Do começo!"
+    ]
+  ]
+}

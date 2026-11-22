@@ -12,7 +12,7 @@ Plano do volume: [`../PLANO-DOM-QUIXOTE-VOLUME-2.md`](../PLANO-DOM-QUIXOTE-VOLUM
 | 5 Revisão final 🛑 | ⏭️ pulada a pedido do humano (publicar já); notas virão da leitura no site | 2026-11-12 | | — |
 | 6 Narração (pt) + escuta 🛑 | ⬜ | | | US$ |
 | Publicação | ✅ estante principal, no boxset do segundo volume (só pt, voz do aparelho) | 2026-11-12 | | — |
-| 7 Idiomas (en, fr, es) | ⬜ | | | US$ |
+| 7 Idiomas (en, fr, es) | ✅ traduções publicadas · 🟡 narração (palavras quase todas; páginas por gravar) | 2026-11-22 | `main` | US$ 0,04 |
 | 8 Retrospectiva | ⬜ | | | — |
 
 > Sessão autônoma (pedido do humano, 2026-11-10): sem API paga, sem baixar o original, a escaleta **não** passou pela pergunta ✋ antes do texto. Se a estrutura mudar na fase 3, o custo é só reescrever texto (ainda não há arte, narração nem tradução).
@@ -145,3 +145,29 @@ Lições: (1) a cena da página seguinte deve nascer como **edição da anterior
 Relatório: [`../revisao/FIDELIDADE-VOLUME-2.md`](../revisao/FIDELIDADE-VOLUME-2.md). Nada aplicado nesta parte. **Pendente (decisão do humano):**
 - Cap. 35: citar o autor "Cide Hamete Berenjena" numa frase de Sancho ("Berinjela?"), ligando ao nariz roxo "de berinjela" do cap. 38 (sugestão 13).
 - **Registrar como adaptação nossa** (não estava declarado): o cavalo dos Espelhos que para para comer capim (cap. 39; em II-14 ele só empaca) e o apelido "Cavaleiro do Casaco Verde" dado por Dom Quixote (cap. 40; em II-17 é o narrador quem o chama assim).
+
+## 8. Traduções (fase 7, 2026-11-21/22)
+Arquivos: `dom-quixote/traducoes/parte-5.en.js`, `.es.js`, `.fr.js`. `npm run conferir:traducoes`: 0 erros, 0 avisos. Testadas no Chromium (troca pela bandeirinha, as 10 páginas e as 3 atividades, retrato e paisagem, sem erro no console). Os desafios 🧩 seguem só em português (o formato de tradução não os cobre; o motor avisa).
+
+| | Inglês (en-GB) | Espanhol (es-ES) | Francês (fr-FR) |
+| :--- | :--- | :--- | :--- |
+| Sansão / bacharel | Sansón Carrasco, *bachelor* | Sansón Carrasco, *bachiller* | Sansón Carrasco, *bachelier* |
+| Os cavaleiros | Knight of the Mirrors · of the Green Coat · of the Lions | Caballero de los Espejos · del Verde Gabán · de los Leones | Chevalier aux Miroirs · au Manteau Vert · aux Lions |
+| Requeijão · empada · guizos | curd cheese · pie · bells | requesón · empanada · cascabeles (de Cervantes) | fromage frais · pâté en croûte · grelots |
+| Bacielmo | BASIN-HELMET | BACIELMO | BACIELMO |
+| Atividade 1 (nome) | SAN · CHO · PAN · ZA | SAN · CHO · PAN · ZA | SAN · CHO · PAN · ÇA |
+| Atividade 2 (pedido) | HELMET, NOSE; pegadinhas HAMLET, ROSE | YELMO, NARIZ; OLMO, RAÍZ | HEAUME, NEZ; PAUME, NID |
+| Atividade 3 (o leão) | STRETCHED → YAWNED → WASHED → LAY DOWN | DESPEREZÓ → BOSTEZÓ → LAVÓ → ACOSTÓ | ÉTIRA → BÂILLA → LAVA → COUCHA |
+| Tlim-tlim · boca cheia | clink-clink · "By baster ody gives be…" | tlin-tlin · "Bi abo solo be da…" | cling-cling · "Bon baître de be dodde…" |
+
+- **Ferramenta**: as legendas das 4 etapas do leão (`legenda: [...][n]` dentro de `realCena`) não eram exportadas e ficavam em português; `tools/traducoes.mjs` agora as exporta.
+- **Para a narração**, três frases foram reescritas para a divisão em frases bater com o português (o segmentador não corta depois de `?’`): en "How is your donkey?’ ... How did he know?"; es "tlin... tlin... tlan."; fr "« Moi, jamais ! »".
+- **Para o humano / leitor nativo conferir**: en *bachelor* (título de Cervantes, explicado no texto) e a pegadinha HAMLET (palavra rara, explicada na fala); fr *Sansón* com acento, como na estante do site (as traduções francesas clássicas dizem *Samson*). Na estante (`assets/js/i18n-site.js`), a descrição da Parte 5 diz *baciyelmo* (es) e *bassin-heaume* (fr), enquanto os livros usam *bacielmo* desde a Parte 4: vale unificar.
+
+### 8.1 Narração en/es/fr (começada em 2026-11-22, API autorizada, Flex)
+- Roteiros derivados do português por `tools/derivar-roteiro.mjs` (`narracao-<idioma>/parte-5/roteiro.json`), 146 trechos com fala em cada idioma; no francês, 5 falas divididas à mão (fala + "dit-il" sem fechar as aspas).
+- Elenco novo (`narracao-<idioma>/elenco.json`, mesmos estilos do português): governanta (en `concierge-7`, es `csagent-6`, fr `csagent-11`), Sansón e o Cavaleiro dos Espelhos (en `assistant-10`, es `csagent-3`, fr `concierge-2`), Tomé e o narigudo (en `podcaster-4`, es `training-9`, fr `tutor-3`), diabinho (en `csagent-7`, es `concierge-4`, fr `assistant-10`), tratador (en `advisor-8`, es `training-11`, fr `concierge-8`), Don Diego (en `tutor-8`, es `assistant-4`, fr `concierge-4`). Escolha por idade e persona da lista (`docs/narracao/VOZES-*.md`), **sem escuta**: o humano confere.
+- **Palavras-chave**: en 36/36; es 35/36 (falta `leones`); fr 31/36 (faltam `lion`, `balai`, `secret`, `nez`, `coucha`). Ouvir: en `bachelor`; es `obedece`; fr `besace`, `grelots`, `ecuyers`, `obeit`, `bailla`.
+- **Páginas**: 0/10 nos três idiomas (67 pedidos por idioma, `--seco` conferido). A cota diária de 100 pedidos acabou nas duas chaves (outros agentes gravavam a Parte 8 em português). Comandos para continuar: `docs/RETOMADA.md`.
+- Gasto: 8 pedidos, US$ 0,0435.
+

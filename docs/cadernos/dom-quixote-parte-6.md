@@ -10,8 +10,8 @@ Plano: [`../PLANO-DOM-QUIXOTE-VOLUME-2.md`](../PLANO-DOM-QUIXOTE-VOLUME-2.md) ·
 | 3 Revisão humana 🛑 | ⏭️ publicada a pedido do humano antes de notas formais | | — |
 | 4 Arte (18 WebPs novos + 5 reaproveitados da P4 v1) | ✅ | 2026-11-13 | US$ 0,3472 |
 | 5 Revisão final 🛑 | ⏭️ pendente para leitura em família | | — |
-| 6 Narração | ⬜ | | — |
-| 7 Traduções | ⬜ | | — |
+| 6 Narração | ✅ pt (en/es/fr: só as palavras-chave, §11) | 2026-11-14 | ~US$ 0,39 (pt) |
+| 7 Traduções | ✅ en, es, fr (falta leitura de nativo) | 2026-11-22 | — (texto) · US$ 0,03 (palavras-chave) |
 | 8 Retrospectiva | ⬜ | | — |
 
 ## 0. Onde a Parte 5 termina
@@ -84,3 +84,17 @@ Relatório: [`../revisao/FIDELIDADE-VOLUME-2.md`](../revisao/FIDELIDADE-VOLUME-2
 
 ## Revisão do autor pelo app (2026-11-19, Issue #52)
 - **Pág. 3 (cap. 44, a festa das panelas)**: "a imagem onde aparece um animal inteiro sobre o fogo pode parecer perturbadora". A `p2-real` foi refeita pela API como edição da aprovada (lista `tools/arte/dom-quixote-revisoes-2026-11-19.mjs`): o boi no espeto saiu e, no lugar, há três panelões de cobre fumegando e uma mesa de pães e frutas. O resto da cena ficou igual. O texto (gravado na narração) não mudou.
+
+## 11. Traduções (fase 7, 2026-11-21/22)
+- **Arquivos**: `dom-quixote/traducoes/parte-6.en.js`, `.es.js`, `.fr.js` (10 páginas, legendas, atividades e fim). `npm run conferir:traducoes`: 0 erro, 0 aviso. Testadas no Chrome (Playwright) em paisagem e retrato: todas as páginas no idioma, troca pela bandeirinha, as três atividades completas, as pegadinhas recomeçando e o console sem erros.
+- **Nomes** (coerentes com as Partes 1–5 e com a estante): *basin-helmet* / *bacielmo* / *bacielmo*; Knight of the Lions / Caballero de los Leones / Chevalier aux Lions; Master Peter / maese Pedro / maître Pierre; the Cousin / el Primo / le Cousin; Clavileño / Clavileño / **Clavilègne** (como na Parte 4 antiga); Camacho / Camacho / **Gamache** (as "noces de Gamache" das traduções francesas); Mélisendre e don Gaïferos no francês; requeijão = *curd cheese* / *requesón* / *fromage frais*; Mestre Nicolau = Master Nicolás / maese Nicolás / maître Nicolas.
+- **Atividades adaptadas** (a criança precisa ler na língua):
+  | Pág. | Inglês | Espanhol | Francês |
+  | :--- | :--- | :--- | :--- |
+  | 5 (bonecos) | KING × RING, HORSE × HOUSE, TOWER × TOWEL | REY × RÍO, CABALLO × CABELLO, TORRE × TORTA | ROI × ROUE, CHEVAL × CHEVEU, TOUR × TOURTE |
+  | 7 (nome novo) | THE · KNIGHT · OF THE · LIONS | EL · CABALLERO · DE LOS · LEONES | LE · CHEVALIER · AUX · LIONS |
+  | 9 (viagem) | BELLOWS × PILLOWS, TORCH × PORCH | FUELLE × FUENTE, ANTORCHA × ANCHOA | SOUFFLET × SOUFFLÉ, TORCHE × TORCHON |
+  Os ids das respostas certas são os do português (`rei`, `cavalo`, `torre`, `fole`, `tocha`), porque as camadas da cena aparecem pelo id (`camada.item`). Os desafios 🧩 não entram: o modo Desafio só existe em português (`AGENTS.md` §2.9).
+- **Dois cortes no espanhol** (para as frases baterem com as do português e o roteiro sair sozinho): "y sacó... tres gallinas y dos gansos enteros, ¡nada menos!" e "Y esa voz, ¿dónde he oído yo esa voz?".
+- **Palavras-chave do francês**: BARBE, BARQUE, POÈMES e RÊVE ficaram com a mesma divisão das partes anteriores (BARBE, BARQUE, PO • ÈMES, RÊVE): o áudio de cada palavra é um arquivo só para todas as partes, e outra divisão regravava (e trocava) o das Partes 1–4.
+- **Narração en/es/fr (2026-11-22, autorizada)**: elenco novo em cada `narracao-<idioma>/elenco.json` (Dom Diego, Lourenço, cozinheiro, Primo, Mestre Pedro, dono da pousada, menino, duque, duquesa, arauto, condessa, escolhidos nos catálogos `docs/narracao/VOZES-*.md` com o mesmo perfil do português) e roteiros `narracao-<idioma>/parte-6/roteiro.json`, derivados do português e conferidos frase a frase (no francês, duas frases à mão: p2-s16 e p9-s5). **Gravadas só as palavras-chave**: inglês 29/29, espanhol 28/29 (falta OLLA), francês 28/29 (falta PALAIS); NOCE ficou com aviso do Whisper ("no se nos"), ouvir. As páginas (64 pedidos por idioma, ~190 no total) pararam no **limite diário de pedidos** (429 nas duas chaves; a narração em português da Parte 7 tinha gastado a cota do dia). Gasto: 9 pedidos, ~US$ 0,03. **Para retomar** (depois das 07:00 UTC; o que já foi gravado não se repete): `AUTORIZADO=1 bash tools/gravar-fila-traducoes.sh 6 "en es fr"` (cabem ~1,5 idioma por dia), depois `node tools/conferir-narracao.mjs --partes 6 --idiomas en,es,fr` e, com tudo completo, `6` em `partes` de cada voz em `dom-quixote/audio/vozes.js`.

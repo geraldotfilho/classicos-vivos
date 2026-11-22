@@ -60,6 +60,10 @@ function textosDoLivro(livro, fonte) {
     for (const m of fonte.matchAll(/legenda:\s*(?:[^'"]*?\?\s*)?(['"])((?:(?!\1).)+)\1/g)) add(m[2], 'selo da cena (calculado pelo estado)');
     for (const m of fonte.matchAll(/\?\s*(['"])(👓[^'"]+|✨[^'"]+)\1/g)) add(m[2], 'selo da cena (calculado pelo estado)');
     for (const m of fonte.matchAll(/:\s*(['"])(👓[^'"]+|✨[^'"]+)\1/g)) add(m[2], 'selo da cena');
+    // Legendas numa lista indexada pelo estado (`legenda: ['', '👓 ...', '👓 ...'][n]`, Parte 5 cap. 42)
+    for (const lista of fonte.matchAll(/legenda:\s*\[([^\]]*)\]/g)) {
+        for (const m of lista[1].matchAll(/(['"])((?:(?!\1).)*)\1/g)) add(m[2], 'selo da cena (calculado pelo estado)');
+    }
     add(livro.fim?.mensagem, 'mensagem do fim da parte');
     add(livro.fim?.proximaRotulo, 'botão para a próxima parte');
     return [...textos].map(([texto, onde]) => ({ texto, onde: [...onde] }));

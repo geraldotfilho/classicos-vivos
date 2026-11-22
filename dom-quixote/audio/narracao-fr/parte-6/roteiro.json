@@ -1,0 +1,1177 @@
+{
+  "_sobre": "Quem fala cada trecho das frases com fala de personagem (texto no formato do campo `fala` de docs/narracao/frases-dom-quixote-parte-6-fr.json, sem mudar palavras). Frases fora daqui são da NARRADORA. Elenco em ../elenco.json.",
+  "p1-s6": [
+    [
+      "NARRADORA",
+      "Lorenzo regarda le chevalier tout maigre, regarda le bacielmo et chuchota à sa mère :"
+    ],
+    [
+      "LOURENCO",
+      "Quel homme différent !"
+    ]
+  ],
+  "p1-s7": [
+    [
+      "NARRADORA",
+      "Sancho l’entendit et répondit, la bouche pleine :"
+    ],
+    [
+      "SANCHO",
+      "Différent, c’est peu dire, mon garçon."
+    ]
+  ],
+  "p1-s8": [
+    [
+      "SANCHO",
+      "Attends qu’il voie un moulin."
+    ]
+  ],
+  "p1-s9": [
+    [
+      "NARRADORA",
+      "Don Quichotte écouta les poèmes de Lorenzo et applaudit debout :"
+    ],
+    [
+      "QUIXOTE",
+      "Vive le poète !"
+    ]
+  ],
+  "p1-s12": [
+    [
+      "NARRADORA",
+      "Le quatrième jour, Don Quichotte ne supportait plus tant de silence :"
+    ],
+    [
+      "QUIXOTE",
+      "Chevalier qui se repose trop finit par rouiller, Sancho !"
+    ]
+  ],
+  "p1-s13": [
+    [
+      "QUIXOTE",
+      "J’ai entendu parler d’une grotte très profonde, tout près d’ici, la grotte de Montesinos."
+    ]
+  ],
+  "p1-s14": [
+    [
+      "QUIXOTE",
+      "On dit qu’au fond vivent des merveilles que personne n’a jamais vues."
+    ]
+  ],
+  "p1-s15": [
+    [
+      "QUIXOTE",
+      "Je veux les voir !"
+    ]
+  ],
+  "p1-s16": [
+    [
+      "NARRADORA",
+      "Sancho regarda avec regret la table du petit déjeuner :"
+    ],
+    [
+      "SANCHO",
+      "Il y a du fromage frais dans la grotte, mon maître ?"
+    ]
+  ],
+  "p1-s17": [
+    [
+      "QUIXOTE",
+      "Non."
+    ]
+  ],
+  "p1-s18": [
+    [
+      "SANCHO",
+      "Je m’en doutais."
+    ]
+  ],
+  "p1-s20": [
+    [
+      "NARRADORA",
+      "Don Diego serra les deux amis dans ses bras et leur donna un dernier conseil :"
+    ],
+    [
+      "DOM_DIEGO",
+      "Prenez garde aux lions, seigneur chevalier !"
+    ]
+  ],
+  "p1-s21": [
+    [
+      "QUIXOTE",
+      "Soyez tranquille,"
+    ],
+    [
+      "NARRADORA",
+      "répondit Don Quichotte."
+    ]
+  ],
+  "p1-s22": [
+    [
+      "QUIXOTE",
+      "Dans la grotte, il n’y a pas de lions."
+    ]
+  ],
+  "p1-s23": [
+    [
+      "QUIXOTE",
+      "Il n’y a que du noir, des chauves-souris et du mystère !"
+    ]
+  ],
+  "p2-s7": [
+    [
+      "NARRADORA",
+      "Il s’approcha d’un cuisinier et demanda, de la voix la plus polie du monde :"
+    ],
+    [
+      "SANCHO",
+      "Bon monsieur, puis-je tremper un petit bout de pain dans cette marmite ?"
+    ]
+  ],
+  "p2-s8": [
+    [
+      "NARRADORA",
+      "Le cuisinier éclata de rire :"
+    ],
+    [
+      "COZINHEIRO",
+      "Aujourd’hui, personne n’a faim, mon ami !"
+    ]
+  ],
+  "p2-s9": [
+    [
+      "COZINHEIRO",
+      "Prends une louche et écume la marmite."
+    ]
+  ],
+  "p2-s12": [
+    [
+      "COZINHEIRO",
+      "Tiens."
+    ]
+  ],
+  "p2-s13": [
+    [
+      "COZINHEIRO",
+      "Ce n’est que l’écume, pour tromper ta faim jusqu’au déjeuner."
+    ]
+  ],
+  "p2-s17": [
+    [
+      "SANCHO",
+      "Quel beau mariage !"
+    ]
+  ],
+  "p2-s18": [
+    [
+      "QUIXOTE",
+      "Sancho, tu n’as même pas vu la mariée,"
+    ],
+    [
+      "NARRADORA",
+      "dit Don Quichotte."
+    ]
+  ],
+  "p2-s19": [
+    [
+      "SANCHO",
+      "Je n’ai pas vu la mariée, mon maître, mais j’ai vu la marmite."
+    ]
+  ],
+  "p2-s20": [
+    [
+      "SANCHO",
+      "Et elle m’a beaucoup plu !"
+    ]
+  ],
+  "p2-s24": [
+    [
+      "SANCHO",
+      "Ça, je le sais,"
+    ],
+    [
+      "NARRADORA",
+      "dit Sancho."
+    ]
+  ],
+  "p2-s25": [
+    [
+      "SANCHO",
+      "C’est la première qui est sortie sous la pluie sans chapeau."
+    ]
+  ],
+  "p2-s27": [
+    [
+      "NARRADORA",
+      "Don Quichotte raconta qu’il allait à la grotte de Montesinos, et le Cousin fit un bond :"
+    ],
+    [
+      "PRIMO",
+      "Une grotte enchantée !"
+    ]
+  ],
+  "p2-s28": [
+    [
+      "PRIMO",
+      "Elle sera magnifique dans mon livre !"
+    ]
+  ],
+  "p2-s29": [
+    [
+      "PRIMO",
+      "Je connais le chemin."
+    ]
+  ],
+  "p2-s30": [
+    [
+      "PRIMO",
+      "Et j’ai une très longue corde !"
+    ]
+  ],
+  "p3-s4": [
+    [
+      "SANCHO",
+      "C’est un avertissement, mon maître !"
+    ],
+    [
+      "NARRADORA",
+      "dit Sancho."
+    ]
+  ],
+  "p3-s5": [
+    [
+      "SANCHO",
+      "Les bêtes disent : n’entrez pas !"
+    ]
+  ],
+  "p3-s6": [
+    [
+      "QUIXOTE",
+      "Elles disent : bonjour"
+    ],
+    [
+      "NARRADORA",
+      "répondit Don Quichotte, et il se releva."
+    ]
+  ],
+  "p3-s9": [
+    [
+      "QUIXOTE",
+      "Encore de la corde !"
+    ],
+    [
+      "NARRADORA",
+      "criait sa voix, de plus en plus loin."
+    ]
+  ],
+  "p3-s15": [
+    [
+      "SANCHO",
+      "Ça suffit !"
+    ]
+  ],
+  "p3-s16": [
+    [
+      "SANCHO",
+      "On tire !"
+    ]
+  ],
+  "p3-s24": [
+    [
+      "NARRADORA",
+      "Don Quichotte regarda autour de lui, stupéfait :"
+    ],
+    [
+      "QUIXOTE",
+      "Ah, mes amis, pourquoi m’avez-vous sorti de là ?"
+    ]
+  ],
+  "p3-s25": [
+    [
+      "QUIXOTE",
+      "J’ai vu un palais tout entier de cristal !"
+    ]
+  ],
+  "p3-s26": [
+    [
+      "QUIXOTE",
+      "Un petit vieux à la barbe blanche jusqu’au sol, nommé Montesinos, m’a accueilli à la porte."
+    ]
+  ],
+  "p3-s27": [
+    [
+      "QUIXOTE",
+      "À l’intérieur, des chevaliers et des dames dorment depuis cinq cents ans, enchantés par le magicien Merlin."
+    ]
+  ],
+  "p3-s28": [
+    [
+      "QUIXOTE",
+      "J’ai passé trois jours avec eux !"
+    ]
+  ],
+  "p3-s29": [
+    [
+      "SANCHO",
+      "Trois jours ?"
+    ],
+    [
+      "NARRADORA",
+      "dit Sancho."
+    ]
+  ],
+  "p3-s30": [
+    [
+      "SANCHO",
+      "Mon maître, vous êtes resté en bas une heure !"
+    ]
+  ],
+  "p3-s31": [
+    [
+      "SANCHO",
+      "Je n’ai même pas eu le temps d’avoir faim !"
+    ]
+  ],
+  "p3-s32": [
+    [
+      "QUIXOTE",
+      "Alors, là-dessous, le temps passe autrement"
+    ],
+    [
+      "NARRADORA",
+      "répondit Don Quichotte, très sérieux."
+    ]
+  ],
+  "p4-s2": [
+    [
+      "NARRADORA",
+      "Don Quichotte tapa sur la table :"
+    ],
+    [
+      "QUIXOTE",
+      "Une soupe pour le Chevalier aux Lions, brave homme !"
+    ]
+  ],
+  "p4-s5": [
+    [
+      "MESTRE_PEDRO",
+      "Y a-t-il de la place pour maître Pierre, pour son petit théâtre et pour son singe devin ?"
+    ]
+  ],
+  "p4-s6": [
+    [
+      "DONO_POUSADA",
+      "Pour maître Pierre, il y en a toujours !"
+    ],
+    [
+      "NARRADORA",
+      "s’écria l’aubergiste, tout content."
+    ]
+  ],
+  "p4-s9": [
+    [
+      "MESTRE_PEDRO",
+      "Il devine tout ce qui est déjà arrivé,"
+    ],
+    [
+      "NARRADORA",
+      "expliqua maître Pierre."
+    ]
+  ],
+  "p4-s10": [
+    [
+      "MESTRE_PEDRO",
+      "Ce qui va arriver, non : ça, il n’y connaît rien."
+    ]
+  ],
+  "p4-s11": [
+    [
+      "MESTRE_PEDRO",
+      "C’est deux pièces par question !"
+    ]
+  ],
+  "p4-s12": [
+    [
+      "NARRADORA",
+      "Sancho voulut l’essayer tout de suite :"
+    ],
+    [
+      "SANCHO",
+      "Alors dis-moi, monsieur le singe : que fait ma Thérèse en ce moment ?"
+    ]
+  ],
+  "p4-s15": [
+    [
+      "NARRADORA",
+      "Maître Pierre ouvrit grand l’œil qu’il avait libre, courut et s’agenouilla :"
+    ],
+    [
+      "MESTRE_PEDRO",
+      "Ô célèbre Don Quichotte de la Manche, Chevalier aux Lions !"
+    ]
+  ],
+  "p4-s16": [
+    [
+      "MESTRE_PEDRO",
+      "Et toi, bon Sancho Pança, le meilleur écuyer du monde : ta Thérèse est en train de peigner de la laine, à cette minute même, avec une cruche d’eau à côté d’elle !"
+    ]
+  ],
+  "p4-s22": [
+    [
+      "SANCHO",
+      "C’est une affaire de magicien,"
+    ],
+    [
+      "NARRADORA",
+      "chuchota Sancho."
+    ]
+  ],
+  "p4-s23": [
+    [
+      "SANCHO",
+      "Ou alors ce singe a lu le livre, lui aussi."
+    ]
+  ],
+  "p4-s24": [
+    [
+      "NARRADORA",
+      "Don Quichotte paya deux pièces de plus :"
+    ],
+    [
+      "QUIXOTE",
+      "Demande au singe : ce que j’ai vu dans la grotte de Montesinos, était-ce un rêve ou la vérité ?"
+    ]
+  ],
+  "p4-s26": [
+    [
+      "NARRADORA",
+      "Maître Pierre écouta et répondit :"
+    ],
+    [
+      "MESTRE_PEDRO",
+      "Le singe dit qu’une partie était vraie et que l’autre partie était un rêve."
+    ]
+  ],
+  "p4-s27": [
+    [
+      "MESTRE_PEDRO",
+      "Laquelle est laquelle, il ne le dira que vendredi."
+    ]
+  ],
+  "p4-s28": [
+    [
+      "QUIXOTE",
+      "Tu vois, Sancho ?"
+    ],
+    [
+      "NARRADORA",
+      "dit Don Quichotte."
+    ]
+  ],
+  "p4-s29": [
+    [
+      "QUIXOTE",
+      "Une partie était vraie !"
+    ]
+  ],
+  "p4-s30": [
+    [
+      "SANCHO",
+      "Vous voyez, mon maître ?"
+    ],
+    [
+      "NARRADORA",
+      "dit Sancho."
+    ]
+  ],
+  "p4-s31": [
+    [
+      "SANCHO",
+      "L’autre était un rêve !"
+    ]
+  ],
+  "p5-s2": [
+    [
+      "NARRADORA",
+      "Un garçon, une baguette à la main, racontait l’histoire :"
+    ],
+    [
+      "MENINO",
+      "Voici la princesse Mélisendre, prisonnière d’une très haute tour !"
+    ]
+  ],
+  "p5-s3": [
+    [
+      "MENINO",
+      "Et voici le vaillant don Gaïferos, qui arrive à cheval pour sauver la princesse !"
+    ]
+  ],
+  "p5-s8": [
+    [
+      "MENINO",
+      "Mais regardez !"
+    ],
+    [
+      "NARRADORA",
+      "cria le garçon."
+    ]
+  ],
+  "p5-s9": [
+    [
+      "MENINO",
+      "Le roi de la tour a tout découvert et a envoyé ses soldats à leur poursuite."
+    ]
+  ],
+  "p5-s14": [
+    [
+      "NARRADORA",
+      "Il bondit, tira son épée et cria :"
+    ],
+    [
+      "QUIXOTE",
+      "Arrêtez, méchants !"
+    ]
+  ],
+  "p5-s15": [
+    [
+      "QUIXOTE",
+      "Tant que je vivrai, personne ne poursuivra ces deux-là !"
+    ]
+  ],
+  "p5-s24": [
+    [
+      "NARRADORA",
+      "Quand la poussière retomba, Don Quichotte regarda autour de lui, tout fier :"
+    ],
+    [
+      "QUIXOTE",
+      "Voilà !"
+    ]
+  ],
+  "p5-s25": [
+    [
+      "QUIXOTE",
+      "Don Gaïferos et la princesse sont sauvés !"
+    ]
+  ],
+  "p5-s26": [
+    [
+      "MESTRE_PEDRO",
+      "Sauvés ?"
+    ],
+    [
+      "NARRADORA",
+      "gémit maître Pierre en ramassant les morceaux par terre."
+    ]
+  ],
+  "p5-s27": [
+    [
+      "MESTRE_PEDRO",
+      "Regardez mon roi, sans tête !"
+    ]
+  ],
+  "p5-s28": [
+    [
+      "MESTRE_PEDRO",
+      "Regardez mon cheval, sans jambe !"
+    ]
+  ],
+  "p5-s29": [
+    [
+      "MESTRE_PEDRO",
+      "Regardez ma tour !"
+    ]
+  ],
+  "p5-s30": [
+    [
+      "MESTRE_PEDRO",
+      "C’étaient des marionnettes, monsieur !"
+    ]
+  ],
+  "p5-s31": [
+    [
+      "MESTRE_PEDRO",
+      "Des marionnettes de chiffon et de carton !"
+    ]
+  ],
+  "p5-s34": [
+    [
+      "NARRADORA",
+      "Il se gratta la barbe, tout gêné :"
+    ],
+    [
+      "QUIXOTE",
+      "Je jure qu’elles m’ont paru vivantes..."
+    ]
+  ],
+  "p5-s35": [
+    [
+      "QUIXOTE",
+      "Les magiciens m’ont encore trompé."
+    ]
+  ],
+  "p5-s36": [
+    [
+      "QUIXOTE",
+      "Mais je paie tout, maître Pierre !"
+    ]
+  ],
+  "p5-s37": [
+    [
+      "QUIXOTE",
+      "Sancho, apporte la bourse !"
+    ]
+  ],
+  "p5-s38": [
+    [
+      "NARRADORA",
+      "Sancho soupira :"
+    ],
+    [
+      "SANCHO",
+      "Je n’ai jamais vu une victoire coûter si cher."
+    ]
+  ],
+  "p6-s3": [
+    [
+      "NARRADORA",
+      "Il l’ouvrit à une page au hasard et, en plein milieu, il reconnut les petites fourmis de son nom :"
+    ],
+    [
+      "SANCHO",
+      "C’est notre livre, mon maître !"
+    ]
+  ],
+  "p6-s4": [
+    [
+      "SANCHO",
+      "Alors le singe ne devine rien du tout : maître Pierre a tout lu sur nous !"
+    ]
+  ],
+  "p6-s5": [
+    [
+      "SANCHO",
+      "Et le reste, je parie qu’il l’a demandé à l’aubergiste."
+    ]
+  ],
+  "p6-s6": [
+    [
+      "NARRADORA",
+      "Don Quichotte devint pensif :"
+    ],
+    [
+      "QUIXOTE",
+      "Ce livre court plus vite que Rossinante."
+    ]
+  ],
+  "p6-s10": [
+    [
+      "QUIXOTE",
+      "Regarde, Sancho !"
+    ]
+  ],
+  "p6-s11": [
+    [
+      "QUIXOTE",
+      "Dans les livres, c’est toujours comme ça : une barque enchantée apparaît pour emmener le chevalier jusqu’à quelqu’un qui a besoin d’aide."
+    ]
+  ],
+  "p6-s12": [
+    [
+      "QUIXOTE",
+      "Attache les bêtes et monte !"
+    ]
+  ],
+  "p6-s13": [
+    [
+      "SANCHO",
+      "Mon maître, c’est une barque de pêcheur..."
+    ]
+  ],
+  "p6-s14": [
+    [
+      "QUIXOTE",
+      "Monte, Sancho !"
+    ]
+  ],
+  "p6-s17": [
+    [
+      "QUIXOTE",
+      "Nous sommes déjà très, très loin !"
+    ],
+    [
+      "NARRADORA",
+      "dit Don Quichotte."
+    ]
+  ],
+  "p6-s18": [
+    [
+      "QUIXOTE",
+      "Nous avons sûrement passé la ligne du milieu du monde."
+    ]
+  ],
+  "p6-s19": [
+    [
+      "QUIXOTE",
+      "On dit que, quand on passe cette ligne, tous les poux meurent de froid."
+    ]
+  ],
+  "p6-s20": [
+    [
+      "QUIXOTE",
+      "Regarde donc, Sancho !"
+    ]
+  ],
+  "p6-s21": [
+    [
+      "NARRADORA",
+      "Sancho glissa la main dans son col et chercha :"
+    ],
+    [
+      "SANCHO",
+      "J’en trouve un."
+    ]
+  ],
+  "p6-s22": [
+    [
+      "SANCHO",
+      "J’en trouve deux."
+    ]
+  ],
+  "p6-s23": [
+    [
+      "SANCHO",
+      "Mon maître, on n’a presque pas bougé : on voit encore Rossinante !"
+    ]
+  ],
+  "p6-s26": [
+    [
+      "QUIXOTE",
+      "Un château !"
+    ],
+    [
+      "NARRADORA",
+      "cria Don Quichotte."
+    ]
+  ],
+  "p6-s27": [
+    [
+      "QUIXOTE",
+      "C’est là qu’est le prisonnier !"
+    ]
+  ],
+  "p6-s28": [
+    [
+      "NARRADORA",
+      "Sancho se prit la tête dans les mains :"
+    ],
+    [
+      "SANCHO",
+      "Encore des moulins, non !"
+    ]
+  ],
+  "p6-s29": [
+    [
+      "NARRADORA",
+      "Les meuniers, les patrons des moulins, sortirent en courant, blancs de farine de la tête aux pieds, en agitant de longues perches :"
+    ],
+    [
+      "POVO",
+      "Arrêtez cette barque !"
+    ]
+  ],
+  "p6-s30": [
+    [
+      "POVO",
+      "Vous allez taper dans la roue !"
+    ]
+  ],
+  "p6-s31": [
+    [
+      "QUIXOTE",
+      "Quels vilains fantômes !"
+    ],
+    [
+      "NARRADORA",
+      "dit Don Quichotte, et il se mit debout, l’épée à la main."
+    ]
+  ],
+  "p6-s35": [
+    [
+      "NARRADORA",
+      "Sur la rive, trempé, Don Quichotte paya la barque aux deux pêcheurs, qui arrivaient en courant et en ronchonnant, et soupira :"
+    ],
+    [
+      "QUIXOTE",
+      "Cette fois, les magiciens ont gagné."
+    ]
+  ],
+  "p6-s36": [
+    [
+      "NARRADORA",
+      "Sancho essora sa chemise :"
+    ],
+    [
+      "SANCHO",
+      "Encore une barque enchantée comme celle-là, mon maître, et on se retrouve sans bourse et sans caleçon."
+    ]
+  ],
+  "p7-s4": [
+    [
+      "QUIXOTE",
+      "Voilà une grande dame, Sancho !"
+    ],
+    [
+      "NARRADORA",
+      "dit Don Quichotte en ajustant son bacielmo."
+    ]
+  ],
+  "p7-s5": [
+    [
+      "QUIXOTE",
+      "Va là-bas lui porter un message : dis-lui que ton maître souhaite la saluer, et demande-lui s’il peut s’approcher."
+    ]
+  ],
+  "p7-s6": [
+    [
+      "QUIXOTE",
+      "Et dis bien mon nom de chevalier."
+    ]
+  ],
+  "p7-s7": [
+    [
+      "QUIXOTE",
+      "Pas l’ancien : le nouveau !"
+    ]
+  ],
+  "p7-s11": [
+    [
+      "NARRADORA",
+      "La dame écouta le message et fit un immense sourire :"
+    ],
+    [
+      "DUQUESA",
+      "Le Don Quichotte du livre ?"
+    ]
+  ],
+  "p7-s12": [
+    [
+      "DUQUESA",
+      "Et toi, tu es Sancho Pança, celui de l’âne ?"
+    ]
+  ],
+  "p7-s13": [
+    [
+      "SANCHO",
+      "Moi-même, madame, et l’âne, c’est celui-là !"
+    ]
+  ],
+  "p7-s22": [
+    [
+      "NARRADORA",
+      "Là, on sonna les trompettes, on répandit de l’eau parfumée et on cria :"
+    ],
+    [
+      "POVO",
+      "Bienvenue au grand chevalier errant !"
+    ]
+  ],
+  "p8-s4": [
+    [
+      "NARRADORA",
+      "Entra un grand gaillard à la barbe blanche jusqu’à la ceinture, qui annonça :"
+    ],
+    [
+      "ARAUTO",
+      "La comtesse Trifaldi est venue de très loin, à pied, pour demander l’aide du célèbre Don Quichotte !"
+    ]
+  ],
+  "p8-s9": [
+    [
+      "CONDESSA",
+      "Seigneur chevalier,"
+    ],
+    [
+      "NARRADORA",
+      "dit la comtesse d’une grosse voix"
+    ],
+    [
+      "CONDESSA",
+      "très bizarre, un géant méchant, nommé Malambruno, nous a jeté un terrible sortilège."
+    ]
+  ],
+  "p8-s10": [
+    [
+      "CONDESSA",
+      "Regardez !"
+    ]
+  ],
+  "p8-s14": [
+    [
+      "NARRADORA",
+      "Sancho recula d’un pas :"
+    ],
+    [
+      "SANCHO",
+      "Ça alors !"
+    ]
+  ],
+  "p8-s15": [
+    [
+      "SANCHO",
+      "Qui leur fait la barbe ?"
+    ]
+  ],
+  "p8-s16": [
+    [
+      "SANCHO",
+      "Maître Nicolas deviendrait riche !"
+    ]
+  ],
+  "p8-s17": [
+    [
+      "NARRADORA",
+      "Puis il regarda mieux et chuchota :"
+    ],
+    [
+      "SANCHO",
+      "Mon maître, la comtesse porte des bottes d’homme."
+    ]
+  ],
+  "p8-s18": [
+    [
+      "SANCHO",
+      "Et cette voix... où est-ce que j’ai déjà entendu cette voix ?"
+    ]
+  ],
+  "p8-s20": [
+    [
+      "QUIXOTE",
+      "Dites-moi ce que je dois faire, mesdames !"
+    ]
+  ],
+  "p8-s21": [
+    [
+      "CONDESSA",
+      "Le géant habite le royaume de Candaya, de l’autre côté du monde,"
+    ],
+    [
+      "NARRADORA",
+      "expliqua la comtesse."
+    ]
+  ],
+  "p8-s22": [
+    [
+      "CONDESSA",
+      "Il n’y a qu’un seul moyen d’y aller : voler sur clavilègne, un cheval de bois qu’on dirige avec une cheville sur son front."
+    ]
+  ],
+  "p8-s23": [
+    [
+      "CONDESSA",
+      "Vous irez tous les deux, le chevalier et l’écuyer, les yeux bandés."
+    ]
+  ],
+  "p8-s24": [
+    [
+      "CONDESSA",
+      "Quand vous arriverez, nos barbes tomberont !"
+    ]
+  ],
+  "p8-s25": [
+    [
+      "SANCHO",
+      "Tous les deux ?"
+    ]
+  ],
+  "p8-s27": [
+    [
+      "SANCHO",
+      "Je ne suis pas un petit oiseau, moi !"
+    ]
+  ],
+  "p8-s28": [
+    [
+      "SANCHO",
+      "Et qu’est-ce que j’ai à voir avec la barbe des autres ?"
+    ]
+  ],
+  "p8-s30": [
+    [
+      "NARRADORA",
+      "Sancho se boucha les oreilles :"
+    ],
+    [
+      "SANCHO",
+      "C’est bon, c’est bon, j’y vais !"
+    ]
+  ],
+  "p8-s31": [
+    [
+      "SANCHO",
+      "Mais si je tombe de là-haut, je voudrais bien savoir qui va gouverner mon île !"
+    ]
+  ],
+  "p9-s2": [
+    [
+      "NARRADORA",
+      "Sancho monta derrière lui en ronchonnant :"
+    ],
+    [
+      "SANCHO",
+      "Ce cheval est dur comme une planche !"
+    ]
+  ],
+  "p9-s3": [
+    [
+      "SANCHO",
+      "Il n’y a pas un petit coussin ?"
+    ]
+  ],
+  "p9-s6": [
+    [
+      "POVO",
+      "Ils montent déjà !"
+    ]
+  ],
+  "p9-s7": [
+    [
+      "POVO",
+      "Ils ont déjà dépassé le toit !"
+    ]
+  ],
+  "p9-s10": [
+    [
+      "QUIXOTE",
+      "Je sens le vent des hauteurs, Sancho !"
+    ]
+  ],
+  "p9-s11": [
+    [
+      "SANCHO",
+      "Moi aussi, mon maître."
+    ]
+  ],
+  "p9-s12": [
+    [
+      "SANCHO",
+      "Et j’ai bien envie de jeter un coup d’œil..."
+    ]
+  ],
+  "p9-s13": [
+    [
+      "QUIXOTE",
+      "N’enlève pas ton bandeau !"
+    ]
+  ],
+  "p9-s14": [
+    [
+      "QUIXOTE",
+      "Celui qui regarde a le vertige et tombe !"
+    ]
+  ],
+  "p9-s16": [
+    [
+      "SANCHO",
+      "Maintenant, il fait chaud !"
+    ],
+    [
+      "NARRADORA",
+      "dit Sancho."
+    ]
+  ],
+  "p9-s17": [
+    [
+      "QUIXOTE",
+      "Nous passons tout près du soleil !"
+    ],
+    [
+      "NARRADORA",
+      "répondit Don Quichotte."
+    ]
+  ],
+  "p9-s18": [
+    [
+      "QUIXOTE",
+      "Tiens-toi bien !"
+    ]
+  ],
+  "p9-s28": [
+    [
+      "NARRADORA",
+      "Au dîner, Sancho fanfaronna :"
+    ],
+    [
+      "SANCHO",
+      "J’ai regardé un tout petit peu."
+    ]
+  ],
+  "p9-s29": [
+    [
+      "SANCHO",
+      "La Terre était grande comme un grain de moutarde !"
+    ]
+  ],
+  "p9-s30": [
+    [
+      "SANCHO",
+      "Et je suis descendu du cheval et j’ai joué avec sept petites chèvres, là-haut dans le ciel : deux vertes, deux rouges, deux bleues et une toute mélangée."
+    ]
+  ],
+  "p9-s32": [
+    [
+      "NARRADORA",
+      "Don Quichotte s’approcha de son oreille :"
+    ],
+    [
+      "QUIXOTE",
+      "Sancho, si tu veux que je croie à tes petites chèvres du ciel, crois à mon palais de cristal de la grotte."
+    ]
+  ],
+  "p9-s33": [
+    [
+      "NARRADORA",
+      "Sancho réfléchit un petit moment et fit un clin d’œil :"
+    ],
+    [
+      "SANCHO",
+      "Marché conclu, mon maître."
+    ]
+  ],
+  "p9-s35": [
+    [
+      "NARRADORA",
+      "Alors le duc se leva :"
+    ],
+    [
+      "DUQUE",
+      "Sancho Pança, fais ta valise."
+    ]
+  ],
+  "p9-s36": [
+    [
+      "DUQUE",
+      "Demain, tu vas gouverner ton île !"
+    ]
+  ],
+  "p2-s16": [
+    [
+      "SANCHO",
+      "Vive le marié Gamache !"
+    ],
+    [
+      "NARRADORA",
+      "criait-il, la bouche pleine."
+    ]
+  ],
+  "p9-s5": [
+    [
+      "POVO",
+      "Bon voyage, les braves !"
+    ],
+    [
+      "NARRADORA",
+      "crièrent-ils tous."
+    ]
+  ]
+}

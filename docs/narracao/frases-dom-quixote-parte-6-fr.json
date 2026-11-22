@@ -1,0 +1,2712 @@
+{
+  "obra": "Don Quichotte de la Manche",
+  "parte": 6,
+  "idioma": "fr",
+  "audio": "dom-quixote/audio/<voz>-fr/parte-6/<id>.mp3",
+  "audioPalavras": "dom-quixote/audio/palavras-fr/<slug>.mp3",
+  "frases": [
+    {
+      "id": "p0-s0",
+      "pagina": 0,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Don Quichotte de la Manche. Partie 6 : Le Petit Théâtre, la Barque et le Cheval Volant",
+      "fala": "Don Quichotte de la Manche. Partie 6 : Le Petit Théâtre, la Barque et le Cheval Volant",
+      "hash": "de168331e3"
+    },
+    {
+      "id": "p0-s1",
+      "pagina": 0,
+      "paragrafo": 0,
+      "texto": "Le Chevalier aux Lions et Sancho se reposent chez Don Diego.",
+      "fala": "Le Chevalier aux Lions et Sancho se reposent chez Don Diego.",
+      "hash": "e1f216f2e6"
+    },
+    {
+      "id": "p0-s2",
+      "pagina": 0,
+      "paragrafo": 0,
+      "texto": "Mais la route les appelle !",
+      "fala": "Mais la route les appelle !",
+      "hash": "6e3e37b93e"
+    },
+    {
+      "id": "p0-s3",
+      "pagina": 0,
+      "paragrafo": 0,
+      "texto": "Et, cette fois, des choses très étranges vont arriver : un SINGE qui devine les secrets, une grotte obscure pleine de secrets, et une barque sans rames qui attend au bord de la rivière...",
+      "fala": "Et, cette fois, des choses très étranges vont arriver : un singe qui devine les secrets, une grotte obscure pleine de secrets, et une barque sans rames qui attend au bord de la rivière...",
+      "hash": "471d28b670"
+    },
+    {
+      "id": "p0-s4",
+      "pagina": 0,
+      "paragrafo": 1,
+      "texto": "Dans cette partie de l’histoire, les deux amis vont découvrir un petit théâtre de marionnettes, un vrai PALAIS et douze dames avec un problème très poilu.",
+      "fala": "Dans cette partie de l’histoire, les deux amis vont découvrir un petit théâtre de marionnettes, un vrai palais et douze dames avec un problème très poilu.",
+      "hash": "f5a8ed63e7"
+    },
+    {
+      "id": "p0-s5",
+      "pagina": 0,
+      "paragrafo": 1,
+      "texto": "Et ils vont voler plus haut que les nuages, montés sur un CHEVAL de bois !",
+      "fala": "Et ils vont voler plus haut que les nuages, montés sur un cheval de bois !",
+      "hash": "84713baeb0"
+    },
+    {
+      "id": "p0-s6",
+      "pagina": 0,
+      "paragrafo": 2,
+      "texto": "Tiens-toi bien, tourne la page et n’enlève pas ton bandeau !",
+      "fala": "Tiens-toi bien, tourne la page et n’enlève pas ton bandeau !",
+      "hash": "7aa6243c42"
+    },
+    {
+      "id": "p1-s0",
+      "pagina": 1,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapitre 43. La maison du silence. Quatre jours de fromage frais",
+      "fala": "Chapitre 43. La maison du silence. Quatre jours de fromage frais",
+      "hash": "bf5bdcf269"
+    },
+    {
+      "id": "p1-s1",
+      "pagina": 1,
+      "paragrafo": 0,
+      "texto": "Chez Don Diego, il y avait du fromage frais, oui.",
+      "fala": "Chez Don Diego, il y avait du fromage frais, oui.",
+      "hash": "fc04c66784"
+    },
+    {
+      "id": "p1-s2",
+      "pagina": 1,
+      "paragrafo": 0,
+      "texto": "Il y avait aussi du pain tout chaud, du miel, du raisin et un lit si moelleux que Sancho dormit deux jours de suite.",
+      "fala": "Il y avait aussi du pain tout chaud, du miel, du raisin et un lit si moelleux que Sancho dormit deux jours de suite.",
+      "hash": "dc2c7781a4"
+    },
+    {
+      "id": "p1-s3",
+      "pagina": 1,
+      "paragrafo": 0,
+      "texto": "C’était une grande maison bien tranquille.",
+      "fala": "C’était une grande maison bien tranquille.",
+      "hash": "428c60a4dc"
+    },
+    {
+      "id": "p1-s4",
+      "pagina": 1,
+      "paragrafo": 0,
+      "texto": "Là-bas, personne ne criait, personne ne courait, et même les poules semblaient marcher sur la pointe des pattes.",
+      "fala": "Là-bas, personne ne criait, personne ne courait, et même les poules semblaient marcher sur la pointe des pattes.",
+      "hash": "5c52b46871"
+    },
+    {
+      "id": "p1-s5",
+      "pagina": 1,
+      "paragrafo": 1,
+      "texto": "Doña Cristina, la femme de Don Diego, et leur fils Lorenzo, un jeune homme qui écrivait des POÈMES, accueillirent les voyageurs avec tendresse.",
+      "fala": "Doña Cristina, la femme de Don Diego, et leur fils Lorenzo, un jeune homme qui écrivait des poèmes, accueillirent les voyageurs avec tendresse.",
+      "hash": "ab6dfb15c3"
+    },
+    {
+      "id": "p1-s6",
+      "pagina": 1,
+      "paragrafo": 1,
+      "texto": "Lorenzo regarda le chevalier tout maigre, regarda le bacielmo et chuchota à sa mère : « Quel homme différent ! »",
+      "fala": "Lorenzo regarda le chevalier tout maigre, regarda le bacielmo et chuchota à sa mère : Quel homme différent !",
+      "hash": "805cad7bf5"
+    },
+    {
+      "id": "p1-s7",
+      "pagina": 1,
+      "paragrafo": 1,
+      "texto": "Sancho l’entendit et répondit, la bouche pleine : « Différent, c’est peu dire, mon garçon.",
+      "fala": "Sancho l’entendit et répondit, la bouche pleine : Différent, c’est peu dire, mon garçon.",
+      "hash": "ff41f25bad"
+    },
+    {
+      "id": "p1-s8",
+      "pagina": 1,
+      "paragrafo": 1,
+      "texto": "Attends qu’il voie un moulin. »",
+      "fala": "Attends qu’il voie un moulin.",
+      "hash": "a4eb4c5496"
+    },
+    {
+      "id": "p1-s9",
+      "pagina": 1,
+      "paragrafo": 2,
+      "texto": "Don Quichotte écouta les poèmes de Lorenzo et applaudit debout : « Vive le poète ! »",
+      "fala": "Don Quichotte écouta les poèmes de Lorenzo et applaudit debout : Vive le poète !",
+      "hash": "208edcd2ec"
+    },
+    {
+      "id": "p1-s10",
+      "pagina": 1,
+      "paragrafo": 2,
+      "texto": "Le jeune homme devint tout rouge de joie.",
+      "fala": "Le jeune homme devint tout rouge de joie.",
+      "hash": "b67c4b30e0"
+    },
+    {
+      "id": "p1-s11",
+      "pagina": 1,
+      "paragrafo": 2,
+      "texto": "Don Diego se grattait la tête : cet homme qui parlait si joliment de poésie, était-ce bien le même qui avait fait ouvrir la cage d’un lion ?",
+      "fala": "Don Diego se grattait la tête : cet homme qui parlait si joliment de poésie, était-ce bien le même qui avait fait ouvrir la cage d’un lion ?",
+      "hash": "ce188057c4"
+    },
+    {
+      "id": "p1-s12",
+      "pagina": 1,
+      "paragrafo": 3,
+      "texto": "Le quatrième jour, Don Quichotte ne supportait plus tant de silence : « Chevalier qui se repose trop finit par rouiller, Sancho !",
+      "fala": "Le quatrième jour, Don Quichotte ne supportait plus tant de silence : Chevalier qui se repose trop finit par rouiller, Sancho !",
+      "hash": "3ba3ee9e6e"
+    },
+    {
+      "id": "p1-s13",
+      "pagina": 1,
+      "paragrafo": 3,
+      "texto": "J’ai entendu parler d’une GROTTE très profonde, tout près d’ici, la grotte de Montesinos.",
+      "fala": "J’ai entendu parler d’une grotte très profonde, tout près d’ici, la grotte de Montesinos.",
+      "hash": "95f12b40e7"
+    },
+    {
+      "id": "p1-s14",
+      "pagina": 1,
+      "paragrafo": 3,
+      "texto": "On dit qu’au fond vivent des merveilles que personne n’a jamais vues.",
+      "fala": "On dit qu’au fond vivent des merveilles que personne n’a jamais vues.",
+      "hash": "775b007437"
+    },
+    {
+      "id": "p1-s15",
+      "pagina": 1,
+      "paragrafo": 3,
+      "texto": "Je veux les voir ! »",
+      "fala": "Je veux les voir !",
+      "hash": "1503108952"
+    },
+    {
+      "id": "p1-s16",
+      "pagina": 1,
+      "paragrafo": 3,
+      "texto": "Sancho regarda avec regret la table du petit déjeuner : « Il y a du fromage frais dans la grotte, mon maître ?",
+      "fala": "Sancho regarda avec regret la table du petit déjeuner : Il y a du fromage frais dans la grotte, mon maître ?",
+      "hash": "fc71a8047a"
+    },
+    {
+      "id": "p1-s17",
+      "pagina": 1,
+      "paragrafo": 3,
+      "texto": "— Non.",
+      "fala": "Non.",
+      "hash": "b31a173938"
+    },
+    {
+      "id": "p1-s18",
+      "pagina": 1,
+      "paragrafo": 3,
+      "texto": "— Je m’en doutais. »",
+      "fala": "Je m’en doutais.",
+      "hash": "5d069e1387"
+    },
+    {
+      "id": "p1-s19",
+      "pagina": 1,
+      "paragrafo": 4,
+      "texto": "Doña Cristina remplit la besace de Sancho jusqu’à ce que plus rien n’y entre.",
+      "fala": "Doña Cristina remplit la besace de Sancho jusqu’à ce que plus rien n’y entre.",
+      "hash": "e23a2436e4"
+    },
+    {
+      "id": "p1-s20",
+      "pagina": 1,
+      "paragrafo": 4,
+      "texto": "Don Diego serra les deux amis dans ses bras et leur donna un dernier conseil : « Prenez garde aux lions, seigneur chevalier !",
+      "fala": "Don Diego serra les deux amis dans ses bras et leur donna un dernier conseil : Prenez garde aux lions, seigneur chevalier !",
+      "hash": "db7d46e700"
+    },
+    {
+      "id": "p1-s21",
+      "pagina": 1,
+      "paragrafo": 4,
+      "texto": "— Soyez tranquille, répondit Don Quichotte.",
+      "fala": "Soyez tranquille, répondit Don Quichotte.",
+      "hash": "ba02dfb08e"
+    },
+    {
+      "id": "p1-s22",
+      "pagina": 1,
+      "paragrafo": 4,
+      "texto": "Dans la grotte, il n’y a pas de lions.",
+      "fala": "Dans la grotte, il n’y a pas de lions.",
+      "hash": "523bffea74"
+    },
+    {
+      "id": "p1-s23",
+      "pagina": 1,
+      "paragrafo": 4,
+      "texto": "Il n’y a que du noir, des chauves-souris et du mystère ! »",
+      "fala": "Il n’y a que du noir, des chauves-souris et du mystère !",
+      "hash": "7730167ab1"
+    },
+    {
+      "id": "p1-s24",
+      "pagina": 1,
+      "paragrafo": 4,
+      "texto": "Sancho avala sa salive.",
+      "fala": "Sancho avala sa salive.",
+      "hash": "940045f14d"
+    },
+    {
+      "id": "p2-s0",
+      "pagina": 2,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapitre 44. La fête des marmites. L’écume de Sancho",
+      "fala": "Chapitre 44. La fête des marmites. L’écume de Sancho",
+      "hash": "83e53a8629"
+    },
+    {
+      "id": "p2-s1",
+      "pagina": 2,
+      "paragrafo": 0,
+      "texto": "En chemin, Sancho leva le nez et arrêta son âne.",
+      "fala": "En chemin, Sancho leva le nez et arrêta son âne.",
+      "hash": "e50ddb9748"
+    },
+    {
+      "id": "p2-s2",
+      "pagina": 2,
+      "paragrafo": 0,
+      "texto": "Le vent apportait une odeur de rôti si bonne, si bonne, que même Rossinante se lécha les babines.",
+      "fala": "Le vent apportait une odeur de rôti si bonne, si bonne, que même Rossinante se lécha les babines.",
+      "hash": "b750274195"
+    },
+    {
+      "id": "p2-s3",
+      "pagina": 2,
+      "paragrafo": 0,
+      "texto": "C’était une NOCE !",
+      "fala": "C’était une noce !",
+      "hash": "037a51b620"
+    },
+    {
+      "id": "p2-s4",
+      "pagina": 2,
+      "paragrafo": 0,
+      "texto": "Le marié, le riche Gamache, avait invité toute la région.",
+      "fala": "Le marié, le riche Gamache, avait invité toute la région.",
+      "hash": "55d89a9e78"
+    },
+    {
+      "id": "p2-s5",
+      "pagina": 2,
+      "paragrafo": 1,
+      "texto": "Sancho n’avait jamais vu autant de nourriture à la fois.",
+      "fala": "Sancho n’avait jamais vu autant de nourriture à la fois.",
+      "hash": "ad783d6646"
+    },
+    {
+      "id": "p2-s6",
+      "pagina": 2,
+      "paragrafo": 1,
+      "texto": "Il y avait un bœuf entier qui rôtissait, des marmites grandes comme des baignoires, des fromages empilés comme des briques et un mur de pains.",
+      "fala": "Il y avait un bœuf entier qui rôtissait, des marmites grandes comme des baignoires, des fromages empilés comme des briques et un mur de pains.",
+      "hash": "9361b4eec8"
+    },
+    {
+      "id": "p2-s7",
+      "pagina": 2,
+      "paragrafo": 1,
+      "texto": "Il s’approcha d’un cuisinier et demanda, de la voix la plus polie du monde : « Bon monsieur, puis-je tremper un petit bout de pain dans cette MARMITE ? »",
+      "fala": "Il s’approcha d’un cuisinier et demanda, de la voix la plus polie du monde : Bon monsieur, puis-je tremper un petit bout de pain dans cette marmite ?",
+      "hash": "31a03da42b"
+    },
+    {
+      "id": "p2-s8",
+      "pagina": 2,
+      "paragrafo": 2,
+      "texto": "Le cuisinier éclata de rire : « Aujourd’hui, personne n’a faim, mon ami !",
+      "fala": "Le cuisinier éclata de rire : Aujourd’hui, personne n’a faim, mon ami !",
+      "hash": "a15961d262"
+    },
+    {
+      "id": "p2-s9",
+      "pagina": 2,
+      "paragrafo": 2,
+      "texto": "Prends une louche et écume la marmite. »",
+      "fala": "Prends une louche et écume la marmite.",
+      "hash": "0d8a774bd1"
+    },
+    {
+      "id": "p2-s10",
+      "pagina": 2,
+      "paragrafo": 2,
+      "texto": "Sancho chercha une louche et n’en trouva pas.",
+      "fala": "Sancho chercha une louche et n’en trouva pas.",
+      "hash": "d31f7d1f0a"
+    },
+    {
+      "id": "p2-s11",
+      "pagina": 2,
+      "paragrafo": 2,
+      "texto": "Alors le cuisinier prit une petite casserole, la plongea dans la grande marmite et en sortit... trois poules et deux oies entières !",
+      "fala": "Alors le cuisinier prit une petite casserole, la plongea dans la grande marmite et en sortit... trois poules et deux oies entières !",
+      "hash": "7d94e0d929"
+    },
+    {
+      "id": "p2-s12",
+      "pagina": 2,
+      "paragrafo": 2,
+      "texto": "« Tiens.",
+      "fala": "Tiens.",
+      "hash": "2c2dc9b31c"
+    },
+    {
+      "id": "p2-s13",
+      "pagina": 2,
+      "paragrafo": 2,
+      "texto": "Ce n’est que l’écume, pour tromper ta faim jusqu’au déjeuner. »",
+      "fala": "Ce n’est que l’écume, pour tromper ta faim jusqu’au déjeuner.",
+      "hash": "c7f4ea1c49"
+    },
+    {
+      "id": "p2-s14",
+      "pagina": 2,
+      "paragrafo": 3,
+      "texto": "Don Quichotte regardait les danses, enchanté.",
+      "fala": "Don Quichotte regardait les danses, enchanté.",
+      "hash": "acf1a665f3"
+    },
+    {
+      "id": "p2-s15",
+      "pagina": 2,
+      "paragrafo": 3,
+      "texto": "Sancho regardait les poules, encore plus enchanté.",
+      "fala": "Sancho regardait les poules, encore plus enchanté.",
+      "hash": "ecc1d90fbc"
+    },
+    {
+      "id": "p2-s16",
+      "pagina": 2,
+      "paragrafo": 3,
+      "texto": "« Vive le marié Gamache ! criait-il, la bouche pleine.",
+      "fala": "Vive le marié Gamache ! criait-il, la bouche pleine.",
+      "hash": "fc9588e9f2"
+    },
+    {
+      "id": "p2-s17",
+      "pagina": 2,
+      "paragrafo": 3,
+      "texto": "Quel beau mariage !",
+      "fala": "Quel beau mariage !",
+      "hash": "1b2361d8da"
+    },
+    {
+      "id": "p2-s18",
+      "pagina": 2,
+      "paragrafo": 3,
+      "texto": "— Sancho, tu n’as même pas vu la mariée, dit Don Quichotte.",
+      "fala": "Sancho, tu n’as même pas vu la mariée, dit Don Quichotte.",
+      "hash": "aa81363dbf"
+    },
+    {
+      "id": "p2-s19",
+      "pagina": 2,
+      "paragrafo": 3,
+      "texto": "— Je n’ai pas vu la mariée, mon maître, mais j’ai vu la marmite.",
+      "fala": "Je n’ai pas vu la mariée, mon maître, mais j’ai vu la marmite.",
+      "hash": "7fbab589eb"
+    },
+    {
+      "id": "p2-s20",
+      "pagina": 2,
+      "paragrafo": 3,
+      "texto": "Et elle m’a beaucoup plu ! »",
+      "fala": "Et elle m’a beaucoup plu !",
+      "hash": "c6c37e4da2"
+    },
+    {
+      "id": "p2-s21",
+      "pagina": 2,
+      "paragrafo": 4,
+      "texto": "C’est à la noce que les deux amis rencontrèrent un étudiant tout maigre, avec des lunettes et une pile de papiers sous le bras.",
+      "fala": "C’est à la noce que les deux amis rencontrèrent un étudiant tout maigre, avec des lunettes et une pile de papiers sous le bras.",
+      "hash": "486e12a343"
+    },
+    {
+      "id": "p2-s22",
+      "pagina": 2,
+      "paragrafo": 4,
+      "texto": "Tout le monde l’appelait le Cousin, parce qu’il était le cousin de la moitié du village.",
+      "fala": "Tout le monde l’appelait le Cousin, parce qu’il était le cousin de la moitié du village.",
+      "hash": "a39c2cfd4c"
+    },
+    {
+      "id": "p2-s23",
+      "pagina": 2,
+      "paragrafo": 4,
+      "texto": "Le Cousin écrivait un livre très important : il voulait découvrir qui avait été la première personne du monde à attraper un rhume.",
+      "fala": "Le Cousin écrivait un livre très important : il voulait découvrir qui avait été la première personne du monde à attraper un rhume.",
+      "hash": "af86aa7078"
+    },
+    {
+      "id": "p2-s24",
+      "pagina": 2,
+      "paragrafo": 4,
+      "texto": "« Ça, je le sais, dit Sancho.",
+      "fala": "Ça, je le sais, dit Sancho.",
+      "hash": "9a7db950ba"
+    },
+    {
+      "id": "p2-s25",
+      "pagina": 2,
+      "paragrafo": 4,
+      "texto": "C’est la première qui est sortie sous la pluie sans chapeau. »",
+      "fala": "C’est la première qui est sortie sous la pluie sans chapeau.",
+      "hash": "30c9fcfed2"
+    },
+    {
+      "id": "p2-s26",
+      "pagina": 2,
+      "paragrafo": 4,
+      "texto": "Le Cousin le nota, très sérieux.",
+      "fala": "Le Cousin le nota, très sérieux.",
+      "hash": "856d44f198"
+    },
+    {
+      "id": "p2-s27",
+      "pagina": 2,
+      "paragrafo": 4,
+      "texto": "Don Quichotte raconta qu’il allait à la grotte de Montesinos, et le Cousin fit un bond : « Une grotte enchantée !",
+      "fala": "Don Quichotte raconta qu’il allait à la grotte de Montesinos, et le Cousin fit un bond : Une grotte enchantée !",
+      "hash": "52b7cdb6a8"
+    },
+    {
+      "id": "p2-s28",
+      "pagina": 2,
+      "paragrafo": 4,
+      "texto": "Elle sera magnifique dans mon livre !",
+      "fala": "Elle sera magnifique dans mon livre !",
+      "hash": "ec64a941c8"
+    },
+    {
+      "id": "p2-s29",
+      "pagina": 2,
+      "paragrafo": 4,
+      "texto": "Je connais le chemin.",
+      "fala": "Je connais le chemin.",
+      "hash": "3127fef89a"
+    },
+    {
+      "id": "p2-s30",
+      "pagina": 2,
+      "paragrafo": 4,
+      "texto": "Et j’ai une très longue CORDE ! »",
+      "fala": "Et j’ai une très longue corde !",
+      "hash": "61405c5e2b"
+    },
+    {
+      "id": "p3-s0",
+      "pagina": 3,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapitre 45. La grotte de Montesinos. Une heure ou trois jours ?",
+      "fala": "Chapitre 45. La grotte de Montesinos. Une heure ou trois jours ?",
+      "hash": "50b19611ce"
+    },
+    {
+      "id": "p3-s1",
+      "pagina": 3,
+      "paragrafo": 0,
+      "texto": "L’entrée de la grotte était un trou sombre, bouché par les herbes et les ronces.",
+      "fala": "L’entrée de la grotte était un trou sombre, bouché par les herbes et les ronces.",
+      "hash": "4039ff02ab"
+    },
+    {
+      "id": "p3-s2",
+      "pagina": 3,
+      "paragrafo": 0,
+      "texto": "Don Quichotte se fraya un chemin avec son épée et, tout à coup, FRRROUT !",
+      "fala": "Don Quichotte se fraya un chemin avec son épée et, tout à coup, FRRROUT !",
+      "hash": "84064fba65"
+    },
+    {
+      "id": "p3-s3",
+      "pagina": 3,
+      "paragrafo": 0,
+      "texto": "Un nuage de corbeaux et de chauves-souris sortit en volant et fit tomber le chevalier sur les fesses.",
+      "fala": "Un nuage de corbeaux et de chauves-souris sortit en volant et fit tomber le chevalier sur les fesses.",
+      "hash": "ce86f9ab84"
+    },
+    {
+      "id": "p3-s4",
+      "pagina": 3,
+      "paragrafo": 0,
+      "texto": "« C’est un avertissement, mon maître ! dit Sancho.",
+      "fala": "C’est un avertissement, mon maître ! dit Sancho.",
+      "hash": "67ec646743"
+    },
+    {
+      "id": "p3-s5",
+      "pagina": 3,
+      "paragrafo": 0,
+      "texto": "Les bêtes disent : n’entrez pas !",
+      "fala": "Les bêtes disent : n’entrez pas !",
+      "hash": "14b7b7eec1"
+    },
+    {
+      "id": "p3-s6",
+      "pagina": 3,
+      "paragrafo": 0,
+      "texto": "— Elles disent : bonjour », répondit Don Quichotte, et il se releva.",
+      "fala": "Elles disent : bonjour , répondit Don Quichotte, et il se releva.",
+      "hash": "a04f9bbe33"
+    },
+    {
+      "id": "p3-s7",
+      "pagina": 3,
+      "paragrafo": 1,
+      "texto": "Le Cousin et Sancho attachèrent la corde à la taille du chevalier et la laissèrent filer doucement.",
+      "fala": "Le Cousin et Sancho attachèrent la corde à la taille du chevalier et la laissèrent filer doucement.",
+      "hash": "af324dae50"
+    },
+    {
+      "id": "p3-s8",
+      "pagina": 3,
+      "paragrafo": 1,
+      "texto": "Don Quichotte descendit, descendit, descendit, jusqu’à disparaître dans le NOIR.",
+      "fala": "Don Quichotte descendit, descendit, descendit, jusqu’à disparaître dans le noir.",
+      "hash": "bd9f341e3b"
+    },
+    {
+      "id": "p3-s9",
+      "pagina": 3,
+      "paragrafo": 1,
+      "texto": "« Encore de la corde ! » criait sa voix, de plus en plus loin.",
+      "fala": "Encore de la corde ! criait sa voix, de plus en plus loin.",
+      "hash": "a3caa65505"
+    },
+    {
+      "id": "p3-s10",
+      "pagina": 3,
+      "paragrafo": 1,
+      "texto": "Jusqu’à ce que la corde soit finie.",
+      "fala": "Jusqu’à ce que la corde soit finie.",
+      "hash": "50d677a9d8"
+    },
+    {
+      "id": "p3-s11",
+      "pagina": 3,
+      "paragrafo": 1,
+      "texto": "Et la voix aussi.",
+      "fala": "Et la voix aussi.",
+      "hash": "975a0ed54b"
+    },
+    {
+      "id": "p3-s12",
+      "pagina": 3,
+      "paragrafo": 1,
+      "texto": "Tout en bas, plus rien que le silence.",
+      "fala": "Tout en bas, plus rien que le silence.",
+      "hash": "044fda1663"
+    },
+    {
+      "id": "p3-s13",
+      "pagina": 3,
+      "paragrafo": 2,
+      "texto": "Ils attendirent très longtemps.",
+      "fala": "Ils attendirent très longtemps.",
+      "hash": "e9428ef76d"
+    },
+    {
+      "id": "p3-s14",
+      "pagina": 3,
+      "paragrafo": 2,
+      "texto": "Sancho se rongea les ongles d’une main, puis ceux de l’autre.",
+      "fala": "Sancho se rongea les ongles d’une main, puis ceux de l’autre.",
+      "hash": "39872aea07"
+    },
+    {
+      "id": "p3-s15",
+      "pagina": 3,
+      "paragrafo": 2,
+      "texto": "« Ça suffit !",
+      "fala": "Ça suffit !",
+      "hash": "001c33612e"
+    },
+    {
+      "id": "p3-s16",
+      "pagina": 3,
+      "paragrafo": 2,
+      "texto": "On tire ! »",
+      "fala": "On tire !",
+      "hash": "d9577ba495"
+    },
+    {
+      "id": "p3-s17",
+      "pagina": 3,
+      "paragrafo": 2,
+      "texto": "Ils tirèrent, tirèrent, et la corde remontait légère, légère, comme s’il n’y avait personne au bout.",
+      "fala": "Ils tirèrent, tirèrent, et la corde remontait légère, légère, comme s’il n’y avait personne au bout.",
+      "hash": "85f106ac39"
+    },
+    {
+      "id": "p3-s18",
+      "pagina": 3,
+      "paragrafo": 2,
+      "texto": "Sancho pleurait déjà quand, soudain, la corde devint lourde : BOUM !",
+      "fala": "Sancho pleurait déjà quand, soudain, la corde devint lourde : BOUM !",
+      "hash": "ab89ab4c70"
+    },
+    {
+      "id": "p3-s19",
+      "pagina": 3,
+      "paragrafo": 2,
+      "texto": "Il y avait quelqu’un !",
+      "fala": "Il y avait quelqu’un !",
+      "hash": "011c78b505"
+    },
+    {
+      "id": "p3-s20",
+      "pagina": 3,
+      "paragrafo": 2,
+      "texto": "Ils tirèrent de toutes leurs forces et, tout au fond, apparut le bacielmo.",
+      "fala": "Ils tirèrent de toutes leurs forces et, tout au fond, apparut le bacielmo.",
+      "hash": "e0d7bbed9c"
+    },
+    {
+      "id": "p3-s21",
+      "pagina": 3,
+      "paragrafo": 2,
+      "texto": "C’était Don Quichotte !",
+      "fala": "C’était Don Quichotte !",
+      "hash": "bc8ad0a1ef"
+    },
+    {
+      "id": "p3-s22",
+      "pagina": 3,
+      "paragrafo": 2,
+      "texto": "Mais il arrivait les yeux fermés, sans bouger... et il ronflait.",
+      "fala": "Mais il arrivait les yeux fermés, sans bouger... et il ronflait.",
+      "hash": "431c6fd939"
+    },
+    {
+      "id": "p3-s23",
+      "pagina": 3,
+      "paragrafo": 3,
+      "texto": "Sancho secoua son maître jusqu’à ce qu’il se réveille.",
+      "fala": "Sancho secoua son maître jusqu’à ce qu’il se réveille.",
+      "hash": "4747253f6b"
+    },
+    {
+      "id": "p3-s24",
+      "pagina": 3,
+      "paragrafo": 3,
+      "texto": "Don Quichotte regarda autour de lui, stupéfait : « Ah, mes amis, pourquoi m’avez-vous sorti de là ?",
+      "fala": "Don Quichotte regarda autour de lui, stupéfait : Ah, mes amis, pourquoi m’avez-vous sorti de là ?",
+      "hash": "398cdf0e50"
+    },
+    {
+      "id": "p3-s25",
+      "pagina": 3,
+      "paragrafo": 3,
+      "texto": "J’ai vu un palais tout entier de CRISTAL !",
+      "fala": "J’ai vu un palais tout entier de cristal !",
+      "hash": "cc7d0dec2e"
+    },
+    {
+      "id": "p3-s26",
+      "pagina": 3,
+      "paragrafo": 3,
+      "texto": "Un petit vieux à la barbe blanche jusqu’au sol, nommé Montesinos, m’a accueilli à la porte.",
+      "fala": "Un petit vieux à la barbe blanche jusqu’au sol, nommé Montesinos, m’a accueilli à la porte.",
+      "hash": "445a48f81c"
+    },
+    {
+      "id": "p3-s27",
+      "pagina": 3,
+      "paragrafo": 3,
+      "texto": "À l’intérieur, des chevaliers et des dames dorment depuis cinq cents ans, enchantés par le magicien Merlin.",
+      "fala": "À l’intérieur, des chevaliers et des dames dorment depuis cinq cents ans, enchantés par le magicien Merlin.",
+      "hash": "9dc5fccca1"
+    },
+    {
+      "id": "p3-s28",
+      "pagina": 3,
+      "paragrafo": 3,
+      "texto": "J’ai passé trois jours avec eux ! »",
+      "fala": "J’ai passé trois jours avec eux !",
+      "hash": "6a56dbfbcc"
+    },
+    {
+      "id": "p3-s29",
+      "pagina": 3,
+      "paragrafo": 4,
+      "texto": "« Trois jours ? dit Sancho.",
+      "fala": "Trois jours ? dit Sancho.",
+      "hash": "ffc651826e"
+    },
+    {
+      "id": "p3-s30",
+      "pagina": 3,
+      "paragrafo": 4,
+      "texto": "Mon maître, vous êtes resté en bas une heure !",
+      "fala": "Mon maître, vous êtes resté en bas une heure !",
+      "hash": "5eb851ba6a"
+    },
+    {
+      "id": "p3-s31",
+      "pagina": 3,
+      "paragrafo": 4,
+      "texto": "Je n’ai même pas eu le temps d’avoir faim !",
+      "fala": "Je n’ai même pas eu le temps d’avoir faim !",
+      "hash": "c186e908d4"
+    },
+    {
+      "id": "p3-s32",
+      "pagina": 3,
+      "paragrafo": 4,
+      "texto": "— Alors, là-dessous, le temps passe autrement », répondit Don Quichotte, très sérieux.",
+      "fala": "Alors, là-dessous, le temps passe autrement , répondit Don Quichotte, très sérieux.",
+      "hash": "4597ae2d06"
+    },
+    {
+      "id": "p3-s33",
+      "pagina": 3,
+      "paragrafo": 4,
+      "texto": "Le Cousin notait tout.",
+      "fala": "Le Cousin notait tout.",
+      "hash": "6e9b89349b"
+    },
+    {
+      "id": "p3-s34",
+      "pagina": 3,
+      "paragrafo": 4,
+      "texto": "Sancho se grattait la tête.",
+      "fala": "Sancho se grattait la tête.",
+      "hash": "6871d74f71"
+    },
+    {
+      "id": "p3-s35",
+      "pagina": 3,
+      "paragrafo": 4,
+      "texto": "Était-ce un rêve ?",
+      "fala": "Était-ce un rêve ?",
+      "hash": "984befd187"
+    },
+    {
+      "id": "p3-s36",
+      "pagina": 3,
+      "paragrafo": 4,
+      "texto": "Était-ce la vérité ?",
+      "fala": "Était-ce la vérité ?",
+      "hash": "d52a9b005c"
+    },
+    {
+      "id": "p3-s37",
+      "pagina": 3,
+      "paragrafo": 4,
+      "texto": "Même Don Quichotte ne savait pas le dire.",
+      "fala": "Même Don Quichotte ne savait pas le dire.",
+      "hash": "fd7c22dd00"
+    },
+    {
+      "id": "p3-s38",
+      "pagina": 3,
+      "paragrafo": 4,
+      "texto": "Quelqu’un devait résoudre ce MYSTÈRE !",
+      "fala": "Quelqu’un devait résoudre ce mystère !",
+      "hash": "3a9e9ca551"
+    },
+    {
+      "id": "p4-s0",
+      "pagina": 4,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapitre 46. Le singe devin. Maître Pierre à l’œil caché",
+      "fala": "Chapitre 46. Le singe devin. Maître Pierre à l’œil caché",
+      "hash": "cbbe5cc294"
+    },
+    {
+      "id": "p4-s1",
+      "pagina": 4,
+      "paragrafo": 0,
+      "texto": "Ce soir-là, les trois compagnons s’arrêtèrent dans une auberge.",
+      "fala": "Ce soir-là, les trois compagnons s’arrêtèrent dans une auberge.",
+      "hash": "40babeb7bc"
+    },
+    {
+      "id": "p4-s2",
+      "pagina": 4,
+      "paragrafo": 0,
+      "texto": "Don Quichotte tapa sur la table : « Une soupe pour le Chevalier aux Lions, brave homme ! »",
+      "fala": "Don Quichotte tapa sur la table : Une soupe pour le Chevalier aux Lions, brave homme !",
+      "hash": "eacdf0d194"
+    },
+    {
+      "id": "p4-s3",
+      "pagina": 4,
+      "paragrafo": 0,
+      "texto": "L’aubergiste trouva ce nom si beau qu’il alla le répéter dans toute la cuisine.",
+      "fala": "L’aubergiste trouva ce nom si beau qu’il alla le répéter dans toute la cuisine.",
+      "hash": "0b332d163a"
+    },
+    {
+      "id": "p4-s4",
+      "pagina": 4,
+      "paragrafo": 0,
+      "texto": "Ils avaient à peine commencé à manger quand la porte s’ouvrit : entra un homme vêtu de cuir, avec un tissu vert qui lui cachait un œil.",
+      "fala": "Ils avaient à peine commencé à manger quand la porte s’ouvrit : entra un homme vêtu de cuir, avec un tissu vert qui lui cachait un œil.",
+      "hash": "6d2bad2ca0"
+    },
+    {
+      "id": "p4-s5",
+      "pagina": 4,
+      "paragrafo": 0,
+      "texto": "« Y a-t-il de la place pour maître Pierre, pour son petit théâtre et pour son singe devin ?",
+      "fala": "Y a-t-il de la place pour maître Pierre, pour son petit théâtre et pour son singe devin ?",
+      "hash": "30a038c3bc"
+    },
+    {
+      "id": "p4-s6",
+      "pagina": 4,
+      "paragrafo": 0,
+      "texto": "— Pour maître Pierre, il y en a toujours ! » s’écria l’aubergiste, tout content.",
+      "fala": "Pour maître Pierre, il y en a toujours ! s’écria l’aubergiste, tout content.",
+      "hash": "4d94171145"
+    },
+    {
+      "id": "p4-s7",
+      "pagina": 4,
+      "paragrafo": 0,
+      "texto": "Et tous les deux restèrent un petit moment à parler tout bas, là-bas, dans le coin.",
+      "fala": "Et tous les deux restèrent un petit moment à parler tout bas, là-bas, dans le coin.",
+      "hash": "98860352ee"
+    },
+    {
+      "id": "p4-s8",
+      "pagina": 4,
+      "paragrafo": 1,
+      "texto": "Le SINGE était grand, n’avait pas de queue et faisait une tête très sérieuse.",
+      "fala": "Le singe était grand, n’avait pas de queue et faisait une tête très sérieuse.",
+      "hash": "6634081866"
+    },
+    {
+      "id": "p4-s9",
+      "pagina": 4,
+      "paragrafo": 1,
+      "texto": "« Il devine tout ce qui est déjà arrivé, expliqua maître Pierre.",
+      "fala": "Il devine tout ce qui est déjà arrivé, expliqua maître Pierre.",
+      "hash": "02e2aa5cee"
+    },
+    {
+      "id": "p4-s10",
+      "pagina": 4,
+      "paragrafo": 1,
+      "texto": "Ce qui va arriver, non : ça, il n’y connaît rien.",
+      "fala": "Ce qui va arriver, non : ça, il n’y connaît rien.",
+      "hash": "5da3437872"
+    },
+    {
+      "id": "p4-s11",
+      "pagina": 4,
+      "paragrafo": 1,
+      "texto": "C’est deux pièces par question ! »",
+      "fala": "C’est deux pièces par question !",
+      "hash": "89944dadf1"
+    },
+    {
+      "id": "p4-s12",
+      "pagina": 4,
+      "paragrafo": 1,
+      "texto": "Sancho voulut l’essayer tout de suite : « Alors dis-moi, monsieur le singe : que fait ma Thérèse en ce moment ? »",
+      "fala": "Sancho voulut l’essayer tout de suite : Alors dis-moi, monsieur le singe : que fait ma Thérèse en ce moment ?",
+      "hash": "967dc52792"
+    },
+    {
+      "id": "p4-s13",
+      "pagina": 4,
+      "paragrafo": 2,
+      "texto": "Maître Pierre se tapota deux fois l’épaule.",
+      "fala": "Maître Pierre se tapota deux fois l’épaule.",
+      "hash": "398ec8b546"
+    },
+    {
+      "id": "p4-s14",
+      "pagina": 4,
+      "paragrafo": 2,
+      "texto": "Le singe sauta dessus, approcha sa bouche de son oreille et claqua des dents très vite : tatatatata !",
+      "fala": "Le singe sauta dessus, approcha sa bouche de son oreille et claqua des dents très vite : tatatatata !",
+      "hash": "082f14342d"
+    },
+    {
+      "id": "p4-s15",
+      "pagina": 4,
+      "paragrafo": 2,
+      "texto": "Maître Pierre ouvrit grand l’œil qu’il avait libre, courut et s’agenouilla : « Ô célèbre Don Quichotte de la Manche, Chevalier aux Lions !",
+      "fala": "Maître Pierre ouvrit grand l’œil qu’il avait libre, courut et s’agenouilla : Ô célèbre Don Quichotte de la Manche, Chevalier aux Lions !",
+      "hash": "b6d03eed7d"
+    },
+    {
+      "id": "p4-s16",
+      "pagina": 4,
+      "paragrafo": 2,
+      "texto": "Et toi, bon Sancho Pança, le meilleur écuyer du monde : ta Thérèse est en train de peigner de la laine, à cette minute même, avec une cruche d’eau à côté d’elle ! »",
+      "fala": "Et toi, bon Sancho Pança, le meilleur écuyer du monde : ta Thérèse est en train de peigner de la laine, à cette minute même, avec une cruche d’eau à côté d’elle !",
+      "hash": "f95db1e06b"
+    },
+    {
+      "id": "p4-s17",
+      "pagina": 4,
+      "paragrafo": 3,
+      "texto": "Sancho en resta bouche bée.",
+      "fala": "Sancho en resta bouche bée.",
+      "hash": "dc937f0d51"
+    },
+    {
+      "id": "p4-s18",
+      "pagina": 4,
+      "paragrafo": 3,
+      "texto": "Don Quichotte aussi.",
+      "fala": "Don Quichotte aussi.",
+      "hash": "dcdba6788d"
+    },
+    {
+      "id": "p4-s19",
+      "pagina": 4,
+      "paragrafo": 3,
+      "texto": "Comment un singe pouvait-il savoir leurs noms ?",
+      "fala": "Comment un singe pouvait-il savoir leurs noms ?",
+      "hash": "2dc43b471d"
+    },
+    {
+      "id": "p4-s20",
+      "pagina": 4,
+      "paragrafo": 3,
+      "texto": "Et même le nouveau surnom ?",
+      "fala": "Et même le nouveau surnom ?",
+      "hash": "e2ded78b63"
+    },
+    {
+      "id": "p4-s21",
+      "pagina": 4,
+      "paragrafo": 3,
+      "texto": "Personne ici ne lui avait rien raconté !",
+      "fala": "Personne ici ne lui avait rien raconté !",
+      "hash": "365f4c6f56"
+    },
+    {
+      "id": "p4-s22",
+      "pagina": 4,
+      "paragrafo": 3,
+      "texto": "« C’est une affaire de magicien, chuchota Sancho.",
+      "fala": "C’est une affaire de magicien, chuchota Sancho.",
+      "hash": "1c2c6c6ac0"
+    },
+    {
+      "id": "p4-s23",
+      "pagina": 4,
+      "paragrafo": 3,
+      "texto": "Ou alors ce singe a lu le livre, lui aussi. »",
+      "fala": "Ou alors ce singe a lu le livre, lui aussi.",
+      "hash": "5fd2bd3fe6"
+    },
+    {
+      "id": "p4-s24",
+      "pagina": 4,
+      "paragrafo": 4,
+      "texto": "Don Quichotte paya deux pièces de plus : « Demande au singe : ce que j’ai vu dans la grotte de Montesinos, était-ce un rêve ou la vérité ? »",
+      "fala": "Don Quichotte paya deux pièces de plus : Demande au singe : ce que j’ai vu dans la grotte de Montesinos, était-ce un rêve ou la vérité ?",
+      "hash": "de601b434d"
+    },
+    {
+      "id": "p4-s25",
+      "pagina": 4,
+      "paragrafo": 4,
+      "texto": "Tatatatata !",
+      "fala": "Tatatatata !",
+      "hash": "c321478e89"
+    },
+    {
+      "id": "p4-s26",
+      "pagina": 4,
+      "paragrafo": 4,
+      "texto": "Maître Pierre écouta et répondit : « Le singe dit qu’une partie était vraie et que l’autre partie était un RÊVE.",
+      "fala": "Maître Pierre écouta et répondit : Le singe dit qu’une partie était vraie et que l’autre partie était un rêve.",
+      "hash": "dd123d9dc2"
+    },
+    {
+      "id": "p4-s27",
+      "pagina": 4,
+      "paragrafo": 4,
+      "texto": "Laquelle est laquelle, il ne le dira que vendredi.",
+      "fala": "Laquelle est laquelle, il ne le dira que vendredi.",
+      "hash": "59b8167b50"
+    },
+    {
+      "id": "p4-s28",
+      "pagina": 4,
+      "paragrafo": 4,
+      "texto": "— Tu vois, Sancho ? dit Don Quichotte.",
+      "fala": "Tu vois, Sancho ? dit Don Quichotte.",
+      "hash": "deba493a12"
+    },
+    {
+      "id": "p4-s29",
+      "pagina": 4,
+      "paragrafo": 4,
+      "texto": "Une partie était vraie !",
+      "fala": "Une partie était vraie !",
+      "hash": "33298b4f0e"
+    },
+    {
+      "id": "p4-s30",
+      "pagina": 4,
+      "paragrafo": 4,
+      "texto": "— Vous voyez, mon maître ? dit Sancho.",
+      "fala": "Vous voyez, mon maître ? dit Sancho.",
+      "hash": "f04baeb100"
+    },
+    {
+      "id": "p4-s31",
+      "pagina": 4,
+      "paragrafo": 4,
+      "texto": "L’autre était un rêve ! »",
+      "fala": "L’autre était un rêve !",
+      "hash": "90ef1f8665"
+    },
+    {
+      "id": "p5-s0",
+      "pagina": 5,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapitre 47. Le petit théâtre de maître Pierre. Don Quichotte sauve les marionnettes",
+      "fala": "Chapitre 47. Le petit théâtre de maître Pierre. Don Quichotte sauve les marionnettes",
+      "hash": "c6a0be2a41"
+    },
+    {
+      "id": "p5-s1",
+      "pagina": 5,
+      "paragrafo": 0,
+      "texto": "Maître Pierre installa une petite scène pleine de bougies allumées et se cacha derrière, pour faire bouger les MARIONNETTES.",
+      "fala": "Maître Pierre installa une petite scène pleine de bougies allumées et se cacha derrière, pour faire bouger les marionnettes.",
+      "hash": "5e8e64b928"
+    },
+    {
+      "id": "p5-s2",
+      "pagina": 5,
+      "paragrafo": 0,
+      "texto": "Un garçon, une baguette à la main, racontait l’histoire : « Voici la princesse Mélisendre, prisonnière d’une très haute tour !",
+      "fala": "Un garçon, une baguette à la main, racontait l’histoire : Voici la princesse Mélisendre, prisonnière d’une très haute tour !",
+      "hash": "b614a8a32d"
+    },
+    {
+      "id": "p5-s3",
+      "pagina": 5,
+      "paragrafo": 0,
+      "texto": "Et voici le vaillant don Gaïferos, qui arrive à cheval pour sauver la princesse ! »",
+      "fala": "Et voici le vaillant don Gaïferos, qui arrive à cheval pour sauver la princesse !",
+      "hash": "62c30acc0c"
+    },
+    {
+      "id": "p5-s4",
+      "pagina": 5,
+      "paragrafo": 1,
+      "texto": "Toute l’auberge regardait sans cligner des yeux.",
+      "fala": "Toute l’auberge regardait sans cligner des yeux.",
+      "hash": "531011d701"
+    },
+    {
+      "id": "p5-s5",
+      "pagina": 5,
+      "paragrafo": 1,
+      "texto": "Le chevalier de chiffon arriva à la TOUR.",
+      "fala": "Le chevalier de chiffon arriva à la tour.",
+      "hash": "ebac53b417"
+    },
+    {
+      "id": "p5-s6",
+      "pagina": 5,
+      "paragrafo": 1,
+      "texto": "La princesse de chiffon sauta en croupe.",
+      "fala": "La princesse de chiffon sauta en croupe.",
+      "hash": "0ef04cbb71"
+    },
+    {
+      "id": "p5-s7",
+      "pagina": 5,
+      "paragrafo": 1,
+      "texto": "Tous les deux s’enfuirent au galop !",
+      "fala": "Tous les deux s’enfuirent au galop !",
+      "hash": "774d51441e"
+    },
+    {
+      "id": "p5-s8",
+      "pagina": 5,
+      "paragrafo": 1,
+      "texto": "« Mais regardez ! cria le garçon.",
+      "fala": "Mais regardez ! cria le garçon.",
+      "hash": "30c0653a5e"
+    },
+    {
+      "id": "p5-s9",
+      "pagina": 5,
+      "paragrafo": 1,
+      "texto": "Le roi de la tour a tout découvert et a envoyé ses soldats à leur poursuite.",
+      "fala": "Le roi de la tour a tout découvert et a envoyé ses soldats à leur poursuite.",
+      "hash": "e6698b35c4"
+    },
+    {
+      "id": "p5-s10",
+      "pagina": 5,
+      "paragrafo": 1,
+      "texto": "Les voilà !",
+      "fala": "Les voilà !",
+      "hash": "68e797cb1f"
+    },
+    {
+      "id": "p5-s11",
+      "pagina": 5,
+      "paragrafo": 1,
+      "texto": "Ils vont les rattraper !",
+      "fala": "Ils vont les rattraper !",
+      "hash": "ceee17e787"
+    },
+    {
+      "id": "p5-s12",
+      "pagina": 5,
+      "paragrafo": 1,
+      "texto": "Ils vont les rattraper ! »",
+      "fala": "Ils vont les rattraper !",
+      "hash": "ceee17e787"
+    },
+    {
+      "id": "p5-s13",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "Don Quichotte n’y tint plus.",
+      "fala": "Don Quichotte n’y tint plus.",
+      "hash": "0cc301f69c"
+    },
+    {
+      "id": "p5-s14",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "Il bondit, tira son épée et cria : « Arrêtez, méchants !",
+      "fala": "Il bondit, tira son épée et cria : Arrêtez, méchants !",
+      "hash": "fd608eafed"
+    },
+    {
+      "id": "p5-s15",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "Tant que je vivrai, personne ne poursuivra ces deux-là ! »",
+      "fala": "Tant que je vivrai, personne ne poursuivra ces deux-là !",
+      "hash": "96d41a4ae1"
+    },
+    {
+      "id": "p5-s16",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "Et il fonça sur la petite scène.",
+      "fala": "Et il fonça sur la petite scène.",
+      "hash": "a34949f718"
+    },
+    {
+      "id": "p5-s17",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "ZAC !",
+      "fala": "ZAC !",
+      "hash": "29fe59e204"
+    },
+    {
+      "id": "p5-s18",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "Voilà la tête d’un soldat qui s’envole.",
+      "fala": "Voilà la tête d’un soldat qui s’envole.",
+      "hash": "0aeb8ff32f"
+    },
+    {
+      "id": "p5-s19",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "ZAC !",
+      "fala": "ZAC !",
+      "hash": "29fe59e204"
+    },
+    {
+      "id": "p5-s20",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "Le ROI tombe.",
+      "fala": "Le roi tombe.",
+      "hash": "de482ee575"
+    },
+    {
+      "id": "p5-s21",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "ZAC !",
+      "fala": "ZAC !",
+      "hash": "29fe59e204"
+    },
+    {
+      "id": "p5-s22",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "Adieu la tour.",
+      "fala": "Adieu la tour.",
+      "hash": "12ef4f6a37"
+    },
+    {
+      "id": "p5-s23",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "Maître Pierre sortit de derrière la scène à quatre pattes, et le singe s’enfuit sur le toit.",
+      "fala": "Maître Pierre sortit de derrière la scène à quatre pattes, et le singe s’enfuit sur le toit.",
+      "hash": "0ce7f32473"
+    },
+    {
+      "id": "p5-s24",
+      "pagina": 5,
+      "paragrafo": 3,
+      "texto": "Quand la poussière retomba, Don Quichotte regarda autour de lui, tout fier : « Voilà !",
+      "fala": "Quand la poussière retomba, Don Quichotte regarda autour de lui, tout fier : Voilà !",
+      "hash": "994785bb17"
+    },
+    {
+      "id": "p5-s25",
+      "pagina": 5,
+      "paragrafo": 3,
+      "texto": "Don Gaïferos et la princesse sont sauvés !",
+      "fala": "Don Gaïferos et la princesse sont sauvés !",
+      "hash": "0df15f720e"
+    },
+    {
+      "id": "p5-s26",
+      "pagina": 5,
+      "paragrafo": 3,
+      "texto": "— Sauvés ? gémit maître Pierre en ramassant les morceaux par terre.",
+      "fala": "Sauvés ? gémit maître Pierre en ramassant les morceaux par terre.",
+      "hash": "97797cf1af"
+    },
+    {
+      "id": "p5-s27",
+      "pagina": 5,
+      "paragrafo": 3,
+      "texto": "Regardez mon roi, sans tête !",
+      "fala": "Regardez mon roi, sans tête !",
+      "hash": "d101ea234e"
+    },
+    {
+      "id": "p5-s28",
+      "pagina": 5,
+      "paragrafo": 3,
+      "texto": "Regardez mon cheval, sans jambe !",
+      "fala": "Regardez mon cheval, sans jambe !",
+      "hash": "3b98b18743"
+    },
+    {
+      "id": "p5-s29",
+      "pagina": 5,
+      "paragrafo": 3,
+      "texto": "Regardez ma tour !",
+      "fala": "Regardez ma tour !",
+      "hash": "2482db766c"
+    },
+    {
+      "id": "p5-s30",
+      "pagina": 5,
+      "paragrafo": 3,
+      "texto": "C’étaient des marionnettes, monsieur !",
+      "fala": "C’étaient des marionnettes, monsieur !",
+      "hash": "6f36b4dd06"
+    },
+    {
+      "id": "p5-s31",
+      "pagina": 5,
+      "paragrafo": 3,
+      "texto": "Des marionnettes de chiffon et de carton ! »",
+      "fala": "Des marionnettes de chiffon et de carton !",
+      "hash": "c3b743a47c"
+    },
+    {
+      "id": "p5-s32",
+      "pagina": 5,
+      "paragrafo": 4,
+      "texto": "Don Quichotte regarda les marionnettes.",
+      "fala": "Don Quichotte regarda les marionnettes.",
+      "hash": "a5564df686"
+    },
+    {
+      "id": "p5-s33",
+      "pagina": 5,
+      "paragrafo": 4,
+      "texto": "Il regarda son épée.",
+      "fala": "Il regarda son épée.",
+      "hash": "575898c7ab"
+    },
+    {
+      "id": "p5-s34",
+      "pagina": 5,
+      "paragrafo": 4,
+      "texto": "Il se gratta la barbe, tout gêné : « Je jure qu’elles m’ont paru vivantes...",
+      "fala": "Il se gratta la barbe, tout gêné : Je jure qu’elles m’ont paru vivantes...",
+      "hash": "6305be3e79"
+    },
+    {
+      "id": "p5-s35",
+      "pagina": 5,
+      "paragrafo": 4,
+      "texto": "Les magiciens m’ont encore trompé.",
+      "fala": "Les magiciens m’ont encore trompé.",
+      "hash": "0bf0aa5182"
+    },
+    {
+      "id": "p5-s36",
+      "pagina": 5,
+      "paragrafo": 4,
+      "texto": "Mais je paie tout, maître Pierre !",
+      "fala": "Mais je paie tout, maître Pierre !",
+      "hash": "45cdfd9831"
+    },
+    {
+      "id": "p5-s37",
+      "pagina": 5,
+      "paragrafo": 4,
+      "texto": "Sancho, apporte la bourse ! »",
+      "fala": "Sancho, apporte la bourse !",
+      "hash": "c313657c18"
+    },
+    {
+      "id": "p5-s38",
+      "pagina": 5,
+      "paragrafo": 4,
+      "texto": "Sancho soupira : « Je n’ai jamais vu une victoire coûter si cher. »",
+      "fala": "Sancho soupira : Je n’ai jamais vu une victoire coûter si cher.",
+      "hash": "f6d560d712"
+    },
+    {
+      "id": "p6-s0",
+      "pagina": 6,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapitre 48. La barque enchantée. Encore des moulins, non !",
+      "fala": "Chapitre 48. La barque enchantée. Encore des moulins, non !",
+      "hash": "664213ef44"
+    },
+    {
+      "id": "p6-s1",
+      "pagina": 6,
+      "paragrafo": 0,
+      "texto": "Au matin, maître Pierre était déjà parti avec son singe.",
+      "fala": "Au matin, maître Pierre était déjà parti avec son singe.",
+      "hash": "7484e87df6"
+    },
+    {
+      "id": "p6-s2",
+      "pagina": 6,
+      "paragrafo": 0,
+      "texto": "Sous son banc, Sancho trouva quelque chose d’oublié : un livre.",
+      "fala": "Sous son banc, Sancho trouva quelque chose d’oublié : un livre.",
+      "hash": "73f5a0d37d"
+    },
+    {
+      "id": "p6-s3",
+      "pagina": 6,
+      "paragrafo": 0,
+      "texto": "Il l’ouvrit à une page au hasard et, en plein milieu, il reconnut les petites fourmis de son nom : « C’est notre livre, mon maître !",
+      "fala": "Il l’ouvrit à une page au hasard et, en plein milieu, il reconnut les petites fourmis de son nom : C’est notre livre, mon maître !",
+      "hash": "43936f9e3a"
+    },
+    {
+      "id": "p6-s4",
+      "pagina": 6,
+      "paragrafo": 0,
+      "texto": "Alors le singe ne devine rien du tout : maître Pierre a tout lu sur nous !",
+      "fala": "Alors le singe ne devine rien du tout : maître Pierre a tout lu sur nous !",
+      "hash": "c1cc0ca9ce"
+    },
+    {
+      "id": "p6-s5",
+      "pagina": 6,
+      "paragrafo": 0,
+      "texto": "Et le reste, je parie qu’il l’a demandé à l’aubergiste. »",
+      "fala": "Et le reste, je parie qu’il l’a demandé à l’aubergiste.",
+      "hash": "a9c896a155"
+    },
+    {
+      "id": "p6-s6",
+      "pagina": 6,
+      "paragrafo": 0,
+      "texto": "Don Quichotte devint pensif : « Ce livre court plus vite que Rossinante. »",
+      "fala": "Don Quichotte devint pensif : Ce livre court plus vite que Rossinante.",
+      "hash": "d19adae842"
+    },
+    {
+      "id": "p6-s7",
+      "pagina": 6,
+      "paragrafo": 1,
+      "texto": "Le Cousin rentra chez lui, son cahier bien rempli.",
+      "fala": "Le Cousin rentra chez lui, son cahier bien rempli.",
+      "hash": "c6fa507f96"
+    },
+    {
+      "id": "p6-s8",
+      "pagina": 6,
+      "paragrafo": 1,
+      "texto": "Quelques jours plus tard, les deux amis arrivèrent au bord d’une RIVIÈRE large et belle.",
+      "fala": "Quelques jours plus tard, les deux amis arrivèrent au bord d’une rivière large et belle.",
+      "hash": "bb7dec9c65"
+    },
+    {
+      "id": "p6-s9",
+      "pagina": 6,
+      "paragrafo": 1,
+      "texto": "Attachée à un arbre, une petite barque vide se balançait, sans rames et sans maître.",
+      "fala": "Attachée à un arbre, une petite barque vide se balançait, sans rames et sans maître.",
+      "hash": "b539b8dc6d"
+    },
+    {
+      "id": "p6-s10",
+      "pagina": 6,
+      "paragrafo": 1,
+      "texto": "« Regarde, Sancho !",
+      "fala": "Regarde, Sancho !",
+      "hash": "fbc0a21aa4"
+    },
+    {
+      "id": "p6-s11",
+      "pagina": 6,
+      "paragrafo": 1,
+      "texto": "Dans les livres, c’est toujours comme ça : une BARQUE enchantée apparaît pour emmener le chevalier jusqu’à quelqu’un qui a besoin d’aide.",
+      "fala": "Dans les livres, c’est toujours comme ça : une barque enchantée apparaît pour emmener le chevalier jusqu’à quelqu’un qui a besoin d’aide.",
+      "hash": "1bc32fd510"
+    },
+    {
+      "id": "p6-s12",
+      "pagina": 6,
+      "paragrafo": 1,
+      "texto": "Attache les bêtes et monte !",
+      "fala": "Attache les bêtes et monte !",
+      "hash": "42825f73fb"
+    },
+    {
+      "id": "p6-s13",
+      "pagina": 6,
+      "paragrafo": 1,
+      "texto": "— Mon maître, c’est une barque de pêcheur...",
+      "fala": "Mon maître, c’est une barque de pêcheur...",
+      "hash": "b16f4462c5"
+    },
+    {
+      "id": "p6-s14",
+      "pagina": 6,
+      "paragrafo": 1,
+      "texto": "— Monte, Sancho ! »",
+      "fala": "Monte, Sancho !",
+      "hash": "f52e9ebb5b"
+    },
+    {
+      "id": "p6-s15",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "La petite barque descendit la rivière, tout doucement.",
+      "fala": "La petite barque descendit la rivière, tout doucement.",
+      "hash": "10bc181b0b"
+    },
+    {
+      "id": "p6-s16",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "L’âne brayait sur la rive, et Sancho pleurait, car il lui manquait déjà.",
+      "fala": "L’âne brayait sur la rive, et Sancho pleurait, car il lui manquait déjà.",
+      "hash": "8ed2d4fbef"
+    },
+    {
+      "id": "p6-s17",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "« Nous sommes déjà très, très loin ! dit Don Quichotte.",
+      "fala": "Nous sommes déjà très, très loin ! dit Don Quichotte.",
+      "hash": "858f12746b"
+    },
+    {
+      "id": "p6-s18",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "Nous avons sûrement passé la ligne du milieu du monde.",
+      "fala": "Nous avons sûrement passé la ligne du milieu du monde.",
+      "hash": "6fec937bec"
+    },
+    {
+      "id": "p6-s19",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "On dit que, quand on passe cette ligne, tous les POUX meurent de froid.",
+      "fala": "On dit que, quand on passe cette ligne, tous les poux meurent de froid.",
+      "hash": "3d32c3e56a"
+    },
+    {
+      "id": "p6-s20",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "Regarde donc, Sancho ! »",
+      "fala": "Regarde donc, Sancho !",
+      "hash": "3eaab74817"
+    },
+    {
+      "id": "p6-s21",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "Sancho glissa la main dans son col et chercha : « J’en trouve un.",
+      "fala": "Sancho glissa la main dans son col et chercha : J’en trouve un.",
+      "hash": "9db806f2fe"
+    },
+    {
+      "id": "p6-s22",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "J’en trouve deux.",
+      "fala": "J’en trouve deux.",
+      "hash": "1aba07f481"
+    },
+    {
+      "id": "p6-s23",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "Mon maître, on n’a presque pas bougé : on voit encore Rossinante ! »",
+      "fala": "Mon maître, on n’a presque pas bougé : on voit encore Rossinante !",
+      "hash": "edb31faa86"
+    },
+    {
+      "id": "p6-s24",
+      "pagina": 6,
+      "paragrafo": 3,
+      "texto": "Plus loin, au milieu de la rivière, apparurent des maisons de bois avec d’énormes roues qui tournaient dans l’eau.",
+      "fala": "Plus loin, au milieu de la rivière, apparurent des maisons de bois avec d’énormes roues qui tournaient dans l’eau.",
+      "hash": "6273092afb"
+    },
+    {
+      "id": "p6-s25",
+      "pagina": 6,
+      "paragrafo": 3,
+      "texto": "C’étaient des MOULINS à eau, pour moudre le blé.",
+      "fala": "C’étaient des moulins à eau, pour moudre le blé.",
+      "hash": "23faa0ebda"
+    },
+    {
+      "id": "p6-s26",
+      "pagina": 6,
+      "paragrafo": 3,
+      "texto": "« Un château ! cria Don Quichotte.",
+      "fala": "Un château ! cria Don Quichotte.",
+      "hash": "2ed16b1c9b"
+    },
+    {
+      "id": "p6-s27",
+      "pagina": 6,
+      "paragrafo": 3,
+      "texto": "C’est là qu’est le prisonnier ! »",
+      "fala": "C’est là qu’est le prisonnier !",
+      "hash": "94da77a037"
+    },
+    {
+      "id": "p6-s28",
+      "pagina": 6,
+      "paragrafo": 3,
+      "texto": "Sancho se prit la tête dans les mains : « Encore des moulins, non ! »",
+      "fala": "Sancho se prit la tête dans les mains : Encore des moulins, non !",
+      "hash": "75f760a1cb"
+    },
+    {
+      "id": "p6-s29",
+      "pagina": 6,
+      "paragrafo": 3,
+      "texto": "Les meuniers, les patrons des moulins, sortirent en courant, blancs de farine de la tête aux pieds, en agitant de longues perches : « Arrêtez cette barque !",
+      "fala": "Les meuniers, les patrons des moulins, sortirent en courant, blancs de farine de la tête aux pieds, en agitant de longues perches : Arrêtez cette barque !",
+      "hash": "0d76451d66"
+    },
+    {
+      "id": "p6-s30",
+      "pagina": 6,
+      "paragrafo": 3,
+      "texto": "Vous allez taper dans la roue ! »",
+      "fala": "Vous allez taper dans la roue !",
+      "hash": "d678ac6024"
+    },
+    {
+      "id": "p6-s31",
+      "pagina": 6,
+      "paragrafo": 4,
+      "texto": "« Quels vilains fantômes ! » dit Don Quichotte, et il se mit debout, l’épée à la main.",
+      "fala": "Quels vilains fantômes ! dit Don Quichotte, et il se mit debout, l’épée à la main.",
+      "hash": "3d5027bc8f"
+    },
+    {
+      "id": "p6-s32",
+      "pagina": 6,
+      "paragrafo": 4,
+      "texto": "La barque tangua, se renversa et PLOUF !",
+      "fala": "La barque tangua, se renversa et PLOUF !",
+      "hash": "49d91f9490"
+    },
+    {
+      "id": "p6-s33",
+      "pagina": 6,
+      "paragrafo": 4,
+      "texto": "Les voilà tous les deux dans l’eau.",
+      "fala": "Les voilà tous les deux dans l’eau.",
+      "hash": "92c2b1c418"
+    },
+    {
+      "id": "p6-s34",
+      "pagina": 6,
+      "paragrafo": 4,
+      "texto": "Les meuniers repêchèrent le chevalier et l’écuyer avec leurs perches, comme deux gros poissons.",
+      "fala": "Les meuniers repêchèrent le chevalier et l’écuyer avec leurs perches, comme deux gros poissons.",
+      "hash": "8e8b309e5f"
+    },
+    {
+      "id": "p6-s35",
+      "pagina": 6,
+      "paragrafo": 4,
+      "texto": "Sur la rive, trempé, Don Quichotte paya la barque aux deux pêcheurs, qui arrivaient en courant et en ronchonnant, et soupira : « Cette fois, les magiciens ont gagné. »",
+      "fala": "Sur la rive, trempé, Don Quichotte paya la barque aux deux pêcheurs, qui arrivaient en courant et en ronchonnant, et soupira : Cette fois, les magiciens ont gagné.",
+      "hash": "d7995b6655"
+    },
+    {
+      "id": "p6-s36",
+      "pagina": 6,
+      "paragrafo": 4,
+      "texto": "Sancho essora sa chemise : « Encore une barque enchantée comme celle-là, mon maître, et on se retrouve sans bourse et sans caleçon. »",
+      "fala": "Sancho essora sa chemise : Encore une barque enchantée comme celle-là, mon maître, et on se retrouve sans bourse et sans caleçon.",
+      "hash": "4c9cf211c9"
+    },
+    {
+      "id": "p7-s0",
+      "pagina": 7,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapitre 49. La duchesse chasseresse. Le message de Sancho",
+      "fala": "Chapitre 49. La duchesse chasseresse. Le message de Sancho",
+      "hash": "d91a1ac016"
+    },
+    {
+      "id": "p7-s1",
+      "pagina": 7,
+      "paragrafo": 0,
+      "texto": "Encore un peu mouillés, les deux amis sortirent d’un bois et tombèrent sur un pré tout vert.",
+      "fala": "Encore un peu mouillés, les deux amis sortirent d’un bois et tombèrent sur un pré tout vert.",
+      "hash": "654c734762"
+    },
+    {
+      "id": "p7-s2",
+      "pagina": 7,
+      "paragrafo": 0,
+      "texto": "Un groupe de chasseurs s’y promenait, avec des chiens et des chevaux.",
+      "fala": "Un groupe de chasseurs s’y promenait, avec des chiens et des chevaux.",
+      "hash": "4baa329d2f"
+    },
+    {
+      "id": "p7-s3",
+      "pagina": 7,
+      "paragrafo": 0,
+      "texto": "Au milieu d’eux, sur un cheval blanc comme le lait, venait une dame vêtue de vert, avec un FAUCON, un oiseau chasseur, posé sur son gant.",
+      "fala": "Au milieu d’eux, sur un cheval blanc comme le lait, venait une dame vêtue de vert, avec un faucon, un oiseau chasseur, posé sur son gant.",
+      "hash": "c299683ad4"
+    },
+    {
+      "id": "p7-s4",
+      "pagina": 7,
+      "paragrafo": 1,
+      "texto": "« Voilà une grande dame, Sancho ! dit Don Quichotte en ajustant son bacielmo.",
+      "fala": "Voilà une grande dame, Sancho ! dit Don Quichotte en ajustant son bacielmo.",
+      "hash": "48c5e24c8e"
+    },
+    {
+      "id": "p7-s5",
+      "pagina": 7,
+      "paragrafo": 1,
+      "texto": "Va là-bas lui porter un MESSAGE : dis-lui que ton maître souhaite la saluer, et demande-lui s’il peut s’approcher.",
+      "fala": "Va là-bas lui porter un message : dis-lui que ton maître souhaite la saluer, et demande-lui s’il peut s’approcher.",
+      "hash": "f9a1f8b51a"
+    },
+    {
+      "id": "p7-s6",
+      "pagina": 7,
+      "paragrafo": 1,
+      "texto": "Et dis bien mon nom de chevalier.",
+      "fala": "Et dis bien mon nom de chevalier.",
+      "hash": "dd2e8de281"
+    },
+    {
+      "id": "p7-s7",
+      "pagina": 7,
+      "paragrafo": 1,
+      "texto": "Pas l’ancien : le nouveau ! »",
+      "fala": "Pas l’ancien : le nouveau !",
+      "hash": "98efd1effe"
+    },
+    {
+      "id": "p7-s8",
+      "pagina": 7,
+      "paragrafo": 1,
+      "texto": "Sancho partit au trot sur son âne, en le répétant tout bas.",
+      "fala": "Sancho partit au trot sur son âne, en le répétant tout bas.",
+      "hash": "10ec699a19"
+    },
+    {
+      "id": "p7-s9",
+      "pagina": 7,
+      "paragrafo": 1,
+      "texto": "Mais, à mi-chemin, ce fut le trou noir.",
+      "fala": "Mais, à mi-chemin, ce fut le trou noir.",
+      "hash": "95c934c69b"
+    },
+    {
+      "id": "p7-s10",
+      "pagina": 7,
+      "paragrafo": 1,
+      "texto": "Comment était-il, déjà, le nouveau nom ?",
+      "fala": "Comment était-il, déjà, le nouveau nom ?",
+      "hash": "0068480b10"
+    },
+    {
+      "id": "p7-s11",
+      "pagina": 7,
+      "paragrafo": 2,
+      "texto": "La dame écouta le message et fit un immense sourire : « Le Don Quichotte du livre ?",
+      "fala": "La dame écouta le message et fit un immense sourire : Le Don Quichotte du livre ?",
+      "hash": "aa0fbc2931"
+    },
+    {
+      "id": "p7-s12",
+      "pagina": 7,
+      "paragrafo": 2,
+      "texto": "Et toi, tu es Sancho Pança, celui de l’âne ?",
+      "fala": "Et toi, tu es Sancho Pança, celui de l’âne ?",
+      "hash": "933aa5712a"
+    },
+    {
+      "id": "p7-s13",
+      "pagina": 7,
+      "paragrafo": 2,
+      "texto": "— Moi-même, madame, et l’âne, c’est celui-là ! »",
+      "fala": "Moi-même, madame, et l’âne, c’est celui-là !",
+      "hash": "ec4316dfc3"
+    },
+    {
+      "id": "p7-s14",
+      "pagina": 7,
+      "paragrafo": 2,
+      "texto": "La dame était une DUCHESSE, propriétaire d’un palais tout proche.",
+      "fala": "La dame était une duchesse, propriétaire d’un palais tout proche.",
+      "hash": "f92820aa45"
+    },
+    {
+      "id": "p7-s15",
+      "pagina": 7,
+      "paragrafo": 2,
+      "texto": "Elle et son mari, le duc, un homme à la fine moustache qui riait pour un rien, avaient lu le livre tant de fois qu’ils en savaient des morceaux par cœur.",
+      "fala": "Elle et son mari, le duc, un homme à la fine moustache qui riait pour un rien, avaient lu le livre tant de fois qu’ils en savaient des morceaux par cœur.",
+      "hash": "8eac564db5"
+    },
+    {
+      "id": "p7-s16",
+      "pagina": 7,
+      "paragrafo": 3,
+      "texto": "Don Quichotte vint se présenter, sur son trente et un.",
+      "fala": "Don Quichotte vint se présenter, sur son trente et un.",
+      "hash": "6f3cb49534"
+    },
+    {
+      "id": "p7-s17",
+      "pagina": 7,
+      "paragrafo": 3,
+      "texto": "Sancho courut lui tenir l’étrier, là où l’on pose le pied pour descendre, mais il se prit le pied dans la selle de son âne et resta pendu la tête en bas.",
+      "fala": "Sancho courut lui tenir l’étrier, là où l’on pose le pied pour descendre, mais il se prit le pied dans la selle de son âne et resta pendu la tête en bas.",
+      "hash": "cc9263b554"
+    },
+    {
+      "id": "p7-s18",
+      "pagina": 7,
+      "paragrafo": 3,
+      "texto": "Don Quichotte, sans personne pour l’aider, descendit quand même : la selle de Rossinante glissa, et il se retrouva par terre, la selle dans les bras.",
+      "fala": "Don Quichotte, sans personne pour l’aider, descendit quand même : la selle de Rossinante glissa, et il se retrouva par terre, la selle dans les bras.",
+      "hash": "e80536e49b"
+    },
+    {
+      "id": "p7-s19",
+      "pagina": 7,
+      "paragrafo": 3,
+      "texto": "La duchesse mordit son gant pour ne pas rire.",
+      "fala": "La duchesse mordit son gant pour ne pas rire.",
+      "hash": "8aa862a93a"
+    },
+    {
+      "id": "p7-s20",
+      "pagina": 7,
+      "paragrafo": 3,
+      "texto": "C’était exactement comme dans le livre !",
+      "fala": "C’était exactement comme dans le livre !",
+      "hash": "3e2532277a"
+    },
+    {
+      "id": "p7-s21",
+      "pagina": 7,
+      "paragrafo": 4,
+      "texto": "Le duc et la duchesse emmenèrent les deux amis au PALAIS.",
+      "fala": "Le duc et la duchesse emmenèrent les deux amis au palais.",
+      "hash": "66c2bea99c"
+    },
+    {
+      "id": "p7-s22",
+      "pagina": 7,
+      "paragrafo": 4,
+      "texto": "Là, on sonna les trompettes, on répandit de l’eau parfumée et on cria : « Bienvenue au grand chevalier errant ! »",
+      "fala": "Là, on sonna les trompettes, on répandit de l’eau parfumée et on cria : Bienvenue au grand chevalier errant !",
+      "hash": "0c2e97437e"
+    },
+    {
+      "id": "p7-s23",
+      "pagina": 7,
+      "paragrafo": 4,
+      "texto": "Don Quichotte s’arrêta dans l’escalier, les yeux pleins de larmes.",
+      "fala": "Don Quichotte s’arrêta dans l’escalier, les yeux pleins de larmes.",
+      "hash": "6d9cef019e"
+    },
+    {
+      "id": "p7-s24",
+      "pagina": 7,
+      "paragrafo": 4,
+      "texto": "Pour la première fois de sa vie, le monde du dehors était exactement comme le monde qu’il imaginait.",
+      "fala": "Pour la première fois de sa vie, le monde du dehors était exactement comme le monde qu’il imaginait.",
+      "hash": "2408731d4e"
+    },
+    {
+      "id": "p7-s25",
+      "pagina": 7,
+      "paragrafo": 4,
+      "texto": "Les ducs aimaient tant le Don Quichotte du livre qu’ils décidèrent de lui faire un cadeau : de vraies aventures, inventées rien que pour lui !",
+      "fala": "Les ducs aimaient tant le Don Quichotte du livre qu’ils décidèrent de lui faire un cadeau : de vraies aventures, inventées rien que pour lui !",
+      "hash": "38687a2640"
+    },
+    {
+      "id": "p7-s26",
+      "pagina": 7,
+      "paragrafo": 4,
+      "texto": "Le duc chuchota avec la duchesse et avec le majordome du palais, un homme grand, à la voix très grave.",
+      "fala": "Le duc chuchota avec la duchesse et avec le majordome du palais, un homme grand, à la voix très grave.",
+      "hash": "9dedddde70"
+    },
+    {
+      "id": "p7-s27",
+      "pagina": 7,
+      "paragrafo": 4,
+      "texto": "Tous les trois riaient tout bas.",
+      "fala": "Tous les trois riaient tout bas.",
+      "hash": "af3152378e"
+    },
+    {
+      "id": "p7-s28",
+      "pagina": 7,
+      "paragrafo": 4,
+      "texto": "Que pouvaient-ils bien préparer ?",
+      "fala": "Que pouvaient-ils bien préparer ?",
+      "hash": "ecbf60df4c"
+    },
+    {
+      "id": "p8-s0",
+      "pagina": 8,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapitre 50. Les dames barbues. La comtesse à la grosse voix",
+      "fala": "Chapitre 50. Les dames barbues. La comtesse à la grosse voix",
+      "hash": "c65113ed13"
+    },
+    {
+      "id": "p8-s1",
+      "pagina": 8,
+      "paragrafo": 0,
+      "texto": "Après le dîner, dans le jardin du palais, on entendit un tambour : BOUM...",
+      "fala": "Après le dîner, dans le jardin du palais, on entendit un tambour : BOUM...",
+      "hash": "08c7db6443"
+    },
+    {
+      "id": "p8-s2",
+      "pagina": 8,
+      "paragrafo": 0,
+      "texto": "BOUM...",
+      "fala": "BOUM...",
+      "hash": "98c4ce39c6"
+    },
+    {
+      "id": "p8-s3",
+      "pagina": 8,
+      "paragrafo": 0,
+      "texto": "BOUM...",
+      "fala": "BOUM...",
+      "hash": "98c4ce39c6"
+    },
+    {
+      "id": "p8-s4",
+      "pagina": 8,
+      "paragrafo": 0,
+      "texto": "Entra un grand gaillard à la barbe blanche jusqu’à la ceinture, qui annonça : « La comtesse Trifaldi est venue de très loin, à pied, pour demander l’aide du célèbre Don Quichotte ! »",
+      "fala": "Entra un grand gaillard à la barbe blanche jusqu’à la ceinture, qui annonça : La comtesse Trifaldi est venue de très loin, à pied, pour demander l’aide du célèbre Don Quichotte !",
+      "hash": "c23e2649d5"
+    },
+    {
+      "id": "p8-s5",
+      "pagina": 8,
+      "paragrafo": 0,
+      "texto": "Sancho compta sur ses doigts : c’était la deuxième dame en détresse qui cherchait son maître.",
+      "fala": "Sancho compta sur ses doigts : c’était la deuxième dame en détresse qui cherchait son maître.",
+      "hash": "065436121d"
+    },
+    {
+      "id": "p8-s6",
+      "pagina": 8,
+      "paragrafo": 0,
+      "texto": "Et la première avait été pour de faux...",
+      "fala": "Et la première avait été pour de faux...",
+      "hash": "5f8c48c811"
+    },
+    {
+      "id": "p8-s7",
+      "pagina": 8,
+      "paragrafo": 1,
+      "texto": "La COMTESSE entra lentement, un voile sur le visage, avec une robe à traîne si longue que trois garçons en tenaient les bouts.",
+      "fala": "La comtesse entra lentement, un voile sur le visage, avec une robe à traîne si longue que trois garçons en tenaient les bouts.",
+      "hash": "4220401361"
+    },
+    {
+      "id": "p8-s8",
+      "pagina": 8,
+      "paragrafo": 1,
+      "texto": "Derrière elle venaient douze dames, voilées elles aussi.",
+      "fala": "Derrière elle venaient douze dames, voilées elles aussi.",
+      "hash": "9dc7e69ed9"
+    },
+    {
+      "id": "p8-s9",
+      "pagina": 8,
+      "paragrafo": 1,
+      "texto": "« Seigneur chevalier, dit la comtesse d’une grosse voix, très bizarre, un géant méchant, nommé Malambruno, nous a jeté un terrible sortilège.",
+      "fala": "Seigneur chevalier, dit la comtesse d’une grosse voix, très bizarre, un géant méchant, nommé Malambruno, nous a jeté un terrible sortilège.",
+      "hash": "ba7a5ff2b6"
+    },
+    {
+      "id": "p8-s10",
+      "pagina": 8,
+      "paragrafo": 1,
+      "texto": "Regardez ! »",
+      "fala": "Regardez !",
+      "hash": "a621d8f7c2"
+    },
+    {
+      "id": "p8-s11",
+      "pagina": 8,
+      "paragrafo": 2,
+      "texto": "Les treize soulevèrent leur voile en même temps.",
+      "fala": "Les treize soulevèrent leur voile en même temps.",
+      "hash": "fb89a3ecc6"
+    },
+    {
+      "id": "p8-s12",
+      "pagina": 8,
+      "paragrafo": 2,
+      "texto": "Elles avaient toutes une BARBE !",
+      "fala": "Elles avaient toutes une barbe !",
+      "hash": "ec8e381e72"
+    },
+    {
+      "id": "p8-s13",
+      "pagina": 8,
+      "paragrafo": 2,
+      "texto": "Des barbes blondes, noires, rousses, et une toute blanche comme du coton.",
+      "fala": "Des barbes blondes, noires, rousses, et une toute blanche comme du coton.",
+      "hash": "7b20ed4543"
+    },
+    {
+      "id": "p8-s14",
+      "pagina": 8,
+      "paragrafo": 2,
+      "texto": "Sancho recula d’un pas : « Ça alors !",
+      "fala": "Sancho recula d’un pas : Ça alors !",
+      "hash": "6c1f47f859"
+    },
+    {
+      "id": "p8-s15",
+      "pagina": 8,
+      "paragrafo": 2,
+      "texto": "Qui leur fait la barbe ?",
+      "fala": "Qui leur fait la barbe ?",
+      "hash": "c5fc3882fe"
+    },
+    {
+      "id": "p8-s16",
+      "pagina": 8,
+      "paragrafo": 2,
+      "texto": "Maître Nicolas deviendrait riche ! »",
+      "fala": "Maître Nicolas deviendrait riche !",
+      "hash": "dbfe78afeb"
+    },
+    {
+      "id": "p8-s17",
+      "pagina": 8,
+      "paragrafo": 2,
+      "texto": "Puis il regarda mieux et chuchota : « Mon maître, la comtesse porte des bottes d’homme.",
+      "fala": "Puis il regarda mieux et chuchota : Mon maître, la comtesse porte des bottes d’homme.",
+      "hash": "0887d4e784"
+    },
+    {
+      "id": "p8-s18",
+      "pagina": 8,
+      "paragrafo": 2,
+      "texto": "Et cette voix... où est-ce que j’ai déjà entendu cette voix ? »",
+      "fala": "Et cette voix... où est-ce que j’ai déjà entendu cette voix ?",
+      "hash": "db7c46fdbd"
+    },
+    {
+      "id": "p8-s19",
+      "pagina": 8,
+      "paragrafo": 3,
+      "texto": "Don Quichotte ne l’écoutait même pas : il avait déjà la main sur le cœur.",
+      "fala": "Don Quichotte ne l’écoutait même pas : il avait déjà la main sur le cœur.",
+      "hash": "6ef51d6592"
+    },
+    {
+      "id": "p8-s20",
+      "pagina": 8,
+      "paragrafo": 3,
+      "texto": "« Dites-moi ce que je dois faire, mesdames !",
+      "fala": "Dites-moi ce que je dois faire, mesdames !",
+      "hash": "b7daecaca8"
+    },
+    {
+      "id": "p8-s21",
+      "pagina": 8,
+      "paragrafo": 3,
+      "texto": "— Le géant habite le royaume de Candaya, de l’autre côté du monde, expliqua la comtesse.",
+      "fala": "Le géant habite le royaume de Candaya, de l’autre côté du monde, expliqua la comtesse.",
+      "hash": "439f46aae4"
+    },
+    {
+      "id": "p8-s22",
+      "pagina": 8,
+      "paragrafo": 3,
+      "texto": "Il n’y a qu’un seul moyen d’y aller : voler sur CLAVILÈGNE, un cheval de bois qu’on dirige avec une cheville sur son front.",
+      "fala": "Il n’y a qu’un seul moyen d’y aller : voler sur clavilègne, un cheval de bois qu’on dirige avec une cheville sur son front.",
+      "hash": "707abb1b9c"
+    },
+    {
+      "id": "p8-s23",
+      "pagina": 8,
+      "paragrafo": 3,
+      "texto": "Vous irez tous les deux, le chevalier et l’écuyer, les yeux bandés.",
+      "fala": "Vous irez tous les deux, le chevalier et l’écuyer, les yeux bandés.",
+      "hash": "1787045901"
+    },
+    {
+      "id": "p8-s24",
+      "pagina": 8,
+      "paragrafo": 3,
+      "texto": "Quand vous arriverez, nos barbes tomberont ! »",
+      "fala": "Quand vous arriverez, nos barbes tomberont !",
+      "hash": "912dabdba7"
+    },
+    {
+      "id": "p8-s25",
+      "pagina": 8,
+      "paragrafo": 4,
+      "texto": "« Tous les deux ? »",
+      "fala": "Tous les deux ?",
+      "hash": "36ef6ef7e4"
+    },
+    {
+      "id": "p8-s26",
+      "pagina": 8,
+      "paragrafo": 4,
+      "texto": "Sancho faillit s’étrangler.",
+      "fala": "Sancho faillit s’étrangler.",
+      "hash": "e518557532"
+    },
+    {
+      "id": "p8-s27",
+      "pagina": 8,
+      "paragrafo": 4,
+      "texto": "« Je ne suis pas un petit oiseau, moi !",
+      "fala": "Je ne suis pas un petit oiseau, moi !",
+      "hash": "95ebd8cabf"
+    },
+    {
+      "id": "p8-s28",
+      "pagina": 8,
+      "paragrafo": 4,
+      "texto": "Et qu’est-ce que j’ai à voir avec la barbe des autres ? »",
+      "fala": "Et qu’est-ce que j’ai à voir avec la barbe des autres ?",
+      "hash": "5f6b44195d"
+    },
+    {
+      "id": "p8-s29",
+      "pagina": 8,
+      "paragrafo": 4,
+      "texto": "Les douze dames se mirent à pleurer très fort et à essuyer leurs larmes avec leurs barbes.",
+      "fala": "Les douze dames se mirent à pleurer très fort et à essuyer leurs larmes avec leurs barbes.",
+      "hash": "f44ce42cd4"
+    },
+    {
+      "id": "p8-s30",
+      "pagina": 8,
+      "paragrafo": 4,
+      "texto": "Sancho se boucha les oreilles : « C’est bon, c’est bon, j’y vais !",
+      "fala": "Sancho se boucha les oreilles : C’est bon, c’est bon, j’y vais !",
+      "hash": "b856e70507"
+    },
+    {
+      "id": "p8-s31",
+      "pagina": 8,
+      "paragrafo": 4,
+      "texto": "Mais si je tombe de là-haut, je voudrais bien savoir qui va gouverner mon île ! »",
+      "fala": "Mais si je tombe de là-haut, je voudrais bien savoir qui va gouverner mon île !",
+      "hash": "813829cd21"
+    },
+    {
+      "id": "p8-s32",
+      "pagina": 8,
+      "paragrafo": 4,
+      "texto": "Le duc fit un clin d’œil à la duchesse.",
+      "fala": "Le duc fit un clin d’œil à la duchesse.",
+      "hash": "b31da75f35"
+    },
+    {
+      "id": "p8-s33",
+      "pagina": 8,
+      "paragrafo": 4,
+      "texto": "Cette nuit-là, quatre hommes couverts de feuilles apportèrent dans le jardin un énorme cheval, tout en bois.",
+      "fala": "Cette nuit-là, quatre hommes couverts de feuilles apportèrent dans le jardin un énorme cheval, tout en bois.",
+      "hash": "482cdaaeef"
+    },
+    {
+      "id": "p9-s0",
+      "pagina": 9,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapitre 51. Clavilègne, le cheval volant. Plus haut que les nuages",
+      "fala": "Chapitre 51. Clavilègne, le cheval volant. Plus haut que les nuages",
+      "hash": "9807727a90"
+    },
+    {
+      "id": "p9-s1",
+      "pagina": 9,
+      "paragrafo": 0,
+      "texto": "Don Quichotte monta sur le cheval de bois et tint la cheville du front.",
+      "fala": "Don Quichotte monta sur le cheval de bois et tint la cheville du front.",
+      "hash": "0119baaa65"
+    },
+    {
+      "id": "p9-s2",
+      "pagina": 9,
+      "paragrafo": 0,
+      "texto": "Sancho monta derrière lui en ronchonnant : « Ce cheval est dur comme une planche !",
+      "fala": "Sancho monta derrière lui en ronchonnant : Ce cheval est dur comme une planche !",
+      "hash": "f803023488"
+    },
+    {
+      "id": "p9-s3",
+      "pagina": 9,
+      "paragrafo": 0,
+      "texto": "Il n’y a pas un petit coussin ? »",
+      "fala": "Il n’y a pas un petit coussin ?",
+      "hash": "28463e52ab"
+    },
+    {
+      "id": "p9-s4",
+      "pagina": 9,
+      "paragrafo": 0,
+      "texto": "Tous les deux se couvrirent les yeux d’un BANDEAU noir.",
+      "fala": "Tous les deux se couvrirent les yeux d’un bandeau noir.",
+      "hash": "1bde2e6e24"
+    },
+    {
+      "id": "p9-s5",
+      "pagina": 9,
+      "paragrafo": 0,
+      "texto": "« Bon voyage, les braves ! crièrent-ils tous.",
+      "fala": "Bon voyage, les braves ! crièrent-ils tous.",
+      "hash": "d6f27010da"
+    },
+    {
+      "id": "p9-s6",
+      "pagina": 9,
+      "paragrafo": 0,
+      "texto": "Ils montent déjà !",
+      "fala": "Ils montent déjà !",
+      "hash": "b8914103bb"
+    },
+    {
+      "id": "p9-s7",
+      "pagina": 9,
+      "paragrafo": 0,
+      "texto": "Ils ont déjà dépassé le toit ! »",
+      "fala": "Ils ont déjà dépassé le toit !",
+      "hash": "7277c80f37"
+    },
+    {
+      "id": "p9-s8",
+      "pagina": 9,
+      "paragrafo": 1,
+      "texto": "Seulement, Clavilègne n’avait pas bougé d’un pouce.",
+      "fala": "Seulement, Clavilègne n’avait pas bougé d’un pouce.",
+      "hash": "d50ebd7165"
+    },
+    {
+      "id": "p9-s9",
+      "pagina": 9,
+      "paragrafo": 1,
+      "texto": "Tout doucement, les serviteurs du palais s’approchèrent par derrière avec un grand SOUFFLET, celui qu’utilise le forgeron, et leur soufflèrent du vent au visage.",
+      "fala": "Tout doucement, les serviteurs du palais s’approchèrent par derrière avec un grand soufflet, celui qu’utilise le forgeron, et leur soufflèrent du vent au visage.",
+      "hash": "d838dbd7c7"
+    },
+    {
+      "id": "p9-s10",
+      "pagina": 9,
+      "paragrafo": 1,
+      "texto": "« Je sens le vent des hauteurs, Sancho !",
+      "fala": "Je sens le vent des hauteurs, Sancho !",
+      "hash": "c0ade93367"
+    },
+    {
+      "id": "p9-s11",
+      "pagina": 9,
+      "paragrafo": 1,
+      "texto": "— Moi aussi, mon maître.",
+      "fala": "Moi aussi, mon maître.",
+      "hash": "8156369d9b"
+    },
+    {
+      "id": "p9-s12",
+      "pagina": 9,
+      "paragrafo": 1,
+      "texto": "Et j’ai bien envie de jeter un coup d’œil...",
+      "fala": "Et j’ai bien envie de jeter un coup d’œil...",
+      "hash": "beee479e30"
+    },
+    {
+      "id": "p9-s13",
+      "pagina": 9,
+      "paragrafo": 1,
+      "texto": "— N’enlève pas ton bandeau !",
+      "fala": "N’enlève pas ton bandeau !",
+      "hash": "54ba10283e"
+    },
+    {
+      "id": "p9-s14",
+      "pagina": 9,
+      "paragrafo": 1,
+      "texto": "Celui qui regarde a le vertige et tombe ! »",
+      "fala": "Celui qui regarde a le vertige et tombe !",
+      "hash": "2d78cabccc"
+    },
+    {
+      "id": "p9-s15",
+      "pagina": 9,
+      "paragrafo": 2,
+      "texto": "Ensuite, les serviteurs s’approchèrent avec une TORCHE allumée au bout d’une perche.",
+      "fala": "Ensuite, les serviteurs s’approchèrent avec une torche allumée au bout d’une perche.",
+      "hash": "1322f98856"
+    },
+    {
+      "id": "p9-s16",
+      "pagina": 9,
+      "paragrafo": 2,
+      "texto": "« Maintenant, il fait chaud ! dit Sancho.",
+      "fala": "Maintenant, il fait chaud ! dit Sancho.",
+      "hash": "4776f7d613"
+    },
+    {
+      "id": "p9-s17",
+      "pagina": 9,
+      "paragrafo": 2,
+      "texto": "— Nous passons tout près du soleil ! répondit Don Quichotte.",
+      "fala": "Nous passons tout près du soleil ! répondit Don Quichotte.",
+      "hash": "284daf1e21"
+    },
+    {
+      "id": "p9-s18",
+      "pagina": 9,
+      "paragrafo": 2,
+      "texto": "Tiens-toi bien ! »",
+      "fala": "Tiens-toi bien !",
+      "hash": "3210b0ca2b"
+    },
+    {
+      "id": "p9-s19",
+      "pagina": 9,
+      "paragrafo": 2,
+      "texto": "Le duc et la duchesse se tenaient le ventre pour ne pas rire tout haut, et les voix du jardin semblaient vraiment venir de très, très loin.",
+      "fala": "Le duc et la duchesse se tenaient le ventre pour ne pas rire tout haut, et les voix du jardin semblaient vraiment venir de très, très loin.",
+      "hash": "714ae4dc60"
+    },
+    {
+      "id": "p9-s20",
+      "pagina": 9,
+      "paragrafo": 3,
+      "texto": "Pour finir le voyage, quelqu’un alluma les fusées cachées dans la queue du cheval.",
+      "fala": "Pour finir le voyage, quelqu’un alluma les fusées cachées dans la queue du cheval.",
+      "hash": "c566955f2d"
+    },
+    {
+      "id": "p9-s21",
+      "pagina": 9,
+      "paragrafo": 3,
+      "texto": "PAN !",
+      "fala": "PAN !",
+      "hash": "c57f946c4a"
+    },
+    {
+      "id": "p9-s22",
+      "pagina": 9,
+      "paragrafo": 3,
+      "texto": "PAN !",
+      "fala": "PAN !",
+      "hash": "c57f946c4a"
+    },
+    {
+      "id": "p9-s23",
+      "pagina": 9,
+      "paragrafo": 3,
+      "texto": "PAN !",
+      "fala": "PAN !",
+      "hash": "c57f946c4a"
+    },
+    {
+      "id": "p9-s24",
+      "pagina": 9,
+      "paragrafo": 3,
+      "texto": "Clavilègne fit un bond, et les deux amis se retrouvèrent dans l’herbe.",
+      "fala": "Clavilègne fit un bond, et les deux amis se retrouvèrent dans l’herbe.",
+      "hash": "65782a037a"
+    },
+    {
+      "id": "p9-s25",
+      "pagina": 9,
+      "paragrafo": 3,
+      "texto": "Quand ils enlevèrent leur bandeau, le jardin était vide : plus de comtesse, plus de barbes.",
+      "fala": "Quand ils enlevèrent leur bandeau, le jardin était vide : plus de comtesse, plus de barbes.",
+      "hash": "07ce2c4f49"
+    },
+    {
+      "id": "p9-s26",
+      "pagina": 9,
+      "paragrafo": 3,
+      "texto": "Juste un papier accroché à une lance : \"Le célèbre Don Quichotte a remporté cette aventure rien qu’en ayant le courage d’essayer.",
+      "fala": "Juste un papier accroché à une lance : Le célèbre Don Quichotte a remporté cette aventure rien qu’en ayant le courage d’essayer.",
+      "hash": "210bd0b7bd"
+    },
+    {
+      "id": "p9-s27",
+      "pagina": 9,
+      "paragrafo": 3,
+      "texto": "Les barbes sont déjà tombées !\".",
+      "fala": "Les barbes sont déjà tombées !.",
+      "hash": "0013faca95"
+    },
+    {
+      "id": "p9-s28",
+      "pagina": 9,
+      "paragrafo": 4,
+      "texto": "Au dîner, Sancho fanfaronna : « J’ai regardé un tout petit peu.",
+      "fala": "Au dîner, Sancho fanfaronna : J’ai regardé un tout petit peu.",
+      "hash": "30c23d432c"
+    },
+    {
+      "id": "p9-s29",
+      "pagina": 9,
+      "paragrafo": 4,
+      "texto": "La Terre était grande comme un grain de moutarde !",
+      "fala": "La Terre était grande comme un grain de moutarde !",
+      "hash": "b33bd1b8c7"
+    },
+    {
+      "id": "p9-s30",
+      "pagina": 9,
+      "paragrafo": 4,
+      "texto": "Et je suis descendu du cheval et j’ai joué avec sept petites chèvres, là-haut dans le ciel : deux vertes, deux rouges, deux bleues et une toute mélangée. »",
+      "fala": "Et je suis descendu du cheval et j’ai joué avec sept petites chèvres, là-haut dans le ciel : deux vertes, deux rouges, deux bleues et une toute mélangée.",
+      "hash": "407a1fae1d"
+    },
+    {
+      "id": "p9-s31",
+      "pagina": 9,
+      "paragrafo": 4,
+      "texto": "La duchesse pleurait de rire.",
+      "fala": "La duchesse pleurait de rire.",
+      "hash": "1b1318c0a0"
+    },
+    {
+      "id": "p9-s32",
+      "pagina": 9,
+      "paragrafo": 4,
+      "texto": "Don Quichotte s’approcha de son oreille : « Sancho, si tu veux que je croie à tes petites chèvres du ciel, crois à mon palais de cristal de la grotte. »",
+      "fala": "Don Quichotte s’approcha de son oreille : Sancho, si tu veux que je croie à tes petites chèvres du ciel, crois à mon palais de cristal de la grotte.",
+      "hash": "1dd32c3a29"
+    },
+    {
+      "id": "p9-s33",
+      "pagina": 9,
+      "paragrafo": 4,
+      "texto": "Sancho réfléchit un petit moment et fit un clin d’œil : « Marché conclu, mon maître.",
+      "fala": "Sancho réfléchit un petit moment et fit un clin d’œil : Marché conclu, mon maître.",
+      "hash": "2d67f67ff9"
+    },
+    {
+      "id": "p9-s34",
+      "pagina": 9,
+      "paragrafo": 4,
+      "texto": "Les petites chèvres et le palais restent là-haut, à jouer ensemble. »",
+      "fala": "Les petites chèvres et le palais restent là-haut, à jouer ensemble.",
+      "hash": "4f40e541e0"
+    },
+    {
+      "id": "p9-s35",
+      "pagina": 9,
+      "paragrafo": 4,
+      "texto": "Alors le duc se leva : « Sancho Pança, fais ta valise.",
+      "fala": "Alors le duc se leva : Sancho Pança, fais ta valise.",
+      "hash": "bf05d3fae4"
+    },
+    {
+      "id": "p9-s36",
+      "pagina": 9,
+      "paragrafo": 4,
+      "texto": "Demain, tu vas gouverner ton ÎLE ! »",
+      "fala": "Demain, tu vas gouverner ton île !",
+      "hash": "ad37950fb7"
+    },
+    {
+      "id": "p9-s37",
+      "pagina": 9,
+      "paragrafo": 4,
+      "texto": "Sancho laissa tomber sa cuillère dans sa soupe.",
+      "fala": "Sancho laissa tomber sa cuillère dans sa soupe.",
+      "hash": "632844e811"
+    }
+  ],
+  "palavras": [
+    {
+      "slug": "singe",
+      "palavra": "SINGE",
+      "silabas": "SIN • GE",
+      "fala": "sin... ge... singe!",
+      "hash": "50ce8e37c0"
+    },
+    {
+      "slug": "palais",
+      "palavra": "PALAIS",
+      "silabas": "PA • LAIS",
+      "fala": "pa... lais... palais!",
+      "hash": "52b3e5e2d9"
+    },
+    {
+      "slug": "cheval",
+      "palavra": "CHEVAL",
+      "silabas": "CHE • VAL",
+      "fala": "che... val... cheval!",
+      "hash": "106f173547"
+    },
+    {
+      "slug": "poemes",
+      "palavra": "POÈMES",
+      "silabas": "PO • ÈMES",
+      "fala": "po... èmes... poèmes!",
+      "hash": "1f38c35a5a"
+    },
+    {
+      "slug": "grotte",
+      "palavra": "GROTTE",
+      "silabas": "GROT • TE",
+      "fala": "grot... te... grotte!",
+      "hash": "f31e63882a"
+    },
+    {
+      "slug": "noce",
+      "palavra": "NOCE",
+      "silabas": "NO • CE",
+      "fala": "no... ce... noce!",
+      "hash": "4dc0445eec"
+    },
+    {
+      "slug": "marmite",
+      "palavra": "MARMITE",
+      "silabas": "MAR • MI • TE",
+      "fala": "mar... mi... te... marmite!",
+      "hash": "34dd4d78c8"
+    },
+    {
+      "slug": "corde",
+      "palavra": "CORDE",
+      "silabas": "COR • DE",
+      "fala": "cor... de... corde!",
+      "hash": "3ca5e3ddd8"
+    },
+    {
+      "slug": "noir",
+      "palavra": "NOIR",
+      "silabas": "NOIR",
+      "fala": "noir... noir!",
+      "hash": "d5637ebd00"
+    },
+    {
+      "slug": "cristal",
+      "palavra": "CRISTAL",
+      "silabas": "CRIS • TAL",
+      "fala": "cris... tal... cristal!",
+      "hash": "52d79a6bf6"
+    },
+    {
+      "slug": "mystere",
+      "palavra": "MYSTÈRE",
+      "silabas": "MYS • TÈ • RE",
+      "fala": "mys... tè... re... mystère!",
+      "hash": "40b5df2b6c"
+    },
+    {
+      "slug": "reve",
+      "palavra": "RÊVE",
+      "silabas": "RÊVE",
+      "fala": "rêve... rêve!",
+      "hash": "f741f5167c"
+    },
+    {
+      "slug": "marionnettes",
+      "palavra": "MARIONNETTES",
+      "silabas": "MA • RION • NET • TES",
+      "fala": "ma... rion... net... tes... marionnettes!",
+      "hash": "52f3375c75"
+    },
+    {
+      "slug": "tour",
+      "palavra": "TOUR",
+      "silabas": "TOUR",
+      "fala": "tour... tour!",
+      "hash": "68e4afc697"
+    },
+    {
+      "slug": "roi",
+      "palavra": "ROI",
+      "silabas": "ROI",
+      "fala": "roi... roi!",
+      "hash": "fef657cfa4"
+    },
+    {
+      "slug": "riviere",
+      "palavra": "RIVIÈRE",
+      "silabas": "RI • VIÈ • RE",
+      "fala": "ri... viè... re... rivière!",
+      "hash": "6d0b9bd859"
+    },
+    {
+      "slug": "barque",
+      "palavra": "BARQUE",
+      "silabas": "BARQUE",
+      "fala": "barque... barque!",
+      "hash": "05d1edaeda"
+    },
+    {
+      "slug": "poux",
+      "palavra": "POUX",
+      "silabas": "POUX",
+      "fala": "poux... poux!",
+      "hash": "948f86f30d"
+    },
+    {
+      "slug": "moulins",
+      "palavra": "MOULINS",
+      "silabas": "MOU • LINS",
+      "fala": "mou... lins... moulins!",
+      "hash": "3252deface"
+    },
+    {
+      "slug": "faucon",
+      "palavra": "FAUCON",
+      "silabas": "FAU • CON",
+      "fala": "fau... con... faucon!",
+      "hash": "2ecbe7ea61"
+    },
+    {
+      "slug": "message",
+      "palavra": "MESSAGE",
+      "silabas": "MES • SA • GE",
+      "fala": "mes... sa... ge... message!",
+      "hash": "fe3950dcb5"
+    },
+    {
+      "slug": "duchesse",
+      "palavra": "DUCHESSE",
+      "silabas": "DU • CHES • SE",
+      "fala": "du... ches... se... duchesse!",
+      "hash": "f612c7b8d7"
+    },
+    {
+      "slug": "comtesse",
+      "palavra": "COMTESSE",
+      "silabas": "COM • TES • SE",
+      "fala": "com... tes... se... comtesse!",
+      "hash": "c13194192c"
+    },
+    {
+      "slug": "barbe",
+      "palavra": "BARBE",
+      "silabas": "BARBE",
+      "fala": "barbe... barbe!",
+      "hash": "fd35ec0dc0"
+    },
+    {
+      "slug": "clavilegne",
+      "palavra": "CLAVILÈGNE",
+      "silabas": "CLA • VI • LÈGNE",
+      "fala": "cla... vi... lègne... clavilègne!",
+      "hash": "34e4750702"
+    },
+    {
+      "slug": "bandeau",
+      "palavra": "BANDEAU",
+      "silabas": "BAN • DEAU",
+      "fala": "ban... deau... bandeau!",
+      "hash": "16c07d382d"
+    },
+    {
+      "slug": "soufflet",
+      "palavra": "SOUFFLET",
+      "silabas": "SOUF • FLET",
+      "fala": "souf... flet... soufflet!",
+      "hash": "a0c84105f2"
+    },
+    {
+      "slug": "torche",
+      "palavra": "TORCHE",
+      "silabas": "TOR • CHE",
+      "fala": "tor... che... torche!",
+      "hash": "88836bafd7"
+    },
+    {
+      "slug": "ile",
+      "palavra": "ÎLE",
+      "silabas": "ÎLE",
+      "fala": "île... île!",
+      "hash": "bfb2387ec9"
+    }
+  ]
+}
