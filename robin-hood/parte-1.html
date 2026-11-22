@@ -278,7 +278,12 @@
                 cena: {
                     real: 'p8-real.webp', emoji: '🌳',
                     alt: 'Debaixo do Grande Carvalho oco de Xervedo, Lady Mariana recebe Robin Hood, Grilo e João Pequeno (todos vestindo verde-folha) enquanto Robin risca na terra o plano do resgate',
-                    legendaReal: '🌳 O Esconderijo do Grande Carvalho'
+                    legendaReal: '🌳 O Esconderijo do Grande Carvalho',
+                    hotspots: [
+                        { x: 35, y: 4, w: 30, h: 30, palavra: 'CARVALHO', emoji: '🌳' },
+                        { x: 50, y: 34, w: 14, h: 36, palavra: 'ESCONDERIJO', emoji: '🍃' },
+                        { x: 50, y: 74, w: 22, h: 16, palavra: 'PLANO', emoji: '🗺️' }
+                    ]
                 }
             },
             {
@@ -296,10 +301,23 @@
                     real: 'p9-real.webp', emoji: '🗝️',
                     alt: 'Nos fundos da cadeia de pedra ao entardecer, João Pequeno ergue Grilo até a janela alta para pegar a chave enquanto Robin desce os sacos de farinha por uma corda',
                     legendaReal: '🗝️ Um Resgate Sem Fazer Barulho!',
-                    camadas: [
-                        { id: 'c-chave', emoji: '🗝️', item: 'chave', x: 35, y: 48, w: 12 },
-                        { id: 'c-corda', emoji: '🪢', item: 'corda', x: 64, y: 55, w: 14 },
-                        { id: 'c-farinha', emoji: '🌾', item: 'farinha', x: 64, y: 74, w: 15 }
+                    precarregar: ['p9-stage-1.webp', 'p9-stage-2.webp', 'p9-stage-3.webp'],
+                    realCena: (st) => {
+                        const n = st.usados.size;
+                        if (n === 0) return null;
+                        const etapas = [null, 'p9-stage-1.webp', 'p9-stage-2.webp', 'p9-stage-3.webp'];
+                        const legendas = [
+                            null,
+                            '🗝️ Clac! A Cela Abriu e Mestre Tomé Está Livre!',
+                            '🪢 Corda Firme Amarrada no Saco de Farinha!',
+                            '🌾 Farinha Resgatada Sem Fazer Nenhum Barulho!'
+                        ];
+                        return { src: etapas[n], legenda: legendas[n] };
+                    },
+                    hotspots: [
+                        { x: 44, y: 31, w: 12, h: 20, palavra: 'CADEIA', emoji: '🔒' },
+                        { x: 11, y: 54, w: 14, h: 38, palavra: 'CHAVE', emoji: '🗝️' },
+                        { x: 56, y: 12, w: 16, h: 48, palavra: 'CORDA', emoji: '🪢' }
                     ],
                     cartoes: {
                         tipo: 'pedido',
@@ -329,7 +347,12 @@
                 cena: {
                     real: 'p10-real.webp', emoji: '🏹',
                     alt: 'Na beira da Floresta de Xervedo, Robin Hood rebate o Xerife furioso enquanto João Pequeno, Lady Mariana, Grilo e Mestre Tomé devolvem os sacos de farinha às famílias',
-                    legendaReal: '🏹 Devolver o Pão Tomado Não É Roubar!'
+                    legendaReal: '🏹 Devolver o Pão Tomado Não É Roubar!',
+                    hotspots: [
+                        { x: 25, y: 24, w: 20, h: 20, palavra: 'FARINHA', emoji: '🍞' },
+                        { x: 60, y: 46, w: 18, h: 44, palavra: 'XERIFE', emoji: '😠' },
+                        { x: 9, y: 34, w: 14, h: 52, palavra: 'VERDADE', emoji: '✨' }
+                    ]
                 }
             },
             {
@@ -346,7 +369,12 @@
                 cena: {
                     real: 'p11-real.webp', emoji: '🍞',
                     alt: 'Debaixo do Grande Carvalho iluminado por lanternas, Mestre Tomé abraça Grilo diante do banquete de pães enquanto Lady Mariana mostra a Robin e João Pequeno o cartaz da Flecha de Ouro',
-                    legendaReal: '🍞 Festa no Grande Carvalho e o Cartaz da Flecha de Ouro'
+                    legendaReal: '🍞 Festa no Grande Carvalho e o Cartaz da Flecha de Ouro',
+                    hotspots: [
+                        { x: 36, y: 62, w: 26, h: 26, palavra: 'BANQUETE', emoji: '🍞' },
+                        { x: 76, y: 54, w: 9, h: 24, palavra: 'FLECHA', emoji: '🏹' },
+                        { x: 80, y: 40, w: 12, h: 16, palavra: 'ARMADILHA', emoji: '🕸️' }
+                    ]
                 }
             }
         ]
