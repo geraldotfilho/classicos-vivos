@@ -1,7 +1,7 @@
 {
   "codigoVoz": "fr-FR",
   "amostra": "Bonjour ! Je vais lire cette histoire avec toi. Tourne la page quand tu veux !",
-  "nomes": "Don Quichotte, Miguel de Cervantes, Alonso Quichano, Rossinante, la Manche, Aldonza Lorenzo, Dulcinée du Toboso, Montiel, Sancho Pança, Campo de Criptana, Mambrin, Micomicona, Pandafilando, Alifanfaron, Trapobane, Pentapolin, Freston, maître Nicolas, Dorothée, Teresa Pança, Sanchica, Eugène, Tachounette, Sierra Morena, Chevalier à la Triste Figure, Lope Ruiz, Amadis de Gaule, Pandafilando de la Fosca Vista, Don Diego, doña Cristina, Gamache, Montesinos, Merlin, maître Pierre, Mélisendre, don Gaïferos, comtesse Trifaldi, Malambruno, Candaya, Clavilègne, Chevalier aux Lions",
+  "nomes": "Don Quichotte, Miguel de Cervantes, Alonso Quichano, Rossinante, la Manche, Aldonza Lorenzo, Dulcinée du Toboso, Montiel, Sancho Pança, Campo de Criptana, Mambrin, Micomicona, Pandafilando, Alifanfaron, Trapobane, Pentapolin, Freston, maître Nicolas, Dorothée, Teresa Pança, Sanchica, Eugène, Tachounette, Sierra Morena, Chevalier à la Triste Figure, Lope Ruiz, Amadis de Gaule, Pandafilando de la Fosca Vista, Sansón Carrasco, bachelier, Tomé, Don Diego, Chevalier aux Miroirs, Chevalier au Manteau Vert, Chevalier aux Lions, doña Cristina, Gamache, Montesinos, Merlin, maître Pierre, Mélisendre, don Gaïferos, comtesse Trifaldi, Malambruno, Candaya, Clavilègne",
   "elenco": {
     "NARRADORA": {"voz": "fr-fr-tutor-4", "estilo": "warm, gentle storyteller reading aloud to young children in French from France; calm, clear pace; expressive but not theatrical"},
     "QUIXOTE": {"voz": "fr-fr-assistant-4", "estilo": "elderly knight in French from France; noble, solemn and dreamy, speaking with heartfelt conviction; never mocking"},
@@ -19,6 +19,13 @@
     "SOBRINHA": {"voz": "fr-fr-assistant-12", "estilo": "young woman laughing and crying with joy, hugging her uncle in French from France"},
     "TERESA": {"voz": "fr-fr-csagent-6", "estilo": "warm-hearted wife, eager and affectionate in French from France"},
     "POVO": {"voz": "fr-fr-concierge-6", "estilo": "cheerful villagers calling out together, lively and playful in French from France"},
+    "GOVERNANTA": {"voz": "fr-fr-csagent-11", "estilo": "stern but loving housekeeper guarding the door, firm and a little comic, caring underneath in French from France"},
+    "SANSAO": {"voz": "fr-fr-concierge-2", "estilo": "cheerful young scholar, playful and bright, fond of his old neighbor in French from France"},
+    "SANSAO_ESPELHOS": {"voz": "fr-fr-concierge-2", "estilo": "young knight in disguise boasting with a deeper, grand voice, a bit theatrical and funny in French from France"},
+    "TOME": {"voz": "fr-fr-tutor-3", "estilo": "friendly young neighbor, easygoing, trying not to laugh in French from France"},
+    "TOME_NARIGUDO": {"voz": "fr-fr-tutor-3", "estilo": "friendly squire speaking in a stuffy, nasal voice as if his nose is blocked, jolly in French from France"},
+    "DIABINHO": {"voz": "fr-fr-assistant-10", "estilo": "very polite traveling actor dressed as a little devil, cheerful and courteous in French from France"},
+    "TRATADOR": {"voz": "fr-fr-concierge-8", "estilo": "practical lion keeper calling down from the top of the cart, firm, a bit nervous in French from France"},
     "DOM_DIEGO": {"voz": "fr-fr-concierge-4", "estilo": "calm, gentle and kind gentleman, wise and patient, concerned for his new friend in French from France"},
     "LOURENCO": {"voz": "fr-fr-training-4", "estilo": "shy young poet, gentle, whispering then blushing with joy in French from France"},
     "COZINHEIRO": {"voz": "fr-fr-assistant-2", "estilo": "jolly wedding cook, generous and laughing in French from France"},

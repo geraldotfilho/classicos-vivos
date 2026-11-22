@@ -94,7 +94,7 @@ Pero, cuando la carreta desapareció en la curva, todavía se oía un ruidito al
             hash: '196ec55d97',
             capitulo: '🌲 Capítulo 38 • La noche en el bosque',
             titulo: 'El escudero narigudo',
-            texto: `Aquella noche, los dos amigos dormían debajo de unos árboles altos cuando un ruido despertó a don Quijote: tlin... tlin... ¡tlan! Otro caballero, con armadura, acababa de llegar al {{BOSQUE|BOS • QUE|🌲}}. Se bajó del caballo, se sentó en la hierba y soltó un suspiro larguísimo, de esos de quien echa mucho de menos a alguien.
+            texto: `Aquella noche, los dos amigos dormían debajo de unos árboles altos cuando un ruido despertó a don Quijote: tlin... tlin... tlan. Otro caballero, con armadura, acababa de llegar al {{BOSQUE|BOS • QUE|🌲}}. Se bajó del caballo, se sentó en la hierba y soltó un suspiro larguísimo, de esos de quien echa mucho de menos a alguien.
 
 Los dos caballeros empezaron a conversar a oscuras, hablando bonito y difícil. El escudero del otro caballero no salía de la sombra y hablaba con una voz gangosa, como quien tiene la nariz tapada: —Deja que los amos hablen difícil. ¡Vamos a charlar nosotros dos, como buenos {{ESCUDEROS|ES • CU • DE • ROS|🤝}}! Sacó de las alforjas una {{EMPANADA|EM • PA • NA • DA|🥧}} tan grande como una rueda de carreta y la partió por la mitad.
 

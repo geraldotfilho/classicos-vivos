@@ -166,7 +166,7 @@ Le gardien vit qu’il n’y avait pas d’autre moyen. Il attendit que tout le 
 
 Enfin, le lion passa la tête hors de la cage et regarda bien le chevalier. Don Quichotte ne bougea pas. Le lion regarda, regarda... se retourna, lui montra son derrière et se {{COUCHA|COU • CHA|💤}} pour dormir.
 
-Don Quichotte attendit. Et il attendit encore un peu. « Piquez le lion avec un bâton, brave homme, pour qu’il sorte ! » « Moi ? Jamais ! répondit le gardien, tout là-haut. Un lion qui dort, on ne le réveille pas ! Vous avez déjà montré que vous êtes courageux. » « Alors vous pouvez fermer la cage, dit Don Quichotte en soufflant. Il n’a pas voulu se battre. La victoire est à moi ! » Le gardien referma la porte en vitesse et promit de raconter au roi tout ce qu’il avait vu.
+Don Quichotte attendit. Et il attendit encore un peu. « Piquez le lion avec un bâton, brave homme, pour qu’il sorte ! » « Moi, jamais ! répondit le gardien, tout là-haut. Un lion qui dort, on ne le réveille pas ! Vous avez déjà montré que vous êtes courageux. » « Alors vous pouvez fermer la cage, dit Don Quichotte en soufflant. Il n’a pas voulu se battre. La victoire est à moi ! » Le gardien referma la porte en vitesse et promit de raconter au roi tout ce qu’il avait vu.
 
 Sancho revint en courant, tâta son maître de la tête aux pieds et compta : « Deux bras, deux jambes, un nez... Il est en un seul morceau ! » Et il le serra très fort dans ses bras. « À partir d’aujourd’hui, annonça le chevalier, je ne suis plus le Chevalier à la Triste Figure. Je suis le Chevalier aux {{LIONS|LI • ONS|🦁}} ! »
 

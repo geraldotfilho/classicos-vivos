@@ -7,7 +7,7 @@
    - Páginas HTML e vozes.js: rede primeiro com limite de 2,5 s (se a rede estiver lenta, abre do cache na hora).
    - Narração gravada (*.mp3 e *.json): rede primeiro com limite de 2,5 s, cache próprio (cv-narracao).
    - Demais arquivos: cache primeiro (abre instantâneo no tablet). */
-const CACHE = 'classicos-vivos-a3678dcad6d3';
+const CACHE = 'classicos-vivos-5cc907576c09';
 const CACHE_AUDIO = 'cv-narracao';
 const CACHE_META = 'cv-meta';
 const FILES = [
@@ -113,7 +113,7 @@ const FILES = [
     ],
     [
         "./assets/js/offline-manager.js",
-        "79ac8e5c"
+        "59fcb478"
     ],
     [
         "./assets/js/texto.js",
@@ -1061,15 +1061,15 @@ const FILES = [
     ],
     [
         "./dom-quixote/traducoes/parte-5.en.js",
-        "dfc83b20"
+        "65dfb87f"
     ],
     [
         "./dom-quixote/traducoes/parte-5.es.js",
-        "4cbc1e4b"
+        "dfd005b2"
     ],
     [
         "./dom-quixote/traducoes/parte-5.fr.js",
-        "b9ddea8c"
+        "a1478f7c"
     ],
     [
         "./dom-quixote/traducoes/parte-6.en.js",
@@ -1106,6 +1106,14 @@ const FILES = [
     [
         "./robin-hood/imagens/parte-1/p1-real.webp",
         "53ea5194"
+    ],
+    [
+        "./robin-hood/imagens/parte-1/p10-real.webp",
+        "a939c42f"
+    ],
+    [
+        "./robin-hood/imagens/parte-1/p11-real.webp",
+        "36e76db7"
     ],
     [
         "./robin-hood/imagens/parte-1/p2-real.webp",
@@ -1161,15 +1169,27 @@ const FILES = [
     ],
     [
         "./robin-hood/imagens/parte-1/p8-real.webp",
-        "80b65c04"
+        "4a4d5ea4"
     ],
     [
         "./robin-hood/imagens/parte-1/p9-real.webp",
-        "f61ad89f"
+        "b079f9da"
+    ],
+    [
+        "./robin-hood/imagens/parte-1/p9-stage-1.webp",
+        "43a17a6c"
+    ],
+    [
+        "./robin-hood/imagens/parte-1/p9-stage-2.webp",
+        "ae3dafe9"
+    ],
+    [
+        "./robin-hood/imagens/parte-1/p9-stage-3.webp",
+        "e230503c"
     ],
     [
         "./robin-hood/parte-1.html",
-        "dc37c99a"
+        "cc00699a"
     ],
     [
         "./sobre.html",

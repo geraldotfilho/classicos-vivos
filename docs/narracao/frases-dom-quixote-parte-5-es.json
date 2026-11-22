@@ -1247,20 +1247,12 @@
       "id": "p5-s1",
       "pagina": 5,
       "paragrafo": 0,
-      "texto": "Aquella noche, los dos amigos dormían debajo de unos árboles altos cuando un ruido despertó a don Quijote: tlin... tlin...",
-      "fala": "Aquella noche, los dos amigos dormían debajo de unos árboles altos cuando un ruido despertó a don Quijote: tlin... tlin...",
-      "hash": "0ba41e9fcd"
+      "texto": "Aquella noche, los dos amigos dormían debajo de unos árboles altos cuando un ruido despertó a don Quijote: tlin... tlin... tlan.",
+      "fala": "Aquella noche, los dos amigos dormían debajo de unos árboles altos cuando un ruido despertó a don Quijote: tlin... tlin... tlan.",
+      "hash": "da0879b537"
     },
     {
       "id": "p5-s2",
-      "pagina": 5,
-      "paragrafo": 0,
-      "texto": "¡tlan!",
-      "fala": "¡tlan!",
-      "hash": "c906012450"
-    },
-    {
-      "id": "p5-s3",
       "pagina": 5,
       "paragrafo": 0,
       "texto": "Otro caballero, con armadura, acababa de llegar al BOSQUE.",
@@ -1268,7 +1260,7 @@
       "hash": "e80e1bacfa"
     },
     {
-      "id": "p5-s4",
+      "id": "p5-s3",
       "pagina": 5,
       "paragrafo": 0,
       "texto": "Se bajó del caballo, se sentó en la hierba y soltó un suspiro larguísimo, de esos de quien echa mucho de menos a alguien.",
@@ -1276,7 +1268,7 @@
       "hash": "160e8602f0"
     },
     {
-      "id": "p5-s5",
+      "id": "p5-s4",
       "pagina": 5,
       "paragrafo": 1,
       "texto": "Los dos caballeros empezaron a conversar a oscuras, hablando bonito y difícil.",
@@ -1284,7 +1276,7 @@
       "hash": "97a0b2d9f1"
     },
     {
-      "id": "p5-s6",
+      "id": "p5-s5",
       "pagina": 5,
       "paragrafo": 1,
       "texto": "El escudero del otro caballero no salía de la sombra y hablaba con una voz gangosa, como quien tiene la nariz tapada: —Deja que los amos hablen difícil.",
@@ -1292,7 +1284,7 @@
       "hash": "9c189cd585"
     },
     {
-      "id": "p5-s7",
+      "id": "p5-s6",
       "pagina": 5,
       "paragrafo": 1,
       "texto": "¡Vamos a charlar nosotros dos, como buenos ESCUDEROS!",
@@ -1300,7 +1292,7 @@
       "hash": "26bc6c3281"
     },
     {
-      "id": "p5-s8",
+      "id": "p5-s7",
       "pagina": 5,
       "paragrafo": 1,
       "texto": "Sacó de las alforjas una EMPANADA tan grande como una rueda de carreta y la partió por la mitad.",
@@ -1308,7 +1300,7 @@
       "hash": "cc5576ae00"
     },
     {
-      "id": "p5-s9",
+      "id": "p5-s8",
       "pagina": 5,
       "paragrafo": 2,
       "texto": "Sancho nunca le había cogido cariño a nadie tan deprisa.",
@@ -1316,7 +1308,7 @@
       "hash": "d9ddd1e680"
     },
     {
-      "id": "p5-s10",
+      "id": "p5-s9",
       "pagina": 5,
       "paragrafo": 2,
       "texto": "—Qué curioso... tu voz me recuerda a alguien de mi pueblo.",
@@ -1324,7 +1316,7 @@
       "hash": "e8193bfcf3"
     },
     {
-      "id": "p5-s11",
+      "id": "p5-s10",
       "pagina": 5,
       "paragrafo": 2,
       "texto": "—¡Será la empanada! —contestó el otro, muy rápido, y le llenó la boca a Sancho con otro trozo.",
@@ -1332,7 +1324,7 @@
       "hash": "51ca5740fa"
     },
     {
-      "id": "p5-s12",
+      "id": "p5-s11",
       "pagina": 5,
       "paragrafo": 2,
       "texto": "—Bi abo solo be da queso duro y probesas de isla —contó Sancho, con la boca llena.",
@@ -1340,7 +1332,7 @@
       "hash": "ed14688e51"
     },
     {
-      "id": "p5-s13",
+      "id": "p5-s12",
       "pagina": 5,
       "paragrafo": 2,
       "texto": "Tragó y siguió: —¡Pero yo no lo cambio por ningún otro!",
@@ -1348,7 +1340,7 @@
       "hash": "5d021f2c09"
     },
     {
-      "id": "p5-s14",
+      "id": "p5-s13",
       "pagina": 5,
       "paragrafo": 2,
       "texto": "Tiene corazón de niño: no sabe hacerle daño a nadie.",
@@ -1356,7 +1348,7 @@
       "hash": "3d92ad7108"
     },
     {
-      "id": "p5-s15",
+      "id": "p5-s14",
       "pagina": 5,
       "paragrafo": 3,
       "texto": "Mientras tanto, el otro caballero presumía: —He vencido a todos los caballeros de España.",
@@ -1364,7 +1356,7 @@
       "hash": "a23400756d"
     },
     {
-      "id": "p5-s16",
+      "id": "p5-s15",
       "pagina": 5,
       "paragrafo": 3,
       "texto": "¡He vencido hasta al famoso don Quijote de la Mancha!",
@@ -1372,7 +1364,7 @@
       "hash": "e47356fba6"
     },
     {
-      "id": "p5-s17",
+      "id": "p5-s16",
       "pagina": 5,
       "paragrafo": 3,
       "texto": "Don Quijote dio un salto: —¡Eso es imposible!",
@@ -1380,7 +1372,7 @@
       "hash": "62450bb38c"
     },
     {
-      "id": "p5-s18",
+      "id": "p5-s17",
       "pagina": 5,
       "paragrafo": 3,
       "texto": "¡Don Quijote soy yo, y nadie me ha vencido!",
@@ -1388,7 +1380,7 @@
       "hash": "e5a8d091af"
     },
     {
-      "id": "p5-s19",
+      "id": "p5-s18",
       "pagina": 5,
       "paragrafo": 3,
       "texto": "—Entonces lo resolveremos cuando salga el sol —respondió el otro—.",
@@ -1396,7 +1388,7 @@
       "hash": "af7fdd8efe"
     },
     {
-      "id": "p5-s20",
+      "id": "p5-s19",
       "pagina": 5,
       "paragrafo": 3,
       "texto": "Y queda acordado: ¡el que pierda OBEDECE al vencedor, sin protestar!",
@@ -1404,7 +1396,7 @@
       "hash": "2dff0b38d3"
     },
     {
-      "id": "p5-s21",
+      "id": "p5-s20",
       "pagina": 5,
       "paragrafo": 3,
       "texto": "—¡Acordado!",
@@ -1412,7 +1404,7 @@
       "hash": "4b1465bef7"
     },
     {
-      "id": "p5-s22",
+      "id": "p5-s21",
       "pagina": 5,
       "paragrafo": 4,
       "texto": "Cuando amaneció, Sancho miró a su nuevo amigo y se quedó blanco del susto.",
@@ -1420,7 +1412,7 @@
       "hash": "83887a3653"
     },
     {
-      "id": "p5-s23",
+      "id": "p5-s22",
       "pagina": 5,
       "paragrafo": 4,
       "texto": "¡El escudero tenía una NARIZ enorme!",
@@ -1428,7 +1420,7 @@
       "hash": "c470bb890d"
     },
     {
-      "id": "p5-s24",
+      "id": "p5-s23",
       "pagina": 5,
       "paragrafo": 4,
       "texto": "Era larga, torcida, morada como una berenjena y llena de verrugas, y le bajaba hasta más abajo de la boca.",
@@ -1436,7 +1428,7 @@
       "hash": "3af911228c"
     },
     {
-      "id": "p5-s25",
+      "id": "p5-s24",
       "pagina": 5,
       "paragrafo": 4,
       "texto": "—¡Mi amo, ayúdeme a subirme a ese árbol! —pidió Sancho.",
@@ -1444,7 +1436,7 @@
       "hash": "7230a73e85"
     },
     {
-      "id": "p5-s26",
+      "id": "p5-s25",
       "pagina": 5,
       "paragrafo": 4,
       "texto": "—¿Para ver mejor la pelea?",
@@ -1452,7 +1444,7 @@
       "hash": "0cec3a8904"
     },
     {
-      "id": "p5-s27",
+      "id": "p5-s26",
       "pagina": 5,
       "paragrafo": 4,
       "texto": "—¡Para que esa nariz no me alcance!",

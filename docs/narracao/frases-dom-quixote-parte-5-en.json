@@ -363,12 +363,20 @@
       "id": "p1-s35",
       "pagina": 1,
       "paragrafo": 4,
-      "texto": "How is your donkey?’ How did he know?",
-      "fala": "How is your donkey?’ How did he know?",
-      "hash": "dfb6f535e7"
+      "texto": "How is your donkey?’ ...",
+      "fala": "How is your donkey?’ ...",
+      "hash": "a5c22c78b0"
     },
     {
       "id": "p1-s36",
+      "pagina": 1,
+      "paragrafo": 4,
+      "texto": "How did he know?",
+      "fala": "How did he know?",
+      "hash": "43af6a5b46"
+    },
+    {
+      "id": "p1-s37",
       "pagina": 1,
       "paragrafo": 4,
       "texto": "And there’s more: I’ve just met Sansón Carrasco in the square.",
@@ -376,7 +384,7 @@
       "hash": "644af24108"
     },
     {
-      "id": "p1-s37",
+      "id": "p1-s38",
       "pagina": 1,
       "paragrafo": 4,
       "texto": "He laughed and said he knows the SECRET!”",

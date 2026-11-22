@@ -95,3 +95,9 @@ Relatório: [`../revisao/FIDELIDADE-VOLUME-2.md`](../revisao/FIDELIDADE-VOLUME-2
 - **#59 (cap. 61)**: "Só não perdoo o doutor Pedro Rezio de Tirafora, que me fez jantar bolachinha!"
 - **#60 (cap. 61, atividade e Imaginação)**: atividade nova `ordem` (CHAVES → PORTÃO → ESTRADA, todos com 🕊️; só acerta quem lê), com a cena mudando a cada acerto como o leão da Parte 5: `p10-real-palacio` (Sancho ajoelhado devolve as chaves), `p10-real-chaves` (o duque com as chaves, a duquesa com as bolotas, Sancho com a bolsinha), `p10-real-portao` (o portão aberto, pombas saindo) e, no fim, a estrada que já existia (`p10-real`). A recompensa é a Imaginação nova `p10-imag` (a estrada dourada da liberdade, com pombas). Palavras-chave novas: CHAVES, PORTÃO, ESTRADA. A Parte 7 tem agora **4 atividades** (pedido do autor).
 - **Arte pela API** (autorizada no prompt da sessão): 7 imagens da Parte 7 na lista `tools/arte/dom-quixote-revisoes-2026-11-21.mjs`, todas aceitas de primeira (custo somado com a Parte 8 no §7 do caderno dela).
+
+## 9. Narração gravada em português (fase 6, 2026-11-21)
+- **Gravada e ativada** (`partes: [1, …, 7]` em `dom-quixote/audio/vozes.js`): 11/11 páginas inteiras e 35/35 palavras-chave, conferidas no Whisper local e sem rajadas de ruído (`node tools/conferir-narracao.mjs --partes 7 --idiomas pt`).
+- Roteiro em `dom-quixote/audio/narracao/parte-7/roteiro.json`; elenco novo no `ELENCO` de `tools/gravar-narracao.mjs` (mordomo, lavrador, alfaiate, doutor, aldeão, velhinho da bengala, viajante, pajem).
+- **Gasto**: 86 pedidos, ~US$ 0,215 (Flex; `docs/narracao/gastos.csv`).
+- 🛑 Escuta do humano: [`docs/narracao/qa-parte-7.md`](../narracao/qa-parte-7.md) (a voz do mordomo × a da condessa, Pedro Rezio de Tirafora, as emendas de `p6-s16` e `p9-s32`, o zurro).
