@@ -33,6 +33,8 @@
 
 ## 2. Próximas sessões (escolha do humano)
 
+> **2026-11-22 — narração em português: Parte 7 completa e ativada; Parte 8 em prévia (págs. 0–6)**: P7 com 11/11 páginas e 35/35 palavras-chave (`partes: [1, …, 7]` em `dom-quixote/audio/vozes.js`); P8 com as págs. 0–6 e 29/29 palavras (`previa: [8]`), parada no limite de 100 pedidos/dia. **Para terminar a P8** (~27 pedidos, ~US$ 0,06, com autorização da API): `npm run gravar:narracao -- --voz narracao --parte 8 --pagina-inteira --autorizado` depois das 07:00 UTC, `node tools/conferir-narracao.mjs --partes 8 --idiomas pt`, trocar `previa: [8]` por `8` em `partes` e completar `docs/narracao/qa-parte-8.md`. Pontos de escuta: [`narracao/qa-parte-7.md`](narracao/qa-parte-7.md) e [`narracao/qa-parte-8.md`](narracao/qa-parte-8.md). Gasto: ~US$ 0,37 (Flex).
+
 > **2026-11-21 — revisões do autor pelo app (#55 a #67) resolvidas e publicadas**: P7 com atividade e Imaginação novas na última página, ponte e pena explicadas, cena final da bengala; P8 com **capítulo novo, o 63 (*A Boiada*)**, que dá o motivo de Sansão; a Parte 8 tem agora **11 páginas** (caps. 62–71). A cabeça encantada abre na Imaginação (campo novo `cena.lenteInicial`). Sugestão do autor no livro falso e na gráfica ("Isso se já não fizeram, viu?"). Arte pela API: 11 imagens aceitas, **US$ 0,41**. Detalhes: §8 do caderno da Parte 7 e §7 do da Parte 8.
 
 > **2026-11-19 — revisões do autor pelo app (#52, #53, #54) resolvidas e publicadas**: P6 p.3 sem o animal inteiro no espeto (arte refeita); P7 cap. 54 reescrito (o doutor deixa a fruta: "comer de tudo um pouco"); P7 cap. 55 dividido em dois (bengala, com a arte refeita e a bengala nas mãos do aldeão; e o novo cap. 56, a ponte, conferido em Cervantes II-51, com arte nova). A Parte 7 tem agora **11 páginas** e os capítulos seguintes andaram um número (P7: 52–61; P8: 62–70). Arte pela API: 3 imagens, **US$ 0,10**. Detalhes no §7 do caderno da Parte 7.
@@ -51,8 +53,8 @@
 > | :--- | :--- | :--- | :--- | :--- |
 > | 5 | O Livro Famoso e o Cavaleiro dos Leões | 34–42 | Publicada (PT + narração gravada; faltam traduções) | [`cadernos/dom-quixote-parte-5.md`](cadernos/dom-quixote-parte-5.md) |
 > | 6 | O Teatrinho, o Barco e o Cavalo Voador | 43–51 | Publicada (PT + narração gravada; faltam traduções) | [`cadernos/dom-quixote-parte-6.md`](cadernos/dom-quixote-parte-6.md) |
-> | 7 | Sancho, Governador da Ilha | 52–61 | Publicada na estante (18 WebPs; PT, voz do aparelho; aguardando leitura/notas pelo app, narração e traduções) | [`cadernos/dom-quixote-parte-7.md`](cadernos/dom-quixote-parte-7.md) |
-> | 8 | O Cavaleiro da Branca Lua | 62–71 | Publicada na estante (17 WebPs; PT, voz do aparelho; aguardando leitura/notas pelo app, narração e traduções) | [`cadernos/dom-quixote-parte-8.md`](cadernos/dom-quixote-parte-8.md) |
+> | 7 | Sancho, Governador da Ilha | 52–61 | Publicada na estante (18 WebPs; PT + narração gravada; aguardando leitura/notas pelo app, narração e traduções) | [`cadernos/dom-quixote-parte-7.md`](cadernos/dom-quixote-parte-7.md) |
+> | 8 | O Cavaleiro da Branca Lua | 62–71 | Publicada na estante (17 WebPs; PT, narração em prévia nas págs. 0–6; aguardando leitura/notas pelo app, narração e traduções) | [`cadernos/dom-quixote-parte-8.md`](cadernos/dom-quixote-parte-8.md) |
 >
 > **Entrega**: sempre na `main`, por merge, ao fim de cada entrega (`AGENTS.md` §0.4): é pelo site que o humano lê.
 
