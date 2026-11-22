@@ -7,7 +7,7 @@
    - Páginas HTML e vozes.js: rede primeiro com limite de 2,5 s (se a rede estiver lenta, abre do cache na hora).
    - Narração gravada (*.mp3 e *.json): rede primeiro com limite de 2,5 s, cache próprio (cv-narracao).
    - Demais arquivos: cache primeiro (abre instantâneo no tablet). */
-const CACHE = 'classicos-vivos-5688701089b1';
+const CACHE = 'classicos-vivos-507909774646';
 const CACHE_AUDIO = 'cv-narracao';
 const CACHE_META = 'cv-meta';
 const FILES = [
@@ -113,7 +113,7 @@ const FILES = [
     ],
     [
         "./assets/js/offline-manager.js",
-        "48035717"
+        "59398a23"
     ],
     [
         "./assets/js/texto.js",
@@ -1137,7 +1137,7 @@ const FILES = [
     ],
     [
         "./robin-hood/parte-1.html",
-        "d51fad1f"
+        "a9c5f3c3"
     ],
     [
         "./sobre.html",

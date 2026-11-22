@@ -51,10 +51,10 @@ Primeira parte de *Robin Hood* (5 partes previstas). Estabelece:
 | 5 | 5 | 5. Travessia do Limiar | **🪵 Capítulo 5 • A Ponte do Riacho Fundo** (*Pressa de um Lado, Teimosia do Outro*) | ✅ Aprovado e aplicado em `parte-1.html` |
 | 6 | 6 | 6. O Teste na Ponte | **😂 Capítulo 6 • O Banho de Risadas** (*Quem Caiu no Riacho?* · **Atividade 2: 4 gravuras progressivas**) | ✅ Aprovado e aplicado em `parte-1.html` |
 | 7 | 7 | 6. O Novo Aliado e Sua Dor | **🤝 Capítulo 7 • O Gigante Chamado Pequeno** (*Um Apelido ao Contrário*) | ✅ Aprovado e aplicado em `parte-1.html` |
-| 8 | 8 | 7. O Esconderijo e o Plano | **🌳 Capítulo 8 • O Segredo do Grande Carvalho** (*Um Plano Debaixo das Folhas*) | ⏳ Aguardando renovação da cota do Opus 5.5 (05:02 UTC) |
-| 9 | 9 | 8. A Provação (Resgate Silencioso) | **🗝️ Capítulo 9 • A Janela Alta e a Chave** (*Silêncio na Cadeia* · **Atividade 3**) | ⏳ Aguardando renovação da cota do Opus 5.5 (05:02 UTC) |
-| 10 | 10 | 8. Confronto Moral com o Xerife | **🏹 Capítulo 10 • Ladrões ou Justiceiros?** (*Devolver Não É Roubar!*) | ⏳ Aguardando renovação da cota do Opus 5.5 (05:02 UTC) |
-| 11 | 11 | 9. A Recompensa e Gancho para P2 | **🍞 Capítulo 11 • Pão Quentinho e uma Nova Armadilha** (*A Flecha de Ouro Vem Aí*) | ⏳ Aguardando renovação da cota do Opus 5.5 (05:02 UTC) |
+| 8 | 8 | 7. O Esconderijo e o Plano | **🌳 Capítulo 8 • O Segredo do Grande Carvalho** (*Um Plano Debaixo das Folhas*) | ✅ Concluído (Hydrogen + Opus 5.5) e aplicado em `parte-1.html` |
+| 9 | 9 | 8. A Provação (Resgate Silencioso) | **🗝️ Capítulo 9 • A Janela Alta e a Chave** (*Silêncio na Cadeia* · **Atividade 3**) | ✅ Concluído (Hydrogen + Opus 5.5) e aplicado em `parte-1.html` |
+| 10 | 10 | 8. Confronto Moral com o Xerife | **🏹 Capítulo 10 • Ladrões ou Justiceiros?** (*Devolver Não É Roubar!*) | ✅ Concluído (Hydrogen + Opus 5.5) e aplicado em `parte-1.html` |
+| 11 | 11 | 9. A Recompensa e Gancho para P2 | **🍞 Capítulo 11 • Pão Quentinho e uma Nova Armadilha** (*Ouro que Esconde o Perigo*) | ✅ Concluído (Hydrogen + Opus 5.5) e aplicado em `parte-1.html` |
 
 ## 2. O que ficou de fora nesta parte e por quê
 - **A morte do guarda florestal** (Pyle cap. 1): cortada por proteção da infância; substituída pelo imposto desigual e prisão injusta do moleiro sem provas.
