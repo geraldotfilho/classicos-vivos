@@ -1,0 +1,523 @@
+{
+  "obra": "Robin Hood",
+  "autor": "Howard Pyle e lendas tradicionais",
+  "parte": 1,
+  "traducao": "robin-hood/traducoes/parte-1.<idioma>.js",
+  "paginas": [
+    {
+      "indice": 0,
+      "hash": "1693942885",
+      "capa": true,
+      "titulo": "Parte 1: O Segredo da Floresta de Xervedo",
+      "texto": "Bem pertinho da grande {{FLORESTA|FLO • RES • TA|🌳}} de Xervedo existe uma vila onde o riacho canta e o vento cheira a pão quente. É a Vila do Moinho. Lá, os vizinhos se chamam pelo nome e dividem o que têm.\n\nMas um dia o Xerife de Nortigão chega com uma cobrança injusta. Para quem tem muito, pagar é moleza. Para quem tem pouquinho, pode faltar pão na mesa!\n\nÉ aí que Robin Hood, Lady Mariana e seus {{AMIGOS|A • MI • GOS|🤝}} corajosos se encontram debaixo do Grande Carvalho. Com esperteza e bom coração, eles vão descobrir um jeito de defender a {{JUSTIÇA|JUS • TI • ÇA|⚖️}}!"
+    },
+    {
+      "indice": 1,
+      "hash": "b01cee907b",
+      "capitulo": "👑 Capítulo 1 • O Banquete do Rei Distante",
+      "titulo": "Muito Pão para Uma Mesa Só",
+      "texto": "Lá no alto da colina de Nortigão brilhava o {{PALÁCIO|PA • LÁ • CIO|🏰}} do Rei Ricardo. O rei se achava o mais bondoso do mundo. Só que vivia afundado em almofadas macias, atrás de cortinas de veludo. Nem via o povo das vilas trabalhando duro lá embaixo.\n\nCerta manhã, o rei acordou querendo dar uma {{FESTA|FES • TA|🎉}} gigante para os nobres e barões. Sonhou com montanhas de pães doces, tortas e biscoitos. Chamou o Xerife de Nortigão, de manto roxo e sorriso esperto, e pediu farinha da boa.\n\nO Xerife esfregou as mãos e sugeriu um {{IMPOSTO|IM • POS • TO|🪙}} extra. Imposto é a parte que cada família entrega a quem governa. Dois sacos de farinha por casa, igualzinho para todo mundo! O rei nem pensou que dois sacos pesam muito para quem tem pouco. Bateu palmas e disse: — Dois sacos para todos? Que conta simples! Pode cobrar, Xerife!\n\nCom o papel carimbado, o Xerife trocou o sorriso manso por uma cara azeda. Chamou os guardas e desceu a estrada: tum, tum, tum. Na Vila do Moinho, ninguém imaginava que a vida ia virar de cabeça para baixo."
+    },
+    {
+      "indice": 2,
+      "hash": "7aa95b23c2",
+      "capitulo": "🌾 Capítulo 2 • O Moinho de Mestre Tomé",
+      "titulo": "Três Sacos e uma Conta que Não Fecha",
+      "texto": "Pertinho da Floresta de Xervedo ficava a Vila do Moinho. Lá, toda manhã começava com uma música: chuá, chuá, chuá. Era a roda d'água do {{MOINHO|MO • I • NHO|⚙️}} girando para amassar o trigo.\n\nQuem cuidava de tudo era Mestre Tomé, o {{MOLEIRO|MO • LEI • RO|🌾}}. Ele transformava o trigo dourado em {{FARINHA|FA • RI • NHA|🍞}} branquinha, macia como talco. O filho dele, Grilo, vivia com uma nuvenzinha branca na ponta do nariz. E sempre aparecia o vizinho Robin Hood, rapaz de riso fácil e flecha certeira.\n\nDe repente, o Xerife chegou à estrada com o papel do rei. — Dois sacos de farinha por família! — gritou. Logo passou a carroça do barão, o homem mais rico da região, carregadinha com cinquenta sacos. Ele riu, jogou dois para os guardas e seguiu assobiando. Para ele, era só uma migalha.\n\nEntão os guardas pararam na porta de Mestre Tomé. Tudo ficou em silêncio, e até a roda parecia girar mais devagar. Lá dentro havia só três sacos para a família comer o mês inteiro! Grilo apertou a mão do pai, e Robin ficou firme ao lado deles. Mestre Tomé limpou as mãos no avental e deu um passo à frente. Ia mostrar que aquela conta não fechava."
+    },
+    {
+      "indice": 3,
+      "hash": "816b771bc0",
+      "capitulo": "⚖️ Capítulo 3 • Quem Desafia o Xerife?",
+      "titulo": "Uma Mentira sem Prova Nenhuma",
+      "texto": "Mestre Tomé apontou para o moinho e disse com voz mansa: — Só tenho três sacos. Se eu entregar dois, sobra um só para o Grilo comer o mês inteiro. O Xerife franziu a testa e bateu o pé na terra: — Lei do rei não aceita choro! Pague logo!\n\nCheio de {{CORAGEM|CO • RA • GEM|💪}}, Robin falou alto, para a vila ouvir: — Essa {{CONTA|CON • TA|🧮}} não é justa, Xerife! Tirar dois sacos de cinquenta não faz falta. Mas tirar dois de três deixa uma criança com fome! Os vizinhos cochicharam: — É verdade! E o Xerife ficou vermelho feito tomate.\n\nFurioso, o Xerife inventou uma mentira na hora: — Vocês estão escondendo farinha no porão! Mestre Tomé abriu os braços: — Pode entrar e procurar! Não escondi nada! Mas o Xerife gritou mais alto: — Eu sou o Xerife de Nortigão! Não preciso de {{PROVA|PRO • VA|🔎}} nenhuma! Guardas, prendam o moleiro e esse rapaz atrevido!\n\nOs guardas agarraram Mestre Tomé e levaram a farinha dos vizinhos pobres. Mesmo preso, o moleiro se pôs na frente e gritou: — Corram para a floresta, meninos! Com o coração aos pulos, Robin segurou a mão de Grilo. Pulou a cerca e mergulhou com ele no verde das árvores."
+    },
+    {
+      "indice": 4,
+      "hash": "c34e49c4ad",
+      "capitulo": "🍃 Capítulo 4 • A Mentora da Mata",
+      "titulo": "Como Sumir no Meio das Folhas",
+      "texto": "Robin e Grilo se esconderam atrás de um tronco, na beira da floresta. Ufa, tinham deixado os guardas para trás! Só que a camisa clara de Robin e o avental de Grilo brilhavam no mato feito lanterna!\n\nDe repente, um galho balançou sem barulho. Dele desceu Lady Mariana, de tranças compridas, olhos vivos e arco nas costas. Ela era amiga de Robin e conhecia cada trilha de Xervedo. — Com essas roupas claras, os guardas acham vocês num instante! — cochichou, abrindo um embrulho.\n\nLá dentro havia roupas tingidas de {{VERDE|VER • DE|🍃}}, um {{CAPUZ|CA • PUZ|🧢}} com pena vermelha e uma {{CORNETA|COR • NE • TA|📯}} dourada. — Quem veste a cor da floresta vira parte dela! — ensinou Mariana. — A mata é grande, e é fácil se perder. Se alguém estiver em perigo, sopre três vezes: tuuu, tuuu, tuuu! Quer dizer: venham me ajudar!\n\nRapidinho, os dois se vestiram de verde, e Grilo escondeu o avental na mochila. Os guardas voltaram pela trilha, devagar, cutucando as moitas com as lanças. Robin e Grilo ficaram parados feito estátuas. Os guardas olharam bem e só viram folhas! Mariana apontou o caminho: o Grande Carvalho, depois do Riacho Fundo. Lá estariam seguros para pensar em como ajudar Mestre Tomé.",
+      "cartoes": {
+        "tipo": "ordem",
+        "ordem": [
+          "verde",
+          "capuz",
+          "corneta"
+        ],
+        "itens": [
+          {
+            "id": "corneta",
+            "palavra": "CORNETA",
+            "emoji": "🍃"
+          },
+          {
+            "id": "verde",
+            "palavra": "VERDE",
+            "emoji": "🍃"
+          },
+          {
+            "id": "capuz",
+            "palavra": "CAPUZ",
+            "emoji": "🍃"
+          }
+        ]
+      }
+    },
+    {
+      "indice": 5,
+      "hash": "f5b33ebc75",
+      "capitulo": "🪵 Capítulo 5 • A Ponte do Riacho Fundo",
+      "titulo": "Pressa de um Lado, Teimosia do Outro",
+      "texto": "Vestidos de verde, Robin e Grilo seguiram sozinhos pela trilha. Mariana ficou mais atrás, vigiando o caminho. Logo ouviram um barulhinho fresco: era o {{RIACHO|RI • A • CHO|💧}} Fundo, pulando entre as pedras. Do outro lado ficava a mata fechada do Grande Carvalho.\n\nSobre a água havia uma só {{PONTE|PON • TE|🪵}}: um tronco caído, estreito e escorregadio. Robin catou no chão um galho reto para se apoiar. Mas, quando pisou numa ponta, um homem imenso pisou na outra! Era tão alto que quase batia a cabeça nos galhos. Vestia couro marrom e segurava um longo {{BASTÃO|BAS • TÃO|🦯}} de madeira.\n\nGrilo arregalou os olhos e se escondeu atrás de uma samambaia. Passo a passo, os dois chegaram ao meio do tronco. O nariz de Robin ficou na altura do peito do grandalhão! — Abra caminho, rapazinho de verde! — trovejou o gigante, com olhos risonhos. — Eu pisei aqui primeiro!\n\nRobin olhou para a água fria lá embaixo. Depois olhou para o grandalhão, que não saía da frente e ainda sorria. Robin achou graça. — Eu tenho pressa, e você tem teimosia! — disse, rindo. — Vamos fazer um jogo rápido de equilíbrio, com o galho e o bastão. Quem cair na água dá passagem ao outro!"
+    },
+    {
+      "indice": 6,
+      "hash": "3090f45edb",
+      "capitulo": "😂 Capítulo 6 • O Banho de Risadas",
+      "titulo": "Quem Caiu no Riacho?",
+      "texto": "Toc, tac, toc! O galho de Robin e o bastão do gigante se cruzavam no ar. Os dois balançavam no tronco feito artistas de circo. Robin pulou para um lado, desviou para o outro e quase venceu. Mas a bota dele pisou num musgo molhado e escorregou!\n\nPlof! Robin levou um {{TOMBO|TOM • BO|💦}} daqueles e caiu sentado no meio do riacho. A água espirrou para todo lado e molhou até a pena vermelha do capuz! Atrás da samambaia, Grilo tapou a boca com as duas mãos. Será que ia começar uma briga feia?\n\nSó que Robin olhou para as botas cheias d'água e soltou uma {{RISADA|RI • SA • DA|😂}} gostosa. — Que banho bonito! Você venceu direitinho! O gigante abriu um sorriso do tamanho do mundo. E riu tão alto que os passarinhos voaram assustados dos galhos.\n\nDepois, estendeu a mão imensa e, com um puxão só, tirou Robin da água. Parecia que o rapaz era leve feito uma folha! — Você sabe perder com alegria, rapaz de verde! — disse o gigante, ajudando Robin a torcer a camisa. — Quem sabe rir do próprio tombo já ganhou um {{AMIGO|A • MI • GO|🤝}}!",
+      "cartoes": {
+        "tipo": "ordem",
+        "ordem": [
+          "ponte",
+          "tombo",
+          "risada",
+          "amigo"
+        ],
+        "itens": [
+          {
+            "id": "risada",
+            "palavra": "RISADA",
+            "emoji": "💧"
+          },
+          {
+            "id": "amigo",
+            "palavra": "AMIGO",
+            "emoji": "💧"
+          },
+          {
+            "id": "ponte",
+            "palavra": "PONTE",
+            "emoji": "💧"
+          },
+          {
+            "id": "tombo",
+            "palavra": "TOMBO",
+            "emoji": "💧"
+          }
+        ]
+      }
+    },
+    {
+      "indice": 7,
+      "hash": "e206fe5423",
+      "capitulo": "🤝 Capítulo 7 • O Gigante Chamado Pequeno",
+      "titulo": "Um Apelido ao Contrário",
+      "texto": "Robin sentou na margem e esvaziou as botas: saiu um riachinho de cada uma! O gigante contou que se chamava João. Ele era lenhador e ferreiro, com uma {{FORÇA|FOR • ÇA|💪}} de urso. Mas os guardas do Xerife cobraram um imposto impossível e levaram as ferramentas dele. Por isso, João fugiu para a floresta.\n\nGrilo saiu de trás da samambaia, com os olhos brilhando de lágrimas. — Com meu pai foi igualzinho! O Xerife levou a farinha da vila e prendeu Mestre Tomé, sem prova nenhuma! João fechou a cara e bateu o bastão no chão: toc! — Esse Xerife passou de todos os limites!\n\nGrilo esticou o pescoço para olhar o gigante lá em cima. Depois deu um tapinha no joelho dele, rindo: — Um amigo tão grandão merece um {{APELIDO|A • PE • LI • DO|😄}} ao contrário. De hoje em diante, você é o João Pequeno! O gigante soltou uma gargalhada que sacudiu as folhas.\n\nRobin pôs a mão no ombro largo de João. — Vamos para o Grande Carvalho pensar num jeito de soltar Mestre Tomé. Vem com a gente? João Pequeno ergueu o bastão: — Vou! Juntos, vamos formar um {{BANDO|BAN • DO|🏹}} que o Xerife nunca viu! E os três atravessaram a ponte juntos."
+    },
+    {
+      "indice": 8,
+      "hash": "f2f63da212",
+      "capitulo": "🌳 Capítulo 8 • O Segredo do Grande Carvalho",
+      "titulo": "Um Plano Debaixo das Folhas",
+      "texto": "Do outro lado do Riacho Fundo, as árvores foram ficando cada vez mais altas. Até que a mata se abriu numa clareira cheia de raios dourados de sol. Bem no meio crescia um {{CARVALHO|CAR • VA • LHO|🌳}} velhinho e enorme. Nem vinte crianças de mãos dadas conseguiriam abraçar o tronco dele!\n\nLady Mariana já esperava ali. Tinha chegado antes, por um atalho! Atrás dela, uma porta escondida no tronco oco levava a um {{ESCONDERIJO|ES • CON • DE • RI • JO|🍃}} secreto. Para João Pequeno, ela buscou a camisa verde mais larga que tinha. Coube direitinho! Agora os quatro amigos vestiam o verde da floresta.\n\nMariana tinha espiado a vila do alto de uma árvore. — O Xerife trancou Mestre Tomé na cadeia de pedra — contou ela. — Bem do lado fica o depósito, com a farinha de todas as famílias. E dois guardas vigiam o portão.\n\nSentado nas raízes do carvalho, Robin pegou um graveto e riscou na terra um {{PLANO|PLA • NO|🗺️}} esperto. Seria à tardinha, sem briga e sem machucar ninguém. Mariana ia distrair os guardas. João Pequeno ia erguer Grilo até a janelinha da cadeia. E Robin ia abrir o depósito, para a farinha voltar às famílias antes da noite!"
+    },
+    {
+      "indice": 9,
+      "hash": "19cdc0c911",
+      "capitulo": "🗝️ Capítulo 9 • A Janela Alta e a Chave",
+      "titulo": "Silêncio na Cadeia",
+      "texto": "No fim da tarde, o céu ficou cor de laranja. Em silêncio, o bando verde chegou perto da {{CADEIA|CA • DEI • A|🔒}} de pedra. Na frente do portão, Lady Mariana deixou cair, de propósito, uma cesta de maçãs. Os guardas correram atrás das maçãs, ladeira abaixo. O muro dos fundos ficou livre!\n\nJoão Pequeno encostou no muro e ergueu Grilo nos ombros, como se ele não pesasse nada. O menino alcançou a janelinha alta e escorregou para dentro. Não fez nem cri-cri! Atrás das grades, lá estava o pai. — Psiu, pai! Vim tirar o senhor daqui!\n\nNum prego da parede estava pendurada a {{CHAVE|CHA • VE|🗝️}} de ferro. Grilo ficou na ponta dos pés, pegou a chave e abriu a cela: clac! Pai e filho se abraçaram, bem baixinho. Enquanto isso, Robin pulou a janela do depósito. Lá dentro, amarrou uma {{CORDA|COR • DA|🪢}} firme no primeiro saco de farinha.\n\nOs sacos desciam pela corda, um por um. Lá embaixo, João Pequeno aparava cada um nos braços, feito travesseiros. Só faltava o último saco e abrir o portão dos fundos! E o Xerife podia chegar a qualquer momento para a ronda da tarde.",
+      "cartoes": {
+        "tipo": "pedido",
+        "pedidos": [
+          "chave",
+          "corda",
+          "farinha"
+        ],
+        "itens": [
+          {
+            "id": "chuva",
+            "palavra": "CHUVA",
+            "emoji": "🌧️",
+            "pegadinha": "Chuva? Chuva só molha o chão e não abre cadeado! Vamos escolher de novo!"
+          },
+          {
+            "id": "chave",
+            "palavra": "CHAVE",
+            "emoji": "🗝️"
+          },
+          {
+            "id": "corda",
+            "palavra": "CORDA",
+            "emoji": "🪢"
+          },
+          {
+            "id": "coroa",
+            "palavra": "COROA",
+            "emoji": "👑",
+            "pegadinha": "Coroa? Coroa fica na cabeça do rei e não amarra saco pesado! Vamos tentar de novo!"
+          },
+          {
+            "id": "varinha",
+            "palavra": "VARINHA",
+            "emoji": "🪄",
+            "pegadinha": "Varinha? Não precisa de mágica para fazer justiça! Vamos escolher a palavra certa!"
+          },
+          {
+            "id": "farinha",
+            "palavra": "FARINHA",
+            "emoji": "🌾"
+          }
+        ]
+      }
+    },
+    {
+      "indice": 10,
+      "hash": "2e33900379",
+      "capitulo": "🏹 Capítulo 10 • Ladrões ou Justiceiros?",
+      "titulo": "Devolver Não É Roubar!",
+      "texto": "Mestre Tomé saiu livre pelo portão dos fundos. Na mesma hora, João Pequeno jogou três sacos de {{FARINHA|FA • RI • NHA|🍞}} em cada ombro. O grupo saiu correndo pela estrada, de casinha em casinha. Em cada porta, deixavam os dois sacos que os guardas tinham levado de manhã.\n\nBem nessa hora, o {{XERIFE|XE • RI • FE|😠}} dobrou a esquina com seus guardas. Viu a cela aberta, o depósito vazio e um grupo de verde perto das árvores. Ficou roxo como o próprio manto! Ele não queria contar que tinha prendido um homem sem prova. Então apontou o dedo e berrou: — Peguem esses ladrões! O bando de Robin Hood roubou a farinha do rei!\n\nRobin parou na beira da mata e falou bem alto, para a vila inteira ouvir a {{VERDADE|VER • DA • DE|✨}}: — Nós não somos ladrões! Devolver não é roubar! Essa farinha é das famílias, e o senhor tomou à força. E Mestre Tomé é um homem honesto, preso sem prova nenhuma!\n\nNas janelas, os moradores sorriam, abraçados à sua farinha. O Xerife batia o chapéu no chão, de tanta raiva. Mas, quando os guardas chegaram às árvores, não acharam ninguém. Os cinco amigos já tinham sumido nas folhas de Xervedo."
+    },
+    {
+      "indice": 11,
+      "hash": "7a93b9eae0",
+      "capitulo": "🍞 Capítulo 11 • Pão Quentinho e uma Nova Armadilha",
+      "titulo": "Ouro que Esconde o Perigo",
+      "texto": "Naquela noite, o Grande Carvalho se encheu de lanternas, penduradas nos galhos feito vaga-lumes. Livre e feliz, Mestre Tomé preparou um {{BANQUETE|BAN • QUE • TE|🍞}}: pão quentinho do forno de barro, maçãs doces e queijo. O cheiro de pão chegava até as estrelas. E Grilo não largava o abraço do pai por nada!\n\nRobin ergueu a caneca, e os amigos ergueram as deles. — Enquanto o rei não olhar para o povo, e o Xerife cobrar o que não é justo, nós vamos estar aqui! Somos o Bando Verde do Grande Carvalho! Todos bateram as canecas: tim, tim!\n\nNisso, Lady Mariana chegou correndo de Nortigão, com um cartaz na mão. O Xerife tinha pregado aquele papel na praça. Ele anunciava um campeonato de arco e flecha. E o prêmio era uma {{FLECHA|FLE • CHA|🏹}} inteirinha de ouro!\n\n— É uma {{ARMADILHA|AR • MA • DI • LHA|🕸️}}! — avisou Mariana. — O Xerife sabe que ninguém atira como Robin. A praça vai estar cheia de guardas, esperando a roupa verde aparecer! Robin olhou a flecha desenhada no papel. Com aquele ouro, dava para comprar comida e cobertores para a vila inteira. Ele piscou para os amigos: — Nós vamos ao campeonato. Mas do jeito mais esperto do mundo!"
+    }
+  ],
+  "textos": [
+    {
+      "texto": "Na clareira ensolarada do Grande Carvalho em Xervedo, Robin Hood, Lady Mariana, João Pequeno e Grilo partilham pães e maçãs",
+      "onde": [
+        "página 0: descrição da ilustração (leitor de tela)"
+      ]
+    },
+    {
+      "texto": "🌳 O Bando do Grande Carvalho",
+      "onde": [
+        "página 0: selo da Lente da Realidade"
+      ]
+    },
+    {
+      "texto": "FLORESTA",
+      "onde": [
+        "página 0: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "AMIGOS",
+      "onde": [
+        "página 0: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "JUSTIÇA",
+      "onde": [
+        "página 0: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "No salão luxuoso do palácio de Nortigão, o Rei Ricardo entre almofadas aprova o papel do imposto apresentado pelo Xerife de manto roxo",
+      "onde": [
+        "página 1: descrição da ilustração (leitor de tela)"
+      ]
+    },
+    {
+      "texto": "👑 Um Banquete Real e uma Conta Simples Demais",
+      "onde": [
+        "página 1: selo da Lente da Realidade"
+      ]
+    },
+    {
+      "texto": "IMPOSTO",
+      "onde": [
+        "página 1: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "FESTA",
+      "onde": [
+        "página 1: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "PALÁCIO",
+      "onde": [
+        "página 1: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "Na estrada do moinho d'água, o barão passa em carroça com cinquenta sacos enquanto os guardas do Xerife param diante da porta do moleiro Mestre Tomé, Grilo e Robin",
+      "onde": [
+        "página 2: descrição da ilustração (leitor de tela)"
+      ]
+    },
+    {
+      "texto": "🌾 Cinquenta Sacos do Barão e Só Três no Moinho",
+      "onde": [
+        "página 2: selo da Lente da Realidade"
+      ]
+    },
+    {
+      "texto": "MOINHO",
+      "onde": [
+        "página 2: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "MOLEIRO",
+      "onde": [
+        "página 2: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "FARINHA",
+      "onde": [
+        "página 2: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "Diante do moinho, Robin e Mestre Tomé argumentam com o Xerife furioso; os guardas prendem Mestre Tomé enquanto Robin e Grilo fogem para a floresta",
+      "onde": [
+        "página 3: descrição da ilustração (leitor de tela)"
+      ]
+    },
+    {
+      "texto": "⚖️ Um Desafio Corajoso e uma Prisão sem Provas",
+      "onde": [
+        "página 3: selo da Lente da Realidade"
+      ]
+    },
+    {
+      "texto": "CORAGEM",
+      "onde": [
+        "página 3: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "CONTA",
+      "onde": [
+        "página 3: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "PROVA",
+      "onde": [
+        "página 3: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "Ajude Robin e Grilo a sumir no meio das folhas! Toque nos cartões na ordem certa: VERDE, CAPUZ e CORNETA, antes que os guardas cheguem.",
+      "onde": [
+        "página 4: instrução da atividade"
+      ]
+    },
+    {
+      "texto": "Na borda da Floresta de Xervedo, Lady Mariana entrega roupas verde-folha, um capuz com pena vermelha e uma corneta dourada a Robin e Grilo",
+      "onde": [
+        "página 4: descrição da ilustração (leitor de tela)"
+      ]
+    },
+    {
+      "texto": "🍃 As Roupas Verdes e a Corneta de Três Sopros",
+      "onde": [
+        "página 4: selo da Lente da Realidade"
+      ]
+    },
+    {
+      "texto": "O que Mariana entregou para o grupo?",
+      "onde": [
+        "página 4: faixa onde as palavras são escritas"
+      ]
+    },
+    {
+      "texto": "VERDE",
+      "onde": [
+        "página 4: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "CAPUZ",
+      "onde": [
+        "página 4: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "CORNETA",
+      "onde": [
+        "página 4: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "Sobre uma ponte estreita de tronco em cima do Riacho Fundo, Robin Hood (de roupa verde) e um gigante de couro marrom e bastão comprido ficam frente a frente, enquanto Grilo (de verde) espia atrás da samambaia",
+      "onde": [
+        "página 5: descrição da ilustração (leitor de tela)"
+      ]
+    },
+    {
+      "texto": "🪵 Frente a Frente na Ponte do Riacho Fundo",
+      "onde": [
+        "página 5: selo da Lente da Realidade"
+      ]
+    },
+    {
+      "texto": "RIACHO",
+      "onde": [
+        "página 5: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "PONTE",
+      "onde": [
+        "página 5: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "BASTÃO",
+      "onde": [
+        "página 5: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "Leia os cartões e toque na ordem do que aconteceu no riacho: PONTE, TOMBO, RISADA e AMIGO. A cada toque, a história anda um passo!",
+      "onde": [
+        "página 6: instrução da atividade"
+      ]
+    },
+    {
+      "texto": "Robin Hood sentado dentro da água rasa do riacho rindo muito, enquanto o gigante estende a mão sorrindo da ponte e Grilo (de roupa verde) espia alegre da margem",
+      "onde": [
+        "página 6: descrição da ilustração (leitor de tela)"
+      ]
+    },
+    {
+      "texto": "😂 Um Banho que Virou Amizade",
+      "onde": [
+        "página 6: selo da Lente da Realidade"
+      ]
+    },
+    {
+      "texto": "O que aconteceu primeiro no riacho?",
+      "onde": [
+        "página 6: faixa onde as palavras são escritas"
+      ]
+    },
+    {
+      "texto": "TOMBO",
+      "onde": [
+        "página 6: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "RISADA",
+      "onde": [
+        "página 6: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "AMIGO",
+      "onde": [
+        "página 6: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "Na margem do Riacho Fundo, João Pequeno conversa com Robin Hood e Grilo (ambos de roupa verde) e ergue o bastão decidindo entrar para o bando",
+      "onde": [
+        "página 7: descrição da ilustração (leitor de tela)"
+      ]
+    },
+    {
+      "texto": "🤝 O Nascimento de João Pequeno",
+      "onde": [
+        "página 7: selo da Lente da Realidade"
+      ]
+    },
+    {
+      "texto": "FORÇA",
+      "onde": [
+        "página 7: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "APELIDO",
+      "onde": [
+        "página 7: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "BANDO",
+      "onde": [
+        "página 7: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "Debaixo do Grande Carvalho oco de Xervedo, Lady Mariana recebe Robin Hood, Grilo e João Pequeno (todos vestindo verde-folha) enquanto Robin risca na terra o plano do resgate",
+      "onde": [
+        "página 8: descrição da ilustração (leitor de tela)"
+      ]
+    },
+    {
+      "texto": "🌳 O Esconderijo do Grande Carvalho",
+      "onde": [
+        "página 8: selo da Lente da Realidade"
+      ]
+    },
+    {
+      "texto": "Ajude no resgate silencioso! Olhe a figura lá em cima e toque na palavra certa. Cuidado: tem palavras parecidas querendo enganar você!",
+      "onde": [
+        "página 9: instrução da atividade"
+      ]
+    },
+    {
+      "texto": "Nos fundos da cadeia de pedra ao entardecer, João Pequeno ergue Grilo até a janela alta para pegar a chave enquanto Robin desce os sacos de farinha por uma corda",
+      "onde": [
+        "página 9: descrição da ilustração (leitor de tela)"
+      ]
+    },
+    {
+      "texto": "🗝️ Um Resgate Sem Fazer Barulho!",
+      "onde": [
+        "página 9: selo da Lente da Realidade"
+      ]
+    },
+    {
+      "texto": "🗝️ Para o resgate silencioso:",
+      "onde": [
+        "página 9: rótulo da faixa do pedido"
+      ]
+    },
+    {
+      "texto": "Na beira da Floresta de Xervedo, Robin Hood rebate o Xerife furioso enquanto João Pequeno, Lady Mariana, Grilo e Mestre Tomé devolvem os sacos de farinha às famílias",
+      "onde": [
+        "página 10: descrição da ilustração (leitor de tela)"
+      ]
+    },
+    {
+      "texto": "🏹 Devolver o Pão Tomado Não É Roubar!",
+      "onde": [
+        "página 10: selo da Lente da Realidade"
+      ]
+    },
+    {
+      "texto": "Debaixo do Grande Carvalho iluminado por lanternas, Mestre Tomé abraça Grilo diante do banquete de pães enquanto Lady Mariana mostra a Robin e João Pequeno o cartaz da Flecha de Ouro",
+      "onde": [
+        "página 11: descrição da ilustração (leitor de tela)"
+      ]
+    },
+    {
+      "texto": "🍞 Festa no Grande Carvalho e o Cartaz da Flecha de Ouro",
+      "onde": [
+        "página 11: selo da Lente da Realidade"
+      ]
+    },
+    {
+      "texto": "🏹 Mestre Tomé está livre, e o Bando Verde do Grande Carvalho nasceu! Agora uma flecha de ouro espera Robin numa praça cheia de guardas. Descubra na Parte 2 como ele vai vencer sem cair na armadilha!",
+      "onde": [
+        "mensagem do fim da parte"
+      ]
+    }
+  ]
+}
