@@ -32,7 +32,8 @@ IDIOMA = os.environ.get("CV_IDIOMA", "pt")
 NOMES = os.environ.get("CV_NOMES") or ("Dom Quixote de La Mancha, Alonso Quixano, Sancho Pança, Rocinante, Dulcineia del Toboso, Aldonza Lorenzo, "
          "Montiel, Campo de Criptana, Miguel de Cervantes, Mambrino, Micomicona, Micomicão, Alifanfarrão, Pentapolim, "
          "Trapobana, Pandafilando da Fosca Vista, Clavilenho, Barataria, Sansão Carrasco, Amadis, Teresa Pança, Sanchica, "
-         "mestre Nicolau, Doroteia, bacielmo, Eugênio, Manchadinha, Antônia, Teresinha.")
+         "mestre Nicolau, Doroteia, bacielmo, Eugênio, Manchadinha, Antônia, Teresinha, Pedro Rezio de Tirafora, "
+         "Mari Gutiérrez, Dom Antônio, Saragoça, Barcelona, Quixotiz, Curiambro, Miculoso, Teresona, Sansonino.")
 
 
 def ler(arquivo):
