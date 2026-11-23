@@ -977,5 +977,107 @@
       "fala": "yel... mo... de... mam... bri... no... yelmo de mambrino!",
       "hash": "609245817e"
     }
+  ],
+  "audioFalas": "dom-quixote/audio/falas-es/<id>.mp3",
+  "falas": [
+    {
+      "id": "ayuda-a-preparar-la-merienda-de-a23512",
+      "tipo": "comando",
+      "chave": "¡Ayuda a preparar la merienda de los pastores: toca las bellotas dulces, el queso fresco y la leche calentita!",
+      "texto": "¡Ayuda a preparar la merienda de los pastores: toca las bellotas dulces, el queso fresco y la leche calentita!",
+      "fala": "¡Ayuda a preparar la merienda de los pastores: toca las bellotas dulces, el queso fresco y la leche calentita!",
+      "hash": "82f65293f5",
+      "paginas": [
+        3
+      ]
+    },
+    {
+      "id": "sopla-la-nube-de-polvo-para-desc-7c0716",
+      "tipo": "comando",
+      "chave": "¡Sopla la nube de polvo para descubrir qué se esconde en el camino!",
+      "texto": "¡Sopla la nube de polvo para descubrir qué se esconde en el camino!",
+      "fala": "¡Sopla la nube de polvo para descubrir qué se esconde en el camino!",
+      "hash": "4630b44175",
+      "paginas": [
+        4
+      ]
+    },
+    {
+      "id": "ayuda-a-sancho-a-contar-las-cabr-f98b5a",
+      "tipo": "comando",
+      "chave": "¡Ayuda a Sancho a contar las cabritas que cruzan el río en la barca, una por una!",
+      "texto": "¡Ayuda a Sancho a contar las cabritas que cruzan el río en la barca, una por una!",
+      "fala": "¡Ayuda a Sancho a contar las cabritas que cruzan el río en la barca, una por una!",
+      "hash": "eba2b8e24f",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "una-cabra-312dfe",
+      "tipo": "contagem",
+      "chave": "¡Una cabra!",
+      "texto": "¡Una cabra!",
+      "fala": "¡Una cabra!",
+      "hash": "c64ca1d5f6",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "dos-cabras-7e295b",
+      "tipo": "contagem",
+      "chave": "¡Dos cabras!",
+      "texto": "¡Dos cabras!",
+      "fala": "¡Dos cabras!",
+      "hash": "70d9bfd548",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "tres-cabras-9c08c5",
+      "tipo": "contagem",
+      "chave": "¡Tres cabras!",
+      "texto": "¡Tres cabras!",
+      "fala": "¡Tres cabras!",
+      "hash": "d23e5fbe48",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "cuatro-cabras-c45e1c",
+      "tipo": "contagem",
+      "chave": "¡Cuatro cabras!",
+      "texto": "¡Cuatro cabras!",
+      "fala": "¡Cuatro cabras!",
+      "hash": "b1528360b1",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "cinco-cabras-todavia-faltan-dosc-bafaa5",
+      "tipo": "contagem",
+      "chave": "¡Cinco cabras! ¡Todavía faltan doscientas noventa y cinco!",
+      "texto": "¡Cinco cabras! ¡Todavía faltan doscientas noventa y cinco!",
+      "fala": "¡Cinco cabras! ¡Todavía faltan doscientas noventa y cinco!",
+      "hash": "1e96dba2de",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "toca-el-sol-naciente-para-ilumin-b257db",
+      "tipo": "comando",
+      "chave": "¡Toca el sol naciente para iluminar el río y resolver el misterio de los ruidos de la noche!",
+      "texto": "¡Toca el sol naciente para iluminar el río y resolver el misterio de los ruidos de la noche!",
+      "fala": "¡Toca el sol naciente para iluminar el río y resolver el misterio de los ruidos de la noche!",
+      "hash": "be4043c0f1",
+      "paginas": [
+        7
+      ]
+    }
   ]
 }

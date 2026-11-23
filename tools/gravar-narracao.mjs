@@ -15,6 +15,8 @@
 //   npm run gravar:narracao -- --voz narracao --parte 1 --ids p2-s5     # regravar frases específicas
 //   npm run gravar:narracao -- --voz narracao --amostra                 # amostra.mp3 do painel "Voz"
 //   npm run gravar:narracao -- --voz palavras --parte 1                  # palavras-chave (sílabas)
+//   npm run gravar:narracao -- --voz falas --parte 1,2,3                 # falas das atividades (comandos 🎮, cartões, pegadinhas, contagens)
+//       # em falas<-idioma>/<id>.mp3 + indice.json { frases: {id: hash}, textos: {texto: id} }; grupos de até --agrupar itens
 //   ... --seco                                                            # mostra o que faria, sem chamar a API
 //   ... --forcar                                                          # regrava mesmo com o hash igual
 //   ... --sem-qa                                                          # pula a transcrição de conferência
@@ -65,6 +67,15 @@ const AMOSTRA = 'Olá! Eu vou ler esta história com você. Vire a página quand
 
 const ESTILO_NARRADORA = 'warm, gentle storyteller reading aloud to young children; calm, clear pace; expressive but not theatrical';
 const ESTILO_PALAVRAS = 'literacy teacher: each syllable slowly and clearly separated with short pauses, then the whole word joyfully';
+// Falas das atividades (--voz falas): um estilo por tipo; cada grupo de pedido tem um tipo só
+const ESTILO_FALAS = {
+    comando: 'warm, friendly storyteller inviting a young child to play; natural, cheerful and welcoming; clear, unhurried pace',
+    brincadeira: 'playful storyteller telling a young child a funny little surprise; amused and lively, clear pace',
+    cartao: 'literacy teacher saying each word once, clearly and warmly, at a natural pace; never split the word into syllables',
+    silaba: 'literacy teacher saying each syllable once, clearly, as one short spoken sound; never spell it letter by letter',
+    letra: 'literacy teacher saying the NAME of each letter of the alphabet once, clearly and warmly'
+};
+const GRUPO_FALA = { comando: 'comando', pegadinha: 'brincadeira', contagem: 'brincadeira', cartao: 'cartao', silaba: 'silaba', letra: 'letra' };
 
 // Elenco: quem fala nas frases com diálogo (roteiro em <livro>/audio/narracao/parte-N/roteiro.json).
 // Vozes da biblioteca pt-BR (docs/narracao/VOZES-PT-BR.md), escolhidas pelo Claude a pedido do humano (2026-10-24).
@@ -175,7 +186,8 @@ if (IDIOMA) {
 const NARRADORA = ELENCO.NARRADORA.voz;
 const VOZES = {
     narracao: { voz: NARRADORA, estilo: ELENCO.NARRADORA.estilo || ESTILO_NARRADORA },
-    palavras: { voz: NARRADORA, estilo: ELENCO.PALAVRAS?.estilo || ESTILO_PALAVRAS }
+    palavras: { voz: NARRADORA, estilo: ELENCO.PALAVRAS?.estilo || ESTILO_PALAVRAS },
+    falas: { voz: NARRADORA, estilo: ESTILO_FALAS.comando }
 };
 const flex = !o.standard;   // Flex é o padrão (decisão do humano, 2026-10-24)
 const cfg = VOZES[o.voz] && { modelo: MODELO_TTS, ...VOZES[o.voz] };
@@ -1168,6 +1180,61 @@ async function gravarPalavrasAgrupadas(itens, pasta, indiceArq, ids) {
     }
 }
 
+/* Falas das atividades (--voz falas; lista em `falas` de docs/narracao/frases-*.json, AGENTS.md §2.6). Mesmo caminho das
+   páginas: cada grupo (um tipo só, um item por parágrafo, até `agrupar` itens ou MAX_LETRAS) é um pedido; o Whisper local
+   marca onde cada item começa (alinharFrases) e confere o texto; frases com defeito vão para o reparo cirúrgico. Cada item
+   vira um MP3 (pecaDaPagina, sem o silêncio das pontas) e entra no indice.json com o hash e o texto que o motor procura.
+   Item sem áudio (a voz pulou) não é salvo: rode o mesmo comando de novo e ele vai num grupo novo. */
+async function gravarFalas(itens, pasta, indiceArq, ids) {
+    const indice = lerJson(indiceArq, { frases: {}, textos: {} });
+    const salvo = (i) => indice.frases[i.id] === i.hash && (indice.textos || {})[i.chave] === i.id && existsSync(join(pasta, `${i.id}.mp3`));
+    const pendentes = itens.filter(i => (!ids || ids.has(i.id)) && (o.forcar || !salvo(i)));
+    const maximo = Number(o.agrupar ?? AGRUPAR_PADRAO);
+    const grupos = [];
+    for (const tipo of Object.keys(ESTILO_FALAS)) {
+        const doTipo = pendentes.filter(i => GRUPO_FALA[i.tipo] === tipo);
+        let atual = null, letras = 0;
+        for (const i of doTipo) {
+            if (!atual || atual.frases.length >= maximo || letras + i.fala.length > MAX_LETRAS) { grupos.push(atual = { frases: [], personagem: null, estilo: ESTILO_FALAS[tipo], tipo }); letras = 0; }
+            atual.frases.push({ ...i, pagina: 0, paragrafo: atual.frases.length });
+            letras += i.fala.length;
+        }
+    }
+    console.log(`falas (${MODELO_TTS} / ${ELENCO.NARRADORA.voz}): ${pendentes.length} em ${grupos.length} pedido(s)${o.seco ? ' [seco]' : ''}`);
+    if (o.seco) { grupos.forEach((g, k) => console.log(`  grupo ${k + 1} (${g.tipo}, ${g.frases.reduce((t, f) => t + f.fala.length, 0)} letras): ${g.frases.map(f => f.fala.slice(0, 30)).join(' | ')}`)); return; }
+    const falhas = [];
+    await emParalelo(grupos, PARALELO, async (g) => {
+        const rotulo = `grupo ${g.tipo} ${g.frases[0].id}…`;
+        try {
+            const r = await gravarBloco(g, {}, rotulo);
+            if (r.erros >= 999) { falhas.push(`${rotulo}: ${r.motivo}`); return; }
+            for (const f of g.frases) {
+                const m = r.marcas.find(x => x.id === f.id);
+                if (!m || m.fim - m.ini < 0.15) { falhas.push(`${f.id}: sem áudio no grupo; não foi salva (rode de novo)`); continue; }
+                const peca = pecaDaPagina(r, new Set([f.id]));
+                salvarMp3(peca.amostras, join(pasta, `${f.id}.mp3`));
+                const atual = lerJson(indiceArq, { frases: {}, textos: {} });
+                atual.textos = atual.textos || {};
+                atual.frases[f.id] = f.hash;
+                atual.textos[f.chave] = f.id;
+                Object.assign(atual, { modelo: MODELO_TTS, voz: ELENCO.NARRADORA.voz, qa: o['sem-qa'] ? 'sem' : 'whisper-large-v3-turbo (local)' });
+                writeFileSync(indiceArq, JSON.stringify(atual, null, 2) + '\n');
+                Object.assign(indice, atual);
+                console.log(`  ✓ ${f.id} (${(peca.amostras.length / TAXA).toFixed(1)} s)`);
+            }
+            (r.avisos || []).forEach(a => falhas.push(`${a} → revise de ouvido`));
+        } catch (e) {
+            falhas.push(`${rotulo}: ${e.message}`);
+            if (!/adiado para o lote/.test(e.message)) console.log(`  ✗ ${rotulo}: ${e.message}`);
+            if (/cota esgotada/.test(e.message)) { cotaEsgotada = true; return 'parar'; }
+        }
+    });
+    if (falhas.length) {
+        console.log(`\n${falhas.length} aviso(s):\n  ${falhas.join('\n  ')}`);
+        process.exitCode = 1;
+    }
+}
+
 async function main() {
     if (o['criar-voz']) return criarVoz();
     const base = join(RAIZ, o.livro, 'audio', `${o.voz}${SUFIXO}`);
@@ -1182,15 +1249,16 @@ async function main() {
     } else {
         if (!o.parte) throw new Error('informe --parte N (ou --amostra)');
         // `--parte 2,3,4` (só nas palavras-chave): as palavras de várias partes entram nos mesmos pedidos
-        const partes = o.voz === 'palavras' ? String(o.parte).split(',') : [o.parte];
+        const partes = o.voz === 'palavras' || o.voz === 'falas' ? String(o.parte).split(',') : [o.parte];
         const fontes = partes.map(n => lerJson(join(RAIZ, 'docs', 'narracao', `frases-${o.livro}-parte-${n}${SUFIXO}.json`)));
         const fonte = { ...fontes[0], palavras: [...new Map(fontes.flatMap(f => f.palavras || []).map(w => [w.slug, w])).values()] };
-        const pasta = o.voz === 'palavras' ? base : join(base, `parte-${o.parte}`);
+        const pasta = o.voz === 'palavras' || o.voz === 'falas' ? base : join(base, `parte-${o.parte}`);
         mkdirSync(pasta, { recursive: true });
         indiceArq = join(pasta, 'indice.json');
         indice = lerJson(indiceArq, { frases: {} });
         const ids = o.ids ? new Set(o.ids.split(',')) : null;
         const paginas = o.paginas ? new Set(o.paginas.split(',').map(Number)) : null;
+        if (o.voz === 'falas') return gravarFalas([...new Map(fontes.flatMap(f => f.falas || []).map(f => [f.id, f])).values()], pasta, indiceArq, ids);
         if (o['pagina-inteira']) return gravarPaginas(fonte, pasta, paginas, ids);
         const itens = o.voz === 'palavras'
             ? fonte.palavras.map(p => ({ ...p, id: p.slug }))

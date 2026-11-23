@@ -993,5 +993,107 @@
       "fala": "ar... met... de... mam... brin... armet de mambrin!",
       "hash": "5cb7b70101"
     }
+  ],
+  "audioFalas": "dom-quixote/audio/falas-fr/<id>.mp3",
+  "falas": [
+    {
+      "id": "aide-a-preparer-le-gouter-des-ch-33e7c0",
+      "tipo": "comando",
+      "chave": "Aide à préparer le goûter des chevriers : touche les doux glands, le fromage frais et le lait bien chaud !",
+      "texto": "Aide à préparer le goûter des chevriers : touche les doux glands, le fromage frais et le lait bien chaud !",
+      "fala": "Aide à préparer le goûter des chevriers : touche les doux glands, le fromage frais et le lait bien chaud !",
+      "hash": "0ecdf8b0c6",
+      "paginas": [
+        3
+      ]
+    },
+    {
+      "id": "souffle-sur-le-nuage-de-poussier-70116e",
+      "tipo": "comando",
+      "chave": "Souffle sur le nuage de poussière pour découvrir ce qui se cache sur le chemin !",
+      "texto": "Souffle sur le nuage de poussière pour découvrir ce qui se cache sur le chemin !",
+      "fala": "Souffle sur le nuage de poussière pour découvrir ce qui se cache sur le chemin !",
+      "hash": "bfba19a133",
+      "paginas": [
+        4
+      ]
+    },
+    {
+      "id": "aide-sancho-a-compter-les-petite-516837",
+      "tipo": "comando",
+      "chave": "Aide Sancho à compter les petites chèvres qui traversent la rivière sur la barque, une par une !",
+      "texto": "Aide Sancho à compter les petites chèvres qui traversent la rivière sur la barque, une par une !",
+      "fala": "Aide Sancho à compter les petites chèvres qui traversent la rivière sur la barque, une par une !",
+      "hash": "81357e9189",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "une-chevre-adec11",
+      "tipo": "contagem",
+      "chave": "Une chèvre !",
+      "texto": "Une chèvre !",
+      "fala": "Une chèvre !",
+      "hash": "c50b2c79ad",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "deux-chevres-564ef8",
+      "tipo": "contagem",
+      "chave": "Deux chèvres !",
+      "texto": "Deux chèvres !",
+      "fala": "Deux chèvres !",
+      "hash": "6319cb9d97",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "trois-chevres-cb2cbb",
+      "tipo": "contagem",
+      "chave": "Trois chèvres !",
+      "texto": "Trois chèvres !",
+      "fala": "Trois chèvres !",
+      "hash": "b320836ff7",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "quatre-chevres-a7b652",
+      "tipo": "contagem",
+      "chave": "Quatre chèvres !",
+      "texto": "Quatre chèvres !",
+      "fala": "Quatre chèvres !",
+      "hash": "f5f435d09e",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "cinq-chevres-il-en-reste-encore-3e19d3",
+      "tipo": "contagem",
+      "chave": "Cinq chèvres ! Il en reste encore deux cent quatre-vingt-quinze !",
+      "texto": "Cinq chèvres ! Il en reste encore deux cent quatre-vingt-quinze !",
+      "fala": "Cinq chèvres ! Il en reste encore deux cent quatre-vingt-quinze !",
+      "hash": "373ce41194",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "touche-le-soleil-levant-pour-ecl-56e3e4",
+      "tipo": "comando",
+      "chave": "Touche le soleil levant pour éclairer la rivière et percer le mystère des bruits de la nuit !",
+      "texto": "Touche le soleil levant pour éclairer la rivière et percer le mystère des bruits de la nuit !",
+      "fala": "Touche le soleil levant pour éclairer la rivière et percer le mystère des bruits de la nuit !",
+      "hash": "b7212990ae",
+      "paginas": [
+        7
+      ]
+    }
   ]
 }

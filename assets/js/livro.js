@@ -831,6 +831,7 @@ function vozGravadaAtiva() {
 function carregarVozesGravadas() {
     const script = document.createElement('script');
     script.src = `${AUDIO_BASE}vozes.js`;
+    script.onload = () => aquecerFalas(currentPage);   // as falas da página aberta pelo ?page= já ficam prontas
     document.head.appendChild(script);
 }
 
@@ -856,6 +857,42 @@ function paginasDaVoz(voz) {
 /* Palavras-chave gravadas: palavras/ (português) ou palavras-<idioma>/ */
 function urlPalavra(slugPalavra) {
     return `${AUDIO_BASE}palavras${idioma === PT ? '' : `-${idioma}`}/${slugPalavra}.mp3`;
+}
+
+/* Falas das atividades gravadas (AGENTS.md §2.6): comandos 🎮, cartões falados, pegadinhas e contagens.
+   Um MP3 por fala em falas/ (português) ou falas-<idioma>/; o indice.json da pasta liga o texto que o motor passa
+   para falar() ao arquivo: { textos: { "<texto>": "<id>" }, frases: { "<id>": "<hash>" } } (letra isolada: "letra:h").
+   Texto fora do índice (desafios 🧩, texto mudado depois da gravação) vai direto para a voz do aparelho, sem esperar. */
+const indicesFalas = {};
+function indiceFalas() {
+    const pasta = `falas${idioma === PT ? '' : `-${idioma}`}`;
+    if (!indicesFalas[pasta]) {
+        const ind = indicesFalas[pasta] = { pasta, textos: null };
+        ind.pronto = fetch(`${AUDIO_BASE}${pasta}/indice.json`).then(r => (r.ok ? r.json() : {})).catch(() => ({}))
+            .then(j => { ind.textos = (j && j.textos) || {}; return ind; });
+    }
+    return indicesFalas[pasta];
+}
+
+/* URL do MP3 da fala, só se o idioma tiver narração gravada ativa nesta parte (como as palavras-chave) e o índice
+   já tiver chegado; senão null (aí fala a voz do aparelho) */
+function urlFala(chave) {
+    if (!vozesGravadas().some(gravadaDisponivel)) return null;
+    const ind = indiceFalas();
+    const id = ind.textos && ind.textos[chave];
+    return id ? `${AUDIO_BASE}${ind.pasta}/${id}.mp3` : null;
+}
+
+/* Pré-carrega as falas da página (fica no cache do navegador/SW: o toque da criança não espera a rede) */
+const falasAquecidas = new Set();
+function aquecerFalas(i) {
+    if (!LIVRO.paginas[i] || !vozesGravadas().some(gravadaDisponivel)) return;
+    indiceFalas().pronto.then(() => {
+        Texto.falasDaAtividade(LIVRO.paginas[i], cartoesDe(i), t, IDIOMAS[idioma].lang).forEach(f => {
+            const src = urlFala(f.chave);
+            if (src && !falasAquecidas.has(src)) { falasAquecidas.add(src); fetch(src).catch(() => falasAquecidas.delete(src)); }
+        });
+    });
 }
 
 /* Toca um áudio gravado (a partir de `inicio` segundos); rejeita se o arquivo não existir (aí entra a voz do aparelho) */
@@ -1302,10 +1339,15 @@ function pronounceWord(wordText, slugPalavra) {
     tocarGravacao(urlPalavra(slugPalavra || Texto.slug(wordText))).catch(aparelho);
 }
 
-/* Texto livre (contagens, palavras ordenadas): sempre com a voz do aparelho */
-function falar(texto) {
+/* Fala das atividades (comando 🎮, cartões, pegadinhas, contagens; também as perguntas 🧩): a gravação da
+   narradora, se houver (urlFala), senão a voz do aparelho. `letra`: cartão de letra isolada (assinatura soletrada):
+   procura "letra:<x>" e, na voz do aparelho, fala o nome da letra ("agá", não "h") */
+function falar(texto, { letra = false } = {}) {
     calarTudo();
-    falarComAparelho(texto).catch(() => {});
+    const aparelho = () => falarComAparelho(letra ? Texto.nomeDaLetra(texto, idioma) : texto).catch(() => {});
+    const src = urlFala(letra ? `letra:${texto}` : texto);
+    if (src) tocarGravacao(src).catch(aparelho);
+    else aparelho();
 }
 
 function openPhonicsCard(wordText, syllablesText, emoji, slugPalavra) {
@@ -2154,7 +2196,7 @@ function handleOrdemPalavra(pageIdx, card, coords) {
 
     st.usados.add(expected);
     completeCard(card, coords);
-    falar(card.dataset.word.toLocaleLowerCase(IDIOMAS[idioma].lang));
+    falar(card.dataset.word.toLocaleLowerCase(IDIOMAS[idioma].lang), { letra: Texto.cartoesSaoLetras(c, t) });
     escreverNaFaixa(pageIdx);
 
     if (st.usados.size === c.ordem.length) {
@@ -2932,7 +2974,8 @@ function goToPage(index, options = {}) {
 
     renderPaginationDots();
 
-    // Aquece o cache com todas as ilustrações desta página e da próxima
+    // Aquece o cache com todas as ilustrações desta página e da próxima (e as falas gravadas das atividades)
+    aquecerFalas(currentPage);
     warmImages(allSceneSrcs(currentPage));
     if (currentPage + 1 < totalPages) warmImages(allSceneSrcs(currentPage + 1));
     if (window.CVColaboracao && window.CVColaboracao.aoIrParaPagina) {
@@ -3045,6 +3088,7 @@ function trocarIdioma(codigo, botao) {
         aplicarIdioma();
         for (let i = 0; i < totalPages; i++) traduzirPagina(i);
         traduzirInterface();
+        aquecerFalas(currentPage);
         // Modo Desafio: os quadros já foram refeitos por traduzirPagina; fora do português, avisa
         if (modoDesafio && window.CamadaDesafios) window.CamadaDesafios.aoTrocarIdioma();
         updateScrollHint(currentPage);

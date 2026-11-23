@@ -24,6 +24,8 @@ function traducoesDe(pasta, livro) {
         const t = contexto.window.TRADUCOES[idioma];
         return {
             idioma,
+            t: (texto) => (typeof texto === 'string' && (t.textos || {})[texto]) || texto,
+            cartoes: (t.paginas || []).map(p => (p && p.cartoes) || null),
             livro: {
                 ...livro,
                 obra: t.obra || livro.obra,
@@ -36,7 +38,35 @@ function traducoesDe(pasta, livro) {
     });
 }
 
-function exportar(livro, pasta, idioma) {
+// Código das minúsculas dos cartões (o mesmo de IDIOMAS[idioma].lang no motor)
+const LANG = { en: 'en-GB', fr: 'fr-FR', es: 'es-ES' };
+
+/* Falas das atividades (AGENTS.md §2.6): comandos 🎮, cartões falados, pegadinhas e falas da contagem, com o texto
+   exatamente como o motor passa para falar() (Texto.falasDaAtividade, a mesma lista que o motor pré-carrega).
+   `id`: nome do arquivo (falas<-idioma>/<id>.mp3), estável enquanto o texto não muda; `fala`: o que a voz grava
+   (letra isolada: o nome da letra); `hash`: muda quando a fala muda (pede regravação). */
+function falasDe(livro, idioma, traducao) {
+    const t = traducao ? traducao.t : (x) => x;
+    const lang = idioma ? LANG[idioma] || idioma : 'pt-BR';
+    const falas = [];
+    livro.paginas.forEach((pagina, i) => {
+        const original = (pagina.cena && pagina.cena.cartoes) || null;
+        const troca = traducao && traducao.cartoes[i];
+        const cartoes = original && troca ? { ...original, ...troca } : original;
+        Texto.falasDaAtividade(pagina, cartoes, t, lang).forEach(f => {
+            const ja = falas.find(x => x.chave === f.chave);
+            if (ja) { ja.paginas.push(i); return; }
+            const fala = f.tipo === 'letra' ? Texto.nomeDaLetra(f.texto, idioma || 'pt')
+                : f.tipo === 'cartao' || f.tipo === 'silaba' ? f.texto
+                : Texto.prepararFala(f.texto);
+            const id = `${Texto.slug(f.tipo === 'letra' ? `letra-${f.texto}` : f.texto).slice(0, 32).replace(/-$/, '')}-${hash(f.chave).slice(0, 6)}`;
+            falas.push({ id, tipo: f.tipo, chave: f.chave, texto: f.texto, fala, hash: hash(`${f.tipo}|${fala}`), paginas: [i] });
+        });
+    });
+    return falas;
+}
+
+function exportar(livro, pasta, idioma, traducao) {
     const frases = [];
     const palavras = new Map();
     livro.paginas.forEach((pagina, i) => {
@@ -56,6 +86,7 @@ function exportar(livro, pasta, idioma) {
 
     // Português: frases-<livro>-parte-N.json, na pasta `narracao`. Outros idiomas: ...-parte-N-<idioma>.json, `narracao-<idioma>`
     // A versão nova de uma parte publicada tem a sua pasta (`pastaAudio`, ex.: parte-4-rascunho): `--parte 4-rascunho` na gravação
+    const falas = falasDe(livro, idioma, traducao);
     const sufixo = idioma ? `-${idioma}` : '';
     const pastaAudio = livro.pastaAudio || `parte-${livro.parte}`;
     const destino = `docs/narracao/frases-${pasta}-${pastaAudio}${sufixo}.json`;
@@ -66,9 +97,11 @@ function exportar(livro, pasta, idioma) {
         audio: `${pasta}/audio/<voz>${sufixo}/${pastaAudio}/<id>.mp3`,
         audioPalavras: `${pasta}/audio/palavras${sufixo}/<slug>.mp3`,
         frases,
-        palavras: [...palavras.values()]
+        palavras: [...palavras.values()],
+        audioFalas: `${pasta}/audio/falas${sufixo}/<id>.mp3`,
+        falas
     }, null, 2) + '\n');
-    console.log(`${destino}: ${frases.length} frases, ${palavras.size} palavras-chave`);
+    console.log(`${destino}: ${frases.length} frases, ${palavras.size} palavras-chave, ${falas.length} falas de atividade`);
 }
 
 mkdirSync('docs/narracao', { recursive: true });
@@ -81,5 +114,5 @@ for (const arquivo of globSync('*/parte-*.html').sort()) {
     const pasta = arquivo.split(/[\\/]/)[0];
     exportar(livro, pasta, null);
     // Rascunho não carrega traduções (AGENTS §2.5): as de parte-N.<idioma>.js são da versão publicada
-    if (!livro.rascunho) traducoesDe(pasta, livro).forEach(t => exportar(t.livro, pasta, t.idioma));
+    if (!livro.rascunho) traducoesDe(pasta, livro).forEach(t => exportar(t.livro, pasta, t.idioma, t));
 }

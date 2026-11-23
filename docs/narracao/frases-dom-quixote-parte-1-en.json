@@ -632,5 +632,63 @@
       "fala": "gi... ants... giants!",
       "hash": "f59a6c463d"
     }
+  ],
+  "audioFalas": "dom-quixote/audio/falas-en/<id>.mp3",
+  "falas": [
+    {
+      "id": "tap-alonso-s-three-books-to-disc-f34ede",
+      "tipo": "comando",
+      "chave": "Tap Alonso’s three books to discover adventures of knights, castles, and dragons!",
+      "texto": "Tap Alonso’s three books to discover adventures of knights, castles, and dragons!",
+      "fala": "Tap Alonso’s three books to discover adventures of knights, castles, and dragons!",
+      "hash": "4d23533add",
+      "paginas": [
+        1
+      ]
+    },
+    {
+      "id": "help-grandad-alonso-get-equipped-066184",
+      "tipo": "comando",
+      "chave": "Help Grandad Alonso get equipped: tap the items in the right order to put on the armour, the basin, the shield, and the lance!",
+      "texto": "Help Grandad Alonso get equipped: tap the items in the right order to put on the armour, the basin, the shield, and the lance!",
+      "fala": "Help Grandad Alonso get equipped: tap the items in the right order to put on the armour, the basin, the shield, and the lance!",
+      "hash": "5e024142c3",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "take-good-care-of-rocinante-give-29ae31",
+      "tipo": "comando",
+      "chave": "Take good care of Rocinante: give him the sweet apple, the crunchy carrot, and brush his mane!",
+      "texto": "Take good care of Rocinante: give him the sweet apple, the crunchy carrot, and brush his mane!",
+      "fala": "Take good care of Rocinante: give him the sweet apple, the crunchy carrot, and brush his mane!",
+      "hash": "4e5589e9a9",
+      "paginas": [
+        3
+      ]
+    },
+    {
+      "id": "tap-the-trumpet-to-hear-the-shep-ab44f5",
+      "tipo": "comando",
+      "chave": "Tap the trumpet to hear the shepherd’s music and the warm soup to warm up at the inn!",
+      "texto": "Tap the trumpet to hear the shepherd’s music and the warm soup to warm up at the inn!",
+      "fala": "Tap the trumpet to hear the shepherd’s music and the warm soup to warm up at the inn!",
+      "hash": "d98c0971fe",
+      "paginas": [
+        4
+      ]
+    },
+    {
+      "id": "tap-the-strong-wind-to-make-the-74ac70",
+      "tipo": "comando",
+      "chave": "Tap the strong wind to make the windmill blades spin faster and faster!",
+      "texto": "Tap the strong wind to make the windmill blades spin faster and faster!",
+      "fala": "Tap the strong wind to make the windmill blades spin faster and faster!",
+      "hash": "4c290c3c80",
+      "paginas": [
+        7
+      ]
+    }
   ]
 }

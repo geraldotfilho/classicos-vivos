@@ -743,5 +743,118 @@
       "fala": "lettres... lettres!",
       "hash": "bb39cba1b5"
     }
+  ],
+  "audioFalas": "dom-quixote/audio/falas-fr/<id>.mp3",
+  "falas": [
+    {
+      "id": "ouvre-la-vieille-valise-trouvee-6044a9",
+      "tipo": "comando",
+      "chave": "Ouvre la vieille valise trouvée dans la sierra : touche le cahier de poèmes et les pièces d’or !",
+      "texto": "Ouvre la vieille valise trouvée dans la sierra : touche le cahier de poèmes et les pièces d’or !",
+      "fala": "Ouvre la vieille valise trouvée dans la sierra : touche le cahier de poèmes et les pièces d’or !",
+      "hash": "fb552c3b3f",
+      "paginas": [
+        1
+      ]
+    },
+    {
+      "id": "touche-la-culbute-pour-voir-les-c4b14a",
+      "tipo": "comando",
+      "chave": "Touche la culbute pour voir les pirouettes héroïques de Don Quichotte sur la montagne !",
+      "texto": "Touche la culbute pour voir les pirouettes héroïques de Don Quichotte sur la montagne !",
+      "fala": "Touche la culbute pour voir les pirouettes héroïques de Don Quichotte sur la montagne !",
+      "hash": "f3d74db4de",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "aide-sancho-a-signer-la-lettre-d-e46cae",
+      "tipo": "comando",
+      "chave": "Aide Sancho à signer la lettre d’amour : touche les mots dans le bon ordre pour former LE CHEVALIER À LA TRISTE FIGURE !",
+      "texto": "Aide Sancho à signer la lettre d’amour : touche les mots dans le bon ordre pour former LE CHEVALIER À LA TRISTE FIGURE !",
+      "fala": "Aide Sancho à signer la lettre d’amour : touche les mots dans le bon ordre pour former LE CHEVALIER À LA TRISTE FIGURE !",
+      "hash": "6fd15540a3",
+      "paginas": [
+        3
+      ]
+    },
+    {
+      "id": "le-593b74",
+      "tipo": "cartao",
+      "chave": "le",
+      "texto": "le",
+      "fala": "le",
+      "hash": "3845abc7cc",
+      "paginas": [
+        3
+      ]
+    },
+    {
+      "id": "chevalier-f0e555",
+      "tipo": "cartao",
+      "chave": "chevalier",
+      "texto": "chevalier",
+      "fala": "chevalier",
+      "hash": "363a554e51",
+      "paginas": [
+        3
+      ]
+    },
+    {
+      "id": "a-c34f17",
+      "tipo": "cartao",
+      "chave": "à",
+      "texto": "à",
+      "fala": "à",
+      "hash": "4c121f5869",
+      "paginas": [
+        3
+      ]
+    },
+    {
+      "id": "la-3efd4c",
+      "tipo": "cartao",
+      "chave": "la",
+      "texto": "la",
+      "fala": "la",
+      "hash": "545ba2c710",
+      "paginas": [
+        3
+      ]
+    },
+    {
+      "id": "triste-f47590",
+      "tipo": "cartao",
+      "chave": "triste",
+      "texto": "triste",
+      "fala": "triste",
+      "hash": "ff6396a4de",
+      "paginas": [
+        3
+      ]
+    },
+    {
+      "id": "figure-f85bdc",
+      "tipo": "cartao",
+      "chave": "figure",
+      "texto": "figure",
+      "fala": "figure",
+      "hash": "9ef7d5056b",
+      "paginas": [
+        3
+      ]
+    },
+    {
+      "id": "don-quichotte-reve-qu-il-affront-e8f846",
+      "tipo": "comando",
+      "chave": "Don Quichotte rêve qu’il affronte un géant : touche l’épée pour percer les outres de vin !",
+      "texto": "Don Quichotte rêve qu’il affronte un géant : touche l’épée pour percer les outres de vin !",
+      "fala": "Don Quichotte rêve qu’il affronte un géant : touche l’épée pour percer les outres de vin !",
+      "hash": "50377d8ed3",
+      "paginas": [
+        6
+      ]
+    }
   ]
 }

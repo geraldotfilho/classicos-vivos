@@ -2661,5 +2661,173 @@
       "fala": "li... ons... lions!",
       "hash": "55940a0bbd"
     }
+  ],
+  "audioFalas": "dom-quixote/audio/falas-en/<id>.mp3",
+  "falas": [
+    {
+      "id": "sancho-can-t-read-and-he-wants-t-8ca43f",
+      "tipo": "comando",
+      "chave": "Sancho can’t read, and he wants to find his name in the book. Help him: put the pieces of his name together in the right order!",
+      "texto": "Sancho can’t read, and he wants to find his name in the book. Help him: put the pieces of his name together in the right order!",
+      "fala": "Sancho can’t read, and he wants to find his name in the book. Help him: put the pieces of his name together in the right order!",
+      "hash": "a54279630c",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "san-b23d0c",
+      "tipo": "silaba",
+      "chave": "san",
+      "texto": "san",
+      "fala": "san",
+      "hash": "9922e983d4",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "cho-5a6e35",
+      "tipo": "silaba",
+      "chave": "cho",
+      "texto": "cho",
+      "fala": "cho",
+      "hash": "d8d1315ddc",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "pan-bd2bd8",
+      "tipo": "silaba",
+      "chave": "pan",
+      "texto": "pan",
+      "fala": "pan",
+      "hash": "51593d710b",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "za-85c9ba",
+      "tipo": "silaba",
+      "chave": "za",
+      "texto": "za",
+      "fala": "za",
+      "hash": "0e109dd0a8",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "help-sancho-find-out-who-the-two-6dd401",
+      "tipo": "comando",
+      "chave": "Help Sancho find out who the two strangers are! Look at the picture of what he wants to take off and tap the right word. Watch out for the trick words!",
+      "texto": "Help Sancho find out who the two strangers are! Look at the picture of what he wants to take off and tap the right word. Watch out for the trick words!",
+      "fala": "Help Sancho find out who the two strangers are! Look at the picture of what he wants to take off and tap the right word. Watch out for the trick words!",
+      "hash": "d92f9c9295",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "helmet-749440",
+      "tipo": "cartao",
+      "chave": "helmet",
+      "texto": "helmet",
+      "fala": "helmet",
+      "hash": "ca6938a50b",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "nose-1a1f58",
+      "tipo": "cartao",
+      "chave": "nose",
+      "texto": "nose",
+      "fala": "nose",
+      "hash": "c2473d33f2",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "rose-sancho-picked-a-rose-from-a-f6edc0",
+      "tipo": "pegadinha",
+      "chave": "Rose? Sancho picked a rose from a bush and pricked his finger on a thorn. Ouch! Let's try again!",
+      "texto": "Rose? Sancho picked a rose from a bush and pricked his finger on a thorn. Ouch! Let's try again!",
+      "fala": "Rose? Sancho picked a rose from a bush and pricked his finger on a thorn. Ouch! Let's try again!",
+      "hash": "eb407e625c",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "hamlet-a-hamlet-is-a-tiny-villag-786d40",
+      "tipo": "pegadinha",
+      "chave": "Hamlet? A hamlet is a tiny village! Sancho looked all round the field, but there wasn't a single house. Let's try again!",
+      "texto": "Hamlet? A hamlet is a tiny village! Sancho looked all round the field, but there wasn't a single house. Let's try again!",
+      "fala": "Hamlet? A hamlet is a tiny village! Sancho looked all round the field, but there wasn't a single house. Let's try again!",
+      "hash": "b3e1e76f51",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "the-keeper-is-going-to-tell-the-9da59a",
+      "tipo": "comando",
+      "chave": "The keeper is going to tell the king everything the lion did. Help him remember: read the story and tap the words in the order it happened!",
+      "texto": "The keeper is going to tell the king everything the lion did. Help him remember: read the story and tap the words in the order it happened!",
+      "fala": "The keeper is going to tell the king everything the lion did. Help him remember: read the story and tap the words in the order it happened!",
+      "hash": "e100f87ed6",
+      "paginas": [
+        9
+      ]
+    },
+    {
+      "id": "stretched-951664",
+      "tipo": "cartao",
+      "chave": "stretched",
+      "texto": "stretched",
+      "fala": "stretched",
+      "hash": "99b1e6df46",
+      "paginas": [
+        9
+      ]
+    },
+    {
+      "id": "yawned-566633",
+      "tipo": "cartao",
+      "chave": "yawned",
+      "texto": "yawned",
+      "fala": "yawned",
+      "hash": "0a4aed9786",
+      "paginas": [
+        9
+      ]
+    },
+    {
+      "id": "washed-a803b1",
+      "tipo": "cartao",
+      "chave": "washed",
+      "texto": "washed",
+      "fala": "washed",
+      "hash": "d8617dfb05",
+      "paginas": [
+        9
+      ]
+    },
+    {
+      "id": "lay-down-45cec4",
+      "tipo": "cartao",
+      "chave": "lay down",
+      "texto": "lay down",
+      "fala": "lay down",
+      "hash": "71e86df5cb",
+      "paginas": [
+        9
+      ]
+    }
   ]
 }

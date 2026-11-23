@@ -2661,5 +2661,173 @@
       "fala": "li... ons... lions!",
       "hash": "55940a0bbd"
     }
+  ],
+  "audioFalas": "dom-quixote/audio/falas-fr/<id>.mp3",
+  "falas": [
+    {
+      "id": "sancho-ne-sait-pas-lire-et-veut-401368",
+      "tipo": "comando",
+      "chave": "Sancho ne sait pas lire et veut trouver son nom dans le livre. Aide-le : remets les morceaux de son nom dans le bon ordre !",
+      "texto": "Sancho ne sait pas lire et veut trouver son nom dans le livre. Aide-le : remets les morceaux de son nom dans le bon ordre !",
+      "fala": "Sancho ne sait pas lire et veut trouver son nom dans le livre. Aide-le : remets les morceaux de son nom dans le bon ordre !",
+      "hash": "ad14edd65f",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "san-b23d0c",
+      "tipo": "silaba",
+      "chave": "san",
+      "texto": "san",
+      "fala": "san",
+      "hash": "9922e983d4",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "cho-5a6e35",
+      "tipo": "silaba",
+      "chave": "cho",
+      "texto": "cho",
+      "fala": "cho",
+      "hash": "d8d1315ddc",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "pan-bd2bd8",
+      "tipo": "silaba",
+      "chave": "pan",
+      "texto": "pan",
+      "fala": "pan",
+      "hash": "51593d710b",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "ca-24125d",
+      "tipo": "silaba",
+      "chave": "ça",
+      "texto": "ça",
+      "fala": "ça",
+      "hash": "d183677c68",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "aide-sancho-a-decouvrir-qui-sont-b05821",
+      "tipo": "comando",
+      "chave": "Aide Sancho à découvrir qui sont les deux inconnus ! Regarde l’image de ce qu’il veut leur enlever et touche le bon mot. Attention aux pièges !",
+      "texto": "Aide Sancho à découvrir qui sont les deux inconnus ! Regarde l’image de ce qu’il veut leur enlever et touche le bon mot. Attention aux pièges !",
+      "fala": "Aide Sancho à découvrir qui sont les deux inconnus ! Regarde l’image de ce qu’il veut leur enlever et touche le bon mot. Attention aux pièges !",
+      "hash": "7d5ec82f7e",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "heaume-59b2d3",
+      "tipo": "cartao",
+      "chave": "heaume",
+      "texto": "heaume",
+      "fala": "heaume",
+      "hash": "b1aaa73cfa",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "nez-953bd2",
+      "tipo": "cartao",
+      "chave": "nez",
+      "texto": "nez",
+      "fala": "nez",
+      "hash": "d951d1609c",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "nid-sancho-chercha-un-nid-dans-l-3e3fcd",
+      "tipo": "pegadinha",
+      "chave": "Nid ? Sancho chercha un nid dans l’arbre, et une pie lui vola son chapeau ! On essaie encore !",
+      "texto": "Nid ? Sancho chercha un nid dans l’arbre, et une pie lui vola son chapeau ! On essaie encore !",
+      "fala": "Nid ? Sancho chercha un nid dans l’arbre, et une pie lui vola son chapeau ! On essaie encore !",
+      "hash": "1922798024",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "paume-sancho-regarda-la-paume-de-d2e9d9",
+      "tipo": "pegadinha",
+      "chave": "Paume ? Sancho regarda la paume de sa main : il n’y avait rien dedans ! On essaie encore !",
+      "texto": "Paume ? Sancho regarda la paume de sa main : il n’y avait rien dedans ! On essaie encore !",
+      "fala": "Paume ? Sancho regarda la paume de sa main : il n’y avait rien dedans ! On essaie encore !",
+      "hash": "d01373d333",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "le-gardien-va-raconter-au-roi-to-25c5a9",
+      "tipo": "comando",
+      "chave": "Le gardien va raconter au roi tout ce que le lion a fait. Aide-le à s’en souvenir : lis l’histoire et touche les mots dans l’ordre où c’est arrivé !",
+      "texto": "Le gardien va raconter au roi tout ce que le lion a fait. Aide-le à s’en souvenir : lis l’histoire et touche les mots dans l’ordre où c’est arrivé !",
+      "fala": "Le gardien va raconter au roi tout ce que le lion a fait. Aide-le à s’en souvenir : lis l’histoire et touche les mots dans l’ordre où c’est arrivé !",
+      "hash": "dac08c33f3",
+      "paginas": [
+        9
+      ]
+    },
+    {
+      "id": "etira-4a0014",
+      "tipo": "cartao",
+      "chave": "étira",
+      "texto": "étira",
+      "fala": "étira",
+      "hash": "cdffa525ee",
+      "paginas": [
+        9
+      ]
+    },
+    {
+      "id": "bailla-76d069",
+      "tipo": "cartao",
+      "chave": "bâilla",
+      "texto": "bâilla",
+      "fala": "bâilla",
+      "hash": "7040c44937",
+      "paginas": [
+        9
+      ]
+    },
+    {
+      "id": "lava-cd2f5f",
+      "tipo": "cartao",
+      "chave": "lava",
+      "texto": "lava",
+      "fala": "lava",
+      "hash": "0e062c3f90",
+      "paginas": [
+        9
+      ]
+    },
+    {
+      "id": "coucha-3b05ef",
+      "tipo": "cartao",
+      "chave": "coucha",
+      "texto": "coucha",
+      "fala": "coucha",
+      "hash": "0ef7311b9a",
+      "paginas": [
+        9
+      ]
+    }
   ]
 }

@@ -2707,5 +2707,195 @@
       "fala": "i... lha... ilha!",
       "hash": "14b9fb74ee"
     }
+  ],
+  "audioFalas": "dom-quixote/audio/falas/<id>.mp3",
+  "falas": [
+    {
+      "id": "ajude-a-consertar-os-bonecos-que-ec02e4",
+      "tipo": "comando",
+      "chave": "Ajude a consertar os bonecos, que Sancho paga um por um! Mestre Pedro mostra o boneco quebrado: toque no nome certo. Cuidado com as pegadinhas!",
+      "texto": "Ajude a consertar os bonecos, que Sancho paga um por um! Mestre Pedro mostra o boneco quebrado: toque no nome certo. Cuidado com as pegadinhas!",
+      "fala": "Ajude a consertar os bonecos, que Sancho paga um por um! Mestre Pedro mostra o boneco quebrado: toque no nome certo. Cuidado com as pegadinhas!",
+      "hash": "a19fec7881",
+      "paginas": [
+        5
+      ]
+    },
+    {
+      "id": "rei-39e454",
+      "tipo": "cartao",
+      "chave": "rei",
+      "texto": "rei",
+      "fala": "rei",
+      "hash": "28a9c21429",
+      "paginas": [
+        5
+      ]
+    },
+    {
+      "id": "cavalo-dc5755",
+      "tipo": "cartao",
+      "chave": "cavalo",
+      "texto": "cavalo",
+      "fala": "cavalo",
+      "hash": "8b4939e33b",
+      "paginas": [
+        5
+      ]
+    },
+    {
+      "id": "torre-a006e3",
+      "tipo": "cartao",
+      "chave": "torre",
+      "texto": "torre",
+      "fala": "torre",
+      "hash": "1769671384",
+      "paginas": [
+        5
+      ]
+    },
+    {
+      "id": "torta-sancho-bem-que-queria-mas-dd4124",
+      "tipo": "pegadinha",
+      "chave": "Torta? Sancho bem que queria! Mas torta não se conserta: se come. Vamos tentar de novo!",
+      "texto": "Torta? Sancho bem que queria! Mas torta não se conserta: se come. Vamos tentar de novo!",
+      "fala": "Torta? Sancho bem que queria! Mas torta não se conserta: se come. Vamos tentar de novo!",
+      "hash": "8a9c5e3f9a",
+      "paginas": [
+        5
+      ]
+    },
+    {
+      "id": "cabelo-boneco-nao-vai-ao-barbeir-f0c2f5",
+      "tipo": "pegadinha",
+      "chave": "Cabelo? Boneco não vai ao barbeiro! Mestre Pedro até riu. Vamos tentar de novo!",
+      "texto": "Cabelo? Boneco não vai ao barbeiro! Mestre Pedro até riu. Vamos tentar de novo!",
+      "fala": "Cabelo? Boneco não vai ao barbeiro! Mestre Pedro até riu. Vamos tentar de novo!",
+      "hash": "54eac49246",
+      "paginas": [
+        5
+      ]
+    },
+    {
+      "id": "rio-mestre-pedro-procurou-um-rio-903e1e",
+      "tipo": "pegadinha",
+      "chave": "Rio? Mestre Pedro procurou um rio no teatrinho e só achou o macaco! Vamos tentar de novo!",
+      "texto": "Rio? Mestre Pedro procurou um rio no teatrinho e só achou o macaco! Vamos tentar de novo!",
+      "fala": "Rio? Mestre Pedro procurou um rio no teatrinho e só achou o macaco! Vamos tentar de novo!",
+      "hash": "f1e5d38c1d",
+      "paginas": [
+        5
+      ]
+    },
+    {
+      "id": "deu-um-branco-em-sancho-ajude-o-61f5fa",
+      "tipo": "comando",
+      "chave": "Deu um branco em Sancho! Ajude-o a lembrar o nome novo do seu amo: toque nas palavras na ordem certa.",
+      "texto": "Deu um branco em Sancho! Ajude-o a lembrar o nome novo do seu amo: toque nas palavras na ordem certa.",
+      "fala": "Deu um branco em Sancho! Ajude-o a lembrar o nome novo do seu amo: toque nas palavras na ordem certa.",
+      "hash": "46ef962986",
+      "paginas": [
+        7
+      ]
+    },
+    {
+      "id": "o-7a81af",
+      "tipo": "cartao",
+      "chave": "o",
+      "texto": "o",
+      "fala": "o",
+      "hash": "961d49cc27",
+      "paginas": [
+        7
+      ]
+    },
+    {
+      "id": "cavaleiro-6c67a4",
+      "tipo": "cartao",
+      "chave": "cavaleiro",
+      "texto": "cavaleiro",
+      "fala": "cavaleiro",
+      "hash": "328dc61e2c",
+      "paginas": [
+        7
+      ]
+    },
+    {
+      "id": "dos-e67f16",
+      "tipo": "cartao",
+      "chave": "dos",
+      "texto": "dos",
+      "fala": "dos",
+      "hash": "5678815296",
+      "paginas": [
+        7
+      ]
+    },
+    {
+      "id": "leoes-8b26f9",
+      "tipo": "cartao",
+      "chave": "leões",
+      "texto": "leões",
+      "fala": "leões",
+      "hash": "26bd1b6921",
+      "paginas": [
+        7
+      ]
+    },
+    {
+      "id": "ajude-os-criados-do-duque-a-prep-6138df",
+      "tipo": "comando",
+      "chave": "Ajude os criados do duque a preparar a viagem-surpresa de Dom Quixote! Veja a figura do que eles precisam e toque na palavra certa. Cuidado com as pegadinhas!",
+      "texto": "Ajude os criados do duque a preparar a viagem-surpresa de Dom Quixote! Veja a figura do que eles precisam e toque na palavra certa. Cuidado com as pegadinhas!",
+      "fala": "Ajude os criados do duque a preparar a viagem-surpresa de Dom Quixote! Veja a figura do que eles precisam e toque na palavra certa. Cuidado com as pegadinhas!",
+      "hash": "171d4acc40",
+      "paginas": [
+        9
+      ]
+    },
+    {
+      "id": "fole-6bffaf",
+      "tipo": "cartao",
+      "chave": "fole",
+      "texto": "fole",
+      "fala": "fole",
+      "hash": "5964c46316",
+      "paginas": [
+        9
+      ]
+    },
+    {
+      "id": "tocha-e6edde",
+      "tipo": "cartao",
+      "chave": "tocha",
+      "texto": "tocha",
+      "fala": "tocha",
+      "hash": "ffe64fe729",
+      "paginas": [
+        9
+      ]
+    },
+    {
+      "id": "touca-puseram-uma-touca-no-caval-774821",
+      "tipo": "pegadinha",
+      "chave": "Touca? Puseram uma touca no cavalo, e ele ficou só mais quentinho. Voar, que é bom, nada! Vamos tentar de novo!",
+      "texto": "Touca? Puseram uma touca no cavalo, e ele ficou só mais quentinho. Voar, que é bom, nada! Vamos tentar de novo!",
+      "fala": "Touca? Puseram uma touca no cavalo, e ele ficou só mais quentinho. Voar, que é bom, nada! Vamos tentar de novo!",
+      "hash": "cef147188b",
+      "paginas": [
+        9
+      ]
+    },
+    {
+      "id": "folha-abanaram-uma-folhinha-e-na-82ac02",
+      "tipo": "pegadinha",
+      "chave": "Folha? Abanaram uma folhinha, e não saiu vento nem para espantar mosquito! Vamos tentar de novo!",
+      "texto": "Folha? Abanaram uma folhinha, e não saiu vento nem para espantar mosquito! Vamos tentar de novo!",
+      "fala": "Folha? Abanaram uma folhinha, e não saiu vento nem para espantar mosquito! Vamos tentar de novo!",
+      "hash": "b6c7508121",
+      "paginas": [
+        9
+      ]
+    }
   ]
 }

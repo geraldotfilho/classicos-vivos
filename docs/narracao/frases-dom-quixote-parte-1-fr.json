@@ -625,5 +625,63 @@
       "fala": "gé... ants... géants!",
       "hash": "9a4752acf2"
     }
+  ],
+  "audioFalas": "dom-quixote/audio/falas-fr/<id>.mp3",
+  "falas": [
+    {
+      "id": "touche-les-trois-livres-d-alonso-5fe8fc",
+      "tipo": "comando",
+      "chave": "Touche les trois livres d’Alonso pour découvrir les aventures de chevaliers, de châteaux et de dragons !",
+      "texto": "Touche les trois livres d’Alonso pour découvrir les aventures de chevaliers, de châteaux et de dragons !",
+      "fala": "Touche les trois livres d’Alonso pour découvrir les aventures de chevaliers, de châteaux et de dragons !",
+      "hash": "52aad3b91f",
+      "paginas": [
+        1
+      ]
+    },
+    {
+      "id": "aide-grand-pere-alonso-a-s-equip-1f04a9",
+      "tipo": "comando",
+      "chave": "Aide grand-père Alonso à s’équiper : touche les objets dans le bon ordre pour enfiler l’armure, le plat à barbe, le bouclier et la lance !",
+      "texto": "Aide grand-père Alonso à s’équiper : touche les objets dans le bon ordre pour enfiler l’armure, le plat à barbe, le bouclier et la lance !",
+      "fala": "Aide grand-père Alonso à s’équiper : touche les objets dans le bon ordre pour enfiler l’armure, le plat à barbe, le bouclier et la lance !",
+      "hash": "61ef6f3ff3",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "prends-bien-soin-de-rossinante-d-7ddcef",
+      "tipo": "comando",
+      "chave": "Prends bien soin de Rossinante : donne-lui la pomme sucrée, la carotte croquante et brosse sa crinière !",
+      "texto": "Prends bien soin de Rossinante : donne-lui la pomme sucrée, la carotte croquante et brosse sa crinière !",
+      "fala": "Prends bien soin de Rossinante : donne-lui la pomme sucrée, la carotte croquante et brosse sa crinière !",
+      "hash": "1d3df79d44",
+      "paginas": [
+        3
+      ]
+    },
+    {
+      "id": "touche-la-trompette-pour-ecouter-29099d",
+      "tipo": "comando",
+      "chave": "Touche la trompette pour écouter la musique du berger et la soupe bien chaude pour te réchauffer à l’auberge !",
+      "texto": "Touche la trompette pour écouter la musique du berger et la soupe bien chaude pour te réchauffer à l’auberge !",
+      "fala": "Touche la trompette pour écouter la musique du berger et la soupe bien chaude pour te réchauffer à l’auberge !",
+      "hash": "9173cb49a6",
+      "paginas": [
+        4
+      ]
+    },
+    {
+      "id": "touche-le-vent-fort-pour-faire-t-cc747d",
+      "tipo": "comando",
+      "chave": "Touche le vent fort pour faire tourner les ailes des moulins de plus en plus vite !",
+      "texto": "Touche le vent fort pour faire tourner les ailes des moulins de plus en plus vite !",
+      "fala": "Touche le vent fort pour faire tourner les ailes des moulins de plus en plus vite !",
+      "hash": "690216c144",
+      "paginas": [
+        7
+      ]
+    }
   ]
 }

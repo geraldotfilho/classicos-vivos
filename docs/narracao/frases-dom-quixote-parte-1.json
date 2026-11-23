@@ -624,5 +624,63 @@
       "fala": "gi... gan... tes... gigantes!",
       "hash": "9e4e0a721d"
     }
+  ],
+  "audioFalas": "dom-quixote/audio/falas/<id>.mp3",
+  "falas": [
+    {
+      "id": "toque-nos-tres-livros-de-alonso-6d2f5b",
+      "tipo": "comando",
+      "chave": "Toque nos três livros de Alonso para descobrir as aventuras de cavaleiros, castelos e dragões!",
+      "texto": "Toque nos três livros de Alonso para descobrir as aventuras de cavaleiros, castelos e dragões!",
+      "fala": "Toque nos três livros de Alonso para descobrir as aventuras de cavaleiros, castelos e dragões!",
+      "hash": "e4ff008fbd",
+      "paginas": [
+        1
+      ]
+    },
+    {
+      "id": "ajude-o-vovo-alonso-a-se-equipar-a98880",
+      "tipo": "comando",
+      "chave": "Ajude o vovô Alonso a se equipar: toque nos itens na ordem certa para vestir a armadura, a bacia, o escudo e a lança!",
+      "texto": "Ajude o vovô Alonso a se equipar: toque nos itens na ordem certa para vestir a armadura, a bacia, o escudo e a lança!",
+      "fala": "Ajude o vovô Alonso a se equipar: toque nos itens na ordem certa para vestir a armadura, a bacia, o escudo e a lança!",
+      "hash": "8cbeee5b72",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "cuide-com-carinho-do-rocinante-d-1aeed9",
+      "tipo": "comando",
+      "chave": "Cuide com carinho do Rocinante: dê a maçã doce, a cenoura crocante e escove suas crinas!",
+      "texto": "Cuide com carinho do Rocinante: dê a maçã doce, a cenoura crocante e escove suas crinas!",
+      "fala": "Cuide com carinho do Rocinante: dê a maçã doce, a cenoura crocante e escove suas crinas!",
+      "hash": "707228913e",
+      "paginas": [
+        3
+      ]
+    },
+    {
+      "id": "toque-na-trombeta-para-ouvir-a-m-aa0ab2",
+      "tipo": "comando",
+      "chave": "Toque na trombeta para ouvir a música do pastor e na sopa quentinha para se aquecer na pousada!",
+      "texto": "Toque na trombeta para ouvir a música do pastor e na sopa quentinha para se aquecer na pousada!",
+      "fala": "Toque na trombeta para ouvir a música do pastor e na sopa quentinha para se aquecer na pousada!",
+      "hash": "2d604c8575",
+      "paginas": [
+        4
+      ]
+    },
+    {
+      "id": "toque-no-vento-forte-para-fazer-3c5908",
+      "tipo": "comando",
+      "chave": "Toque no vento forte para fazer as pás dos moinhos girarem cada vez mais rápido!",
+      "texto": "Toque no vento forte para fazer as pás dos moinhos girarem cada vez mais rápido!",
+      "fala": "Toque no vento forte para fazer as pás dos moinhos girarem cada vez mais rápido!",
+      "hash": "a7162da7f0",
+      "paginas": [
+        7
+      ]
+    }
   ]
 }

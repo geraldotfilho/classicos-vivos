@@ -2072,5 +2072,272 @@
       "fala": "dream... dream!",
       "hash": "8d7828c0e8"
     }
+  ],
+  "audioFalas": "dom-quixote/audio/falas-en/<id>.mp3",
+  "falas": [
+    {
+      "id": "tap-the-syllables-in-the-right-o-d317ba",
+      "tipo": "comando",
+      "chave": "Tap the syllables in the right order to form Sancho’s new word: BA-SIN-HEL-MET!",
+      "texto": "Tap the syllables in the right order to form Sancho’s new word: BA-SIN-HEL-MET!",
+      "fala": "Tap the syllables in the right order to form Sancho’s new word: BA-SIN-HEL-MET!",
+      "hash": "06874c8e54",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "ba-6c0596",
+      "tipo": "silaba",
+      "chave": "ba",
+      "texto": "ba",
+      "fala": "ba",
+      "hash": "f518e76bd9",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "sin-7d14c0",
+      "tipo": "silaba",
+      "chave": "sin",
+      "texto": "sin",
+      "fala": "sin",
+      "hash": "2f4446ac4a",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "hel-3617b3",
+      "tipo": "silaba",
+      "chave": "hel",
+      "texto": "hel",
+      "fala": "hel",
+      "hash": "84cdb556dc",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "met-ceafa9",
+      "tipo": "silaba",
+      "chave": "met",
+      "texto": "met",
+      "fala": "met",
+      "hash": "020046c629",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "tap-the-magic-letters-and-discov-0c1f25",
+      "tipo": "comando",
+      "chave": "Tap the magic letters and discover the secret 6-letter word that opens the carriage door!",
+      "texto": "Tap the magic letters and discover the secret 6-letter word that opens the carriage door!",
+      "fala": "Tap the magic letters and discover the secret 6-letter word that opens the carriage door!",
+      "hash": "bcc8edf3dc",
+      "paginas": [
+        3
+      ]
+    },
+    {
+      "id": "letra-f-e29296",
+      "tipo": "letra",
+      "chave": "letra:f",
+      "texto": "f",
+      "fala": "ef",
+      "hash": "3101b7c378",
+      "paginas": [
+        3
+      ]
+    },
+    {
+      "id": "letra-r-d866b1",
+      "tipo": "letra",
+      "chave": "letra:r",
+      "texto": "r",
+      "fala": "ar",
+      "hash": "596f87ebfa",
+      "paginas": [
+        3
+      ]
+    },
+    {
+      "id": "letra-i-011e7a",
+      "tipo": "letra",
+      "chave": "letra:i",
+      "texto": "i",
+      "fala": "eye",
+      "hash": "e636da5d0e",
+      "paginas": [
+        3
+      ]
+    },
+    {
+      "id": "letra-e-f51287",
+      "tipo": "letra",
+      "chave": "letra:e",
+      "texto": "e",
+      "fala": "ee",
+      "hash": "c289e4b3d4",
+      "paginas": [
+        3
+      ]
+    },
+    {
+      "id": "letra-n-53d5e1",
+      "tipo": "letra",
+      "chave": "letra:n",
+      "texto": "n",
+      "fala": "en",
+      "hash": "d5363b1ea1",
+      "paginas": [
+        3
+      ]
+    },
+    {
+      "id": "letra-d-9142ab",
+      "tipo": "letra",
+      "chave": "letra:d",
+      "texto": "d",
+      "fala": "dee",
+      "hash": "2556199569",
+      "paginas": [
+        3
+      ]
+    },
+    {
+      "id": "sancho-is-hungry-look-at-the-pic-7e7da6",
+      "tipo": "comando",
+      "chave": "Sancho is hungry! Look at the picture of what he wants and tap the right word. Watch out for the trick words: they will muddle up the whole picnic!",
+      "texto": "Sancho is hungry! Look at the picture of what he wants and tap the right word. Watch out for the trick words: they will muddle up the whole picnic!",
+      "fala": "Sancho is hungry! Look at the picture of what he wants and tap the right word. Watch out for the trick words: they will muddle up the whole picnic!",
+      "hash": "e485666d39",
+      "paginas": [
+        5
+      ]
+    },
+    {
+      "id": "bread-6ff291",
+      "tipo": "cartao",
+      "chave": "bread",
+      "texto": "bread",
+      "fala": "bread",
+      "hash": "51b7e2f58c",
+      "paginas": [
+        5
+      ]
+    },
+    {
+      "id": "cheese-bcef7a",
+      "tipo": "cartao",
+      "chave": "cheese",
+      "texto": "cheese",
+      "fala": "cheese",
+      "hash": "c990dee4f3",
+      "paginas": [
+        5
+      ]
+    },
+    {
+      "id": "water-6d5a45",
+      "tipo": "cartao",
+      "chave": "water",
+      "texto": "water",
+      "fala": "water",
+      "hash": "222d74c43b",
+      "paginas": [
+        5
+      ]
+    },
+    {
+      "id": "thread-thread-is-for-sewing-not-aad6c7",
+      "tipo": "pegadinha",
+      "chave": "Thread? Thread is for sewing, not for eating! The spool rolled across the blanket and made a mess. Let's try again!",
+      "texto": "Thread? Thread is for sewing, not for eating! The spool rolled across the blanket and made a mess. Let's try again!",
+      "fala": "Thread? Thread is for sewing, not for eating! The spool rolled across the blanket and made a mess. Let's try again!",
+      "hash": "564ad78431",
+      "paginas": [
+        5
+      ]
+    },
+    {
+      "id": "bees-bzzzz-a-buzzy-bee-flew-over-eccc07",
+      "tipo": "pegadinha",
+      "chave": "Bees? Bzzzz! A buzzy bee flew over the picnic and made everyone jump! Let's try again!",
+      "texto": "Bees? Bzzzz! A buzzy bee flew over the picnic and made everyone jump! Let's try again!",
+      "fala": "Bees? Bzzzz! A buzzy bee flew over the picnic and made everyone jump! Let's try again!",
+      "hash": "eb10c3a150",
+      "paginas": [
+        5
+      ]
+    },
+    {
+      "id": "chin-you-can-t-eat-your-chin-san-285bd3",
+      "tipo": "pegadinha",
+      "chave": "Chin? You can't eat your chin! Sancho laughed so hard his hat fell off. Let's try again!",
+      "texto": "Chin? You can't eat your chin! Sancho laughed so hard his hat fell off. Let's try again!",
+      "fala": "Chin? You can't eat your chin! Sancho laughed so hard his hat fell off. Let's try again!",
+      "hash": "c004c8e4e3",
+      "paginas": [
+        5
+      ]
+    },
+    {
+      "id": "help-sancho-announce-to-his-fami-895c2c",
+      "tipo": "comando",
+      "chave": "Help Sancho announce to his family the title he dreams of having: SANCHO GOVERNOR OF THE ISLAND!",
+      "texto": "Help Sancho announce to his family the title he dreams of having: SANCHO GOVERNOR OF THE ISLAND!",
+      "fala": "Help Sancho announce to his family the title he dreams of having: SANCHO GOVERNOR OF THE ISLAND!",
+      "hash": "42b0112825",
+      "paginas": [
+        10
+      ]
+    },
+    {
+      "id": "sancho-2e9054",
+      "tipo": "cartao",
+      "chave": "sancho",
+      "texto": "sancho",
+      "fala": "sancho",
+      "hash": "696d848b94",
+      "paginas": [
+        10
+      ]
+    },
+    {
+      "id": "governor-a7d666",
+      "tipo": "cartao",
+      "chave": "governor",
+      "texto": "governor",
+      "fala": "governor",
+      "hash": "bb5ba17b46",
+      "paginas": [
+        10
+      ]
+    },
+    {
+      "id": "of-the-d2263e",
+      "tipo": "cartao",
+      "chave": "of the",
+      "texto": "of the",
+      "fala": "of the",
+      "hash": "48658fb8cb",
+      "paginas": [
+        10
+      ]
+    },
+    {
+      "id": "island-7bd1a9",
+      "tipo": "cartao",
+      "chave": "island",
+      "texto": "island",
+      "fala": "island",
+      "hash": "2006216934",
+      "paginas": [
+        10
+      ]
+    }
   ]
 }

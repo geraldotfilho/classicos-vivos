@@ -3263,5 +3263,239 @@
       "fala": "bar... ce... lo... na... barcelona!",
       "hash": "01ebf70eee"
     }
+  ],
+  "audioFalas": "dom-quixote/audio/falas-es/<id>.mp3",
+  "falas": [
+    {
+      "id": "ayuda-al-gobernador-a-contar-los-67811f",
+      "tipo": "comando",
+      "chave": "¡Ayuda al gobernador a contar los gorritos! Toca los números en el orden correcto: cada acierto pone un gorrito en un dedo del sastre.",
+      "texto": "¡Ayuda al gobernador a contar los gorritos! Toca los números en el orden correcto: cada acierto pone un gorrito en un dedo del sastre.",
+      "fala": "¡Ayuda al gobernador a contar los gorritos! Toca los números en el orden correcto: cada acierto pone un gorrito en un dedo del sastre.",
+      "hash": "a550f66d05",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "uno-81b6f5",
+      "tipo": "cartao",
+      "chave": "uno",
+      "texto": "uno",
+      "fala": "uno",
+      "hash": "a0a00005e6",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "dos-e67f16",
+      "tipo": "cartao",
+      "chave": "dos",
+      "texto": "dos",
+      "fala": "dos",
+      "hash": "5678815296",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "tres-0c9598",
+      "tipo": "cartao",
+      "chave": "tres",
+      "texto": "tres",
+      "fala": "tres",
+      "hash": "5d4519b05f",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "cuatro-a37e3b",
+      "tipo": "cartao",
+      "chave": "cuatro",
+      "texto": "cuatro",
+      "fala": "cuatro",
+      "hash": "9a620114ca",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "cinco-a097b3",
+      "tipo": "cartao",
+      "chave": "cinco",
+      "texto": "cinco",
+      "fala": "cinco",
+      "hash": "baaf77828a",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "sancho-quiere-abrir-el-escondite-579869",
+      "tipo": "comando",
+      "chave": "Sancho quiere abrir el escondite de las monedas. ¡Toca su nombre! ¡Cuidado con las trampas!",
+      "texto": "Sancho quiere abrir el escondite de las monedas. ¡Toca su nombre! ¡Cuidado con las trampas!",
+      "fala": "Sancho quiere abrir el escondite de las monedas. ¡Toca su nombre! ¡Cuidado con las trampas!",
+      "hash": "00dca05330",
+      "paginas": [
+        4
+      ]
+    },
+    {
+      "id": "baston-255c56",
+      "tipo": "cartao",
+      "chave": "bastón",
+      "texto": "bastón",
+      "fala": "bastón",
+      "hash": "29c307be16",
+      "paginas": [
+        4
+      ]
+    },
+    {
+      "id": "balcon-sancho-se-asomo-al-balcon-5f6efe",
+      "tipo": "pegadinha",
+      "chave": "¿Balcón? Sancho se asomó al balcón del tribunal, ¡y allí solo había palomas, ni una moneda! ¡Vamos a intentarlo otra vez!",
+      "texto": "¿Balcón? Sancho se asomó al balcón del tribunal, ¡y allí solo había palomas, ni una moneda! ¡Vamos a intentarlo otra vez!",
+      "fala": "¿Balcón? Sancho se asomó al balcón del tribunal, ¡y allí solo había palomas, ni una moneda! ¡Vamos a intentarlo otra vez!",
+      "hash": "4e160ac4f6",
+      "paginas": [
+        4
+      ]
+    },
+    {
+      "id": "boton-sancho-miro-todos-los-boto-7ccc3a",
+      "tipo": "pegadinha",
+      "chave": "¿Botón? Sancho miró todos los botones de su gabán, uno por uno, ¡y ninguno tenía monedas dentro! ¡Vamos a intentarlo otra vez!",
+      "texto": "¿Botón? Sancho miró todos los botones de su gabán, uno por uno, ¡y ninguno tenía monedas dentro! ¡Vamos a intentarlo otra vez!",
+      "fala": "¿Botón? Sancho miró todos los botones de su gabán, uno por uno, ¡y ninguno tenía monedas dentro! ¡Vamos a intentarlo otra vez!",
+      "hash": "d4184bc687",
+      "paginas": [
+        4
+      ]
+    },
+    {
+      "id": "ayuda-al-gobernador-a-firmar-la-23608f",
+      "tipo": "comando",
+      "chave": "¡Ayuda al gobernador a firmar la carta! Toca las letras de su nombre, en el orden correcto.",
+      "texto": "¡Ayuda al gobernador a firmar la carta! Toca las letras de su nombre, en el orden correcto.",
+      "fala": "¡Ayuda al gobernador a firmar la carta! Toca las letras de su nombre, en el orden correcto.",
+      "hash": "38907dcaaa",
+      "paginas": [
+        7
+      ]
+    },
+    {
+      "id": "letra-s-d4031c",
+      "tipo": "letra",
+      "chave": "letra:s",
+      "texto": "s",
+      "fala": "ese",
+      "hash": "acd83e7dfe",
+      "paginas": [
+        7
+      ]
+    },
+    {
+      "id": "letra-a-39af6d",
+      "tipo": "letra",
+      "chave": "letra:a",
+      "texto": "a",
+      "fala": "a",
+      "hash": "02d6f0a7d7",
+      "paginas": [
+        7
+      ]
+    },
+    {
+      "id": "letra-n-53d5e1",
+      "tipo": "letra",
+      "chave": "letra:n",
+      "texto": "n",
+      "fala": "ene",
+      "hash": "548cb7b63a",
+      "paginas": [
+        7
+      ]
+    },
+    {
+      "id": "letra-c-b9d477",
+      "tipo": "letra",
+      "chave": "letra:c",
+      "texto": "c",
+      "fala": "ce",
+      "hash": "57c8342a82",
+      "paginas": [
+        7
+      ]
+    },
+    {
+      "id": "letra-h-0fa366",
+      "tipo": "letra",
+      "chave": "letra:h",
+      "texto": "h",
+      "fala": "hache",
+      "hash": "0a1d429c26",
+      "paginas": [
+        7
+      ]
+    },
+    {
+      "id": "letra-o-2c382c",
+      "tipo": "letra",
+      "chave": "letra:o",
+      "texto": "o",
+      "fala": "o",
+      "hash": "45592d60b6",
+      "paginas": [
+        7
+      ]
+    },
+    {
+      "id": "es-hora-de-dejar-el-palacio-ayud-ee311e",
+      "tipo": "comando",
+      "chave": "¡Es hora de dejar el palacio! Ayuda a los dos amigos a marcharse: toca las palabras en el orden en que pasa todo.",
+      "texto": "¡Es hora de dejar el palacio! Ayuda a los dos amigos a marcharse: toca las palabras en el orden en que pasa todo.",
+      "fala": "¡Es hora de dejar el palacio! Ayuda a los dos amigos a marcharse: toca las palabras en el orden en que pasa todo.",
+      "hash": "87ebc0d534",
+      "paginas": [
+        10
+      ]
+    },
+    {
+      "id": "llaves-f7d901",
+      "tipo": "cartao",
+      "chave": "llaves",
+      "texto": "llaves",
+      "fala": "llaves",
+      "hash": "f44d5e732e",
+      "paginas": [
+        10
+      ]
+    },
+    {
+      "id": "porton-14288b",
+      "tipo": "cartao",
+      "chave": "portón",
+      "texto": "portón",
+      "fala": "portón",
+      "hash": "fde189289f",
+      "paginas": [
+        10
+      ]
+    },
+    {
+      "id": "camino-4c2b2d",
+      "tipo": "cartao",
+      "chave": "camino",
+      "texto": "camino",
+      "fala": "camino",
+      "hash": "3c41809840",
+      "paginas": [
+        10
+      ]
+    }
   ]
 }

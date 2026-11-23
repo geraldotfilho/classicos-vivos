@@ -2661,5 +2661,173 @@
       "fala": "le... o... nes... leones!",
       "hash": "919dad54eb"
     }
+  ],
+  "audioFalas": "dom-quixote/audio/falas-es/<id>.mp3",
+  "falas": [
+    {
+      "id": "sancho-no-sabe-leer-y-quiere-enc-8f8448",
+      "tipo": "comando",
+      "chave": "Sancho no sabe leer y quiere encontrar su nombre en el libro. Ayúdalo: ¡junta los trocitos del nombre en el orden correcto!",
+      "texto": "Sancho no sabe leer y quiere encontrar su nombre en el libro. Ayúdalo: ¡junta los trocitos del nombre en el orden correcto!",
+      "fala": "Sancho no sabe leer y quiere encontrar su nombre en el libro. Ayúdalo: ¡junta los trocitos del nombre en el orden correcto!",
+      "hash": "69a5647c6c",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "san-b23d0c",
+      "tipo": "silaba",
+      "chave": "san",
+      "texto": "san",
+      "fala": "san",
+      "hash": "9922e983d4",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "cho-5a6e35",
+      "tipo": "silaba",
+      "chave": "cho",
+      "texto": "cho",
+      "fala": "cho",
+      "hash": "d8d1315ddc",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "pan-bd2bd8",
+      "tipo": "silaba",
+      "chave": "pan",
+      "texto": "pan",
+      "fala": "pan",
+      "hash": "51593d710b",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "za-85c9ba",
+      "tipo": "silaba",
+      "chave": "za",
+      "texto": "za",
+      "fala": "za",
+      "hash": "0e109dd0a8",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "ayuda-a-sancho-a-descubrir-quien-ec1254",
+      "tipo": "comando",
+      "chave": "¡Ayuda a Sancho a descubrir quiénes son los dos desconocidos! Mira el dibujo de lo que quiere quitarles y toca la palabra correcta. ¡Cuidado con las trampas!",
+      "texto": "¡Ayuda a Sancho a descubrir quiénes son los dos desconocidos! Mira el dibujo de lo que quiere quitarles y toca la palabra correcta. ¡Cuidado con las trampas!",
+      "fala": "¡Ayuda a Sancho a descubrir quiénes son los dos desconocidos! Mira el dibujo de lo que quiere quitarles y toca la palabra correcta. ¡Cuidado con las trampas!",
+      "hash": "13f7c91224",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "yelmo-01de5c",
+      "tipo": "cartao",
+      "chave": "yelmo",
+      "texto": "yelmo",
+      "fala": "yelmo",
+      "hash": "9515a3d5d7",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "nariz-062564",
+      "tipo": "cartao",
+      "chave": "nariz",
+      "texto": "nariz",
+      "fala": "nariz",
+      "hash": "7d1f16bc37",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "raiz-sancho-tiro-de-la-raiz-del-5798e6",
+      "tipo": "pegadinha",
+      "chave": "¿Raíz? ¡Sancho tiró de la raíz del árbol con tanta fuerza que también se cayó sentado! ¡Vamos a intentarlo otra vez!",
+      "texto": "¿Raíz? ¡Sancho tiró de la raíz del árbol con tanta fuerza que también se cayó sentado! ¡Vamos a intentarlo otra vez!",
+      "fala": "¿Raíz? ¡Sancho tiró de la raíz del árbol con tanta fuerza que también se cayó sentado! ¡Vamos a intentarlo otra vez!",
+      "hash": "70b6cd354e",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "olmo-un-olmo-es-un-arbol-sancho-48ed29",
+      "tipo": "pegadinha",
+      "chave": "¿Olmo? ¡Un olmo es un árbol! Sancho tiró y tiró del tronco, y no se movió ni una hoja. ¡Vamos a intentarlo otra vez!",
+      "texto": "¿Olmo? ¡Un olmo es un árbol! Sancho tiró y tiró del tronco, y no se movió ni una hoja. ¡Vamos a intentarlo otra vez!",
+      "fala": "¿Olmo? ¡Un olmo es un árbol! Sancho tiró y tiró del tronco, y no se movió ni una hoja. ¡Vamos a intentarlo otra vez!",
+      "hash": "c17d27e3df",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "el-leonero-le-va-a-contar-al-rey-fef1e1",
+      "tipo": "comando",
+      "chave": "El leonero le va a contar al rey todo lo que hizo el león. Ayúdalo a recordar: ¡lee la historia y toca las palabras en el orden en que pasó!",
+      "texto": "El leonero le va a contar al rey todo lo que hizo el león. Ayúdalo a recordar: ¡lee la historia y toca las palabras en el orden en que pasó!",
+      "fala": "El leonero le va a contar al rey todo lo que hizo el león. Ayúdalo a recordar: ¡lee la historia y toca las palabras en el orden en que pasó!",
+      "hash": "60fbc7dad6",
+      "paginas": [
+        9
+      ]
+    },
+    {
+      "id": "desperezo-ab2645",
+      "tipo": "cartao",
+      "chave": "desperezó",
+      "texto": "desperezó",
+      "fala": "desperezó",
+      "hash": "7668bd5a75",
+      "paginas": [
+        9
+      ]
+    },
+    {
+      "id": "bostezo-a44fc7",
+      "tipo": "cartao",
+      "chave": "bostezó",
+      "texto": "bostezó",
+      "fala": "bostezó",
+      "hash": "646b9f5171",
+      "paginas": [
+        9
+      ]
+    },
+    {
+      "id": "lavo-51a871",
+      "tipo": "cartao",
+      "chave": "lavó",
+      "texto": "lavó",
+      "fala": "lavó",
+      "hash": "148b05da2c",
+      "paginas": [
+        9
+      ]
+    },
+    {
+      "id": "acosto-10fab2",
+      "tipo": "cartao",
+      "chave": "acostó",
+      "texto": "acostó",
+      "fala": "acostó",
+      "hash": "8ae8fe362d",
+      "paginas": [
+        9
+      ]
+    }
   ]
 }

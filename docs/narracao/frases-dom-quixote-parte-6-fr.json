@@ -2708,5 +2708,195 @@
       "fala": "île... île!",
       "hash": "bfb2387ec9"
     }
+  ],
+  "audioFalas": "dom-quixote/audio/falas-fr/<id>.mp3",
+  "falas": [
+    {
+      "id": "aide-a-reparer-les-marionnettes-8c4d3d",
+      "tipo": "comando",
+      "chave": "Aide à réparer les marionnettes, Sancho les paie une par une ! Maître Pierre te montre la marionnette cassée : touche le bon nom. Attention aux pièges !",
+      "texto": "Aide à réparer les marionnettes, Sancho les paie une par une ! Maître Pierre te montre la marionnette cassée : touche le bon nom. Attention aux pièges !",
+      "fala": "Aide à réparer les marionnettes, Sancho les paie une par une ! Maître Pierre te montre la marionnette cassée : touche le bon nom. Attention aux pièges !",
+      "hash": "fc6fba8dff",
+      "paginas": [
+        5
+      ]
+    },
+    {
+      "id": "roi-70fe19",
+      "tipo": "cartao",
+      "chave": "roi",
+      "texto": "roi",
+      "fala": "roi",
+      "hash": "8b1705917c",
+      "paginas": [
+        5
+      ]
+    },
+    {
+      "id": "cheval-042ebe",
+      "tipo": "cartao",
+      "chave": "cheval",
+      "texto": "cheval",
+      "fala": "cheval",
+      "hash": "e8f94555a6",
+      "paginas": [
+        5
+      ]
+    },
+    {
+      "id": "tour-2c8bbd",
+      "tipo": "cartao",
+      "chave": "tour",
+      "texto": "tour",
+      "fala": "tour",
+      "hash": "b15bb336fe",
+      "paginas": [
+        5
+      ]
+    },
+    {
+      "id": "tourte-sancho-en-aurait-bien-vou-cade55",
+      "tipo": "pegadinha",
+      "chave": "Tourte ? Sancho en aurait bien voulu ! Mais une tourte, ça ne se répare pas : ça se mange. On recommence !",
+      "texto": "Tourte ? Sancho en aurait bien voulu ! Mais une tourte, ça ne se répare pas : ça se mange. On recommence !",
+      "fala": "Tourte ? Sancho en aurait bien voulu ! Mais une tourte, ça ne se répare pas : ça se mange. On recommence !",
+      "hash": "752646591f",
+      "paginas": [
+        5
+      ]
+    },
+    {
+      "id": "cheveu-les-marionnettes-ne-vont-d7f66f",
+      "tipo": "pegadinha",
+      "chave": "Cheveu ? Les marionnettes ne vont pas chez le coiffeur ! Même maître Pierre a ri. On recommence !",
+      "texto": "Cheveu ? Les marionnettes ne vont pas chez le coiffeur ! Même maître Pierre a ri. On recommence !",
+      "fala": "Cheveu ? Les marionnettes ne vont pas chez le coiffeur ! Même maître Pierre a ri. On recommence !",
+      "hash": "4c7d9243d7",
+      "paginas": [
+        5
+      ]
+    },
+    {
+      "id": "roue-maitre-pierre-a-cherche-une-5b9f3f",
+      "tipo": "pegadinha",
+      "chave": "Roue ? Maître Pierre a cherché une roue dans tout son théâtre et n'a trouvé que le singe ! On recommence !",
+      "texto": "Roue ? Maître Pierre a cherché une roue dans tout son théâtre et n'a trouvé que le singe ! On recommence !",
+      "fala": "Roue ? Maître Pierre a cherché une roue dans tout son théâtre et n'a trouvé que le singe ! On recommence !",
+      "hash": "73f05c81ff",
+      "paginas": [
+        5
+      ]
+    },
+    {
+      "id": "sancho-a-un-trou-de-memoire-aide-bf556b",
+      "tipo": "comando",
+      "chave": "Sancho a un trou de mémoire ! Aide-le à se rappeler le nouveau nom de son maître : touche les mots dans le bon ordre.",
+      "texto": "Sancho a un trou de mémoire ! Aide-le à se rappeler le nouveau nom de son maître : touche les mots dans le bon ordre.",
+      "fala": "Sancho a un trou de mémoire ! Aide-le à se rappeler le nouveau nom de son maître : touche les mots dans le bon ordre.",
+      "hash": "622be311c1",
+      "paginas": [
+        7
+      ]
+    },
+    {
+      "id": "le-593b74",
+      "tipo": "cartao",
+      "chave": "le",
+      "texto": "le",
+      "fala": "le",
+      "hash": "3845abc7cc",
+      "paginas": [
+        7
+      ]
+    },
+    {
+      "id": "chevalier-f0e555",
+      "tipo": "cartao",
+      "chave": "chevalier",
+      "texto": "chevalier",
+      "fala": "chevalier",
+      "hash": "363a554e51",
+      "paginas": [
+        7
+      ]
+    },
+    {
+      "id": "aux-2288e3",
+      "tipo": "cartao",
+      "chave": "aux",
+      "texto": "aux",
+      "fala": "aux",
+      "hash": "e7eeebf3ea",
+      "paginas": [
+        7
+      ]
+    },
+    {
+      "id": "lions-16eea8",
+      "tipo": "cartao",
+      "chave": "lions",
+      "texto": "lions",
+      "fala": "lions",
+      "hash": "c8bade44da",
+      "paginas": [
+        7
+      ]
+    },
+    {
+      "id": "aide-les-serviteurs-du-duc-a-pre-84c84e",
+      "tipo": "comando",
+      "chave": "Aide les serviteurs du duc à préparer le voyage surprise de Don Quichotte ! Regarde l’image de ce dont ils ont besoin et touche le bon mot. Attention aux pièges !",
+      "texto": "Aide les serviteurs du duc à préparer le voyage surprise de Don Quichotte ! Regarde l’image de ce dont ils ont besoin et touche le bon mot. Attention aux pièges !",
+      "fala": "Aide les serviteurs du duc à préparer le voyage surprise de Don Quichotte ! Regarde l’image de ce dont ils ont besoin et touche le bon mot. Attention aux pièges !",
+      "hash": "b96995c860",
+      "paginas": [
+        9
+      ]
+    },
+    {
+      "id": "soufflet-58fee2",
+      "tipo": "cartao",
+      "chave": "soufflet",
+      "texto": "soufflet",
+      "fala": "soufflet",
+      "hash": "79c63d8f8d",
+      "paginas": [
+        9
+      ]
+    },
+    {
+      "id": "torche-ec07ed",
+      "tipo": "cartao",
+      "chave": "torche",
+      "texto": "torche",
+      "fala": "torche",
+      "hash": "3b1fdc0a4a",
+      "paginas": [
+        9
+      ]
+    },
+    {
+      "id": "torchon-on-a-agite-un-torchon-de-f9b895",
+      "tipo": "pegadinha",
+      "chave": "Torchon ? On a agité un torchon de cuisine devant le cheval : pas une miette de chaleur ! On recommence !",
+      "texto": "Torchon ? On a agité un torchon de cuisine devant le cheval : pas une miette de chaleur ! On recommence !",
+      "fala": "Torchon ? On a agité un torchon de cuisine devant le cheval : pas une miette de chaleur ! On recommence !",
+      "hash": "76cdf860f3",
+      "paginas": [
+        9
+      ]
+    },
+    {
+      "id": "souffle-on-a-apporte-un-souffle-bc08d4",
+      "tipo": "pegadinha",
+      "chave": "Soufflé ? On a apporté un soufflé au fromage ! Sancho l'aurait bien mangé, mais ça ne fait pas de vent. On recommence !",
+      "texto": "Soufflé ? On a apporté un soufflé au fromage ! Sancho l'aurait bien mangé, mais ça ne fait pas de vent. On recommence !",
+      "fala": "Soufflé ? On a apporté un soufflé au fromage ! Sancho l'aurait bien mangé, mais ça ne fait pas de vent. On recommence !",
+      "hash": "c468aebe0a",
+      "paginas": [
+        9
+      ]
+    }
   ]
 }

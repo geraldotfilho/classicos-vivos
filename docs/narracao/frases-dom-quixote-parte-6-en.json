@@ -2708,5 +2708,195 @@
       "fala": "is... land... island!",
       "hash": "e512090c80"
     }
+  ],
+  "audioFalas": "dom-quixote/audio/falas-en/<id>.mp3",
+  "falas": [
+    {
+      "id": "help-mend-the-puppets-and-sancho-ed1370",
+      "tipo": "comando",
+      "chave": "Help mend the puppets, and Sancho will pay for them one by one! Master Peter shows you the broken puppet: tap the right name. Watch out for the trick words!",
+      "texto": "Help mend the puppets, and Sancho will pay for them one by one! Master Peter shows you the broken puppet: tap the right name. Watch out for the trick words!",
+      "fala": "Help mend the puppets, and Sancho will pay for them one by one! Master Peter shows you the broken puppet: tap the right name. Watch out for the trick words!",
+      "hash": "c7e4d448a4",
+      "paginas": [
+        5
+      ]
+    },
+    {
+      "id": "king-481902",
+      "tipo": "cartao",
+      "chave": "king",
+      "texto": "king",
+      "fala": "king",
+      "hash": "9219bdc019",
+      "paginas": [
+        5
+      ]
+    },
+    {
+      "id": "horse-091b50",
+      "tipo": "cartao",
+      "chave": "horse",
+      "texto": "horse",
+      "fala": "horse",
+      "hash": "1d81649725",
+      "paginas": [
+        5
+      ]
+    },
+    {
+      "id": "tower-54efaa",
+      "tipo": "cartao",
+      "chave": "tower",
+      "texto": "tower",
+      "fala": "tower",
+      "hash": "b58dc8240a",
+      "paginas": [
+        5
+      ]
+    },
+    {
+      "id": "towel-sancho-mopped-his-forehead-471cf4",
+      "tipo": "pegadinha",
+      "chave": "Towel? Sancho mopped his forehead with it, but a towel can't mend a tower! Let's try again!",
+      "texto": "Towel? Sancho mopped his forehead with it, but a towel can't mend a tower! Let's try again!",
+      "fala": "Towel? Sancho mopped his forehead with it, but a towel can't mend a tower! Let's try again!",
+      "hash": "c2365d6a7c",
+      "paginas": [
+        5
+      ]
+    },
+    {
+      "id": "house-master-peter-laughed-a-pup-ee01d3",
+      "tipo": "pegadinha",
+      "chave": "House? Master Peter laughed: a puppet doesn't need a house, it sleeps in a box! Let's try again!",
+      "texto": "House? Master Peter laughed: a puppet doesn't need a house, it sleeps in a box! Let's try again!",
+      "fala": "House? Master Peter laughed: a puppet doesn't need a house, it sleeps in a box! Let's try again!",
+      "hash": "ab16aa8718",
+      "paginas": [
+        5
+      ]
+    },
+    {
+      "id": "ring-master-peter-looked-for-a-r-75e204",
+      "tipo": "pegadinha",
+      "chave": "Ring? Master Peter looked for a ring all over the puppet show and only found the monkey! Let's try again!",
+      "texto": "Ring? Master Peter looked for a ring all over the puppet show and only found the monkey! Let's try again!",
+      "fala": "Ring? Master Peter looked for a ring all over the puppet show and only found the monkey! Let's try again!",
+      "hash": "4828eeaac7",
+      "paginas": [
+        5
+      ]
+    },
+    {
+      "id": "sancho-s-mind-has-gone-blank-hel-199c1f",
+      "tipo": "comando",
+      "chave": "Sancho’s mind has gone blank! Help him remember his master’s new name: tap the words in the right order.",
+      "texto": "Sancho’s mind has gone blank! Help him remember his master’s new name: tap the words in the right order.",
+      "fala": "Sancho’s mind has gone blank! Help him remember his master’s new name: tap the words in the right order.",
+      "hash": "6785cf4006",
+      "paginas": [
+        7
+      ]
+    },
+    {
+      "id": "the-bbccdf",
+      "tipo": "cartao",
+      "chave": "the",
+      "texto": "the",
+      "fala": "the",
+      "hash": "e99ca6d8a3",
+      "paginas": [
+        7
+      ]
+    },
+    {
+      "id": "knight-8f2174",
+      "tipo": "cartao",
+      "chave": "knight",
+      "texto": "knight",
+      "fala": "knight",
+      "hash": "f970699fed",
+      "paginas": [
+        7
+      ]
+    },
+    {
+      "id": "of-the-d2263e",
+      "tipo": "cartao",
+      "chave": "of the",
+      "texto": "of the",
+      "fala": "of the",
+      "hash": "48658fb8cb",
+      "paginas": [
+        7
+      ]
+    },
+    {
+      "id": "lions-16eea8",
+      "tipo": "cartao",
+      "chave": "lions",
+      "texto": "lions",
+      "fala": "lions",
+      "hash": "c8bade44da",
+      "paginas": [
+        7
+      ]
+    },
+    {
+      "id": "help-the-duke-s-servants-prepare-a8130d",
+      "tipo": "comando",
+      "chave": "Help the duke’s servants prepare Don Quixote’s surprise journey! Look at the picture of what they need and tap the right word. Watch out for the trick words!",
+      "texto": "Help the duke’s servants prepare Don Quixote’s surprise journey! Look at the picture of what they need and tap the right word. Watch out for the trick words!",
+      "fala": "Help the duke’s servants prepare Don Quixote’s surprise journey! Look at the picture of what they need and tap the right word. Watch out for the trick words!",
+      "hash": "65c669c116",
+      "paginas": [
+        9
+      ]
+    },
+    {
+      "id": "bellows-8db2cd",
+      "tipo": "cartao",
+      "chave": "bellows",
+      "texto": "bellows",
+      "fala": "bellows",
+      "hash": "5bca67e1ee",
+      "paginas": [
+        9
+      ]
+    },
+    {
+      "id": "torch-e7de9e",
+      "tipo": "cartao",
+      "chave": "torch",
+      "texto": "torch",
+      "fala": "torch",
+      "hash": "67f8b55f5f",
+      "paginas": [
+        9
+      ]
+    },
+    {
+      "id": "porch-they-carried-a-whole-front-9666ac",
+      "tipo": "pegadinha",
+      "chave": "Porch? They carried a whole front porch into the garden, and it didn't get one bit warmer! Let's try again!",
+      "texto": "Porch? They carried a whole front porch into the garden, and it didn't get one bit warmer! Let's try again!",
+      "fala": "Porch? They carried a whole front porch into the garden, and it didn't get one bit warmer! Let's try again!",
+      "hash": "998f09bd6e",
+      "paginas": [
+        9
+      ]
+    },
+    {
+      "id": "pillows-they-waved-fluffy-pillow-edbb93",
+      "tipo": "pegadinha",
+      "chave": "Pillows? They waved fluffy pillows at the horse, and the feathers made Sancho sneeze. But there wasn't a puff of wind! Let's try again!",
+      "texto": "Pillows? They waved fluffy pillows at the horse, and the feathers made Sancho sneeze. But there wasn't a puff of wind! Let's try again!",
+      "fala": "Pillows? They waved fluffy pillows at the horse, and the feathers made Sancho sneeze. But there wasn't a puff of wind! Let's try again!",
+      "hash": "5949d05d70",
+      "paginas": [
+        9
+      ]
+    }
   ]
 }
