@@ -425,3 +425,8 @@ O que já foi entregue, sprint a sprint, em ordem cronológica (o mais antigo pr
 - **Ferramenta**: `tools/traducoes.mjs` passou a exportar as legendas numa lista indexada pelo estado (`legenda: ['', '👓 …'][n]`), que antes ficavam em português (as 4 etapas do leão).
 - **Narração en/es/fr** (API autorizada, Flex): roteiros derivados do português (5 falas francesas divididas à mão), elenco novo nos três idiomas (governanta, Sansón, Tomé, diabinho, tratador, Don Diego); palavras-chave en 36/36, es 35/36, fr 31/36. As páginas não foram gravadas: a cota diária (100 pedidos/dia, principal e reserva) acabou. **Gasto: US$ 0,04.**
 
+
+## ✅ Traduções da Parte 7 de Dom Quixote (en, es, fr; fase 7) (2026-11-22/23)
+- `dom-quixote/traducoes/parte-7.{en,es,fr}.js`: 11 páginas, legendas, 4 atividades e o fim em cada idioma; 0 erros e 0 avisos em `npm run conferir:traducoes`; frases divididas exatamente como no português (para o roteiro de narração). Entregue na `main` um idioma por vez.
+- Atividades com os ids do português (chapeuzinhos `um..cinco`, `bengala`, `s,a,n,c,h,o`, `chaves/portao/estrada`); testadas no Chrome até o fim nos três idiomas, com as camadas e cenas mudando a cada acerto. Pegadinhas próprias: CAKE/CAGE, BALCÓN/BOTÓN, BATEAU/BOUTON.
+- O doutor Pedro Rezio de Tirafora virou *Pedro Recio of Takeaway* (en), *de Tirteafuera* (es, Cervantes) e *de Débarrasse* (fr). Palavras-chave já gravadas mantiveram a divisão das Partes 1–6. Narração nesses idiomas: pendente (fila da API). Detalhes: §11 do caderno da Parte 7.

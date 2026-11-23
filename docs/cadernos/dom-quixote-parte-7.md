@@ -10,7 +10,9 @@ Plano: [`../PLANO-DOM-QUIXOTE-VOLUME-2.md`](../PLANO-DOM-QUIXOTE-VOLUME-2.md) ·
 | 3 Revisão humana 🛑 | ⏭️ publicada a pedido do humano para leitura e notas diretas pelo app | | — |
 | 4 Arte (9 WebPs novos no Antigravity + 9 reaproveitados da P4 v1) | ✅ | 2026-11-18 | US$ 0,00 |
 | 5 Revisão final 🛑 | ⏭️ pendente para leitura em família | | — |
-| 6 a 8 | ⬜ | | |
+| 6 Narração pt | ✅ | 2026-11-21 | ~US$ 0,22 |
+| 7 Traduções en/es/fr (texto) | ✅ (narração nesses idiomas pendente) | 2026-11-23 | — |
+| 8 | ⬜ | | |
 
 ## 0. Onde a Parte 6 termina
 No jantar depois do voo de Clavilenho, o duque anuncia: "Amanhã você vai governar a sua ilha!", e Sancho deixa a colher cair na sopa. Pistas abertas: a condessa barbuda tinha voz grossa e botas de homem; o mordomo do duque é alto e de voz grossa.
@@ -101,3 +103,18 @@ Relatório: [`../revisao/FIDELIDADE-VOLUME-2.md`](../revisao/FIDELIDADE-VOLUME-2
 - Roteiro em `dom-quixote/audio/narracao/parte-7/roteiro.json`; elenco novo no `ELENCO` de `tools/gravar-narracao.mjs` (mordomo, lavrador, alfaiate, doutor, aldeão, velhinho da bengala, viajante, pajem).
 - **Gasto**: 86 pedidos, ~US$ 0,215 (Flex; `docs/narracao/gastos.csv`).
 - 🛑 Escuta do humano: [`docs/narracao/qa-parte-7.md`](../narracao/qa-parte-7.md) (a voz do mordomo × a da condessa, Pedro Rezio de Tirafora, as emendas de `p6-s16` e `p9-s32`, o zurro).
+
+## 11. Traduções (fase 7, 2026-11-22/23)
+- **Arquivos**: `dom-quixote/traducoes/parte-7.en.js`, `.es.js`, `.fr.js` (11 páginas, legendas, as 4 atividades e o fim). `npm run conferir:traducoes`: 0 erro, 0 aviso. **A divisão em frases bate com a do português em todas as páginas e parágrafos** (conferida com `texto.js`; no espanhol, seis frases reescritas para não começar com "¡" depois de reticências, que o segmentador corta). Testadas no Chrome (Playwright), 1280×800 e 800×1280: as 11 páginas no idioma, as 4 atividades até o fim (um chapeuzinho por acerto; a bengala abre `p4-real-fim` + camada; a assinatura libera a Imaginação; `palacio → chaves → portao → estrada` na pág. 10), as pegadinhas faladas no idioma e o console sem erros (o 404 conhecido de `robin-hood/audio/vozes.js` não é desta frente).
+- **Ids do português** em todas as atividades (`um..cinco`, `bengala`, `s,a,n,c,h,o`, `chaves/portao/estrada`), porque acionam camadas e `realCena`. Só as palavras e as pegadinhas mudam:
+  | Pág. | Inglês | Espanhol | Francês |
+  | :--- | :--- | :--- | :--- |
+  | 2 (chapeuzinhos) | ONE … FIVE | UNO … CINCO | UN … CINQ |
+  | 4 (bengala) | CANE × CAKE, CAGE | BASTÓN × BALCÓN, BOTÓN | BÂTON × BATEAU, BOUTON |
+  | 7 (assinatura) | S · A · N · C · H · O | idem | idem |
+  | 10 (despedida) | KEYS → GATE → ROAD | LLAVES → PORTÓN → CAMINO | CLÉS → PORTAIL → ROUTE |
+- **O doutor Pedro Rezio de Tirafora**: nos três idiomas, *Pedro Recio* (Cervantes, como na estante). Inglês: **of Takeaway** ("take yourself away from here!"; *takeaway* é também a comida para viagem: um doutor que leva a comida embora). Espanhol: **de Tirteafuera**, o nome de Cervantes, com a mesma piada do original ("¡tírese fuera de aquí!"). Francês: **de Débarrasse** ("débarrassez-moi le plancher!": o doutor *débarrasse* a mesa e Sancho o manda *débarrasser le plancher*). Os títulos: *The Plate-Snatching Doctor* / *El doctor Quitaplatos* / *Le docteur Ôte-Assiette*.
+- **Outras escolhas**: mordomo = *steward* / *mayordomo* / *majordome* (como na Parte 6); a pena = *quill* / *pluma* / *plume* (a piada de Sanchica funciona nos três: "Has Dad turned into a bird?"); o zurro = HEE-HAAAW ("three As") / IIIH-AAA ("tres aes") / HIII-HAAAN ("trois A"); ditados = *sayings* / *refranes* / *proverbes*, com provérbios equivalentes de cada língua; *cinco caperuzas* viraram *tiny caps* / *gorritos* / *petits chapeaux*; Sansón Carrasco, maese/maître Nicolás/Nicolas, Master/señor/monsieur Alonso, como nas partes anteriores. No espanhol, Cervantes em "la ínsula Barataria" (título como na estante: *gobernador de la ínsula*), mas a palavra-chave segue ISLA, como nas Partes 4–6.
+- **Palavras-chave já gravadas mantêm a divisão**: en ISLAND, LONGING, CHEESE, COINS, ACORNS, LETTER, DONKEY, FREEDOM, ROAD; es ISLA, AÑORANZA, QUESO, MONEDAS, BELLOTAS, CARTA, BURRITO, LIBERTAD, CAMINO; fr ÎLE, CHAGRIN, FROMAGE, BÂTON, PIÈCES, GLANDS, LETTRE, ÂNE, LIBERTÉ, ROUTE. Novas por idioma: en 26, es 26, fr 25 (a gravar).
+- **Para o humano / leitor nativo conferir**: en *Takeaway* e *CANE* (a estante diz *walking stick*); es *Tirteafuera* (nome longo, mas é o de Cervantes) e o título com *ínsula*; fr *Débarrasse* e o *bâton* (a estante diz *bâton*, como aqui).
+- **Narração en/es/fr**: não gravada nesta sessão (fica para a fila da API: roteiros com `tools/derivar-roteiro.mjs --parte 7`, elenco e palavras novas).
