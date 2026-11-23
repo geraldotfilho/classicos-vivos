@@ -441,5 +441,6 @@ O que já foi entregue, sprint a sprint, em ordem cronológica (o mais antigo pr
 - Defeito do lote achado e corrigido: na `p6` em inglês a voz parou depois da 1ª frase de um bloco, o reparo era o mesmo pedido do bloco e a página foi salva sem 10 frases; refeita, e o script agora recusa salvar página com texto sem áudio (`docs/TODO-NARRACAO.md` §8.7). Também: um arquivo de lote pendente por comando, para rodar os três idiomas em paralelo.
 - Junto: elenco novo das Partes 7 e 8 nos três `elenco.json`, roteiros `narracao-<idioma>/parte-{7,8}/roteiro.json` (falantes iguais aos do português em todas as frases) e as palavras-chave das Partes 5–8 que faltavam. Escuta: `docs/narracao/qa-parte-5-{en,es,fr}.md`.
 
-## 🟡 Narração en/es/fr da Parte 6 de Dom Quixote, em prévia (2026-11-23)
+## ✅ Narração en/es/fr da Parte 6 de Dom Quixote (2026-11-23)
 - Palavras-chave 29/29 nos três idiomas; páginas en 9/10, es 9/10, fr 7/10, sem rajadas, liberadas como prévia (`previa: [6]`). Parou no teto de gasto mensal do projeto no AI Studio (429 nas duas chaves); faltam 7 pedidos. As Partes 7 e 8 (roteiros, elenco e palavras prontos) não começaram as páginas pelo mesmo motivo. Escuta: `docs/narracao/qa-parte-6-{en,es,fr}.md`.
+- Com o teto ampliado pelo humano, os 7 pedidos que faltavam saíram no mesmo dia: páginas 10/10 nos três idiomas e `6` em `partes` (a prévia saiu).

@@ -9,10 +9,10 @@ Plano para reiniciar a fila de agentes. Os subagentes pararam por limite de uso:
 | Narração pt, Parte 7 | ✅ completa e ativada | — |
 | Narração pt, Parte 8 | 7/11 páginas (0–6) e 29/29 palavras; `previa: [8]` | gravar págs. 7–10 (~27 pedidos), conferir, trocar `previa: [8]` por `8` em `partes`, completar `docs/narracao/qa-parte-8.md` (**precisa da cota do Gemini**) |
 | Tradução Parte 5 (en/es/fr) | ✅ no ar; **narração completa e ativada nos três idiomas (2026-11-23, modo lote)** | escuta: `docs/narracao/qa-parte-5-{en,es,fr}.md` |
-| Tradução Parte 6 (en/es/fr) | ✅ no ar; narração em **prévia** (2026-11-23): palavras 29/29, páginas en 9/10, es 9/10, fr 7/10 | os 7 pedidos que faltam, quando o teto de gasto do AI Studio permitir; depois `6` em `partes` |
+| Tradução Parte 6 (en/es/fr) | ✅ no ar; **narração completa e ativada nos três idiomas (2026-11-23, modo lote)** | escuta: `docs/narracao/qa-parte-6-{en,es,fr}.md` |
 | Tradução Parte 7 (en/es/fr) | ✅ no ar (2026-11-23; §11 do caderno da Parte 7) | narração: roteiros (`tools/derivar-roteiro.mjs --parte 7`), elenco novo, palavras (en 26, es 26, fr 25) e páginas; depois `7` em `partes` de cada idioma (**cota do Gemini**) |
 | Tradução Parte 8 (en/es/fr) | ✅ no ar (2026-11-23; §9 do caderno da Parte 8) | narração: roteiros (`tools/derivar-roteiro.mjs --parte 8`), elenco novo, palavras e páginas; depois `8` em `partes` de cada idioma (**cota do Gemini**) |
-| Narração en/es/fr das Partes 7 e 8 | elenco novo, roteiros e palavras-chave prontos (2026-11-23); páginas paradas no teto de gasto mensal do AI Studio (429) | o humano sobe o teto em ai.studio/spend; depois `tools/gravar-lote.sh` por idioma e parte |
+| Narração en/es/fr das Partes 7 e 8 | elenco novo, roteiros e palavras-chave prontos; páginas em gravação (2026-11-23, modo lote) | conferir, ativar `7`/`8` em `partes`, escrever os QA |
 
 ## Ordem de retomada
 
