@@ -444,3 +444,6 @@ O que já foi entregue, sprint a sprint, em ordem cronológica (o mais antigo pr
 ## ✅ Narração en/es/fr da Parte 6 de Dom Quixote (2026-11-23)
 - Palavras-chave 29/29 nos três idiomas; páginas en 9/10, es 9/10, fr 7/10, sem rajadas, liberadas como prévia (`previa: [6]`). Parou no teto de gasto mensal do projeto no AI Studio (429 nas duas chaves); faltam 7 pedidos. As Partes 7 e 8 (roteiros, elenco e palavras prontos) não começaram as páginas pelo mesmo motivo. Escuta: `docs/narracao/qa-parte-6-{en,es,fr}.md`.
 - Com o teto ampliado pelo humano, os 7 pedidos que faltavam saíram no mesmo dia: páginas 10/10 nos três idiomas e `6` em `partes` (a prévia saiu).
+
+## ✅ Narração en/es/fr da Parte 7 de Dom Quixote, pelo modo lote (2026-11-23)
+- Páginas 11/11 e palavras-chave 35/35 nos três idiomas, sem rajadas; `7` em `partes` de `narracao-en/-es/-fr`. Elenco novo (mordomo com a voz da condessa Trifaldi, decisão do humano; lavrador, alfaiate, doutor, aldeão, velho da bengala, viajante, pajem, Sanchica) e roteiros derivados do português. Escuta: `docs/narracao/qa-parte-7-{en,es,fr}.md`.
