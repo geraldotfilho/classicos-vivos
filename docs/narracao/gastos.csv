@@ -149,3 +149,10 @@ data,comando,pedidos_voz,tokens_audio,tokens_qa,usd_estimado
 2026-11-23T10:12,"--voz narracao --parte 7 --paginas 2,3,7,8 --pagina-inteira --forcar --lote --autorizado",1,215,0,0.0010
 2026-11-23T10:26,"--voz narracao --parte 7 --paginas 7 --pagina-inteira --forcar --relote Escreva aí a resposta --lote --autorizado",3,3150,0,0.0144
 2026-11-23T10:31,"--voz narracao --parte 7 --paginas 7 --pagina-inteira --forcar --relote Escreva aí a resposta --lote --autorizado",1,257,0,0.0012
+2026-11-23T23:07,"--voz narracao --idioma en --parte 8 --pagina-inteira --lote --autorizado",3,1546,0,0.0070
+2026-11-23T23:07,"--voz narracao --idioma fr --parte 8 --pagina-inteira --lote --autorizado",4,1402,0,0.0064
+2026-11-23T23:10,"--voz narracao --idioma en --parte 8 --pagina-inteira --lote --autorizado",4,4033,0,0.0184
+2026-11-23T23:12,"--voz narracao --idioma fr --parte 8 --pagina-inteira --lote --autorizado",2,1723,0,0.0079
+2026-11-23T23:15,"--voz narracao --idioma fr --parte 8 --pagina-inteira --lote --autorizado",2,2412,0,0.0110
+2026-11-23T23:18,"--voz narracao --idioma fr --parte 8 --pagina-inteira --lote --autorizado",2,1178,0,0.0054
+2026-11-23T23:20,"--voz narracao --idioma fr --parte 8 --pagina-inteira --lote --autorizado",1,1284,0,0.0059

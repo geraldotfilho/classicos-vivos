@@ -11,8 +11,8 @@ Plano para reiniciar a fila de agentes. Os subagentes pararam por limite de uso:
 | Tradução Parte 5 (en/es/fr) | ✅ no ar; **narração completa e ativada nos três idiomas (2026-11-23, modo lote)** | escuta: `docs/narracao/qa-parte-5-{en,es,fr}.md` |
 | Tradução Parte 6 (en/es/fr) | ✅ no ar; **narração completa e ativada nos três idiomas (2026-11-23, modo lote)** | escuta: `docs/narracao/qa-parte-6-{en,es,fr}.md` |
 | Tradução Parte 7 (en/es/fr) | ✅ no ar; **narração completa e ativada nos três idiomas (2026-11-23, modo lote)** | escuta: `docs/narracao/qa-parte-7-{en,es,fr}.md` |
-| Tradução Parte 8 (en/es/fr) | ✅ no ar (2026-11-23; §9 do caderno da Parte 8) | narração: roteiros (`tools/derivar-roteiro.mjs --parte 8`), elenco novo, palavras e páginas; depois `8` em `partes` de cada idioma (**cota do Gemini**) |
-| Narração en/es/fr da Parte 8 | elenco, roteiros e palavras prontos; páginas: es 11/11, en e fr em montagem (2026-11-23) | conferir, `8` em `partes`, QA |
+| Tradução Parte 8 (en/es/fr) | ✅ no ar; **narração completa e ativada nos três idiomas (2026-11-23, modo lote)** | escuta: `docs/narracao/qa-parte-8-{en,es,fr}.md` |
+| Narração en/es/fr das Partes 5 a 8 | ✅ completas e ativadas (2026-11-23) | escuta do humano (`docs/narracao/qa-parte-N-<idioma>.md`) |
 
 ## Ordem de retomada
 

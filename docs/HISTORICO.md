@@ -447,3 +447,6 @@ O que já foi entregue, sprint a sprint, em ordem cronológica (o mais antigo pr
 
 ## ✅ Narração en/es/fr da Parte 7 de Dom Quixote, pelo modo lote (2026-11-23)
 - Páginas 11/11 e palavras-chave 35/35 nos três idiomas, sem rajadas; `7` em `partes` de `narracao-en/-es/-fr`. Elenco novo (mordomo com a voz da condessa Trifaldi, decisão do humano; lavrador, alfaiate, doutor, aldeão, velho da bengala, viajante, pajem, Sanchica) e roteiros derivados do português. Escuta: `docs/narracao/qa-parte-7-{en,es,fr}.md`.
+
+## ✅ Narração en/es/fr da Parte 8 de Dom Quixote: a obra inteira narrada nos quatro idiomas (2026-11-23)
+- Páginas 11/11 e palavras-chave 29/29 nos três idiomas, sem rajadas; `8` em `partes` de `narracao-en/-es/-fr`. Com isso as 8 partes de Dom Quixote têm narração gravada em português, inglês, espanhol e francês. Escuta: `docs/narracao/qa-parte-8-{en,es,fr}.md`.

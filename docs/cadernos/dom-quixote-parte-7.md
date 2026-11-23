@@ -120,4 +120,4 @@ Relatório: [`../revisao/FIDELIDADE-VOLUME-2.md`](../revisao/FIDELIDADE-VOLUME-2
 - **Narração en/es/fr (2026-11-23, modo lote): completa e ativada** (`partes: [1, …, 7]` nas três vozes do `vozes.js`). Páginas 11/11 e palavras-chave 35/35 em cada idioma, sem rajadas.
   - **Roteiros**: `narracao-<idioma>/parte-7/roteiro.json`, derivados do português por `tools/derivar-roteiro.mjs`, com 9 falas divididas à mão (en/es: a carta lida por Sansón, `p6-s15`, e a de Dom Quixote, `p7-s8`; fr: `p3-s37`, `p3-s40`, `p5-s14`, `p5-s15`, `p6-s13`). Os falantes batem com os do português em todas as 375 frases.
   - **Elenco novo** nos três `elenco.json` (mesmo perfil do português, pelo catálogo `docs/narracao/VOZES-*.md`, sem escuta). O **mordomo usa a voz da condessa Trifaldi** em cada idioma (decisão do humano: é o mesmo homem disfarçado), com estilo de homem sério. As listas estão nos QA.
-  - ~250 pedidos nos três idiomas, ~US$ 0,70. 🛑 Escuta: `docs/narracao/qa-parte-7-{en,es,fr}.md`.
+  - ~270 pedidos nos três idiomas (com a regravação das páginas do mordomo), ~US$ 0,74. 🛑 Escuta: `docs/narracao/qa-parte-7-{en,es,fr}.md`.
