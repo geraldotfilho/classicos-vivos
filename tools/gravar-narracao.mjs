@@ -34,6 +34,7 @@
 //       cada rodada junta os pedidos que faltam num lote só, espera o resultado (minutos) e sai com código 76;
 //       rode o mesmo comando de novo para montar as páginas e pedir o que faltar (reparos). Use tools/gravar-lote.sh,
 //       que repete sozinho até terminar. Testado em 2026-11-23 (docs/TODO-NARRACAO.md §8.7).
+//   ... --relote "trecho"                                                 # (lote) pede de novo, com áudio novo, os pedidos que contêm esse texto
 //   ... --standard                                                        # nível Standard (o padrão é o Flex: metade do preço, resposta em minutos)
 //   npm run gravar:narracao -- --criar-voz SANCHICA --descricao "..." --autorizado   # cria uma voz por descrição (voice design)
 //   npm run gravar:narracao -- --voz narracao --idioma en --parte 1 --pagina-inteira --autorizado
@@ -128,7 +129,8 @@ let ELENCO = {
     COZINHEIRO: { voz: 'pt-br-csagent-9', estilo: 'jolly wedding cook, generous and laughing' },
     MENINO: { voz: 'pt-br-training-6', estilo: 'young boy narrating a puppet show with a stick, eager and theatrical' },
     // Parte 7 (2026-11-21). O aldeão e o velhinho da bengala reaproveitam as vozes do CREDOR e do DEVEDOR
-    MORDOMO: { voz: 'pt-br-storyteller-10', estilo: 'tall butler with a deep, formal voice, dry and polite, secretly amused' },
+    // Mesma voz da CONDESSA (Parte 6): é o mordomo disfarçado, e o texto diz que as vozes são "igualzinhas" (decisão do humano, 2026-11-23)
+    MORDOMO: { voz: 'pt-br-training-8', estilo: 'tall butler with a deep, formal voice, dry and polite, secretly amused' },
     LAVRADOR: { voz: 'pt-br-assistant-3', estilo: 'simple farmer complaining to the judge, indignant and a bit suspicious' },
     ALFAIATE: { voz: 'pt-br-csagent-7', estilo: 'cheeky tailor, proud of his little trick, comic' },
     DOUTOR: { voz: 'pt-br-advisor-9', estilo: 'stiff, fussy doctor, serious and pompous, a bit comic' },
@@ -317,7 +319,10 @@ function paraGenerateContent(corpo) {
 }
 async function pedirAudioLote(corpo) {
     const req = paraGenerateContent(corpo);
-    const chave = createHash('sha1').update(JSON.stringify([corpo.model, req])).digest('hex').slice(0, 20);
+    // --relote "trecho": os pedidos que contêm esse texto ganham chave nova (= áudio novo), quando o lote devolveu um
+    // áudio com defeito e o reparo repete o mesmo pedido (ex.: a voz parou depois da primeira frase)
+    const sal = o.relote && req.contents[0].parts.some(p => p.text.includes(o.relote)) ? ['relote', o.relote] : [];
+    const chave = createHash('sha1').update(JSON.stringify([corpo.model, req, ...sal])).digest('hex').slice(0, 20);
     const wav = join(LOTE_DIR, `${chave}.wav`);
     if (existsSync(wav)) return readFileSync(wav);
     const erro = join(LOTE_DIR, `${chave}.erro`);
