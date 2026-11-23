@@ -34,6 +34,7 @@
 //       cada rodada junta os pedidos que faltam num lote só, espera o resultado (minutos) e sai com código 76;
 //       rode o mesmo comando de novo para montar as páginas e pedir o que faltar (reparos). Use tools/gravar-lote.sh,
 //       que repete sozinho até terminar. Testado em 2026-11-23 (docs/TODO-NARRACAO.md §8.7).
+//   ... --relote "trecho"                                                 # (lote) pede de novo, com áudio novo, os pedidos que contêm esse texto
 //   ... --standard                                                        # nível Standard (o padrão é o Flex: metade do preço, resposta em minutos)
 //   npm run gravar:narracao -- --criar-voz SANCHICA --descricao "..." --autorizado   # cria uma voz por descrição (voice design)
 //   npm run gravar:narracao -- --voz narracao --idioma en --parte 1 --pagina-inteira --autorizado
@@ -318,7 +319,10 @@ function paraGenerateContent(corpo) {
 }
 async function pedirAudioLote(corpo) {
     const req = paraGenerateContent(corpo);
-    const chave = createHash('sha1').update(JSON.stringify([corpo.model, req])).digest('hex').slice(0, 20);
+    // --relote "trecho": os pedidos que contêm esse texto ganham chave nova (= áudio novo), quando o lote devolveu um
+    // áudio com defeito e o reparo repete o mesmo pedido (ex.: a voz parou depois da primeira frase)
+    const sal = o.relote && req.contents[0].parts.some(p => p.text.includes(o.relote)) ? ['relote', o.relote] : [];
+    const chave = createHash('sha1').update(JSON.stringify([corpo.model, req, ...sal])).digest('hex').slice(0, 20);
     const wav = join(LOTE_DIR, `${chave}.wav`);
     if (existsSync(wav)) return readFileSync(wav);
     const erro = join(LOTE_DIR, `${chave}.erro`);
