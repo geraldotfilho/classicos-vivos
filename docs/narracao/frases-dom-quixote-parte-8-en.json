@@ -1,0 +1,3065 @@
+{
+  "obra": "Don Quixote of La Mancha",
+  "parte": 8,
+  "idioma": "en",
+  "audio": "dom-quixote/audio/<voz>-en/parte-8/<id>.mp3",
+  "audioPalavras": "dom-quixote/audio/palavras-en/<slug>.mp3",
+  "frases": [
+    {
+      "id": "p0-s0",
+      "pagina": 0,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Don Quixote of La Mancha. Part 8: The Knight of the White Moon",
+      "fala": "Don Quixote of La Mancha. Part 8: The Knight of the White Moon",
+      "hash": "17891fa0ba"
+    },
+    {
+      "id": "p0-s1",
+      "pagina": 0,
+      "paragrafo": 0,
+      "texto": "Don Quixote and Sancho are on their way to Barcelona, to see the SEA for the very first time.",
+      "fala": "Don Quixote and Sancho are on their way to Barcelona, to see the sea for the very first time.",
+      "hash": "91b1ab0987"
+    },
+    {
+      "id": "p0-s2",
+      "pagina": 0,
+      "paragrafo": 0,
+      "texto": "But they are not alone on the road: a knight with a white MOON on his shield is coming along behind them, unhurried and without a sound...",
+      "fala": "But they are not alone on the road: a knight with a white moon on his shield is coming along behind them, unhurried and without a sound...",
+      "hash": "436a98407e"
+    },
+    {
+      "id": "p0-s3",
+      "pagina": 0,
+      "paragrafo": 1,
+      "texto": "In this last part of the story, the two friends will discover a lying book, a bronze head that talks and the workshop where books are born.",
+      "fala": "In this last part of the story, the two friends will discover a lying book, a bronze head that talks and the workshop where books are born.",
+      "hash": "724d5e5712"
+    },
+    {
+      "id": "p0-s4",
+      "pagina": 0,
+      "paragrafo": 1,
+      "texto": "And at last they will find out who the wizard is who wrote down all their adventures!",
+      "fala": "And at last they will find out who the wizard is who wrote down all their adventures!",
+      "hash": "12e3900288"
+    },
+    {
+      "id": "p0-s5",
+      "pagina": 0,
+      "paragrafo": 2,
+      "texto": "Take a deep breath, turn the page and come all the way to the END.",
+      "fala": "Take a deep breath, turn the page and come all the way to the end.",
+      "hash": "a304d2ef66"
+    },
+    {
+      "id": "p0-s6",
+      "pagina": 0,
+      "paragrafo": 2,
+      "texto": "Or will it be a beginning?",
+      "fala": "Or will it be a beginning?",
+      "hash": "7547468605"
+    },
+    {
+      "id": "p1-s0",
+      "pagina": 1,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapter 62. The Green Nets. Pretend Shepherds",
+      "fala": "Chapter 62. The Green Nets. Pretend Shepherds",
+      "hash": "8072b25fa6"
+    },
+    {
+      "id": "p1-s1",
+      "pagina": 1,
+      "paragrafo": 0,
+      "texto": "The road went into a cool wood.",
+      "fala": "The road went into a cool wood.",
+      "hash": "aeb9d4c8ea"
+    },
+    {
+      "id": "p1-s2",
+      "pagina": 1,
+      "paragrafo": 0,
+      "texto": "Suddenly, Don Quixote stopped: between the trees, from one trunk to another, green NETS were stretched out, as fine as spiders’ webs.",
+      "fala": "Suddenly, Don Quixote stopped: between the trees, from one trunk to another, green nets were stretched out, as fine as spiders’ webs.",
+      "hash": "a9120c38eb"
+    },
+    {
+      "id": "p1-s3",
+      "pagina": 1,
+      "paragrafo": 0,
+      "texto": "“Careful, Sancho!",
+      "fala": "Careful, Sancho!",
+      "hash": "fa6a36825f"
+    },
+    {
+      "id": "p1-s4",
+      "pagina": 1,
+      "paragrafo": 0,
+      "texto": "It’s a wizards’ trap!",
+      "fala": "It’s a wizards’ trap!",
+      "hash": "fe28efd9dd"
+    },
+    {
+      "id": "p1-s5",
+      "pagina": 1,
+      "paragrafo": 0,
+      "texto": "They want to catch me because I...”",
+      "fala": "They want to catch me because I...",
+      "hash": "f8fd607b26"
+    },
+    {
+      "id": "p1-s6",
+      "pagina": 1,
+      "paragrafo": 0,
+      "texto": "He never finished the sentence: Rocinante took one more step, and knight and horse were tangled up in the net, like two fish.",
+      "fala": "He never finished the sentence: Rocinante took one more step, and knight and horse were tangled up in the net, like two fish.",
+      "hash": "e2dc5ec968"
+    },
+    {
+      "id": "p1-s7",
+      "pagina": 1,
+      "paragrafo": 1,
+      "texto": "Out from among the trees came running two girls and two young men, dressed as shepherds, but in clothes far too pretty for anyone who looks after sheep.",
+      "fala": "Out from among the trees came running two girls and two young men, dressed as shepherds, but in clothes far too pretty for anyone who looks after sheep.",
+      "hash": "3bb918f7d6"
+    },
+    {
+      "id": "p1-s8",
+      "pagina": 1,
+      "paragrafo": 1,
+      "texto": "“Sorry, sir!",
+      "fala": "Sorry, sir!",
+      "hash": "2bc538d73d"
+    },
+    {
+      "id": "p1-s9",
+      "pagina": 1,
+      "paragrafo": 1,
+      "texto": "The nets are for catching BUTTERFLIES.",
+      "fala": "The nets are for catching butterflies.",
+      "hash": "55a81a8971"
+    },
+    {
+      "id": "p1-s10",
+      "pagina": 1,
+      "paragrafo": 1,
+      "texto": "We look at the colours of their wings up close and then we let them go!",
+      "fala": "We look at the colours of their wings up close and then we let them go!",
+      "hash": "aed1ddfdc0"
+    },
+    {
+      "id": "p1-s11",
+      "pagina": 1,
+      "paragrafo": 1,
+      "texto": "We’re from the village near here.",
+      "fala": "We’re from the village near here.",
+      "hash": "19af7cee65"
+    },
+    {
+      "id": "p1-s12",
+      "pagina": 1,
+      "paragrafo": 1,
+      "texto": "We’ve come to spend a few days in the country, playing at shepherds: we sing, read poetry and have picnics.”",
+      "fala": "We’ve come to spend a few days in the country, playing at shepherds: we sing, read poetry and have picnics.",
+      "hash": "0ac30d8138"
+    },
+    {
+      "id": "p1-s13",
+      "pagina": 1,
+      "paragrafo": 2,
+      "texto": "While they were untangling the knight, one of the girls looked at the basin-helmet and gave a shriek: “I don’t believe it!",
+      "fala": "While they were untangling the knight, one of the girls looked at the basin-helmet and gave a shriek: I don’t believe it!",
+      "hash": "6610b73c1a"
+    },
+    {
+      "id": "p1-s14",
+      "pagina": 1,
+      "paragrafo": 2,
+      "texto": "It’s Don Quixote from the book!",
+      "fala": "It’s Don Quixote from the book!",
+      "hash": "2bfa2d9cc0"
+    },
+    {
+      "id": "p1-s15",
+      "pagina": 1,
+      "paragrafo": 2,
+      "texto": "And that’s Sancho!",
+      "fala": "And that’s Sancho!",
+      "hash": "66c52619f5"
+    },
+    {
+      "id": "p1-s16",
+      "pagina": 1,
+      "paragrafo": 2,
+      "texto": "We read your adventures out loud every night, round the campfire!”",
+      "fala": "We read your adventures out loud every night, round the campfire!",
+      "hash": "349ff5d223"
+    },
+    {
+      "id": "p1-s17",
+      "pagina": 1,
+      "paragrafo": 2,
+      "texto": "Sancho straightened his collar, very important: “Donkey and all, miss.”",
+      "fala": "Sancho straightened his collar, very important: Donkey and all, miss.",
+      "hash": "bef6724a5e"
+    },
+    {
+      "id": "p1-s18",
+      "pagina": 1,
+      "paragrafo": 3,
+      "texto": "The pretend shepherds invited the two of them to lunch, under some tents.",
+      "fala": "The pretend shepherds invited the two of them to lunch, under some tents.",
+      "hash": "3f098799a7"
+    },
+    {
+      "id": "p1-s19",
+      "pagina": 1,
+      "paragrafo": 3,
+      "texto": "There were flutes, verses and lots of food.",
+      "fala": "There were flutes, verses and lots of food.",
+      "hash": "e88af48a5a"
+    },
+    {
+      "id": "p1-s20",
+      "pagina": 1,
+      "paragrafo": 3,
+      "texto": "Don Quixote watched it all with a dreamy smile: “What a lovely life, Sancho.",
+      "fala": "Don Quixote watched it all with a dreamy smile: What a lovely life, Sancho.",
+      "hash": "8587a563df"
+    },
+    {
+      "id": "p1-s21",
+      "pagina": 1,
+      "paragrafo": 3,
+      "texto": "No lance, no tumbles.",
+      "fala": "No lance, no tumbles.",
+      "hash": "1a0972a96c"
+    },
+    {
+      "id": "p1-s22",
+      "pagina": 1,
+      "paragrafo": 3,
+      "texto": "Just FIELDS, music and friends...”",
+      "fala": "Just fields, music and friends...",
+      "hash": "b015b6fed0"
+    },
+    {
+      "id": "p1-s23",
+      "pagina": 1,
+      "paragrafo": 3,
+      "texto": "“And cheese,” added Sancho.",
+      "fala": "And cheese, added Sancho.",
+      "hash": "6da5bf430e"
+    },
+    {
+      "id": "p1-s24",
+      "pagina": 1,
+      "paragrafo": 3,
+      "texto": "“Keep hold of that idea, master.",
+      "fala": "Keep hold of that idea, master.",
+      "hash": "a388e34558"
+    },
+    {
+      "id": "p1-s25",
+      "pagina": 1,
+      "paragrafo": 3,
+      "texto": "One day it might come in handy.”",
+      "fala": "One day it might come in handy.",
+      "hash": "1a41e955b3"
+    },
+    {
+      "id": "p1-s26",
+      "pagina": 1,
+      "paragrafo": 4,
+      "texto": "When it was time to say goodbye, one of the girls asked: “Where are you going now?”",
+      "fala": "When it was time to say goodbye, one of the girls asked: Where are you going now?",
+      "hash": "87b458f9b7"
+    },
+    {
+      "id": "p1-s27",
+      "pagina": 1,
+      "paragrafo": 4,
+      "texto": "“To Barcelona, to see the sea!”",
+      "fala": "To Barcelona, to see the sea!",
+      "hash": "07bc61e5ca"
+    },
+    {
+      "id": "p1-s28",
+      "pagina": 1,
+      "paragrafo": 4,
+      "texto": "“Huh.",
+      "fala": "Huh.",
+      "hash": "6ed1eb5a1c"
+    },
+    {
+      "id": "p1-s29",
+      "pagina": 1,
+      "paragrafo": 4,
+      "texto": "In the other book, you were going to a different city...”",
+      "fala": "In the other book, you were going to a different city...",
+      "hash": "3bc2005d2d"
+    },
+    {
+      "id": "p1-s30",
+      "pagina": 1,
+      "paragrafo": 4,
+      "texto": "“Other book?”",
+      "fala": "Other book?",
+      "hash": "5fdaf003a0"
+    },
+    {
+      "id": "p1-s31",
+      "pagina": 1,
+      "paragrafo": 4,
+      "texto": "Don Quixote frowned.",
+      "fala": "Don Quixote frowned.",
+      "hash": "c9f2419951"
+    },
+    {
+      "id": "p1-s32",
+      "pagina": 1,
+      "paragrafo": 4,
+      "texto": "“What other BOOK?”",
+      "fala": "What other book?",
+      "hash": "10d35ce959"
+    },
+    {
+      "id": "p1-s33",
+      "pagina": 1,
+      "paragrafo": 4,
+      "texto": "But the girl was already waving from far away, and the question hung in the air.",
+      "fala": "But the girl was already waving from far away, and the question hung in the air.",
+      "hash": "3a01fa3d75"
+    },
+    {
+      "id": "p2-s0",
+      "pagina": 2,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapter 63. The Herd. Get Off the Road, Master!",
+      "fala": "Chapter 63. The Herd. Get Off the Road, Master!",
+      "hash": "eda0a66a07"
+    },
+    {
+      "id": "p2-s1",
+      "pagina": 2,
+      "paragrafo": 0,
+      "texto": "Before leaving, Don Quixote wanted to thank the pretend shepherds.",
+      "fala": "Before leaving, Don Quixote wanted to thank the pretend shepherds.",
+      "hash": "dafc6329ca"
+    },
+    {
+      "id": "p2-s2",
+      "pagina": 2,
+      "paragrafo": 0,
+      "texto": "He stopped Rocinante right in the middle of the road, raised his lance and announced: “Attention, travellers!",
+      "fala": "He stopped Rocinante right in the middle of the road, raised his lance and announced: Attention, travellers!",
+      "hash": "5c4a3de40a"
+    },
+    {
+      "id": "p2-s3",
+      "pagina": 2,
+      "paragrafo": 0,
+      "texto": "I shall stay here all day and tell everyone who passes that these shepherdesses are the kindest young ladies in the world!”",
+      "fala": "I shall stay here all day and tell everyone who passes that these shepherdesses are the kindest young ladies in the world!",
+      "hash": "c3a44a8043"
+    },
+    {
+      "id": "p2-s4",
+      "pagina": 2,
+      "paragrafo": 0,
+      "texto": "The girls clapped.",
+      "fala": "The girls clapped.",
+      "hash": "6f531903c1"
+    },
+    {
+      "id": "p2-s5",
+      "pagina": 2,
+      "paragrafo": 0,
+      "texto": "Sancho just sighed: “Here he goes again!”",
+      "fala": "Sancho just sighed: Here he goes again!",
+      "hash": "4c983d207c"
+    },
+    {
+      "id": "p2-s6",
+      "pagina": 2,
+      "paragrafo": 1,
+      "texto": "The road stayed empty for ages.",
+      "fala": "The road stayed empty for ages.",
+      "hash": "929d57574c"
+    },
+    {
+      "id": "p2-s7",
+      "pagina": 2,
+      "paragrafo": 1,
+      "texto": "A butterfly went by.",
+      "fala": "A butterfly went by.",
+      "hash": "f97c16260a"
+    },
+    {
+      "id": "p2-s8",
+      "pagina": 2,
+      "paragrafo": 1,
+      "texto": "A beetle went by.",
+      "fala": "A beetle went by.",
+      "hash": "b517685533"
+    },
+    {
+      "id": "p2-s9",
+      "pagina": 2,
+      "paragrafo": 1,
+      "texto": "Then, far away, a cloud of DUST rose up and there came a noise like thunder: THUD-THUD-THUD-THUD!",
+      "fala": "Then, far away, a cloud of dust rose up and there came a noise like thunder: thud, thud-thud, thud!",
+      "hash": "35de36efe5"
+    },
+    {
+      "id": "p2-s10",
+      "pagina": 2,
+      "paragrafo": 1,
+      "texto": "It was a HERD: lots of big bulls, being driven to the city by some cowherds on horseback.",
+      "fala": "It was a herd: lots of big bulls, being driven to the city by some cowherds on horseback.",
+      "hash": "a03250900c"
+    },
+    {
+      "id": "p2-s11",
+      "pagina": 2,
+      "paragrafo": 1,
+      "texto": "“Get off the road, sir!” shouted the cowherds.",
+      "fala": "Get off the road, sir! shouted the cowherds.",
+      "hash": "10e7380bef"
+    },
+    {
+      "id": "p2-s12",
+      "pagina": 2,
+      "paragrafo": 1,
+      "texto": "“Bulls don’t stop!”",
+      "fala": "Bulls don’t stop!",
+      "hash": "bc58972b55"
+    },
+    {
+      "id": "p2-s13",
+      "pagina": 2,
+      "paragrafo": 1,
+      "texto": "“Move, master!” shouted Sancho, already pulling the donkey into the bushes.",
+      "fala": "Move, master! shouted Sancho, already pulling the donkey into the bushes.",
+      "hash": "43578d9680"
+    },
+    {
+      "id": "p2-s14",
+      "pagina": 2,
+      "paragrafo": 2,
+      "texto": "Don Quixote didn’t even budge: “A knight does not get out of the way, not for a bull, not for...”",
+      "fala": "Don Quixote didn’t even budge: A knight does not get out of the way, not for a bull, not for...",
+      "hash": "c60befb418"
+    },
+    {
+      "id": "p2-s15",
+      "pagina": 2,
+      "paragrafo": 2,
+      "texto": "There was no time to finish the sentence.",
+      "fala": "There was no time to finish the sentence.",
+      "hash": "785f1d7a95"
+    },
+    {
+      "id": "p2-s16",
+      "pagina": 2,
+      "paragrafo": 2,
+      "texto": "The herd went past like a wind made of horns and knocked everything over: the knight, the horse, the squire and even the donkey, who had nothing to do with any of it.",
+      "fala": "The herd went past like a wind made of horns and knocked everything over: the knight, the horse, the squire and even the donkey, who had nothing to do with any of it.",
+      "hash": "1b6213e1d6"
+    },
+    {
+      "id": "p2-s17",
+      "pagina": 2,
+      "paragrafo": 2,
+      "texto": "The bulls didn’t even look back.",
+      "fala": "The bulls didn’t even look back.",
+      "hash": "831c46fdf5"
+    },
+    {
+      "id": "p2-s18",
+      "pagina": 2,
+      "paragrafo": 2,
+      "texto": "When the dust settled, all four of them were lying flat on the road, covered in earth, each one facing a different way.",
+      "fala": "When the dust settled, all four of them were lying flat on the road, covered in earth, each one facing a different way.",
+      "hash": "6dc49d69a8"
+    },
+    {
+      "id": "p2-s19",
+      "pagina": 2,
+      "paragrafo": 3,
+      "texto": "Nobody broke anything, by pure luck.",
+      "fala": "Nobody broke anything, by pure luck.",
+      "hash": "2892372d94"
+    },
+    {
+      "id": "p2-s20",
+      "pagina": 2,
+      "paragrafo": 3,
+      "texto": "But Don Quixote got up slowly, with his hand on his back, limping.",
+      "fala": "But Don Quixote got up slowly, with his hand on his back, limping.",
+      "hash": "7a842a52ff"
+    },
+    {
+      "id": "p2-s21",
+      "pagina": 2,
+      "paragrafo": 3,
+      "texto": "That night, he couldn’t even take off his armour by himself: Sancho had to help, piece by piece.",
+      "fala": "That night, he couldn’t even take off his armour by himself: Sancho had to help, piece by piece.",
+      "hash": "99114d1e4c"
+    },
+    {
+      "id": "p2-s22",
+      "pagina": 2,
+      "paragrafo": 3,
+      "texto": "“Master,” he said softly, “the bulls don’t know you’re a knight.",
+      "fala": "Master, he said softly, the bulls don’t know you’re a knight.",
+      "hash": "b90db54bd3"
+    },
+    {
+      "id": "p2-s23",
+      "pagina": 2,
+      "paragrafo": 3,
+      "texto": "And you’re not exactly a young lad any more.",
+      "fala": "And you’re not exactly a young lad any more.",
+      "hash": "86ef9bcdce"
+    },
+    {
+      "id": "p2-s24",
+      "pagina": 2,
+      "paragrafo": 3,
+      "texto": "Even the bulls have more SENSE: at least they don’t stop in the middle of the road!”",
+      "fala": "Even the bulls have more sense: at least they don’t stop in the middle of the road!",
+      "hash": "27f4c798bd"
+    },
+    {
+      "id": "p2-s25",
+      "pagina": 2,
+      "paragrafo": 3,
+      "texto": "“It’ll be better tomorrow, Sancho...” groaned the knight.",
+      "fala": "It’ll be better tomorrow, Sancho... groaned the knight.",
+      "hash": "e0d289557a"
+    },
+    {
+      "id": "p2-s26",
+      "pagina": 2,
+      "paragrafo": 4,
+      "texto": "High up on the hill, hidden among the trees, a knight with a white moon on his shield had seen everything.",
+      "fala": "High up on the hill, hidden among the trees, a knight with a white moon on his shield had seen everything.",
+      "hash": "61513ecef4"
+    },
+    {
+      "id": "p2-s27",
+      "pagina": 2,
+      "paragrafo": 4,
+      "texto": "He kept on watching for a long while.",
+      "fala": "He kept on watching for a long while.",
+      "hash": "a1b98017fa"
+    },
+    {
+      "id": "p2-s28",
+      "pagina": 2,
+      "paragrafo": 4,
+      "texto": "Then he slowly shook his head, like someone making up his mind.",
+      "fala": "Then he slowly shook his head, like someone making up his mind.",
+      "hash": "5483065662"
+    },
+    {
+      "id": "p3-s0",
+      "pagina": 3,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapter 64. The Lying Book. That’s Not Me!",
+      "fala": "Chapter 64. The Lying Book. That’s Not Me!",
+      "hash": "cb5eacd364"
+    },
+    {
+      "id": "p3-s1",
+      "pagina": 3,
+      "paragrafo": 0,
+      "texto": "That night, at an inn, the two of them were having supper when they heard voices on the other side of the wall, which was very thin: “Shall we read another chapter of the new Don Quixote book?”",
+      "fala": "That night, at an inn, the two of them were having supper when they heard voices on the other side of the wall, which was very thin: Shall we read another chapter of the new Don Quixote book?",
+      "hash": "5e3ae05338"
+    },
+    {
+      "id": "p3-s2",
+      "pagina": 3,
+      "paragrafo": 0,
+      "texto": "“Oh, no!",
+      "fala": "Oh, no!",
+      "hash": "a21668603a"
+    },
+    {
+      "id": "p3-s3",
+      "pagina": 3,
+      "paragrafo": 0,
+      "texto": "That new book is awful.",
+      "fala": "That new book is awful.",
+      "hash": "0f4fd0d158"
+    },
+    {
+      "id": "p3-s4",
+      "pagina": 3,
+      "paragrafo": 0,
+      "texto": "In it, Don Quixote doesn’t even love Dulcinea any more, and Sancho is a greedy guts with no fun in him at all.”",
+      "fala": "In it, Don Quixote doesn’t even love Dulcinea any more, and Sancho is a greedy guts with no fun in him at all.",
+      "hash": "1abd15493b"
+    },
+    {
+      "id": "p3-s5",
+      "pagina": 3,
+      "paragrafo": 0,
+      "texto": "Sancho stopped with a chicken leg in the air.",
+      "fala": "Sancho stopped with a chicken leg in the air.",
+      "hash": "daf21036f5"
+    },
+    {
+      "id": "p3-s6",
+      "pagina": 3,
+      "paragrafo": 1,
+      "texto": "Don Quixote got up and knocked on the door of the next room: “Whoever says that Don Quixote has forgotten Dulcinea is very much mistaken!”",
+      "fala": "Don Quixote got up and knocked on the door of the next room: Whoever says that Don Quixote has forgotten Dulcinea is very much mistaken!",
+      "hash": "dbb40a2317"
+    },
+    {
+      "id": "p3-s7",
+      "pagina": 3,
+      "paragrafo": 1,
+      "texto": "The two travellers opened the door, looked at the skinny knight with a basin on his head, looked at the squire with a chicken leg in his hand and jumped: “It’s them!",
+      "fala": "The two travellers opened the door, looked at the skinny knight with a basin on his head, looked at the squire with a chicken leg in his hand and jumped: It’s them!",
+      "hash": "f07ef1cd17"
+    },
+    {
+      "id": "p3-s8",
+      "pagina": 3,
+      "paragrafo": 1,
+      "texto": "The real ones!”",
+      "fala": "The real ones!",
+      "hash": "f0a8346f30"
+    },
+    {
+      "id": "p3-s9",
+      "pagina": 3,
+      "paragrafo": 2,
+      "texto": "The travellers showed them the book.",
+      "fala": "The travellers showed them the book.",
+      "hash": "568c7f8b30"
+    },
+    {
+      "id": "p3-s10",
+      "pagina": 3,
+      "paragrafo": 2,
+      "texto": "Somebody, wanting to make use of the FAME of the first one, had made up a sequel full of lies, without ever having met the two of them.",
+      "fala": "Somebody, wanting to make use of the fame of the first one, had made up a sequel full of lies, without ever having met the two of them.",
+      "hash": "99a8507c55"
+    },
+    {
+      "id": "p3-s11",
+      "pagina": 3,
+      "paragrafo": 2,
+      "texto": "Don Quixote leafed through a few pages and found a mistake straight away: “It says here that Sancho’s wife is called Mari Gutiérrez!”",
+      "fala": "Don Quixote leafed through a few pages and found a mistake straight away: It says here that Sancho’s wife is called Mari Gutiérrez!",
+      "hash": "754be005cf"
+    },
+    {
+      "id": "p3-s12",
+      "pagina": 3,
+      "paragrafo": 2,
+      "texto": "“Mari who?”",
+      "fala": "Mari who?",
+      "hash": "c581f96b8c"
+    },
+    {
+      "id": "p3-s13",
+      "pagina": 3,
+      "paragrafo": 2,
+      "texto": "Sancho nearly choked.",
+      "fala": "Sancho nearly choked.",
+      "hash": "cf2efd80f9"
+    },
+    {
+      "id": "p3-s14",
+      "pagina": 3,
+      "paragrafo": 2,
+      "texto": "“My wife has been Teresa since the day she was born!",
+      "fala": "My wife has been Teresa since the day she was born!",
+      "hash": "c2241a914b"
+    },
+    {
+      "id": "p3-s15",
+      "pagina": 3,
+      "paragrafo": 2,
+      "texto": "Whoever wrote this has never had a bowl of soup at our house.",
+      "fala": "Whoever wrote this has never had a bowl of soup at our house.",
+      "hash": "87fafcb556"
+    },
+    {
+      "id": "p3-s16",
+      "pagina": 3,
+      "paragrafo": 2,
+      "texto": "And me, greedy?” he said, and took a bite of chicken.",
+      "fala": "And me, greedy? he said, and took a bite of chicken.",
+      "hash": "941b739f3c"
+    },
+    {
+      "id": "p3-s17",
+      "pagina": 3,
+      "paragrafo": 2,
+      "texto": "“And no fun?",
+      "fala": "And no fun?",
+      "hash": "e2c90f42b8"
+    },
+    {
+      "id": "p3-s18",
+      "pagina": 3,
+      "paragrafo": 2,
+      "texto": "I’m funny even in my sleep!”",
+      "fala": "I’m funny even in my sleep!",
+      "hash": "77cc63313c"
+    },
+    {
+      "id": "p3-s19",
+      "pagina": 3,
+      "paragrafo": 3,
+      "texto": "“And it says here that you went to a knights’ tournament in the city of Saragossa,” said one of the travellers.",
+      "fala": "And it says here that you went to a knights’ tournament in the city of Saragossa, said one of the travellers.",
+      "hash": "6c3c254431"
+    },
+    {
+      "id": "p3-s20",
+      "pagina": 3,
+      "paragrafo": 3,
+      "texto": "“Oh, does it?” said Don Quixote.",
+      "fala": "Oh, does it? said Don Quixote.",
+      "hash": "8eacb58fac"
+    },
+    {
+      "id": "p3-s21",
+      "pagina": 3,
+      "paragrafo": 3,
+      "texto": "“Well, I was going to pass that way.",
+      "fala": "Well, I was going to pass that way.",
+      "hash": "ce55701a1c"
+    },
+    {
+      "id": "p3-s22",
+      "pagina": 3,
+      "paragrafo": 3,
+      "texto": "But now I shall not set foot in Saragossa!",
+      "fala": "But now I shall not set foot in Saragossa!",
+      "hash": "5c665ce8db"
+    },
+    {
+      "id": "p3-s23",
+      "pagina": 3,
+      "paragrafo": 3,
+      "texto": "That way the whole world will see that this book is full of LIES.",
+      "fala": "That way the whole world will see that this book is full of lies.",
+      "hash": "7dd2be2871"
+    },
+    {
+      "id": "p3-s24",
+      "pagina": 3,
+      "paragrafo": 3,
+      "texto": "We shall go straight to Barcelona!”",
+      "fala": "We shall go straight to Barcelona!",
+      "hash": "3e4063f86f"
+    },
+    {
+      "id": "p3-s25",
+      "pagina": 3,
+      "paragrafo": 3,
+      "texto": "“We’ll go on ahead,” said the travellers, “and tell the city you’re coming!”",
+      "fala": "We’ll go on ahead, said the travellers, and tell the city you’re coming!",
+      "hash": "c1f651a178"
+    },
+    {
+      "id": "p3-s26",
+      "pagina": 3,
+      "paragrafo": 4,
+      "texto": "Later, lying on the straw, Sancho was still grumbling: “Master, how can anyone write so many lies?”",
+      "fala": "Later, lying on the straw, Sancho was still grumbling: Master, how can anyone write so many lies?",
+      "hash": "2fd80f98f3"
+    },
+    {
+      "id": "p3-s27",
+      "pagina": 3,
+      "paragrafo": 4,
+      "texto": "“Writing is easy, Sancho.",
+      "fala": "Writing is easy, Sancho.",
+      "hash": "ac6e2b3462"
+    },
+    {
+      "id": "p3-s28",
+      "pagina": 3,
+      "paragrafo": 4,
+      "texto": "The danger is that, in a book, a lie can look just like the truth.",
+      "fala": "The danger is that, in a book, a lie can look just like the truth.",
+      "hash": "6c25712170"
+    },
+    {
+      "id": "p3-s29",
+      "pagina": 3,
+      "paragrafo": 4,
+      "texto": "Whoever reads without doubting believes everything.”",
+      "fala": "Whoever reads without doubting believes everything.",
+      "hash": "5bc5678ae2"
+    },
+    {
+      "id": "p3-s30",
+      "pagina": 3,
+      "paragrafo": 4,
+      "texto": "Sancho thought about it.",
+      "fala": "Sancho thought about it.",
+      "hash": "ab4753d82d"
+    },
+    {
+      "id": "p3-s31",
+      "pagina": 3,
+      "paragrafo": 4,
+      "texto": "“So, if anybody can write a wrong book about us... who wrote the right one?”",
+      "fala": "So, if anybody can write a wrong book about us... who wrote the right one?",
+      "hash": "68b7acdc26"
+    },
+    {
+      "id": "p3-s32",
+      "pagina": 3,
+      "paragrafo": 4,
+      "texto": "“One day we shall find out.”",
+      "fala": "One day we shall find out.",
+      "hash": "8138c9b044"
+    },
+    {
+      "id": "p3-s33",
+      "pagina": 3,
+      "paragrafo": 4,
+      "texto": "“When I find that wizard, I’m going to ask him to put more food in the chapters.”",
+      "fala": "When I find that wizard, I’m going to ask him to put more food in the chapters.",
+      "hash": "8050d1956d"
+    },
+    {
+      "id": "p4-s0",
+      "pagina": 4,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapter 65. The Sea. The Water that Never Ends",
+      "fala": "Chapter 65. The Sea. The Water that Never Ends",
+      "hash": "d401306748"
+    },
+    {
+      "id": "p4-s1",
+      "pagina": 4,
+      "paragrafo": 0,
+      "texto": "They reached Barcelona before sunrise and waited, standing still at the top of a hill.",
+      "fala": "They reached Barcelona before sunrise and waited, standing still at the top of a hill.",
+      "hash": "484e2efa45"
+    },
+    {
+      "id": "p4-s2",
+      "pagina": 4,
+      "paragrafo": 0,
+      "texto": "When day broke, the two of them were speechless.",
+      "fala": "When day broke, the two of them were speechless.",
+      "hash": "a3439009fc"
+    },
+    {
+      "id": "p4-s3",
+      "pagina": 4,
+      "paragrafo": 0,
+      "texto": "Down below there was water, water and more water, all the way to where the sky touched it.",
+      "fala": "Down below there was water, water and more water, all the way to where the sky touched it.",
+      "hash": "9756bc8440"
+    },
+    {
+      "id": "p4-s4",
+      "pagina": 4,
+      "paragrafo": 0,
+      "texto": "It was the SEA!",
+      "fala": "It was the sea!",
+      "hash": "b70aeed8ae"
+    },
+    {
+      "id": "p4-s5",
+      "pagina": 4,
+      "paragrafo": 0,
+      "texto": "“It is much bigger than the pond back home,” whispered Don Quixote.",
+      "fala": "It is much bigger than the pond back home, whispered Don Quixote.",
+      "hash": "ccc0b0a3f3"
+    },
+    {
+      "id": "p4-s6",
+      "pagina": 4,
+      "paragrafo": 0,
+      "texto": "“And there’s no bank on the other side!” said Sancho.",
+      "fala": "And there’s no bank on the other side! said Sancho.",
+      "hash": "7ecc50439d"
+    },
+    {
+      "id": "p4-s7",
+      "pagina": 4,
+      "paragrafo": 0,
+      "texto": "“Who filled it up, I wonder?”",
+      "fala": "Who filled it up, I wonder?",
+      "hash": "3d79565dcc"
+    },
+    {
+      "id": "p4-s8",
+      "pagina": 4,
+      "paragrafo": 1,
+      "texto": "Sancho ran down to the sand, wet the tip of his finger and tasted it.",
+      "fala": "Sancho ran down to the sand, wet the tip of his finger and tasted it.",
+      "hash": "f89928a879"
+    },
+    {
+      "id": "p4-s9",
+      "pagina": 4,
+      "paragrafo": 1,
+      "texto": "He pulled a face: “It’s salty!",
+      "fala": "He pulled a face: It’s salty!",
+      "hash": "832a471282"
+    },
+    {
+      "id": "p4-s10",
+      "pagina": 4,
+      "paragrafo": 1,
+      "texto": "Somebody’s dropped the salt cellar in there.”",
+      "fala": "Somebody’s dropped the salt cellar in there.",
+      "hash": "6b65cef194"
+    },
+    {
+      "id": "p4-s11",
+      "pagina": 4,
+      "paragrafo": 1,
+      "texto": "Then a WAVE crept in gently and wet his boots.",
+      "fala": "Then a wave crept in gently and wet his boots.",
+      "hash": "8758a7632c"
+    },
+    {
+      "id": "p4-s12",
+      "pagina": 4,
+      "paragrafo": 1,
+      "texto": "Sancho jumped backwards.",
+      "fala": "Sancho jumped backwards.",
+      "hash": "e9d77b7482"
+    },
+    {
+      "id": "p4-s13",
+      "pagina": 4,
+      "paragrafo": 1,
+      "texto": "The wave went away.",
+      "fala": "The wave went away.",
+      "hash": "4224d18744"
+    },
+    {
+      "id": "p4-s14",
+      "pagina": 4,
+      "paragrafo": 1,
+      "texto": "Sancho came back.",
+      "fala": "Sancho came back.",
+      "hash": "cdeddc6415"
+    },
+    {
+      "id": "p4-s15",
+      "pagina": 4,
+      "paragrafo": 1,
+      "texto": "The wave came back too.",
+      "fala": "The wave came back too.",
+      "hash": "d6cee26ab5"
+    },
+    {
+      "id": "p4-s16",
+      "pagina": 4,
+      "paragrafo": 1,
+      "texto": "“It’s playing with me, master!”",
+      "fala": "It’s playing with me, master!",
+      "hash": "d4f387f74c"
+    },
+    {
+      "id": "p4-s17",
+      "pagina": 4,
+      "paragrafo": 2,
+      "texto": "On the water floated some enormous boats, full of flags, with lots of oars on each side, which the sailors pulled all together, singing.",
+      "fala": "On the water floated some enormous boats, full of flags, with lots of oars on each side, which the sailors pulled all together, singing.",
+      "hash": "6680f2d284"
+    },
+    {
+      "id": "p4-s18",
+      "pagina": 4,
+      "paragrafo": 2,
+      "texto": "Sancho’s eyes grew wide: “Master, those creatures have more than a hundred feet!",
+      "fala": "Sancho’s eyes grew wide: Master, those creatures have more than a hundred feet!",
+      "hash": "3e3649ae7e"
+    },
+    {
+      "id": "p4-s19",
+      "pagina": 4,
+      "paragrafo": 2,
+      "texto": "And they walk on top of the water!”",
+      "fala": "And they walk on top of the water!",
+      "hash": "9818be39c1"
+    },
+    {
+      "id": "p4-s20",
+      "pagina": 4,
+      "paragrafo": 2,
+      "texto": "“They are SHIPS, Sancho.",
+      "fala": "They are ships, Sancho.",
+      "hash": "742dc484d8"
+    },
+    {
+      "id": "p4-s21",
+      "pagina": 4,
+      "paragrafo": 2,
+      "texto": "The feet are oars.”",
+      "fala": "The feet are oars.",
+      "hash": "af70356985"
+    },
+    {
+      "id": "p4-s22",
+      "pagina": 4,
+      "paragrafo": 2,
+      "texto": "“Ah.",
+      "fala": "Ah.",
+      "hash": "cab61f9a2c"
+    },
+    {
+      "id": "p4-s23",
+      "pagina": 4,
+      "paragrafo": 2,
+      "texto": "Then they’re donkeys of the sea.”",
+      "fala": "Then they’re donkeys of the sea.",
+      "hash": "38ce22d8a0"
+    },
+    {
+      "id": "p4-s24",
+      "pagina": 4,
+      "paragrafo": 3,
+      "texto": "Suddenly, the ships fired off celebration shots, BOOM, BOOM!, and a group of finely dressed horsemen came galloping along the beach.",
+      "fala": "Suddenly, the ships fired off celebration shots, BOOM, BOOM! and a group of finely dressed horsemen came galloping along the beach.",
+      "hash": "fd9306b40e"
+    },
+    {
+      "id": "p4-s25",
+      "pagina": 4,
+      "paragrafo": 3,
+      "texto": "At the front rode a cheerful gentleman in a feathered hat, called Don Antonio: “Welcome to Barcelona, true Don Quixote of La Mancha!",
+      "fala": "At the front rode a cheerful gentleman in a feathered hat, called Don Antonio: Welcome to Barcelona, true Don Quixote of La Mancha!",
+      "hash": "42f71e5b4c"
+    },
+    {
+      "id": "p4-s26",
+      "pagina": 4,
+      "paragrafo": 3,
+      "texto": "Not the false one, from the lying book: the true one!",
+      "fala": "Not the false one, from the lying book: the true one!",
+      "hash": "1ce0a07f81"
+    },
+    {
+      "id": "p4-s27",
+      "pagina": 4,
+      "paragrafo": 3,
+      "texto": "The travellers from the inn told us everything, and the whole city is waiting for you!”",
+      "fala": "The travellers from the inn told us everything, and the whole city is waiting for you!",
+      "hash": "dd69afed49"
+    },
+    {
+      "id": "p4-s28",
+      "pagina": 4,
+      "paragrafo": 4,
+      "texto": "Don Quixote and Sancho rode on in the middle of the celebration, with music and flags.",
+      "fala": "Don Quixote and Sancho rode on in the middle of the celebration, with music and flags.",
+      "hash": "6e4282c3d1"
+    },
+    {
+      "id": "p4-s29",
+      "pagina": 4,
+      "paragrafo": 4,
+      "texto": "Down at the far end of the beach, standing in the shadow of a rock, a knight with a white moon on his shield was watching everything from afar.",
+      "fala": "Down at the far end of the beach, standing in the shadow of a rock, a knight with a white moon on his shield was watching everything from afar.",
+      "hash": "8104d01475"
+    },
+    {
+      "id": "p4-s30",
+      "pagina": 4,
+      "paragrafo": 4,
+      "texto": "Nobody noticed him.",
+      "fala": "Nobody noticed him.",
+      "hash": "f50e94ded5"
+    },
+    {
+      "id": "p5-s0",
+      "pagina": 5,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapter 66. The Enchanted Head. The Paper on His Back",
+      "fala": "Chapter 66. The Enchanted Head. The Paper on His Back",
+      "hash": "787df58481"
+    },
+    {
+      "id": "p5-s1",
+      "pagina": 5,
+      "paragrafo": 0,
+      "texto": "Don Antonio put the two of them up in his house and, in the morning, took Don Quixote for a walk through the streets.",
+      "fala": "Don Antonio put the two of them up in his house and, in the morning, took Don Quixote for a walk through the streets.",
+      "hash": "23f4d08789"
+    },
+    {
+      "id": "p5-s2",
+      "pagina": 5,
+      "paragrafo": 0,
+      "texto": "How strange: everyone who passed said: “Good morning, Don Quixote of La Mancha!”",
+      "fala": "How strange: everyone who passed said: Good morning, Don Quixote of La Mancha!",
+      "hash": "67fb6b5ccc"
+    },
+    {
+      "id": "p5-s3",
+      "pagina": 5,
+      "paragrafo": 0,
+      "texto": "Even the children.",
+      "fala": "Even the children.",
+      "hash": "2a7c78d661"
+    },
+    {
+      "id": "p5-s4",
+      "pagina": 5,
+      "paragrafo": 0,
+      "texto": "Even a lady at her window.",
+      "fala": "Even a lady at her window.",
+      "hash": "20a5155d9b"
+    },
+    {
+      "id": "p5-s5",
+      "pagina": 5,
+      "paragrafo": 0,
+      "texto": "“You see, Sancho, what fame is?",
+      "fala": "You see, Sancho, what fame is?",
+      "hash": "9d94082a59"
+    },
+    {
+      "id": "p5-s6",
+      "pagina": 5,
+      "paragrafo": 0,
+      "texto": "Here they know me without ever having seen me!”",
+      "fala": "Here they know me without ever having seen me!",
+      "hash": "f2046b41f1"
+    },
+    {
+      "id": "p5-s7",
+      "pagina": 5,
+      "paragrafo": 0,
+      "texto": "Sancho, who was walking behind, noticed something: stuck to his master’s back there was a piece of PAPER.",
+      "fala": "Sancho, who was walking behind, noticed something: stuck to his master’s back there was a piece of paper.",
+      "hash": "4d24c1bdfd"
+    },
+    {
+      "id": "p5-s8",
+      "pagina": 5,
+      "paragrafo": 0,
+      "texto": "A boy read it out loud for him: “This is Don Quixote of La Mancha.”",
+      "fala": "A boy read it out loud for him: This is Don Quixote of La Mancha.",
+      "hash": "2567aac313"
+    },
+    {
+      "id": "p5-s9",
+      "pagina": 5,
+      "paragrafo": 0,
+      "texto": "Sancho took the paper off and showed it to his master.",
+      "fala": "Sancho took the paper off and showed it to his master.",
+      "hash": "94d28c0e07"
+    },
+    {
+      "id": "p5-s10",
+      "pagina": 5,
+      "paragrafo": 0,
+      "texto": "Don Antonio went red, and Don Quixote burst out laughing: “Well, well, so my fame was made of paper!”",
+      "fala": "Don Antonio went red, and Don Quixote burst out laughing: Well, well, so my fame was made of paper!",
+      "hash": "767196e2ea"
+    },
+    {
+      "id": "p5-s11",
+      "pagina": 5,
+      "paragrafo": 1,
+      "texto": "That night, Don Antonio closed the door of a little room and spoke quietly: “Now I am going to show you a secret.”",
+      "fala": "That night, Don Antonio closed the door of a little room and spoke quietly: Now I am going to show you a secret.",
+      "hash": "5328f31a52"
+    },
+    {
+      "id": "p5-s12",
+      "pagina": 5,
+      "paragrafo": 1,
+      "texto": "On top of a table there was a bronze HEAD, of a bald man, with its eyes wide open.",
+      "fala": "On top of a table there was a bronze head, of a bald man, with its eyes wide open.",
+      "hash": "6fbca840f4"
+    },
+    {
+      "id": "p5-s13",
+      "pagina": 5,
+      "paragrafo": 1,
+      "texto": "“This head was made by a great wizard.",
+      "fala": "This head was made by a great wizard.",
+      "hash": "c10b144f7f"
+    },
+    {
+      "id": "p5-s14",
+      "pagina": 5,
+      "paragrafo": 1,
+      "texto": "It answers any question.",
+      "fala": "It answers any question.",
+      "hash": "f098978e4d"
+    },
+    {
+      "id": "p5-s15",
+      "pagina": 5,
+      "paragrafo": 1,
+      "texto": "Only it doesn’t speak on Fridays.”",
+      "fala": "Only it doesn’t speak on Fridays.",
+      "hash": "a1d8a7f034"
+    },
+    {
+      "id": "p5-s16",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "Don Quixote went closer, very respectfully: “Tell me, head: what I saw in the Cave of Montesinos, was it a dream or was it real?”",
+      "fala": "Don Quixote went closer, very respectfully: Tell me, head: what I saw in the Cave of Montesinos, was it a dream or was it real?",
+      "hash": "de6dccc505"
+    },
+    {
+      "id": "p5-s17",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "A voice came out from inside, without the mouth moving: “There is a little of everything.”",
+      "fala": "A voice came out from inside, without the mouth moving: There is a little of everything.",
+      "hash": "dae0a983c3"
+    },
+    {
+      "id": "p5-s18",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "Then it was Sancho’s turn: “Head, am I going to govern another island?",
+      "fala": "Then it was Sancho’s turn: Head, am I going to govern another island?",
+      "hash": "9fefc05ae8"
+    },
+    {
+      "id": "p5-s19",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "And will I see my Teresa again?”",
+      "fala": "And will I see my Teresa again?",
+      "hash": "5f2a7be539"
+    },
+    {
+      "id": "p5-s20",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "“You will govern your own house.",
+      "fala": "You will govern your own house.",
+      "hash": "0ce766165e"
+    },
+    {
+      "id": "p5-s21",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "And, if you go back there, you will see your Teresa.”",
+      "fala": "And, if you go back there, you will see your Teresa.",
+      "hash": "82f33da04f"
+    },
+    {
+      "id": "p5-s22",
+      "pagina": 5,
+      "paragrafo": 3,
+      "texto": "“Big news!” said Sancho.",
+      "fala": "Big news! said Sancho.",
+      "hash": "8daa00aab6"
+    },
+    {
+      "id": "p5-s23",
+      "pagina": 5,
+      "paragrafo": 3,
+      "texto": "“Even the donkey knew that!”",
+      "fala": "Even the donkey knew that!",
+      "hash": "8eb1c2215f"
+    },
+    {
+      "id": "p5-s24",
+      "pagina": 5,
+      "paragrafo": 3,
+      "texto": "He walked round the table, suspicious.",
+      "fala": "He walked round the table, suspicious.",
+      "hash": "22ea9b8484"
+    },
+    {
+      "id": "p5-s25",
+      "pagina": 5,
+      "paragrafo": 3,
+      "texto": "He looked over the top, he looked underneath.",
+      "fala": "He looked over the top, he looked underneath.",
+      "hash": "f2f8c83a6d"
+    },
+    {
+      "id": "p5-s26",
+      "pagina": 5,
+      "paragrafo": 3,
+      "texto": "And he saw it: out of the neck of the head came a thin little PIPE, which went down inside the table leg and through the floor.",
+      "fala": "And he saw it: out of the neck of the head came a thin little pipe, which went down inside the table leg and through the floor.",
+      "hash": "08318805e6"
+    },
+    {
+      "id": "p5-s27",
+      "pagina": 5,
+      "paragrafo": 3,
+      "texto": "Sancho put his mouth to the bronze ear and shouted: “Is there anybody down there?”",
+      "fala": "Sancho put his mouth to the bronze ear and shouted: Is there anybody down there?",
+      "hash": "36429f7701"
+    },
+    {
+      "id": "p5-s28",
+      "pagina": 5,
+      "paragrafo": 3,
+      "texto": "“No!” answered the voice.",
+      "fala": "No! answered the voice.",
+      "hash": "dde4e299b6"
+    },
+    {
+      "id": "p5-s29",
+      "pagina": 5,
+      "paragrafo": 3,
+      "texto": "And down in the room below, sitting on a little stool, was Don Antonio’s nephew, talking into the pipe and covering his mouth so as not to laugh.",
+      "fala": "And down in the room below, sitting on a little stool, was Don Antonio’s nephew, talking into the pipe and covering his mouth so as not to laugh.",
+      "hash": "b8009343df"
+    },
+    {
+      "id": "p5-s30",
+      "pagina": 5,
+      "paragrafo": 4,
+      "texto": "Don Antonio roared with laughter, and so did Don Quixote.",
+      "fala": "Don Antonio roared with laughter, and so did Don Quixote.",
+      "hash": "0d70c583fe"
+    },
+    {
+      "id": "p5-s31",
+      "pagina": 5,
+      "paragrafo": 4,
+      "texto": "“Sancho, you find everything out!",
+      "fala": "Sancho, you find everything out!",
+      "hash": "a0d207b513"
+    },
+    {
+      "id": "p5-s32",
+      "pagina": 5,
+      "paragrafo": 4,
+      "texto": "The walking stick, the monkey, the countess, the head...",
+      "fala": "The walking stick, the monkey, the countess, the head...",
+      "hash": "7898c74969"
+    },
+    {
+      "id": "p5-s33",
+      "pagina": 5,
+      "paragrafo": 4,
+      "texto": "How do you do it?”",
+      "fala": "How do you do it?",
+      "hash": "72b589a400"
+    },
+    {
+      "id": "p5-s34",
+      "pagina": 5,
+      "paragrafo": 4,
+      "texto": "“It’s simple, master.",
+      "fala": "It’s simple, master.",
+      "hash": "68ab6f79f7"
+    },
+    {
+      "id": "p5-s35",
+      "pagina": 5,
+      "paragrafo": 4,
+      "texto": "When people tell me something is magic, I don’t say yes and I don’t say no: I go and look under the table.",
+      "fala": "When people tell me something is magic, I don’t say yes and I don’t say no: I go and look under the table.",
+      "hash": "9e3435e674"
+    },
+    {
+      "id": "p5-s36",
+      "pagina": 5,
+      "paragrafo": 4,
+      "texto": "I DOUBT first and believe afterwards.”",
+      "fala": "I doubt first and believe afterwards.",
+      "hash": "8e5aab272f"
+    },
+    {
+      "id": "p5-s37",
+      "pagina": 5,
+      "paragrafo": 4,
+      "texto": "Don Quixote turned serious for a moment: “If everybody did that, lying books would never fool anyone.”",
+      "fala": "Don Quixote turned serious for a moment: If everybody did that, lying books would never fool anyone.",
+      "hash": "277d74b895"
+    },
+    {
+      "id": "p5-s38",
+      "pagina": 5,
+      "paragrafo": 4,
+      "texto": "“Nor would bronze heads!” laughed Don Antonio.",
+      "fala": "Nor would bronze heads! laughed Don Antonio.",
+      "hash": "752fd62c7c"
+    },
+    {
+      "id": "p5-s39",
+      "pagina": 5,
+      "paragrafo": 4,
+      "texto": "Later, from the window, Sancho saw a strong horse go by in the dark street.",
+      "fala": "Later, from the window, Sancho saw a strong horse go by in the dark street.",
+      "hash": "392dccfcf0"
+    },
+    {
+      "id": "p5-s40",
+      "pagina": 5,
+      "paragrafo": 4,
+      "texto": "On the rider’s shield shone a white moon.",
+      "fala": "On the rider’s shield shone a white moon.",
+      "hash": "ca1cb28d8d"
+    },
+    {
+      "id": "p5-s41",
+      "pagina": 5,
+      "paragrafo": 4,
+      "texto": "He had his doubts about that too.",
+      "fala": "He had his doubts about that too.",
+      "hash": "b6e29bc852"
+    },
+    {
+      "id": "p6-s0",
+      "pagina": 6,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapter 67. The Book Workshop. The Wizard’s Name",
+      "fala": "Chapter 67. The Book Workshop. The Wizard’s Name",
+      "hash": "75e2c5b2ad"
+    },
+    {
+      "id": "p6-s1",
+      "pagina": 6,
+      "paragrafo": 0,
+      "texto": "Walking through the city, Don Quixote saw a sign on a door: “Books Made Here.”",
+      "fala": "Walking through the city, Don Quixote saw a sign on a door: Books Made Here.",
+      "hash": "7e16be5df8"
+    },
+    {
+      "id": "p6-s2",
+      "pagina": 6,
+      "paragrafo": 0,
+      "texto": "He went in at once.",
+      "fala": "He went in at once.",
+      "hash": "3e3102a82d"
+    },
+    {
+      "id": "p6-s3",
+      "pagina": 6,
+      "paragrafo": 0,
+      "texto": "Inside, what a noise and what a smell of ink!",
+      "fala": "Inside, what a noise and what a smell of ink!",
+      "hash": "95ed593202"
+    },
+    {
+      "id": "p6-s4",
+      "pagina": 6,
+      "paragrafo": 0,
+      "texto": "Some men were spreading black ink, others were pressing down on an enormous wooden machine, others were hanging the sheets up to dry, like washing on a line.",
+      "fala": "Some men were spreading black ink, others were pressing down on an enormous wooden machine, others were hanging the sheets up to dry, like washing on a line.",
+      "hash": "9c2e64a636"
+    },
+    {
+      "id": "p6-s5",
+      "pagina": 6,
+      "paragrafo": 1,
+      "texto": "In a corner, a man in an apron was picking up little letters made of METAL, as heavy as lead, one by one, and lining them up on a ruler.",
+      "fala": "In a corner, a man in an apron was picking up little letters made of metal, as heavy as lead, one by one, and lining them up on a ruler.",
+      "hash": "73491b7ed0"
+    },
+    {
+      "id": "p6-s6",
+      "pagina": 6,
+      "paragrafo": 1,
+      "texto": "“Each one of these little letters is a stamp,” he explained.",
+      "fala": "Each one of these little letters is a stamp, he explained.",
+      "hash": "d71e0e5ccb"
+    },
+    {
+      "id": "p6-s7",
+      "pagina": 6,
+      "paragrafo": 1,
+      "texto": "“I put the letters together to make the words, the words to make the lines, and the lines to make the page.",
+      "fala": "I put the letters together to make the words, the words to make the lines, and the lines to make the page.",
+      "hash": "ea6322487f"
+    },
+    {
+      "id": "p6-s8",
+      "pagina": 6,
+      "paragrafo": 1,
+      "texto": "Then you just spread on the ink and press the paper down on top!”",
+      "fala": "Then you just spread on the ink and press the paper down on top!",
+      "hash": "72f5c27894"
+    },
+    {
+      "id": "p6-s9",
+      "pagina": 6,
+      "paragrafo": 1,
+      "texto": "“So that’s how one book turns into twelve thousand!” said Sancho, amazed.",
+      "fala": "So that’s how one book turns into twelve thousand! said Sancho, amazed.",
+      "hash": "6f88b00ebe"
+    },
+    {
+      "id": "p6-s10",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "“And which book are you making now?”",
+      "fala": "And which book are you making now?",
+      "hash": "39d21df3cb"
+    },
+    {
+      "id": "p6-s11",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "The man showed them a pile of sheets.",
+      "fala": "The man showed them a pile of sheets.",
+      "hash": "3958ae1951"
+    },
+    {
+      "id": "p6-s12",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "Don Quixote read the first one and was left breathless.",
+      "fala": "Don Quixote read the first one and was left breathless.",
+      "hash": "bd8af797eb"
+    },
+    {
+      "id": "p6-s13",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "It was the book of his own adventures!",
+      "fala": "It was the book of his own adventures!",
+      "hash": "55b7cd5128"
+    },
+    {
+      "id": "p6-s14",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "But, doubting first, as Sancho had taught him, he checked quickly: there were the windmills, the sheep, the barber’s basin, Dulcinea... and Sancho’s wife was called Teresa!",
+      "fala": "But, doubting first, as Sancho had taught him, he checked quickly: there were the windmills, the sheep, the barber’s basin, Dulcinea... and Sancho’s wife was called Teresa!",
+      "hash": "c321376cff"
+    },
+    {
+      "id": "p6-s15",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "“It’s the true one, Sancho!”",
+      "fala": "It’s the true one, Sancho!",
+      "hash": "8b86ccc5f0"
+    },
+    {
+      "id": "p6-s16",
+      "pagina": 6,
+      "paragrafo": 2,
+      "texto": "Sancho pointed to a line at the top of the page, in bigger letters: “And what do these great big ants up here say, master?”",
+      "fala": "Sancho pointed to a line at the top of the page, in bigger letters: And what do these great big ants up here say, master?",
+      "hash": "2d59c9730d"
+    },
+    {
+      "id": "p6-s17",
+      "pagina": 6,
+      "paragrafo": 3,
+      "texto": "Don Quixote read slowly: “Written by MIGUEL DE CERVANTES.”",
+      "fala": "Don Quixote read slowly: Written by miguel de cervantes.",
+      "hash": "a8634ade06"
+    },
+    {
+      "id": "p6-s18",
+      "pagina": 6,
+      "paragrafo": 3,
+      "texto": "The two of them looked at each other.",
+      "fala": "The two of them looked at each other.",
+      "hash": "cbd9328111"
+    },
+    {
+      "id": "p6-s19",
+      "pagina": 6,
+      "paragrafo": 3,
+      "texto": "So that was the wizard’s name!",
+      "fala": "So that was the wizard’s name!",
+      "hash": "08575ed544"
+    },
+    {
+      "id": "p6-s20",
+      "pagina": 6,
+      "paragrafo": 3,
+      "texto": "“His name was already in the first book,” said the man in the apron.",
+      "fala": "His name was already in the first book, said the man in the apron.",
+      "hash": "e028bd1273"
+    },
+    {
+      "id": "p6-s21",
+      "pagina": 6,
+      "paragrafo": 3,
+      "texto": "“But now, because of that lying book, he wants everybody to know which one is the true one.",
+      "fala": "But now, because of that lying book, he wants everybody to know which one is the true one.",
+      "hash": "025c4ea4b8"
+    },
+    {
+      "id": "p6-s22",
+      "pagina": 6,
+      "paragrafo": 3,
+      "texto": "They say he’s a gentleman with a white beard, who was once a soldier and has travelled a great deal.",
+      "fala": "They say he’s a gentleman with a white beard, who was once a soldier and has travelled a great deal.",
+      "hash": "b040e1cb0b"
+    },
+    {
+      "id": "p6-s23",
+      "pagina": 6,
+      "paragrafo": 3,
+      "texto": "He listens to the stories going round the world and writes them all down, with lots of love and lots of laughter.”",
+      "fala": "He listens to the stories going round the world and writes them all down, with lots of love and lots of laughter.",
+      "hash": "5d332e9ad9"
+    },
+    {
+      "id": "p6-s24",
+      "pagina": 6,
+      "paragrafo": 3,
+      "texto": "“So he isn’t a wizard,” said Sancho.",
+      "fala": "So he isn’t a wizard, said Sancho.",
+      "hash": "97e4f68f26"
+    },
+    {
+      "id": "p6-s25",
+      "pagina": 6,
+      "paragrafo": 3,
+      "texto": "“He is something better,” answered Don Quixote.",
+      "fala": "He is something better, answered Don Quixote.",
+      "hash": "75e5be46ec"
+    },
+    {
+      "id": "p6-s26",
+      "pagina": 6,
+      "paragrafo": 3,
+      "texto": "“He is a WRITER.”",
+      "fala": "He is a writer.",
+      "hash": "490c5e892a"
+    },
+    {
+      "id": "p6-s27",
+      "pagina": 6,
+      "paragrafo": 4,
+      "texto": "“And you two have become so famous,” the man in the apron went on, “that everybody wants to tell your story: in plays, in little rhymes, in other languages...”",
+      "fala": "And you two have become so famous, the man in the apron went on, that everybody wants to tell your story: in plays, in little rhymes, in other languages...",
+      "hash": "ee93ad32d6"
+    },
+    {
+      "id": "p6-s28",
+      "pagina": 6,
+      "paragrafo": 4,
+      "texto": "Sancho puffed out his chest: “Before long they’ll even want to make a book for children, with pictures and everything!”",
+      "fala": "Sancho puffed out his chest: Before long they’ll even want to make a book for children, with pictures and everything!",
+      "hash": "01b48d1afc"
+    },
+    {
+      "id": "p6-s29",
+      "pagina": 6,
+      "paragrafo": 4,
+      "texto": "The man gave a little chuckle: “Who says they haven’t already?”",
+      "fala": "The man gave a little chuckle: Who says they haven’t already?",
+      "hash": "f5eb6cc50e"
+    },
+    {
+      "id": "p6-s30",
+      "pagina": 6,
+      "paragrafo": 4,
+      "texto": "And he winked.",
+      "fala": "And he winked.",
+      "hash": "8a6a59bd4d"
+    },
+    {
+      "id": "p6-s31",
+      "pagina": 6,
+      "paragrafo": 4,
+      "texto": "Not at Sancho: at someone who wasn’t in the workshop.",
+      "fala": "Not at Sancho: at someone who wasn’t in the workshop.",
+      "hash": "4d52728ef1"
+    },
+    {
+      "id": "p6-s32",
+      "pagina": 6,
+      "paragrafo": 4,
+      "texto": "Just then, he tripped over a little stool, and a box of letters spilled all over the floor.",
+      "fala": "Just then, he tripped over a little stool, and a box of letters spilled all over the floor.",
+      "hash": "01249e5fe8"
+    },
+    {
+      "id": "p6-s33",
+      "pagina": 6,
+      "paragrafo": 4,
+      "texto": "“Oh dear, oh dear!",
+      "fala": "Oh dear, oh dear!",
+      "hash": "48c5c0b36a"
+    },
+    {
+      "id": "p6-s34",
+      "pagina": 6,
+      "paragrafo": 4,
+      "texto": "And it’s the very word we make most of all in here!”",
+      "fala": "And it’s the very word we make most of all in here!",
+      "hash": "85bf6faaea"
+    },
+    {
+      "id": "p7-s0",
+      "pagina": 7,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapter 68. The Knight of the White Moon. The Deal on the Beach",
+      "fala": "Chapter 68. The Knight of the White Moon. The Deal on the Beach",
+      "hash": "7a8330dff8"
+    },
+    {
+      "id": "p7-s1",
+      "pagina": 7,
+      "paragrafo": 0,
+      "texto": "One morning, Don Quixote was riding along the beach on Rocinante, with his basin-helmet and his lance.",
+      "fala": "One morning, Don Quixote was riding along the beach on Rocinante, with his basin-helmet and his lance.",
+      "hash": "496daf524e"
+    },
+    {
+      "id": "p7-s2",
+      "pagina": 7,
+      "paragrafo": 0,
+      "texto": "He was still limping a little since the herd, but he didn’t tell anyone.",
+      "fala": "He was still limping a little since the herd, but he didn’t tell anyone.",
+      "hash": "550a2cd163"
+    },
+    {
+      "id": "p7-s3",
+      "pagina": 7,
+      "paragrafo": 0,
+      "texto": "From the other side of the sand came a knight in full armour, with his visor closed and a white moon shining on his SHIELD.",
+      "fala": "From the other side of the sand came a knight in full armour, with his visor closed and a white moon shining on his shield.",
+      "hash": "4709e6523e"
+    },
+    {
+      "id": "p7-s4",
+      "pagina": 7,
+      "paragrafo": 0,
+      "texto": "His horse was strong and stepped firmly.",
+      "fala": "His horse was strong and stepped firmly.",
+      "hash": "9bd9f0323d"
+    },
+    {
+      "id": "p7-s5",
+      "pagina": 7,
+      "paragrafo": 0,
+      "texto": "It was the knight who had been following the two of them since the duke and duchess’s palace!",
+      "fala": "It was the knight who had been following the two of them since the duke and duchess’s palace!",
+      "hash": "fbe17781d2"
+    },
+    {
+      "id": "p7-s6",
+      "pagina": 7,
+      "paragrafo": 1,
+      "texto": "“Famous Don Quixote of La Mancha!” he said, his voice muffled by his helmet.",
+      "fala": "Famous Don Quixote of La Mancha! he said, his voice muffled by his helmet.",
+      "hash": "1a161fb848"
+    },
+    {
+      "id": "p7-s7",
+      "pagina": 7,
+      "paragrafo": 1,
+      "texto": "“I am the Knight of the White Moon, and I have come to challenge you.",
+      "fala": "I am the Knight of the White Moon, and I have come to challenge you.",
+      "hash": "bf245f1ffc"
+    },
+    {
+      "id": "p7-s8",
+      "pagina": 7,
+      "paragrafo": 1,
+      "texto": "But first, let us make a deal.",
+      "fala": "But first, let us make a deal.",
+      "hash": "dc0d0ff512"
+    },
+    {
+      "id": "p7-s9",
+      "pagina": 7,
+      "paragrafo": 1,
+      "texto": "If you knock me down, I will do whatever you command.",
+      "fala": "If you knock me down, I will do whatever you command.",
+      "hash": "4bd28a7a4b"
+    },
+    {
+      "id": "p7-s10",
+      "pagina": 7,
+      "paragrafo": 1,
+      "texto": "If I knock you down, I ask for one thing only: that you put away your lance, go back to your house and rest there for a whole year, without going off on adventures.”",
+      "fala": "If I knock you down, I ask for one thing only: that you put away your lance, go back to your house and rest there for a whole year, without going off on adventures.",
+      "hash": "7f8a130496"
+    },
+    {
+      "id": "p7-s11",
+      "pagina": 7,
+      "paragrafo": 2,
+      "texto": "Sancho felt a shiver in his tummy.",
+      "fala": "Sancho felt a shiver in his tummy.",
+      "hash": "8b69cd604d"
+    },
+    {
+      "id": "p7-s12",
+      "pagina": 7,
+      "paragrafo": 2,
+      "texto": "He had heard that deal somewhere before: whoever loses obeys!",
+      "fala": "He had heard that deal somewhere before: whoever loses obeys!",
+      "hash": "49d44cb50f"
+    },
+    {
+      "id": "p7-s13",
+      "pagina": 7,
+      "paragrafo": 2,
+      "texto": "Don Quixote took a good look at the stranger.",
+      "fala": "Don Quixote took a good look at the stranger.",
+      "hash": "a26a47987b"
+    },
+    {
+      "id": "p7-s14",
+      "pagina": 7,
+      "paragrafo": 2,
+      "texto": "It was a fair deal.",
+      "fala": "It was a fair deal.",
+      "hash": "bd6fe007ac"
+    },
+    {
+      "id": "p7-s15",
+      "pagina": 7,
+      "paragrafo": 2,
+      "texto": "“I give you my WORD as a knight,” he answered.",
+      "fala": "I give you my word as a knight, he answered.",
+      "hash": "9beca66e83"
+    },
+    {
+      "id": "p7-s16",
+      "pagina": 7,
+      "paragrafo": 2,
+      "texto": "“Choose your side of the beach!”",
+      "fala": "Choose your side of the beach!",
+      "hash": "15f3d98707"
+    },
+    {
+      "id": "p7-s17",
+      "pagina": 7,
+      "paragrafo": 3,
+      "texto": "The two of them rode apart and turned their horses round.",
+      "fala": "The two of them rode apart and turned their horses round.",
+      "hash": "665872113f"
+    },
+    {
+      "id": "p7-s18",
+      "pagina": 7,
+      "paragrafo": 3,
+      "texto": "Rocinante set off at his usual little trot.",
+      "fala": "Rocinante set off at his usual little trot.",
+      "hash": "8bb25cb790"
+    },
+    {
+      "id": "p7-s19",
+      "pagina": 7,
+      "paragrafo": 3,
+      "texto": "The white moon’s horse came at a real gallop, strong and determined, not a bit afraid of the waves.",
+      "fala": "The white moon’s horse came at a real gallop, strong and determined, not a bit afraid of the waves.",
+      "hash": "6c453f8304"
+    },
+    {
+      "id": "p7-s20",
+      "pagina": 7,
+      "paragrafo": 3,
+      "texto": "When he got close, the knight lifted his lance up high, on purpose, so as not to hurt anyone.",
+      "fala": "When he got close, the knight lifted his lance up high, on purpose, so as not to hurt anyone.",
+      "hash": "1673fdf60e"
+    },
+    {
+      "id": "p7-s21",
+      "pagina": 7,
+      "paragrafo": 3,
+      "texto": "The bump of the horses was enough: Rocinante, who was very old, bent his knees and lay down on his side in the soft sand, and Don Quixote slid out of the saddle, slowly, like someone lying down for a rest.",
+      "fala": "The bump of the horses was enough: Rocinante, who was very old, bent his knees and lay down on his side in the soft sand, and Don Quixote slid out of the saddle, slowly, like someone lying down for a rest.",
+      "hash": "23eff98397"
+    },
+    {
+      "id": "p7-s22",
+      "pagina": 7,
+      "paragrafo": 4,
+      "texto": "Sancho ran, with his heart in his mouth.",
+      "fala": "Sancho ran, with his heart in his mouth.",
+      "hash": "16352040c5"
+    },
+    {
+      "id": "p7-s23",
+      "pagina": 7,
+      "paragrafo": 4,
+      "texto": "Don Quixote wasn’t hurt.",
+      "fala": "Don Quixote wasn’t hurt.",
+      "hash": "5ae567ce49"
+    },
+    {
+      "id": "p7-s24",
+      "pagina": 7,
+      "paragrafo": 4,
+      "texto": "But he lay still for a while, looking at the sky, with his eyes full of tears.",
+      "fala": "But he lay still for a while, looking at the sky, with his eyes full of tears.",
+      "hash": "b3aa5738da"
+    },
+    {
+      "id": "p7-s25",
+      "pagina": 7,
+      "paragrafo": 4,
+      "texto": "Then he spoke, softly and firmly: “I lost, and a deal is a deal.",
+      "fala": "Then he spoke, softly and firmly: I lost, and a deal is a deal.",
+      "hash": "4d0038ae48"
+    },
+    {
+      "id": "p7-s26",
+      "pagina": 7,
+      "paragrafo": 4,
+      "texto": "A knight keeps his word.",
+      "fala": "A knight keeps his word.",
+      "hash": "d82990107b"
+    },
+    {
+      "id": "p7-s27",
+      "pagina": 7,
+      "paragrafo": 4,
+      "texto": "I shall go back home.”",
+      "fala": "I shall go back home.",
+      "hash": "3cec11e16f"
+    },
+    {
+      "id": "p7-s28",
+      "pagina": 7,
+      "paragrafo": 4,
+      "texto": "The Knight of the White Moon bowed his head very slowly, with great respect.",
+      "fala": "The Knight of the White Moon bowed his head very slowly, with great respect.",
+      "hash": "06bb09cc3f"
+    },
+    {
+      "id": "p7-s29",
+      "pagina": 7,
+      "paragrafo": 4,
+      "texto": "As he turned his horse, he murmured, almost without meaning to: “Rest well, Master Alonso...”",
+      "fala": "As he turned his horse, he murmured, almost without meaning to: Rest well, Master Alonso...",
+      "hash": "51600bc935"
+    },
+    {
+      "id": "p7-s30",
+      "pagina": 7,
+      "paragrafo": 4,
+      "texto": "And he rode away along the beach.",
+      "fala": "And he rode away along the beach.",
+      "hash": "4ec052bae3"
+    },
+    {
+      "id": "p7-s31",
+      "pagina": 7,
+      "paragrafo": 4,
+      "texto": "Sancho’s mouth fell open.",
+      "fala": "Sancho’s mouth fell open.",
+      "hash": "ac7c88d672"
+    },
+    {
+      "id": "p7-s32",
+      "pagina": 7,
+      "paragrafo": 4,
+      "texto": "Master Alonso?",
+      "fala": "Master Alonso?",
+      "hash": "2ed93ab968"
+    },
+    {
+      "id": "p7-s33",
+      "pagina": 7,
+      "paragrafo": 4,
+      "texto": "Far from the village, nobody called his master that!",
+      "fala": "Far from the village, nobody called his master that!",
+      "hash": "97a141664d"
+    },
+    {
+      "id": "p8-s0",
+      "pagina": 8,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapter 69. The Way Back. The Shepherd Quixotiz",
+      "fala": "Chapter 69. The Way Back. The Shepherd Quixotiz",
+      "hash": "8459724a99"
+    },
+    {
+      "id": "p8-s1",
+      "pagina": 8,
+      "paragrafo": 0,
+      "texto": "That night, while his master was asleep at Don Antonio’s house, Sancho couldn’t bear not knowing.",
+      "fala": "That night, while his master was asleep at Don Antonio’s house, Sancho couldn’t bear not knowing.",
+      "hash": "dff28e4dfa"
+    },
+    {
+      "id": "p8-s2",
+      "pagina": 8,
+      "paragrafo": 0,
+      "texto": "He went to the inn by the harbour and peeped through the window.",
+      "fala": "He went to the inn by the harbour and peeped through the window.",
+      "hash": "23abe9c43a"
+    },
+    {
+      "id": "p8-s3",
+      "pagina": 8,
+      "paragrafo": 0,
+      "texto": "Inside, the knight took off his helmet, and out came a round face with a flat nose.",
+      "fala": "Inside, the knight took off his helmet, and out came a round face with a flat nose.",
+      "hash": "b46fe8b17f"
+    },
+    {
+      "id": "p8-s4",
+      "pagina": 8,
+      "paragrafo": 0,
+      "texto": "“I knew it!",
+      "fala": "I knew it!",
+      "hash": "5eb1b197ed"
+    },
+    {
+      "id": "p8-s5",
+      "pagina": 8,
+      "paragrafo": 0,
+      "texto": "Sansón Carrasco!”",
+      "fala": "Sansón Carrasco!",
+      "hash": "571569028d"
+    },
+    {
+      "id": "p8-s6",
+      "pagina": 8,
+      "paragrafo": 0,
+      "texto": "Sansón got a fright.",
+      "fala": "Sansón got a fright.",
+      "hash": "9278e1718e"
+    },
+    {
+      "id": "p8-s7",
+      "pagina": 8,
+      "paragrafo": 0,
+      "texto": "Then he smiled, tired: “Shh, Sancho.",
+      "fala": "Then he smiled, tired: Shh, Sancho.",
+      "hash": "f210988608"
+    },
+    {
+      "id": "p8-s8",
+      "pagina": 8,
+      "paragrafo": 0,
+      "texto": "This time I trained for three months and found a horse that doesn’t stop to eat.",
+      "fala": "This time I trained for three months and found a horse that doesn’t stop to eat.",
+      "hash": "9d4a701655"
+    },
+    {
+      "id": "p8-s9",
+      "pagina": 8,
+      "paragrafo": 0,
+      "texto": "I saw the herd run right over Master Alonso.",
+      "fala": "I saw the herd run right over Master Alonso.",
+      "hash": "b9e63acd15"
+    },
+    {
+      "id": "p8-s10",
+      "pagina": 8,
+      "paragrafo": 0,
+      "texto": "Next time, it might not be just a fright!",
+      "fala": "Next time, it might not be just a fright!",
+      "hash": "821f0ed1d6"
+    },
+    {
+      "id": "p8-s11",
+      "pagina": 8,
+      "paragrafo": 0,
+      "texto": "All I want is him at home, rested and well looked after.",
+      "fala": "All I want is him at home, rested and well looked after.",
+      "hash": "303e8d8307"
+    },
+    {
+      "id": "p8-s12",
+      "pagina": 8,
+      "paragrafo": 0,
+      "texto": "You know how fond of him I am.",
+      "fala": "You know how fond of him I am.",
+      "hash": "7662d2d576"
+    },
+    {
+      "id": "p8-s13",
+      "pagina": 8,
+      "paragrafo": 0,
+      "texto": "Let me tell him myself, when we get there.”",
+      "fala": "Let me tell him myself, when we get there.",
+      "hash": "44543f64c4"
+    },
+    {
+      "id": "p8-s14",
+      "pagina": 8,
+      "paragrafo": 1,
+      "texto": "Sancho thought and thought.",
+      "fala": "Sancho thought and thought.",
+      "hash": "a3cd002b50"
+    },
+    {
+      "id": "p8-s15",
+      "pagina": 8,
+      "paragrafo": 1,
+      "texto": "He had been worried too: since the herd, his master had been groaning every night and was getting thinner and more tired every day.",
+      "fala": "He had been worried too: since the herd, his master had been groaning every night and was getting thinner and more tired every day.",
+      "hash": "15b76eb32c"
+    },
+    {
+      "id": "p8-s16",
+      "pagina": 8,
+      "paragrafo": 1,
+      "texto": "“All right.",
+      "fala": "All right.",
+      "hash": "441c8d04a2"
+    },
+    {
+      "id": "p8-s17",
+      "pagina": 8,
+      "paragrafo": 1,
+      "texto": "But if he ends up sad, you’ll have me to answer to!”",
+      "fala": "But if he ends up sad, you’ll have me to answer to!",
+      "hash": "2ef263e736"
+    },
+    {
+      "id": "p8-s18",
+      "pagina": 8,
+      "paragrafo": 1,
+      "texto": "“It’s a deal.",
+      "fala": "It’s a deal.",
+      "hash": "8d0e70a709"
+    },
+    {
+      "id": "p8-s19",
+      "pagina": 8,
+      "paragrafo": 1,
+      "texto": "I’ll go on ahead and tell the niece and the housekeeper.”",
+      "fala": "I’ll go on ahead and tell the niece and the housekeeper.",
+      "hash": "f621d040ca"
+    },
+    {
+      "id": "p8-s20",
+      "pagina": 8,
+      "paragrafo": 2,
+      "texto": "Don Antonio gave them both a big, tight hug and filled Sancho’s saddlebag with bread and cheese.",
+      "fala": "Don Antonio gave them both a big, tight hug and filled Sancho’s saddlebag with bread and cheese.",
+      "hash": "edb6000da6"
+    },
+    {
+      "id": "p8-s21",
+      "pagina": 8,
+      "paragrafo": 2,
+      "texto": "The journey back began slowly.",
+      "fala": "The journey back began slowly.",
+      "hash": "d445d491fc"
+    },
+    {
+      "id": "p8-s22",
+      "pagina": 8,
+      "paragrafo": 2,
+      "texto": "Don Quixote rode without his armour, in silence, and his weapons were tied on top of the donkey.",
+      "fala": "Don Quixote rode without his armour, in silence, and his weapons were tied on top of the donkey.",
+      "hash": "6abfce0fb4"
+    },
+    {
+      "id": "p8-s23",
+      "pagina": 8,
+      "paragrafo": 2,
+      "texto": "Sancho walked, trying to get him talking: “Master, whoever falls today gets up tomorrow.",
+      "fala": "Sancho walked, trying to get him talking: Master, whoever falls today gets up tomorrow.",
+      "hash": "7dc1dd4a1b"
+    },
+    {
+      "id": "p8-s24",
+      "pagina": 8,
+      "paragrafo": 2,
+      "texto": "A year goes by quickly!”",
+      "fala": "A year goes by quickly!",
+      "hash": "a6d6445d2b"
+    },
+    {
+      "id": "p8-s25",
+      "pagina": 8,
+      "paragrafo": 2,
+      "texto": "“A year without adventures, Sancho...",
+      "fala": "A year without adventures, Sancho...",
+      "hash": "be872a877a"
+    },
+    {
+      "id": "p8-s26",
+      "pagina": 8,
+      "paragrafo": 2,
+      "texto": "What does a knight do when he cannot be a knight?”",
+      "fala": "What does a knight do when he cannot be a knight?",
+      "hash": "18df763d12"
+    },
+    {
+      "id": "p8-s27",
+      "pagina": 8,
+      "paragrafo": 3,
+      "texto": "They passed the wood with the green nets again.",
+      "fala": "They passed the wood with the green nets again.",
+      "hash": "aaf4e76325"
+    },
+    {
+      "id": "p8-s28",
+      "pagina": 8,
+      "paragrafo": 3,
+      "texto": "And Don Quixote’s eyes lit up: “I’ve got it!",
+      "fala": "And Don Quixote’s eyes lit up: I’ve got it!",
+      "hash": "2c559ace9d"
+    },
+    {
+      "id": "p8-s29",
+      "pagina": 8,
+      "paragrafo": 3,
+      "texto": "Do you remember that lovely life, Sancho?",
+      "fala": "Do you remember that lovely life, Sancho?",
+      "hash": "71d7f22387"
+    },
+    {
+      "id": "p8-s30",
+      "pagina": 8,
+      "paragrafo": 3,
+      "texto": "Let us be SHEPHERDS!",
+      "fala": "Let us be shepherds!",
+      "hash": "95e8ee508d"
+    },
+    {
+      "id": "p8-s31",
+      "pagina": 8,
+      "paragrafo": 3,
+      "texto": "We shall buy some sheep and spend the year in the countryside, singing and making up verses.",
+      "fala": "We shall buy some sheep and spend the year in the countryside, singing and making up verses.",
+      "hash": "6e8fe0294b"
+    },
+    {
+      "id": "p8-s32",
+      "pagina": 8,
+      "paragrafo": 3,
+      "texto": "I shall be called the shepherd Quixotiz!",
+      "fala": "I shall be called the shepherd Quixotiz!",
+      "hash": "a2b15f0094"
+    },
+    {
+      "id": "p8-s33",
+      "pagina": 8,
+      "paragrafo": 3,
+      "texto": "The priest will be the shepherd Curiambro, and Master Nicolás the shepherd Miculoso!”",
+      "fala": "The priest will be the shepherd Curiambro, and Master Nicolás the shepherd Miculoso!",
+      "hash": "7ecfb851b2"
+    },
+    {
+      "id": "p8-s34",
+      "pagina": 8,
+      "paragrafo": 4,
+      "texto": "Sancho laughed so much he had to stop walking: “And my Teresa will be the shepherdess Teresona!",
+      "fala": "Sancho laughed so much he had to stop walking: And my Teresa will be the shepherdess Teresona!",
+      "hash": "0bb0028898"
+    },
+    {
+      "id": "p8-s35",
+      "pagina": 8,
+      "paragrafo": 4,
+      "texto": "What about me, master?",
+      "fala": "What about me, master?",
+      "hash": "2bcc6d042c"
+    },
+    {
+      "id": "p8-s36",
+      "pagina": 8,
+      "paragrafo": 4,
+      "texto": "I want a shepherd’s NAME too!”",
+      "fala": "I want a shepherd’s name too!",
+      "hash": "689178bf40"
+    },
+    {
+      "id": "p8-s37",
+      "pagina": 8,
+      "paragrafo": 4,
+      "texto": "Don Quixote scratched his beard, with a smile: “Yours is the loveliest of all, Sancho.",
+      "fala": "Don Quixote scratched his beard, with a smile: Yours is the loveliest of all, Sancho.",
+      "hash": "a600a378a9"
+    },
+    {
+      "id": "p8-s38",
+      "pagina": 8,
+      "paragrafo": 4,
+      "texto": "Let’s see if you can guess...”",
+      "fala": "Let’s see if you can guess...",
+      "hash": "948840cf1b"
+    },
+    {
+      "id": "p9-s0",
+      "pagina": 9,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapter 70. Coming Home. Sansón’s Secret",
+      "fala": "Chapter 70. Coming Home. Sansón’s Secret",
+      "hash": "f864d142cd"
+    },
+    {
+      "id": "p9-s1",
+      "pagina": 9,
+      "paragrafo": 0,
+      "texto": "From the top of the last hill, the two of them saw the village: the little white houses, the church tower, the smoke from the chimneys.",
+      "fala": "From the top of the last hill, the two of them saw the village: the little white houses, the church tower, the smoke from the chimneys.",
+      "hash": "2167741dcd"
+    },
+    {
+      "id": "p9-s2",
+      "pagina": 9,
+      "paragrafo": 0,
+      "texto": "Sancho fell to his knees: “Open your eyes, my dear home village!",
+      "fala": "Sancho fell to his knees: Open your eyes, my dear home village!",
+      "hash": "2733dac215"
+    },
+    {
+      "id": "p9-s3",
+      "pagina": 9,
+      "paragrafo": 0,
+      "texto": "Here comes your son Sancho Panza: not very rich, but very well travelled!",
+      "fala": "Here comes your son Sancho Panza: not very rich, but very well travelled!",
+      "hash": "c9ca0cd385"
+    },
+    {
+      "id": "p9-s4",
+      "pagina": 9,
+      "paragrafo": 0,
+      "texto": "And here comes my master too, who lost a fight but kept his word!”",
+      "fala": "And here comes my master too, who lost a fight but kept his word!",
+      "hash": "593a4dae1f"
+    },
+    {
+      "id": "p9-s5",
+      "pagina": 9,
+      "paragrafo": 0,
+      "texto": "The donkey, thinking it was time for a rest, knelt down beside him.",
+      "fala": "The donkey, thinking it was time for a rest, knelt down beside him.",
+      "hash": "cc722633dd"
+    },
+    {
+      "id": "p9-s6",
+      "pagina": 9,
+      "paragrafo": 1,
+      "texto": "Teresa came running, with her necklace of little red stones round her neck, and Sanchica behind her.",
+      "fala": "Teresa came running, with her necklace of little red stones round her neck, and Sanchica behind her.",
+      "hash": "dc48dfea41"
+    },
+    {
+      "id": "p9-s7",
+      "pagina": 9,
+      "paragrafo": 1,
+      "texto": "“Where’s the carriage, my love?",
+      "fala": "Where’s the carriage, my love?",
+      "hash": "26700ae2cc"
+    },
+    {
+      "id": "p9-s8",
+      "pagina": 9,
+      "paragrafo": 1,
+      "texto": "Is that how a governor arrives, on foot and covered in dust?”",
+      "fala": "Is that how a governor arrives, on foot and covered in dust?",
+      "hash": "758d3136cb"
+    },
+    {
+      "id": "p9-s9",
+      "pagina": 9,
+      "paragrafo": 1,
+      "texto": "“There’s no carriage, my Teresita.",
+      "fala": "There’s no carriage, my Teresita.",
+      "hash": "67364d23f1"
+    },
+    {
+      "id": "p9-s10",
+      "pagina": 9,
+      "paragrafo": 1,
+      "texto": "But look at this!”",
+      "fala": "But look at this!",
+      "hash": "ec3db8f18a"
+    },
+    {
+      "id": "p9-s11",
+      "pagina": 9,
+      "paragrafo": 1,
+      "texto": "And he showed her the little purse of coins that the duke and duchess, the owners of the palace and of the make-believe island, had given him.",
+      "fala": "And he showed her the little purse of coins that the duke and duchess, the owners of the palace and of the make-believe island, had given him.",
+      "hash": "878768c0f8"
+    },
+    {
+      "id": "p9-s12",
+      "pagina": 9,
+      "paragrafo": 1,
+      "texto": "Sanchica hung round her father’s neck, and Teresa went to hug the donkey.",
+      "fala": "Sanchica hung round her father’s neck, and Teresa went to hug the donkey.",
+      "hash": "2acdbf338e"
+    },
+    {
+      "id": "p9-s13",
+      "pagina": 9,
+      "paragrafo": 1,
+      "texto": "Then she hugged her husband too, very tight.",
+      "fala": "Then she hugged her husband too, very tight.",
+      "hash": "cce863241d"
+    },
+    {
+      "id": "p9-s14",
+      "pagina": 9,
+      "paragrafo": 2,
+      "texto": "At the door of the house were waiting his niece Antonia, the housekeeper, the priest, Master Nicolás and Sansón Carrasco.",
+      "fala": "At the door of the house were waiting his niece Antonia, the housekeeper, the priest, Master Nicolás and Sansón Carrasco.",
+      "hash": "11d06600eb"
+    },
+    {
+      "id": "p9-s15",
+      "pagina": 9,
+      "paragrafo": 2,
+      "texto": "They all hugged Master Alonso at the same time.",
+      "fala": "They all hugged Master Alonso at the same time.",
+      "hash": "5403f3d9c8"
+    },
+    {
+      "id": "p9-s16",
+      "pagina": 9,
+      "paragrafo": 2,
+      "texto": "The housekeeper was wiping her eyes on her apron: “This time you’re staying, aren’t you?”",
+      "fala": "The housekeeper was wiping her eyes on her apron: This time you’re staying, aren’t you?",
+      "hash": "aa222ba8eb"
+    },
+    {
+      "id": "p9-s17",
+      "pagina": 9,
+      "paragrafo": 2,
+      "texto": "“I am staying a whole year.",
+      "fala": "I am staying a whole year.",
+      "hash": "34dd890dd1"
+    },
+    {
+      "id": "p9-s18",
+      "pagina": 9,
+      "paragrafo": 2,
+      "texto": "I gave my word to the Knight of the White Moon.”",
+      "fala": "I gave my word to the Knight of the White Moon.",
+      "hash": "85e3369b87"
+    },
+    {
+      "id": "p9-s19",
+      "pagina": 9,
+      "paragrafo": 3,
+      "texto": "Sansón went red, then white, then red again.",
+      "fala": "Sansón went red, then white, then red again.",
+      "hash": "efe86d07e9"
+    },
+    {
+      "id": "p9-s20",
+      "pagina": 9,
+      "paragrafo": 3,
+      "texto": "He looked at Sancho.",
+      "fala": "He looked at Sancho.",
+      "hash": "eaf34da295"
+    },
+    {
+      "id": "p9-s21",
+      "pagina": 9,
+      "paragrafo": 3,
+      "texto": "Sancho nodded.",
+      "fala": "Sancho nodded.",
+      "hash": "ba120448b0"
+    },
+    {
+      "id": "p9-s22",
+      "pagina": 9,
+      "paragrafo": 3,
+      "texto": "Then the young man took a deep breath: “Master Alonso... the Knight of the White Moon was me.",
+      "fala": "Then the young man took a deep breath: Master Alonso... the Knight of the White Moon was me.",
+      "hash": "7fcf35f996"
+    },
+    {
+      "id": "p9-s23",
+      "pagina": 9,
+      "paragrafo": 3,
+      "texto": "And the Knight of the Mirrors too.",
+      "fala": "And the Knight of the Mirrors too.",
+      "hash": "13a65685e9"
+    },
+    {
+      "id": "p9-s24",
+      "pagina": 9,
+      "paragrafo": 3,
+      "texto": "I did it because I’m very fond of you and I wanted to see you at home, well looked after.",
+      "fala": "I did it because I’m very fond of you and I wanted to see you at home, well looked after.",
+      "hash": "b220ae002f"
+    },
+    {
+      "id": "p9-s25",
+      "pagina": 9,
+      "paragrafo": 3,
+      "texto": "I’m sorry I kept this SECRET.”",
+      "fala": "I’m sorry I kept this secret.",
+      "hash": "ad1a21ffc3"
+    },
+    {
+      "id": "p9-s26",
+      "pagina": 9,
+      "paragrafo": 4,
+      "texto": "Everyone held their breath.",
+      "fala": "Everyone held their breath.",
+      "hash": "1000f2cb62"
+    },
+    {
+      "id": "p9-s27",
+      "pagina": 9,
+      "paragrafo": 4,
+      "texto": "Don Quixote looked at the young man for a long time.",
+      "fala": "Don Quixote looked at the young man for a long time.",
+      "hash": "13b80fae7a"
+    },
+    {
+      "id": "p9-s28",
+      "pagina": 9,
+      "paragrafo": 4,
+      "texto": "Then he opened his arms: “So it was a FRIEND who beat me?",
+      "fala": "Then he opened his arms: So it was a friend who beat me?",
+      "hash": "ee002206a7"
+    },
+    {
+      "id": "p9-s29",
+      "pagina": 9,
+      "paragrafo": 4,
+      "texto": "Even better!",
+      "fala": "Even better!",
+      "hash": "133fcd7585"
+    },
+    {
+      "id": "p9-s30",
+      "pagina": 9,
+      "paragrafo": 4,
+      "texto": "You fought fair, little Sansón, and you lifted your lance so as not to hurt me.",
+      "fala": "You fought fair, little Sansón, and you lifted your lance so as not to hurt me.",
+      "hash": "5d7b97ac0d"
+    },
+    {
+      "id": "p9-s31",
+      "pagina": 9,
+      "paragrafo": 4,
+      "texto": "You are forgiven.",
+      "fala": "You are forgiven.",
+      "hash": "2e50c3fe65"
+    },
+    {
+      "id": "p9-s32",
+      "pagina": 9,
+      "paragrafo": 4,
+      "texto": "But there is a punishment: you will be the shepherd Sansonino and play the flute all year long!”",
+      "fala": "But there is a punishment: you will be the shepherd Sansonino and play the flute all year long!",
+      "hash": "c3f7e47193"
+    },
+    {
+      "id": "p9-s33",
+      "pagina": 9,
+      "paragrafo": 4,
+      "texto": "Sansón laughed with relief: “But I don’t even know how to play the flute!”",
+      "fala": "Sansón laughed with relief: But I don’t even know how to play the flute!",
+      "hash": "60ebacee6c"
+    },
+    {
+      "id": "p9-s34",
+      "pagina": 9,
+      "paragrafo": 4,
+      "texto": "“Then you will learn.",
+      "fala": "Then you will learn.",
+      "hash": "3d6d039c29"
+    },
+    {
+      "id": "p9-s35",
+      "pagina": 9,
+      "paragrafo": 4,
+      "texto": "And you, Sancho, did you know all along?”",
+      "fala": "And you, Sancho, did you know all along?",
+      "hash": "59d559c1aa"
+    },
+    {
+      "id": "p9-s36",
+      "pagina": 9,
+      "paragrafo": 4,
+      "texto": "“Since Barcelona, master.",
+      "fala": "Since Barcelona, master.",
+      "hash": "6761a699c4"
+    },
+    {
+      "id": "p9-s37",
+      "pagina": 9,
+      "paragrafo": 4,
+      "texto": "A friend’s secret is something you keep... for a little while.”",
+      "fala": "A friend’s secret is something you keep... for a little while.",
+      "hash": "3830fc5d2b"
+    },
+    {
+      "id": "p10-s0",
+      "pagina": 10,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Chapter 71. Adventures Live in Books. Once Upon a Time...",
+      "fala": "Chapter 71. Adventures Live in Books. Once Upon a Time...",
+      "hash": "e9b8a5ebe1"
+    },
+    {
+      "id": "p10-s1",
+      "pagina": 10,
+      "paragrafo": 0,
+      "texto": "The year went by slowly and happily.",
+      "fala": "The year went by slowly and happily.",
+      "hash": "2f38f392b3"
+    },
+    {
+      "id": "p10-s2",
+      "pagina": 10,
+      "paragrafo": 0,
+      "texto": "In the spring, everybody played at being shepherds: the shepherd Sansonino learned three notes on the flute, and all the sheep ran away.",
+      "fala": "In the spring, everybody played at being shepherds: the shepherd Sansonino learned three notes on the flute, and all the sheep ran away.",
+      "hash": "940d5f6d30"
+    },
+    {
+      "id": "p10-s3",
+      "pagina": 10,
+      "paragrafo": 0,
+      "texto": "Rocinante grazed in the yard, fatter than ever.",
+      "fala": "Rocinante grazed in the yard, fatter than ever.",
+      "hash": "f65ce9a57f"
+    },
+    {
+      "id": "p10-s4",
+      "pagina": 10,
+      "paragrafo": 0,
+      "texto": "One morning, Master Alonso came down to breakfast singing, in his slippers and with his beard combed: “I have some news, my friends.",
+      "fala": "One morning, Master Alonso came down to breakfast singing, in his slippers and with his beard combed: I have some news, my friends.",
+      "hash": "51a968a17c"
+    },
+    {
+      "id": "p10-s5",
+      "pagina": 10,
+      "paragrafo": 0,
+      "texto": "I am no longer Don Quixote of La Mancha.",
+      "fala": "I am no longer Don Quixote of La Mancha.",
+      "hash": "e35022a839"
+    },
+    {
+      "id": "p10-s6",
+      "pagina": 10,
+      "paragrafo": 0,
+      "texto": "I am Alonso Quixano once again, the one the neighbours used to call ‘the Good’.”",
+      "fala": "I am Alonso Quixano once again, the one the neighbours used to call ‘the Good’.",
+      "hash": "cf09ddfd8c"
+    },
+    {
+      "id": "p10-s7",
+      "pagina": 10,
+      "paragrafo": 1,
+      "texto": "Sancho nearly dropped his bread: “Don’t say that, master!",
+      "fala": "Sancho nearly dropped his bread: Don’t say that, master!",
+      "hash": "2c88d1fd31"
+    },
+    {
+      "id": "p10-s8",
+      "pagina": 10,
+      "paragrafo": 1,
+      "texto": "What about the adventures?",
+      "fala": "What about the adventures?",
+      "hash": "99056320c5"
+    },
+    {
+      "id": "p10-s9",
+      "pagina": 10,
+      "paragrafo": 1,
+      "texto": "And the year that’s nearly over?",
+      "fala": "And the year that’s nearly over?",
+      "hash": "954c450896"
+    },
+    {
+      "id": "p10-s10",
+      "pagina": 10,
+      "paragrafo": 1,
+      "texto": "I’ve even polished the donkey’s saddle!”",
+      "fala": "I’ve even polished the donkey’s saddle!",
+      "hash": "30d2d2349c"
+    },
+    {
+      "id": "p10-s11",
+      "pagina": 10,
+      "paragrafo": 1,
+      "texto": "Alonso smiled and put his hand on his friend’s shoulder: “Calm down, Sancho.",
+      "fala": "Alonso smiled and put his hand on his friend’s shoulder: Calm down, Sancho.",
+      "hash": "25ffc5d039"
+    },
+    {
+      "id": "p10-s12",
+      "pagina": 10,
+      "paragrafo": 1,
+      "texto": "The adventures haven’t ended.",
+      "fala": "The adventures haven’t ended.",
+      "hash": "f65836c7fb"
+    },
+    {
+      "id": "p10-s13",
+      "pagina": 10,
+      "paragrafo": 1,
+      "texto": "They have only moved house: now they live in BOOKS.",
+      "fala": "They have only moved house: now they live in books.",
+      "hash": "6fc875f19d"
+    },
+    {
+      "id": "p10-s14",
+      "pagina": 10,
+      "paragrafo": 1,
+      "texto": "And you can open a book as many times as you like.”",
+      "fala": "And you can open a book as many times as you like.",
+      "hash": "c3edaded79"
+    },
+    {
+      "id": "p10-s15",
+      "pagina": 10,
+      "paragrafo": 2,
+      "texto": "And that was how the best adventure of all began.",
+      "fala": "And that was how the best adventure of all began.",
+      "hash": "616d6c0c1b"
+    },
+    {
+      "id": "p10-s16",
+      "pagina": 10,
+      "paragrafo": 2,
+      "texto": "Every afternoon, the village children sat on the rug, near the fireplace, at Grandpa Alonso’s feet.",
+      "fala": "Every afternoon, the village children sat on the rug, near the fireplace, at Grandpa Alonso’s feet.",
+      "hash": "da3377a54f"
+    },
+    {
+      "id": "p10-s17",
+      "pagina": 10,
+      "paragrafo": 2,
+      "texto": "Sanchica sat at the front, and Sancho stood in the doorway, to put things right: “It wasn’t thirty windmills, it was forty!",
+      "fala": "Sanchica sat at the front, and Sancho stood in the doorway, to put things right: It wasn’t thirty windmills, it was forty!",
+      "hash": "7d1742553c"
+    },
+    {
+      "id": "p10-s18",
+      "pagina": 10,
+      "paragrafo": 2,
+      "texto": "And the donkey was there too!”",
+      "fala": "And the donkey was there too!",
+      "hash": "784fc0308a"
+    },
+    {
+      "id": "p10-s19",
+      "pagina": 10,
+      "paragrafo": 2,
+      "texto": "The basin-helmet hung on the wall, shining, and the little house cat slept inside it, like a small lion.",
+      "fala": "The basin-helmet hung on the wall, shining, and the little house cat slept inside it, like a small lion.",
+      "hash": "08814e9176"
+    },
+    {
+      "id": "p10-s20",
+      "pagina": 10,
+      "paragrafo": 2,
+      "texto": "And every night, from the window, Grandpa Alonso still said softly: “Good night, Dulcinea.”",
+      "fala": "And every night, from the window, Grandpa Alonso still said softly: Good night, Dulcinea.",
+      "hash": "95fd1b2cc1"
+    },
+    {
+      "id": "p10-s21",
+      "pagina": 10,
+      "paragrafo": 3,
+      "texto": "Miguel de Cervantes’s book stood on the shelf, close at hand.",
+      "fala": "Miguel de Cervantes’s book stood on the shelf, close at hand.",
+      "hash": "ba6147d47b"
+    },
+    {
+      "id": "p10-s22",
+      "pagina": 10,
+      "paragrafo": 3,
+      "texto": "All through that year, every night, Master Alonso had taught Sancho a new letter, with Sancho’s finger on the paper.",
+      "fala": "All through that year, every night, Master Alonso had taught Sancho a new letter, with Sancho’s finger on the paper.",
+      "hash": "403b84ad3f"
+    },
+    {
+      "id": "p10-s23",
+      "pagina": 10,
+      "paragrafo": 3,
+      "texto": "Now Sancho would open the book, look for his own little ants and read all by himself, slowly, with his finger: “San-cho Pan-za.”",
+      "fala": "Now Sancho would open the book, look for his own little ants and read all by himself, slowly, with his finger: San-cho Pan-za.",
+      "hash": "d7857ab473"
+    },
+    {
+      "id": "p10-s24",
+      "pagina": 10,
+      "paragrafo": 3,
+      "texto": "Then he read the line below.",
+      "fala": "Then he read the line below.",
+      "hash": "40d4f3c25b"
+    },
+    {
+      "id": "p10-s25",
+      "pagina": 10,
+      "paragrafo": 3,
+      "texto": "And the next one.",
+      "fala": "And the next one.",
+      "hash": "5d727e6574"
+    },
+    {
+      "id": "p10-s26",
+      "pagina": 10,
+      "paragrafo": 3,
+      "texto": "Sancho had learned to READ!",
+      "fala": "Sancho had learned to read!",
+      "hash": "b175ac05a3"
+    },
+    {
+      "id": "p10-s27",
+      "pagina": 10,
+      "paragrafo": 4,
+      "texto": "That afternoon, the room was full.",
+      "fala": "That afternoon, the room was full.",
+      "hash": "5e281b8067"
+    },
+    {
+      "id": "p10-s28",
+      "pagina": 10,
+      "paragrafo": 4,
+      "texto": "The children begged: “Tell it again, Grandpa Alonso!",
+      "fala": "The children begged: Tell it again, Grandpa Alonso!",
+      "hash": "1fe060efca"
+    },
+    {
+      "id": "p10-s29",
+      "pagina": 10,
+      "paragrafo": 4,
+      "texto": "From the beginning!”",
+      "fala": "From the beginning!",
+      "hash": "64218c922a"
+    },
+    {
+      "id": "p10-s30",
+      "pagina": 10,
+      "paragrafo": 4,
+      "texto": "He looked at each little face, with a mischievous twinkle in his eye, and took a deep breath.",
+      "fala": "He looked at each little face, with a mischievous twinkle in his eye, and took a deep breath.",
+      "hash": "c88a303192"
+    },
+    {
+      "id": "p10-s31",
+      "pagina": 10,
+      "paragrafo": 4,
+      "texto": "Now, how do all the best stories begin?",
+      "fala": "Now, how do all the best stories begin?",
+      "hash": "bfb2f2c537"
+    }
+  ],
+  "palavras": [
+    {
+      "slug": "sea",
+      "palavra": "SEA",
+      "silabas": "SEA",
+      "fala": "sea... sea!",
+      "hash": "da97ce3301"
+    },
+    {
+      "slug": "moon",
+      "palavra": "MOON",
+      "silabas": "MOON",
+      "fala": "moon... moon!",
+      "hash": "1359498707"
+    },
+    {
+      "slug": "end",
+      "palavra": "END",
+      "silabas": "END",
+      "fala": "end... end!",
+      "hash": "4c3eefbfa0"
+    },
+    {
+      "slug": "nets",
+      "palavra": "NETS",
+      "silabas": "NETS",
+      "fala": "nets... nets!",
+      "hash": "417f601c37"
+    },
+    {
+      "slug": "butterflies",
+      "palavra": "BUTTERFLIES",
+      "silabas": "BUT • TER • FLIES",
+      "fala": "but... ter... flies... butterflies!",
+      "hash": "ee366ba3c4"
+    },
+    {
+      "slug": "fields",
+      "palavra": "FIELDS",
+      "silabas": "FIELDS",
+      "fala": "fields... fields!",
+      "hash": "8ac9d7c29d"
+    },
+    {
+      "slug": "book",
+      "palavra": "BOOK",
+      "silabas": "BOOK",
+      "fala": "book... book!",
+      "hash": "7142e51c98"
+    },
+    {
+      "slug": "dust",
+      "palavra": "DUST",
+      "silabas": "DUST",
+      "fala": "dust... dust!",
+      "hash": "b19b39a805"
+    },
+    {
+      "slug": "herd",
+      "palavra": "HERD",
+      "silabas": "HERD",
+      "fala": "herd... herd!",
+      "hash": "5c4864af5e"
+    },
+    {
+      "slug": "sense",
+      "palavra": "SENSE",
+      "silabas": "SENSE",
+      "fala": "sense... sense!",
+      "hash": "a69af72496"
+    },
+    {
+      "slug": "fame",
+      "palavra": "FAME",
+      "silabas": "FAME",
+      "fala": "fame... fame!",
+      "hash": "af45f78c2b"
+    },
+    {
+      "slug": "lies",
+      "palavra": "LIES",
+      "silabas": "LIES",
+      "fala": "lies... lies!",
+      "hash": "bfbd0ef522"
+    },
+    {
+      "slug": "wave",
+      "palavra": "WAVE",
+      "silabas": "WAVE",
+      "fala": "wave... wave!",
+      "hash": "10fccebbe4"
+    },
+    {
+      "slug": "ships",
+      "palavra": "SHIPS",
+      "silabas": "SHIPS",
+      "fala": "ships... ships!",
+      "hash": "12ec78b36b"
+    },
+    {
+      "slug": "paper",
+      "palavra": "PAPER",
+      "silabas": "PA • PER",
+      "fala": "pa... per... paper!",
+      "hash": "d8dba1349a"
+    },
+    {
+      "slug": "head",
+      "palavra": "HEAD",
+      "silabas": "HEAD",
+      "fala": "head... head!",
+      "hash": "9fad79a5da"
+    },
+    {
+      "slug": "pipe",
+      "palavra": "PIPE",
+      "silabas": "PIPE",
+      "fala": "pipe... pipe!",
+      "hash": "00f090c59f"
+    },
+    {
+      "slug": "doubt",
+      "palavra": "DOUBT",
+      "silabas": "DOUBT",
+      "fala": "doubt... doubt!",
+      "hash": "71da9b456d"
+    },
+    {
+      "slug": "metal",
+      "palavra": "METAL",
+      "silabas": "MET • AL",
+      "fala": "met... al... metal!",
+      "hash": "df298b219f"
+    },
+    {
+      "slug": "miguel-de-cervantes",
+      "palavra": "MIGUEL DE CERVANTES",
+      "silabas": "MI • GUEL • DE • CER • VAN • TES",
+      "fala": "mi... guel... de... cer... van... tes... miguel de cervantes!",
+      "hash": "27931d57ae"
+    },
+    {
+      "slug": "writer",
+      "palavra": "WRITER",
+      "silabas": "WRIT • ER",
+      "fala": "writ... er... writer!",
+      "hash": "8cf273b96b"
+    },
+    {
+      "slug": "shield",
+      "palavra": "SHIELD",
+      "silabas": "SHIELD",
+      "fala": "shield... shield!",
+      "hash": "70b9ceb8bd"
+    },
+    {
+      "slug": "word",
+      "palavra": "WORD",
+      "silabas": "WORD",
+      "fala": "word... word!",
+      "hash": "e231ad4064"
+    },
+    {
+      "slug": "shepherds",
+      "palavra": "SHEPHERDS",
+      "silabas": "SHEP • HERDS",
+      "fala": "shep... herds... shepherds!",
+      "hash": "fee7fe08cf"
+    },
+    {
+      "slug": "name",
+      "palavra": "NAME",
+      "silabas": "NAME",
+      "fala": "name... name!",
+      "hash": "b8a6e58f1f"
+    },
+    {
+      "slug": "secret",
+      "palavra": "SECRET",
+      "silabas": "SE • CRET",
+      "fala": "se... cret... secret!",
+      "hash": "461e184d52"
+    },
+    {
+      "slug": "friend",
+      "palavra": "FRIEND",
+      "silabas": "FRIEND",
+      "fala": "friend... friend!",
+      "hash": "5ce38c3393"
+    },
+    {
+      "slug": "books",
+      "palavra": "BOOKS",
+      "silabas": "BOOKS",
+      "fala": "books... books!",
+      "hash": "9aad8e490e"
+    },
+    {
+      "slug": "read",
+      "palavra": "READ",
+      "silabas": "READ",
+      "fala": "read... read!",
+      "hash": "389005869e"
+    }
+  ]
+}
