@@ -45,7 +45,7 @@
 // tentativas; se nenhuma bater, guarda a mais próxima e avisa), converte para MP3 (tools/otimizar-audio.mjs)
 // e registra o hash em indice.json. Frases com o
 // mesmo hash já gravado são puladas: pode rodar de novo depois de uma queda ou do fim da cota.
-import { readFileSync, writeFileSync, existsSync, mkdirSync, unlinkSync } from 'node:fs';
+import { readFileSync, writeFileSync, appendFileSync, existsSync, mkdirSync, unlinkSync } from 'node:fs';
 import { execFileSync, spawn } from 'node:child_process';
 import { tmpdir } from 'node:os';
 import { createHash } from 'node:crypto';
@@ -285,6 +285,9 @@ async function pedirAudio(corpo) {
 const LOTE_DIR = join(RAIZ, '.cache-narracao', 'lote');
 const loteColetados = new Map();
 const MAX_POR_LOTE = 200;
+// Um arquivo de lote pendente por comando: dois comandos ao mesmo tempo (ex.: um idioma em cada) não retomam
+// nem contam em dobro o lote um do outro.
+const ARQ_PENDENTE = join(LOTE_DIR, `pendente-${createHash('sha1').update(process.argv.slice(2).filter(a => a !== '--autorizado').join(' ')).digest('hex').slice(0, 12)}.json`);
 function paraGenerateContent(corpo) {
     const parts = corpo.input[0].content.map(c => {
         const m = (c.annotations || []).find(a => a.type === 'speech_metadata') || {};
@@ -355,7 +358,7 @@ async function esperarLote(nome) {
     if (!respostas.length) console.log(JSON.stringify(lote).slice(0, 1500));
 }
 async function retomarLotePendente() {
-    const arq = join(LOTE_DIR, 'pendente.json');
+    const arq = ARQ_PENDENTE;
     if (!existsSync(arq)) return;
     const { nomes = [] } = JSON.parse(readFileSync(arq, 'utf8'));
     for (const nome of nomes) { console.log(`📦 retomando o lote ${nome}`); await esperarLote(nome); }
@@ -376,9 +379,9 @@ async function executarLote() {
         nomes.push(lote.name);
         console.log(`📦 lote enviado: ${lote.name} (${parte.length} pedido(s) de voz)`);
     }
-    writeFileSync(join(LOTE_DIR, 'pendente.json'), JSON.stringify({ nomes, data: new Date().toISOString() }));
+    writeFileSync(ARQ_PENDENTE, JSON.stringify({ nomes, data: new Date().toISOString() }));
     for (const nome of nomes) await esperarLote(nome);
-    unlinkSync(join(LOTE_DIR, 'pendente.json'));
+    unlinkSync(ARQ_PENDENTE);
 }
 
 function comCabecalhoWav(pcm) {
@@ -958,6 +961,12 @@ async function gravarPaginas(fonte, pasta, paginas, ids) {
         const pecas = u.blocos.map(k => pecaDaPagina(feitos[k], new Set(u.frases.filter(f => blocos[k].frases.includes(f)).map(f => f.id))));
         const { amostras, marcas } = juntarBlocos(pecas);
         const segundos = amostras.length / TAXA;
+        // Frase sem áudio (a voz parou antes dela e o reparo não resolveu): a página não é salva, senão o livro
+        // ficaria com o texto sem narração. Visto em 2026-11-23 (Parte 5 en, p6: o bloco só leu a 1ª frase).
+        // (uma interjeição curta colada na frase vizinha, como "¡A... a..." antes de "¡ACHÍS!", não conta)
+        const semAudio = marcas.filter(m => m.fim - m.ini < 0.15);
+        const letrasSemAudio = semAudio.reduce((t, m) => t + (u.frases.find(f => f.id === m.id)?.fala.replace(/[^\p{L}]/gu, '').length || 0), 0);
+        if (letrasSemAudio > 25) { falhas.push(`${u.id}: NÃO salva, ${semAudio.length} frase(s) sem áudio (${semAudio.map(m => m.id).slice(0, 4).join(', ')}…); apague o bloco do cache e o WAV do lote dele para pedir de novo (docs/TODO-NARRACAO.md §8.7)`); return; }
         if (ids) {
             mkdirSync(join(pasta, 'avulsas'), { recursive: true });
             const nome = `avulsas/${u.frases[0].id}_${u.frases[u.frases.length - 1].id}.mp3`;
@@ -1230,7 +1239,7 @@ function registrarGasto() {
     const arq = join(RAIZ, 'docs', 'narracao', 'gastos.csv');
     if (!existsSync(arq)) writeFileSync(arq, 'data,comando,pedidos_voz,tokens_audio,tokens_qa,usd_estimado\n');
     const linha = [new Date().toISOString().slice(0, 16), `"${process.argv.slice(2).join(' ')}"`, gasto.pedidos, gasto.tts, 0, usd.toFixed(4)].join(',');
-    writeFileSync(arq, readFileSync(arq, 'utf8') + linha + '\n');
+    appendFileSync(arq, linha + '\n');
 }
 
 (async () => {

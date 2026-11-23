@@ -8,11 +8,11 @@ Plano para reiniciar a fila de agentes. Os subagentes pararam por limite de uso:
 | :--- | :--- | :--- |
 | Narração pt, Parte 7 | ✅ completa e ativada | — |
 | Narração pt, Parte 8 | 7/11 páginas (0–6) e 29/29 palavras; `previa: [8]` | gravar págs. 7–10 (~27 pedidos), conferir, trocar `previa: [8]` por `8` em `partes`, completar `docs/narracao/qa-parte-8.md` (**precisa da cota do Gemini**) |
-| Tradução Parte 5 (en/es/fr) | ✅ no ar | narração: palavras que faltam (es `leones`; fr `lion`, `balai`, `secret`, `nez`, `coucha`) e as páginas (~67 pedidos por idioma); depois `5` em `partes` de cada idioma (**cota do Gemini**) |
+| Tradução Parte 5 (en/es/fr) | ✅ no ar; **narração completa e ativada nos três idiomas (2026-11-23, modo lote)** | escuta: `docs/narracao/qa-parte-5-{en,es,fr}.md` |
 | Tradução Parte 6 (en/es/fr) | ✅ no ar | narração: `AUTORIZADO=1 bash tools/gravar-fila-traducoes.sh 6 "en es fr"` (~190 pedidos, uns 2 dias de cota), conferir, `6` em `partes` (**cota do Gemini**) |
 | Tradução Parte 7 (en/es/fr) | ✅ no ar (2026-11-23; §11 do caderno da Parte 7) | narração: roteiros (`tools/derivar-roteiro.mjs --parte 7`), elenco novo, palavras (en 26, es 26, fr 25) e páginas; depois `7` em `partes` de cada idioma (**cota do Gemini**) |
 | Tradução Parte 8 (en/es/fr) | ✅ no ar (2026-11-23; §9 do caderno da Parte 8) | narração: roteiros (`tools/derivar-roteiro.mjs --parte 8`), elenco novo, palavras e páginas; depois `8` em `partes` de cada idioma (**cota do Gemini**) |
-| Narração en/es/fr das Partes 7 e 8 | não começou | depois das traduções e das Partes 5 e 6 (**cota do Gemini**) |
+| Narração en/es/fr das Partes 7 e 8 | elenco novo, roteiros e palavras-chave prontos (2026-11-23) | páginas pelo modo lote (`tools/gravar-lote.sh`), depois `7`/`8` em `partes` |
 
 ## Ordem de retomada
 

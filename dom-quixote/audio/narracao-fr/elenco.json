@@ -1,7 +1,7 @@
 {
   "codigoVoz": "fr-FR",
   "amostra": "Bonjour ! Je vais lire cette histoire avec toi. Tourne la page quand tu veux !",
-  "nomes": "Don Quichotte, Miguel de Cervantes, Alonso Quichano, Rossinante, la Manche, Aldonza Lorenzo, Dulcinée du Toboso, Montiel, Sancho Pança, Campo de Criptana, Mambrin, Micomicona, Pandafilando, Alifanfaron, Trapobane, Pentapolin, Freston, maître Nicolas, Dorothée, Teresa Pança, Sanchica, Eugène, Tachounette, Sierra Morena, Chevalier à la Triste Figure, Lope Ruiz, Amadis de Gaule, Pandafilando de la Fosca Vista, Sansón Carrasco, bachelier, Tomé, Don Diego, Chevalier aux Miroirs, Chevalier au Manteau Vert, Chevalier aux Lions, doña Cristina, Gamache, Montesinos, Merlin, maître Pierre, Mélisendre, don Gaïferos, comtesse Trifaldi, Malambruno, Candaya, Clavilègne",
+  "nomes": "Don Quichotte, Miguel de Cervantes, Alonso Quichano, Rossinante, la Manche, Aldonza Lorenzo, Dulcinée du Toboso, Montiel, Sancho Pança, Campo de Criptana, Mambrin, Micomicona, Pandafilando, Alifanfaron, Trapobane, Pentapolin, Freston, maître Nicolas, Dorothée, Teresa Pança, Sanchica, Eugène, Tachounette, Sierra Morena, Chevalier à la Triste Figure, Lope Ruiz, Amadis de Gaule, Pandafilando de la Fosca Vista, Sansón Carrasco, bachelier, Tomé, Don Diego, Chevalier aux Miroirs, Chevalier au Manteau Vert, Chevalier aux Lions, doña Cristina, Gamache, Montesinos, Merlin, maître Pierre, Mélisendre, don Gaïferos, comtesse Trifaldi, Malambruno, Candaya, Clavilègne, Barataria, Pedro Recio de Débarrasse, Chevalier de la Blanche Lune, don Antonio, Barcelone, Saragosse, Mari Gutiérrez, Quichottiz, Curiambro, Miculoso, Teresona, Sansonino, Pancino",
   "elenco": {
     "NARRADORA": {"voz": "fr-fr-tutor-4", "estilo": "warm, gentle storyteller reading aloud to young children in French from France; calm, clear pace; expressive but not theatrical"},
     "QUIXOTE": {"voz": "fr-fr-assistant-4", "estilo": "elderly knight in French from France; noble, solemn and dreamy, speaking with heartfelt conviction; never mocking"},
@@ -37,6 +37,24 @@
     "DUQUE": {"voz": "fr-fr-concierge-2", "estilo": "kind duke who laughs easily, warm and playful, hiding a surprise in French from France"},
     "ARAUTO": {"voz": "fr-fr-advisor-4", "estilo": "big herald announcing a visitor, deep and ceremonious in French from France"},
     "CONDESSA": {"voz": "fr-fr-csagent-12", "estilo": "grand countess in distress, deep solemn voice, dramatic and comically serious, never mocking in French from France"},
+    "MORDOMO": {"voz": "fr-fr-tutor-6", "estilo": "tall butler with a deep, formal voice, dry and polite, secretly amused in French from France"},
+    "LAVRADOR": {"voz": "fr-fr-advisor-4", "estilo": "simple farmer complaining to the judge, indignant and a bit suspicious in French from France"},
+    "ALFAIATE": {"voz": "fr-fr-tutor-1", "estilo": "cheeky tailor, proud of his little trick, comic in French from France"},
+    "DOUTOR": {"voz": "fr-fr-tutor-8", "estilo": "stiff, fussy doctor, serious and pompous, a bit comic in French from France"},
+    "ALDEAO": {"voz": "fr-fr-csagent-4", "estilo": "humble, honest old villager, trusting and a little confused in French from France"},
+    "VELHO_BENGALA": {"voz": "fr-fr-tutor-7", "estilo": "sly old man, overly calm and sweet, hiding a trick in French from France"},
+    "VIAJANTE": {"voz": "fr-fr-concierge-8", "estilo": "dusty traveler telling a puzzling case, earnest and lively in French from France"},
+    "PAJEM": {"voz": "fr-fr-concierge-11", "estilo": "polite young page, ceremonious and eager, bowing in French from France"},
+    "SANCHICA": {"voz": "fr-fr-concierge-12", "estilo": "excited little girl, bouncing with joy, playful in French from France"},
+    "PASTORA": {"voz": "fr-fr-concierge-5", "estilo": "cheerful young woman playing shepherdess, an excited fan of the book in French from France"},
+    "VAQUEIROS": {"voz": "fr-fr-concierge-6", "estilo": "cowherds on horseback shouting a warning together, urgent in French from France"},
+    "VIAJANTE1": {"voz": "fr-fr-assistant-7", "estilo": "inn guest about to read a book aloud, curious, then amazed in French from France"},
+    "VIAJANTE2": {"voz": "fr-fr-podcaster-8", "estilo": "inn guest grumbling about a bad book, disappointed in French from France"},
+    "DOM_ANTONIO": {"voz": "fr-fr-podcaster-4", "estilo": "jovial, cheerful nobleman, warm host who loves a good joke in French from France"},
+    "CABECA": {"voz": "fr-fr-training-4", "estilo": "hollow, mysterious voice speaking through a pipe, slow, holding back a laugh in French from France"},
+    "IMPRESSOR": {"voz": "fr-fr-csagent-4", "estilo": "friendly printer proud of his craft, warm and a bit mischievous in French from France"},
+    "BRANCA_LUA": {"voz": "fr-fr-concierge-2", "estilo": "knight in a closed helmet: muffled, deep, solemn and respectful in French from France"},
+    "CRIANCAS": {"voz": "fr-fr-concierge-12", "estilo": "group of excited children begging for a story together in French from France"},
     "PALAVRAS": {"estilo": "literacy teacher in French from France: each syllable slowly and clearly separated with short pauses, then the whole word joyfully"}
   }
 }

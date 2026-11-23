@@ -1,0 +1,1772 @@
+{
+  "p0": {
+    "arquivo": "p0.mp3",
+    "hash": "ebcf2de6f0",
+    "frases": [
+      {
+        "id": "p0-s0",
+        "ini": 0,
+        "fim": 7.67
+      },
+      {
+        "id": "p0-s1",
+        "ini": 7.67,
+        "fim": 11.51
+      },
+      {
+        "id": "p0-s2",
+        "ini": 11.51,
+        "fim": 21.03
+      },
+      {
+        "id": "p0-s3",
+        "ini": 21.03,
+        "fim": 22.91
+      },
+      {
+        "id": "p0-s4",
+        "ini": 22.91,
+        "fim": 26.51
+      },
+      {
+        "id": "p0-s5",
+        "ini": 26.51,
+        "fim": 32.14
+      },
+      {
+        "id": "p0-s6",
+        "ini": 32.14,
+        "fim": 43.51
+      },
+      {
+        "id": "p0-s7",
+        "ini": 43.51,
+        "fim": 48.73
+      },
+      {
+        "id": "p0-s8",
+        "ini": 48.73,
+        "fim": 54.41
+      }
+    ]
+  },
+  "modelo": "gemini-3.8-flash-tts",
+  "elenco": {
+    "NARRADORA": {
+      "voz": "en-gb-storyteller-2",
+      "estilo": "warm, gentle storyteller reading aloud to young children in British English; calm, clear pace; expressive but not theatrical"
+    },
+    "QUIXOTE": {
+      "voz": "en-gb-storyteller-4",
+      "estilo": "noble, solemn and dreamy elderly knight in British English, speaking with heartfelt conviction; never mocking"
+    },
+    "SANCHO": {
+      "voz": "en-gb-advisor-2",
+      "estilo": "simple, warm and good-humoured country farmer in British English, plain and practical"
+    },
+    "PASTOR": {
+      "voz": "en-gb-csagent-3",
+      "estilo": "old goatherd, warm, welcoming and generous in British English"
+    },
+    "BARBEIRO": {
+      "voz": "en-gb-training-12",
+      "estilo": "frightened barber, shouting for help while running away, comic in British English"
+    },
+    "PADRE": {
+      "voz": "en-gb-tutor-9",
+      "estilo": "kind village priest, gentle, cheerful and clever in British English"
+    },
+    "DOROTEIA": {
+      "voz": "en-gb-commercial-9",
+      "estilo": "clever young woman playing a princess in distress, dramatic and graceful in British English"
+    },
+    "ESTALAJADEIRO": {
+      "voz": "en-gb-advisor-9",
+      "estilo": "innkeeper in comic despair over his spilled wine in British English"
+    },
+    "BARBEIRO_BACIA": {
+      "voz": "en-gb-training-12",
+      "estilo": "indignant barber demanding his basin back, then comically puzzled in British English"
+    },
+    "NICOLAU": {
+      "voz": "en-gb-tutor-2",
+      "estilo": "village barber, playful and good-natured, holding back a laugh in British English"
+    },
+    "NICOLAU_MAGO": {
+      "voz": "en-gb-tutor-2",
+      "estilo": "pretending to be a mysterious wizard: deep, slow and theatrical, a bit funny in British English"
+    },
+    "EUGENIO": {
+      "voz": "en-gb-commercial-7",
+      "estilo": "young goatherd, out of breath at first, then tender and chatty with his goat in British English"
+    },
+    "VELHINHO": {
+      "voz": "en-gb-concierge-10",
+      "estilo": "kind old farmer, warm and smiling, glad to meet a neighbor in British English"
+    },
+    "SOBRINHA": {
+      "voz": "en-gb-commercial-1",
+      "estilo": "young woman laughing and crying with joy, hugging her uncle in British English"
+    },
+    "TERESA": {
+      "voz": "en-gb-assistant-7",
+      "estilo": "warm-hearted wife, eager and affectionate in British English"
+    },
+    "POVO": {
+      "voz": "en-gb-csagent-10",
+      "estilo": "cheerful villagers calling out together, lively and playful in British English"
+    },
+    "GOVERNANTA": {
+      "voz": "en-gb-concierge-7",
+      "estilo": "stern but loving housekeeper guarding the door, firm and a little comic, caring underneath in British English"
+    },
+    "SANSAO": {
+      "voz": "en-gb-assistant-10",
+      "estilo": "cheerful young scholar, playful and bright, fond of his old neighbor in British English"
+    },
+    "SANSAO_ESPELHOS": {
+      "voz": "en-gb-assistant-10",
+      "estilo": "young knight in disguise boasting with a deeper, grand voice, a bit theatrical and funny in British English"
+    },
+    "TOME": {
+      "voz": "en-gb-podcaster-4",
+      "estilo": "friendly young neighbor, easygoing, trying not to laugh in British English"
+    },
+    "TOME_NARIGUDO": {
+      "voz": "en-gb-podcaster-4",
+      "estilo": "friendly squire speaking in a stuffy, nasal voice as if his nose is blocked, jolly in British English"
+    },
+    "DIABINHO": {
+      "voz": "en-gb-csagent-7",
+      "estilo": "very polite traveling actor dressed as a little devil, cheerful and courteous in British English"
+    },
+    "TRATADOR": {
+      "voz": "en-gb-advisor-8",
+      "estilo": "practical lion keeper calling down from the top of the cart, firm, a bit nervous in British English"
+    },
+    "DOM_DIEGO": {
+      "voz": "en-gb-tutor-8",
+      "estilo": "calm, gentle and kind gentleman, wise and patient, concerned for his new friend in British English"
+    },
+    "LOURENCO": {
+      "voz": "en-gb-podcaster-4",
+      "estilo": "shy young poet, gentle, whispering then blushing with joy in British English"
+    },
+    "COZINHEIRO": {
+      "voz": "en-gb-assistant-4",
+      "estilo": "jolly wedding cook, generous and laughing in British English"
+    },
+    "PRIMO": {
+      "voz": "en-gb-csagent-7",
+      "estilo": "eager thin student, bookish, enthusiastic and a little absent-minded in British English"
+    },
+    "MESTRE_PEDRO": {
+      "voz": "en-gb-advisor-8",
+      "estilo": "showman puppeteer with one eye covered, lively and theatrical, a bit sly but friendly in British English"
+    },
+    "DONO_POUSADA": {
+      "voz": "en-gb-training-1",
+      "estilo": "friendly innkeeper, calm and hospitable, cheerful in British English"
+    },
+    "MENINO": {
+      "voz": "en-gb-training-3",
+      "estilo": "young boy narrating a puppet show with a stick, eager and theatrical in British English"
+    },
+    "DUQUESA": {
+      "voz": "en-gb-tutor-7",
+      "estilo": "elegant, warm duchess delighted to meet her favorite book hero, smiling in British English"
+    },
+    "DUQUE": {
+      "voz": "en-gb-assistant-10",
+      "estilo": "kind duke who laughs easily, warm and playful, hiding a surprise in British English"
+    },
+    "ARAUTO": {
+      "voz": "en-gb-training-10",
+      "estilo": "big herald announcing a visitor, deep and ceremonious in British English"
+    },
+    "CONDESSA": {
+      "voz": "en-gb-podcaster-2",
+      "estilo": "grand countess in distress, deep solemn voice, dramatic and comically serious, never mocking in British English"
+    },
+    "MORDOMO": {
+      "voz": "en-gb-podcaster-11",
+      "estilo": "tall butler with a deep, formal voice, dry and polite, secretly amused in British English"
+    },
+    "LAVRADOR": {
+      "voz": "en-gb-advisor-3",
+      "estilo": "simple farmer complaining to the judge, indignant and a bit suspicious in British English"
+    },
+    "ALFAIATE": {
+      "voz": "en-gb-assistant-8",
+      "estilo": "cheeky tailor, proud of his little trick, comic in British English"
+    },
+    "DOUTOR": {
+      "voz": "en-gb-podcaster-9",
+      "estilo": "stiff, fussy doctor, serious and pompous, a bit comic in British English"
+    },
+    "ALDEAO": {
+      "voz": "en-gb-assistant-5",
+      "estilo": "humble, honest old villager, trusting and a little confused in British English"
+    },
+    "VELHO_BENGALA": {
+      "voz": "en-gb-training-11",
+      "estilo": "sly old man, overly calm and sweet, hiding a trick in British English"
+    },
+    "VIAJANTE": {
+      "voz": "en-gb-training-8",
+      "estilo": "dusty traveler telling a puzzling case, earnest and lively in British English"
+    },
+    "PAJEM": {
+      "voz": "en-gb-csagent-13",
+      "estilo": "polite young page, ceremonious and eager, bowing in British English"
+    },
+    "SANCHICA": {
+      "voz": "en-gb-csagent-8",
+      "estilo": "excited little girl, bouncing with joy, playful in British English"
+    },
+    "PASTORA": {
+      "voz": "en-gb-csagent-6",
+      "estilo": "cheerful young woman playing shepherdess, an excited fan of the book in British English"
+    },
+    "VAQUEIROS": {
+      "voz": "en-gb-csagent-10",
+      "estilo": "cowherds on horseback shouting a warning together, urgent in British English"
+    },
+    "VIAJANTE1": {
+      "voz": "en-gb-tutor-14",
+      "estilo": "inn guest about to read a book aloud, curious, then amazed in British English"
+    },
+    "VIAJANTE2": {
+      "voz": "en-gb-storyteller-1",
+      "estilo": "inn guest grumbling about a bad book, disappointed in British English"
+    },
+    "DOM_ANTONIO": {
+      "voz": "en-gb-concierge-12",
+      "estilo": "jovial, cheerful nobleman, warm host who loves a good joke in British English"
+    },
+    "CABECA": {
+      "voz": "en-gb-assistant-2",
+      "estilo": "hollow, mysterious voice speaking through a pipe, slow, holding back a laugh in British English"
+    },
+    "IMPRESSOR": {
+      "voz": "en-gb-csagent-14",
+      "estilo": "friendly printer proud of his craft, warm and a bit mischievous in British English"
+    },
+    "BRANCA_LUA": {
+      "voz": "en-gb-assistant-10",
+      "estilo": "knight in a closed helmet: muffled, deep, solemn and respectful in British English"
+    },
+    "CRIANCAS": {
+      "voz": "en-gb-csagent-8",
+      "estilo": "group of excited children begging for a story together in British English"
+    },
+    "PALAVRAS": {
+      "estilo": "British English literacy teacher: each syllable slowly and clearly separated with short pauses, then the whole word joyfully"
+    }
+  },
+  "qa": "whisper-large-v3-turbo (local)",
+  "p1": {
+    "arquivo": "p1.mp3",
+    "hash": "a7107e3938",
+    "frases": [
+      {
+        "id": "p1-s0",
+        "ini": 0,
+        "fim": 5.48
+      },
+      {
+        "id": "p1-s1",
+        "ini": 5.48,
+        "fim": 10.44
+      },
+      {
+        "id": "p1-s2",
+        "ini": 10.44,
+        "fim": 20.58
+      },
+      {
+        "id": "p1-s3",
+        "ini": 20.58,
+        "fim": 29.67
+      },
+      {
+        "id": "p1-s4",
+        "ini": 29.67,
+        "fim": 34.77
+      },
+      {
+        "id": "p1-s5",
+        "ini": 34.77,
+        "fim": 40.33
+      },
+      {
+        "id": "p1-s6",
+        "ini": 40.33,
+        "fim": 45.16
+      },
+      {
+        "id": "p1-s7",
+        "ini": 45.16,
+        "fim": 54.03
+      },
+      {
+        "id": "p1-s8",
+        "ini": 54.03,
+        "fim": 60.43
+      },
+      {
+        "id": "p1-s9",
+        "ini": 60.43,
+        "fim": 63.54
+      },
+      {
+        "id": "p1-s10",
+        "ini": 63.54,
+        "fim": 69.11
+      },
+      {
+        "id": "p1-s11",
+        "ini": 69.11,
+        "fim": 73.44
+      },
+      {
+        "id": "p1-s12",
+        "ini": 73.44,
+        "fim": 78.38
+      },
+      {
+        "id": "p1-s13",
+        "ini": 78.38,
+        "fim": 88.62
+      },
+      {
+        "id": "p1-s14",
+        "ini": 88.62,
+        "fim": 92.81
+      },
+      {
+        "id": "p1-s15",
+        "ini": 92.81,
+        "fim": 101.12
+      },
+      {
+        "id": "p1-s16",
+        "ini": 101.12,
+        "fim": 105.49
+      },
+      {
+        "id": "p1-s17",
+        "ini": 105.49,
+        "fim": 108.59
+      },
+      {
+        "id": "p1-s18",
+        "ini": 108.59,
+        "fim": 113.97
+      },
+      {
+        "id": "p1-s19",
+        "ini": 113.97,
+        "fim": 116.36
+      },
+      {
+        "id": "p1-s20",
+        "ini": 116.36,
+        "fim": 120.69
+      },
+      {
+        "id": "p1-s21",
+        "ini": 120.69,
+        "fim": 126.39
+      },
+      {
+        "id": "p1-s22",
+        "ini": 126.39,
+        "fim": 135.15
+      },
+      {
+        "id": "p1-s23",
+        "ini": 135.15,
+        "fim": 139.17
+      },
+      {
+        "id": "p1-s24",
+        "ini": 139.17,
+        "fim": 143.05
+      },
+      {
+        "id": "p1-s25",
+        "ini": 143.05,
+        "fim": 145.51
+      },
+      {
+        "id": "p1-s26",
+        "ini": 145.51,
+        "fim": 149.85
+      },
+      {
+        "id": "p1-s27",
+        "ini": 149.85,
+        "fim": 155.49
+      },
+      {
+        "id": "p1-s28",
+        "ini": 155.49,
+        "fim": 157.85
+      },
+      {
+        "id": "p1-s29",
+        "ini": 157.85,
+        "fim": 159.06
+      },
+      {
+        "id": "p1-s30",
+        "ini": 159.06,
+        "fim": 160.65
+      },
+      {
+        "id": "p1-s31",
+        "ini": 160.65,
+        "fim": 167.15
+      },
+      {
+        "id": "p1-s32",
+        "ini": 167.15,
+        "fim": 175.58
+      },
+      {
+        "id": "p1-s33",
+        "ini": 175.58,
+        "fim": 180.55
+      },
+      {
+        "id": "p1-s34",
+        "ini": 180.55,
+        "fim": 184.48
+      },
+      {
+        "id": "p1-s35",
+        "ini": 184.48,
+        "fim": 186.17
+      },
+      {
+        "id": "p1-s36",
+        "ini": 186.17,
+        "fim": 187.7
+      },
+      {
+        "id": "p1-s37",
+        "ini": 187.7,
+        "fim": 191.95
+      },
+      {
+        "id": "p1-s38",
+        "ini": 191.95,
+        "fim": 194.83
+      }
+    ]
+  },
+  "p2": {
+    "arquivo": "p2.mp3",
+    "hash": "63c1914dca",
+    "frases": [
+      {
+        "id": "p2-s0",
+        "ini": 0,
+        "fim": 6.66
+      },
+      {
+        "id": "p2-s1",
+        "ini": 6.66,
+        "fim": 10.44
+      },
+      {
+        "id": "p2-s2",
+        "ini": 10.44,
+        "fim": 22.96
+      },
+      {
+        "id": "p2-s3",
+        "ini": 22.96,
+        "fim": 25.69
+      },
+      {
+        "id": "p2-s4",
+        "ini": 25.69,
+        "fim": 38.32
+      },
+      {
+        "id": "p2-s5",
+        "ini": 38.32,
+        "fim": 41.81
+      },
+      {
+        "id": "p2-s6",
+        "ini": 41.81,
+        "fim": 52.54
+      },
+      {
+        "id": "p2-s7",
+        "ini": 52.54,
+        "fim": 56.01
+      },
+      {
+        "id": "p2-s8",
+        "ini": 56.01,
+        "fim": 61.13
+      },
+      {
+        "id": "p2-s9",
+        "ini": 61.13,
+        "fim": 62.44
+      },
+      {
+        "id": "p2-s10",
+        "ini": 62.44,
+        "fim": 68.38
+      },
+      {
+        "id": "p2-s11",
+        "ini": 68.38,
+        "fim": 70.42
+      },
+      {
+        "id": "p2-s12",
+        "ini": 70.42,
+        "fim": 74.12
+      },
+      {
+        "id": "p2-s13",
+        "ini": 74.12,
+        "fim": 81.64
+      },
+      {
+        "id": "p2-s14",
+        "ini": 81.64,
+        "fim": 84.03
+      },
+      {
+        "id": "p2-s15",
+        "ini": 84.03,
+        "fim": 91.4
+      },
+      {
+        "id": "p2-s16",
+        "ini": 91.4,
+        "fim": 97.58
+      },
+      {
+        "id": "p2-s17",
+        "ini": 97.58,
+        "fim": 100.96
+      },
+      {
+        "id": "p2-s18",
+        "ini": 100.96,
+        "fim": 102.18
+      },
+      {
+        "id": "p2-s19",
+        "ini": 102.18,
+        "fim": 104.43
+      },
+      {
+        "id": "p2-s20",
+        "ini": 104.43,
+        "fim": 106.22
+      },
+      {
+        "id": "p2-s21",
+        "ini": 106.22,
+        "fim": 113.63
+      },
+      {
+        "id": "p2-s22",
+        "ini": 113.63,
+        "fim": 121.5
+      },
+      {
+        "id": "p2-s23",
+        "ini": 121.5,
+        "fim": 125.05
+      },
+      {
+        "id": "p2-s24",
+        "ini": 125.05,
+        "fim": 128.42
+      },
+      {
+        "id": "p2-s25",
+        "ini": 128.42,
+        "fim": 132.74
+      },
+      {
+        "id": "p2-s26",
+        "ini": 132.74,
+        "fim": 134.48
+      },
+      {
+        "id": "p2-s27",
+        "ini": 134.48,
+        "fim": 135.59
+      },
+      {
+        "id": "p2-s28",
+        "ini": 135.59,
+        "fim": 138.02
+      },
+      {
+        "id": "p2-s29",
+        "ini": 138.02,
+        "fim": 141.29
+      },
+      {
+        "id": "p2-s30",
+        "ini": 141.29,
+        "fim": 146.68
+      },
+      {
+        "id": "p2-s31",
+        "ini": 146.68,
+        "fim": 151.39
+      },
+      {
+        "id": "p2-s32",
+        "ini": 151.39,
+        "fim": 153.23
+      },
+      {
+        "id": "p2-s33",
+        "ini": 153.23,
+        "fim": 154.57
+      },
+      {
+        "id": "p2-s34",
+        "ini": 154.57,
+        "fim": 156.64
+      },
+      {
+        "id": "p2-s35",
+        "ini": 156.64,
+        "fim": 166.3
+      },
+      {
+        "id": "p2-s36",
+        "ini": 166.3,
+        "fim": 170.39
+      },
+      {
+        "id": "p2-s37",
+        "ini": 170.39,
+        "fim": 176.67
+      },
+      {
+        "id": "p2-s38",
+        "ini": 176.67,
+        "fim": 183.1
+      }
+    ]
+  },
+  "p3": {
+    "arquivo": "p3.mp3",
+    "hash": "4bb4f18a04",
+    "frases": [
+      {
+        "id": "p3-s0",
+        "ini": 0,
+        "fim": 6.12
+      },
+      {
+        "id": "p3-s1",
+        "ini": 6.12,
+        "fim": 15.12
+      },
+      {
+        "id": "p3-s2",
+        "ini": 15.12,
+        "fim": 18.84
+      },
+      {
+        "id": "p3-s3",
+        "ini": 18.84,
+        "fim": 23.23
+      },
+      {
+        "id": "p3-s4",
+        "ini": 23.23,
+        "fim": 30.39
+      },
+      {
+        "id": "p3-s5",
+        "ini": 30.39,
+        "fim": 34.06
+      },
+      {
+        "id": "p3-s6",
+        "ini": 34.06,
+        "fim": 36.26
+      },
+      {
+        "id": "p3-s7",
+        "ini": 36.26,
+        "fim": 45.92
+      },
+      {
+        "id": "p3-s8",
+        "ini": 45.92,
+        "fim": 48.67
+      },
+      {
+        "id": "p3-s9",
+        "ini": 48.67,
+        "fim": 51.51
+      },
+      {
+        "id": "p3-s10",
+        "ini": 51.51,
+        "fim": 55.85
+      },
+      {
+        "id": "p3-s11",
+        "ini": 55.85,
+        "fim": 60.68
+      },
+      {
+        "id": "p3-s12",
+        "ini": 60.68,
+        "fim": 62.61
+      },
+      {
+        "id": "p3-s13",
+        "ini": 62.61,
+        "fim": 67
+      },
+      {
+        "id": "p3-s14",
+        "ini": 67,
+        "fim": 73.01
+      },
+      {
+        "id": "p3-s15",
+        "ini": 73.01,
+        "fim": 75.08
+      },
+      {
+        "id": "p3-s16",
+        "ini": 75.08,
+        "fim": 78.68
+      },
+      {
+        "id": "p3-s17",
+        "ini": 78.68,
+        "fim": 85.87
+      },
+      {
+        "id": "p3-s18",
+        "ini": 85.87,
+        "fim": 87.4
+      },
+      {
+        "id": "p3-s19",
+        "ini": 87.4,
+        "fim": 89.8
+      },
+      {
+        "id": "p3-s20",
+        "ini": 89.8,
+        "fim": 93.97
+      },
+      {
+        "id": "p3-s21",
+        "ini": 93.97,
+        "fim": 98.6
+      },
+      {
+        "id": "p3-s22",
+        "ini": 98.6,
+        "fim": 106.25
+      },
+      {
+        "id": "p3-s23",
+        "ini": 106.25,
+        "fim": 115.07
+      },
+      {
+        "id": "p3-s24",
+        "ini": 115.07,
+        "fim": 117.47
+      },
+      {
+        "id": "p3-s25",
+        "ini": 117.47,
+        "fim": 124.42
+      },
+      {
+        "id": "p3-s26",
+        "ini": 124.42,
+        "fim": 134.15
+      },
+      {
+        "id": "p3-s27",
+        "ini": 134.15,
+        "fim": 144.03
+      },
+      {
+        "id": "p3-s28",
+        "ini": 144.03,
+        "fim": 149.67
+      },
+      {
+        "id": "p3-s29",
+        "ini": 149.67,
+        "fim": 158.1
+      },
+      {
+        "id": "p3-s30",
+        "ini": 158.1,
+        "fim": 159.83
+      },
+      {
+        "id": "p3-s31",
+        "ini": 159.83,
+        "fim": 164.62
+      },
+      {
+        "id": "p3-s32",
+        "ini": 164.62,
+        "fim": 173.98
+      },
+      {
+        "id": "p3-s33",
+        "ini": 173.98,
+        "fim": 182.71
+      },
+      {
+        "id": "p3-s34",
+        "ini": 182.71,
+        "fim": 184.59
+      }
+    ]
+  },
+  "p4": {
+    "arquivo": "p4.mp3",
+    "hash": "2ec256059f",
+    "frases": [
+      {
+        "id": "p4-s0",
+        "ini": 0,
+        "fim": 6.28
+      },
+      {
+        "id": "p4-s1",
+        "ini": 6.28,
+        "fim": 12.28
+      },
+      {
+        "id": "p4-s2",
+        "ini": 12.28,
+        "fim": 14.16
+      },
+      {
+        "id": "p4-s3",
+        "ini": 14.16,
+        "fim": 18.93
+      },
+      {
+        "id": "p4-s4",
+        "ini": 18.93,
+        "fim": 27.41
+      },
+      {
+        "id": "p4-s5",
+        "ini": 27.41,
+        "fim": 33.73
+      },
+      {
+        "id": "p4-s6",
+        "ini": 33.73,
+        "fim": 36.71
+      },
+      {
+        "id": "p4-s7",
+        "ini": 36.71,
+        "fim": 43.41
+      },
+      {
+        "id": "p4-s8",
+        "ini": 43.41,
+        "fim": 50.68
+      },
+      {
+        "id": "p4-s9",
+        "ini": 50.68,
+        "fim": 53.24
+      },
+      {
+        "id": "p4-s10",
+        "ini": 53.24,
+        "fim": 60.6
+      },
+      {
+        "id": "p4-s11",
+        "ini": 60.6,
+        "fim": 63.69
+      },
+      {
+        "id": "p4-s12",
+        "ini": 63.69,
+        "fim": 67.42
+      },
+      {
+        "id": "p4-s13",
+        "ini": 67.42,
+        "fim": 75.36
+      },
+      {
+        "id": "p4-s14",
+        "ini": 75.36,
+        "fim": 81.81
+      },
+      {
+        "id": "p4-s15",
+        "ini": 81.81,
+        "fim": 86.58
+      },
+      {
+        "id": "p4-s16",
+        "ini": 86.58,
+        "fim": 89.9
+      },
+      {
+        "id": "p4-s17",
+        "ini": 89.9,
+        "fim": 96.48
+      },
+      {
+        "id": "p4-s18",
+        "ini": 96.48,
+        "fim": 101.03
+      },
+      {
+        "id": "p4-s19",
+        "ini": 101.03,
+        "fim": 104.28
+      },
+      {
+        "id": "p4-s20",
+        "ini": 104.28,
+        "fim": 116.95
+      },
+      {
+        "id": "p4-s21",
+        "ini": 116.95,
+        "fim": 119.72
+      },
+      {
+        "id": "p4-s22",
+        "ini": 119.72,
+        "fim": 129.36
+      },
+      {
+        "id": "p4-s23",
+        "ini": 129.36,
+        "fim": 135.07
+      },
+      {
+        "id": "p4-s24",
+        "ini": 135.07,
+        "fim": 138.26
+      },
+      {
+        "id": "p4-s25",
+        "ini": 138.26,
+        "fim": 141.82
+      },
+      {
+        "id": "p4-s26",
+        "ini": 141.82,
+        "fim": 146.73
+      },
+      {
+        "id": "p4-s27",
+        "ini": 146.73,
+        "fim": 152.38
+      },
+      {
+        "id": "p4-s28",
+        "ini": 152.38,
+        "fim": 158.31
+      },
+      {
+        "id": "p4-s29",
+        "ini": 158.31,
+        "fim": 170.52
+      },
+      {
+        "id": "p4-s30",
+        "ini": 170.52,
+        "fim": 173.44
+      }
+    ]
+  },
+  "p8": {
+    "arquivo": "p8.mp3",
+    "hash": "6945155322",
+    "frases": [
+      {
+        "id": "p8-s0",
+        "ini": 0,
+        "fim": 7.28
+      },
+      {
+        "id": "p8-s1",
+        "ini": 7.28,
+        "fim": 10.17
+      },
+      {
+        "id": "p8-s2",
+        "ini": 10.17,
+        "fim": 16.75
+      },
+      {
+        "id": "p8-s3",
+        "ini": 16.75,
+        "fim": 21.81
+      },
+      {
+        "id": "p8-s4",
+        "ini": 21.81,
+        "fim": 28.83
+      },
+      {
+        "id": "p8-s5",
+        "ini": 28.83,
+        "fim": 31.64
+      },
+      {
+        "id": "p8-s6",
+        "ini": 31.64,
+        "fim": 39.41
+      },
+      {
+        "id": "p8-s7",
+        "ini": 39.41,
+        "fim": 41.88
+      },
+      {
+        "id": "p8-s8",
+        "ini": 41.88,
+        "fim": 46.47
+      },
+      {
+        "id": "p8-s9",
+        "ini": 46.47,
+        "fim": 53.58
+      },
+      {
+        "id": "p8-s10",
+        "ini": 53.58,
+        "fim": 55.37
+      },
+      {
+        "id": "p8-s11",
+        "ini": 55.37,
+        "fim": 60.03
+      },
+      {
+        "id": "p8-s12",
+        "ini": 60.03,
+        "fim": 65.67
+      },
+      {
+        "id": "p8-s13",
+        "ini": 65.67,
+        "fim": 71.5
+      },
+      {
+        "id": "p8-s14",
+        "ini": 71.5,
+        "fim": 75.35
+      },
+      {
+        "id": "p8-s15",
+        "ini": 75.35,
+        "fim": 85.58
+      },
+      {
+        "id": "p8-s16",
+        "ini": 85.58,
+        "fim": 93.74
+      },
+      {
+        "id": "p8-s17",
+        "ini": 93.74,
+        "fim": 99.6
+      },
+      {
+        "id": "p8-s18",
+        "ini": 99.6,
+        "fim": 104.47
+      },
+      {
+        "id": "p8-s19",
+        "ini": 104.47,
+        "fim": 108.59
+      },
+      {
+        "id": "p8-s20",
+        "ini": 108.59,
+        "fim": 111.52
+      },
+      {
+        "id": "p8-s21",
+        "ini": 111.52,
+        "fim": 119.77
+      },
+      {
+        "id": "p8-s22",
+        "ini": 119.77,
+        "fim": 126.36
+      },
+      {
+        "id": "p8-s23",
+        "ini": 126.36,
+        "fim": 131.41
+      }
+    ]
+  },
+  "p9": {
+    "arquivo": "p9.mp3",
+    "hash": "01e8a69b7d",
+    "frases": [
+      {
+        "id": "p9-s0",
+        "ini": 0,
+        "fim": 6.49
+      },
+      {
+        "id": "p9-s1",
+        "ini": 6.49,
+        "fim": 9.15
+      },
+      {
+        "id": "p9-s2",
+        "ini": 9.15,
+        "fim": 10.48
+      },
+      {
+        "id": "p9-s3",
+        "ini": 10.48,
+        "fim": 15.23
+      },
+      {
+        "id": "p9-s4",
+        "ini": 15.23,
+        "fim": 24.01
+      },
+      {
+        "id": "p9-s5",
+        "ini": 24.01,
+        "fim": 28.49
+      },
+      {
+        "id": "p9-s6",
+        "ini": 28.49,
+        "fim": 33.61
+      },
+      {
+        "id": "p9-s7",
+        "ini": 33.61,
+        "fim": 36
+      },
+      {
+        "id": "p9-s8",
+        "ini": 36,
+        "fim": 46.61
+      },
+      {
+        "id": "p9-s9",
+        "ini": 46.61,
+        "fim": 48.56
+      },
+      {
+        "id": "p9-s10",
+        "ini": 48.56,
+        "fim": 50.94
+      },
+      {
+        "id": "p9-s11",
+        "ini": 50.94,
+        "fim": 56.49
+      },
+      {
+        "id": "p9-s12",
+        "ini": 56.49,
+        "fim": 60.72
+      },
+      {
+        "id": "p9-s13",
+        "ini": 60.72,
+        "fim": 63.4
+      },
+      {
+        "id": "p9-s14",
+        "ini": 63.4,
+        "fim": 66.66
+      },
+      {
+        "id": "p9-s15",
+        "ini": 66.66,
+        "fim": 73.14
+      },
+      {
+        "id": "p9-s16",
+        "ini": 73.14,
+        "fim": 75.46
+      },
+      {
+        "id": "p9-s17",
+        "ini": 75.46,
+        "fim": 78.47
+      },
+      {
+        "id": "p9-s18",
+        "ini": 78.47,
+        "fim": 86.21
+      },
+      {
+        "id": "p9-s19",
+        "ini": 86.21,
+        "fim": 96.62
+      },
+      {
+        "id": "p9-s20",
+        "ini": 96.62,
+        "fim": 98.61
+      },
+      {
+        "id": "p9-s21",
+        "ini": 98.61,
+        "fim": 103.12
+      },
+      {
+        "id": "p9-s22",
+        "ini": 103.12,
+        "fim": 111.07
+      },
+      {
+        "id": "p9-s23",
+        "ini": 111.07,
+        "fim": 115.01
+      },
+      {
+        "id": "p9-s24",
+        "ini": 115.01,
+        "fim": 121.76
+      },
+      {
+        "id": "p9-s25",
+        "ini": 121.76,
+        "fim": 124.41
+      },
+      {
+        "id": "p9-s26",
+        "ini": 124.41,
+        "fim": 129.87
+      },
+      {
+        "id": "p9-s27",
+        "ini": 129.87,
+        "fim": 133.71
+      },
+      {
+        "id": "p9-s28",
+        "ini": 133.71,
+        "fim": 140.99
+      },
+      {
+        "id": "p9-s29",
+        "ini": 140.99,
+        "fim": 147.56
+      }
+    ]
+  },
+  "p5": {
+    "arquivo": "p5.mp3",
+    "hash": "6a4e9d34d5",
+    "frases": [
+      {
+        "id": "p5-s0",
+        "ini": 0,
+        "fim": 6.22
+      },
+      {
+        "id": "p5-s1",
+        "ini": 6.22,
+        "fim": 17.65
+      },
+      {
+        "id": "p5-s2",
+        "ini": 17.65,
+        "fim": 22.42
+      },
+      {
+        "id": "p5-s3",
+        "ini": 22.42,
+        "fim": 32.07
+      },
+      {
+        "id": "p5-s4",
+        "ini": 32.07,
+        "fim": 38.19
+      },
+      {
+        "id": "p5-s5",
+        "ini": 38.19,
+        "fim": 49.29
+      },
+      {
+        "id": "p5-s6",
+        "ini": 49.29,
+        "fim": 53.39
+      },
+      {
+        "id": "p5-s7",
+        "ini": 53.39,
+        "fim": 60.27
+      },
+      {
+        "id": "p5-s8",
+        "ini": 60.27,
+        "fim": 64.77
+      },
+      {
+        "id": "p5-s9",
+        "ini": 64.77,
+        "fim": 69.12
+      },
+      {
+        "id": "p5-s10",
+        "ini": 69.12,
+        "fim": 77.06
+      },
+      {
+        "id": "p5-s11",
+        "ini": 77.06,
+        "fim": 83.57
+      },
+      {
+        "id": "p5-s12",
+        "ini": 83.57,
+        "fim": 88.11
+      },
+      {
+        "id": "p5-s13",
+        "ini": 88.11,
+        "fim": 92.17
+      },
+      {
+        "id": "p5-s14",
+        "ini": 92.17,
+        "fim": 98.81
+      },
+      {
+        "id": "p5-s15",
+        "ini": 98.81,
+        "fim": 103.59
+      },
+      {
+        "id": "p5-s16",
+        "ini": 103.59,
+        "fim": 108.66
+      },
+      {
+        "id": "p5-s17",
+        "ini": 108.66,
+        "fim": 114.85
+      },
+      {
+        "id": "p5-s18",
+        "ini": 114.85,
+        "fim": 119.5
+      },
+      {
+        "id": "p5-s19",
+        "ini": 119.5,
+        "fim": 125.49
+      },
+      {
+        "id": "p5-s20",
+        "ini": 125.49,
+        "fim": 126.87
+      },
+      {
+        "id": "p5-s21",
+        "ini": 126.87,
+        "fim": 134.89
+      },
+      {
+        "id": "p5-s22",
+        "ini": 134.89,
+        "fim": 139.55
+      },
+      {
+        "id": "p5-s23",
+        "ini": 139.55,
+        "fim": 150.95
+      },
+      {
+        "id": "p5-s24",
+        "ini": 150.95,
+        "fim": 155.33
+      },
+      {
+        "id": "p5-s25",
+        "ini": 155.33,
+        "fim": 158.48
+      },
+      {
+        "id": "p5-s26",
+        "ini": 158.48,
+        "fim": 160.44
+      }
+    ]
+  },
+  "p7": {
+    "arquivo": "p7.mp3",
+    "hash": "3928ec6289",
+    "frases": [
+      {
+        "id": "p7-s0",
+        "ini": 0,
+        "fim": 7.78
+      },
+      {
+        "id": "p7-s1",
+        "ini": 7.78,
+        "fim": 13.44
+      },
+      {
+        "id": "p7-s2",
+        "ini": 13.44,
+        "fim": 18.02
+      },
+      {
+        "id": "p7-s3",
+        "ini": 18.02,
+        "fim": 21.72
+      },
+      {
+        "id": "p7-s4",
+        "ini": 21.72,
+        "fim": 24.65
+      },
+      {
+        "id": "p7-s5",
+        "ini": 24.65,
+        "fim": 33.13
+      },
+      {
+        "id": "p7-s6",
+        "ini": 33.13,
+        "fim": 36.91
+      },
+      {
+        "id": "p7-s7",
+        "ini": 36.91,
+        "fim": 44.58
+      },
+      {
+        "id": "p7-s8",
+        "ini": 44.58,
+        "fim": 52.84
+      },
+      {
+        "id": "p7-s9",
+        "ini": 52.84,
+        "fim": 62.2
+      },
+      {
+        "id": "p7-s10",
+        "ini": 62.2,
+        "fim": 74.12
+      },
+      {
+        "id": "p7-s11",
+        "ini": 74.12,
+        "fim": 77.17
+      },
+      {
+        "id": "p7-s12",
+        "ini": 77.17,
+        "fim": 86.06
+      },
+      {
+        "id": "p7-s13",
+        "ini": 86.06,
+        "fim": 88.85
+      },
+      {
+        "id": "p7-s14",
+        "ini": 88.85,
+        "fim": 100.98
+      },
+      {
+        "id": "p7-s15",
+        "ini": 100.98,
+        "fim": 102.11
+      },
+      {
+        "id": "p7-s16",
+        "ini": 102.11,
+        "fim": 105.07
+      },
+      {
+        "id": "p7-s17",
+        "ini": 105.07,
+        "fim": 113.33
+      },
+      {
+        "id": "p7-s18",
+        "ini": 113.33,
+        "fim": 120.89
+      },
+      {
+        "id": "p7-s19",
+        "ini": 120.89,
+        "fim": 126.37
+      },
+      {
+        "id": "p7-s20",
+        "ini": 126.37,
+        "fim": 134.62
+      },
+      {
+        "id": "p7-s21",
+        "ini": 134.62,
+        "fim": 142.52
+      },
+      {
+        "id": "p7-s22",
+        "ini": 142.52,
+        "fim": 144.74
+      },
+      {
+        "id": "p7-s23",
+        "ini": 144.74,
+        "fim": 146.72
+      },
+      {
+        "id": "p7-s24",
+        "ini": 146.72,
+        "fim": 150.05
+      },
+      {
+        "id": "p7-s25",
+        "ini": 150.05,
+        "fim": 155.06
+      },
+      {
+        "id": "p7-s26",
+        "ini": 155.06,
+        "fim": 161.41
+      },
+      {
+        "id": "p7-s27",
+        "ini": 161.41,
+        "fim": 168.31
+      },
+      {
+        "id": "p7-s28",
+        "ini": 168.31,
+        "fim": 171.53
+      },
+      {
+        "id": "p7-s29",
+        "ini": 171.53,
+        "fim": 174.04
+      },
+      {
+        "id": "p7-s30",
+        "ini": 174.04,
+        "fim": 183.95
+      },
+      {
+        "id": "p7-s31",
+        "ini": 183.95,
+        "fim": 191.51
+      },
+      {
+        "id": "p7-s32",
+        "ini": 191.51,
+        "fim": 199.81
+      },
+      {
+        "id": "p7-s33",
+        "ini": 199.81,
+        "fim": 207.06
+      },
+      {
+        "id": "p7-s34",
+        "ini": 207.06,
+        "fim": 212.35
+      }
+    ]
+  },
+  "p6": {
+    "arquivo": "p6.mp3",
+    "hash": "0de521fd0c",
+    "frases": [
+      {
+        "id": "p6-s0",
+        "ini": 0,
+        "fim": 7.82
+      },
+      {
+        "id": "p6-s1",
+        "ini": 7.82,
+        "fim": 13.49
+      },
+      {
+        "id": "p6-s2",
+        "ini": 13.49,
+        "fim": 24.81
+      },
+      {
+        "id": "p6-s3",
+        "ini": 24.81,
+        "fim": 27.89
+      },
+      {
+        "id": "p6-s4",
+        "ini": 27.89,
+        "fim": 34.33
+      },
+      {
+        "id": "p6-s5",
+        "ini": 34.33,
+        "fim": 39.25
+      },
+      {
+        "id": "p6-s6",
+        "ini": 39.25,
+        "fim": 44.08
+      },
+      {
+        "id": "p6-s7",
+        "ini": 44.08,
+        "fim": 51.84
+      },
+      {
+        "id": "p6-s8",
+        "ini": 51.84,
+        "fim": 54.12
+      },
+      {
+        "id": "p6-s9",
+        "ini": 54.12,
+        "fim": 62.96
+      },
+      {
+        "id": "p6-s10",
+        "ini": 62.96,
+        "fim": 67.69
+      },
+      {
+        "id": "p6-s11",
+        "ini": 67.69,
+        "fim": 72.45
+      },
+      {
+        "id": "p6-s12",
+        "ini": 72.45,
+        "fim": 76.02
+      },
+      {
+        "id": "p6-s13",
+        "ini": 76.02,
+        "fim": 83.06
+      },
+      {
+        "id": "p6-s14",
+        "ini": 83.06,
+        "fim": 88.21
+      },
+      {
+        "id": "p6-s15",
+        "ini": 88.21,
+        "fim": 94.71
+      },
+      {
+        "id": "p6-s16",
+        "ini": 94.71,
+        "fim": 101.76
+      },
+      {
+        "id": "p6-s17",
+        "ini": 101.76,
+        "fim": 103.17
+      },
+      {
+        "id": "p6-s18",
+        "ini": 103.17,
+        "fim": 107.94
+      },
+      {
+        "id": "p6-s19",
+        "ini": 107.94,
+        "fim": 115.61
+      },
+      {
+        "id": "p6-s20",
+        "ini": 115.61,
+        "fim": 117.93
+      },
+      {
+        "id": "p6-s21",
+        "ini": 117.93,
+        "fim": 124.28
+      },
+      {
+        "id": "p6-s22",
+        "ini": 124.28,
+        "fim": 129.67
+      },
+      {
+        "id": "p6-s23",
+        "ini": 129.67,
+        "fim": 140.43
+      },
+      {
+        "id": "p6-s24",
+        "ini": 140.43,
+        "fim": 144.72
+      },
+      {
+        "id": "p6-s25",
+        "ini": 144.72,
+        "fim": 149.45
+      },
+      {
+        "id": "p6-s26",
+        "ini": 149.45,
+        "fim": 151.7
+      },
+      {
+        "id": "p6-s27",
+        "ini": 151.7,
+        "fim": 154.83
+      },
+      {
+        "id": "p6-s28",
+        "ini": 154.83,
+        "fim": 158.08
+      },
+      {
+        "id": "p6-s29",
+        "ini": 158.08,
+        "fim": 164.7
+      }
+    ]
+  }
+}

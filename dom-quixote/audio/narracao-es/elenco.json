@@ -1,7 +1,7 @@
 {
   "codigoVoz": "es-ES",
   "amostra": "¡Hola! Voy a leer esta historia contigo. ¡Pasa la página cuando quieras!",
-  "nomes": "Don Quijote de la Mancha, Alonso Quijano, Sancho Panza, Rocinante, Dulcinea del Toboso, Aldonza Lorenzo, Miguel de Cervantes, Montiel, Campo de Criptana, vuestra merced, ínsula, bacía, yelmo, Mambrino, Micomicona, Pandafilando, Alifanfarón, Trapobana, Pentapolín, Frestón, maese Nicolás, Dorotea, Teresa Panza, Sanchica, Eugenio, Manchada, Sierra Morena, Caballero de la Triste Figura, Lope Ruiz, Amadís de Gaula, bacía, bacielmo, Sansón Carrasco, bachiller, Tomé, don Diego, Caballero de los Espejos, Caballero del Verde Gabán, Caballero de los Leones, leonero, requesón, doña Cristina, Camacho, Montesinos, Merlín, maese Pedro, Melisendra, don Gaiferos, condesa Trifaldi, Malambruno, Candaya, Clavileño",
+  "nomes": "Don Quijote de la Mancha, Alonso Quijano, Sancho Panza, Rocinante, Dulcinea del Toboso, Aldonza Lorenzo, Miguel de Cervantes, Montiel, Campo de Criptana, vuestra merced, ínsula, bacía, yelmo, Mambrino, Micomicona, Pandafilando, Alifanfarón, Trapobana, Pentapolín, Frestón, maese Nicolás, Dorotea, Teresa Panza, Sanchica, Eugenio, Manchada, Sierra Morena, Caballero de la Triste Figura, Lope Ruiz, Amadís de Gaula, bacía, bacielmo, Sansón Carrasco, bachiller, Tomé, don Diego, Caballero de los Espejos, Caballero del Verde Gabán, Caballero de los Leones, leonero, requesón, doña Cristina, Camacho, Montesinos, Merlín, maese Pedro, Melisendra, don Gaiferos, condesa Trifaldi, Malambruno, Candaya, Clavileño, ínsula Barataria, Pedro Recio de Tirteafuera, Caballero de la Blanca Luna, don Antonio, Barcelona, Zaragoza, Mari Gutiérrez, Quijotiz, Curiambro, Miculoso, Teresona, Sansonino, Pancino",
   "elenco": {
     "NARRADORA": {"voz": "es-es-tutor-12", "estilo": "warm, gentle storyteller reading aloud to young children in Castilian Spanish from Spain; calm, clear pace; savouring Cervantes' classic phrases with a smile; expressive but not theatrical"},
     "QUIXOTE": {"voz": "es-es-assistant-3", "estilo": "elderly noble knight in Castilian Spanish from Spain; solemn, dreamy and grand, speaking with heartfelt conviction and old-fashioned dignity; never mocking"},
@@ -37,6 +37,24 @@
     "DUQUE": {"voz": "es-es-concierge-4", "estilo": "kind duke who laughs easily, warm and playful, hiding a surprise in Castilian Spanish from Spain"},
     "ARAUTO": {"voz": "es-es-podcaster-7", "estilo": "big herald announcing a visitor, deep and ceremonious in Castilian Spanish from Spain"},
     "CONDESSA": {"voz": "es-es-podcaster-5", "estilo": "grand countess in distress, deep solemn voice, dramatic and comically serious, never mocking in Castilian Spanish from Spain"},
+    "MORDOMO": {"voz": "es-es-podcaster-7", "estilo": "tall butler with a deep, formal voice, dry and polite, secretly amused in Castilian Spanish from Spain"},
+    "LAVRADOR": {"voz": "es-es-advisor-9", "estilo": "simple farmer complaining to the judge, indignant and a bit suspicious in Castilian Spanish from Spain"},
+    "ALFAIATE": {"voz": "es-es-advisor-2", "estilo": "cheeky tailor, proud of his little trick, comic in Castilian Spanish from Spain"},
+    "DOUTOR": {"voz": "es-es-advisor-8", "estilo": "stiff, fussy doctor, serious and pompous, a bit comic in Castilian Spanish from Spain"},
+    "ALDEAO": {"voz": "es-es-assistant-4", "estilo": "humble, honest old villager, trusting and a little confused in Castilian Spanish from Spain"},
+    "VELHO_BENGALA": {"voz": "es-es-training-3", "estilo": "sly old man, overly calm and sweet, hiding a trick in Castilian Spanish from Spain"},
+    "VIAJANTE": {"voz": "es-es-concierge-4", "estilo": "dusty traveler telling a puzzling case, earnest and lively in Castilian Spanish from Spain"},
+    "PAJEM": {"voz": "es-es-training-9", "estilo": "polite young page, ceremonious and eager, bowing in Castilian Spanish from Spain"},
+    "SANCHICA": {"voz": "es-es-concierge-3", "estilo": "excited little girl, bouncing with joy, playful in Castilian Spanish from Spain"},
+    "PASTORA": {"voz": "es-es-techagent-5", "estilo": "cheerful young woman playing shepherdess, an excited fan of the book in Castilian Spanish from Spain"},
+    "VAQUEIROS": {"voz": "es-es-commercial-7", "estilo": "cowherds on horseback shouting a warning together, urgent in Castilian Spanish from Spain"},
+    "VIAJANTE1": {"voz": "es-es-training-11", "estilo": "inn guest about to read a book aloud, curious, then amazed in Castilian Spanish from Spain"},
+    "VIAJANTE2": {"voz": "es-es-concierge-12", "estilo": "inn guest grumbling about a bad book, disappointed in Castilian Spanish from Spain"},
+    "DOM_ANTONIO": {"voz": "es-es-podcaster-7", "estilo": "jovial, cheerful nobleman, warm host who loves a good joke in Castilian Spanish from Spain"},
+    "CABECA": {"voz": "es-es-concierge-12", "estilo": "hollow, mysterious voice speaking through a pipe, slow, holding back a laugh in Castilian Spanish from Spain"},
+    "IMPRESSOR": {"voz": "es-es-assistant-4", "estilo": "friendly printer proud of his craft, warm and a bit mischievous in Castilian Spanish from Spain"},
+    "BRANCA_LUA": {"voz": "es-es-csagent-3", "estilo": "knight in a closed helmet: muffled, deep, solemn and respectful in Castilian Spanish from Spain"},
+    "CRIANCAS": {"voz": "es-es-concierge-3", "estilo": "group of excited children begging for a story together in Castilian Spanish from Spain"},
     "PALAVRAS": {"estilo": "kind literacy teacher in Castilian Spanish from Spain: each syllable slowly and clearly separated with short pauses, then the whole word joyfully"}
   }
 }

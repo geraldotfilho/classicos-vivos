@@ -95,3 +95,30 @@ data,comando,pedidos_voz,tokens_audio,tokens_qa,usd_estimado
 2026-11-23T01:09,"--voz narracao --parte 8 --pagina-inteira --lote --autorizado",1,675,0,0.0031
 2026-11-23T01:12,"--voz narracao --parte 8 --pagina-inteira --lote --autorizado",1,1134,0,0.0052
 2026-11-23T01:15,"--voz narracao --parte 8 --pagina-inteira --lote --autorizado",1,151,0,0.0007
+2026-11-23T01:20,"--voz palavras --idioma es --parte 5,6 --agrupar 1 --lote --autorizado",2,282,0,0.0013
+2026-11-23T01:20,"--voz palavras --idioma fr --parte 5,6 --agrupar 1 --lote --autorizado",6,687,0,0.0031
+2026-11-23T01:24,"--voz palavras --idioma en --parte 7,8 --lote --autorizado",2,4002,0,0.0182
+2026-11-23T01:24,"--voz narracao --idioma en --parte 5 --pagina-inteira --lote --autorizado",67,38445,0,0.1754
+2026-11-23T01:24,"--voz narracao --idioma fr --parte 5 --pagina-inteira --lote --autorizado",67,38777,0,0.1774
+2026-11-23T01:24,"--voz narracao --idioma es --parte 5 --pagina-inteira --lote --autorizado",67,40326,0,0.1841
+2026-11-23T01:24,"--voz palavras --idioma fr --parte 7,8 --lote --autorizado",2,4231,0,0.0192
+2026-11-23T01:24,"--voz palavras --idioma es --parte 7,8 --lote --autorizado",2,5459,0,0.0248
+2026-11-23T01:52,"--voz palavras --idioma en --parte 7,8 --agrupar 1 --lote --autorizado",1,293,0,0.0013
+2026-11-23T01:52,"--voz palavras --idioma fr --parte 7,8 --agrupar 1 --lote --autorizado",6,726,0,0.0033
+2026-11-23T01:52,"--voz palavras --idioma es --parte 7,8 --agrupar 1 --lote --autorizado",4,703,0,0.0032
+2026-11-23T02:02,"--voz narracao --idioma en --parte 5 --pagina-inteira --lote --autorizado",3,929,0,0.0042
+2026-11-23T02:03,"--voz narracao --idioma es --parte 5 --pagina-inteira --lote --autorizado",2,849,0,0.0039
+2026-11-23T02:04,"--voz narracao --idioma fr --parte 5 --pagina-inteira --lote --autorizado",3,549,0,0.0025
+2026-11-23T02:08,"--voz narracao --idioma en --parte 5 --pagina-inteira --lote --autorizado",2,2261,0,0.0103
+2026-11-23T02:11,"--voz narracao --idioma en --parte 5 --pagina-inteira --lote --autorizado",1,314,0,0.0014
+2026-11-23T02:11,"--voz narracao --idioma es --parte 5 --pagina-inteira --lote --autorizado",2,481,0,0.0022
+2026-11-23T02:13,"--voz narracao --idioma en --parte 5 --pagina-inteira --lote --autorizado",1,610,0,0.0028
+2026-11-23T02:13,"--voz narracao --idioma fr --parte 5 --pagina-inteira --lote --autorizado",3,3774,0,0.0173
+2026-11-23T02:14,"--voz narracao --idioma es --parte 5 --pagina-inteira --lote --autorizado",1,1754,0,0.0080
+2026-11-23T02:17,"--voz narracao --idioma es --parte 5 --pagina-inteira --lote --autorizado",1,441,0,0.0020
+2026-11-23T02:17,"--voz narracao --idioma fr --parte 5 --pagina-inteira --lote --autorizado",1,463,0,0.0021
+2026-11-23T02:20,"--voz narracao --idioma fr --parte 5 --pagina-inteira --lote --autorizado",1,59,0,0.0003
+2026-11-23T02:21,"--voz narracao --idioma en --parte 6 --pagina-inteira --lote --autorizado",64,39517,0,0.1801
+2026-11-23T02:21,"--voz narracao --idioma fr --parte 6 --pagina-inteira --lote --autorizado",64,37921,0,0.1734
+2026-11-23T02:21,"--voz narracao --idioma en --parte 5 --pagina-inteira --lote --autorizado",2,3178,0,0.0145
+2026-11-23T02:21,"--voz narracao --idioma es --parte 6 --pagina-inteira --lote --autorizado",64,38646,0,0.1764

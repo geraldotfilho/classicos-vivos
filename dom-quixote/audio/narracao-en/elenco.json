@@ -1,7 +1,7 @@
 {
   "codigoVoz": "en-GB",
   "amostra": "Hello! I'm going to read this story with you. Turn the page whenever you like!",
-  "nomes": "Don Quixote, Sancho Panza, Alonso Quixano, Rocinante, Dulcinea, Aldonza Lorenzo, El Toboso, La Mancha, Miguel de Cervantes, Montiel, Campo de Criptana, Mambrino, Micomicona, Pandafilando, Alifanfarón, Trapobana, Pentapolín, Frestón, Master Nicolás, Dorothea, Teresa Panza, Sanchica, Eugenio, Spotty, Sierra Morena, Knight of the Sorrowful Face, Lope Ruiz, Amadís of Gaul, Sansón Carrasco, Tomé, Don Diego, Knight of the Mirrors, Knight of the Green Coat, Knight of the Lions, Africa, Doña Cristina, Camacho, Montesinos, Merlin, Master Peter, Melisendra, Don Gaiferos, Countess Trifaldi, Malambruno, Candaya, Clavileño",
+  "nomes": "Don Quixote, Sancho Panza, Alonso Quixano, Rocinante, Dulcinea, Aldonza Lorenzo, El Toboso, La Mancha, Miguel de Cervantes, Montiel, Campo de Criptana, Mambrino, Micomicona, Pandafilando, Alifanfarón, Trapobana, Pentapolín, Frestón, Master Nicolás, Dorothea, Teresa Panza, Sanchica, Eugenio, Spotty, Sierra Morena, Knight of the Sorrowful Face, Lope Ruiz, Amadís of Gaul, Sansón Carrasco, Tomé, Don Diego, Knight of the Mirrors, Knight of the Green Coat, Knight of the Lions, Africa, Doña Cristina, Camacho, Montesinos, Merlin, Master Peter, Melisendra, Don Gaiferos, Countess Trifaldi, Malambruno, Candaya, Clavileño, Barataria, Pedro Recio of Takeaway, Knight of the White Moon, Don Antonio, Barcelona, Saragossa, Mari Gutiérrez, Quixotiz, Curiambro, Miculoso, Teresona, Sansonino, Panzino",
   "elenco": {
     "NARRADORA": {"voz": "en-gb-storyteller-2", "estilo": "warm, gentle storyteller reading aloud to young children in British English; calm, clear pace; expressive but not theatrical"},
     "QUIXOTE": {"voz": "en-gb-storyteller-4", "estilo": "noble, solemn and dreamy elderly knight in British English, speaking with heartfelt conviction; never mocking"},
@@ -37,6 +37,24 @@
     "DUQUE": {"voz": "en-gb-assistant-10", "estilo": "kind duke who laughs easily, warm and playful, hiding a surprise in British English"},
     "ARAUTO": {"voz": "en-gb-training-10", "estilo": "big herald announcing a visitor, deep and ceremonious in British English"},
     "CONDESSA": {"voz": "en-gb-podcaster-2", "estilo": "grand countess in distress, deep solemn voice, dramatic and comically serious, never mocking in British English"},
+    "MORDOMO": {"voz": "en-gb-podcaster-11", "estilo": "tall butler with a deep, formal voice, dry and polite, secretly amused in British English"},
+    "LAVRADOR": {"voz": "en-gb-advisor-3", "estilo": "simple farmer complaining to the judge, indignant and a bit suspicious in British English"},
+    "ALFAIATE": {"voz": "en-gb-assistant-8", "estilo": "cheeky tailor, proud of his little trick, comic in British English"},
+    "DOUTOR": {"voz": "en-gb-podcaster-9", "estilo": "stiff, fussy doctor, serious and pompous, a bit comic in British English"},
+    "ALDEAO": {"voz": "en-gb-assistant-5", "estilo": "humble, honest old villager, trusting and a little confused in British English"},
+    "VELHO_BENGALA": {"voz": "en-gb-training-11", "estilo": "sly old man, overly calm and sweet, hiding a trick in British English"},
+    "VIAJANTE": {"voz": "en-gb-training-8", "estilo": "dusty traveler telling a puzzling case, earnest and lively in British English"},
+    "PAJEM": {"voz": "en-gb-csagent-13", "estilo": "polite young page, ceremonious and eager, bowing in British English"},
+    "SANCHICA": {"voz": "en-gb-csagent-8", "estilo": "excited little girl, bouncing with joy, playful in British English"},
+    "PASTORA": {"voz": "en-gb-csagent-6", "estilo": "cheerful young woman playing shepherdess, an excited fan of the book in British English"},
+    "VAQUEIROS": {"voz": "en-gb-csagent-10", "estilo": "cowherds on horseback shouting a warning together, urgent in British English"},
+    "VIAJANTE1": {"voz": "en-gb-tutor-14", "estilo": "inn guest about to read a book aloud, curious, then amazed in British English"},
+    "VIAJANTE2": {"voz": "en-gb-storyteller-1", "estilo": "inn guest grumbling about a bad book, disappointed in British English"},
+    "DOM_ANTONIO": {"voz": "en-gb-concierge-12", "estilo": "jovial, cheerful nobleman, warm host who loves a good joke in British English"},
+    "CABECA": {"voz": "en-gb-assistant-2", "estilo": "hollow, mysterious voice speaking through a pipe, slow, holding back a laugh in British English"},
+    "IMPRESSOR": {"voz": "en-gb-csagent-14", "estilo": "friendly printer proud of his craft, warm and a bit mischievous in British English"},
+    "BRANCA_LUA": {"voz": "en-gb-assistant-10", "estilo": "knight in a closed helmet: muffled, deep, solemn and respectful in British English"},
+    "CRIANCAS": {"voz": "en-gb-csagent-8", "estilo": "group of excited children begging for a story together in British English"},
     "PALAVRAS": {"estilo": "British English literacy teacher: each syllable slowly and clearly separated with short pauses, then the whole word joyfully"}
   }
 }

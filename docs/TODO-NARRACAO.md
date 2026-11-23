@@ -210,8 +210,10 @@ O áudio gerado custa por token: **25 tokens por segundo de fala**. O texto envi
   3. junta num lote novo o que falta, inclusive os reparos de frases com defeito;
   4. espera o lote, que leva alguns minutos, e sai com o código 76.
 
-  O `.sh` repete o comando até não sobrar pedido, no máximo 6 rodadas. Se o processo cair, o lote em andamento fica em `.cache-narracao/lote/pendente.json` e é retomado na rodada seguinte.
+  O `.sh` repete o comando até não sobrar pedido, no máximo 6 rodadas. Se o processo cair, o lote em andamento fica em `.cache-narracao/lote/pendente-<hash do comando>.json` (um por comando: dá para rodar um idioma em cada processo ao mesmo tempo) e é retomado na rodada seguinte.
 - **Diferença do modo direto**: uma 2ª tentativa idêntica de um bloco ilegível devolve o mesmo áudio (a chave é o próprio pedido); os reparos cirúrgicos funcionam normalmente, porque são pedidos diferentes.
+- **Quando o reparo é o próprio bloco** (2026-11-23, Parte 5 em inglês, `p6`): o bloco `p5-s26…p6-s9` voltou só com a 1ª frase (a voz parou), e o reparo das 10 frases faltantes, com a frase anterior de contexto, era o mesmo pedido do bloco inteiro: o lote devolveu o mesmo áudio e a página foi salva sem as 10 frases. Agora o script **não salva uma página com mais de 25 letras sem áudio** (marca com menos de 0,15 s) e avisa. Para pedir de novo: ache o bloco em `.cache-narracao/<chave>.json` (as `marcas` com `ini` = `fim`), apague o `.json` e o `.pcm` dele e o WAV do lote que deu origem (`.cache-narracao/lote/<chave>.wav`, o de mesma duração; confira com o Whisper), tire a página do `paginas.json` e rode o lote de novo. Interjeições curtas coladas na frase vizinha ("¡A... a..." antes de "¡ACHÍS!") não contam.
+- **Vários comandos ao mesmo tempo** (um idioma por processo): cada comando tem o seu `pendente-<hash>.json`, e o `gastos.csv` recebe a linha por acréscimo; rodar 6 processos com o Whisper deixa a CPU de 4 núcleos em ~20 de carga (~3 min por página), mas termina.
 
 ### 8.6 Controle de qualidade
 - **Sempre local** (regra 11): o Whisper transcreve e o script compara palavra por palavra (sem acento, pontuação nem caixa; nomes quase iguais, palavras juntas ou separadas e números em algarismos contam como certos).
