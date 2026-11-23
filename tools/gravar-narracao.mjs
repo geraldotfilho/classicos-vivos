@@ -128,7 +128,8 @@ let ELENCO = {
     COZINHEIRO: { voz: 'pt-br-csagent-9', estilo: 'jolly wedding cook, generous and laughing' },
     MENINO: { voz: 'pt-br-training-6', estilo: 'young boy narrating a puppet show with a stick, eager and theatrical' },
     // Parte 7 (2026-11-21). O aldeão e o velhinho da bengala reaproveitam as vozes do CREDOR e do DEVEDOR
-    MORDOMO: { voz: 'pt-br-storyteller-10', estilo: 'tall butler with a deep, formal voice, dry and polite, secretly amused' },
+    // Mesma voz da CONDESSA (Parte 6): é o mordomo disfarçado, e o texto diz que as vozes são "igualzinhas" (decisão do humano, 2026-11-23)
+    MORDOMO: { voz: 'pt-br-training-8', estilo: 'tall butler with a deep, formal voice, dry and polite, secretly amused' },
     LAVRADOR: { voz: 'pt-br-assistant-3', estilo: 'simple farmer complaining to the judge, indignant and a bit suspicious' },
     ALFAIATE: { voz: 'pt-br-csagent-7', estilo: 'cheeky tailor, proud of his little trick, comic' },
     DOUTOR: { voz: 'pt-br-advisor-9', estilo: 'stiff, fussy doctor, serious and pompous, a bit comic' },

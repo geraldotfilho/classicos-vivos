@@ -126,3 +126,4 @@ data,comando,pedidos_voz,tokens_audio,tokens_qa,usd_estimado
 2026-11-23T09:39,"--voz narracao --idioma fr --parte 6 --pagina-inteira --lote --autorizado",5,3148,0,0.0144
 2026-11-23T09:40,"--voz narracao --idioma es --parte 6 --pagina-inteira --lote --autorizado",3,1582,0,0.0072
 2026-11-23T09:46,"--voz falas --parte 1,2,3,4,5,6,7,8 --lote --autorizado",7,10947,0,0.0500
+2026-11-23T09:58,"--voz narracao --parte 7 --paginas 2,3,7,8 --pagina-inteira --forcar --lote --autorizado",26,15530,0,0.0710
