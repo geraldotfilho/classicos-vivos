@@ -33,6 +33,8 @@
 
 ## 2. Próximas sessões (escolha do humano)
 
+> **2026-11-23 — Parte 8 de Dom Quixote traduzida para inglês, espanhol e francês: a obra inteira está nos quatro idiomas** (`traducoes/parte-8.{en,es,fr}.js`, 0 erro e 0 aviso, frases iguais às do português, testada no Chrome com as 3 atividades até o fim). Letras BOOK / LIBRO / LIVRE; nome de pastor PANZINO / PANCINO / PANCINO; ONCE UPON A TIME / ÉRASE UNA VEZ UN HIDALGO / IL ÉTAIT UNE FOIS. Narração nesses idiomas: na fila da API, depois das Partes 5 a 7. Escolhas a confirmar: §9 do caderno da Parte 8.
+
 > **2026-11-23 — Parte 7 de Dom Quixote traduzida para inglês, espanhol e francês** (`traducoes/parte-7.{en,es,fr}.js`, 0 erro e 0 aviso, frases iguais às do português, testada no Chrome com as 4 atividades até o fim). **Narração nesses idiomas ainda não começou** (sem API nesta sessão): derivar os roteiros (`node tools/derivar-roteiro.mjs --idioma <en|es|fr> --parte 7`), escolher o elenco novo (mordomo, lavrador, alfaiate, doutor, aldeão, velhinho, viajante, pajem) e gravar palavras (en 26, es 26, fr 25 novas) e páginas. Para o humano conferir: *Takeaway* / *Tirteafuera* / *Débarrasse* para o doutor. Detalhes: §11 do caderno da Parte 7.
 
 > **2026-11-22 — Parte 6 de Dom Quixote traduzida para inglês, espanhol e francês** (`traducoes/parte-6.{en,es,fr}.js`, 0 erro e 0 aviso, testada no Chrome). Narração nesses idiomas **pela metade**: elenco e roteiros prontos e palavras-chave gravadas (faltam OLLA no espanhol e PALAIS no francês); as páginas pararam no limite diário de pedidos. **Retomar depois das 07:00 UTC** com `AUTORIZADO=1 bash tools/gravar-fila-traducoes.sh 6 "en es fr"` (~190 pedidos, uns 2 dias), conferir e pôr `6` em `partes` de cada voz no `vozes.js`. Detalhes: §11 do caderno da Parte 6.

@@ -10,7 +10,9 @@ Plano: [`../PLANO-DOM-QUIXOTE-VOLUME-2.md`](../PLANO-DOM-QUIXOTE-VOLUME-2.md) ·
 | 3 Revisão humana 🛑 | ⏭️ publicada a pedido do humano para leitura e notas diretas pelo app | | — |
 | 4 Arte (15 WebPs novos em 2 lotes Batch + 2 reaproveitados da P4 v1) | ✅ | 2026-11-18 | US$ 0,5208 |
 | 5 Revisão final 🛑 | ⏭️ pendente para leitura em família | | — |
-| 6 a 8 | ⬜ | | |
+| 6 Narração pt | 🟡 págs. 0–6 em prévia (§8) | 2026-11-22 | ~US$ 0,15 |
+| 7 Idiomas (en, es, fr): traduções | ✅ (§9) | 2026-11-23 | — |
+| 7 Idiomas: narração · 8 | ⬜ | | |
 
 ## 0. Onde a Parte 7 termina
 Na estrada, livres do palácio, a caminho de Barcelona para ver o mar; lá atrás, um cavaleiro sozinho com uma lua branca no escudo. Na aldeia, Sansão já sabe para onde vai o senhor Alonso e pediu um escudo velho e tinta branca.
@@ -96,3 +98,17 @@ Relatório: [`../revisao/FIDELIDADE-VOLUME-2.md`](../revisao/FIDELIDADE-VOLUME-2
 - Roteiro em `dom-quixote/audio/narracao/parte-8/roteiro.json`; elenco novo no `ELENCO` (pastora, vaqueiros, dois viajantes, Dom Antônio, cabeça encantada, homem de avental, Cavaleiro da Branca Lua = voz de Sansão, crianças).
 - **Gasto até aqui**: 70 pedidos, ~US$ 0,152 (Flex).
 - 🛑 Escuta do humano: [`docs/narracao/qa-parte-8.md`](../narracao/qa-parte-8.md).
+
+## 9. Traduções (fase 7, 2026-11-22/23)
+- **Arquivos**: `dom-quixote/traducoes/parte-8.en.js`, `.es.js`, `.fr.js` (11 páginas, legendas, as 3 atividades e o fim). `npm run conferir:traducoes`: 0 erro, 0 aviso. Frases divididas exatamente como no português em todas as páginas (conferido frase a frase com o segmentador do livro), para o roteiro de narração sair sozinho. Entregue na `main` um idioma por vez. Testadas no Chrome (Playwright), em paisagem e retrato: as 11 páginas no idioma, a pág. 5 abrindo na Imaginação, as 3 atividades até o fim (toque fora de ordem não conta, a pegadinha recomeça), a Imaginação liberada depois, e a mensagem do fim; console só com o 404 do `favicon.ico` do servidor local.
+- **Nomes**: Knight of the White Moon / Caballero de la Blanca Luna / Chevalier de la Blanche Lune; Don Antonio; Saragossa / Zaragoza / Saragosse; Sansón Carrasco nos três; Mari Gutiérrez igual (é o erro do livro falso, II-59); basin-helmet / bacielmo / bacielmo; a bengala da Parte 7 = *the cane* / *el bastón* / *le bâton* (como nas traduções da Parte 7); vovô Alonso = Grandpa Alonso / abuelo Alonso / papi Alonso; "o Bom" = ‘the Good’ / «el Bueno» / “le Bon”. Pastores de II-67: Quixotiz / Quijotiz / **Quichottiz** (Viardot), Curiambro, Miculoso, Teresona e Sansonino nos três.
+- **Atividades adaptadas** (só acerta quem lê; os ids não acionam camada nem figura nesta parte, mas o `pancino` do pedido ficou o do português):
+  | Pág. | Inglês | Espanhol | Francês |
+  | :--- | :--- | :--- | :--- |
+  | 6 (letras de chumbo) | B · O · O · K (4 cartões; os dois O valem em qualquer ordem) | L · I · B · R · O | L · I · V · R · E |
+  | 8 (nome de pastor) | **PANZINO** (de Panza, como em Ormsby) × PANINI, PANCAKE | PANCINO × PEPINO, PANCETA | PANCINO × PANINI, CAPPUCCINO |
+  | 10 (o começo) | ONCE · UPON · A · TIME (4) | ÉRASE · UNA · VEZ · UN · HIDALGO (5) | IL · ÉTAIT · UNE · FOIS (4) |
+- **A piscadela da gráfica**: "Who says they haven’t already?" / "Eso si no lo han hecho ya, ¿eh?" / "Si ce n’est pas déjà fait, hein ?". **Trato é trato**: "a deal is a deal" / "lo prometido es deuda" / "un marché est un marché".
+- **Palavras-chave**: as já gravadas nas Partes 1–7 mantiveram a mesma divisão (en MOON, BOOK, DUST, SHIELD, SE • CRET, BOOKS; es LU • NA, LI • BRO, POL • VO, ES • CU • DO, SE • CRE • TO, LI • BROS; fr LUNE, LI • VRE, POUS • SIÈRE, BOU • CLIER, SE • CRET, LIVRES). Escolhas novas a ouvir na narração: en CHUMBO virou **METAL** (*lead* seria lido "lid"), MENTIROSO virou **LIES**, JUÍZO = SENSE, DESCONFIO = DOUBT; es BOIADA = **MANADA** (de toros), CANO = TUBO; fr BOIADA = TROUPEAU, JUÍZO = JU • GEO • TE, FAMA = GLOI • RE, DESCONFIO = MÉ • FIE (seguindo o estilo de sílabas da Parte 6).
+- **Para o humano / leitor nativo conferir**: PANZINO em inglês (Grossman escreve *Pancino*; preferi Ormsby para a dica "nasceu do sobrenome" funcionar com *Panza*); "Quichottiz" no francês; *papi Alonso* (mais carinhoso que *grand-père*).
+- **Narração en/es/fr**: não gravada (fila da API; depois das Partes 5 a 7). Os `frases-dom-quixote-parte-8-<idioma>.json` já estão exportados.

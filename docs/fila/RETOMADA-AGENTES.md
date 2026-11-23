@@ -11,7 +11,7 @@ Plano para reiniciar a fila de agentes. Os subagentes pararam por limite de uso:
 | Tradução Parte 5 (en/es/fr) | ✅ no ar | narração: palavras que faltam (es `leones`; fr `lion`, `balai`, `secret`, `nez`, `coucha`) e as páginas (~67 pedidos por idioma); depois `5` em `partes` de cada idioma (**cota do Gemini**) |
 | Tradução Parte 6 (en/es/fr) | ✅ no ar | narração: `AUTORIZADO=1 bash tools/gravar-fila-traducoes.sh 6 "en es fr"` (~190 pedidos, uns 2 dias de cota), conferir, `6` em `partes` (**cota do Gemini**) |
 | Tradução Parte 7 (en/es/fr) | ✅ no ar (2026-11-23; §11 do caderno da Parte 7) | narração: roteiros (`tools/derivar-roteiro.mjs --parte 7`), elenco novo, palavras (en 26, es 26, fr 25) e páginas; depois `7` em `partes` de cada idioma (**cota do Gemini**) |
-| Tradução Parte 8 (en/es/fr) | rascunho do inglês salvo em `docs/fila/wip-traducoes/parte-8.en.js.rascunho` (fora do livro) | idem (sem API) |
+| Tradução Parte 8 (en/es/fr) | ✅ no ar (2026-11-23; §9 do caderno da Parte 8) | narração: roteiros (`tools/derivar-roteiro.mjs --parte 8`), elenco novo, palavras e páginas; depois `8` em `partes` de cada idioma (**cota do Gemini**) |
 | Narração en/es/fr das Partes 7 e 8 | não começou | depois das traduções e das Partes 5 e 6 (**cota do Gemini**) |
 
 ## Ordem de retomada
