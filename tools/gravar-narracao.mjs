@@ -28,6 +28,10 @@
 //   ... --chave-reserva                                                   # usa logo GEMINI_API_KEY_ANTIGRAVITY (sem ela, a reserva só entra quando a cota diária da principal acaba)
 //   (cota diária esgotada: encerra com código 75; rode o mesmo comando depois das 07:00 UTC)
 //   ... --autorizado                                                      # obrigatório para chamar a API (ver a regra acima)
+//   ... --lote                                                            # modo LOTE (Batch API, preço do Flex, FORA do limite de 100 pedidos/dia):
+//       cada rodada junta os pedidos que faltam num lote só, espera o resultado (minutos) e sai com código 76;
+//       rode o mesmo comando de novo para montar as páginas e pedir o que faltar (reparos). Use tools/gravar-lote.sh,
+//       que repete sozinho até terminar. Testado em 2026-11-23 (docs/TODO-NARRACAO.md §8.7).
 //   ... --standard                                                        # nível Standard (o padrão é o Flex: metade do preço, resposta em minutos)
 //   npm run gravar:narracao -- --criar-voz SANCHICA --descricao "..." --autorizado   # cria uma voz por descrição (voice design)
 //   npm run gravar:narracao -- --voz narracao --idioma en --parte 1 --pagina-inteira --autorizado
@@ -137,7 +141,7 @@ function opcoes(argv) {
     const o = { livro: 'dom-quixote' };
     for (let i = 0; i < argv.length; i++) {
         const a = argv[i].replace(/^--/, '');
-        if (['seco', 'forcar', 'amostra', 'sem-qa', 'pagina-inteira', 'autorizado', 'standard', 'so-cache', 'remontar', 'sem-reparo', 'chave-reserva'].includes(a)) o[a] = true;
+        if (['seco', 'forcar', 'amostra', 'sem-qa', 'pagina-inteira', 'autorizado', 'standard', 'so-cache', 'remontar', 'sem-reparo', 'chave-reserva', 'lote'].includes(a)) o[a] = true;
         else o[a] = argv[++i];
     }
     return o;
@@ -253,6 +257,7 @@ async function sintetizarDialogo(falas) {
 
 async function pedirAudio(corpo) {
     if (!o.autorizado) throw new Error('sem --autorizado: a API paga só pode ser chamada com autorização do humano no prompt inicial da sessão');
+    if (o.lote) return pedirAudioLote(corpo);
     let j, standard = !flex;
     try {
         j = await postar(`${API}/interactions`, flex ? { ...corpo, service_tier: 'flex' } : corpo);
@@ -271,6 +276,109 @@ async function pedirAudio(corpo) {
     if (!audio) throw new Error('resposta sem áudio');
     const buf = Buffer.from(audio.data, 'base64');
     return buf.toString('ascii', 0, 4) === 'RIFF' ? buf : comCabecalhoWav(buf);
+}
+
+/* ===== Modo lote (--lote): Batch API (batchGenerateContent), metade do preço e fora do limite diário de pedidos =====
+   O pedido da API `interactions` vira um pedido `generateContent`: cada trecho com `speechMetadata` { speaker, style }
+   e as vozes em `speechConfig` (formato conferido em 2026-11-23). Cada rodada: o que já voltou de um lote é lido de
+   .cache-narracao/lote/<chave>.wav; o que falta é juntado e, no fim, vai num lote só. */
+const LOTE_DIR = join(RAIZ, '.cache-narracao', 'lote');
+const loteColetados = new Map();
+const MAX_POR_LOTE = 200;
+function paraGenerateContent(corpo) {
+    const parts = corpo.input[0].content.map(c => {
+        const m = (c.annotations || []).find(a => a.type === 'speech_metadata') || {};
+        const sm = {};
+        if (m.speaker) sm.speaker = m.speaker;
+        if (m.style) sm.style = m.style;
+        return { text: c.text, ...(Object.keys(sm).length ? { speechMetadata: sm } : {}) };
+    });
+    const sc = corpo.generation_config.speech_config;
+    const voz = (v) => ({ prebuiltVoiceConfig: { voiceName: v } });
+    const speechConfig = Array.isArray(sc)
+        ? { voiceConfig: voz(sc[0].voice) }
+        : { multiSpeakerVoiceConfig: { speakerVoiceConfigs: sc.speakers.map(x => ({ speaker: x.speaker, voiceConfig: voz(x.voice) })) } };
+    return { contents: [{ role: 'user', parts }], generationConfig: { responseModalities: ['AUDIO'], speechConfig } };
+}
+async function pedirAudioLote(corpo) {
+    const req = paraGenerateContent(corpo);
+    const chave = createHash('sha1').update(JSON.stringify([corpo.model, req])).digest('hex').slice(0, 20);
+    const wav = join(LOTE_DIR, `${chave}.wav`);
+    if (existsSync(wav)) return readFileSync(wav);
+    const erro = join(LOTE_DIR, `${chave}.erro`);
+    if (existsSync(erro) && readFileSync(erro, 'utf8').split('\n').filter(Boolean).length >= 2) throw new Error(`lote: pedido recusado duas vezes (${readFileSync(erro, 'utf8').split('\n')[0].slice(0, 120)})`);
+    loteColetados.set(chave, req);
+    throw new Error('adiado para o lote');
+}
+async function obter(url) {
+    for (let t = 0; ; t++) {
+        try {
+            const r = await fetch(url, { headers: cabecalhos() });
+            const j = await r.json().catch(() => ({}));
+            if (r.ok) return j;
+            if (t >= 5 || (r.status < 500 && r.status !== 429)) throw new Error(`HTTP ${r.status}: ${j.error?.message || ''}`);
+        } catch (e) { if (t >= 5) throw e; }
+        await espera(5000 * 2 ** t);
+    }
+}
+async function esperarLote(nome) {
+    const inicio = Date.now();
+    let lote;
+    for (;;) {
+        lote = await obter(`${API}/${nome}`);
+        const st = lote.metadata?.state || lote.state || '';
+        if (lote.done || /SUCCEEDED|FAILED|CANCELLED|EXPIRED/.test(st)) break;
+        console.log(`  … ${nome}: ${st || 'aguardando'} (${Math.round((Date.now() - inicio) / 1000)} s)`);
+        await espera(30000);
+    }
+    const achar = (x) => { if (!x || typeof x !== 'object') return null; if (Array.isArray(x.inlinedResponses)) return x.inlinedResponses; for (const v of Object.values(x)) { const r = achar(v); if (r) return r; } return null; };
+    const respostas = achar(lote) || [];
+    let ok = 0, falhas = 0;
+    for (const r of respostas) {
+        const chave = r.metadata?.key;
+        if (!chave) continue;
+        const dados = (r.response?.candidates?.[0]?.content?.parts || []).map(p => p.inlineData).find(Boolean);
+        if (r.error || !dados) {
+            falhas++;
+            writeFileSync(join(LOTE_DIR, `${chave}.erro`), `${r.error?.message || 'resposta sem áudio'}\n`, { flag: 'a' });
+            continue;
+        }
+        const buf = Buffer.from(dados.data, 'base64');
+        writeFileSync(join(LOTE_DIR, `${chave}.wav`), buf.toString('ascii', 0, 4) === 'RIFF' ? buf : comCabecalhoWav(buf));
+        const u = r.response.usageMetadata || {};
+        gasto.pedidos++;
+        gasto.tts += u.candidatesTokenCount || 0;
+        gasto.ttsEntrada += u.promptTokenCount || 0;
+        ok++;
+    }
+    console.log(`📦 ${nome}: ${lote.metadata?.state || lote.state} — ${ok} áudio(s) recebido(s), ${falhas} recusado(s)`);
+    if (!respostas.length) console.log(JSON.stringify(lote).slice(0, 1500));
+}
+async function retomarLotePendente() {
+    const arq = join(LOTE_DIR, 'pendente.json');
+    if (!existsSync(arq)) return;
+    const { nomes = [] } = JSON.parse(readFileSync(arq, 'utf8'));
+    for (const nome of nomes) { console.log(`📦 retomando o lote ${nome}`); await esperarLote(nome); }
+    unlinkSync(arq);
+}
+async function executarLote() {
+    mkdirSync(LOTE_DIR, { recursive: true });
+    const itens = [...loteColetados];
+    const nomes = [];
+    for (let k = 0; k < itens.length; k += MAX_POR_LOTE) {
+        const parte = itens.slice(k, k + MAX_POR_LOTE);
+        const lote = await postar(`${API}/models/${MODELO_TTS}:batchGenerateContent`, {
+            batch: {
+                display_name: `classicos-vivos narracao ${process.argv.slice(2).filter(a => a !== '--autorizado').join(' ')}`.slice(0, 120),
+                input_config: { requests: { requests: parte.map(([chave, req]) => ({ request: req, metadata: { key: chave } })) } }
+            }
+        });
+        nomes.push(lote.name);
+        console.log(`📦 lote enviado: ${lote.name} (${parte.length} pedido(s) de voz)`);
+    }
+    writeFileSync(join(LOTE_DIR, 'pendente.json'), JSON.stringify({ nomes, data: new Date().toISOString() }));
+    for (const nome of nomes) await esperarLote(nome);
+    unlinkSync(join(LOTE_DIR, 'pendente.json'));
 }
 
 function comCabecalhoWav(pcm) {
@@ -1125,7 +1233,21 @@ function registrarGasto() {
     writeFileSync(arq, readFileSync(arq, 'utf8') + linha + '\n');
 }
 
-main().catch(e => { console.error(e.message); process.exitCode = 1; if (/cota esgotada/.test(e.message)) cotaEsgotada = true; }).finally(() => {
+(async () => {
+    if (o.lote && o.autorizado && !o.seco) await retomarLotePendente();
+    await main();
+})().catch(e => { console.error(e.message); process.exitCode = 1; if (/cota esgotada/.test(e.message)) cotaEsgotada = true; }).then(async () => {
+    if (!o.lote || !loteColetados.size) return;
+    console.log(`\n📦 ${loteColetados.size} pedido(s) de voz juntados para o lote`);
+    try {
+        await executarLote();
+        console.log('\n🔁 LOTE_CONCLUIDO: rode o mesmo comando de novo para montar as páginas (e pedir os reparos, se houver).');
+        process.exitCode = 76;
+    } catch (e) {
+        console.error(`lote: ${e.message}`);
+        process.exitCode = 1;
+    }
+}).finally(() => {
     whisper?.fechar();
     registrarGasto();
     if (cotaEsgotada) {

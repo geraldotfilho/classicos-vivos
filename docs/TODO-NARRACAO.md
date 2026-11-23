@@ -201,6 +201,18 @@ O áudio gerado custa por token: **25 tokens por segundo de fala**. O texto envi
 - **No livro**: se a página está em `paginas.json`, "Ouvir Página" toca o MP3 inteiro e destaca a frase pelo `currentTime` (funciona no 🐢, que só muda o `playbackRate`). Página sem gravação inteira: frase por frase, como antes.
 - **Falas de personagem**: a página inteira com a narradora + 1 personagem cabe num pedido só no modo `conversational` (2 falantes). Com 2 ou mais personagens na página, divide-se a página em blocos. Decidir com o humano quando o elenco estiver escolhido.
 
+### 8.7 Modo lote (`--lote`, Batch API) — testado em 2026-11-23
+- **Por que existe**: a API aceita só 2 vozes por pedido, e o teatro de vozes corta a página a cada troca de personagem. Uma parte traduzida dava ~65 pedidos de ~300 letras, e o limite de **100 pedidos por dia** fazia a fila das traduções levar ~10 dias. O modo lote (`batchGenerateContent`) custa o mesmo que o Flex (metade do Standard) e **não conta no limite diário**: o teste foi aceito com a cota do dia já esgotada.
+- **Formato** (o `generateContent` do `gemini-3.8-flash-tts`; conferido em 2026-11-23): cada trecho do texto é uma `part` com `speechMetadata: { speaker, style }`, e as vozes vão em `generationConfig.speechConfig.multiSpeakerVoiceConfig.speakerVoiceConfigs[{ speaker, voiceConfig: { prebuiltVoiceConfig: { voiceName } } }]`; com uma voz, `speechConfig.voiceConfig` e `speechMetadata: { style }`. Escrever "NARRADORA: ..." no texto, sem `speechMetadata`, dá 400 ("must specify speech_metadata.speaker for each text part"). `systemInstruction` não é aceito. A resposta traz um WAV com cabeçalho (RIFF).
+- **Como usar**: `AUTORIZADO=1 bash tools/gravar-lote.sh <os mesmos argumentos de sempre>`, por exemplo `--voz narracao --idioma en --parte 6 --pagina-inteira` ou `--voz palavras --idioma fr --parte 5,6`. Cada rodada faz quatro coisas:
+  1. lê o que já voltou dos lotes, em `.cache-narracao/lote/<chave>.wav`;
+  2. monta as páginas, com a conferência pelo Whisper e as marcas de tempo;
+  3. junta num lote novo o que falta, inclusive os reparos de frases com defeito;
+  4. espera o lote, que leva alguns minutos, e sai com o código 76.
+
+  O `.sh` repete o comando até não sobrar pedido, no máximo 6 rodadas. Se o processo cair, o lote em andamento fica em `.cache-narracao/lote/pendente.json` e é retomado na rodada seguinte.
+- **Diferença do modo direto**: uma 2ª tentativa idêntica de um bloco ilegível devolve o mesmo áudio (a chave é o próprio pedido); os reparos cirúrgicos funcionam normalmente, porque são pedidos diferentes.
+
 ### 8.6 Controle de qualidade
 - **Sempre local** (regra 11): o Whisper transcreve e o script compara palavra por palavra (sem acento, pontuação nem caixa; nomes quase iguais, palavras juntas ou separadas e números em algarismos contam como certos).
 - **Falso alarme conhecido**: o modelo de transcrição tende a "corrigir" nomes famosos (ex.: "Quijano" para "Quixano"). Na dúvida, só o ouvido do humano decide.
