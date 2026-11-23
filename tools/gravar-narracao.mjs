@@ -1185,6 +1185,34 @@ async function gravarPalavrasAgrupadas(itens, pasta, indiceArq, ids) {
    marca onde cada item começa (alinharFrases) e confere o texto; frases com defeito vão para o reparo cirúrgico. Cada item
    vira um MP3 (pecaDaPagina, sem o silêncio das pontas) e entra no indice.json com o hash e o texto que o motor procura.
    Item sem áudio (a voz pulou) não é salvo: rode o mesmo comando de novo e ele vai num grupo novo. */
+/* Cartões, sílabas e letras (itens de uma ou duas palavras): o Whisper não alinha bem uma lista de palavras soltas
+   (visto em 2026-11-23: pulou 18 de 25 e o corte "engoliu" o meio da lista). O corte vai pelas K-1 pausas mais longas
+   (entre os itens há a pausa do parágrafo, maior que qualquer pausa dentro de uma palavra), e cada pedaço é conferido
+   sozinho pelo Whisper: cartão só é salvo se a palavra bater; sílaba e letra, se o pedaço for curto e de no máximo 2
+   palavras (o Whisper escreve sílaba e nome de letra de mil jeitos; fica para a escuta). */
+async function cortarCurtas(grupo, amostras) {
+    let vozIni = 0, vozFim = amostras.length - 1;
+    while (vozIni < vozFim && Math.abs(amostras[vozIni]) < 500) vozIni++;
+    while (vozFim > vozIni && Math.abs(amostras[vozFim]) < 500) vozFim--;
+    const K = grupo.length - 1;
+    const gaps = pausas(amostras, vozIni, vozFim).sort((a, b) => b.s - a.s);
+    if (gaps.length < K) return { marcas: [], avisos: [`grupo ${grupo[0].id}…: ${gaps.length} pausas para ${K} cortes; nada salvo`] };
+    const cortes = [0, ...gaps.slice(0, K).sort((a, b) => a.meio - b.meio).map(g => Math.round(g.meio)), amostras.length];
+    const marcas = [], avisos = [];
+    for (let k = 0; k < grupo.length; k++) {
+        const f = grupo[k];
+        const ouvido = o['sem-qa'] ? f.fala : await transcrever(wavDe(amostras.subarray(cortes[k], cortes[k + 1])));
+        const n = normalizar(ouvido).split(' ').filter(Boolean).length;
+        const segundos = (cortes[k + 1] - cortes[k]) / TAXA;
+        const bate = diferenca(f.fala, ouvido) === 0 || diferenca(f.texto, ouvido) === 0;
+        if (bate || (f.tipo !== 'cartao' && n >= 1 && n <= 2 && segundos < 2.5)) {
+            marcas.push({ id: f.id, ini: cortes[k] / TAXA, fim: cortes[k + 1] / TAXA });
+            if (!bate) avisos.push(`${f.id}: salva; o Whisper ouviu "${ouvido}" (esperado "${f.fala}")`);
+        } else avisos.push(`${f.id}: o pedaço não bate ("${ouvido}", esperado "${f.fala}"); não foi salva`);
+    }
+    return { marcas, avisos };
+}
+
 async function gravarFalas(itens, pasta, indiceArq, ids) {
     const indice = lerJson(indiceArq, { frases: {}, textos: {} });
     const salvo = (i) => indice.frases[i.id] === i.hash && (indice.textos || {})[i.chave] === i.id && existsSync(join(pasta, `${i.id}.mp3`));
@@ -1206,8 +1234,10 @@ async function gravarFalas(itens, pasta, indiceArq, ids) {
     await emParalelo(grupos, PARALELO, async (g) => {
         const rotulo = `grupo ${g.tipo} ${g.frases[0].id}…`;
         try {
-            const r = await gravarBloco(g, {}, rotulo);
+            const curtas = ['cartao', 'silaba', 'letra'].includes(g.tipo);
+            const r = await gravarBloco(curtas ? { ...g, palavras: true } : g, {}, rotulo);
             if (r.erros >= 999) { falhas.push(`${rotulo}: ${r.motivo}`); return; }
+            if (curtas) Object.assign(r, await cortarCurtas(g.frases, r.amostras));
             for (const f of g.frases) {
                 const m = r.marcas.find(x => x.id === f.id);
                 if (!m || m.fim - m.ini < 0.15) { falhas.push(`${f.id}: sem áudio no grupo; não foi salva (rode de novo)`); continue; }
