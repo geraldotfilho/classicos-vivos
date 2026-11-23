@@ -1,6 +1,6 @@
 # Narração da Parte 8 (2026-11-22): pontos para escuta do humano
 
-> ⏸ **Em andamento.** Páginas 0 a 6 gravadas (caps. 62–67) e liberadas como **prévia** (`previa: [8]` no `vozes.js`); as páginas 7 a 10 (caps. 68–71) pararam no limite de 100 pedidos por dia (a chave reserva recebeu o mesmo 429, como previsto em `TODO-NARRACAO.md`, decisão 20). Faltam ~27 pedidos (~US$ 0,06). Para retomar depois das 07:00 UTC, com autorização: `npm run gravar:narracao -- --voz narracao --parte 8 --pagina-inteira --autorizado` (as páginas prontas não se repetem). Depois: `node tools/conferir-narracao.mjs --partes 8 --idiomas pt`, trocar `previa: [8]` por `8` em `partes` e completar este arquivo.
+> ✅ **Completa** (2026-11-23). Páginas 0 a 6 gravadas em 2026-11-22; páginas 7 a 10 (caps. 68–71) gravadas em 2026-11-23 pelo **modo lote** (`tools/gravar-lote.sh`, 32 pedidos em 5 rodadas, ~US$ 0,08), fora do limite diário. 11/11 páginas, 29/29 palavras, sem rajadas; ativada em `partes` no `vozes.js`.
 
 Gravada pela API (Flex), página inteira: 61 pedidos (inclui 1 reparo cirúrgico), 29.560 tokens de áudio, ~US$ 0,1349. Palavras-chave novas da parte (21; as outras 8 já existiam): 1 pedido em grupo + 8 avulsos, 3.711 tokens, ~US$ 0,0169. **Total da Parte 8 até aqui: ~US$ 0,152** (70 pedidos). Conferência local (Whisper `large-v3-turbo`): 7/11 páginas e 29/29 palavras; sem rajadas de ruído nas 7 páginas gravadas.
 
@@ -16,3 +16,11 @@ Ouvir (avisos do Whisper):
 - `p2-s9` ("...barulho de trovão: TUM-TUM-TUM-TUM!"): reparo cirúrgico; o Whisper não escreve a onomatopeia: conferir a emenda e se o "tum-tum" foi dito.
 - `p5-s17` ("Tem um pouco de tudo"): o Whisper ouviu "tenho um pouco de tudo" na voz da cabeça.
 - Nomes a conferir de ouvido: **Mari Gutiérrez** (`p3-s11`, `p3-s12`), **Dom Antônio** (`p4-s25`, cap. 66), **Cervantes** (`p6-s17`; palavra-chave `miguel-de-cervantes`), Saragoça e Barcelona (cap. 64). Quixotiz, Sansonino e o pastor Curiambro/Miculoso estão nas páginas que faltam.
+
+
+## Páginas 7 a 10 (modo lote, 2026-11-23): pontos para escuta
+- `p8-s9` (Sansão: "Eu vi a boiada passar por cima do senhor Alonso"): o Whisper escreve "sr", é só a grafia; ouvir se a voz disse "senhor".
+- `p9-s9` ("Carruagem não tem, minha Teresinha"): o Whisper ouviu "não teme a Teresinha"; ouvir a dicção.
+- `p9-s15`, `p10-s21`: "senhor" transcrito como "sr" (grafia).
+- `p10-s4` ("Tenho uma novidade, meus amigos"): ouvido como "tem uma novidade"; ouvir.
+- Reparos emendados pelo script: um em `p8`, um em `p10`, um em `p9` (frases com defeito pedidas de novo e emendadas); vale ouvir as emendas.
