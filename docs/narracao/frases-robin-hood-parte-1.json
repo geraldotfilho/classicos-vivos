@@ -2079,5 +2079,184 @@
       "fala": "ar... ma... di... lha... armadilha!",
       "hash": "812f962bf9"
     }
+  ],
+  "audioFalas": "robin-hood/audio/falas/<id>.mp3",
+  "falas": [
+    {
+      "id": "ajude-robin-e-grilo-a-sumir-no-m-769548",
+      "tipo": "comando",
+      "chave": "Ajude Robin e Grilo a sumir no meio das folhas! Toque nos cartões na ordem certa: VERDE, CAPUZ e CORNETA, antes que os guardas cheguem.",
+      "texto": "Ajude Robin e Grilo a sumir no meio das folhas! Toque nos cartões na ordem certa: VERDE, CAPUZ e CORNETA, antes que os guardas cheguem.",
+      "fala": "Ajude Robin e Grilo a sumir no meio das folhas! Toque nos cartões na ordem certa: VERDE, CAPUZ e CORNETA, antes que os guardas cheguem.",
+      "hash": "09afb4c600",
+      "paginas": [
+        4
+      ]
+    },
+    {
+      "id": "verde-2030ab",
+      "tipo": "cartao",
+      "chave": "verde",
+      "texto": "verde",
+      "fala": "verde",
+      "hash": "a8355cd893",
+      "paginas": [
+        4
+      ]
+    },
+    {
+      "id": "capuz-1aaeff",
+      "tipo": "cartao",
+      "chave": "capuz",
+      "texto": "capuz",
+      "fala": "capuz",
+      "hash": "7875daf181",
+      "paginas": [
+        4
+      ]
+    },
+    {
+      "id": "corneta-bf6ada",
+      "tipo": "cartao",
+      "chave": "corneta",
+      "texto": "corneta",
+      "fala": "corneta",
+      "hash": "fa21d542d6",
+      "paginas": [
+        4
+      ]
+    },
+    {
+      "id": "leia-os-cartoes-e-toque-na-ordem-3e0dc3",
+      "tipo": "comando",
+      "chave": "Leia os cartões e toque na ordem do que aconteceu no riacho: PONTE, TOMBO, RISADA e AMIGO. A cada toque, a história anda um passo!",
+      "texto": "Leia os cartões e toque na ordem do que aconteceu no riacho: PONTE, TOMBO, RISADA e AMIGO. A cada toque, a história anda um passo!",
+      "fala": "Leia os cartões e toque na ordem do que aconteceu no riacho: PONTE, TOMBO, RISADA e AMIGO. A cada toque, a história anda um passo!",
+      "hash": "c20d90a43e",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "ponte-498d8e",
+      "tipo": "cartao",
+      "chave": "ponte",
+      "texto": "ponte",
+      "fala": "ponte",
+      "hash": "301e739f72",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "tombo-9294b0",
+      "tipo": "cartao",
+      "chave": "tombo",
+      "texto": "tombo",
+      "fala": "tombo",
+      "hash": "15d6c214d8",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "risada-1f70cd",
+      "tipo": "cartao",
+      "chave": "risada",
+      "texto": "risada",
+      "fala": "risada",
+      "hash": "a3d156eb57",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "amigo-01f07b",
+      "tipo": "cartao",
+      "chave": "amigo",
+      "texto": "amigo",
+      "fala": "amigo",
+      "hash": "28143242a7",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "ajude-no-resgate-silencioso-olhe-08ea50",
+      "tipo": "comando",
+      "chave": "Ajude no resgate silencioso! Olhe a figura lá em cima e toque na palavra certa. Cuidado: tem palavras parecidas querendo enganar você!",
+      "texto": "Ajude no resgate silencioso! Olhe a figura lá em cima e toque na palavra certa. Cuidado: tem palavras parecidas querendo enganar você!",
+      "fala": "Ajude no resgate silencioso! Olhe a figura lá em cima e toque na palavra certa. Cuidado: tem palavras parecidas querendo enganar você!",
+      "hash": "5f80317319",
+      "paginas": [
+        9
+      ]
+    },
+    {
+      "id": "chave-dca6ea",
+      "tipo": "cartao",
+      "chave": "chave",
+      "texto": "chave",
+      "fala": "chave",
+      "hash": "bc18a6336a",
+      "paginas": [
+        9
+      ]
+    },
+    {
+      "id": "corda-9b1403",
+      "tipo": "cartao",
+      "chave": "corda",
+      "texto": "corda",
+      "fala": "corda",
+      "hash": "d20ee10eca",
+      "paginas": [
+        9
+      ]
+    },
+    {
+      "id": "farinha-802f37",
+      "tipo": "cartao",
+      "chave": "farinha",
+      "texto": "farinha",
+      "fala": "farinha",
+      "hash": "ecd434c215",
+      "paginas": [
+        9
+      ]
+    },
+    {
+      "id": "chuva-chuva-so-molha-o-chao-e-na-80d13e",
+      "tipo": "pegadinha",
+      "chave": "Chuva? Chuva só molha o chão e não abre cadeado! Vamos escolher de novo!",
+      "texto": "Chuva? Chuva só molha o chão e não abre cadeado! Vamos escolher de novo!",
+      "fala": "Chuva? Chuva só molha o chão e não abre cadeado! Vamos escolher de novo!",
+      "hash": "0f9d67e528",
+      "paginas": [
+        9
+      ]
+    },
+    {
+      "id": "coroa-coroa-fica-na-cabeca-do-re-12d578",
+      "tipo": "pegadinha",
+      "chave": "Coroa? Coroa fica na cabeça do rei e não amarra saco pesado! Vamos tentar de novo!",
+      "texto": "Coroa? Coroa fica na cabeça do rei e não amarra saco pesado! Vamos tentar de novo!",
+      "fala": "Coroa? Coroa fica na cabeça do rei e não amarra saco pesado! Vamos tentar de novo!",
+      "hash": "fe7adf02fe",
+      "paginas": [
+        9
+      ]
+    },
+    {
+      "id": "varinha-nao-precisa-de-magica-pa-e4ce8a",
+      "tipo": "pegadinha",
+      "chave": "Varinha? Não precisa de mágica para fazer justiça! Vamos escolher a palavra certa!",
+      "texto": "Varinha? Não precisa de mágica para fazer justiça! Vamos escolher a palavra certa!",
+      "fala": "Varinha? Não precisa de mágica para fazer justiça! Vamos escolher a palavra certa!",
+      "hash": "0c1f5d4e1f",
+      "paginas": [
+        9
+      ]
+    }
   ]
 }

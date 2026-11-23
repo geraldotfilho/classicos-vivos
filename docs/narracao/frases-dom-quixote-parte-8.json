@@ -3060,5 +3060,184 @@
       "fala": "ler... ler!",
       "hash": "4943b2ae5f"
     }
+  ],
+  "audioFalas": "dom-quixote/audio/falas/<id>.mp3",
+  "falas": [
+    {
+      "id": "as-letrinhas-de-chumbo-cairam-no-534e84",
+      "tipo": "comando",
+      "chave": "As letrinhas de chumbo caíram no chão! Ajude o homem de avental: junte as letras na ordem certa e descubra a palavra que esta oficina faz o dia inteiro.",
+      "texto": "As letrinhas de chumbo caíram no chão! Ajude o homem de avental: junte as letras na ordem certa e descubra a palavra que esta oficina faz o dia inteiro.",
+      "fala": "As letrinhas de chumbo caíram no chão! Ajude o homem de avental: junte as letras na ordem certa e descubra a palavra que esta oficina faz o dia inteiro.",
+      "hash": "2d332be9f7",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "letra-l-99c30a",
+      "tipo": "letra",
+      "chave": "letra:l",
+      "texto": "l",
+      "fala": "ele",
+      "hash": "6cdf228f9c",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "letra-i-011e7a",
+      "tipo": "letra",
+      "chave": "letra:i",
+      "texto": "i",
+      "fala": "i",
+      "hash": "a87b1483ca",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "letra-v-4d8144",
+      "tipo": "letra",
+      "chave": "letra:v",
+      "texto": "v",
+      "fala": "vê",
+      "hash": "b0cff058b6",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "letra-r-d866b1",
+      "tipo": "letra",
+      "chave": "letra:r",
+      "texto": "r",
+      "fala": "erre",
+      "hash": "651ed104f8",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "letra-o-2c382c",
+      "tipo": "letra",
+      "chave": "letra:o",
+      "texto": "o",
+      "fala": "ó",
+      "hash": "0855f92ad8",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "qual-e-o-nome-de-pastor-de-sanch-5c8916",
+      "tipo": "comando",
+      "chave": "Qual é o nome de pastor de Sancho? Uma dica: ele nasceu do sobrenome dele. Toque no nome certo. Cuidado com as pegadinhas!",
+      "texto": "Qual é o nome de pastor de Sancho? Uma dica: ele nasceu do sobrenome dele. Toque no nome certo. Cuidado com as pegadinhas!",
+      "fala": "Qual é o nome de pastor de Sancho? Uma dica: ele nasceu do sobrenome dele. Toque no nome certo. Cuidado com as pegadinhas!",
+      "hash": "edb3a09f02",
+      "paginas": [
+        8
+      ]
+    },
+    {
+      "id": "pancino-3cacf3",
+      "tipo": "cartao",
+      "chave": "pancino",
+      "texto": "pancino",
+      "fala": "pancino",
+      "hash": "f916b75462",
+      "paginas": [
+        8
+      ]
+    },
+    {
+      "id": "pepino-pastor-pepino-e-nome-de-s-7baea1",
+      "tipo": "pegadinha",
+      "chave": "Pepino? Pastor Pepino é nome de salada! As ovelhas iam querer comer o pastor. Vamos tentar de novo!",
+      "texto": "Pepino? Pastor Pepino é nome de salada! As ovelhas iam querer comer o pastor. Vamos tentar de novo!",
+      "fala": "Pepino? Pastor Pepino é nome de salada! As ovelhas iam querer comer o pastor. Vamos tentar de novo!",
+      "hash": "a5fe2a93ee",
+      "paginas": [
+        8
+      ]
+    },
+    {
+      "id": "panqueca-o-pastor-panqueca-ia-vi-b2e3b2",
+      "tipo": "pegadinha",
+      "chave": "Panqueca? O pastor Panqueca ia virar café da manhã das ovelhas! Vamos tentar de novo!",
+      "texto": "Panqueca? O pastor Panqueca ia virar café da manhã das ovelhas! Vamos tentar de novo!",
+      "fala": "Panqueca? O pastor Panqueca ia virar café da manhã das ovelhas! Vamos tentar de novo!",
+      "hash": "abca53fb70",
+      "paginas": [
+        8
+      ]
+    },
+    {
+      "id": "as-criancas-querem-ouvir-tudo-de-77037d",
+      "tipo": "comando",
+      "chave": "As crianças querem ouvir tudo de novo! Ajude o vovô Alonso a começar a história: toque nas palavras na ordem certa.",
+      "texto": "As crianças querem ouvir tudo de novo! Ajude o vovô Alonso a começar a história: toque nas palavras na ordem certa.",
+      "fala": "As crianças querem ouvir tudo de novo! Ajude o vovô Alonso a começar a história: toque nas palavras na ordem certa.",
+      "hash": "c93c87e0dc",
+      "paginas": [
+        10
+      ]
+    },
+    {
+      "id": "era-281f09",
+      "tipo": "cartao",
+      "chave": "era",
+      "texto": "era",
+      "fala": "era",
+      "hash": "a7cf60a703",
+      "paginas": [
+        10
+      ]
+    },
+    {
+      "id": "uma-44710d",
+      "tipo": "cartao",
+      "chave": "uma",
+      "texto": "uma",
+      "fala": "uma",
+      "hash": "1ccb5f59b9",
+      "paginas": [
+        10
+      ]
+    },
+    {
+      "id": "vez-b5c9d5",
+      "tipo": "cartao",
+      "chave": "vez",
+      "texto": "vez",
+      "fala": "vez",
+      "hash": "6cf47f2f43",
+      "paginas": [
+        10
+      ]
+    },
+    {
+      "id": "um-ec92b7",
+      "tipo": "cartao",
+      "chave": "um",
+      "texto": "um",
+      "fala": "um",
+      "hash": "71e7ac40ca",
+      "paginas": [
+        10
+      ]
+    },
+    {
+      "id": "fidalgo-21da92",
+      "tipo": "cartao",
+      "chave": "fidalgo",
+      "texto": "fidalgo",
+      "fala": "fidalgo",
+      "hash": "56fad88dac",
+      "paginas": [
+        10
+      ]
+    }
   ]
 }

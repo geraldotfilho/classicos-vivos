@@ -976,5 +976,107 @@
       "fala": "el... mo... de... mam... bri... no... elmo de mambrino!",
       "hash": "1de51f5a9e"
     }
+  ],
+  "audioFalas": "dom-quixote/audio/falas/<id>.mp3",
+  "falas": [
+    {
+      "id": "ajude-a-preparar-o-lanche-dos-pa-001fb8",
+      "tipo": "comando",
+      "chave": "Ajude a preparar o lanche dos pastores: toque nas bolotas doces, no queijo fresco e no leite quentinho!",
+      "texto": "Ajude a preparar o lanche dos pastores: toque nas bolotas doces, no queijo fresco e no leite quentinho!",
+      "fala": "Ajude a preparar o lanche dos pastores: toque nas bolotas doces, no queijo fresco e no leite quentinho!",
+      "hash": "63994d1873",
+      "paginas": [
+        3
+      ]
+    },
+    {
+      "id": "sopre-a-nuvem-de-poeira-para-des-b85bcb",
+      "tipo": "comando",
+      "chave": "Sopre a nuvem de poeira para descobrir o que está escondido no caminho!",
+      "texto": "Sopre a nuvem de poeira para descobrir o que está escondido no caminho!",
+      "fala": "Sopre a nuvem de poeira para descobrir o que está escondido no caminho!",
+      "hash": "c574ba3361",
+      "paginas": [
+        4
+      ]
+    },
+    {
+      "id": "ajude-sancho-a-contar-as-cabrinh-098ab3",
+      "tipo": "comando",
+      "chave": "Ajude Sancho a contar as cabrinhas que atravessam o rio no barquinho, uma por uma!",
+      "texto": "Ajude Sancho a contar as cabrinhas que atravessam o rio no barquinho, uma por uma!",
+      "fala": "Ajude Sancho a contar as cabrinhas que atravessam o rio no barquinho, uma por uma!",
+      "hash": "3e2a982a7c",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "uma-cabra-3b3672",
+      "tipo": "contagem",
+      "chave": "Uma cabra!",
+      "texto": "Uma cabra!",
+      "fala": "Uma cabra!",
+      "hash": "062640ff25",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "duas-cabras-9dc35d",
+      "tipo": "contagem",
+      "chave": "Duas cabras!",
+      "texto": "Duas cabras!",
+      "fala": "Duas cabras!",
+      "hash": "08af10b629",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "tres-cabras-0c16eb",
+      "tipo": "contagem",
+      "chave": "Três cabras!",
+      "texto": "Três cabras!",
+      "fala": "Três cabras!",
+      "hash": "d705fe8084",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "quatro-cabras-873568",
+      "tipo": "contagem",
+      "chave": "Quatro cabras!",
+      "texto": "Quatro cabras!",
+      "fala": "Quatro cabras!",
+      "hash": "8d921a9c57",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "cinco-cabras-ainda-faltam-duzent-37fe6d",
+      "tipo": "contagem",
+      "chave": "Cinco cabras! Ainda faltam duzentas e noventa e cinco!",
+      "texto": "Cinco cabras! Ainda faltam duzentas e noventa e cinco!",
+      "fala": "Cinco cabras! Ainda faltam duzentas e noventa e cinco!",
+      "hash": "faca1d663e",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "toque-no-sol-nascente-para-ilumi-d2070c",
+      "tipo": "comando",
+      "chave": "Toque no sol nascente para iluminar o rio e desvendar o mistério dos barulhos da noite!",
+      "texto": "Toque no sol nascente para iluminar o rio e desvendar o mistério dos barulhos da noite!",
+      "fala": "Toque no sol nascente para iluminar o rio e desvendar o mistério dos barulhos da noite!",
+      "hash": "ff1d725927",
+      "paginas": [
+        7
+      ]
+    }
   ]
 }

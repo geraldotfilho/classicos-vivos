@@ -2708,5 +2708,195 @@
       "fala": "is... la... isla!",
       "hash": "9dc338f9aa"
     }
+  ],
+  "audioFalas": "dom-quixote/audio/falas-es/<id>.mp3",
+  "falas": [
+    {
+      "id": "ayuda-a-arreglar-los-titeres-que-cdb89e",
+      "tipo": "comando",
+      "chave": "¡Ayuda a arreglar los títeres, que Sancho los paga uno por uno! Maese Pedro te enseña el títere roto: toca el nombre correcto. ¡Cuidado con las trampas!",
+      "texto": "¡Ayuda a arreglar los títeres, que Sancho los paga uno por uno! Maese Pedro te enseña el títere roto: toca el nombre correcto. ¡Cuidado con las trampas!",
+      "fala": "¡Ayuda a arreglar los títeres, que Sancho los paga uno por uno! Maese Pedro te enseña el títere roto: toca el nombre correcto. ¡Cuidado con las trampas!",
+      "hash": "4fe1cab7ec",
+      "paginas": [
+        5
+      ]
+    },
+    {
+      "id": "rey-9fc518",
+      "tipo": "cartao",
+      "chave": "rey",
+      "texto": "rey",
+      "fala": "rey",
+      "hash": "52bb4eedea",
+      "paginas": [
+        5
+      ]
+    },
+    {
+      "id": "caballo-62b912",
+      "tipo": "cartao",
+      "chave": "caballo",
+      "texto": "caballo",
+      "fala": "caballo",
+      "hash": "7f53d5de2c",
+      "paginas": [
+        5
+      ]
+    },
+    {
+      "id": "torre-a006e3",
+      "tipo": "cartao",
+      "chave": "torre",
+      "texto": "torre",
+      "fala": "torre",
+      "hash": "1769671384",
+      "paginas": [
+        5
+      ]
+    },
+    {
+      "id": "torta-a-sancho-bien-que-le-gusta-c41411",
+      "tipo": "pegadinha",
+      "chave": "¿Torta? ¡A Sancho bien que le gustaría! Pero una torta no se arregla: se come. ¡Vamos a probar otra vez!",
+      "texto": "¿Torta? ¡A Sancho bien que le gustaría! Pero una torta no se arregla: se come. ¡Vamos a probar otra vez!",
+      "fala": "¿Torta? ¡A Sancho bien que le gustaría! Pero una torta no se arregla: se come. ¡Vamos a probar otra vez!",
+      "hash": "ccccd11e78",
+      "paginas": [
+        5
+      ]
+    },
+    {
+      "id": "cabello-los-titeres-no-van-al-ba-95a5f8",
+      "tipo": "pegadinha",
+      "chave": "¿Cabello? ¡Los títeres no van al barbero! Hasta maese Pedro se rio. ¡Vamos a probar otra vez!",
+      "texto": "¿Cabello? ¡Los títeres no van al barbero! Hasta maese Pedro se rio. ¡Vamos a probar otra vez!",
+      "fala": "¿Cabello? ¡Los títeres no van al barbero! Hasta maese Pedro se rio. ¡Vamos a probar otra vez!",
+      "hash": "a68d92b50c",
+      "paginas": [
+        5
+      ]
+    },
+    {
+      "id": "rio-maese-pedro-busco-un-rio-en-84366a",
+      "tipo": "pegadinha",
+      "chave": "¿Río? ¡Maese Pedro buscó un río en el teatrillo y solo encontró al mono! ¡Vamos a probar otra vez!",
+      "texto": "¿Río? ¡Maese Pedro buscó un río en el teatrillo y solo encontró al mono! ¡Vamos a probar otra vez!",
+      "fala": "¿Río? ¡Maese Pedro buscó un río en el teatrillo y solo encontró al mono! ¡Vamos a probar otra vez!",
+      "hash": "7081ef5a2e",
+      "paginas": [
+        5
+      ]
+    },
+    {
+      "id": "sancho-se-ha-quedado-en-blanco-a-094bd5",
+      "tipo": "comando",
+      "chave": "¡Sancho se ha quedado en blanco! Ayúdale a recordar el nombre nuevo de su amo: toca las palabras en el orden correcto.",
+      "texto": "¡Sancho se ha quedado en blanco! Ayúdale a recordar el nombre nuevo de su amo: toca las palabras en el orden correcto.",
+      "fala": "¡Sancho se ha quedado en blanco! Ayúdale a recordar el nombre nuevo de su amo: toca las palabras en el orden correcto.",
+      "hash": "2c2aa284e2",
+      "paginas": [
+        7
+      ]
+    },
+    {
+      "id": "el-4f1ea4",
+      "tipo": "cartao",
+      "chave": "el",
+      "texto": "el",
+      "fala": "el",
+      "hash": "8596100ae0",
+      "paginas": [
+        7
+      ]
+    },
+    {
+      "id": "caballero-99eddf",
+      "tipo": "cartao",
+      "chave": "caballero",
+      "texto": "caballero",
+      "fala": "caballero",
+      "hash": "cfa7ff2a64",
+      "paginas": [
+        7
+      ]
+    },
+    {
+      "id": "de-los-5c0d5e",
+      "tipo": "cartao",
+      "chave": "de los",
+      "texto": "de los",
+      "fala": "de los",
+      "hash": "e8fde2f5e4",
+      "paginas": [
+        7
+      ]
+    },
+    {
+      "id": "leones-6359ca",
+      "tipo": "cartao",
+      "chave": "leones",
+      "texto": "leones",
+      "fala": "leones",
+      "hash": "ddc9556141",
+      "paginas": [
+        7
+      ]
+    },
+    {
+      "id": "ayuda-a-los-criados-del-duque-a-199dc9",
+      "tipo": "comando",
+      "chave": "¡Ayuda a los criados del duque a preparar el viaje sorpresa de don Quijote! Mira el dibujo de lo que necesitan y toca la palabra correcta. ¡Cuidado con las trampas!",
+      "texto": "¡Ayuda a los criados del duque a preparar el viaje sorpresa de don Quijote! Mira el dibujo de lo que necesitan y toca la palabra correcta. ¡Cuidado con las trampas!",
+      "fala": "¡Ayuda a los criados del duque a preparar el viaje sorpresa de don Quijote! Mira el dibujo de lo que necesitan y toca la palabra correcta. ¡Cuidado con las trampas!",
+      "hash": "6275e631a7",
+      "paginas": [
+        9
+      ]
+    },
+    {
+      "id": "fuelle-37b0cd",
+      "tipo": "cartao",
+      "chave": "fuelle",
+      "texto": "fuelle",
+      "fala": "fuelle",
+      "hash": "7ae40418be",
+      "paginas": [
+        9
+      ]
+    },
+    {
+      "id": "antorcha-e61eff",
+      "tipo": "cartao",
+      "chave": "antorcha",
+      "texto": "antorcha",
+      "fala": "antorcha",
+      "hash": "97d66d351e",
+      "paginas": [
+        9
+      ]
+    },
+    {
+      "id": "anchoa-le-pusieron-una-anchoa-en-79fa1c",
+      "tipo": "pegadinha",
+      "chave": "¿Anchoa? Le pusieron una anchoa en la nariz a Sancho: olía a mar, ¡pero calor, ninguno! ¡Vamos a probar otra vez!",
+      "texto": "¿Anchoa? Le pusieron una anchoa en la nariz a Sancho: olía a mar, ¡pero calor, ninguno! ¡Vamos a probar otra vez!",
+      "fala": "¿Anchoa? Le pusieron una anchoa en la nariz a Sancho: olía a mar, ¡pero calor, ninguno! ¡Vamos a probar otra vez!",
+      "hash": "9a687969f8",
+      "paginas": [
+        9
+      ]
+    },
+    {
+      "id": "fuente-le-echaron-a-sancho-un-ch-3997ec",
+      "tipo": "pegadinha",
+      "chave": "¿Fuente? ¡Le echaron a Sancho un chorro de agua de la fuente, y de viento, nada! ¡Vamos a probar otra vez!",
+      "texto": "¿Fuente? ¡Le echaron a Sancho un chorro de agua de la fuente, y de viento, nada! ¡Vamos a probar otra vez!",
+      "fala": "¿Fuente? ¡Le echaron a Sancho un chorro de agua de la fuente, y de viento, nada! ¡Vamos a probar otra vez!",
+      "hash": "b9f5896024",
+      "paginas": [
+        9
+      ]
+    }
   ]
 }

@@ -3262,5 +3262,239 @@
       "fala": "bar... ce... lo... na... barcelona!",
       "hash": "01ebf70eee"
     }
+  ],
+  "audioFalas": "dom-quixote/audio/falas/<id>.mp3",
+  "falas": [
+    {
+      "id": "ajude-o-governador-a-conferir-os-7e9388",
+      "tipo": "comando",
+      "chave": "Ajude o governador a conferir os chapeuzinhos! Toque nos números na ordem certa: cada acerto põe um chapeuzinho num dedo do alfaiate.",
+      "texto": "Ajude o governador a conferir os chapeuzinhos! Toque nos números na ordem certa: cada acerto põe um chapeuzinho num dedo do alfaiate.",
+      "fala": "Ajude o governador a conferir os chapeuzinhos! Toque nos números na ordem certa: cada acerto põe um chapeuzinho num dedo do alfaiate.",
+      "hash": "03c2a22436",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "um-ec92b7",
+      "tipo": "cartao",
+      "chave": "um",
+      "texto": "um",
+      "fala": "um",
+      "hash": "71e7ac40ca",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "dois-7b4267",
+      "tipo": "cartao",
+      "chave": "dois",
+      "texto": "dois",
+      "fala": "dois",
+      "hash": "1c9a385e9d",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "tres-a4316f",
+      "tipo": "cartao",
+      "chave": "três",
+      "texto": "três",
+      "fala": "três",
+      "hash": "afa7d951b9",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "quatro-a7943c",
+      "tipo": "cartao",
+      "chave": "quatro",
+      "texto": "quatro",
+      "fala": "quatro",
+      "hash": "7e49267a00",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "cinco-a097b3",
+      "tipo": "cartao",
+      "chave": "cinco",
+      "texto": "cinco",
+      "fala": "cinco",
+      "hash": "baaf77828a",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "sancho-quer-abrir-o-esconderijo-1a3b4f",
+      "tipo": "comando",
+      "chave": "Sancho quer abrir o esconderijo das moedas. Toque no nome dele! Cuidado com as pegadinhas!",
+      "texto": "Sancho quer abrir o esconderijo das moedas. Toque no nome dele! Cuidado com as pegadinhas!",
+      "fala": "Sancho quer abrir o esconderijo das moedas. Toque no nome dele! Cuidado com as pegadinhas!",
+      "hash": "d6eeec4ef4",
+      "paginas": [
+        4
+      ]
+    },
+    {
+      "id": "bengala-29a5fa",
+      "tipo": "cartao",
+      "chave": "bengala",
+      "texto": "bengala",
+      "fala": "bengala",
+      "hash": "10961fb13c",
+      "paginas": [
+        4
+      ]
+    },
+    {
+      "id": "balanca-a-balanca-do-tribunal-pe-8adcd6",
+      "tipo": "pegadinha",
+      "chave": "Balança? A balança do tribunal pesou, pesou e não achou moeda nenhuma! Vamos tentar de novo!",
+      "texto": "Balança? A balança do tribunal pesou, pesou e não achou moeda nenhuma! Vamos tentar de novo!",
+      "fala": "Balança? A balança do tribunal pesou, pesou e não achou moeda nenhuma! Vamos tentar de novo!",
+      "hash": "4124b6ff6f",
+      "paginas": [
+        4
+      ]
+    },
+    {
+      "id": "bandeja-na-bandeja-so-tinha-as-b-a363ef",
+      "tipo": "pegadinha",
+      "chave": "Bandeja? Na bandeja só tinha as bolachinhas do doutor. Vamos tentar de novo!",
+      "texto": "Bandeja? Na bandeja só tinha as bolachinhas do doutor. Vamos tentar de novo!",
+      "fala": "Bandeja? Na bandeja só tinha as bolachinhas do doutor. Vamos tentar de novo!",
+      "hash": "d6bc3ca133",
+      "paginas": [
+        4
+      ]
+    },
+    {
+      "id": "ajude-o-governador-a-assinar-a-c-466a71",
+      "tipo": "comando",
+      "chave": "Ajude o governador a assinar a carta! Toque nas letras do primeiro nome dele, na ordem certa.",
+      "texto": "Ajude o governador a assinar a carta! Toque nas letras do primeiro nome dele, na ordem certa.",
+      "fala": "Ajude o governador a assinar a carta! Toque nas letras do primeiro nome dele, na ordem certa.",
+      "hash": "99ce9deb86",
+      "paginas": [
+        7
+      ]
+    },
+    {
+      "id": "letra-s-d4031c",
+      "tipo": "letra",
+      "chave": "letra:s",
+      "texto": "s",
+      "fala": "esse",
+      "hash": "9eefc5bc8e",
+      "paginas": [
+        7
+      ]
+    },
+    {
+      "id": "letra-a-39af6d",
+      "tipo": "letra",
+      "chave": "letra:a",
+      "texto": "a",
+      "fala": "á",
+      "hash": "1b3b6ed346",
+      "paginas": [
+        7
+      ]
+    },
+    {
+      "id": "letra-n-53d5e1",
+      "tipo": "letra",
+      "chave": "letra:n",
+      "texto": "n",
+      "fala": "ene",
+      "hash": "548cb7b63a",
+      "paginas": [
+        7
+      ]
+    },
+    {
+      "id": "letra-c-b9d477",
+      "tipo": "letra",
+      "chave": "letra:c",
+      "texto": "c",
+      "fala": "cê",
+      "hash": "c8c6b4e95f",
+      "paginas": [
+        7
+      ]
+    },
+    {
+      "id": "letra-h-0fa366",
+      "tipo": "letra",
+      "chave": "letra:h",
+      "texto": "h",
+      "fala": "agá",
+      "hash": "9ea160e19b",
+      "paginas": [
+        7
+      ]
+    },
+    {
+      "id": "letra-o-2c382c",
+      "tipo": "letra",
+      "chave": "letra:o",
+      "texto": "o",
+      "fala": "ó",
+      "hash": "0855f92ad8",
+      "paginas": [
+        7
+      ]
+    },
+    {
+      "id": "hora-de-deixar-o-palacio-ajude-o-13dde6",
+      "tipo": "comando",
+      "chave": "Hora de deixar o palácio! Ajude os dois amigos a ir embora: toque nas palavras na ordem em que tudo acontece.",
+      "texto": "Hora de deixar o palácio! Ajude os dois amigos a ir embora: toque nas palavras na ordem em que tudo acontece.",
+      "fala": "Hora de deixar o palácio! Ajude os dois amigos a ir embora: toque nas palavras na ordem em que tudo acontece.",
+      "hash": "ed157c1785",
+      "paginas": [
+        10
+      ]
+    },
+    {
+      "id": "chaves-2c6462",
+      "tipo": "cartao",
+      "chave": "chaves",
+      "texto": "chaves",
+      "fala": "chaves",
+      "hash": "86c358311d",
+      "paginas": [
+        10
+      ]
+    },
+    {
+      "id": "portao-e2f49b",
+      "tipo": "cartao",
+      "chave": "portão",
+      "texto": "portão",
+      "fala": "portão",
+      "hash": "cb62f08d26",
+      "paginas": [
+        10
+      ]
+    },
+    {
+      "id": "estrada-e50dcf",
+      "tipo": "cartao",
+      "chave": "estrada",
+      "texto": "estrada",
+      "fala": "estrada",
+      "hash": "a9f076a34e",
+      "paginas": [
+        10
+      ]
+    }
   ]
 }

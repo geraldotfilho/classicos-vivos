@@ -751,5 +751,107 @@
       "fala": "let... ters... letters!",
       "hash": "1b9af42c80"
     }
+  ],
+  "audioFalas": "dom-quixote/audio/falas-en/<id>.mp3",
+  "falas": [
+    {
+      "id": "open-the-old-suitcase-found-on-t-296877",
+      "tipo": "comando",
+      "chave": "Open the old suitcase found on the mountain: tap the poetry notebook and the gold coins!",
+      "texto": "Open the old suitcase found on the mountain: tap the poetry notebook and the gold coins!",
+      "fala": "Open the old suitcase found on the mountain: tap the poetry notebook and the gold coins!",
+      "hash": "3f387085ea",
+      "paginas": [
+        1
+      ]
+    },
+    {
+      "id": "tap-the-somersault-to-see-don-qu-f5ff4a",
+      "tipo": "comando",
+      "chave": "Tap the somersault to see Don Quixote’s heroic somersaults on the mountain!",
+      "texto": "Tap the somersault to see Don Quixote’s heroic somersaults on the mountain!",
+      "fala": "Tap the somersault to see Don Quixote’s heroic somersaults on the mountain!",
+      "hash": "8291777fa9",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "help-sancho-sign-the-love-letter-a18e1a",
+      "tipo": "comando",
+      "chave": "Help Sancho sign the love letter: tap the words in the right order to form THE KNIGHT OF THE SORROWFUL FACE!",
+      "texto": "Help Sancho sign the love letter: tap the words in the right order to form THE KNIGHT OF THE SORROWFUL FACE!",
+      "fala": "Help Sancho sign the love letter: tap the words in the right order to form THE KNIGHT OF THE SORROWFUL FACE!",
+      "hash": "7cc282705f",
+      "paginas": [
+        3
+      ]
+    },
+    {
+      "id": "the-bbccdf",
+      "tipo": "cartao",
+      "chave": "the",
+      "texto": "the",
+      "fala": "the",
+      "hash": "e99ca6d8a3",
+      "paginas": [
+        3
+      ]
+    },
+    {
+      "id": "knight-8f2174",
+      "tipo": "cartao",
+      "chave": "knight",
+      "texto": "knight",
+      "fala": "knight",
+      "hash": "f970699fed",
+      "paginas": [
+        3
+      ]
+    },
+    {
+      "id": "of-the-d2263e",
+      "tipo": "cartao",
+      "chave": "of the",
+      "texto": "of the",
+      "fala": "of the",
+      "hash": "48658fb8cb",
+      "paginas": [
+        3
+      ]
+    },
+    {
+      "id": "sorrowful-420ff7",
+      "tipo": "cartao",
+      "chave": "sorrowful",
+      "texto": "sorrowful",
+      "fala": "sorrowful",
+      "hash": "45c4537865",
+      "paginas": [
+        3
+      ]
+    },
+    {
+      "id": "face-49dc1c",
+      "tipo": "cartao",
+      "chave": "face",
+      "texto": "face",
+      "fala": "face",
+      "hash": "f790ffb165",
+      "paginas": [
+        3
+      ]
+    },
+    {
+      "id": "don-quixote-dreams-he-is-facing-f13a57",
+      "tipo": "comando",
+      "chave": "Don Quixote dreams he is facing a giant: tap the sword to pierce the wineskins!",
+      "texto": "Don Quixote dreams he is facing a giant: tap the sword to pierce the wineskins!",
+      "fala": "Don Quixote dreams he is facing a giant: tap the sword to pierce the wineskins!",
+      "hash": "53fc68a126",
+      "paginas": [
+        6
+      ]
+    }
   ]
 }

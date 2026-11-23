@@ -19,3 +19,10 @@ Ouvir (avisos do Whisper):
 - `p7-s19` e `p9-s25` (o zurro "IIIH-ÓÓÓ"): o Whisper não escreve a onomatopeia; conferir se o zurro foi dito. A palavra-chave `zurro` também ficou com aviso ("zoho"): ouvir o "rr".
 - `p6-s30` ("o senhor Alonso"): o Whisper escreveu "Sr."; `p10-s2` ("e a fome também"): uma palavra a mais no fim do trecho, provavelmente da frase seguinte.
 - As **atividades** (cartões de ordenar, contagens) usam a voz do aparelho por desenho do motor (`falar()` em `assets/js/livro.js`); só as palavras-chave do texto têm gravação.
+
+## Mordomo com a voz da condessa (2026-11-23)
+Decisão do humano: o MORDOMO passou a usar a voz da CONDESSA Trifaldi da Parte 6 (`pt-br-training-8`), já que é o mesmo homem disfarçado e o texto diz que as vozes são "igualzinhas". Págs. 2, 3, 7 e 8 regravadas pelo modo lote (~US$ 0,09). Pontos para escuta:
+- As falas do mordomo nas págs. 2 ("O mar está de folga hoje"), 3, 7 e 8: conferir se a semelhança com a condessa aparece.
+- `p7-s19` (o zurro "IIIH-ÓÓÓ" na carta de Sancho): o Whisper ouviu "e o o o"; ouvir se o zurro saiu.
+- `p2-s13` ("anotava tudo", ouvido "anotava tido") e `p3-s31` ("Doutor" escrito "dr"): grafia do Whisper.
+- A pág. 7 precisou de áudio novo num trecho da carta (a voz tinha parado depois da primeira frase); foi pedido de novo com `--relote`.

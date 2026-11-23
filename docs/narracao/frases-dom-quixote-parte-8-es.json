@@ -3061,5 +3061,184 @@
       "fala": "le... er... leer!",
       "hash": "1a0e64ad9d"
     }
+  ],
+  "audioFalas": "dom-quixote/audio/falas-es/<id>.mp3",
+  "falas": [
+    {
+      "id": "las-letritas-de-plomo-se-han-cai-3945dc",
+      "tipo": "comando",
+      "chave": "¡Las letritas de plomo se han caído al suelo! Ayuda al hombre del delantal: junta las letras en el orden correcto y descubre la palabra que este taller hace todo el día.",
+      "texto": "¡Las letritas de plomo se han caído al suelo! Ayuda al hombre del delantal: junta las letras en el orden correcto y descubre la palabra que este taller hace todo el día.",
+      "fala": "¡Las letritas de plomo se han caído al suelo! Ayuda al hombre del delantal: junta las letras en el orden correcto y descubre la palabra que este taller hace todo el día.",
+      "hash": "9f840a553d",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "letra-l-99c30a",
+      "tipo": "letra",
+      "chave": "letra:l",
+      "texto": "l",
+      "fala": "ele",
+      "hash": "6cdf228f9c",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "letra-i-011e7a",
+      "tipo": "letra",
+      "chave": "letra:i",
+      "texto": "i",
+      "fala": "i",
+      "hash": "a87b1483ca",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "letra-b-490a87",
+      "tipo": "letra",
+      "chave": "letra:b",
+      "texto": "b",
+      "fala": "be",
+      "hash": "6841d52f9a",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "letra-r-d866b1",
+      "tipo": "letra",
+      "chave": "letra:r",
+      "texto": "r",
+      "fala": "erre",
+      "hash": "651ed104f8",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "letra-o-2c382c",
+      "tipo": "letra",
+      "chave": "letra:o",
+      "texto": "o",
+      "fala": "o",
+      "hash": "45592d60b6",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "cual-es-el-nombre-de-pastor-de-s-f44f75",
+      "tipo": "comando",
+      "chave": "¿Cuál es el nombre de pastor de Sancho? Una pista: nació de su apellido. Toca el nombre correcto. ¡Cuidado con las trampas!",
+      "texto": "¿Cuál es el nombre de pastor de Sancho? Una pista: nació de su apellido. Toca el nombre correcto. ¡Cuidado con las trampas!",
+      "fala": "¿Cuál es el nombre de pastor de Sancho? Una pista: nació de su apellido. Toca el nombre correcto. ¡Cuidado con las trampas!",
+      "hash": "1493fa62a2",
+      "paginas": [
+        8
+      ]
+    },
+    {
+      "id": "pancino-3cacf3",
+      "tipo": "cartao",
+      "chave": "pancino",
+      "texto": "pancino",
+      "fala": "pancino",
+      "hash": "f916b75462",
+      "paginas": [
+        8
+      ]
+    },
+    {
+      "id": "pepino-el-pastor-pepino-es-nombr-5fe05b",
+      "tipo": "pegadinha",
+      "chave": "¿Pepino? ¡El pastor Pepino es nombre de ensalada! Las ovejas se querrían comer al pastor. ¡Vamos a intentarlo otra vez!",
+      "texto": "¿Pepino? ¡El pastor Pepino es nombre de ensalada! Las ovejas se querrían comer al pastor. ¡Vamos a intentarlo otra vez!",
+      "fala": "¿Pepino? ¡El pastor Pepino es nombre de ensalada! Las ovejas se querrían comer al pastor. ¡Vamos a intentarlo otra vez!",
+      "hash": "45e4f385e2",
+      "paginas": [
+        8
+      ]
+    },
+    {
+      "id": "panceta-el-pastor-panceta-oleria-5073d5",
+      "tipo": "pegadinha",
+      "chave": "¿Panceta? ¡El pastor Panceta olería a desayuno, y los perros del rebaño lo seguirían a todas partes! ¡Vamos a intentarlo otra vez!",
+      "texto": "¿Panceta? ¡El pastor Panceta olería a desayuno, y los perros del rebaño lo seguirían a todas partes! ¡Vamos a intentarlo otra vez!",
+      "fala": "¿Panceta? ¡El pastor Panceta olería a desayuno, y los perros del rebaño lo seguirían a todas partes! ¡Vamos a intentarlo otra vez!",
+      "hash": "acf5c6181e",
+      "paginas": [
+        8
+      ]
+    },
+    {
+      "id": "los-ninos-quieren-oirlo-todo-otr-db777b",
+      "tipo": "comando",
+      "chave": "¡Los niños quieren oírlo todo otra vez! Ayuda al abuelo Alonso a empezar la historia: toca las palabras en el orden correcto.",
+      "texto": "¡Los niños quieren oírlo todo otra vez! Ayuda al abuelo Alonso a empezar la historia: toca las palabras en el orden correcto.",
+      "fala": "¡Los niños quieren oírlo todo otra vez! Ayuda al abuelo Alonso a empezar la historia: toca las palabras en el orden correcto.",
+      "hash": "0702e0d0cb",
+      "paginas": [
+        10
+      ]
+    },
+    {
+      "id": "erase-b3821e",
+      "tipo": "cartao",
+      "chave": "érase",
+      "texto": "érase",
+      "fala": "érase",
+      "hash": "3050f1f8b5",
+      "paginas": [
+        10
+      ]
+    },
+    {
+      "id": "una-226f39",
+      "tipo": "cartao",
+      "chave": "una",
+      "texto": "una",
+      "fala": "una",
+      "hash": "87f1ce0cfc",
+      "paginas": [
+        10
+      ]
+    },
+    {
+      "id": "vez-b5c9d5",
+      "tipo": "cartao",
+      "chave": "vez",
+      "texto": "vez",
+      "fala": "vez",
+      "hash": "6cf47f2f43",
+      "paginas": [
+        10
+      ]
+    },
+    {
+      "id": "un-dd3bc4",
+      "tipo": "cartao",
+      "chave": "un",
+      "texto": "un",
+      "fala": "un",
+      "hash": "1267de9a86",
+      "paginas": [
+        10
+      ]
+    },
+    {
+      "id": "hidalgo-d7356e",
+      "tipo": "cartao",
+      "chave": "hidalgo",
+      "texto": "hidalgo",
+      "fala": "hidalgo",
+      "hash": "b03d79ba40",
+      "paginas": [
+        10
+      ]
+    }
   ]
 }

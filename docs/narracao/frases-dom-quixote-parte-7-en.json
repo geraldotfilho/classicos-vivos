@@ -3263,5 +3263,239 @@
       "fala": "bar... ce... lo... na... barcelona!",
       "hash": "01ebf70eee"
     }
+  ],
+  "audioFalas": "dom-quixote/audio/falas-en/<id>.mp3",
+  "falas": [
+    {
+      "id": "help-the-governor-check-the-tiny-bd275e",
+      "tipo": "comando",
+      "chave": "Help the governor check the tiny caps! Tap the numbers in the right order: each right answer puts a tiny cap on one of the tailor’s fingers.",
+      "texto": "Help the governor check the tiny caps! Tap the numbers in the right order: each right answer puts a tiny cap on one of the tailor’s fingers.",
+      "fala": "Help the governor check the tiny caps! Tap the numbers in the right order: each right answer puts a tiny cap on one of the tailor’s fingers.",
+      "hash": "8e66f6906e",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "one-fe05bc",
+      "tipo": "cartao",
+      "chave": "one",
+      "texto": "one",
+      "fala": "one",
+      "hash": "3f9bb632e5",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "two-ad782e",
+      "tipo": "cartao",
+      "chave": "two",
+      "texto": "two",
+      "fala": "two",
+      "hash": "8cf453aad8",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "three-b802f3",
+      "tipo": "cartao",
+      "chave": "three",
+      "texto": "three",
+      "fala": "three",
+      "hash": "db8ee6bfaa",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "four-9f8f7e",
+      "tipo": "cartao",
+      "chave": "four",
+      "texto": "four",
+      "fala": "four",
+      "hash": "e6476c79f5",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "five-4db2c1",
+      "tipo": "cartao",
+      "chave": "five",
+      "texto": "five",
+      "fala": "five",
+      "hash": "68b2c4cfd0",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "sancho-wants-to-open-the-coins-h-1f0782",
+      "tipo": "comando",
+      "chave": "Sancho wants to open the coins’ hiding place. Tap its name! Watch out for the trick words!",
+      "texto": "Sancho wants to open the coins’ hiding place. Tap its name! Watch out for the trick words!",
+      "fala": "Sancho wants to open the coins’ hiding place. Tap its name! Watch out for the trick words!",
+      "hash": "cab51b0b6e",
+      "paginas": [
+        4
+      ]
+    },
+    {
+      "id": "cane-95df5d",
+      "tipo": "cartao",
+      "chave": "cane",
+      "texto": "cane",
+      "fala": "cane",
+      "hash": "cf5fac54c1",
+      "paginas": [
+        4
+      ]
+    },
+    {
+      "id": "cake-the-doctor-s-wand-whisked-t-bed672",
+      "tipo": "pegadinha",
+      "chave": "Cake? The doctor’s wand whisked the cake away before anybody could look inside it! Let’s try again!",
+      "texto": "Cake? The doctor’s wand whisked the cake away before anybody could look inside it! Let’s try again!",
+      "fala": "Cake? The doctor’s wand whisked the cake away before anybody could look inside it! Let’s try again!",
+      "hash": "be2865a431",
+      "paginas": [
+        4
+      ]
+    },
+    {
+      "id": "cage-there-s-no-lion-in-this-cou-095a6e",
+      "tipo": "pegadinha",
+      "chave": "Cage? There’s no lion in this courtroom, and no coins in a cage either! Let’s try again!",
+      "texto": "Cage? There’s no lion in this courtroom, and no coins in a cage either! Let’s try again!",
+      "fala": "Cage? There’s no lion in this courtroom, and no coins in a cage either! Let’s try again!",
+      "hash": "b0ae2bbc5c",
+      "paginas": [
+        4
+      ]
+    },
+    {
+      "id": "help-the-governor-sign-the-lette-d279c2",
+      "tipo": "comando",
+      "chave": "Help the governor sign the letter! Tap the letters of his first name, in the right order.",
+      "texto": "Help the governor sign the letter! Tap the letters of his first name, in the right order.",
+      "fala": "Help the governor sign the letter! Tap the letters of his first name, in the right order.",
+      "hash": "042df866b1",
+      "paginas": [
+        7
+      ]
+    },
+    {
+      "id": "letra-s-d4031c",
+      "tipo": "letra",
+      "chave": "letra:s",
+      "texto": "s",
+      "fala": "ess",
+      "hash": "cd005ac911",
+      "paginas": [
+        7
+      ]
+    },
+    {
+      "id": "letra-a-39af6d",
+      "tipo": "letra",
+      "chave": "letra:a",
+      "texto": "a",
+      "fala": "A",
+      "hash": "a7ba47764f",
+      "paginas": [
+        7
+      ]
+    },
+    {
+      "id": "letra-n-53d5e1",
+      "tipo": "letra",
+      "chave": "letra:n",
+      "texto": "n",
+      "fala": "en",
+      "hash": "d5363b1ea1",
+      "paginas": [
+        7
+      ]
+    },
+    {
+      "id": "letra-c-b9d477",
+      "tipo": "letra",
+      "chave": "letra:c",
+      "texto": "c",
+      "fala": "see",
+      "hash": "097e694776",
+      "paginas": [
+        7
+      ]
+    },
+    {
+      "id": "letra-h-0fa366",
+      "tipo": "letra",
+      "chave": "letra:h",
+      "texto": "h",
+      "fala": "aitch",
+      "hash": "c60861b80c",
+      "paginas": [
+        7
+      ]
+    },
+    {
+      "id": "letra-o-2c382c",
+      "tipo": "letra",
+      "chave": "letra:o",
+      "texto": "o",
+      "fala": "oh",
+      "hash": "1de75801d2",
+      "paginas": [
+        7
+      ]
+    },
+    {
+      "id": "time-to-leave-the-palace-help-th-7ef92f",
+      "tipo": "comando",
+      "chave": "Time to leave the palace! Help the two friends on their way: tap the words in the order that everything happens.",
+      "texto": "Time to leave the palace! Help the two friends on their way: tap the words in the order that everything happens.",
+      "fala": "Time to leave the palace! Help the two friends on their way: tap the words in the order that everything happens.",
+      "hash": "4df7c9ccd8",
+      "paginas": [
+        10
+      ]
+    },
+    {
+      "id": "keys-5944ae",
+      "tipo": "cartao",
+      "chave": "keys",
+      "texto": "keys",
+      "fala": "keys",
+      "hash": "6a9bbaf5f1",
+      "paginas": [
+        10
+      ]
+    },
+    {
+      "id": "gate-3c5b49",
+      "tipo": "cartao",
+      "chave": "gate",
+      "texto": "gate",
+      "fala": "gate",
+      "hash": "b48ed77f1f",
+      "paginas": [
+        10
+      ]
+    },
+    {
+      "id": "road-4adfa5",
+      "tipo": "cartao",
+      "chave": "road",
+      "texto": "road",
+      "fala": "road",
+      "hash": "5d50189b4e",
+      "paginas": [
+        10
+      ]
+    }
   ]
 }

@@ -2080,5 +2080,228 @@
       "fala": "rê... ver... rêver!",
       "hash": "41bdcba50c"
     }
+  ],
+  "audioFalas": "dom-quixote/audio/falas-fr/<id>.mp3",
+  "falas": [
+    {
+      "id": "touche-les-syllabes-dans-le-bon-254892",
+      "tipo": "comando",
+      "chave": "Touche les syllabes dans le bon ordre pour former le nouveau mot de Sancho : BA-CI-EL-MO !",
+      "texto": "Touche les syllabes dans le bon ordre pour former le nouveau mot de Sancho : BA-CI-EL-MO !",
+      "fala": "Touche les syllabes dans le bon ordre pour former le nouveau mot de Sancho : BA-CI-EL-MO !",
+      "hash": "f2cffd6874",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "ba-6c0596",
+      "tipo": "silaba",
+      "chave": "ba",
+      "texto": "ba",
+      "fala": "ba",
+      "hash": "f518e76bd9",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "ci-5a4fe0",
+      "tipo": "silaba",
+      "chave": "ci",
+      "texto": "ci",
+      "fala": "ci",
+      "hash": "9083dbb45a",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "el-4f1ea4",
+      "tipo": "silaba",
+      "chave": "el",
+      "texto": "el",
+      "fala": "el",
+      "hash": "a34d474240",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "mo-6adbae",
+      "tipo": "silaba",
+      "chave": "mo",
+      "texto": "mo",
+      "fala": "mo",
+      "hash": "6a9383b03f",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "touche-les-lettres-magiques-et-d-6e61e1",
+      "tipo": "comando",
+      "chave": "Touche les lettres magiques et découvre le mot secret de 3 lettres qui ouvre la porte du carrosse !",
+      "texto": "Touche les lettres magiques et découvre le mot secret de 3 lettres qui ouvre la porte du carrosse !",
+      "fala": "Touche les lettres magiques et découvre le mot secret de 3 lettres qui ouvre la porte du carrosse !",
+      "hash": "2b4ec2cd17",
+      "paginas": [
+        3
+      ]
+    },
+    {
+      "id": "letra-a-39af6d",
+      "tipo": "letra",
+      "chave": "letra:a",
+      "texto": "a",
+      "fala": "a",
+      "hash": "02d6f0a7d7",
+      "paginas": [
+        3
+      ]
+    },
+    {
+      "id": "letra-m-bdccdd",
+      "tipo": "letra",
+      "chave": "letra:m",
+      "texto": "m",
+      "fala": "emme",
+      "hash": "ef51f3bdb7",
+      "paginas": [
+        3
+      ]
+    },
+    {
+      "id": "letra-i-011e7a",
+      "tipo": "letra",
+      "chave": "letra:i",
+      "texto": "i",
+      "fala": "i",
+      "hash": "a87b1483ca",
+      "paginas": [
+        3
+      ]
+    },
+    {
+      "id": "sancho-a-faim-regarde-l-image-de-03cd09",
+      "tipo": "comando",
+      "chave": "Sancho a faim ! Regarde l’image de ce qu’il demande et touche le bon mot. Attention aux pièges : ils mettent tout le pique-nique sans dessus dessous !",
+      "texto": "Sancho a faim ! Regarde l’image de ce qu’il demande et touche le bon mot. Attention aux pièges : ils mettent tout le pique-nique sans dessus dessous !",
+      "fala": "Sancho a faim ! Regarde l’image de ce qu’il demande et touche le bon mot. Attention aux pièges : ils mettent tout le pique-nique sans dessus dessous !",
+      "hash": "5d0f3adcd2",
+      "paginas": [
+        5
+      ]
+    },
+    {
+      "id": "pain-4582cd",
+      "tipo": "cartao",
+      "chave": "pain",
+      "texto": "pain",
+      "fala": "pain",
+      "hash": "bf2421c798",
+      "paginas": [
+        5
+      ]
+    },
+    {
+      "id": "fromage-52f78e",
+      "tipo": "cartao",
+      "chave": "fromage",
+      "texto": "fromage",
+      "fala": "fromage",
+      "hash": "17c671b925",
+      "paginas": [
+        5
+      ]
+    },
+    {
+      "id": "eau-849ddd",
+      "tipo": "cartao",
+      "chave": "eau",
+      "texto": "eau",
+      "fala": "eau",
+      "hash": "a17596f95b",
+      "paginas": [
+        5
+      ]
+    },
+    {
+      "id": "bain-plouf-sancho-n-a-pas-envie-d7f027",
+      "tipo": "pegadinha",
+      "chave": "Bain ? Plouf ! Sancho n'a pas envie de prendre un bain dans le ruisseau, il a faim ! Rangeons tout à nouveau !",
+      "texto": "Bain ? Plouf ! Sancho n'a pas envie de prendre un bain dans le ruisseau, il a faim ! Rangeons tout à nouveau !",
+      "fala": "Bain ? Plouf ! Sancho n'a pas envie de prendre un bain dans le ruisseau, il a faim ! Rangeons tout à nouveau !",
+      "hash": "16a08c1eb2",
+      "paginas": [
+        5
+      ]
+    },
+    {
+      "id": "orage-boum-le-tonnerre-a-gronde-14127c",
+      "tipo": "pegadinha",
+      "chave": "Orage ? Boum ! Le tonnerre a grondé et tout a tremblé sur la nappe ! Rangeons tout à nouveau !",
+      "texto": "Orage ? Boum ! Le tonnerre a grondé et tout a tremblé sur la nappe ! Rangeons tout à nouveau !",
+      "fala": "Orage ? Boum ! Le tonnerre a grondé et tout a tremblé sur la nappe ! Rangeons tout à nouveau !",
+      "hash": "87cdb8413f",
+      "paginas": [
+        5
+      ]
+    },
+    {
+      "id": "menton-on-ne-mange-pas-son-mento-207c78",
+      "tipo": "pegadinha",
+      "chave": "Menton ? On ne mange pas son menton ! Sancho a tellement ri qu'il a renversé le panier. Rangeons tout à nouveau !",
+      "texto": "Menton ? On ne mange pas son menton ! Sancho a tellement ri qu'il a renversé le panier. Rangeons tout à nouveau !",
+      "fala": "Menton ? On ne mange pas son menton ! Sancho a tellement ri qu'il a renversé le panier. Rangeons tout à nouveau !",
+      "hash": "c02c14c4ac",
+      "paginas": [
+        5
+      ]
+    },
+    {
+      "id": "aide-sancho-a-annoncer-a-sa-fami-906bd0",
+      "tipo": "comando",
+      "chave": "Aide Sancho à annoncer à sa famille le titre dont il rêve : SANCHO GOUVERNEUR DE L'ÎLE !",
+      "texto": "Aide Sancho à annoncer à sa famille le titre dont il rêve : SANCHO GOUVERNEUR DE L'ÎLE !",
+      "fala": "Aide Sancho à annoncer à sa famille le titre dont il rêve : SANCHO GOUVERNEUR DE L'ÎLE !",
+      "hash": "5f7c82a11b",
+      "paginas": [
+        10
+      ]
+    },
+    {
+      "id": "sancho-2e9054",
+      "tipo": "cartao",
+      "chave": "sancho",
+      "texto": "sancho",
+      "fala": "sancho",
+      "hash": "696d848b94",
+      "paginas": [
+        10
+      ]
+    },
+    {
+      "id": "gouverneur-5f9400",
+      "tipo": "cartao",
+      "chave": "gouverneur",
+      "texto": "gouverneur",
+      "fala": "gouverneur",
+      "hash": "f822c6ed61",
+      "paginas": [
+        10
+      ]
+    },
+    {
+      "id": "de-l-ile-292782",
+      "tipo": "cartao",
+      "chave": "de l'île",
+      "texto": "de l'île",
+      "fala": "de l'île",
+      "hash": "ca29e98063",
+      "paginas": [
+        10
+      ]
+    }
   ]
 }

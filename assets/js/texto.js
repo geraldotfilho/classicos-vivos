@@ -140,7 +140,59 @@
         return falas;
     }
 
-    const api = { segmentarTexto, frasesDaPagina, paginaParaHtml, falasDaPagina, tituloDaPagina, falaDaFrase, textoDaFrase, falaSilabica, prepararFala, slug, escapeHtml };
+    /* ---- Falas das atividades (o que o motor passa para falar(): AGENTS.md §2.6) ----
+       Uma lista só, usada nos dois lugares: o motor pré-carrega as gravações da página e o
+       tools/exportar-frases.mjs lista o que gravar. `texto` é EXATAMENTE o que o motor fala;
+       `chave` é como o motor procura a gravação (letra isolada: "letra:h", para não se confundir com a
+       palavra "a"/"o"). Tipos: comando (🔊 do quadro 🎮), cartao, silaba, letra (ordem/pedido),
+       pegadinha, contagem. `t` traduz (a do motor); `lang` é o código das minúsculas (pt-BR, en-GB...). */
+    // Assinatura soletrada: todos os cartões da atividade 'ordem' são uma letra só
+    function cartoesSaoLetras(cartoes, t) {
+        return !!cartoes && cartoes.tipo === 'ordem' && (cartoes.itens || []).every(x => Array.from(t(x.palavra) || '').length === 1);
+    }
+
+    function falasDaAtividade(pagina, cartoes, t, lang) {
+        const falas = [];
+        const add = (tipo, texto) => {
+            if (!texto) return;
+            const chave = tipo === 'letra' ? `letra:${texto}` : texto;
+            if (!falas.some(f => f.chave === chave)) falas.push({ tipo, texto, chave });
+        };
+        const comando = pagina.comandoAtividade || (pagina.cena && pagina.cena.cartoes && pagina.cena.cartoes.comando);
+        if (comando) add('comando', t(comando));
+        const c = cartoes;
+        if (!c) return falas;
+        const item = (id) => (c.itens || []).find(x => x.id === id) || {};
+        const palavra = (x) => String(t(x.palavra) || '').toLocaleLowerCase(lang);
+        if (c.tipo === 'ordem') {
+            const letras = cartoesSaoLetras(c, t);
+            const silabas = !letras && /s[íi]lab|syllab|pedacinho|pieces|morceaux|trocito/i.test(String(t(comando) || ''));
+            (c.ordem || []).forEach(id => add(letras ? 'letra' : silabas ? 'silaba' : 'cartao', palavra(item(id))));
+        } else if (c.tipo === 'pedido') {
+            (c.pedidos || []).forEach(id => add('cartao', palavra(item(id))));
+            (c.itens || []).filter(x => x.pegadinha).forEach(x => add('pegadinha', t(x.pegadinha)));
+        } else if (c.tipo === 'contagem') {
+            (c.falas || []).forEach(f => add('contagem', t(f)));
+        }
+        return falas;
+    }
+
+    /* Nome da letra isolada (a voz do aparelho lê "h" sozinho de qualquer jeito, e o "a" do inglês como artigo) */
+    const NOMES_LETRAS = {
+        pt: 'á bê cê dê é efe gê agá i jota cá ele eme ene ó pê quê erre esse tê u vê dáblio xis ípsilon zê',
+        en: 'A bee see dee ee ef gee aitch eye jay kay el em en oh pee cue ar ess tee you vee double-you ex why zed',
+        fr: 'a bé cé dé e effe gé ache i ji ka elle emme enne o pé qu erre esse té u vé double-vé ixe i-grec zède',
+        es: 'a be ce de e efe ge hache i jota ka ele eme ene o pe cu erre ese te u uve uve-doble equis ye zeta'
+    };
+    function nomeDaLetra(letra, idioma) {
+        const nomes = NOMES_LETRAS[String(idioma || 'pt').slice(0, 2)];
+        const base = String(letra).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+        if (base === 'ñ' || letra.toLowerCase() === 'ñ') return 'eñe';
+        const n = base.charCodeAt(0) - 97;
+        return nomes && base.length === 1 && n >= 0 && n < 26 ? nomes.split(' ')[n].replace(/-/g, ' ') : letra;
+    }
+
+    const api = { segmentarTexto, frasesDaPagina, paginaParaHtml, falasDaPagina, tituloDaPagina, falaDaFrase, textoDaFrase, falaSilabica, prepararFala, slug, escapeHtml, falasDaAtividade, cartoesSaoLetras, nomeDaLetra };
     if (typeof module === 'object' && module.exports) module.exports = api;
     else raiz.Texto = api;
 })(typeof window !== 'undefined' ? window : globalThis);

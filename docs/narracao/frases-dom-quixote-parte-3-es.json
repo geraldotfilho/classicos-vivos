@@ -743,5 +743,118 @@
       "fala": "le... tras... letras!",
       "hash": "d2788ac3bb"
     }
+  ],
+  "audioFalas": "dom-quixote/audio/falas-es/<id>.mp3",
+  "falas": [
+    {
+      "id": "abre-la-maleta-vieja-encontrada-4057cc",
+      "tipo": "comando",
+      "chave": "¡Abre la maleta vieja encontrada en la sierra: toca el cuaderno de poesías y las monedas de oro!",
+      "texto": "¡Abre la maleta vieja encontrada en la sierra: toca el cuaderno de poesías y las monedas de oro!",
+      "fala": "¡Abre la maleta vieja encontrada en la sierra: toca el cuaderno de poesías y las monedas de oro!",
+      "hash": "ee1e1ba34a",
+      "paginas": [
+        1
+      ]
+    },
+    {
+      "id": "toca-la-voltereta-para-ver-las-p-0232e6",
+      "tipo": "comando",
+      "chave": "¡Toca la voltereta para ver las piruetas heroicas de Don Quijote en la montaña!",
+      "texto": "¡Toca la voltereta para ver las piruetas heroicas de Don Quijote en la montaña!",
+      "fala": "¡Toca la voltereta para ver las piruetas heroicas de Don Quijote en la montaña!",
+      "hash": "dfee08fef6",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "ayuda-a-sancho-a-firmar-la-carta-aa4e9c",
+      "tipo": "comando",
+      "chave": "¡Ayuda a Sancho a firmar la carta de amor: toca las palabras en el orden correcto para formar EL CABALLERO DE LA TRISTE FIGURA!",
+      "texto": "¡Ayuda a Sancho a firmar la carta de amor: toca las palabras en el orden correcto para formar EL CABALLERO DE LA TRISTE FIGURA!",
+      "fala": "¡Ayuda a Sancho a firmar la carta de amor: toca las palabras en el orden correcto para formar EL CABALLERO DE LA TRISTE FIGURA!",
+      "hash": "b13969e3f3",
+      "paginas": [
+        3
+      ]
+    },
+    {
+      "id": "el-4f1ea4",
+      "tipo": "cartao",
+      "chave": "el",
+      "texto": "el",
+      "fala": "el",
+      "hash": "8596100ae0",
+      "paginas": [
+        3
+      ]
+    },
+    {
+      "id": "caballero-99eddf",
+      "tipo": "cartao",
+      "chave": "caballero",
+      "texto": "caballero",
+      "fala": "caballero",
+      "hash": "cfa7ff2a64",
+      "paginas": [
+        3
+      ]
+    },
+    {
+      "id": "de-600ccd",
+      "tipo": "cartao",
+      "chave": "de",
+      "texto": "de",
+      "fala": "de",
+      "hash": "ecc4ff1e68",
+      "paginas": [
+        3
+      ]
+    },
+    {
+      "id": "la-3efd4c",
+      "tipo": "cartao",
+      "chave": "la",
+      "texto": "la",
+      "fala": "la",
+      "hash": "545ba2c710",
+      "paginas": [
+        3
+      ]
+    },
+    {
+      "id": "triste-f47590",
+      "tipo": "cartao",
+      "chave": "triste",
+      "texto": "triste",
+      "fala": "triste",
+      "hash": "ff6396a4de",
+      "paginas": [
+        3
+      ]
+    },
+    {
+      "id": "figura-00258f",
+      "tipo": "cartao",
+      "chave": "figura",
+      "texto": "figura",
+      "fala": "figura",
+      "hash": "92fae01038",
+      "paginas": [
+        3
+      ]
+    },
+    {
+      "id": "don-quijote-suena-que-se-enfrent-95bb98",
+      "tipo": "comando",
+      "chave": "¡Don Quijote sueña que se enfrenta a un gigante: toca la espada para pinchar los odres de vino!",
+      "texto": "¡Don Quijote sueña que se enfrenta a un gigante: toca la espada para pinchar los odres de vino!",
+      "fala": "¡Don Quijote sueña que se enfrenta a un gigante: toca la espada para pinchar los odres de vino!",
+      "hash": "37a2dc34db",
+      "paginas": [
+        6
+      ]
+    }
   ]
 }

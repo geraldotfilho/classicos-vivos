@@ -633,5 +633,63 @@
       "fala": "gi... gan... tes... gigantes!",
       "hash": "9e4e0a721d"
     }
+  ],
+  "audioFalas": "dom-quixote/audio/falas-es/<id>.mp3",
+  "falas": [
+    {
+      "id": "toca-los-tres-libros-de-alonso-p-458ad4",
+      "tipo": "comando",
+      "chave": "¡Toca los tres libros de Alonso para descubrir las aventuras de caballeros, castillos y dragones!",
+      "texto": "¡Toca los tres libros de Alonso para descubrir las aventuras de caballeros, castillos y dragones!",
+      "fala": "¡Toca los tres libros de Alonso para descubrir las aventuras de caballeros, castillos y dragones!",
+      "hash": "fb92c4b8d2",
+      "paginas": [
+        1
+      ]
+    },
+    {
+      "id": "ayuda-al-abuelo-alonso-a-equipar-183c20",
+      "tipo": "comando",
+      "chave": "¡Ayuda al abuelo Alonso a equiparse: toca los objetos en el orden correcto para ponerte la armadura, la bacía, el escudo y la lanza!",
+      "texto": "¡Ayuda al abuelo Alonso a equiparse: toca los objetos en el orden correcto para ponerte la armadura, la bacía, el escudo y la lanza!",
+      "fala": "¡Ayuda al abuelo Alonso a equiparse: toca los objetos en el orden correcto para ponerte la armadura, la bacía, el escudo y la lanza!",
+      "hash": "190514ef76",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "cuida-con-carino-de-rocinante-da-30b31b",
+      "tipo": "comando",
+      "chave": "¡Cuida con cariño de Rocinante: dale la manzana dulce, la zanahoria crujiente y cepilla sus crines!",
+      "texto": "¡Cuida con cariño de Rocinante: dale la manzana dulce, la zanahoria crujiente y cepilla sus crines!",
+      "fala": "¡Cuida con cariño de Rocinante: dale la manzana dulce, la zanahoria crujiente y cepilla sus crines!",
+      "hash": "0dca93c120",
+      "paginas": [
+        3
+      ]
+    },
+    {
+      "id": "toca-la-trompeta-para-escuchar-l-52f543",
+      "tipo": "comando",
+      "chave": "¡Toca la trompeta para escuchar la música del pastor y la sopa calentita para calentarte en la venta!",
+      "texto": "¡Toca la trompeta para escuchar la música del pastor y la sopa calentita para calentarte en la venta!",
+      "fala": "¡Toca la trompeta para escuchar la música del pastor y la sopa calentita para calentarte en la venta!",
+      "hash": "2794f34f6f",
+      "paginas": [
+        4
+      ]
+    },
+    {
+      "id": "toca-el-viento-fuerte-para-que-l-305772",
+      "tipo": "comando",
+      "chave": "¡Toca el viento fuerte para que las aspas de los molinos giren cada vez más rápido!",
+      "texto": "¡Toca el viento fuerte para que las aspas de los molinos giren cada vez más rápido!",
+      "fala": "¡Toca el viento fuerte para que las aspas de los molinos giren cada vez más rápido!",
+      "hash": "4af80351f1",
+      "paginas": [
+        7
+      ]
+    }
   ]
 }

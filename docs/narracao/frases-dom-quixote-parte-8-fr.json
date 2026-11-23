@@ -3061,5 +3061,173 @@
       "fala": "li... re... lire!",
       "hash": "97cd5fc76b"
     }
+  ],
+  "audioFalas": "dom-quixote/audio/falas-fr/<id>.mp3",
+  "falas": [
+    {
+      "id": "les-petites-lettres-de-plomb-son-6613b7",
+      "tipo": "comando",
+      "chave": "Les petites lettres de plomb sont tombées par terre ! Aide l’homme en tablier : assemble les lettres dans le bon ordre et découvre le mot que cet atelier fabrique toute la journée.",
+      "texto": "Les petites lettres de plomb sont tombées par terre ! Aide l’homme en tablier : assemble les lettres dans le bon ordre et découvre le mot que cet atelier fabrique toute la journée.",
+      "fala": "Les petites lettres de plomb sont tombées par terre ! Aide l’homme en tablier : assemble les lettres dans le bon ordre et découvre le mot que cet atelier fabrique toute la journée.",
+      "hash": "cd99900559",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "letra-l-99c30a",
+      "tipo": "letra",
+      "chave": "letra:l",
+      "texto": "l",
+      "fala": "elle",
+      "hash": "1d862314da",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "letra-i-011e7a",
+      "tipo": "letra",
+      "chave": "letra:i",
+      "texto": "i",
+      "fala": "i",
+      "hash": "a87b1483ca",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "letra-v-4d8144",
+      "tipo": "letra",
+      "chave": "letra:v",
+      "texto": "v",
+      "fala": "vé",
+      "hash": "b9c16cfcfe",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "letra-r-d866b1",
+      "tipo": "letra",
+      "chave": "letra:r",
+      "texto": "r",
+      "fala": "erre",
+      "hash": "651ed104f8",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "letra-e-f51287",
+      "tipo": "letra",
+      "chave": "letra:e",
+      "texto": "e",
+      "fala": "e",
+      "hash": "f82dc24403",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "quel-est-le-nom-de-berger-de-san-54b0dd",
+      "tipo": "comando",
+      "chave": "Quel est le nom de berger de Sancho ? Un indice : il vient de son nom de famille. Touche le bon nom. Attention aux pièges !",
+      "texto": "Quel est le nom de berger de Sancho ? Un indice : il vient de son nom de famille. Touche le bon nom. Attention aux pièges !",
+      "fala": "Quel est le nom de berger de Sancho ? Un indice : il vient de son nom de famille. Touche le bon nom. Attention aux pièges !",
+      "hash": "53b8333abd",
+      "paginas": [
+        8
+      ]
+    },
+    {
+      "id": "pancino-3cacf3",
+      "tipo": "cartao",
+      "chave": "pancino",
+      "texto": "pancino",
+      "fala": "pancino",
+      "hash": "f916b75462",
+      "paginas": [
+        8
+      ]
+    },
+    {
+      "id": "panini-le-berger-panini-c-est-un-bb285f",
+      "tipo": "pegadinha",
+      "chave": "Panini ? Le berger Panini, c’est un nom de sandwich ! Les moutons voudraient le croquer à midi. On essaie encore !",
+      "texto": "Panini ? Le berger Panini, c’est un nom de sandwich ! Les moutons voudraient le croquer à midi. On essaie encore !",
+      "fala": "Panini ? Le berger Panini, c’est un nom de sandwich ! Les moutons voudraient le croquer à midi. On essaie encore !",
+      "hash": "23b0003ff3",
+      "paginas": [
+        8
+      ]
+    },
+    {
+      "id": "cappuccino-le-berger-cappuccino-f4f369",
+      "tipo": "pegadinha",
+      "chave": "Cappuccino ? Le berger Cappuccino aurait de la mousse sur la moustache, et les moutons voudraient le boire au petit déjeuner ! On essaie encore !",
+      "texto": "Cappuccino ? Le berger Cappuccino aurait de la mousse sur la moustache, et les moutons voudraient le boire au petit déjeuner ! On essaie encore !",
+      "fala": "Cappuccino ? Le berger Cappuccino aurait de la mousse sur la moustache, et les moutons voudraient le boire au petit déjeuner ! On essaie encore !",
+      "hash": "eb679cc4f2",
+      "paginas": [
+        8
+      ]
+    },
+    {
+      "id": "les-enfants-veulent-tout-entendr-380458",
+      "tipo": "comando",
+      "chave": "Les enfants veulent tout entendre encore une fois ! Aide papi Alonso à commencer l’histoire : touche les mots dans le bon ordre.",
+      "texto": "Les enfants veulent tout entendre encore une fois ! Aide papi Alonso à commencer l’histoire : touche les mots dans le bon ordre.",
+      "fala": "Les enfants veulent tout entendre encore une fois ! Aide papi Alonso à commencer l’histoire : touche les mots dans le bon ordre.",
+      "hash": "4d5248fa09",
+      "paginas": [
+        10
+      ]
+    },
+    {
+      "id": "il-53c1d6",
+      "tipo": "cartao",
+      "chave": "il",
+      "texto": "il",
+      "fala": "il",
+      "hash": "0c3bab8f46",
+      "paginas": [
+        10
+      ]
+    },
+    {
+      "id": "etait-8f9c60",
+      "tipo": "cartao",
+      "chave": "était",
+      "texto": "était",
+      "fala": "était",
+      "hash": "4d797eaca1",
+      "paginas": [
+        10
+      ]
+    },
+    {
+      "id": "une-e3bae9",
+      "tipo": "cartao",
+      "chave": "une",
+      "texto": "une",
+      "fala": "une",
+      "hash": "e1d9dce61f",
+      "paginas": [
+        10
+      ]
+    },
+    {
+      "id": "fois-529669",
+      "tipo": "cartao",
+      "chave": "fois",
+      "texto": "fois",
+      "fala": "fois",
+      "hash": "824f010075",
+      "paginas": [
+        10
+      ]
+    }
   ]
 }

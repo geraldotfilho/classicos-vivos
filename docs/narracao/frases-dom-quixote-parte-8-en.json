@@ -3061,5 +3061,151 @@
       "fala": "read... read!",
       "hash": "389005869e"
     }
+  ],
+  "audioFalas": "dom-quixote/audio/falas-en/<id>.mp3",
+  "falas": [
+    {
+      "id": "the-little-lead-letters-have-fal-02b571",
+      "tipo": "comando",
+      "chave": "The little lead letters have fallen on the floor! Help the man in the apron: put the letters in the right order and find out the word this workshop makes all day long.",
+      "texto": "The little lead letters have fallen on the floor! Help the man in the apron: put the letters in the right order and find out the word this workshop makes all day long.",
+      "fala": "The little lead letters have fallen on the floor! Help the man in the apron: put the letters in the right order and find out the word this workshop makes all day long.",
+      "hash": "87b538cf9b",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "letra-b-490a87",
+      "tipo": "letra",
+      "chave": "letra:b",
+      "texto": "b",
+      "fala": "bee",
+      "hash": "cff77f8ea3",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "letra-o-2c382c",
+      "tipo": "letra",
+      "chave": "letra:o",
+      "texto": "o",
+      "fala": "oh",
+      "hash": "1de75801d2",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "letra-k-bd8a1a",
+      "tipo": "letra",
+      "chave": "letra:k",
+      "texto": "k",
+      "fala": "kay",
+      "hash": "c8f6b94449",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "what-is-sancho-s-shepherd-name-a-e50782",
+      "tipo": "comando",
+      "chave": "What is Sancho’s shepherd name? A clue: it comes from his surname. Tap the right name. Watch out for the trick words!",
+      "texto": "What is Sancho’s shepherd name? A clue: it comes from his surname. Tap the right name. Watch out for the trick words!",
+      "fala": "What is Sancho’s shepherd name? A clue: it comes from his surname. Tap the right name. Watch out for the trick words!",
+      "hash": "51a878c9b1",
+      "paginas": [
+        8
+      ]
+    },
+    {
+      "id": "panzino-e82c0e",
+      "tipo": "cartao",
+      "chave": "panzino",
+      "texto": "panzino",
+      "fala": "panzino",
+      "hash": "0ebb25edc7",
+      "paginas": [
+        8
+      ]
+    },
+    {
+      "id": "panini-shepherd-panini-sounds-li-e6cdec",
+      "tipo": "pegadinha",
+      "chave": "Panini? Shepherd Panini sounds like a sandwich! The sheep would want to eat him for lunch. Let's try again!",
+      "texto": "Panini? Shepherd Panini sounds like a sandwich! The sheep would want to eat him for lunch. Let's try again!",
+      "fala": "Panini? Shepherd Panini sounds like a sandwich! The sheep would want to eat him for lunch. Let's try again!",
+      "hash": "73e08aae64",
+      "paginas": [
+        8
+      ]
+    },
+    {
+      "id": "pancake-shepherd-pancake-would-e-d6d165",
+      "tipo": "pegadinha",
+      "chave": "Pancake? Shepherd Pancake would end up as the sheep’s breakfast! Let's try again!",
+      "texto": "Pancake? Shepherd Pancake would end up as the sheep’s breakfast! Let's try again!",
+      "fala": "Pancake? Shepherd Pancake would end up as the sheep’s breakfast! Let's try again!",
+      "hash": "99f5e35c0b",
+      "paginas": [
+        8
+      ]
+    },
+    {
+      "id": "the-children-want-to-hear-it-all-bbcc06",
+      "tipo": "comando",
+      "chave": "The children want to hear it all again! Help Grandpa Alonso begin the story: tap the words in the right order.",
+      "texto": "The children want to hear it all again! Help Grandpa Alonso begin the story: tap the words in the right order.",
+      "fala": "The children want to hear it all again! Help Grandpa Alonso begin the story: tap the words in the right order.",
+      "hash": "a78ace3d95",
+      "paginas": [
+        10
+      ]
+    },
+    {
+      "id": "once-186383",
+      "tipo": "cartao",
+      "chave": "once",
+      "texto": "once",
+      "fala": "once",
+      "hash": "155a165e46",
+      "paginas": [
+        10
+      ]
+    },
+    {
+      "id": "upon-76205f",
+      "tipo": "cartao",
+      "chave": "upon",
+      "texto": "upon",
+      "fala": "upon",
+      "hash": "2d5e26c0ff",
+      "paginas": [
+        10
+      ]
+    },
+    {
+      "id": "a-86f7e4",
+      "tipo": "cartao",
+      "chave": "a",
+      "texto": "a",
+      "fala": "a",
+      "hash": "d549767f8f",
+      "paginas": [
+        10
+      ]
+    },
+    {
+      "id": "time-714eea",
+      "tipo": "cartao",
+      "chave": "time",
+      "texto": "time",
+      "fala": "time",
+      "hash": "12442e43eb",
+      "paginas": [
+        10
+      ]
+    }
   ]
 }

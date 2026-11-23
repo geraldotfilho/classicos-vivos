@@ -985,5 +985,107 @@
       "fala": "hel... met... of... mam... bri... no... helmet of mambrino!",
       "hash": "fee85395d5"
     }
+  ],
+  "audioFalas": "dom-quixote/audio/falas-en/<id>.mp3",
+  "falas": [
+    {
+      "id": "help-prepare-the-goatherds-snack-d2dcf5",
+      "tipo": "comando",
+      "chave": "Help prepare the goatherds’ snack: tap the sweet acorns, the fresh cheese, and the warm milk!",
+      "texto": "Help prepare the goatherds’ snack: tap the sweet acorns, the fresh cheese, and the warm milk!",
+      "fala": "Help prepare the goatherds’ snack: tap the sweet acorns, the fresh cheese, and the warm milk!",
+      "hash": "d064d73dca",
+      "paginas": [
+        3
+      ]
+    },
+    {
+      "id": "blow-away-the-cloud-of-dust-to-f-d99a57",
+      "tipo": "comando",
+      "chave": "Blow away the cloud of dust to find out what is hidden on the road!",
+      "texto": "Blow away the cloud of dust to find out what is hidden on the road!",
+      "fala": "Blow away the cloud of dust to find out what is hidden on the road!",
+      "hash": "133b626f5a",
+      "paginas": [
+        4
+      ]
+    },
+    {
+      "id": "help-sancho-count-the-little-goa-ccd36e",
+      "tipo": "comando",
+      "chave": "Help Sancho count the little goats crossing the river in the boat, one by one!",
+      "texto": "Help Sancho count the little goats crossing the river in the boat, one by one!",
+      "fala": "Help Sancho count the little goats crossing the river in the boat, one by one!",
+      "hash": "a9c2c29a00",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "one-goat-e5b7c6",
+      "tipo": "contagem",
+      "chave": "One goat!",
+      "texto": "One goat!",
+      "fala": "One goat!",
+      "hash": "eca17aa475",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "two-goats-89b2a1",
+      "tipo": "contagem",
+      "chave": "Two goats!",
+      "texto": "Two goats!",
+      "fala": "Two goats!",
+      "hash": "7479050bff",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "three-goats-da6879",
+      "tipo": "contagem",
+      "chave": "Three goats!",
+      "texto": "Three goats!",
+      "fala": "Three goats!",
+      "hash": "ccb984d3d2",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "four-goats-51d5c4",
+      "tipo": "contagem",
+      "chave": "Four goats!",
+      "texto": "Four goats!",
+      "fala": "Four goats!",
+      "hash": "e45c9d63ba",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "five-goats-only-two-hundred-and-7879a4",
+      "tipo": "contagem",
+      "chave": "Five goats! Only two hundred and ninety-five to go!",
+      "texto": "Five goats! Only two hundred and ninety-five to go!",
+      "fala": "Five goats! Only two hundred and ninety-five to go!",
+      "hash": "ab40c19c99",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "tap-the-rising-sun-to-light-up-t-65054b",
+      "tipo": "comando",
+      "chave": "Tap the rising sun to light up the river and solve the mystery of the night sounds!",
+      "texto": "Tap the rising sun to light up the river and solve the mystery of the night sounds!",
+      "fala": "Tap the rising sun to light up the river and solve the mystery of the night sounds!",
+      "hash": "2e3d90b421",
+      "paginas": [
+        7
+      ]
+    }
   ]
 }

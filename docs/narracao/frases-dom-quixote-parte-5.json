@@ -2660,5 +2660,173 @@
       "fala": "le... ões... leões!",
       "hash": "a5e7966570"
     }
+  ],
+  "audioFalas": "dom-quixote/audio/falas/<id>.mp3",
+  "falas": [
+    {
+      "id": "sancho-nao-sabe-ler-e-quer-achar-9e07f4",
+      "tipo": "comando",
+      "chave": "Sancho não sabe ler e quer achar o nome dele no livro. Ajude: junte os pedacinhos do nome na ordem certa!",
+      "texto": "Sancho não sabe ler e quer achar o nome dele no livro. Ajude: junte os pedacinhos do nome na ordem certa!",
+      "fala": "Sancho não sabe ler e quer achar o nome dele no livro. Ajude: junte os pedacinhos do nome na ordem certa!",
+      "hash": "26cbd8c004",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "san-b23d0c",
+      "tipo": "silaba",
+      "chave": "san",
+      "texto": "san",
+      "fala": "san",
+      "hash": "9922e983d4",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "cho-5a6e35",
+      "tipo": "silaba",
+      "chave": "cho",
+      "texto": "cho",
+      "fala": "cho",
+      "hash": "d8d1315ddc",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "pan-bd2bd8",
+      "tipo": "silaba",
+      "chave": "pan",
+      "texto": "pan",
+      "fala": "pan",
+      "hash": "51593d710b",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "ca-24125d",
+      "tipo": "silaba",
+      "chave": "ça",
+      "texto": "ça",
+      "fala": "ça",
+      "hash": "d183677c68",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "ajude-sancho-a-descobrir-quem-sa-ea57b2",
+      "tipo": "comando",
+      "chave": "Ajude Sancho a descobrir quem são os dois desconhecidos! Veja a figura do que ele quer tirar e toque na palavra certa. Cuidado com as pegadinhas!",
+      "texto": "Ajude Sancho a descobrir quem são os dois desconhecidos! Veja a figura do que ele quer tirar e toque na palavra certa. Cuidado com as pegadinhas!",
+      "fala": "Ajude Sancho a descobrir quem são os dois desconhecidos! Veja a figura do que ele quer tirar e toque na palavra certa. Cuidado com as pegadinhas!",
+      "hash": "b76f0327b0",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "elmo-1269f2",
+      "tipo": "cartao",
+      "chave": "elmo",
+      "texto": "elmo",
+      "fala": "elmo",
+      "hash": "e8ac288e7b",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "nariz-062564",
+      "tipo": "cartao",
+      "chave": "nariz",
+      "texto": "nariz",
+      "fala": "nariz",
+      "hash": "7d1f16bc37",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "raiz-sancho-puxou-a-raiz-da-arvo-6fb2d8",
+      "tipo": "pegadinha",
+      "chave": "Raiz? Sancho puxou a raiz da árvore com tanta força que caiu sentado também! Vamos tentar de novo!",
+      "texto": "Raiz? Sancho puxou a raiz da árvore com tanta força que caiu sentado também! Vamos tentar de novo!",
+      "fala": "Raiz? Sancho puxou a raiz da árvore com tanta força que caiu sentado também! Vamos tentar de novo!",
+      "hash": "ed59a36367",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "remo-sancho-remou-remou-no-capim-2f3c5f",
+      "tipo": "pegadinha",
+      "chave": "Remo? Sancho remou, remou no capim e não saiu do lugar. Aqui não tem rio! Vamos tentar de novo!",
+      "texto": "Remo? Sancho remou, remou no capim e não saiu do lugar. Aqui não tem rio! Vamos tentar de novo!",
+      "fala": "Remo? Sancho remou, remou no capim e não saiu do lugar. Aqui não tem rio! Vamos tentar de novo!",
+      "hash": "efa92ed9ef",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "o-tratador-vai-contar-ao-rei-tud-057ba7",
+      "tipo": "comando",
+      "chave": "O tratador vai contar ao rei tudo o que o leão fez. Ajude-o a lembrar: leia a história e toque nas palavras na ordem em que aconteceu!",
+      "texto": "O tratador vai contar ao rei tudo o que o leão fez. Ajude-o a lembrar: leia a história e toque nas palavras na ordem em que aconteceu!",
+      "fala": "O tratador vai contar ao rei tudo o que o leão fez. Ajude-o a lembrar: leia a história e toque nas palavras na ordem em que aconteceu!",
+      "hash": "c329da414d",
+      "paginas": [
+        9
+      ]
+    },
+    {
+      "id": "espreguicou-6d5230",
+      "tipo": "cartao",
+      "chave": "espreguiçou",
+      "texto": "espreguiçou",
+      "fala": "espreguiçou",
+      "hash": "4b0e2d8596",
+      "paginas": [
+        9
+      ]
+    },
+    {
+      "id": "bocejou-a32229",
+      "tipo": "cartao",
+      "chave": "bocejou",
+      "texto": "bocejou",
+      "fala": "bocejou",
+      "hash": "ba9527ea8b",
+      "paginas": [
+        9
+      ]
+    },
+    {
+      "id": "lavou-b656aa",
+      "tipo": "cartao",
+      "chave": "lavou",
+      "texto": "lavou",
+      "fala": "lavou",
+      "hash": "c7a47c7645",
+      "paginas": [
+        9
+      ]
+    },
+    {
+      "id": "deitou-3ce786",
+      "tipo": "cartao",
+      "chave": "deitou",
+      "texto": "deitou",
+      "fala": "deitou",
+      "hash": "fff4be022d",
+      "paginas": [
+        9
+      ]
+    }
   ]
 }

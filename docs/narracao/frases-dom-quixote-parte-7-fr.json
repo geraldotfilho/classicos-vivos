@@ -3263,5 +3263,239 @@
       "fala": "bar... ce... lone... barcelone!",
       "hash": "fcfd835b28"
     }
+  ],
+  "audioFalas": "dom-quixote/audio/falas-fr/<id>.mp3",
+  "falas": [
+    {
+      "id": "aide-le-gouverneur-a-compter-les-3ab087",
+      "tipo": "comando",
+      "chave": "Aide le gouverneur à compter les petits chapeaux ! Touche les nombres dans le bon ordre : chaque bonne réponse met un petit chapeau sur un doigt du tailleur.",
+      "texto": "Aide le gouverneur à compter les petits chapeaux ! Touche les nombres dans le bon ordre : chaque bonne réponse met un petit chapeau sur un doigt du tailleur.",
+      "fala": "Aide le gouverneur à compter les petits chapeaux ! Touche les nombres dans le bon ordre : chaque bonne réponse met un petit chapeau sur un doigt du tailleur.",
+      "hash": "7319aa5cbd",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "un-dd3bc4",
+      "tipo": "cartao",
+      "chave": "un",
+      "texto": "un",
+      "fala": "un",
+      "hash": "1267de9a86",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "deux-503c02",
+      "tipo": "cartao",
+      "chave": "deux",
+      "texto": "deux",
+      "fala": "deux",
+      "hash": "1cf9af6f97",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "trois-dff3ee",
+      "tipo": "cartao",
+      "chave": "trois",
+      "texto": "trois",
+      "fala": "trois",
+      "hash": "3d0dc7d683",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "quatre-1f411d",
+      "tipo": "cartao",
+      "chave": "quatre",
+      "texto": "quatre",
+      "fala": "quatre",
+      "hash": "c9d8047d86",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "cinq-64a7f9",
+      "tipo": "cartao",
+      "chave": "cinq",
+      "texto": "cinq",
+      "fala": "cinq",
+      "hash": "7cc5821e9a",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "sancho-veut-ouvrir-la-cachette-d-1d6c41",
+      "tipo": "comando",
+      "chave": "Sancho veut ouvrir la cachette des pièces. Touche son nom ! Attention aux pièges !",
+      "texto": "Sancho veut ouvrir la cachette des pièces. Touche son nom ! Attention aux pièges !",
+      "fala": "Sancho veut ouvrir la cachette des pièces. Touche son nom ! Attention aux pièges !",
+      "hash": "ae60ee5b72",
+      "paginas": [
+        4
+      ]
+    },
+    {
+      "id": "baton-c1c459",
+      "tipo": "cartao",
+      "chave": "bâton",
+      "texto": "bâton",
+      "fala": "bâton",
+      "hash": "9a1b366385",
+      "paginas": [
+        4
+      ]
+    },
+    {
+      "id": "bateau-sur-cette-ile-il-n-y-a-me-3cf98e",
+      "tipo": "pegadinha",
+      "chave": "Bateau ? Sur cette île, il n’y a même pas de mer pour un bateau ! On essaie encore une fois !",
+      "texto": "Bateau ? Sur cette île, il n’y a même pas de mer pour un bateau ! On essaie encore une fois !",
+      "fala": "Bateau ? Sur cette île, il n’y a même pas de mer pour un bateau ! On essaie encore une fois !",
+      "hash": "9c5bed4d52",
+      "paginas": [
+        4
+      ]
+    },
+    {
+      "id": "bouton-sancho-a-regarde-tous-les-258b84",
+      "tipo": "pegadinha",
+      "chave": "Bouton ? Sancho a regardé tous les boutons de son grand manteau, un par un : pas une seule pièce dedans ! On essaie encore une fois !",
+      "texto": "Bouton ? Sancho a regardé tous les boutons de son grand manteau, un par un : pas une seule pièce dedans ! On essaie encore une fois !",
+      "fala": "Bouton ? Sancho a regardé tous les boutons de son grand manteau, un par un : pas une seule pièce dedans ! On essaie encore une fois !",
+      "hash": "7c7ac6daad",
+      "paginas": [
+        4
+      ]
+    },
+    {
+      "id": "aide-le-gouverneur-a-signer-la-l-1efa13",
+      "tipo": "comando",
+      "chave": "Aide le gouverneur à signer la lettre ! Touche les lettres de son prénom, dans le bon ordre.",
+      "texto": "Aide le gouverneur à signer la lettre ! Touche les lettres de son prénom, dans le bon ordre.",
+      "fala": "Aide le gouverneur à signer la lettre ! Touche les lettres de son prénom, dans le bon ordre.",
+      "hash": "2eca05f82e",
+      "paginas": [
+        7
+      ]
+    },
+    {
+      "id": "letra-s-d4031c",
+      "tipo": "letra",
+      "chave": "letra:s",
+      "texto": "s",
+      "fala": "esse",
+      "hash": "9eefc5bc8e",
+      "paginas": [
+        7
+      ]
+    },
+    {
+      "id": "letra-a-39af6d",
+      "tipo": "letra",
+      "chave": "letra:a",
+      "texto": "a",
+      "fala": "a",
+      "hash": "02d6f0a7d7",
+      "paginas": [
+        7
+      ]
+    },
+    {
+      "id": "letra-n-53d5e1",
+      "tipo": "letra",
+      "chave": "letra:n",
+      "texto": "n",
+      "fala": "enne",
+      "hash": "37e4ddb4fd",
+      "paginas": [
+        7
+      ]
+    },
+    {
+      "id": "letra-c-b9d477",
+      "tipo": "letra",
+      "chave": "letra:c",
+      "texto": "c",
+      "fala": "cé",
+      "hash": "d7252c6149",
+      "paginas": [
+        7
+      ]
+    },
+    {
+      "id": "letra-h-0fa366",
+      "tipo": "letra",
+      "chave": "letra:h",
+      "texto": "h",
+      "fala": "ache",
+      "hash": "fa336c0be0",
+      "paginas": [
+        7
+      ]
+    },
+    {
+      "id": "letra-o-2c382c",
+      "tipo": "letra",
+      "chave": "letra:o",
+      "texto": "o",
+      "fala": "o",
+      "hash": "45592d60b6",
+      "paginas": [
+        7
+      ]
+    },
+    {
+      "id": "c-est-l-heure-de-quitter-le-pala-0a055e",
+      "tipo": "comando",
+      "chave": "C’est l’heure de quitter le palais ! Aide les deux amis à partir : touche les mots dans l’ordre où tout se passe.",
+      "texto": "C’est l’heure de quitter le palais ! Aide les deux amis à partir : touche les mots dans l’ordre où tout se passe.",
+      "fala": "C’est l’heure de quitter le palais ! Aide les deux amis à partir : touche les mots dans l’ordre où tout se passe.",
+      "hash": "6d46840756",
+      "paginas": [
+        10
+      ]
+    },
+    {
+      "id": "cles-b425df",
+      "tipo": "cartao",
+      "chave": "clés",
+      "texto": "clés",
+      "fala": "clés",
+      "hash": "3af5f185a2",
+      "paginas": [
+        10
+      ]
+    },
+    {
+      "id": "portail-b3007f",
+      "tipo": "cartao",
+      "chave": "portail",
+      "texto": "portail",
+      "fala": "portail",
+      "hash": "b25ee1af99",
+      "paginas": [
+        10
+      ]
+    },
+    {
+      "id": "route-fc166e",
+      "tipo": "cartao",
+      "chave": "route",
+      "texto": "route",
+      "fala": "route",
+      "hash": "699190effc",
+      "paginas": [
+        10
+      ]
+    }
   ]
 }

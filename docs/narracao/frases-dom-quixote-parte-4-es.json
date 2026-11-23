@@ -2120,5 +2120,261 @@
       "fala": "so... ñar... soñar!",
       "hash": "0b8032f27e"
     }
+  ],
+  "audioFalas": "dom-quixote/audio/falas-es/<id>.mp3",
+  "falas": [
+    {
+      "id": "toca-las-silabas-en-el-orden-cor-0f708d",
+      "tipo": "comando",
+      "chave": "¡Toca las sílabas en el orden correcto para formar la nueva palabra de Sancho: BA-CI-EL-MO!",
+      "texto": "¡Toca las sílabas en el orden correcto para formar la nueva palabra de Sancho: BA-CI-EL-MO!",
+      "fala": "¡Toca las sílabas en el orden correcto para formar la nueva palabra de Sancho: BA-CI-EL-MO!",
+      "hash": "1ac10270b9",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "ba-6c0596",
+      "tipo": "silaba",
+      "chave": "ba",
+      "texto": "ba",
+      "fala": "ba",
+      "hash": "f518e76bd9",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "ci-5a4fe0",
+      "tipo": "silaba",
+      "chave": "ci",
+      "texto": "ci",
+      "fala": "ci",
+      "hash": "9083dbb45a",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "el-4f1ea4",
+      "tipo": "silaba",
+      "chave": "el",
+      "texto": "el",
+      "fala": "el",
+      "hash": "a34d474240",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "mo-6adbae",
+      "tipo": "silaba",
+      "chave": "mo",
+      "texto": "mo",
+      "fala": "mo",
+      "hash": "6a9383b03f",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "toca-las-letras-magicas-y-descub-e294fa",
+      "tipo": "comando",
+      "chave": "¡Toca las letras mágicas y descubre la palabra secreta de 5 letras que abre la puerta de la carroza!",
+      "texto": "¡Toca las letras mágicas y descubre la palabra secreta de 5 letras que abre la puerta de la carroza!",
+      "fala": "¡Toca las letras mágicas y descubre la palabra secreta de 5 letras que abre la puerta de la carroza!",
+      "hash": "3ed5c20e93",
+      "paginas": [
+        3
+      ]
+    },
+    {
+      "id": "letra-a-39af6d",
+      "tipo": "letra",
+      "chave": "letra:a",
+      "texto": "a",
+      "fala": "a",
+      "hash": "02d6f0a7d7",
+      "paginas": [
+        3
+      ]
+    },
+    {
+      "id": "letra-m-bdccdd",
+      "tipo": "letra",
+      "chave": "letra:m",
+      "texto": "m",
+      "fala": "eme",
+      "hash": "5d5caa2d83",
+      "paginas": [
+        3
+      ]
+    },
+    {
+      "id": "letra-i-011e7a",
+      "tipo": "letra",
+      "chave": "letra:i",
+      "texto": "i",
+      "fala": "i",
+      "hash": "a87b1483ca",
+      "paginas": [
+        3
+      ]
+    },
+    {
+      "id": "letra-g-ac5a24",
+      "tipo": "letra",
+      "chave": "letra:g",
+      "texto": "g",
+      "fala": "ge",
+      "hash": "98f4895a5b",
+      "paginas": [
+        3
+      ]
+    },
+    {
+      "id": "letra-o-2c382c",
+      "tipo": "letra",
+      "chave": "letra:o",
+      "texto": "o",
+      "fala": "o",
+      "hash": "45592d60b6",
+      "paginas": [
+        3
+      ]
+    },
+    {
+      "id": "sancho-tiene-hambre-mira-el-dibu-288a66",
+      "tipo": "comando",
+      "chave": "¡Sancho tiene hambre! Mira el dibujo de lo que pide y toca la palabra correcta. ¡Cuidado con las trampas: desordenan toda la merienda!",
+      "texto": "¡Sancho tiene hambre! Mira el dibujo de lo que pide y toca la palabra correcta. ¡Cuidado con las trampas: desordenan toda la merienda!",
+      "fala": "¡Sancho tiene hambre! Mira el dibujo de lo que pide y toca la palabra correcta. ¡Cuidado con las trampas: desordenan toda la merienda!",
+      "hash": "c4493be1b2",
+      "paginas": [
+        5
+      ]
+    },
+    {
+      "id": "pan-bd2bd8",
+      "tipo": "cartao",
+      "chave": "pan",
+      "texto": "pan",
+      "fala": "pan",
+      "hash": "cbd2b99963",
+      "paginas": [
+        5
+      ]
+    },
+    {
+      "id": "queso-8e5fc6",
+      "tipo": "cartao",
+      "chave": "queso",
+      "texto": "queso",
+      "fala": "queso",
+      "hash": "2c59eca7a0",
+      "paginas": [
+        5
+      ]
+    },
+    {
+      "id": "agua-c1962c",
+      "tipo": "cartao",
+      "chave": "agua",
+      "texto": "agua",
+      "fala": "agua",
+      "hash": "0ddbe2ed25",
+      "paginas": [
+        5
+      ]
+    },
+    {
+      "id": "flan-el-flan-resbalo-por-el-mant-b4b51b",
+      "tipo": "pegadinha",
+      "chave": "¡¿Flan?! El flan resbaló por el mantel y lo dejó todo pegajoso. ¡Vamos a ordenar la merienda otra vez!",
+      "texto": "¡¿Flan?! El flan resbaló por el mantel y lo dejó todo pegajoso. ¡Vamos a ordenar la merienda otra vez!",
+      "fala": "¡¿Flan?! El flan resbaló por el mantel y lo dejó todo pegajoso. ¡Vamos a ordenar la merienda otra vez!",
+      "hash": "cdb409cbe1",
+      "paginas": [
+        5
+      ]
+    },
+    {
+      "id": "aguila-el-aguila-bajo-del-cielo-991d27",
+      "tipo": "pegadinha",
+      "chave": "¡¿Águila?! El águila bajó del cielo planeando y... ¡ñam! ¡Casi se lleva la comida! ¡Vamos a ordenar otra vez!",
+      "texto": "¡¿Águila?! El águila bajó del cielo planeando y... ¡ñam! ¡Casi se lleva la comida! ¡Vamos a ordenar otra vez!",
+      "fala": "¡¿Águila?! El águila bajó del cielo planeando y... ¡ñam! ¡Casi se lleva la comida! ¡Vamos a ordenar otra vez!",
+      "hash": "b5abd57174",
+      "paginas": [
+        5
+      ]
+    },
+    {
+      "id": "hueso-un-hueso-no-se-come-es-par-ad1417",
+      "tipo": "pegadinha",
+      "chave": "¡¿Hueso?! ¡Un hueso no se come, es para los cachorros! Sancho soltó una carcajada. ¡Vamos a ordenar otra vez!",
+      "texto": "¡¿Hueso?! ¡Un hueso no se come, es para los cachorros! Sancho soltó una carcajada. ¡Vamos a ordenar otra vez!",
+      "fala": "¡¿Hueso?! ¡Un hueso no se come, es para los cachorros! Sancho soltó una carcajada. ¡Vamos a ordenar otra vez!",
+      "hash": "adc93fdc91",
+      "paginas": [
+        5
+      ]
+    },
+    {
+      "id": "ayuda-a-sancho-a-anunciar-a-su-f-9c6f86",
+      "tipo": "comando",
+      "chave": "¡Ayuda a Sancho a anunciar a su familia el título que sueña tener: SANCHO GOBERNADOR DE LA ISLA!",
+      "texto": "¡Ayuda a Sancho a anunciar a su familia el título que sueña tener: SANCHO GOBERNADOR DE LA ISLA!",
+      "fala": "¡Ayuda a Sancho a anunciar a su familia el título que sueña tener: SANCHO GOBERNADOR DE LA ISLA!",
+      "hash": "3f6722136c",
+      "paginas": [
+        10
+      ]
+    },
+    {
+      "id": "sancho-2e9054",
+      "tipo": "cartao",
+      "chave": "sancho",
+      "texto": "sancho",
+      "fala": "sancho",
+      "hash": "696d848b94",
+      "paginas": [
+        10
+      ]
+    },
+    {
+      "id": "gobernador-6ae9bd",
+      "tipo": "cartao",
+      "chave": "gobernador",
+      "texto": "gobernador",
+      "fala": "gobernador",
+      "hash": "2e270fd7ae",
+      "paginas": [
+        10
+      ]
+    },
+    {
+      "id": "de-la-685af1",
+      "tipo": "cartao",
+      "chave": "de la",
+      "texto": "de la",
+      "fala": "de la",
+      "hash": "e00b4c2528",
+      "paginas": [
+        10
+      ]
+    },
+    {
+      "id": "isla-ef64ec",
+      "tipo": "cartao",
+      "chave": "isla",
+      "texto": "isla",
+      "fala": "isla",
+      "hash": "8120fc0d7f",
+      "paginas": [
+        10
+      ]
+    }
   ]
 }

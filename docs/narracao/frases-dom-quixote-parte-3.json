@@ -742,5 +742,107 @@
       "fala": "le... tras... letras!",
       "hash": "d2788ac3bb"
     }
+  ],
+  "audioFalas": "dom-quixote/audio/falas/<id>.mp3",
+  "falas": [
+    {
+      "id": "abra-a-mala-velha-achada-na-serr-7ce337",
+      "tipo": "comando",
+      "chave": "Abra a mala velha achada na serra: toque no caderno de poesias e nas moedas de ouro!",
+      "texto": "Abra a mala velha achada na serra: toque no caderno de poesias e nas moedas de ouro!",
+      "fala": "Abra a mala velha achada na serra: toque no caderno de poesias e nas moedas de ouro!",
+      "hash": "672b3e58af",
+      "paginas": [
+        1
+      ]
+    },
+    {
+      "id": "toque-na-cambalhota-para-ver-as-b31ae1",
+      "tipo": "comando",
+      "chave": "Toque na cambalhota para ver as piruetas heroicas de Dom Quixote na montanha!",
+      "texto": "Toque na cambalhota para ver as piruetas heroicas de Dom Quixote na montanha!",
+      "fala": "Toque na cambalhota para ver as piruetas heroicas de Dom Quixote na montanha!",
+      "hash": "4c8b072c4d",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "ajude-sancho-a-assinar-a-carta-d-8b3de2",
+      "tipo": "comando",
+      "chave": "Ajude Sancho a assinar a carta de amor: toque nas palavras na ordem certa para formar O CAVALEIRO DA TRISTE FIGURA!",
+      "texto": "Ajude Sancho a assinar a carta de amor: toque nas palavras na ordem certa para formar O CAVALEIRO DA TRISTE FIGURA!",
+      "fala": "Ajude Sancho a assinar a carta de amor: toque nas palavras na ordem certa para formar O CAVALEIRO DA TRISTE FIGURA!",
+      "hash": "d2966d04f3",
+      "paginas": [
+        3
+      ]
+    },
+    {
+      "id": "o-7a81af",
+      "tipo": "cartao",
+      "chave": "o",
+      "texto": "o",
+      "fala": "o",
+      "hash": "961d49cc27",
+      "paginas": [
+        3
+      ]
+    },
+    {
+      "id": "cavaleiro-6c67a4",
+      "tipo": "cartao",
+      "chave": "cavaleiro",
+      "texto": "cavaleiro",
+      "fala": "cavaleiro",
+      "hash": "328dc61e2c",
+      "paginas": [
+        3
+      ]
+    },
+    {
+      "id": "da-cdd4f8",
+      "tipo": "cartao",
+      "chave": "da",
+      "texto": "da",
+      "fala": "da",
+      "hash": "c2659b901f",
+      "paginas": [
+        3
+      ]
+    },
+    {
+      "id": "triste-f47590",
+      "tipo": "cartao",
+      "chave": "triste",
+      "texto": "triste",
+      "fala": "triste",
+      "hash": "ff6396a4de",
+      "paginas": [
+        3
+      ]
+    },
+    {
+      "id": "figura-00258f",
+      "tipo": "cartao",
+      "chave": "figura",
+      "texto": "figura",
+      "fala": "figura",
+      "hash": "92fae01038",
+      "paginas": [
+        3
+      ]
+    },
+    {
+      "id": "dom-quixote-sonha-que-enfrenta-u-8fe866",
+      "tipo": "comando",
+      "chave": "Dom Quixote sonha que enfrenta um gigante: toque na espada para furar os odres de vinho!",
+      "texto": "Dom Quixote sonha que enfrenta um gigante: toque na espada para furar os odres de vinho!",
+      "fala": "Dom Quixote sonha que enfrenta um gigante: toque na espada para furar os odres de vinho!",
+      "hash": "17c6084e0e",
+      "paginas": [
+        6
+      ]
+    }
   ]
 }

@@ -2079,5 +2079,261 @@
       "fala": "so... nhar... sonhar!",
       "hash": "6e73808838"
     }
+  ],
+  "audioFalas": "dom-quixote/audio/falas/<id>.mp3",
+  "falas": [
+    {
+      "id": "toque-nas-silabas-na-ordem-certa-5274ab",
+      "tipo": "comando",
+      "chave": "Toque nas sílabas na ordem certa para formar a nova palavra de Sancho: BA-CI-EL-MO!",
+      "texto": "Toque nas sílabas na ordem certa para formar a nova palavra de Sancho: BA-CI-EL-MO!",
+      "fala": "Toque nas sílabas na ordem certa para formar a nova palavra de Sancho: BA-CI-EL-MO!",
+      "hash": "830d5b07aa",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "ba-6c0596",
+      "tipo": "silaba",
+      "chave": "ba",
+      "texto": "ba",
+      "fala": "ba",
+      "hash": "f518e76bd9",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "ci-5a4fe0",
+      "tipo": "silaba",
+      "chave": "ci",
+      "texto": "ci",
+      "fala": "ci",
+      "hash": "9083dbb45a",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "el-4f1ea4",
+      "tipo": "silaba",
+      "chave": "el",
+      "texto": "el",
+      "fala": "el",
+      "hash": "a34d474240",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "mo-6adbae",
+      "tipo": "silaba",
+      "chave": "mo",
+      "texto": "mo",
+      "fala": "mo",
+      "hash": "6a9383b03f",
+      "paginas": [
+        2
+      ]
+    },
+    {
+      "id": "toque-nas-letras-magicas-e-descu-13f861",
+      "tipo": "comando",
+      "chave": "Toque nas letras mágicas e descubra a palavra secreta de 5 letras que abre a porta da carruagem!",
+      "texto": "Toque nas letras mágicas e descubra a palavra secreta de 5 letras que abre a porta da carruagem!",
+      "fala": "Toque nas letras mágicas e descubra a palavra secreta de 5 letras que abre a porta da carruagem!",
+      "hash": "b248f29544",
+      "paginas": [
+        3
+      ]
+    },
+    {
+      "id": "letra-a-39af6d",
+      "tipo": "letra",
+      "chave": "letra:a",
+      "texto": "a",
+      "fala": "á",
+      "hash": "1b3b6ed346",
+      "paginas": [
+        3
+      ]
+    },
+    {
+      "id": "letra-m-bdccdd",
+      "tipo": "letra",
+      "chave": "letra:m",
+      "texto": "m",
+      "fala": "eme",
+      "hash": "5d5caa2d83",
+      "paginas": [
+        3
+      ]
+    },
+    {
+      "id": "letra-i-011e7a",
+      "tipo": "letra",
+      "chave": "letra:i",
+      "texto": "i",
+      "fala": "i",
+      "hash": "a87b1483ca",
+      "paginas": [
+        3
+      ]
+    },
+    {
+      "id": "letra-g-ac5a24",
+      "tipo": "letra",
+      "chave": "letra:g",
+      "texto": "g",
+      "fala": "gê",
+      "hash": "1f31489326",
+      "paginas": [
+        3
+      ]
+    },
+    {
+      "id": "letra-o-2c382c",
+      "tipo": "letra",
+      "chave": "letra:o",
+      "texto": "o",
+      "fala": "ó",
+      "hash": "0855f92ad8",
+      "paginas": [
+        3
+      ]
+    },
+    {
+      "id": "sancho-esta-com-fome-olhe-a-figu-4767ee",
+      "tipo": "comando",
+      "chave": "Sancho está com fome! Olhe a figura do que ele pede e toque na palavra certa. Cuidado com as pegadinhas: elas bagunçam o piquenique todo!",
+      "texto": "Sancho está com fome! Olhe a figura do que ele pede e toque na palavra certa. Cuidado com as pegadinhas: elas bagunçam o piquenique todo!",
+      "fala": "Sancho está com fome! Olhe a figura do que ele pede e toque na palavra certa. Cuidado com as pegadinhas: elas bagunçam o piquenique todo!",
+      "hash": "fe9b25245c",
+      "paginas": [
+        5
+      ]
+    },
+    {
+      "id": "pao-3464c0",
+      "tipo": "cartao",
+      "chave": "pão",
+      "texto": "pão",
+      "fala": "pão",
+      "hash": "f1625bc45f",
+      "paginas": [
+        5
+      ]
+    },
+    {
+      "id": "queijo-fc4282",
+      "tipo": "cartao",
+      "chave": "queijo",
+      "texto": "queijo",
+      "fala": "queijo",
+      "hash": "1fe62678f9",
+      "paginas": [
+        5
+      ]
+    },
+    {
+      "id": "agua-513cba",
+      "tipo": "cartao",
+      "chave": "água",
+      "texto": "água",
+      "fala": "água",
+      "hash": "59e3059cc5",
+      "paginas": [
+        5
+      ]
+    },
+    {
+      "id": "piao-o-piao-rodou-rodou-em-cima-15cb6a",
+      "tipo": "pegadinha",
+      "chave": "Pião? O pião rodou, rodou em cima da toalha e espalhou o lanche todo! Vamos arrumar de novo!",
+      "texto": "Pião? O pião rodou, rodou em cima da toalha e espalhou o lanche todo! Vamos arrumar de novo!",
+      "fala": "Pião? O pião rodou, rodou em cima da toalha e espalhou o lanche todo! Vamos arrumar de novo!",
+      "hash": "a6f879ec32",
+      "paginas": [
+        5
+      ]
+    },
+    {
+      "id": "aguia-a-aguia-desceu-do-ceu-e-nh-cf9ece",
+      "tipo": "pegadinha",
+      "chave": "Águia? A águia desceu do céu e... nhac! Levou o lanche embora! Vamos arrumar de novo!",
+      "texto": "Águia? A águia desceu do céu e... nhac! Levou o lanche embora! Vamos arrumar de novo!",
+      "fala": "Águia? A águia desceu do céu e... nhac! Levou o lanche embora! Vamos arrumar de novo!",
+      "hash": "e20c5f3efa",
+      "paginas": [
+        5
+      ]
+    },
+    {
+      "id": "queixo-queixo-nao-se-come-sancho-5f6769",
+      "tipo": "pegadinha",
+      "chave": "Queixo? Queixo não se come! Sancho riu tanto que derrubou o lanche todo. Vamos arrumar de novo!",
+      "texto": "Queixo? Queixo não se come! Sancho riu tanto que derrubou o lanche todo. Vamos arrumar de novo!",
+      "fala": "Queixo? Queixo não se come! Sancho riu tanto que derrubou o lanche todo. Vamos arrumar de novo!",
+      "hash": "7710309d3d",
+      "paginas": [
+        5
+      ]
+    },
+    {
+      "id": "ajude-sancho-a-anunciar-para-a-f-09da2c",
+      "tipo": "comando",
+      "chave": "Ajude Sancho a anunciar para a família o título que ele sonha ter: SANCHO GOVERNADOR DA ILHA!",
+      "texto": "Ajude Sancho a anunciar para a família o título que ele sonha ter: SANCHO GOVERNADOR DA ILHA!",
+      "fala": "Ajude Sancho a anunciar para a família o título que ele sonha ter: SANCHO GOVERNADOR DA ILHA!",
+      "hash": "29f42e9823",
+      "paginas": [
+        10
+      ]
+    },
+    {
+      "id": "sancho-2e9054",
+      "tipo": "cartao",
+      "chave": "sancho",
+      "texto": "sancho",
+      "fala": "sancho",
+      "hash": "696d848b94",
+      "paginas": [
+        10
+      ]
+    },
+    {
+      "id": "governador-442978",
+      "tipo": "cartao",
+      "chave": "governador",
+      "texto": "governador",
+      "fala": "governador",
+      "hash": "a581d3ea8a",
+      "paginas": [
+        10
+      ]
+    },
+    {
+      "id": "da-cdd4f8",
+      "tipo": "cartao",
+      "chave": "da",
+      "texto": "da",
+      "fala": "da",
+      "hash": "c2659b901f",
+      "paginas": [
+        10
+      ]
+    },
+    {
+      "id": "ilha-3db54c",
+      "tipo": "cartao",
+      "chave": "ilha",
+      "texto": "ilha",
+      "fala": "ilha",
+      "hash": "3b933788ff",
+      "paginas": [
+        10
+      ]
+    }
   ]
 }
