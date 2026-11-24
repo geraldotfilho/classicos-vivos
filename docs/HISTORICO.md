@@ -444,3 +444,9 @@ O que já foi entregue, sprint a sprint, em ordem cronológica (o mais antigo pr
 ## ✅ Narração en/es/fr da Parte 6 de Dom Quixote (2026-11-23)
 - Palavras-chave 29/29 nos três idiomas; páginas en 9/10, es 9/10, fr 7/10, sem rajadas, liberadas como prévia (`previa: [6]`). Parou no teto de gasto mensal do projeto no AI Studio (429 nas duas chaves); faltam 7 pedidos. As Partes 7 e 8 (roteiros, elenco e palavras prontos) não começaram as páginas pelo mesmo motivo. Escuta: `docs/narracao/qa-parte-6-{en,es,fr}.md`.
 - Com o teto ampliado pelo humano, os 7 pedidos que faltavam saíram no mesmo dia: páginas 10/10 nos três idiomas e `6` em `partes` (a prévia saiu).
+
+## ✅ Falas das atividades gravadas (Dom Quixote, Partes 1 a 8, pt/en/fr/es) (2026-11-23)
+- O comando 🎮 (🔊 do quadro), a palavra dos cartões de `ordem` e `pedido` (com as sílabas e as letras das assinaturas), as pegadinhas e as falas da contagem passaram a tocar na **voz da narradora** de cada idioma, em vez da voz do aparelho. Sem a gravação, a voz do aparelho continua como reserva, agora falando as letras isoladas pelo nome ("agá", "aitch", "hache"). As perguntas dos desafios 🧩 seguem na voz do aparelho.
+- Motor (`assets/js/livro.js`): `falar()` procura o MP3 em `audio/falas<-idioma>/` pelo `indice.json` (texto exato → arquivo), só quando o idioma tem narração ativa na parte; as falas da página são pré-carregadas. A lista do que é falado é uma só, `Texto.falasDaAtividade` (`assets/js/texto.js`), usada também pela exportação (`falas` em `docs/narracao/frases-*.json`). `AGENTS.md` §2.6.
+- Gravação: `tools/gravar-narracao.mjs --voz falas` (grupos de um tipo só; frases cortadas pelo Whisper como as páginas; cartões, sílabas e letras embaralhados e cortados pelas pausas, cada pedaço conferido sozinho), pelo modo lote. Gasto e pontos de escuta: `docs/narracao/qa-falas.md` e `docs/narracao/gastos.csv`. Auditoria atualizada (`docs/narracao/AUDITORIA-ATIVIDADES-E-PALAVRAS.md`).
+

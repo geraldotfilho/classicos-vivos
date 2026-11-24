@@ -13,6 +13,7 @@ Plano para reiniciar a fila de agentes. Os subagentes pararam por limite de uso:
 | Tradução Parte 7 (en/es/fr) | ✅ no ar (2026-11-23; §11 do caderno da Parte 7) | narração: roteiros (`tools/derivar-roteiro.mjs --parte 7`), elenco novo, palavras (en 26, es 26, fr 25) e páginas; depois `7` em `partes` de cada idioma (**cota do Gemini**) |
 | Tradução Parte 8 (en/es/fr) | ✅ no ar (2026-11-23; §9 do caderno da Parte 8) | narração: roteiros (`tools/derivar-roteiro.mjs --parte 8`), elenco novo, palavras e páginas; depois `8` em `partes` de cada idioma (**cota do Gemini**) |
 | Narração en/es/fr das Partes 7 e 8 | elenco novo, roteiros e palavras-chave prontos; páginas em gravação (2026-11-23, modo lote) | conferir, ativar `7`/`8` em `partes`, escrever os QA |
+| Falas das atividades (comandos, cartões, pegadinhas, contagens), P1–P8, 4 idiomas | ✅ gravadas e ligadas no motor (2026-11-23, modo lote) | escuta: `docs/narracao/qa-falas.md`; desafios 🧩 ficaram na voz do aparelho |
 
 ## Ordem de retomada
 

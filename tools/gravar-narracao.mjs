@@ -1210,10 +1210,11 @@ async function cortarCurtas(grupo, amostras) {
         const n = normalizar(ouvido).split(' ').filter(Boolean).length;
         const segundos = (cortes[k + 1] - cortes[k]) / TAXA;
         const bate = diferenca(f.fala, ouvido) === 0 || diferenca(f.texto, ouvido) === 0;
-        if (bate || (f.tipo !== 'cartao' && n >= 1 && n <= 2 && segundos < 2.5)) {
+        // Sozinho no pedido não há corte a errar: palavra curta que o Whisper "ouve" errado ("vez" → "This") fica para a escuta
+        if (bate || ((f.tipo !== 'cartao' || grupo.length === 1) && n >= 1 && n <= 2 && segundos < 2.5)) {
             marcas.push({ id: f.id, ini: cortes[k] / TAXA, fim: cortes[k + 1] / TAXA });
             if (!bate) avisos.push(`${f.id}: salva; o Whisper ouviu "${ouvido}" (esperado "${f.fala}")`);
-        } else avisos.push(`${f.id}: o pedaço não bate ("${ouvido}", esperado "${f.fala}"); não foi salva`);
+        } else avisos.push(`${f.id}: o pedaço não bate ("${ouvido}", esperado "${f.fala}", ${segundos.toFixed(1)} s); não foi salva`);
     }
     return { marcas, avisos };
 }
@@ -1225,10 +1226,15 @@ async function gravarFalas(itens, pasta, indiceArq, ids) {
     const maximo = Number(o.agrupar ?? AGRUPAR_PADRAO);
     const grupos = [];
     for (const tipo of Object.keys(ESTILO_FALAS)) {
+        // Cartões, sílabas e letras: embaralhados (pelo hash) e em grupos de no máximo 12. Na ordem da atividade, a voz lia
+        // "il / était / une / fois" ou "of the / sorrowful / face" como uma frase só, sem pausa entre os cartões (2026-11-23)
+        const curtas = ['cartao', 'silaba', 'letra'].includes(tipo);
         const doTipo = pendentes.filter(i => GRUPO_FALA[i.tipo] === tipo);
+        if (curtas) doTipo.sort((a, b) => (a.hash < b.hash ? -1 : 1));
+        const teto = curtas ? Math.min(maximo, 12) : maximo;
         let atual = null, letras = 0;
         for (const i of doTipo) {
-            if (!atual || atual.frases.length >= maximo || letras + i.fala.length > MAX_LETRAS) { grupos.push(atual = { frases: [], personagem: null, estilo: ESTILO_FALAS[tipo], tipo }); letras = 0; }
+            if (!atual || atual.frases.length >= teto || letras + i.fala.length > MAX_LETRAS) { grupos.push(atual = { frases: [], personagem: null, estilo: ESTILO_FALAS[tipo], tipo }); letras = 0; }
             atual.frases.push({ ...i, pagina: 0, paragrafo: atual.frases.length });
             letras += i.fala.length;
         }

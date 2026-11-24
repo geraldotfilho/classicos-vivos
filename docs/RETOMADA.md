@@ -33,6 +33,8 @@
 
 ## 2. Próximas sessões (escolha do humano)
 
+> **2026-11-23 — falas das atividades gravadas nos 4 idiomas** (comandos 🎮, cartões, sílabas e letras das assinaturas, pegadinhas e contagens das Partes 1 a 8; `dom-quixote/audio/falas<-idioma>/`, `AGENTS.md` §2.6). Sem o MP3, a voz do aparelho segue como reserva. Nas traduções tocam nas partes ativas no `vozes.js` (as 7 e 8 em en/es/fr entram junto com a narração das páginas). Os desafios 🧩 continuam na voz do aparelho. **Para o humano ouvir**: `docs/narracao/qa-falas.md` (letras e sílabas primeiro).
+
 > **2026-11-23 — narração en/es/fr pelo modo lote: Partes 5 e 6 completas e ativadas nos três idiomas** (`partes: [1, …, 6]` em `narracao-en/-es/-fr`; P5 10/10 páginas e 36/36 palavras, P6 10/10 e 29/29). Partes 7 e 8: elenco novo, roteiros e palavras-chave prontos; **páginas em gravação** (`AUTORIZADO=1 bash tools/gravar-lote.sh --voz narracao --idioma <en|es|fr> --parte N --pagina-inteira`; o que já foi pago fica no cache). O teto de gasto mensal do AI Studio chegou a bloquear (429 "monthly spending cap") e foi ampliado pelo humano no mesmo dia. Escuta: `docs/narracao/qa-parte-5-{en,es,fr}.md` e `qa-parte-6-{en,es,fr}.md`.
 
 > **2026-11-23 — Parte 8 de Dom Quixote traduzida para inglês, espanhol e francês: a obra inteira está nos quatro idiomas** (`traducoes/parte-8.{en,es,fr}.js`, 0 erro e 0 aviso, frases iguais às do português, testada no Chrome com as 3 atividades até o fim). Letras BOOK / LIBRO / LIVRE; nome de pastor PANZINO / PANCINO / PANCINO; ONCE UPON A TIME / ÉRASE UNA VEZ UN HIDALGO / IL ÉTAIT UNE FOIS. Narração nesses idiomas: na fila da API, depois das Partes 5 a 7. Escolhas a confirmar: §9 do caderno da Parte 8.

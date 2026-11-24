@@ -33,7 +33,6 @@
     "uma-cabra-3b3672": "062640ff25",
     "duas-cabras-9dc35d": "08af10b629",
     "tres-cabras-0c16eb": "d705fe8084",
-    "quatro-cabras-873568": "8d921a9c57",
     "cinco-cabras-ainda-faltam-duzent-37fe6d": "faca1d663e",
     "piao-o-piao-rodou-rodou-em-cima-15cb6a": "a6f879ec32",
     "aguia-a-aguia-desceu-do-ceu-e-nh-cf9ece": "e20c5f3efa",
@@ -105,7 +104,9 @@
     "leoes-8b26f9": "26bd1b6921",
     "fole-6bffaf": "5964c46316",
     "tocha-e6edde": "ffe64fe729",
-    "um-ec92b7": "71e7ac40ca"
+    "um-ec92b7": "71e7ac40ca",
+    "quatro-cabras-873568": "8d921a9c57",
+    "vez-b5c9d5": "6cf47f2f43"
   },
   "textos": {
     "Toque nos três livros de Alonso para descobrir as aventuras de cavaleiros, castelos e dragões!": "toque-nos-tres-livros-de-alonso-6d2f5b",
@@ -141,7 +142,6 @@
     "Uma cabra!": "uma-cabra-3b3672",
     "Duas cabras!": "duas-cabras-9dc35d",
     "Três cabras!": "tres-cabras-0c16eb",
-    "Quatro cabras!": "quatro-cabras-873568",
     "Cinco cabras! Ainda faltam duzentas e noventa e cinco!": "cinco-cabras-ainda-faltam-duzent-37fe6d",
     "Pião? O pião rodou, rodou em cima da toalha e espalhou o lanche todo! Vamos arrumar de novo!": "piao-o-piao-rodou-rodou-em-cima-15cb6a",
     "Águia? A águia desceu do céu e... nhac! Levou o lanche embora! Vamos arrumar de novo!": "aguia-a-aguia-desceu-do-ceu-e-nh-cf9ece",
@@ -213,7 +213,9 @@
     "leões": "leoes-8b26f9",
     "fole": "fole-6bffaf",
     "tocha": "tocha-e6edde",
-    "um": "um-ec92b7"
+    "um": "um-ec92b7",
+    "Quatro cabras!": "quatro-cabras-873568",
+    "vez": "vez-b5c9d5"
   },
   "modelo": "gemini-3.8-flash-tts",
   "voz": "pt-br-storyteller-9",
