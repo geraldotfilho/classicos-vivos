@@ -37,7 +37,7 @@
     "DUQUE": {"voz": "fr-fr-concierge-2", "estilo": "kind duke who laughs easily, warm and playful, hiding a surprise in French from France"},
     "ARAUTO": {"voz": "fr-fr-advisor-4", "estilo": "big herald announcing a visitor, deep and ceremonious in French from France"},
     "CONDESSA": {"voz": "fr-fr-csagent-12", "estilo": "grand countess in distress, deep solemn voice, dramatic and comically serious, never mocking in French from France"},
-    "MORDOMO": {"voz": "fr-fr-tutor-6", "estilo": "tall butler with a deep, formal voice, dry and polite, secretly amused in French from France"},
+    "MORDOMO": {"voz": "fr-fr-csagent-12", "estilo": "tall butler, a serious grown man with a deep, formal voice, dry and polite, secretly amused in French from France"},
     "LAVRADOR": {"voz": "fr-fr-advisor-4", "estilo": "simple farmer complaining to the judge, indignant and a bit suspicious in French from France"},
     "ALFAIATE": {"voz": "fr-fr-tutor-1", "estilo": "cheeky tailor, proud of his little trick, comic in French from France"},
     "DOUTOR": {"voz": "fr-fr-tutor-8", "estilo": "stiff, fussy doctor, serious and pompous, a bit comic in French from France"},

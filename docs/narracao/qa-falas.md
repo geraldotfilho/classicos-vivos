@@ -2,7 +2,7 @@
 
 > **Gravadas em 2026-11-23** pelo modo lote (`AUTORIZADO=1 bash tools/gravar-lote.sh --voz falas [--idioma X] --parte 1,2,3,4,5,6,7,8`), com a narradora de cada idioma (pt `pt-br-storyteller-9`, en `en-gb-storyteller-2`, fr `fr-fr-tutor-4`, es `es-es-tutor-12`). Conferência local pelo Whisper (`tools/transcrever.py`). Como funciona no motor: `AGENTS.md` §2.6 ("Falas das atividades").
 > **O que foi gravado**: os comandos 🎮 (🔊 do quadro), as palavras dos cartões falados (`ordem` e `pedido`), as sílabas e as letras das assinaturas, as pegadinhas e as falas da contagem. **Não** foram gravadas as perguntas dos desafios 🧩 (continuam na voz do aparelho, por decisão: o texto ainda pode mudar).
-> **Onde ouvir**: abra a página da atividade (`?page=N`) no idioma, toque no 🔊 do quadro 🎮 e nos cartões. Nas traduções, as falas só tocam gravadas nas partes que já estão em `partes`/`previa` da narração do idioma no `vozes.js` (en/fr/es: Partes 1 a 6 hoje; 7 e 8 entram com a narração das páginas).
+> **Onde ouvir**: abra a página da atividade (`?page=N`) no idioma, toque no 🔊 do quadro 🎮 e nos cartões. Nas traduções, as falas só tocam gravadas nas partes que já estão em `partes`/`previa` da narração do idioma no `vozes.js` (hoje as 8 partes nos quatro idiomas).
 
 ## Situação
 

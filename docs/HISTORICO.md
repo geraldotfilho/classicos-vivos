@@ -445,6 +445,12 @@ O que já foi entregue, sprint a sprint, em ordem cronológica (o mais antigo pr
 - Palavras-chave 29/29 nos três idiomas; páginas en 9/10, es 9/10, fr 7/10, sem rajadas, liberadas como prévia (`previa: [6]`). Parou no teto de gasto mensal do projeto no AI Studio (429 nas duas chaves); faltam 7 pedidos. As Partes 7 e 8 (roteiros, elenco e palavras prontos) não começaram as páginas pelo mesmo motivo. Escuta: `docs/narracao/qa-parte-6-{en,es,fr}.md`.
 - Com o teto ampliado pelo humano, os 7 pedidos que faltavam saíram no mesmo dia: páginas 10/10 nos três idiomas e `6` em `partes` (a prévia saiu).
 
+## ✅ Narração en/es/fr da Parte 7 de Dom Quixote, pelo modo lote (2026-11-23)
+- Páginas 11/11 e palavras-chave 35/35 nos três idiomas, sem rajadas; `7` em `partes` de `narracao-en/-es/-fr`. Elenco novo (mordomo com a voz da condessa Trifaldi, decisão do humano; lavrador, alfaiate, doutor, aldeão, velho da bengala, viajante, pajem, Sanchica) e roteiros derivados do português. Escuta: `docs/narracao/qa-parte-7-{en,es,fr}.md`.
+
+## ✅ Narração en/es/fr da Parte 8 de Dom Quixote: a obra inteira narrada nos quatro idiomas (2026-11-23)
+- Páginas 11/11 e palavras-chave 29/29 nos três idiomas, sem rajadas; `8` em `partes` de `narracao-en/-es/-fr`. Com isso as 8 partes de Dom Quixote têm narração gravada em português, inglês, espanhol e francês. Escuta: `docs/narracao/qa-parte-8-{en,es,fr}.md`.
+
 ## ✅ Falas das atividades gravadas (Dom Quixote, Partes 1 a 8, pt/en/fr/es) (2026-11-23)
 - O comando 🎮 (🔊 do quadro), a palavra dos cartões de `ordem` e `pedido` (com as sílabas e as letras das assinaturas), as pegadinhas e as falas da contagem passaram a tocar na **voz da narradora** de cada idioma, em vez da voz do aparelho. Sem a gravação, a voz do aparelho continua como reserva, agora falando as letras isoladas pelo nome ("agá", "aitch", "hache"). As perguntas dos desafios 🧩 seguem na voz do aparelho.
 - Motor (`assets/js/livro.js`): `falar()` procura o MP3 em `audio/falas<-idioma>/` pelo `indice.json` (texto exato → arquivo), só quando o idioma tem narração ativa na parte; as falas da página são pré-carregadas. A lista do que é falado é uma só, `Texto.falasDaAtividade` (`assets/js/texto.js`), usada também pela exportação (`falas` em `docs/narracao/frases-*.json`). `AGENTS.md` §2.6.
