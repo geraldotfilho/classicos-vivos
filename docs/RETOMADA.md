@@ -1,4 +1,4 @@
-# 🔁 Retomada — onde o trabalho parou (2026-11-21, revisões do autor #55 a #67 nas Partes 7 e 8 resolvidas e publicadas)
+# 🔁 Retomada — onde o trabalho parou (2026-11-26, Robin Hood Parte 1 publicada e documentos alinhados; próxima frente: Robin Hood Parte 2)
 
 **Leia este arquivo primeiro numa sessão nova**, seja qual for o agente. Depois, siga a ordem de leitura do `AGENTS.md` §0.2 (AGENTS → receita geral → receita específica → plano → caderno da parte).
 
@@ -32,6 +32,8 @@
 - **Gasto da API em outubro**: ~US$ 5,12 (≈ R$ 28) até 2026-10-26, mais o desta fila (centavos de dólar: o gargalo é o limite de pedidos por dia, não o dinheiro; ver `docs/narracao/gastos.csv`).
 
 ## 2. Próximas sessões (escolha do humano)
+
+> **2026-11-26 — Robin Hood: Parte 1 publicada e documentação alinhada; foco agora na Parte 2**: `robin-hood/parte-1.html` (Capa + 11 capítulos, 22 gravuras em Diorama de Papel Recortado + 8 sprites animados, US$ 0,00) está publicada na estante principal. Issues `#69`–`#73` fechadas. A narração em português da Parte 1 foi adiada para depois do lançamento da Parte 2. Documentos alinhados ([`PLANO-ROBIN-HOOD.md`](PLANO-ROBIN-HOOD.md), [`receitas/ROBIN-HOOD.md`](receitas/ROBIN-HOOD.md), [`DIRETRIZES_ROBIN_HOOD.md`](DIRETRIZES_ROBIN_HOOD.md), [`cadernos/robin-hood-parte-1.md`](cadernos/robin-hood-parte-1.md)). **Próximos alinhamentos com o humano (um passo por vez)**: definir o novo agente de Antirracismo, Diversidade e Compliance no Swarm, o recorte de partes/elenco da Parte 2 e montar a equipe no `/swarm`.
 
 > **2026-11-23 — Dom Quixote inteiro narrado em inglês, espanhol e francês** (Partes 5 a 8 pelo modo lote): `partes: [1, …, 8]` em `narracao-en/-es/-fr`, todas as páginas e palavras-chave conferidas no Whisper local e sem rajadas. O mordomo usa a voz da condessa Trifaldi nos quatro idiomas (decisão do humano). 🛑 Escuta do humano: `docs/narracao/qa-parte-{5,6,7,8}-{en,es,fr}.md` (vozes novas escolhidas pelo catálogo, sem escuta). Gasto das Partes 5–8 nos três idiomas: ~US$ 2,68 (Batch; novembro inteiro ~US$ 6,40 somando arte e narração).
 

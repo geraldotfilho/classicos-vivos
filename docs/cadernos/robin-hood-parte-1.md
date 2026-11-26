@@ -1,6 +1,6 @@
-# Caderno — Robin Hood, Parte 1: O Bando do Grande Carvalho
+# Caderno — Robin Hood, Parte 1: O Segredo da Floresta de Xervedo
 
-Arquivo: `robin-hood/parte-1.html` (`rascunho: true`) · Trecho de referência: Howard Pyle (1883), caps. 1 e 3 + Grande Carvalho + Lady Mariana · Nossos capítulos: 1–9 (capa + 9 páginas)
+Arquivo: `robin-hood/parte-1.html` (**publicada na estante principal**) · Trecho de referência: Howard Pyle (1883), cap. 1 + Grande Carvalho + Lady Mariana + Resgate do Moleiro · Nossos capítulos: **1–11 (capa + 11 capítulos = 12 páginas)**
 Plano: [`../PLANO-ROBIN-HOOD.md`](../PLANO-ROBIN-HOOD.md) · Receita: [`../receitas/ROBIN-HOOD.md`](../receitas/ROBIN-HOOD.md) · Diretrizes: [`../DIRETRIZES_ROBIN_HOOD.md`](../DIRETRIZES_ROBIN_HOOD.md) · Pesquisa: [`../pesquisa/ROBIN-HOOD.md`](../pesquisa/ROBIN-HOOD.md)
 
 | Fase | Situação | Data | Commit/PR | Gasto |
@@ -8,13 +8,13 @@ Plano: [`../PLANO-ROBIN-HOOD.md`](../PLANO-ROBIN-HOOD.md) · Receita: [`../recei
 | 0 Mapa da Obra (plano, pesquisa, receita) | ✅ aprovado pelo humano | 2026-11-21 | `ef3117d` + reengenharia | — |
 | 1 Adaptação e texto v2 (Jornada do Herói, 11 caps., Hydrogen + Opus 5.5) | ✅ concluído (Capa + 11 caps.) | 2026-11-22 | `09b22f8` | US$ 0,00 |
 | 2 Interações e visual v2 (Opção C — Diorama de Papel + Método Híbrido) | ✅ concluído | 2026-11-22 | `f5afd97` | US$ 0,00 |
-| 3 Revisão humana 🛑 | ✅ **Capa + Caps. 1–7 revisados com o humano; Caps. 8–11 prontos** | 2026-11-22 | Issues #69 a #74 endereçadas na nova arquitetura | — |
-| 4 Ilustrações e atividades v2 (Opção C — Diorama de Papel Recortado) | ✅ **22/22 gravuras + 2 camadas animadas WebP prontas** (100% no gerador nativo) | 2026-11-22 | `main` | US$ 0,00 |
-| 5 Revisão final 🛑 | 🟡 **pronto para leitura em família** | 2026-11-22 | | — |
-| 6 Narração (pt) + escuta 🛑 | ⬜ | | | US$ |
-| Publicação | ⬜ | | | — |
-| 7 Idiomas (en, fr, es) | ⬜ | | | US$ |
-| 8 Retrospectiva | ⬜ | | | — |
+| 3 Revisão humana 🛑 | ✅ **aprovada na reengenharia v2** (Issues #69–#73 fechadas em 2026-11-26) | 2026-11-22 | Issues #69–#73 | — |
+| 4 Ilustrações e atividades v2 (Opção C — Diorama de Papel Recortado) | ✅ **22/22 gravuras + 8 sprites animados WebP** (100% no gerador nativo) | 2026-11-22 | `252cd86` | US$ 0,00 |
+| Publicação (estante principal, PT) | ✅ **publicada na estante principal** (pontos de melhoria anotados para futura v2) | 2026-11-22 | `252cd86` | — |
+| 5 Revisão final / pontos para v2 🛑 | 📝 **melhorias anotadas para futura v2** (ver §5) | 2026-11-26 | — | — |
+| 6 Narração (pt) + escuta 🛑 | ⏸️ **adiada para após o lançamento da Parte 2** (decisão do humano, 2026-11-26) | — | — | US$ |
+| 7 Idiomas (en, fr, es) + Desafios 🧩 | ⬜ aguardando | — | — | US$ |
+| 8 Retrospectiva | ⬜ aguardando | — | — | — |
 
 ---
 
@@ -59,45 +59,36 @@ Primeira parte de *Robin Hood* (5 partes previstas). Estabelece:
 - **A morte do guarda florestal** (Pyle cap. 1): cortada por proteção da infância; substituída pelo imposto desigual e prisão injusta do moleiro sem provas.
 - **O funileiro (*Tinker*, Pyle cap. 2)**: deixado de fora na Parte 1 para dar espaço ao conflito prévio do Bando Verde com o Xerife (cap. 5) e construir bem os personagens antes do torneio.
 
-## 3. Atividades (crivo da receita geral §6.2)
+## 3. Atividades publicadas na Parte 1 (v2 — crivo da receita geral §6.2)
 
 | # | Pág. | O que a criança faz | Nasce da história? Ajuda quem? | Treina | Tipo | Como a cena muda | Por que só acerta lendo |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | 4 | Ordena a sequência do que aconteceu no riacho: `PONTE` · `TOMBO` · `RISADA` · `AMIGO` | Grilo quer contar a Lady Mariana, na ordem certa, como conheceu João Pequeno | compreensão da sequência e leitura de palavras | `ordem` + `camadas` | a faixa escreve a sequência e cada acerto revela um elemento (`camadas`) na cena | todos os 4 cartões têm o mesmo emoji `💧` |
-| 2 | 7 | Vê o pedido do disfarce de Robin (sem verde!) e acha a palavra certa: `CAPUZ` (× `CAPIM`), `MANTO` (× `MATO` / `BARCO` → 5 cartões: `CAPUZ`, `CAPIM`, `MANTO`, `BARCO`, `ARCO`) | Ajudar Robin a montar o disfarce antes de o capitão da guarda chegar | leitura atenta de palavras parecidas | `pedido` + `camadas` | cada acerto coloca um item do disfarce na cena (`c-capuz`, `c-manto`, `c-arco`); pegadinhas bagunçam e recomeçam | cartões da bandeja sem emoji (motor esconde em `pedido`); pegadinhas quase iguais (`CAPIM` × `CAPUZ`) |
-| 3 | 9 | Separa o que a flecha de ouro vai comprar para as famílias: `TRIGO` (× `TREVO`), `LEITE` (× `LEQUE`), `MANTA` | Ajudar o bando a montar as cestas da partilha com o prêmio do torneio | leitura atenta com pegadinhas sonoras/visuais | `pedido` + `camadas` | cada acerto coloca o mantimento na mesa da festa (`c-trigo`, `c-leite`, `c-manta`) | cartões sem emoji; 5 itens na bandeja (`TRIGO`, `TREVO`, `LEITE`, `LEQUE`, `MANTA`) |
+| 1 | 4 | Ordena o que Lady Mariana entregou: `VERDE` · `CAPUZ` · `CORNETA` | Ajudar Robin e Grilo a sumir no meio das folhas antes dos guardas | leitura e sequência | `ordem` + `realCena` | 3 gravuras progressivas reais (`p4-stage-1..3.webp`) | todos os cartões usam o mesmo emoji `🍃` |
+| 2 | 6 | Ordena a sequência do que aconteceu no riacho: `PONTE` · `TOMBO` · `RISADA` · `AMIGO` | Relembrar passo a passo como Robin e João Pequeno viraram amigos | compreensão da sequência e leitura | `ordem` + `realCena` | 4 gravuras progressivas reais (`p6-stage-1..4.webp`) | todos os 4 cartões têm o mesmo emoji `💧` |
+| 3 | 9 | Escolhe o item certo para o resgate silencioso: `CHAVE` (× `CHUVA`), `CORDA` (× `COROA`), `FARINHA` (× `VARINHA`) | Ajudar Grilo, João Pequeno e Robin a libertar Mestre Tomé e resgatar a farinha | leitura atenta de palavras parecidas | `pedido` + `realCena` | 3 gravuras progressivas reais (`p9-stage-1..3.webp`); pegadinhas dão resposta bem-humorada e recomeçam | cartões da bandeja sem emoji (modo `pedido`) + pegadinhas quase iguais |
 
-- Páginas calmas entre as atividades: 1, 2, 3, 5, 6, 8 (nenhuma atividade em páginas seguidas).
+- Páginas calmas entre as atividades: 1, 2, 3, 5, 7, 8, 10, 11 (nenhuma atividade em páginas seguidas).
 
-## 4. Visual de cada página (Estilo A — Gouache estilizado · Cena única + camadas)
+## 4. Visual publicado (Opção C — Diorama de Papel Recortado · 22 gravuras + 8 sprites animados)
 
-| Pág. | Arquivo | Descrição da cena (Gouache estilizado, sem texto legível na arte) | Camadas / observações |
-| :--- | :--- | :--- | :--- |
-| 0 | `p0-real` | Clareira do Grande Carvalho em Sherwood iluminada por raios de sol dourados: Robin Hood (túnica verde-musgo, chapéu com pena vermelha), Lady Mariana (jovem negra de cabelo trançado, capa verde-esmeralda), João Pequeno (gigante gentil de bastão) e Grilo (menino baixinho de avental enfarinhado) | capa |
-| 1 | `p1-real` | Estrada da feira perto do moinho: o Xerife de capa púrpura e cara azeda cobra dois sacos de farinha; carroça enorme do barão ao lado com dezenas de sacos; o moleiro triste com apenas três sacos e Grilo segurando o braço do pai; Robin ao fundo escondido atrás de um arbusto | — |
-| 2 | `p2-real` | Sob os galhos imensos do Grande Carvalho oco: Robin, Mariana e Grilo experimentam camisas compridas verde-folha e observam a corneta de caça dourada | — |
-| 3 | `p3-real` | Riacho transparente cortado por uma ponte estreita de tronco caído: Robin segurando um galho e um desconhecido altíssimo apoiado num bastão longo frente a frente; Grilo espiando de trás de uma samambaia | — |
-| 4 | `p4-real` | Robin sentado dentro da água rasa do riacho rindo muito com água espirrando, enquanto o gigante na ponte estende a mão sorrindo; Grilo espiando alegre da margem | 4 camadas (`c-ponte`, `c-tombo`, `c-risada`, `c-amigo`) |
-| 5 | `p5-real` | Portão da pequena cadeia ao entardecer: o pai de Grilo saindo feliz com sacos de farinha devolvidos enquanto quatro vultos de roupa verde somem entre as árvores e o Xerife aponta furioso com os guardas | — |
-| 6 | `p6-real` | Praça de Nottingham com bandeiras festivas e um alvo de palha com flecha dourada no alto; Lady Mariana, de vestido simples de feira, observa os guardas apontando para um pano verde na parede | — |
-| 7 | `p7-real` | Fundos das barracas do torneio em Nottingham: Robin espera ao lado de Mariana (lenço azul), João Pequeno (carvão no rosto) e Grilo (cesta de pães) enquanto guardas patrulham ao longe | 3 camadas (`c-capuz`, `c-manto`, `c-arco`) |
-| 8 | `p8-real` | Alvo de palha em destaque com uma flecha partida exatamente ao meio por outra; Robin puxando o capuz vermelho enquanto fitas vermelhas e nuvem branca de farinha voam ao redor dos guardas confusos | — |
-| 9 | `p9-real` | Mesa comprida de madeira sob o Grande Carvalho com lanternas acesas: o bando verde, o pai de Grilo abraçando o filho e vizinhos comemorando; ao fundo, um mensageiro chegando ofegante | 3 camadas (`c-trigo`, `c-leite`, `c-manta`) |
+- **12 cenas-base** (`p0-real.webp` a `p11-real.webp`) + **10 gravuras progressivas** (`p4-stage-1..3`, `p6-stage-1..4`, `p9-stage-1..3`) = **22 gravuras WebP** geradas no gerador nativo (US$ 0,00).
+- **8 sprites sobrepostos animados** (`robin-hood/imagens/parte-1/camadas/`): `p0-passarinhos.webp` (`flutuar`), `p1-pergaminho.webp` (`flutuar`), `p2-roda.webp` (`girar`, usada em P2 e P3), `p5-libelula.webp` e `p5-samambaia.webp` (usadas em P5 e P7), `p8-borboleta.webp` (`flutuar`), `p11-lanterna.webp` (`pendulo`) e `p11-fumaca-pao.webp` (`flutuar`).
 
-### Caixas "Você sabia?" da Parte 1 (campo `voceSabia` pronto para o modo tradicional + referência para o Desafio 🧩)
-- **Pág. 1 (Cap. 1)**: *Na Idade Média existiam leis muito duras chamadas Leis da Floresta: os moradores comuns podiam ser castigados até por juntar lenha caída ou caçar comida perto de casa!*
-- **Pág. 2 (Cap. 2)**: *Em Sherwood existe até hoje um carvalho gigante de verdade chamado Major Oak, com cerca de 800 a 1.000 anos. Muita gente conta que ele foi o esconderijo de Robin Hood!*
-- **Pág. 5 (Cap. 5)**: *Prender alguém sem investigar as provas é uma grande injustiça. Hoje em dia, peritos independentes estudam pistas como pegadas e marcas para descobrir o que realmente aconteceu!*
-- **Pág. 8 (Cap. 8)**: *Na Inglaterra medieval, treinar arco e flecha nos fins de semana e competir nos torneios das feiras era tão popular quanto jogar futebol hoje em dia!*
+### Caixas "Você sabia?" publicadas na Parte 1 (`voceSabia`)
+- **Pág. 2 (Cap. 2)**: como funcionava a roda d'água do moinho antigo.
+- **Pág. 4 (Cap. 4)**: o *verde de Lincoln* usado pelos arqueiros na Inglaterra.
+- **Pág. 8 (Cap. 8)**: o *Major Oak* (Carvalho Maior) de cerca de mil anos em Sherwood.
+- **Pág. 11 (Cap. 11)**: o papel dos peritos que examinam provas e pistas antes de acusar alguém.
 
-## 5. Notas do humano e crítica adversarial
-- **2026-11-21 — Issue #68 (`revisao-autor`)**: trocado `Dama Mariana` / `Dama Mariana de Sherwood` / `Mariana de Sherwood` por **`Lady Mariana`** (variando com *Mariana*), para remeter melhor ao original e soar mais natural junto com *Robin Hood*. Atualizados `robin-hood/parte-1.html` e toda a documentação de *Robin Hood*.
-- Autor pediu rascunho ilustrado para já realizar a revisão lendo com o filho.
+## 5. Notas do humano e pendências anotadas para futura v2
+- **2026-11-21 — Issue #68 (`revisao-autor`)**: trocado `Dama Mariana` por **`Lady Mariana`** (variando com *Mariana*).
+- **2026-11-26 — Issues #69 a #73 fechadas**: todas já endereçadas na reengenharia v2 publicada.
+- **2026-11-26 — Avaliação do humano e pontos para futura v2**:
+  - A Parte 1 publicada ficou boa e o filho pediu insistentemente a continuação (por isso a **Parte 2** tem prioridade e a **narração em português da Parte 1** foi adiada para depois do lançamento da Parte 2).
+  - **Ponto editorial para v2 (e para o elenco das próximas partes)**: sensação de **"falsa diversidade"** — apesar de Lady Mariana, Mestre Tomé e Grilo, a maioria dos demais personagens ainda é masculina e branca (e figuras femininas cotidianas, como a mãe de Grilo, nem chegam a ser mencionadas). Não forçar remendos artificiais agora; amadurecer revisões para a v2 da Parte 1 e garantir diversidade orgânica real nas próximas partes com apoio de um novo agente de Antirracismo, Diversidade e Compliance no Swarm.
 
-## 6. Arte (10/10 cenas concluídas)
-- **7/10 cenas no gerador nativo (`US$ 0,00`)**: `p0-real`, `p1-real`, `p2-real`, `p3-real`, `p4-real`, `p6-real` e `p7-real` (Estilo A — Gouache estilizado de floresta).
-- **3/10 cenas pela API paga Batch (`tools/arte/robin-hood-parte-1.mjs`, `US$ 0,1036`)**: `p5-real`, `p8-real` e `p9-real` (`batches/ymffobzbvd3hgmrhru309wiyg9brekwx1r5j`, 3/3 aceitas de primeira, registradas em `docs/arte/gastos.csv`).
-- Camadas das atividades nas págs. 7 e 9 seguem com o fallback limpo de emoji nesta etapa de revisão em família.
+## 6. Histórico da v1 (arquivado como referência)
+- A v1 inicial (Estilo A — Gouache, 10 páginas, com o Torneio da Flecha de Ouro ainda na Parte 1) teve 7 cenas no gerador nativo e 3 cenas pela API Batch (`tools/arte/robin-hood-parte-1.mjs`, `US$ 0,1036`, registradas em `docs/arte/gastos.csv`), sendo integralmente substituída pela reengenharia v2 em Diorama de Papel Recortado (US$ 0,00).
 
 ### 5.1 Crítica adversarial (subagente de contexto limpo, 2026-11-21)
 Notas iniciais por página: de **4,0 a 8,0** (mais baixas na Pág. 7 e Pág. 9). Todas as 10 correções críticas apontadas pelo revisor foram aplicadas no polimento:

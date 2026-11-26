@@ -1,21 +1,23 @@
-# 🗺️ Plano — Robin Hood (Obra Completa em 5 Partes)
+# 🗺️ Plano — Robin Hood (Obra Completa — 5 ou 6 Partes)
 
-**Fase 0 da receita geral: o Mapa da Obra.** Planejado e **aprovado pelo humano em 2026-11-21** (`✅`), seguindo o modelo de [`PLANO-DOM-QUIXOTE-VOLUME-2.md`](PLANO-DOM-QUIXOTE-VOLUME-2.md) e a receita geral ([`RECEITA-CLASSICO-VIVO.md`](RECEITA-CLASSICO-VIVO.md) §3).
+**Fase 0 da receita geral: o Mapa da Obra.** Planejado e **aprovado pelo humano em 2026-11-21** (`✅`), atualizado em **2026-11-26** após a publicação da Parte 1 (reengenharia v2 pela Jornada do Herói). Segue o modelo de [`PLANO-DOM-QUIXOTE-VOLUME-2.md`](PLANO-DOM-QUIXOTE-VOLUME-2.md) e a receita geral ([`RECEITA-CLASSICO-VIVO.md`](RECEITA-CLASSICO-VIVO.md) §3).
 
-> **Situação: ✅ Fase 0 fechada. Parte 1 em produção (Fase 1–2).**
+> **Situação: ✅ Fase 0 fechada · ✅ Parte 1 publicada na estante principal (`robin-hood/parte-1.html`) · 🟡 Parte 2 em preparação.**
 > **Documentos desta obra**: [pesquisa com fontes](pesquisa/ROBIN-HOOD.md) · [receita específica](receitas/ROBIN-HOOD.md) · [diretrizes de escrita (1 página)](DIRETRIZES_ROBIN_HOOD.md) · [caderno da Parte 1](cadernos/robin-hood-parte-1.md).
 
 ---
 
-## 1. A divisão em cinco partes
+## 1. A divisão da obra (em revisão para 5 ou 6 partes)
+
+Com a reengenharia v2 da Parte 1 (Capa + 11 capítulos focados na origem do Bando Verde e no resgate de Mestre Tomé), o **Torneio da Flecha de Ouro** passou a ser o gancho de abertura da **Parte 2**. O fechamento do total de partes (5 ou 6) e o recorte exato das Partes 2+ serão alinhados com o humano antes de iniciar a redação da Parte 2.
 
 | Parte | Título | Fonte principal (Howard Pyle, 1883) | Caps. nossos | Arco | Situação |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **1** | **O Bando do Grande Carvalho** | Caps. 1, 3 + Grande Carvalho + Mariana | 1–9 | **O começo e o bando verde**: imposto desigual, prisão injusta do moleiro, roupas verdes, João Pequeno na ponte, 1º resgate/conflito com o Xerife e o torneio da flecha de ouro | 🟡 em rascunho (Fases 1–2) |
-| **2** | **O Resgate da Torre e o Açougueiro** | Caps. 4–7 | 10–18 | **Esperteza e solidariedade**: resgate de presos sem prova na torre (com pistas concretas), Robin engana o Xerife na feira e João Pequeno vira o castelo de ponta-cabeça na cozinha | ⬜ aguardando P1 |
-| **3** | **O Frade do Rio e a Canção da Floresta** | Caps. 8–13 | 19–27 | **O bando cresce e o povo se anima**: Gui Escarlate, Frei Tuco no riacho, a história musical de Alan do Vale e as aldeias perdendo o medo nas feiras | ⬜ aguardando |
-| **4** | **O Cavaleiro Triste e a Flecha da Rainha** | Caps. 14–15, 18–19 | 28–36 | **Generosidade e pressão social**: empréstimo a Dom Ricardo do Vale diante do Abade isento de impostos, o povo cobrando justiça e o torneio diante da Rainha Leonor | ⬜ aguardando |
-| **5** | **O Hóspede Encapuzado e as Novas Leis** | Caps. 20–21 (adaptados + final institucional) | 37–45 | **Provas, povo unido e novas leis**: última armadilha do Xerife desmontada por vestígios, chegada do Rei Ricardo encapuzado, imposto justo e criação de um corpo independente de peritos das provas | ⬜ aguardando |
+| **1** | **O Segredo da Floresta de Xervedo** | Cap. 1 + Grande Carvalho + Lady Mariana + Resgate do Moleiro | 1–11 | **A origem do Bando Verde**: Rei distante e imposto desigual, Moinho de Mestre Tomé, prisão sem provas, Lady Mariana (Mentora) e roupas verdes, João Pequeno na ponte, Grande Carvalho, resgate silencioso, confronto "devolver não é roubar" e o cartaz do Torneio da Flecha de Ouro | ✅ publicada (narração PT adiada para após a P2; melhorias anotadas para v2) |
+| **2** | *(a definir — abre com o Torneio da Flecha de Ouro)* | Caps. 3–7 *(a recortar)* | 12+ | **Torneio da Flecha de Ouro, esperteza e solidariedade**: armadilha do torneio em Nortigão, resgate de presos sem prova na torre e ações na feira/cozinha *(escopo a fechar com o humano)* | 🟡 próxima frente |
+| **3** | **O Frade do Rio e a Canção da Floresta** *(provisório)* | Caps. 8–13 | a definir | **O bando cresce e o povo se anima**: novas adições diversas ao bando, episódio do riacho, canção nas feiras e aldeias perdendo o medo | ⬜ aguardando |
+| **4** | **O Cavaleiro Triste e a Flecha da Rainha** *(provisório)* | Caps. 14–15, 18–19 | a definir | **Generosidade e pressão social**: empréstimo a Dom Ricardo do Vale diante do Abade isento de impostos, o povo cobrando justiça e o torneio diante da Rainha Leonor | ⬜ aguardando |
+| **5** | **O Hóspede Encapuzado e as Novas Leis** *(provisório)* | Caps. 20–21 (adaptados + final institucional) | a definir | **Provas, povo unido e novas leis**: última armadilha do Xerife desmontada por vestígios, chegada do Rei Ricardo, imposto justo e criação de um corpo independente de peritos das provas | ⬜ aguardando |
 
 ---
 
@@ -23,15 +25,17 @@
 
 Decisão de cada bloco: ✅ entra · 🔀 entra adaptado/fundido · ✂️ fica de fora (com motivo).
 
-### 2.1 Parte 1 — O Bando do Grande Carvalho (caps. 1–9)
-| Fonte | Episódio | Decisão |
-| :--- | :--- | :--- |
-| Pyle cap. 1 (início) + Leis da Floresta | Imposto desigual e fuga para Sherwood | 🔀 sem morte do guarda: o Xerife cobra a mesma quantia (2 sacos) de todos — para o barão de carroça cheia não é nada; para o moleiro (pai de Grilo), tira quase tudo. Ao reclamar, o moleiro é preso sem provas; Robin ajuda Grilo a fugir |
-| Folclore (Major Oak + Mariana) | O Grande Carvalho e as túnicas verdes | ✅ Robin, **Lady Mariana** e **Grilo** se unem no carvalho, escolhem **roupas verde-floresta** (para sumir entre as folhas) e o sinal da corneta (3 toques) |
-| Pyle cap. 1 (fim) | A ponte estreita e João Pequeno | ✅ duelo cômico de bastões; Robin cai no riacho, ri alto e **João Pequeno** entra para o bando vestindo o verde de Sherwood |
-| Adaptação (conflito prévio necessário) | A primeira ação do Bando Verde | ✅ o bando liberta o pai de Grilo sem violência e devolve a farinha; o Xerife só vê vultos verdes sumindo na mata e jura pegar **"esse bando de roupa verde!"** |
-| Pyle cap. 3 | O pregão da Flecha de Ouro e o torneio | ✅ furioso, o Xerife cria o torneio mandando vigiar roupas verdes; Mariana colhe a pista na feira; Robin vai de capuz vermelho, parte a flecha no centro do alvo e foge com o bando |
-| Gancho P1 → P2 | Banquete e nova prisão injusta | ✅ festa da partilha no carvalho; chega a notícia de que o Xerife trancou um amigo do bando (**Gui**) na torre sem prova nenhuma |
+### 2.1 Parte 1 — O Segredo da Floresta de Xervedo (caps. 1–11 · ✅ publicada)
+| Cap. | Fonte | Episódio | Decisão |
+| :--- | :--- | :--- | :--- |
+| 1 | Adaptação (pilar 1) | O Banquete do Rei Distante | ✅ Rei Ricardo alienado entre almofadas aprova o imposto extra sugerido pelo Xerife de Nortigão ("dois sacos de farinha por casa") |
+| 2 | Pyle cap. 1 (início) | O Moinho de Mestre Tomé | ✅ apresenta a Vila do Moinho, o ofício do moleiro (**Mestre Tomé**), seu filho **Grilo** e **Robin Hood** (ainda em roupas comuns); barão entrega 2 de 50 sacos, moleiro só tem 3 |
+| 3 | Adaptação (escalada) | Quem Desafia o Xerife? | 🔀 sem morte do guarda: Mestre Tomé e Robin contestam a conta diante da vila; furioso, o Xerife inventa mentira sem provas, prende Mestre Tomé e Robin foge com Grilo para a mata |
+| 4 | Folclore (Lady Mariana) | A Mentora da Mata | ✅ na borda de Xervedo, **Lady Mariana** entrega as **roupas verde-floresta**, o capuz com pena vermelha e a corneta de 3 sopros (**Atividade 1**) |
+| 5–7 | Pyle cap. 1 (fim) | Ponte do Riacho Fundo, Banho de Risadas e João Pequeno | ✅ duelo cômico de bastões; Robin cai no riacho, ri do próprio tombo (**Atividade 2**, 4 gravuras progressivas), conhece a história de **João Pequeno** (ferramentas tomadas pelo Xerife) e o convida para o bando |
+| 8 | Folclore (Major Oak) | O Segredo do Grande Carvalho | ✅ esconderijo no tronco oco, João Pequeno recebe camisa verde e Robin risca na terra o plano do resgate sem violência |
+| 9–10 | Adaptação (conflito prévio) | A Janela Alta e "Ladrões ou Justiceiros?" | ✅ resgate silencioso de Mestre Tomé e da farinha (**Atividade 3**, `pedido` com pegadinhas); Xerife tenta rotulá-los de "ladrões" e Robin rebate diante da vila que *"devolver não é roubar"* |
+| 11 | Gancho P1 → P2 (Pyle cap. 3) | Pão Quentinho e uma Nova Armadilha | ✅ banquete no Grande Carvalho; Mariana traz o cartaz do **Torneio da Flecha de Ouro** — gancho direto para a Parte 2 |
 
 ### 2.2 Parte 2 — O Resgate da Torre e o Açougueiro (caps. 10–18)
 | Fonte | Episódio | Decisão |
@@ -75,9 +79,9 @@ Decisão de cada bloco: ✅ entra · 🔀 entra adaptado/fundido · ✂️ fica 
 
 ---
 
-## 4. Direção visual e recursos (fechados em 2026-11-21)
+## 4. Direção visual, diversidade e recursos (atualizados em 2026-11-26)
 
-- **Estilo artístico (Opção A)**: **Gouache estilizado de floresta** (inspirado em *Wolfwalkers* / Cartoon Saloon) — árvores geométricas expressivas, raios de sol dourados, traço suave de carvão/tinta.
-- **Diversidade**: elenco diverso desde a Parte 1 (**Lady Mariana** jovem negra, e diversidade nos personagens do bando e das aldeias), priorizando representatividade infantil (registrar também em `sobre.html`).
-- **Recurso visual (Opção 1)**: **cena única + camadas interativas** (sem 2ª lente).
-- **"Você sabia?"**: presente tanto no **Modo Tradicional** (botão discreto no fim do texto, para 5–8 anos — suporte no motor a ligar depois) quanto no **Modo Desafio 🧩** (8–10 anos).
+- **Estilo artístico (Opção C — Diorama de Papel Recortado / *Paper Cut-Out Craft*)**: planos com textura tátil de papel artesanal e sombras de profundidade entre camadas, totalmente distinto de *Dom Quixote*, com **Palcos-Base Reaproveitáveis** e **sprites sobrepostos animados** (`.webp` transparente recortado de fundo `#FF00FF`). Receita operacional em [`DIRETRIZES_ROBIN_HOOD.md`](DIRETRIZES_ROBIN_HOOD.md) §11.
+- **Diversidade real (evitar "falsa diversidade" — diretriz do humano, 2026-11-26)**: a Parte 1 trouxe **Lady Mariana** (jovem negra), **Mestre Tomé** (homem negro) e **Grilo** (menino pardo), mas ainda manteve maioria de personagens masculinos brancos (e sequer mencionou a mãe de Grilo — ponto anotado para uma futura v2 da Parte 1). Para as próximas partes, em vez de forçar correções artificiais no que já passou, o elenco será diversificado **de forma orgânica nas próximas adições naturais da história** — incluindo a ideia em amadurecimento de trazer **um personagem indígena** e **uma mulher branca** como variações naturais de personagens clássicos previstos. Um **novo agente no Swarm** (focado em antirracismo, diversidade e compliance) atuará tanto na revisão quanto nas recomendações desde o início do processo criativo. Registrar a escolha editorial também em `sobre.html`.
+- **Recurso visual (Opção 1)**: **cena única + camadas interativas e gravuras progressivas reais** (sem 2ª lente).
+- **"Você sabia?"**: presente tanto no **Modo Tradicional** (`voceSabia` já ativo na Parte 1, para 5–8 anos) quanto no **Modo Desafio 🧩** (8–10 anos).

@@ -2,11 +2,11 @@
 
 O que vale **só para Robin Hood**, complementando a [receita geral](../RECEITA-CLASSICO-VIVO.md). Leia a receita geral primeiro: esta só acrescenta ou especializa.
 
-> **Situação: ✅ Fase 0 aprovada pelo humano (2026-11-21). Parte 1 em produção.**
+> **Situação: ✅ Fase 0 aprovada (2026-11-21) · ✅ Parte 1 publicada na estante principal (2026-11-22) · 🟡 Parte 2 em preparação (2026-11-26).**
 > Plano: [`PLANO-ROBIN-HOOD.md`](../PLANO-ROBIN-HOOD.md) · Diretrizes operacionais: [`DIRETRIZES_ROBIN_HOOD.md`](../DIRETRIZES_ROBIN_HOOD.md) · Pesquisa com fontes: [`pesquisa/ROBIN-HOOD.md`](../pesquisa/ROBIN-HOOD.md).
 
 - **As obras-fonte**: *The Merry Adventures of Robin Hood*, de **Howard Pyle** (1883, Prefácio + 22 capítulos, domínio público), combinada com as baladas medievais (*A Gest of Robyn Hode*) e o folclore posterior (Grande Carvalho, Lady Mariana).
-- **Tipo de adaptação**: **condensação** episódica em **5 partes** (receita geral §2), para evitar pressa e dar espaço ao desenvolvimento dos personagens, da trama e dos temas sociais.
+- **Tipo de adaptação**: **condensação** episódica em **5 ou 6 partes** (receita geral §2; total a fechar antes da Parte 2), para evitar pressa e dar espaço ao desenvolvimento dos personagens, da trama e dos temas sociais.
 - **Público**: **5 a 8 anos** (leitor de referência: criança de **6 anos**, `AGENTS.md` §3.5), mais camada *"Você sabia?"* nos dois modos (tradicional 5–8 anos e Desafio 🧩 8–10 anos).
 
 ---
@@ -22,16 +22,14 @@ O que vale **só para Robin Hood**, complementando a [receita geral](../RECEITA-
 
 ---
 
-## 2. Condensação: divisão em 5 partes
+## 2. Condensação: divisão em partes
 
-1. **Proporção**: **5 partes**, cada uma com **capa + 8 a 9 capítulos nossos** (9 a 10 páginas), numeração contínua de capítulos entre as partes (1–9, 10–18…).
+1. **Proporção**: **5 ou 6 partes** (a fechar antes da Parte 2), cada uma com **capa + ~9 a 11 capítulos nossos**, numeração contínua de capítulos entre as partes (P1: caps. 1–11; P2: caps. 12+…).
 2. **Cada parte tem arco, conflito prévio e gancho**:
-   - Nenhum plano do Xerife nasce do nada: primeiro ocorre o conflito e a identificação visual do bando (as roupas verdes de Sherwood), depois o Xerife elabora armadilhas.
-   - **P1**: *O Bando do Grande Carvalho* (imposto desigual, prisão do moleiro, roupas verdes, João Pequeno, 1º resgate/conflito com o Xerife, torneio da flecha de ouro, banquete e prisão de Gui).
-   - **P2**: *O Resgate da Torre e o Açougueiro* (resgate na torre, disfarce na feira e jantar na casa do Xerife, João Pequeno na cozinha).
-   - **P3**: *O Frade do Rio e a Canção da Floresta* (Frei Tuco no riacho, Alan do Vale, Gui Escarlate, o povo perdendo o medo nas feiras).
-   - **P4**: *O Cavaleiro Triste e a Flecha da Rainha* (Dom Ricardo do Vale × Abade isento de impostos, pressão social crescendo, torneio diante da Rainha Leonor).
-   - **P5**: *O Hóspede Encapuzado e as Novas Leis* (armação do Xerife desmascarada por provas, mobilização popular, Rei Ricardo, imposto justo e criação dos peritos das provas).
+   - Nenhum plano do Xerife nasce do nada: primeiro ocorre o conflito e a identificação visual do bando (as roupas verdes de Xervedo), depois o Xerife elabora armadilhas.
+   - **P1 (✅ publicada)**: *O Segredo da Floresta de Xervedo* (Rei distante e imposto desigual, Moinho de Mestre Tomé, prisão sem provas, Lady Mariana e roupas verdes, João Pequeno na ponte, Grande Carvalho, resgate silencioso, "devolver não é roubar" e gancho do cartaz da Flecha de Ouro).
+   - **P2 (🟡 próxima)**: abre com o **Torneio da Flecha de Ouro** e segue com o resgate/disfarces *(escopo exato a fechar com o humano)*.
+   - **P3–P5/P6**: novas adições diversas ao bando (variações naturais dos personagens clássicos), canção nas feiras, Dom Ricardo do Vale × Abade, torneio diante da Rainha Leonor, armação desmascarada por provas, Rei Ricardo, imposto justo e criação dos peritos das provas.
 
 ---
 
@@ -48,7 +46,7 @@ O que vale **só para Robin Hood**, complementando a [receita geral](../RECEITA-
 
 - **Estilo artístico — Opção C (Diorama de Papel Recortado / *Paper Cut-Out Craft*)**: planos com textura tátil de papel artesanal e sombras de profundidade entre as camadas, totalmente distinto da aquarela/guache de *Dom Quixote* e alinhado à estética de camadas animadas do motor.
   - **✅ Método Híbrido validado por Teste de Conceito (2026-11-21)**: geração de **Palcos-Base Reaproveitáveis** em diorama de papel + **Camadas Animadas em `.webp` transparente** recortadas de fundo `#FF00FF`, operado por uma linha de montagem de 3 agentes em Hydrogen (`@ilustrador-hydrogen` → `@animador-hydrogen` → `@critico-arte-hydrogen`), com verificação obrigatória de geometria 2D/3D (superfícies 100% frontais para camadas com rotação 2D) e porte etário de Grilo (~11–12 anos, altura no peito do pai). Receita completa em [`DIRETRIZES_ROBIN_HOOD.md`](../DIRETRIZES_ROBIN_HOOD.md) §11.
-- **Diversidade editorial declarada**: **Lady Mariana** (jovem negra de cabelo trançado, mentora da floresta), **Mestre Tomé** (o moleiro, homem negro) e seu filho **Grilo** (menino pardo), além de elenco diverso em toda a obra — **a representatividade infantil prevalece sobre a distribuição étnica da Europa medieval**. Registrar essa escolha também no texto para adultos em `sobre.html`.
+- **Diversidade editorial declarada (atualizada em 2026-11-26 — evitar "falsa diversidade")**: **Lady Mariana** (jovem negra de cabelo trançado, mentora da floresta), **Mestre Tomé** (o moleiro, homem negro) e seu filho **Grilo** (menino pardo) abriram a Parte 1 — **a representatividade infantil prevalece sobre a distribuição étnica da Europa medieval**. Contudo, na revisão da Parte 1 notou-se que a maioria dos demais personagens ainda ficou masculina e branca (e figuras femininas cotidianas, como a mãe de Grilo, não apareceram). A diretriz passa a ser **diversidade orgânica e contínua** nas próximas adições naturais do elenco (incluindo a ideia em amadurecimento de incluir **um personagem indígena** e **uma mulher branca** como variações naturais de personagens clássicos previstos), com acompanhamento de um **agente dedicado de Antirracismo, Diversidade e Compliance** no Swarm desde a concepção até a revisão. Registrar essa escolha também no texto para adultos em `sobre.html`.
 - **Recurso visual — Opção 1 (Cena única + camadas e gravuras progressivas reais)**: sem a chave da 2ª lente (*Realidade × Imaginação* é própria de Dom Quixote). **Proibido usar apenas emojis soltos como resultado de atividade**: toda atividade deve mudar a gravura de verdade (`progressivo` com 4 etapas ilustradas ou `camadas` ilustradas em estilo papel recortado).
 - **"Você sabia?" nos dois modos**: caixas curtas e curiosas no modo tradicional (5–8 anos, `voceSabia` na página) e versão mais completa no Modo Desafio 🧩 (8–10 anos).
 
