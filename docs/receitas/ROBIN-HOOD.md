@@ -6,7 +6,7 @@ O que vale **só para Robin Hood**, complementando a [receita geral](../RECEITA-
 > Plano: [`PLANO-ROBIN-HOOD.md`](../PLANO-ROBIN-HOOD.md) · Diretrizes operacionais: [`DIRETRIZES_ROBIN_HOOD.md`](../DIRETRIZES_ROBIN_HOOD.md) · Pesquisa com fontes: [`pesquisa/ROBIN-HOOD.md`](../pesquisa/ROBIN-HOOD.md).
 
 - **As obras-fonte**: *The Merry Adventures of Robin Hood*, de **Howard Pyle** (1883, Prefácio + 22 capítulos, domínio público), combinada com as baladas medievais (*A Gest of Robyn Hode*) e o folclore posterior (Grande Carvalho, Lady Mariana).
-- **Tipo de adaptação**: **condensação** episódica em **5 ou 6 partes** (receita geral §2; total a fechar antes da Parte 2), para evitar pressa e dar espaço ao desenvolvimento dos personagens, da trama e dos temas sociais.
+- **Tipo de adaptação**: **condensação** episódica em **6 partes** (receita geral §2; ampliada de 5 para 6 partes em 2026-11-26), para evitar pressa e dar espaço ao desenvolvimento dos personagens, da trama e dos temas sociais.
 - **Público**: **5 a 8 anos** (leitor de referência: criança de **6 anos**, `AGENTS.md` §3.5), mais camada *"Você sabia?"* nos dois modos (tradicional 5–8 anos e Desafio 🧩 8–10 anos).
 
 ---
@@ -22,14 +22,17 @@ O que vale **só para Robin Hood**, complementando a [receita geral](../RECEITA-
 
 ---
 
-## 2. Condensação: divisão em partes
+## 2. Condensação: divisão em 6 partes
 
-1. **Proporção**: **5 ou 6 partes** (a fechar antes da Parte 2), cada uma com **capa + ~9 a 11 capítulos nossos**, numeração contínua de capítulos entre as partes (P1: caps. 1–11; P2: caps. 12+…).
+1. **Proporção**: **6 partes** (decisão de 2026-11-26), cada uma com **capa + ~10 a 11 capítulos nossos**, numeração contínua de capítulos entre as partes (P1: caps. 1–11; P2: caps. 12–22…).
 2. **Cada parte tem arco, conflito prévio e gancho**:
    - Nenhum plano do Xerife nasce do nada: primeiro ocorre o conflito e a identificação visual do bando (as roupas verdes de Xervedo), depois o Xerife elabora armadilhas.
    - **P1 (✅ publicada)**: *O Segredo da Floresta de Xervedo* (Rei distante e imposto desigual, Moinho de Mestre Tomé, prisão sem provas, Lady Mariana e roupas verdes, João Pequeno na ponte, Grande Carvalho, resgate silencioso, "devolver não é roubar" e gancho do cartaz da Flecha de Ouro).
-   - **P2 (🟡 próxima)**: abre com o **Torneio da Flecha de Ouro** e segue com o resgate/disfarces *(escopo exato a fechar com o humano)*.
-   - **P3–P5/P6**: novas adições diversas ao bando (variações naturais dos personagens clássicos), canção nas feiras, Dom Ricardo do Vale × Abade, torneio diante da Rainha Leonor, armação desmascarada por provas, Rei Ricardo, imposto justo e criação dos peritos das provas.
+   - **P2 (🟡 próxima)**: **Torneio da Flecha de Ouro + Resgate na Torre** (armadilha em Nortigão, pistas concretas, resgate sem violência e 1ª nova adição diversa ao bando).
+   - **P3**: *O Açougueiro e a Cozinha do Castelo* (Robin na feira e João Pequeno na cozinha).
+   - **P4**: *O Frade do Rio e a Canção da Floresta* (novas adições diversas ao bando, episódio do riacho e canção nas feiras).
+   - **P5**: *O Cavaleiro Triste e a Flecha da Rainha* (Dom Ricardo do Vale × Abade e torneio diante da Rainha Leonor).
+   - **P6**: *O Hóspede Encapuzado e as Novas Leis* (armação desmascarada por provas, mobilização popular, Rei Ricardo, imposto justo e criação dos peritos das provas).
 
 ---
 
