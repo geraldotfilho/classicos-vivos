@@ -43,3 +43,4 @@ data,modelo,nivel,comando,pedidos,imagens_ok,tokens_entrada,tokens_imagem,tokens
 2026-11-21T01:08,gemini-3.1-flash-image,batch,"--lista tools/arte/dom-quixote-revisoes-2026-11-21.mjs --ids p8-p7-imag",1,1,1666,1120,719,0.0351
 2026-11-21T19:28,gemini-3.1-flash-image,batch,"--lista tools/arte/robin-hood-parte-1.mjs",3,3,3141,3360,1362,0.1036
 2026-11-22T14:15,gemini-3.1-flash-image,batch,"--lista tools/arte/robin-hood-parte-1-camadas.mjs",2,2,298,2240,684,0.0683
+2026-11-27T09:19,gemini-3.1-flash-image,batch,"--lista tools/arte/robin-hood-parte-2.mjs",20,20,18256,22400,9003,0.6901

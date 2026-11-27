@@ -7,9 +7,9 @@ Plano: [`../PLANO-ROBIN-HOOD.md`](../PLANO-ROBIN-HOOD.md) · Receita: [`../recei
 | :--- | :--- | :--- | :--- | :--- |
 | 0 Concepção, elenco diverso e escaleta (com `@diversidade-compliance`) | ✅ aprovada pelo humano | 2026-11-26 | — | US$ 0,00 |
 | 1 Adaptação e texto (`@escritor-hydrogen` → `@revisor-opus` → `@diversidade-compliance`) | ✅ **100% concluído e lapidado** (Capa + Caps. 12–24, com comédia e ajustes de diversidade) | 2026-11-27 | `main` | US$ 0,00 |
-| 2 Interações e visual (Opção C — Diorama de Papel + `@diretor-animacao`) | ⬜ | | | US$ 0,00 |
-| 3 Revisão humana 🛑 | ⬜ | | | — |
-| 4 Ilustrações e animações integradas (gerador nativo) | ⬜ | | | US$ 0,00 |
+| 2 Interações e visual (Opção C — Diorama de Papel + `@diretor-animacao`) | ✅ concluído (3 atividades progressivas + 6 páginas animadas / 2 sprites) | 2026-11-27 | `main` | US$ 0,00 |
+| 3 Revisão humana 🛑 | 🟡 **pronto para revisão do humano (texto + 24 WebPs + animações)** | 2026-11-27 | `main` | — |
+| 4 Ilustrações e animações integradas | ✅ **100% concluído (24 cenas/etapas WebP + 2 sprites animados)** | 2026-11-27 | `main` | US$ 0,6901 |
 | 5 Revisão final em família 🛑 | ⬜ | | | — |
 | Publicação (estante principal, PT) | ⬜ | | | — |
 | 6 Narração (pt) — P1 e P2 | ⬜ (após publicação da P2) | | | US$ |
@@ -52,6 +52,7 @@ Plano: [`../PLANO-ROBIN-HOOD.md`](../PLANO-ROBIN-HOOD.md) · Receita: [`../recei
 - **Animações (`@diretor-animacao`, `Gemini 4 Neon`)**:
   - Vapor/bolhas do tacho no Cap. 13 **removidos** (feedback humano: parecia tinta fervendo).
   - Livro fechado com **6 páginas animadas em 14** (Capa, Caps. 12, 15, 17, 21 e 24) e apenas **2 sprites recortados** (`p4-flamula.webp` pronto + `p10-lenco.webp` agendado).
-- **Ilustrações (gerador nativo, US$ 0,00)**:
-  - **Prontas (8/22 WebP)**: `p1-real`, `p2-real`, `p3-real`, `p3-stage-1..3`, `p4-real`, `camadas/p4-flamula`.
-  - **Agendadas para renovação da cota (~19:45 BRT de 2026-11-27)**: `p0-real`, `p5-real`, `p6-real`, `p7-real`, `p8-real`, `p9-real`, `p9-stage-1..3`, `p10-real`, `camadas/p10-lenco`, `p11-real`, `p11-stage-1..3`, `p12-real`, `p13-real` + retoques de `p3-stage-1` (remover Robin duplicado) e `p3-stage-2/3` (fechar manto sem verde). Todos os prompts estão prontos no board do Swarm (`#42`, `#47`, `#51`).
+- **Ilustrações (100% concluídas — 24 cenas/etapas WebP + 2 sprites animados)**:
+  - **Gerador nativo (`US$ 0,00`)**: `p1-real`, `p2-real`, `p3-real`, `p4-real`, `camadas/p4-flamula`.
+  - **API paga Batch autorizada (`tools/arte/robin-hood-parte-2.mjs`, lote `batches/jz3e2knf0cdcakd91kf8cqty9yhja4mbvqns`, 20/20 aceitas, `US$ 0,6901` registrados em `docs/arte/gastos.csv`)**: `p0-real`, retoques `p3-stage-1..3`, `p5-real`, `p6-real`, `p7-real`, `p8-real`, `p9-real`, `p9-stage-1..3`, `p10-real`, `camadas/p10-lenco`, `p11-real`, `p11-stage-1..3`, `p12-real`, `p13-real`.
+  - Recorte de `p10-lenco` (removida cornija superior, 0 pixels magenta/halo) e calibração de coordenadas (`c-brilho-p0`, `c-farinha-p6`, `c-lenco-p10`, `c-sol-p13`) concluídos pelo `@diretor-animacao`.

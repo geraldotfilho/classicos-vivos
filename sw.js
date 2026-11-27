@@ -7,7 +7,7 @@
    - Páginas HTML e vozes.js: rede primeiro com limite de 2,5 s (se a rede estiver lenta, abre do cache na hora).
    - Narração gravada (*.mp3 e *.json): rede primeiro com limite de 2,5 s, cache próprio (cv-narracao).
    - Demais arquivos: cache primeiro (abre instantâneo no tablet). */
-const CACHE = 'classicos-vivos-94e3d9a4729b';
+const CACHE = 'classicos-vivos-8830d8c0d8ba';
 const CACHE_AUDIO = 'cv-narracao';
 const CACHE_META = 'cv-meta';
 const FILES = [
@@ -113,7 +113,7 @@ const FILES = [
     ],
     [
         "./assets/js/offline-manager.js",
-        "1a4d75cd"
+        "031041b9"
     ],
     [
         "./assets/js/texto.js",
@@ -1236,12 +1236,48 @@ const FILES = [
         "e230503c"
     ],
     [
+        "./robin-hood/imagens/parte-2/camadas/p10-lenco.webp",
+        "31307d11"
+    ],
+    [
         "./robin-hood/imagens/parte-2/camadas/p4-flamula.webp",
         "9c726a68"
     ],
     [
+        "./robin-hood/imagens/parte-2/p0-real.webp",
+        "472d943c"
+    ],
+    [
         "./robin-hood/imagens/parte-2/p1-real.webp",
         "f866529a"
+    ],
+    [
+        "./robin-hood/imagens/parte-2/p10-real.webp",
+        "e6a53f59"
+    ],
+    [
+        "./robin-hood/imagens/parte-2/p11-real.webp",
+        "bec2056d"
+    ],
+    [
+        "./robin-hood/imagens/parte-2/p11-stage-1.webp",
+        "d2856059"
+    ],
+    [
+        "./robin-hood/imagens/parte-2/p11-stage-2.webp",
+        "84491e64"
+    ],
+    [
+        "./robin-hood/imagens/parte-2/p11-stage-3.webp",
+        "06104207"
+    ],
+    [
+        "./robin-hood/imagens/parte-2/p12-real.webp",
+        "8f42ee87"
+    ],
+    [
+        "./robin-hood/imagens/parte-2/p13-real.webp",
+        "e033c0c7"
     ],
     [
         "./robin-hood/imagens/parte-2/p2-real.webp",
@@ -1253,19 +1289,51 @@ const FILES = [
     ],
     [
         "./robin-hood/imagens/parte-2/p3-stage-1.webp",
-        "3f917967"
+        "67360ed2"
     ],
     [
         "./robin-hood/imagens/parte-2/p3-stage-2.webp",
-        "13958178"
+        "77e3deac"
     ],
     [
         "./robin-hood/imagens/parte-2/p3-stage-3.webp",
-        "c3261174"
+        "30bcfefa"
     ],
     [
         "./robin-hood/imagens/parte-2/p4-real.webp",
         "24cae2e0"
+    ],
+    [
+        "./robin-hood/imagens/parte-2/p5-real.webp",
+        "fa875623"
+    ],
+    [
+        "./robin-hood/imagens/parte-2/p6-real.webp",
+        "e02564ed"
+    ],
+    [
+        "./robin-hood/imagens/parte-2/p7-real.webp",
+        "5dc8945b"
+    ],
+    [
+        "./robin-hood/imagens/parte-2/p8-real.webp",
+        "983495d5"
+    ],
+    [
+        "./robin-hood/imagens/parte-2/p9-real.webp",
+        "649588e6"
+    ],
+    [
+        "./robin-hood/imagens/parte-2/p9-stage-1.webp",
+        "c33b8797"
+    ],
+    [
+        "./robin-hood/imagens/parte-2/p9-stage-2.webp",
+        "a0949bb0"
+    ],
+    [
+        "./robin-hood/imagens/parte-2/p9-stage-3.webp",
+        "05ec28ce"
     ],
     [
         "./robin-hood/parte-1.html",
@@ -1273,7 +1341,7 @@ const FILES = [
     ],
     [
         "./robin-hood/parte-2.html",
-        "4ec9685f"
+        "2f11e6e7"
     ],
     [
         "./sobre.html",
