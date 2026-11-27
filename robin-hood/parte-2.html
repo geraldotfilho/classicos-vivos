@@ -15,38 +15,54 @@
     <link rel="manifest" href="../manifest.webmanifest">
     <link rel="apple-touch-icon" href="../assets/icones/icone-180.png">
     <style>
-        /* Animações sutis integradas ao diorama — Robin Hood Parte 2 (revisado sem vapor no tacho do Cap. 13) */
+        /* Animações sutis integradas ao diorama — Robin Hood Parte 2 (revisado sem vapor no tacho do Cap. 13).
+           Os véus (fundo: 'transparent') recebem do livro.js um background inline; por isso todo efeito pintado
+           fica num pseudo-elemento (::before/::after), que o inline não apaga. Sem mix-blend-mode: no tablet
+           (e sobre cena clara) o "screen" deixava o brilho invisível. */
         .camada[data-camada="c-sol-p1"],
-        .camada[data-camada="c-sol-p13"] { mix-blend-mode: screen; overflow: visible; }
+        .camada[data-camada="c-sol-p13"],
+        .camada[data-camada="c-brilho-p0"],
+        .camada[data-camada="c-farinha-p6"] { overflow: visible; }
         .camada[data-camada="c-sol-p1"] .camada-arte,
-        .camada[data-camada="c-sol-p13"] .camada-arte { position: relative; }
+        .camada[data-camada="c-sol-p13"] .camada-arte,
+        .camada[data-camada="c-brilho-p0"] .camada-arte,
+        .camada[data-camada="c-farinha-p6"] .camada-arte { position: relative; }
+        /* Raios de sol entre as copas */
         .camada[data-camada="c-sol-p1"] .camada-arte::before,
         .camada[data-camada="c-sol-p13"] .camada-arte::before {
             content: ''; position: absolute; inset: 0;
             background:
-                linear-gradient(125deg, rgba(255,247,178,0.52) 8%, rgba(255,232,140,0.22) 26%, transparent 44%),
-                linear-gradient(122deg, transparent 28%, rgba(255,244,180,0.38) 44%, transparent 60%);
-            filter: blur(4px);
+                linear-gradient(125deg, rgba(255,246,190,0.75) 6%, rgba(255,232,150,0.38) 24%, transparent 44%),
+                linear-gradient(122deg, transparent 26%, rgba(255,244,190,0.55) 42%, transparent 60%),
+                linear-gradient(128deg, transparent 48%, rgba(255,240,180,0.35) 60%, transparent 72%);
+            filter: blur(5px);
+            will-change: opacity, transform;
             animation: rh2SolRespira 5.5s ease-in-out infinite;
         }
+        /* Poeirinha dourada flutuando na luz */
         .camada[data-camada="c-sol-p1"] .camada-arte::after,
         .camada[data-camada="c-sol-p13"] .camada-arte::after {
             content: ''; position: absolute; inset: 8% 6%;
             background-image:
-                radial-gradient(circle 3.5px at 22% 28%, rgba(255,250,210,0.95), transparent 70%),
-                radial-gradient(circle 3px at 48% 18%, rgba(255,244,190,0.85), transparent 70%),
-                radial-gradient(circle 4px at 64% 46%, rgba(255,250,210,0.85), transparent 70%),
-                radial-gradient(circle 3px at 36% 62%, rgba(255,240,180,0.90), transparent 70%),
-                radial-gradient(circle 3.5px at 76% 72%, rgba(255,250,210,0.80), transparent 70%);
+                radial-gradient(circle 7px at 22% 28%, rgba(255,252,220,1), rgba(255,236,150,0.5) 45%, transparent 75%),
+                radial-gradient(circle 5px at 48% 18%, rgba(255,250,210,1), rgba(255,236,150,0.45) 45%, transparent 75%),
+                radial-gradient(circle 8px at 64% 46%, rgba(255,252,220,1), rgba(255,236,150,0.5) 45%, transparent 75%),
+                radial-gradient(circle 6px at 36% 62%, rgba(255,248,205,1), rgba(255,236,150,0.45) 45%, transparent 75%),
+                radial-gradient(circle 7px at 76% 72%, rgba(255,252,220,1), rgba(255,236,150,0.5) 45%, transparent 75%),
+                radial-gradient(circle 5px at 14% 80%, rgba(255,250,210,1), rgba(255,236,150,0.45) 45%, transparent 75%),
+                radial-gradient(circle 6px at 86% 34%, rgba(255,252,220,1), rgba(255,236,150,0.45) 45%, transparent 75%);
+            filter: drop-shadow(0 0 4px rgba(255,236,150,0.9));
+            will-change: opacity, transform;
             animation: rh2Poeira 6.5s ease-in-out infinite;
         }
 
         /* Capa: brilho dourado suave sobre a Flecha de Ouro */
-        .camada[data-camada="c-brilho-p0"] { mix-blend-mode: screen; overflow: visible; }
-        .camada[data-camada="c-brilho-p0"] .camada-arte {
-            background: radial-gradient(ellipse at center, rgba(255,242,160,0.55) 0%, rgba(255,220,100,0.18) 45%, transparent 72%);
+        .camada[data-camada="c-brilho-p0"] .camada-arte::before {
+            content: ''; position: absolute; inset: 0;
+            background: radial-gradient(ellipse at center, rgba(255,240,150,0.85) 0%, rgba(255,214,90,0.40) 42%, transparent 72%);
             filter: blur(6px);
-            animation: rh2SolRespira 4.8s ease-in-out infinite;
+            will-change: opacity, transform;
+            animation: rh2Brilho 3.6s ease-in-out infinite;
         }
 
         /* Cap. 15: 2 flâmulas ancoradas pelo topo sob as travessas dos mastros */
@@ -64,12 +80,13 @@
         }
 
         /* Cap. 17: névoa leve de farinha no ar da praça */
-        .camada[data-camada="c-farinha-p6"] { overflow: visible; }
-        .camada[data-camada="c-farinha-p6"] .camada-arte {
+        .camada[data-camada="c-farinha-p6"] .camada-arte::before {
+            content: ''; position: absolute; inset: 0;
+            will-change: opacity, transform;
             background-image:
-                radial-gradient(circle 28px at 26% 55%, rgba(255,252,245,0.45), transparent 70%),
-                radial-gradient(circle 34px at 56% 42%, rgba(255,250,242,0.40), transparent 70%),
-                radial-gradient(circle 24px at 78% 60%, rgba(255,252,245,0.38), transparent 70%);
+                radial-gradient(circle 28px at 26% 55%, rgba(255,252,245,0.75), transparent 70%),
+                radial-gradient(circle 34px at 56% 42%, rgba(255,250,242,0.70), transparent 70%),
+                radial-gradient(circle 24px at 78% 60%, rgba(255,252,245,0.65), transparent 70%);
             filter: blur(6px);
             animation: rh2Poeira 6s ease-in-out infinite;
         }
@@ -85,8 +102,12 @@
         }
 
         @keyframes rh2SolRespira {
-            0%, 100% { opacity: 0.30; transform: translate3d(0, 0, 0) scale(1); }
-            50% { opacity: 0.80; transform: translate3d(1.5%, 1%, 0) scale(1.03); }
+            0%, 100% { opacity: 0.35; transform: translate3d(0, 0, 0) scale(1); }
+            50% { opacity: 1; transform: translate3d(1.5%, 1%, 0) scale(1.03); }
+        }
+        @keyframes rh2Brilho {
+            0%, 100% { opacity: 0.35; transform: scale(0.94); }
+            50% { opacity: 1; transform: scale(1.08); }
         }
         @keyframes rh2Poeira {
             0%, 100% { opacity: 0.30; transform: translate3d(0, 4%, 0); }
@@ -101,8 +122,8 @@
             .camada[data-camada="c-sol-p1"] .camada-arte::after,
             .camada[data-camada="c-sol-p13"] .camada-arte::before,
             .camada[data-camada="c-sol-p13"] .camada-arte::after,
-            .camada[data-camada="c-brilho-p0"] .camada-arte,
-            .camada[data-camada="c-farinha-p6"] .camada-arte,
+            .camada[data-camada="c-brilho-p0"] .camada-arte::before,
+            .camada[data-camada="c-farinha-p6"] .camada-arte::before,
             .camada[data-camada^="c-flamula-p4"] > .camada-arte,
             .camada[data-camada="c-lenco-p10"] > .camada-arte {
                 animation: none !important;

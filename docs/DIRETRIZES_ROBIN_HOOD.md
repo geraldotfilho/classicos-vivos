@@ -108,6 +108,8 @@ Validado por Teste de Conceito (Capítulos 1 e 2) em 2026-11-21. Combina **Palco
      - **Robin Hood**: jovem arqueiro ágil; veste **camisa de linho creme e colete marrom de morador da vila nos Caps. 2 e 3 (ZERO roupa verde antes do Cap. 4!)** e **traje verde-folha com capuz e pena vermelha a partir do Cap. 4**.
      - **Lady Mariana**: jovem negra de tranças compridas, olhos vivos, traje verde-esmeralda de arqueira da floresta.
      - **João Pequeno**: gigante gentil com barba castanha, túnica rústica de couro marrom nos Caps. 5–7 (ganhando verde ao chegar ao Grande Carvalho).
+   - **Regra dos véus CSS (aprendida em 2026-11-27)**: uma camada sem sprite (`fundo: 'transparent'`) recebe do `livro.js` um `background` **inline**, que vence qualquer `background`/`background-image` do `<style>` da página. Pinte o efeito (brilho, raios, poeira, névoa) num **`::before`/`::after`** da `.camada-arte`, nunca na própria `.camada-arte`. **Não use `mix-blend-mode`** nesses efeitos: sobre cena clara e no tablet o resultado some; use cor com alfa e confira no tablet (Playwright `Galaxy Tab S4 landscape`) com a animação congelada no pico.
+
 3. **Subagente 2 — `@diretor-animacao` (`Gemini 4 Neon` — Diretor de Animação, Integração Visual e Montagem DOM)**:
    - Substitui os antigos `@animador-hydrogen` e o papel de animação do `@engenheiro-ci-animacao` (decisão do humano em 2026-11-26, após o diagnóstico da Parte 1).
    - **Só animar o que nasce da história**: fim da meta burocrática de animar 100% das páginas. Melhor 4 ou 5 animações impecáveis e com lógica física (bandeiras ao vento, flecha no alvo, tochas, fumaça suave) do que adesivos flutuantes artificiais.

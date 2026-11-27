@@ -456,3 +456,9 @@ O que já foi entregue, sprint a sprint, em ordem cronológica (o mais antigo pr
 - Motor (`assets/js/livro.js`): `falar()` procura o MP3 em `audio/falas<-idioma>/` pelo `indice.json` (texto exato → arquivo), só quando o idioma tem narração ativa na parte; as falas da página são pré-carregadas. A lista do que é falado é uma só, `Texto.falasDaAtividade` (`assets/js/texto.js`), usada também pela exportação (`falas` em `docs/narracao/frases-*.json`). `AGENTS.md` §2.6.
 - Gravação: `tools/gravar-narracao.mjs --voz falas` (grupos de um tipo só; frases cortadas pelo Whisper como as páginas; cartões, sílabas e letras embaralhados e cortados pelas pausas, cada pedaço conferido sozinho), pelo modo lote. Gasto e pontos de escuta: `docs/narracao/qa-falas.md` e `docs/narracao/gastos.csv`. Auditoria atualizada (`docs/narracao/AUDITORIA-ATIVIDADES-E-PALAVRAS.md`).
 
+
+## ✅ Animações da Parte 2 de Robin Hood visíveis no tablet (2026-11-27)
+- Relato do humano: no tablet, só as flâmulas do Cap. 15 se mexiam; a capa e o Cap. 12 pareciam paradas.
+- Causa 1 (todos os aparelhos): o `livro.js` escreve `background:transparent` inline nos véus `fundo`, apagando o gradiente do brilho da capa (`c-brilho-p0`) e da névoa de farinha (`c-farinha-p6`).
+- Causa 2 (tablet): os raios e a poeira do sol (Caps. 12 e 24) usavam `mix-blend-mode: screen`, alfa baixo e pontos de 3 px; sobre a cena clara, no tablet, não se viam.
+- Correção em `robin-hood/parte-2.html`: efeitos movidos para `::before`/`::after`, sem blend, mais fortes e com partículas maiores (com brilho). Conferido no Playwright (Galaxy Tab S4, paisagem). `sw.js` regerado. Regra registrada em `docs/DIRETRIZES_ROBIN_HOOD.md`.

@@ -10,6 +10,7 @@
 
 ## 1. Estado atual
 
+- **2026-11-27**: Robin Hood Parte 2 — animações da capa (brilho na flecha), Caps. 12 e 24 (raios e poeira de sol) e Cap. 17 (farinha) corrigidas: não apareciam no tablet (`HISTORICO.md`).
 - **2026-11-14**: corrigido o tablet preso na versão antiga dos livros (os volumes do botão "Baixar" ganhavam do cache novo no service worker; `HISTORICO.md`).
 - **2026-11-14**: botão "Buscar a versão mais nova" (🔄 verde no topo da estante) e busca automática de versão ao voltar à tela. A suspeita de que a remoção das rajadas encurtou as pausas da narração foi conferida e não se confirmou (duração idêntica; detalhes no `HISTORICO.md`); alongar pausas curtas aguarda o humano (`BACKLOG.md`).
 - **Dom Quixote, primeiro volume (Partes 1 a 4) completo e publicado em 4 idiomas**:

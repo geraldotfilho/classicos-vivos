@@ -50,6 +50,7 @@ Plano: [`../PLANO-ROBIN-HOOD.md`](../PLANO-ROBIN-HOOD.md) · Receita: [`../recei
 - **Texto**:
   - **Capa + Caps. 12–24 (14/14 páginas)**: ✅ **100% lapidados pelo `@revisor-opus` (`Claude Opus 5.5`)** na retomada automática das 04:05 BRT de 2026-11-27, incorporando todos os ajustes de diversidade de `#55` (zero associação com sangue no Cap. 19, inclusão de famílias inteiras no Cap. 23, continuidade do lenço curtinho de Clara nos Caps. 21–24) e elementos de comédia leve em toda a obra.
 - **Animações (`@diretor-animacao`, `Gemini 4 Neon`)**:
+  - **Correção (2026-11-27, relato do humano no tablet: só as flâmulas mexiam)**: os véus pintados em CSS (`fundo: 'transparent'`) recebem do `livro.js` um `background` inline, que apagava o gradiente do brilho da capa (`c-brilho-p0`) e da farinha (`c-farinha-p6`) em qualquer aparelho; e os raios/poeira do sol (Caps. 12 e 24) dependiam de `mix-blend-mode: screen` sobre cena clara, com partículas de 3 px, invisíveis no tablet. Agora todo efeito pintado mora em `::before`/`::after`, sem blend, mais forte e com partículas maiores.
   - Vapor/bolhas do tacho no Cap. 13 **removidos** (feedback humano: parecia tinta fervendo).
   - Livro fechado com **6 páginas animadas em 14** (Capa, Caps. 12, 15, 17, 21 e 24) e apenas **2 sprites recortados** (`p4-flamula.webp` pronto + `p10-lenco.webp` agendado).
 - **Ilustrações (100% concluídas — 24 cenas/etapas WebP + 2 sprites animados)**:
