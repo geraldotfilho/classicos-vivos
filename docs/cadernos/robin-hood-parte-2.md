@@ -6,7 +6,7 @@ Plano: [`../PLANO-ROBIN-HOOD.md`](../PLANO-ROBIN-HOOD.md) · Receita: [`../recei
 | Fase | Situação | Data | Commit/PR | Gasto |
 | :--- | :--- | :--- | :--- | :--- |
 | 0 Concepção, elenco diverso e escaleta (com `@diversidade-compliance`) | ✅ aprovada pelo humano | 2026-11-26 | — | US$ 0,00 |
-| 1 Adaptação e texto (`@escritor-hydrogen` → `@revisor-opus` → `@diversidade-compliance`) | 🟡 em andamento (Cap. 12 iniciado) | 2026-11-26 | — | US$ 0,00 |
+| 1 Adaptação e texto (`@escritor-hydrogen` → `@revisor-opus` → `@diversidade-compliance`) | ✅ **100% concluído e lapidado** (Capa + Caps. 12–24, com comédia e ajustes de diversidade) | 2026-11-27 | `main` | US$ 0,00 |
 | 2 Interações e visual (Opção C — Diorama de Papel + `@diretor-animacao`) | ⬜ | | | US$ 0,00 |
 | 3 Revisão humana 🛑 | ⬜ | | | — |
 | 4 Ilustrações e animações integradas (gerador nativo) | ⬜ | | | US$ 0,00 |
@@ -48,8 +48,7 @@ Plano: [`../PLANO-ROBIN-HOOD.md`](../PLANO-ROBIN-HOOD.md) · Receita: [`../recei
 
 ## 3. Notas de produção (2026-11-26 — produção noturna contínua)
 - **Texto**:
-  - **Caps. 12–17**: ✅ lapidados pelo `@revisor-opus` (`Claude Opus 5.5`) com rigor gramatical e elementos de comédia (espirro de Robin no Cap. 16; guardas amarrados feito pacote de presente e Xerife enfarinhado no Cap. 17).
-  - **Caps. 18–24 + Capa**: ✅ rascunhos completos em `robin-hood/parte-2.html`; lapidação pelo `@revisor-opus` agendada automaticamente para o reset da cota de 5 horas (~03:55 BRT de 2026-11-27).
+  - **Capa + Caps. 12–24 (14/14 páginas)**: ✅ **100% lapidados pelo `@revisor-opus` (`Claude Opus 5.5`)** na retomada automática das 04:05 BRT de 2026-11-27, incorporando todos os ajustes de diversidade de `#55` (zero associação com sangue no Cap. 19, inclusão de famílias inteiras no Cap. 23, continuidade do lenço curtinho de Clara nos Caps. 21–24) e elementos de comédia leve em toda a obra.
 - **Animações (`@diretor-animacao`, `Gemini 4 Neon`)**:
   - Vapor/bolhas do tacho no Cap. 13 **removidos** (feedback humano: parecia tinta fervendo).
   - Livro fechado com **6 páginas animadas em 14** (Capa, Caps. 12, 15, 17, 21 e 24) e apenas **2 sprites recortados** (`p4-flamula.webp` pronto + `p10-lenco.webp` agendado).
