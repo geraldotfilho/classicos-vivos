@@ -35,6 +35,8 @@ O humano (responsável pelo projeto, que lê os livros com o filho) aprova as pa
 
 Agentes podem estar trabalhando **em paralelo** no mesmo repositório, cada um na sua branch. Por isso a entrega sempre começa trazendo a `main` do remoto para a branch (§0.4, §6). As regras da API paga (§2.7) valem para todos. Em documentos antigos, "o Claude" e "o Gemini" aparecem nos papéis que tinham na época (escritor e artista); isso é histórico, não regra.
 
+**Método de equipe (Swarm)**: hoje o trabalho pesado das obras roda no Swarm do Antigravity (coordenador + trabalhadores por papel, `docs/DIRETRIZES_ROBIN_HOOD.md` §10–12), e o Claude atua na nuvem, sobretudo em bugs e Issues (decisão do humano, 2026-11-27). Se o humano chamar um **coordenador no Claude** para repetir esse método, a receita é `docs/RECEITA-COORDENADOR-CLAUDE.md` (subagentes por papel, sem comandar o Antigravity). A ideia de um app próprio para coordenar agentes dos dois lados está guardada em `docs/estudos/EDITORA-CLASSICOS-VIVOS.md`.
+
 ### 0.4 Regras de convivência
 - **Português do Brasil** em tudo (código comentado, documentos, commits).
 - **Nunca quebre o que está publicado**: obra nova ou versão nova nasce como **rascunho** (§2.5, §3.4).

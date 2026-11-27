@@ -462,3 +462,8 @@ O que já foi entregue, sprint a sprint, em ordem cronológica (o mais antigo pr
 - Causa 1 (todos os aparelhos): o `livro.js` escreve `background:transparent` inline nos véus `fundo`, apagando o gradiente do brilho da capa (`c-brilho-p0`) e da névoa de farinha (`c-farinha-p6`).
 - Causa 2 (tablet): os raios e a poeira do sol (Caps. 12 e 24) usavam `mix-blend-mode: screen`, alfa baixo e pontos de 3 px; sobre a cena clara, no tablet, não se viam.
 - Correção em `robin-hood/parte-2.html`: efeitos movidos para `::before`/`::after`, sem blend, mais fortes e com partículas maiores (com brilho). Conferido no Playwright (Galaxy Tab S4, paisagem). `sw.js` regerado. Regra registrada em `docs/DIRETRIZES_ROBIN_HOOD.md`.
+
+## ✅ Receita do coordenador no Claude e estudo da "Editora" (2026-11-27)
+- Estudado o plugin Swarm do Antigravity instalado na máquina do humano (coordenador, trabalhadores por papel, mural com `@menção`, `swarm_wait`) e como as Partes 1 e 2 de Robin Hood foram produzidas com ele.
+- `docs/RECEITA-COORDENADOR-CLAUDE.md`: o mesmo método com os meios do Claude Code (subagentes com modelo por papel, o coordenador como único dono do `parte-N.html`, críticos de contexto limpo, arte só pela API com autorização, economia da cota do plano Pro). Para quando o humano chamar um coordenador no Claude.
+- `docs/estudos/EDITORA-CLASSICOS-VIVOS.md`: viabilidade de um app local que coordene agentes do Claude e do Antigravity por MCP, com escritório gamificado. Conclusão principal: viável só com o Antigravity "puxando" tarefas, nunca comandado por fora (termos do plano de consumidor do Google). **Na geladeira** por decisão do humano.
