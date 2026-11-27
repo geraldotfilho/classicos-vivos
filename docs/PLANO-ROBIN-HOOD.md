@@ -1,23 +1,24 @@
-# 🗺️ Plano — Robin Hood (Obra Completa — 5 ou 6 Partes)
+# 🗺️ Plano — Robin Hood (Obra Completa em 6 Partes)
 
-**Fase 0 da receita geral: o Mapa da Obra.** Planejado e **aprovado pelo humano em 2026-11-21** (`✅`), atualizado em **2026-11-26** após a publicação da Parte 1 (reengenharia v2 pela Jornada do Herói). Segue o modelo de [`PLANO-DOM-QUIXOTE-VOLUME-2.md`](PLANO-DOM-QUIXOTE-VOLUME-2.md) e a receita geral ([`RECEITA-CLASSICO-VIVO.md`](RECEITA-CLASSICO-VIVO.md) §3).
+**Fase 0 da receita geral: o Mapa da Obra.** Planejado e **aprovado pelo humano em 2026-11-21** (`✅`), atualizado em **2026-11-26** após a publicação da Parte 1 e a decisão de organizar a série em **6 partes** (para dar respiro ao enredo e aos arcos dos personagens). Segue o modelo de [`PLANO-DOM-QUIXOTE-VOLUME-2.md`](PLANO-DOM-QUIXOTE-VOLUME-2.md) e a receita geral ([`RECEITA-CLASSICO-VIVO.md`](RECEITA-CLASSICO-VIVO.md) §3).
 
 > **Situação: ✅ Fase 0 fechada · ✅ Parte 1 publicada na estante principal (`robin-hood/parte-1.html`) · 🟡 Parte 2 em preparação.**
 > **Documentos desta obra**: [pesquisa com fontes](pesquisa/ROBIN-HOOD.md) · [receita específica](receitas/ROBIN-HOOD.md) · [diretrizes de escrita (1 página)](DIRETRIZES_ROBIN_HOOD.md) · [caderno da Parte 1](cadernos/robin-hood-parte-1.md).
 
 ---
 
-## 1. A divisão da obra (em revisão para 5 ou 6 partes)
+## 1. A divisão em seis partes (fechada em 2026-11-26)
 
-Com a reengenharia v2 da Parte 1 (Capa + 11 capítulos focados na origem do Bando Verde e no resgate de Mestre Tomé), o **Torneio da Flecha de Ouro** passou a ser o gancho de abertura da **Parte 2**. O fechamento do total de partes (5 ou 6) e o recorte exato das Partes 2+ serão alinhados com o humano antes de iniciar a redação da Parte 2.
+Com a reengenharia v2 da Parte 1 (Capa + 11 capítulos focados na origem do Bando Verde e no resgate de Mestre Tomé), a série passa para **6 partes**, com ~10–11 capítulos por parte para que o enredo e os arcos dos personagens respirem bem.
 
 | Parte | Título | Fonte principal (Howard Pyle, 1883) | Caps. nossos | Arco | Situação |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **1** | **O Segredo da Floresta de Xervedo** | Cap. 1 + Grande Carvalho + Lady Mariana + Resgate do Moleiro | 1–11 | **A origem do Bando Verde**: Rei distante e imposto desigual, Moinho de Mestre Tomé, prisão sem provas, Lady Mariana (Mentora) e roupas verdes, João Pequeno na ponte, Grande Carvalho, resgate silencioso, confronto "devolver não é roubar" e o cartaz do Torneio da Flecha de Ouro | ✅ publicada (narração PT adiada para após a P2; melhorias anotadas para v2) |
-| **2** | *(a definir — abre com o Torneio da Flecha de Ouro)* | Caps. 3–7 *(a recortar)* | 12+ | **Torneio da Flecha de Ouro, esperteza e solidariedade**: armadilha do torneio em Nortigão, resgate de presos sem prova na torre e ações na feira/cozinha *(escopo a fechar com o humano)* | 🟡 próxima frente |
-| **3** | **O Frade do Rio e a Canção da Floresta** *(provisório)* | Caps. 8–13 | a definir | **O bando cresce e o povo se anima**: novas adições diversas ao bando, episódio do riacho, canção nas feiras e aldeias perdendo o medo | ⬜ aguardando |
-| **4** | **O Cavaleiro Triste e a Flecha da Rainha** *(provisório)* | Caps. 14–15, 18–19 | a definir | **Generosidade e pressão social**: empréstimo a Dom Ricardo do Vale diante do Abade isento de impostos, o povo cobrando justiça e o torneio diante da Rainha Leonor | ⬜ aguardando |
-| **5** | **O Hóspede Encapuzado e as Novas Leis** *(provisório)* | Caps. 20–21 (adaptados + final institucional) | a definir | **Provas, povo unido e novas leis**: última armadilha do Xerife desmontada por vestígios, chegada do Rei Ricardo, imposto justo e criação de um corpo independente de peritos das provas | ⬜ aguardando |
+| **2** | **A Flecha de Ouro e o Resgate na Torre** *(provisório)* | Caps. 3–4 | 12–22 *(prev.)* | **Armadilha do torneio, pistas e resgate**: disfarce de Robin em Nortigão, vitória da Flecha de Ouro, fuga esperta, nova prisão sem provas e resgate na torre usando vestígios concretos (espaço para a 1ª nova adição diversa ao bando) | 🟡 próxima frente |
+| **3** | **O Açougueiro e a Cozinha do Castelo** *(provisório)* | Caps. 5–7 | a definir | **Esperteza na feira e solidariedade**: Robin engana o Xerife na feira e devolve tributos; João Pequeno vira o castelo de ponta-cabeça na cozinha e leva comida ao povo | ⬜ aguardando |
+| **4** | **O Frade do Rio e a Canção da Floresta** *(provisório)* | Caps. 8–13 | a definir | **O bando cresce e o povo se anima**: novas adições diversas ao bando (variações naturais dos personagens clássicos), episódio do riacho, canção nas feiras e aldeias perdendo o medo | ⬜ aguardando |
+| **5** | **O Cavaleiro Triste e a Flecha da Rainha** *(provisório)* | Caps. 14–15, 18–19 | a definir | **Generosidade e pressão social**: empréstimo a Dom Ricardo do Vale diante do Abade isento de impostos, o povo cobrando justiça e o torneio diante da Rainha Leonor | ⬜ aguardando |
+| **6** | **O Hóspede Encapuzado e as Novas Leis** *(provisório)* | Caps. 20–21 (adaptados + final institucional) | a definir | **Provas, povo unido e novas leis**: última armadilha do Xerife desmontada por vestígios, chegada do Rei Ricardo, imposto justo e criação de um corpo independente de peritos das provas | ⬜ aguardando |
 
 ---
 
