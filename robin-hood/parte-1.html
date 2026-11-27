@@ -14,6 +14,109 @@
     <link rel="stylesheet" href="../assets/css/livro.css">
     <link rel="manifest" href="../manifest.webmanifest">
     <link rel="apple-touch-icon" href="../assets/icones/icone-180.png">
+    <style>
+        /* Animações sutis integradas ao diorama — Robin Hood Parte 1 (SVG orgânico, zero adesivo ou borda quadrada) */
+        .camada[data-camada="c-sol-p0"],
+        .camada[data-camada="c-sol-p8"],
+        .camada[data-camada="c-luz-p1"],
+        .camada[data-camada="c-riacho-p5"],
+        .camada[data-camada="c-riacho-p7"],
+        .camada[data-camada="c-lanternas-p11"] {
+            overflow: hidden;
+        }
+        .camada[data-camada="c-sol-p0"] .camada-arte,
+        .camada[data-camada="c-sol-p8"] .camada-arte,
+        .camada[data-camada="c-luz-p1"] .camada-arte,
+        .camada[data-camada="c-riacho-p5"] .camada-arte,
+        .camada[data-camada="c-riacho-p7"] .camada-arte,
+        .camada[data-camada="c-lanternas-p11"] .camada-arte { position: relative; }
+
+        /* Capa (Pág. 0) e Cap. 8 (Pág. 8): feixes diagonais de sol + poeira dourada no Grande Carvalho */
+        .camada[data-camada="c-sol-p0"] .camada-arte::before,
+        .camada[data-camada="c-sol-p8"] .camada-arte::before {
+            content: ''; position: absolute; inset: 0;
+            background-repeat: no-repeat; background-size: 100% 100%;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1376 768'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0.14' y1='0.04' x2='0.48' y2='0.64'%3E%3Cstop offset='0%25' stop-color='%23FFF5C2' stop-opacity='0.52'/%3E%3Cstop offset='55%25' stop-color='%23FFE89E' stop-opacity='0.20'/%3E%3Cstop offset='100%25' stop-color='%23FFE89E' stop-opacity='0'/%3E%3C/linearGradient%3E%3Cfilter id='b' x='-20%25' y='-20%25' width='140%25' height='140%25'%3E%3CfeGaussianBlur stdDeviation='18'/%3E%3C/filter%3E%3C/defs%3E%3Cg filter='url(%23b)'%3E%3Cpolygon points='175,40 275,30 510,430 375,460' fill='url(%23g)'/%3E%3Cpolygon points='295,25 385,20 620,415 510,435' fill='url(%23g)' opacity='0.82'/%3E%3Cpolygon points='105,85 170,65 360,445 270,465' fill='url(%23g)' opacity='0.65'/%3E%3C/g%3E%3C/svg%3E");
+            animation: rh1SolRespira 6.4s ease-in-out infinite;
+        }
+        .camada[data-camada="c-sol-p0"] .camada-arte::after,
+        .camada[data-camada="c-sol-p8"] .camada-arte::after {
+            content: ''; position: absolute; inset: 0;
+            background-repeat: no-repeat; background-size: 100% 100%;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1376 768'%3E%3Cdefs%3E%3CradialGradient id='d'%3E%3Cstop offset='0%25' stop-color='%23FFFBE0' stop-opacity='0.95'/%3E%3Cstop offset='55%25' stop-color='%23FFE89A' stop-opacity='0.45'/%3E%3Cstop offset='100%25' stop-color='%23FFE89A' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Ccircle cx='220' cy='155' r='5' fill='url(%23d)'/%3E%3Ccircle cx='288' cy='210' r='3.5' fill='url(%23d)'/%3E%3Ccircle cx='348' cy='138' r='4.5' fill='url(%23d)'/%3E%3Ccircle cx='395' cy='255' r='4' fill='url(%23d)'/%3E%3Ccircle cx='252' cy='295' r='3.5' fill='url(%23d)'/%3E%3Ccircle cx='445' cy='198' r='5' fill='url(%23d)'/%3E%3Ccircle cx='488' cy='312' r='3.5' fill='url(%23d)'/%3E%3Ccircle cx='325' cy='355' r='4' fill='url(%23d)'/%3E%3C/svg%3E");
+            animation: rh1Poeira 7.5s ease-in-out infinite;
+        }
+
+        /* Cap. 1 (Pág. 1): luz quente suave entrando pela janela gótica do palácio */
+        .camada[data-camada="c-luz-p1"] .camada-arte::before {
+            content: ''; position: absolute; inset: 0;
+            background-repeat: no-repeat; background-size: 100% 100%;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1376 768'%3E%3Cdefs%3E%3ClinearGradient id='w' x1='0.88' y1='0.24' x2='0.58' y2='0.78'%3E%3Cstop offset='0%25' stop-color='%23FFF4C4' stop-opacity='0.42'/%3E%3Cstop offset='55%25' stop-color='%23FFE59E' stop-opacity='0.14'/%3E%3Cstop offset='100%25' stop-color='%23FFE59E' stop-opacity='0'/%3E%3C/linearGradient%3E%3Cfilter id='b1' x='-20%25' y='-20%25' width='140%25' height='140%25'%3E%3CfeGaussianBlur stdDeviation='18'/%3E%3C/filter%3E%3C/defs%3E%3Cg filter='url(%23b1)'%3E%3Cpolygon points='1150,155 1270,220 960,640 770,580' fill='url(%23w)'/%3E%3C/g%3E%3C/svg%3E");
+            animation: rh1SolRespira 7s ease-in-out infinite;
+        }
+
+        /* Caps. 5 e 7 (Págs. 5 e 7): cintilação delicada de sol na água do Riacho Fundo */
+        .camada[data-camada="c-riacho-p5"] .camada-arte::before,
+        .camada[data-camada="c-riacho-p7"] .camada-arte::before {
+            content: ''; position: absolute; inset: 0;
+            background-repeat: no-repeat; background-size: 100% 100%;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1376 768'%3E%3Cdefs%3E%3CradialGradient id='r'%3E%3Cstop offset='0%25' stop-color='%23FFFFFF' stop-opacity='0.95'/%3E%3Cstop offset='45%25' stop-color='%23DFF6FF' stop-opacity='0.45'/%3E%3Cstop offset='100%25' stop-color='%23DFF6FF' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Cellipse cx='510' cy='625' rx='18' ry='5' fill='url(%23r)'/%3E%3Cellipse cx='655' cy='660' rx='22' ry='5' fill='url(%23r)'/%3E%3Cellipse cx='780' cy='615' rx='16' ry='4.5' fill='url(%23r)'/%3E%3Cellipse cx='585' cy='710' rx='20' ry='5' fill='url(%23r)'/%3E%3Cellipse cx='860' cy='695' rx='18' ry='4.5' fill='url(%23r)'/%3E%3C/svg%3E");
+            animation: rh1Agua 4.2s ease-in-out infinite;
+        }
+        .camada[data-camada="c-riacho-p5"] .camada-arte::after,
+        .camada[data-camada="c-riacho-p7"] .camada-arte::after {
+            content: ''; position: absolute; inset: 0;
+            background-repeat: no-repeat; background-size: 100% 100%;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1376 768'%3E%3Cdefs%3E%3CradialGradient id='r2'%3E%3Cstop offset='0%25' stop-color='%23FFFFFF' stop-opacity='0.90'/%3E%3Cstop offset='45%25' stop-color='%23DFF6FF' stop-opacity='0.40'/%3E%3Cstop offset='100%25' stop-color='%23DFF6FF' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Cellipse cx='445' cy='690' rx='16' ry='4.5' fill='url(%23r2)'/%3E%3Cellipse cx='720' cy='720' rx='20' ry='5' fill='url(%23r2)'/%3E%3Cellipse cx='620' cy='595' rx='14' ry='4' fill='url(%23r2)'/%3E%3Cellipse cx='815' cy='650' rx='18' ry='4.5' fill='url(%23r2)'/%3E%3C/svg%3E");
+            animation: rh1Agua 4.8s ease-in-out -2.1s infinite;
+        }
+
+        /* Cap. 11 (Pág. 11): brilho quente pulsante nas 10 lanternas pintadas do Grande Carvalho (2 fases defasadas) */
+        .camada[data-camada="c-lanternas-p11"] .camada-arte::before {
+            content: ''; position: absolute; inset: 0;
+            background-repeat: no-repeat; background-size: 100% 100%;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 562'%3E%3Cdefs%3E%3CradialGradient id='l'%3E%3Cstop offset='0%25' stop-color='%23FFF5B8' stop-opacity='0.82'/%3E%3Cstop offset='38%25' stop-color='%23FFCA58' stop-opacity='0.34'/%3E%3Cstop offset='100%25' stop-color='%23FF9E2C' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Ccircle cx='120' cy='175' r='44' fill='url(%23l)'/%3E%3Ccircle cx='246' cy='144' r='44' fill='url(%23l)'/%3E%3Ccircle cx='453' cy='112' r='48' fill='url(%23l)'/%3E%3Ccircle cx='669' cy='146' r='46' fill='url(%23l)'/%3E%3Ccircle cx='771' cy='179' r='36' fill='url(%23l)'/%3E%3C/svg%3E");
+            animation: rh1Lanterna 3.6s ease-in-out infinite;
+        }
+        .camada[data-camada="c-lanternas-p11"] .camada-arte::after {
+            content: ''; position: absolute; inset: 0;
+            background-repeat: no-repeat; background-size: 100% 100%;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 562'%3E%3Cdefs%3E%3CradialGradient id='l2'%3E%3Cstop offset='0%25' stop-color='%23FFF5B8' stop-opacity='0.82'/%3E%3Cstop offset='38%25' stop-color='%23FFCA58' stop-opacity='0.34'/%3E%3Cstop offset='100%25' stop-color='%23FF9E2C' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Ccircle cx='172' cy='142' r='38' fill='url(%23l2)'/%3E%3Ccircle cx='355' cy='191' r='38' fill='url(%23l2)'/%3E%3Ccircle cx='554' cy='141' r='50' fill='url(%23l2)'/%3E%3Ccircle cx='733' cy='175' r='46' fill='url(%23l2)'/%3E%3Ccircle cx='860' cy='206' r='40' fill='url(%23l2)'/%3E%3C/svg%3E");
+            animation: rh1Lanterna 4.2s ease-in-out -1.9s infinite;
+        }
+
+        @keyframes rh1SolRespira {
+            0%, 100% { opacity: 0.42; transform: translate3d(0, 0, 0); }
+            50% { opacity: 0.88; transform: translate3d(0.8%, 0.6%, 0); }
+        }
+        @keyframes rh1Poeira {
+            0%, 100% { opacity: 0.35; transform: translate3d(0, 1.4%, 0); }
+            50% { opacity: 0.88; transform: translate3d(1.2%, -1.8%, 0); }
+        }
+        @keyframes rh1Agua {
+            0%, 100% { opacity: 0.25; transform: translateX(-0.5%); }
+            50% { opacity: 0.85; transform: translateX(0.6%); }
+        }
+        @keyframes rh1Lanterna {
+            0%, 100% { opacity: 0.38; }
+            50% { opacity: 0.92; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .camada[data-camada="c-sol-p0"] .camada-arte::before,
+            .camada[data-camada="c-sol-p0"] .camada-arte::after,
+            .camada[data-camada="c-sol-p8"] .camada-arte::before,
+            .camada[data-camada="c-sol-p8"] .camada-arte::after,
+            .camada[data-camada="c-luz-p1"] .camada-arte::before,
+            .camada[data-camada="c-riacho-p5"] .camada-arte::before,
+            .camada[data-camada="c-riacho-p5"] .camada-arte::after,
+            .camada[data-camada="c-riacho-p7"] .camada-arte::before,
+            .camada[data-camada="c-riacho-p7"] .camada-arte::after,
+            .camada[data-camada="c-lanternas-p11"] .camada-arte::before,
+            .camada[data-camada="c-lanternas-p11"] .camada-arte::after {
+                animation: none !important;
+            }
+        }
+    </style>
 </head>
 <body class="p-1 sm:p-2.5 select-none">
     <noscript>Este livro interativo precisa de JavaScript ativado no navegador.</noscript>
@@ -47,7 +150,7 @@
                     alt: 'Na clareira ensolarada do Grande Carvalho em Xervedo, Robin Hood, Lady Mariana, João Pequeno e Grilo partilham pães e maçãs',
                     legendaReal: '🌳 O Bando do Grande Carvalho',
                     camadas: [
-                        { id: 'c-passarinhos-p0', src: 'camadas/p0-passarinhos.webp', x: 80, y: 38, w: 14, anim: 'flutuar', emoji: '🐦' }
+                        { id: 'c-sol-p0', fundo: 'transparent', x: 50, y: 100, w: 100, h: 100, z: 6 }
                     ],
                     hotspots: [
                         { x: 34, y: 4, w: 32, h: 30, palavra: 'FLORESTA', emoji: '🌳' },
@@ -71,7 +174,7 @@
                     alt: 'No salão luxuoso do palácio de Nortigão, o Rei Ricardo entre almofadas aprova o papel do imposto apresentado pelo Xerife de manto roxo',
                     legendaReal: '👑 Um Banquete Real e uma Conta Simples Demais',
                     camadas: [
-                        { id: 'c-pergaminho', src: 'camadas/p1-pergaminho.webp', x: 61.5, y: 69, w: 14, anim: 'flutuar', emoji: '📜' }
+                        { id: 'c-luz-p1', fundo: 'transparent', x: 50, y: 100, w: 100, h: 100, z: 6 }
                     ],
                     hotspots: [
                         { x: 54, y: 43, w: 15, h: 27, palavra: 'IMPOSTO', emoji: '🪙' },
@@ -190,8 +293,7 @@
                     alt: 'Sobre uma ponte estreita de tronco em cima do Riacho Fundo, Robin Hood (de roupa verde) e um gigante de couro marrom e bastão comprido ficam frente a frente, enquanto Grilo (de verde) espia atrás da samambaia',
                     legendaReal: '🪵 Frente a Frente na Ponte do Riacho Fundo',
                     camadas: [
-                        { id: 'c-libelula-p5', src: 'camadas/p5-libelula.webp', x: 49, y: 90, w: 7, anim: 'flutuar', emoji: '🪰' },
-                        { id: 'c-samambaia-p5', src: 'camadas/p5-samambaia.webp', x: 92, y: 101, w: 16, anim: 'balanco', z: 9, emoji: '🌿' }
+                        { id: 'c-riacho-p5', fundo: 'transparent', x: 50, y: 100, w: 100, h: 100, z: 6 }
                     ],
                     hotspots: [
                         { x: 30, y: 74, w: 38, h: 24, palavra: 'RIACHO', emoji: '💧' },
@@ -262,8 +364,7 @@
                     alt: 'Na margem do Riacho Fundo, João Pequeno conversa com Robin Hood e Grilo (ambos de roupa verde) e ergue o bastão decidindo entrar para o bando',
                     legendaReal: '🤝 O Nascimento de João Pequeno',
                     camadas: [
-                        { id: 'c-libelula-p7', src: 'camadas/p5-libelula.webp', x: 50, y: 89, w: 7, anim: 'flutuar', emoji: '🪰' },
-                        { id: 'c-samambaia-p7', src: 'camadas/p5-samambaia.webp', x: 92, y: 101, w: 16, anim: 'balanco', z: 9, emoji: '🌿' }
+                        { id: 'c-riacho-p7', fundo: 'transparent', x: 50, y: 100, w: 100, h: 100, z: 6 }
                     ],
                     hotspots: [
                         { x: 38, y: 4, w: 22, h: 40, palavra: 'FORÇA', emoji: '💪' },
@@ -288,7 +389,7 @@
                     alt: 'Debaixo do Grande Carvalho oco de Xervedo, Lady Mariana recebe Robin Hood, Grilo e João Pequeno (todos vestindo verde-folha) enquanto Robin risca na terra o plano do resgate',
                     legendaReal: '🌳 O Esconderijo do Grande Carvalho',
                     camadas: [
-                        { id: 'c-borboleta-p8', src: 'camadas/p8-borboleta.webp', x: 18, y: 35, w: 7.5, anim: 'flutuar', emoji: '🦋' }
+                        { id: 'c-sol-p8', fundo: 'transparent', x: 50, y: 100, w: 100, h: 100, z: 6 }
                     ],
                     hotspots: [
                         { x: 35, y: 4, w: 30, h: 30, palavra: 'CARVALHO', emoji: '🌳' },
@@ -382,8 +483,7 @@
                     alt: 'Debaixo do Grande Carvalho iluminado por lanternas, Mestre Tomé abraça Grilo diante do banquete de pães enquanto Lady Mariana mostra a Robin e João Pequeno o cartaz da Flecha de Ouro',
                     legendaReal: '🍞 Festa no Grande Carvalho e o Cartaz da Flecha de Ouro',
                     camadas: [
-                        { id: 'c-lanterna-p11', src: 'camadas/p11-lanterna.webp', x: 12.5, y: 45, w: 5.5, anim: 'pendulo', emoji: '🏮' },
-                        { id: 'c-fumaca-p11', src: 'camadas/p11-fumaca-pao.webp', x: 45.5, y: 67.5, w: 4.4, anim: 'flutuar', emoji: '♨️' }
+                        { id: 'c-lanternas-p11', fundo: 'transparent', x: 50, y: 100, w: 100, h: 100, z: 6 }
                     ],
                     hotspots: [
                         { x: 36, y: 62, w: 26, h: 26, palavra: 'BANQUETE', emoji: '🍞' },

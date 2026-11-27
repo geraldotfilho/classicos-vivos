@@ -15,54 +15,51 @@
     <link rel="manifest" href="../manifest.webmanifest">
     <link rel="apple-touch-icon" href="../assets/icones/icone-180.png">
     <style>
-        /* Animações sutis integradas ao diorama — Robin Hood Parte 2 (revisado sem vapor no tacho do Cap. 13).
+        /* Animações sutis integradas ao diorama — Robin Hood Parte 2 (SVG orgânico 100% sem borda retangular).
            Os véus (fundo: 'transparent') recebem do livro.js um background inline; por isso todo efeito pintado
-           fica num pseudo-elemento (::before/::after), que o inline não apaga. Sem mix-blend-mode: no tablet
-           (e sobre cena clara) o "screen" deixava o brilho invisível. */
+           fica em ::before/::after, sem mix-blend-mode (consistente em iPad/Android). */
         .camada[data-camada="c-sol-p1"],
         .camada[data-camada="c-sol-p13"],
         .camada[data-camada="c-brilho-p0"],
-        .camada[data-camada="c-farinha-p6"] { overflow: visible; }
+        .camada[data-camada="c-farinha-p6"] { overflow: hidden; }
         .camada[data-camada="c-sol-p1"] .camada-arte,
         .camada[data-camada="c-sol-p13"] .camada-arte,
         .camada[data-camada="c-brilho-p0"] .camada-arte,
         .camada[data-camada="c-farinha-p6"] .camada-arte { position: relative; }
-        /* Raios de sol entre as copas */
+
+        /* Raios diagonais orgânicos entre as copas (SVG full-frame esfumado: zero corte retangular) */
         .camada[data-camada="c-sol-p1"] .camada-arte::before,
         .camada[data-camada="c-sol-p13"] .camada-arte::before {
             content: ''; position: absolute; inset: 0;
-            background:
-                linear-gradient(125deg, rgba(255,246,190,0.75) 6%, rgba(255,232,150,0.38) 24%, transparent 44%),
-                linear-gradient(122deg, transparent 26%, rgba(255,244,190,0.55) 42%, transparent 60%),
-                linear-gradient(128deg, transparent 48%, rgba(255,240,180,0.35) 60%, transparent 72%);
-            filter: blur(5px);
+            background-repeat: no-repeat; background-size: 100% 100%;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1376 768'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0.14' y1='0.04' x2='0.48' y2='0.64'%3E%3Cstop offset='0%25' stop-color='%23FFF7CC' stop-opacity='0.58'/%3E%3Cstop offset='55%25' stop-color='%23FFE89E' stop-opacity='0.22'/%3E%3Cstop offset='100%25' stop-color='%23FFE89E' stop-opacity='0'/%3E%3C/linearGradient%3E%3Cfilter id='b' x='-20%25' y='-20%25' width='140%25' height='140%25'%3E%3CfeGaussianBlur stdDeviation='18'/%3E%3C/filter%3E%3C/defs%3E%3Cg filter='url(%23b)'%3E%3Cpolygon points='175,40 275,30 510,430 375,460' fill='url(%23g)'/%3E%3Cpolygon points='295,25 385,20 620,415 510,435' fill='url(%23g)' opacity='0.82'/%3E%3Cpolygon points='105,85 170,65 360,445 270,465' fill='url(%23g)' opacity='0.65'/%3E%3C/g%3E%3C/svg%3E");
             will-change: opacity, transform;
-            animation: rh2SolRespira 5.5s ease-in-out infinite;
+            animation: rh2SolRespira 6.2s ease-in-out infinite;
         }
-        /* Poeirinha dourada flutuando na luz */
+        /* Poeirinha dourada flutuando livre na luz */
         .camada[data-camada="c-sol-p1"] .camada-arte::after,
         .camada[data-camada="c-sol-p13"] .camada-arte::after {
-            content: ''; position: absolute; inset: 8% 6%;
-            background-image:
-                radial-gradient(circle 7px at 22% 28%, rgba(255,252,220,1), rgba(255,236,150,0.5) 45%, transparent 75%),
-                radial-gradient(circle 5px at 48% 18%, rgba(255,250,210,1), rgba(255,236,150,0.45) 45%, transparent 75%),
-                radial-gradient(circle 8px at 64% 46%, rgba(255,252,220,1), rgba(255,236,150,0.5) 45%, transparent 75%),
-                radial-gradient(circle 6px at 36% 62%, rgba(255,248,205,1), rgba(255,236,150,0.45) 45%, transparent 75%),
-                radial-gradient(circle 7px at 76% 72%, rgba(255,252,220,1), rgba(255,236,150,0.5) 45%, transparent 75%),
-                radial-gradient(circle 5px at 14% 80%, rgba(255,250,210,1), rgba(255,236,150,0.45) 45%, transparent 75%),
-                radial-gradient(circle 6px at 86% 34%, rgba(255,252,220,1), rgba(255,236,150,0.45) 45%, transparent 75%);
-            filter: drop-shadow(0 0 4px rgba(255,236,150,0.9));
+            content: ''; position: absolute; inset: 0;
+            background-repeat: no-repeat; background-size: 100% 100%;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1376 768'%3E%3Cdefs%3E%3CradialGradient id='d'%3E%3Cstop offset='0%25' stop-color='%23FFFCE6' stop-opacity='0.96'/%3E%3Cstop offset='50%25' stop-color='%23FFE68F' stop-opacity='0.48'/%3E%3Cstop offset='100%25' stop-color='%23FFE68F' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Ccircle cx='220' cy='155' r='6' fill='url(%23d)'/%3E%3Ccircle cx='288' cy='210' r='4.5' fill='url(%23d)'/%3E%3Ccircle cx='348' cy='138' r='5.5' fill='url(%23d)'/%3E%3Ccircle cx='395' cy='255' r='5' fill='url(%23d)'/%3E%3Ccircle cx='252' cy='295' r='4.5' fill='url(%23d)'/%3E%3Ccircle cx='445' cy='198' r='6' fill='url(%23d)'/%3E%3Ccircle cx='488' cy='312' r='4.5' fill='url(%23d)'/%3E%3Ccircle cx='325' cy='355' r='5' fill='url(%23d)'/%3E%3Ccircle cx='182' cy='235' r='4.5' fill='url(%23d)'/%3E%3Ccircle cx='532' cy='248' r='4' fill='url(%23d)'/%3E%3C/svg%3E");
             will-change: opacity, transform;
-            animation: rh2Poeira 6.5s ease-in-out infinite;
+            animation: rh2Poeira 7.2s ease-in-out infinite;
         }
 
-        /* Capa: brilho dourado suave sobre a Flecha de Ouro */
+        /* Capa: brilho dourado orgânico sobre a Flecha de Ouro (elipse suave + pontinhos de brilho) */
         .camada[data-camada="c-brilho-p0"] .camada-arte::before {
             content: ''; position: absolute; inset: 0;
-            background: radial-gradient(ellipse at center, rgba(255,240,150,0.85) 0%, rgba(255,214,90,0.40) 42%, transparent 72%);
-            filter: blur(6px);
+            background-repeat: no-repeat; background-size: 100% 100%;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1376 768'%3E%3Cdefs%3E%3CradialGradient id='a' cx='50%25' cy='50%25' r='50%25'%3E%3Cstop offset='0%25' stop-color='%23FFF8CC' stop-opacity='0.65'/%3E%3Cstop offset='45%25' stop-color='%23FFD86B' stop-opacity='0.24'/%3E%3Cstop offset='100%25' stop-color='%23FFD86B' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Cellipse cx='688' cy='195' rx='265' ry='68' fill='url(%23a)'/%3E%3C/svg%3E");
             will-change: opacity, transform;
-            animation: rh2Brilho 3.6s ease-in-out infinite;
+            animation: rh2Brilho 4.2s ease-in-out infinite;
+        }
+        .camada[data-camada="c-brilho-p0"] .camada-arte::after {
+            content: ''; position: absolute; inset: 0;
+            background-repeat: no-repeat; background-size: 100% 100%;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1376 768'%3E%3Cdefs%3E%3CradialGradient id='s'%3E%3Cstop offset='0%25' stop-color='%23FFFFFF' stop-opacity='0.96'/%3E%3Cstop offset='40%25' stop-color='%23FFF0A6' stop-opacity='0.52'/%3E%3Cstop offset='100%25' stop-color='%23FFD86B' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Ccircle cx='812' cy='195' r='16' fill='url(%23s)'/%3E%3Ccircle cx='565' cy='182' r='10' fill='url(%23s)' opacity='0.82'/%3E%3Ccircle cx='710' cy='168' r='8' fill='url(%23s)' opacity='0.78'/%3E%3C/svg%3E");
+            will-change: opacity, transform;
+            animation: rh2Poeira 4.8s ease-in-out -1.5s infinite;
         }
 
         /* Cap. 15: 2 flâmulas ancoradas pelo topo sob as travessas dos mastros */
@@ -79,16 +76,13 @@
             animation: rh2Flamula 3.1s ease-in-out -1.2s infinite;
         }
 
-        /* Cap. 17: névoa leve de farinha no ar da praça */
+        /* Cap. 17: névoa leve de farinha no ar da praça (SVG esfumado sem borda) */
         .camada[data-camada="c-farinha-p6"] .camada-arte::before {
             content: ''; position: absolute; inset: 0;
+            background-repeat: no-repeat; background-size: 100% 100%;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1376 768'%3E%3Cdefs%3E%3CradialGradient id='f'%3E%3Cstop offset='0%25' stop-color='%23FFFDF7' stop-opacity='0.52'/%3E%3Cstop offset='55%25' stop-color='%23FFF9EE' stop-opacity='0.22'/%3E%3Cstop offset='100%25' stop-color='%23FFF9EE' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Cellipse cx='290' cy='280' rx='135' ry='82' fill='url(%23f)'/%3E%3Cellipse cx='430' cy='240' rx='110' ry='66' fill='url(%23f)'/%3E%3Cellipse cx='545' cy='310' rx='100' ry='60' fill='url(%23f)'/%3E%3C/svg%3E");
             will-change: opacity, transform;
-            background-image:
-                radial-gradient(circle 28px at 26% 55%, rgba(255,252,245,0.75), transparent 70%),
-                radial-gradient(circle 34px at 56% 42%, rgba(255,250,242,0.70), transparent 70%),
-                radial-gradient(circle 24px at 78% 60%, rgba(255,252,245,0.65), transparent 70%);
-            filter: blur(6px);
-            animation: rh2Poeira 6s ease-in-out infinite;
+            animation: rh2Poeira 6.2s ease-in-out infinite;
         }
 
         /* Cap. 21: lenço vermelho-escarlate balançando na janela alta */
@@ -102,16 +96,16 @@
         }
 
         @keyframes rh2SolRespira {
-            0%, 100% { opacity: 0.35; transform: translate3d(0, 0, 0) scale(1); }
-            50% { opacity: 1; transform: translate3d(1.5%, 1%, 0) scale(1.03); }
+            0%, 100% { opacity: 0.42; transform: translate3d(0, 0, 0); }
+            50% { opacity: 0.92; transform: translate3d(0.8%, 0.6%, 0); }
         }
         @keyframes rh2Brilho {
-            0%, 100% { opacity: 0.35; transform: scale(0.94); }
-            50% { opacity: 1; transform: scale(1.08); }
+            0%, 100% { opacity: 0.38; transform: scale(0.97); }
+            50% { opacity: 0.95; transform: scale(1.03); }
         }
         @keyframes rh2Poeira {
-            0%, 100% { opacity: 0.30; transform: translate3d(0, 4%, 0); }
-            50% { opacity: 0.90; transform: translate3d(3%, -6%, 0); }
+            0%, 100% { opacity: 0.35; transform: translate3d(0, 1.4%, 0); }
+            50% { opacity: 0.92; transform: translate3d(1.2%, -1.8%, 0); }
         }
         @keyframes rh2Flamula {
             0%, 100% { transform: rotate(-5.5deg) skewX(-2deg); }
@@ -123,6 +117,7 @@
             .camada[data-camada="c-sol-p13"] .camada-arte::before,
             .camada[data-camada="c-sol-p13"] .camada-arte::after,
             .camada[data-camada="c-brilho-p0"] .camada-arte::before,
+            .camada[data-camada="c-brilho-p0"] .camada-arte::after,
             .camada[data-camada="c-farinha-p6"] .camada-arte::before,
             .camada[data-camada^="c-flamula-p4"] > .camada-arte,
             .camada[data-camada="c-lenco-p10"] > .camada-arte {
@@ -163,7 +158,7 @@
                     alt: 'Sob um arco de folhas de Xervedo e uma Flecha de Ouro brilhante, Robin Hood, Lady Mariana, João Pequeno, Grilo e Clara Escarlate sorriem diante da silhueta da Torre Velha',
                     legendaReal: '🏹 A Flecha de Ouro e o Resgate na Torre',
                     camadas: [
-                        { id: 'c-brilho-p0', fundo: 'transparent', x: 50, y: 34.5, w: 36, h: 18, z: 6 }
+                        { id: 'c-brilho-p0', fundo: 'transparent', x: 50, y: 100, w: 100, h: 100, z: 6 }
                     ],
                     hotspots: [
                         { x: 34, y: 18, w: 32, h: 16, palavra: 'FLECHA', emoji: '🏹' },
@@ -187,7 +182,7 @@
                     alt: 'Debaixo do Grande Carvalho, Robin Hood, Lady Mariana, Mestre Tomé, Grilo e João Pequeno cercam a mesa de tronco com o cartaz da Flecha de Ouro preso por pedrinhas',
                     legendaReal: '🏹 O Cartaz da Flecha de Ouro no Grande Carvalho',
                     camadas: [
-                        { id: 'c-sol-p1', fundo: 'transparent', x: 28, y: 58, w: 46, h: 58, z: 6 }
+                        { id: 'c-sol-p1', fundo: 'transparent', x: 50, y: 100, w: 100, h: 100, z: 6 }
                     ],
                     hotspots: [
                         { x: 40, y: 65, w: 20, h: 12, palavra: 'FLECHA', emoji: '🏹' },
@@ -326,7 +321,7 @@
                     alt: 'Na praça de Nortigão, fitas vermelho-escarlate enrolam dois guardas feito pacote de presente e uma nuvem de farinha deixa o Xerife branco feito boneco de neve enquanto o bando foge rindo',
                     legendaReal: '🎀 Fitas, Farinha e Risada na Praça!',
                     camadas: [
-                        { id: 'c-farinha-p6', fundo: 'transparent', x: 34, y: 46, w: 46, h: 32, z: 6 }
+                        { id: 'c-farinha-p6', fundo: 'transparent', x: 50, y: 100, w: 100, h: 100, z: 6 }
                     ],
                     hotspots: [
                         { x: 32, y: 38, w: 28, h: 36, palavra: 'FITA', emoji: '🎀' },
@@ -531,7 +526,7 @@
                     alt: 'Debaixo do Grande Carvalho banhado de sol, Clara Escarlate de camisa verde e lenço vermelho-escarlate brinda canecas de madeira com Robin, Mariana, João Pequeno, Grilo e Mestre Tomé',
                     legendaReal: '🍃 Clara Escarlate Entra para o Bando Verde!',
                     camadas: [
-                        { id: 'c-sol-p13', fundo: 'transparent', x: 28, y: 58, w: 46, h: 58, z: 6 }
+                        { id: 'c-sol-p13', fundo: 'transparent', x: 50, y: 100, w: 100, h: 100, z: 6 }
                     ],
                     hotspots: [
                         { x: 34, y: 38, w: 28, h: 42, palavra: 'AMIZADE', emoji: '🤝' },
