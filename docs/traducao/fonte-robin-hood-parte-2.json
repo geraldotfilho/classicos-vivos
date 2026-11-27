@@ -1,0 +1,666 @@
+{
+  "obra": "Robin Hood",
+  "autor": "Howard Pyle e lendas tradicionais",
+  "parte": 2,
+  "traducao": "robin-hood/traducoes/parte-2.<idioma>.js",
+  "paginas": [
+    {
+      "indice": 0,
+      "hash": "1537a28766",
+      "capa": true,
+      "titulo": "Parte 2: A Flecha de Ouro e o Resgate na Torre",
+      "texto": "Nesta parte, o Xerife de Nortigão prepara um campeonato famoso com um prêmio brilhante: uma {{FLECHA|FLE • CHA|🏹}} inteirinha de ouro! Mas todos sabem que a praça vai estar cheia de guardas procurando o Bando Verde.\n\nPara entrar na disputa sem ser descoberto, Robin Hood vai precisar de um bom plano e da ajuda de uma nova amiga cheia de cores. Só que o perigo aparece quando menos se espera!\n\nAgora, cada {{PISTA|PIS • TA|🔎}} pelo caminho vai ser importante para descobrir um segredo guardado numa torre alta. Juntos, os amigos vão mostrar que esperteza e {{CORAGEM|CO • RA • GEM|💪}} valem mais do que qualquer tesouro!"
+    },
+    {
+      "indice": 1,
+      "hash": "6be3917be7",
+      "capitulo": "🏹 Capítulo 12 • O Cartaz da Flecha de Ouro",
+      "titulo": "Uma Armadilha que Pode Ajudar a Vila",
+      "texto": "Na manhã seguinte, os passarinhos acordaram Xervedo: piu, piu, piu! Debaixo do Grande Carvalho, os cinco amigos rodeavam a mesa de tronco. No meio dela, preso com pedrinhas, estava o cartaz da {{FLECHA|FLE • CHA|🏹}} de Ouro.\n\nJoão Pequeno coçou a barba. — Desde que tiramos Mestre Tomé da cadeia e devolvemos a farinha, o Xerife procura roupa verde em todo canto! A praça vai estar cheia de guardas. Mestre Tomé esfregou as mãos geladas. — O frio vem chegando, e muitas famílias da Vila do Moinho não têm cobertor nem comida guardada. Com esse {{OURO|OU • RO|✨}}, dava para encher as panelas e agasalhar todo mundo!\n\nRobin olhou a própria camisa, verdinha feito folha nova, e franziu a testa. — Se eu aparecer assim em Nortigão, os guardas me pegam num piscar de olhos! Ele precisava de um {{DISFARCE|DIS • FAR • CE|🎭}}: uma roupa de outra cor, longe do verde da mata, para ninguém descobrir quem estava dentro.\n\nLady Mariana bateu palmas. — Conheço a pessoa certa! Minha amiga Clara Escarlate é tintureira: mergulha os panos em tachos de tinta, e eles saem de todas as cores. E costura como ninguém! Ficou combinado: antes do meio-dia, o bando ia bater na porta da oficina dela."
+    },
+    {
+      "indice": 2,
+      "hash": "b33bb9d14c",
+      "capitulo": "🎨 Capítulo 13 • A Oficina das Cores",
+      "titulo": "Quem É Clara Escarlate?",
+      "texto": "Antes do meio-dia, Lady Mariana levou Robin e Grilo por uma ruela calma de Nortigão. Para esconder o verde, os três usavam capas marrons por cima da roupa. No fim da ruela, panos azuis, amarelos e cor-de-rosa dançavam nos varais de uma casinha. Era a {{OFICINA|O • FI • CI • NA|🧵}} de Clara Escarlate.\n\nClara abriu a porta toda animada, de avental pintadinho de respingos. Lá dentro, tachos enormes guardavam {{TINTA|TIN • TA|🎨}} feita de cascas, flores e raízes, e tudo cheirava a chá. Mas a cor mais famosa de Clara, que ninguém mais sabia fazer, era um {{VERMELHO|VER • ME • LHO|🧣}} vivo feito brasa, como o lenço no pescoço dela!\n\nEnquanto servia água fresquinha, Clara contou que os guardas do Xerife também cobravam impostos injustos das costureiras e das feirantes da cidade. Quando ouviu como o bando tinha ajudado as famílias da Vila do Moinho, os olhos dela brilharam. — Até que enfim alguém teve coragem!\n\nMariana abriu o cartaz da Flecha de Ouro na mesa. Clara deu um sorriso esperto, pegou a fita de medir e olhou Robin da ponta do capuz até o bico das botas. — Vou transformar você num viajante tão comum que nem o Xerife vai reconhecer!"
+    },
+    {
+      "indice": 3,
+      "hash": "d07f02706a",
+      "capitulo": "🎭 Capítulo 14 • Um Viajante Sem Nada de Verde",
+      "titulo": "Nem o Espelho Vai Reconhecer!",
+      "texto": "Na oficina de Clara, Robin tirou o capuz verde de pena vermelha e deixou em cima da mesa. Para entrar na praça sem virar alvo dos guardas, não podia sobrar nem um fiozinho verde à vista!\n\nClara abriu um baú de madeira, nhééé, e tirou três peças de viajante das estradas. Primeiro, um {{CHAPÉU|CHA • PÉU|🤠}} de aba larga, para fazer sombra no rosto. Depois, um {{MANTO|MAN • TO|🧥}} marrom comprido, que tampava a camisa todinha. Por fim, uma {{BARBA|BAR • BA|🧔}} de fios de lã, macia feito nuvem!\n\nQuando Robin vestiu tudo, Grilo caiu na gargalhada: — Nem parece o arqueiro de Xervedo! Mariana conferiu o arco de Robin e avisou que ela, Grilo e João Pequeno também iam à feira, misturados no meio do povo. Clara escondeu numa cesta uns rolos de fita vermelha e um saquinho de farinha. — É para fugir sem briga, se precisar! — cochichou.\n\nRobin se olhou no espelho de mão e arregalou os olhos. Quem era aquele viajante de barba fofa? Ele ajeitou o chapéu largo e piscou para os amigos. E lá longe, a praça de Nortigão já chamava para o campeonato!",
+      "cartoes": {
+        "tipo": "pedido",
+        "pedidos": [
+          "chapeu",
+          "manto",
+          "barba"
+        ],
+        "itens": [
+          {
+            "id": "papel",
+            "palavra": "PAPEL",
+            "emoji": "📄",
+            "pegadinha": "Papel? Papel serve para desenhar, não faz sombra no rosto! Vamos escolher de novo!"
+          },
+          {
+            "id": "chapeu",
+            "palavra": "CHAPÉU",
+            "emoji": "🤠"
+          },
+          {
+            "id": "mato",
+            "palavra": "MATO",
+            "emoji": "🌿",
+            "pegadinha": "Mato? Mato é verde e os guardas iam achar o Robin na hora! Vamos tentar de novo!"
+          },
+          {
+            "id": "manto",
+            "palavra": "MANTO",
+            "emoji": "🧥"
+          },
+          {
+            "id": "barco",
+            "palavra": "BARCO",
+            "emoji": "⛵",
+            "pegadinha": "Barco? Barco navega no rio, não cabe no queixo do Robin! Vamos escolher a palavra certa!"
+          },
+          {
+            "id": "barba",
+            "palavra": "BARBA",
+            "emoji": "🧔"
+          }
+        ]
+      }
+    },
+    {
+      "indice": 4,
+      "hash": "acc4085981",
+      "capitulo": "🚩 Capítulo 15 • A Praça das Bandeiras",
+      "titulo": "Olhos de Águia na Fila do Campeonato",
+      "texto": "Naquela tarde, a {{PRAÇA|PRA • ÇA|🏛️}} de Nortigão estava toda enfeitada para o campeonato! No alto de cada mastro, uma {{BANDEIRA|BAN • DEI • RA|🚩}} vermelha e dourada dançava com o vento: flap, flap, flap! Barraquinhas de frutas, pães e flores enchiam o ar de cheiro bom, e gente de toda a região ria e conversava.\n\nNum palanque de madeira, o Xerife, de manto roxo, erguia a Flecha de Ouro, brilhando ao sol. Lá embaixo, os guardas de armadura cinza iam e vinham, clanc, clanc, com olhos de águia, caçando roupa verde. Diante do {{ALVO|AL • VO|🎯}} de palha, esperava uma fila de arqueiros e arqueiras de várias vilas, de arco firme na mão.\n\nBem no meio da fila estava Robin, de chapéu largo, manto marrom e barba de lã, segurando um arco simples. Um guarda chegou pertinho e olhou Robin de cima a baixo. Robin ficou parado feito estátua. Nem um fiozinho verde! O guarda deu de ombros e seguiu adiante.\n\nPerto da barraquinha de frutas, Mariana, Grilo, João Pequeno e Clara, com a cesta no braço, trocaram um olhar rápido com Robin. Então o tambor rufou: tum, tum, tum! Era hora de atirar. A disputa pela Flecha de Ouro ia começar!"
+    },
+    {
+      "indice": 5,
+      "hash": "018eae93c2",
+      "capitulo": "🎯 Capítulo 16 • A Flecha que Partiu a Flecha",
+      "titulo": "Um Tiro de Cair o Queixo",
+      "texto": "A {{DISPUTA|DIS • PU • TA|🏆}} começou! Uma arqueira da vila soltou a flecha, fiuuu, e acertou pertinho do centro. Depois, o capitão dos guardas acertou no meio do alvo. Lá no palanque, o Xerife estufou o peito feito um pombo. Ninguém ia vencer o guarda dele!\n\nChegou a vez do viajante de manto marrom. Robin puxou a {{CORDA|COR • DA|🪢}} do arco. Nessa hora, a barba de lã fez cócegas no nariz dele! — Aaa… aaa… A barba fofa subia e descia. Robin torceu o nariz para um lado, depois para o outro, e prendeu o ar. Ufa! O espirro voltou para dentro. Ele respirou fundo e mirou firme.\n\nZUP! A flecha voou reta e, CRAC, partiu a flecha do capitão bem ao meio! Depois, fincou no coração do alvo. Por um segundinho, a praça ficou muda. Então explodiu em {{PALMAS|PAL • MAS|👏}}, assobios e gritos de espanto!\n\nSem desconfiar de nada, o Xerife desceu do palanque com cara de quem chupou limão e entregou a Flecha de Ouro ao viajante. Robin fez uma reverência exagerada, quase varrendo o chão com a barba. Só que, ao se abaixar, a aba do chapéu subiu um tiquinho. E um guarda, ali perto, arregalou os olhos!"
+    },
+    {
+      "indice": 6,
+      "hash": "d077dddf9d",
+      "capitulo": "🎀 Capítulo 17 • Chuva de Fitas Escarlates",
+      "titulo": "Uma Fuga Colorida e Sem Briga",
+      "texto": "O guarda apontou para o rosto debaixo do chapéu e berrou: — É Robin Hood! Peguem esse homem! O Xerife arregalou os olhos, ficou roxo de raiva e correu para tomar de volta a Flecha de Ouro.\n\nNa mesma hora, Clara abriu a cesta! Ela, Mariana, Grilo e João Pequeno jogaram para o alto os rolos de {{FITA|FI • TA|🎀}} vermelha. As fitas compridas voaram, rodopiaram e se enrolaram nos pés e nos braços dos guardas. Dois deles tropeçaram, plaft, e acabaram amarrados um no outro, feito pacote de presente. Só faltou o laço!\n\nEntão Grilo abriu o saquinho de {{FARINHA|FA • RI • NHA|🌾}} e assoprou com toda a força: PUF! Uma nuvem branquinha cobriu o Xerife. — Cof, cof, cof! Ele ficou branco dos pés à cabeça, feito boneco de neve de chapéu roxo! A praça inteira caiu na gargalhada.\n\nNinguém se machucou: era só fita, farinha e risada. No meio da bagunça, Robin guardou a Flecha de Ouro debaixo do manto e correu com os amigos. Foi uma {{FUGA|FU • GA|💨}} rapidinha até as árvores de Xervedo! Enquanto isso, Clara voltou depressa pelas ruelas até a oficina, certinha de que ninguém tinha visto nada."
+    },
+    {
+      "indice": 7,
+      "hash": "1d5932107c",
+      "capitulo": "🔴 Capítulo 18 • A Cor que Entregou a Oficina",
+      "titulo": "Uma Raiva que Não Quer Saber de Prova",
+      "texto": "Quando a poeira baixou, o Xerife sacudiu o manto cheio de farinha e desamarrou os dois guardas emburrados. Ao dar um passo na praça, ele tropeçou num rolo comprido de fita vermelha, viva feito brasa.\n\nO Xerife segurou o pano contra a luz e deu um sorriso malvado. Em toda Nortigão, só existia uma tintureira capaz de fazer aquela {{COR|COR|🔴}} tão forte: Clara Escarlate! — Aha! Ela ajudou Robin Hood a fugir! — gritou, sem querer ouvir nenhuma explicação.\n\nSe prendesse Clara na cadeia da vila, o bando ia soltar a moça depressa, como fez com Mestre Tomé. Por isso, o Xerife chamou dois guardas de confiança e ordenou em {{SEGREDO|SE • GRE • DO|🤫}}: — Levem a tintureira hoje mesmo para a {{TORRE|TOR • RE|🗼}} Velha, no alto do morro! Ninguém pode saber onde ela está!\n\nOs dois guardas marcharam pelas ruelas até a oficina das cores, quando a tarde já ia acabando. Lá dentro, Clara nem desconfiava de que sua cor mais famosa tinha virado alvo da fúria do Xerife."
+    },
+    {
+      "indice": 8,
+      "hash": "0be81a146f",
+      "capitulo": "🚪 Capítulo 19 • A Oficina Vazia",
+      "titulo": "Onde Foi Parar Clara Escarlate?",
+      "texto": "Na manhã seguinte, Lady Mariana e Grilo voltaram a Nortigão para contar a Clara que todo mundo tinha escapado bem. Mas, quando dobraram a esquina da oficina, levaram um susto: a {{PORTA|POR • TA|🚪}} estava entreaberta e os varais não balançavam.\n\nUm {{SILÊNCIO|SI • LÊN • CIO|🤫}} estranho tomava conta da casinha. Lá dentro, o tacho grande de madeira estava tombado de lado, derramando uma poça de tinta vermelha brilhante pelo chão. Rolos de tecido colorido estavam caídos e espalhados por todo o assoalho.\n\nUma feirante vizinha apareceu na calçada, falando baixinho e muito assustada: — Ontem, quando a tarde ia acabando, vi dois guardas entrarem aqui! Ninguém na rua sabe explicar o {{SUMIÇO|SU • MI • ÇO|❓}} da pobre Clara Escarlate!\n\nGrilo coçou a cabeça, preocupado, sem saber para que lado correr. Mariana respirou fundo, olhou firme para o chão manchado e disse: — Não adianta sair correndo sem rumo, Grilo. Primeiro, vamos olhar com calma para as pistas!"
+    },
+    {
+      "indice": 9,
+      "hash": "834dfb6bd5",
+      "capitulo": "🔎 Capítulo 20 • Os Sinais no Caminho",
+      "titulo": "O Olhar de Quem Investiga",
+      "texto": "Mariana e Grilo se agacharam bem perto da poça de tinta vermelha. Logo na entrada da ruela, os dois enxergaram uma {{PEGADA|PE • GA • DA|👣}} grande de bota de guarda, carimbada de vermelho nas pedras da rua!\n\nEles seguiram as marcas vermelhas até o portão da cidade. Ali, Grilo piscou os olhos e apontou para uma cerca de madeira: — Olhe, Mariana! Um {{FIO|FI • O|🧶}} vermelho! Mais adiante, havia outro retalho preso num arbusto verde.\n\nMariana sorriu cheia de orgulho da amiga. Clara tinha ido soltando pedacinhos do próprio lenço pelo caminho, de propósito, para deixar um rastro claro! Os guardas nem notaram aqueles pequenos sinais vermelhos nas cercas e nos galhos.\n\nA trilha de retalhos levou os dois até uma curva alta da estrada. Lá no topo do morro, cercada de nuvens douradas, aparecia a {{TORRE|TOR • RE|🗼}} Velha de pedra. Eles tinham encontrado o esconderijo onde Clara estava!",
+      "cartoes": {
+        "tipo": "ordem",
+        "ordem": [
+          "pegada",
+          "fio",
+          "torre"
+        ],
+        "itens": [
+          {
+            "id": "torre",
+            "palavra": "TORRE",
+            "emoji": "🔎"
+          },
+          {
+            "id": "pegada",
+            "palavra": "PEGADA",
+            "emoji": "🔎"
+          },
+          {
+            "id": "fio",
+            "palavra": "FIO",
+            "emoji": "🔎"
+          }
+        ]
+      }
+    },
+    {
+      "indice": 10,
+      "hash": "558131320a",
+      "capitulo": "🧣 Capítulo 21 • O Lenço na Janela Alta",
+      "titulo": "Clara Não Fica Esperando Parada",
+      "texto": "Quando o céu ficou dourado de fim de tarde, Robin, Mariana, João Pequeno e Grilo chegaram pertinho da Torre Velha. Os quatro se esconderam atrás das árvores e dos troncos para ninguém perceber o bando ali.\n\nDe repente, lá no alto da torre, alguma coisa mexeu numa {{JANELA|JA • NE • LA|🪟}} estreita de pedra. Era um {{LENÇO|LEN • ÇO|🧣}} vermelho vivo balançando ao vento! Clara estava espiando lá de cima e já tinha visto os amigos na mata!\n\nClara não perdeu tempo esperando socorro parada. Ela tinha observado tudo: bem na portinha da torre, o {{GUARDA|GUAR • DA|🛡️}} de plantão sempre tirava um cochilo sentado quando a lua subia, roncando bem alto: rrronc, pfff, rrronc! Até o capacete dele escorregava!\n\nDa fresta alta, Clara acenou com o lenço para os fundos da torre, mostrando o lado mais baixo do muro para jogar uma corda. O bando sorriu, aliviado e feliz: Clara era tão esperta quanto eles!"
+    },
+    {
+      "indice": 11,
+      "hash": "8b8414a4fa",
+      "capitulo": "🪢 Capítulo 22 • Corda, Vento e Liberdade",
+      "titulo": "Um Resgate de Ponta de Pé",
+      "texto": "Quando a lua redonda subiu no céu, o guarda da portinha começou a roncar alto: rrronc, pfff! Uma folha seca caiu bem na ponta do nariz dele, e o dorminhoco nem se mexeu! Sem fazer barulho, o bando correu para os fundos da Torre Velha.\n\nJoão Pequeno girou o braço forte e jogou uma {{CORDA|COR • DA|🪢}} comprida lá para o alto. Clara segurou a ponta, deu um nó bem firme na pedra da janela e desceu devagarinho pelo muro, com leveza e coragem, até tocar os pés na grama.\n\nNo mesmo instante, Lady Mariana jogou uma {{CAPA|CA • PA|🧥}} verde sobre os ombros da amiga. Clara sorriu e deixou o lenço vermelho aparecendo por cima, porque aquela cor brilhante era a marca dela!\n\nOs cinco amigos deram as mãos e pisaram na ponta dos pés, bem devagarinho, rumo às árvores altas. Em poucos segundos, sumiram todos juntos dentro da {{FLORESTA|FLO • RES • TA|🌳}} de Xervedo, enquanto o guarda seguia roncando tranquilo!",
+      "cartoes": {
+        "tipo": "pedido",
+        "pedidos": [
+          "corda",
+          "capa",
+          "floresta"
+        ],
+        "itens": [
+          {
+            "id": "porta",
+            "palavra": "PORTA",
+            "emoji": "🚪",
+            "pegadinha": "Porta? Na porta o guarda está roncando — se abrir, ele acorda! Vamos tentar de novo!"
+          },
+          {
+            "id": "corda",
+            "palavra": "CORDA",
+            "emoji": "🪢"
+          },
+          {
+            "id": "copa",
+            "palavra": "COPA",
+            "emoji": "🏆",
+            "pegadinha": "Copa? Copa brilha na estante, não esconde ninguém no meio das árvores! Vamos escolher de novo!"
+          },
+          {
+            "id": "capa",
+            "palavra": "CAPA",
+            "emoji": "🧥"
+          },
+          {
+            "id": "festa",
+            "palavra": "FESTA",
+            "emoji": "🎉",
+            "pegadinha": "Festa? Festa faz barulho demais perto da torre — primeiro precisamos escapar! Vamos tentar de novo!"
+          },
+          {
+            "id": "floresta",
+            "palavra": "FLORESTA",
+            "emoji": "🌳"
+          }
+        ]
+      }
+    },
+    {
+      "indice": 12,
+      "hash": "37e4a0defa",
+      "capitulo": "🧣 Capítulo 23 • O Ouro que Virou Cobertor",
+      "titulo": "Ninguém Passa Frio na Vila",
+      "texto": "Na manhã seguinte, a Vila do Moinho acordou cheia de movimento bom. O prêmio da Flecha de Ouro tinha cumprido a promessa! Cada moedinha daquele tesouro virou comida fresca e agasalho quentinho para quem mais precisava na vila.\n\nRobin, Mariana, João Pequeno, Grilo, Clara e Mestre Tomé passaram de porta em porta com grandes cestas. Entregaram fornadas de {{PÃO|PÃO|🍞}} quentinho, frutas doces e pilhas altas de {{COBERTOR|CO • BER • TOR|🧣}} macio e colorido para espantar o vento frio.\n\nMulheres, idosos e crianças saíam às portas abraçando os agasalhos novos, com o rosto cheio de {{ALEGRIA|A • LE • GRI • A|😊}}. Ninguém na Vila do Moinho ia passar frio nem fome naquele inverno que chegava devagarinho!\n\nNa varanda das casinhas, os moradores sorriam e comentavam baixinho, cheios de orgulho dos amigos da mata: — O Bando Verde nunca esquece quem trabalha duro! E as crianças já brincavam na rua embrulhadas nos cobertores macios."
+    },
+    {
+      "indice": 13,
+      "hash": "5a71ccbf24",
+      "capitulo": "🍃 Capítulo 24 • Verde com Lenço Escarlate",
+      "titulo": "Uma Nova Companheira e Uma Ideia Maluca",
+      "texto": "De volta ao Grande Carvalho banhado de sol, Clara Escarlate vestiu pela primeira vez a camisa verde da floresta. Mas ela manteve o lenço vermelho bem amarrado no pescoço, porque não abria mão da sua cor favorita de jeito nenhum!\n\nOs seis amigos ergueram suas canecas de madeira e fizeram um brinde bem animado: tim, tim! Todos celebravam a nova {{AMIZADE|A • MI • ZA • DE|🤝}} e a entrada oficial de Clara no {{BANDO|BAN • DO|🏹}} de Xervedo.\n\nNisso, Grilo chegou correndo pela trilha, ofegante com uma notícia quentinha: — Pessoal! O Xerife ficou furioso e mandou cobrar caro demais pela comida lá na {{FEIRA|FEI • RA|🧺}} de Nortigão! As famílias mal conseguem comprar um queijo!\n\nRobin coçou o queixo, deu uma risadinha marota e seus olhos brilharam: — Tive uma ideia bem maluca! E se eu aparecesse na feira vestido de açougueiro para dar um nó na cabeça do Xerife? Todo mundo caiu na gargalhada!"
+    }
+  ],
+  "textos": [
+    {
+      "texto": "Sob um arco de folhas de Xervedo e uma Flecha de Ouro brilhante, Robin Hood, Lady Mariana, João Pequeno, Grilo e Clara Escarlate sorriem diante da silhueta da Torre Velha",
+      "onde": [
+        "página 0: descrição da ilustração (leitor de tela)"
+      ]
+    },
+    {
+      "texto": "🏹 A Flecha de Ouro e o Resgate na Torre",
+      "onde": [
+        "página 0: selo da Lente da Realidade"
+      ]
+    },
+    {
+      "texto": "FLECHA",
+      "onde": [
+        "página 0: dica ao passar o dedo na cena",
+        "página 1: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "CORAGEM",
+      "onde": [
+        "página 0: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "PISTA",
+      "onde": [
+        "página 0: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "Debaixo do Grande Carvalho, Robin Hood, Lady Mariana, Mestre Tomé, Grilo e João Pequeno cercam a mesa de tronco com o cartaz da Flecha de Ouro preso por pedrinhas",
+      "onde": [
+        "página 1: descrição da ilustração (leitor de tela)"
+      ]
+    },
+    {
+      "texto": "🏹 O Cartaz da Flecha de Ouro no Grande Carvalho",
+      "onde": [
+        "página 1: selo da Lente da Realidade"
+      ]
+    },
+    {
+      "texto": "OURO",
+      "onde": [
+        "página 1: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "DISFARCE",
+      "onde": [
+        "página 1: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "Na oficina colorida de tinturaria, Clara Escarlate de lenço vermelho-escarlate e avental respingado recebe Lady Mariana, Robin e Grilo com um grande tacho de tinta escarlate à frente",
+      "onde": [
+        "página 2: descrição da ilustração (leitor de tela)"
+      ]
+    },
+    {
+      "texto": "🎨 A Oficina de Clara Escarlate em Nortigão",
+      "onde": [
+        "página 2: selo da Lente da Realidade"
+      ]
+    },
+    {
+      "texto": "OFICINA",
+      "onde": [
+        "página 2: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "TINTA",
+      "onde": [
+        "página 2: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "VERMELHO",
+      "onde": [
+        "página 2: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "Ajude Clara a montar o disfarce de Robin! Olhe a figura lá em cima e toque na palavra certa. Cuidado: tem palavras parecidas querendo enganar você!",
+      "onde": [
+        "página 3: instrução da atividade"
+      ]
+    },
+    {
+      "texto": "Na oficina de Clara Escarlate, Robin Hood experimenta o disfarce de viajante com chapéu largo, manto marrom e barba de lã enquanto Clara, Mariana e Grilo ajudam",
+      "onde": [
+        "página 3: descrição da ilustração (leitor de tela)"
+      ]
+    },
+    {
+      "texto": "🎭 Hora de Montar o Disfarce de Viajante!",
+      "onde": [
+        "página 3: selo da Lente da Realidade"
+      ]
+    },
+    {
+      "texto": "🎭 Para o disfarce de viajante:",
+      "onde": [
+        "página 3: rótulo da faixa do pedido"
+      ]
+    },
+    {
+      "texto": "CHAPÉU",
+      "onde": [
+        "página 3: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "MANTO",
+      "onde": [
+        "página 3: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "BARBA",
+      "onde": [
+        "página 3: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "Na praça festiva de Nortigão, o Xerife ergue a Flecha de Ouro no palanque enquanto uma fila diversa de arqueiros e arqueiras, incluindo Robin disfarçado de marrom, aguarda diante do alvo sob duas flâmulas vermelhas e douradas",
+      "onde": [
+        "página 4: descrição da ilustração (leitor de tela)"
+      ]
+    },
+    {
+      "texto": "🚩 A Praça das Bandeiras em Nortigão",
+      "onde": [
+        "página 4: selo da Lente da Realidade"
+      ]
+    },
+    {
+      "texto": "PRAÇA",
+      "onde": [
+        "página 4: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "BANDEIRA",
+      "onde": [
+        "página 4: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "ALVO",
+      "onde": [
+        "página 4: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "Na praça de Nortigão, a flecha de Robin disfarçado parte ao meio a flecha do capitão bem no centro do alvo de palha enquanto a multidão aplaude e o Xerife faz cara azeda",
+      "onde": [
+        "página 5: descrição da ilustração (leitor de tela)"
+      ]
+    },
+    {
+      "texto": "🎯 A Flecha Partida Bem no Coração do Alvo!",
+      "onde": [
+        "página 5: selo da Lente da Realidade"
+      ]
+    },
+    {
+      "texto": "DISPUTA",
+      "onde": [
+        "página 5: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "CORDA",
+      "onde": [
+        "página 5: dica ao passar o dedo na cena",
+        "página 11: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "PALMAS",
+      "onde": [
+        "página 5: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "Na praça de Nortigão, fitas vermelho-escarlate enrolam dois guardas feito pacote de presente e uma nuvem de farinha deixa o Xerife branco feito boneco de neve enquanto o bando foge rindo",
+      "onde": [
+        "página 6: descrição da ilustração (leitor de tela)"
+      ]
+    },
+    {
+      "texto": "🎀 Fitas, Farinha e Risada na Praça!",
+      "onde": [
+        "página 6: selo da Lente da Realidade"
+      ]
+    },
+    {
+      "texto": "FITA",
+      "onde": [
+        "página 6: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "FARINHA",
+      "onde": [
+        "página 6: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "FUGA",
+      "onde": [
+        "página 6: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "No fim de tarde na praça vazia, o Xerife ainda sujo de farinha ergue furioso a fita vermelho-escarlate e sussurra ordens secretas para dois guardas",
+      "onde": [
+        "página 7: descrição da ilustração (leitor de tela)"
+      ]
+    },
+    {
+      "texto": "🔴 A Fita Escarlate e uma Ordem em Segredo",
+      "onde": [
+        "página 7: selo da Lente da Realidade"
+      ]
+    },
+    {
+      "texto": "COR",
+      "onde": [
+        "página 7: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "SEGREDO",
+      "onde": [
+        "página 7: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "TORRE",
+      "onde": [
+        "página 7: dica ao passar o dedo na cena",
+        "página 9: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "Dentro da oficina vazia e revirada de Clara Escarlate, o tacho de tinta vermelha está tombado no chão enquanto Lady Mariana e Grilo entram preocupados pela porta entreaberta",
+      "onde": [
+        "página 8: descrição da ilustração (leitor de tela)"
+      ]
+    },
+    {
+      "texto": "🚪 A Oficina Revirada e o Sumiço de Clara",
+      "onde": [
+        "página 8: selo da Lente da Realidade"
+      ]
+    },
+    {
+      "texto": "PORTA",
+      "onde": [
+        "página 8: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "SILÊNCIO",
+      "onde": [
+        "página 8: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "SUMIÇO",
+      "onde": [
+        "página 8: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "Ajude Mariana e Grilo a seguir as pistas na ordem certa: PEGADA, FIO e TORRE! A cada toque, o bando chega mais perto de Clara.",
+      "onde": [
+        "página 9: instrução da atividade"
+      ]
+    },
+    {
+      "texto": "Lady Mariana e Grilo agachados na ruela de pedra de Nortigão investigando as pistas deixadas por Clara Escarlate até localizar a Torre Velha",
+      "onde": [
+        "página 9: descrição da ilustração (leitor de tela)"
+      ]
+    },
+    {
+      "texto": "🔎 Seguindo as Pistas Até a Torre Velha!",
+      "onde": [
+        "página 9: selo da Lente da Realidade"
+      ]
+    },
+    {
+      "texto": "Qual pista Mariana e Grilo acharam primeiro?",
+      "onde": [
+        "página 9: faixa onde as palavras são escritas"
+      ]
+    },
+    {
+      "texto": "PEGADA",
+      "onde": [
+        "página 9: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "FIO",
+      "onde": [
+        "página 9: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "Ao entardecer diante da Torre Velha, Clara acena da janela alta com seu lenço vermelho-escarlate para Robin, Mariana, João Pequeno e Grilo escondidos na mata enquanto o guarda cochila na portinha",
+      "onde": [
+        "página 10: descrição da ilustração (leitor de tela)"
+      ]
+    },
+    {
+      "texto": "🧣 O Sinal de Clara na Janela da Torre",
+      "onde": [
+        "página 10: selo da Lente da Realidade"
+      ]
+    },
+    {
+      "texto": "JANELA",
+      "onde": [
+        "página 10: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "LENÇO",
+      "onde": [
+        "página 10: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "GUARDA",
+      "onde": [
+        "página 10: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "Ajude no resgate silencioso na Torre Velha! Olhe a figura lá em cima e toque na palavra certa. Cuidado com as pegadinhas!",
+      "onde": [
+        "página 11: instrução da atividade"
+      ]
+    },
+    {
+      "texto": "À noite nos fundos da Torre Velha, o bando lança uma corda para Clara descer em segurança, entrega-lhe uma capa verde e foge silenciosamente para a Floresta de Xervedo",
+      "onde": [
+        "página 11: descrição da ilustração (leitor de tela)"
+      ]
+    },
+    {
+      "texto": "🪢 Resgate Silencioso Sob a Lua Cheia!",
+      "onde": [
+        "página 11: selo da Lente da Realidade"
+      ]
+    },
+    {
+      "texto": "🪢 Para o resgate na Torre Velha:",
+      "onde": [
+        "página 11: rótulo da faixa do pedido"
+      ]
+    },
+    {
+      "texto": "CAPA",
+      "onde": [
+        "página 11: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "FLORESTA",
+      "onde": [
+        "página 11: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "Na manhã ensolarada da Vila do Moinho, o bando de Robin Hood entrega cestas de pães, frutas e pilhas de cobertores coloridos para famílias diversas e crianças sorridentes",
+      "onde": [
+        "página 12: descrição da ilustração (leitor de tela)"
+      ]
+    },
+    {
+      "texto": "🧣 Pão Quentinho e Cobertores para Toda a Vila!",
+      "onde": [
+        "página 12: selo da Lente da Realidade"
+      ]
+    },
+    {
+      "texto": "PÃO",
+      "onde": [
+        "página 12: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "COBERTOR",
+      "onde": [
+        "página 12: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "ALEGRIA",
+      "onde": [
+        "página 12: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "Debaixo do Grande Carvalho banhado de sol, Clara Escarlate de camisa verde e lenço vermelho-escarlate brinda canecas de madeira com Robin, Mariana, João Pequeno, Grilo e Mestre Tomé",
+      "onde": [
+        "página 13: descrição da ilustração (leitor de tela)"
+      ]
+    },
+    {
+      "texto": "🍃 Clara Escarlate Entra para o Bando Verde!",
+      "onde": [
+        "página 13: selo da Lente da Realidade"
+      ]
+    },
+    {
+      "texto": "AMIZADE",
+      "onde": [
+        "página 13: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "BANDO",
+      "onde": [
+        "página 13: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "FEIRA",
+      "onde": [
+        "página 13: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "🏹 Clara Escarlate agora faz parte do Bando Verde, e o ouro da flecha virou comida e cobertor para a vila! Mas o Xerife resolveu encarecer a feira de Nortigão — descubra na Parte 3 o plano maluco de Robin vestido de açougueiro!",
+      "onde": [
+        "mensagem do fim da parte"
+      ]
+    }
+  ]
+}
