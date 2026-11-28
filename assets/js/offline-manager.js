@@ -5,7 +5,7 @@
 (function() {
     'use strict';
 
-    const VERSAO_ATUAL = '9e5c3336e56c';
+    const VERSAO_ATUAL = '9131583f52e7';
     const PREFIXO_CACHE = 'cv-volume-quixote-';
     const PREFIXO_STORAGE = 'cv-offline-quixote-';
 
@@ -530,6 +530,60 @@
         "./robin-hood/imagens/parte-1/p9-stage-2.webp",
         "./robin-hood/imagens/parte-1/p9-stage-3.webp",
         "./robin-hood/parte-1.html"
+    ],
+    "rh-2": [
+        "./assets/icones/icone-192.png",
+        "./assets/css/fonts.css",
+        "./assets/css/icons.css",
+        "./assets/css/livro.css",
+        "./assets/css/tailwind.css",
+        "./assets/fonts/fredoka-latin-400-normal.woff2",
+        "./assets/fonts/fredoka-latin-500-normal.woff2",
+        "./assets/fonts/fredoka-latin-600-normal.woff2",
+        "./assets/fonts/fredoka-latin-700-normal.woff2",
+        "./assets/fonts/nunito-latin-400-normal.woff2",
+        "./assets/fonts/nunito-latin-600-normal.woff2",
+        "./assets/fonts/nunito-latin-700-normal.woff2",
+        "./assets/fonts/nunito-latin-800-normal.woff2",
+        "./assets/fonts/nunito-latin-900-normal.woff2",
+        "./assets/icones/bandeiras/br.svg",
+        "./assets/icones/bandeiras/es.svg",
+        "./assets/icones/bandeiras/fr.svg",
+        "./assets/icones/bandeiras/gb.svg",
+        "./assets/js/acervo.js",
+        "./assets/js/colaboracao.js",
+        "./assets/js/i18n-site.js",
+        "./assets/js/livro.js",
+        "./assets/js/texto.js",
+        "./assets/js/desafios.js",
+        "./assets/css/desafios.css",
+        "./robin-hood/imagens/parte-2/camadas/p10-lenco.webp",
+        "./robin-hood/imagens/parte-2/camadas/p4-flamula.webp",
+        "./robin-hood/imagens/parte-2/p0-real.webp",
+        "./robin-hood/imagens/parte-2/p1-real.webp",
+        "./robin-hood/imagens/parte-2/p10-real.webp",
+        "./robin-hood/imagens/parte-2/p11-real.webp",
+        "./robin-hood/imagens/parte-2/p11-stage-1.webp",
+        "./robin-hood/imagens/parte-2/p11-stage-2.webp",
+        "./robin-hood/imagens/parte-2/p11-stage-3.webp",
+        "./robin-hood/imagens/parte-2/p12-real.webp",
+        "./robin-hood/imagens/parte-2/p13-real.webp",
+        "./robin-hood/imagens/parte-2/p2-real.webp",
+        "./robin-hood/imagens/parte-2/p3-real.webp",
+        "./robin-hood/imagens/parte-2/p3-stage-1.webp",
+        "./robin-hood/imagens/parte-2/p3-stage-2.webp",
+        "./robin-hood/imagens/parte-2/p3-stage-3.webp",
+        "./robin-hood/imagens/parte-2/p4-real.webp",
+        "./robin-hood/imagens/parte-2/p5-panoramico.webp",
+        "./robin-hood/imagens/parte-2/p5-real.webp",
+        "./robin-hood/imagens/parte-2/p6-real.webp",
+        "./robin-hood/imagens/parte-2/p7-real.webp",
+        "./robin-hood/imagens/parte-2/p8-real.webp",
+        "./robin-hood/imagens/parte-2/p9-real.webp",
+        "./robin-hood/imagens/parte-2/p9-stage-1.webp",
+        "./robin-hood/imagens/parte-2/p9-stage-2.webp",
+        "./robin-hood/imagens/parte-2/p9-stage-3.webp",
+        "./robin-hood/parte-2.html"
     ]
 };
 
