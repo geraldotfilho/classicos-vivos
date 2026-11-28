@@ -168,3 +168,5 @@ data,comando,pedidos_voz,tokens_audio,tokens_qa,usd_estimado
 2026-11-23T23:39,"--voz falas --idioma es --parte 1,2,3,4,5,6,7,8 --lote --autorizado",1,268,0,0.0012
 2026-11-23T23:41,"--voz falas --idioma fr --parte 1,2,3,4,5,6,7,8 --agrupar 1 --lote --autorizado",17,538,0,0.0024
 2026-11-23T23:45,"--voz falas --idioma es --parte 1,2,3,4,5,6,7,8 --lote --autorizado",1,27,0,0.0001
+
+2026-11-28T00:39,"--amostras robin-hood P1-P2 (23 vozes candidatas) --autorizado",23,4420,0,0.0202
