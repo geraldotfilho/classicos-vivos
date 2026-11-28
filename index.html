@@ -685,18 +685,18 @@
             </div>
         </section>
 
-        <!-- Prateleira 2: Robin Hood (Parte 1 publicada; Partes 2 a 5 em produção) -->
+        <!-- Prateleira 2: Robin Hood (Partes 1 e 2 publicadas; Partes 3 a 6 em produção) -->
         <section id="shelf-robin-hood" class="shelf" aria-label="Robin Hood" data-i18n-aria="shelfRobinHood">
             <div id="container-boxset-robin" class="w-full flex justify-center">
                 <div class="flex flex-col items-center justify-end">
-                    <button id="boxset-robin-hood" type="button" class="boxset-card boxset-noturno boxset-robin" aria-expanded="false" aria-label="Coleção Robin Hood: Parte 1 disponível. Toque para abrir." data-i18n-aria="boxsetRobinAria">
+                    <button id="boxset-robin-hood" type="button" class="boxset-card boxset-noturno boxset-robin" aria-expanded="false" aria-label="Coleção Robin Hood: Partes 1 e 2 disponíveis. Toque para abrir." data-i18n-aria="boxsetRobinAria">
                         <span class="boxset-layer boxset-layer-3" aria-hidden="true"></span>
                         <span class="boxset-layer boxset-layer-2" aria-hidden="true"></span>
                         <span class="boxset-layer boxset-layer-1" aria-hidden="true"></span>
                         <span class="boxset-front">
                             <img src="./robin-hood/imagens/parte-1/p0-real.webp" alt="Robin Hood, Lady Mariana, Grilo e João Pequeno" class="v2-arte" />
                             <span class="v2-veu"></span>
-                            <span class="v2-selo" data-i18n="rhBadgeDisponivel">Parte 1 · Disponível</span>
+                            <span class="v2-selo" data-i18n="rhBadgeDisponivel">Partes 1 e 2 · Disponíveis</span>
                             <span class="v2-rodape">
                                 <span class="v2-titulo" data-i18n="robinHood">Robin Hood</span>
                                 <span class="v2-sub" data-i18n="robinHoodSub">O Herói de Sherwood</span>
@@ -741,20 +741,21 @@
                         <div id="offline-ctrl-rh-1" class="offline-ctrl-bar w-full mt-2 flex items-center justify-center gap-1.5 min-h-[44px]"></div>
                     </div>
 
-                    <!-- Partes 2 a 5 (Em breve com cadeado) -->
+                    <!-- Parte 2 (Publicada) -->
                     <div class="volume-item flex flex-col items-center w-36 sm:w-40 md:w-44 shrink-0 book-spread-enter" style="animation-delay: -0.4s">
-                        <button type="button" class="book-teaser parte-trancada w-full flex flex-col text-left" data-em-producao="robin-hood" aria-label="Robin Hood, parte 2: em produção" data-i18n-aria="rhEmProducaoAria2">
-                            <div class="book-cover relative aspect-[3/4] rounded-r-2xl rounded-l-md overflow-hidden border-3 border-emerald-500/70 bg-gradient-to-b from-emerald-800 to-emerald-950 shadow-md">
-                                <span class="absolute inset-x-0 bottom-8 flex justify-center text-5xl opacity-50" aria-hidden="true">🎯</span>
-                                <span class="v2-cadeado" aria-hidden="true">🔒</span>
-                                <span class="absolute top-2 right-2 bg-emerald-700/90 text-white font-display font-bold text-xs sm:text-sm px-2.5 py-0.5 rounded-full border-2 border-white shadow" data-i18n="parte2Badge">Parte 2</span>
+                        <a id="link-rh-parte-2" href="./robin-hood/parte-2.html" class="book w-full flex flex-col" aria-label="Ler Robin Hood, parte 2" data-i18n-aria="rhLerParte2">
+                            <div class="book-cover relative aspect-[3/4] rounded-r-2xl rounded-l-md overflow-hidden border-3 border-emerald-400 bg-emerald-950 shadow-md">
+                                <img src="./robin-hood/imagens/parte-2/p0-real.webp" alt="" class="absolute inset-0 w-full h-full object-cover" />
+                                <span id="badge-rh-parte-2" class="absolute top-2 right-2 bg-emerald-600 text-white font-display font-bold text-xs sm:text-sm px-2.5 py-0.5 rounded-full border-2 border-white shadow" data-i18n="parte2Badge">Parte 2</span>
                                 <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-emerald-950/95 via-emerald-950/80 to-transparent pt-6 pb-2.5 px-2 text-center">
-                                    <h3 class="font-display font-bold text-xs sm:text-sm text-emerald-200 leading-tight" data-i18n="emBreve">Em breve</h3>
+                                    <h3 id="titulo-rh-parte-2" class="font-display font-bold text-xs sm:text-sm text-amber-200 leading-tight" data-i18n="rh2TituloCurto">A Flecha de Ouro e o Resgate na Torre</h3>
                                 </div>
                             </div>
-                        </button>
-                        <div class="w-full mt-2 min-h-[44px]"></div>
+                        </a>
+                        <div id="offline-ctrl-rh-2" class="offline-ctrl-bar w-full mt-2 flex items-center justify-center gap-1.5 min-h-[44px]"></div>
                     </div>
+
+                    <!-- Partes 3 a 6 (Em breve com cadeado) -->
 
                     <div class="volume-item flex flex-col items-center w-36 sm:w-40 md:w-44 shrink-0 book-spread-enter" style="animation-delay: -0.8s">
                         <button type="button" class="book-teaser parte-trancada w-full flex flex-col text-left" data-em-producao="robin-hood" aria-label="Robin Hood, parte 3: em produção" data-i18n-aria="rhEmProducaoAria3">

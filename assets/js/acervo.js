@@ -18,16 +18,16 @@
    ===================================================================== */
 window.ACERVO_PRODUCAO = [
     {
-        id: 'robin-hood-parte-2',
+        id: 'robin-hood-parte-3',
         obra: 'Robin Hood',
-        parte: 2,
-        titulo: 'Parte 2: A Flecha de Ouro e o Resgate na Torre',
-        nota: 'Rascunho ilustrado e animado (Capa + 13 caps., 6 partes previstas). Pronto para revisão.',
-        situacao: 'rascunho',
+        parte: 3,
+        titulo: 'Parte 3: O Açougueiro e a Cozinha do Castelo',
+        nota: 'Próxima parte na fila. 6 partes previstas.',
+        situacao: 'fila',
         estante: null,
         emoji: '🏹',
         cor: 'from-emerald-300 to-teal-500',
-        href: './robin-hood/parte-2.html'
+        href: './robin-hood/parte-3.html'
     },
     {
         id: 'viagem-ao-centro-da-terra',
