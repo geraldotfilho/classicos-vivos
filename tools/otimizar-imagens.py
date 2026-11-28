@@ -12,13 +12,17 @@ from pathlib import Path
 from PIL import Image
 
 MAX_W = 1376
+MAX_H_PANORAMA = 1024   # panorâmicas (mais de 2:1, ex.: a 4:1 do desempate de Robin Hood P2): limita a altura, não a largura
 QUALITY = 80
 
 
 def converter(src: Path) -> None:
     dst = src.with_suffix('.webp')
     im = Image.open(src)
-    if im.width > MAX_W:
+    if im.width > 2 * im.height:
+        if im.height > MAX_H_PANORAMA:
+            im = im.resize((round(im.width * MAX_H_PANORAMA / im.height), MAX_H_PANORAMA), Image.LANCZOS)
+    elif im.width > MAX_W:
         im = im.resize((MAX_W, round(im.height * MAX_W / im.width)), Image.LANCZOS)
     has_alpha = im.mode in ('RGBA', 'LA') or 'transparency' in im.info
     im = im.convert('RGBA' if has_alpha else 'RGB')
