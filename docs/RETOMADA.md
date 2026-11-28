@@ -1,4 +1,4 @@
-# 🔁 Retomada — onde o trabalho parou (2026-11-27, Robin Hood Partes 1 e 2 publicadas na estante principal e 100% narradas em português com elenco oficial)
+# 🔁 Retomada — onde o trabalho parou (2026-11-28, revisões do autor #75–#79; falta remontar o fim cortado da narração)
 
 **Leia este arquivo primeiro numa sessão nova**, seja qual for o agente. Depois, siga a ordem de leitura do `AGENTS.md` §0.2 (AGENTS → receita geral → receita específica → plano → caderno da parte).
 
@@ -10,6 +10,7 @@
 
 ## 1. Estado atual
 
+- **2026-11-28**: revisões do autor #75 a #79 (Robin Hood P1). Resolvidas: **#77** (samambaia animada na frente do Grilo, Caps. 5 e 6) e **#78** (a narração conduz as gravuras sequenciais e a atividade espera; campo `cena.narracaoEtapas`, `AGENTS.md` §2.2.1). **#75/#76/#79** (narração cortando o fim da página): a causa era o `audio_gate.py`, já corrigido e com conferência nova (`conferir-narracao --fim`), mas **o áudio de ~120 páginas continua cortado** até ser remontado do `.cache-narracao/` na máquina que gravou (sem custo: `TODO-NARRACAO.md` §10) ou regravado com autorização. Lista: `docs/narracao/fim-cortado-2026-11-28.md`.
 - **2026-11-27**: registrada a [receita do coordenador no Claude](RECEITA-COORDENADOR-CLAUDE.md) (o método do Swarm do Antigravity com subagentes do Claude, para quando o humano pedir) e guardado na geladeira o [estudo da "Editora Clássicos Vivos"](estudos/EDITORA-CLASSICOS-VIVOS.md) (app próprio de coordenação entre Claude e Antigravity). O trabalho pesado segue no Antigravity.
 - **2026-11-27**: Robin Hood Parte 2 — animações da capa (brilho na flecha), Caps. 12 e 24 (raios e poeira de sol) e Cap. 17 (farinha) corrigidas: não apareciam no tablet (`HISTORICO.md`).
 - **2026-11-14**: corrigido o tablet preso na versão antiga dos livros (os volumes do botão "Baixar" ganhavam do cache novo no service worker; `HISTORICO.md`).
