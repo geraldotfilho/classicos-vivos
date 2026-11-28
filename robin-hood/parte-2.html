@@ -19,17 +19,17 @@
            Os véus (fundo: 'transparent') recebem do livro.js um background inline; por isso todo efeito pintado
            fica em ::before/::after, sem mix-blend-mode (consistente em iPad/Android). */
         .camada[data-camada="c-sol-p1"],
-        .camada[data-camada="c-sol-p13"],
+        .camada[data-camada="c-sol-p14"],
         .camada[data-camada="c-brilho-p0"],
-        .camada[data-camada="c-farinha-p6"] { overflow: hidden; }
+        .camada[data-camada="c-farinha-p7"] { overflow: hidden; }
         .camada[data-camada="c-sol-p1"] .camada-arte,
-        .camada[data-camada="c-sol-p13"] .camada-arte,
+        .camada[data-camada="c-sol-p14"] .camada-arte,
         .camada[data-camada="c-brilho-p0"] .camada-arte,
-        .camada[data-camada="c-farinha-p6"] .camada-arte { position: relative; }
+        .camada[data-camada="c-farinha-p7"] .camada-arte { position: relative; }
 
         /* Raios diagonais orgânicos entre as copas (SVG full-frame esfumado: bem visível no tablet e zero corte retangular) */
         .camada[data-camada="c-sol-p1"] .camada-arte::before,
-        .camada[data-camada="c-sol-p13"] .camada-arte::before {
+        .camada[data-camada="c-sol-p14"] .camada-arte::before {
             content: ''; position: absolute; inset: 0;
             background-repeat: no-repeat; background-size: 100% 100%;
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1376 768'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0.14' y1='0.04' x2='0.48' y2='0.64'%3E%3Cstop offset='0%25' stop-color='%23FFF7B8' stop-opacity='0.82'/%3E%3Cstop offset='52%25' stop-color='%23FFE07A' stop-opacity='0.40'/%3E%3Cstop offset='100%25' stop-color='%23FFE07A' stop-opacity='0'/%3E%3C/linearGradient%3E%3Cfilter id='b' x='-15%25' y='-15%25' width='130%25' height='130%25'%3E%3CfeGaussianBlur stdDeviation='9'/%3E%3C/filter%3E%3C/defs%3E%3Cg filter='url(%23b)'%3E%3Cpolygon points='175,35 280,25 520,445 375,475' fill='url(%23g)'/%3E%3Cpolygon points='295,20 390,15 630,430 510,450' fill='url(%23g)' opacity='0.88'/%3E%3Cpolygon points='100,80 175,60 365,455 268,478' fill='url(%23g)' opacity='0.75'/%3E%3C/g%3E%3C/svg%3E");
@@ -38,7 +38,7 @@
         }
         /* Poeirinha dourada bem visível e brilhante flutuando livre na luz */
         .camada[data-camada="c-sol-p1"] .camada-arte::after,
-        .camada[data-camada="c-sol-p13"] .camada-arte::after {
+        .camada[data-camada="c-sol-p14"] .camada-arte::after {
             content: ''; position: absolute; inset: 0;
             background-repeat: no-repeat; background-size: 100% 100%;
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1376 768'%3E%3Cdefs%3E%3CradialGradient id='d'%3E%3Cstop offset='0%25' stop-color='%23FFFFFF' stop-opacity='1'/%3E%3Cstop offset='45%25' stop-color='%23FFE169' stop-opacity='0.78'/%3E%3Cstop offset='100%25' stop-color='%23FFE169' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Ccircle cx='215' cy='155' r='13' fill='url(%23d)'/%3E%3Ccircle cx='288' cy='215' r='10' fill='url(%23d)'/%3E%3Ccircle cx='352' cy='135' r='14' fill='url(%23d)'/%3E%3Ccircle cx='400' cy='260' r='11' fill='url(%23d)'/%3E%3Ccircle cx='252' cy='305' r='10' fill='url(%23d)'/%3E%3Ccircle cx='455' cy='198' r='15' fill='url(%23d)'/%3E%3Ccircle cx='495' cy='318' r='10' fill='url(%23d)'/%3E%3Ccircle cx='325' cy='365' r='12' fill='url(%23d)'/%3E%3Ccircle cx='178' cy='240' r='10' fill='url(%23d)'/%3E%3Ccircle cx='540' cy='245' r='9' fill='url(%23d)'/%3E%3Ccircle cx='375' cy='320' r='9' fill='url(%23d)'/%3E%3Ccircle cx='295' cy='165' r='11' fill='url(%23d)'/%3E%3C/svg%3E");
@@ -78,7 +78,7 @@
         }
 
         /* Cap. 17: nuvenzinhas leves de farinha derivando no ar da praça (SVG esfumado bem visível) */
-        .camada[data-camada="c-farinha-p6"] .camada-arte::before {
+        .camada[data-camada="c-farinha-p7"] .camada-arte::before {
             content: ''; position: absolute; inset: 0;
             background-repeat: no-repeat; background-size: 100% 100%;
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1376 768'%3E%3Cdefs%3E%3CradialGradient id='f'%3E%3Cstop offset='0%25' stop-color='%23FFFFFF' stop-opacity='0.78'/%3E%3Cstop offset='50%25' stop-color='%23FFF9EE' stop-opacity='0.36'/%3E%3Cstop offset='100%25' stop-color='%23FFF9EE' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Cellipse cx='290' cy='280' rx='145' ry='88' fill='url(%23f)'/%3E%3Cellipse cx='440' cy='235' rx='120' ry='72' fill='url(%23f)'/%3E%3Cellipse cx='560' cy='310' rx='110' ry='66' fill='url(%23f)'/%3E%3Ccircle cx='240' cy='210' r='12' fill='url(%23f)'/%3E%3Ccircle cx='370' cy='190' r='10' fill='url(%23f)'/%3E%3Ccircle cx='495' cy='265' r='11' fill='url(%23f)'/%3E%3C/svg%3E");
@@ -87,16 +87,16 @@
         }
 
         /* Cap. 21: lenço vermelho-escarlate balançando na janela alta */
-        .camada[data-camada="c-lenco-p10"] {
+        .camada[data-camada="c-lenco-p11"] {
             transform: translate(-50%, 0);
             filter: drop-shadow(0 3px 4px rgba(35, 18, 8, 0.28));
         }
-        .camada[data-camada="c-lenco-p10"] > .camada-arte {
+        .camada[data-camada="c-lenco-p11"] > .camada-arte {
             transform-origin: 70% 0%;
             animation: rh2Flamula 2.4s ease-in-out infinite;
         }
 
-        /* Cap. 16 (Pág. 5): câmera panorâmica interativa + flecha em voo + partição em V no alvo */
+        /* Cap. 16 (Pág. 5): câmera panorâmica interativa + flecha em voo que crava coladinha na do capitão (EMPATE) */
         #drop-zone-5 .scene-img { opacity: 0; }
         .rh2-p5-palco {
             position: absolute; inset: 0; overflow: hidden; z-index: 6; pointer-events: none;
@@ -120,18 +120,11 @@
         .rh2-p5-svg {
             position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible;
         }
-        /* Flecha do capitão já fincada no centro do alvo (parte-se em V no impacto!) */
-        .rh2-cap-cima, .rh2-cap-baixo {
-            transform-origin: 1169px 446px;
-            transition: transform 0.36s cubic-bezier(0.22, 1.45, 0.36, 1);
-        }
-        .rh2-p5-palco.impacto .rh2-cap-cima {
-            transform: rotate(-25deg) translate(-12px, -9px);
-        }
-        .rh2-p5-palco.impacto .rh2-cap-baixo {
-            transform: rotate(25deg) translate(-12px, 9px);
-        }
-        /* Flecha de Robin voando do arco (495, 407) até o centro do alvo (1169, 446) */
+        /* Flecha do capitão já fincada no centro do alvo: no impacto, as duas tremem juntinhas (empate, Issue #80) */
+        .rh2-cap-cima, .rh2-cap-baixo { transform-origin: 1169px 446px; }
+        .rh2-p5-palco.impacto .rh2-cap-cima,
+        .rh2-p5-palco.impacto .rh2-cap-baixo { animation: rh2FlechaTreme 0.5s ease-out; }
+        /* Flecha de Robin voando do arco (495, 407) até o centro do alvo, 9 px acima da do capitão (1169, 437) */
         .rh2-flecha-robin {
             opacity: 0;
             transform-origin: 1169px 446px;
@@ -149,10 +142,10 @@
         .rh2-p5-palco.disparou .rh2-rastro {
             animation: rh2RastroVoo 1.22s ease-out forwards;
         }
-        /* Explosão CRAC! + lascas douradas no centro do alvo */
+        /* Brilho do TOC! + lascas de palha no centro do alvo */
         .rh2-crac {
             opacity: 0;
-            transform-origin: 1169px 446px;
+            transform-origin: 1169px 441px;
             transform: scale(0.2);
         }
         .rh2-p5-palco.impacto .rh2-crac {
@@ -170,6 +163,11 @@
             96%  { opacity: 1; transform: translate3d(-6px, -2px, 0) rotate(2deg); }
             100% { opacity: 1; transform: translate3d(0px, 0px, 0) rotate(0deg); }
         }
+        @keyframes rh2FlechaTreme {
+            0%, 100% { transform: rotate(0deg); }
+            30% { transform: rotate(-2.5deg); }
+            65% { transform: rotate(1.5deg); }
+        }
         @keyframes rh2RastroVoo {
             0%   { opacity: 0; stroke-dashoffset: 220; }
             20%  { opacity: 0.75; }
@@ -186,6 +184,29 @@
             25% { transform: translate3d(-36.25%, -0.35%, 0); }
             55% { transform: translate3d(-37.05%, 0.25%, 0); }
             80% { transform: translate3d(-36.55%, -0.15%, 0); }
+        }
+
+        /* Cap. 17 (Pág. 6): a panorâmica 4:1 do desempate. O mundo tem o tamanho da imagem (4128 × 1024) e o JS
+           (RH2P6) escala e desloca com transform: a câmera anda acompanhando a flecha até o alvo lá no fim. */
+        #drop-zone-6 .scene-img { opacity: 0; }
+        .rh2-p6-palco {
+            position: absolute; inset: 0; overflow: hidden; z-index: 6; pointer-events: none;
+            background: #cfe3ee;
+        }
+        .rh2-p6-mundo {
+            position: absolute; left: 0; top: 0; width: 4128px; height: 1024px;
+            transform-origin: 0 0;
+            will-change: transform;
+        }
+        .rh2-p6-mundo > img { display: block; width: 100%; height: 100%; }
+        .rh2-p6-svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+        .rh2-p6-flecha { filter: drop-shadow(0 6px 5px rgba(30, 15, 5, 0.38)); }
+        .rh2-p6-estouro { opacity: 0; }
+        .rh2-p6-estouro.pop { animation: rh2P6Estouro 0.75s cubic-bezier(0.2, 1.35, 0.4, 1) forwards; }
+        @keyframes rh2P6Estouro {
+            0%   { opacity: 0; }
+            30%  { opacity: 1; }
+            100% { opacity: 0; }
         }
 
         @keyframes rh2SolRespira {
@@ -207,17 +228,20 @@
         @media (prefers-reduced-motion: reduce) {
             .camada[data-camada="c-sol-p1"] .camada-arte::before,
             .camada[data-camada="c-sol-p1"] .camada-arte::after,
-            .camada[data-camada="c-sol-p13"] .camada-arte::before,
-            .camada[data-camada="c-sol-p13"] .camada-arte::after,
+            .camada[data-camada="c-sol-p14"] .camada-arte::before,
+            .camada[data-camada="c-sol-p14"] .camada-arte::after,
             .camada[data-camada="c-brilho-p0"] .camada-arte::before,
             .camada[data-camada="c-brilho-p0"] .camada-arte::after,
-            .camada[data-camada="c-farinha-p6"] .camada-arte::before,
+            .camada[data-camada="c-farinha-p7"] .camada-arte::before,
             .camada[data-camada^="c-flamula-p4"] > .camada-arte,
-            .camada[data-camada="c-lenco-p10"] > .camada-arte,
+            .camada[data-camada="c-lenco-p11"] > .camada-arte,
             .rh2-p5-mundo,
             .rh2-flecha-robin,
             .rh2-rastro,
-            .rh2-crac {
+            .rh2-crac,
+            .rh2-cap-cima,
+            .rh2-cap-baixo,
+            .rh2-p6-estouro.pop {
                 animation: none !important;
                 transition: none !important;
             }
@@ -231,8 +255,278 @@
     <script>
     /* =========================================================================
        ROBIN HOOD — PARTE 2: A FLECHA DE OURO E O RESGATE NA TORRE (RASCUNHO)
-       Capa + 13 Capítulos (Caps. 12–24).
+       Capa + 14 Capítulos (Caps. 12–25). O Cap. 17 (desempate) entrou em 2026-11-28, Issues #80 e #81.
        ========================================================================= */
+    /* =========================================================================
+       CAP. 17 (Pág. 6): O DESEMPATE DE MAIS LONGE — câmera que "anda" pela panorâmica (Issues #80 e #81)
+       A ilustração é uma tira 4:1 (p6-panorama.webp). O "mundo" (imagem + SVG das flechas) tem o tamanho da
+       imagem em pixels e é escalado/deslocado por JS para caber na cena 16:9: a câmera é { cx, cy, z } em pixels
+       da imagem (centro e zoom). Um único requestAnimationFrame toca a "cena" pedida: a flecha do capitão
+       (curta, acerta pertinho), a de Robin (longa, a câmera acompanha da esquerda até o alvo lá no fim) e os
+       gestos PUXA / MIRA. Com prefers-reduced-motion, nada viaja: a flecha aparece cravada e a câmera corta.
+       ========================================================================= */
+    const RH2P6 = (() => {
+        const W = 4128, H = 1024;                         // pixels da panorâmica
+        const ALVO = { x: 3915, y: 620 };               // centro do miolo amarelo
+        const ACERTO_GUARDA = { x: 3905, y: 578 };      // pertinho do centro (no vermelho, colado no amarelo)
+        const ARCO_ROBIN = { x: 690, y: 532, ang: -0.5 };   // ponta da flecha encaixada no arco
+        const ARCO_GUARDA = { x: 1310, y: 505 };        // onde a flecha do capitão sai
+        const ESCALA_LONGE = 0.5;                            // a flecha fica menor lá no alvo (longe)
+        // Cravada, a flecha é vista quase de frente (o alvo olha para o leitor): um toquinho curto, com as penas,
+        // que não passa por cima do juiz parado ao lado do alvo
+        const CRAVADA = [0.2, 0.5];
+        const ZOOM_ALVO = 1.9;
+        const VISTA = H * 16 / 9;                            // largura vista pela cena 16:9 com zoom 1
+        const INICIO = { cx: VISTA / 2, cy: H / 2, z: 1 };
+        const reduzido = () => window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const lerp = (a, b, t) => a + (b - a) * t;
+        const suave = (t) => t * t * (3 - 2 * t);
+        const st = {
+            cam: { ...INICIO },
+            robin: { modo: 'arco', puxada: 0 },              // 'arco' | 'voando' | 'cravada'
+            guarda: { modo: 'oculta' },                      // 'oculta' | 'voando' | 'cravada'
+            cena: null, t0: 0, quadro: 0, api: null
+        };
+        const el = (id) => document.getElementById(id);
+
+        function aplicarCamera() {
+            const palco = el('rh2-p6-palco'), mundo = el('rh2-p6-mundo');
+            if (!palco || !mundo) return;
+            const bw = palco.clientWidth, bh = palco.clientHeight;
+            if (!bw || !bh) return;
+            const s = (bh / H) * st.cam.z;
+            let tx = bw / 2 - st.cam.cx * s, ty = bh / 2 - st.cam.cy * s;
+            tx = Math.min(0, Math.max(bw - W * s, tx));
+            ty = Math.min(0, Math.max(bh - H * s, ty));
+            const tremor = st.tremor ? st.tremor() : 0;
+            mundo.style.transform = `translate3d(${(tx + tremor).toFixed(2)}px, ${ty.toFixed(2)}px, 0) scale(${s.toFixed(5)})`;
+        }
+
+        // Posição da flecha numa trajetória: do arco (S) ao alvo (E), com um arco de altura h; e de 0 a 1
+        function naTrajetoria(S, E, h, e) {
+            const x = lerp(S.x, E.x, e), y = lerp(S.y, E.y, e) - 4 * h * e * (1 - e);
+            const dx = E.x - S.x, dy = (E.y - S.y) - 4 * h * (1 - 2 * e);
+            return { x, y, ang: Math.atan2(dy, dx) * 180 / Math.PI };
+        }
+        function porFlecha(id, p, escala, visivel) {
+            const g = el(id);
+            if (!g) return;
+            g.setAttribute('transform', `translate(${p.x.toFixed(1)} ${p.y.toFixed(1)}) rotate(${p.ang.toFixed(2)}) scale(${[].concat(escala).map(v => v.toFixed(3)).join(' ')})`);
+            g.style.opacity = visivel ? '1' : '0';
+        }
+        function rastro(S, E, h, e, ligado) {
+            const r = el('rh2-p6-rastro');
+            if (!r) return;
+            if (!ligado || e <= 0.02) { r.setAttribute('d', ''); return; }
+            const pts = [];
+            for (let k = 0; k <= 10; k++) {
+                const q = naTrajetoria(S, E, h, Math.max(0, e - 0.11 * (1 - k / 10)));
+                pts.push(`${q.x.toFixed(1)},${q.y.toFixed(1)}`);
+            }
+            r.setAttribute('d', 'M' + pts.join(' L'));
+        }
+
+        // Desenha as flechas paradas conforme o estado (fora das viagens)
+        function desenharParadas() {
+            const rb = st.robin;
+            if (rb.modo === 'arco') porFlecha('rh2-p6-flecha-robin', { x: ARCO_ROBIN.x - 34 * rb.puxada, y: ARCO_ROBIN.y, ang: ARCO_ROBIN.ang }, 1, true);
+            if (rb.modo === 'cravada') porFlecha('rh2-p6-flecha-robin', { x: ALVO.x + 4, y: ALVO.y, ang: -4 }, CRAVADA, true);
+            const gd = st.guarda;
+            if (gd.modo === 'oculta') porFlecha('rh2-p6-flecha-guarda', { ...ARCO_GUARDA, ang: 0 }, 1, false);
+            if (gd.modo === 'cravada') porFlecha('rh2-p6-flecha-guarda', { x: ACERTO_GUARDA.x + 4, y: ACERTO_GUARDA.y, ang: 6 }, CRAVADA, true);
+        }
+
+        function estouro(x, y, forte) {
+            const g = el('rh2-p6-estouro');
+            if (!g) return;
+            g.setAttribute('transform', `translate(${x} ${y}) scale(${forte ? 1 : 0.7})`);
+            g.classList.remove('pop');
+            void g.getBoundingClientRect();
+            g.classList.add('pop');
+            if (st.api && st.api.faiscas) {
+                const palco = el('rh2-p6-palco'), mundo = el('rh2-p6-mundo');
+                const r = palco.getBoundingClientRect();
+                const m = new DOMMatrix(getComputedStyle(mundo).transform);
+                st.api.faiscas(r.left + m.a * x + m.e, r.top + m.d * y + m.f);
+            }
+        }
+
+        // Toca uma cena: { dur (ms), passo(t 0..1), fim() }. Uma cena nova substitui a que estiver tocando.
+        function tocar(cena) {
+            cancelAnimationFrame(st.quadro);
+            st.cena = cena;
+            st.t0 = performance.now();
+            const quadro = (agora) => {
+                if (st.cena !== cena) return;
+                const t = Math.min(1, (agora - st.t0) / cena.dur);
+                cena.passo(t);
+                aplicarCamera();
+                if (t < 1) st.quadro = requestAnimationFrame(quadro);
+                else { st.cena = null; if (cena.fim) cena.fim(); aplicarCamera(); }
+            };
+            st.quadro = requestAnimationFrame(quadro);
+        }
+        function parar() { cancelAnimationFrame(st.quadro); st.cena = null; st.tremor = null; }
+
+        // A câmera desliza de onde está até `alvo` ({ cx, cy, z }) em `dur` ms, e depois chama `depois`
+        function deslizar(alvo, dur, depois) {
+            const de = { ...st.cam };
+            if (reduzido()) { st.cam = { ...alvo }; aplicarCamera(); if (depois) depois(); return; }
+            tocar({ dur, passo: (t) => {
+                const e = suave(t);
+                st.cam = { cx: lerp(de.cx, alvo.cx, e), cy: lerp(de.cy, alvo.cy, e), z: lerp(de.z, alvo.z, e) };
+            }, fim: depois });
+        }
+
+        function tremerAlvo(ms) {
+            const t0 = performance.now();
+            st.tremor = () => {
+                const t = (performance.now() - t0) / ms;
+                if (t >= 1) { st.tremor = null; return 0; }
+                return Math.sin(t * 28) * 5 * (1 - t);
+            };
+            const laco = () => { aplicarCamera(); if (st.tremor) requestAnimationFrame(laco); };
+            requestAnimationFrame(laco);
+        }
+
+        // Voo de uma flecha com a câmera acompanhando
+        function voar({ id, S, E, h, dur, aoCravar }) {
+            const camDe = { ...st.cam };
+            const lead = VISTA * 0.22;
+            tocar({ dur, passo: (t) => {
+                const e = t * (1.12 - 0.12 * t);   // quase constante, freando um tiquinho no fim
+                const p = naTrajetoria(S, E, h, e);
+                // a câmera vai buscando a flecha (com folga na frente) e, no fim, fecha no alvo
+                const pega = suave(Math.min(1, t / 0.18));
+                const fecha = suave(Math.max(0, (t - 0.8) / 0.2));
+                const esc = lerp(1, ESCALA_LONGE, e);
+                const vira = suave(Math.max(0, (e - 0.9) / 0.1));   // no fim, encurta para o "toquinho" cravado
+                porFlecha(id, p, [esc * lerp(1, CRAVADA[0] / ESCALA_LONGE, vira), esc], true);
+                rastro(S, E, h, e, true);
+                const cxVoo = p.x + lead * (1 - e);
+                st.cam = {
+                    cx: lerp(lerp(camDe.cx, cxVoo, pega), E.x, fecha),
+                    cy: lerp(lerp(camDe.cy, H / 2, pega), E.y, fecha),
+                    z: lerp(lerp(camDe.z, 1, pega), ZOOM_ALVO, fecha)
+                };
+            }, fim: () => { rastro(S, E, h, 1, false); aoCravar(); } });
+        }
+
+        function legenda(texto) {
+            const b = el('lens-badge-6');
+            if (b && texto) b.textContent = texto;
+        }
+
+        // ---- ações da página -------------------------------------------------------------------
+        function tiroDoGuarda(api) {
+            st.api = api;
+            parar();
+            if (st.robin.modo !== 'arco') { st.robin.modo = 'arco'; st.robin.puxada = 0; }
+            st.guarda.modo = 'voando';
+            desenharParadas();
+            const E = { x: ACERTO_GUARDA.x + 4, y: ACERTO_GUARDA.y };
+            const cravar = () => {
+                st.guarda.modo = 'cravada';
+                desenharParadas();
+                if (api.som) api.som('crunch');
+                estouro(ACERTO_GUARDA.x, ACERTO_GUARDA.y, false);
+                legenda('Fiuuu... Pertinho do Centro! Impossível Fazer Melhor?');
+            };
+            if (reduzido()) { cravar(); return; }
+            if (api.som) api.som('windGust');
+            legenda('Fiuuu! A Flecha do Capitão Atravessa a Praça...');
+            deslizar(INICIO, 450, () => voar({
+                id: 'rh2-p6-flecha-guarda', S: ARCO_GUARDA, E, h: 150, dur: 3400,
+                aoCravar: () => {
+                    cravar();
+                    tremerAlvo(420);
+                    // mostra o acerto um instante e volta para a fila dos arqueiros (o Xerife fala lá do palanque)
+                    setTimeout(() => { if (!st.cena && st.robin.modo === 'arco') deslizar(INICIO, 1700); }, 1500);
+                }
+            }));
+        }
+
+        function tiroDeRobin(api) {
+            st.api = api;
+            parar();
+            const atirar = () => {
+                if (st.guarda.modo !== 'cravada') { st.guarda.modo = 'cravada'; desenharParadas(); }
+                st.robin.modo = 'voando';
+                const S = { x: ARCO_ROBIN.x - 34 * st.robin.puxada, y: ARCO_ROBIN.y };
+                const E = { x: ALVO.x + 4, y: ALVO.y };
+                const cravar = () => {
+                    st.robin.modo = 'cravada';
+                    st.robin.puxada = 0;
+                    desenharParadas();
+                    if (api.som) { api.som('crunch'); setTimeout(() => api.som('fanfare'), 260); }
+                    estouro(ALVO.x, ALVO.y, true);
+                    legenda('TUC! Bem no Centro do Alvo! Robin Venceu!');
+                };
+                if (reduzido()) { cravar(); st.cam = { cx: ALVO.x, cy: ALVO.y, z: ZOOM_ALVO }; aplicarCamera(); return; }
+                if (api.som) api.som('windGust');
+                legenda('ZUP! A Flecha de Robin Voa Longe, Longe...');
+                voar({ id: 'rh2-p6-flecha-robin', S, E, h: 260, dur: 5600, aoCravar: () => { cravar(); tremerAlvo(520); } });
+            };
+            // Já atirou antes: a câmera volta para Robin, a flecha volta para o arco, e ele atira de novo
+            if (st.robin.modo === 'cravada' || st.cam.z !== 1 || st.cam.cx > INICIO.cx + 1) {
+                st.robin.modo = 'arco';
+                desenharParadas();
+                legenda('Robin mira de novo...');
+                deslizar(INICIO, 900, atirar);
+            } else atirar();
+        }
+
+        function puxar(api) {
+            st.api = api;
+            if (st.robin.modo !== 'arco') { parar(); st.robin.modo = 'arco'; st.cam = { ...st.cam }; deslizar(INICIO, 700); }
+            if (api.som) api.som('crunch');
+            legenda('Puxa... a corda estica até a orelha!');
+            if (reduzido()) { st.robin.puxada = 1; desenharParadas(); return; }
+            const de = st.robin.puxada;
+            const t0 = performance.now();
+            const laco = (agora) => {
+                const t = Math.min(1, (agora - t0) / 600);
+                st.robin.puxada = lerp(de, 1, suave(t));
+                if (st.robin.modo === 'arco') desenharParadas();
+                if (t < 1) requestAnimationFrame(laco);
+            };
+            requestAnimationFrame(laco);
+        }
+
+        function mirar(api) {
+            st.api = api;
+            legenda('Mira... lá longe, bem no meio!');
+            if (api.som) api.som('lensMagic');
+            // a câmera chega pertinho do olho de Robin e depois espia o alvo lá no fim da praça
+            deslizar({ cx: ARCO_ROBIN.x - 120, cy: ARCO_ROBIN.y - 60, z: 1.35 }, 900);
+        }
+
+        function reiniciar() {
+            parar();
+            st.robin = { modo: 'arco', puxada: 0 };
+            st.guarda = { modo: 'oculta' };
+            st.cam = { ...INICIO };
+            rastro(null, null, 0, 0, false);
+            desenharParadas();
+            aplicarCamera();
+        }
+
+        // Começo: flechas no lugar e câmera na fila dos arqueiros; acompanha mudanças de tamanho (retrato ↔ paisagem)
+        function iniciar() {
+            if (!el('rh2-p6-palco')) return false;
+            desenharParadas();
+            aplicarCamera();
+            if (window.ResizeObserver) new ResizeObserver(aplicarCamera).observe(el('rh2-p6-palco'));
+            else window.addEventListener('resize', aplicarCamera);
+            return true;
+        }
+        if (typeof document !== 'undefined') {
+            const tentar = () => { if (!iniciar()) setTimeout(tentar, 120); };
+            if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', tentar); else tentar();
+        }
+        return { tiroDoGuarda, tiroDeRobin, puxar, mirar, reiniciar, estado: st };
+    })();
+
     window.LIVRO = {
         obra: 'Robin Hood',
         autor: 'Howard Pyle e lendas tradicionais',
@@ -387,27 +681,27 @@
                 }
             },
             {
-                capitulo: '🎯 Capítulo 16 • A Flecha que Partiu a Flecha', corCapitulo: 'text-amber-700',
-                titulo: 'Um Tiro de Cair o Queixo',
+                capitulo: '🎯 Capítulo 16 • Duas Flechas no Meio do Alvo', corCapitulo: 'text-amber-700',
+                titulo: 'Um Empate de Cair o Queixo',
                 comandoAtividade: 'Ajude Robin a fazer o tiro mais difícil do campeonato! Toque no cartão para soltar a flecha!',
                 texto: `A {{DISPUTA|DIS • PU • TA|🏆}} começou! Uma arqueira da vila soltou a flecha, fiuuu, e acertou pertinho do centro. Depois, o capitão dos guardas acertou no meio do alvo. Lá no palanque, o Xerife estufou o peito feito um pombo. Ninguém ia vencer o guarda dele!
 
-                    Chegou a vez do viajante de manto marrom. Robin puxou a {{CORDA|COR • DA|🪢}} do arco. Nessa hora, a barba de lã fez cócegas no nariz dele! — Aaa… aaa… A barba fofa subia e descia. Robin torceu o nariz para um lado, depois para o outro, e prendeu o ar. Ufa! O espirro voltou para dentro. Ele respirou fundo e mirou firme.
+                    Chegou a vez do viajante de manto marrom. Robin puxou a {{CORDA|COR • DA|🪢}} do arco. Nessa hora, a barba de lã fez cócegas no nariz dele. Aaa… aaa… lá vinha um espirro! A barba fofa subia e descia. Robin torceu o nariz para um lado, depois para o outro, e prendeu o ar. Ufa! O espirro voltou para dentro. Ele respirou fundo e mirou firme.
 
-                    ZUP! A flecha voou reta e, CRAC, partiu a flecha do capitão bem ao meio! Depois, fincou no coração do alvo. Por um segundinho, a praça ficou muda. Então explodiu em {{PALMAS|PAL • MAS|👏}}, assobios e gritos de espanto!
+                    ZUP! A flecha voou reta e, TOC, cravou no meio do alvo, coladinha na flecha do capitão! Por um segundinho, a praça ficou muda. Então explodiu em palmas e assobios! O juiz do campeonato correu até o alvo, olhou bem de perto e coçou a cabeça. As duas flechas estavam no centro, juntinhas feito irmãs gêmeas.
 
-                    Sem desconfiar de nada, o Xerife desceu do palanque com cara de quem chupou limão e entregou a Flecha de Ouro ao viajante. Robin fez uma reverência exagerada, quase varrendo o chão com a barba. Só que, ao se abaixar, a aba do chapéu subiu um tiquinho. E um guarda, ali perto, arregalou os olhos!`,
+                    O juiz rufou o tambor, tum, tum, tum, e anunciou: era um {{EMPATE|EM • PA • TE|⚖️}}! Ia ter desempate, e de mais longe ainda! O Xerife esfregou as mãos, todo confiante. Os guardas pegaram o alvo de palha e foram carregando, carregando, até o fim da praça. Robin ajeitou o chapéu largo e coçou a barba de lã. Agora, sim, ia ser difícil!`,
                 cena: {
                     real: 'p5-panoramico.webp', emoji: '🎯',
-                    alt: 'Na praça panorâmica de Nortigão, Robin disfarçado mira à esquerda enquanto a plateia diversa e o Xerife acompanham o voo da flecha até partir a flecha do capitão no centro do alvo de palha à direita',
+                    alt: 'Na praça panorâmica de Nortigão, Robin disfarçado mira à esquerda enquanto a plateia diversa e o Xerife acompanham o voo da flecha até cravar no centro do alvo de palha, coladinha na flecha do capitão: empate',
                     legendaReal: '🎯 Robin Mira no Alvo... Toque em ATIRAR!',
                     extra: `<div id="rh2-p5-palco" class="rh2-p5-palco" aria-hidden="true">
                         <div class="rh2-p5-mundo">
                             <img src="./imagens/parte-2/p5-panoramico.webp" alt="" draggable="false" />
                             <svg class="rh2-p5-svg" viewBox="0 0 1376 768" xmlns="http://www.w3.org/2000/svg">
                                 <!-- Rastro suave de vento da flecha em voo -->
-                                <path class="rh2-rastro" d="M495 407 Q830 375 1169 446" fill="none" stroke="#FFF7D6" stroke-width="5" stroke-linecap="round" />
-                                <!-- Flecha do capitão (já fincada no centro dourado 1169,446; parte-se em V no impacto!) -->
+                                <path class="rh2-rastro" d="M495 407 Q830 366 1169 437" fill="none" stroke="#FFF7D6" stroke-width="5" stroke-linecap="round" />
+                                <!-- Flecha do capitão (já fincada no centro dourado 1169,446) -->
                                 <g class="rh2-cap-cima">
                                     <polygon points="1044,441 1169,442 1169,446 1044,446" fill="#B89B72"/>
                                     <polygon points="1032,431 1068,442 1054,445 1026,437" fill="#64748B"/>
@@ -418,8 +712,8 @@
                                     <polygon points="1032,461 1068,450 1054,447 1026,455" fill="#475569"/>
                                     <polygon points="1050,460 1078,450 1068,448 1044,456" fill="#64748B"/>
                                 </g>
-                                <!-- Flecha de Robin (dispara do arco até cravar bem no meio das duas metades!) -->
-                                <g class="rh2-flecha-robin">
+                                <!-- Flecha de Robin (dispara do arco e crava coladinha logo acima da do capitão: empate!) -->
+                                <g transform="translate(0 -9)"><g class="rh2-flecha-robin">
                                     <rect x="1032" y="443" width="128" height="6" rx="2.5" fill="#9A5B2C"/>
                                     <rect x="1032" y="443" width="128" height="2.5" rx="1" fill="#C47D44"/>
                                     <polygon points="1156,439 1173,446 1156,453" fill="#D97706"/>
@@ -427,10 +721,10 @@
                                     <polygon points="1018,459 1052,449 1038,446 1012,453" fill="#B91C1C"/>
                                     <polygon points="1036,434 1062,443 1050,445 1030,438" fill="#F59E0B"/>
                                     <polygon points="1036,458 1062,449 1050,447 1030,454" fill="#D97706"/>
-                                </g>
-                                <!-- Efeito CRAC! (brilho dourado + lascas de madeira no ponto de impacto 1169,446) -->
-                                <g class="rh2-crac">
-                                    <polygon points="1169,398 1179,430 1212,422 1188,446 1212,470 1179,462 1169,494 1159,462 1126,470 1150,446 1126,422 1159,430" fill="#FDE047" opacity="0.92"/>
+                                </g></g>
+                                <!-- Efeito TOC! (brilho dourado + lascas de palha no ponto de impacto, entre as duas flechas) -->
+                                <g class="rh2-crac" transform="translate(0 -5)">
+                                    <polygon points="1169,412 1176,434 1199,428 1183,446 1199,464 1176,458 1169,480 1162,458 1139,464 1155,446 1139,428 1162,434" fill="#FDE047" opacity="0.92"/>
                                     <polygon points="1132,412 1146,420 1138,426" fill="#C47D44"/>
                                     <polygon points="1130,478 1145,470 1138,464" fill="#A16227"/>
                                     <polygon points="1195,416 1208,408 1202,422" fill="#F59E0B"/>
@@ -439,6 +733,16 @@
                             </svg>
                         </div>
                     </div>`,
+                    // A flecha voa sozinha quando a narração chega ao "ZUP!" (Issue #80, AGENTS §2.2.1 `narracaoAcoes`)
+                    narracaoAcoes: [{ em: { paragrafo: 3, palavra: 'ZUP' }, acao: 'atirarFlecha', item: 'atirar' }],
+                    aoReiniciar: () => {
+                        const palco = document.getElementById('rh2-p5-palco');
+                        if (!palco) return;
+                        clearTimeout(palco._tImpacto);
+                        clearTimeout(palco._tReset);
+                        palco.dataset.voando = '0';
+                        palco.classList.remove('disparou', 'impacto');
+                    },
                     cartoes: {
                         tipo: 'acao',
                         itens: [
@@ -448,12 +752,84 @@
                     hotspots: [
                         { x: 14, y: 38, w: 22, h: 46, palavra: 'CORDA', emoji: '🪢' },
                         { x: 42, y: 36, w: 22, h: 42, palavra: 'DISPUTA', emoji: '🏆' },
-                        { x: 74, y: 42, w: 22, h: 44, palavra: 'PALMAS', emoji: '👏' }
+                        { x: 74, y: 42, w: 22, h: 44, palavra: 'EMPATE', emoji: '⚖️' }
                     ]
                 }
             },
             {
-                capitulo: '🎀 Capítulo 17 • Chuva de Fitas Escarlates', corCapitulo: 'text-rose-700',
+                capitulo: '🏹 Capítulo 17 • O Desempate de Mais Longe', corCapitulo: 'text-sky-700',
+                titulo: 'Impossível Fazer Melhor?',
+                comandoAtividade: 'Ajude Robin a lembrar o segredo dos arqueiros! Toque nas palavras na mesma ordem em que Grilo cochichou.',
+                texto: `Lá no fim da praça, os guardas fincaram o alvo no chão. Era tão longe que a bolinha dourada do meio parecia um botãozinho de camisa! Que {{DISTÂNCIA|DIS • TÂN • CI • A|📏}}! As crianças subiram nos ombros dos pais para enxergar, e as bandeirinhas dançavam lá no alto.
+
+                    O capitão atirou primeiro. Molhou a ponta do dedo e ergueu no ar, para sentir o {{VENTO|VEN • TO|🍃}}. Puxou a corda e soltou: fiuuu! A flecha atravessou a praça inteira e acertou bem pertinho do meio, a um dedinho só. O Xerife bateu palmas lá do palanque: — Daquela distância, é impossível fazer melhor!
+
+                    Robin nem respondeu. No meio do povo, Grilo cruzou os dedos e cochichou o segredo dos arqueiros de Xervedo: — Puxa, mira, solta! Robin puxou a corda até a orelha, mirou bem devagar e soltou. ZUP! A flecha subiu por cima dos chapéus, das barracas e das bandeiras, e foi, e foi, e foi… TUC! Cravou bem no {{CENTRO|CEN • TRO|🎯}} do alvo!
+
+                    A praça explodiu em palmas e assobios! Sem desconfiar de nada, o Xerife desceu do palanque com cara de quem chupou limão e entregou a Flecha de Ouro ao viajante. Robin fez uma reverência exagerada, quase varrendo o chão com a barba. Só que, ao se abaixar, a aba do chapéu subiu um tiquinho. E um guarda, ali perto, arregalou os olhos!`,
+                cena: {
+                    real: 'p6-panorama.webp', emoji: '🏹',
+                    alt: 'Numa praça de Nortigão bem comprida, Robin disfarçado de viajante de manto marrom e barba de lã mira lá da fila dos arqueiros, ao lado do capitão dos guardas e do Xerife no palanque, enquanto o povo olha para o alvo de palha lá longe, no fim da praça',
+                    legendaReal: '🏹 O Desempate de Mais Longe!',
+                    // A câmera anda pela panorâmica acompanhando cada flecha (RH2P6, no começo deste script).
+                    // A narração dispara os tiros no ponto certo da história (Issue #80, AGENTS §2.2.1 `narracaoAcoes`)
+                    narracaoAcoes: [
+                        { em: { paragrafo: 2, palavra: 'FIUUU' }, acao: 'tiroDoGuardaP6' },
+                        { em: { paragrafo: 3, palavra: 'ZUP' }, acao: 'tiroDeRobinP6', item: 'solta' }
+                    ],
+                    narracaoEtapas: false,
+                    aoReiniciar: () => RH2P6.reiniciar(),
+                    extra: `<div id="rh2-p6-palco" class="rh2-p6-palco" aria-hidden="true">
+                        <div id="rh2-p6-mundo" class="rh2-p6-mundo">
+                            <img src="./imagens/parte-2/p6-panorama.webp" alt="" draggable="false" />
+                            <svg class="rh2-p6-svg" viewBox="0 0 4128 1024" xmlns="http://www.w3.org/2000/svg">
+                                <path id="rh2-p6-rastro" d="" fill="none" stroke="#FFF7D6" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" opacity="0.7" />
+                                <!-- Flecha do capitão (penas cinzentas): a ponta fica na origem e aponta para a direita -->
+                                <g id="rh2-p6-flecha-guarda" class="rh2-p6-flecha" style="opacity:0">
+                                    <rect x="-330" y="-6" width="318" height="12" rx="5" fill="#8C714D"/>
+                                    <rect x="-330" y="-6" width="318" height="5" rx="2" fill="#B89B72"/>
+                                    <polygon points="-18,-17 16,0 -18,17" fill="#94A3B8"/>
+                                    <polygon points="-344,-26 -284,-6 -306,0 -352,-14" fill="#64748B"/>
+                                    <polygon points="-344,26 -284,6 -306,0 -352,14" fill="#475569"/>
+                                </g>
+                                <!-- Flecha de Robin (penas vermelhas, como as da aljava dele) -->
+                                <g id="rh2-p6-flecha-robin" class="rh2-p6-flecha">
+                                    <rect x="-330" y="-6" width="318" height="12" rx="5" fill="#9A5B2C"/>
+                                    <rect x="-330" y="-6" width="318" height="5" rx="2" fill="#C47D44"/>
+                                    <polygon points="-18,-17 16,0 -18,17" fill="#D97706"/>
+                                    <polygon points="-344,-26 -284,-6 -306,0 -352,-14" fill="#DC2626"/>
+                                    <polygon points="-344,26 -284,6 -306,0 -352,14" fill="#B91C1C"/>
+                                    <polygon points="-322,-20 -280,-6 -294,-2 -328,-12" fill="#F59E0B"/>
+                                </g>
+                                <!-- Brilho do acerto (TUC!) -->
+                                <g id="rh2-p6-estouro" class="rh2-p6-estouro">
+                                    <polygon points="0,-62 12,-20 52,-30 24,0 52,30 12,20 0,62 -12,20 -52,30 -24,0 -52,-30 -12,-20" fill="#FDE047" opacity="0.92"/>
+                                    <polygon points="-48,-38 -30,-30 -40,-22" fill="#E7C46A"/>
+                                    <polygon points="-46,40 -28,30 -38,24" fill="#D9A441"/>
+                                    <polygon points="40,-40 58,-48 50,-30" fill="#F59E0B"/>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>`,
+                    hotspots: [
+                        { x: 34, y: 54, w: 32, h: 30, palavra: 'DISTÂNCIA', emoji: '📏' },
+                        { x: 30, y: 2, w: 40, h: 18, palavra: 'VENTO', emoji: '🍃' },
+                        { x: 80, y: 30, w: 18, h: 44, palavra: 'CENTRO', emoji: '🎯' }
+                    ],
+                    cartoes: {
+                        tipo: 'ordem',
+                        faixaVazia: 'O que Robin faz primeiro?',
+                        ordem: ['puxa', 'mira', 'solta'],
+                        itens: [
+                            { id: 'mira', palavra: 'MIRA', emoji: '🏹', acao: 'mirarP6' },
+                            { id: 'solta', palavra: 'SOLTA', emoji: '🏹', acao: 'tiroDeRobinP6' },
+                            { id: 'puxa', palavra: 'PUXA', emoji: '🏹', acao: 'puxarP6' }
+                        ]
+                    }
+                }
+            },
+            {
+                capitulo: '🎀 Capítulo 18 • Chuva de Fitas Escarlates', corCapitulo: 'text-rose-700',
                 titulo: 'Uma Fuga Colorida e Sem Briga',
                 texto: `O guarda apontou para o rosto debaixo do chapéu e berrou: — É Robin Hood! Peguem esse homem! O Xerife arregalou os olhos, ficou roxo de raiva e correu para tomar de volta a Flecha de Ouro.
 
@@ -463,11 +839,11 @@
 
                     Ninguém se machucou: era só fita, farinha e risada. No meio da bagunça, Robin guardou a Flecha de Ouro debaixo do manto e correu com os amigos. Foi uma {{FUGA|FU • GA|💨}} rapidinha até as árvores de Xervedo! Enquanto isso, Clara voltou depressa pelas ruelas até a oficina, certinha de que ninguém tinha visto nada.`,
                 cena: {
-                    real: 'p6-real.webp', emoji: '🎀',
+                    real: 'p7-real.webp', emoji: '🎀',
                     alt: 'Na praça de Nortigão, fitas vermelho-escarlate enrolam dois guardas feito pacote de presente e uma nuvem de farinha deixa o Xerife branco feito boneco de neve enquanto o bando foge rindo',
                     legendaReal: '🎀 Fitas, Farinha e Risada na Praça!',
                     camadas: [
-                        { id: 'c-farinha-p6', fundo: 'transparent', x: 50, y: 100, w: 100, h: 100, z: 6 }
+                        { id: 'c-farinha-p7', fundo: 'transparent', x: 50, y: 100, w: 100, h: 100, z: 6 }
                     ],
                     hotspots: [
                         { x: 32, y: 38, w: 28, h: 36, palavra: 'FITA', emoji: '🎀' },
@@ -477,7 +853,7 @@
                 }
             },
             {
-                capitulo: '🔴 Capítulo 18 • A Cor que Entregou a Oficina', corCapitulo: 'text-rose-700',
+                capitulo: '🔴 Capítulo 19 • A Cor que Entregou a Oficina', corCapitulo: 'text-rose-700',
                 titulo: 'Uma Raiva que Não Quer Ouvir Ninguém',
                 texto: `Quando a poeira branca baixou, o Xerife bateu no manto: pof, pof, pof! Saiu farinha que dava para fazer um bolo. Depois, desamarrou os dois guardas emburrados, ainda enrolados feito presente. Ao dar um passo, tropeçou num rolo comprido de fita vermelha, viva feito brasa, e quase caiu de nariz no chão.
 
@@ -487,7 +863,7 @@
 
                     A tarde já ia embora quando os dois guardas marcharam pelas ruelas, toc, toc, toc, rumo à oficina das cores. Lá dentro, Clara dobrava seus panos, cantarolando. Nem desconfiava de que seu vermelho mais bonito tinha virado pista para o Xerife.`,
                 cena: {
-                    real: 'p7-real.webp', emoji: '🔴',
+                    real: 'p8-real.webp', emoji: '🔴',
                     alt: 'No fim de tarde na praça vazia, o Xerife ainda sujo de farinha ergue furioso a fita vermelho-escarlate e sussurra ordens secretas para dois guardas',
                     legendaReal: '🔴 A Fita Escarlate e uma Ordem em Segredo',
                     hotspots: [
@@ -498,7 +874,7 @@
                 }
             },
             {
-                capitulo: '🚪 Capítulo 19 • A Oficina Vazia', corCapitulo: 'text-purple-700',
+                capitulo: '🚪 Capítulo 20 • A Oficina Vazia', corCapitulo: 'text-purple-700',
                 titulo: 'Onde Foi Parar Clara Escarlate?',
                 texto: `Na manhã seguinte, Lady Mariana e Grilo voltaram a Nortigão. Queriam contar a Clara, tintim por tintim, que todo mundo tinha escapado bem! Mas, quando dobraram a esquina, pararam de repente. A {{PORTA|POR • TA|🚪}} da oficina estava entreaberta, e os panos dos varais nem se mexiam.
 
@@ -508,7 +884,7 @@
 
                     Grilo coçou a cabeça e girou para um lado e para o outro, feito pião, sem saber para onde correr. Mariana respirou fundo e olhou bem devagar para o chão. — Correr sem rumo não adianta, Grilo. Primeiro, vamos procurar as pistas com calma!`,
                 cena: {
-                    real: 'p8-real.webp', emoji: '🚪',
+                    real: 'p9-real.webp', emoji: '🚪',
                     alt: 'Dentro da oficina vazia e revirada de Clara Escarlate, a tinta vermelha de flor e raiz está derramada junto aos panos azuis e amarelos enquanto Lady Mariana e Grilo entram preocupados pela porta entreaberta',
                     legendaReal: '🚪 A Oficina Revirada e o Sumiço de Clara',
                     hotspots: [
@@ -519,7 +895,7 @@
                 }
             },
             {
-                capitulo: '🔎 Capítulo 20 • Os Sinais no Caminho', corCapitulo: 'text-teal-700',
+                capitulo: '🔎 Capítulo 21 • Os Sinais no Caminho', corCapitulo: 'text-teal-700',
                 titulo: 'O Olhar de Quem Investiga',
                 voceSabia: 'Os peritos da vida real olham pistas pequenas, como pegadas no chão e fios de roupa, para descobrir o que aconteceu. Cada pedacinho conta uma parte da história!',
                 comandoAtividade: 'Ajude Mariana e Grilo a seguir as pistas! Toque nas palavras na mesma ordem em que as pistas aparecem no texto. A cada acerto, o bando chega mais perto de Clara.',
@@ -531,17 +907,17 @@
 
                     A trilha de retalhos subia, subia, até uma curva alta da estrada. Lá no topo do morro, cercada de nuvens douradas, apareceu a {{TORRE|TOR • RE|🗼}} Velha de pedra, alta e cinzenta. Grilo apertou a mão de Mariana: tinham achado o esconderijo de Clara!`,
                 cena: {
-                    real: 'p9-real.webp', emoji: '🔎',
+                    real: 'p10-real.webp', emoji: '🔎',
                     alt: 'Lady Mariana e Grilo agachados na ruela de pedra de Nortigão investigando as pistas deixadas por Clara Escarlate até localizar a Torre Velha',
                     legendaReal: '🔎 Seguindo as Pistas Até a Torre Velha!',
-                    precarregar: ['p9-stage-1.webp', 'p9-stage-2.webp', 'p9-stage-3.webp'],
+                    precarregar: ['p10-stage-1.webp', 'p10-stage-2.webp', 'p10-stage-3.webp'],
                     // Gravuras conduzidas pela narração (Issue #78, AGENTS §2.2.1): onde cada etapa começa na leitura
                     // a pegada vermelha, a cerca com o fio, a Torre Velha no morro
-                    narracaoEtapas: ['p9-s2', 'p9-s6', 'p9-s14'],
+                    narracaoEtapas: ['p10-s2', 'p10-s6', 'p10-s14'],
                     realCena: (st) => {
                         const n = st.usados.size;
                         if (n === 0) return null;
-                        const etapas = [null, 'p9-stage-1.webp', 'p9-stage-2.webp', 'p9-stage-3.webp'];
+                        const etapas = [null, 'p10-stage-1.webp', 'p10-stage-2.webp', 'p10-stage-3.webp'];
                         const legendas = [
                             null,
                             '👣 Pegadas Vermelhas na Ruela! Por aqui passaram os guardas!',
@@ -568,7 +944,7 @@
                 }
             },
             {
-                capitulo: '🧣 Capítulo 21 • O Lenço na Janela Alta', corCapitulo: 'text-rose-700',
+                capitulo: '🧣 Capítulo 22 • O Lenço na Janela Alta', corCapitulo: 'text-rose-700',
                 titulo: 'Clara Não Fica Esperando Parada',
                 texto: `Quando o céu ficou dourado de fim de tarde, Robin, Mariana, João Pequeno e Grilo chegaram pertinho da Torre Velha. Os quatro se esconderam atrás das árvores e prenderam a respiração. João Pequeno, grandão como era, precisou de dois troncos só para ele!
 
@@ -578,11 +954,11 @@
 
                     Agora, Clara balançava o lenço apontando para os fundos da torre. Era ali que o muro ficava mais baixo, bom para jogar uma corda. Lá embaixo, Robin piscou para ela, bem devagar: recado entendido! — Essa Clara pensa em tudo! — cochichou João Pequeno.`,
                 cena: {
-                    real: 'p10-real.webp', emoji: '🧣',
+                    real: 'p11-real.webp', emoji: '🧣',
                     alt: 'Ao entardecer diante da Torre Velha, Clara acena da janela alta com seu lenço vermelho-escarlate para Robin, Mariana, João Pequeno e Grilo escondidos na mata enquanto o guarda cochila na portinha',
                     legendaReal: '🧣 O Sinal de Clara na Janela da Torre',
                     camadas: [
-                        { id: 'c-lenco-p10', src: 'camadas/p10-lenco.webp', x: 48.4, y: 32.4, w: 8.5, z: 7, emoji: '🧣' }
+                        { id: 'c-lenco-p11', src: 'camadas/p11-lenco.webp', x: 48.4, y: 32.4, w: 8.5, z: 7, emoji: '🧣' }
                     ],
                     hotspots: [
                         { x: 42, y: 12, w: 16, h: 18, palavra: 'JANELA', emoji: '🪟' },
@@ -592,7 +968,7 @@
                 }
             },
             {
-                capitulo: '🪢 Capítulo 22 • Corda, Vento e Liberdade', corCapitulo: 'text-purple-700',
+                capitulo: '🪢 Capítulo 23 • Corda, Vento e Liberdade', corCapitulo: 'text-purple-700',
                 titulo: 'Um Resgate de Ponta de Pé',
                 comandoAtividade: 'Ajude no resgate silencioso na Torre Velha! Olhe a figura lá em cima e toque na palavra certa. Cuidado com as pegadinhas!',
                 texto: `Quando a lua redonda subiu no céu, o guarda da portinha começou a roncar: rrronc, pfff! Uma folha seca caiu rodopiando, bem na ponta do nariz dele. O nariz tremeu, tremeu… — Atchinf! — fez o guarda, dormindo. A folha voou longe, e ele roncou ainda mais alto! Sem fazer barulho, o bando correu para os fundos da Torre Velha.
@@ -603,17 +979,17 @@
 
                     Os cinco amigos deram as mãos e saíram na ponta dos pés: um passinho, outro passinho. Em poucos segundos, sumiram juntos no escuro da {{FLORESTA|FLO • RES • TA|🌳}} de Xervedo. E o guarda? Continuava lá no banco, roncando feito um urso no inverno.`,
                 cena: {
-                    real: 'p11-real.webp', emoji: '🪢',
+                    real: 'p12-real.webp', emoji: '🪢',
                     alt: 'À noite nos fundos da Torre Velha, o bando lança uma corda para Clara descer em segurança, entrega-lhe uma capa verde e foge silenciosamente para a Floresta de Xervedo',
                     legendaReal: '🪢 Resgate Silencioso Sob a Lua Cheia!',
-                    precarregar: ['p11-stage-1.webp', 'p11-stage-2.webp', 'p11-stage-3.webp'],
+                    precarregar: ['p12-stage-1.webp', 'p12-stage-2.webp', 'p12-stage-3.webp'],
                     // Gravuras conduzidas pela narração (Issue #78, AGENTS §2.2.1): onde cada etapa começa na leitura
                     // a corda na janela, a capa verde em Clara, os cinco sumindo na floresta
-                    narracaoEtapas: ['p11-s7', 'p11-s10', 'p11-s13'],
+                    narracaoEtapas: ['p12-s7', 'p12-s10', 'p12-s13'],
                     realCena: (st) => {
                         const n = st.usados.size;
                         if (n === 0) return null;
-                        const etapas = [null, 'p11-stage-1.webp', 'p11-stage-2.webp', 'p11-stage-3.webp'];
+                        const etapas = [null, 'p12-stage-1.webp', 'p12-stage-2.webp', 'p12-stage-3.webp'];
                         const legendas = [
                             null,
                             '🪢 Corda Firme na Janela! Clara Já Pode Descer!',
@@ -643,7 +1019,7 @@
                 }
             },
             {
-                capitulo: '🛏️ Capítulo 23 • O Ouro que Virou Cobertor', corCapitulo: 'text-amber-700',
+                capitulo: '🛏️ Capítulo 24 • O Ouro que Virou Cobertor', corCapitulo: 'text-amber-700',
                 titulo: 'Ninguém Passa Frio na Vila',
                 texto: `Na manhã seguinte, a Vila do Moinho acordou com cheiro de pão e barulho de risada. A Flecha de Ouro tinha sido trocada por moedas na cidade, e cada moedinha virou comida fresca e agasalho quentinho para quem mais precisava. O plano do Grande Carvalho tinha dado certo!
 
@@ -653,7 +1029,7 @@
 
                     Nas varandas, os vizinhos comentavam, orgulhosos: — O Bando Verde nunca esquece ninguém da vila! E as crianças já corriam pela rua, enroladas nos cobertores feito pasteizinhos, rindo à toa.`,
                 cena: {
-                    real: 'p12-real.webp', emoji: '🛏️',
+                    real: 'p13-real.webp', emoji: '🛏️',
                     alt: 'Na manhã ensolarada da Vila do Moinho, o bando de Robin Hood entrega cestas de pães, frutas e pilhas de cobertores coloridos para famílias diversas e crianças sorridentes',
                     legendaReal: '🛏️ Pão Quentinho e Cobertores para Toda a Vila!',
                     hotspots: [
@@ -664,7 +1040,7 @@
                 }
             },
             {
-                capitulo: '🍃 Capítulo 24 • Verde com Lenço Escarlate', corCapitulo: 'text-emerald-700',
+                capitulo: '🍃 Capítulo 25 • Verde com Lenço Escarlate', corCapitulo: 'text-emerald-700',
                 titulo: 'Uma Nova Companheira e Uma Ideia Maluca',
                 texto: `De volta ao Grande Carvalho, Clara Escarlate vestiu pela primeira vez a camisa verde da floresta. E o lenço vermelho? Continuou amarradinho no pescoço, mesmo curtinho. Daquela cor ela não abria mão de jeito nenhum! Clara deu uma voltinha para os amigos verem: — E então? Fiquei com cara de floresta?
 
@@ -674,11 +1050,11 @@
 
                     Robin coçou o queixo, e os olhos dele brilharam. — Tive uma ideia maluca! E se eu fosse à feira vestido de açougueiro, de avental e tudo, só para deixar o Xerife zonzo? João Pequeno deu uma gargalhada tão grande que até os passarinhos voaram do Grande Carvalho!`,
                 cena: {
-                    real: 'p13-real.webp', emoji: '🍃',
+                    real: 'p14-real.webp', emoji: '🍃',
                     alt: 'Debaixo do Grande Carvalho banhado de sol, Clara Escarlate de camisa verde e lenço vermelho-escarlate brinda canecas de madeira com Robin, Mariana, João Pequeno, Grilo e Mestre Tomé',
                     legendaReal: '🍃 Clara Escarlate Entra para o Bando Verde!',
                     camadas: [
-                        { id: 'c-sol-p13', fundo: 'transparent', x: 50, y: 100, w: 100, h: 100, z: 6 }
+                        { id: 'c-sol-p14', fundo: 'transparent', x: 50, y: 100, w: 100, h: 100, z: 6 }
                     ],
                     hotspots: [
                         { x: 34, y: 38, w: 28, h: 42, palavra: 'AMIZADE', emoji: '🤝' },
@@ -689,6 +1065,11 @@
             }
         ],
         acoes: {
+            // Cap. 17 (Pág. 6): o desempate (RH2P6, no começo deste script)
+            tiroDoGuardaP6: (api) => RH2P6.tiroDoGuarda(api),
+            tiroDeRobinP6: (api) => RH2P6.tiroDeRobin(api),
+            puxarP6: (api) => RH2P6.puxar(api),
+            mirarP6: (api) => RH2P6.mirar(api),
             atirarFlecha: (api, ctx) => {
                 const palco = document.getElementById('rh2-p5-palco');
                 const badge = document.getElementById('lens-badge-5');
@@ -709,10 +1090,10 @@
                         palco.classList.add('impacto');
                         palco.dataset.voando = '0';
                         if (api.som) api.som('fanfare');
-                        if (badge) badge.textContent = 'CRAC! A Flecha Partida Bem no Coração do Alvo!';
+                        if (badge) badge.textContent = 'TOC! Coladinha na Flecha do Capitão: Empate!';
                         if (api.faiscas) {
                             const rect = palco.getBoundingClientRect();
-                            api.faiscas(rect.left + rect.width * 0.76, rect.top + rect.height * 0.50);
+                            api.faiscas(rect.left + rect.width * 0.76, rect.top + rect.height * 0.49);
                         }
                         if (ctx && ctx.card) {
                             ctx.card.classList.remove('card-used', 'opacity-40', 'pointer-events-none');
@@ -733,19 +1114,6 @@
             }
         }
     };
-    if (typeof document !== 'undefined') {
-        document.addEventListener('click', (e) => {
-            if (e.target.closest('[data-reiniciar-pagina="5"]')) {
-                const palco = document.getElementById('rh2-p5-palco');
-                if (palco) {
-                    clearTimeout(palco._tImpacto);
-                    clearTimeout(palco._tReset);
-                    palco.dataset.voando = '0';
-                    palco.classList.remove('disparou', 'impacto');
-                }
-            }
-        });
-    }
     </script>
     <script src="../assets/js/texto.js"></script>
     <script src="../assets/js/livro.js"></script>

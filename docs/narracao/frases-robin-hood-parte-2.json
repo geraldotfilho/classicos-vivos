@@ -582,9 +582,9 @@
       "pagina": 5,
       "paragrafo": -1,
       "titulo": true,
-      "texto": "Capítulo 16. A Flecha que Partiu a Flecha. Um Tiro de Cair o Queixo",
-      "fala": "Capítulo 16. A Flecha que Partiu a Flecha. Um Tiro de Cair o Queixo",
-      "hash": "7d15dd6542"
+      "texto": "Capítulo 16. Duas Flechas no Meio do Alvo. Um Empate de Cair o Queixo",
+      "fala": "Capítulo 16. Duas Flechas no Meio do Alvo. Um Empate de Cair o Queixo",
+      "hash": "758cdddb9f"
     },
     {
       "id": "p5-s1",
@@ -646,17 +646,17 @@
       "id": "p5-s8",
       "pagina": 5,
       "paragrafo": 1,
-      "texto": "Nessa hora, a barba de lã fez cócegas no nariz dele!",
-      "fala": "Nessa hora, a barba de lã fez cócegas no nariz dele!",
-      "hash": "f2fadf1d66"
+      "texto": "Nessa hora, a barba de lã fez cócegas no nariz dele.",
+      "fala": "Nessa hora, a barba de lã fez cócegas no nariz dele.",
+      "hash": "a90848aefe"
     },
     {
       "id": "p5-s9",
       "pagina": 5,
       "paragrafo": 1,
-      "texto": "— Aaa… aaa…",
-      "fala": "Aaa… aaa…",
-      "hash": "9dccbbe0ea"
+      "texto": "Aaa… aaa… lá vinha um espirro!",
+      "fala": "Aaa… aaa… lá vinha um espirro!",
+      "hash": "26a3868bf8"
     },
     {
       "id": "p5-s10",
@@ -710,20 +710,12 @@
       "id": "p5-s16",
       "pagina": 5,
       "paragrafo": 2,
-      "texto": "A flecha voou reta e, CRAC, partiu a flecha do capitão bem ao meio!",
-      "fala": "A flecha voou reta e, CRAC, partiu a flecha do capitão bem ao meio!",
-      "hash": "8a85e65c1f"
+      "texto": "A flecha voou reta e, TOC, cravou no meio do alvo, coladinha na flecha do capitão!",
+      "fala": "A flecha voou reta e, TOC, cravou no meio do alvo, coladinha na flecha do capitão!",
+      "hash": "445edb3dc0"
     },
     {
       "id": "p5-s17",
-      "pagina": 5,
-      "paragrafo": 2,
-      "texto": "Depois, fincou no coração do alvo.",
-      "fala": "Depois, fincou no coração do alvo.",
-      "hash": "9dd6562892"
-    },
-    {
-      "id": "p5-s18",
       "pagina": 5,
       "paragrafo": 2,
       "texto": "Por um segundinho, a praça ficou muda.",
@@ -731,1128 +723,1337 @@
       "hash": "fa83d54d72"
     },
     {
+      "id": "p5-s18",
+      "pagina": 5,
+      "paragrafo": 2,
+      "texto": "Então explodiu em palmas e assobios!",
+      "fala": "Então explodiu em palmas e assobios!",
+      "hash": "5a7ea898d6"
+    },
+    {
       "id": "p5-s19",
       "pagina": 5,
       "paragrafo": 2,
-      "texto": "Então explodiu em PALMAS, assobios e gritos de espanto!",
-      "fala": "Então explodiu em palmas, assobios e gritos de espanto!",
-      "hash": "9e6dc2df09"
+      "texto": "O juiz do campeonato correu até o alvo, olhou bem de perto e coçou a cabeça.",
+      "fala": "O juiz do campeonato correu até o alvo, olhou bem de perto e coçou a cabeça.",
+      "hash": "2cb5da8a36"
     },
     {
       "id": "p5-s20",
       "pagina": 5,
-      "paragrafo": 3,
-      "texto": "Sem desconfiar de nada, o Xerife desceu do palanque com cara de quem chupou limão e entregou a Flecha de Ouro ao viajante.",
-      "fala": "Sem desconfiar de nada, o Xerife desceu do palanque com cara de quem chupou limão e entregou a Flecha de Ouro ao viajante.",
-      "hash": "07967610d9"
+      "paragrafo": 2,
+      "texto": "As duas flechas estavam no centro, juntinhas feito irmãs gêmeas.",
+      "fala": "As duas flechas estavam no centro, juntinhas feito irmãs gêmeas.",
+      "hash": "8a45236d29"
     },
     {
       "id": "p5-s21",
       "pagina": 5,
       "paragrafo": 3,
-      "texto": "Robin fez uma reverência exagerada, quase varrendo o chão com a barba.",
-      "fala": "Robin fez uma reverência exagerada, quase varrendo o chão com a barba.",
-      "hash": "5c24c97b75"
+      "texto": "O juiz rufou o tambor, tum, tum, tum, e anunciou: era um EMPATE!",
+      "fala": "O juiz rufou o tambor, tum, tum, tum, e anunciou: era um empate!",
+      "hash": "02f3e7fd46"
     },
     {
       "id": "p5-s22",
       "pagina": 5,
       "paragrafo": 3,
-      "texto": "Só que, ao se abaixar, a aba do chapéu subiu um tiquinho.",
-      "fala": "Só que, ao se abaixar, a aba do chapéu subiu um tiquinho.",
-      "hash": "3aa25eee87"
+      "texto": "Ia ter desempate, e de mais longe ainda!",
+      "fala": "Ia ter desempate, e de mais longe ainda!",
+      "hash": "b89104c0aa"
     },
     {
       "id": "p5-s23",
       "pagina": 5,
       "paragrafo": 3,
-      "texto": "E um guarda, ali perto, arregalou os olhos!",
-      "fala": "E um guarda, ali perto, arregalou os olhos!",
-      "hash": "2393cb49e2"
+      "texto": "O Xerife esfregou as mãos, todo confiante.",
+      "fala": "O Xerife esfregou as mãos, todo confiante.",
+      "hash": "8d49aed640"
+    },
+    {
+      "id": "p5-s24",
+      "pagina": 5,
+      "paragrafo": 3,
+      "texto": "Os guardas pegaram o alvo de palha e foram carregando, carregando, até o fim da praça.",
+      "fala": "Os guardas pegaram o alvo de palha e foram carregando, carregando, até o fim da praça.",
+      "hash": "789d55ed5c"
+    },
+    {
+      "id": "p5-s25",
+      "pagina": 5,
+      "paragrafo": 3,
+      "texto": "Robin ajeitou o chapéu largo e coçou a barba de lã.",
+      "fala": "Robin ajeitou o chapéu largo e coçou a barba de lã.",
+      "hash": "f68317e2f6"
+    },
+    {
+      "id": "p5-s26",
+      "pagina": 5,
+      "paragrafo": 3,
+      "texto": "Agora, sim, ia ser difícil!",
+      "fala": "Agora, sim, ia ser difícil!",
+      "hash": "5ef7327864"
     },
     {
       "id": "p6-s0",
       "pagina": 6,
       "paragrafo": -1,
       "titulo": true,
-      "texto": "Capítulo 17. Chuva de Fitas Escarlates. Uma Fuga Colorida e Sem Briga",
-      "fala": "Capítulo 17. Chuva de Fitas Escarlates. Uma Fuga Colorida e Sem Briga",
-      "hash": "b98dbfc32a"
+      "texto": "Capítulo 17. O Desempate de Mais Longe. Impossível Fazer Melhor?",
+      "fala": "Capítulo 17. O Desempate de Mais Longe. Impossível Fazer Melhor?",
+      "hash": "18b791ab35"
     },
     {
       "id": "p6-s1",
       "pagina": 6,
       "paragrafo": 0,
-      "texto": "O guarda apontou para o rosto debaixo do chapéu e berrou: — É Robin Hood!",
-      "fala": "O guarda apontou para o rosto debaixo do chapéu e berrou: É Robin Hood!",
-      "hash": "249a09b08b"
+      "texto": "Lá no fim da praça, os guardas fincaram o alvo no chão.",
+      "fala": "Lá no fim da praça, os guardas fincaram o alvo no chão.",
+      "hash": "e3e7ed94a0"
     },
     {
       "id": "p6-s2",
       "pagina": 6,
       "paragrafo": 0,
-      "texto": "Peguem esse homem!",
-      "fala": "Peguem esse homem!",
-      "hash": "ba58a17cb8"
+      "texto": "Era tão longe que a bolinha dourada do meio parecia um botãozinho de camisa!",
+      "fala": "Era tão longe que a bolinha dourada do meio parecia um botãozinho de camisa!",
+      "hash": "042ee9706c"
     },
     {
       "id": "p6-s3",
       "pagina": 6,
       "paragrafo": 0,
-      "texto": "O Xerife arregalou os olhos, ficou roxo de raiva e correu para tomar de volta a Flecha de Ouro.",
-      "fala": "O Xerife arregalou os olhos, ficou roxo de raiva e correu para tomar de volta a Flecha de Ouro.",
-      "hash": "338c1c4d18"
+      "texto": "Que DISTÂNCIA!",
+      "fala": "Que distância!",
+      "hash": "02d9773c1b"
     },
     {
       "id": "p6-s4",
       "pagina": 6,
-      "paragrafo": 1,
-      "texto": "Na mesma hora, Clara abriu a cesta!",
-      "fala": "Na mesma hora, Clara abriu a cesta!",
-      "hash": "9824ec5300"
+      "paragrafo": 0,
+      "texto": "As crianças subiram nos ombros dos pais para enxergar, e as bandeirinhas dançavam lá no alto.",
+      "fala": "As crianças subiram nos ombros dos pais para enxergar, e as bandeirinhas dançavam lá no alto.",
+      "hash": "4ef0fc6a5a"
     },
     {
       "id": "p6-s5",
       "pagina": 6,
       "paragrafo": 1,
-      "texto": "Ela, Mariana, Grilo e João Pequeno jogaram para o alto os rolos de FITA vermelha.",
-      "fala": "Ela, Mariana, Grilo e João Pequeno jogaram para o alto os rolos de fita vermelha.",
-      "hash": "09cc7c4630"
+      "texto": "O capitão atirou primeiro.",
+      "fala": "O capitão atirou primeiro.",
+      "hash": "1cdd34e3ab"
     },
     {
       "id": "p6-s6",
       "pagina": 6,
       "paragrafo": 1,
-      "texto": "As fitas compridas voaram, rodopiaram e se enrolaram nos pés e nos braços dos guardas.",
-      "fala": "As fitas compridas voaram, rodopiaram e se enrolaram nos pés e nos braços dos guardas.",
-      "hash": "3bbf6cab6e"
+      "texto": "Molhou a ponta do dedo e ergueu no ar, para sentir o VENTO.",
+      "fala": "Molhou a ponta do dedo e ergueu no ar, para sentir o vento.",
+      "hash": "5934ca8e02"
     },
     {
       "id": "p6-s7",
       "pagina": 6,
       "paragrafo": 1,
-      "texto": "Dois deles tropeçaram, plaft, e acabaram amarrados um no outro, feito pacote de presente.",
-      "fala": "Dois deles tropeçaram, plaft, e acabaram amarrados um no outro, feito pacote de presente.",
-      "hash": "5d1d06ca88"
+      "texto": "Puxou a corda e soltou: fiuuu!",
+      "fala": "Puxou a corda e soltou: fiuuu!",
+      "hash": "90dd9b0228"
     },
     {
       "id": "p6-s8",
       "pagina": 6,
       "paragrafo": 1,
-      "texto": "Só faltou o laço!",
-      "fala": "Só faltou o laço!",
-      "hash": "5267ca1fac"
+      "texto": "A flecha atravessou a praça inteira e acertou bem pertinho do meio, a um dedinho só.",
+      "fala": "A flecha atravessou a praça inteira e acertou bem pertinho do meio, a um dedinho só.",
+      "hash": "eda4ff6fc1"
     },
     {
       "id": "p6-s9",
       "pagina": 6,
-      "paragrafo": 2,
-      "texto": "Então Grilo abriu o saquinho de FARINHA e assoprou com toda a força: PUF!",
-      "fala": "Então Grilo abriu o saquinho de farinha e assoprou com toda a força: PUF!",
-      "hash": "940674062a"
+      "paragrafo": 1,
+      "texto": "O Xerife bateu palmas lá do palanque: — Daquela distância, é impossível fazer melhor!",
+      "fala": "O Xerife bateu palmas lá do palanque: Daquela distância, é impossível fazer melhor!",
+      "hash": "245d8fbc12"
     },
     {
       "id": "p6-s10",
       "pagina": 6,
       "paragrafo": 2,
-      "texto": "Uma nuvem branquinha cobriu o Xerife.",
-      "fala": "Uma nuvem branquinha cobriu o Xerife.",
-      "hash": "87107b0bd8"
+      "texto": "Robin nem respondeu.",
+      "fala": "Robin nem respondeu.",
+      "hash": "d702cef8ce"
     },
     {
       "id": "p6-s11",
       "pagina": 6,
       "paragrafo": 2,
-      "texto": "— Cof, cof, cof!",
-      "fala": "Cof, cof, cof!",
-      "hash": "738acfd4c5"
+      "texto": "No meio do povo, Grilo cruzou os dedos e cochichou o segredo dos arqueiros de Xervedo: — Puxa, mira, solta!",
+      "fala": "No meio do povo, Grilo cruzou os dedos e cochichou o segredo dos arqueiros de Xervedo: Puxa, mira, solta!",
+      "hash": "2d3cc8f73f"
     },
     {
       "id": "p6-s12",
       "pagina": 6,
       "paragrafo": 2,
-      "texto": "Ele ficou branco dos pés à cabeça, feito boneco de neve de chapéu roxo!",
-      "fala": "Ele ficou branco dos pés à cabeça, feito boneco de neve de chapéu roxo!",
-      "hash": "55cb87264e"
+      "texto": "Robin puxou a corda até a orelha, mirou bem devagar e soltou.",
+      "fala": "Robin puxou a corda até a orelha, mirou bem devagar e soltou.",
+      "hash": "a15a289fe9"
     },
     {
       "id": "p6-s13",
       "pagina": 6,
       "paragrafo": 2,
-      "texto": "A praça inteira caiu na gargalhada.",
-      "fala": "A praça inteira caiu na gargalhada.",
-      "hash": "bf7c9ca409"
+      "texto": "ZUP!",
+      "fala": "ZUP!",
+      "hash": "a4745921ac"
     },
     {
       "id": "p6-s14",
       "pagina": 6,
-      "paragrafo": 3,
-      "texto": "Ninguém se machucou: era só fita, farinha e risada.",
-      "fala": "Ninguém se machucou: era só fita, farinha e risada.",
-      "hash": "625d43ec40"
+      "paragrafo": 2,
+      "texto": "A flecha subiu por cima dos chapéus, das barracas e das bandeiras, e foi, e foi, e foi…",
+      "fala": "A flecha subiu por cima dos chapéus, das barracas e das bandeiras, e foi, e foi, e foi…",
+      "hash": "96d10a6cac"
     },
     {
       "id": "p6-s15",
       "pagina": 6,
-      "paragrafo": 3,
-      "texto": "No meio da bagunça, Robin guardou a Flecha de Ouro debaixo do manto e correu com os amigos.",
-      "fala": "No meio da bagunça, Robin guardou a Flecha de Ouro debaixo do manto e correu com os amigos.",
-      "hash": "6440f59d44"
+      "paragrafo": 2,
+      "texto": "TUC!",
+      "fala": "TUC!",
+      "hash": "ace1c1d61f"
     },
     {
       "id": "p6-s16",
       "pagina": 6,
-      "paragrafo": 3,
-      "texto": "Foi uma FUGA rapidinha até as árvores de Xervedo!",
-      "fala": "Foi uma fuga rapidinha até as árvores de Xervedo!",
-      "hash": "8494109895"
+      "paragrafo": 2,
+      "texto": "Cravou bem no CENTRO do alvo!",
+      "fala": "Cravou bem no centro do alvo!",
+      "hash": "6b3a454c36"
     },
     {
       "id": "p6-s17",
       "pagina": 6,
       "paragrafo": 3,
-      "texto": "Enquanto isso, Clara voltou depressa pelas ruelas até a oficina, certinha de que ninguém tinha visto nada.",
-      "fala": "Enquanto isso, Clara voltou depressa pelas ruelas até a oficina, certinha de que ninguém tinha visto nada.",
-      "hash": "983903b83f"
+      "texto": "A praça explodiu em palmas e assobios!",
+      "fala": "A praça explodiu em palmas e assobios!",
+      "hash": "9ac0f9399f"
+    },
+    {
+      "id": "p6-s18",
+      "pagina": 6,
+      "paragrafo": 3,
+      "texto": "Sem desconfiar de nada, o Xerife desceu do palanque com cara de quem chupou limão e entregou a Flecha de Ouro ao viajante.",
+      "fala": "Sem desconfiar de nada, o Xerife desceu do palanque com cara de quem chupou limão e entregou a Flecha de Ouro ao viajante.",
+      "hash": "07967610d9"
+    },
+    {
+      "id": "p6-s19",
+      "pagina": 6,
+      "paragrafo": 3,
+      "texto": "Robin fez uma reverência exagerada, quase varrendo o chão com a barba.",
+      "fala": "Robin fez uma reverência exagerada, quase varrendo o chão com a barba.",
+      "hash": "5c24c97b75"
+    },
+    {
+      "id": "p6-s20",
+      "pagina": 6,
+      "paragrafo": 3,
+      "texto": "Só que, ao se abaixar, a aba do chapéu subiu um tiquinho.",
+      "fala": "Só que, ao se abaixar, a aba do chapéu subiu um tiquinho.",
+      "hash": "3aa25eee87"
+    },
+    {
+      "id": "p6-s21",
+      "pagina": 6,
+      "paragrafo": 3,
+      "texto": "E um guarda, ali perto, arregalou os olhos!",
+      "fala": "E um guarda, ali perto, arregalou os olhos!",
+      "hash": "2393cb49e2"
     },
     {
       "id": "p7-s0",
       "pagina": 7,
       "paragrafo": -1,
       "titulo": true,
-      "texto": "Capítulo 18. A Cor que Entregou a Oficina. Uma Raiva que Não Quer Ouvir Ninguém",
-      "fala": "Capítulo 18. A Cor que Entregou a Oficina. Uma Raiva que Não Quer Ouvir Ninguém",
-      "hash": "2e68388573"
+      "texto": "Capítulo 18. Chuva de Fitas Escarlates. Uma Fuga Colorida e Sem Briga",
+      "fala": "Capítulo 18. Chuva de Fitas Escarlates. Uma Fuga Colorida e Sem Briga",
+      "hash": "cc0343fbce"
     },
     {
       "id": "p7-s1",
       "pagina": 7,
       "paragrafo": 0,
-      "texto": "Quando a poeira branca baixou, o Xerife bateu no manto: pof, pof, pof!",
-      "fala": "Quando a poeira branca baixou, o Xerife bateu no manto: pof, pof, pof!",
-      "hash": "ada0b1e8e9"
+      "texto": "O guarda apontou para o rosto debaixo do chapéu e berrou: — É Robin Hood!",
+      "fala": "O guarda apontou para o rosto debaixo do chapéu e berrou: É Robin Hood!",
+      "hash": "249a09b08b"
     },
     {
       "id": "p7-s2",
       "pagina": 7,
       "paragrafo": 0,
-      "texto": "Saiu farinha que dava para fazer um bolo.",
-      "fala": "Saiu farinha que dava para fazer um bolo.",
-      "hash": "18b17adc41"
+      "texto": "Peguem esse homem!",
+      "fala": "Peguem esse homem!",
+      "hash": "ba58a17cb8"
     },
     {
       "id": "p7-s3",
       "pagina": 7,
       "paragrafo": 0,
-      "texto": "Depois, desamarrou os dois guardas emburrados, ainda enrolados feito presente.",
-      "fala": "Depois, desamarrou os dois guardas emburrados, ainda enrolados feito presente.",
-      "hash": "1f662dc8d8"
+      "texto": "O Xerife arregalou os olhos, ficou roxo de raiva e correu para tomar de volta a Flecha de Ouro.",
+      "fala": "O Xerife arregalou os olhos, ficou roxo de raiva e correu para tomar de volta a Flecha de Ouro.",
+      "hash": "338c1c4d18"
     },
     {
       "id": "p7-s4",
       "pagina": 7,
-      "paragrafo": 0,
-      "texto": "Ao dar um passo, tropeçou num rolo comprido de fita vermelha, viva feito brasa, e quase caiu de nariz no chão.",
-      "fala": "Ao dar um passo, tropeçou num rolo comprido de fita vermelha, viva feito brasa, e quase caiu de nariz no chão.",
-      "hash": "940c982b73"
+      "paragrafo": 1,
+      "texto": "Na mesma hora, Clara abriu a cesta!",
+      "fala": "Na mesma hora, Clara abriu a cesta!",
+      "hash": "9824ec5300"
     },
     {
       "id": "p7-s5",
       "pagina": 7,
       "paragrafo": 1,
-      "texto": "O Xerife ergueu a fita contra a luz e abriu um sorriso malvado.",
-      "fala": "O Xerife ergueu a fita contra a luz e abriu um sorriso malvado.",
-      "hash": "7a9e48947e"
+      "texto": "Ela, Mariana, Grilo e João Pequeno jogaram para o alto os rolos de FITA vermelha.",
+      "fala": "Ela, Mariana, Grilo e João Pequeno jogaram para o alto os rolos de fita vermelha.",
+      "hash": "09cc7c4630"
     },
     {
       "id": "p7-s6",
       "pagina": 7,
       "paragrafo": 1,
-      "texto": "Em toda Nortigão, só uma tintureira sabia fazer aquela COR tão forte: Clara Escarlate!",
-      "fala": "Em toda Nortigão, só uma tintureira sabia fazer aquela cor tão forte: Clara Escarlate!",
-      "hash": "81309cdeb2"
+      "texto": "As fitas compridas voaram, rodopiaram e se enrolaram nos pés e nos braços dos guardas.",
+      "fala": "As fitas compridas voaram, rodopiaram e se enrolaram nos pés e nos braços dos guardas.",
+      "hash": "3bbf6cab6e"
     },
     {
       "id": "p7-s7",
       "pagina": 7,
       "paragrafo": 1,
-      "texto": "— Aha!",
-      "fala": "Aha!",
-      "hash": "dfd5571fd1"
+      "texto": "Dois deles tropeçaram, plaft, e acabaram amarrados um no outro, feito pacote de presente.",
+      "fala": "Dois deles tropeçaram, plaft, e acabaram amarrados um no outro, feito pacote de presente.",
+      "hash": "5d1d06ca88"
     },
     {
       "id": "p7-s8",
       "pagina": 7,
       "paragrafo": 1,
-      "texto": "Esta fita é a prova!",
-      "fala": "Esta fita é a prova!",
-      "hash": "b7e8e5248c"
+      "texto": "Só faltou o laço!",
+      "fala": "Só faltou o laço!",
+      "hash": "5267ca1fac"
     },
     {
       "id": "p7-s9",
       "pagina": 7,
-      "paragrafo": 1,
-      "texto": "Foi ela que ajudou Robin Hood a fugir!",
-      "fala": "Foi ela que ajudou Robin Hood a fugir!",
-      "hash": "c9cbd6c05d"
+      "paragrafo": 2,
+      "texto": "Então Grilo abriu o saquinho de FARINHA e assoprou com toda a força: PUF!",
+      "fala": "Então Grilo abriu o saquinho de farinha e assoprou com toda a força: PUF!",
+      "hash": "940674062a"
     },
     {
       "id": "p7-s10",
       "pagina": 7,
-      "paragrafo": 1,
-      "texto": "Mas o Xerife não quis ouvir Clara.",
-      "fala": "Mas o Xerife não quis ouvir Clara.",
-      "hash": "b90edd4705"
+      "paragrafo": 2,
+      "texto": "Uma nuvem branquinha cobriu o Xerife.",
+      "fala": "Uma nuvem branquinha cobriu o Xerife.",
+      "hash": "87107b0bd8"
     },
     {
       "id": "p7-s11",
       "pagina": 7,
-      "paragrafo": 1,
-      "texto": "Ela podia ter uma explicação.",
-      "fala": "Ela podia ter uma explicação.",
-      "hash": "9c0ea2a732"
+      "paragrafo": 2,
+      "texto": "— Cof, cof, cof!",
+      "fala": "Cof, cof, cof!",
+      "hash": "738acfd4c5"
     },
     {
       "id": "p7-s12",
       "pagina": 7,
-      "paragrafo": 1,
-      "texto": "Todo mundo tem o direito de se defender!",
-      "fala": "Todo mundo tem o direito de se defender!",
-      "hash": "61060a88f2"
+      "paragrafo": 2,
+      "texto": "Ele ficou branco dos pés à cabeça, feito boneco de neve de chapéu roxo!",
+      "fala": "Ele ficou branco dos pés à cabeça, feito boneco de neve de chapéu roxo!",
+      "hash": "55cb87264e"
     },
     {
       "id": "p7-s13",
       "pagina": 7,
-      "paragrafo": 1,
-      "texto": "Só que o Xerife não queria explicação nenhuma: queria era prender alguém.",
-      "fala": "Só que o Xerife não queria explicação nenhuma: queria era prender alguém.",
-      "hash": "2a76611ee9"
+      "paragrafo": 2,
+      "texto": "A praça inteira caiu na gargalhada.",
+      "fala": "A praça inteira caiu na gargalhada.",
+      "hash": "bf7c9ca409"
     },
     {
       "id": "p7-s14",
       "pagina": 7,
-      "paragrafo": 2,
-      "texto": "Mas o Xerife pensou bem: se prendesse Clara na cadeia de sempre, o bando ia soltar a moça num instante, como tinha feito com Mestre Tomé.",
-      "fala": "Mas o Xerife pensou bem: se prendesse Clara na cadeia de sempre, o bando ia soltar a moça num instante, como tinha feito com Mestre Tomé.",
-      "hash": "6d08c93836"
+      "paragrafo": 3,
+      "texto": "Ninguém se machucou: era só fita, farinha e risada.",
+      "fala": "Ninguém se machucou: era só fita, farinha e risada.",
+      "hash": "625d43ec40"
     },
     {
       "id": "p7-s15",
       "pagina": 7,
-      "paragrafo": 2,
-      "texto": "Então chamou dois guardas de confiança e cochichou em SEGREDO: — Levem a tintureira hoje mesmo para a TORRE Velha, lá no alto do morro.",
-      "fala": "Então chamou dois guardas de confiança e cochichou em segredo: Levem a tintureira hoje mesmo para a torre Velha, lá no alto do morro.",
-      "hash": "7dd11ac284"
+      "paragrafo": 3,
+      "texto": "No meio da bagunça, Robin guardou a Flecha de Ouro debaixo do manto e correu com os amigos.",
+      "fala": "No meio da bagunça, Robin guardou a Flecha de Ouro debaixo do manto e correu com os amigos.",
+      "hash": "6440f59d44"
     },
     {
       "id": "p7-s16",
       "pagina": 7,
-      "paragrafo": 2,
-      "texto": "Ninguém pode saber onde ela está!",
-      "fala": "Ninguém pode saber onde ela está!",
-      "hash": "729b280f76"
+      "paragrafo": 3,
+      "texto": "Foi uma FUGA rapidinha até as árvores de Xervedo!",
+      "fala": "Foi uma fuga rapidinha até as árvores de Xervedo!",
+      "hash": "8494109895"
     },
     {
       "id": "p7-s17",
       "pagina": 7,
       "paragrafo": 3,
-      "texto": "A tarde já ia embora quando os dois guardas marcharam pelas ruelas, toc, toc, toc, rumo à oficina das cores.",
-      "fala": "A tarde já ia embora quando os dois guardas marcharam pelas ruelas, toc, toc, toc, rumo à oficina das cores.",
-      "hash": "70f919e6a4"
-    },
-    {
-      "id": "p7-s18",
-      "pagina": 7,
-      "paragrafo": 3,
-      "texto": "Lá dentro, Clara dobrava seus panos, cantarolando.",
-      "fala": "Lá dentro, Clara dobrava seus panos, cantarolando.",
-      "hash": "a67c81a58f"
-    },
-    {
-      "id": "p7-s19",
-      "pagina": 7,
-      "paragrafo": 3,
-      "texto": "Nem desconfiava de que seu vermelho mais bonito tinha virado pista para o Xerife.",
-      "fala": "Nem desconfiava de que seu vermelho mais bonito tinha virado pista para o Xerife.",
-      "hash": "c8c6edce5b"
+      "texto": "Enquanto isso, Clara voltou depressa pelas ruelas até a oficina, certinha de que ninguém tinha visto nada.",
+      "fala": "Enquanto isso, Clara voltou depressa pelas ruelas até a oficina, certinha de que ninguém tinha visto nada.",
+      "hash": "983903b83f"
     },
     {
       "id": "p8-s0",
       "pagina": 8,
       "paragrafo": -1,
       "titulo": true,
-      "texto": "Capítulo 19. A Oficina Vazia. Onde Foi Parar Clara Escarlate?",
-      "fala": "Capítulo 19. A Oficina Vazia. Onde Foi Parar Clara Escarlate?",
-      "hash": "f44b05bf77"
+      "texto": "Capítulo 19. A Cor que Entregou a Oficina. Uma Raiva que Não Quer Ouvir Ninguém",
+      "fala": "Capítulo 19. A Cor que Entregou a Oficina. Uma Raiva que Não Quer Ouvir Ninguém",
+      "hash": "c2546e0d09"
     },
     {
       "id": "p8-s1",
       "pagina": 8,
       "paragrafo": 0,
-      "texto": "Na manhã seguinte, Lady Mariana e Grilo voltaram a Nortigão.",
-      "fala": "Na manhã seguinte, Lady Mariana e Grilo voltaram a Nortigão.",
-      "hash": "c9eaac6a0e"
+      "texto": "Quando a poeira branca baixou, o Xerife bateu no manto: pof, pof, pof!",
+      "fala": "Quando a poeira branca baixou, o Xerife bateu no manto: pof, pof, pof!",
+      "hash": "ada0b1e8e9"
     },
     {
       "id": "p8-s2",
       "pagina": 8,
       "paragrafo": 0,
-      "texto": "Queriam contar a Clara, tintim por tintim, que todo mundo tinha escapado bem!",
-      "fala": "Queriam contar a Clara, tintim por tintim, que todo mundo tinha escapado bem!",
-      "hash": "4b76874407"
+      "texto": "Saiu farinha que dava para fazer um bolo.",
+      "fala": "Saiu farinha que dava para fazer um bolo.",
+      "hash": "18b17adc41"
     },
     {
       "id": "p8-s3",
       "pagina": 8,
       "paragrafo": 0,
-      "texto": "Mas, quando dobraram a esquina, pararam de repente.",
-      "fala": "Mas, quando dobraram a esquina, pararam de repente.",
-      "hash": "b83209cbf1"
+      "texto": "Depois, desamarrou os dois guardas emburrados, ainda enrolados feito presente.",
+      "fala": "Depois, desamarrou os dois guardas emburrados, ainda enrolados feito presente.",
+      "hash": "1f662dc8d8"
     },
     {
       "id": "p8-s4",
       "pagina": 8,
       "paragrafo": 0,
-      "texto": "A PORTA da oficina estava entreaberta, e os panos dos varais nem se mexiam.",
-      "fala": "A porta da oficina estava entreaberta, e os panos dos varais nem se mexiam.",
-      "hash": "d286b1168c"
+      "texto": "Ao dar um passo, tropeçou num rolo comprido de fita vermelha, viva feito brasa, e quase caiu de nariz no chão.",
+      "fala": "Ao dar um passo, tropeçou num rolo comprido de fita vermelha, viva feito brasa, e quase caiu de nariz no chão.",
+      "hash": "940c982b73"
     },
     {
       "id": "p8-s5",
       "pagina": 8,
       "paragrafo": 1,
-      "texto": "Um SILÊNCIO esquisito enchia a casinha.",
-      "fala": "Um silêncio esquisito enchia a casinha.",
-      "hash": "ad7eecbb71"
+      "texto": "O Xerife ergueu a fita contra a luz e abriu um sorriso malvado.",
+      "fala": "O Xerife ergueu a fita contra a luz e abriu um sorriso malvado.",
+      "hash": "7a9e48947e"
     },
     {
       "id": "p8-s6",
       "pagina": 8,
       "paragrafo": 1,
-      "texto": "Nada de cantoria nem de tesoura.",
-      "fala": "Nada de cantoria nem de tesoura.",
-      "hash": "4684df3d25"
+      "texto": "Em toda Nortigão, só uma tintureira sabia fazer aquela COR tão forte: Clara Escarlate!",
+      "fala": "Em toda Nortigão, só uma tintureira sabia fazer aquela cor tão forte: Clara Escarlate!",
+      "hash": "81309cdeb2"
     },
     {
       "id": "p8-s7",
       "pagina": 8,
       "paragrafo": 1,
-      "texto": "Lá dentro, o tacho maior estava virado de lado, e a tinta vermelha de flor e raiz tinha escorrido pelo chão, no meio dos panos azuis e amarelos.",
-      "fala": "Lá dentro, o tacho maior estava virado de lado, e a tinta vermelha de flor e raiz tinha escorrido pelo chão, no meio dos panos azuis e amarelos.",
-      "hash": "2be7383d9f"
+      "texto": "— Aha!",
+      "fala": "Aha!",
+      "hash": "dfd5571fd1"
     },
     {
       "id": "p8-s8",
       "pagina": 8,
       "paragrafo": 1,
-      "texto": "Rolos de tecido estavam caídos por todo canto.",
-      "fala": "Rolos de tecido estavam caídos por todo canto.",
-      "hash": "5c77764e66"
+      "texto": "Esta fita é a prova!",
+      "fala": "Esta fita é a prova!",
+      "hash": "b7e8e5248c"
     },
     {
       "id": "p8-s9",
       "pagina": 8,
-      "paragrafo": 2,
-      "texto": "Uma vizinha feirante chegou perto, de cesto no braço, olhou para os lados e cochichou: — Ontem, no fim da tarde, eu vi dois guardas entrarem aqui, bem apressados!",
-      "fala": "Uma vizinha feirante chegou perto, de cesto no braço, olhou para os lados e cochichou: Ontem, no fim da tarde, eu vi dois guardas entrarem aqui, bem apressados!",
-      "hash": "23bb390328"
+      "paragrafo": 1,
+      "texto": "Foi ela que ajudou Robin Hood a fugir!",
+      "fala": "Foi ela que ajudou Robin Hood a fugir!",
+      "hash": "c9cbd6c05d"
     },
     {
       "id": "p8-s10",
       "pagina": 8,
-      "paragrafo": 2,
-      "texto": "Depois disso, mais nada.",
-      "fala": "Depois disso, mais nada.",
-      "hash": "52da2db5a8"
+      "paragrafo": 1,
+      "texto": "Mas o Xerife não quis ouvir Clara.",
+      "fala": "Mas o Xerife não quis ouvir Clara.",
+      "hash": "b90edd4705"
     },
     {
       "id": "p8-s11",
       "pagina": 8,
-      "paragrafo": 2,
-      "texto": "Ninguém na rua sabe explicar o SUMIÇO da nossa Clara.",
-      "fala": "Ninguém na rua sabe explicar o sumiço da nossa Clara.",
-      "hash": "8934a18c4c"
+      "paragrafo": 1,
+      "texto": "Ela podia ter uma explicação.",
+      "fala": "Ela podia ter uma explicação.",
+      "hash": "9c0ea2a732"
     },
     {
       "id": "p8-s12",
       "pagina": 8,
-      "paragrafo": 3,
-      "texto": "Grilo coçou a cabeça e girou para um lado e para o outro, feito pião, sem saber para onde correr.",
-      "fala": "Grilo coçou a cabeça e girou para um lado e para o outro, feito pião, sem saber para onde correr.",
-      "hash": "f6b6e34a5b"
+      "paragrafo": 1,
+      "texto": "Todo mundo tem o direito de se defender!",
+      "fala": "Todo mundo tem o direito de se defender!",
+      "hash": "61060a88f2"
     },
     {
       "id": "p8-s13",
       "pagina": 8,
-      "paragrafo": 3,
-      "texto": "Mariana respirou fundo e olhou bem devagar para o chão.",
-      "fala": "Mariana respirou fundo e olhou bem devagar para o chão.",
-      "hash": "01be62c1d3"
+      "paragrafo": 1,
+      "texto": "Só que o Xerife não queria explicação nenhuma: queria era prender alguém.",
+      "fala": "Só que o Xerife não queria explicação nenhuma: queria era prender alguém.",
+      "hash": "2a76611ee9"
     },
     {
       "id": "p8-s14",
       "pagina": 8,
-      "paragrafo": 3,
-      "texto": "— Correr sem rumo não adianta, Grilo.",
-      "fala": "Correr sem rumo não adianta, Grilo.",
-      "hash": "cc2af7595d"
+      "paragrafo": 2,
+      "texto": "Mas o Xerife pensou bem: se prendesse Clara na cadeia de sempre, o bando ia soltar a moça num instante, como tinha feito com Mestre Tomé.",
+      "fala": "Mas o Xerife pensou bem: se prendesse Clara na cadeia de sempre, o bando ia soltar a moça num instante, como tinha feito com Mestre Tomé.",
+      "hash": "6d08c93836"
     },
     {
       "id": "p8-s15",
       "pagina": 8,
+      "paragrafo": 2,
+      "texto": "Então chamou dois guardas de confiança e cochichou em SEGREDO: — Levem a tintureira hoje mesmo para a TORRE Velha, lá no alto do morro.",
+      "fala": "Então chamou dois guardas de confiança e cochichou em segredo: Levem a tintureira hoje mesmo para a torre Velha, lá no alto do morro.",
+      "hash": "7dd11ac284"
+    },
+    {
+      "id": "p8-s16",
+      "pagina": 8,
+      "paragrafo": 2,
+      "texto": "Ninguém pode saber onde ela está!",
+      "fala": "Ninguém pode saber onde ela está!",
+      "hash": "729b280f76"
+    },
+    {
+      "id": "p8-s17",
+      "pagina": 8,
       "paragrafo": 3,
-      "texto": "Primeiro, vamos procurar as pistas com calma!",
-      "fala": "Primeiro, vamos procurar as pistas com calma!",
-      "hash": "8c279f2f54"
+      "texto": "A tarde já ia embora quando os dois guardas marcharam pelas ruelas, toc, toc, toc, rumo à oficina das cores.",
+      "fala": "A tarde já ia embora quando os dois guardas marcharam pelas ruelas, toc, toc, toc, rumo à oficina das cores.",
+      "hash": "70f919e6a4"
+    },
+    {
+      "id": "p8-s18",
+      "pagina": 8,
+      "paragrafo": 3,
+      "texto": "Lá dentro, Clara dobrava seus panos, cantarolando.",
+      "fala": "Lá dentro, Clara dobrava seus panos, cantarolando.",
+      "hash": "a67c81a58f"
+    },
+    {
+      "id": "p8-s19",
+      "pagina": 8,
+      "paragrafo": 3,
+      "texto": "Nem desconfiava de que seu vermelho mais bonito tinha virado pista para o Xerife.",
+      "fala": "Nem desconfiava de que seu vermelho mais bonito tinha virado pista para o Xerife.",
+      "hash": "c8c6edce5b"
     },
     {
       "id": "p9-s0",
       "pagina": 9,
       "paragrafo": -1,
       "titulo": true,
-      "texto": "Capítulo 20. Os Sinais no Caminho. O Olhar de Quem Investiga",
-      "fala": "Capítulo 20. Os Sinais no Caminho. O Olhar de Quem Investiga",
-      "hash": "df15bb6813"
+      "texto": "Capítulo 20. A Oficina Vazia. Onde Foi Parar Clara Escarlate?",
+      "fala": "Capítulo 20. A Oficina Vazia. Onde Foi Parar Clara Escarlate?",
+      "hash": "4e8149cb6e"
     },
     {
       "id": "p9-s1",
       "pagina": 9,
       "paragrafo": 0,
-      "texto": "Mariana e Grilo se agacharam perto da tinta derramada, de olhos bem abertos.",
-      "fala": "Mariana e Grilo se agacharam perto da tinta derramada, de olhos bem abertos.",
-      "hash": "0c463e58d2"
+      "texto": "Na manhã seguinte, Lady Mariana e Grilo voltaram a Nortigão.",
+      "fala": "Na manhã seguinte, Lady Mariana e Grilo voltaram a Nortigão.",
+      "hash": "c9eaac6a0e"
     },
     {
       "id": "p9-s2",
       "pagina": 9,
       "paragrafo": 0,
-      "texto": "Bem na porta, nas pedras da ruela, havia uma PEGADA enorme de bota de guarda, carimbada de tinta vermelha.",
-      "fala": "Bem na porta, nas pedras da ruela, havia uma pegada enorme de bota de guarda, carimbada de tinta vermelha.",
-      "hash": "c3c40e4f6c"
+      "texto": "Queriam contar a Clara, tintim por tintim, que todo mundo tinha escapado bem!",
+      "fala": "Queriam contar a Clara, tintim por tintim, que todo mundo tinha escapado bem!",
+      "hash": "4b76874407"
     },
     {
       "id": "p9-s3",
       "pagina": 9,
       "paragrafo": 0,
-      "texto": "Grilo pôs o pé do lado, e a pegada era duas vezes maior!",
-      "fala": "Grilo pôs o pé do lado, e a pegada era duas vezes maior!",
-      "hash": "aba305f1d0"
+      "texto": "Mas, quando dobraram a esquina, pararam de repente.",
+      "fala": "Mas, quando dobraram a esquina, pararam de repente.",
+      "hash": "b83209cbf1"
     },
     {
       "id": "p9-s4",
       "pagina": 9,
       "paragrafo": 0,
-      "texto": "Depois dela vinha outra, e mais outra.",
-      "fala": "Depois dela vinha outra, e mais outra.",
-      "hash": "657a877497"
+      "texto": "A PORTA da oficina estava entreaberta, e os panos dos varais nem se mexiam.",
+      "fala": "A porta da oficina estava entreaberta, e os panos dos varais nem se mexiam.",
+      "hash": "d286b1168c"
     },
     {
       "id": "p9-s5",
       "pagina": 9,
       "paragrafo": 1,
-      "texto": "Os dois seguiram as marcas vermelhas, pulando de pedra em pedra, até o portão da cidade.",
-      "fala": "Os dois seguiram as marcas vermelhas, pulando de pedra em pedra, até o portão da cidade.",
-      "hash": "877a461afd"
+      "texto": "Um SILÊNCIO esquisito enchia a casinha.",
+      "fala": "Um silêncio esquisito enchia a casinha.",
+      "hash": "ad7eecbb71"
     },
     {
       "id": "p9-s6",
       "pagina": 9,
       "paragrafo": 1,
-      "texto": "Ali, Grilo arregalou os olhos e apontou para uma cerca de madeira: — Olhe, Mariana!",
-      "fala": "Ali, Grilo arregalou os olhos e apontou para uma cerca de madeira: Olhe, Mariana!",
-      "hash": "a6cc247912"
+      "texto": "Nada de cantoria nem de tesoura.",
+      "fala": "Nada de cantoria nem de tesoura.",
+      "hash": "4684df3d25"
     },
     {
       "id": "p9-s7",
       "pagina": 9,
       "paragrafo": 1,
-      "texto": "Um FIO vermelho!",
-      "fala": "Um fio vermelho!",
-      "hash": "3bff55e406"
+      "texto": "Lá dentro, o tacho maior estava virado de lado, e a tinta vermelha de flor e raiz tinha escorrido pelo chão, no meio dos panos azuis e amarelos.",
+      "fala": "Lá dentro, o tacho maior estava virado de lado, e a tinta vermelha de flor e raiz tinha escorrido pelo chão, no meio dos panos azuis e amarelos.",
+      "hash": "2be7383d9f"
     },
     {
       "id": "p9-s8",
       "pagina": 9,
       "paragrafo": 1,
-      "texto": "Mais adiante, um retalhinho da mesma cor balançava, preso num arbusto.",
-      "fala": "Mais adiante, um retalhinho da mesma cor balançava, preso num arbusto.",
-      "hash": "8944164190"
+      "texto": "Rolos de tecido estavam caídos por todo canto.",
+      "fala": "Rolos de tecido estavam caídos por todo canto.",
+      "hash": "5c77764e66"
     },
     {
       "id": "p9-s9",
       "pagina": 9,
       "paragrafo": 2,
-      "texto": "Mariana sorriu, cheia de orgulho da amiga.",
-      "fala": "Mariana sorriu, cheia de orgulho da amiga.",
-      "hash": "6425be1341"
+      "texto": "Uma vizinha feirante chegou perto, de cesto no braço, olhou para os lados e cochichou: — Ontem, no fim da tarde, eu vi dois guardas entrarem aqui, bem apressados!",
+      "fala": "Uma vizinha feirante chegou perto, de cesto no braço, olhou para os lados e cochichou: Ontem, no fim da tarde, eu vi dois guardas entrarem aqui, bem apressados!",
+      "hash": "23bb390328"
     },
     {
       "id": "p9-s10",
       "pagina": 9,
       "paragrafo": 2,
-      "texto": "— Foi a Clara!",
-      "fala": "Foi a Clara!",
-      "hash": "121e7a6bf8"
+      "texto": "Depois disso, mais nada.",
+      "fala": "Depois disso, mais nada.",
+      "hash": "52da2db5a8"
     },
     {
       "id": "p9-s11",
       "pagina": 9,
       "paragrafo": 2,
-      "texto": "Ela soltou pedacinhos do próprio lenço pelo caminho, de propósito, para deixar uma trilha para nós!",
-      "fala": "Ela soltou pedacinhos do próprio lenço pelo caminho, de propósito, para deixar uma trilha para nós!",
-      "hash": "a44681223c"
+      "texto": "Ninguém na rua sabe explicar o SUMIÇO da nossa Clara.",
+      "fala": "Ninguém na rua sabe explicar o sumiço da nossa Clara.",
+      "hash": "8934a18c4c"
     },
     {
       "id": "p9-s12",
       "pagina": 9,
-      "paragrafo": 2,
-      "texto": "E os guardas, marchando de nariz empinado, nem repararam naqueles pontinhos vermelhos.",
-      "fala": "E os guardas, marchando de nariz empinado, nem repararam naqueles pontinhos vermelhos.",
-      "hash": "5e2c7fcfdb"
+      "paragrafo": 3,
+      "texto": "Grilo coçou a cabeça e girou para um lado e para o outro, feito pião, sem saber para onde correr.",
+      "fala": "Grilo coçou a cabeça e girou para um lado e para o outro, feito pião, sem saber para onde correr.",
+      "hash": "f6b6e34a5b"
     },
     {
       "id": "p9-s13",
       "pagina": 9,
       "paragrafo": 3,
-      "texto": "A trilha de retalhos subia, subia, até uma curva alta da estrada.",
-      "fala": "A trilha de retalhos subia, subia, até uma curva alta da estrada.",
-      "hash": "45f3aabbb4"
+      "texto": "Mariana respirou fundo e olhou bem devagar para o chão.",
+      "fala": "Mariana respirou fundo e olhou bem devagar para o chão.",
+      "hash": "01be62c1d3"
     },
     {
       "id": "p9-s14",
       "pagina": 9,
       "paragrafo": 3,
-      "texto": "Lá no topo do morro, cercada de nuvens douradas, apareceu a TORRE Velha de pedra, alta e cinzenta.",
-      "fala": "Lá no topo do morro, cercada de nuvens douradas, apareceu a torre Velha de pedra, alta e cinzenta.",
-      "hash": "523714d753"
+      "texto": "— Correr sem rumo não adianta, Grilo.",
+      "fala": "Correr sem rumo não adianta, Grilo.",
+      "hash": "cc2af7595d"
     },
     {
       "id": "p9-s15",
       "pagina": 9,
       "paragrafo": 3,
-      "texto": "Grilo apertou a mão de Mariana: tinham achado o esconderijo de Clara!",
-      "fala": "Grilo apertou a mão de Mariana: tinham achado o esconderijo de Clara!",
-      "hash": "6545378672"
+      "texto": "Primeiro, vamos procurar as pistas com calma!",
+      "fala": "Primeiro, vamos procurar as pistas com calma!",
+      "hash": "8c279f2f54"
     },
     {
       "id": "p10-s0",
       "pagina": 10,
       "paragrafo": -1,
       "titulo": true,
-      "texto": "Capítulo 21. O Lenço na Janela Alta. Clara Não Fica Esperando Parada",
-      "fala": "Capítulo 21. O Lenço na Janela Alta. Clara Não Fica Esperando Parada",
-      "hash": "b93fc55adf"
+      "texto": "Capítulo 21. Os Sinais no Caminho. O Olhar de Quem Investiga",
+      "fala": "Capítulo 21. Os Sinais no Caminho. O Olhar de Quem Investiga",
+      "hash": "ceeca42e9d"
     },
     {
       "id": "p10-s1",
       "pagina": 10,
       "paragrafo": 0,
-      "texto": "Quando o céu ficou dourado de fim de tarde, Robin, Mariana, João Pequeno e Grilo chegaram pertinho da Torre Velha.",
-      "fala": "Quando o céu ficou dourado de fim de tarde, Robin, Mariana, João Pequeno e Grilo chegaram pertinho da Torre Velha.",
-      "hash": "6c8e42d0d6"
+      "texto": "Mariana e Grilo se agacharam perto da tinta derramada, de olhos bem abertos.",
+      "fala": "Mariana e Grilo se agacharam perto da tinta derramada, de olhos bem abertos.",
+      "hash": "0c463e58d2"
     },
     {
       "id": "p10-s2",
       "pagina": 10,
       "paragrafo": 0,
-      "texto": "Os quatro se esconderam atrás das árvores e prenderam a respiração.",
-      "fala": "Os quatro se esconderam atrás das árvores e prenderam a respiração.",
-      "hash": "20e6aff6a6"
+      "texto": "Bem na porta, nas pedras da ruela, havia uma PEGADA enorme de bota de guarda, carimbada de tinta vermelha.",
+      "fala": "Bem na porta, nas pedras da ruela, havia uma pegada enorme de bota de guarda, carimbada de tinta vermelha.",
+      "hash": "c3c40e4f6c"
     },
     {
       "id": "p10-s3",
       "pagina": 10,
       "paragrafo": 0,
-      "texto": "João Pequeno, grandão como era, precisou de dois troncos só para ele!",
-      "fala": "João Pequeno, grandão como era, precisou de dois troncos só para ele!",
-      "hash": "4471b0aa82"
+      "texto": "Grilo pôs o pé do lado, e a pegada era duas vezes maior!",
+      "fala": "Grilo pôs o pé do lado, e a pegada era duas vezes maior!",
+      "hash": "aba305f1d0"
     },
     {
       "id": "p10-s4",
       "pagina": 10,
-      "paragrafo": 1,
-      "texto": "De repente, lá no alto, alguma coisa se mexeu numa JANELA estreita de pedra.",
-      "fala": "De repente, lá no alto, alguma coisa se mexeu numa janela estreita de pedra.",
-      "hash": "54b159322a"
+      "paragrafo": 0,
+      "texto": "Depois dela vinha outra, e mais outra.",
+      "fala": "Depois dela vinha outra, e mais outra.",
+      "hash": "657a877497"
     },
     {
       "id": "p10-s5",
       "pagina": 10,
       "paragrafo": 1,
-      "texto": "Era um LENÇO vermelho, já bem mais curtinho, balançando ao vento!",
-      "fala": "Era um lenço vermelho, já bem mais curtinho, balançando ao vento!",
-      "hash": "a5baa48726"
+      "texto": "Os dois seguiram as marcas vermelhas, pulando de pedra em pedra, até o portão da cidade.",
+      "fala": "Os dois seguiram as marcas vermelhas, pulando de pedra em pedra, até o portão da cidade.",
+      "hash": "877a461afd"
     },
     {
       "id": "p10-s6",
       "pagina": 10,
       "paragrafo": 1,
-      "texto": "Clara estava espiando lá de cima, com um sorriso de orelha a orelha.",
-      "fala": "Clara estava espiando lá de cima, com um sorriso de orelha a orelha.",
-      "hash": "d503968161"
+      "texto": "Ali, Grilo arregalou os olhos e apontou para uma cerca de madeira: — Olhe, Mariana!",
+      "fala": "Ali, Grilo arregalou os olhos e apontou para uma cerca de madeira: Olhe, Mariana!",
+      "hash": "a6cc247912"
     },
     {
       "id": "p10-s7",
       "pagina": 10,
       "paragrafo": 1,
-      "texto": "Ela já tinha visto os amigos na mata!",
-      "fala": "Ela já tinha visto os amigos na mata!",
-      "hash": "450f582cac"
+      "texto": "Um FIO vermelho!",
+      "fala": "Um fio vermelho!",
+      "hash": "3bff55e406"
     },
     {
       "id": "p10-s8",
       "pagina": 10,
-      "paragrafo": 2,
-      "texto": "Clara não tinha ficado parada, esperando socorro.",
-      "fala": "Clara não tinha ficado parada, esperando socorro.",
-      "hash": "409fcc4ba1"
+      "paragrafo": 1,
+      "texto": "Mais adiante, um retalhinho da mesma cor balançava, preso num arbusto.",
+      "fala": "Mais adiante, um retalhinho da mesma cor balançava, preso num arbusto.",
+      "hash": "8944164190"
     },
     {
       "id": "p10-s9",
       "pagina": 10,
       "paragrafo": 2,
-      "texto": "Lá de cima, ela tinha observado tudo: quando a lua subia, o GUARDA da portinha sempre cochilava sentado.",
-      "fala": "Lá de cima, ela tinha observado tudo: quando a lua subia, o guarda da portinha sempre cochilava sentado.",
-      "hash": "8c2d15fa13"
+      "texto": "Mariana sorriu, cheia de orgulho da amiga.",
+      "fala": "Mariana sorriu, cheia de orgulho da amiga.",
+      "hash": "6425be1341"
     },
     {
       "id": "p10-s10",
       "pagina": 10,
       "paragrafo": 2,
-      "texto": "E roncava tão alto que as folhas tremiam: rrronc, pfff, rrronc!",
-      "fala": "E roncava tão alto que as folhas tremiam: rrronc, pfff, rrronc!",
-      "hash": "df94db177d"
+      "texto": "— Foi a Clara!",
+      "fala": "Foi a Clara!",
+      "hash": "121e7a6bf8"
     },
     {
       "id": "p10-s11",
       "pagina": 10,
       "paragrafo": 2,
-      "texto": "O capacete ia escorregando, escorregando, até tampar o nariz dele.",
-      "fala": "O capacete ia escorregando, escorregando, até tampar o nariz dele.",
-      "hash": "028dd42837"
+      "texto": "Ela soltou pedacinhos do próprio lenço pelo caminho, de propósito, para deixar uma trilha para nós!",
+      "fala": "Ela soltou pedacinhos do próprio lenço pelo caminho, de propósito, para deixar uma trilha para nós!",
+      "hash": "a44681223c"
     },
     {
       "id": "p10-s12",
       "pagina": 10,
-      "paragrafo": 3,
-      "texto": "Agora, Clara balançava o lenço apontando para os fundos da torre.",
-      "fala": "Agora, Clara balançava o lenço apontando para os fundos da torre.",
-      "hash": "5237d3cbb1"
+      "paragrafo": 2,
+      "texto": "E os guardas, marchando de nariz empinado, nem repararam naqueles pontinhos vermelhos.",
+      "fala": "E os guardas, marchando de nariz empinado, nem repararam naqueles pontinhos vermelhos.",
+      "hash": "5e2c7fcfdb"
     },
     {
       "id": "p10-s13",
       "pagina": 10,
       "paragrafo": 3,
-      "texto": "Era ali que o muro ficava mais baixo, bom para jogar uma corda.",
-      "fala": "Era ali que o muro ficava mais baixo, bom para jogar uma corda.",
-      "hash": "fde1300dce"
+      "texto": "A trilha de retalhos subia, subia, até uma curva alta da estrada.",
+      "fala": "A trilha de retalhos subia, subia, até uma curva alta da estrada.",
+      "hash": "45f3aabbb4"
     },
     {
       "id": "p10-s14",
       "pagina": 10,
       "paragrafo": 3,
-      "texto": "Lá embaixo, Robin piscou para ela, bem devagar: recado entendido!",
-      "fala": "Lá embaixo, Robin piscou para ela, bem devagar: recado entendido!",
-      "hash": "ad163edc95"
+      "texto": "Lá no topo do morro, cercada de nuvens douradas, apareceu a TORRE Velha de pedra, alta e cinzenta.",
+      "fala": "Lá no topo do morro, cercada de nuvens douradas, apareceu a torre Velha de pedra, alta e cinzenta.",
+      "hash": "523714d753"
     },
     {
       "id": "p10-s15",
       "pagina": 10,
       "paragrafo": 3,
-      "texto": "— Essa Clara pensa em tudo! — cochichou João Pequeno.",
-      "fala": "Essa Clara pensa em tudo! cochichou João Pequeno.",
-      "hash": "85d0019951"
+      "texto": "Grilo apertou a mão de Mariana: tinham achado o esconderijo de Clara!",
+      "fala": "Grilo apertou a mão de Mariana: tinham achado o esconderijo de Clara!",
+      "hash": "6545378672"
     },
     {
       "id": "p11-s0",
       "pagina": 11,
       "paragrafo": -1,
       "titulo": true,
-      "texto": "Capítulo 22. Corda, Vento e Liberdade. Um Resgate de Ponta de Pé",
-      "fala": "Capítulo 22. Corda, Vento e Liberdade. Um Resgate de Ponta de Pé",
-      "hash": "4c2b36e3e8"
+      "texto": "Capítulo 22. O Lenço na Janela Alta. Clara Não Fica Esperando Parada",
+      "fala": "Capítulo 22. O Lenço na Janela Alta. Clara Não Fica Esperando Parada",
+      "hash": "82b19bdb13"
     },
     {
       "id": "p11-s1",
       "pagina": 11,
       "paragrafo": 0,
-      "texto": "Quando a lua redonda subiu no céu, o guarda da portinha começou a roncar: rrronc, pfff!",
-      "fala": "Quando a lua redonda subiu no céu, o guarda da portinha começou a roncar: rrronc, pfff!",
-      "hash": "c42a64318c"
+      "texto": "Quando o céu ficou dourado de fim de tarde, Robin, Mariana, João Pequeno e Grilo chegaram pertinho da Torre Velha.",
+      "fala": "Quando o céu ficou dourado de fim de tarde, Robin, Mariana, João Pequeno e Grilo chegaram pertinho da Torre Velha.",
+      "hash": "6c8e42d0d6"
     },
     {
       "id": "p11-s2",
       "pagina": 11,
       "paragrafo": 0,
-      "texto": "Uma folha seca caiu rodopiando, bem na ponta do nariz dele.",
-      "fala": "Uma folha seca caiu rodopiando, bem na ponta do nariz dele.",
-      "hash": "6c878ab756"
+      "texto": "Os quatro se esconderam atrás das árvores e prenderam a respiração.",
+      "fala": "Os quatro se esconderam atrás das árvores e prenderam a respiração.",
+      "hash": "20e6aff6a6"
     },
     {
       "id": "p11-s3",
       "pagina": 11,
       "paragrafo": 0,
-      "texto": "O nariz tremeu, tremeu…",
-      "fala": "O nariz tremeu, tremeu…",
-      "hash": "bcb9355a91"
+      "texto": "João Pequeno, grandão como era, precisou de dois troncos só para ele!",
+      "fala": "João Pequeno, grandão como era, precisou de dois troncos só para ele!",
+      "hash": "4471b0aa82"
     },
     {
       "id": "p11-s4",
       "pagina": 11,
-      "paragrafo": 0,
-      "texto": "— Atchinf! — fez o guarda, dormindo.",
-      "fala": "Atchinf! fez o guarda, dormindo.",
-      "hash": "bc70357d87"
+      "paragrafo": 1,
+      "texto": "De repente, lá no alto, alguma coisa se mexeu numa JANELA estreita de pedra.",
+      "fala": "De repente, lá no alto, alguma coisa se mexeu numa janela estreita de pedra.",
+      "hash": "54b159322a"
     },
     {
       "id": "p11-s5",
       "pagina": 11,
-      "paragrafo": 0,
-      "texto": "A folha voou longe, e ele roncou ainda mais alto!",
-      "fala": "A folha voou longe, e ele roncou ainda mais alto!",
-      "hash": "b63752810b"
+      "paragrafo": 1,
+      "texto": "Era um LENÇO vermelho, já bem mais curtinho, balançando ao vento!",
+      "fala": "Era um lenço vermelho, já bem mais curtinho, balançando ao vento!",
+      "hash": "a5baa48726"
     },
     {
       "id": "p11-s6",
       "pagina": 11,
-      "paragrafo": 0,
-      "texto": "Sem fazer barulho, o bando correu para os fundos da Torre Velha.",
-      "fala": "Sem fazer barulho, o bando correu para os fundos da Torre Velha.",
-      "hash": "892dc9586c"
+      "paragrafo": 1,
+      "texto": "Clara estava espiando lá de cima, com um sorriso de orelha a orelha.",
+      "fala": "Clara estava espiando lá de cima, com um sorriso de orelha a orelha.",
+      "hash": "d503968161"
     },
     {
       "id": "p11-s7",
       "pagina": 11,
       "paragrafo": 1,
-      "texto": "João Pequeno girou o braço forte, uma, duas, três vezes, e jogou uma CORDA comprida lá para o alto.",
-      "fala": "João Pequeno girou o braço forte, uma, duas, três vezes, e jogou uma corda comprida lá para o alto.",
-      "hash": "540ab94c0a"
+      "texto": "Ela já tinha visto os amigos na mata!",
+      "fala": "Ela já tinha visto os amigos na mata!",
+      "hash": "450f582cac"
     },
     {
       "id": "p11-s8",
       "pagina": 11,
-      "paragrafo": 1,
-      "texto": "Clara pegou a ponta e deu um nó bem firme na pedra da janela.",
-      "fala": "Clara pegou a ponta e deu um nó bem firme na pedra da janela.",
-      "hash": "880fbec888"
+      "paragrafo": 2,
+      "texto": "Clara não tinha ficado parada, esperando socorro.",
+      "fala": "Clara não tinha ficado parada, esperando socorro.",
+      "hash": "409fcc4ba1"
     },
     {
       "id": "p11-s9",
       "pagina": 11,
-      "paragrafo": 1,
-      "texto": "Depois, desceu devagarinho, segurando forte e apoiando os pés no muro, até pisar na grama fofinha.",
-      "fala": "Depois, desceu devagarinho, segurando forte e apoiando os pés no muro, até pisar na grama fofinha.",
-      "hash": "842e50e058"
+      "paragrafo": 2,
+      "texto": "Lá de cima, ela tinha observado tudo: quando a lua subia, o GUARDA da portinha sempre cochilava sentado.",
+      "fala": "Lá de cima, ela tinha observado tudo: quando a lua subia, o guarda da portinha sempre cochilava sentado.",
+      "hash": "8c2d15fa13"
     },
     {
       "id": "p11-s10",
       "pagina": 11,
       "paragrafo": 2,
-      "texto": "Na mesma hora, Lady Mariana jogou uma CAPA verde sobre os ombros da amiga.",
-      "fala": "Na mesma hora, Lady Mariana jogou uma capa verde sobre os ombros da amiga.",
-      "hash": "9af25ead4c"
+      "texto": "E roncava tão alto que as folhas tremiam: rrronc, pfff, rrronc!",
+      "fala": "E roncava tão alto que as folhas tremiam: rrronc, pfff, rrronc!",
+      "hash": "df94db177d"
     },
     {
       "id": "p11-s11",
       "pagina": 11,
       "paragrafo": 2,
-      "texto": "Clara ajeitou a capa e puxou para fora o que tinha sobrado do lenço vermelho.",
-      "fala": "Clara ajeitou a capa e puxou para fora o que tinha sobrado do lenço vermelho.",
-      "hash": "b797c7bccb"
+      "texto": "O capacete ia escorregando, escorregando, até tampar o nariz dele.",
+      "fala": "O capacete ia escorregando, escorregando, até tampar o nariz dele.",
+      "hash": "028dd42837"
     },
     {
       "id": "p11-s12",
       "pagina": 11,
-      "paragrafo": 2,
-      "texto": "Aquela cor era a marca dela!",
-      "fala": "Aquela cor era a marca dela!",
-      "hash": "f2988b96f0"
+      "paragrafo": 3,
+      "texto": "Agora, Clara balançava o lenço apontando para os fundos da torre.",
+      "fala": "Agora, Clara balançava o lenço apontando para os fundos da torre.",
+      "hash": "5237d3cbb1"
     },
     {
       "id": "p11-s13",
       "pagina": 11,
       "paragrafo": 3,
-      "texto": "Os cinco amigos deram as mãos e saíram na ponta dos pés: um passinho, outro passinho.",
-      "fala": "Os cinco amigos deram as mãos e saíram na ponta dos pés: um passinho, outro passinho.",
-      "hash": "dcba6d7b91"
+      "texto": "Era ali que o muro ficava mais baixo, bom para jogar uma corda.",
+      "fala": "Era ali que o muro ficava mais baixo, bom para jogar uma corda.",
+      "hash": "fde1300dce"
     },
     {
       "id": "p11-s14",
       "pagina": 11,
       "paragrafo": 3,
-      "texto": "Em poucos segundos, sumiram juntos no escuro da FLORESTA de Xervedo.",
-      "fala": "Em poucos segundos, sumiram juntos no escuro da floresta de Xervedo.",
-      "hash": "5bc6efb9e0"
+      "texto": "Lá embaixo, Robin piscou para ela, bem devagar: recado entendido!",
+      "fala": "Lá embaixo, Robin piscou para ela, bem devagar: recado entendido!",
+      "hash": "ad163edc95"
     },
     {
       "id": "p11-s15",
       "pagina": 11,
       "paragrafo": 3,
-      "texto": "E o guarda?",
-      "fala": "E o guarda?",
-      "hash": "4de3772a74"
-    },
-    {
-      "id": "p11-s16",
-      "pagina": 11,
-      "paragrafo": 3,
-      "texto": "Continuava lá no banco, roncando feito um urso no inverno.",
-      "fala": "Continuava lá no banco, roncando feito um urso no inverno.",
-      "hash": "aaade64116"
+      "texto": "— Essa Clara pensa em tudo! — cochichou João Pequeno.",
+      "fala": "Essa Clara pensa em tudo! cochichou João Pequeno.",
+      "hash": "85d0019951"
     },
     {
       "id": "p12-s0",
       "pagina": 12,
       "paragrafo": -1,
       "titulo": true,
-      "texto": "Capítulo 23. O Ouro que Virou Cobertor. Ninguém Passa Frio na Vila",
-      "fala": "Capítulo 23. O Ouro que Virou Cobertor. Ninguém Passa Frio na Vila",
-      "hash": "0ad058a2d1"
+      "texto": "Capítulo 23. Corda, Vento e Liberdade. Um Resgate de Ponta de Pé",
+      "fala": "Capítulo 23. Corda, Vento e Liberdade. Um Resgate de Ponta de Pé",
+      "hash": "9c1bdfeabd"
     },
     {
       "id": "p12-s1",
       "pagina": 12,
       "paragrafo": 0,
-      "texto": "Na manhã seguinte, a Vila do Moinho acordou com cheiro de pão e barulho de risada.",
-      "fala": "Na manhã seguinte, a Vila do Moinho acordou com cheiro de pão e barulho de risada.",
-      "hash": "2edaf955d5"
+      "texto": "Quando a lua redonda subiu no céu, o guarda da portinha começou a roncar: rrronc, pfff!",
+      "fala": "Quando a lua redonda subiu no céu, o guarda da portinha começou a roncar: rrronc, pfff!",
+      "hash": "c42a64318c"
     },
     {
       "id": "p12-s2",
       "pagina": 12,
       "paragrafo": 0,
-      "texto": "A Flecha de Ouro tinha sido trocada por moedas na cidade, e cada moedinha virou comida fresca e agasalho quentinho para quem mais precisava.",
-      "fala": "A Flecha de Ouro tinha sido trocada por moedas na cidade, e cada moedinha virou comida fresca e agasalho quentinho para quem mais precisava.",
-      "hash": "fb81285299"
+      "texto": "Uma folha seca caiu rodopiando, bem na ponta do nariz dele.",
+      "fala": "Uma folha seca caiu rodopiando, bem na ponta do nariz dele.",
+      "hash": "6c878ab756"
     },
     {
       "id": "p12-s3",
       "pagina": 12,
       "paragrafo": 0,
-      "texto": "O plano do Grande Carvalho tinha dado certo!",
-      "fala": "O plano do Grande Carvalho tinha dado certo!",
-      "hash": "ca1f81ddbd"
+      "texto": "O nariz tremeu, tremeu…",
+      "fala": "O nariz tremeu, tremeu…",
+      "hash": "bcb9355a91"
     },
     {
       "id": "p12-s4",
       "pagina": 12,
-      "paragrafo": 1,
-      "texto": "Robin, Mariana, João Pequeno, Grilo, Clara e Mestre Tomé passaram de porta em porta com cestas enormes.",
-      "fala": "Robin, Mariana, João Pequeno, Grilo, Clara e Mestre Tomé passaram de porta em porta com cestas enormes.",
-      "hash": "53d166326a"
+      "paragrafo": 0,
+      "texto": "— Atchinf! — fez o guarda, dormindo.",
+      "fala": "Atchinf! fez o guarda, dormindo.",
+      "hash": "bc70357d87"
     },
     {
       "id": "p12-s5",
       "pagina": 12,
-      "paragrafo": 1,
-      "texto": "Levavam PÃO saído do forno, frutas doces e um COBERTOR macio para cada casa.",
-      "fala": "Levavam pão saído do forno, frutas doces e um cobertor macio para cada casa.",
-      "hash": "1327a1565a"
+      "paragrafo": 0,
+      "texto": "A folha voou longe, e ele roncou ainda mais alto!",
+      "fala": "A folha voou longe, e ele roncou ainda mais alto!",
+      "hash": "b63752810b"
     },
     {
       "id": "p12-s6",
       "pagina": 12,
-      "paragrafo": 1,
-      "texto": "Grilo carregava tantos cobertores que só dava para ver dois pezinhos andando sozinhos!",
-      "fala": "Grilo carregava tantos cobertores que só dava para ver dois pezinhos andando sozinhos!",
-      "hash": "9c6f97b2b9"
+      "paragrafo": 0,
+      "texto": "Sem fazer barulho, o bando correu para os fundos da Torre Velha.",
+      "fala": "Sem fazer barulho, o bando correu para os fundos da Torre Velha.",
+      "hash": "892dc9586c"
     },
     {
       "id": "p12-s7",
       "pagina": 12,
       "paragrafo": 1,
-      "texto": "Uma vovó espiou a pilha e perguntou: — Tem alguém aí dentro?",
-      "fala": "Uma vovó espiou a pilha e perguntou: Tem alguém aí dentro?",
-      "hash": "c6eee6912d"
+      "texto": "João Pequeno girou o braço forte, uma, duas, três vezes, e jogou uma CORDA comprida lá para o alto.",
+      "fala": "João Pequeno girou o braço forte, uma, duas, três vezes, e jogou uma corda comprida lá para o alto.",
+      "hash": "540ab94c0a"
     },
     {
       "id": "p12-s8",
       "pagina": 12,
-      "paragrafo": 2,
-      "texto": "Famílias inteiras — mães, pais, avós e crianças — saíam às portas, abraçadas aos agasalhos novos, com o rosto cheio de ALEGRIA.",
-      "fala": "Famílias inteiras, mães, pais, avós e crianças, saíam às portas, abraçadas aos agasalhos novos, com o rosto cheio de alegria.",
-      "hash": "9f157fcd10"
+      "paragrafo": 1,
+      "texto": "Clara pegou a ponta e deu um nó bem firme na pedra da janela.",
+      "fala": "Clara pegou a ponta e deu um nó bem firme na pedra da janela.",
+      "hash": "880fbec888"
     },
     {
       "id": "p12-s9",
       "pagina": 12,
-      "paragrafo": 2,
-      "texto": "Um menininho enrolou o cobertor na cabeça, feito capuz, e gritou: — Agora eu sou Robin Hood!",
-      "fala": "Um menininho enrolou o cobertor na cabeça, feito capuz, e gritou: Agora eu sou Robin Hood!",
-      "hash": "23aa412ba3"
+      "paragrafo": 1,
+      "texto": "Depois, desceu devagarinho, segurando forte e apoiando os pés no muro, até pisar na grama fofinha.",
+      "fala": "Depois, desceu devagarinho, segurando forte e apoiando os pés no muro, até pisar na grama fofinha.",
+      "hash": "842e50e058"
     },
     {
       "id": "p12-s10",
       "pagina": 12,
       "paragrafo": 2,
-      "texto": "Naquele inverno, ninguém na Vila do Moinho ia passar frio nem fome!",
-      "fala": "Naquele inverno, ninguém na Vila do Moinho ia passar frio nem fome!",
-      "hash": "2262201f9f"
+      "texto": "Na mesma hora, Lady Mariana jogou uma CAPA verde sobre os ombros da amiga.",
+      "fala": "Na mesma hora, Lady Mariana jogou uma capa verde sobre os ombros da amiga.",
+      "hash": "9af25ead4c"
     },
     {
       "id": "p12-s11",
       "pagina": 12,
-      "paragrafo": 3,
-      "texto": "Nas varandas, os vizinhos comentavam, orgulhosos: — O Bando Verde nunca esquece ninguém da vila!",
-      "fala": "Nas varandas, os vizinhos comentavam, orgulhosos: O Bando Verde nunca esquece ninguém da vila!",
-      "hash": "f237a898aa"
+      "paragrafo": 2,
+      "texto": "Clara ajeitou a capa e puxou para fora o que tinha sobrado do lenço vermelho.",
+      "fala": "Clara ajeitou a capa e puxou para fora o que tinha sobrado do lenço vermelho.",
+      "hash": "b797c7bccb"
     },
     {
       "id": "p12-s12",
       "pagina": 12,
+      "paragrafo": 2,
+      "texto": "Aquela cor era a marca dela!",
+      "fala": "Aquela cor era a marca dela!",
+      "hash": "f2988b96f0"
+    },
+    {
+      "id": "p12-s13",
+      "pagina": 12,
       "paragrafo": 3,
-      "texto": "E as crianças já corriam pela rua, enroladas nos cobertores feito pasteizinhos, rindo à toa.",
-      "fala": "E as crianças já corriam pela rua, enroladas nos cobertores feito pasteizinhos, rindo à toa.",
-      "hash": "609bbddff5"
+      "texto": "Os cinco amigos deram as mãos e saíram na ponta dos pés: um passinho, outro passinho.",
+      "fala": "Os cinco amigos deram as mãos e saíram na ponta dos pés: um passinho, outro passinho.",
+      "hash": "dcba6d7b91"
+    },
+    {
+      "id": "p12-s14",
+      "pagina": 12,
+      "paragrafo": 3,
+      "texto": "Em poucos segundos, sumiram juntos no escuro da FLORESTA de Xervedo.",
+      "fala": "Em poucos segundos, sumiram juntos no escuro da floresta de Xervedo.",
+      "hash": "5bc6efb9e0"
+    },
+    {
+      "id": "p12-s15",
+      "pagina": 12,
+      "paragrafo": 3,
+      "texto": "E o guarda?",
+      "fala": "E o guarda?",
+      "hash": "4de3772a74"
+    },
+    {
+      "id": "p12-s16",
+      "pagina": 12,
+      "paragrafo": 3,
+      "texto": "Continuava lá no banco, roncando feito um urso no inverno.",
+      "fala": "Continuava lá no banco, roncando feito um urso no inverno.",
+      "hash": "aaade64116"
     },
     {
       "id": "p13-s0",
       "pagina": 13,
       "paragrafo": -1,
       "titulo": true,
-      "texto": "Capítulo 24. Verde com Lenço Escarlate. Uma Nova Companheira e Uma Ideia Maluca",
-      "fala": "Capítulo 24. Verde com Lenço Escarlate. Uma Nova Companheira e Uma Ideia Maluca",
-      "hash": "e7e049de55"
+      "texto": "Capítulo 24. O Ouro que Virou Cobertor. Ninguém Passa Frio na Vila",
+      "fala": "Capítulo 24. O Ouro que Virou Cobertor. Ninguém Passa Frio na Vila",
+      "hash": "18a8abdf0f"
     },
     {
       "id": "p13-s1",
       "pagina": 13,
+      "paragrafo": 0,
+      "texto": "Na manhã seguinte, a Vila do Moinho acordou com cheiro de pão e barulho de risada.",
+      "fala": "Na manhã seguinte, a Vila do Moinho acordou com cheiro de pão e barulho de risada.",
+      "hash": "2edaf955d5"
+    },
+    {
+      "id": "p13-s2",
+      "pagina": 13,
+      "paragrafo": 0,
+      "texto": "A Flecha de Ouro tinha sido trocada por moedas na cidade, e cada moedinha virou comida fresca e agasalho quentinho para quem mais precisava.",
+      "fala": "A Flecha de Ouro tinha sido trocada por moedas na cidade, e cada moedinha virou comida fresca e agasalho quentinho para quem mais precisava.",
+      "hash": "fb81285299"
+    },
+    {
+      "id": "p13-s3",
+      "pagina": 13,
+      "paragrafo": 0,
+      "texto": "O plano do Grande Carvalho tinha dado certo!",
+      "fala": "O plano do Grande Carvalho tinha dado certo!",
+      "hash": "ca1f81ddbd"
+    },
+    {
+      "id": "p13-s4",
+      "pagina": 13,
+      "paragrafo": 1,
+      "texto": "Robin, Mariana, João Pequeno, Grilo, Clara e Mestre Tomé passaram de porta em porta com cestas enormes.",
+      "fala": "Robin, Mariana, João Pequeno, Grilo, Clara e Mestre Tomé passaram de porta em porta com cestas enormes.",
+      "hash": "53d166326a"
+    },
+    {
+      "id": "p13-s5",
+      "pagina": 13,
+      "paragrafo": 1,
+      "texto": "Levavam PÃO saído do forno, frutas doces e um COBERTOR macio para cada casa.",
+      "fala": "Levavam pão saído do forno, frutas doces e um cobertor macio para cada casa.",
+      "hash": "1327a1565a"
+    },
+    {
+      "id": "p13-s6",
+      "pagina": 13,
+      "paragrafo": 1,
+      "texto": "Grilo carregava tantos cobertores que só dava para ver dois pezinhos andando sozinhos!",
+      "fala": "Grilo carregava tantos cobertores que só dava para ver dois pezinhos andando sozinhos!",
+      "hash": "9c6f97b2b9"
+    },
+    {
+      "id": "p13-s7",
+      "pagina": 13,
+      "paragrafo": 1,
+      "texto": "Uma vovó espiou a pilha e perguntou: — Tem alguém aí dentro?",
+      "fala": "Uma vovó espiou a pilha e perguntou: Tem alguém aí dentro?",
+      "hash": "c6eee6912d"
+    },
+    {
+      "id": "p13-s8",
+      "pagina": 13,
+      "paragrafo": 2,
+      "texto": "Famílias inteiras — mães, pais, avós e crianças — saíam às portas, abraçadas aos agasalhos novos, com o rosto cheio de ALEGRIA.",
+      "fala": "Famílias inteiras, mães, pais, avós e crianças, saíam às portas, abraçadas aos agasalhos novos, com o rosto cheio de alegria.",
+      "hash": "9f157fcd10"
+    },
+    {
+      "id": "p13-s9",
+      "pagina": 13,
+      "paragrafo": 2,
+      "texto": "Um menininho enrolou o cobertor na cabeça, feito capuz, e gritou: — Agora eu sou Robin Hood!",
+      "fala": "Um menininho enrolou o cobertor na cabeça, feito capuz, e gritou: Agora eu sou Robin Hood!",
+      "hash": "23aa412ba3"
+    },
+    {
+      "id": "p13-s10",
+      "pagina": 13,
+      "paragrafo": 2,
+      "texto": "Naquele inverno, ninguém na Vila do Moinho ia passar frio nem fome!",
+      "fala": "Naquele inverno, ninguém na Vila do Moinho ia passar frio nem fome!",
+      "hash": "2262201f9f"
+    },
+    {
+      "id": "p13-s11",
+      "pagina": 13,
+      "paragrafo": 3,
+      "texto": "Nas varandas, os vizinhos comentavam, orgulhosos: — O Bando Verde nunca esquece ninguém da vila!",
+      "fala": "Nas varandas, os vizinhos comentavam, orgulhosos: O Bando Verde nunca esquece ninguém da vila!",
+      "hash": "f237a898aa"
+    },
+    {
+      "id": "p13-s12",
+      "pagina": 13,
+      "paragrafo": 3,
+      "texto": "E as crianças já corriam pela rua, enroladas nos cobertores feito pasteizinhos, rindo à toa.",
+      "fala": "E as crianças já corriam pela rua, enroladas nos cobertores feito pasteizinhos, rindo à toa.",
+      "hash": "609bbddff5"
+    },
+    {
+      "id": "p14-s0",
+      "pagina": 14,
+      "paragrafo": -1,
+      "titulo": true,
+      "texto": "Capítulo 25. Verde com Lenço Escarlate. Uma Nova Companheira e Uma Ideia Maluca",
+      "fala": "Capítulo 25. Verde com Lenço Escarlate. Uma Nova Companheira e Uma Ideia Maluca",
+      "hash": "02deb9c5a8"
+    },
+    {
+      "id": "p14-s1",
+      "pagina": 14,
       "paragrafo": 0,
       "texto": "De volta ao Grande Carvalho, Clara Escarlate vestiu pela primeira vez a camisa verde da floresta.",
       "fala": "De volta ao Grande Carvalho, Clara Escarlate vestiu pela primeira vez a camisa verde da floresta.",
       "hash": "ba7a4037a2"
     },
     {
-      "id": "p13-s2",
-      "pagina": 13,
+      "id": "p14-s2",
+      "pagina": 14,
       "paragrafo": 0,
       "texto": "E o lenço vermelho?",
       "fala": "E o lenço vermelho?",
       "hash": "be523cf922"
     },
     {
-      "id": "p13-s3",
-      "pagina": 13,
+      "id": "p14-s3",
+      "pagina": 14,
       "paragrafo": 0,
       "texto": "Continuou amarradinho no pescoço, mesmo curtinho.",
       "fala": "Continuou amarradinho no pescoço, mesmo curtinho.",
       "hash": "dba174231c"
     },
     {
-      "id": "p13-s4",
-      "pagina": 13,
+      "id": "p14-s4",
+      "pagina": 14,
       "paragrafo": 0,
       "texto": "Daquela cor ela não abria mão de jeito nenhum!",
       "fala": "Daquela cor ela não abria mão de jeito nenhum!",
       "hash": "7b554d58f3"
     },
     {
-      "id": "p13-s5",
-      "pagina": 13,
+      "id": "p14-s5",
+      "pagina": 14,
       "paragrafo": 0,
       "texto": "Clara deu uma voltinha para os amigos verem: — E então?",
       "fala": "Clara deu uma voltinha para os amigos verem: E então?",
       "hash": "e7b452322e"
     },
     {
-      "id": "p13-s6",
-      "pagina": 13,
+      "id": "p14-s6",
+      "pagina": 14,
       "paragrafo": 0,
       "texto": "Fiquei com cara de floresta?",
       "fala": "Fiquei com cara de floresta?",
       "hash": "7c2f6e36cb"
     },
     {
-      "id": "p13-s7",
-      "pagina": 13,
+      "id": "p14-s7",
+      "pagina": 14,
       "paragrafo": 1,
       "texto": "Mestre Tomé trouxe pão quentinho do forno de barro, e os seis amigos ergueram as canecas de madeira: tim, tim!",
       "fala": "Mestre Tomé trouxe pão quentinho do forno de barro, e os seis amigos ergueram as canecas de madeira: tim, tim!",
       "hash": "8f2760bc43"
     },
     {
-      "id": "p13-s8",
-      "pagina": 13,
+      "id": "p14-s8",
+      "pagina": 14,
       "paragrafo": 1,
       "texto": "Era a festa da nova AMIZADE.",
       "fala": "Era a festa da nova amizade.",
       "hash": "6744e929b1"
     },
     {
-      "id": "p13-s9",
-      "pagina": 13,
+      "id": "p14-s9",
+      "pagina": 14,
       "paragrafo": 1,
       "texto": "João Pequeno bateu a caneca com tanta força que espirrou suco de maçã no nariz dele!",
       "fala": "João Pequeno bateu a caneca com tanta força que espirrou suco de maçã no nariz dele!",
       "hash": "8c69ba5491"
     },
     {
-      "id": "p13-s10",
-      "pagina": 13,
+      "id": "p14-s10",
+      "pagina": 14,
       "paragrafo": 1,
       "texto": "Agora, Clara também fazia parte do BANDO Verde!",
       "fala": "Agora, Clara também fazia parte do bando Verde!",
       "hash": "e05c537934"
     },
     {
-      "id": "p13-s11",
-      "pagina": 13,
+      "id": "p14-s11",
+      "pagina": 14,
       "paragrafo": 2,
       "texto": "No fim da tarde, Grilo voltou correndo da FEIRA de Nortigão, aonde tinha ido comprar sal.",
       "fala": "No fim da tarde, Grilo voltou correndo da feira de Nortigão, aonde tinha ido comprar sal.",
       "hash": "8558d9a505"
     },
     {
-      "id": "p13-s12",
-      "pagina": 13,
+      "id": "p14-s12",
+      "pagina": 14,
       "paragrafo": 2,
       "texto": "Chegou bufando: — Pessoal!",
       "fala": "Chegou bufando: Pessoal!",
       "hash": "1e0af684dd"
     },
     {
-      "id": "p13-s13",
-      "pagina": 13,
+      "id": "p14-s13",
+      "pagina": 14,
       "paragrafo": 2,
       "texto": "O Xerife ficou furioso e mandou cobrar caro demais pela comida!",
       "fala": "O Xerife ficou furioso e mandou cobrar caro demais pela comida!",
       "hash": "cfbc074056"
     },
     {
-      "id": "p13-s14",
-      "pagina": 13,
+      "id": "p14-s14",
+      "pagina": 14,
       "paragrafo": 2,
       "texto": "As famílias mal conseguem comprar um queijo!",
       "fala": "As famílias mal conseguem comprar um queijo!",
       "hash": "afa48c81e4"
     },
     {
-      "id": "p13-s15",
-      "pagina": 13,
+      "id": "p14-s15",
+      "pagina": 14,
       "paragrafo": 3,
       "texto": "Robin coçou o queixo, e os olhos dele brilharam.",
       "fala": "Robin coçou o queixo, e os olhos dele brilharam.",
       "hash": "d42bb1fd5e"
     },
     {
-      "id": "p13-s16",
-      "pagina": 13,
+      "id": "p14-s16",
+      "pagina": 14,
       "paragrafo": 3,
       "texto": "— Tive uma ideia maluca!",
       "fala": "Tive uma ideia maluca!",
       "hash": "343081a70d"
     },
     {
-      "id": "p13-s17",
-      "pagina": 13,
+      "id": "p14-s17",
+      "pagina": 14,
       "paragrafo": 3,
       "texto": "E se eu fosse à feira vestido de açougueiro, de avental e tudo, só para deixar o Xerife zonzo?",
       "fala": "E se eu fosse à feira vestido de açougueiro, de avental e tudo, só para deixar o Xerife zonzo?",
       "hash": "d210a4b0db"
     },
     {
-      "id": "p13-s18",
-      "pagina": 13,
+      "id": "p14-s18",
+      "pagina": 14,
       "paragrafo": 3,
       "texto": "João Pequeno deu uma gargalhada tão grande que até os passarinhos voaram do Grande Carvalho!",
       "fala": "João Pequeno deu uma gargalhada tão grande que até os passarinhos voaram do Grande Carvalho!",
@@ -1973,11 +2174,32 @@
       "hash": "b020f0bafb"
     },
     {
-      "slug": "palmas",
-      "palavra": "PALMAS",
-      "silabas": "PAL • MAS",
-      "fala": "pal... mas... palmas!",
-      "hash": "cc75175397"
+      "slug": "empate",
+      "palavra": "EMPATE",
+      "silabas": "EM • PA • TE",
+      "fala": "em... pa... te... empate!",
+      "hash": "6aaae38e62"
+    },
+    {
+      "slug": "distancia",
+      "palavra": "DISTÂNCIA",
+      "silabas": "DIS • TÂN • CI • A",
+      "fala": "dis... tân... ci... a... distância!",
+      "hash": "dc0d68afd1"
+    },
+    {
+      "slug": "vento",
+      "palavra": "VENTO",
+      "silabas": "VEN • TO",
+      "fala": "ven... to... vento!",
+      "hash": "d0bece3a69"
+    },
+    {
+      "slug": "centro",
+      "palavra": "CENTRO",
+      "silabas": "CEN • TRO",
+      "fala": "cen... tro... centro!",
+      "hash": "9c65a37100"
     },
     {
       "slug": "fita",
@@ -2225,6 +2447,50 @@
       ]
     },
     {
+      "id": "ajude-robin-a-lembrar-o-segredo-400692",
+      "tipo": "comando",
+      "chave": "Ajude Robin a lembrar o segredo dos arqueiros! Toque nas palavras na mesma ordem em que Grilo cochichou.",
+      "texto": "Ajude Robin a lembrar o segredo dos arqueiros! Toque nas palavras na mesma ordem em que Grilo cochichou.",
+      "fala": "Ajude Robin a lembrar o segredo dos arqueiros! Toque nas palavras na mesma ordem em que Grilo cochichou.",
+      "hash": "feaf92c57f",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "puxa-749dbe",
+      "tipo": "cartao",
+      "chave": "puxa",
+      "texto": "puxa",
+      "fala": "puxa",
+      "hash": "f2ca40f4dc",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "mira-ca8427",
+      "tipo": "cartao",
+      "chave": "mira",
+      "texto": "mira",
+      "fala": "mira",
+      "hash": "a2982c15fc",
+      "paginas": [
+        6
+      ]
+    },
+    {
+      "id": "solta-afef13",
+      "tipo": "cartao",
+      "chave": "solta",
+      "texto": "solta",
+      "fala": "solta",
+      "hash": "841151b01e",
+      "paginas": [
+        6
+      ]
+    },
+    {
       "id": "ajude-mariana-e-grilo-a-seguir-a-3ad3b8",
       "tipo": "comando",
       "chave": "Ajude Mariana e Grilo a seguir as pistas! Toque nas palavras na mesma ordem em que as pistas aparecem no texto. A cada acerto, o bando chega mais perto de Clara.",
@@ -2232,7 +2498,7 @@
       "fala": "Ajude Mariana e Grilo a seguir as pistas! Toque nas palavras na mesma ordem em que as pistas aparecem no texto. A cada acerto, o bando chega mais perto de Clara.",
       "hash": "8088b11fd4",
       "paginas": [
-        9
+        10
       ]
     },
     {
@@ -2243,7 +2509,7 @@
       "fala": "pegada",
       "hash": "cc746887d9",
       "paginas": [
-        9
+        10
       ]
     },
     {
@@ -2254,7 +2520,7 @@
       "fala": "fio",
       "hash": "e6bb861e51",
       "paginas": [
-        9
+        10
       ]
     },
     {
@@ -2265,7 +2531,7 @@
       "fala": "torre",
       "hash": "1769671384",
       "paginas": [
-        9
+        10
       ]
     },
     {
@@ -2276,7 +2542,7 @@
       "fala": "Ajude no resgate silencioso na Torre Velha! Olhe a figura lá em cima e toque na palavra certa. Cuidado com as pegadinhas!",
       "hash": "867e67d19a",
       "paginas": [
-        11
+        12
       ]
     },
     {
@@ -2287,7 +2553,7 @@
       "fala": "corda",
       "hash": "d20ee10eca",
       "paginas": [
-        11
+        12
       ]
     },
     {
@@ -2298,7 +2564,7 @@
       "fala": "capa",
       "hash": "4cfb833099",
       "paginas": [
-        11
+        12
       ]
     },
     {
@@ -2309,7 +2575,7 @@
       "fala": "floresta",
       "hash": "37b4601608",
       "paginas": [
-        11
+        12
       ]
     },
     {
@@ -2320,7 +2586,7 @@
       "fala": "Porta? Na porta o guarda está roncando, se abrir, ele acorda! Vamos tentar de novo!",
       "hash": "01e1f84e53",
       "paginas": [
-        11
+        12
       ]
     },
     {
@@ -2331,7 +2597,7 @@
       "fala": "Copa? Copa brilha na estante, não esconde ninguém no meio das árvores! Vamos escolher de novo!",
       "hash": "54b0649bf3",
       "paginas": [
-        11
+        12
       ]
     },
     {
@@ -2342,7 +2608,7 @@
       "fala": "Festa? Festa faz barulho demais perto da torre, primeiro precisamos escapar! Vamos tentar de novo!",
       "hash": "d6583f8b2a",
       "paginas": [
-        11
+        12
       ]
     }
   ]

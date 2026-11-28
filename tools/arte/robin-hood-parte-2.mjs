@@ -73,7 +73,7 @@ Progressive Activity Stage 3 (Complete Disguise: Hat + Closed Cloak + Wool Beard
         // --- CAP. 17 (Pág. 6) ---
         {
             id: 'p6-real',
-            destino: `${P2}/p6-real.png`,
+            destino: `${P2}/p7-real.png`,
             refs: [`${P2}/p1-real.webp`, `${P2}/p2-real.webp`, `${P2}/p4-real.webp`],
             prompt: `Playful, non-violent slapstick escape in the festive Nottingham town square (full-bleed diorama, NO outer frame border). Keep the upper third of the sky/air open under warm golden light for subtle CSS flour mist.
 - Midground slapstick: long vivid scarlet-red paper ribbons swirl through the air and playfully wrap two clumsy grey-armored guards together like a funny gift parcel (harmless and comical).
@@ -85,7 +85,7 @@ Progressive Activity Stage 3 (Complete Disguise: Hat + Closed Cloak + Wool Beard
         // --- CAP. 18 (Pág. 7) ---
         {
             id: 'p7-real',
-            destino: `${P2}/p7-real.png`,
+            destino: `${P2}/p8-real.png`,
             refs: [`${P2}/p4-real.webp`, `${P1}/p1-real.webp`],
             prompt: `Quiet deserted Nottingham town square in warm late-afternoon amber shadows (full-bleed diorama, NO outer frame border), empty wooden market stalls and half-timbered cottages.
 - Foreground: [XERIFE] (still with comical light dustings of white flour on his purple cloak) angrily holds up a long vivid scarlet-red paper ribbon in his hands, pointing down a side alley while leaning in to whisper secret orders to two grey-armored guards listening intently.`
@@ -94,7 +94,7 @@ Progressive Activity Stage 3 (Complete Disguise: Hat + Closed Cloak + Wool Beard
         // --- CAP. 19 (Pág. 8 — sem associação com sangue!) ---
         {
             id: 'p8-real',
-            destino: `${P2}/p8-real.png`,
+            destino: `${P2}/p9-real.png`,
             refs: [`${P2}/p2-real.webp`, `${P2}/p1-real.webp`],
             prompt: `EXACT SAME interior of Clara Escarlate's workshop as the first reference image, now quiet, empty of Clara, and tumbled.
 - The wooden front door stands ajar with calm daylight streaming in. The main wooden dye vat is tipped on its side, with vivid scarlet-red plant dye spilled onto the wooden floor right alongside colorful scattered rolls of blue, marigold-yellow, and cream fabrics (clearly a colorful artisan dyer's workshop spill, strictly NOT scary or blood-like).
@@ -104,28 +104,28 @@ Progressive Activity Stage 3 (Complete Disguise: Hat + Closed Cloak + Wool Beard
         // --- CAP. 20 (Pág. 9 — Atividade 2: 4 etapas progressivas) ---
         {
             id: 'p9-real',
-            destino: `${P2}/p9-real.png`,
+            destino: `${P2}/p10-real.png`,
             refs: [`${P2}/p1-real.webp`, `${P2}/p2-real.webp`],
             prompt: `Cobblestone alley right outside Clara Escarlate's open workshop door in Nottingham, half-timbered walls and stone paving in crisp daytime light.
 - Initial investigation state: [MARIANA] and [GRILO] crouched low near the workshop threshold, peering attentively at the grey cobblestone street to begin looking for clues (clean cobblestones, no highlighted trail yet).`
         },
         {
             id: 'p9-stage-1',
-            destino: `${P2}/p9-stage-1.png`,
+            destino: `${P2}/p10-stage-1.png`,
             refs: [`${P2}/p1-real.webp`, `${P2}/p2-real.webp`],
             prompt: `Same Nottingham cobblestone alley outside Clara's workshop door in crisp daytime light.
 - Activity Stage 1 (PEGADA — Scarlet Footprints): A clear, unmistakable trail of vivid scarlet-red guard boot footprints stamped across the grey cobblestones leading away from the workshop door down the alley. [MARIANA] and [GRILO] crouch beside the large scarlet boot prints—Grilo comparing his smaller foot beside one huge red boot print—pointing excitedly along the trail.`
         },
         {
             id: 'p9-stage-2',
-            destino: `${P2}/p9-stage-2.png`,
+            destino: `${P2}/p10-stage-2.png`,
             refs: [`${P2}/p1-real.webp`],
             prompt: `Just outside the stone Nottingham town gate in warm afternoon countryside light, where a wooden fence and green roadside bushes border a winding dirt path toward the hills.
 - Activity Stage 2 (FIO — Scarlet Cloth Threads): Tied intentionally onto the wooden fence posts and green bush branches are bright vivid scarlet-red cloth threads and torn fabric strips left as a deliberate trail by Clara. [MARIANA] and [GRILO] examine and point triumphantly at the scarlet threads fluttering on the fence and bush.`
         },
         {
             id: 'p9-stage-3',
-            destino: `${P2}/p9-stage-3.png`,
+            destino: `${P2}/p10-stage-3.png`,
             refs: [`${P2}/p1-real.webp`],
             prompt: `From the crest of a winding dirt road outside town in warm golden-hour sunlight with layered cream-and-gold clouds (a final vivid scarlet-red thread tied to a roadside branch in the foreground).
 - Activity Stage 3 (TORRE — The Old Tower): Ahead on a grassy hill rises the tall sturdy Old Stone Tower (Torre Velha) built of layered grey craft paper against warm clouds. [MARIANA] and [GRILO] stand in the foreground pointing eagerly up toward the distant Old Stone Tower, having discovered Clara's hiding place.`
@@ -134,7 +134,7 @@ Progressive Activity Stage 3 (Complete Disguise: Hat + Closed Cloak + Wool Beard
         // --- CAP. 21 (Pág. 10) + SPRITE LENÇO ---
         {
             id: 'p10-real',
-            destino: `${P2}/p10-real.png`,
+            destino: `${P2}/p11-real.png`,
             refs: [`${P2}/p1-real.webp`, `${P2}/p2-real.webp`],
             prompt: `Warm golden-blue dusk at the Old Stone Tower (Torre Velha) built of layered grey craft paper on a grassy hill bordered by Sherwood trees and boulders.
 - At the tower's lower wooden door: a grey-armored guard sits slumped fast asleep on a bench with his helmet tilted down over his nose, snoring peacefully.
@@ -144,7 +144,7 @@ Progressive Activity Stage 3 (Complete Disguise: Hat + Closed Cloak + Wool Beard
         {
             id: 'p10-lenco',
             camada: true,
-            destino: `${P2}/camadas/p10-lenco.png`,
+            destino: `${P2}/camadas/p11-lenco.png`,
             refs: [`${P2}/p2-real.webp`],
             prompt: `One fluttering, slightly shortened vivid scarlet-red cloth handkerchief/scarf (lenço vermelho-escarlate, frayed lightly at the bottom tip) crafted from layered textured matte craft paper. Its top corner is shaped cleanly to anchor onto a frontal stone window sill, while the fabric waves gracefully downward in a gentle dusk breeze, lit with warm golden-hour dusk light. Isolated cleanly on solid #FF00FF magenta.`
         },
@@ -152,28 +152,28 @@ Progressive Activity Stage 3 (Complete Disguise: Hat + Closed Cloak + Wool Beard
         // --- CAP. 22 (Pág. 11 — Atividade 3: 4 etapas noturnas) ---
         {
             id: 'p11-real',
-            destino: `${P2}/p11-real.png`,
+            destino: `${P2}/p12-real.png`,
             refs: [`${P2}/p1-real.webp`, `${P2}/p2-real.webp`],
             prompt: `Starry deep-blue moonlit night at the back stone wall of the Old Stone Tower under a glowing cream paper full moon. Far to the side near the front door, the grey-armored guard snores peacefully on his bench.
 - Initial night rescue state: At the base of the lower back stone wall, [ROBIN], [JOAO] (holding a coiled brown paper rope), [MARIANA], and [GRILO] prepare quietly for the rescue while Clara Escarlate looks down eagerly from the high arched stone window above.`
         },
         {
             id: 'p11-stage-1',
-            destino: `${P2}/p11-stage-1.png`,
+            destino: `${P2}/p12-stage-1.png`,
             refs: [`${P2}/p1-real.webp`, `${P2}/p2-real.webp`],
             prompt: `Same starry deep-blue moonlit night and back stone wall of the Old Stone Tower (guard still snoring peacefully on the distant bench).
 - Activity Stage 1 (CORDA — Rope secured): [JOAO] has thrown a sturdy braided brown paper rope all the way up to the high stone window. Up in the window, Clara Escarlate ties the rope firmly and begins climbing safely down while [ROBIN], [MARIANA], and [GRILO] watch closely below.`
         },
         {
             id: 'p11-stage-2',
-            destino: `${P2}/p11-stage-2.png`,
+            destino: `${P2}/p12-stage-2.png`,
             refs: [`${P2}/p1-real.webp`, `${P2}/p2-real.webp`],
             prompt: `Same starry deep-blue moonlit night and back stone wall of the Old Stone Tower (guard still snoring peacefully on the distant bench).
 - Activity Stage 2 (CAPA — Green forest cloak): Clara Escarlate has safely climbed down to the grassy ground! [MARIANA] drapes a leaf-green forest cloak gently over Clara's shoulders, with Clara's shortened vivid scarlet-red neckerchief peeking proudly over the collar, while [ROBIN], [JOAO], and [GRILO] smile warmly beside them.`
         },
         {
             id: 'p11-stage-3',
-            destino: `${P2}/p11-stage-3.png`,
+            destino: `${P2}/p12-stage-3.png`,
             refs: [`${P2}/p1-real.webp`, `${P2}/p2-real.webp`],
             prompt: `Same starry deep-blue moonlit night and back stone wall of the Old Stone Tower.
 - Activity Stage 3 (FLORESTA — Silent escape): All five friends—[ROBIN], [MARIANA], Clara Escarlate (wearing the leaf-green forest cloak with her vivid scarlet-red neckerchief), [JOAO], and [GRILO]—tiptoe and run joyfully together into the moonlit Sherwood Forest trees at the edge of the clearing, while far behind them at the tower door the grey-armored guard keeps snoring peacefully on his bench.`
@@ -182,7 +182,7 @@ Progressive Activity Stage 3 (Complete Disguise: Hat + Closed Cloak + Wool Beard
         // --- CAP. 23 (Pág. 12) ---
         {
             id: 'p12-real',
-            destino: `${P2}/p12-real.png`,
+            destino: `${P2}/p13-real.png`,
             refs: [`${P2}/p1-real.webp`, `${P2}/p2-real.webp`],
             prompt: `Radiant sunny morning in the cheerful medieval village of Vila do Moinho with half-timbered thatched-roof cottages and the stone watermill in the background.
 - Action & Genuine Diversity: [ROBIN], [MARIANA], [CLARA], [JOAO], [TOME], and [GRILO] (comically carrying such a tall stack of colorful folded blankets that only his feet and eyes peek out!) are warmly handing out woven baskets of fresh bread, red apples, and cozy folded blankets to genuinely diverse village families—mothers, fathers, grandparents, Black, brown/pardo, Indigenous, and white families, and joyful children wrapped up in colorful blankets like little burritos laughing together.`
@@ -191,7 +191,7 @@ Progressive Activity Stage 3 (Complete Disguise: Hat + Closed Cloak + Wool Beard
         // --- CAP. 24 (Pág. 13) ---
         {
             id: 'p13-real',
-            destino: `${P2}/p13-real.png`,
+            destino: `${P2}/p14-real.png`,
             refs: [`${P2}/p1-real.webp`, `${P2}/p2-real.webp`],
             prompt: `EXACT SAME Sherwood Great Oak clearing stage as the first reference image (massive gnarled brown-paper Great Oak tree with its dark hollow behind the rustic wooden log table, mossy floor, ferns, wildflowers).
 CRITICAL ANIMATION CLEARANCE: Keep the upper-left quadrant beneath the sunlit oak canopy open and unobstructed for subtle golden sunbeams and luminous forest dust in CSS/SVG.
