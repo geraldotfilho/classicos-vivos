@@ -920,9 +920,9 @@
       "pagina": 7,
       "paragrafo": -1,
       "titulo": true,
-      "texto": "Capítulo 18. A Cor que Entregou a Oficina. Uma Raiva que Não Quer Saber de Prova",
-      "fala": "Capítulo 18. A Cor que Entregou a Oficina. Uma Raiva que Não Quer Saber de Prova",
-      "hash": "67ee46419e"
+      "texto": "Capítulo 18. A Cor que Entregou a Oficina. Uma Raiva que Não Quer Ouvir Ninguém",
+      "fala": "Capítulo 18. A Cor que Entregou a Oficina. Uma Raiva que Não Quer Ouvir Ninguém",
+      "hash": "2e68388573"
     },
     {
       "id": "p7-s1",
@@ -984,44 +984,52 @@
       "id": "p7-s8",
       "pagina": 7,
       "paragrafo": 1,
-      "texto": "Foi ela que ajudou Robin Hood a fugir!",
-      "fala": "Foi ela que ajudou Robin Hood a fugir!",
-      "hash": "c9cbd6c05d"
+      "texto": "Esta fita é a prova!",
+      "fala": "Esta fita é a prova!",
+      "hash": "b7e8e5248c"
     },
     {
       "id": "p7-s9",
       "pagina": 7,
       "paragrafo": 1,
-      "texto": "Prova?",
-      "fala": "Prova?",
-      "hash": "0a19a3fd39"
+      "texto": "Foi ela que ajudou Robin Hood a fugir!",
+      "fala": "Foi ela que ajudou Robin Hood a fugir!",
+      "hash": "c9cbd6c05d"
     },
     {
       "id": "p7-s10",
       "pagina": 7,
       "paragrafo": 1,
-      "texto": "Ele nem quis saber.",
-      "fala": "Ele nem quis saber.",
-      "hash": "c25a7922a1"
+      "texto": "Mas o Xerife não quis ouvir Clara.",
+      "fala": "Mas o Xerife não quis ouvir Clara.",
+      "hash": "b90edd4705"
     },
     {
       "id": "p7-s11",
       "pagina": 7,
       "paragrafo": 1,
-      "texto": "Explicação?",
-      "fala": "Explicação?",
-      "hash": "42fdc327cb"
+      "texto": "Ela podia ter uma explicação.",
+      "fala": "Ela podia ter uma explicação.",
+      "hash": "9c0ea2a732"
     },
     {
       "id": "p7-s12",
       "pagina": 7,
       "paragrafo": 1,
-      "texto": "Muito menos.",
-      "fala": "Muito menos.",
-      "hash": "3b95bd4e6f"
+      "texto": "Todo mundo tem o direito de se defender!",
+      "fala": "Todo mundo tem o direito de se defender!",
+      "hash": "61060a88f2"
     },
     {
       "id": "p7-s13",
+      "pagina": 7,
+      "paragrafo": 1,
+      "texto": "Só que o Xerife não queria explicação nenhuma: queria era prender alguém.",
+      "fala": "Só que o Xerife não queria explicação nenhuma: queria era prender alguém.",
+      "hash": "2a76611ee9"
+    },
+    {
+      "id": "p7-s14",
       "pagina": 7,
       "paragrafo": 2,
       "texto": "Mas o Xerife pensou bem: se prendesse Clara na cadeia de sempre, o bando ia soltar a moça num instante, como tinha feito com Mestre Tomé.",
@@ -1029,7 +1037,7 @@
       "hash": "6d08c93836"
     },
     {
-      "id": "p7-s14",
+      "id": "p7-s15",
       "pagina": 7,
       "paragrafo": 2,
       "texto": "Então chamou dois guardas de confiança e cochichou em SEGREDO: — Levem a tintureira hoje mesmo para a TORRE Velha, lá no alto do morro.",
@@ -1037,7 +1045,7 @@
       "hash": "7dd11ac284"
     },
     {
-      "id": "p7-s15",
+      "id": "p7-s16",
       "pagina": 7,
       "paragrafo": 2,
       "texto": "Ninguém pode saber onde ela está!",
@@ -1045,7 +1053,7 @@
       "hash": "729b280f76"
     },
     {
-      "id": "p7-s16",
+      "id": "p7-s17",
       "pagina": 7,
       "paragrafo": 3,
       "texto": "A tarde já ia embora quando os dois guardas marcharam pelas ruelas, toc, toc, toc, rumo à oficina das cores.",
@@ -1053,7 +1061,7 @@
       "hash": "70f919e6a4"
     },
     {
-      "id": "p7-s17",
+      "id": "p7-s18",
       "pagina": 7,
       "paragrafo": 3,
       "texto": "Lá dentro, Clara dobrava seus panos, cantarolando.",
@@ -1061,7 +1069,7 @@
       "hash": "a67c81a58f"
     },
     {
-      "id": "p7-s18",
+      "id": "p7-s19",
       "pagina": 7,
       "paragrafo": 3,
       "texto": "Nem desconfiava de que seu vermelho mais bonito tinha virado pista para o Xerife.",
