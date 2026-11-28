@@ -27,39 +27,40 @@
         .camada[data-camada="c-brilho-p0"] .camada-arte,
         .camada[data-camada="c-farinha-p6"] .camada-arte { position: relative; }
 
-        /* Raios diagonais orgânicos entre as copas (SVG full-frame esfumado: zero corte retangular) */
+        /* Raios diagonais orgânicos entre as copas (SVG full-frame esfumado: bem visível no tablet e zero corte retangular) */
         .camada[data-camada="c-sol-p1"] .camada-arte::before,
         .camada[data-camada="c-sol-p13"] .camada-arte::before {
             content: ''; position: absolute; inset: 0;
             background-repeat: no-repeat; background-size: 100% 100%;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1376 768'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0.14' y1='0.04' x2='0.48' y2='0.64'%3E%3Cstop offset='0%25' stop-color='%23FFF7CC' stop-opacity='0.58'/%3E%3Cstop offset='55%25' stop-color='%23FFE89E' stop-opacity='0.22'/%3E%3Cstop offset='100%25' stop-color='%23FFE89E' stop-opacity='0'/%3E%3C/linearGradient%3E%3Cfilter id='b' x='-20%25' y='-20%25' width='140%25' height='140%25'%3E%3CfeGaussianBlur stdDeviation='18'/%3E%3C/filter%3E%3C/defs%3E%3Cg filter='url(%23b)'%3E%3Cpolygon points='175,40 275,30 510,430 375,460' fill='url(%23g)'/%3E%3Cpolygon points='295,25 385,20 620,415 510,435' fill='url(%23g)' opacity='0.82'/%3E%3Cpolygon points='105,85 170,65 360,445 270,465' fill='url(%23g)' opacity='0.65'/%3E%3C/g%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1376 768'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0.14' y1='0.04' x2='0.48' y2='0.64'%3E%3Cstop offset='0%25' stop-color='%23FFF7B8' stop-opacity='0.82'/%3E%3Cstop offset='52%25' stop-color='%23FFE07A' stop-opacity='0.40'/%3E%3Cstop offset='100%25' stop-color='%23FFE07A' stop-opacity='0'/%3E%3C/linearGradient%3E%3Cfilter id='b' x='-15%25' y='-15%25' width='130%25' height='130%25'%3E%3CfeGaussianBlur stdDeviation='9'/%3E%3C/filter%3E%3C/defs%3E%3Cg filter='url(%23b)'%3E%3Cpolygon points='175,35 280,25 520,445 375,475' fill='url(%23g)'/%3E%3Cpolygon points='295,20 390,15 630,430 510,450' fill='url(%23g)' opacity='0.88'/%3E%3Cpolygon points='100,80 175,60 365,455 268,478' fill='url(%23g)' opacity='0.75'/%3E%3C/g%3E%3C/svg%3E");
             will-change: opacity, transform;
-            animation: rh2SolRespira 6.2s ease-in-out infinite;
+            animation: rh2SolRespira 4.8s ease-in-out infinite;
         }
-        /* Poeirinha dourada flutuando livre na luz */
+        /* Poeirinha dourada bem visível e brilhante flutuando livre na luz */
         .camada[data-camada="c-sol-p1"] .camada-arte::after,
         .camada[data-camada="c-sol-p13"] .camada-arte::after {
             content: ''; position: absolute; inset: 0;
             background-repeat: no-repeat; background-size: 100% 100%;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1376 768'%3E%3Cdefs%3E%3CradialGradient id='d'%3E%3Cstop offset='0%25' stop-color='%23FFFCE6' stop-opacity='0.96'/%3E%3Cstop offset='50%25' stop-color='%23FFE68F' stop-opacity='0.48'/%3E%3Cstop offset='100%25' stop-color='%23FFE68F' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Ccircle cx='220' cy='155' r='6' fill='url(%23d)'/%3E%3Ccircle cx='288' cy='210' r='4.5' fill='url(%23d)'/%3E%3Ccircle cx='348' cy='138' r='5.5' fill='url(%23d)'/%3E%3Ccircle cx='395' cy='255' r='5' fill='url(%23d)'/%3E%3Ccircle cx='252' cy='295' r='4.5' fill='url(%23d)'/%3E%3Ccircle cx='445' cy='198' r='6' fill='url(%23d)'/%3E%3Ccircle cx='488' cy='312' r='4.5' fill='url(%23d)'/%3E%3Ccircle cx='325' cy='355' r='5' fill='url(%23d)'/%3E%3Ccircle cx='182' cy='235' r='4.5' fill='url(%23d)'/%3E%3Ccircle cx='532' cy='248' r='4' fill='url(%23d)'/%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1376 768'%3E%3Cdefs%3E%3CradialGradient id='d'%3E%3Cstop offset='0%25' stop-color='%23FFFFFF' stop-opacity='1'/%3E%3Cstop offset='45%25' stop-color='%23FFE169' stop-opacity='0.78'/%3E%3Cstop offset='100%25' stop-color='%23FFE169' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Ccircle cx='215' cy='155' r='13' fill='url(%23d)'/%3E%3Ccircle cx='288' cy='215' r='10' fill='url(%23d)'/%3E%3Ccircle cx='352' cy='135' r='14' fill='url(%23d)'/%3E%3Ccircle cx='400' cy='260' r='11' fill='url(%23d)'/%3E%3Ccircle cx='252' cy='305' r='10' fill='url(%23d)'/%3E%3Ccircle cx='455' cy='198' r='15' fill='url(%23d)'/%3E%3Ccircle cx='495' cy='318' r='10' fill='url(%23d)'/%3E%3Ccircle cx='325' cy='365' r='12' fill='url(%23d)'/%3E%3Ccircle cx='178' cy='240' r='10' fill='url(%23d)'/%3E%3Ccircle cx='540' cy='245' r='9' fill='url(%23d)'/%3E%3Ccircle cx='375' cy='320' r='9' fill='url(%23d)'/%3E%3Ccircle cx='295' cy='165' r='11' fill='url(%23d)'/%3E%3C/svg%3E");
+            filter: drop-shadow(0 0 6px rgba(255, 230, 120, 0.85));
             will-change: opacity, transform;
-            animation: rh2Poeira 7.2s ease-in-out infinite;
+            animation: rh2Poeira 5.4s ease-in-out infinite;
         }
 
-        /* Capa: brilho dourado orgânico sobre a Flecha de Ouro (elipse suave + pontinhos de brilho) */
+        /* Capa: brilho dourado vivo sobre a Flecha de Ouro (elipse suave + estrelinhas de brilho) */
         .camada[data-camada="c-brilho-p0"] .camada-arte::before {
             content: ''; position: absolute; inset: 0;
             background-repeat: no-repeat; background-size: 100% 100%;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1376 768'%3E%3Cdefs%3E%3CradialGradient id='a' cx='50%25' cy='50%25' r='50%25'%3E%3Cstop offset='0%25' stop-color='%23FFF8CC' stop-opacity='0.65'/%3E%3Cstop offset='45%25' stop-color='%23FFD86B' stop-opacity='0.24'/%3E%3Cstop offset='100%25' stop-color='%23FFD86B' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Cellipse cx='688' cy='195' rx='265' ry='68' fill='url(%23a)'/%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1376 768'%3E%3Cdefs%3E%3CradialGradient id='a' cx='50%25' cy='50%25' r='50%25'%3E%3Cstop offset='0%25' stop-color='%23FFF8B8' stop-opacity='0.85'/%3E%3Cstop offset='45%25' stop-color='%23FFD24C' stop-opacity='0.44'/%3E%3Cstop offset='100%25' stop-color='%23FFD24C' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Cellipse cx='688' cy='195' rx='280' ry='78' fill='url(%23a)'/%3E%3C/svg%3E");
             will-change: opacity, transform;
-            animation: rh2Brilho 4.2s ease-in-out infinite;
+            animation: rh2Brilho 3.4s ease-in-out infinite;
         }
         .camada[data-camada="c-brilho-p0"] .camada-arte::after {
             content: ''; position: absolute; inset: 0;
             background-repeat: no-repeat; background-size: 100% 100%;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1376 768'%3E%3Cdefs%3E%3CradialGradient id='s'%3E%3Cstop offset='0%25' stop-color='%23FFFFFF' stop-opacity='0.96'/%3E%3Cstop offset='40%25' stop-color='%23FFF0A6' stop-opacity='0.52'/%3E%3Cstop offset='100%25' stop-color='%23FFD86B' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Ccircle cx='812' cy='195' r='16' fill='url(%23s)'/%3E%3Ccircle cx='565' cy='182' r='10' fill='url(%23s)' opacity='0.82'/%3E%3Ccircle cx='710' cy='168' r='8' fill='url(%23s)' opacity='0.78'/%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1376 768'%3E%3Cdefs%3E%3CradialGradient id='s'%3E%3Cstop offset='0%25' stop-color='%23FFFFFF' stop-opacity='1'/%3E%3Cstop offset='45%25' stop-color='%23FFEA85' stop-opacity='0.78'/%3E%3Cstop offset='100%25' stop-color='%23FFD24C' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Ccircle cx='814' cy='195' r='26' fill='url(%23s)'/%3E%3Cpath d='M814 166 L819 190 L843 195 L819 200 L814 224 L809 200 L785 195 L809 190 Z' fill='%23FFFFFF'/%3E%3Ccircle cx='565' cy='180' r='18' fill='url(%23s)'/%3E%3Cpath d='M565 162 L568 177 L583 180 L568 183 L565 198 L562 183 L547 180 L562 177 Z' fill='%23FFFDF0'/%3E%3Ccircle cx='705' cy='168' r='14' fill='url(%23s)'/%3E%3C/svg%3E");
             will-change: opacity, transform;
-            animation: rh2Poeira 4.8s ease-in-out -1.5s infinite;
+            animation: rh2Brilho 3.2s ease-in-out -1.4s infinite;
         }
 
         /* Cap. 15: 2 flâmulas ancoradas pelo topo sob as travessas dos mastros */
@@ -76,13 +77,13 @@
             animation: rh2Flamula 3.1s ease-in-out -1.2s infinite;
         }
 
-        /* Cap. 17: névoa leve de farinha no ar da praça (SVG esfumado sem borda) */
+        /* Cap. 17: nuvenzinhas leves de farinha derivando no ar da praça (SVG esfumado bem visível) */
         .camada[data-camada="c-farinha-p6"] .camada-arte::before {
             content: ''; position: absolute; inset: 0;
             background-repeat: no-repeat; background-size: 100% 100%;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1376 768'%3E%3Cdefs%3E%3CradialGradient id='f'%3E%3Cstop offset='0%25' stop-color='%23FFFDF7' stop-opacity='0.52'/%3E%3Cstop offset='55%25' stop-color='%23FFF9EE' stop-opacity='0.22'/%3E%3Cstop offset='100%25' stop-color='%23FFF9EE' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Cellipse cx='290' cy='280' rx='135' ry='82' fill='url(%23f)'/%3E%3Cellipse cx='430' cy='240' rx='110' ry='66' fill='url(%23f)'/%3E%3Cellipse cx='545' cy='310' rx='100' ry='60' fill='url(%23f)'/%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1376 768'%3E%3Cdefs%3E%3CradialGradient id='f'%3E%3Cstop offset='0%25' stop-color='%23FFFFFF' stop-opacity='0.78'/%3E%3Cstop offset='50%25' stop-color='%23FFF9EE' stop-opacity='0.36'/%3E%3Cstop offset='100%25' stop-color='%23FFF9EE' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Cellipse cx='290' cy='280' rx='145' ry='88' fill='url(%23f)'/%3E%3Cellipse cx='440' cy='235' rx='120' ry='72' fill='url(%23f)'/%3E%3Cellipse cx='560' cy='310' rx='110' ry='66' fill='url(%23f)'/%3E%3Ccircle cx='240' cy='210' r='12' fill='url(%23f)'/%3E%3Ccircle cx='370' cy='190' r='10' fill='url(%23f)'/%3E%3Ccircle cx='495' cy='265' r='11' fill='url(%23f)'/%3E%3C/svg%3E");
             will-change: opacity, transform;
-            animation: rh2Poeira 6.2s ease-in-out infinite;
+            animation: rh2Poeira 4.8s ease-in-out infinite;
         }
 
         /* Cap. 21: lenço vermelho-escarlate balançando na janela alta */
@@ -95,17 +96,109 @@
             animation: rh2Flamula 2.4s ease-in-out infinite;
         }
 
+        /* Cap. 16 (Pág. 5): câmera panorâmica interativa + flecha em voo + partição em V no alvo */
+        #drop-zone-5 .scene-img { opacity: 0; }
+        .rh2-p5-palco {
+            position: absolute; inset: 0; overflow: hidden; z-index: 6; pointer-events: none;
+            background: #2a1d12;
+        }
+        .rh2-p5-mundo {
+            position: absolute; left: 0; top: -43%; width: 158%; height: 158%;
+            transform: translate3d(0%, 0, 0);
+            transition: transform 1.28s cubic-bezier(0.24, 0.08, 0.28, 1);
+            will-change: transform;
+        }
+        .rh2-p5-palco.disparou .rh2-p5-mundo {
+            transform: translate3d(-36.71%, 0, 0);
+        }
+        .rh2-p5-palco.impacto .rh2-p5-mundo {
+            animation: rh2AlvoTremer 0.32s ease-out;
+        }
+        .rh2-p5-mundo > img {
+            display: block; width: 100%; height: 100%; object-fit: fill;
+        }
+        .rh2-p5-svg {
+            position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible;
+        }
+        /* Flecha do capitão já fincada no centro do alvo (parte-se em V no impacto!) */
+        .rh2-cap-cima, .rh2-cap-baixo {
+            transform-origin: 1169px 446px;
+            transition: transform 0.36s cubic-bezier(0.22, 1.45, 0.36, 1);
+        }
+        .rh2-p5-palco.impacto .rh2-cap-cima {
+            transform: rotate(-25deg) translate(-12px, -9px);
+        }
+        .rh2-p5-palco.impacto .rh2-cap-baixo {
+            transform: rotate(25deg) translate(-12px, 9px);
+        }
+        /* Flecha de Robin voando do arco (495, 407) até o centro do alvo (1169, 446) */
+        .rh2-flecha-robin {
+            opacity: 0;
+            transform-origin: 1169px 446px;
+            transform: translate3d(-674px, -39px, 0) rotate(-3deg);
+            filter: drop-shadow(0 4px 4px rgba(30, 15, 5, 0.38));
+        }
+        .rh2-p5-palco.disparou .rh2-flecha-robin {
+            animation: rh2FlechaVoo 1.28s cubic-bezier(0.22, 0.06, 0.32, 1) forwards;
+        }
+        .rh2-rastro {
+            opacity: 0;
+            stroke-dasharray: 220;
+            stroke-dashoffset: 220;
+        }
+        .rh2-p5-palco.disparou .rh2-rastro {
+            animation: rh2RastroVoo 1.22s ease-out forwards;
+        }
+        /* Explosão CRAC! + lascas douradas no centro do alvo */
+        .rh2-crac {
+            opacity: 0;
+            transform-origin: 1169px 446px;
+            transform: scale(0.2);
+        }
+        .rh2-p5-palco.impacto .rh2-crac {
+            animation: rh2CracPop 0.72s cubic-bezier(0.2, 1.35, 0.4, 1) forwards;
+        }
+        #card-5-atirar {
+            pointer-events: auto !important;
+            opacity: 1 !important;
+            cursor: pointer !important;
+        }
+
+        @keyframes rh2FlechaVoo {
+            0%   { opacity: 1; transform: translate3d(-674px, -39px, 0) rotate(-5deg); }
+            45%  { opacity: 1; transform: translate3d(-330px, -68px, 0) rotate(0deg); }
+            96%  { opacity: 1; transform: translate3d(-6px, -2px, 0) rotate(2deg); }
+            100% { opacity: 1; transform: translate3d(0px, 0px, 0) rotate(0deg); }
+        }
+        @keyframes rh2RastroVoo {
+            0%   { opacity: 0; stroke-dashoffset: 220; }
+            20%  { opacity: 0.75; }
+            85%  { opacity: 0.55; stroke-dashoffset: 0; }
+            100% { opacity: 0; stroke-dashoffset: -120; }
+        }
+        @keyframes rh2CracPop {
+            0%   { opacity: 0; transform: scale(0.25) rotate(-10deg); }
+            35%  { opacity: 1; transform: scale(1.18) rotate(4deg); }
+            100% { opacity: 0; transform: scale(1.55) rotate(12deg); }
+        }
+        @keyframes rh2AlvoTremer {
+            0%, 100% { transform: translate3d(-36.71%, 0, 0); }
+            25% { transform: translate3d(-36.25%, -0.35%, 0); }
+            55% { transform: translate3d(-37.05%, 0.25%, 0); }
+            80% { transform: translate3d(-36.55%, -0.15%, 0); }
+        }
+
         @keyframes rh2SolRespira {
-            0%, 100% { opacity: 0.42; transform: translate3d(0, 0, 0); }
-            50% { opacity: 0.92; transform: translate3d(0.8%, 0.6%, 0); }
+            0%, 100% { opacity: 0.28; transform: translate3d(0, 0, 0); }
+            50% { opacity: 1; transform: translate3d(2.4%, 1.6%, 0); }
         }
         @keyframes rh2Brilho {
-            0%, 100% { opacity: 0.38; transform: scale(0.97); }
-            50% { opacity: 0.95; transform: scale(1.03); }
+            0%, 100% { opacity: 0.26; transform: scale(0.92); }
+            50% { opacity: 1; transform: scale(1.06); }
         }
         @keyframes rh2Poeira {
-            0%, 100% { opacity: 0.35; transform: translate3d(0, 1.4%, 0); }
-            50% { opacity: 0.92; transform: translate3d(1.2%, -1.8%, 0); }
+            0%, 100% { opacity: 0.22; transform: translate3d(0, 3.2%, 0); }
+            50% { opacity: 1; transform: translate3d(3.8%, -5.5%, 0); }
         }
         @keyframes rh2Flamula {
             0%, 100% { transform: rotate(-5.5deg) skewX(-2deg); }
@@ -120,9 +213,15 @@
             .camada[data-camada="c-brilho-p0"] .camada-arte::after,
             .camada[data-camada="c-farinha-p6"] .camada-arte::before,
             .camada[data-camada^="c-flamula-p4"] > .camada-arte,
-            .camada[data-camada="c-lenco-p10"] > .camada-arte {
+            .camada[data-camada="c-lenco-p10"] > .camada-arte,
+            .rh2-p5-mundo,
+            .rh2-flecha-robin,
+            .rh2-rastro,
+            .rh2-crac {
                 animation: none !important;
+                transition: none !important;
             }
+            .rh2-p5-palco.disparou .rh2-flecha-robin { opacity: 1; transform: translate3d(0, 0, 0); }
         }
     </style>
 </head>
@@ -288,6 +387,7 @@
             {
                 capitulo: '🎯 Capítulo 16 • A Flecha que Partiu a Flecha', corCapitulo: 'text-amber-700',
                 titulo: 'Um Tiro de Cair o Queixo',
+                comandoAtividade: 'Ajude Robin a fazer o tiro mais difícil do campeonato! Toque no cartão para soltar a flecha!',
                 texto: `A {{DISPUTA|DIS • PU • TA|🏆}} começou! Uma arqueira da vila soltou a flecha, fiuuu, e acertou pertinho do centro. Depois, o capitão dos guardas acertou no meio do alvo. Lá no palanque, o Xerife estufou o peito feito um pombo. Ninguém ia vencer o guarda dele!
 
                     Chegou a vez do viajante de manto marrom. Robin puxou a {{CORDA|COR • DA|🪢}} do arco. Nessa hora, a barba de lã fez cócegas no nariz dele! — Aaa… aaa… A barba fofa subia e descia. Robin torceu o nariz para um lado, depois para o outro, e prendeu o ar. Ufa! O espirro voltou para dentro. Ele respirou fundo e mirou firme.
@@ -296,13 +396,57 @@
 
                     Sem desconfiar de nada, o Xerife desceu do palanque com cara de quem chupou limão e entregou a Flecha de Ouro ao viajante. Robin fez uma reverência exagerada, quase varrendo o chão com a barba. Só que, ao se abaixar, a aba do chapéu subiu um tiquinho. E um guarda, ali perto, arregalou os olhos!`,
                 cena: {
-                    real: 'p5-real.webp', emoji: '🎯',
-                    alt: 'Na praça de Nortigão, a flecha de Robin disfarçado parte ao meio a flecha do capitão bem no centro do alvo de palha enquanto a multidão aplaude e o Xerife faz cara azeda',
-                    legendaReal: '🎯 A Flecha Partida Bem no Coração do Alvo!',
+                    real: 'p5-panoramico.webp', emoji: '🎯',
+                    alt: 'Na praça panorâmica de Nortigão, Robin disfarçado mira à esquerda enquanto a plateia diversa e o Xerife acompanham o voo da flecha até partir a flecha do capitão no centro do alvo de palha à direita',
+                    legendaReal: '🎯 Robin Mira no Alvo... Toque em ATIRAR!',
+                    extra: `<div id="rh2-p5-palco" class="rh2-p5-palco" aria-hidden="true">
+                        <div class="rh2-p5-mundo">
+                            <img src="./imagens/parte-2/p5-panoramico.webp" alt="" draggable="false" />
+                            <svg class="rh2-p5-svg" viewBox="0 0 1376 768" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Rastro suave de vento da flecha em voo -->
+                                <path class="rh2-rastro" d="M495 407 Q830 375 1169 446" fill="none" stroke="#FFF7D6" stroke-width="5" stroke-linecap="round" />
+                                <!-- Flecha do capitão (já fincada no centro dourado 1169,446; parte-se em V no impacto!) -->
+                                <g class="rh2-cap-cima">
+                                    <polygon points="1044,441 1169,442 1169,446 1044,446" fill="#B89B72"/>
+                                    <polygon points="1032,431 1068,442 1054,445 1026,437" fill="#64748B"/>
+                                    <polygon points="1050,432 1078,442 1068,444 1044,436" fill="#94A3B8"/>
+                                </g>
+                                <g class="rh2-cap-baixo">
+                                    <polygon points="1044,446 1169,446 1169,450 1044,451" fill="#8C714D"/>
+                                    <polygon points="1032,461 1068,450 1054,447 1026,455" fill="#475569"/>
+                                    <polygon points="1050,460 1078,450 1068,448 1044,456" fill="#64748B"/>
+                                </g>
+                                <!-- Flecha de Robin (dispara do arco até cravar bem no meio das duas metades!) -->
+                                <g class="rh2-flecha-robin">
+                                    <rect x="1032" y="443" width="128" height="6" rx="2.5" fill="#9A5B2C"/>
+                                    <rect x="1032" y="443" width="128" height="2.5" rx="1" fill="#C47D44"/>
+                                    <polygon points="1156,439 1173,446 1156,453" fill="#D97706"/>
+                                    <polygon points="1018,433 1052,443 1038,446 1012,439" fill="#DC2626"/>
+                                    <polygon points="1018,459 1052,449 1038,446 1012,453" fill="#B91C1C"/>
+                                    <polygon points="1036,434 1062,443 1050,445 1030,438" fill="#F59E0B"/>
+                                    <polygon points="1036,458 1062,449 1050,447 1030,454" fill="#D97706"/>
+                                </g>
+                                <!-- Efeito CRAC! (brilho dourado + lascas de madeira no ponto de impacto 1169,446) -->
+                                <g class="rh2-crac">
+                                    <polygon points="1169,398 1179,430 1212,422 1188,446 1212,470 1179,462 1169,494 1159,462 1126,470 1150,446 1126,422 1159,430" fill="#FDE047" opacity="0.92"/>
+                                    <polygon points="1132,412 1146,420 1138,426" fill="#C47D44"/>
+                                    <polygon points="1130,478 1145,470 1138,464" fill="#A16227"/>
+                                    <polygon points="1195,416 1208,408 1202,422" fill="#F59E0B"/>
+                                    <polygon points="1194,474 1208,482 1201,468" fill="#F59E0B"/>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>`,
+                    cartoes: {
+                        tipo: 'acao',
+                        itens: [
+                            { id: 'atirar', palavra: 'ATIRAR', emoji: '🏹', acao: 'atirarFlecha' }
+                        ]
+                    },
                     hotspots: [
-                        { x: 64, y: 42, w: 22, h: 34, palavra: 'DISPUTA', emoji: '🏆' },
-                        { x: 14, y: 40, w: 20, h: 40, palavra: 'CORDA', emoji: '🪢' },
-                        { x: 38, y: 50, w: 28, h: 30, palavra: 'PALMAS', emoji: '👏' }
+                        { x: 14, y: 38, w: 22, h: 46, palavra: 'CORDA', emoji: '🪢' },
+                        { x: 42, y: 36, w: 22, h: 42, palavra: 'DISPUTA', emoji: '🏆' },
+                        { x: 74, y: 42, w: 22, h: 44, palavra: 'PALMAS', emoji: '👏' }
                     ]
                 }
             },
@@ -535,8 +679,63 @@
                     ]
                 }
             }
-        ]
+        ],
+        acoes: {
+            atirarFlecha: (api, ctx) => {
+                const palco = document.getElementById('rh2-p5-palco');
+                const badge = document.getElementById('lens-badge-5');
+                if (!palco || palco.dataset.voando === '1') return;
+
+                const disparar = () => {
+                    palco.dataset.voando = '1';
+                    palco.classList.remove('disparou', 'impacto');
+                    void palco.offsetWidth;
+                    if (api.som) api.som('magic');
+                    if (badge) badge.textContent = 'ZUP! A flecha voa pela praça...';
+                    palco.classList.add('disparou');
+
+                    const reduzido = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                    const tempoVoo = reduzido ? 80 : 1260;
+                    clearTimeout(palco._tImpacto);
+                    palco._tImpacto = setTimeout(() => {
+                        palco.classList.add('impacto');
+                        palco.dataset.voando = '0';
+                        if (api.som) api.som('fanfare');
+                        if (badge) badge.textContent = 'CRAC! A Flecha Partida Bem no Coração do Alvo!';
+                        if (api.faiscas) {
+                            const rect = palco.getBoundingClientRect();
+                            api.faiscas(rect.left + rect.width * 0.76, rect.top + rect.height * 0.50);
+                        }
+                        if (ctx && ctx.card) {
+                            ctx.card.classList.remove('card-used', 'opacity-40', 'pointer-events-none');
+                        }
+                    }, tempoVoo);
+                };
+
+                // Se já atirou antes, volta suavemente a câmera para Robin e atira de novo!
+                if (palco.classList.contains('impacto')) {
+                    palco.dataset.voando = '1';
+                    palco.classList.remove('disparou', 'impacto');
+                    if (badge) badge.textContent = 'Robin mira de novo...';
+                    clearTimeout(palco._tReset);
+                    palco._tReset = setTimeout(disparar, 720);
+                } else {
+                    disparar();
+                }
+            }
+        }
     };
+    document.addEventListener('click', (e) => {
+        if (e.target.closest('[data-reiniciar-pagina="5"]')) {
+            const palco = document.getElementById('rh2-p5-palco');
+            if (palco) {
+                clearTimeout(palco._tImpacto);
+                clearTimeout(palco._tReset);
+                palco.dataset.voando = '0';
+                palco.classList.remove('disparou', 'impacto');
+            }
+        }
+    });
     </script>
     <script src="../assets/js/texto.js"></script>
     <script src="../assets/js/livro.js"></script>
