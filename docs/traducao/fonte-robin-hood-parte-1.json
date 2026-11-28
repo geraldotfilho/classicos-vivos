@@ -585,6 +585,12 @@
       "onde": [
         "mensagem do fim da parte"
       ]
+    },
+    {
+      "texto": "Ler Parte 2: A Flecha de Ouro",
+      "onde": [
+        "botão para a próxima parte"
+      ]
     }
   ]
 }
