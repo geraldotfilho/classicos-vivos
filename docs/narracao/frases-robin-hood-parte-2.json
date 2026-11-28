@@ -2206,6 +2206,17 @@
       ]
     },
     {
+      "id": "ajude-robin-a-fazer-o-tiro-mais-fb78ef",
+      "tipo": "comando",
+      "chave": "Ajude Robin a fazer o tiro mais difícil do campeonato! Toque no cartão para soltar a flecha!",
+      "texto": "Ajude Robin a fazer o tiro mais difícil do campeonato! Toque no cartão para soltar a flecha!",
+      "fala": "Ajude Robin a fazer o tiro mais difícil do campeonato! Toque no cartão para soltar a flecha!",
+      "hash": "3edb5022bd",
+      "paginas": [
+        5
+      ]
+    },
+    {
       "id": "ajude-mariana-e-grilo-a-seguir-a-3ad3b8",
       "tipo": "comando",
       "chave": "Ajude Mariana e Grilo a seguir as pistas! Toque nas palavras na mesma ordem em que as pistas aparecem no texto. A cada acerto, o bando chega mais perto de Clara.",

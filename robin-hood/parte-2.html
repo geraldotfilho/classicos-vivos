@@ -725,17 +725,19 @@
             }
         }
     };
-    document.addEventListener('click', (e) => {
-        if (e.target.closest('[data-reiniciar-pagina="5"]')) {
-            const palco = document.getElementById('rh2-p5-palco');
-            if (palco) {
-                clearTimeout(palco._tImpacto);
-                clearTimeout(palco._tReset);
-                palco.dataset.voando = '0';
-                palco.classList.remove('disparou', 'impacto');
+    if (typeof document !== 'undefined') {
+        document.addEventListener('click', (e) => {
+            if (e.target.closest('[data-reiniciar-pagina="5"]')) {
+                const palco = document.getElementById('rh2-p5-palco');
+                if (palco) {
+                    clearTimeout(palco._tImpacto);
+                    clearTimeout(palco._tReset);
+                    palco.dataset.voando = '0';
+                    palco.classList.remove('disparou', 'impacto');
+                }
             }
-        }
-    });
+        });
+    }
     </script>
     <script src="../assets/js/texto.js"></script>
     <script src="../assets/js/livro.js"></script>
