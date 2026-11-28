@@ -1,0 +1,205 @@
+{
+  "_sobre": "Quem fala cada trecho das frases com fala de personagem (texto no formato do campo `fala`, sem mudar palavras). Frases fora daqui são da NARRADORA. Elenco em robin-hood/audio/narracao/elenco.json.",
+  "p1-s12": [
+    ["NARRADORA", "Bateu palmas e disse:"],
+    ["REI_RICARDO", "Dois sacos para todos?"]
+  ],
+  "p1-s13": [
+    ["REI_RICARDO", "Que conta simples!"]
+  ],
+  "p1-s14": [
+    ["REI_RICARDO", "Pode cobrar, Xerife!"]
+  ],
+  "p2-s9": [
+    ["XERIFE", "Dois sacos de farinha por família!"],
+    ["NARRADORA", "gritou."]
+  ],
+  "p3-s1": [
+    ["NARRADORA", "Mestre Tomé apontou para o moinho e disse com voz mansa:"],
+    ["MESTRE_TOME", "Só tenho três sacos."]
+  ],
+  "p3-s2": [
+    ["MESTRE_TOME", "Se eu entregar dois, sobra um só para o Grilo comer o mês inteiro."]
+  ],
+  "p3-s3": [
+    ["NARRADORA", "O Xerife franziu a testa e bateu o pé na terra:"],
+    ["XERIFE", "Lei do rei não aceita choro!"]
+  ],
+  "p3-s4": [
+    ["XERIFE", "Pague logo!"]
+  ],
+  "p3-s5": [
+    ["NARRADORA", "Cheio de coragem, Robin falou alto, para a vila ouvir:"],
+    ["ROBIN", "Essa conta não é justa, Xerife!"]
+  ],
+  "p3-s6": [
+    ["ROBIN", "Tirar dois sacos de cinquenta não faz falta."]
+  ],
+  "p3-s7": [
+    ["ROBIN", "Mas tirar dois de três deixa uma criança com fome!"]
+  ],
+  "p3-s8": [
+    ["NARRADORA", "Os vizinhos cochicharam:"],
+    ["VIZINHOS", "É verdade!"]
+  ],
+  "p3-s10": [
+    ["NARRADORA", "Furioso, o Xerife inventou uma mentira na hora:"],
+    ["XERIFE", "Vocês estão escondendo farinha no porão!"]
+  ],
+  "p3-s11": [
+    ["NARRADORA", "Mestre Tomé abriu os braços:"],
+    ["MESTRE_TOME", "Pode entrar e procurar!"]
+  ],
+  "p3-s12": [
+    ["MESTRE_TOME", "Não escondi nada!"]
+  ],
+  "p3-s13": [
+    ["NARRADORA", "Mas o Xerife gritou mais alto:"],
+    ["XERIFE", "Eu sou o Xerife de Nortigão!"]
+  ],
+  "p3-s14": [
+    ["XERIFE", "Não preciso de prova nenhuma!"]
+  ],
+  "p3-s15": [
+    ["XERIFE", "Guardas, prendam o moleiro e esse rapaz atrevido!"]
+  ],
+  "p3-s17": [
+    ["NARRADORA", "Mesmo preso, o moleiro se pôs na frente e gritou:"],
+    ["MESTRE_TOME", "Corram para a floresta, meninos!"]
+  ],
+  "p4-s7": [
+    ["MARIANA", "Com essas roupas claras, os guardas acham vocês num instante!"],
+    ["NARRADORA", "cochichou, abrindo um embrulho."]
+  ],
+  "p4-s9": [
+    ["MARIANA", "Quem veste a cor da floresta vira parte dela!"],
+    ["NARRADORA", "ensinou Mariana."]
+  ],
+  "p4-s10": [
+    ["MARIANA", "A mata é grande, e é fácil se perder."]
+  ],
+  "p4-s11": [
+    ["MARIANA", "Se alguém estiver em perigo, sopre três vezes: tuuu, tuuu, tuuu!"]
+  ],
+  "p4-s12": [
+    ["MARIANA", "Quer dizer: venham me ajudar!"]
+  ],
+  "p5-s13": [
+    ["JOAO_PEQUENO", "Abra caminho, rapazinho de verde!"],
+    ["NARRADORA", "trovejou o gigante, com olhos risonhos."]
+  ],
+  "p5-s14": [
+    ["JOAO_PEQUENO", "Eu pisei aqui primeiro!"]
+  ],
+  "p5-s18": [
+    ["ROBIN", "Eu tenho pressa, e você tem teimosia!"],
+    ["NARRADORA", "disse, rindo."]
+  ],
+  "p5-s19": [
+    ["ROBIN", "Vamos fazer um jogo rápido de equilíbrio, com o galho e o bastão."]
+  ],
+  "p5-s20": [
+    ["ROBIN", "Quem cair na água dá passagem ao outro!"]
+  ],
+  "p6-s12": [
+    ["ROBIN", "Que banho bonito!"]
+  ],
+  "p6-s13": [
+    ["ROBIN", "Você venceu direitinho!"]
+  ],
+  "p6-s18": [
+    ["JOAO_PEQUENO", "Você sabe perder com alegria, rapaz de verde!"],
+    ["NARRADORA", "disse o gigante, ajudando Robin a torcer a camisa."]
+  ],
+  "p6-s19": [
+    ["JOAO_PEQUENO", "Quem sabe rir do próprio tombo já ganhou um amigo!"]
+  ],
+  "p7-s7": [
+    ["GRILO", "Com meu pai foi igualzinho!"]
+  ],
+  "p7-s8": [
+    ["GRILO", "O Xerife levou a farinha da vila e prendeu Mestre Tomé, sem prova nenhuma!"]
+  ],
+  "p7-s10": [
+    ["JOAO_PEQUENO", "Esse Xerife passou de todos os limites!"]
+  ],
+  "p7-s12": [
+    ["NARRADORA", "Depois deu um tapinha no joelho dele, rindo:"],
+    ["GRILO", "Um amigo tão grandão merece um apelido ao contrário."]
+  ],
+  "p7-s13": [
+    ["GRILO", "De hoje em diante, você é o João Pequeno!"]
+  ],
+  "p7-s16": [
+    ["ROBIN", "Vamos para o Grande Carvalho pensar num jeito de soltar Mestre Tomé."]
+  ],
+  "p7-s17": [
+    ["ROBIN", "Vem com a gente?"]
+  ],
+  "p7-s18": [
+    ["NARRADORA", "João Pequeno ergueu o bastão:"],
+    ["JOAO_PEQUENO", "Vou!"]
+  ],
+  "p7-s19": [
+    ["JOAO_PEQUENO", "Juntos, vamos formar um bando que o Xerife nunca viu!"]
+  ],
+  "p8-s12": [
+    ["MARIANA", "O Xerife trancou Mestre Tomé na cadeia de pedra,"],
+    ["NARRADORA", "contou ela."]
+  ],
+  "p8-s13": [
+    ["MARIANA", "Bem do lado fica o depósito, com a farinha de todas as famílias."]
+  ],
+  "p8-s14": [
+    ["MARIANA", "E dois guardas vigiam o portão."]
+  ],
+  "p9-s10": [
+    ["GRILO", "Psiu, pai!"]
+  ],
+  "p9-s11": [
+    ["GRILO", "Vim tirar o senhor daqui!"]
+  ],
+  "p10-s9": [
+    ["NARRADORA", "Então apontou o dedo e berrou:"],
+    ["XERIFE", "Peguem esses ladrões!"]
+  ],
+  "p10-s10": [
+    ["XERIFE", "O bando de Robin Hood roubou a farinha do rei!"]
+  ],
+  "p10-s11": [
+    ["NARRADORA", "Robin parou na beira da mata e falou bem alto, para a vila inteira ouvir a verdade:"],
+    ["ROBIN", "Nós não somos ladrões!"]
+  ],
+  "p10-s12": [
+    ["ROBIN", "Devolver não é roubar!"]
+  ],
+  "p10-s13": [
+    ["ROBIN", "Essa farinha é das famílias, e o senhor tomou à força."]
+  ],
+  "p10-s14": [
+    ["ROBIN", "E Mestre Tomé é um homem honesto, preso sem prova nenhuma!"]
+  ],
+  "p11-s6": [
+    ["ROBIN", "Enquanto o rei não olhar para o povo, e o Xerife cobrar o que não é justo, nós vamos estar aqui!"]
+  ],
+  "p11-s7": [
+    ["ROBIN", "Somos o Bando Verde do Grande Carvalho!"]
+  ],
+  "p11-s13": [
+    ["MARIANA", "É uma armadilha!"],
+    ["NARRADORA", "avisou Mariana."]
+  ],
+  "p11-s14": [
+    ["MARIANA", "O Xerife sabe que ninguém atira como Robin."]
+  ],
+  "p11-s15": [
+    ["MARIANA", "A praça vai estar cheia de guardas, esperando a roupa verde aparecer!"]
+  ],
+  "p11-s18": [
+    ["NARRADORA", "Ele piscou para os amigos:"],
+    ["ROBIN", "Nós vamos ao campeonato."]
+  ],
+  "p11-s19": [
+    ["ROBIN", "Mas do jeito mais esperto do mundo!"]
+  ]
+}
