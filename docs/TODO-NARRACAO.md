@@ -131,7 +131,8 @@ Se o modelo errar um nome, reescreva só aquele trecho foneticamente no pedido (
 3. **Ouça** (ou analise) as frases com nomes da tabela da seção 5 e as frases de diálogo.
 4. Grave `indice.json` em cada pasta (`{ "p2-s5": "<hash>" }`) com o `hash` da frase no momento da gravação. Quando o texto do livro mudar, o Claude regenera os JSON: compare os hashes e **regrave só o que mudou**.
 5. **Sem rajadas** (o "arranhão de agulha" entre frases, `AGENTS.md` §2.6): `node tools/conferir-narracao.mjs --partes N --idiomas pt` tem de terminar com "✅ Sem rajadas de ruído". Ele confere todo `pN.mp3` com `tools/audio_gate.py --verificar` e sai com erro se achar alguma; para limpar: `python3 tools/audio_gate.py --so-rajadas <arquivos>`. A gravação já passa pelo gate (e para com erro se ele não rodar: falta de python3 com numpy ou do ffmpeg), mas a conferência é a garantia final, inclusive para áudio feito por outro caminho.
-6. Quando **todas** as frases de uma parte estiverem gravadas numa voz, acrescente o número da parte em `partes` daquela voz em `dom-quixote/audio/vozes.js`. A partir daí ela aparece como opção no painel "Voz" do livro.
+6. **Fim da página inteiro** (desde 2026-11-28, §10): `node tools/conferir-narracao.mjs --partes N --idiomas pt --fim` confere de ouvido, no MP3 **final** (depois do gate), se a última palavra de cada página está lá. A conferência da gravação roda antes do gate e não pega um corte feito por ele. `CORTE?` com nome próprio (o Whisper escreve "Sherwood" para *Xervedo*) é falso alarme: confira de ouvido.
+7. Quando **todas** as frases de uma parte estiverem gravadas numa voz, acrescente o número da parte em `partes` daquela voz em `dom-quixote/audio/vozes.js`. A partir daí ela aparece como opção no painel "Voz" do livro.
 
 ## 7. Ordem de produção e entregas
 Uma entrega (commit + merge na `main` + uma linha nas Revisões de `docs/fila/PEDIDOS.md`) por item. **Antes do item 1**, entregue as amostras de 2 ou 3 narradoras e espere o humano escolher a voz de ouvido:
@@ -226,3 +227,23 @@ O áudio gerado custa por token: **25 tokens por segundo de fala**. O texto envi
 
 ## 9. Situação em 2026-10-24 (manhã)
 **As quatro partes de Dom Quixote estão gravadas** (`partes: [1, 2, 3, 4]` no `vozes.js`): páginas inteiras com títulos, vozes dos personagens e todas as palavras-chave. QA em `docs/narracao/qa-parte-N.md`. Gasto da produção das Partes 2–4: ~US$ 0,42 (Flex), incluindo ~US$ 0,13 perdidos na madrugada antes do cache de blocos.
+
+---
+
+## 10. O fim da página cortado pelo gate (2026-11-28, Issues #75, #76 e #79)
+**O que o autor ouviu** (Robin Hood, Parte 1): a narração terminava a página sem as últimas palavras ("…a vida ia virar de cabeça ~~para baixo~~", "…ajudar Mestre ~~Tomé~~", "…atravessaram a ponte ~~juntos~~").
+
+**Causa** (não era o player, nem o TTS): o passo 1 do `tools/audio_gate.py` (rajada de fim de arquivo, criado em 2026-10-26) tomava **qualquer** energia nos últimos 250 ms como rajada e zerava tudo a partir do **primeiro** quadro quieto da janela de 800 ms. Como o `otimizar-audio.mjs` e o `pecaDaPagina` deixam só 80 ms depois da última palavra, a própria última palavra caía nesses 250 ms: o "corte da rajada" começava na micro-pausa entre duas palavras e levava o fim da frase (no arquivo, aparece como fala alta seguida de ~0,4 a 0,8 s de zeros digitais). A conferência pelo Whisper da gravação roda **bloco a bloco, antes do gate**, por isso dizia que estava tudo certo.
+
+**Correção**: o passo 1 agora só corta se o trecho final tiver **cara de ruído** (planura espectral > 0,06; a fala tem < 0,03), vier **logo depois** de uma pausa de verdade (≥ 40 ms quietos colados na rajada, procurados de trás para a frente) e **não houver fala** no trecho zerado. Na dúvida, não corta. Teste de regressão sem API: `npm run testar:audio` (`tools/testar-audio-gate.py`, que reproduz o bug na versão antiga). Conferência do acervo: `npm run conferir:fim` ou `node tools/conferir-narracao.mjs --fim` (`tools/conferir-fim.py`, Whisper local; `CV_WHISPER_MODELO=small` numa máquina sem GPU).
+
+**Para não voltar**: (1) nenhum passo de limpeza de áudio pode zerar um trecho sem confirmar que **não é fala** (planura baixa = fala); (2) toda conferência de qualidade tem de rodar também no **arquivo final**, depois de todos os filtros; (3) `npm run testar:audio` antes de mexer no `audio_gate.py`.
+
+**O áudio já cortado não volta sozinho**: o gate zerou as amostras. Há dois caminhos:
+- **Sem custo, na máquina que gravou** (onde está o `.cache-narracao/`, com os blocos pagos **antes** do gate): traga a `main` e remonte a parte inteira do cache, sem nenhum pedido novo, por exemplo
+  `npm run gravar:narracao -- --livro robin-hood --voz narracao --parte 1 --pagina-inteira --remontar --so-cache`
+  (e `--idioma en|es|fr` nas traduções). Remonte a **parte inteira** (sem `--paginas`), para os blocos saírem iguais aos da gravação (a chave do cache depende da divisão em blocos); se faltar algum bloco no cache, o `--so-cache` avisa e não chama a API. Depois: `node tools/conferir-narracao.mjs --livro <livro> --partes N --idiomas <idioma> --fim`.
+- **Pela API paga** (só com autorização do humano no prompt inicial, §2.7 do AGENTS.md): regravar as páginas afetadas.
+
+Lista das páginas afetadas na varredura de 2026-11-28: `docs/narracao/fim-cortado-2026-11-28.md`.
+

@@ -123,18 +123,39 @@ def clean_audio_stream(samples, sample_rate=24000, preserve_length=True):
     tail_frames = samples_f[(n_frames - check_frames)*frame_len : n_frames*frame_len].reshape(check_frames, frame_len)
     tail_rms = np.sqrt(np.mean(tail_frames**2, axis=1))
     
-    # Se nos últimos 25 frames (250 ms) houver energia alta (RMS > 200)
-    burst_candidates = np.where(tail_rms[-25:] > 200)[0]
+    # BUG CORRIGIDO (2026-11-28, Issues #75, #76 e #79 do Robin Hood): a versão antiga tomava QUALQUER energia
+    # (RMS > 200) nos últimos 250 ms como rajada e zerava tudo a partir do PRIMEIRO quadro quieto da janela de
+    # 800 ms. Como o otimizar-audio.mjs e o pecaDaPagina deixam só 80 ms depois da última palavra, a própria
+    # última palavra caía nos 250 ms finais e a "rajada" era ela: o corte começava na micro-pausa entre duas
+    # palavras e levava junto o fim da frase ("…de cabeça [para baixo]", "…ajudar Mestre [Tomé]", "…a ponte
+    # [juntos]"). Agora a rajada final só é reconhecida se (a) tiver cara de RUÍDO (planura espectral > 0,06;
+    # a fala tem < 0,03), (b) vier logo depois de uma pausa de verdade (>= 40 ms quietos IMEDIATAMENTE antes,
+    # procurada de trás para a frente a partir da rajada) e (c) o trecho zerado não tiver fala. Na dúvida, não
+    # corta: um chiado no fim é muito melhor que uma palavra a menos. tools/conferir-fim.py confere de ouvido.
+    janela_tail = samples_f[(n_frames - check_frames)*frame_len : n_frames*frame_len].reshape(check_frames, frame_len)
+    P_tail = np.abs(np.fft.rfft(janela_tail * np.hanning(frame_len), axis=1)) ** 2 + 1e-9
+    planura_tail = np.exp(np.mean(np.log(P_tail), axis=1)) / np.mean(P_tail, axis=1)
+    ruidoso = (tail_rms > 200) & (planura_tail > 0.06)
+    falante = (tail_rms > 250) & (planura_tail < 0.03)
+
+    burst_candidates = np.where(ruidoso[-25:])[0]
     if len(burst_candidates) > 0:
         burst_start_local = (check_frames - 25) + burst_candidates[0]
-        pre_burst = tail_rms[:burst_start_local]
-        quiet_local = np.where(pre_burst < 60)[0]
-        
-        # Se houve pelo menos 4 frames (40 ms) de silêncio antes do pico
-        if len(quiet_local) >= 4:
-            last_speech_local = quiet_local[0]
-            cutoff_sample = (n_frames - check_frames + last_speech_local) * frame_len
-            
+        # recua pela subida da rajada (quadros não quietos e sem cara de fala) até achar a pausa
+        k = burst_start_local - 1
+        while k >= 0 and tail_rms[k] >= 60 and not falante[k] and burst_start_local - k <= 5:
+            k -= 1
+        fim_pausa = k + 1
+        while k >= 0 and tail_rms[k] < 60:
+            k -= 1
+        ini_pausa = k + 1                       # primeiro quadro quieto da pausa colada na rajada
+        pausa_ok = (fim_pausa - ini_pausa) >= 4
+        sem_fala_depois = not np.any(falante[ini_pausa:])
+        rajada_de_ruido = np.mean(planura_tail[burst_start_local:][tail_rms[burst_start_local:] > 200]) > 0.06
+
+        if pausa_ok and sem_fala_depois and rajada_de_ruido:
+            cutoff_sample = (n_frames - check_frames + ini_pausa) * frame_len
+
             fade_samples = int(sample_rate * 0.03) # fade out suave de 30 ms
             if cutoff_sample > fade_samples:
                 ramp = 0.5 * (1 + np.cos(np.pi * np.arange(fade_samples) / fade_samples))

@@ -10,6 +10,8 @@
     "build": "npm run build:fonts && npm run build:icons && npm run build:css && npm run exportar:frases && npm run exportar:traducoes && npm run build:sw",
     "build:sw": "node tools/build-sw.mjs",
     "build:audio": "node tools/otimizar-audio.mjs",
+    "testar:audio": "python3 tools/testar-audio-gate.py",
+    "conferir:fim": "python3 tools/conferir-fim.py",
     "exportar:frases": "node tools/exportar-frases.mjs",
     "exportar:traducoes": "node tools/traducoes.mjs exportar",
     "conferir:traducoes": "node tools/traducoes.mjs",
