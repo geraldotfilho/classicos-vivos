@@ -329,6 +329,9 @@
                     alt: 'Na borda da Floresta de Xervedo, Lady Mariana entrega roupas verde-folha, um capuz com pena vermelha e uma corneta dourada a Robin e Grilo',
                     legendaReal: '🍃 As Roupas Verdes e a Corneta de Três Sopros',
                     precarregar: ['p4-stage-1.webp', 'p4-stage-2.webp', 'p4-stage-3.webp'],
+                    // Gravuras conduzidas pela narração (Issue #78, AGENTS §2.2.1): onde cada etapa começa na leitura
+                    // roupas verdes ("tingidas de VERDE"), a corneta explicada ("A mata é grande..."), os guardas que só veem folhas
+                    narracaoEtapas: [{ frase: 'p4-s8', palavra: 'VERDE' }, 'p4-s10', 'p4-s14'],
                     realCena: (st) => {
                         const n = st.usados.size;
                         if (n === 0) return null;
@@ -398,6 +401,9 @@
                     alt: 'Robin Hood sentado dentro da água rasa do riacho rindo muito, enquanto o gigante estende a mão sorrindo da ponte e Grilo (de roupa verde) espia alegre da margem',
                     legendaReal: '😂 Um Banho que Virou Amizade',
                     precarregar: ['p6-stage-1.webp', 'p6-stage-2.webp', 'p6-stage-3.webp', 'p6-stage-4.webp'],
+                    // Gravuras conduzidas pela narração (Issue #78, AGENTS §2.2.1): onde cada etapa começa na leitura
+                    // escorregão no musgo, "Plof!", a risada, a mão estendida (a inicial é o duelo na ponte)
+                    narracaoEtapas: ['p6-s5', 'p6-s6', 'p6-s11', 'p6-s16'],
                     realCena: (st) => {
                         const n = st.usados.size;
                         if (n === 0) return null;
@@ -494,6 +500,9 @@
                     alt: 'Nos fundos da cadeia de pedra ao entardecer, João Pequeno ergue Grilo até a janela alta para pegar a chave enquanto Robin desce os sacos de farinha por uma corda',
                     legendaReal: '🗝️ Um Resgate Sem Fazer Barulho!',
                     precarregar: ['p9-stage-1.webp', 'p9-stage-2.webp', 'p9-stage-3.webp'],
+                    // Gravuras conduzidas pela narração (Issue #78, AGENTS §2.2.1): onde cada etapa começa na leitura
+                    // a cela aberta ("clac!"), a corda no saco, os sacos descendo
+                    narracaoEtapas: ['p9-s13', 'p9-s16', 'p9-s17'],
                     realCena: (st) => {
                         const n = st.usados.size;
                         if (n === 0) return null;
