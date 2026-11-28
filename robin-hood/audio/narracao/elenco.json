@@ -1,0 +1,74 @@
+{
+  "codigoVoz": "pt-BR",
+  "amostra": "Olá! Eu vou ler esta história com você. Vire a página quando quiser!",
+  "nomes": "Robin Hood, Lady Mariana, João Pequeno, Grilo, Mestre Tomé, Clara Escarlate, Xerife de Nortigão, Rei Ricardo, Xervedo, Nortigão, Vila do Moinho, Grande Carvalho, Riacho Fundo, Torre Velha, Bando Verde",
+  "elenco": {
+    "NARRADORA": {
+      "voz": "pt-br-storyteller-9",
+      "estilo": "warm, gentle storyteller reading aloud to young children; calm, clear pace; expressive but not theatrical"
+    },
+    "ROBIN": {
+      "voz": "pt-br-storyteller-6",
+      "estilo": "brave, cheerful young archer speaking up with spirit and warmth; clear, lively and confident, never aggressive"
+    },
+    "MARIANA": {
+      "voz": "pt-br-tutor-11",
+      "estilo": "clever, warm and confident young woman of the forest, calm mentor voice, encouraging and alert"
+    },
+    "JOAO_PEQUENO": {
+      "voz": "pt-br-podcaster-3",
+      "estilo": "big, hearty gentle giant with a booming, warm voice and an easy laugh, friendly and jovial"
+    },
+    "GRILO": {
+      "voz": "pt-br-techagent-4",
+      "estilo": "lively, curious young boy speaking with excitement and affection, playful and bright"
+    },
+    "MESTRE_TOME": {
+      "voz": "pt-br-assistant-2",
+      "estilo": "gentle, honest older village miller, humble and calm, speaking with quiet dignity and love for his son"
+    },
+    "CLARA": {
+      "voz": "pt-br-csagent-12",
+      "estilo": "bright, spirited, creative young craftswoman, cheerful and clever with a playful sparkle"
+    },
+    "XERIFE": {
+      "voz": "pt-br-advisor-6",
+      "estilo": "pompous, grumpy, self-important medieval sheriff barking orders, comic villain, blustery and theatrical, never truly scary"
+    },
+    "REI_RICARDO": {
+      "voz": "pt-br-podcaster-1",
+      "estilo": "jolly, pampered, well-meaning but oblivious king clapping his hands cheerfully, grand and breezy"
+    },
+    "VIZINHOS": {
+      "voz": "pt-br-csagent-8",
+      "estilo": "villagers whispering in agreement together, lively and supportive"
+    },
+    "GUARDA_PRACA": {
+      "voz": "pt-br-tutor-7",
+      "estilo": "alert castle guard shouting an alarm in the square, startled and urgent"
+    },
+    "VIZINHA_FEIRANTE": {
+      "voz": "pt-br-tutor-5",
+      "estilo": "kind older market neighbor whispering worriedly about what she saw, warm and helpful"
+    },
+    "GUARDA_TORRE": {
+      "voz": "pt-br-training-1",
+      "estilo": "sleepy guard letting out a comical sneeze in his sleep"
+    },
+    "VOVO": {
+      "voz": "pt-br-training-11",
+      "estilo": "sweet, playful grandmother chuckling warmly as she peeks at a pile of blankets"
+    },
+    "MENININHO": {
+      "voz": "pt-br-training-7",
+      "estilo": "excited little boy shouting joyfully while pretending to be a hero"
+    },
+    "VIZINHO_VARANDA": {
+      "voz": "pt-br-csagent-9",
+      "estilo": "proud, grateful villager chatting warmly from the porch, cheerful and appreciative"
+    },
+    "PALAVRAS": {
+      "estilo": "literacy teacher: each syllable slowly and clearly separated with short pauses, then the whole word joyfully"
+    }
+  }
+}
