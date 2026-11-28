@@ -5,7 +5,7 @@
 (function() {
     'use strict';
 
-    const VERSAO_ATUAL = 'bf9dee97e8a0';
+    const VERSAO_ATUAL = 'a297739e8e2d';
     const PREFIXO_CACHE = 'cv-volume-quixote-';
     const PREFIXO_STORAGE = 'cv-offline-quixote-';
 
@@ -557,17 +557,21 @@
         "./assets/js/texto.js",
         "./assets/js/desafios.js",
         "./assets/css/desafios.css",
-        "./robin-hood/imagens/parte-2/camadas/p10-lenco.webp",
+        "./robin-hood/imagens/parte-2/camadas/p11-lenco.webp",
         "./robin-hood/imagens/parte-2/camadas/p4-flamula.webp",
         "./robin-hood/imagens/parte-2/p0-real.webp",
         "./robin-hood/imagens/parte-2/p1-real.webp",
         "./robin-hood/imagens/parte-2/p10-real.webp",
+        "./robin-hood/imagens/parte-2/p10-stage-1.webp",
+        "./robin-hood/imagens/parte-2/p10-stage-2.webp",
+        "./robin-hood/imagens/parte-2/p10-stage-3.webp",
         "./robin-hood/imagens/parte-2/p11-real.webp",
-        "./robin-hood/imagens/parte-2/p11-stage-1.webp",
-        "./robin-hood/imagens/parte-2/p11-stage-2.webp",
-        "./robin-hood/imagens/parte-2/p11-stage-3.webp",
         "./robin-hood/imagens/parte-2/p12-real.webp",
+        "./robin-hood/imagens/parte-2/p12-stage-1.webp",
+        "./robin-hood/imagens/parte-2/p12-stage-2.webp",
+        "./robin-hood/imagens/parte-2/p12-stage-3.webp",
         "./robin-hood/imagens/parte-2/p13-real.webp",
+        "./robin-hood/imagens/parte-2/p14-real.webp",
         "./robin-hood/imagens/parte-2/p2-real.webp",
         "./robin-hood/imagens/parte-2/p3-real.webp",
         "./robin-hood/imagens/parte-2/p3-stage-1.webp",
@@ -576,13 +580,10 @@
         "./robin-hood/imagens/parte-2/p4-real.webp",
         "./robin-hood/imagens/parte-2/p5-panoramico.webp",
         "./robin-hood/imagens/parte-2/p5-real.webp",
-        "./robin-hood/imagens/parte-2/p6-real.webp",
+        "./robin-hood/imagens/parte-2/p6-panorama.webp",
         "./robin-hood/imagens/parte-2/p7-real.webp",
         "./robin-hood/imagens/parte-2/p8-real.webp",
         "./robin-hood/imagens/parte-2/p9-real.webp",
-        "./robin-hood/imagens/parte-2/p9-stage-1.webp",
-        "./robin-hood/imagens/parte-2/p9-stage-2.webp",
-        "./robin-hood/imagens/parte-2/p9-stage-3.webp",
         "./robin-hood/parte-2.html"
     ]
 };

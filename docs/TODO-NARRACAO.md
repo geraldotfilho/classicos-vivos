@@ -247,3 +247,18 @@ O áudio gerado custa por token: **25 tokens por segundo de fala**. O texto envi
 
 Lista das páginas afetadas na varredura de 2026-11-28: `docs/narracao/fim-cortado-2026-11-28.md`.
 
+
+---
+
+## 11. A narradora que virou personagem (2026-11-28, Issue #80, item 3)
+**O que o autor ouviu** (Robin Hood, Parte 2, pág. 5, Cap. 16): quase toda a página saiu na voz de **Robin**, e não na da narradora.
+
+**Causa** (no roteiro, não no player): o roteiro dava a Robin só o `"Aaa… aaa…"` (`p5-s9`, uma interjeição de 2 palavras). O `blocosDe` (`tools/gravar-narracao.mjs`) junta narradora + **um** personagem num pedido de até ~3.500 letras, atravessando páginas; com um personagem "quase mudo" num bloco longo de narradora, o TTS de duas vozes se confundiu e leu boa parte do bloco com a voz do personagem. O Whisper confere as **palavras**, não a **voz**, e não pegou.
+
+**Regra (vale para todo roteiro, qualquer livro e idioma)**:
+1. **Interjeição, onomatopeia ou som curto de personagem** (espirro, tosse, "Aaa…", "Hum!", "Atchinf!") **não vira fala de personagem** no roteiro: fica com a NARRADORA. Melhor ainda, escreva no texto como narração ("Aaa… aaa… lá vinha um espirro!"), sem travessão.
+2. Só entra no roteiro como personagem a fala de **pelo menos uma frase de verdade** (com sentido próprio, ex.: "Daquela distância, é impossível fazer melhor!").
+3. Se um personagem precisar mesmo de uma fala curtinha, **isole o bloco**: grave a página com `--max-letras` menor (ou a frase avulsa), para o personagem não dividir um bloco longo com a narradora.
+4. Na escuta (fase 6), confira de ouvido **as páginas com falas curtas de personagem** (a lista sai do roteiro: trechos de personagem com menos de ~4 palavras). Hoje, em Robin Hood P2: `p7-s11` ("Cof, cof, cof!", Xerife) e `p12-s4` ("Atchinf!", guarda da torre). Na regravação da P2, passe as duas para a narradora.
+
+**Robin Hood P2 (2026-11-28)**: o texto da pág. 5 mudou (empate) e a pág. 6 é nova (o desempate); as duas saíram do `paginas.json` e leem na voz do aparelho até a regravação (com autorização). O roteiro novo já segue a regra (pág. 5 sem personagem; pág. 6 com o Xerife e o Grilo em frases inteiras). As págs. 7 a 14 (antigas 6 a 13) continuam gravadas, renomeadas, mas o título falado ainda diz o número **antigo** do capítulo ("Capítulo 17" na pág. 7, que agora é o 18); por isso, e pelos fins cortados do §10, **a Parte 2 inteira precisa ser regravada** quando o humano autorizar.

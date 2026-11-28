@@ -1699,8 +1699,11 @@ function setReadingPageUI(reading) {
    A cena da narração é derivada do estado, como todo o resto: `estadoDaCena` entrega um estado simulado
    ("como se os n primeiros passos da atividade tivessem sido feitos") e renderScene/setSceneImage
    desenham. O progresso de verdade da criança (pageState) nunca é tocado.
+   AÇÕES NO PONTO DA HISTÓRIA (Issue #80): `cena.narracaoAcoes` liga um ponto da leitura (frase, parágrafo ou
+   palavra, como nas etapas) a uma ação da página (LIVRO.acoes): quando a narração chega ao "ZUP!", a flecha
+   voa sozinha. Usa a mesma máquina (posição da leitura + atividade esperando) e vale sem gravuras sequenciais.
    ===================================================================== */
-let narracaoCena = null;   // { pagina, ancoras, etapa, quadro } enquanto a narração conduz a cena da página
+let narracaoCena = null;   // { pagina, ancoras, sequencia, etapa, disparos, quadro } enquanto a narração conduz a página
 let falaEmCurso = null;    // onde a leitura está: { modo: 'pagina' | 'gravacao' | 'aparelho', k (frase), ... }
 const LETRAS_POR_SEGUNDO = 14;   // ritmo estimado da voz do aparelho (taxa 1), quando ela não informa as palavras ditas
 
@@ -1722,7 +1725,7 @@ function estadoSimulado(i, n) {
 
 /* Estado que a cena desenha: o da narração enquanto ela conduz a página; senão, o progresso da criança */
 function estadoDaCena(i) {
-    return narracaoCena && narracaoCena.pagina === i ? estadoSimulado(i, narracaoCena.etapa) : pageState[i];
+    return narracaoCena && narracaoCena.pagina === i && narracaoCena.sequencia ? estadoSimulado(i, narracaoCena.etapa) : pageState[i];
 }
 
 /* A página tem gravuras sequenciais para a narração conduzir? `cena.narracaoEtapas` (lista) liga e
@@ -1797,6 +1800,23 @@ function indiceDaFraseRef(i, frases, ref) {
    - null: a narração não mostra essa etapa.
    Sem o campo, cada etapa começa na palavra do cartão daquele passo, procurada depois da etapa anterior
    (sem achar: na frase seguinte). */
+const naFrase = (k) => (k >= 0 ? { k, f: 0, c: 0 } : null);
+
+/* Um ponto da leitura escrito na página ('p6-s5', 4, { frase, palavra }, { paragrafo, palavra }, null) → { k, f, c }
+   ou null. `desde`: onde procurar uma palavra solta ({ palavra } sem frase nem parágrafo). */
+function ancoraDaReferencia(i, frases, e, desde) {
+    const ultima = frases.length - 1;
+    if (typeof e === 'number') return naFrase(faixaDoParagrafo(i, frases, e)[0]);
+    if (typeof e === 'string') return naFrase(indiceDaFraseRef(i, frases, e));
+    if (e && typeof e === 'object') {
+        const [de, ate] = e.frase ? [indiceDaFraseRef(i, frases, e.frase), indiceDaFraseRef(i, frases, e.frase)]
+            : e.paragrafo ? faixaDoParagrafo(i, frases, e.paragrafo)
+            : [desde ? desde.k : Math.min(1, ultima), ultima];
+        if (de >= 0) return (e.palavra && acharPalavra(frases, t(e.palavra), de, ate, null)) || naFrase(de);
+    }
+    return null;
+}
+
 function ancorasDaNarracao(i, frases) {
     const cena = cenaDe(i);
     const c = cartoesDe(i);
@@ -1804,7 +1824,6 @@ function ancorasDaNarracao(i, frases) {
     const ultima = frases.length - 1;
     if (ultima < 0) return [];
     const explicitas = Array.isArray(cena.narracaoEtapas) ? cena.narracaoEtapas : null;
-    const naFrase = (k) => (k >= 0 ? { k, f: 0, c: 0 } : null);
     const ancoras = [];
     let desde = { k: Math.min(1, ultima), c: 0 };   // depois do título (frase 0)
     for (let n = 1; n <= passos.length; n++) {
@@ -1814,15 +1833,7 @@ function ancorasDaNarracao(i, frases) {
             a = (item && acharPalavra(frases, t(item.palavra), desde.k, ultima, desde))
                 || naFrase(Math.min(n === 1 ? desde.k : desde.k + 1, ultima));
         } else {
-            const e = explicitas[n - 1];
-            if (typeof e === 'number') a = naFrase(faixaDoParagrafo(i, frases, e)[0]);
-            else if (typeof e === 'string') a = naFrase(indiceDaFraseRef(i, frases, e));
-            else if (e && typeof e === 'object') {
-                const [de, ate] = e.frase ? [indiceDaFraseRef(i, frases, e.frase), indiceDaFraseRef(i, frases, e.frase)]
-                    : e.paragrafo ? faixaDoParagrafo(i, frases, e.paragrafo)
-                    : [desde.k, ultima];
-                if (de >= 0) a = (e.palavra && acharPalavra(frases, t(e.palavra), de, ate, null)) || naFrase(de);
-            }
+            a = ancoraDaReferencia(i, frases, explicitas[n - 1], desde);
         }
         ancoras.push(a);
         if (a) desde = { k: a.k, c: a.achou ? a.c + 1 : 0 };
@@ -1830,13 +1841,37 @@ function ancorasDaNarracao(i, frases) {
     return ancoras;
 }
 
-/* Etapa da sequência num ponto da leitura ({ k: frase, f: fração da frase já falada }) */
+/* A leitura ({ k: frase, f: fração da frase já falada }) já chegou ao ponto `a`? */
+const chegouEm = (a, pos) => !!a && (pos.k > a.k || (pos.k === a.k && pos.f >= a.f));
+
+/* Etapa da sequência num ponto da leitura */
 function etapaNaPosicao(ancoras, pos) {
     let etapa = 0;
     ancoras.forEach((a, n) => {
-        if (a && (pos.k > a.k || (pos.k === a.k && pos.f >= a.f))) etapa = n + 1;
+        if (chegouEm(a, pos)) etapa = n + 1;
     });
     return etapa;
+}
+
+/* Ações que a narração dispara (`cena.narracaoAcoes`): [{ em: <ponto da leitura>, acao: 'nome', item?: 'id do cartão' }].
+   `em` aceita as mesmas formas das etapas ('p5-s10', 3, { frase: 'p5-s10', palavra: 'ZUP' }, { paragrafo: 3, palavra: 'ZUP' }).
+   Devolve [{ a, acao, item, feito }] só com as que existem em LIVRO.acoes e cujo ponto foi achado. */
+function disparosDaNarracao(i, frases) {
+    const lista = cenaDe(i).narracaoAcoes;
+    if (!Array.isArray(lista) || !frases.length) return [];
+    return lista.map(d => ({ a: ancoraDaReferencia(i, frases, d.em, null), acao: d.acao, item: d.item || null, feito: false }))
+        .filter(d => d.a && LIVRO.acoes && typeof LIVRO.acoes[d.acao] === 'function');
+}
+
+/* A narração chegou ao ponto: chama a ação como se fosse o cartão, com `narracao: true` no contexto.
+   O progresso da criança não muda (o cartão continua livre para ela repetir depois da história). */
+function dispararAcaoDaNarracao(i, d) {
+    const card = d.item ? document.querySelector(`#page-${i} .draggable-card[data-id="${d.item}"]`) : null;
+    try {
+        LIVRO.acoes[d.acao](apiDaPagina(i), { narracao: true, card, item: d.item ? itemDe(i, d.item) : null });
+    } catch (e) {
+        console.error('narracaoAcoes:', e);
+    }
 }
 
 /* Onde a narração está agora: página gravada inteira (marcas de tempo), frase gravada ou voz do aparelho */
@@ -1868,27 +1903,38 @@ function acompanharNarracaoDaCena() {
     if (!nc) return;
     const pos = posicaoDaNarracao();
     if (pos) {
-        const etapa = etapaNaPosicao(nc.ancoras, pos);
-        if (etapa !== nc.etapa) {
-            nc.etapa = etapa;
-            renderScene(nc.pagina);
+        if (nc.sequencia) {
+            const etapa = etapaNaPosicao(nc.ancoras, pos);
+            if (etapa !== nc.etapa) {
+                nc.etapa = etapa;
+                renderScene(nc.pagina);
+            }
+        }
+        for (const d of nc.disparos) {
+            if (!d.feito && chegouEm(d.a, pos)) {
+                d.feito = true;
+                dispararAcaoDaNarracao(nc.pagina, d);
+            }
         }
     }
-    nc.quadro = requestAnimationFrame(acompanharNarracaoDaCena);
+    if (narracaoCena === nc) nc.quadro = requestAnimationFrame(acompanharNarracaoDaCena);
 }
 
 /* Começo da leitura da página `i` a partir da frase `inicio` (lerPagina) */
 function iniciarNarracaoDaCena(i, frases, inicio) {
     encerrarNarracaoDaCena();
-    if (!temSequenciaNarrada(i)) return;
-    const ancoras = ancorasDaNarracao(i, frases);
-    if (!ancoras.some(Boolean)) return;
+    const ancoras = temSequenciaNarrada(i) ? ancorasDaNarracao(i, frases) : [];
+    const sequencia = ancoras.some(Boolean);
+    const disparos = disparosDaNarracao(i, frases);
+    if (!sequencia && !disparos.length) return;
+    // Ação cujo ponto ficou para trás (a leitura começou num parágrafo depois dele): não dispara
+    disparos.forEach(d => { d.feito = d.a.k < inicio; });
     const page = document.getElementById(`page-${i}`);
     const area = document.getElementById(`cartoes-${i}`);
     if (area) area.dataset.avisoNarracao = ui('ouvindoHistoria');
     if (page) page.classList.add('page-narrando');   // cartões esperando a história (livro.css)
-    narracaoCena = { pagina: i, ancoras, etapa: etapaNaPosicao(ancoras, { k: inicio, f: 0 }), quadro: 0 };
-    renderScene(i);
+    narracaoCena = { pagina: i, ancoras, sequencia, etapa: sequencia ? etapaNaPosicao(ancoras, { k: inicio, f: 0 }) : 0, disparos, quadro: 0 };
+    if (sequencia) renderScene(i);
     narracaoCena.quadro = requestAnimationFrame(acompanharNarracaoDaCena);
 }
 
@@ -2458,10 +2504,14 @@ function handleOrdemPalavra(pageIdx, card, coords) {
     completeCard(card, coords);
     falar(card.dataset.word.toLocaleLowerCase(IDIOMAS[idioma].lang), { letra: Texto.cartoesSaoLetras(c, t) });
     escreverNaFaixa(pageIdx);
+    // Item com `acao`: o acerto também chama LIVRO.acoes[acao] (ex.: PUXA, MIRA, SOLTA → a flecha voa no SOLTA)
+    const itemAcao = itemDe(pageIdx, expected);
+    const acaoDoItem = itemAcao && itemAcao.acao && LIVRO.acoes && LIVRO.acoes[itemAcao.acao];
+    if (acaoDoItem) acaoDoItem(apiDaPagina(pageIdx), { card, coords, item: itemAcao });
 
     if (st.usados.size === c.ordem.length) {
         st.completo = true;
-        setTimeout(() => playSound('fanfare'), 600);
+        if (!acaoDoItem) setTimeout(() => playSound('fanfare'), 600);   // com ação, quem celebra é ela
         lensImaginationState[pageIdx] = false;
         renderScene(pageIdx).then(() => inviteImagination(pageIdx));
     } else {
@@ -3134,6 +3184,8 @@ function reiniciarPagina(i, opcoes = {}) {
     if (c && c.tipo === 'progressivo') updateProgressHints(i);
     if (c && c.tipo === 'ordem') escreverNaFaixa(i);
     if (c && c.tipo === 'pedido') mostrarPedido(i);
+    const cenaR = cenaDe(i);
+    if (cenaR && typeof cenaR.aoReiniciar === 'function') cenaR.aoReiniciar(apiDaPagina(i));   // ex.: a flecha volta para o arco
     renderScene(i);
     if (!opcoes.silencioso) {
         playSound('wordPop');

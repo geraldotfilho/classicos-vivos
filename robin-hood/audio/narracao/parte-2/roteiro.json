@@ -38,102 +38,107 @@
     ["CLARA", "É para fugir sem briga, se precisar!"],
     ["NARRADORA", "cochichou."]
   ],
-  "p5-s9": [
-    ["ROBIN", "Aaa… aaa…"]
+  "p6-s9": [
+    ["NARRADORA", "O Xerife bateu palmas lá do palanque:"],
+    ["XERIFE", "Daquela distância, é impossível fazer melhor!"]
   ],
-  "p6-s1": [
+  "p6-s11": [
+    ["NARRADORA", "No meio do povo, Grilo cruzou os dedos e cochichou o segredo dos arqueiros de Xervedo:"],
+    ["GRILO", "Puxa, mira, solta!"]
+  ],
+  "p7-s1": [
     ["NARRADORA", "O guarda apontou para o rosto debaixo do chapéu e berrou:"],
     ["GUARDA_PRACA", "É Robin Hood!"]
   ],
-  "p6-s2": [
+  "p7-s2": [
     ["GUARDA_PRACA", "Peguem esse homem!"]
   ],
-  "p6-s11": [
+  "p7-s11": [
     ["XERIFE", "Cof, cof, cof!"]
   ],
-  "p7-s7": [
+  "p8-s7": [
     ["XERIFE", "Aha!"]
   ],
-  "p7-s8": [
+  "p8-s8": [
     ["XERIFE", "Foi ela que ajudou Robin Hood a fugir!"]
   ],
-  "p7-s14": [
+  "p8-s14": [
     ["NARRADORA", "Então chamou dois guardas de confiança e cochichou em segredo:"],
     ["XERIFE", "Levem a tintureira hoje mesmo para a torre Velha, lá no alto do morro."]
   ],
-  "p7-s15": [
+  "p8-s15": [
     ["XERIFE", "Ninguém pode saber onde ela está!"]
   ],
-  "p8-s9": [
+  "p9-s9": [
     ["NARRADORA", "Uma vizinha feirante chegou perto, de cesto no braço, olhou para os lados e cochichou:"],
     ["VIZINHA_FEIRANTE", "Ontem, no fim da tarde, eu vi dois guardas entrarem aqui, bem apressados!"]
   ],
-  "p8-s10": [
+  "p9-s10": [
     ["VIZINHA_FEIRANTE", "Depois disso, mais nada."]
   ],
-  "p8-s11": [
+  "p9-s11": [
     ["VIZINHA_FEIRANTE", "Ninguém na rua sabe explicar o sumiço da nossa Clara."]
   ],
-  "p8-s14": [
+  "p9-s14": [
     ["MARIANA", "Correr sem rumo não adianta, Grilo."]
   ],
-  "p8-s15": [
+  "p9-s15": [
     ["MARIANA", "Primeiro, vamos procurar as pistas com calma!"]
   ],
-  "p9-s6": [
+  "p10-s6": [
     ["NARRADORA", "Ali, Grilo arregalou os olhos e apontou para uma cerca de madeira:"],
     ["GRILO", "Olhe, Mariana!"]
   ],
-  "p9-s7": [
+  "p10-s7": [
     ["GRILO", "Um fio vermelho!"]
   ],
-  "p9-s10": [
+  "p10-s10": [
     ["MARIANA", "Foi a Clara!"]
   ],
-  "p9-s11": [
+  "p10-s11": [
     ["MARIANA", "Ela soltou pedacinhos do próprio lenço pelo caminho, de propósito, para deixar uma trilha para nós!"]
   ],
-  "p10-s15": [
+  "p11-s15": [
     ["JOAO_PEQUENO", "Essa Clara pensa em tudo!"],
     ["NARRADORA", "cochichou João Pequeno."]
   ],
-  "p11-s4": [
+  "p12-s4": [
     ["GUARDA_TORRE", "Atchinf!"],
     ["NARRADORA", "fez o guarda, dormindo."]
   ],
-  "p12-s7": [
+  "p13-s7": [
     ["NARRADORA", "Uma vovó espiou a pilha e perguntou:"],
     ["VOVO", "Tem alguém aí dentro?"]
   ],
-  "p12-s9": [
+  "p13-s9": [
     ["NARRADORA", "Um menininho enrolou o cobertor na cabeça, feito capuz, e gritou:"],
     ["MENININHO", "Agora eu sou Robin Hood!"]
   ],
-  "p12-s11": [
+  "p13-s11": [
     ["NARRADORA", "Nas varandas, os vizinhos comentavam, orgulhosos:"],
     ["VIZINHO_VARANDA", "O Bando Verde nunca esquece ninguém da vila!"]
   ],
-  "p13-s5": [
+  "p14-s5": [
     ["NARRADORA", "Clara deu uma voltinha para os amigos verem:"],
     ["CLARA", "E então?"]
   ],
-  "p13-s6": [
+  "p14-s6": [
     ["CLARA", "Fiquei com cara de floresta?"]
   ],
-  "p13-s12": [
+  "p14-s12": [
     ["NARRADORA", "Chegou bufando:"],
     ["GRILO", "Pessoal!"]
   ],
-  "p13-s13": [
+  "p14-s13": [
     ["GRILO", "O Xerife ficou furioso e mandou cobrar caro demais pela comida!"]
   ],
-  "p13-s14": [
+  "p14-s14": [
     ["GRILO", "As famílias mal conseguem comprar um queijo!"]
   ],
-  "p13-s16": [
+  "p14-s16": [
     ["ROBIN", "Tive uma ideia maluca!"]
   ],
-  "p13-s17": [
+  "p14-s17": [
     ["ROBIN", "E se eu fosse à feira vestido de açougueiro, de avental e tudo, só para deixar o Xerife zonzo?"]
   ]
 }
