@@ -107,6 +107,7 @@ const IDIOMAS = {
             amostraDe: (nome) => `Ouvir amostra de ${nome}`, amostra: 'Olá! Eu vou ler esta história com você.',
             atividadeRotulo: 'Atividade', ouvirInstrucao: 'Ouvir instrução da atividade', atividadeOpcional: 'Atividade opcional',
             lenteTrancada: '🔒 Termine a atividade para abrir a Imaginação!', pedidoRotulo: 'Pedido:',
+            ouvindoHistoria: '🎧 Ouvindo a história…',
             // Modo Desafio (segunda camada, docs/DESAFIOS.md)
             nivelLigar: 'Ligar o modo Desafio (para quem já lê sozinho)', nivelDesligar: 'Desligar o modo Desafio',
             desafioLigado: '🧩 Modo Desafio ligado! Procure o quadro roxo no fim do texto.',
@@ -158,6 +159,7 @@ const IDIOMAS = {
             amostraDe: (nome) => `Hear a sample of ${nome}`, amostra: 'Hello! I am going to read this story with you.',
             atividadeRotulo: 'Activity', ouvirInstrucao: 'Listen to activity instructions', atividadeOpcional: 'Optional activity',
             lenteTrancada: '🔒 Finish the activity to open the Imagination!', pedidoRotulo: 'Wants:',
+            ouvindoHistoria: '🎧 Listening to the story…',
             nivelLigar: 'Turn on Challenge mode (for children who already read on their own)', nivelDesligar: 'Turn off Challenge mode',
             desafioLigado: '🧩 Challenge mode is on! Look for the purple box at the end of the text.',
             desafiosPreparando: '🧩 The challenges for this part are still being prepared.',
@@ -208,6 +210,7 @@ const IDIOMAS = {
             amostraDe: (nome) => `Écouter un extrait de ${nome}`, amostra: 'Bonjour ! Je vais lire cette histoire avec toi.',
             atividadeRotulo: 'Activité', ouvirInstrucao: "Écouter l'instruction de l'activité", atividadeOpcional: 'Activité facultative',
             lenteTrancada: '🔒 Termine l’activité pour ouvrir l’Imagination !', pedidoRotulo: 'Demande :',
+            ouvindoHistoria: '🎧 On écoute l’histoire…',
             nivelLigar: 'Activer le mode Défi (pour ceux qui lisent déjà seuls)', nivelDesligar: 'Désactiver le mode Défi',
             desafioLigado: '🧩 Mode Défi activé ! Cherche le cadre violet à la fin du texte.',
             desafiosPreparando: '🧩 Les défis de cette partie sont encore en préparation.',
@@ -258,6 +261,7 @@ const IDIOMAS = {
             amostraDe: (nome) => `Oír una muestra de ${nome}`, amostra: '¡Hola! Voy a leer esta historia contigo.',
             atividadeRotulo: 'Actividad', ouvirInstrucao: 'Escuchar la instrucción de la actividad', atividadeOpcional: 'Actividad opcional',
             lenteTrancada: '🔒 ¡Termina la actividad para abrir la Imaginación!', pedidoRotulo: 'Pide:',
+            ouvindoHistoria: '🎧 Escuchando la historia…',
             nivelLigar: 'Activar el modo Desafío (para quien ya lee solo)', nivelDesligar: 'Desactivar el modo Desafío',
             desafioLigado: '🧩 ¡Modo Desafío activado! Busca el recuadro morado al final del texto.',
             desafiosPreparando: '🧩 Los desafíos de esta parte todavía se están preparando.',
@@ -330,9 +334,8 @@ function carregarTraducao(codigo) {
 /* =====================================================================
    CENA = f(lente, progresso)
    ===================================================================== */
-function realSceneFor(i) {
+function realSceneFor(i, st = estadoDaCena(i)) {
     const cena = cenaDe(i);
-    const st = pageState[i];
     const c = cena.cartoes;
 
     if (cena.realCena) {
@@ -931,7 +934,7 @@ function pararGravacao() {
 
 /* Fala um texto com a voz do aparelho; resolve ao terminar.
    Se uma voz "online" falhar (tablet sem internet), tenta de novo com a melhor voz offline. */
-function falarComAparelho(texto, { taxa, voz } = {}) {
+function falarComAparelho(texto, { taxa, voz, aoComecar, aoLimite } = {}) {
     return new Promise((resolve, reject) => {
         if (!('speechSynthesis' in window)) {
             reject(new Error('sem voz'));
@@ -943,13 +946,16 @@ function falarComAparelho(texto, { taxa, voz } = {}) {
         if (usar) utterance.voice = usar;
         utterance.rate = taxa || VELOCIDADES[velocidade].aparelho;
         utterance.pitch = 1.03;
+        // Ganchos da leitura guiada (gravuras conduzidas pela narração): início da fala e cada palavra dita
+        if (aoComecar) utterance.onstart = () => aoComecar();
+        if (aoLimite) utterance.onboundary = (e) => { if (typeof e.charIndex === 'number') aoLimite(e.charIndex); };
         utterance.onend = () => resolve();
         utterance.onerror = (e) => {
             const interrompida = e && (e.error === 'interrupted' || e.error === 'canceled');
             const offline = vozesAparelho.find(v => v.localService);
             if (!interrompida && usar && !usar.localService && offline) {
                 if (usar === vozDoAparelho) vozDoAparelho = offline;   // até recarregar: não insiste na voz sem internet
-                falarComAparelho(texto, { taxa, voz: offline }).then(resolve, reject);
+                falarComAparelho(texto, { taxa, voz: offline, aoComecar, aoLimite }).then(resolve, reject);
             } else {
                 reject(e);
             }
@@ -1343,7 +1349,10 @@ function pronounceWord(wordText, slugPalavra) {
    narradora, se houver (urlFala), senão a voz do aparelho. `letra`: cartão de letra isolada (assinatura soletrada):
    procura "letra:<x>" e, na voz do aparelho, fala o nome da letra ("agá", não "h") */
 function falar(texto, { letra = false } = {}) {
-    calarTudo();
+    // Uma fala no meio da leitura guiada encerra a leitura de vez (só calar o áudio deixaria a leitura
+    // "presa", com o ⏸ aceso e, nas páginas de gravuras sequenciais, os cartões travados)
+    if (isReadingPage) stopReadingPage();
+    else calarTudo();
     const aparelho = () => falarComAparelho(letra ? Texto.nomeDaLetra(texto, idioma) : texto).catch(() => {});
     const src = urlFala(letra ? `letra:${texto}` : texto);
     if (src) tocarGravacao(src).catch(aparelho);
@@ -1494,6 +1503,7 @@ function sincronizarBotoesTitulo() {
 
 function stopReadingPage() {
     readingSession++;
+    falaEmCurso = null;
     calarTudo();
     clearSentenceHighlight();
     setReadingPageUI(false);
@@ -1533,7 +1543,10 @@ function lerPagina(inicio = 0) {
     pausaDaLeitura = null;   // uma leitura nova desfaz a pausa guardada
     const session = ++readingSession;
     const voz = vozGravadaAtiva();
+    falaEmCurso = null;
     setReadingPageUI(true);
+    // Páginas com gravuras sequenciais: a narração conduz a cena e a atividade espera (narracaoEtapas)
+    iniciarNarracaoDaCena(currentPage, sentences, inicio);
 
     const falhou = () => { if (session === readingSession) stopReadingPage(); };
     // Pequena pausa entre as frases para respeitar o ritmo da leitura
@@ -1560,8 +1573,16 @@ function lerPagina(inicio = 0) {
         }
         destacarFrase(sentence);
 
-        const comAparelho = () => falarComAparelho(text).then(proxima(i), falhou);
+        const comAparelho = () => {
+            // Onde a voz do aparelho está dentro da frase: pelas palavras ditas (onboundary) ou, sem elas, pelo tempo
+            const fala = falaEmCurso = { modo: 'aparelho', k: i, t0: performance.now(), total: text.length, limite: null };
+            return falarComAparelho(text, {
+                aoComecar: () => { fala.t0 = performance.now(); },
+                aoLimite: (c) => { fala.limite = c; }
+            }).then(proxima(i), falhou);
+        };
         if (voz) {
+            falaEmCurso = { modo: 'gravacao', k: i };
             tocarGravacao(urlFrase(voz, sentence.dataset.frase)).then(proxima(i), () => {
                 if (session === readingSession) comAparelho();
             });
@@ -1606,6 +1627,8 @@ function lerPaginaInteira(voz, gravada, sentences, session, inicio, reserva) {
         return;
     }
     const desde = marcaInicial ? marcaInicial.ini : 0;
+    // A posição da narração vem das marcas de tempo de cada frase (gravuras conduzidas pela narração)
+    falaEmCurso = { modo: 'pagina', marcas: gravada.frases, indice: new Map(sentences.map((el, k) => [el.dataset.frase, k])), desde, inicio };
     let atual = null;
     let quadro = 0;
     const acompanhar = () => {
@@ -1644,7 +1667,11 @@ function lerPaginaInteira(voz, gravada, sentences, session, inicio, reserva) {
 
 function setReadingPageUI(reading) {
     isReadingPage = reading;
-    if (!reading) sincronizarBotoesParagrafo(null);
+    if (!reading) {
+        sincronizarBotoesParagrafo(null);
+        // Fim natural, pausa, parada ou troca de página: a cena volta ao estado da atividade e os cartões se soltam
+        encerrarNarracaoDaCena();
+    }
     sincronizarBotoesTitulo();
     const btn = document.getElementById('btn-tts');
     const label = document.getElementById('tts-label');
@@ -1662,7 +1689,224 @@ function setReadingPageUI(reading) {
     }
 }
 
+/* =====================================================================
+   GRAVURAS CONDUZIDAS PELA NARRAÇÃO (pedido do autor, Issue #78; AGENTS.md §2.2.1)
+   Nas páginas com várias gravuras em sequência (as etapas de uma atividade: vestir o cavaleiro, o tombo
+   no riacho...), a narração da página conduz a cena: cada gravura aparece quando a leitura chega ao trecho
+   da história que ela mostra. Enquanto a narração toca, a atividade espera (cartões esmaecidos, com um
+   aviso gentil); quando a narração termina, é pausada ou parada, ou a página muda, a cena volta ao estado
+   da atividade (antes de a criança começar, a primeira gravura) e só então os cartões se soltam.
+   A cena da narração é derivada do estado, como todo o resto: `estadoDaCena` entrega um estado simulado
+   ("como se os n primeiros passos da atividade tivessem sido feitos") e renderScene/setSceneImage
+   desenham. O progresso de verdade da criança (pageState) nunca é tocado.
+   ===================================================================== */
+let narracaoCena = null;   // { pagina, ancoras, etapa, quadro } enquanto a narração conduz a cena da página
+let falaEmCurso = null;    // onde a leitura está: { modo: 'pagina' | 'gravacao' | 'aparelho', k (frase), ... }
+const LETRAS_POR_SEGUNDO = 14;   // ritmo estimado da voz do aparelho (taxa 1), quando ela não informa as palavras ditas
 
+/* Passos da atividade, na ordem da história: são as etapas da sequência de gravuras */
+function passosDaAtividade(i) {
+    const c = cartoesDe(i);
+    if (!c) return null;
+    if (c.tipo === 'pedido') return c.pedidos || null;
+    if (c.tipo === 'contagem') return c.sequencia || null;
+    if (c.tipo === 'ordem' || c.tipo === 'progressivo') return c.ordem || null;
+    return null;
+}
+
+/* Estado "como se os n primeiros passos tivessem sido feitos": só para desenhar a cena da narração */
+function estadoSimulado(i, n) {
+    const passos = passosDaAtividade(i) || [];
+    return { usados: new Set(passos.slice(0, n)), ultimo: passos[n - 1] || null, completo: n >= passos.length, simulado: true };
+}
+
+/* Estado que a cena desenha: o da narração enquanto ela conduz a página; senão, o progresso da criança */
+function estadoDaCena(i) {
+    return narracaoCena && narracaoCena.pagina === i ? estadoSimulado(i, narracaoCena.etapa) : pageState[i];
+}
+
+/* A página tem gravuras sequenciais para a narração conduzir? `cena.narracaoEtapas` (lista) liga e
+   `false` desliga; sem o campo, liga sozinho quando as etapas da atividade mostram pelo menos 3 gravuras
+   diferentes (a inicial e mais duas). Uma gravura só de recompensa no fim não é sequência. */
+function temSequenciaNarrada(i) {
+    const cena = cenaDe(i);
+    const passos = passosDaAtividade(i);
+    if (cena.narracaoEtapas === false || !passos || !passos.length) return false;
+    if (Array.isArray(cena.narracaoEtapas)) return true;
+    const srcs = new Set();
+    for (let n = 0; n <= passos.length; n++) srcs.add(realSceneFor(i, estadoSimulado(i, n)).src);
+    return srcs.size >= 3;
+}
+
+const semAcento = (s) => String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+const LETRA_OU_DIGITO = /[\p{L}\p{N}]/u;
+
+/* Procura `palavra` no texto falado das frases de índice `de` a `ate`, a partir de `desde` ({ k, c }: frase
+   e letra). Primeiro a palavra inteira; depois, como começo de palavra (PEGADA → pegadas).
+   Devolve { k, f, c } (f: fração da frase onde a palavra começa, para acompanhar o tempo da fala) ou null. */
+function acharPalavra(frases, palavra, de, ate, desde) {
+    const alvo = semAcento(palavra).trim();
+    if (!alvo) return null;
+    for (const inteira of [true, false]) {
+        for (let k = Math.max(de, desde ? desde.k : de); k <= ate; k++) {
+            const texto = semAcento(speechTextOf(frases[k]));
+            let c = desde && k === desde.k ? desde.c : 0;
+            while ((c = texto.indexOf(alvo, c)) >= 0) {
+                const antes = c > 0 && LETRA_OU_DIGITO.test(texto[c - 1]);
+                const depois = inteira && LETRA_OU_DIGITO.test(texto[c + alvo.length] || '');
+                if (!antes && !depois) return { k, f: c / Math.max(1, texto.length), c, achou: true };
+                c++;
+            }
+        }
+    }
+    return null;
+}
+
+/* Parágrafos da página como listas de ids de frase (no idioma atual ou, com `original`, em português) */
+function paragrafosDaPagina(i, original) {
+    const texto = original ? LIVRO.paginas[i].texto : paginaNoIdioma(i).texto;
+    return Texto.frasesDaPagina(texto || '', i).map(par => par.map(f => f.id));
+}
+
+/* Índices (na lista `frases` da leitura) da primeira e da última frase do parágrafo `p` (1 = o primeiro) */
+function faixaDoParagrafo(i, frases, p) {
+    const ids = paragrafosDaPagina(i)[p - 1] || [];
+    const indices = ids.map(id => frases.findIndex(el => el.dataset.frase === id)).filter(k => k >= 0);
+    return indices.length ? [indices[0], indices[indices.length - 1]] : [-1, -1];
+}
+
+/* Frase pelo id ('p6-s5' ou só 's5'). Se a tradução dividiu as frases de outro jeito e o id não existe,
+   vale o começo do mesmo parágrafo do original */
+function indiceDaFraseRef(i, frases, ref) {
+    const m = String(ref).match(/^(?:p\d+-)?s(\d+)$/);
+    if (!m) return -1;
+    const id = `p${i}-s${m[1]}`;
+    const k = frases.findIndex(el => el.dataset.frase === id);
+    if (k >= 0) return k;
+    const par = paragrafosDaPagina(i, true).findIndex(ids => ids.includes(id));
+    return par >= 0 ? faixaDoParagrafo(i, frases, par + 1)[0] : -1;
+}
+
+/* Onde cada etapa n (1 = a primeira gravura depois da inicial) começa na leitura: lista de { k, f } (ou null,
+   etapa que a narração não mostra). Cada item de `cena.narracaoEtapas` pode ser:
+   - 'p6-s5' (ou 's5'): a etapa começa nessa frase;
+   - 4: começa no 4º parágrafo do texto;
+   - { frase: 'p3-s4', palavra: 'CENOURA' }: começa quando a fala chega à palavra, dentro da frase
+     (a palavra passa por t(), então vale nas traduções; sem ela, a frase inteira);
+   - { paragrafo: 2, palavra: 'FIO' }: a palavra, procurada dentro do parágrafo;
+   - null: a narração não mostra essa etapa.
+   Sem o campo, cada etapa começa na palavra do cartão daquele passo, procurada depois da etapa anterior
+   (sem achar: na frase seguinte). */
+function ancorasDaNarracao(i, frases) {
+    const cena = cenaDe(i);
+    const c = cartoesDe(i);
+    const passos = passosDaAtividade(i) || [];
+    const ultima = frases.length - 1;
+    if (ultima < 0) return [];
+    const explicitas = Array.isArray(cena.narracaoEtapas) ? cena.narracaoEtapas : null;
+    const naFrase = (k) => (k >= 0 ? { k, f: 0, c: 0 } : null);
+    const ancoras = [];
+    let desde = { k: Math.min(1, ultima), c: 0 };   // depois do título (frase 0)
+    for (let n = 1; n <= passos.length; n++) {
+        let a = null;
+        if (!explicitas) {
+            const item = c.itens.find(it => it.id === passos[n - 1]);
+            a = (item && acharPalavra(frases, t(item.palavra), desde.k, ultima, desde))
+                || naFrase(Math.min(n === 1 ? desde.k : desde.k + 1, ultima));
+        } else {
+            const e = explicitas[n - 1];
+            if (typeof e === 'number') a = naFrase(faixaDoParagrafo(i, frases, e)[0]);
+            else if (typeof e === 'string') a = naFrase(indiceDaFraseRef(i, frases, e));
+            else if (e && typeof e === 'object') {
+                const [de, ate] = e.frase ? [indiceDaFraseRef(i, frases, e.frase), indiceDaFraseRef(i, frases, e.frase)]
+                    : e.paragrafo ? faixaDoParagrafo(i, frases, e.paragrafo)
+                    : [desde.k, ultima];
+                if (de >= 0) a = (e.palavra && acharPalavra(frases, t(e.palavra), de, ate, null)) || naFrase(de);
+            }
+        }
+        ancoras.push(a);
+        if (a) desde = { k: a.k, c: a.achou ? a.c + 1 : 0 };
+    }
+    return ancoras;
+}
+
+/* Etapa da sequência num ponto da leitura ({ k: frase, f: fração da frase já falada }) */
+function etapaNaPosicao(ancoras, pos) {
+    let etapa = 0;
+    ancoras.forEach((a, n) => {
+        if (a && (pos.k > a.k || (pos.k === a.k && pos.f >= a.f))) etapa = n + 1;
+    });
+    return etapa;
+}
+
+/* Onde a narração está agora: página gravada inteira (marcas de tempo), frase gravada ou voz do aparelho */
+function posicaoDaNarracao() {
+    const fala = falaEmCurso;
+    if (!fala) return null;
+    if (fala.modo === 'pagina') {
+        const tempo = narrador.currentTime;
+        if (tempo < fala.desde - 0.05) return { k: fala.inicio, f: 0 };   // o salto para a frase ainda não aconteceu
+        let marca = fala.marcas.find(m => tempo >= m.ini && tempo < m.fim);
+        let f = 1;
+        if (marca) f = (tempo - marca.ini) / Math.max(0.01, marca.fim - marca.ini);
+        else marca = fala.marcas.filter(m => m.ini <= tempo).pop();   // na pausa entre duas frases
+        const k = marca ? fala.indice.get(marca.id) : undefined;
+        return k === undefined ? null : { k, f };
+    }
+    if (fala.modo === 'gravacao') {
+        const d = narrador.duration;
+        return { k: fala.k, f: d && isFinite(d) ? Math.min(1, narrador.currentTime / d) : 0 };
+    }
+    if (fala.limite !== null) return { k: fala.k, f: fala.limite / Math.max(1, fala.total) };
+    const estimadaMs = (fala.total / (LETRAS_POR_SEGUNDO * VELOCIDADES[velocidade].aparelho)) * 1000;
+    return { k: fala.k, f: Math.min(0.98, (performance.now() - fala.t0) / Math.max(1, estimadaMs)) };
+}
+
+/* Um quadro por vez: quando a leitura passa de uma etapa, a cena troca (pelo estado → renderScene) */
+function acompanharNarracaoDaCena() {
+    const nc = narracaoCena;
+    if (!nc) return;
+    const pos = posicaoDaNarracao();
+    if (pos) {
+        const etapa = etapaNaPosicao(nc.ancoras, pos);
+        if (etapa !== nc.etapa) {
+            nc.etapa = etapa;
+            renderScene(nc.pagina);
+        }
+    }
+    nc.quadro = requestAnimationFrame(acompanharNarracaoDaCena);
+}
+
+/* Começo da leitura da página `i` a partir da frase `inicio` (lerPagina) */
+function iniciarNarracaoDaCena(i, frases, inicio) {
+    encerrarNarracaoDaCena();
+    if (!temSequenciaNarrada(i)) return;
+    const ancoras = ancorasDaNarracao(i, frases);
+    if (!ancoras.some(Boolean)) return;
+    const page = document.getElementById(`page-${i}`);
+    const area = document.getElementById(`cartoes-${i}`);
+    if (area) area.dataset.avisoNarracao = ui('ouvindoHistoria');
+    if (page) page.classList.add('page-narrando');   // cartões esperando a história (livro.css)
+    narracaoCena = { pagina: i, ancoras, etapa: etapaNaPosicao(ancoras, { k: inicio, f: 0 }), quadro: 0 };
+    renderScene(i);
+    narracaoCena.quadro = requestAnimationFrame(acompanharNarracaoDaCena);
+}
+
+/* Fim da leitura (natural, pausa, parada, troca de página ou de idioma): a cena volta ao estado da
+   atividade (antes de a criança começar, a primeira gravura) e só então os cartões se soltam.
+   Atividade já feita: a narração passou pelas gravuras e a página volta a ficar como a criança deixou. */
+function encerrarNarracaoDaCena() {
+    const nc = narracaoCena;
+    if (!nc) return;
+    narracaoCena = null;
+    cancelAnimationFrame(nc.quadro);
+    const i = nc.pagina;
+    renderScene(i).then(() => {
+        if (narracaoCena && narracaoCena.pagina === i) return;   // uma leitura nova já recomeçou nesta página
+        const page = document.getElementById(`page-${i}`);
+        if (page) page.classList.remove('page-narrando');
+    });
+}
 
 /* =====================================================================
    2. TROCA DE ILUSTRAÇÃO COM FEEDBACK INSTANTÂNEO DE CARREGAMENTO
@@ -1684,12 +1928,28 @@ function warmImages(srcs) {
     srcs.forEach(src => { new Image().src = src; });
 }
 
+/* O pedido mais novo vence: com trocas seguidas (a narração passando pelas gravuras, ou parando no meio
+   de uma troca), uma imagem que demorou a decodificar nunca cobre a que foi pedida depois */
+const pedidoDeCena = {};
+
 function setSceneImage(pageIdx, src) {
     const sceneImg = document.getElementById(`scene-bg-${pageIdx}`);
-    if (!sceneImg || sceneImg.getAttribute('src') === src) return Promise.resolve();
+    if (!sceneImg) return Promise.resolve();
 
     const stage = sceneImg.parentElement;
     const page = document.getElementById(`page-${pageIdx}`);
+    const pedido = pedidoDeCena[pageIdx] = {};
+    const liberar = () => {
+        stage.classList.remove('scene-loading');
+        stage.removeAttribute('aria-busy');
+        page.classList.remove('page-busy');
+        sceneBusy[pageIdx] = false;
+    };
+    if (sceneImg.getAttribute('src') === src) {
+        if (sceneBusy[pageIdx]) liberar();   // a troca que estava a caminho ficou sem efeito
+        return Promise.resolve();
+    }
+
     sceneBusy[pageIdx] = true;
     stage.classList.add('scene-loading');
     stage.setAttribute('aria-busy', 'true');
@@ -1697,15 +1957,13 @@ function setSceneImage(pageIdx, src) {
 
     const minDelay = new Promise(resolve => setTimeout(resolve, SCENE_MIN_BUSY_MS));
     return Promise.all([decodeImage(src), minDelay]).then(() => {
+        if (pedidoDeCena[pageIdx] !== pedido) return;   // chegou um pedido mais novo: ele é que desenha
         stage.classList.remove('scene-missing');
         sceneImg.src = src;
         sceneImg.classList.remove('scene-enter', 'character-joy', 'horse-happy');
         void sceneImg.offsetWidth;
         sceneImg.classList.add('scene-enter');
-        stage.classList.remove('scene-loading');
-        stage.removeAttribute('aria-busy');
-        page.classList.remove('page-busy');
-        sceneBusy[pageIdx] = false;
+        liberar();
     });
 }
 
@@ -1730,7 +1988,7 @@ function initArtFallbacks() {
    CAMADAS: visibilidade derivada do estado da página
    ===================================================================== */
 function camadaVisivel(i, camada) {
-    const st = pageState[i];
+    const st = estadoDaCena(i);
     const imag = lensImaginationState[i];
     const lente = camada.lente || 'real';
     if (lente === 'real' && imag) return false;
@@ -2026,6 +2284,8 @@ function triggerCardInteraction(card, coords) {
     const i = pageIndexOf(card);
     // Uma troca de ilustração já está em andamento: ignora o toque repetido
     if (sceneBusy[i]) return;
+    // A narração está conduzindo as gravuras da página: a atividade espera a história terminar
+    if (narracaoCena && narracaoCena.pagina === i) return;
 
     const c = cartoesDe(i);
     const id = card.dataset.id;

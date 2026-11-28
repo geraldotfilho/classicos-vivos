@@ -7,7 +7,7 @@
    - Páginas HTML e vozes.js: rede primeiro com limite de 2,5 s (se a rede estiver lenta, abre do cache na hora).
    - Narração gravada (*.mp3 e *.json): rede primeiro com limite de 2,5 s, cache próprio (cv-narracao).
    - Demais arquivos: cache primeiro (abre instantâneo no tablet). */
-const CACHE = 'classicos-vivos-9131583f52e7';
+const CACHE = 'classicos-vivos-00968032ebc0';
 const CACHE_AUDIO = 'cv-narracao';
 const CACHE_META = 'cv-meta';
 const FILES = [
@@ -25,7 +25,7 @@ const FILES = [
     ],
     [
         "./assets/css/livro.css",
-        "691b1132"
+        "e837a852"
     ],
     [
         "./assets/css/tailwind.css",
@@ -109,7 +109,7 @@ const FILES = [
     ],
     [
         "./assets/js/livro.js",
-        "d7518e6f"
+        "fb4f2922"
     ],
     [
         "./assets/js/offline-manager.js",
@@ -981,7 +981,7 @@ const FILES = [
     ],
     [
         "./dom-quixote/parte-1.html",
-        "cea80a60"
+        "3a700f8a"
     ],
     [
         "./dom-quixote/parte-2.html",
@@ -997,7 +997,7 @@ const FILES = [
     ],
     [
         "./dom-quixote/parte-5.html",
-        "4bfa3498"
+        "0a631765"
     ],
     [
         "./dom-quixote/parte-6.html",
@@ -1005,7 +1005,7 @@ const FILES = [
     ],
     [
         "./dom-quixote/parte-7.html",
-        "b8edfa5f"
+        "23dcd847"
     ],
     [
         "./dom-quixote/parte-8.html",
@@ -1341,11 +1341,11 @@ const FILES = [
     ],
     [
         "./robin-hood/parte-1.html",
-        "fa7a6264"
+        "84a31af8"
     ],
     [
         "./robin-hood/parte-2.html",
-        "20d688cc"
+        "c7b36335"
     ],
     [
         "./sobre.html",
