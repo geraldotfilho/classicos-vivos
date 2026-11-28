@@ -373,21 +373,27 @@
       ]
     },
     {
-      "texto": "Na praça de Nortigão, a flecha de Robin disfarçado parte ao meio a flecha do capitão bem no centro do alvo de palha enquanto a multidão aplaude e o Xerife faz cara azeda",
+      "texto": "Ajude Robin a fazer o tiro mais difícil do campeonato! Toque no cartão para soltar a flecha!",
+      "onde": [
+        "página 5: instrução da atividade"
+      ]
+    },
+    {
+      "texto": "Na praça panorâmica de Nortigão, Robin disfarçado mira à esquerda enquanto a plateia diversa e o Xerife acompanham o voo da flecha até partir a flecha do capitão no centro do alvo de palha à direita",
       "onde": [
         "página 5: descrição da ilustração (leitor de tela)"
       ]
     },
     {
-      "texto": "🎯 A Flecha Partida Bem no Coração do Alvo!",
+      "texto": "🎯 Robin Mira no Alvo... Toque em ATIRAR!",
       "onde": [
         "página 5: selo da Lente da Realidade"
       ]
     },
     {
-      "texto": "DISPUTA",
+      "texto": "ATIRAR",
       "onde": [
-        "página 5: dica ao passar o dedo na cena"
+        "página 5: cartão (MAIÚSCULAS, curto)"
       ]
     },
     {
@@ -395,6 +401,12 @@
       "onde": [
         "página 5: dica ao passar o dedo na cena",
         "página 11: dica ao passar o dedo na cena"
+      ]
+    },
+    {
+      "texto": "DISPUTA",
+      "onde": [
+        "página 5: dica ao passar o dedo na cena"
       ]
     },
     {
