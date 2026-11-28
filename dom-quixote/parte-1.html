@@ -102,6 +102,9 @@
                     real: 'p2-real-stage-0.webp', imag: 'p2-imag.webp', alt: 'Dom Quixote no Sótão',
                     legendaReal: '👓 Lente da Realidade: Armadura Enferrujada e Bacia',
                     legendaImag: '✨ Lente da Imaginação: Armadura Real de Ouro Puro!',
+                    // Gravuras conduzidas pela narração (Issue #78, AGENTS §2.2.1): onde cada etapa começa na leitura
+                    // a armadura do baú; depois, na mesma frase, a bacia, o escudo e a lança (palavra a palavra)
+                    narracaoEtapas: ['p2-s4', { frase: 'p2-s5', palavra: 'BACIA' }, { frase: 'p2-s5', palavra: 'ESCUDO' }, { frase: 'p2-s5', palavra: 'LANÇA' }],
                     // Ilustrações cumulativas: os itens seguem a ordem do texto (AGENTS §4.2)
                     cartoes: {
                         tipo: 'progressivo',
@@ -139,6 +142,9 @@
                     real: 'p3-real.webp', imag: 'p3-imag.webp', alt: 'Rocinante e Dulcineia',
                     legendaReal: '👓 Lente da Realidade: Cavalinho Magricela e Aldonza',
                     legendaImag: '✨ Lente da Imaginação: Corcel Branco e Princesa Dulcineia!',
+                    // Gravuras conduzidas pela narração (Issue #78, AGENTS §2.2.1): onde cada etapa começa na leitura
+                    // maçã, cenoura e escova vêm na mesma frase: a gravura troca palavra a palavra
+                    narracaoEtapas: [{ frase: 'p3-s4', palavra: 'MAÇÃ' }, { frase: 'p3-s4', palavra: 'CENOURA' }, { frase: 'p3-s4', palavra: 'ESCOVA' }],
                     hotspots: [
                         { x: 62, y: 18, w: 32, h: 78, palavra: 'ALDONZA', emoji: '🌾', emojiImag: '👸', titulo: 'Tocar em Aldonza / Dulcineia' }
                     ],

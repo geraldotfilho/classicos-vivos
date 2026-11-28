@@ -25,7 +25,8 @@ try:
 except Exception:
     FFMPEG_BIN = 'ffmpeg'
 
-MODELO = "large-v3-turbo"
+# CV_WHISPER_MODELO troca o modelo (ex.: "small" numa máquina sem GPU, para conferências rápidas)
+MODELO = os.environ.get("CV_WHISPER_MODELO", "large-v3-turbo")
 # Idioma da fala (pt, en, fr, es): o gravar-narracao.mjs passa CV_IDIOMA e, nas traduções, os nomes em CV_NOMES
 IDIOMA = os.environ.get("CV_IDIOMA", "pt")
 # Nomes próprios dos livros: ajudam o Whisper a não "corrigir" o que a voz disse certo
