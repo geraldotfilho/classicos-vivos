@@ -162,24 +162,24 @@ function opcoes(argv) {
 
 const o = opcoes(process.argv.slice(2));
 
-// Idioma da narração. Português: o original, com o ELENCO acima. Traduções (en, fr, es): o elenco, a frase de
-// amostra e os nomes próprios (dica para o Whisper) ficam em <livro>/audio/narracao-<idioma>/elenco.json:
+// Idioma da narração. Português: usa <livro>/audio/narracao/elenco.json se existir (senão o ELENCO acima).
+// Traduções (en, fr, es): o elenco, a frase de amostra e os nomes próprios (dica para o Whisper) ficam em
+// <livro>/audio/narracao-<idioma>/elenco.json:
 //   { "codigoVoz": "en-GB", "amostra": "...", "nomes": "Don Quixote, Sancho Panza, ...",
 //     "elenco": { "NARRADORA": { "voz": "en-gb-...", "estilo": "..." }, "QUIXOTE": {...}, ... } }
 const IDIOMA = o.idioma && o.idioma !== 'pt-BR' ? o.idioma : null;
 const SUFIXO = IDIOMA ? `-${IDIOMA}` : '';
 let AMOSTRA_FALA = AMOSTRA, NOMES_WHISPER = '', CODIGO_VOZ = 'pt-BR';
-if (IDIOMA) {
-    const arq = join(RAIZ, o.livro, 'audio', `narracao${SUFIXO}`, 'elenco.json');
-    if (!existsSync(arq)) {
-        console.error(`Falta ${arq} (o elenco do idioma; ver o comentário acima no script)`);
-        process.exit(1);
-    }
-    const def = JSON.parse(readFileSync(arq, 'utf8'));
+const arqElenco = join(RAIZ, o.livro, 'audio', `narracao${SUFIXO}`, 'elenco.json');
+if (existsSync(arqElenco)) {
+    const def = JSON.parse(readFileSync(arqElenco, 'utf8'));
     ELENCO = def.elenco;
     AMOSTRA_FALA = def.amostra || AMOSTRA;
     NOMES_WHISPER = def.nomes || '';
-    CODIGO_VOZ = def.codigoVoz || IDIOMA;
+    CODIGO_VOZ = def.codigoVoz || IDIOMA || 'pt-BR';
+} else if (IDIOMA) {
+    console.error(`Falta ${arqElenco} (o elenco do idioma; ver o comentário acima no script)`);
+    process.exit(1);
 }
 
 // Pasta de saída (dom-quixote/audio/<id>) → voz da API (e o modelo, se não for o MODELO_TTS).

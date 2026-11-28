@@ -11,6 +11,6 @@ window.VOZES_GRAVADAS = [
         id: 'narracao',
         nome: 'Contadora de histórias',
         descricao: 'Narração gravada, com voz calorosa',
-        partes: []
+        partes: [1, 2]
     }
 ];

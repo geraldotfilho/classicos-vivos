@@ -11,8 +11,8 @@ Plano: [`../PLANO-ROBIN-HOOD.md`](../PLANO-ROBIN-HOOD.md) · Receita: [`../recei
 | 3 Revisão humana 🛑 | 🟡 **pronto para revisão do humano (texto + 24 WebPs + animações)** | 2026-11-27 | `main` | — |
 | 4 Ilustrações e animações integradas | ✅ **100% concluído (24 cenas/etapas WebP + 2 sprites animados)** | 2026-11-27 | `main` | US$ 0,6901 |
 | 5 Revisão final em família 🛑 | ⬜ | | | — |
-| Publicação (estante principal, PT) | ⬜ | | | — |
-| 6 Narração (pt) — P1 e P2 | ⬜ (após publicação da P2) | | | US$ |
+| Publicação (estante principal, PT) | ✅ **publicada na prateleira principal** (`index.html`, link P1→P2) | 2026-11-27 | `0f794fb` | — |
+| 6 Narração (pt) — P1 e P2 | ✅ **14/14 págs. + 39/39 palavras + falas gravadas (0 rajadas, `vozes.js` ativo)** · escuta em `qa-robin-hood-parte-2.md` | 2026-11-27 | `main` | US$ 0,18 |
 
 ---
 

@@ -170,3 +170,11 @@ data,comando,pedidos_voz,tokens_audio,tokens_qa,usd_estimado
 2026-11-23T23:45,"--voz falas --idioma es --parte 1,2,3,4,5,6,7,8 --lote --autorizado",1,27,0,0.0001
 
 2026-11-28T00:39,"--amostras robin-hood P1-P2 (23 vozes candidatas) --autorizado",23,4420,0,0.0202
+2026-11-28T01:08,"--livro robin-hood --voz narracao --parte 1 --pagina-inteira --autorizado",27,26411,0,0.1207
+2026-11-28T01:10,"--livro robin-hood --voz narracao --parte 2 --pagina-inteira --autorizado",26,31931,0,0.1459
+2026-11-28T01:12,"--livro robin-hood --voz palavras --parte 1,2 --autorizado",3,8117,0,0.0368
+2026-11-28T01:12,"--livro robin-hood --voz falas --parte 1,2 --autorizado",2,2002,0,0.0091
+2026-11-28T01:16,"--livro robin-hood --voz palavras --parte 1,2 --agrupar 6 --lote --chave-reserva --autorizado",2,1437,0,0.0065
+2026-11-28T01:18,"--livro robin-hood --voz falas --parte 1,2 --lote --chave-reserva --autorizado",2,2443,0,0.0111
+2026-11-28T01:21,"--livro robin-hood --voz palavras --parte 1,2 --agrupar 1 --lote --chave-reserva --autorizado",3,432,0,0.0020
+2026-11-28T01:24,"--livro robin-hood --voz falas --parte 1,2 --lote --chave-reserva --autorizado",1,32,0,0.0001

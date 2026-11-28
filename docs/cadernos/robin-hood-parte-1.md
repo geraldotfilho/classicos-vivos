@@ -12,7 +12,7 @@ Plano: [`../PLANO-ROBIN-HOOD.md`](../PLANO-ROBIN-HOOD.md) · Receita: [`../recei
 | 4 Ilustrações e atividades v2 (Opção C — Diorama de Papel Recortado) | ✅ **22/22 gravuras + 8 sprites animados WebP** (100% no gerador nativo) | 2026-11-22 | `252cd86` | US$ 0,00 |
 | Publicação (estante principal, PT) | ✅ **publicada na estante principal** (pontos de melhoria anotados para futura v2) | 2026-11-22 | `252cd86` | — |
 | 5 Revisão final / pontos para v2 🛑 | 📝 **melhorias anotadas para futura v2** (ver §5) | 2026-11-26 | — | — |
-| 6 Narração (pt) + escuta 🛑 | ⏸️ **adiada para após o lançamento da Parte 2** (decisão do humano, 2026-11-26) | — | — | US$ |
+| 6 Narração (pt) + escuta 🛑 | ✅ **12/12 págs. + 35/35 palavras + falas gravadas (0 rajadas, `vozes.js` ativo)** · escuta em `qa-robin-hood-parte-1.md` | 2026-11-27 | `main` | US$ 0,15 |
 | 7 Idiomas (en, fr, es) + Desafios 🧩 | ⬜ aguardando | — | — | US$ |
 | 8 Retrospectiva | ⬜ aguardando | — | — | — |
 
